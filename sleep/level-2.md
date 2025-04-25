@@ -1,3 +1,4 @@
+[← Back to Sleep overview](index)
 ## Level 2: Fundamental Sleep Foundations
 
 This level represents the core fundamentals that deliver maximum benefit for minimal effort—the 80/20 principle applied to sleep.
