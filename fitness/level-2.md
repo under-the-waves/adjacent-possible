@@ -1,3 +1,4 @@
+[← Back to Fitness overview](index)
 ## Level 2: Establishing the Foundations
 
 This level represents the "minimum effective dose" for significant health benefits—the 20% of effort that delivers 80% of results.
