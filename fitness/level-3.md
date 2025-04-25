@@ -1,3 +1,4 @@
+[← Back to Fitness overview](index)
 ## Level 3: Reaching the Top 20%
 
 This level represents fitness capabilities that exceed 80% of the general population.
