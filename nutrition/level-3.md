@@ -1,3 +1,4 @@
+[← Back to Food and Nutrition overview](index)
 ## Level 3: Optimized Food and Nutrition
 
 This level represents food and nutrition capabilities that exceed 80% of households.
@@ -91,3 +92,5 @@ This level represents food and nutrition capabilities that exceed 80% of househo
   * Grocery delivery services: Save 1-2 hours weekly shopping time
   * Meal kit services: Reduce planning and prep time while maintaining nutrition quality
   * Pre-prepped ingredients: Strike balance between convenience and control
+
+Continue to [Level 4](level-4)
