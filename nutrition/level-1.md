@@ -1,3 +1,4 @@
+[← Back to Food and Nutrition overview](index)
 ## Level 1: Awareness and Basic Planning
 
 This level requires no habit changes or financial investment—just a one-time assessment and planning.
@@ -49,4 +50,4 @@ This level requires no habit changes or financial investment—just a one-time a
   * [Notes app](https://keep.google.com) for meal ideas and observations
 
 ## Next Steps
-Ready to move forward? Continue to [Level 2](level-2)
+Continue to [Level 2](level-2)
