@@ -1,3 +1,4 @@
+[← Back to Fitness Levels](../)
 ## Level 1: Awareness and Basic Planning
 
 This level requires no habit changes or financial investment—just assessment and planning.
@@ -65,3 +66,6 @@ This level requires no habit changes or financial investment—just assessment a
   * [SleepScore](https://www.sleepscore.com/) (free version)
 - Online questionnaires for sleep quality and chronotype assessment
 - Smartphone camera for documenting sleep environment
+
+## Next Steps
+Ready to move forward? Continue to [Level 2: Fundamental Fitness](level-2)
