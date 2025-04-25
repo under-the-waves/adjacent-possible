@@ -1,3 +1,4 @@
+[← Back to Fitness overview](index)
 ## Level 5: The Elite 1%
 
 This level represents the pinnacle of fitness achievement, comparable to competitive athletes or fitness professionals.
