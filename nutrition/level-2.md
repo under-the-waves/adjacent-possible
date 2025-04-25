@@ -85,4 +85,4 @@ This level represents the core fundamentals that deliver maximum benefit for min
   * Cost-benefit: Reduces active cooking time by 75% for applicable recipes
 
 ## Next Steps
-Ready to move forward? Continue to [Level 3](level-3)
+Continue to [Level 3](level-3)
