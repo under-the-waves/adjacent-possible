@@ -47,3 +47,6 @@ This level requires no habit changes or financial investment—just a one-time a
 - Free apps:
   * [Cronometer](https://cronometer.com/) (free version) for nutritional analysis
   * [Notes app](https://keep.google.com) for meal ideas and observations
+
+## Next Steps
+Ready to move forward? Continue to [Level 2](level-2)
