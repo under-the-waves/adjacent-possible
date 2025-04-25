@@ -63,3 +63,5 @@ This level requires no habit changes or financial investment—just assessment a
   * [Google Keep](https://keep.google.com) or [Microsoft OneNote](https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app) for notes
   * [Tody](https://todyapp.com/) (free version) for time tracking
   * [Google Sheets](https://www.google.com/sheets/about/) for basic inventory
+
+Continue to [Level 2](level-2)
