@@ -93,4 +93,4 @@ This level represents sleep capabilities that exceed 95% of the population.
   * Cost-benefit: Creates perfect alignment between environment and biology
 
 ## Next Steps
-Ready to move forward? Continue to [Level 5](level-5)
+Continue to [Level 5](level-5)
