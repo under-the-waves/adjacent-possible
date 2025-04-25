@@ -57,10 +57,6 @@ To objectively understand your current sleep quality, these assessment methods p
   - Polysomnography (clinical sleep study)
   - Physician consultation for sleep disorders screening
 
-# Sleep Levels
-
-A guide to systematically improving your sleep quality and habits.
-
 ## Levels
 
 - [Level 1: Awareness and Basic Planning](level-1)
