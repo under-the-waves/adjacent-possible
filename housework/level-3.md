@@ -80,3 +80,5 @@ This level represents home management capabilities that exceed 80% of households
   * Reduces cognitive load of remembering cleaning schedules
   * Enables seamless delegation in multi-person households
   * Eliminates need for physical planning sessions
+
+Continue to [Level 2](level-2)
