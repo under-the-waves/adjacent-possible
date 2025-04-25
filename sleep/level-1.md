@@ -1,5 +1,3 @@
-#Sleep
-
 ## Level 1: Awareness and Basic Planning
 
 This level requires no habit changes or financial investment—just assessment and planning.
