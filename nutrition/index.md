@@ -1,3 +1,4 @@
+[← Back to Home](../)
 # Food and Nutrition: A 5-Level Guide to Excellence
 
 *A "Life Levels" guide to optimizing nutritional value, taste, cost, efficiency, and ethical considerations*
