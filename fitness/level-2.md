@@ -42,3 +42,4 @@ This level represents the "minimum effective dose" for significant health benefi
   - YouTube channels: Fitness Blender, Yoga with Adriene, HASfit
   - Equipment: Resistance bands, 1-2 pairs of dumbbells or kettlebells
 
+Continue to [Level 3](level-3)
