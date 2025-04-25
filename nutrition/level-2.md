@@ -1,53 +1,88 @@
 [← Back to Food and Nutrition overview](index)
-## Level 1: Awareness and Basic Planning
+## Level 2: Fundamental Food and Nutrition
 
-This level requires no habit changes or financial investment—just a one-time assessment and planning.
+This level represents the core fundamentals that deliver maximum benefit for minimal effort—the 80/20 principle applied to food.
 
 ### Benchmarks
-- **Nutritional Knowledge and Application**: Understand basic nutrient needs and recognize current diet patterns
-- **Taste and Diversity**: Identify personal preferences and current meal variety
-- **Food Sourcing and Planning**: Know local food options and basic budget parameters
-- **Preparation Skills and Efficiency**: Assess cooking abilities and time constraints
-- **Food Ecosystem Management**: Recognize storage methods and waste patterns
+- **Nutritional Knowledge and Application**: 
+  - Basic understanding of macronutrients and their functions
+  - Recognition of nutrient-dense foods across categories
+  - Ability to build balanced meals with appropriate portions
+  - Fundamental understanding of plant-based nutrition needs
 
-**Healthy Diet Essentials**: Research consistently shows that the healthiest dietary patterns share key characteristics: abundant plant foods (vegetables, fruits, legumes, whole grains, nuts), moderate protein intake, limited refined sugars and highly processed foods, and appropriate caloric balance. The [Mediterranean](https://www.health.harvard.edu/blog/a-practical-guide-to-the-mediterranean-diet-2019032116194), [DASH](https://www.nhlbi.nih.gov/education/dash-eating-plan), and [MIND](https://www.rush.edu/news/mind-diet-may-slow-cognitive-decline-alzheimers-patients) diets exemplify these principles and have strong research support for health outcomes.
+- **Taste and Diversity**:
+  - Regular inclusion of 15+ different whole foods weekly
+  - Understanding of basic flavor balance (salt, acid, fat, heat)
+  - Enjoyment of meals through mindful eating
+  - Willingness to try new foods and preparation methods
 
-**Basic Flavor Principles**: Food scientists identify five basic tastes (sweet, sour, salt, bitter, umami) plus elements of aroma, texture, temperature, and appearance that create flavor experiences. As chef Samin Nosrat explains in her framework, balancing salt, fat, acid, and heat is fundamental to delicious cooking. The [Flavor Bible](https://www.amazon.com/Flavor-Bible-Essential-Creativity-Imaginative/dp/0316118400) provides extensive flavor pairing guidance.
+- **Food Sourcing and Planning**:
+  - Regular grocery shopping with basic list
+  - Some price awareness and budget considerations
+  - Intentional inclusion of plant foods at most meals
+  - Basic meal planning for 3-4 days at a time
 
-**Further Learning Resources**:
-- [Harvard's Nutrition Source](https://www.hsph.harvard.edu/nutritionsource/)
-- [Culinary Institute of America's Techniques Videos](https://www.ciachef.edu/cia-culinary-intelligence/techniques-and-recipes/)
-- [Science of Cooking](https://www.exploratorium.edu/cooking) by Exploratorium
-- [Nutrition Facts](https://nutritionfacts.org/) for evidence-based nutrition information
+- **Preparation Skills and Efficiency**:
+  - Comfort with 5-7 simple, nutritious recipes
+  - Basic knife skills and kitchen safety
+  - Understanding of fundamental cooking methods
+  - Ability to prepare simple balanced meals in 30 minutes
 
-**Benefits**: At this level, you gain crucial self-awareness that establishes direction without requiring immediate changes. This understanding aligns future efforts with your true priorities, preventing wasted resources on misaligned approaches. Research has found that dietary awareness alone increases favorable food choices by up to 30% through conscious attention ([source](https://doi.org/10.1037/hea0000121)). Meanwhile, planning meals in advance reduces food costs by 15-20% and improves diet quality scores, even before implementation ([source](https://doi.org/10.1016/j.jneb.2014.03.001)). This foundation-building phase creates the mental clarity needed for sustainable progress.
+- **Food Ecosystem Management**:
+  - Organized refrigerator with visible fresh foods
+  - Basic pantry stocked with versatile staples
+  - Food stored properly to maintain freshness
+  - Food waste reduced through basic planning
 
-### Actions (One-Time Tasks)
-- Track one day's food intake using a free app like [Cronometer](https://cronometer.com/) (15 min)
-- List your 3-5 most frequently prepared meals (5 min)
-- Create a simple food values framework using the [Rokeach Value Survey adaptation](https://www.foodethicscouncil.org/app/uploads/2019/03/Food_Ethics_Tool_Kit_for_web_1.pdf) (10 min)
-- Take a quick photo of your refrigerator and pantry contents (5 min)
-- Research one nearby farmers market or food delivery option (10 min)
-- Calculate approximate weekly food spending (5 min)
+**Benefits**: This level establishes the core foundation for both nutrition and culinary competence. Research has found that mastering just 5-7 basic, nutritious recipes dramatically increases home cooking frequency, which correlates with 50% higher diet quality scores and average savings of $60-80 monthly compared to convenience foods ([source](https://doi.org/10.1016/j.jada.2006.09.008)). Simple meal planning reduces grocery spending by 20% while increasing fruit and vegetable consumption by 33% ([source](https://doi.org/10.1016/j.amepre.2017.01.044)). These fundamentals create the critical momentum that makes continued progress significantly easier.
+
+### Actions (Quick Wins)
+- Build a functional minimalist kitchen with essential tools using [Minimalist Baker's Kitchen Essentials Guide](https://minimalistbaker.com/essential-kitchen-tools/)
+- Create a basic plant-centered pantry following [Plant-Based Pantry Basics](https://www.forksoverknives.com/how-to/plant-based-pantry-basics/)
+- Learn proper knife handling and basic cutting techniques using [Serious Eats Knife Skills 101](https://www.seriouseats.com/knife-skills-how-to-hold-a-knife)
+- Create a refrigerator organization system following [The Kitchn's Food Storage Guide](https://www.thekitchn.com/the-best-way-to-organize-your-refrigerator-tips-from-the-kitchn-214742)
 
 ### Habits
-- No new habits required at this level—just awareness and planning
-- Continue current eating and preparation patterns
+- Prepare at least 50% of meals at home using basic whole ingredients
+- Include vegetables or fruits with at least two meals daily
+- Drink water as primary beverage (64+ oz daily)
+- Use a grocery list for all shopping trips
+- Learn one new simple recipe every two weeks
 
 ### Costs
 #### Upfront Costs
-- **Time**: 1 hour (one-time investment for assessment and planning)
-- **Money**: $0
+- **Time**: 5-7 hours (for kitchen organization and skill development)
+- **Money**: Up to $200 total
+  - Basic kitchen tools: $80-120
+    * Chef's knife: $30-40
+    * Cutting board: $15-25
+    * Measuring cups/spoons: $10-15
+    * Basic pots and pans: $40-60
+  - Fundamental pantry staples: $60-80
+    * Whole grains (rice, oats, etc.): $10-15
+    * Legumes (beans, lentils): $10-15
+    * Basic spices and herbs: $20-30
+    * Cooking oils (olive, avocado): $15-20
+  - Storage containers: $30-40
+    * Glass food storage set: $20-30
+    * Reusable produce bags: $10-15
 
 #### Ongoing Costs
-- **Time**: 0 additional hours (maintaining current practices)
-- **Money**: $0 additional
+- **Time**: 3-4 hours weekly for shopping and basic preparation
+- **Money**: Generally cost-neutral or savings compared to current spending; grocery costs vary by location
 
-#### Tools (Free)
-- Smartphone camera for meal photos
-- Free apps:
-  * [Cronometer](https://cronometer.com/) (free version) for nutritional analysis
-  * [Notes app](https://keep.google.com) for meal ideas and observations
+#### Key Tools
+- **Meal planning templates**: Save 1-2 hours weekly on decision-making
+  * Free templates from [The Kitchn](https://www.thekitchn.com/the-kitchns-meal-planning-templates-265323)
+  * Cost-benefit: Reduces food waste by 25-30% according to EPA data
+  
+- **Basic food processor or blender**: $30-60
+  * Creates sauces, dressings, smoothies in minutes
+  * Cost-benefit: Makes nutrient-dense foods more accessible and convenient
+  
+- **Slow cooker**: $30-50
+  * Enables hands-off cooking of soups, stews, beans
+  * Cost-benefit: Reduces active cooking time by 75% for applicable recipes
 
 ## Next Steps
 Ready to move forward? Continue to [Level 3](level-3)
