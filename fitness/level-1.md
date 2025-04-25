@@ -34,3 +34,5 @@ This level requires no habit changes or financial investment—just a one-time a
 - Time: 1-2 hours (one-time investment for assessment and planning)
 - Money: $0
 - Tools: Free apps like Google Fit, Apple Health, or MyFitnessPal for basic tracking
+
+Continue to [Level 2](level-2)
