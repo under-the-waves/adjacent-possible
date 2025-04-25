@@ -1,3 +1,4 @@
+[← Back to Fitness overview](index)
 ## Level 4: Entering the Top 5%
 
 This level represents fitness capabilities that exceed 95% of the general population.
