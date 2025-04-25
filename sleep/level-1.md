@@ -68,4 +68,4 @@ This level requires no habit changes or financial investment—just assessment a
 - Smartphone camera for documenting sleep environment
 
 ## Next Steps
-Ready to move forward? Continue to [Level 2: Fundamental Fitness](level-2)
+Continue to [Level 2](level-2)
