@@ -1,6 +1,10 @@
 # Life Levels
 
-A guide to systematically leveling up different areas of your life.
+A guide to systematically leveling up different areas of your life, based on a 'return on investment' approach.
+
+See ]here](ROI-mindset/) for why an ROI mindset to personal development is important, and how to apply it to daily life. 
+
+For more on ROI
 
 ## Life Areas
 
