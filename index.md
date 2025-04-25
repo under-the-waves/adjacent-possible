@@ -4,8 +4,6 @@ A guide to systematically leveling up different areas of your life, based on a '
 
 See [here](ROI-mindset/) for why an ROI mindset to personal development is important, and how to apply one to your daily life. 
 
-For more on ROI
-
 ## Life Areas
 
 - [Fitness](fitness/)
