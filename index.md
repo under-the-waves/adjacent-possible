@@ -2,7 +2,7 @@
 
 A guide to systematically leveling up different areas of your life, based on a 'return on investment' approach.
 
-See [here](/life-levels/ROI-mindset.md) for why an ROI mindset to personal development is important, and how to apply one to your daily life. 
+See [here](/life-levels/ROI-mindset) for why an ROI mindset to personal development is important, and how to apply one to your daily life. 
 
 ## Life Areas
 
