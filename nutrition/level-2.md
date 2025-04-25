@@ -49,4 +49,4 @@ This level requires no habit changes or financial investment—just a one-time a
   * [Notes app](https://keep.google.com) for meal ideas and observations
 
 ## Next Steps
-Ready to move forward? Continue to [Level 3](level-2)
+Ready to move forward? Continue to [Level 3](level-3)
