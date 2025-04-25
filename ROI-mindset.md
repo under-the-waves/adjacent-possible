@@ -1,4 +1,4 @@
-# ROI Mindsets: Using Return on Investment Thinking in Daily Life
+# ROI Mindsets
 
 > "If you are going to sweep, give it everything you've got."  
 > — Ajahn Chah (quoted in Opening the Door of Your Heart)
