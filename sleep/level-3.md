@@ -92,4 +92,4 @@ This level represents sleep capabilities that exceed 80% of the population.
   * Cost-benefit: Can improve deep sleep by 10-20% through temperature optimization
 
 ## Next Steps
-Ready to move forward? Continue to [Level 4](level-4)
+Continue to [Level 4](level-4)
