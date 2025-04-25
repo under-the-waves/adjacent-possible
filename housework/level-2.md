@@ -1,3 +1,4 @@
+[← Back to Housework overview](index)
 ## Level 2: Efficient Basics
 
 This level represents the core fundamentals that deliver maximum benefit for minimal effort—applying the 80/20 principle to home management.
