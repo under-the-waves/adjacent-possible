@@ -62,3 +62,5 @@ This level represents fitness capabilities that exceed 80% of the general popula
   - Possible heart rate monitor or fitness tracker
   - Foam roller, resistance bands, mobility tools
   - Quality lifting shoes or sport-specific footwear
+
+Continue to [Level 4](level-4)
