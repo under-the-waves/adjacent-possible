@@ -91,3 +91,6 @@ This level represents sleep capabilities that exceed 95% of the population.
   * Timed exposure protocols based on chronotype
   * Seasonal adjustment automation
   * Cost-benefit: Creates perfect alignment between environment and biology
+
+## Next Steps
+Ready to move forward? Continue to [Level 5](level-5)
