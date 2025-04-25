@@ -66,3 +66,5 @@ This level represents fitness capabilities that exceed 95% of the general popula
   - Specialized training equipment for chosen modality
   - Recovery devices (massage gun, compression boots)
   - Advanced training apps with periodization support
+
+Continue to [Level 5](level-5)
