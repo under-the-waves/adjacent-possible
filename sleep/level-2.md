@@ -86,3 +86,6 @@ This level represents the core fundamentals that deliver maximum benefit for min
   * Provides objective feedback on improvements
   * Creates accountability for sleep schedule consistency
   * Cost-benefit: Self-monitoring improves behavioral adherence by 30%
+
+## Next Steps
+Ready to move forward? Continue to [Level 3](level-3)
