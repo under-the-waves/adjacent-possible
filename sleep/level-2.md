@@ -1,4 +1,4 @@
-[← Back to Sleep overview](index)
+[← Back to Level 1](level-1)
 ## Level 2: The 80/20 of Sleep Improvement
 
 This level focuses on the few key changes that deliver the majority of sleep benefits for minimal effort.
