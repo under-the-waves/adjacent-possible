@@ -42,6 +42,36 @@
   </script>
 </nav>
 
+<!-- Diagnostic testing elements -->
+<div style="background-color: red; padding: 10px; color: white; margin: 10px 0;">
+  <button onclick="alert('JavaScript works!')">Test JavaScript</button>
+  <span>If you see this red box, CSS is loading</span>
+  
+  <div style="position: relative; display: inline-block; margin-left: 20px;">
+    <button id="testDropdownBtn" style="cursor: pointer;">Test Dropdown ▾</button>
+    <div style="display: none; position: absolute; background-color: yellow; padding: 10px; top: 100%; left: 0; z-index: 10000; min-width: 150px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" id="testDropdown">
+      <a href="#" style="display: block; padding: 5px; color: black; text-decoration: none;">Test Link 1</a>
+      <a href="#" style="display: block; padding: 5px; color: black; text-decoration: none;">Test Link 2</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set up test dropdown button
+    document.getElementById('testDropdownBtn').addEventListener('click', function() {
+      var dropdown = document.getElementById('testDropdown');
+      if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+        dropdown.style.display = 'block';
+      } else {
+        dropdown.style.display = 'none';
+      }
+    });
+  });
+</script>
+<!-- End diagnostic elements -->
+
+    
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
