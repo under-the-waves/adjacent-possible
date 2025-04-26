@@ -9,19 +9,38 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <nav class="navbar">
-      <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
-      
-      <div class="dropdown">
-        <button class="dropbtn">Life Areas ▾</button>
-        <div class="dropdown-content">
-          <a href="{{ site.baseurl }}/housework/">Housework</a>
-          <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-          <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
-          <a href="{{ site.baseurl }}/sleep/">Sleep</a>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar">
+  <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
+  
+  <div class="dropdown">
+    <button onclick="toggleDropdown()" class="dropbtn">Life Areas ▾</button>
+    <div id="lifeAreasDropdown" class="dropdown-content">
+      <a href="{{ site.baseurl }}/housework/">Housework</a>
+      <a href="{{ site.baseurl }}/fitness/">Fitness</a>
+      <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
+      <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+function toggleDropdown() {
+  document.getElementById("lifeAreasDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
