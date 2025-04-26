@@ -17,11 +17,10 @@ There's no universal standard for sleep optimization. Your optimal approach depe
 5. **Sleep quality monitoring and improvement**
 
 ## Levels
-
-- [Level 1: Awareness and Basic Planning](level-1)
-- [Level 2: Fundamental Sleep Foundations](level-2)
-- [Level 3: Optimized Sleep Management (Top 20%)](level-3)
-- [Level 4: Advanced Sleep Systems (Top 5%)](level-4)
-- [Level 5: Elite Sleep Mastery (Top 1%)](level-5)
+- [Level 1: Awareness](level-1)
+- [Level 2: Fundamentals](level-2)
+- [Level 3: Proficiency](level-3)
+- [Level 4: Excellence](level-4)
+- [Level 5: Mastery](level-5)
 
 [← Back to Life Levels Home](../)
