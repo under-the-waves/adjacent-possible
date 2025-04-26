@@ -1,4 +1,3 @@
-[← Back to Home](../)
 # Sleep
 
 ## Why Sleep Matters
