@@ -26,4 +26,4 @@ This level requires no habit changes or financial investment—just assessment a
 - **Money**: $0
 
 ## Next Steps
-Continue to [Level 2](level-2)
+Continue to [Level 2: Fundamentals](level-2)
