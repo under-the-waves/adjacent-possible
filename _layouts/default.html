@@ -2,10 +2,6 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
-
-{% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -14,22 +10,57 @@
   </head>
   <body>
     <div class="navbar">
-  <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
-  
-  <div class="dropdown">
-    <button class="dropbtn">Housework</button>
-    <div class="dropdown-content">
-      <a href="{{ site.baseurl }}/housework/">Overview</a>
-      <a href="{{ site.baseurl }}/housework/level1">Level 1</a>
-      <a href="{{ site.baseurl }}/housework/level2">Level 2</a>
-      <a href="{{ site.baseurl }}/housework/level3">Level 3</a>
-      <a href="{{ site.baseurl }}/housework/level4">Level 4</a>
-      <a href="{{ site.baseurl }}/housework/level5">Level 5</a>
+      <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Housework</button>
+        <div class="dropdown-content">
+          <a href="{{ site.baseurl }}/housework/">Overview</a>
+          <a href="{{ site.baseurl }}/housework/level1">Level 1</a>
+          <a href="{{ site.baseurl }}/housework/level2">Level 2</a>
+          <a href="{{ site.baseurl }}/housework/level3">Level 3</a>
+          <a href="{{ site.baseurl }}/housework/level4">Level 4</a>
+          <a href="{{ site.baseurl }}/housework/level5">Level 5</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Fitness</button>
+        <div class="dropdown-content">
+          <a href="{{ site.baseurl }}/fitness/">Overview</a>
+          <a href="{{ site.baseurl }}/fitness/level1">Level 1</a>
+          <a href="{{ site.baseurl }}/fitness/level2">Level 2</a>
+          <a href="{{ site.baseurl }}/fitness/level3">Level 3</a>
+          <a href="{{ site.baseurl }}/fitness/level4">Level 4</a>
+          <a href="{{ site.baseurl }}/fitness/level5">Level 5</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Food & Nutrition</button>
+        <div class="dropdown-content">
+          <a href="{{ site.baseurl }}/food/">Overview</a>
+          <a href="{{ site.baseurl }}/food/level1">Level 1</a>
+          <a href="{{ site.baseurl }}/food/level2">Level 2</a>
+          <a href="{{ site.baseurl }}/food/level3">Level 3</a>
+          <a href="{{ site.baseurl }}/food/level4">Level 4</a>
+          <a href="{{ site.baseurl }}/food/level5">Level 5</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Sleep</button>
+        <div class="dropdown-content">
+          <a href="{{ site.baseurl }}/sleep/">Overview</a>
+          <a href="{{ site.baseurl }}/sleep/level1">Level 1</a>
+          <a href="{{ site.baseurl }}/sleep/level2">Level 2</a>
+          <a href="{{ site.baseurl }}/sleep/level3">Level 3</a>
+          <a href="{{ site.baseurl }}/sleep/level4">Level 4</a>
+          <a href="{{ site.baseurl }}/sleep/level5">Level 5</a>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <!-- Repeat similar dropdown sections for other life areas -->
-</div>
+
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
