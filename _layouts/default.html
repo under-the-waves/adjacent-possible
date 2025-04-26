@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
     <link rel="stylesheet" href="{{ '/assets/css/dropdown.css' | relative_url }}">
-    <script src="{{ '/assets/js/dropdown.js' | relative_url }}"></script>
   </head>
   <body>
     
@@ -17,7 +16,7 @@
   
   <div style="position: relative; display: inline-block;">
     <button id="lifeAreasDropdownBtn" style="background-color: #155799; color: white; padding: 14px 16px; font-size: 16px; border: none; cursor: pointer; font-family: inherit;">Life Areas ▾</button>
-    <div id="lifeAreasDropdownContent" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 9999; top: 100%; left: 0; border: 1px solid #ddd;">
+    <div id="lifeAreasDropdownContent" style="display: none !important; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 9999; top: 100%; left: 0; border: 1px solid #ddd;">
       <a href="{{ site.baseurl }}/housework/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Housework</a>
       <a href="{{ site.baseurl }}/fitness/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Fitness</a>
       <a href="{{ site.baseurl }}/food/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Food & Nutrition</a>
@@ -25,6 +24,37 @@
     </div>
   </div>
 </nav>
+
+<script>
+  // Add this immediately after the nav element
+  document.addEventListener('DOMContentLoaded', function() {
+    var dropdownBtn = document.getElementById('lifeAreasDropdownBtn');
+    var dropdownContent = document.getElementById('lifeAreasDropdownContent');
+    
+    if (dropdownBtn && dropdownContent) {
+      // Initially ensure the dropdown is hidden
+      dropdownContent.style.display = 'none';
+      
+      // Toggle dropdown when clicking the button
+      dropdownBtn.onclick = function(event) {
+        event.stopPropagation();
+        
+        if (dropdownContent.style.display === 'none') {
+          dropdownContent.style.display = 'block';
+        } else {
+          dropdownContent.style.display = 'none';
+        }
+      };
+      
+      // Close dropdown when clicking elsewhere
+      document.onclick = function(event) {
+        if (event.target !== dropdownBtn) {
+          dropdownContent.style.display = 'none';
+        }
+      };
+    }
+  });
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
