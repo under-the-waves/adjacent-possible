@@ -7,14 +7,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/dropdown.css' | relative_url }}">
+    <script src="{{ '/assets/js/dropdown.js' | relative_url }}"></script>
   </head>
   <body>
 <nav class="navbar">
   <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
   
-  <div class="dropdown">
-    <button onclick="toggleDropdown()" class="dropbtn">Life Areas ▾</button>
-    <div id="lifeAreasDropdown" class="dropdown-content">
+  <div id="lifeAreasWrapper">
+    <button id="lifeAreasButton">Life Areas ▾</button>
+    <div id="lifeAreasDropdown">
       <a href="{{ site.baseurl }}/housework/">Housework</a>
       <a href="{{ site.baseurl }}/fitness/">Fitness</a>
       <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
