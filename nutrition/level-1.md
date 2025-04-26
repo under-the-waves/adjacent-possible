@@ -1,4 +1,3 @@
-[← Back to Food and Nutrition overview](index)
 # [Food and Nutrition](index)
 ## Level 1: Awareness and Basic Planning
 
