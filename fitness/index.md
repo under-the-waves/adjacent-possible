@@ -1,5 +1,5 @@
 [← Back to Home](../)
-# Fitness: A 5-Level Guide to Physical Excellence
+# Fitness
 
 ## Why Fitness Matters
 
