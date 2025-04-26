@@ -24,32 +24,75 @@
       <a href="{{ site.baseurl }}/sleep/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Sleep</a>
     </div>
   </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log("Setting up main dropdown");
+    var mainBtn = document.getElementById('lifeAreasDropdownBtn');
+    var mainDropdown = document.getElementById('lifeAreasDropdownContent');
+    
+    if (mainBtn && mainDropdown) {
+      mainBtn.addEventListener('click', function(event) {
+        console.log("Main button clicked");
+        event.stopPropagation(); // Prevent the document click handler from immediately closing it
+        
+        if (mainDropdown.style.display === 'none' || mainDropdown.style.display === '') {
+          mainDropdown.style.display = 'block';
+          console.log("Set main dropdown to block");
+        } else {
+          mainDropdown.style.display = 'none';
+          console.log("Set main dropdown to none");
+        }
+      });
+    } else {
+      console.log("Could not find dropdown elements", {mainBtn, mainDropdown});
+    }
+  });
+</script>
+
+<!-- Debugging information -->
+<div style="background-color: lightblue; padding: 10px; margin: 10px 0;">
+  <h4>Debugging Info:</h4>
+  <div id="debugInfo">Loading...</div>
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Set up main Life Areas dropdown
-      document.getElementById('lifeAreasDropdownBtn').addEventListener('click', function() {
-        var dropdown = document.getElementById('lifeAreasDropdownContent');
-        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-          dropdown.style.display = 'block';
-        } else {
-          dropdown.style.display = 'none';
-        }
-      });
+      var debugDiv = document.getElementById('debugInfo');
+      var mainBtn = document.getElementById('lifeAreasDropdownBtn');
+      var mainDropdown = document.getElementById('lifeAreasDropdownContent');
       
-      // Close dropdown when clicking elsewhere
-      document.addEventListener('click', function(event) {
-        if (!event.target.matches('#lifeAreasDropdownBtn')) {
-          var dropdown = document.getElementById('lifeAreasDropdownContent');
-          if (dropdown.style.display === 'block') {
-            dropdown.style.display = 'none';
+      // Display basic information about the elements
+      debugDiv.innerHTML = '<p>Button exists: ' + (mainBtn !== null) + '</p>';
+      debugDiv.innerHTML += '<p>Dropdown exists: ' + (mainDropdown !== null) + '</p>';
+      
+      if (mainBtn) {
+        // Add a click handler that logs directly to the debug div
+        mainBtn.addEventListener('click', function() {
+          debugDiv.innerHTML += '<p>Button was clicked at ' + new Date().toTimeString() + '</p>';
+          
+          if (mainDropdown) {
+            var currentDisplay = mainDropdown.style.display;
+            debugDiv.innerHTML += '<p>Current dropdown display: "' + currentDisplay + '"</p>';
+            
+            // Try to toggle the dropdown and report the result
+            if (currentDisplay === 'none' || currentDisplay === '') {
+              mainDropdown.style.display = 'block';
+              debugDiv.innerHTML += '<p>Set dropdown to: "block"</p>';
+            } else {
+              mainDropdown.style.display = 'none';
+              debugDiv.innerHTML += '<p>Set dropdown to: "none"</p>';
+            }
+            
+            // Report the new state
+            debugDiv.innerHTML += '<p>New dropdown display: "' + mainDropdown.style.display + '"</p>';
           }
-        }
-      });
+        });
+      }
     });
   </script>
-</nav>
-
+</div>
+    
 <!-- Diagnostic testing elements -->
 <div style="background-color: red; padding: 10px; color: white; margin: 10px 0;">
   <button onclick="alert('JavaScript works!')">Test JavaScript</button>
