@@ -1,5 +1,5 @@
 [← Back to Housework overview](index)
-## Level 1: Awareness and Basic Planning
+## Level 1: Awareness
 
 This level requires no habit changes or financial investment—just assessment and planning.
 
@@ -64,4 +64,4 @@ This level requires no habit changes or financial investment—just assessment a
   * [Tody](https://todyapp.com/) (free version) for time tracking
   * [Google Sheets](https://www.google.com/sheets/about/) for basic inventory
 
-Continue to [Level 2](level-2)
+Continue to [Level 2: Fundamentals](level-2)
