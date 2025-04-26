@@ -192,3 +192,52 @@
 .site-footer {
   display: none; /* This hides the entire footer */
 }
+
+/* Custom dropdown styles - added at the end to override any conflicting styles */
+.navbar .dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.navbar .dropbtn {
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  background-color: #155799;
+  font-family: inherit;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .dropdown:hover .dropbtn {
+  background-color: #0e3b68;
+}
+
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.navbar .dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.navbar .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
