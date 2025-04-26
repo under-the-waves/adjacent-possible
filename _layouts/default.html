@@ -11,34 +11,42 @@
     <script src="{{ '/assets/js/dropdown.js' | relative_url }}"></script>
   </head>
   <body>
+    
 <nav class="navbar">
   <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
   
-  <div id="lifeAreasWrapper">
-    <button id="lifeAreasButton" onclick="toggleDropdown()">Life Areas ▾</button>
-    <div id="lifeAreasDropdown">
-      <a href="{{ site.baseurl }}/housework/">Housework</a>
-      <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-      <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
-      <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+  <div style="position: relative; display: inline-block;">
+    <button id="lifeAreasDropdownBtn" style="background-color: #155799; color: white; padding: 14px 16px; font-size: 16px; border: none; cursor: pointer; font-family: inherit;">Life Areas ▾</button>
+    <div id="lifeAreasDropdownContent" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 9999; top: 100%; left: 0; border: 1px solid #ddd;">
+      <a href="{{ site.baseurl }}/housework/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Housework</a>
+      <a href="{{ site.baseurl }}/fitness/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Fitness</a>
+      <a href="{{ site.baseurl }}/food/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Food & Nutrition</a>
+      <a href="{{ site.baseurl }}/sleep/" style="color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;">Sleep</a>
     </div>
   </div>
-
+  
   <script>
-    function toggleDropdown() {
-      var dropdown = document.getElementById("lifeAreasDropdown");
-      dropdown.classList.toggle("active");
-    }
-    
-    // Close the dropdown when clicking elsewhere
-    window.onclick = function(event) {
-      if (!event.target.matches('#lifeAreasButton')) {
-        var dropdown = document.getElementById("lifeAreasDropdown");
-        if (dropdown.classList.contains('active')) {
-          dropdown.classList.remove('active');
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set up main Life Areas dropdown
+      document.getElementById('lifeAreasDropdownBtn').addEventListener('click', function() {
+        var dropdown = document.getElementById('lifeAreasDropdownContent');
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+          dropdown.style.display = 'block';
+        } else {
+          dropdown.style.display = 'none';
         }
-      }
-    }
+      });
+      
+      // Close dropdown when clicking elsewhere
+      document.addEventListener('click', function(event) {
+        if (!event.target.matches('#lifeAreasDropdownBtn')) {
+          var dropdown = document.getElementById('lifeAreasDropdownContent');
+          if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+          }
+        }
+      });
+    });
   </script>
 </nav>
 
