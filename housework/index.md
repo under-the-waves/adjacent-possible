@@ -74,7 +74,7 @@ To objectively understand your current home management level, these assessment m
   - Resource: [Green Cleaning Coalition Assessment](https://www.greencleaningcoalition.org/green-assessment)
 
 ## Levels
-- [Level 1: Awareness and Basic Planning](level-1)
+- [Level 1: Awareness](level-1)
 - [Level 2: Fundamentals](level-2)
 - [Level 3: Proficiency](level-3)
 - [Level 4: Excellence](level-4)
