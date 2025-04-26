@@ -86,6 +86,25 @@
   display: none;
 }
 
+/* Remove the entire lower banner (page-header) */
+.page-header {
+  display: none;
+}
+
+/* Adjust the main content to account for the missing banner */
+.main-content {
+  padding-top: 2rem; /* Add some padding at the top so content doesn't start right at the navigation */
+}
+
+/* Make sure the skip-to-content link still works */
+#skip-to-content {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .main-content {
   word-wrap: break-word;
   max-width: 64rem;
