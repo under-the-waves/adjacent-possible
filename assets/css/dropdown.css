@@ -1,4 +1,4 @@
-/* Basic styling for the dropdown */
+/* Basic styling for the dropdown - FIXED */
 #lifeAreasWrapper {
   position: relative;
   display: inline-block;
@@ -21,22 +21,28 @@
 #lifeAreasDropdown {
   display: none;
   position: absolute;
+  top: 100%;  /* Position right below the button */
+  left: 0;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1000;
+  z-index: 9999;  /* Ensure it's above everything */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 2px;  /* Small gap between button and dropdown */
 }
 
 #lifeAreasDropdown.active {
-  display: block;
+  display: block !important;  /* Force display */
 }
 
 #lifeAreasDropdown a {
-  color: black;
+  color: black !important;  /* Override any other styles */
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+  font-size: 14px;
 }
 
 #lifeAreasDropdown a:hover {
