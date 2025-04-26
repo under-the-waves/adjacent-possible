@@ -15,7 +15,7 @@
   <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
   
   <div id="lifeAreasWrapper">
-    <button id="lifeAreasButton">Life Areas ▾</button>
+    <button id="lifeAreasButton" onclick="toggleDropdown()">Life Areas ▾</button>
     <div id="lifeAreasDropdown">
       <a href="{{ site.baseurl }}/housework/">Housework</a>
       <a href="{{ site.baseurl }}/fitness/">Fitness</a>
@@ -23,6 +23,23 @@
       <a href="{{ site.baseurl }}/sleep/">Sleep</a>
     </div>
   </div>
+
+  <script>
+    function toggleDropdown() {
+      var dropdown = document.getElementById("lifeAreasDropdown");
+      dropdown.classList.toggle("active");
+    }
+    
+    // Close the dropdown when clicking elsewhere
+    window.onclick = function(event) {
+      if (!event.target.matches('#lifeAreasButton')) {
+        var dropdown = document.getElementById("lifeAreasDropdown");
+        if (dropdown.classList.contains('active')) {
+          dropdown.classList.remove('active');
+        }
+      }
+    }
+  </script>
 </nav>
 
     <a id="skip-to-content" href="#content">Skip to the content.</a>
