@@ -11,8 +11,8 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 0;
   padding: 0;
+  position: relative;
 }
 
 .navbar a {
@@ -41,6 +41,7 @@
 
 .dropdown .dropbtn {
   color: white;
+  padding: 14px 16px;
   background-color: transparent;
   font-family: inherit;
   margin: 0;
@@ -73,15 +74,7 @@
   display: block;
 }
 
-/* Fix for the main content area */
-.main-content {
-  max-width: 64rem;
-  padding: 2rem 6rem;
-  margin: 0 auto;
-  font-size: 1.1rem;
-}
-
-/* Restore page header styling */
+/* Restore Cayman styling */
 .page-header {
   color: #fff;
   text-align: center;
@@ -90,11 +83,77 @@
   padding: 3rem 6rem;
 }
 
-/* Hide the "Skip to content" link by default */
+.main-content {
+  word-wrap: break-word;
+  max-width: 64rem;
+  padding: 2rem 6rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: #159957;
+}
+
+.main-content p {
+  margin-bottom: 1em;
+}
+
+.main-content code {
+  padding: 2px 4px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9rem;
+  color: #567482;
+  background-color: #f3f6fa;
+  border-radius: 0.3rem;
+}
+
+.main-content ul,
+.main-content ol {
+  margin-top: 0;
+}
+
+.main-content blockquote {
+  padding: 0 1rem;
+  margin-left: 0;
+  color: #819198;
+  border-left: 0.3rem solid #dce6f0;
+}
+
+.main-content table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for skip-to-content link */
 #skip-to-content {
   position: absolute;
   height: 1px;
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Fix bullet points and lists */
+.main-content ul, 
+.main-content ol {
+  margin-top: 0;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-content li {
+  margin-bottom: 0.5em;
 }
