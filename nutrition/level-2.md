@@ -1,6 +1,6 @@
 [← Back to Level 1](level-1)
-# [Food and Nutrition](index)
-## Level 2: Fundamental Food and Nutrition
+# Food and Nutrition
+## Level 2: Fundamentals
 
 This level represents the core fundamentals that deliver maximum benefit for minimal effort—the 80/20 principle applied to food.
 
@@ -40,4 +40,4 @@ This level represents the core fundamentals that deliver maximum benefit for min
   - Storage containers: $30-40
 
 ## Next Steps
-Continue to [Level 3](level-3)
+Continue to [Level 3: Top 20%](level-3)
