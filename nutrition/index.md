@@ -8,8 +8,7 @@ Food choices affect virtually every aspect of life, from physical health and lon
 Good nutrition involves balancing science-based approaches with personal preferences and practical constraints. While Level 1 focuses on awareness and basic planning, Level 3 represents a sweet spot where most people can achieve excellent nutrition with reasonable effort. At the highest levels, individuals develop sophisticated systems that make optimal nutrition almost effortless through advanced knowledge and strategic decision-making.
 
 ## Levels
-
-- [Level 1: Awareness and Basic Planning](level-1)
+- [Level 1: Awareness](level-1)
 - [Level 2: Fundamentals](level-2)
 - [Level 3: Proficiency](level-3)
 - [Level 4: Excellence](level-4)
