@@ -1,4 +1,4 @@
-[← Back to Housework overview](index)
+[← Back to Level 3](level-3)
 ## Level 4: Advanced Home Systems
 
 This level represents home management capabilities that exceed 95% of households.
