@@ -1,5 +1,5 @@
 [← Back to Sleep overview](index)
-## Level 3: Solid Sleep Optimization
+## Level 3: Solid Sleep Optimisation
 
 This level represents sleep capabilities that exceed 80% of the population.
 
