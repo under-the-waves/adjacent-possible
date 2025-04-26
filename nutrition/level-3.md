@@ -50,4 +50,5 @@ This level represents food and nutrition capabilities that exceed 80% of househo
   - Digital tools: $50-100
   - Basic supplements (if needed): $20-50 monthly
 
+## Next Steps
 Continue to [Level 4](level-4)
