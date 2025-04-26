@@ -41,3 +41,5 @@ This level represents food and nutrition capabilities that exceed 95% of househo
   - Digital systems: $100-200
   - Targeted supplements: $50-150 monthly
 
+## Next Steps
+Continue to [Level 5](level-5)
