@@ -1,5 +1,5 @@
 [← Back to Level 4](level-4)
-## Level 5: Expert Food and Nutrition Systems
+## Level 5: Mastery
 
 This level represents the top 1% of food and nutrition capabilities.
 
