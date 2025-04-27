@@ -1,3 +1,9 @@
+<div class="hero-section">
+  <h1>Adjacent Possible</h1>
+  <p class="tagline">A framework for holistic personal development, backed by evidence and following the 80/20 principle</p>
+  <a href="#get-started" class="cta-button">Get Started</a>
+</div>
+
 # Adjacent Possible
 
 **A framework for holistic personal development, backed by evidence and following the 80/20 principle**
@@ -49,6 +55,22 @@ Each guide addresses a fundamental life domain through the same systematic appro
 - [Fitness]({{ site.baseurl }}/fitness) – Building physical capability and resilience
 - [Food & Nutrition]({{ site.baseurl }}/nutrition) – Fueling your body and mind
 - [Housework]({{ site.baseurl }}/housework) – Creating an environment that supports your goals
+
+<h2 class="section-title">Life Areas</h2>
+<div class="life-areas-grid">
+  <div class="life-area-card">
+    <h3>Sleep</h3>
+    <p>Optimizing rest, recovery, and energy</p>
+    <a href="{{ site.baseurl }}/sleep" class="area-link">Explore Sleep</a>
+  </div>
+  <div class="life-area-card">
+    <h3>Fitness</h3>
+    <p>Building physical capability and resilience</p>
+    <a href="{{ site.baseurl }}/fitness" class="area-link">Explore Fitness</a>
+  </div>
+  <!-- Similar cards for other areas -->
+</div>
+
 
 ## Forthcoming areas
 
