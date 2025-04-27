@@ -1,6 +1,6 @@
 [← Back to Level 1](level-1)
 # Food and Nutrition
-## Level 2: Fundamentals
+## Level 2: Foundations
 
 This level represents the core fundamentals that deliver maximum benefit for minimal effort—the 80/20 principle applied to food.
 
