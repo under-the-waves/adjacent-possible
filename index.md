@@ -41,10 +41,10 @@ Level 5 represents comprehensive knowledge and highly developed skills in a doma
 
 Each guide addresses a fundamental life domain through the same systematic approach:
 
-- [Sleep]({{ site.baseurl }}/sleep) – Optimizing rest, recovery, and energy
-- [Fitness]({{ site.baseurl }}/fitness) – Building physical capability and resilience
-- [Food & Nutrition]({{ site.baseurl }}/nutrition) – Fueling your body and mind
-- [Housework]({{ site.baseurl }}/housework) – Creating an environment that supports your goals
+- [Sleep]({{ site.baseurl }}/sleep)
+- [Fitness]({{ site.baseurl }}/fitness)
+- [Food & Nutrition]({{ site.baseurl }}/nutrition)
+- [Housework]({{ site.baseurl }}/housework)
 
 ## Forthcoming areas
 
