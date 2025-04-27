@@ -1,5 +1,5 @@
 [← Back to Level 3](level-3)
-## Level 4: Thorough Sleep Optimization
+## Level 4: Excellence
 
 This level represents sleep capabilities that exceed 95% of the population.
 
@@ -37,4 +37,4 @@ This level represents sleep capabilities that exceed 95% of the population.
 - **Tools**: Sleep tracker, smart lighting or timers, quality bedding
 
 ## Next Steps
-Continue to [Level 5](level-5)
+Continue to [Level 5: Mastery](level-5)
