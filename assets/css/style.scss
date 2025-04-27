@@ -13,6 +13,8 @@
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
@@ -31,6 +33,57 @@
 .navbar .logo {
   font-weight: bold;
   font-size: 18px;
+}
+
+/* Site navigation styles */
+.site-nav {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-button {
+  background-color: #155799;
+  color: white;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav-button:hover {
+  background-color: #0e3b68;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1001;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+
+.nav-menu.visible {
+  display: block;
+}
+
+.nav-menu a {
+  color: black !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 14px;
+}
+
+.nav-menu a:hover {
+  background-color: #f1f1f1;
 }
 
 /* Restore Cayman styling */
