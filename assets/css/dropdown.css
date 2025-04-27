@@ -1,7 +1,8 @@
-/* Basic styling for the dropdown - FIXED */
+/* Basic styling for the dropdown */
 #lifeAreasWrapper {
   position: relative;
   display: inline-block;
+  z-index: 9999; /* Ensure high z-index */
 }
 
 #lifeAreasButton {
