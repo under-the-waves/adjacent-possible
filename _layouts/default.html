@@ -9,20 +9,13 @@
     {% include head-custom.html %}
     
     <style>
-      /* Keep the debug box */
-      .debug-box {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        background-color: red;
-        color: white;
-        padding: 10px;
-        z-index: 999999;
-        border: 2px solid black;
+      /* Adblocker-friendly navigation styling */
+      .site-nav {
+        display: inline-block;
+        position: relative;
       }
       
-      /* Button styling */
-      .nav-dropdown-btn {
+      .nav-button {
         background-color: #155799;
         color: white;
         padding: 14px 16px;
@@ -32,79 +25,71 @@
         font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       
-      /* This is the key change - make the dropdown fixed position */
-      #fixedDropdown {
+      .nav-menu {
         display: none;
-        position: fixed;
-        left: 150px; /* Position relative to button - may need adjustment */
-        top: 50px; /* Position right below navbar - may need adjustment */
-        background-color: white;
-        border: 3px solid red; /* Very visible border */
-        width: 200px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-        z-index: 1000000; /* Ultra high z-index */
-        padding: 5px;
+        position: relative;
+        top: 0;
+        margin-top: 5px;
+        background-color: #f9f9f9;
+        width: 160px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        /* Avoid terms like "dropdown" that might trigger blockers */
       }
       
-      #fixedDropdown a {
+      .nav-menu.visible {
         display: block;
-        padding: 10px;
-        color: black !important;
-        text-decoration: none;
-        margin: 2px 0;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
       }
       
-      #fixedDropdown a:hover {
-        background-color: #ddd;
+      .nav-menu a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: 14px;
       }
+      
+      .nav-menu a:hover {
+        background-color: #f1f1f1;
+      }
+      
+      /* Note: avoiding terms like "popup", "dropdown", "ad", etc. in class names */
     </style>
   </head>
   <body>
     
-    <!-- Debug box to verify positioning and z-index are working -->
-    <div class="debug-box">Debug Box - If you see this, z-index and positioning work</div>
-    
-    <!-- Fixed position dropdown that will appear regardless of layout issues -->
-    <div id="fixedDropdown">
-      <a href="{{ site.baseurl }}/housework/">Housework</a>
-      <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-      <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
-      <a href="{{ site.baseurl }}/sleep/">Sleep</a>
-    </div>
-    
     <nav class="navbar">
       <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
       
-      <button onclick="toggleFixedDropdown()" class="nav-dropdown-btn">Life Areas ▾</button>
+      <div class="site-nav">
+        <button id="navButton" class="nav-button">Life Areas ▾</button>
+        <div id="navMenu" class="nav-menu">
+          <a href="{{ site.baseurl }}/housework/">Housework</a>
+          <a href="{{ site.baseurl }}/fitness/">Fitness</a>
+          <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
+          <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+        </div>
+      </div>
     </nav>
 
     <script>
-      function toggleFixedDropdown() {
-        console.log("Toggle function called");
-        var dropdown = document.getElementById('fixedDropdown');
-        if (dropdown.style.display === 'block') {
-          dropdown.style.display = 'none';
-          console.log("Dropdown hidden");
-        } else {
-          dropdown.style.display = 'block';
-          console.log("Dropdown shown");
-        }
-      }
-      
-      // Close dropdown when clicking elsewhere
-      document.addEventListener('click', function(e) {
-        var dropdown = document.getElementById('fixedDropdown');
-        var button = document.querySelector('.nav-dropdown-btn');
-        
-        if (e.target !== button && e.target !== dropdown) {
-          dropdown.style.display = 'none';
-        }
-      });
-      
       document.addEventListener('DOMContentLoaded', function() {
-        console.log("DOM loaded with fixed dropdown approach");
+        var button = document.getElementById('navButton');
+        var menu = document.getElementById('navMenu');
+        
+        if (button && menu) {
+          button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('visible');
+          });
+          
+          document.addEventListener('click', function(e) {
+            if (e.target !== button) {
+              menu.classList.remove('visible');
+            }
+          });
+        }
       });
     </script>
     
