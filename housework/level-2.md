@@ -2,64 +2,39 @@
 # Housework
 ## Level 2: Fundamentals
 
-This level represents the core fundamentals that deliver maximum benefit for minimal effort—applying the 80/20 principle to home management.
+This level represents the core fundamentals that deliver maximum benefit for minimal effort - applying the 80/20 principle to home management.
 
 ### Benchmarks
-- **Cleanliness and Hygiene**: 
-  - No visible dust on surfaces
-  - Bathroom and kitchen sanitized weekly
-  - Floors vacuumed/mopped weekly
-  - No health hazards (mold, pests, unsafe conditions)
+- **Cleanliness and Hygiene**: No visible dust on surfaces; floors cleaned regularly; no health hazards present
+- **Organisation and Storage**: Daily-use items have consistent locations; major walkways and surfaces free of clutter
+- **Home Maintenance**: Basic maintenance schedule exists; critical home systems functioning properly
+- **Efficiency**: 3-4 hours weekly maintenance time; essential tools organised and accessible
 
-- **Organization and Storage**:
-  - Daily-use items have consistent, accessible locations
-  - Major walkways and surfaces free of clutter
-  - Basic sorting system for incoming items (mail, purchases)
-  - 80% of items can be located within 1 minute
-
-- **Home Maintenance and Systems**:
-  - Basic maintenance schedule exists
-  - Critical home systems functioning properly
-  - Simple cleaning routines established
-  - Emergency contacts documented
-
-- **Time and Resource Efficiency**:
-  - 3-4 hours weekly maintenance time
-  - Essential tools and supplies organized and accessible
-  - Basic labor division for multi-person households
-  - Minimal waste of consumable supplies
-
-**Benefits**: Achieving this level establishes the foundation for an efficient home. A study by the National Soap and Detergent Association found that eliminating clutter would reduce housework by 40% ([source](https://www.becomingminimalist.com/the-cost-of-clutter-in-your-home/)). Meanwhile, Princeton University researchers discovered that physical clutter competes for attention, reducing focus and increasing stress ([source](https://www.jneurosci.org/content/31/2/587)). By implementing these fundamentals, you'll eliminate the most significant friction points while investing minimal time—essentially the "low-hanging fruit" of home management.
+### Benefits
+Achieving this level establishes the foundation for an efficient home. Eliminating clutter can reduce housework by up to 40% ([National Soap and Detergent Association](https://www.becomingminimalist.com/the-cost-of-clutter-in-your-home/)). Physical clutter also competes for attention, reducing focus and increasing stress. Common household health hazards like mold, poor ventilation, and certain cleaning chemical combinations can significantly impact respiratory health and overall wellbeing. By implementing these fundamentals, you'll eliminate the most significant friction points while investing minimal time - this level represents the most efficient starting point for home management.
 
 ### Actions (Quick Wins)
+- Identify and eliminate common household health hazards such as mold, pest entry points, and tripping hazards using this [CDC Home Assessment Checklist](https://www.cdc.gov/nceh/lead/publications/housing_assessment/housing_assessment.htm)
+- Implement the "quick wins" identified during your Level 1 assessment
 - Declutter visible spaces using the "four-box method" (keep, donate, store, trash) following [this guide from The Spruce](https://www.thespruce.com/four-box-method-for-decluttering-2648624)
-- Create a "command center" for important household information (calendar, contacts, schedules) using [this FlyLady system](https://www.flylady.net/d/getting-started/flying-lessons/control-journal/)
-- Establish a simple mail processing system (example: [OHIO method - "Only Handle It Once"](https://www.apartmenttherapy.com/the-ohio-method-for-processing-mail-and-paperwork-245271))
-- Implement a daily "reset routine" for main living areas using [Clear & CALM's 10-minute reset](https://clearandcalm.com/home-tidying-routine/)
-- Identify and eliminate health hazards using this [CDC Home Assessment Checklist](https://www.cdc.gov/nceh/lead/publications/housing_assessment/housing_assessment.htm)
-- Set up the basics of the [Clean Mama routine](https://cleanmama.com/start-here/) for consistent maintenance
+- Learn efficient cleaning techniques for different areas using [Clean My Space's comprehensive cleaning tutorials](https://cleanmyspace.com/cleaning-basics/) (1 hour)
+- Set up a simple routine based on [Clean Mama's system](https://cleanmama.com/start-here/), which assigns different cleaning tasks to specific days of the week (Monday: bathroom day, Tuesday: dusting day, etc.)
 
 ### Habits
-- Implement a 10-minute daily reset routine (quick tidy of main living areas)
-- Practice the "one-touch rule" for mail and daily items
-- Maintain clear counters and surfaces in kitchen and bathrooms
-- Address spills and messes immediately rather than letting them accumulate
-- Run one load of dishes and one load of laundry when needed (avoid buildup)
-- Perform weekly cleaning of essential areas (bathrooms, kitchen)
-- Manage trash and recycling on a consistent schedule
-- Put items away immediately after use
+- Complete a 10-minute daily reset of main living areas (tidying surfaces and putting items back in place)
+- Follow the "clean as you go" principle by handling messes immediately rather than letting them accumulate
+- Maintain a simple laundry system with designated days to prevent overwhelming buildup
 
 ### Costs
 #### Upfront Costs
-- **Time**: 8-12 hours (for initial decluttering and system setup)
+- **Time**: 3-6 hours (for learning cleaning techniques, initial organisation, and system setup – time may vary depending on your starting point)
 - **Money**: Up to $200 total
   - Basic cleaning supplies: $50-75
     * Multi-purpose cleaner: $5-10
-    * Microfiber cloths (pack of 12): $10-15
-    * Vacuum cleaner: $50-100
-    * Broom and dustpan: $10-20
+    * Microfibre cloths (pack of 12): $10-15
+    * Basic vacuum cleaner or broom/dustpan: $75-150
     * Mop and bucket: $15-30
-  - Simple organization tools: $75-100
+  - Simple organisation tools: $75-100
     * Storage bins (set of 6): $20-40
     * Command hooks/strips: $10-20
     * Basic shelving unit: $30-50
@@ -73,15 +48,14 @@ This level represents the core fundamentals that deliver maximum benefit for min
 - **Money**: $10-20 monthly for replacement supplies
 
 #### Key Tools and Appliances
-- **Dishwasher**: If available, saves approximately 230 hours annually compared to hand washing ([source](https://www.energystar.gov/products/appliances/dishwashers))
-  * Run only when full
+- **Dishwasher**: If available, saves approximately 4-5 hours weekly compared to hand washing dishes daily for a family of four ([Energy Star](https://www.energystar.gov/products/appliances/dishwashers))
+  * Learn efficient loading techniques via [this visual guide](https://www.consumerreports.org/dishwashers/how-to-load-a-dishwasher-a5810788398/)
   * Skip pre-rinsing to save water and time
-  * Estimated return: 30 minutes saved weekly
+  * Run only when full for maximum efficiency
 
 - **Washing Machine/Dryer**:
-  * Use concentrated detergents
-  * Implement a simple sorting system nearby
-  * Fold immediately after drying to prevent wrinkles
+  * Implement a simple sorting system using [this laundry organisation guide](https://www.goodhousekeeping.com/home/organizing/tips/a26982/linen-closet-organization/)
+  * Follow these [laundry efficiency tips](https://www.thespruce.com/save-time-and-energy-doing-laundry-1900456) to reduce work
   * Estimated return: 2-3 hours saved weekly compared to laundromat or hand washing
 
 ## Next Steps
