@@ -4,8 +4,6 @@
 
 *"The adjacent possible is a kind of shadow future, hovering on the edges of the present state of things, a map of all the ways in which the present can reinvent itself." – Steven Johnson*
 
-Welcome! This website provides a structured approach to personal development across various life domains. It focuses on identifying and implementing the highest-value improvements to your live for your time, energy, and resources. Each level builds upon the previous one, making new capabilities accessible as foundational skills are established. 
-
 We live in a remarkable time for human development. Never before have we had such understanding of what helps us thrive - from the science of sleep to the psychology of relationships. The internet has democratised this knowledge while technology has created countless tools to help us apply it.
 
 But this wealth of information brings its own challenge: how do we choose what's worthwhile? With an endless stream of books, courses, apps and expert advice, it's hard to know what to prioritise.
