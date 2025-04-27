@@ -1,5 +1,5 @@
 <div class="hero-section">
-  <p class="tagline">A framework for holistic personal development, backed by evidence and following the 80/20 principle</p>
+  <p class="tagline">A framework for holistic and cost-effective personal development, backed by evidence</p>
 </div>
 
 *"The adjacent possible is a kind of shadow future, hovering on the edges of the present state of things, a map of all the ways in which the present can reinvent itself." – Steven Johnson*
