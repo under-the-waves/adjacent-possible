@@ -1,5 +1,5 @@
 [← Back to Level 3](level-3)
-## Level 4: Advanced Food and Nutrition
+## Level 4: Excellence
 
 This level represents food and nutrition capabilities that exceed 95% of households.
 
@@ -42,4 +42,4 @@ This level represents food and nutrition capabilities that exceed 95% of househo
   - Targeted supplements: $50-150 monthly
 
 ## Next Steps
-Continue to [Level 5](level-5)
+Continue to [Level 5: Mastery](level-5)
