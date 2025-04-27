@@ -27,7 +27,7 @@ This level requires no habit changes or financial investment – just a one-time
 - Identify potential obstacles to regular exercise
 
 ### Habits
-- No new habits required at this level—just awareness and planning
+- No new habits required at this level – just awareness and planning
 - Continue any current physical activity
 
 ### Costs
