@@ -11,16 +11,15 @@
   <body>
     
 <nav class="navbar">
-  <a href="{{ site.baseurl }}/" class="logo">Adjacent Possible</a>
+  <!-- Logo with image -->
+  <div class="logo-container">
+    <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Logo" class="nav-logo">
+    <a href="{{ site.baseurl }}/" class="logo">Adjacent Possible</a>
+  </div>
   
   <div class="spacer"></div>
   
-  <div class="direct-links">
-    <a href="{{ site.baseurl }}/housework/">Housework</a>
-    <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-    <a href="{{ site.baseurl }}/nutrition/">Food & Nutrition</a>
-    <a href="{{ site.baseurl }}/sleep/">Sleep</a>
-  </div>
+  <!-- Remove the direct-links div completely -->
   
   <div class="site-nav">
     <button id="navButton" class="nav-button">Life Areas ▾</button>
