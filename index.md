@@ -14,6 +14,10 @@ The Adjacent Possible is built on three foundational principles:
 - **Focus on low-hanging fruit and the 80/20 rule** to get the highest benefits for your time and money
 - **A holistic approach** to personal development, ensuring important areas aren't neglected
 
+## Individual Differences and Values
+
+People have different values, circumstances, and starting points. What works well for one person may not work for another based on personal priorities, available resources and specific life situations. While these guides provide principles that are likely to benefit most people, your mileage may vary. Take only what is useful and adapt it to your own life values.
+
 ## The Five-Level Framework
 
 Each guide breaks down progress into five distinct stages, allowing you to identify your current position and plan your next steps:
@@ -33,14 +37,6 @@ Level 4 represents advanced development that few people achieve. This level ofte
 ### Level 5: Mastery
 Level 5 represents comprehensive knowledge and highly developed skills in a domain. While relatively rare, this level is achieved by those who dedicate substantial time and consistent effort to an area. It typically involves extensive knowledge, refined systems, and a deep understanding of the subject matter, putting performance roughly in the top 1%.
 
-## Individual Differences and Values
-
-People have different values, circumstances, and starting points. What works well for one person may not work for another based on individual biology, personal priorities, available resources, and specific life situations. The guides provide principles that benefit most people while acknowledging these differences, focusing on approaches that can be adapted to individual circumstances.
-
-## Strategic Choices
-
-While one could pursue improvement in every life area, thoughtful living means making intentional choices about which domains deserve focus. This might involve identifying current bottlenecks, considering personal values, recognizing areas with potential positive spillover effects, and evaluating where time and effort would create the most meaningful change.
-
 ## Start Exploring
 
 Each guide addresses a fundamental life domain through the same systematic approach:
@@ -50,27 +46,11 @@ Each guide addresses a fundamental life domain through the same systematic appro
 - [Food & Nutrition]({{ site.baseurl }}/nutrition) – Fueling your body and mind
 - [Housework]({{ site.baseurl }}/housework) – Creating an environment that supports your goals
 
-<h2 class="section-title">Life Areas</h2>
-<div class="life-areas-grid">
-  <div class="life-area-card">
-    <h3>Sleep</h3>
-    <p>Optimizing rest, recovery, and energy</p>
-    <a href="{{ site.baseurl }}/sleep" class="area-link">Explore Sleep</a>
-  </div>
-  <div class="life-area-card">
-    <h3>Fitness</h3>
-    <p>Building physical capability and resilience</p>
-    <a href="{{ site.baseurl }}/fitness" class="area-link">Explore Fitness</a>
-  </div>
-  <!-- Similar cards for other areas -->
-</div>
-
-
 ## Forthcoming areas
 
-- Relationships
 - Finances
 - Productivity
 - Mental well-being
+- Relationships
 - Learning & knowledge
 - Career development
