@@ -1,5 +1,4 @@
 <div class="hero-section">
-  <h1>Adjacent Possible</h1>
   <p class="tagline">A framework for holistic personal development, backed by evidence and following the 80/20 principle</p>
 </div>
 
