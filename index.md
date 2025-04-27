@@ -19,8 +19,8 @@ These guides aim to provide evidence-backed approaches to improving our lives, i
 
 The Adjacent Possible is built on three foundational principles:
 
-- **Evidence-based interventions** supported by research
-- **Focus on low-hanging fruit and the 80/20 rule** to get the highest benefits for your time and money
+- **Evidence-based** interventions
+- **Using the 80/20 rule** to get the highest benefits for your time and money
 - **A holistic approach** to personal development, ensuring important areas aren't neglected
 
 ## Individual Differences and Values
