@@ -6,6 +6,12 @@
 
 Welcome! This website provides a structured approach to personal development across various life domains. It focuses on identifying and implementing the highest-value improvements to your live for your time, energy, and resources. Each level builds upon the previous one, making new capabilities accessible as foundational skills are established. 
 
+We live in a remarkable time for human development. Never before have we had such understanding of what helps us thrive - from the science of sleep to the psychology of relationships. The internet has democratised this knowledge while technology has created countless tools to help us apply it.
+
+But this wealth of information brings its own challenge: how do we choose what's worthwhile? With an endless stream of books, courses, apps and expert advice, it's hard to know what to prioritise.
+
+These guides aim to provide evidence-backed approaches to improving our lives, identifying specific actions and resources that provide the greatest benefits relative to their costs in time, money and energy.
+
 ## Core Principles
 
 The Adjacent Possible is built on three foundational principles:
