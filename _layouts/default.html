@@ -8,55 +8,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
     
-    <!-- Custom styles that override everything else -->
     <style>
-      /* Force dropdown to be visible with !important */
-      .dropdown-menu-container {
-        position: relative;
-        display: inline-block;
-      }
-      
-      .dropdown-button {
-        background-color: #155799;
-        color: white;
-        padding: 14px 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-      
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9 !important;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 99999 !important;
-        left: 0;
-        top: 100%;
-        border: 2px solid #000 !important; /* Very visible border for debugging */
-      }
-      
-      .dropdown-content.show {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      }
-      
-      .dropdown-content a {
-        color: black !important;
-        padding: 12px 16px !important;
-        text-decoration: none !important;
-        display: block !important;
-        text-align: left !important;
-      }
-      
-      .dropdown-content a:hover {
-        background-color: #ddd !important;
-      }
-      
-      /* Debug box that will help us see if anything is visible */
+      /* Keep the debug box */
       .debug-box {
         position: fixed;
         bottom: 10px;
@@ -67,6 +20,45 @@
         z-index: 999999;
         border: 2px solid black;
       }
+      
+      /* Button styling */
+      .nav-dropdown-btn {
+        background-color: #155799;
+        color: white;
+        padding: 14px 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      
+      /* This is the key change - make the dropdown fixed position */
+      #fixedDropdown {
+        display: none;
+        position: fixed;
+        left: 150px; /* Position relative to button - may need adjustment */
+        top: 50px; /* Position right below navbar - may need adjustment */
+        background-color: white;
+        border: 3px solid red; /* Very visible border */
+        width: 200px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        z-index: 1000000; /* Ultra high z-index */
+        padding: 5px;
+      }
+      
+      #fixedDropdown a {
+        display: block;
+        padding: 10px;
+        color: black !important;
+        text-decoration: none;
+        margin: 2px 0;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+      }
+      
+      #fixedDropdown a:hover {
+        background-color: #ddd;
+      }
     </style>
   </head>
   <body>
@@ -74,54 +66,45 @@
     <!-- Debug box to verify positioning and z-index are working -->
     <div class="debug-box">Debug Box - If you see this, z-index and positioning work</div>
     
+    <!-- Fixed position dropdown that will appear regardless of layout issues -->
+    <div id="fixedDropdown">
+      <a href="{{ site.baseurl }}/housework/">Housework</a>
+      <a href="{{ site.baseurl }}/fitness/">Fitness</a>
+      <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
+      <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+    </div>
+    
     <nav class="navbar">
       <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
       
-      <div class="dropdown-menu-container">
-        <button class="dropdown-button" id="lifeAreasDropdownBtn">Life Areas ▾</button>
-        <div class="dropdown-content" id="lifeAreasDropdownContent">
-          <a href="{{ site.baseurl }}/housework/">Housework</a>
-          <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-          <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
-          <a href="{{ site.baseurl }}/sleep/">Sleep</a>
-        </div>
-      </div>
+      <button onclick="toggleFixedDropdown()" class="nav-dropdown-btn">Life Areas ▾</button>
     </nav>
 
     <script>
-      // Wait for the DOM to be fully loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        console.log("DOM fully loaded");
-        
-        var dropdownBtn = document.getElementById('lifeAreasDropdownBtn');
-        var dropdownContent = document.getElementById('lifeAreasDropdownContent');
-        
-        console.log("Button element:", dropdownBtn);
-        console.log("Dropdown content element:", dropdownContent);
-        
-        if (dropdownBtn && dropdownContent) {
-          // Add click event listener to button
-          dropdownBtn.addEventListener('click', function(e) {
-            console.log("Button clicked");
-            e.stopPropagation();
-            
-            // Toggle dropdown visibility
-            dropdownContent.classList.toggle('show');
-            
-            // Log dropdown state for debugging
-            console.log("Dropdown visible:", dropdownContent.classList.contains('show'));
-            console.log("Dropdown style:", getComputedStyle(dropdownContent).display);
-          });
-          
-          // Close dropdown when clicking elsewhere
-          document.addEventListener('click', function(e) {
-            if (e.target !== dropdownBtn) {
-              dropdownContent.classList.remove('show');
-            }
-          });
+      function toggleFixedDropdown() {
+        console.log("Toggle function called");
+        var dropdown = document.getElementById('fixedDropdown');
+        if (dropdown.style.display === 'block') {
+          dropdown.style.display = 'none';
+          console.log("Dropdown hidden");
         } else {
-          console.error("Dropdown elements not found");
+          dropdown.style.display = 'block';
+          console.log("Dropdown shown");
         }
+      }
+      
+      // Close dropdown when clicking elsewhere
+      document.addEventListener('click', function(e) {
+        var dropdown = document.getElementById('fixedDropdown');
+        var button = document.querySelector('.nav-dropdown-btn');
+        
+        if (e.target !== button && e.target !== dropdown) {
+          dropdown.style.display = 'none';
+        }
+      });
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM loaded with fixed dropdown approach");
       });
     </script>
     
