@@ -40,4 +40,4 @@ At this level, you gain crucial self-awareness that eliminates guesswork and est
   * [Google Sheets](https://www.google.com/sheets/about/) for basic inventory
 
 ## Next Steps
-Continue to [Level 2: Fundamentals](level-2)
+Continue to [Level 2: Foundations](level-2)
