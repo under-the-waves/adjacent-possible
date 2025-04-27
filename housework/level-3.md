@@ -1,6 +1,6 @@
 [← Back to Level 2](level-2)
 # Housework
-## Level 3: Proficient
+## Level 3: Proficiency
 
 This level represents home management capabilities that exceed 80% of households.
 
@@ -82,4 +82,5 @@ This level represents home management capabilities that exceed 80% of households
   * Enables seamless delegation in multi-person households
   * Eliminates need for physical planning sessions
 
+## Next Steps
 Continue to [Level 4](level-4)
