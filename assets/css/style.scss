@@ -284,10 +284,11 @@
 .logo-container {
   display: flex;
   align-items: center;
+  padding: 5px 0; /* Add some vertical padding */
 }
 
 .nav-logo {
-  height: 30px; /* Adjust height as needed */
+  height: 45px; /* Adjust height as needed */
   width: auto;
   margin-right: 10px;
   margin-left: 16px;
@@ -302,4 +303,62 @@
 /* Remove the direct-links styles since we're no longer using them */
 .direct-links {
   display: none;
+}
+
+/* Hero section with logo on left and text on right */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              linear-gradient(120deg, #082B45, #0D4D56);
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  flex: 0 0 30%;
+  text-align: center;
+  padding-right: 2rem;
+}
+
+.hero-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px; /* Set maximum height */
+}
+
+.hero-content {
+  flex: 0 0 65%;
+  z-index: 2;
+  text-align: left;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align: left;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: white;
+  text-align: left;
+}
+
+/* Make responsive for smaller screens */
+@media (max-width: 768px) {
+  .hero-logo, .hero-content {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .hero-section h1, .tagline {
+    text-align: center;
+  }
 }
