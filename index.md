@@ -21,7 +21,7 @@ Each guide breaks down progress into five distinct stages, allowing you to ident
 ### Level 1: Awareness
 Level 1 requires minimal investment—typically 1 hour of time with no financial cost. It focuses on understanding why this area matters, what's possible to achieve, assessing your current capabilities, and creating a simple improvement plan.
 
-### Level 2: Fundamentals
+### Level 2: Foundations
 Level 2 applies the 80/20 principle—implementing the vital 20% of actions that deliver 80% of results. This typically requires about 5 hours of time and approximately $200 in basic tools or resources, resulting in significant improvement with minimal lifestyle disruption.
 
 ### Level 3: Proficiency
