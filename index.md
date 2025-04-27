@@ -3,7 +3,6 @@
     <img src="{{ site.baseurl }}/assets/images/AP-logo.png" alt="Adjacent Possible Logo">
   </div>
   <div class="hero-content">
-    <h1>Adjacent Possible</h1>
     <p class="tagline">A framework for holistic and cost-effective personal development, backed by evidence</p>
   </div>
 </div>
