@@ -1,5 +1,6 @@
 [← Back to Level 2](level-2)
-## Level 3: Reaching the Top 20%
+# Fitness
+## Level 3: Profiency
 
 This level represents fitness capabilities that exceed 80% of the general population.
 
@@ -63,4 +64,4 @@ This level represents fitness capabilities that exceed 80% of the general popula
   - Foam roller, resistance bands, mobility tools
   - Quality lifting shoes or sport-specific footwear
 
-Continue to [Level 4](level-4)
+Continue to [Level 4: Excellence](level-4)
