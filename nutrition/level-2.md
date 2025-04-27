@@ -40,4 +40,4 @@ This level represents the core fundamentals that deliver maximum benefit for min
   - Storage containers: $30-40
 
 ## Next Steps
-Continue to [Level 3: Top 20%](level-3)
+Continue to [Level 3: Proficiency](level-3)
