@@ -1,5 +1,6 @@
 [← Back to Level 4](level-4)
-## Level 5: The Elite 1%
+# Fitness
+## Level 5: Mastery
 
 This level represents the pinnacle of fitness achievement, comparable to competitive athletes or fitness professionals.
 
