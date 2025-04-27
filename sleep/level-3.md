@@ -1,5 +1,5 @@
 [← Back to Level 2](level-2)
-## Level 3: Solid Sleep Optimisation
+## Level 3: Proficiency
 
 This level represents sleep capabilities that exceed 80% of the population.
 
@@ -53,4 +53,4 @@ This level represents sleep capabilities that exceed 80% of the population.
   - Quality sleep mask
 
 ## Next Steps
-Continue to [Level 4](level-4)
+Continue to [Level 4: Excellence](level-4)
