@@ -13,12 +13,7 @@ We live in a remarkable time for human development. Never before have we had suc
 
 But this wealth of information brings its own challenge: how do we choose what's worthwhile? With an endless stream of books, courses, apps and expert advice, it's hard to know what to prioritise.
 
-These guides aim to provide evidence-backed approaches to improving our lives, identifying specific actions and resources that provide the greatest benefits relative to their costs in time, money and energy.
-
-## Core Principles
-
-The Adjacent Possible is built on three foundational principles:
-
+These guides aim to help improve our lives according to three foundational principles:
 - **Evidence-based** interventions
 - **Using the 80/20 rule** to get the highest benefits for your time and money
 - **A holistic approach** to personal development, ensuring important areas aren't neglected
