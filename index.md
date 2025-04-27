@@ -15,8 +15,8 @@ But this wealth of information brings its own challenge: how do we choose what's
 
 These guides aim to help improve our lives according to three foundational principles:
 - **Evidence-based** interventions
-- **Using the 80/20 rule** to get the highest benefits for your time and money
-- **A holistic approach** to personal development, ensuring important areas aren't neglected
+- **Using the 80/20 rule** to get the most benefit for your time and money
+- **A holistic approach** ensuring important areas aren't neglected
 
 ## Individual Differences and Values
 
