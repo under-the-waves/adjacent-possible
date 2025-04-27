@@ -1,4 +1,4 @@
-# [Food and Nutrition](index)
+# Food and Nutrition
 ## Level 1: Awareness
 
 This level requires no habit changes or financial investment—just assessment and planning.
