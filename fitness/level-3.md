@@ -64,4 +64,5 @@ This level represents fitness capabilities that exceed 80% of the general popula
   - Foam roller, resistance bands, mobility tools
   - Quality lifting shoes or sport-specific footwear
 
+## Next Steps
 Continue to [Level 4: Excellence](level-4)
