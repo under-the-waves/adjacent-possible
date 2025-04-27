@@ -45,7 +45,7 @@ While one could pursue improvement in every life area, thoughtful living means m
 
 Each guide addresses a fundamental life domain through the same systematic approach:
 
-- [Sleep](/sleep) – Optimizing rest, recovery, and energy
+- [Sleep]({{ site.baseurl }}/sleep) – Optimizing rest, recovery, and energy
 - [Fitness](/fitness) – Building physical capability and resilience
 - [Food & Nutrition](/nutrition) – Fueling your body and mind
 - [Housework](/housework) – Creating an environment that supports your goals
