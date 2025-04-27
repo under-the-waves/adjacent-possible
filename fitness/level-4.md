@@ -68,4 +68,5 @@ This level represents fitness capabilities that exceed 95% of the general popula
   - Recovery devices (massage gun, compression boots)
   - Advanced training apps with periodization support
 
+## Next Steps
 Continue to [Level 5: Mastery](level-5)
