@@ -1,7 +1,7 @@
 [← Back to Fitness overview](index)
 ## Level 1: Awareness
 
-This level requires no habit changes or financial investment - just a one-time assessment and plan development.
+This level requires no habit changes or financial investment – just a one-time assessment and plan development.
 
 ### Benchmarks
 - Cardiovascular: Understand your current endurance level
