@@ -56,31 +56,6 @@
   });
 </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("Setting up main dropdown");
-    var mainBtn = document.getElementById('lifeAreasDropdownBtn');
-    var mainDropdown = document.getElementById('lifeAreasDropdownContent');
-    
-    if (mainBtn && mainDropdown) {
-      mainBtn.addEventListener('click', function(event) {
-        console.log("Main button clicked");
-        event.stopPropagation(); // Prevent the document click handler from immediately closing it
-        
-        if (mainDropdown.style.display === 'none' || mainDropdown.style.display === '') {
-          mainDropdown.style.display = 'block';
-          console.log("Set main dropdown to block");
-        } else {
-          mainDropdown.style.display = 'none';
-          console.log("Set main dropdown to none");
-        }
-      });
-    } else {
-      console.log("Could not find dropdown elements", {mainBtn, mainDropdown});
-    }
-  });
-</script>
-
 <!-- Debugging information -->
 <div style="background-color: lightblue; padding: 10px; margin: 10px 0;">
   <h4>Debugging Info:</h4>
