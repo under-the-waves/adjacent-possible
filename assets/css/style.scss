@@ -278,3 +278,28 @@
 .area-link:hover {
   text-decoration: underline;
 }
+
+
+/* Logo container with image and text */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 30px; /* Adjust height as needed */
+  width: auto;
+  margin-right: 10px;
+  margin-left: 16px;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Remove the direct-links styles since we're no longer using them */
+.direct-links {
+  display: none;
+}
