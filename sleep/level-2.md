@@ -1,5 +1,5 @@
 [← Back to Level 1](level-1)
-## Level 2: The 80/20 of Sleep Improvement
+## Level 2: Fundamentals
 
 This level focuses on the few key changes that deliver the majority of sleep benefits for minimal effort.
 
@@ -38,4 +38,4 @@ This level focuses on the few key changes that deliver the majority of sleep ben
 - **Tools**: Alarm clock (non-phone if possible)
 
 ## Next Steps
-Continue to [Level 3](level-3)
+Continue to [Level 3: Proficiency](level-3)
