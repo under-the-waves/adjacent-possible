@@ -1,5 +1,6 @@
 [← Back to Level 5](level-5)
-## Level 5: Elite Home Management
+# Housework
+## Level 5: Mastery
 
 This level represents the pinnacle of home management achievement, comparable to professional estate managers.
 
