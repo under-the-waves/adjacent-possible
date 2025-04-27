@@ -1,5 +1,5 @@
 [← Back to Level 2](level-2)
-## Level 3: Optimized Home Management
+## Level 3: Proficient
 
 This level represents home management capabilities that exceed 80% of households.
 
