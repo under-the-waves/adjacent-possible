@@ -84,4 +84,5 @@ This level represents the core fundamentals that deliver maximum benefit for min
   * Fold immediately after drying to prevent wrinkles
   * Estimated return: 2-3 hours saved weekly compared to laundromat or hand washing
 
+## Next Steps
 Continue to [Level 3](level-3)
