@@ -7,45 +7,123 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-    <link rel="stylesheet" href="{{ '/assets/css/dropdown.css' | relative_url }}">
+    
+    <!-- Custom styles that override everything else -->
+    <style>
+      /* Force dropdown to be visible with !important */
+      .dropdown-menu-container {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-button {
+        background-color: #155799;
+        color: white;
+        padding: 14px 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9 !important;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 99999 !important;
+        left: 0;
+        top: 100%;
+        border: 2px solid #000 !important; /* Very visible border for debugging */
+      }
+      
+      .dropdown-content.show {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      
+      .dropdown-content a {
+        color: black !important;
+        padding: 12px 16px !important;
+        text-decoration: none !important;
+        display: block !important;
+        text-align: left !important;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd !important;
+      }
+      
+      /* Debug box that will help us see if anything is visible */
+      .debug-box {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        z-index: 999999;
+        border: 2px solid black;
+      }
+    </style>
   </head>
   <body>
     
-<nav class="navbar">
-  <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
-  
-  <div id="lifeAreasWrapper">
-    <button id="lifeAreasButton">Life Areas ▾</button>
-    <div id="lifeAreasDropdown">
-      <a href="{{ site.baseurl }}/housework/">Housework</a>
-      <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-      <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
-      <a href="{{ site.baseurl }}/sleep/">Sleep</a>
-    </div>
-  </div>
-</nav>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var button = document.getElementById('lifeAreasButton');
-    var dropdown = document.getElementById('lifeAreasDropdown');
+    <!-- Debug box to verify positioning and z-index are working -->
+    <div class="debug-box">Debug Box - If you see this, z-index and positioning work</div>
     
-    if (button && dropdown) {
-      // Toggle dropdown visibility when button is clicked
-      button.onclick = function(event) {
-        event.stopPropagation();
-        dropdown.classList.toggle('active');
-      };
+    <nav class="navbar">
+      <a href="{{ site.baseurl }}/" class="logo">Life Levels</a>
       
-      // Close dropdown when clicking elsewhere
-      document.onclick = function(event) {
-        if (event.target !== button) {
-          dropdown.classList.remove('active');
+      <div class="dropdown-menu-container">
+        <button class="dropdown-button" id="lifeAreasDropdownBtn">Life Areas ▾</button>
+        <div class="dropdown-content" id="lifeAreasDropdownContent">
+          <a href="{{ site.baseurl }}/housework/">Housework</a>
+          <a href="{{ site.baseurl }}/fitness/">Fitness</a>
+          <a href="{{ site.baseurl }}/food/">Food & Nutrition</a>
+          <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      // Wait for the DOM to be fully loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM fully loaded");
+        
+        var dropdownBtn = document.getElementById('lifeAreasDropdownBtn');
+        var dropdownContent = document.getElementById('lifeAreasDropdownContent');
+        
+        console.log("Button element:", dropdownBtn);
+        console.log("Dropdown content element:", dropdownContent);
+        
+        if (dropdownBtn && dropdownContent) {
+          // Add click event listener to button
+          dropdownBtn.addEventListener('click', function(e) {
+            console.log("Button clicked");
+            e.stopPropagation();
+            
+            // Toggle dropdown visibility
+            dropdownContent.classList.toggle('show');
+            
+            // Log dropdown state for debugging
+            console.log("Dropdown visible:", dropdownContent.classList.contains('show'));
+            console.log("Dropdown style:", getComputedStyle(dropdownContent).display);
+          });
+          
+          // Close dropdown when clicking elsewhere
+          document.addEventListener('click', function(e) {
+            if (e.target !== dropdownBtn) {
+              dropdownContent.classList.remove('show');
+            }
+          });
+        } else {
+          console.error("Dropdown elements not found");
         }
-      };
-    }
-  });
-</script>
+      });
+    </script>
     
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
