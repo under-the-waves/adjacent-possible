@@ -36,4 +36,5 @@ This level requires no habit changes or financial investment – just a one-time
 - Money: $0
 - Tools: Free apps like Google Fit, Apple Health, or MyFitnessPal for basic tracking
 
+## Next Steps
 Continue to [Level 2: Fundamentals](level-2)
