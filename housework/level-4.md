@@ -1,35 +1,16 @@
 [← Back to Level 3](level-3)
 # Housework
 ## Level 4: Excellence
-
 This level represents home management capabilities that exceed 95% of households.
 
 ### Benchmarks
-- **Cleanliness and Hygiene**: 
-  - Professional-level cleanliness throughout home
-  - Specialized cleaning protocols for different materials
-  - Preventative cleaning systems eliminate most dirt accumulation
-  - All cleaning processes optimized and documented
+- **Cleanliness and Hygiene**: Professional-level cleanliness throughout home; specialised cleaning protocols for different materials
+- **Organisation and Storage**: Custom storage solutions for specific needs; inventory management systems track possessions
+- **Home Maintenance**: Comprehensive preventative maintenance protocol; digital documentation of all home systems
+- **Efficiency**: 3-4 hours weekly maintenance time (through outsourcing and automation); strategic outsourcing of high-effort tasks
 
-- **Organization and Storage**:
-  - Custom storage solutions for specific needs
-  - 100% of items have logical, accessible homes
-  - Inventory management systems track possessions
-  - Storage optimized for specific household workflows
-
-- **Home Maintenance and Systems**:
-  - Comprehensive preventative maintenance protocol
-  - Professional relationships for specialized services
-  - Digital documentation of all home systems
-  - Automated monitoring of critical systems
-
-- **Time and Resource Efficiency**:
-  - 3-4 hours weekly maintenance time (through outsourcing and automation)
-  - Strategic outsourcing of high-effort tasks
-  - High-efficiency tools for remaining manual work
-  - Sophisticated supply management system
-
-**Benefits**: At Level 4, home management becomes nearly invisible. A 2021 survey by the American Cleaning Institute found that smart home technology can reduce cleaning time by up to 30% ([source](https://www.cleaninginstitute.org/newsroom/releases/survey-shows-smart-home-technology-changing-cleaning-habits)). Meanwhile, the Harvard Business Review reported that strategic outsourcing of household tasks provides one of the highest "happiness returns" on any expenditure ([source](https://hbr.org/2017/03/buying-time-promotes-happiness)). The reduced weekly time commitment doesn't indicate less thoroughness—rather, it represents exceptional efficiency through automation, outsourcing, and systems optimization.
+### Benefits
+At Level 4, home management requires significantly less hands-on time. Smart home technology can reduce cleaning time by up to 30% ([American Cleaning Institute](https://www.cleaninginstitute.org/)). Strategic outsourcing of household tasks provides one of the highest "happiness returns" on any expenditure ([Harvard Business Review](https://hbr.org/2017/03/buying-time-promotes-happiness)). The reduced weekly time commitment doesn't indicate less thoroughness - rather, it represents efficiency through automation, outsourcing, and systems optimisation.
 
 ### Actions
 - Implement a smart home ecosystem with voice-controlled assistants (Amazon Alexa or Google Home)
@@ -39,17 +20,15 @@ This level represents home management capabilities that exceed 95% of households
 - Conduct a professional home efficiency audit (energy, water, workflow)
 - Set up automated reordering systems using smart sensors and subscription services
 - Create a sophisticated task delegation system using [Monday.com](https://monday.com/) or [ClickUp](https://clickup.com/)
-- Develop personalized cleaning protocols based on material types and usage patterns
 
 ### Habits
 - Maintain oversight of outsourced services through digital management tools
-- Conduct quarterly system optimization reviews
-- Use chatbots or AI assistants (Claude, ChatGPT) to refine household systems
+- Conduct quarterly system optimisation reviews
+- Use chatbots or AI assistants to refine household systems
 - Implement data-driven improvements using smart home analytics
 - Practice zero-based scheduling for household management time
 - Regularly evaluate ROI on current services and systems
 - Scale systems up/down based on current life demands
-- Optimize task batching for maximum efficiency
 
 ### Costs
 #### Upfront Costs
@@ -64,9 +43,9 @@ This level represents home management capabilities that exceed 95% of households
     * High-end robot vacuum/mop combo: $300-600
     * Cordless vacuum: $200-400
     * Steam cleaner: $100-200
-  - Custom organization: $300-600
+  - Custom organisation: $300-600
     * Custom closet system: $200-400
-    * Specialized storage solutions: $100-200
+    * Specialised storage solutions: $100-200
   - Digital systems: $200-400
     * Premium app subscriptions: $100-200
     * Digital home management platform: $100-200
@@ -75,16 +54,15 @@ This level represents home management capabilities that exceed 95% of households
 - **Time**: 3-4 hours weekly (approximately 25% less than Level 3 through efficiency gains)
 - **Money**: $1,000-3,000 annually
   - Professional cleaning service (bi-weekly): $300-600/year
-  - Specialized maintenance services: $300-500/year
+  - Specialised maintenance services: $300-500/year
   - Lawn/garden service (if applicable): $200-800/year
   - Premium subscriptions and services: $200-400/year
 
 #### Key Tools and Automation
 - **Advanced Robot Vacuums**:
-  * Self-emptying models (Roomba i7+/j7+ or Roborock S7) that map multiple rooms
+  * Self-emptying models ([Roomba i7+/j7+](https://www.irobot.com/) or [Roborock S7](https://us.roborock.com/)) that map multiple rooms
   * Can be scheduled or triggered via voice commands or routines
   * Reduces manual vacuuming by 90%
-  * Most cost-effective outsourcing investment ([source](https://www.nytimes.com/wirecutter/reviews/best-robot-vacuum/))
 
 - **Smart Home Integration**:
   * Automated routines (e.g., morning/evening sequences)
@@ -95,7 +73,7 @@ This level represents home management capabilities that exceed 95% of households
 - **AI Tools for Home Management**:
   * Use ChatGPT/Claude to generate cleaning checklists, standard operating procedures, inventory systems
   * AI-powered apps like Notion AI to maintain home documentation
-  * Smart photo cataloging using Google Photos for home inventory
+  * Smart photo cataloguing using Google Photos for home inventory
 
 ## Next Steps
 Continue to [Level 5](level-5)
