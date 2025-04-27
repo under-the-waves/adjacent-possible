@@ -65,4 +65,5 @@ This level requires no habit changes or financial investment—just assessment a
   * [Tody](https://todyapp.com/) (free version) for time tracking
   * [Google Sheets](https://www.google.com/sheets/about/) for basic inventory
 
+## Next Steps
 Continue to [Level 2: Fundamentals](level-2)
