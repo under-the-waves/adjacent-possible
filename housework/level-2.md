@@ -1,6 +1,6 @@
 [← Back to Level 1](level-1)
 # Housework
-## Level 2: Fundamentals
+## Level 2: Foundations
 
 This level represents the core fundamentals that deliver maximum benefit for minimal effort - applying the 80/20 principle to home management.
 
