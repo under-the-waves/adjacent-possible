@@ -1,72 +1,45 @@
 [← Back to Level 3](level-3)
 # Fitness
 ## Level 4: Excellence
-
 This level represents fitness capabilities that exceed 95% of the general population.
 
 ### Benchmarks
-- Cardiovascular:
-  - Run 2.4km in under 9:30 (men) or 11:00 (women)
-  - VO2 max in "excellent" category for age group:
-    - Men: 45-50+ ml/kg/min
-    - Women: 40-45+ ml/kg/min
-  - Strong endurance across multiple modalities (swimming, cycling, running)
-- Strength:
-  - Men: Deadlift 2x bodyweight, bench press 1.5x bodyweight, squat 1.75x bodyweight
-  - Women: Deadlift 1.75x bodyweight, bench press 1x bodyweight, squat 1.5x bodyweight
-  - Perform 30+ consecutive push-ups
-  - Complete 12+ pull-ups (men) or 8+ pull-ups (women)
-  - Excellent technique in Olympic lifts or complex movements
-- Flexibility:
-  - Advanced mobility in all major joints
-  - Full overhead squat with proper alignment
-  - Achieve difficult yoga positions with proper form
-- Body Composition:
-  - Men: 10-13% body fat
-  - Women: 16-19% body fat
-  - Significant muscle development
-  - Year-round leanness with controlled seasonal fluctuations
-- Movement Quality:
-  - Perform complex movement patterns under fatigue
-  - Excellent work capacity across diverse time domains
-  - Quick recovery between intense efforts
-  - Expert coordination in sport-specific movements
+- **Cardiovascular**: Run 2.4km in under 9:30 (men) or 11:00 (women); VO2 max in "excellent" category for age group (45-50+ ml/kg/min for men, 40-45+ ml/kg/min for women)
+- **Strength**: Deadlift 2x bodyweight (men) or 1.75x bodyweight (women); perform 30+ push-ups and 12+ pull-ups (men) or 8+ pull-ups (women)
+- **Performance**: Execute complex movement patterns under fatigue; demonstrate excellent work capacity across diverse time domains; quick recovery between intense efforts
+- **Body Composition**: Maintain 10-13% body fat (men) or 16-19% body fat (women) with significant muscle development
 
-**Benefits**: At this level, your fitness becomes a superpower. You possess physical capabilities that open doors to any recreational activity or sport at competitive levels. Your body has optimal hormonal function, exceptional recovery capabilities, and significant resistance to injury and disease. Research indicates this fitness level correlates with biological aging 10-15 years younger than chronological age, optimized brain function (including heightened neuroplasticity), and maximum longevity potential. You've reached a level where your physical capacity rarely if ever limits your life experiences, providing exceptional freedom and capability for any physical challenge.
+### Benefits
+At this level, your fitness opens doors to any recreational activity or sport at competitive levels. Your body has optimal hormonal function, exceptional recovery capabilities, and significant resistance to injury and disease. This fitness level correlates with biological ageing 10-15 years younger than chronological age, optimised brain function, and maximum longevity potential.
 
 ### Actions
 - Get professional assessment from certified strength coach or exercise physiologist
-- Consider metabolic testing for precise training zones
-- Develop periodized training plan spanning multiple mesocycles
+- Consider metabolic testing for precise training zones through services like [InsideTracker](https://www.insidetracker.com/)
+- Develop periodised training plan spanning multiple mesocycles using principles from [Renaissance Periodization](https://renaissanceperiodization.com/)
 - Establish benchmark testing protocol with regular assessment
 - Learn advanced movement techniques from qualified coach
-- Set up systems to track recovery metrics
+- Set up systems to track recovery metrics using apps like [HRV4Training](https://www.hrv4training.com/)
 
 ### Habits
-- Follow periodized training with distinct phases (hypertrophy, strength, power, etc.)
-  - Programs: Conjugate method, PHAT/PHUL, sport-specific programming
+- Follow periodised training with distinct phases (hypertrophy, strength, power, etc.)
 - Train 5-6 days per week with strategic intensity distribution
-  - Tools: Training Peaks, Final Surge for planning/tracking
 - Incorporate sport-specific or goal-specific specialty work
-  - Resources: specialized coaches or Catalyst Athletics, Juggernaut Training
-- Implement sophisticated recovery protocols
-  - Tools: Whoop, HRV4Training, or other recovery tracking
-- Regular mobility and prehabilitation work
-  - Resources: Kelly Starrett's protocols, FRC (Functional Range Conditioning)
-- Maintain optimal sleep and nutrition (addressed in separate guides)
+- Implement sophisticated recovery protocols including HRV monitoring
+- Practice regular mobility and prehabilitation work using techniques from [Functional Range Conditioning](https://functionalanatomyseminars.com/)
+- Maintain optimal sleep (7-9 hours) and nutrition with precise macronutrient targets
 
 ### Costs
-- Time: 8-10 hours weekly
-- Money: $1000-3000 annually
+- **Time**: 8-10 hours weekly
+- **Money**: $1000-3000 annually
   - Advanced gym membership: $600-1200/year
-  - Specialized equipment: $300-800
+  - Specialised equipment: $300-800
   - Possible coaching: $500-1500/year
   - Recovery tools: $200-500
-- Tools:
+- **Tools**:
   - Comprehensive fitness tracker (Garmin, Whoop, Polar)
-  - Specialized training equipment for chosen modality
+  - Specialised training equipment for chosen modality
   - Recovery devices (massage gun, compression boots)
-  - Advanced training apps with periodization support
+  - Advanced training apps with periodisation support
 
 ## Next Steps
 Continue to [Level 5: Mastery](level-5)
