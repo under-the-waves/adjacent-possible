@@ -3,10 +3,6 @@
   <p class="tagline">A framework for holistic personal development, backed by evidence and following the 80/20 principle</p>
 </div>
 
-# Adjacent Possible
-
-**A framework for holistic personal development, backed by evidence and following the 80/20 principle**
-
 *"The adjacent possible is a kind of shadow future, hovering on the edges of the present state of things, a map of all the ways in which the present can reinvent itself." – Steven Johnson*
 
 The Adjacent Possible provides a structured approach to personal development across various life domains. It focuses on identifying and implementing the highest-value improvements to your live for your time, energy, and resources. Each level builds upon the previous one, making new capabilities accessible as foundational skills are established. 
