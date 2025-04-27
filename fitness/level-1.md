@@ -10,7 +10,7 @@ This level requires no habit changes or financial investment – just a one-time
 - Body composition: Have a rough estimate of your current status
 - Balance: Recognize your stability capabilities
 
-**Benefits**: At this level, you gain self-awareness and direction—the essential foundations for any fitness journey. Understanding your starting point eliminates guesswork, prevents injury from attempting inappropriate activities, and allows you to set realistic goals. This awareness alone correlates with a 60% higher likelihood of maintaining consistent physical activity according to behavior change research.
+**Benefits**: At this level, you gain self-awareness and direction – the essential foundations for any fitness journey. Understanding your starting point eliminates guesswork, prevents injury from attempting inappropriate activities, and allows you to set realistic goals. This awareness alone correlates with a 60% higher likelihood of maintaining consistent physical activity according to behavior change research.
 
 ### Actions (One-Time Tasks)
 - Complete these simple self-assessments:
