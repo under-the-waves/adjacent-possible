@@ -97,4 +97,5 @@ This level represents home management capabilities that exceed 95% of households
   * AI-powered apps like Notion AI to maintain home documentation
   * Smart photo cataloging using Google Photos for home inventory
 
+## Next Steps
 Continue to [Level 5](level-5)
