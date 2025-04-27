@@ -1,0 +1,26 @@
+// Navigation dropdown functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Get references to the button and menu
+  const navButton = document.getElementById('navButton');
+  const navMenu = document.getElementById('navMenu');
+  
+  // Check if both elements exist
+  if (navButton && navMenu) {
+    // Toggle menu visibility when button is clicked
+    navButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      navMenu.classList.toggle('visible');
+      console.log('Menu toggled');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navButton.contains(event.target) && !navMenu.contains(event.target)) {
+        navMenu.classList.remove('visible');
+      }
+    });
+  } else {
+    console.error('Navigation elements not found');
+  }
+});
