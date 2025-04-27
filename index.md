@@ -1,4 +1,4 @@
-# The Adjacent Possible
+# Adjacent Possible
 
 **A framework for holistic personal development, backed by evidence and following the 80/20 principle**
 
