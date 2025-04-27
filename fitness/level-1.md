@@ -35,4 +35,4 @@ At this level, you gain self-awareness and direction – the essential foundatio
 - **Tools**: Free apps like [Google Fit](https://www.google.com/fit/), [Apple Health](https://www.apple.com/ios/health/), or [MyFitnessPal](https://www.myfitnesspal.com) for basic tracking
 
 ## Next Steps
-Continue to [Level 2: Fundamentals](level-2)
+Continue to [Level 2: Foundations](level-2)
