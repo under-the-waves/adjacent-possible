@@ -1,4 +1,5 @@
 [← Back to Fitness overview](index)
+# Fitness
 ## Level 1: Awareness
 
 This level requires no habit changes or financial investment – just a one-time assessment and plan development.
