@@ -1,5 +1,5 @@
 [← Back to Level 2](level-2)
-## Level 3: Optimised Food and Nutrition
+## Level 3: Proficiency
 
 This level represents food and nutrition capabilities that exceed 80% of households.
 
@@ -51,4 +51,4 @@ This level represents food and nutrition capabilities that exceed 80% of househo
   - Basic supplements (if needed): $20-50 monthly
 
 ## Next Steps
-Continue to [Level 4](level-4)
+Continue to [Level 4: Excellence](level-4)
