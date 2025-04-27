@@ -1,5 +1,11 @@
 <div class="hero-section">
-  <p class="tagline">A framework for holistic and cost-effective personal development, backed by evidence</p>
+  <div class="hero-logo">
+    <img src="{{ site.baseurl }}/assets/images/AP-logo.png" alt="Adjacent Possible Logo">
+  </div>
+  <div class="hero-content">
+    <h1>Adjacent Possible</h1>
+    <p class="tagline">A framework for holistic and cost-effective personal development, backed by evidence</p>
+  </div>
 </div>
 
 *"The adjacent possible is a kind of shadow future, hovering on the edges of the present state of things, a map of all the ways in which the present can reinvent itself." – Steven Johnson*
