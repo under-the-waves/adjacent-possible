@@ -1,6 +1,6 @@
 [← Back to Level 1](level-1)
 # Fitness
-## Level 2: Establishing the Foundations
+## Level 2: Foundations
 
 This level represents the "minimum effective dose" for significant health benefits—the 20% of effort that delivers 80% of results.
 
@@ -43,4 +43,4 @@ This level represents the "minimum effective dose" for significant health benefi
   - YouTube channels: Fitness Blender, Yoga with Adriene, HASfit
   - Equipment: Resistance bands, 1-2 pairs of dumbbells or kettlebells
 
-Continue to [Level 3](level-3)
+Continue to [Level 3: Proficiency](level-3)
