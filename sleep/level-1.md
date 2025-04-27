@@ -35,4 +35,4 @@ This level requires no habit changes or financial investment—just assessment a
 - **Tools**: Free smartphone apps (Sleep Cycle, SleepScore) or simple paper sleep journal
 
 ## Next Steps
-Continue to [Level 2: Fundamentals](level-2)
+Continue to [Level 2: Foundations](level-2)
