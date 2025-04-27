@@ -1,4 +1,5 @@
 [← Back to Sleep overview](index)
+# Sleep
 ## Level 1: Awareness
 
 This level requires no habit changes or financial investment—just assessment and planning.
