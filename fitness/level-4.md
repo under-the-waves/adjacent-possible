@@ -1,5 +1,6 @@
 [← Back to Level 3](level-3)
-## Level 4: Entering the Top 5%
+# Fitness
+## Level 4: Excellence
 
 This level represents fitness capabilities that exceed 95% of the general population.
 
@@ -67,4 +68,4 @@ This level represents fitness capabilities that exceed 95% of the general popula
   - Recovery devices (massage gun, compression boots)
   - Advanced training apps with periodization support
 
-Continue to [Level 5](level-5)
+Continue to [Level 5: Mastery](level-5)
