@@ -24,6 +24,9 @@ Each guide follows a [Five-Level Framework]({{ site.baseurl }}/5-levels/), a sys
 
 People have different values, circumstances, and starting points. What works well for one person may not work for another based on personal priorities, available resources and specific life situations. While these guides provide principles that are likely to benefit most people, your mileage may vary. Take only what is useful and adapt it to your own life values.
 
+## How to Use These Guides
+These guides help you systematically improve different areas of your life by identifying the most cost-effective interventions at your current level. Whether you're looking to ensure you haven't missed any obvious low-cost improvements, find the best resources for your skill level, understand where you stand relative to others, or see what's possible with dedicated effort, each guide provides a clear roadmap. The goal isn't to reach Level 5 in every area - simply achieving Level 2 across most domains would be a worthwhile goal, as it would indicate you're taking advantage of all the "low-hanging fruit" while not neglecting important aspects of your life.
+
 ## Start Exploring
 
 Each guide addresses a fundamental life domain through the same systematic approach:
