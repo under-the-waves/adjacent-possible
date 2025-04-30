@@ -361,3 +361,23 @@
     text-align: center;
   }
 }
+
+/* Restore the direct-links styles */
+.direct-links {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.direct-links a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: inline-block;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.direct-links a:hover {
+  background-color: #333333;
+}
