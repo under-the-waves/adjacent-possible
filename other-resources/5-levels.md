@@ -1,6 +1,7 @@
 ---
 layout: default
-title: The Five-Level Framework
+title: The 5 Levels
+permalink: /5-levels/
 ---
 
 # The Five-Level Framework
