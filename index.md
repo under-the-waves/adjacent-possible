@@ -18,12 +18,11 @@ These guides aim to help improve our lives according to three foundational princ
 - **Using the 80/20 rule** to get the most benefit for your time and money
 - **A holistic approach** ensuring important areas aren't neglected
 
+Each guide follows a [Five-Level Framework]({{ site.baseurl }}/5-levels/), a systematic approach to improvement that helps you identify where you are and what to focus on next. The framework provides a clear progression path from basic awareness to mastery in any area of life.
+
 ## Individual Differences and Values
 
 People have different values, circumstances, and starting points. What works well for one person may not work for another based on personal priorities, available resources and specific life situations. While these guides provide principles that are likely to benefit most people, your mileage may vary. Take only what is useful and adapt it to your own life values.
-
-## Our Approach
-Each guide follows a [Five-Level Framework]({{ site.baseurl }}/5-levels/), a systematic approach to improvement that helps you identify where you are and what to focus on next. The framework provides a clear progression path from basic awareness to mastery in any area of life.
 
 ## Start Exploring
 
