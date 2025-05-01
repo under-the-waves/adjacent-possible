@@ -8,15 +8,24 @@ Beyond internal benefits, fitness transforms physical appearance, sculpting the 
 
 Perhaps most importantly, fitness [extends both lifespan and "healthspan"](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61031-9/fulltext)—the period of life spent in good health. Regular exercise helps maintain independence, mobility, and [cognitive function](https://www.sciencedirect.com/science/article/abs/pii/S1087079214000811) well into advanced age, fundamentally changing the experience of getting older. These combined benefits make fitness one of the highest-leverage investments you can make in your quality of life.
 
-## Different Paths, Different Goals
+## Fitness values
+There's no one-size-fits-all approach to fitness. Your optimal path depends on which aspects of fitness you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations:
 
-There's no one-size-fits-all approach to fitness. Your optimal path depends on your current level, personal preferences, age, specific goals, and available resources. This guide focuses on evidence-based approaches that benefit most people across five core components:
+### Health & Longevity (35%)
+Fitness that supports long-term wellbeing and disease prevention. This includes cardiovascular health, maintaining muscle mass for healthy aging, joint integrity, and metabolic health. People who prioritise this value focus on sustainable practices that provide health benefits with minimal injury risk.
 
-1. **Cardiovascular endurance**
-2. **Muscular strength and endurance**
-3. **Flexibility and mobility**
-4. **Body composition**
-5. **Balance and coordination**
+### Physical Performance (30%)
+Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills. This value emphasises what your body can do rather than how it looks. Those who prioritise performance may focus on sport-specific training, measurable improvements in capacity, or achieving particular physical feats.
+
+### Appearance (20%)
+Physical aesthetics including muscle definition, body composition, and overall physique. While appearance changes often accompany health and performance improvements, some training approaches specifically optimise for visual results. Those who prioritise this value may focus more on specific muscle development, fat loss protocols, or physique-oriented goals.
+
+### Enjoyment & Psychological Benefits (15%)
+The pleasure, mental health benefits, and positive experiences derived from physical activity. This includes stress reduction, mood enhancement, community connection, and the inherent satisfaction of movement itself. Those who prioritise this value select activities they genuinely enjoy and that support their mental wellbeing.
+
+Your approach will also be influenced by your current fitness level, age, specific goals, and available resources. This guide focuses on evidence-based principles that benefit most people across five core components: cardiovascular endurance, muscular strength and endurance, flexibility and mobility, body composition, and balance and coordination.
+
+_Note: Your own priorities may differ from the weightings used in this guide. Some trade-offs exist between these values—for example, optimising purely for performance might require sacrificing some aspects of long-term health._
 
 ## Levels
 - [Level 1: Awareness](level-1)
