@@ -8,14 +8,14 @@ This guide presents a progressive 5-level approach to sleep optimization, from b
 
 ## Sleep Values
 There's no universal standard for sleep optimization. Your optimal approach depends on what aspects of sleep you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations:
-Daily Functioning (50%)
 
+### Daily Functioning (50%)
 Sleep that enhances your immediate cognitive and physical performance. This includes mental alertness, energy levels, focus, mood regulation, and physical recovery. People who prioritize this value focus on sleep practices that consistently deliver noticeable improvements in how they think, feel, and perform throughout the day.
-Long-term Health (30%)
 
+### Long-term Health (30%)
 Sleep that supports disease prevention, longevity, and brain health over time. This includes reducing inflammation, supporting immune function, maintaining hormonal balance, and protecting against cognitive decline. Those who prioritize health may focus on sleep duration consistency and quality even when immediate benefits aren't obvious.
-Comfort & Experience (20%)
 
+### Comfort & Experience (20%)
 The subjective quality and enjoyment of your sleep experience. This includes ease of falling asleep, staying asleep throughout the night, and waking feeling refreshed. It also encompasses the comfort of your sleep environment and the pleasure of pre-sleep routines. Those who prioritize this value focus on creating pleasant, relaxing sleep experiences.
 
 Your approach will also be influenced by your chronotype (natural tendency toward morningness or eveningness), age, health conditions, work schedule, family responsibilities, and environmental constraints. This guide focuses on evidence-based principles that benefit most people across five core components: sleep duration and consistency, sleep environment optimization, sleep preparation routines, circadian rhythm alignment, and sleep quality monitoring.
