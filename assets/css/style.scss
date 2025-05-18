@@ -407,6 +407,31 @@
   width: calc(100% - 30px);
 }
 
+/* Style for parent link during hover */
+.dropdown-item:hover .parent-link {
+  background-color: #333333;
+  color: white !important;
+}
+
+/* Make the arrow area visually distinct */
+.expand-icon {
+  font-size: 16px; /* Bigger arrow */
+  padding: 10px; /* Add padding around the arrow */
+  border-left: 1px solid #666; /* Add a subtle separator line */
+}
+
+/* Style for arrow during hover */
+.dropdown-item:hover .expand-icon {
+  background-color: #444444; /* Slightly different shade for the arrow area */
+  color: white;
+}
+
+/* Make submenu items use same highlight color as parent */
+.submenu a:hover {
+  background-color: #333333;
+  color: white !important;
+}
+
 .dropdown-item .expand-icon {
   position: absolute;
   right: 12px;
