@@ -1,5 +1,4 @@
-layout: default
-title: Life Areas
+---layout: default title: Life Areas---
 Explore All Life Areas
 Each area of life follows our systematic five-level framework, providing clear benchmarks and cost-effective recommendations based on the 80/20 principle.
 <div class="life-areas-grid">
