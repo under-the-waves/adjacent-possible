@@ -500,4 +500,24 @@
     text-align: center;
   }
 }
+
+/* Pure CSS dropdown styles */
+.dropdown-toggle {
+  display: none;
+}
+
+.parent-link-label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.dropdown-toggle:checked ~ .submenu {
+  display: block;
+}
+
+.dropdown-toggle:checked ~ .parent-link-label .expand-icon {
+  transform: rotate(90deg);
+}
 }
