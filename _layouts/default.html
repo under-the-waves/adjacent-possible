@@ -225,33 +225,36 @@
     <!-- Load the JavaScript at the end for better performance -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Menu toggle
     const navButton = document.getElementById('navButton');
     const navMenu = document.getElementById('navMenu');
     
+    // Toggle main menu
     navButton.addEventListener('click', function(e) {
       e.preventDefault();
       navMenu.classList.toggle('visible');
     });
     
     // Close when clicking outside
-    document.onclick = function(e) {
-      if (e.target !== navButton && !navButton.contains(e.target) && 
-          !navMenu.contains(e.target)) {
+    document.addEventListener('click', function(e) {
+      if (!navButton.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove('visible');
       }
-    };
+    });
     
-    // Find all expand icons and add click handlers
-    var expandIcons = document.querySelectorAll('.expand-icon');
-    for (var i = 0; i < expandIcons.length; i++) {
-      expandIcons[i].onclick = function(e) {
+    // Use event delegation for submenu toggles
+    navMenu.addEventListener('click', function(e) {
+      // Check if the clicked element is an expand icon
+      if (e.target.classList.contains('expand-icon')) {
         e.preventDefault();
         e.stopPropagation();
-        var parent = this.parentNode;
-        parent.classList.toggle('active');
-      };
-    }
+        
+        // Find the parent dropdown-item and toggle its active class
+        const dropdownItem = e.target.closest('.dropdown-item');
+        if (dropdownItem) {
+          dropdownItem.classList.toggle('active');
+        }
+      }
+    });
   });
 </script>
   </body>
