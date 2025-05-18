@@ -225,44 +225,33 @@
     <!-- Load the JavaScript at the end for better performance -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Main dropdown toggle
+    // Menu toggle
     const navButton = document.getElementById('navButton');
     const navMenu = document.getElementById('navMenu');
     
-    if (navButton && navMenu) {
-      navButton.addEventListener('click', function(e) {
+    navButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      navMenu.classList.toggle('visible');
+    });
+    
+    // Close when clicking outside
+    document.onclick = function(e) {
+      if (e.target !== navButton && !navButton.contains(e.target) && 
+          !navMenu.contains(e.target)) {
+        navMenu.classList.remove('visible');
+      }
+    };
+    
+    // Find all expand icons and add click handlers
+    var expandIcons = document.querySelectorAll('.expand-icon');
+    for (var i = 0; i < expandIcons.length; i++) {
+      expandIcons[i].onclick = function(e) {
         e.preventDefault();
         e.stopPropagation();
-        navMenu.classList.toggle('visible');
-        console.log('Menu toggled');
-      });
-      
-      // Close dropdown when clicking elsewhere
-      document.addEventListener('click', function(e) {
-        if (!navButton.contains(e.target) && !navMenu.contains(e.target)) {
-          navMenu.classList.remove('visible');
-        }
-      });
-    } else {
-      console.error('Navigation elements not found');
+        var parent = this.parentNode;
+        parent.classList.toggle('active');
+      };
     }
-    
-    // Submenu toggle functionality
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
-    console.log('Found dropdown items:', dropdownItems.length);
-    
-    dropdownItems.forEach(item => {
-      const expandIcon = item.querySelector('.expand-icon');
-      
-      if (expandIcon) {
-        expandIcon.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          item.classList.toggle('active');
-          console.log('Submenu toggled');
-        });
-      }
-    });
   });
 </script>
   </body>
