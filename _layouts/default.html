@@ -223,26 +223,54 @@
     </main>
 
     <!-- Load the JavaScript at the end for better performance -->
-    <script>
-      // Basic dropdown functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const navButton = document.getElementById('navButton');
-        const navMenu = document.getElementById('navMenu');
+<script>
+  // Basic dropdown functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const navButton = document.getElementById('navButton');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (navButton && navMenu) {
+      navButton.onclick = function(e) {
+        e.preventDefault();
+        navMenu.classList.toggle('visible');
+      };
+      
+      // Close dropdown when clicking elsewhere
+      document.onclick = function(e) {
+        if (e.target !== navButton && !navButton.contains(e.target) && 
+            !navMenu.contains(e.target)) {
+          navMenu.classList.remove('visible');
+        }
+      };
+      
+      // Handle submenu toggles
+      const dropdownItems = document.querySelectorAll('.dropdown-item');
+      
+      dropdownItems.forEach(item => {
+        const expandIcon = item.querySelector('.expand-icon');
         
-        if (navButton && navMenu) {
-          navButton.onclick = function(e) {
+        if (expandIcon) {
+          expandIcon.addEventListener('click', function(e) {
             e.preventDefault();
-            navMenu.classList.toggle('visible');
-          };
+            e.stopPropagation();
+            item.classList.toggle('active');
+          });
           
-          // Close dropdown when clicking elsewhere
-          document.onclick = function(e) {
-            if (e.target !== navButton && !navButton.contains(e.target)) {
-              navMenu.classList.remove('visible');
-            }
-          };
+          // Also toggle when clicking the parent link
+          const parentLink = item.querySelector('.parent-link');
+          if (parentLink) {
+            parentLink.addEventListener('click', function(e) {
+              // Allow the link to work, but also toggle submenu
+              e.stopPropagation();
+              setTimeout(() => {
+                item.classList.toggle('active');
+              }, 0);
+            });
+          }
         }
       });
-    </script>
+    }
+  });
+</script>
   </body>
 </html>
