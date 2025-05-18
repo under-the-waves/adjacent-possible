@@ -27,20 +27,23 @@ People have different values, circumstances, and starting points. What works wel
 ## How to Use These Guides
 These guides help you systematically improve different areas of your life by identifying the most cost-effective interventions at your current level. Whether you're looking to ensure you haven't missed any obvious low-cost improvements, find the best resources for your skill level, understand where you stand relative to others, or see what's possible with dedicated effort, each guide provides a clear roadmap. The goal isn't to reach Level 5 in every area - simply achieving Level 2 across most domains would be a worthwhile goal, as it would indicate you're taking advantage of all the "low-hanging fruit" while not neglecting important aspects of your life.
 
-## Start Exploring
+## Life Areas
 
-Each guide addresses a fundamental life domain through the same systematic approach:
+Each guide addresses a fundamental life domain across 14 categories:
 
-- [Sleep]({{ site.baseurl }}/sleep)
-- [Fitness]({{ site.baseurl }}/fitness)
-- [Food & Nutrition]({{ site.baseurl }}/nutrition)
-- [Housework]({{ site.baseurl }}/housework)
+- [Values]({{ site.baseurl }}/values/)
+- [Purpose]({{ site.baseurl }}/purpose/)
+- [Knowledge]({{ site.baseurl }}/knowledge/)
+- [Learning]({{ site.baseurl }}/learning/)
+- [Environment]({{ site.baseurl }}/environment/)
+- [Finances]({{ site.baseurl }}/finances/)
+- [Career]({{ site.baseurl }}/career/)
+- [Health]({{ site.baseurl }}/health/)
+- [Relationships]({{ site.baseurl }}/relationships/)
+- [Wellbeing]({{ site.baseurl }}/wellbeing/)
+- [Identity]({{ site.baseurl }}/identity/)
+- [Productivity]({{ site.baseurl }}/productivity/)
+- [Security]({{ site.baseurl }}/security/)
+- [Leisure]({{ site.baseurl }}/leisure/)
 
-## Forthcoming areas
-
-- Finances
-- Productivity
-- Mental well-being
-- Relationships
-- Learning & knowledge
-- Career development
+For a complete overview with detailed subcategories, visit our [Life Areas]({{ site.baseurl }}/life-areas/) page.
