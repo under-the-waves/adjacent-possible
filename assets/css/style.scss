@@ -407,61 +407,30 @@
   width: calc(100% - 30px);
 }
 
-/* Style for parent link during hover */
+.dropdown-item:hover {
+  background-color: #333333; /* Dark grey background for entire item */
+}
+
 .dropdown-item:hover .parent-link {
-  background-color: #333333;
   color: white !important;
 }
 
-/* Make the arrow area visually distinct */
 .expand-icon {
-  font-size: 16px; /* Bigger arrow */
-  padding: 10px; /* Add padding around the arrow */
-  border-left: 1px solid #666; /* Add a subtle separator line */
-}
-
-/* Style for arrow during hover */
-.dropdown-item:hover .expand-icon {
-  background-color: #444444; /* Slightly different shade for the arrow area */
-  color: white;
-}
-
-/* Make submenu items use same highlight color as parent */
-.submenu a:hover {
-  background-color: #333333;
-  color: white !important;
-}
-
-.dropdown-item .expand-icon {
   position: absolute;
   right: 12px;
   top: 14px;
   color: #555;
   cursor: pointer;
   transition: transform 0.3s;
-}
-
-/* Make the entire dropdown item (including arrow) highlight on hover */
-.dropdown-item:hover {
-  background-color: #333333;
-}
-
-/* Make the parent link text color white when hovering over dropdown item */
-.dropdown-item:hover .parent-link {
-  color: white !important;
-}
-
-.dropdown-item.active .expand-icon {
-  transform: rotate(90deg);
-}
-
-/* Make arrow bigger and change color on hover */
-.expand-icon {
-  font-size: 16px; /* Increase size from default */
+  font-size: 16px; /* Bigger arrow */
 }
 
 .dropdown-item:hover .expand-icon {
   color: white;
+}
+
+.dropdown-item.active .expand-icon {
+  transform: rotate(90deg);
 }
 
 .submenu {
@@ -471,9 +440,20 @@
   border-left: 3px solid #eee;
 }
 
-/* Make submenu items use same highlight color as parent */
+.dropdown-item.active .submenu {
+  display: block;
+}
+
+.submenu a {
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  display: block;
+}
+
+/* Make submenu items use EXACTLY the same highlight color as parent */
 .submenu a:hover {
-  background-color: #333333;
+  background-color: #333333 !important;
   color: white !important;
 }
 
