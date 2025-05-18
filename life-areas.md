@@ -2,6 +2,9 @@
 layout: default
 title: Life Areas
 ---
+## Life Areas
+
+Each area of life follows a systematic [five-level framework]({{ site.baseurl }}/5-levels/), providing clear benchmarks and cost-effective recommendations based on the 80/20 principle.
 
 <div class="life-areas-grid">
   <!-- 1. Values -->
