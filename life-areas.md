@@ -4,7 +4,7 @@ title: Life Areas
 ---
 
 ## Explore All Life Areas
-Each area of life follows our systematic five-level framework, providing clear benchmarks and cost-effective recommendations based on the 80/20 principle.
+Each area of life follows a systematic [five-level framework]({{ site.baseurl }}/5-levels/), providing clear benchmarks and cost-effective recommendations based on the 80/20 principle.
 <div class="life-areas-grid">
   <!-- 1. Values -->
   <div class="life-area-card">
@@ -143,13 +143,3 @@ Each area of life follows our systematic five-level framework, providing clear b
     </ul>
   </div>
 </div>
-The Five-Level Framework
-Each life area is organized into a progressive 5-level system:
-
-Level 1: Awareness - Assessment and understanding with no habit changes required
-Level 2: Fundamentals - The core 20% of actions that deliver 80% of results
-Level 3: Proficiency - Capabilities that exceed 80% of the population
-Level 4: Excellence - Capabilities that exceed 95% of the population
-Level 5: Mastery - The top 1% of capabilities in that life area
-
-[Learn more about the 5-level framework →]({{ site.baseurl }}/5-levels/)
