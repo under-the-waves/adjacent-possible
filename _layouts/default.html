@@ -25,18 +25,38 @@
   </div>
   
   <!-- Remove the direct-links div completely -->
-  
-  <div class="site-nav">
-    <button id="navButton" class="nav-button">Life Areas ▾</button>
-    <div id="navMenu" class="nav-menu">
-      <a href="{{ site.baseurl }}/housework/">Housework</a>
-      <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-      <a href="{{ site.baseurl }}/nutrition/">Food & Nutrition</a>
-      <a href="{{ site.baseurl }}/sleep/">Sleep</a>
-    </div>
-  </div>
-</nav>
+
+<!-- Modified navigation dropdown to match exact taxonomy categories -->
+<div class="site-nav">
+  <button id="navButton" class="nav-button">Life Areas ▾</button>
+  <div id="navMenu" class="nav-menu">
+    <!-- Existing implemented areas - keep as is -->
+    <a href="{{ site.baseurl }}/fitness/">Fitness</a>
+    <a href="{{ site.baseurl }}/nutrition/">Food & Nutrition</a>
+    <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+    <a href="{{ site.baseurl }}/housework/">Housework</a>
     
+    <!-- Parent categories from taxonomy (add class="coming-soon" to those not implemented) -->
+    <a href="{{ site.baseurl }}/values/" class="coming-soon">Values</a>
+    <a href="{{ site.baseurl }}/purpose/" class="coming-soon">Purpose</a>
+    <a href="{{ site.baseurl }}/knowledge/" class="coming-soon">Knowledge</a>
+    <a href="{{ site.baseurl }}/learning/" class="coming-soon">Learning</a>
+    <a href="{{ site.baseurl }}/environment/" class="coming-soon">Environment</a>
+    <a href="{{ site.baseurl }}/finances/" class="coming-soon">Finances</a>
+    <a href="{{ site.baseurl }}/career/" class="coming-soon">Career</a>
+    <a href="{{ site.baseurl }}/health/" class="coming-soon">Health</a>
+    <a href="{{ site.baseurl }}/relationships/" class="coming-soon">Relationships</a>
+    <a href="{{ site.baseurl }}/wellbeing/" class="coming-soon">Wellbeing</a>
+    <a href="{{ site.baseurl }}/identity/" class="coming-soon">Identity</a>
+    <a href="{{ site.baseurl }}/productivity/" class="coming-soon">Productivity</a>
+    <a href="{{ site.baseurl }}/security/" class="coming-soon">Security</a>
+    <a href="{{ site.baseurl }}/leisure/" class="coming-soon">Leisure</a>
+    
+    <!-- View All Option -->
+    <a href="{{ site.baseurl }}/life-areas/" class="all-areas-link"><strong>View All Life Areas</strong></a>
+  </div>
+</div>
+      
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
