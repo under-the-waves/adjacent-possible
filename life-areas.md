@@ -1,103 +1,143 @@
 layout: default
 title: Life Areas
-<div class="hero-section">
-  <div class="hero-content">
-    <h1>Life Areas</h1>
-    <p class="tagline">A comprehensive framework covering all aspects of personal development</p>
-  </div>
-</div>
 Explore All Life Areas
-Each area of life follows our systematic five-level framework, providing clear benchmarks and cost-effective recommendations based on the 80/20 principle. Select an area to begin exploring:
+Each area of life follows our systematic five-level framework, providing clear benchmarks and cost-effective recommendations based on the 80/20 principle.
 <div class="life-areas-grid">
-  <!-- Values & Purpose -->
+  <!-- 1. Values -->
   <div class="life-area-card">
-    <h3>Values & Purpose</h3>
-    <p>Develop self-awareness, clarify personal values, and define your life purpose and contribution.</p>
-    <a href="{{ site.baseurl }}/values/" class="area-link">Explore Values & Purpose →</a>
+    <h3><a href="{{ site.baseurl }}/values/">Values</a></h3>
+    <ul>
+      <li>Self-awareness</li>
+      <li>Consciousness</li>
+      <li>Personal values</li>
+    </ul>
   </div>
-  <!-- Knowledge & Learning -->
+  <!-- 2. Purpose -->
   <div class="life-area-card">
-    <h3>Knowledge & Learning</h3>
-    <p>Build cognitive skills, manage information effectively, and develop optimal learning methods.</p>
-    <a href="{{ site.baseurl }}/learning/" class="area-link">Explore Knowledge & Learning →</a>
+    <h3><a href="{{ site.baseurl }}/purpose/">Purpose</a></h3>
+    <ul>
+      <li>Life purpose</li>
+      <li>Global impact</li>
+      <li>Community contribution</li>
+      <li>Ethics</li>
+    </ul>
   </div>
-  <!-- Physical Environment -->
+  <!-- 3. Knowledge -->
   <div class="life-area-card">
-    <h3>Physical Environment</h3>
-    <p>Optimize your living space, possessions, and maintenance systems.</p>
-    <a href="{{ site.baseurl }}/environment/" class="area-link">Explore Environment →</a>
+    <h3><a href="{{ site.baseurl }}/knowledge/">Knowledge</a></h3>
+    <ul>
+      <li>Worldview</li>
+      <li>Media diet</li>
+      <li>Information management</li>
+    </ul>
   </div>
-  <!-- Housework -->
+  <!-- 4. Learning -->
   <div class="life-area-card">
-    <h3>Housework</h3>
-    <p>Create efficient systems for cleaning, organization, and home maintenance.</p>
-    <a href="{{ site.baseurl }}/housework/" class="area-link">Explore Housework →</a>
+    <h3><a href="{{ site.baseurl }}/learning/">Learning</a></h3>
+    <ul>
+      <li>Cognitive skills</li>
+      <li>Life skills</li>
+      <li>Learning methods</li>
+    </ul>
   </div>
-  <!-- Finances -->
+  <!-- 5. Environment -->
   <div class="life-area-card">
-    <h3>Finances</h3>
-    <p>Master budgeting, saving, investing, and long-term financial planning.</p>
-    <a href="{{ site.baseurl }}/finances/" class="area-link">Explore Finances →</a>
+    <h3><a href="{{ site.baseurl }}/environment/">Environment</a></h3>
+    <ul>
+      <li>Housing</li>
+      <li>Possessions</li>
+      <li>Transportation</li>
+      <li>Housework</li>
+    </ul>
   </div>
-  <!-- Career -->
+  <!-- 6. Finances -->
   <div class="life-area-card">
-    <h3>Career</h3>
-    <p>Develop your professional skills, network, and strategic career planning.</p>
-    <a href="{{ site.baseurl }}/career/" class="area-link">Explore Career →</a>
+    <h3><a href="{{ site.baseurl }}/finances/">Finances</a></h3>
+    <ul>
+      <li>Budgeting</li>
+      <li>Saving</li>
+      <li>Investing</li>
+      <li>Planning</li>
+      <li>Tracking</li>
+    </ul>
   </div>
-  <!-- Fitness -->
+  <!-- 7. Career -->
   <div class="life-area-card">
-    <h3>Fitness</h3>
-    <p>Build strength, endurance, flexibility, and overall physical performance.</p>
-    <a href="{{ site.baseurl }}/fitness/" class="area-link">Explore Fitness →</a>
+    <h3><a href="{{ site.baseurl }}/career/">Career</a></h3>
+    <ul>
+      <li>Current work</li>
+      <li>Career planning</li>
+      <li>Networks</li>
+    </ul>
   </div>
-  <!-- Nutrition -->
+  <!-- 8. Health -->
   <div class="life-area-card">
-    <h3>Food & Nutrition</h3>
-    <p>Optimize your diet, cooking skills, and food management systems.</p>
-    <a href="{{ site.baseurl }}/nutrition/" class="area-link">Explore Food & Nutrition →</a>
+    <h3><a href="{{ site.baseurl }}/health/">Health</a></h3>
+    <ul>
+      <li>Fitness</li>
+      <li>Nutrition</li>
+      <li>Preventative health</li>
+      <li>Sleep</li>
+    </ul>
   </div>
-  <!-- Sleep -->
+  <!-- 9. Relationships -->
   <div class="life-area-card">
-    <h3>Sleep</h3>
-    <p>Improve sleep quality, consistency, and recovery through evidence-based methods.</p>
-    <a href="{{ site.baseurl }}/sleep/" class="area-link">Explore Sleep →</a>
+    <h3><a href="{{ site.baseurl }}/relationships/">Relationships</a></h3>
+    <ul>
+      <li>Family</li>
+      <li>Friends</li>
+      <li>Romantic relationships</li>
+    </ul>
   </div>
-  <!-- Relationships -->
+  <!-- 10. Wellbeing -->
   <div class="life-area-card">
-    <h3>Relationships</h3>
-    <p>Build stronger connections with family, friends, and romantic partners.</p>
-    <a href="{{ site.baseurl }}/relationships/" class="area-link">Explore Relationships →</a>
+    <h3><a href="{{ site.baseurl }}/wellbeing/">Wellbeing</a></h3>
+    <ul>
+      <li>Emotional regulation</li>
+      <li>Mental health</li>
+      <li>Stress management</li>
+    </ul>
   </div>
-  <!-- Wellbeing -->
+  <!-- 11. Identity -->
   <div class="life-area-card">
-    <h3>Wellbeing</h3>
-    <p>Enhance emotional regulation, mental health, and stress management skills.</p>
-    <a href="{{ site.baseurl }}/wellbeing/" class="area-link">Explore Wellbeing →</a>
+    <h3><a href="{{ site.baseurl }}/identity/">Identity</a></h3>
+    <ul>
+      <li>Appearance</li>
+      <li>Personality</li>
+      <li>Communication</li>
+      <li>Personal style</li>
+    </ul>
   </div>
-  <!-- Identity & Communication -->
+  <!-- 12. Productivity -->
   <div class="life-area-card">
-    <h3>Identity & Communication</h3>
-    <p>Develop your personal style, communication skills, and authentic self-expression.</p>
-    <a href="{{ site.baseurl }}/identity/" class="area-link">Explore Identity & Communication →</a>
+    <h3><a href="{{ site.baseurl }}/productivity/">Productivity</a></h3>
+    <ul>
+      <li>Organization</li>
+      <li>Systems</li>
+      <li>Time management</li>
+      <li>Goals</li>
+      <li>Habits</li>
+    </ul>
   </div>
-  <!-- Productivity -->
+  <!-- 13. Security -->
   <div class="life-area-card">
-    <h3>Productivity</h3>
-    <p>Create effective systems for organization, time management, and habit formation.</p>
-    <a href="{{ site.baseurl }}/productivity/" class="area-link">Explore Productivity →</a>
+    <h3><a href="{{ site.baseurl }}/security/">Security</a></h3>
+    <ul>
+      <li>Physical safety</li>
+      <li>Emergency preparedness</li>
+      <li>Digital safety</li>
+      <li>Legal matters</li>
+    </ul>
   </div>
-  <!-- Security -->
+  <!-- 14. Leisure -->
   <div class="life-area-card">
-    <h3>Security</h3>
-    <p>Establish systems for physical, digital, and legal protection and preparedness.</p>
-    <a href="{{ site.baseurl }}/security/" class="area-link">Explore Security →</a>
-  </div>
-  <!-- Leisure -->
-  <div class="life-area-card">
-    <h3>Leisure</h3>
-    <p>Cultivate meaningful recreation, creativity, and enjoyable pastimes.</p>
-    <a href="{{ site.baseurl }}/leisure/" class="area-link">Explore Leisure →</a>
+    <h3><a href="{{ site.baseurl }}/leisure/">Leisure</a></h3>
+    <ul>
+      <li>Recreation</li>
+      <li>Creativity</li>
+      <li>Hobbies</li>
+      <li>Entertainment</li>
+    </ul>
   </div>
 </div>
 The Five-Level Framework
