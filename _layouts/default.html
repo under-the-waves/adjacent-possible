@@ -17,23 +17,183 @@
     <a href="{{ site.baseurl }}/" class="logo">Adjacent Possible</a>
   </div>
   
-  <div class="spacer"></div>
-
-  <!-- Add Framework link -->
-  <div class="direct-links">
-    <a href="{{ site.baseurl }}/5-levels/">The 5 levels</a>
-  </div>
-  
-  <!-- Remove the direct-links div completely -->
-  
+  <!-- Life Areas Multilevel Dropdown - Now positioned right after the logo -->
   <div class="site-nav">
     <button id="navButton" class="nav-button">Life Areas ▾</button>
     <div id="navMenu" class="nav-menu">
-      <a href="{{ site.baseurl }}/housework/">Housework</a>
-      <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-      <a href="{{ site.baseurl }}/nutrition/">Food & Nutrition</a>
-      <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+      <!-- Values -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/values/" class="parent-link">Values</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/values/self-awareness/">Self-awareness</a>
+          <a href="{{ site.baseurl }}/values/consciousness/">Consciousness</a>
+          <a href="{{ site.baseurl }}/values/personal-values/">Personal values</a>
+        </div>
+      </div>
+      
+      <!-- Purpose -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/purpose/" class="parent-link">Purpose</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/purpose/life-purpose/">Life purpose</a>
+          <a href="{{ site.baseurl }}/purpose/global-impact/">Global impact</a>
+          <a href="{{ site.baseurl }}/purpose/community-contribution/">Community contribution</a>
+          <a href="{{ site.baseurl }}/purpose/ethics/">Ethics</a>
+        </div>
+      </div>
+      
+      <!-- Knowledge -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/knowledge/" class="parent-link">Knowledge</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/knowledge/worldview/">Worldview</a>
+          <a href="{{ site.baseurl }}/knowledge/media-diet/">Media diet</a>
+          <a href="{{ site.baseurl }}/knowledge/information-management/">Information management</a>
+        </div>
+      </div>
+      
+      <!-- Learning -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/learning/" class="parent-link">Learning</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/learning/cognitive-skills/">Cognitive skills</a>
+          <a href="{{ site.baseurl }}/learning/life-skills/">Life skills</a>
+          <a href="{{ site.baseurl }}/learning/learning-methods/">Learning methods</a>
+        </div>
+      </div>
+      
+      <!-- Environment -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/environment/" class="parent-link">Environment</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/environment/housing/">Housing</a>
+          <a href="{{ site.baseurl }}/environment/possessions/">Possessions</a>
+          <a href="{{ site.baseurl }}/environment/transportation/">Transportation</a>
+          <a href="{{ site.baseurl }}/housework/">Housework</a>
+        </div>
+      </div>
+      
+      <!-- Finances -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/finances/" class="parent-link">Finances</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/finances/budgeting/">Budgeting</a>
+          <a href="{{ site.baseurl }}/finances/saving/">Saving</a>
+          <a href="{{ site.baseurl }}/finances/investing/">Investing</a>
+          <a href="{{ site.baseurl }}/finances/planning/">Planning</a>
+          <a href="{{ site.baseurl }}/finances/tracking/">Tracking</a>
+        </div>
+      </div>
+      
+      <!-- Career -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/career/" class="parent-link">Career</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/career/current-work/">Current work</a>
+          <a href="{{ site.baseurl }}/career/career-planning/">Career planning</a>
+          <a href="{{ site.baseurl }}/career/networks/">Networks</a>
+        </div>
+      </div>
+      
+      <!-- Health -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/health/" class="parent-link">Health</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/fitness/">Fitness</a>
+          <a href="{{ site.baseurl }}/nutrition/">Food & Nutrition</a>
+          <a href="{{ site.baseurl }}/sleep/">Sleep</a>
+          <a href="{{ site.baseurl }}/health/preventative-health/">Preventative health</a>
+        </div>
+      </div>
+      
+      <!-- Relationships -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/relationships/" class="parent-link">Relationships</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/relationships/family/">Family</a>
+          <a href="{{ site.baseurl }}/relationships/friends/">Friends</a>
+          <a href="{{ site.baseurl }}/relationships/romantic-relationships/">Romantic relationships</a>
+        </div>
+      </div>
+      
+      <!-- Wellbeing -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/wellbeing/" class="parent-link">Wellbeing</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/wellbeing/emotional-regulation/">Emotional regulation</a>
+          <a href="{{ site.baseurl }}/wellbeing/mental-health/">Mental health</a>
+          <a href="{{ site.baseurl }}/wellbeing/stress-management/">Stress management</a>
+        </div>
+      </div>
+      
+      <!-- Identity -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/identity/" class="parent-link">Identity</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/identity/appearance/">Appearance</a>
+          <a href="{{ site.baseurl }}/identity/personality/">Personality</a>
+          <a href="{{ site.baseurl }}/identity/communication/">Communication</a>
+          <a href="{{ site.baseurl }}/identity/personal-style/">Personal style</a>
+        </div>
+      </div>
+      
+      <!-- Productivity -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/productivity/" class="parent-link">Productivity</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/productivity/organization/">Organization</a>
+          <a href="{{ site.baseurl }}/productivity/systems/">Systems</a>
+          <a href="{{ site.baseurl }}/productivity/time-management/">Time management</a>
+          <a href="{{ site.baseurl }}/productivity/goals/">Goals</a>
+          <a href="{{ site.baseurl }}/productivity/habits/">Habits</a>
+        </div>
+      </div>
+      
+      <!-- Security -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/security/" class="parent-link">Security</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/security/physical-safety/">Physical safety</a>
+          <a href="{{ site.baseurl }}/security/emergency-preparedness/">Emergency preparedness</a>
+          <a href="{{ site.baseurl }}/security/digital-safety/">Digital safety</a>
+          <a href="{{ site.baseurl }}/security/legal-matters/">Legal matters</a>
+        </div>
+      </div>
+      
+      <!-- Leisure -->
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/leisure/" class="parent-link">Leisure</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/leisure/recreation/">Recreation</a>
+          <a href="{{ site.baseurl }}/leisure/creativity/">Creativity</a>
+          <a href="{{ site.baseurl }}/leisure/hobbies/">Hobbies</a>
+          <a href="{{ site.baseurl }}/leisure/entertainment/">Entertainment</a>
+        </div>
+      </div>
+      
+      <a href="{{ site.baseurl }}/life-areas/" class="all-areas-link"><strong>View All Life Areas</strong></a>
     </div>
+  </div>
+  
+  <div class="spacer"></div>
+  
+  <!-- Add Framework link - Now at the right side -->
+  <div class="direct-links">
+    <a href="{{ site.baseurl }}/5-levels/">The 5 levels</a>
   </div>
 </nav>
     
