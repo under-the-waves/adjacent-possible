@@ -224,52 +224,45 @@
 
     <!-- Load the JavaScript at the end for better performance -->
 <script>
-  // Basic dropdown functionality
   document.addEventListener('DOMContentLoaded', function() {
+    // Main dropdown toggle
     const navButton = document.getElementById('navButton');
     const navMenu = document.getElementById('navMenu');
     
     if (navButton && navMenu) {
-      navButton.onclick = function(e) {
+      navButton.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         navMenu.classList.toggle('visible');
-      };
+        console.log('Menu toggled');
+      });
       
       // Close dropdown when clicking elsewhere
-      document.onclick = function(e) {
-        if (e.target !== navButton && !navButton.contains(e.target) && 
-            !navMenu.contains(e.target)) {
+      document.addEventListener('click', function(e) {
+        if (!navButton.contains(e.target) && !navMenu.contains(e.target)) {
           navMenu.classList.remove('visible');
         }
-      };
-      
-      // Handle submenu toggles
-      const dropdownItems = document.querySelectorAll('.dropdown-item');
-      
-      dropdownItems.forEach(item => {
-        const expandIcon = item.querySelector('.expand-icon');
-        
-        if (expandIcon) {
-          expandIcon.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            item.classList.toggle('active');
-          });
-          
-          // Also toggle when clicking the parent link
-          const parentLink = item.querySelector('.parent-link');
-          if (parentLink) {
-            parentLink.addEventListener('click', function(e) {
-              // Allow the link to work, but also toggle submenu
-              e.stopPropagation();
-              setTimeout(() => {
-                item.classList.toggle('active');
-              }, 0);
-            });
-          }
-        }
       });
+    } else {
+      console.error('Navigation elements not found');
     }
+    
+    // Submenu toggle functionality
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    console.log('Found dropdown items:', dropdownItems.length);
+    
+    dropdownItems.forEach(item => {
+      const expandIcon = item.querySelector('.expand-icon');
+      
+      if (expandIcon) {
+        expandIcon.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          item.classList.toggle('active');
+          console.log('Submenu toggled');
+        });
+      }
+    });
   });
 </script>
   </body>
