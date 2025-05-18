@@ -401,18 +401,12 @@
   padding: 0;
 }
 
-.dropdown-item .parent-link {
+.parent-link {
   display: inline-block;
-  padding-right: 30px; /* Make room for the expand icon */
-  width: calc(100% - 30px);
-}
-
-.dropdown-item:hover {
-  background-color: #333333; /* Dark grey background for entire item */
-}
-
-.dropdown-item:hover .parent-link {
-  color: white !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  width: calc(100% - 50px);
 }
 
 .expand-icon {
@@ -422,54 +416,50 @@
   color: #555;
   cursor: pointer;
   transition: transform 0.3s;
-  font-size: 16px; /* Bigger arrow */
+  padding: 0 8px;
 }
 
-.dropdown-item:hover .expand-icon {
+/* Style for parent link during hover */
+.dropdown-item:hover .parent-link {
+  background-color: #333333;
+  color: white !important;
+}
+
+/* Style for arrow during hover - keep it separate */
+.dropdown-item .expand-icon:hover {
+  background-color: #444444; /* Different shade for the arrow */
   color: white;
 }
 
+/* Arrow rotation when submenu is active */
 .dropdown-item.active .expand-icon {
   transform: rotate(90deg);
 }
 
+/* Submenu styling */
 .submenu {
   display: none;
-  background-color: #f9f9f9;
-  padding-left: 15px;
-  border-left: 3px solid #eee;
-}
-
-.dropdown-item.active .submenu {
-  display: block;
-}
-
-.submenu a {
-  padding: 10px 16px !important;
-  font-size: 13px !important;
-  color: #333 !important;
-  display: block;
-}
-
-/* Make submenu items use EXACTLY the same highlight color as parent */
-.submenu a:hover {
-  background-color: #333333 !important;
-  color: white !important;
-}
-
-.dropdown-item.active .submenu {
-  display: block;
-}
-
-.submenu a {
-  padding: 10px 16px !important;
-  font-size: 13px !important;
-  color: #333 !important;
-  display: block;
-}
-
-.submenu a:hover {
   background-color: #f1f1f1;
+  padding-left: 15px;
+  border-left: 3px solid #ddd;
+}
+
+.dropdown-item.active .submenu {
+  display: block;
+}
+
+.submenu a {
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Make submenu items use same highlight color as parent */
+.submenu a:hover {
+  background-color: #333333;
+  color: white !important;
 }
 
 /* Update navbar positioning styles */
