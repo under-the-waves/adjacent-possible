@@ -20,8 +20,8 @@ These guides aim to help improve our lives according to three foundational princ
 
 Each guide follows a [Five-Level Framework]({{ site.baseurl }}/5-levels/), a systematic approach to improvement that helps you identify where you are and what to focus on next. The framework provides a clear progression path from basic awareness to mastery in any area of life.
 
-<div class="cta-container">
-  <a href="{{ site.baseurl }}/start-here/" class="cta-button">Start Here</a>
-  <a href="{{ site.baseurl }}/prioritisation/low-hanging-fruit/" class="cta-button">Find Quick Wins</a>
-  <a href="{{ site.baseurl }}/life-areas/" class="cta-button">Browse Life Areas</a>
-</div>
+New to the site? [Start here]({{ site.baseurl }}/start-here/) to learn about the framework and how to use it effectively.
+
+Looking for immediate improvements? Take a look at the [quick wins]({{ site.baseurl }}/prioritisation/low-hanging-fruit/) page for high-impact, low-effort actions across all life domains.
+
+Ready to explore specific areas? [Browse the life areas]({{ site.baseurl }}/life-areas/) to find detailed guides for each domain.
