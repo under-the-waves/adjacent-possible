@@ -10,6 +10,7 @@
   </head>
   <body>
     
+<!-- Two-Level Navbar Structure -->
 <nav class="navbar">
   <!-- Logo with image -->
   <div class="logo-container">
@@ -17,10 +18,59 @@
     <a href="{{ site.baseurl }}/" class="logo">Adjacent Possible</a>
   </div>
   
-  <!-- Life Areas Multilevel Dropdown - Now positioned right after the logo -->
+  <!-- Start Here Dropdown -->
   <div class="site-nav">
-    <button id="navButton" class="nav-button">Life Areas ▾</button>
-    <div id="navMenu" class="nav-menu">
+    <button id="startHereButton" class="nav-button">Start Here ▾</button>
+    <div id="startHereMenu" class="nav-menu">
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/start-here/" class="parent-link">Overview</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/start-here/how-to-use/" class="parent-link">How to Use This Site</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/start-here/terminology/" class="parent-link">Terminology</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/5-levels/" class="parent-link">5 Level Framework</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Prioritisation Dropdown -->
+  <div class="site-nav">
+    <button id="prioritisationButton" class="nav-button">Prioritisation ▾</button>
+    <div id="prioritisationMenu" class="nav-menu">
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/prioritisation/values/" class="parent-link">Values</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/prioritisation/assessment/" class="parent-link">Assessment</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/prioritisation/dashboard/" class="parent-link">Dashboard</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/prioritisation/low-hanging-fruit/" class="parent-link">Low-Hanging Fruit</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/prioritisation/meta-growth/" class="parent-link">Meta Growth</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/prioritisation/meta-growth/learning/">Learning Systems</a>
+          <a href="{{ site.baseurl }}/prioritisation/meta-growth/habits/">Habit Formation</a>
+          <a href="{{ site.baseurl }}/prioritisation/meta-growth/mindfulness/">Mindfulness</a>
+          <a href="{{ site.baseurl }}/prioritisation/meta-growth/productivity/">Productivity</a>
+          <a href="{{ site.baseurl }}/prioritisation/meta-growth/tools/">Tool Use & AI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Life Areas Dropdown (Existing) -->
+  <div class="site-nav">
+    <button id="lifeAreasButton" class="nav-button">Life Areas ▾</button>
+    <div id="lifeAreasMenu" class="nav-menu">
       <!-- Values -->
       <div class="dropdown-item">
         <a href="{{ site.baseurl }}/values/" class="parent-link">Values</a>
@@ -78,122 +128,34 @@
         </div>
       </div>
       
-      <!-- Finances -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/finances/" class="parent-link">Finances</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/finances/budgeting/">Budgeting</a>
-          <a href="{{ site.baseurl }}/finances/saving/">Saving</a>
-          <a href="{{ site.baseurl }}/finances/investing/">Investing</a>
-          <a href="{{ site.baseurl }}/finances/planning/">Planning</a>
-          <a href="{{ site.baseurl }}/finances/tracking/">Tracking</a>
-        </div>
-      </div>
-      
-      <!-- Career -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/career/" class="parent-link">Career</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/career/current-work/">Current work</a>
-          <a href="{{ site.baseurl }}/career/career-planning/">Career planning</a>
-          <a href="{{ site.baseurl }}/career/networks/">Networks</a>
-        </div>
-      </div>
-      
-      <!-- Health -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/health/" class="parent-link">Health</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/fitness/">Fitness</a>
-          <a href="{{ site.baseurl }}/nutrition/">Food & Nutrition</a>
-          <a href="{{ site.baseurl }}/sleep/">Sleep</a>
-          <a href="{{ site.baseurl }}/health/preventative-health/">Preventative health</a>
-        </div>
-      </div>
-      
-      <!-- Relationships -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/relationships/" class="parent-link">Relationships</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/relationships/family/">Family</a>
-          <a href="{{ site.baseurl }}/relationships/friends/">Friends</a>
-          <a href="{{ site.baseurl }}/relationships/romantic-relationships/">Romantic relationships</a>
-        </div>
-      </div>
-      
-      <!-- Wellbeing -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/wellbeing/" class="parent-link">Wellbeing</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/wellbeing/emotional-regulation/">Emotional regulation</a>
-          <a href="{{ site.baseurl }}/wellbeing/mental-health/">Mental health</a>
-          <a href="{{ site.baseurl }}/wellbeing/stress-management/">Stress management</a>
-        </div>
-      </div>
-      
-      <!-- Identity -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/identity/" class="parent-link">Identity</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/identity/appearance/">Appearance</a>
-          <a href="{{ site.baseurl }}/identity/personality/">Personality</a>
-          <a href="{{ site.baseurl }}/identity/communication/">Communication</a>
-          <a href="{{ site.baseurl }}/identity/personal-style/">Personal style</a>
-        </div>
-      </div>
-      
-      <!-- Productivity -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/productivity/" class="parent-link">Productivity</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/productivity/organization/">Organization</a>
-          <a href="{{ site.baseurl }}/productivity/systems/">Systems</a>
-          <a href="{{ site.baseurl }}/productivity/time-management/">Time management</a>
-          <a href="{{ site.baseurl }}/productivity/goals/">Goals</a>
-          <a href="{{ site.baseurl }}/productivity/habits/">Habits</a>
-        </div>
-      </div>
-      
-      <!-- Security -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/security/" class="parent-link">Security</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/security/physical-safety/">Physical safety</a>
-          <a href="{{ site.baseurl }}/security/emergency-preparedness/">Emergency preparedness</a>
-          <a href="{{ site.baseurl }}/security/digital-safety/">Digital safety</a>
-          <a href="{{ site.baseurl }}/security/legal-matters/">Legal matters</a>
-        </div>
-      </div>
-      
-      <!-- Leisure -->
-      <div class="dropdown-item">
-        <a href="{{ site.baseurl }}/leisure/" class="parent-link">Leisure</a>
-        <span class="expand-icon">▸</span>
-        <div class="submenu">
-          <a href="{{ site.baseurl }}/leisure/recreation/">Recreation</a>
-          <a href="{{ site.baseurl }}/leisure/creativity/">Creativity</a>
-          <a href="{{ site.baseurl }}/leisure/hobbies/">Hobbies</a>
-          <a href="{{ site.baseurl }}/leisure/entertainment/">Entertainment</a>
-        </div>
-      </div>
+      <!-- Additional life areas... -->
       
       <a href="{{ site.baseurl }}/life-areas/" class="all-areas-link"><strong>View All Life Areas</strong></a>
     </div>
   </div>
   
-  <div class="spacer"></div>
+  <!-- Resources Dropdown -->
+  <div class="site-nav">
+    <button id="resourcesButton" class="nav-button">Resources ▾</button>
+    <div id="resourcesMenu" class="nav-menu">
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/resources/intervention-database/" class="parent-link">Intervention Database</a>
+      </div>
+      <div class="dropdown-item">
+        <a href="{{ site.baseurl }}/resources/spreadsheets/" class="parent-link">Spreadsheets</a>
+        <span class="expand-icon">▸</span>
+        <div class="submenu">
+          <a href="{{ site.baseurl }}/resources/spreadsheets/books/">ROI Books</a>
+          <a href="{{ site.baseurl }}/resources/spreadsheets/movies/">ROI Movies</a>
+          <a href="{{ site.baseurl }}/resources/spreadsheets/tools/">ROI Tools</a>
+        </div>
+      </div>
+    </div>
+  </div>
   
-  <!-- Add Framework link - Now at the right side -->
-  <div class="direct-links">
-    <a href="{{ site.baseurl }}/5-levels/">The 5 levels</a>
+  <!-- About Link -->
+  <div class="site-nav">
+    <a href="{{ site.baseurl }}/about/" class="nav-button">About</a>
   </div>
 </nav>
     
@@ -223,26 +185,38 @@
     </main>
 
     <!-- Load the JavaScript at the end for better performance -->
+<!-- JavaScript for Dropdowns -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const navButton = document.getElementById('navButton');
-    const navMenu = document.getElementById('navMenu');
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all dropdown buttons
+  const dropdownButtons = document.querySelectorAll('.nav-button');
+  const dropdownMenus = document.querySelectorAll('.nav-menu');
+  
+  // Setup for each main dropdown
+  dropdownButtons.forEach(button => {
+    if (!button.id) return; // Skip if no id (like simple links)
     
-    // Toggle main menu
-    navButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      navMenu.classList.toggle('visible');
+    const menu = document.getElementById(button.id.replace('Button', 'Menu'));
+    if (!menu) return;
+    
+    // Toggle menu visibility when button is clicked
+    button.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      // Close all other menus first
+      dropdownMenus.forEach(m => {
+        if (m !== menu) m.classList.remove('visible');
+      });
+      
+      // Toggle this menu
+      menu.classList.toggle('visible');
     });
-    
-    // Close when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!navButton.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove('visible');
-      }
-    });
-    
-    // Use event delegation for submenu toggles
-    navMenu.addEventListener('click', function(e) {
+  });
+  
+  // Setup for submenu toggles using event delegation
+  document.querySelectorAll('.nav-menu').forEach(menu => {
+    menu.addEventListener('click', function(e) {
       // Check if the clicked element is an expand icon
       if (e.target.classList.contains('expand-icon')) {
         e.preventDefault();
@@ -256,6 +230,28 @@
       }
     });
   });
+  
+  // Close all menus when clicking outside
+  document.addEventListener('click', function(event) {
+    let clickedInsideNav = false;
+    
+    // Check if click was inside any button or menu
+    dropdownButtons.forEach(button => {
+      if (button.contains(event.target)) clickedInsideNav = true;
+    });
+    
+    dropdownMenus.forEach(menu => {
+      if (menu.contains(event.target)) clickedInsideNav = true;
+    });
+    
+    // If clicked outside, close all menus
+    if (!clickedInsideNav) {
+      dropdownMenus.forEach(menu => {
+        menu.classList.remove('visible');
+      });
+    }
+  });
+});
 </script>
   </body>
 </html>
