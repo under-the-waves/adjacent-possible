@@ -540,3 +540,151 @@
 .dropdown-toggle:checked ~ .parent-link-label .expand-icon {
   transform: rotate(90deg);
 }
+
+/* Additional CSS for Two-Level Navbar 
+   Add these to your assets/css/style.scss file */
+
+/* Main navbar container - ensure it can accommodate more items */
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+/* Site navigation positioning */
+.site-nav {
+  position: relative;
+  margin: 0 5px;
+}
+
+/* Dropdown button styling */
+.nav-button {
+  background-color: #000000;
+  color: white;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav-button:hover {
+  background-color: #333333;
+}
+
+/* Dropdown menu container */
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1001;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 0;
+  max-height: 80vh; /* Prevent extremely long menus */
+  overflow-y: auto; /* Allow scrolling for long menus */
+}
+
+.nav-menu.visible {
+  display: block;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+
+.dropdown-item .parent-link {
+  display: inline-block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  width: calc(100% - 50px); /* Make room for expand icon */
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Expand icon for submenu toggling */
+.expand-icon {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: transform 0.3s;
+  padding: 0 8px;
+}
+
+.dropdown-item.active .expand-icon {
+  transform: rotate(90deg);
+}
+
+/* Submenu styling */
+.submenu {
+  display: none;
+  background-color: #f1f1f1;
+  padding-left: 15px;
+  border-left: 3px solid #ddd;
+}
+
+.dropdown-item.active .submenu {
+  display: block;
+}
+
+.submenu a {
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Link for viewing all life areas */
+.all-areas-link {
+  display: block;
+  padding: 12px 16px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 8px;
+  color: #007bff !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .site-nav {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .nav-button {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    max-height: none;
+  }
+}
