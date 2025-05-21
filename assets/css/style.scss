@@ -738,3 +738,32 @@
 .dropdown-item:hover .parent-link.completed-guide {
   color: #f48c92 !important;
 }
+
+/* Base styles for completed guides - these should override any existing styles */
+.completed-guide,
+a.completed-guide,
+.parent-link.completed-guide,
+.submenu a.completed-guide {
+  color: #e63946 !important; /* Red color */
+  font-weight: 500; /* Slightly bolder */
+}
+
+/* Hover states for all completed guides */
+.completed-guide:hover,
+a.completed-guide:hover,
+.parent-link.completed-guide:hover,
+.submenu a.completed-guide:hover,
+.dropdown-item:hover .parent-link.completed-guide {
+  color: #f48c92 !important; /* Lighter red on hover */
+}
+
+/* Specifically target submenu links to override any conflicting styles */
+.submenu a.completed-guide {
+  color: #e63946 !important; /* Ensure submenu items are also red */
+}
+
+/* Override any background color changes that might affect text visibility */
+.submenu a.completed-guide:hover {
+  background-color: #333333;
+  color: #f48c92 !important;
+}
