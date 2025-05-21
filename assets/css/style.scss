@@ -711,3 +711,30 @@
   display: flex;
   align-items: center;
 }
+
+/* Style for completed guides */
+.completed-guide {
+  color: #e63946 !important; /* A slightly muted red that works on dark backgrounds */
+  font-weight: 500; /* Make it slightly bolder */
+}
+
+/* Style for parent links with completed subcategories */
+.parent-link.completed-guide {
+  color: #e63946 !important;
+}
+
+/* Make sure the red color persists on hover */
+.completed-guide:hover {
+  color: #f48c92 !important; /* Lighter red on hover */
+}
+
+/* For completed submenu items */
+.submenu a.completed-guide:hover {
+  background-color: #333333;
+  color: #f48c92 !important;
+}
+
+/* For parent links on hover */
+.dropdown-item:hover .parent-link.completed-guide {
+  color: #f48c92 !important;
+}
