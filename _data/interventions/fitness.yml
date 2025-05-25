@@ -179,3 +179,221 @@ bodyweight_training:
     - "Space for bodyweight movements (roughly 6x6 feet clear area)"
     - "Patience for gradual skill progression - strength gains may be slower than weighted training"
     - "Understanding that bodyweight training requires progression through exercise variations"
+
+swimming_training:
+  name: "Swimming Training"
+  description: "Regular swimming sessions 2-3 times per week focusing on technique, endurance, and full-body conditioning"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 8.0
+      expected_score: 7.7
+      justification_potential: "Excellent cardiovascular benefits with minimal joint stress, full-body muscle engagement"
+      justification_expected: "Accounting for 90% adherence rate, low injury risk and high enjoyment factor"
+    performance:
+      potential_score: 7.0
+      expected_score: 6.6
+      justification_potential: "Strong cardiovascular endurance and muscular endurance development across all muscle groups"
+      justification_expected: "Accounting for 90% adherence rate and skill development requirements"
+    appearance:
+      potential_score: 5.5
+      expected_score: 5.2
+      justification_potential: "Moderate body composition improvements, lean muscle development without bulk"
+      justification_expected: "Accounting for 90% adherence rate and moderate caloric expenditure"
+    enjoyment:
+      potential_score: 8.5
+      expected_score: 8.1
+      justification_potential: "High enjoyment from meditative qualities, full-body engagement, and low-impact nature"
+      justification_expected: "Accounting for 90% adherence rate, most people find swimming pleasant once technique improves"
+  
+  resources:
+    upfront_cost: 250
+    upfront_cost_justification: "Swimming gear (goggles, cap, suit) plus pool membership or access fees"
+    ongoing_cost_weekly: 15
+    ongoing_cost_justification: "Pool membership fees and occasional equipment replacement"
+    upfront_time: 8
+    upfront_time_justification: "Learning basic strokes, pool orientation, and establishing routine"
+    ongoing_time_weekly: 3.5
+    ongoing_time_justification: "Three 45-minute sessions plus changing/travel time"
+  
+  prerequisites:
+    - "Basic swimming competency - can swim 25 metres without stopping"
+    - "Access to swimming pool with lap swimming availability"
+    - "No untreated ear infections or skin conditions aggravated by chlorine"
+    - "Comfortable being in water and able to put face underwater"
+
+yoga_practice:
+  name: "Regular Yoga Practice"
+  description: "Consistent yoga practice 3-4 times per week combining flexibility, balance, strength, and mindfulness"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 6.5
+      expected_score: 6.2
+      justification_potential: "Good stress reduction, flexibility maintenance, and injury prevention benefits"
+      justification_expected: "Accounting for 90% adherence rate, accessible and sustainable for most people"
+    performance:
+      potential_score: 5.0
+      expected_score: 4.7
+      justification_potential: "Moderate improvements in flexibility, balance, and functional movement patterns"
+      justification_expected: "Accounting for 90% adherence rate and gradual progress nature"
+    appearance:
+      potential_score: 4.0
+      expected_score: 3.8
+      justification_potential: "Modest body composition changes, improved posture and body awareness"
+      justification_expected: "Accounting for 90% adherence rate and limited muscle building potential"
+    enjoyment:
+      potential_score: 8.0
+      expected_score: 7.6
+      justification_potential: "High satisfaction from mind-body connection, stress relief, and community aspects"
+      justification_expected: "Accounting for 90% adherence rate, strong retention once habit established"
+  
+  resources:
+    upfront_cost: 150
+    upfront_cost_justification: "Yoga mat, props (blocks, strap), and initial class packages or app subscriptions"
+    ongoing_cost_weekly: 8
+    ongoing_cost_justification: "Class fees or premium app subscriptions, occasional prop replacement"
+    upfront_time: 4
+    upfront_time_justification: "Learning basic poses, finding suitable classes or routines"
+    ongoing_time_weekly: 4.0
+    ongoing_time_justification: "Four 60-minute sessions including setup and brief relaxation"
+  
+  prerequisites:
+    - "Basic mobility - can sit cross-legged and reach towards toes"
+    - "No acute back injuries or conditions requiring medical clearance"
+    - "Patience for gradual flexibility and strength improvements"
+    - "Access to classes, online instruction, or willingness to learn independently"
+
+cycling_training:
+  name: "Regular Cycling Training"
+  description: "Structured cycling program 3-4 times per week combining endurance rides, intervals, and recovery sessions"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 7.5
+      expected_score: 7.1
+      justification_potential: "Excellent cardiovascular benefits with low joint impact and outdoor exposure"
+      justification_expected: "Accounting for 85% adherence rate, weather and equipment dependencies"
+    performance:
+      potential_score: 7.5
+      expected_score: 7.1
+      justification_potential: "Strong cardiovascular endurance and lower body power development"
+      justification_expected: "Accounting for 85% adherence rate and progressive training adaptations"
+    appearance:
+      potential_score: 5.0
+      expected_score: 4.7
+      justification_potential: "Moderate lower body muscle development and fat loss from sustained cardio"
+      justification_expected: "Accounting for 85% adherence rate and endurance-focused training"
+    enjoyment:
+      potential_score: 8.0
+      expected_score: 7.6
+      justification_potential: "High enjoyment from outdoor exploration, speed sensation, and social opportunities"
+      justification_expected: "Accounting for 85% adherence rate, weather and mechanical issues impact"
+  
+  resources:
+    upfront_cost: 800
+    upfront_cost_justification: "Quality road or hybrid bike, helmet, basic accessories (lights, pump, repair kit)"
+    ongoing_cost_weekly: 5
+    ongoing_cost_justification: "Maintenance, occasional part replacement, and gear wear"
+    upfront_time: 12
+    upfront_time_justification: "Bike fitting, route planning, safety education, and initial skill development"
+    ongoing_time_weekly: 5.0
+    ongoing_time_justification: "Four sessions averaging 75 minutes including prep and post-ride activities"
+  
+  prerequisites:
+    - "Basic cycling competency - can ride confidently and brake/turn safely"
+    - "Access to safe cycling routes or indoor trainer setup"
+    - "Physical ability to maintain balance and coordinate pedaling/steering"
+    - "Budget for initial bike investment and ongoing maintenance"
+    - "Understanding of basic road safety and cycling rules"
+
+martial_arts_training:
+  name: "Martial Arts Training"
+  description: "Regular martial arts practice 2-3 times per week focusing on technique, conditioning, and mental discipline"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 6.5
+      expected_score: 6.1
+      justification_potential: "Good cardiovascular health, bone density, and injury risk varies by discipline"
+      justification_expected: "Accounting for 85% adherence rate and moderate injury risk in contact styles"
+    performance:
+      potential_score: 7.0
+      expected_score: 6.6
+      justification_potential: "Excellent coordination, agility, power development, and functional movement skills"
+      justification_expected: "Accounting for 85% adherence rate and skill-based progression requirements"
+    appearance:
+      potential_score: 6.0
+      expected_score: 5.7
+      justification_potential: "Good muscle tone, functional strength, and athletic physique development"
+      justification_expected: "Accounting for 85% adherence rate and varied training intensities"
+    enjoyment:
+      potential_score: 8.5
+      expected_score: 8.0
+      justification_potential: "High satisfaction from skill mastery, mental discipline, and community aspects"
+      justification_expected: "Accounting for 85% adherence rate, strong retention due to progression system"
+  
+  resources:
+    upfront_cost: 300
+    upfront_cost_justification: "Uniform/gi, protective equipment, school registration fees, and initial equipment"
+    ongoing_cost_weekly: 20
+    ongoing_cost_justification: "Monthly training fees, testing fees, and equipment maintenance/replacement"
+    upfront_time: 10
+    upfront_time_justification: "Learning basic techniques, school orientation, and understanding training protocols"
+    ongoing_time_weekly: 4.5
+    ongoing_time_weekly_justification: "Three 90-minute sessions including warm-up, technique practice, and conditioning"
+  
+  prerequisites:
+    - "Basic physical coordination and ability to follow complex movement patterns"
+    - "Access to qualified martial arts school or instructor"
+    - "Willingness to accept moderate injury risk and physical contact (varies by style)"
+    - "Patience for skill development and belt/ranking progression systems"
+    - "Respect for traditional training methods and instructor authority"
+
+rock_climbing:
+  name: "Rock Climbing Training"
+  description: "Indoor and/or outdoor climbing 2-3 times per week focusing on technique, strength, and problem-solving"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 6.0
+      expected_score: 5.6
+      justification_potential: "Good functional strength and flexibility, moderate injury risk from falls"
+      justification_expected: "Accounting for 80% adherence rate due to access limitations and injury concerns"
+    performance:
+      potential_score: 7.5
+      expected_score: 7.0
+      justification_potential: "Excellent upper body and core strength, grip strength, and body awareness"
+      justification_expected: "Accounting for 80% adherence rate and progressive skill/strength requirements"
+    appearance:
+      potential_score: 6.5
+      expected_score: 6.1
+      justification_potential: "Strong upper body muscle development, lean athletic physique"
+      justification_expected: "Accounting for 80% adherence rate and specific muscle development patterns"
+    enjoyment:
+      potential_score: 9.0
+      expected_score: 8.4
+      justification_potential: "Extremely high satisfaction from problem-solving, achievement, and adventure aspects"
+      justification_expected: "Accounting for 80% adherence rate, those who continue find it highly engaging"
+  
+  resources:
+    upfront_cost: 400
+    upfront_cost_justification: "Climbing shoes, harness, chalk bag, gym membership or outdoor gear basics"
+    ongoing_cost_weekly: 18
+    ongoing_cost_justification: "Gym fees, gear maintenance, occasional guided trips or new equipment"
+    upfront_time: 15
+    upfront_time_justification: "Safety training, basic technique instruction, and equipment familiarisation"
+    ongoing_time_weekly: 4.0
+    ongoing_time_justification: "Three sessions averaging 80 minutes including preparation and recovery"
+  
+  prerequisites:
+    - "Basic upper body strength - can hang from a bar for 15+ seconds"
+    - "Access to climbing gym or outdoor climbing areas with appropriate safety setup"
+    - "Comfortable with heights and willing to learn proper safety protocols"
+    - "Patient with technical skill development and route problem-solving"
+    - "Budget for ongoing equipment needs and facility access"
