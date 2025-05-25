@@ -13,21 +13,25 @@ title: Progressive Strength Training
 
 ### Health & Longevity
 **Potential Benefit Score: +{{ intervention.values.health.potential_score }}** - {{ intervention.values.health.justification_potential }}
+
 **Expected Benefit Score: +{{ intervention.values.health.expected_score }}** - {{ intervention.values.health.justification_expected }}
 
 ### Performance
 
 **Potential Benefit Score: +{{ intervention.values.performance.potential_score }}** - {{ intervention.values.performance.justification_potential }}
+
 **Expected Benefit Score: +{{ intervention.values.performance.expected_score }}** - {{ intervention.values.performance.justification_expected }}
 
 ### Appearance
 
 **Potential Benefit Score: +{{ intervention.values.appearance.potential_score }}** - {{ intervention.values.appearance.justification_potential }}
+
 **Expected Benefit Score: +{{ intervention.values.appearance.expected_score }}** - {{ intervention.values.appearance.justification_expected }}
 
 ### Enjoyment
 
 **Potential Benefit Score: +{{ intervention.values.enjoyment.potential_score }}** - {{ intervention.values.enjoyment.justification_potential }}
+
 **Expected Benefit Score: +{{ intervention.values.enjoyment.expected_score }}** - {{ intervention.values.enjoyment.justification_expected }}
 
 ## Resource Requirements
