@@ -9,6 +9,7 @@ title: Fitness Recommendations
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .header-section {
@@ -17,12 +18,13 @@ title: Fitness Recommendations
 }
 
 .header-section h1 {
-    color: #155799;
+    color: #000000;
     margin-bottom: 15px;
+    font-weight: normal;
 }
 
 .header-section p {
-    color: #666;
+    color: #000000;
     font-size: 1.1em;
     margin-bottom: 0;
 }
@@ -103,9 +105,9 @@ title: Fitness Recommendations
 
 /* Color coding for sliders */
 .health-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #28a745 100%); }
-.performance-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #007bff 100%); }
+.performance-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #dc3545 100%); }
 .appearance-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #ffc107 100%); }
-.enjoyment-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #17a2b8 100%); }
+.enjoyment-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #6f42c1 100%); }
 
 /* Pie chart */
 .pie-chart {
@@ -136,9 +138,9 @@ title: Fitness Recommendations
 }
 
 .legend-health { background: #28a745; }
-.legend-performance { background: #007bff; }
+.legend-performance { background: #dc3545; }
 .legend-appearance { background: #ffc107; }
-.legend-enjoyment { background: #17a2b8; }
+.legend-enjoyment { background: #6f42c1; }
 
 /* Recommendations section */
 .recommendations-section {
@@ -234,9 +236,9 @@ title: Fitness Recommendations
 }
 
 .bar-health { background: #28a745; }
-.bar-performance { background: #007bff; }
+.bar-performance { background: #dc3545; }
 .bar-appearance { background: #ffc107; }
-.bar-enjoyment { background: #17a2b8; }
+.bar-enjoyment { background: #6f42c1; }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -323,6 +325,9 @@ title: Fitness Recommendations
         <div class="recommendations-header">
             <h2>Your Recommended Interventions</h2>
             <p>Based on your priorities, here are the fitness interventions that will give you the best results:</p>
+            <div class="methodology-note">
+                <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2× the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate total scores. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
+            </div>
         </div>
         <div class="recommendations-grid" id="recommendationsGrid">
             <div class="loading">Loading recommendations...</div>
@@ -385,10 +390,10 @@ const fitnessInterventions = {
 
 // Color scheme
 const colors = {
-    health: '#28a745',
-    performance: '#007bff', 
-    appearance: '#ffc107',
-    enjoyment: '#17a2b8'
+    health: '#28a745',     // Green
+    performance: '#dc3545', // Red
+    appearance: '#ffc107',  // Yellow
+    enjoyment: '#6f42c1'    // Purple
 };
 
 // Current values
