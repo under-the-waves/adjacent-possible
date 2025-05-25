@@ -18,7 +18,7 @@ Systematic weightlifting program with progressive overload, training major muscl
 
 **Potential Benefit Score: +8.5** - Meta-analyses show 20-35% reduction in all-cause mortality from regular resistance training
 
-**Expected Benefit Score: +6.8** - Accounting for 80% adherence rate among beginners who start structured programs
+**Expected Benefit Score: +8.2** - Accounting for 80% adherence rate among beginners who start structured programs
 
 ### Performance
 **Scale anchors:**
@@ -29,7 +29,7 @@ Systematic weightlifting program with progressive overload, training major muscl
 
 **Potential Benefit Score: +9.0** - Beginners typically achieve 40-100% strength increases in major lifts within 6 months
 
-**Expected Benefit Score: +7.2** - Accounting for 80% adherence and realistic progression rates in gym environments
+**Expected Benefit Score: +8.7** - Accounting for 80% adherence and realistic progression rates in gym environments
 
 ### Appearance
 **Scale anchors:**
@@ -40,7 +40,7 @@ Systematic weightlifting program with progressive overload, training major muscl
 
 **Potential Benefit Score: +7.5** - Significant muscle hypertrophy (10-25% size increases) and improved body composition achievable
 
-**Expected Benefit Score: +6.0** - Accounting for 80% adherence and realistic muscle building rates for recreational trainees
+**Expected Benefit Score: +7.2** - Accounting for 80% adherence and realistic muscle building rates for recreational trainees
 
 ### Enjoyment
 **Scale anchors:**
@@ -51,7 +51,7 @@ Systematic weightlifting program with progressive overload, training major muscl
 
 **Potential Benefit Score: +6.0** - High long-term satisfaction from visible progress and strength gains once established
 
-**Expected Benefit Score: +4.8** - Accounting for initial learning curve intimidation and 80% who continue past 3 months
+**Expected Benefit Score: +5.7** - Accounting for initial learning curve intimidation and 80% who continue past 3 months
 
 ## Resource Requirements
 
