@@ -2,6 +2,7 @@
 layout: default
 title: Overview
 ---
+# Overview
 
 There's an overwhelming amount of personal development advice available today. Books, courses, apps, and expert opinions offer countless approaches to improving your life, but it's nearly impossible to evaluate which advice applies to your specific situation or how different recommendations fit together.
 
