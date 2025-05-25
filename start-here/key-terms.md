@@ -17,6 +17,8 @@ This glossary defines the key concepts and terminology used throughout the Adjac
 
 **Constraints** – The limitations of time, money, and attention that influence which interventions are practical for your situation. The framework helps optimise recommendations within these constraints.
 
+**Expected Benefit Score (EBS)** – The Potential Benefit Score adjusted for realistic probability of success, accounting for factors like adherence rates and individual circumstances.
+
 **Habits** – Ongoing routines, practices, and behaviours that maintain your capabilities at each level and support continued progress. These become the sustainable foundation of improvement.
 
 **Interventions** – The complete set of actions and habits recommended for each level, representing proven approaches for improvement in that life area based on evidence and practical experience.
@@ -29,6 +31,10 @@ This glossary defines the key concepts and terminology used throughout the Adjac
 
 **Outcome-Focused Values** – Values that describe what you want to achieve in a particular life area. For example, fitness values might focus on health, performance, or appearance goals.
 
+**Potential Benefit Score (PBS)** – The theoretical maximum benefit an intervention could provide for a specific domain (e.g., health, performance) under ideal conditions, scored from -10 to +10.
+
 **ROI Approach** – Return on investment thinking applied to personal development. Given what's important to you in life, which actions can be expected to deliver the most value for the least expenditure of your time, money and attention?
 
 **Values** – The 3-5 core priorities that determine which interventions are most suitable for you within each life area. Values help personalise recommendations based on what matters most to you and how you prefer to work.
+
+**Weighted Total Benefit (WTB)** – The final personalized score for an intervention, calculated by multiplying each Expected Benefit Score by the user's priority weightings and summing across all domains.
