@@ -112,7 +112,7 @@ title: Fitness Recommendations
 .health-slider .slider-track { background: #28a745; }
 .performance-slider .slider-track { background: #dc3545; }
 .appearance-slider .slider-track { background: #ffc107; }
-.enjoyment-slider .slider-track { background: #6f42c1; }
+.enjoyment-slider .slider-track { background: #007bff; }
 
 /* Pie chart */
 .pie-chart {
@@ -142,10 +142,10 @@ title: Fitness Recommendations
     margin-right: 8px;
 }
 
-.legend-health { background: #90ee90; }
-.legend-performance { background: #ffb3ba; }
-.legend-appearance { background: #fff8dc; }
-.legend-enjoyment { background: #dda0dd; }
+.legend-health { background: #28a745; }
+.legend-performance { background: #dc3545; }
+.legend-appearance { background: #ffc107; }
+.legend-enjoyment { background: #007bff; }
 
 /* Recommendations section */
 .recommendations-section {
@@ -274,7 +274,7 @@ title: Fitness Recommendations
 .bar-health { background: #28a745; }
 .bar-performance { background: #dc3545; }
 .bar-appearance { background: #ffc107; }
-.bar-enjoyment { background: #6f42c1; }
+.bar-enjoyment { background: #007bff; }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -424,12 +424,12 @@ const fitnessInterventions = {
     }
 };
 
-// Color scheme - pastel versions
+// Color scheme - standard colors
 const colors = {
-    health: '#90ee90',     // Light green (pastel)
-    performance: '#ffb3ba', // Light red (pastel)
-    appearance: '#fff8dc',  // Light yellow (pastel)
-    enjoyment: '#dda0dd'    // Light purple (pastel)
+    health: '#28a745',     // Green
+    performance: '#dc3545', // Red
+    appearance: '#ffc107',  // Yellow
+    enjoyment: '#007bff'    // Blue
 };
 
 // Current values
@@ -507,7 +507,7 @@ function updateAllControls() {
     
     // Update percentage labels
     Object.keys(percentLabels).forEach(key => {
-        percentLabels[key].textContent = Math.round(currentValues[key]) + '%';
+        percentLabels[key].textContent = Math.round(currentValues[key]) + '% ';
     });
     
     // Update pie chart
@@ -547,11 +547,18 @@ function drawPieChart() {
     });
 }
 
-// Get intervention URL
+// Get intervention URL - fix for Jekyll
 function getInterventionUrl(key) {
     // Convert snake_case to kebab-case for URLs
     const urlKey = key.replace(/_/g, '-');
-    return `/adjacent-possible/resources/intervention-database/${urlKey}`;
+    return '/adjacent-possible/resources/intervention-database/' + urlKey;
+}
+
+function calculateScore(intervention, userValues) {
+    const total = Object.keys(userValues).reduce((sum, key) => {
+        return sum + (intervention.values[key] * userValues[key] / 100);
+    }, 0);
+    return total;
 }
 
 function updateRecommendations() {
