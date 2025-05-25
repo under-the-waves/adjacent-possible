@@ -1,0 +1,93 @@
+# Fitness Interventions Data
+# This file contains all scoring and resource data for fitness interventions
+
+progressive_strength_training:
+  name: "Progressive Strength Training"
+  description: "Systematic weightlifting program with progressive overload, training major muscle groups 3 times per week to build strength, muscle mass, and metabolic health"
+  domain: "fitness"
+  
+  # Value scoring (logarithmic scale where each point = ~2x impact)
+  values:
+    health:
+      potential_score: 8.5
+      expected_score: 8.2
+      justification_potential: "Meta-analyses show 20-35% reduction in all-cause mortality from regular resistance training"
+      justification_expected: "Accounting for 80% adherence rate among beginners who start structured programs"
+    performance:
+      potential_score: 9.0
+      expected_score: 8.7
+      justification_potential: "Beginners typically achieve 40-100% strength increases in major lifts within 6 months"
+      justification_expected: "Accounting for 80% adherence and realistic progression rates in gym environments"
+    appearance:
+      potential_score: 7.5
+      expected_score: 7.2
+      justification_potential: "Significant muscle hypertrophy (10-25% size increases) and improved body composition achievable"
+      justification_expected: "Accounting for 80% adherence and realistic muscle building rates for recreational trainees"
+    enjoyment:
+      potential_score: 6.0
+      expected_score: 5.7
+      justification_potential: "High long-term satisfaction from visible progress and strength gains once established"
+      justification_expected: "Accounting for initial learning curve intimidation and 80% who continue past 3 months"
+  
+  # Resource requirements
+  resources:
+    upfront_cost: 400
+    upfront_cost_justification: "Gym membership ($200/year) plus basic equipment (shoes, belt, straps) or minimal home setup"
+    ongoing_cost_weekly: 12
+    ongoing_cost_justification: "Average gym membership cost factoring in annual/multi-year discounts"
+    upfront_time: 8
+    upfront_time_justification: "Learning basic movement patterns, gym familiarisation, and initial program setup"
+    ongoing_time_weekly: 4.5
+    ongoing_time_justification: "Three 90-minute sessions including warm-up, workout, and minimal travel time"
+  
+  # Prerequisites for safety and effectiveness
+  prerequisites:
+    - "Can perform 10 bodyweight squats and 5 push-ups with proper form"
+    - "No untreated joint injuries or cardiovascular conditions requiring medical clearance"
+    - "Access to gym with barbells/weight plates or home equipment budget of $300-800"
+    - "Can consistently commit 4.5 hours per week for at least 3 months"
+    - "Willing to spend 2-4 weeks learning proper form before adding significant weight"
+    - "Basic understanding that strength training requires progressive overload and patience"
+
+daily_walking:
+  name: "Daily Walking (8000+ steps)"
+  description: "Consistent daily walking with gradual progression to 8000+ steps per day"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 7.5
+      expected_score: 7.3
+      justification_potential: "Excellent cardiovascular benefits with very low injury risk"
+      justification_expected: "Accounting for 95% adherence rate due to low barrier to entry"
+    performance:
+      potential_score: 4.0
+      expected_score: 3.8
+      justification_potential: "Limited performance gains beyond basic cardiovascular fitness"
+      justification_expected: "Accounting for 95% adherence, minimal skill requirements"
+    appearance:
+      potential_score: 3.5
+      expected_score: 3.3
+      justification_potential: "Minimal body composition changes, primarily cardiovascular health"
+      justification_expected: "Accounting for 95% adherence, modest caloric expenditure"
+    enjoyment:
+      potential_score: 8.0
+      expected_score: 7.8
+      justification_potential: "High accessibility, outdoor benefits, social opportunities, meditative qualities"
+      justification_expected: "Accounting for 95% adherence, very few find walking unpleasant"
+  
+  resources:
+    upfront_cost: 120
+    upfront_cost_justification: "Quality walking shoes designed for daily use and various terrains"
+    ongoing_cost_weekly: 0
+    ongoing_cost_justification: "No ongoing costs after initial shoe investment"
+    upfront_time: 2
+    upfront_time_justification: "Minimal setup - mainly route planning and shoe fitting"
+    ongoing_time_weekly: 7.0
+    ongoing_time_justification: "Approximately 1 hour daily to achieve 8000+ steps target"
+  
+  prerequisites:
+    - "Able to walk continuously for 20-30 minutes without significant discomfort"
+    - "No major joint problems that would be aggravated by daily walking"
+    - "Access to safe walking areas (neighbourhood, parks, or treadmill)"
+    - "Basic understanding of gradual progression principles"
