@@ -12,46 +12,50 @@ layout: default
   {{ intervention.name }}
 </div>
 
-# {{ intervention.name }}
+<h1>{{ intervention.name }}</h1>
 
-{{ intervention.description }}
+<p>{{ intervention.description }}</p>
 
-*See the [{{ page.domain | capitalize }} Value Scoring Framework]({{ site.baseurl }}/{{ page.domain }}/value-scoring-framework) for detailed scale explanations.*
+<p><em>See the <a href="{{ site.baseurl }}/{{ page.domain }}/value-scoring-framework">{{ page.domain | capitalize }} Value Scoring Framework</a> for detailed scale explanations.</em></p>
 
-## Scoring
+<h2>Scoring</h2>
 
-### Health & Longevity
-**Potential Benefit Score: +{{ intervention.values.health.potential_score }}** - {{ intervention.values.health.justification_potential }}
+<h3>Health &amp; Longevity</h3>
+<p><strong>Potential Benefit Score: +{{ intervention.values.health.potential_score }}</strong> - {{ intervention.values.health.justification_potential }}</p>
 
-**Expected Benefit Score: +{{ intervention.values.health.expected_score }}** - {{ intervention.values.health.justification_expected }}
+<p><strong>Expected Benefit Score: +{{ intervention.values.health.expected_score }}</strong> - {{ intervention.values.health.justification_expected }}</p>
 
-### Performance
-**Potential Benefit Score: +{{ intervention.values.performance.potential_score }}** - {{ intervention.values.performance.justification_potential }}
+<h3>Performance</h3>
+<p><strong>Potential Benefit Score: +{{ intervention.values.performance.potential_score }}</strong> - {{ intervention.values.performance.justification_potential }}</p>
 
-**Expected Benefit Score: +{{ intervention.values.performance.expected_score }}** - {{ intervention.values.performance.justification_expected }}
+<p><strong>Expected Benefit Score: +{{ intervention.values.performance.expected_score }}</strong> - {{ intervention.values.performance.justification_expected }}</p>
 
-### Appearance
-**Potential Benefit Score: +{{ intervention.values.appearance.potential_score }}** - {{ intervention.values.appearance.justification_potential }}
+<h3>Appearance</h3>
+<p><strong>Potential Benefit Score: +{{ intervention.values.appearance.potential_score }}</strong> - {{ intervention.values.appearance.justification_potential }}</p>
 
-**Expected Benefit Score: +{{ intervention.values.appearance.expected_score }}** - {{ intervention.values.appearance.justification_expected }}
+<p><strong>Expected Benefit Score: +{{ intervention.values.appearance.expected_score }}</strong> - {{ intervention.values.appearance.justification_expected }}</p>
 
-### Enjoyment
-**Potential Benefit Score: +{{ intervention.values.enjoyment.potential_score }}** - {{ intervention.values.enjoyment.justification_potential }}
+<h3>Enjoyment</h3>
+<p><strong>Potential Benefit Score: +{{ intervention.values.enjoyment.potential_score }}</strong> - {{ intervention.values.enjoyment.justification_potential }}</p>
 
-**Expected Benefit Score: +{{ intervention.values.enjoyment.expected_score }}** - {{ intervention.values.enjoyment.justification_expected }}
+<p><strong>Expected Benefit Score: +{{ intervention.values.enjoyment.expected_score }}</strong> - {{ intervention.values.enjoyment.justification_expected }}</p>
 
-## Resource Requirements
+<h2>Resource Requirements</h2>
 
-**Upfront Cost: ${{ intervention.resources.upfront_cost }}** - {{ intervention.resources.upfront_cost_justification }}
+<p><strong>Upfront Cost: ${{ intervention.resources.upfront_cost }}</strong> - {{ intervention.resources.upfront_cost_justification }}</p>
 
-**Ongoing Cost: ${{ intervention.resources.ongoing_cost_weekly }}/week** - {{ intervention.resources.ongoing_cost_justification }}
+<p><strong>Ongoing Cost: ${{ intervention.resources.ongoing_cost_weekly }}/week</strong> - {{ intervention.resources.ongoing_cost_justification }}</p>
 
-**Upfront Time Investment: {{ intervention.resources.upfront_time }} hours** - {{ intervention.resources.upfront_time_justification }}
+<p><strong>Upfront Time Investment: {{ intervention.resources.upfront_time }} hours</strong> - {{ intervention.resources.upfront_time_justification }}</p>
 
-**Ongoing Time Investment: {{ intervention.resources.ongoing_time_weekly }} hours/week** - {{ intervention.resources.ongoing_time_justification }}
+<p><strong>Ongoing Time Investment: {{ intervention.resources.ongoing_time_weekly }} hours/week</strong> - {{ intervention.resources.ongoing_time_justification }}</p>
 
-## Prerequisites
+<h2>Prerequisites</h2>
 
+<ul>
 {% for prerequisite in intervention.prerequisites %}
-- {{ prerequisite }}
+<li>{{ prerequisite }}</li>
 {% endfor %}
+</ul>
+
+{{ content }}
