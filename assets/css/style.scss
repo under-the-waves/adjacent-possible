@@ -712,40 +712,69 @@
   align-items: center;
 }
 
-/* Style for completed guides */
-.completed-guide {
-  color: #e63946 !important; /* A slightly muted red that works on dark backgrounds */
+/* Style for unavailable/planned content */
+.unavailable-guide {
+  color: #e63946 !important; /* Red color for unavailable */
   font-weight: 500; /* Make it slightly bolder */
 }
 
-/* Style for parent links with completed subcategories */
-.parent-link.completed-guide {
+/* Style for parent links with unavailable subcategories */
+.parent-link.unavailable-guide {
   color: #e63946 !important;
 }
 
 /* Make sure the red color persists on hover */
-.completed-guide:hover {
+.unavailable-guide:hover {
   color: #f48c92 !important; /* Lighter red on hover */
 }
 
-/* For completed submenu items */
-.submenu a.completed-guide:hover {
+/* For unavailable submenu items */
+.submenu a.unavailable-guide:hover {
   background-color: #333333;
   color: #f48c92 !important;
 }
 
 /* For parent links on hover */
-.dropdown-item:hover .parent-link.completed-guide {
+.dropdown-item:hover .parent-link.unavailable-guide {
   color: #f48c92 !important;
 }
 
-/* Base styles for completed guides - these should override any existing styles */
-.completed-guide,
-a.completed-guide,
-.parent-link.completed-guide,
-.submenu a.completed-guide {
+/* Base styles for unavailable guides - these should override any existing styles */
+.unavailable-guide,
+a.unavailable-guide,
+.parent-link.unavailable-guide,
+.submenu a.unavailable-guide {
   color: #e63946 !important; /* Red color */
   font-weight: 500; /* Slightly bolder */
+}
+
+/* Hover states for all unavailable guides */
+.unavailable-guide:hover,
+a.unavailable-guide:hover,
+.parent-link.unavailable-guide:hover,
+.submenu a.unavailable-guide:hover,
+.dropdown-item:hover .parent-link.unavailable-guide {
+  color: #f48c92 !important; /* Lighter red on hover */
+}
+
+/* Specifically target submenu links to override any conflicting styles */
+.submenu a.unavailable-guide {
+  color: #e63946 !important; /* Ensure submenu items are also red */
+}
+
+/* Override any background color changes that might affect text visibility */
+.submenu a.unavailable-guide:hover {
+  background-color: #333333;
+  color: #f48c92 !important;
+}
+
+/* Update the legend */
+.nav-legend {
+  text-align: right;
+  font-size: 12px;
+  padding: 2px 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eee;
 }
 
 /* Hover states for all completed guides */
