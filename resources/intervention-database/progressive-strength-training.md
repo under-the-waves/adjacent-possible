@@ -10,7 +10,7 @@ title: Progressive Strength Training
 {{ intervention.description }}
 
 ## Scoring ##
-The below numbers are based on a logarithmic scale from -10 to 10. For more information, see the Fitness Value Scoring Framework.
+The below numbers are based on a logarithmic scale from -10 to 10. For more information, see the [Fitness Value Scoring Framework]({{ site.baseurl }}/fitness/value-scoring-framework/).
 
 ### Health & Longevity
 **Potential Benefit Score: +{{ intervention.values.health.potential_score }}** - {{ intervention.values.health.justification_potential }}
