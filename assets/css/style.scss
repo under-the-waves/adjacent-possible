@@ -783,7 +783,21 @@ a.unavailable-guide:hover,
   background-color: #f8f9fa;
   border-bottom: 1px solid #ddd;
   margin: 0;
+  width: 100%;
+  display: block;
+  clear: both;
   position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  /* Add this to ensure it doesn't interfere with following elements */
+  flex-direction: row;
 }
 
 /* Hover states for all completed guides */
