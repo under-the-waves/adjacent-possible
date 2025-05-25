@@ -26,7 +26,7 @@ Rather than choosing between different approaches or experts, you can understand
 
 ## Coming Features
 
-As this system develops, it will become increasingly sophisticated through AI-powered personalisation. The long-term vision includes assessment tools that identify your current levels across all domains, personalised dashboards showing your highest-leverage opportunities, and AI recommendations that adapt dynamically as your circumstances and priorities change.
+As this system develops, it will become increasingly sophisticated through AI-powered personalisation. The long-term vision includes assessment tools that identify your current levels across all domains, personalised dashboards showing your highest-leverage opportunities, and AI recommendations that adapt dynamically as your circumstances and priorities change - [see demo here]({{ site.baseurl }}/fitness/test).
 
 Eventually, you'll interact with an intelligent system that understands your values, constraints, and goals, providing customised guidance that evolves with you. Rather than browsing static advice, you'll have conversations with AI that can synthesise the entire evidence base, understand your specific context, and suggest optimal next steps for your unique situation.
 
