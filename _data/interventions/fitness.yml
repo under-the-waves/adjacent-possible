@@ -91,3 +91,91 @@ daily_walking:
     - "No major joint problems that would be aggravated by daily walking"
     - "Access to safe walking areas (neighbourhood, parks, or treadmill)"
     - "Basic understanding of gradual progression principles"
+
+hiit_training:
+  name: "High-Intensity Interval Training (HIIT)"
+  description: "Short bursts of intense exercise alternated with recovery periods, 2-3 sessions per week for 20-30 minutes"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 7.0
+      expected_score: 6.7
+      justification_potential: "Strong cardiovascular benefits and metabolic improvements with time efficiency"
+      justification_expected: "Accounting for 85% adherence rate, some find intensity challenging to maintain"
+    performance:
+      potential_score: 8.0
+      expected_score: 7.6
+      justification_potential: "Excellent conditioning improvements and power development in short timeframes"
+      justification_expected: "Accounting for 85% adherence rate and proper intensity management"
+    appearance:
+      potential_score: 6.5
+      expected_score: 6.1
+      justification_potential: "Good fat loss effects and some muscle preservation with proper programming"
+      justification_expected: "Accounting for 85% adherence and realistic body composition changes"
+    enjoyment:
+      potential_score: 5.5
+      expected_score: 5.1
+      justification_potential: "Time-efficient and challenging, but high intensity can be mentally demanding"
+      justification_expected: "Accounting for 85% adherence, some find the intensity difficult to sustain"
+  
+  resources:
+    upfront_cost: 50
+    upfront_cost_justification: "Minimal equipment needed - timer, mat, possibly resistance bands or light weights"
+    ongoing_cost_weekly: 0
+    ongoing_cost_justification: "No ongoing costs after initial minimal equipment investment"
+    upfront_time: 3
+    upfront_time_justification: "Learning basic exercise forms and understanding work/rest interval timing"
+    ongoing_time_weekly: 2.0
+    ongoing_time_justification: "Very time efficient - 2-3 sessions of 20-30 minutes each including warm-up"
+  
+  prerequisites:
+    - "Basic cardiovascular fitness - can sustain moderate activity for 10-15 minutes"
+    - "No heart conditions or blood pressure issues that contraindicate high-intensity exercise"
+    - "Understanding of perceived exertion and ability to self-regulate intensity"
+    - "Access to timer or smartphone for interval timing"
+    - "Willingness to push through temporary discomfort during high-intensity intervals"
+
+bodyweight_training:
+  name: "Bodyweight Training Program"
+  description: "Structured calisthenics progression focusing on fundamental movement patterns, 4 sessions per week"
+  domain: "fitness"
+  
+  values:
+    health:
+      potential_score: 7.0
+      expected_score: 6.6
+      justification_potential: "Good overall health benefits with functional movement patterns and joint mobility"
+      justification_expected: "Accounting for 85% adherence rate among those who start structured programs"
+    performance:
+      potential_score: 7.5
+      expected_score: 7.1
+      justification_potential: "Excellent relative strength development and functional movement skills"
+      justification_expected: "Accounting for 85% adherence and progressive skill acquisition challenges"
+    appearance:
+      potential_score: 6.5
+      expected_score: 6.1
+      justification_potential: "Good muscle development and lean physique, particularly upper body definition"
+      justification_expected: "Accounting for 85% adherence and progression through skill levels"
+    enjoyment:
+      potential_score: 7.0
+      expected_score: 6.6
+      justification_potential: "High skill acquisition satisfaction and convenience of training anywhere"
+      justification_expected: "Accounting for 85% adherence and learning curve challenges"
+  
+  resources:
+    upfront_cost: 100
+    upfront_cost_justification: "Pull-up bar, suspension trainer or rings, exercise mat, resistance bands"
+    ongoing_cost_weekly: 0
+    ongoing_cost_justification: "No ongoing costs after initial equipment investment"
+    upfront_time: 6
+    upfront_time_justification: "Learning proper form for fundamental movements and progression pathways"
+    ongoing_time_weekly: 4.0
+    ongoing_time_justification: "Four 60-minute sessions focusing on different movement patterns"
+  
+  prerequisites:
+    - "Can perform 5 push-ups and hold a 30-second plank with proper form"
+    - "Access to pull-up bar or suitable substitute for upper body pulling exercises"
+    - "Space for bodyweight movements (roughly 6x6 feet clear area)"
+    - "Patience for gradual skill progression - strength gains may be slower than weighted training"
+    - "Understanding that bodyweight training requires progression through exercise variations"
