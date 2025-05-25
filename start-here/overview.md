@@ -1,3 +1,8 @@
+---
+layout: default
+title: Overview
+---
+
 There's an overwhelming amount of personal development advice available today. Books, courses, apps, and expert opinions offer countless approaches to improving your life, but it's nearly impossible to evaluate which advice applies to your specific situation or how different recommendations fit together.
 
 This creates practical challenges: you might spend time on changes that provide minimal benefit to what you actually care about, miss high-impact opportunities in areas you haven't considered, or struggle to coordinate improvements across different life domains.
