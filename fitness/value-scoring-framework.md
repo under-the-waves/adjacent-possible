@@ -1,6 +1,7 @@
+yaml
 ---
 layout: default
-title: Fitness value scoring framework
+title: Fitness Value Scoring Framework
 ---
 
 ## Value Scoring Framework
