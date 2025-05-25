@@ -12,9 +12,9 @@ This creates practical challenges: you might spend time on changes that provide 
 
 Everyone values certain things in their lives, and everyone has limited resources – time, money, and attention – to pursue what they value. Most of us also have significant room to improve how we apply these limited resources to what matters most.
 
-This suggests we need something like a return on investment approach to personal development. Given what's important to you in life, which actions can be expected to deliver the most value for the least expenditure of your time, money and attention?
+This suggests we need something like a return on investment approach to personal development. Given what's important to us in life, which actions can be expected to deliver the most value for the least expenditure of our time, money and attention?
 
-Now that we have access to AI systems that can reason and synthesise information, it becomes possible to get them to help assess and prioritise advice for us. They just need a structured framework to work within – and that's what this website provides.
+Now that we have access to AI systems that can reason and synthesise information, it becomes possible to get them to help assess and prioritise advice for us. They just need a structured framework to work within. That's what this website hopes to provide.
 
 Adjacent Possible offers a comprehensive framework covering [14 life domains]({{ site.baseurl }}/life-areas/), from values and health to relationships and productivity. Each domain includes evidence-based recommendations organised into five progressive levels, with clear benchmarks and resource requirements at each stage.
 
