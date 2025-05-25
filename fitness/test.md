@@ -1,4 +1,9 @@
----
+function calculateScore(intervention, userValues) {
+    const total = Object.keys(userValues).reduce((sum, key) => {
+        return sum + (intervention.values[key] * userValues[key] / 100);
+    }, 0);
+    return total;
+}---
 layout: default
 title: Fitness Recommendations
 ---
@@ -103,11 +108,11 @@ title: Fitness Recommendations
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Color coding for sliders */
-.health-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #28a745 100%); }
-.performance-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #dc3545 100%); }
-.appearance-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #ffc107 100%); }
-.enjoyment-slider .slider-track { background: linear-gradient(to right, #e9ecef 0%, #6f42c1 100%); }
+/* Color coding for sliders - solid colors */
+.health-slider .slider-track { background: #28a745; }
+.performance-slider .slider-track { background: #dc3545; }
+.appearance-slider .slider-track { background: #ffc107; }
+.enjoyment-slider .slider-track { background: #6f42c1; }
 
 /* Pie chart */
 .pie-chart {
@@ -137,10 +142,10 @@ title: Fitness Recommendations
     margin-right: 8px;
 }
 
-.legend-health { background: #28a745; }
-.legend-performance { background: #dc3545; }
-.legend-appearance { background: #ffc107; }
-.legend-enjoyment { background: #6f42c1; }
+.legend-health { background: #90ee90; }
+.legend-performance { background: #ffb3ba; }
+.legend-appearance { background: #fff8dc; }
+.legend-enjoyment { background: #dda0dd; }
 
 /* Recommendations section */
 .recommendations-section {
@@ -156,8 +161,34 @@ title: Fitness Recommendations
 }
 
 .recommendations-header h2 {
-    color: #155799;
+    color: #000000;
     margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.recommendations-header p {
+    color: #000000;
+}
+
+.methodology-note {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.methodology-note p {
+    margin: 0;
+}
+
+.methodology-note a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.methodology-note a:hover {
+    text-decoration: underline;
 }
 
 .recommendations-grid {
@@ -191,6 +222,11 @@ title: Fitness Recommendations
     font-weight: bold;
     color: #155799;
     margin: 0;
+    text-decoration: none;
+}
+
+.card-title:hover {
+    text-decoration: underline;
 }
 
 .card-score {
@@ -388,12 +424,12 @@ const fitnessInterventions = {
     }
 };
 
-// Color scheme
+// Color scheme - pastel versions
 const colors = {
-    health: '#28a745',     // Green
-    performance: '#dc3545', // Red
-    appearance: '#ffc107',  // Yellow
-    enjoyment: '#6f42c1'    // Purple
+    health: '#90ee90',     // Light green (pastel)
+    performance: '#ffb3ba', // Light red (pastel)
+    appearance: '#fff8dc',  // Light yellow (pastel)
+    enjoyment: '#dda0dd'    // Light purple (pastel)
 };
 
 // Current values
@@ -511,11 +547,11 @@ function drawPieChart() {
     });
 }
 
-function calculateScore(intervention, userValues) {
-    const total = Object.keys(userValues).reduce((sum, key) => {
-        return sum + (intervention.values[key] * userValues[key] / 100);
-    }, 0);
-    return total;
+// Get intervention URL
+function getInterventionUrl(key) {
+    // Convert snake_case to kebab-case for URLs
+    const urlKey = key.replace(/_/g, '-');
+    return `/adjacent-possible/resources/intervention-database/${urlKey}`;
 }
 
 function updateRecommendations() {
@@ -535,12 +571,12 @@ function updateRecommendations() {
     recommendationsGrid.innerHTML = topRecommendations.map(intervention => `
         <div class="recommendation-card">
             <div class="card-header">
-                <h3 class="card-title">${intervention.name}</h3>
+                <a href="${getInterventionUrl(intervention.key)}" class="card-title">${intervention.name}</a>
                 <div class="card-score">${intervention.totalScore.toFixed(1)}</div>
             </div>
             <p class="card-description">${intervention.description}</p>
             <div class="card-stats">
-                <span>Cost: $${intervention.resources.upfront_cost}</span>
+                <span>Cost: ${intervention.resources.upfront_cost}</span>
                 <span>Time: ${intervention.resources.ongoing_time_weekly}h/week</span>
             </div>
             <div class="value-bars">
