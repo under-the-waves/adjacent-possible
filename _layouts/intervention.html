@@ -305,10 +305,11 @@ layout: default
 <h2>Score Summary</h2>
 <div class="score-summary">
     {% for value_pair in intervention.values %}
-        {% assign value_name = value_pair[0] %}
+        {% assign value_key = value_pair[0] %}
+        {% assign value_name = value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
         <div class="summary-item">
-            <span class="summary-label">{{ value_name | capitalize }}{% if value_name == 'health' %} & Longevity{% endif %}:</span>
-            <span class="summary-score" id="summary-{{ value_name }}">Calculating...</span>
+            <span class="summary-label">{{ value_name }}:</span>
+            <span class="summary-score" id="summary-{{ value_key }}">Loading...</span>
         </div>
     {% endfor %}
 </div>
@@ -343,67 +344,39 @@ layout: default
 </div>
 
 {% for value_pair in intervention.values %}
-    {% assign value_name = value_pair[0] %}
+    {% assign value_key = value_pair[0] %}
     {% assign value_data = value_pair[1] %}
+    {% assign value_name = value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
     
     <div class="value-section">
-        <h3>{{ value_name | replace: '.', ' ' | replace: '_', ' ' | capitalize }}{% if value_name contains 'health' %} & Longevity{% endif %}</h3>
+        <h3>{{ value_name }}</h3>
         
         <div class="value-anchor">
-            {% assign value_parts = value_name | split: '.' %}
-            {% if value_parts.size == 2 %}
-                {% assign domain = value_parts[0] %}
-                {% assign value_key = value_parts[1] %}
-                {% assign value_def = site.data.values[domain][value_key] %}
-            {% else %}
-                {% assign value_def = site.data.values.fitness[value_name] %}
-            {% endif %}
-            
-            {% if value_data.anchor_type == "linear" %}
-                <p><strong>Linear Anchor:</strong> {{ value_def.anchor_max }} {{ value_def.anchor_unit }} {{ value_def.anchor_description }}</p>
-                <p><strong>Logarithmic Scale:</strong></p>
-                <ul>
-                    {% for level_pair in value_def.scale_levels %}
-                        {% assign score = level_pair[0] %}
-                        {% assign description = level_pair[1] %}
-                        <li>Score {{ score }}: {{ description }}</li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p><strong>Linear Anchor:</strong> {{ value_def.anchor_description }}</p>
-                <p><strong>Logarithmic Scale:</strong></p>
-                <ul>
-                    {% for level_pair in value_def.scale_levels %}
-                        {% assign score = level_pair[0] %}
-                        {% assign description = level_pair[1] %}
-                        <li>Score {{ score }}: {{ description }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
+            <p><strong>Anchor:</strong> {{ value_data.anchor_description }}</p>
         </div>
         
         <div class="score-item">
             <span class="score-label">Potential Benefit Score (PBS):</span>
-            <span class="score-value" id="{{ value_name }}-pbs">{{ value_data.pbs }}</span>
-            <span class="info-icon" onclick="showReasoning('pbs-{{ value_name }}')">i</span>
+            <span class="score-value">{{ value_data.pbs }}</span>
+            <span class="info-icon" onclick="showReasoning('pbs-{{ value_key }}')">i</span>
         </div>
         
         <div class="score-item">
             <span class="score-label">Intervention Success Rate (ISR):</span>
             <span class="score-value">{{ value_data.isr }}%</span>
-            <span class="info-icon" onclick="showReasoning('isr-{{ value_name }}')">i</span>
+            <span class="info-icon" onclick="showReasoning('isr-{{ value_key }}')">i</span>
         </div>
         
         <div class="score-item">
             <span class="score-label">User Adherence Rate (UAR):</span>
             <span class="score-value">{{ value_data.uar }}%</span>
-            <span class="info-icon" onclick="showReasoning('uar-{{ value_name }}')">i</span>
+            <span class="info-icon" onclick="showReasoning('uar-{{ value_key }}')">i</span>
         </div>
         
         <div class="score-item">
             <span class="score-label">Expected Benefit Score (EBS):</span>
-            <span class="score-value" id="{{ value_name }}-ebs">Calculating...</span>
-            <span class="info-icon calc-icon" onclick="showReasoning('ebs-{{ value_name }}')">∑</span>
+            <span class="score-value" id="ebs-{{ value_key }}">Loading...</span>
+            <span class="calc-icon" onclick="showReasoning('ebs-{{ value_key }}')">∑</span>
         </div>
     </div>
 {% endfor %}
@@ -419,160 +392,114 @@ layout: default
 </div>
 
 <script>
-    // Build reasoning data from Jekyll variables
-    const reasoningData = {
-        'upfront-cost': {
-            title: 'Upfront Cost Breakdown',
-            content: '{{ intervention.resources.upfront_cost_reasoning }}'
-        },
-        'ongoing-cost': {
-            title: 'Ongoing Cost Breakdown',
-            content: '{{ intervention.resources.ongoing_cost_reasoning }}'
-        },
-        'upfront-time': {
-            title: 'Upfront Time Breakdown',
-            content: '{{ intervention.resources.upfront_time_reasoning }}'
-        },
-        'ongoing-time': {
-            title: 'Ongoing Time Breakdown',
-            content: '{{ intervention.resources.ongoing_time_reasoning }}'
-        }
-        {% for value_pair in intervention.values %}
-        {% assign value_name = value_pair[0] %}
-        {% assign value_data = value_pair[1] %}
-        ,'pbs-{{ value_name }}': {
-            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - Potential Benefit Score',
-            content: '{{ value_data.pbs_reasoning }}'
-        }
-        ,'isr-{{ value_name }}': {
-            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - Intervention Success Rate',
-            content: '{{ value_data.isr_reasoning }}'
-        }
-        ,'uar-{{ value_name }}': {
-            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - User Adherence Rate',
-            content: '{{ value_data.uar_reasoning }}'
-        }
-        ,'ebs-{{ value_name }}': {
-            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - Calculation',
-            content: ''  // Will be populated by calculateEBS()
-        }
-        {% endfor %}
-    };
+// Build reasoning data from Jekyll variables - escape quotes properly
+const reasoningData = {
+    'upfront-cost': {
+        title: 'Upfront Cost Breakdown',
+        content: {{ intervention.resources.upfront_cost_reasoning | jsonify }}
+    },
+    'ongoing-cost': {
+        title: 'Ongoing Cost Breakdown', 
+        content: {{ intervention.resources.ongoing_cost_reasoning | jsonify }}
+    },
+    'upfront-time': {
+        title: 'Upfront Time Breakdown',
+        content: {{ intervention.resources.upfront_time_reasoning | jsonify }}
+    },
+    'ongoing-time': {
+        title: 'Ongoing Time Breakdown',
+        content: {{ intervention.resources.ongoing_time_reasoning | jsonify }}
+    }{% for value_pair in intervention.values %}{% assign value_key = value_pair[0] %}{% assign value_data = value_pair[1] %}{% assign value_name = value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %},
+    'pbs-{{ value_key }}': {
+        title: '{{ value_name }} - Potential Benefit Score',
+        content: {{ value_data.pbs_reasoning | jsonify }}
+    },
+    'isr-{{ value_key }}': {
+        title: '{{ value_name }} - Intervention Success Rate',
+        content: {{ value_data.isr_reasoning | jsonify }}
+    },
+    'uar-{{ value_key }}': {
+        title: '{{ value_name }} - User Adherence Rate', 
+        content: {{ value_data.uar_reasoning | jsonify }}
+    },
+    'ebs-{{ value_key }}': {
+        title: '{{ value_name }} - Calculation',
+        content: ''  // Will be populated by calculateEBS()
+    }{% endfor %}
+};
 
-    // Intervention data for calculations
-    const interventionData = {
-        {% for value_pair in intervention.values %}
-        {% assign value_name = value_pair[0] %}
-        {% assign value_data = value_pair[1] %}
-        {{ value_name }}: {
-            pbs: {{ value_data.pbs }},
-            isr: {{ value_data.isr }},
-            uar: {{ value_data.uar }}
-            {% if value_data.anchor_type == "linear" %}
-            ,anchor_max: {{ value_data.anchor_max }}
-            ,anchor_unit: '{{ value_data.anchor_unit }}'
-            {% endif %}
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    };
+// Intervention data for calculations
+const interventionData = {
+{% for value_pair in intervention.values %}
+    {% assign value_key = value_pair[0] %}
+    {% assign value_data = value_pair[1] %}
+    '{{ value_key }}': {
+        pbs: {{ value_data.pbs }},
+        isr: {{ value_data.isr }},
+        uar: {{ value_data.uar }},
+        anchor_type: {{ value_data.anchor_type | jsonify }}{% if value_data.anchor_max %},
+        anchor_max: {{ value_data.anchor_max }},
+        anchor_unit: {{ value_data.anchor_unit | jsonify }}{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
 
-    // Calculate EBS using logarithmic arithmetic and populate summary
-    function calculateEBS() {
-        {% for value_pair in intervention.values %}
-        {% assign value_name = value_pair[0] %}
-        {% assign value_data = value_pair[1] %}
-        
-        // {{ value_name | capitalize }}
-        const {{ value_name }}EBS = {{ value_data.pbs }} + Math.log2({{ value_data.isr }}/100) + Math.log2({{ value_data.uar }}/100);
-        
-        {% if value_data.anchor_type == "linear" %}
-        // Convert to linear for {{ value_name }}
-        const {{ value_name }}Linear = (Math.pow(2, {{ value_name }}EBS) / Math.pow(2, 10)) * {{ value_data.anchor_max }};
-        const {{ value_name }}Display = {{ value_name }}EBS.toFixed(1) + ' (+' + {{ value_name }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }})';
-        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}Display;
-        document.getElementById('summary-{{ value_name }}').textContent = {{ value_name }}Display;
-        {% else %}
-        // Subjective scale for {{ value_name }} - add descriptive level
-        const {{ value_name }}Score = {{ value_name }}EBS.toFixed(1);
-        let {{ value_name }}Level = '';
-        
-        {% if value_name == 'performance' %}
-        const performanceLevels = {
-            '10': 'Elite competitive performance',
-            '8': 'Advanced recreational athlete level',
-            '6': 'Solid recreational fitness',
-            '4': 'Basic functional fitness',
-            '2': 'Minimal performance improvement'
-        };
-        {% elsif value_name == 'appearance' %}
-        const appearanceLevels = {
-            '10': 'Complete physique transformation',
-            '8': 'Significant visible muscle development',
-            '6': 'Noticeable body composition improvement',
-            '4': 'Modest visible changes',
-            '2': 'Minimal appearance changes'
-        };
-        {% elsif value_name == 'enjoyment' %}
-        const enjoymentLevels = {
-            '10': 'Primary source of satisfaction',
-            '8': 'Highly enjoyable and anticipated',
-            '6': 'Generally enjoyable activity',
-            '4': 'Neutral to mildly enjoyable',
-            '2': 'Tolerable but not enjoyed'
-        };
-        {% endif %}
-        
-        {% if value_name == 'performance' %}
-        {{ value_name }}Level = performanceLevels[Math.round({{ value_name }}EBS / 2) * 2] || 'Moderate performance gains';
-        {% elsif value_name == 'appearance' %}
-        {{ value_name }}Level = appearanceLevels[Math.round({{ value_name }}EBS / 2) * 2] || 'Some visible changes';
-        {% elsif value_name == 'enjoyment' %}
-        {{ value_name }}Level = enjoymentLevels[Math.round({{ value_name }}EBS / 2) * 2] || 'Moderately enjoyable';
-        {% endif %}
-        
-        const {{ value_name }}Display = {{ value_name }}Score + ' (' + {{ value_name }}Level + ')';
-        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}Score;
-        document.getElementById('summary-{{ value_name }}').textContent = {{ value_name }}Display;
-        {% endif %}
-        
-        // Update reasoning
-        reasoningData['ebs-{{ value_name }}'].content = 
-            'Logarithmic calculation: {{ value_data.pbs }} + log₂({{ value_data.isr }}%) + log₂({{ value_data.uar }}%) = ' + 
-            '{{ value_data.pbs }} + ' + Math.log2({{ value_data.isr }}/100).toFixed(3) + ' + ' + Math.log2({{ value_data.uar }}/100).toFixed(3) + ' = ' + 
-            {{ value_name }}EBS.toFixed(1)
-            {% if value_data.anchor_type == "linear" %}
-            + '. Converted to linear: ' + {{ value_name }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }}.'
-            {% else %}
-            + '.'
-            {% endif %};
-        
-        {% endfor %}
+// Calculate EBS and populate displays
+function calculateEBS() {
+    {% for value_pair in intervention.values %}
+    {% assign value_key = value_pair[0] %}
+    {% assign value_data = value_pair[1] %}
+    {% assign value_name = value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
+    
+    // Calculate EBS for {{ value_key }}
+    const {{ value_key | replace: '.', '_' }}EBS = {{ value_data.pbs }} + Math.log2({{ value_data.isr }}/100) + Math.log2({{ value_data.uar }}/100);
+    
+    {% if value_data.anchor_type == "linear" %}
+    // Convert to linear for {{ value_key }}
+    const {{ value_key | replace: '.', '_' }}Linear = (Math.pow(2, {{ value_key | replace: '.', '_' }}EBS) / Math.pow(2, 10)) * {{ value_data.anchor_max }};
+    const {{ value_key | replace: '.', '_' }}Display = {{ value_key | replace: '.', '_' }}EBS.toFixed(1) + ' (+' + {{ value_key | replace: '.', '_' }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }})';
+    {% else %}
+    // Subjective scale for {{ value_key }}
+    const {{ value_key | replace: '.', '_' }}Display = {{ value_key | replace: '.', '_' }}EBS.toFixed(1);
+    {% endif %}
+    
+    document.getElementById('ebs-{{ value_key }}').textContent = {{ value_key | replace: '.', '_' }}EBS.toFixed(1);
+    document.getElementById('summary-{{ value_key }}').textContent = {{ value_key | replace: '.', '_' }}Display;
+    
+    // Update reasoning for calculation
+    reasoningData['ebs-{{ value_key }}'].content = 
+        'Logarithmic calculation: {{ value_data.pbs }} + log₂({{ value_data.isr }}%) + log₂({{ value_data.uar }}%) = ' + 
+        '{{ value_data.pbs }} + ' + Math.log2({{ value_data.isr }}/100).toFixed(3) + ' + ' + Math.log2({{ value_data.uar }}/100).toFixed(3) + ' = ' + 
+        {{ value_key | replace: '.', '_' }}EBS.toFixed(1){% if value_data.anchor_type == "linear" %} + 
+        '. Converted to linear: ' + {{ value_key | replace: '.', '_' }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }}.'{% else %} + '.'{% endif %};
+    
+    {% endfor %}
+}
+
+function showReasoning(key) {
+    const data = reasoningData[key];
+    if (data) {
+        document.getElementById('popupHeader').textContent = data.title;
+        document.getElementById('popupContent').textContent = data.content;
+        document.getElementById('popupOverlay').classList.add('visible');
+        document.getElementById('reasoningPopup').classList.add('visible');
     }
+}
 
-    function showReasoning(key) {
-        const data = reasoningData[key];
-        if (data) {
-            document.getElementById('popupHeader').textContent = data.title;
-            document.getElementById('popupContent').textContent = data.content;
-            document.getElementById('popupOverlay').classList.add('visible');
-            document.getElementById('reasoningPopup').classList.add('visible');
-        }
+function hideReasoning() {
+    document.getElementById('popupOverlay').classList.remove('visible');
+    document.getElementById('reasoningPopup').classList.remove('visible');
+}
+
+// Initialize calculations when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    calculateEBS();
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        hideReasoning();
     }
-
-    function hideReasoning() {
-        document.getElementById('popupOverlay').classList.remove('visible');
-        document.getElementById('reasoningPopup').classList.remove('visible');
-    }
-
-    // Initialize calculations when page loads
-    document.addEventListener('DOMContentLoaded', function() {
-        calculateEBS();
-    });
-
-    // Close popup with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            hideReasoning();
-        }
-    });
+});
 </script>
