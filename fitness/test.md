@@ -1,13 +1,3 @@
-function calculateScore(intervention, userValues) {
-    const total = Object.keys(userValues).reduce((sum, key) => {
-        return sum + (intervention.values[key] * userValues[key] / 100);
-    }, 0);
-    return total;
-}---
-layout: default
-title: Fitness Recommendations
----
-
 <style>
 /* Main container */
 .fitness-test-container {
