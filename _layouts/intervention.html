@@ -44,10 +44,16 @@ layout: default
 }
 
 .prerequisites {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
     margin-bottom: 25px;
 }
 
 .value-anchor {
+    background-color: #e3f2fd;
+    padding: 12px;
+    border-radius: 4px;
     margin-bottom: 20px;
     font-size: 0.9em;
 }
@@ -81,7 +87,7 @@ layout: default
 }
 
 .resource-item {
-    background-color: #e3f2fd;
+    background-color: #f8f9fa;
     padding: 12px;
     border-radius: 5px;
     text-align: center;
@@ -107,14 +113,10 @@ layout: default
     margin-top: 5px;
 }
 
-.value-section h3 {
-    background-color: #e3f2fd;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-    
 .prerequisites {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
     margin-bottom: 25px;
 }
 
@@ -128,6 +130,9 @@ layout: default
 }
 
 .scoring-intro {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
     margin-bottom: 20px;
     font-size: 0.95em;
 }
@@ -149,6 +154,9 @@ layout: default
 }
 
 .value-anchor {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 4px;
     margin-bottom: 20px;
     font-size: 0.9em;
 }
@@ -284,6 +292,7 @@ layout: default
     <a href="{{ site.baseurl }}/">Home</a> > 
     <a href="{{ site.baseurl }}/resources/">Resources</a> > 
     <a href="{{ site.baseurl }}/resources/intervention-database/">Intervention Database</a> > 
+    <a href="{{ site.baseurl }}/{{ page.life_area }}/">{{ page.life_area | capitalize }}</a> > 
     {{ intervention.name }}
 </div>
 
@@ -313,8 +322,8 @@ layout: default
 </ul>
 
 <div class="prerequisites">
-    <h2>Suggested Prerequisites</h2>
-    <ul class="resource-list">
+    <h3>Suggested Prerequisites</h3>
+    <ul>
     {% for prereq in intervention.prerequisites %}
         <li>{{ prereq }}</li>
     {% endfor %}
@@ -330,7 +339,7 @@ layout: default
 <h2>Detailed Scoring</h2>
 
 <div class="scoring-intro">
-    <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
+    <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <strong>PBS</strong> = Potential Benefit Score (theoretical maximum), <strong>ISR</strong> = Intervention Success Rate (likelihood of success if followed), <strong>UAR</strong> = User Adherence Rate (likelihood of proper adherence), <strong>EBS</strong> = Expected Benefit Score (PBS + log₂(ISR) + log₂(UAR)). <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
 </div>
 
 {% for value_pair in intervention.values %}
@@ -338,10 +347,18 @@ layout: default
     {% assign value_data = value_pair[1] %}
     
     <div class="value-section">
-        <h3>{{ value_name | capitalize }}{% if value_name == 'health' %} & Longevity{% endif %}</h3>
+        <h3>{{ value_name | replace: '.', ' ' | replace: '_', ' ' | capitalize }}{% if value_name contains 'health' %} & Longevity{% endif %}</h3>
         
         <div class="value-anchor">
-            {% assign value_def = site.data.values[page.life_area][value_name] %}
+            {% assign value_parts = value_name | split: '.' %}
+            {% if value_parts.size == 2 %}
+                {% assign domain = value_parts[0] %}
+                {% assign value_key = value_parts[1] %}
+                {% assign value_def = site.data.values[domain][value_key] %}
+            {% else %}
+                {% assign value_def = site.data.values.fitness[value_name] %}
+            {% endif %}
+            
             {% if value_data.anchor_type == "linear" %}
                 <p><strong>Linear Anchor:</strong> {{ value_def.anchor_max }} {{ value_def.anchor_unit }} {{ value_def.anchor_description }}</p>
                 <p><strong>Logarithmic Scale:</strong></p>
