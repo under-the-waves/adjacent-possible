@@ -1,3 +1,8 @@
+---
+layout: default
+title: Fitness Test - Personalised Recommendations
+---
+
 <style>
 /* Main container */
 .fitness-test-container {
@@ -202,7 +207,7 @@
 
 .card-header {
     display: flex;
-    justify-content: between;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
@@ -362,57 +367,33 @@
 </div>
 
 <script>
-// Fitness interventions data (from your YAML structure)
+// Build interventions data from Jekyll data files
 const fitnessInterventions = {
-    progressive_strength_training: {
-        name: "Progressive Strength Training",
-        description: "Systematic weightlifting program with progressive overload, training major muscle groups 3 times per week",
-        values: { health: 8.2, performance: 8.7, appearance: 7.2, enjoyment: 5.7 },
-        resources: { upfront_cost: 400, ongoing_cost_weekly: 12, upfront_time: 8, ongoing_time_weekly: 4.5 }
-    },
-    daily_walking: {
-        name: "Daily Walking (8000+ steps)",
-        description: "Consistent daily walking with gradual progression to 8000+ steps per day",
-        values: { health: 7.3, performance: 3.8, appearance: 3.3, enjoyment: 7.8 },
-        resources: { upfront_cost: 120, ongoing_cost_weekly: 0, upfront_time: 2, ongoing_time_weekly: 7.0 }
-    },
-    hiit_training: {
-        name: "High-Intensity Interval Training (HIIT)",
-        description: "Short bursts of intense exercise alternated with recovery periods, 2-3 sessions per week",
-        values: { health: 6.7, performance: 7.6, appearance: 6.1, enjoyment: 5.1 },
-        resources: { upfront_cost: 50, ongoing_cost_weekly: 0, upfront_time: 3, ongoing_time_weekly: 2.0 }
-    },
-    bodyweight_training: {
-        name: "Bodyweight Training Program",
-        description: "Structured calisthenics progression focusing on fundamental movement patterns, 4 sessions per week",
-        values: { health: 6.6, performance: 7.1, appearance: 6.1, enjoyment: 6.6 },
-        resources: { upfront_cost: 100, ongoing_cost_weekly: 0, upfront_time: 6, ongoing_time_weekly: 4.0 }
-    },
-    swimming_training: {
-        name: "Swimming Training",
-        description: "Regular swimming sessions 2-3 times per week focusing on technique, endurance, and full-body conditioning",
-        values: { health: 7.7, performance: 6.6, appearance: 5.2, enjoyment: 8.1 },
-        resources: { upfront_cost: 250, ongoing_cost_weekly: 15, upfront_time: 8, ongoing_time_weekly: 3.5 }
-    },
-    yoga_practice: {
-        name: "Regular Yoga Practice",
-        description: "Consistent yoga practice 3-4 times per week combining flexibility, balance, strength, and mindfulness",
-        values: { health: 6.2, performance: 4.7, appearance: 3.8, enjoyment: 7.6 },
-        resources: { upfront_cost: 150, ongoing_cost_weekly: 8, upfront_time: 4, ongoing_time_weekly: 4.0 }
-    },
-    cycling_training: {
-        name: "Regular Cycling Training",
-        description: "Structured cycling program 3-4 times per week combining endurance rides, intervals, and recovery sessions",
-        values: { health: 7.1, performance: 7.1, appearance: 4.7, enjoyment: 7.6 },
-        resources: { upfront_cost: 800, ongoing_cost_weekly: 5, upfront_time: 12, ongoing_time_weekly: 5.0 }
-    },
-    rock_climbing: {
-        name: "Rock Climbing Training",
-        description: "Indoor and/or outdoor climbing 2-3 times per week focusing on technique, strength, and problem-solving",
-        values: { health: 5.6, performance: 7.0, appearance: 6.1, enjoyment: 8.4 },
-        resources: { upfront_cost: 400, ongoing_cost_weekly: 18, upfront_time: 15, ongoing_time_weekly: 4.0 }
-    }
+{% for intervention_file in site.data.interventions %}
+    {% assign intervention_key = intervention_file[0] %}
+    {% assign intervention_data = intervention_file[1] %}
+    {% if intervention_data.applicable_domains contains "fitness" %}
+    "{{ intervention_key }}": {
+        name: {{ intervention_data.name | jsonify }},
+        description: {{ intervention_data.description | jsonify }},
+        values: {
+            health: {% if intervention_data.values["fitness.health"] %}{{ intervention_data.values["fitness.health"].pbs | plus: 0.0 }} + Math.log2({{ intervention_data.values["fitness.health"].isr | plus: 0.0 }}/100) + Math.log2({{ intervention_data.values["fitness.health"].uar | plus: 0.0 }}/100){% else %}0{% endif %},
+            performance: {% if intervention_data.values["fitness.performance"] %}{{ intervention_data.values["fitness.performance"].pbs | plus: 0.0 }} + Math.log2({{ intervention_data.values["fitness.performance"].isr | plus: 0.0 }}/100) + Math.log2({{ intervention_data.values["fitness.performance"].uar | plus: 0.0 }}/100){% else %}0{% endif %},
+            appearance: {% if intervention_data.values["fitness.appearance"] %}{{ intervention_data.values["fitness.appearance"].pbs | plus: 0.0 }} + Math.log2({{ intervention_data.values["fitness.appearance"].isr | plus: 0.0 }}/100) + Math.log2({{ intervention_data.values["fitness.appearance"].uar | plus: 0.0 }}/100){% else %}0{% endif %},
+            enjoyment: {% if intervention_data.values["fitness.enjoyment"] %}{{ intervention_data.values["fitness.enjoyment"].pbs | plus: 0.0 }} + Math.log2({{ intervention_data.values["fitness.enjoyment"].isr | plus: 0.0 }}/100) + Math.log2({{ intervention_data.values["fitness.enjoyment"].uar | plus: 0.0 }}/100){% else %}0{% endif %}
+        },
+        resources: {
+            upfront_cost: {{ intervention_data.resources.upfront_cost | plus: 0 }},
+            ongoing_cost_weekly: {% if intervention_data.resources.ongoing_cost_period == "week" %}{{ intervention_data.resources.ongoing_cost | plus: 0.0 }}{% elsif intervention_data.resources.ongoing_cost_period == "month" %}{{ intervention_data.resources.ongoing_cost | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ intervention_data.resources.ongoing_cost | plus: 0.0 | divided_by: 52.0 }}{% endif %},
+            upfront_time: {{ intervention_data.resources.upfront_time | plus: 0 }},
+            ongoing_time_weekly: {% if intervention_data.resources.ongoing_time_period == "week" %}{{ intervention_data.resources.ongoing_time | plus: 0.0 }}{% elsif intervention_data.resources.ongoing_time_period == "month" %}{{ intervention_data.resources.ongoing_time | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ intervention_data.resources.ongoing_time | plus: 0.0 | divided_by: 52.0 }}{% endif %}
+        }
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+{% endfor %}
 };
+
+console.log('Loaded interventions:', fitnessInterventions);
 
 // Color scheme - standard colors
 const colors = {
@@ -541,7 +522,7 @@ function drawPieChart() {
 function getInterventionUrl(key) {
     // Convert snake_case to kebab-case for URLs
     const urlKey = key.replace(/_/g, '-');
-    return '/adjacent-possible/resources/intervention-database/' + urlKey;
+    return '{{ site.baseurl }}/resources/intervention-database/' + urlKey;
 }
 
 function calculateScore(intervention, userValues) {
@@ -573,25 +554,25 @@ function updateRecommendations() {
             </div>
             <p class="card-description">${intervention.description}</p>
             <div class="card-stats">
-                <span>Cost: ${intervention.resources.upfront_cost}</span>
-                <span>Time: ${intervention.resources.ongoing_time_weekly}h/week</span>
+                <span>Cost: $${intervention.resources.upfront_cost}</span>
+                <span>Time: ${intervention.resources.ongoing_time_weekly.toFixed(1)}h/week</span>
             </div>
             <div class="value-bars">
                 <div class="value-bar">
-                    <div class="value-bar-fill bar-health" style="width: ${(intervention.values.health / 10) * 100}%"></div>
-                    <div>H: ${intervention.values.health}</div>
+                    <div class="value-bar-fill bar-health" style="width: ${Math.max(0, (intervention.values.health / 10) * 100)}%"></div>
+                    <div>H: ${intervention.values.health.toFixed(1)}</div>
                 </div>
                 <div class="value-bar">
-                    <div class="value-bar-fill bar-performance" style="width: ${(intervention.values.performance / 10) * 100}%"></div>
-                    <div>P: ${intervention.values.performance}</div>
+                    <div class="value-bar-fill bar-performance" style="width: ${Math.max(0, (intervention.values.performance / 10) * 100)}%"></div>
+                    <div>P: ${intervention.values.performance.toFixed(1)}</div>
                 </div>
                 <div class="value-bar">
-                    <div class="value-bar-fill bar-appearance" style="width: ${(intervention.values.appearance / 10) * 100}%"></div>
-                    <div>A: ${intervention.values.appearance}</div>
+                    <div class="value-bar-fill bar-appearance" style="width: ${Math.max(0, (intervention.values.appearance / 10) * 100)}%"></div>
+                    <div>A: ${intervention.values.appearance.toFixed(1)}</div>
                 </div>
                 <div class="value-bar">
-                    <div class="value-bar-fill bar-enjoyment" style="width: ${(intervention.values.enjoyment / 10) * 100}%"></div>
-                    <div>E: ${intervention.values.enjoyment}</div>
+                    <div class="value-bar-fill bar-enjoyment" style="width: ${Math.max(0, (intervention.values.enjoyment / 10) * 100)}%"></div>
+                    <div>E: ${intervention.values.enjoyment.toFixed(1)}</div>
                 </div>
             </div>
         </div>
