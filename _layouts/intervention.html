@@ -5,6 +5,48 @@ layout: default
 {% assign intervention = site.data.interventions.fitness[page.intervention_key] %}
 
 <style>
+.score-summary {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+}
+
+.summary-label {
+    font-weight: 600;
+}
+
+.summary-score {
+    font-weight: bold;
+    color: #155799;
+}
+
+.resource-list {
+    margin-bottom: 25px;
+}
+
+.resource-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.resource-list .info-icon {
+    margin-left: auto;
+}
+
 .breadcrumb {
     font-size: 0.9em;
     color: #666;
@@ -249,32 +291,27 @@ layout: default
     {{ intervention.description }}
 </div>
 
-<h2>Resource Requirements</h2>
-<div class="resource-grid">
-    <div class="resource-item">
-        <span class="resource-value">${{ intervention.resources.upfront_cost }}</span>
-        <div class="resource-label">Upfront Cost</div>
-        <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span>
-    </div>
-    <div class="resource-item">
-        <span class="resource-value">${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }}</span>
-        <div class="resource-label">Ongoing Cost</div>
-        <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span>
-    </div>
-    <div class="resource-item">
-        <span class="resource-value">{{ intervention.resources.upfront_time }} hours</span>
-        <div class="resource-label">Upfront Time</div>
-        <span class="info-icon" onclick="showReasoning('upfront-time')">i</span>
-    </div>
-    <div class="resource-item">
-        <span class="resource-value">{{ intervention.resources.ongoing_time }} hours/{{ intervention.resources.ongoing_time_period }}</span>
-        <div class="resource-label">Ongoing Time</div>
-        <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span>
-    </div>
+<h2>Score Summary</h2>
+<div class="score-summary">
+    {% for value_pair in intervention.values %}
+        {% assign value_name = value_pair[0] %}
+        <div class="summary-item">
+            <span class="summary-label">{{ value_name | capitalize }}{% if value_name == 'health' %} & Longevity{% endif %}:</span>
+            <span class="summary-score" id="summary-{{ value_name }}">Calculating...</span>
+        </div>
+    {% endfor %}
 </div>
 
+<h2>Resource Requirements</h2>
+<ul class="resource-list">
+    <li><strong>Upfront Cost:</strong> ${{ intervention.resources.upfront_cost }} <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span></li>
+    <li><strong>Ongoing Cost:</strong> ${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }} <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span></li>
+    <li><strong>Upfront Time:</strong> {{ intervention.resources.upfront_time }} hours <span class="info-icon" onclick="showReasoning('upfront-time')">i</span></li>
+    <li><strong>Ongoing Time:</strong> {{ intervention.resources.ongoing_time }} hours/{{ intervention.resources.ongoing_time_period }} <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span></li>
+</ul>
+
 <div class="prerequisites">
-    <h3>Prerequisites</h3>
+    <h3>Suggested Prerequisites</h3>
     <ul>
     {% for prereq in intervention.prerequisites %}
         <li>{{ prereq }}</li>
@@ -288,10 +325,10 @@ layout: default
     {% endif %}
 </div>
 
-<h2>Scoring</h2>
+<h2>Detailed Scoring</h2>
 
 <div class="scoring-intro">
-    <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
+    <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <strong>PBS</strong> = Potential Benefit Score (theoretical maximum), <strong>ISR</strong> = Intervention Success Rate (likelihood of success if followed), <strong>UAR</strong> = User Adherence Rate (likelihood of proper adherence), <strong>EBS</strong> = Expected Benefit Score (PBS + log₂(ISR) + log₂(UAR)). <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
 </div>
 
 {% for value_pair in intervention.values %}
@@ -420,7 +457,7 @@ layout: default
         {% endfor %}
     };
 
-    // Calculate EBS using logarithmic arithmetic
+    // Calculate EBS using logarithmic arithmetic and populate summary
     function calculateEBS() {
         {% for value_pair in intervention.values %}
         {% assign value_name = value_pair[0] %}
@@ -432,11 +469,14 @@ layout: default
         {% if value_data.anchor_type == "linear" %}
         // Convert to linear for {{ value_name }}
         const {{ value_name }}Linear = (Math.pow(2, {{ value_name }}EBS) / Math.pow(2, 10)) * {{ value_data.anchor_max }};
-        document.getElementById('{{ value_name }}-ebs').textContent = 
-            {{ value_name }}EBS.toFixed(1) + ' (+' + {{ value_name }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }})';
+        const {{ value_name }}Display = {{ value_name }}EBS.toFixed(1) + ' (+' + {{ value_name }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }})';
+        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}Display;
+        document.getElementById('summary-{{ value_name }}').textContent = {{ value_name }}Display;
         {% else %}
         // Subjective scale for {{ value_name }}
-        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}EBS.toFixed(1);
+        const {{ value_name }}Display = {{ value_name }}EBS.toFixed(1);
+        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}Display;
+        document.getElementById('summary-{{ value_name }}').textContent = {{ value_name }}Display;
         {% endif %}
         
         // Update reasoning
