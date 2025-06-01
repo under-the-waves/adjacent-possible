@@ -1,0 +1,121 @@
+# _data/values.yml
+# Defines all value domains and their logarithmic scale interpretations
+
+fitness:
+  health:
+    name: "Health & Longevity"
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan"
+    scale_levels:
+      10: "15+ years additional healthy lifespan"
+      8: "3-4 years additional healthy lifespan"
+      6: "1 year additional healthy lifespan" 
+      4: "3-6 months additional healthy lifespan"
+      2: "1-2 months additional healthy lifespan"
+
+  performance:
+    name: "Performance"
+    anchor_type: "subjective"
+    anchor_description: "Elite athletic capabilities enabling competitive performance"
+    scale_levels:
+      10: "Elite competitive athletic performance"
+      8: "Advanced recreational athlete level"
+      6: "Solid recreational fitness"
+      4: "Basic functional fitness"
+      2: "Minimal performance improvement"
+
+  appearance:
+    name: "Appearance"
+    anchor_type: "subjective"
+    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+    scale_levels:
+      10: "Complete physique transformation"
+      8: "Significant visible muscle development"
+      6: "Noticeable body composition improvement"
+      4: "Modest visible changes"
+      2: "Minimal appearance changes"
+
+  enjoyment:
+    name: "Enjoyment"
+    anchor_type: "subjective"
+    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+    scale_levels:
+      10: "Primary source of satisfaction"
+      8: "Highly enjoyable and anticipated"
+      6: "Generally enjoyable activity"
+      4: "Neutral to mildly enjoyable"
+      2: "Tolerable but not enjoyed"
+
+nutrition:
+  physical_wellbeing:
+    name: "Physical Wellbeing"
+    anchor_type: "linear"
+    anchor_max: 12
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan from optimal nutrition"
+    scale_levels:
+      10: "12+ years additional healthy lifespan"
+      8: "3 years additional healthy lifespan"
+      6: "9 months additional healthy lifespan"
+      4: "2-3 months additional healthy lifespan"
+      2: "Few weeks additional healthy lifespan"
+
+  pleasure_connection:
+    name: "Pleasure & Connection"
+    anchor_type: "subjective"
+    anchor_description: "Food becomes central source of cultural expression and social bonding"
+    scale_levels:
+      10: "Central source of cultural expression and bonding"
+      8: "Highly satisfying culinary experiences"
+      6: "Generally enjoyable and socially positive"
+      4: "Neutral to mildly pleasant food experiences"
+      2: "Functional but unremarkable eating"
+
+  ethical_environmental:
+    name: "Ethical & Environmental Impact"
+    anchor_type: "subjective"
+    anchor_description: "Food choices align perfectly with environmental and ethical values"
+    scale_levels:
+      10: "Perfect alignment with environmental/ethical values"
+      8: "Strong positive environmental and ethical impact"
+      6: "Moderately positive ethical choices"
+      4: "Some consideration of ethics/environment"
+      2: "Minimal ethical/environmental consideration"
+
+sleep:
+  daily_functioning:
+    name: "Daily Functioning"
+    anchor_type: "subjective"
+    anchor_description: "Optimal cognitive and physical performance throughout day"
+    scale_levels:
+      10: "Peak cognitive and physical performance all day"
+      8: "Consistently high energy and mental clarity"
+      6: "Good daily energy and focus"
+      4: "Adequate functioning with occasional fatigue"
+      2: "Frequent tiredness affecting performance"
+
+  long_term_health:
+    name: "Long-term Health"
+    anchor_type: "linear"
+    anchor_max: 8
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan from optimal sleep"
+    scale_levels:
+      10: "8+ years additional healthy lifespan"
+      8: "2 years additional healthy lifespan"
+      6: "6 months additional healthy lifespan"
+      4: "2 months additional healthy lifespan"
+      2: "Few weeks additional healthy lifespan"
+
+  comfort_experience:
+    name: "Comfort & Experience"
+    anchor_type: "subjective"
+    anchor_description: "Sleep experience becomes deeply restorative and pleasant"
+    scale_levels:
+      10: "Deeply restorative and pleasant sleep experience"
+      8: "Consistently restful and comfortable sleep"
+      6: "Generally good sleep quality"
+      4: "Adequate sleep with some issues"
+      2: "Poor sleep quality and comfort"
