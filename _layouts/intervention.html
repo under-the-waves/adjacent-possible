@@ -44,16 +44,16 @@ layout: default
 }
 
 .prerequisites {
-    background-color: #e3f2fd;
-    padding: 15px;
-    border-radius: 5px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
     margin-bottom: 25px;
 }
 
 .value-anchor {
-    background-color: #e3f2fd;
-    padding: 12px;
-    border-radius: 4px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
     margin-bottom: 20px;
     font-size: 0.9em;
 }
@@ -352,7 +352,28 @@ layout: default
         <h3>{{ value_name }}</h3>
         
         <div class="value-anchor">
-            <p><strong>Anchor:</strong> {{ value_data.anchor_description }}</p>
+            {% assign value_parts = value_key | split: '.' %}
+            {% if value_parts.size == 2 %}
+                {% assign domain = value_parts[0] %}
+                {% assign value_name_clean = value_parts[1] %}
+                {% assign value_def = site.data.values[domain][value_name_clean] %}
+            {% else %}
+                {% assign value_def = site.data.values.fitness[value_key] %}
+            {% endif %}
+            
+            {% if value_def %}
+                <p><strong>Anchor:</strong> {{ value_def.anchor_description }}</p>
+                <p><strong>Logarithmic Scale:</strong></p>
+                <ul>
+                    {% for level_pair in value_def.scale_levels %}
+                        {% assign score = level_pair[0] %}
+                        {% assign description = level_pair[1] %}
+                        <li>Score {{ score }}: {{ description }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p><strong>Anchor:</strong> {{ value_data.anchor_description }}</p>
+            {% endif %}
         </div>
         
         <div class="score-item">
@@ -444,8 +465,36 @@ const interventionData = {
 {% endfor %}
 };
 
+// Build scale levels dynamically from Jekyll data
+const scaleLevels = {
+{% for domain_pair in site.data.values %}
+    {% assign domain_name = domain_pair[0] %}
+    {% assign domain_data = domain_pair[1] %}
+    {% for value_pair in domain_data %}
+        {% assign value_name = value_pair[0] %}
+        {% assign value_data = value_pair[1] %}
+        '{{ domain_name }}.{{ value_name }}': {
+            {% for level_pair in value_data.scale_levels %}
+                {% assign score = level_pair[0] %}
+                {% assign description = level_pair[1] %}
+                {{ score }}: {{ description | jsonify }}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        }{% unless forloop.last %},{% endunless %}
+    {% endfor %}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
+
 // Calculate EBS and populate displays
 function calculateEBS() {
+    function getScaleDescription(valueKey, score) {
+        const levels = scaleLevels[valueKey];
+        if (!levels) return '';
+        
+        // Find the closest scale level
+        const scoreRounded = Math.round(score / 2) * 2; // Round to nearest even number
+        return levels[scoreRounded] || 'Moderate benefit level';
+    }
+
     {% for value_pair in intervention.values %}
     {% assign value_key = value_pair[0] %}
     {% assign value_data = value_pair[1] %}
@@ -460,7 +509,8 @@ function calculateEBS() {
     const {{ value_key | replace: '.', '_' }}Display = {{ value_key | replace: '.', '_' }}EBS.toFixed(1) + ' (+' + {{ value_key | replace: '.', '_' }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }})';
     {% else %}
     // Subjective scale for {{ value_key }}
-    const {{ value_key | replace: '.', '_' }}Display = {{ value_key | replace: '.', '_' }}EBS.toFixed(1);
+    const {{ value_key | replace: '.', '_' }}ScaleDesc = getScaleDescription('{{ value_key }}', {{ value_key | replace: '.', '_' }}EBS);
+    const {{ value_key | replace: '.', '_' }}Display = {{ value_key | replace: '.', '_' }}EBS.toFixed(1) + ' (' + {{ value_key | replace: '.', '_' }}ScaleDesc + ')';
     {% endif %}
     
     document.getElementById('ebs-{{ value_key }}').textContent = {{ value_key | replace: '.', '_' }}EBS.toFixed(1);
