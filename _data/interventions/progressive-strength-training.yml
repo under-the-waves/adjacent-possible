@@ -1,4 +1,3 @@
-```yaml
 name: "Progressive Strength Training"
 description: "A systematic approach to resistance training where individuals gradually increase the weight, repetitions, or sets over time to continuously challenge muscles and promote adaptation. Training typically involves compound movements (squats, deadlifts, bench press) and isolation exercises performed 3-4 times per week for 45-75 minutes per session, with progressive overload applied weekly or bi-weekly. Results for strength gains become noticeable within 4-6 weeks, while significant physique changes typically occur after 12-16 weeks of consistent training."
 applicable_domains: ["fitness", "health", "appearance", "mental_health"]
@@ -53,11 +52,11 @@ values:
     anchor_description: "Primary source of satisfaction"
 
 resources:
-  upfront_cost: 500
-  upfront_cost_reasoning: "Gym membership initiation fees ($100-200), basic workout clothing and shoes ($150-250), initial personal trainer sessions for form instruction ($200-400), and basic equipment like lifting belt or straps ($50-100)."
+  upfront_cost: 550
+  upfront_cost_reasoning: "Basic workout clothing and shoes ($150-250), potential personal trainer sessions for form instruction ($300-500), and optional equipment like lifting belt or straps ($50-100). Initial gym membership signup fees if applicable ($50-100)."
   ongoing_cost: 50
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Average gym membership ($30-70/month) represents the primary recurring expense. Additional costs may include protein supplements ($20-30/month) and equipment replacement."
+  ongoing_cost_reasoning: "Average gym membership ($30-70/month) represents the primary recurring expense. Additional costs may include protein supplements ($20-30/month) and equipment replacement/upgrades."
   upfront_time: 15
   upfront_time_reasoning: "Learning proper form and technique (8-10 hours), developing initial routine and understanding progressive overload principles (3-5 hours), facility orientation and initial program trials (2-3 hours)."
   ongoing_time: 4
@@ -65,10 +64,9 @@ resources:
   ongoing_time_reasoning: "3-4 training sessions per week at 45-75 minutes each, including warm-up, workout, and cool-down. Additional time for program planning and progress tracking (30-60 minutes weekly)."
 
 prerequisites:
-  - "Minimum $50/month budget for gym membership or equipment"
-  - "Ability to commit 4+ hours per week consistently"
-  - "Medical clearance if over 40 or with pre-existing conditions"
-  - "Access to resistance training equipment or facility"
+  - "Medical clearance for individuals over 40 or with pre-existing health conditions"
+  - "Access to resistance training equipment or gym facility"
+  - "Basic understanding of proper lifting form or access to qualified instruction"
 
 related_areas:
   - area: "nutrition"
@@ -91,4 +89,3 @@ alternatives:
   - name: "Yoga or Pilates"
     url: "/resources/intervention-database/yoga"
     reason: "When flexibility, mindfulness, and lower-intensity movement are preferred"
-```
