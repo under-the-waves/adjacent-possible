@@ -44,16 +44,10 @@ layout: default
 }
 
 .prerequisites {
-    background-color: #e3f2fd;
-    padding: 15px;
-    border-radius: 5px;
     margin-bottom: 25px;
 }
 
 .value-anchor {
-    background-color: #e3f2fd;
-    padding: 12px;
-    border-radius: 4px;
     margin-bottom: 20px;
     font-size: 0.9em;
 }
@@ -113,6 +107,13 @@ layout: default
     margin-top: 5px;
 }
 
+.value-section h3 {
+    background-color: #e3f2fd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+    
 .prerequisites {
     background-color: #e3f2fd;
     padding: 15px;
@@ -130,9 +131,6 @@ layout: default
 }
 
 .scoring-intro {
-    background-color: #e3f2fd;
-    padding: 15px;
-    border-radius: 5px;
     margin-bottom: 20px;
     font-size: 0.95em;
 }
@@ -322,8 +320,8 @@ layout: default
 </ul>
 
 <div class="prerequisites">
-    <h3>Suggested Prerequisites</h3>
-    <ul>
+    <h2>Suggested Prerequisites</h2>
+    <ul class="resource-list">
     {% for prereq in intervention.prerequisites %}
         <li>{{ prereq }}</li>
     {% endfor %}
