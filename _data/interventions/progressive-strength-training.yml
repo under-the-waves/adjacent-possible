@@ -52,18 +52,19 @@ values:
     anchor_description: "Primary source of satisfaction"
 
 resources:
-  upfront_cost: 550
-  upfront_cost_reasoning: "Basic workout clothing and shoes ($150-250), potential personal trainer sessions for form instruction ($300-500), and optional equipment like lifting belt or straps ($50-100). Initial gym membership signup fees if applicable ($50-100)."
-  ongoing_cost: 50
+  upfront_cost: 100
+  upfront_cost_reasoning: "Basic workout clothing and athletic shoes ($80-120). Optional equipment like lifting belt could add $30-50 but not required initially."
+  ongoing_cost: 30
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Average gym membership ($30-70/month) represents the primary recurring expense. Additional costs may include protein supplements ($20-30/month) and equipment replacement/upgrades."
-  upfront_time: 15
-  upfront_time_reasoning: "Learning proper form and technique (8-10 hours), developing initial routine and understanding progressive overload principles (3-5 hours), facility orientation and initial program trials (2-3 hours)."
-  ongoing_time: 4
+  ongoing_cost_reasoning: "Budget gym membership ($20-40/month) represents the minimum ongoing expense. Higher-end facilities or additional supplements are optional."
+  upfront_time: 8
+  upfront_time_reasoning: "Learning basic compound movements and gym orientation (6-8 hours). Additional personal training is beneficial but not required for minimum implementation."
+  ongoing_time: 3
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "3-4 training sessions per week at 45-75 minutes each, including warm-up, workout, and cool-down. Additional time for program planning and progress tracking (30-60 minutes weekly)."
+  ongoing_time_reasoning: "Minimum effective dose: 3 sessions of 45-60 minutes each per week, including warm-up and workout. Travel time to gym not included."
 
 prerequisites:
   - "Medical clearance for individuals over 40 or with pre-existing health conditions"
   - "Access to resistance training equipment or gym facility"
   - "Basic understanding of proper lifting form or access to qualified instruction"
+```
