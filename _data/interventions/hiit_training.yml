@@ -1,0 +1,46 @@
+name: "High Intensity Interval Training"
+description: "HIIT involves alternating periods of high-intensity exercise (typically 80-95% maximum heart rate) with active recovery or rest periods. Sessions typically last 15-30 minutes total, performed 3 times per week, with work intervals ranging from 30 seconds to 4 minutes. The high-intensity phases recruit maximum muscle fiber activation and stress cardiovascular systems, while recovery periods allow partial physiological restoration before the next interval. Results typically emerge within 2-4 weeks, with significant improvements seen by 8-12 weeks."
+applicable_domains: ["fitness"]
+
+values:
+  fitness.health:
+    pbs: 7
+    pbs_reasoning: "Large-scale meta-analyses demonstrate HIIT produces significant improvements in 14 clinically relevant cardiometabolic health parameters. Studies show 37-49% lower all-cause mortality risk compared to current physical activity guidelines and moderate continuous training. HIIT improves VO2max by 0.58 standard deviations in meta-analyses, along with substantial improvements in blood pressure, glucose regulation, and cardiovascular risk factors. However, while substantial, these benefits represent approximately 12.5% of the theoretical maximum health benefit on the logarithmic scale."
+    isr: 85
+    isr_reasoning: "Very high-quality evidence from multiple large meta-analyses across diverse populations consistently demonstrates HIIT effectiveness. Recent umbrella review of 24 systematic reviews representing 429 primary studies and 12,967 participants confirms robust, replicated benefits. Multiple RCTs show significant improvements in cardiovascular fitness, metabolic health, and mortality risk with high statistical confidence and low heterogeneity."
+    uar: 65
+    uar_reasoning: "Real-world adherence data shows HIIT compliance averages 89.4% in supervised settings but drops to 63% in unsupervised environments. Dropout rates from HIIT interventions average 17.6% overall, with evidence showing 60.8% adherence to prescribed sessions declining to 19.6% by 12 months in unsupervised settings. Time constraints and intensity demands create moderate barriers to long-term adherence."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "15+ years additional healthy lifespan through comprehensive cardiometabolic improvements"
+
+  fitness.performance:
+    pbs: 6
+    pbs_reasoning: "Meta-analyses show HIIT significantly improves VO2max in elite athletes by 0.58 standardized mean difference compared to conventional training. Elite athletes can achieve VO2max values of 70-85 ml/kg/min (men) and 60-75 ml/kg/min (women) with some exceeding 90 ml/kg/min. However, VO2max improvements in already-trained athletes are more modest, and performance gains represent roughly 6.25% of theoretical maximum elite competitive performance on the logarithmic scale."
+    isr: 75
+    isr_reasoning: "Strong evidence from controlled studies in athletic populations demonstrates consistent VO2max improvements and performance gains. Meta-analysis of 9 studies with 176 elite athletes shows significant improvements over conventional training methods. However, evidence base is smaller than for health outcomes, with some studies having small sample sizes and varied protocols."
+    uar: 70
+    uar_reasoning: "Athletes typically show higher adherence rates than general population due to performance motivation and existing training habits. Supervised compliance rates exceed 85% in athletic populations. However, the high intensity demands and time requirements still create challenges for consistent long-term implementation, particularly during competitive seasons."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "Elite competitive athletic performance across endurance and power-based sports"
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "HIIT can be performed with bodyweight exercises, running, or basic equipment like stairs. No mandatory equipment purchases required to begin effective implementation."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Can be performed in public spaces, at home, or using existing facilities. No mandatory subscription or membership fees required for basic implementation."
+  upfront_time: 2
+  upfront_time_reasoning: "Minimal learning required - basic understanding of interval timing and intensity monitoring. One session to learn proper form and timing structure."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective dose is 45-90 minutes per week (3 sessions of 15-30 minutes each including warm-up and cool-down)"
+
+prerequisites:
+  - "Medical clearance for high-intensity exercise, especially for individuals over 40 or with cardiovascular risk factors"
+  - "Basic cardiovascular fitness to safely tolerate high-intensity efforts without immediate exhaustion"
+  - "Access to safe exercise environment (space for movement, non-slip surfaces, emergency assistance if needed)"
+  - "Ability to monitor exercise intensity through perceived exertion, heart rate, or other intensity markers"
