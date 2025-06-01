@@ -2,18 +2,9 @@
 layout: default
 ---
 
-{% assign intervention = site.data.interventions[page.life_area][page.intervention_key] %}
+{% assign intervention = site.data.interventions.fitness[page.intervention_key] %}
 
 <style>
-body {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    color: #333;
-}
-
 .breadcrumb {
     font-size: 0.9em;
     color: #666;
@@ -27,28 +18,6 @@ body {
 
 .breadcrumb a:hover {
     text-decoration: underline;
-}
-
-h1 {
-    color: #000;
-    margin-bottom: 15px;
-    font-weight: normal;
-}
-
-h2 {
-    color: #000;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-weight: normal;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-}
-
-h3 {
-    color: #333;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-weight: 600;
 }
 
 .description {
@@ -322,7 +291,7 @@ h3 {
 <h2>Scoring</h2>
 
 <div class="scoring-intro">
-    <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
+    <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <strong>PBS</strong> = Potential Benefit Score (theoretical maximum), <strong>ISR</strong> = Intervention Success Rate (likelihood of success if followed), <strong>UAR</strong> = User Adherence Rate (likelihood of proper adherence), <strong>EBS</strong> = Expected Benefit Score (PBS + log₂(ISR) + log₂(UAR)). <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
 </div>
 
 {% for value_pair in intervention.values %}
