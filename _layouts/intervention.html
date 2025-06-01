@@ -2,60 +2,512 @@
 layout: default
 ---
 
-{% assign intervention = site.data.interventions[page.domain][page.intervention_key] %}
+{% assign intervention = site.data.interventions[page.life_area][page.intervention_key] %}
+
+<style>
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+.breadcrumb {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+h2 {
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.resource-item {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.resource-item .info-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.resource-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #155799;
+    display: block;
+}
+
+.resource-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.prerequisites {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.prerequisites h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.prerequisites ul {
+    margin-bottom: 0;
+}
+
+.scoring-intro {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+
+.scoring-intro a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.scoring-intro a:hover {
+    text-decoration: underline;
+}
+
+.value-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.value-anchor {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.value-anchor p {
+    margin: 0 0 8px 0;
+}
+
+.value-anchor ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.value-anchor li {
+    margin-bottom: 4px;
+}
+
+.score-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.score-label {
+    font-weight: 600;
+    min-width: 200px;
+}
+
+.score-value {
+    font-weight: bold;
+    color: #155799;
+    min-width: 40px;
+}
+
+.info-icon {
+    background-color: #155799;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+}
+
+.info-icon:hover {
+    background-color: #0d47a1;
+}
+
+.calc-icon {
+    background-color: #e65100;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+    font-weight: bold;
+}
+
+.calc-icon:hover {
+    background-color: #bf360c;
+}
+
+.reasoning-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.reasoning-popup.visible {
+    display: block;
+}
+
+.popup-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #155799;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.popup-overlay.visible {
+    display: block;
+}
+</style>
 
 <div class="breadcrumb">
-  <a href="{{ site.baseurl }}/">Home</a> > 
-  <a href="{{ site.baseurl }}/resources/">Resources</a> > 
-  <a href="{{ site.baseurl }}/resources/intervention-database/">Intervention Database</a> > 
-  <a href="{{ site.baseurl }}/{{ page.domain }}/">{{ page.domain | capitalize }}</a> > 
-  {{ intervention.name }}
+    <a href="{{ site.baseurl }}/">Home</a> > 
+    <a href="{{ site.baseurl }}/resources/">Resources</a> > 
+    <a href="{{ site.baseurl }}/resources/intervention-database/">Intervention Database</a> > 
+    <a href="{{ site.baseurl }}/{{ page.life_area }}/">{{ page.life_area | capitalize }}</a> > 
+    {{ intervention.name }}
 </div>
 
 <h1>{{ intervention.name }}</h1>
 
-<p>{{ intervention.description }}</p>
+<div class="description">
+    {{ intervention.description }}
+</div>
 
-<p><em>See the <a href="{{ site.baseurl }}/{{ page.domain }}/value-scoring-framework">{{ page.domain | capitalize }} Value Scoring Framework</a> for detailed scale explanations.</em></p>
+<h2>Resource Requirements</h2>
+<div class="resource-grid">
+    <div class="resource-item">
+        <span class="resource-value">${{ intervention.resources.upfront_cost }}</span>
+        <div class="resource-label">Upfront Cost</div>
+        <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span>
+    </div>
+    <div class="resource-item">
+        <span class="resource-value">${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }}</span>
+        <div class="resource-label">Ongoing Cost</div>
+        <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span>
+    </div>
+    <div class="resource-item">
+        <span class="resource-value">{{ intervention.resources.upfront_time }} hours</span>
+        <div class="resource-label">Upfront Time</div>
+        <span class="info-icon" onclick="showReasoning('upfront-time')">i</span>
+    </div>
+    <div class="resource-item">
+        <span class="resource-value">{{ intervention.resources.ongoing_time }} hours/{{ intervention.resources.ongoing_time_period }}</span>
+        <div class="resource-label">Ongoing Time</div>
+        <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span>
+    </div>
+</div>
+
+<div class="prerequisites">
+    <h3>Prerequisites</h3>
+    <ul>
+    {% for prereq in intervention.prerequisites %}
+        <li>{{ prereq }}</li>
+    {% endfor %}
+    </ul>
+    {% if intervention.alternatives %}
+        <p><em>Consider {% for alt in intervention.alternatives %}<a href="{{ site.baseurl }}{{ alt.url }}">{{ alt.name }}</a> {{ alt.reason }}{% unless forloop.last %}, {% endunless %}{% endfor %}.</em></p>
+    {% endif %}
+    {% if intervention.related_areas %}
+        <p><em>{% for area in intervention.related_areas %}{{ area.relationship }}: <a href="{{ site.baseurl }}{{ area.url }}">{{ area.area }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.</em></p>
+    {% endif %}
+</div>
 
 <h2>Scoring</h2>
 
-<h3>Health &amp; Longevity</h3>
-<p><strong>Potential Benefit Score: +{{ intervention.values.health.potential_score }}</strong> - {{ intervention.values.health.justification_potential }}</p>
+<div class="scoring-intro">
+    <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <strong>PBS</strong> = Potential Benefit Score (theoretical maximum), <strong>ISR</strong> = Intervention Success Rate (likelihood of success if followed), <strong>UAR</strong> = User Adherence Rate (likelihood of proper adherence), <strong>EBS</strong> = Expected Benefit Score (PBS + log₂(ISR) + log₂(UAR)). <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
+</div>
 
-<p><strong>Expected Benefit Score: +{{ intervention.values.health.expected_score }}</strong> - {{ intervention.values.health.justification_expected }}</p>
-
-<h3>Performance</h3>
-<p><strong>Potential Benefit Score: +{{ intervention.values.performance.potential_score }}</strong> - {{ intervention.values.performance.justification_potential }}</p>
-
-<p><strong>Expected Benefit Score: +{{ intervention.values.performance.expected_score }}</strong> - {{ intervention.values.performance.justification_expected }}</p>
-
-<h3>Appearance</h3>
-<p><strong>Potential Benefit Score: +{{ intervention.values.appearance.potential_score }}</strong> - {{ intervention.values.appearance.justification_potential }}</p>
-
-<p><strong>Expected Benefit Score: +{{ intervention.values.appearance.expected_score }}</strong> - {{ intervention.values.appearance.justification_expected }}</p>
-
-<h3>Enjoyment</h3>
-<p><strong>Potential Benefit Score: +{{ intervention.values.enjoyment.potential_score }}</strong> - {{ intervention.values.enjoyment.justification_potential }}</p>
-
-<p><strong>Expected Benefit Score: +{{ intervention.values.enjoyment.expected_score }}</strong> - {{ intervention.values.enjoyment.justification_expected }}</p>
-
-<h2>Resource Requirements</h2>
-
-<p><strong>Upfront Cost: ${{ intervention.resources.upfront_cost }}</strong> - {{ intervention.resources.upfront_cost_justification }}</p>
-
-<p><strong>Ongoing Cost: ${{ intervention.resources.ongoing_cost_weekly }}/week</strong> - {{ intervention.resources.ongoing_cost_justification }}</p>
-
-<p><strong>Upfront Time Investment: {{ intervention.resources.upfront_time }} hours</strong> - {{ intervention.resources.upfront_time_justification }}</p>
-
-<p><strong>Ongoing Time Investment: {{ intervention.resources.ongoing_time_weekly }} hours/week</strong> - {{ intervention.resources.ongoing_time_justification }}</p>
-
-<h2>Prerequisites</h2>
-
-<ul>
-{% for prerequisite in intervention.prerequisites %}
-<li>{{ prerequisite }}</li>
+{% for value_pair in intervention.values %}
+    {% assign value_name = value_pair[0] %}
+    {% assign value_data = value_pair[1] %}
+    
+    <div class="value-section">
+        <h3>{{ value_name | capitalize }}{% if value_name == 'health' %} & Longevity{% endif %}</h3>
+        
+        <div class="value-anchor">
+            {% assign value_def = site.data.values[page.life_area][value_name] %}
+            {% if value_data.anchor_type == "linear" %}
+                <p><strong>Linear Anchor:</strong> {{ value_def.anchor_max }} {{ value_def.anchor_unit }} {{ value_def.anchor_description }}</p>
+                <p><strong>Logarithmic Scale:</strong></p>
+                <ul>
+                    {% for level_pair in value_def.scale_levels %}
+                        {% assign score = level_pair[0] %}
+                        {% assign description = level_pair[1] %}
+                        <li>Score {{ score }}: {{ description }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p><strong>Linear Anchor:</strong> {{ value_def.anchor_description }}</p>
+                <p><strong>Logarithmic Scale:</strong></p>
+                <ul>
+                    {% for level_pair in value_def.scale_levels %}
+                        {% assign score = level_pair[0] %}
+                        {% assign description = level_pair[1] %}
+                        <li>Score {{ score }}: {{ description }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        
+        <div class="score-item">
+            <span class="score-label">Potential Benefit Score (PBS):</span>
+            <span class="score-value" id="{{ value_name }}-pbs">{{ value_data.pbs }}</span>
+            <span class="info-icon" onclick="showReasoning('pbs-{{ value_name }}')">i</span>
+        </div>
+        
+        <div class="score-item">
+            <span class="score-label">Intervention Success Rate (ISR):</span>
+            <span class="score-value">{{ value_data.isr }}%</span>
+            <span class="info-icon" onclick="showReasoning('isr-{{ value_name }}')">i</span>
+        </div>
+        
+        <div class="score-item">
+            <span class="score-label">User Adherence Rate (UAR):</span>
+            <span class="score-value">{{ value_data.uar }}%</span>
+            <span class="info-icon" onclick="showReasoning('uar-{{ value_name }}')">i</span>
+        </div>
+        
+        <div class="score-item">
+            <span class="score-label">Expected Benefit Score (EBS):</span>
+            <span class="score-value" id="{{ value_name }}-ebs">Calculating...</span>
+            <span class="info-icon calc-icon" onclick="showReasoning('ebs-{{ value_name }}')">∑</span>
+        </div>
+    </div>
 {% endfor %}
-</ul>
 
-{{ content }}
+<!-- Popup overlay -->
+<div class="popup-overlay" id="popupOverlay" onclick="hideReasoning()"></div>
+
+<!-- Reasoning popup -->
+<div class="reasoning-popup" id="reasoningPopup">
+    <button class="popup-close" onclick="hideReasoning()">×</button>
+    <div class="popup-header" id="popupHeader"></div>
+    <div id="popupContent"></div>
+</div>
+
+<script>
+    // Build reasoning data from Jekyll variables
+    const reasoningData = {
+        'upfront-cost': {
+            title: 'Upfront Cost Breakdown',
+            content: '{{ intervention.resources.upfront_cost_reasoning }}'
+        },
+        'ongoing-cost': {
+            title: 'Ongoing Cost Breakdown',
+            content: '{{ intervention.resources.ongoing_cost_reasoning }}'
+        },
+        'upfront-time': {
+            title: 'Upfront Time Breakdown',
+            content: '{{ intervention.resources.upfront_time_reasoning }}'
+        },
+        'ongoing-time': {
+            title: 'Ongoing Time Breakdown',
+            content: '{{ intervention.resources.ongoing_time_reasoning }}'
+        }
+        {% for value_pair in intervention.values %}
+        {% assign value_name = value_pair[0] %}
+        {% assign value_data = value_pair[1] %}
+        ,'pbs-{{ value_name }}': {
+            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - Potential Benefit Score',
+            content: '{{ value_data.pbs_reasoning }}'
+        }
+        ,'isr-{{ value_name }}': {
+            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - Intervention Success Rate',
+            content: '{{ value_data.isr_reasoning }}'
+        }
+        ,'uar-{{ value_name }}': {
+            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - User Adherence Rate',
+            content: '{{ value_data.uar_reasoning }}'
+        }
+        ,'ebs-{{ value_name }}': {
+            title: '{{ value_name | capitalize }}{% if value_name == "health" %} & Longevity{% endif %} - Calculation',
+            content: ''  // Will be populated by calculateEBS()
+        }
+        {% endfor %}
+    };
+
+    // Intervention data for calculations
+    const interventionData = {
+        {% for value_pair in intervention.values %}
+        {% assign value_name = value_pair[0] %}
+        {% assign value_data = value_pair[1] %}
+        {{ value_name }}: {
+            pbs: {{ value_data.pbs }},
+            isr: {{ value_data.isr }},
+            uar: {{ value_data.uar }}
+            {% if value_data.anchor_type == "linear" %}
+            ,anchor_max: {{ value_data.anchor_max }}
+            ,anchor_unit: '{{ value_data.anchor_unit }}'
+            {% endif %}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    };
+
+    // Calculate EBS using logarithmic arithmetic
+    function calculateEBS() {
+        {% for value_pair in intervention.values %}
+        {% assign value_name = value_pair[0] %}
+        {% assign value_data = value_pair[1] %}
+        
+        // {{ value_name | capitalize }}
+        const {{ value_name }}EBS = {{ value_data.pbs }} + Math.log2({{ value_data.isr }}/100) + Math.log2({{ value_data.uar }}/100);
+        
+        {% if value_data.anchor_type == "linear" %}
+        // Convert to linear for {{ value_name }}
+        const {{ value_name }}Linear = (Math.pow(2, {{ value_name }}EBS) / Math.pow(2, 10)) * {{ value_data.anchor_max }};
+        document.getElementById('{{ value_name }}-ebs').textContent = 
+            {{ value_name }}EBS.toFixed(1) + ' (+' + {{ value_name }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }})';
+        {% else %}
+        // Subjective scale for {{ value_name }}
+        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}EBS.toFixed(1);
+        {% endif %}
+        
+        // Update reasoning
+        reasoningData['ebs-{{ value_name }}'].content = 
+            'Logarithmic calculation: {{ value_data.pbs }} + log₂({{ value_data.isr }}%) + log₂({{ value_data.uar }}%) = ' + 
+            '{{ value_data.pbs }} + ' + Math.log2({{ value_data.isr }}/100).toFixed(3) + ' + ' + Math.log2({{ value_data.uar }}/100).toFixed(3) + ' = ' + 
+            {{ value_name }}EBS.toFixed(1)
+            {% if value_data.anchor_type == "linear" %}
+            + '. Converted to linear: ' + {{ value_name }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }}.'
+            {% else %}
+            + '.'
+            {% endif %};
+        
+        {% endfor %}
+    }
+
+    function showReasoning(key) {
+        const data = reasoningData[key];
+        if (data) {
+            document.getElementById('popupHeader').textContent = data.title;
+            document.getElementById('popupContent').textContent = data.content;
+            document.getElementById('popupOverlay').classList.add('visible');
+            document.getElementById('reasoningPopup').classList.add('visible');
+        }
+    }
+
+    function hideReasoning() {
+        document.getElementById('popupOverlay').classList.remove('visible');
+        document.getElementById('reasoningPopup').classList.remove('visible');
+    }
+
+    // Initialize calculations when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        calculateEBS();
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            hideReasoning();
+        }
+    });
+</script>
