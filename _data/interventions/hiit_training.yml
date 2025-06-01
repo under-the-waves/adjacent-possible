@@ -27,6 +27,30 @@ values:
     anchor_unit: "score"
     anchor_description: "Elite competitive athletic performance across endurance and power-based sports"
 
+  fitness.appearance:
+    pbs: 5
+    pbs_reasoning: "Meta-analyses show HIIT produces modest but significant body composition improvements. Studies demonstrate 1.53% reduction in body fat percentage, 1.86 kg reduction in fat mass, and significant reductions in abdominal (-8.3%) and visceral fat (-24.2%). However, effects are similar to moderate continuous training, requiring 40% less time. Body composition changes are modest and represent approximately 3.125% of maximum theoretical appearance benefits on the logarithmic scale."
+    isr: 70
+    isr_reasoning: "Moderate-quality evidence shows consistent but modest body composition effects across multiple meta-analyses. Some studies show no significant differences between HIIT and continuous training for body composition. Evidence is robust for fat loss but limited for muscle building, with resistance training showing superior effects for fat-free mass development."
+    uar: 65
+    uar_reasoning: "Similar adherence challenges as health domain, with supervised compliance around 89% dropping to 63% unsupervised. Body composition changes are slower to manifest than fitness gains, potentially affecting motivation. However, time efficiency of HIIT may appeal to those seeking appearance improvements with limited time availability."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "Dramatic visible body composition transformation with significant fat loss and muscle definition"
+
+  fitness.enjoyment:
+    pbs: 6
+    pbs_reasoning: "Meta-analyses demonstrate HIIT elicits similar or higher enjoyment compared to moderate continuous training. Studies show beneficial effects on enjoyment scales (PACES) with effect sizes classified as small positive. HIIT protocols with shorter intervals (30-60 seconds) show higher enjoyment than longer intervals or continuous exercise. The time-efficient nature and variety in HIIT protocols contribute to positive psychological responses, representing moderate enjoyment benefits."
+    isr: 75
+    isr_reasoning: "Good quality evidence from multiple controlled studies consistently shows neutral to positive enjoyment responses. Systematic reviews and meta-analyses demonstrate that HIIT can be as enjoyable as traditional exercise when properly designed. However, responses vary significantly based on interval structure, fitness level, and individual preferences."
+    uar: 65
+    uar_reasoning: "Enjoyment benefits support adherence but real-world implementation still faces challenges. While HIIT may be more enjoyable than traditional exercise, the high-intensity nature can still be intimidating for sedentary individuals. Proper progression and interval selection are crucial for maintaining positive experiences over time."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "Maximum exercise enjoyment and intrinsic motivation leading to sustained lifelong physical activity engagement"
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "HIIT can be performed with bodyweight exercises, running, or basic equipment like stairs. No mandatory equipment purchases required to begin effective implementation."
