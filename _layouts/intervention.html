@@ -6,7 +6,7 @@ layout: default
 
 <style>
 .score-summary {
-    background-color: #f8f9fa;
+    background-color: #e3f2fd;
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 25px;
@@ -14,9 +14,9 @@ layout: default
 
 .summary-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
+    gap: 8px;
 }
 
 .summary-item:last-child {
@@ -43,8 +43,19 @@ layout: default
     gap: 8px;
 }
 
-.resource-list .info-icon {
-    margin-left: auto;
+.prerequisites {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.value-anchor {
+    background-color: #e3f2fd;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
 }
 
 .breadcrumb {
@@ -473,9 +484,46 @@ layout: default
         document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}Display;
         document.getElementById('summary-{{ value_name }}').textContent = {{ value_name }}Display;
         {% else %}
-        // Subjective scale for {{ value_name }}
-        const {{ value_name }}Display = {{ value_name }}EBS.toFixed(1);
-        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}Display;
+        // Subjective scale for {{ value_name }} - add descriptive level
+        const {{ value_name }}Score = {{ value_name }}EBS.toFixed(1);
+        let {{ value_name }}Level = '';
+        
+        {% if value_name == 'performance' %}
+        const performanceLevels = {
+            '10': 'Elite competitive performance',
+            '8': 'Advanced recreational athlete level',
+            '6': 'Solid recreational fitness',
+            '4': 'Basic functional fitness',
+            '2': 'Minimal performance improvement'
+        };
+        {% elsif value_name == 'appearance' %}
+        const appearanceLevels = {
+            '10': 'Complete physique transformation',
+            '8': 'Significant visible muscle development',
+            '6': 'Noticeable body composition improvement',
+            '4': 'Modest visible changes',
+            '2': 'Minimal appearance changes'
+        };
+        {% elsif value_name == 'enjoyment' %}
+        const enjoymentLevels = {
+            '10': 'Primary source of satisfaction',
+            '8': 'Highly enjoyable and anticipated',
+            '6': 'Generally enjoyable activity',
+            '4': 'Neutral to mildly enjoyable',
+            '2': 'Tolerable but not enjoyed'
+        };
+        {% endif %}
+        
+        {% if value_name == 'performance' %}
+        {{ value_name }}Level = performanceLevels[Math.round({{ value_name }}EBS / 2) * 2] || 'Moderate performance gains';
+        {% elsif value_name == 'appearance' %}
+        {{ value_name }}Level = appearanceLevels[Math.round({{ value_name }}EBS / 2) * 2] || 'Some visible changes';
+        {% elsif value_name == 'enjoyment' %}
+        {{ value_name }}Level = enjoymentLevels[Math.round({{ value_name }}EBS / 2) * 2] || 'Moderately enjoyable';
+        {% endif %}
+        
+        const {{ value_name }}Display = {{ value_name }}Score + ' (' + {{ value_name }}Level + ')';
+        document.getElementById('{{ value_name }}-ebs').textContent = {{ value_name }}Score;
         document.getElementById('summary-{{ value_name }}').textContent = {{ value_name }}Display;
         {% endif %}
         
