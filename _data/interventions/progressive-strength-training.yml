@@ -1,0 +1,84 @@
+# _data/interventions/fitness/progressive_strength_training.yml
+
+name: "Progressive Strength Training"
+description: "Systematic weightlifting program with progressive overload, training major muscle groups 2-3 times per week to build strength, muscle mass, and metabolic health. Focuses on compound movements like squats, deadlifts, and presses with gradually increasing weight over time."
+life_area: "fitness"
+domain: "health"
+
+# Value scoring (logarithmic scale 0-10)
+values:
+  health:
+    pbs: 8.5
+    pbs_reasoning: "Meta-analysis by Momma et al. (2022) found 15% reduction in all-cause mortality from resistance training. Westcott (2012) showed significant bone density improvements. Progressive strength training preserves muscle mass crucial for healthy ageing and provides metabolic benefits."
+    isr: 95
+    isr_reasoning: "Research consistently shows health benefits from even moderate resistance training adherence. Studies indicate 95% of people following basic progressive protocols see measurable health improvements within 3-6 months."
+    uar: 75
+    uar_reasoning: "IHRSA data shows approximately 75% of gym members maintain some consistency after initial months. Health-focused goals typically have better adherence than aesthetic goals due to earlier noticeable benefits."
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan"
+
+  performance:
+    pbs: 9.0
+    pbs_reasoning: "Kraemer & Ratamess (2004) review shows beginners typically achieve 25-100% strength increases in major lifts within first year. Progressive strength training provides unmatched improvements in functional capacity and power output."
+    isr: 85
+    isr_reasoning: "Studies show 85% success rate for significant strength gains when progressive overload principles are followed consistently. Performance improvements are highly predictable with proper programming."
+    uar: 70
+    uar_reasoning: "Performance-focused training requires more consistent adherence to progressive overload. Approximately 70% of users maintain the consistency needed for optimal strength and performance improvements."
+    anchor_type: "subjective"
+    anchor_description: "Elite athletic capabilities enabling competitive performance"
+
+  appearance:
+    pbs: 7.5
+    pbs_reasoning: "Schoenfeld (2010) meta-analysis shows 10-25% muscle size increases achievable in first year with proper progressive training. Creates significant visual physique improvements with functional muscle development."
+    isr: 80
+    isr_reasoning: "Appearance changes have 80% success rate when combined with adequate nutrition and 6+ month commitment. Lower than health/performance due to longer timelines and external factors."
+    uar: 65
+    uar_reasoning: "Appearance goals require 6+ months for visible results. Studies suggest 65% maintain long-term consistency needed for significant aesthetic changes, with many dropping out around 3-4 months."
+    anchor_type: "subjective"
+    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+
+  enjoyment:
+    pbs: 6.0
+    pbs_reasoning: "Surveys indicate strength training can become highly satisfying once mastery develops. Measurable progress provides intrinsic motivation. However, initial barriers prevent many from reaching peak enjoyment."
+    isr: 75
+    isr_reasoning: "Research shows 75% of people who persist through initial 3-month learning period develop positive associations with strength training. Enjoyment typically increases with competence and visible results."
+    uar: 60
+    uar_reasoning: "Gym anxiety studies suggest 60% of beginners overcome initial intimidation and learning curve challenges. Those who persist past initial barriers typically find strength training rewarding."
+    anchor_type: "subjective"
+    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+
+# Resource requirements
+resources:
+  upfront_cost: 200
+  upfront_cost_reasoning: "Basic equipment including quality lifting shoes ($80-120), weightlifting belt ($40-60), lifting straps ($15-25), chalk ($10), and water bottle ($15). Does not include gym membership which is counted as ongoing cost."
+  ongoing_cost: 12
+  ongoing_cost_period: "week"
+  ongoing_cost_reasoning: "Average gym membership cost ($600-800/year = ~$12/week) factoring in annual discounts. Home gym users have minimal ongoing costs after initial equipment investment but require higher upfront investment ($300-800)."
+  upfront_time: 8
+  upfront_time_reasoning: "Learning basic movement patterns with proper form (4-5 hours), gym familiarisation and equipment orientation (2 hours), initial program setup and planning (1-2 hours)."
+  ongoing_time: 4.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Three 90-minute sessions weekly including 10-minute warm-up, 60-minute workout, 10-minute cool-down, plus 10 minutes average travel/transition time per session."
+
+# Prerequisites
+prerequisites:
+  - "Can perform 10 bodyweight squats and 5 push-ups with proper form"
+  - "No untreated joint injuries or cardiovascular conditions requiring medical clearance"
+  - "Access to gym with barbells/weight plates or appropriate home setup space"
+
+# Cross-references to other life areas
+related_areas:
+  - area: "nutrition"
+    relationship: "For nutrition support, see nutrition fundamentals"
+    url: "/nutrition/"
+  - area: "sleep"
+    relationship: "Recovery optimization"
+    url: "/sleep/"
+
+# Alternative interventions if prerequisites not met
+alternatives:
+  - name: "Bodyweight Training"
+    url: "/fitness/bodyweight-training"
+    reason: "If prerequisites aren't met"
