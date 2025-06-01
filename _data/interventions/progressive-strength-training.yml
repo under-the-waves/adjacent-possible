@@ -1,84 +1,92 @@
-# _data/interventions/fitness/progressive_strength_training.yml
-
 name: "Progressive Strength Training"
-description: "Systematic weightlifting program with progressive overload, training major muscle groups 2-3 times per week to build strength, muscle mass, and metabolic health. Focuses on compound movements like squats, deadlifts, and presses with gradually increasing weight over time."
-life_area: "fitness"
-domain: "health"
+description: "A systematic approach to resistance training where individuals gradually increase the weight, repetitions, or sets over time to continuously challenge muscles and promote adaptation. Training typically involves compound movements (squats, deadlifts, bench press) and isolation exercises performed 3-4 times per week for 45-75 minutes per session, with progressive overload applied weekly or bi-weekly. Results for strength gains become noticeable within 4-6 weeks, while significant physique changes typically occur after 12-16 weeks of consistent training."
+applicable_domains: ["fitness", "health", "appearance", "mental_health"]
 
-# Value scoring (logarithmic scale 0-10)
 values:
-  health:
-    pbs: 8.5
-    pbs_reasoning: "Meta-analysis by Momma et al. (2022) found 15% reduction in all-cause mortality from resistance training. Westcott (2012) showed significant bone density improvements. Progressive strength training preserves muscle mass crucial for healthy ageing and provides metabolic benefits."
-    isr: 95
-    isr_reasoning: "Research consistently shows health benefits from even moderate resistance training adherence. Studies indicate 95% of people following basic progressive protocols see measurable health improvements within 3-6 months."
-    uar: 75
-    uar_reasoning: "IHRSA data shows approximately 75% of gym members maintain some consistency after initial months. Health-focused goals typically have better adherence than aesthetic goals due to earlier noticeable benefits."
-    anchor_type: "linear"
-    anchor_max: 15
-    anchor_unit: "years"
-    anchor_description: "Additional healthy lifespan"
-
-  performance:
-    pbs: 9.0
-    pbs_reasoning: "Kraemer & Ratamess (2004) review shows beginners typically achieve 25-100% strength increases in major lifts within first year. Progressive strength training provides unmatched improvements in functional capacity and power output."
+  health.longevity:
+    pbs: 8
+    pbs_reasoning: "Meta-analyses show resistance training reduces all-cause mortality by 15-20% and provides substantial benefits for bone density, metabolic health, and sarcopenia prevention. Studies demonstrate 10-15% reduction in cardiovascular disease risk and significant improvements in insulin sensitivity. While substantial, this represents ~25% of maximum possible longevity benefit on the logarithmic scale."
     isr: 85
-    isr_reasoning: "Studies show 85% success rate for significant strength gains when progressive overload principles are followed consistently. Performance improvements are highly predictable with proper programming."
-    uar: 70
-    uar_reasoning: "Performance-focused training requires more consistent adherence to progressive overload. Approximately 70% of users maintain the consistency needed for optimal strength and performance improvements."
+    isr_reasoning: "Extensive high-quality evidence from multiple large RCTs and meta-analyses consistently demonstrate health benefits when resistance training protocols are followed properly. The physiological mechanisms are well-understood and reliably reproduced across diverse populations."
+    uar: 35
+    uar_reasoning: "Gym membership retention rates show ~80% dropout within 5 months. Long-term resistance training adherence studies indicate only 30-40% maintain consistent training beyond one year due to time constraints, injury concerns, and motivation challenges."
     anchor_type: "subjective"
-    anchor_description: "Elite athletic capabilities enabling competitive performance"
+    anchor_max: null
+    anchor_unit: null
+    anchor_description: "15+ years additional healthy lifespan"
 
-  appearance:
-    pbs: 7.5
-    pbs_reasoning: "Schoenfeld (2010) meta-analysis shows 10-25% muscle size increases achievable in first year with proper progressive training. Creates significant visual physique improvements with functional muscle development."
+  performance.athletic:
+    pbs: 9
+    pbs_reasoning: "Resistance training is fundamental to elite athletic performance across most sports. Studies show 20-40% strength gains in novices, 10-20% in intermediate trainees, and 5-10% in advanced athletes. Combined with sport-specific training, can elevate performance to elite competitive levels, representing ~50% of maximum benefit."
+    isr: 90
+    isr_reasoning: "Strength gains from progressive resistance training are among the most reliable and well-documented adaptations in exercise science. Multiple systematic reviews confirm consistent strength improvements when programs follow progressive overload principles."
+    uar: 45
+    uar_reasoning: "Athletes and serious fitness enthusiasts show higher adherence rates (~40-50%) due to clear performance goals and often external accountability (coaches, teammates). However, the demanding nature still limits long-term adherence for recreational users."
+    anchor_type: "subjective"
+    anchor_max: null
+    anchor_unit: null
+    anchor_description: "Elite competitive athletic performance"
+
+  appearance.physique:
+    pbs: 8
+    pbs_reasoning: "Resistance training can produce dramatic physique transformations through muscle hypertrophy (8-20% muscle mass increases documented) and body composition changes. Studies show 10-15% reduction in body fat percentage when combined with appropriate nutrition. Represents substantial but not complete transformation potential."
     isr: 80
-    isr_reasoning: "Appearance changes have 80% success rate when combined with adequate nutrition and 6+ month commitment. Lower than health/performance due to longer timelines and external factors."
-    uar: 65
-    uar_reasoning: "Appearance goals require 6+ months for visible results. Studies suggest 65% maintain long-term consistency needed for significant aesthetic changes, with many dropping out around 3-4 months."
+    isr_reasoning: "Muscle hypertrophy response to resistance training is well-established with consistent results across studies. However, physique transformation also depends heavily on nutrition compliance and genetic factors, introducing more variability than pure strength gains."
+    uar: 30
+    uar_reasoning: "Physique transformation requires sustained effort over 6-12+ months with high training consistency and dietary discipline. Real-world adherence data shows only 25-35% maintain the necessary consistency for significant visual changes."
     anchor_type: "subjective"
-    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+    anchor_max: null
+    anchor_unit: null
+    anchor_description: "Complete physique transformation"
 
-  enjoyment:
-    pbs: 6.0
-    pbs_reasoning: "Surveys indicate strength training can become highly satisfying once mastery develops. Measurable progress provides intrinsic motivation. However, initial barriers prevent many from reaching peak enjoyment."
-    isr: 75
-    isr_reasoning: "Research shows 75% of people who persist through initial 3-month learning period develop positive associations with strength training. Enjoyment typically increases with competence and visible results."
-    uar: 60
-    uar_reasoning: "Gym anxiety studies suggest 60% of beginners overcome initial intimidation and learning curve challenges. Those who persist past initial barriers typically find strength training rewarding."
+  mental_health.enjoyment:
+    pbs: 7
+    pbs_reasoning: "Studies show resistance training significantly improves mood, self-efficacy, and provides satisfaction through measurable progress. However, it's typically not reported as a primary source of life satisfaction for most individuals, unlike intrinsically enjoyable activities. Represents meaningful but moderate benefit."
+    isr: 70
+    isr_reasoning: "Research consistently shows psychological benefits from resistance training, including reduced anxiety and depression symptoms. However, individual variation in enjoyment response is high, and some find the activity inherently unpleasant despite benefits."
+    uar: 25
+    uar_reasoning: "Enjoyment-based adherence is particularly challenging as resistance training can be uncomfortable and repetitive. Many individuals require external motivation rather than intrinsic enjoyment to maintain consistency long-term."
     anchor_type: "subjective"
-    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+    anchor_max: null
+    anchor_unit: null
+    anchor_description: "Primary source of satisfaction"
 
-# Resource requirements
 resources:
-  upfront_cost: 200
-  upfront_cost_reasoning: "Basic equipment including quality lifting shoes ($80-120), weightlifting belt ($40-60), lifting straps ($15-25), chalk ($10), and water bottle ($15). Does not include gym membership which is counted as ongoing cost."
-  ongoing_cost: 12
-  ongoing_cost_period: "week"
-  ongoing_cost_reasoning: "Average gym membership cost ($600-800/year = ~$12/week) factoring in annual discounts. Home gym users have minimal ongoing costs after initial equipment investment but require higher upfront investment ($300-800)."
-  upfront_time: 8
-  upfront_time_reasoning: "Learning basic movement patterns with proper form (4-5 hours), gym familiarisation and equipment orientation (2 hours), initial program setup and planning (1-2 hours)."
-  ongoing_time: 4.5
+  upfront_cost: 800
+  upfront_cost_reasoning: "Gym membership initiation fees ($100-200), basic workout clothing and shoes ($150-250), potential personal trainer sessions for form instruction ($300-500), and optional equipment like lifting belt or straps ($50-100)."
+  ongoing_cost: 50
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Average gym membership ($30-70/month) represents the primary recurring expense. Additional costs may include protein supplements ($20-30/month) and equipment replacement/upgrades."
+  upfront_time: 15
+  upfront_time_reasoning: "Learning proper form and technique (8-10 hours), developing initial routine and understanding progressive overload principles (3-5 hours), facility orientation and initial program trials (2-3 hours)."
+  ongoing_time: 4
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "Three 90-minute sessions weekly including 10-minute warm-up, 60-minute workout, 10-minute cool-down, plus 10 minutes average travel/transition time per session."
+  ongoing_time_reasoning: "3-4 training sessions per week at 45-75 minutes each, including warm-up, workout, and cool-down. Additional time for program planning and progress tracking (30-60 minutes weekly)."
 
-# Prerequisites
 prerequisites:
-  - "Can perform 10 bodyweight squats and 5 push-ups with proper form"
-  - "No untreated joint injuries or cardiovascular conditions requiring medical clearance"
-  - "Access to gym with barbells/weight plates or appropriate home setup space"
+  - "Medical clearance for individuals over 40 or with pre-existing health conditions"
+  - "Access to resistance training equipment (gym membership or home setup)"
+  - "Basic understanding of proper lifting form or access to instruction"
+  - "Ability to commit 3-4 hours per week consistently"
 
-# Cross-references to other life areas
 related_areas:
   - area: "nutrition"
-    relationship: "For nutrition support, see nutrition fundamentals"
+    relationship: "Protein intake and overall nutrition significantly amplify training results"
     url: "/nutrition/"
   - area: "sleep"
-    relationship: "Recovery optimization"
+    relationship: "Adequate sleep is essential for recovery and adaptation from training"
     url: "/sleep/"
+  - area: "injury_prevention"
+    relationship: "Proper form and progression prevent training-related injuries"
+    url: "/injury-prevention/"
 
-# Alternative interventions if prerequisites not met
 alternatives:
   - name: "Bodyweight Training"
-    url: "/fitness/bodyweight-training"
-    reason: "If prerequisites aren't met"
+    url: "/resources/intervention-database/bodyweight-training"
+    reason: "When gym access is limited or equipment costs are prohibitive"
+  - name: "High-Intensity Interval Training"
+    url: "/resources/intervention-database/hiit"
+    reason: "When time is extremely limited and cardiovascular fitness is the primary goal"
+  - name: "Yoga or Pilates"
+    url: "/resources/intervention-database/yoga"
+    reason: "When flexibility, mindfulness, and lower-intensity movement are preferred"
