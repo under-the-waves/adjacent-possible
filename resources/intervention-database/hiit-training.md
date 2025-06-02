@@ -2,5 +2,5 @@
 layout: intervention
 title: High-Intensity Interval Training (HIIT)
 life_area: fitness
-intervention_key: hiit_training
+intervention_key: hiit-training
 ---
