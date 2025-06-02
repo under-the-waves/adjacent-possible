@@ -460,7 +460,7 @@ title: Fitness Test - Personalised Recommendations
 
 <div class="fitness-test-container">
     <div class="header-section">
-        <h1>Personalised Fitness Recommendations</h1>
+        <h1>Fitness Interventions</h1>
         <p>Adjust the sliders below to reflect what matters most to you in fitness, and we'll recommend the best interventions for your priorities.</p>
     </div>
 
