@@ -69,6 +69,7 @@ title: Fitness Personalised
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    height: 100%; /* This will make it match the height of the sliders container */
 }
     
 body .main-content {
@@ -94,7 +95,7 @@ body .main-content {
 }
 
 .header-description {
-    max-width: 400px;
+    max-width: 800px; /* Increase from 400px to match the combined width */
     margin: 0 auto;
 }
 
