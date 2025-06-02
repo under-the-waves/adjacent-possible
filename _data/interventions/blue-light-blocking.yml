@@ -1,0 +1,58 @@
+name: "Blue Light Blocking"
+description: "The practice of reducing exposure to blue light (wavelengths 400-490nm) in the 2-3 hours before bedtime through blue light blocking glasses, screen filters, or device settings that filter blue wavelengths. This intervention aims to prevent suppression of melatonin production caused by artificial light exposure, particularly from electronic devices like phones, computers, and LED lighting. Most users see improvements in sleep onset time within 1-2 weeks of consistent evening use, with optimal benefits typically achieved after 3-4 weeks of regular implementation."
+applicable_domains: ["sleep"]
+
+values:
+ sleep.daily_functioning:
+   pbs: 5
+   pbs_reasoning: "Randomised controlled trials show blue light blocking improves sleep onset latency by 8-12 minutes and increases total sleep time by 10-15 minutes on average. Burkhart & Phelps (2009) found modest improvements in next-day alertness scores (8-12% improvement). While statistically significant, this represents moderate benefit - moving from 'adequate functioning with energy fluctuations' to 'good daily energy with occasional fatigue' rather than dramatic transformation."
+   isr: 65
+   isr_reasoning: "Mixed evidence quality limits confidence. Shechter et al. (2018) systematic review found significant heterogeneity between studies, with effect sizes varying considerably. Approximately 60-70% of participants show meaningful improvement in controlled trials, but many studies have small sample sizes (n<50) and short durations (1-2 weeks). Replication across diverse populations is limited."
+   uar: 45
+   uar_reasoning: "Poor long-term adherence due to practical barriers. Studies show only 40-50% of users consistently wear blue light glasses or use filters beyond 2 months. Common barriers include forgetting to use devices, discomfort with glasses, colour distortion affecting evening activities, and social awkwardness when wearing tinted glasses around others."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Daily functioning scale from severe impairment (-10) to peak performance (+10)"
+
+ sleep.long_term_health:
+   pbs: 4
+   pbs_reasoning: "Limited evidence for substantial long-term health benefits. While circadian rhythm disruption is linked to health issues, studies specifically examining blue light blocking interventions show modest effects on biomarkers. Gringras et al. (2015) found improvements in melatonin levels but no significant changes in cortisol or other health markers over 3-month periods. Benefits likely represent 3-6 months additional healthy lifespan through modest metabolic improvements."
+   isr: 50
+   isr_reasoning: "Weak evidence base for long-term health outcomes. Most studies focus on short-term sleep metrics rather than health biomarkers. The few longer-term studies (>3 months) show inconsistent results, and effect sizes for health-related outcomes are small. Individual variation appears high, with some people showing no measurable benefit even with consistent use."
+   uar: 45
+   uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require sustained use over months to years, but practical barriers significantly limit consistent implementation. The delayed nature of health benefits (no immediate feedback) further reduces motivation to maintain the intervention."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
+
+ sleep.comfort_experience:
+   pbs: 6
+   pbs_reasoning: "Blue light blocking primarily targets physiological sleep preparation rather than comfort experience. However, users report easier transition to sleepiness and reduced eye strain in evening hours. Ostrin et al. (2017) found 60-70% of participants reported subjectively more comfortable evening wind-down periods. This represents good but not exceptional improvement in sleep experience quality."
+   isr: 70
+   isr_reasoning: "Moderate confidence in subjective improvements. Multiple studies consistently show that users who adhere to blue light blocking report better evening comfort and easier sleep transitions. The mechanism is well-understood (melatonin suppression prevention), and subjective outcomes are more consistently reported than objective sleep metrics across studies."
+   uar: 50
+   uar_reasoning: "Slightly better adherence for comfort benefits because users notice immediate effects (reduced eye strain, easier wind-down feeling). However, still limited by practical barriers of remembering to use devices, discomfort with glasses, and interference with evening activities like watching television or social interactions."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Sleep experience scale from severely unpleasant (-10) to deeply restorative (+10)"
+
+resources:
+ upfront_cost: 20
+ upfront_cost_reasoning: "Basic blue light blocking glasses from reputable manufacturers cost £15-25. Free software options (f.lux, Night Shift) available but glasses provide more comprehensive blocking. Minimum viable option is basic amber-tinted glasses that block 90%+ of blue light."
+ ongoing_cost: 0
+ ongoing_cost_period: "month"
+ ongoing_cost_reasoning: "No recurring costs required. Blue light glasses last 1-2 years with normal use, and software solutions are typically free. Replacement glasses every 18-24 months represent minimal ongoing expense."
+ upfront_time: 1
+ upfront_time_reasoning: "Minimal setup time to install software on devices or establish routine of wearing glasses. Initial adjustment period to determine optimal timing and comfortable fit takes under one hour total."
+ ongoing_time: 0
+ ongoing_time_period: "week"
+ ongoing_time_reasoning: "No additional time investment required - simply wearing glasses or having software active during normal evening activities. The intervention integrates seamlessly into existing routines without requiring dedicated time."
+
+prerequisites:
+ - "Access to blue light blocking glasses or devices with adjustable screen settings"
+ - "Regular evening use of electronic devices or exposure to LED lighting"
+ - "Ability to remember and maintain consistent evening routine modifications"
+ - "Tolerance for mild colour distortion during evening hours when using filters"
