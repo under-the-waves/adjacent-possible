@@ -29,7 +29,7 @@ _Note: Your own priorities may differ from the weightings used in this guide. So
 
 ## Levels
 - [Level 1: Awareness](level-1)
-- [Level 2: Fundamentals](level-2)
+- [Level 2: Foundations](level-2)
 - [Level 3: Proficiency](level-3)
 - [Level 4: Excellence](level-4)
 - [Level 5: Mastery](level-5)
