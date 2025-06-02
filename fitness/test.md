@@ -216,115 +216,157 @@ title: Fitness Test - Personalised Recommendations
     border-color: #155799;
 }
 
-.recommendations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-}
-
-.recommendation-card {
-    border: 1px solid #e0e0e0;
+/* Table styling */
+.recommendations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
     border-radius: 8px;
-    padding: 20px;
-    background: #fafafa;
-    /* Removed hover effects */
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.card-header {
+.recommendations-table th {
+    background: #f8f9fa;
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+    font-size: 0.9em;
+}
+
+.recommendations-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.recommendations-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.recommendations-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Intervention name column */
+.intervention-name {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    gap: 15px;
+    align-items: center;
+    gap: 8px;
+    min-width: 200px;
 }
 
-.card-title-container {
-    flex: 1;
-}
-
-.card-title {
-    font-size: 1.3em;
-    font-weight: bold;
+.intervention-link {
     color: #155799;
-    margin: 0 0 5px 0;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
 }
 
-.card-title:hover {
+.intervention-link:hover {
     text-decoration: underline;
 }
 
-.card-description-icon {
+.table-description-icon {
     background-color: #155799;
     color: white;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 11px;
     cursor: pointer;
     transition: background-color 0.3s;
     user-select: none;
-    margin-left: 8px;
+    flex-shrink: 0;
 }
 
-.card-description-icon:hover {
+.table-description-icon:hover {
     background-color: #0d47a1;
 }
 
-.card-score {
-    font-size: 1.2em;
+/* Score columns */
+.wbs-score {
     font-weight: bold;
     color: #e63946;
-    background: #f8f9fa;
-    padding: 6px 12px;
-    border-radius: 15px;
-    text-align: center;
-    min-width: 80px;
-}
-
-.card-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    font-size: 0.85em;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.card-stats div {
-    padding: 8px;
-    background: #f8f9fa;
-    border-radius: 4px;
-    text-align: center;
-}
-
-.card-eroi {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85em;
-    color: #888;
-    padding-top: 10px;
-    border-top: 1px solid #e0e0e0;
-}
-
-.eroi-item {
-    text-align: center;
-    flex: 1;
-}
-
-.eroi-value {
-    font-weight: bold;
-    color: #155799;
-    display: block;
     font-size: 1.1em;
 }
 
-.eroi-label {
-    color: #666;
+.eroi-score {
+    font-weight: 600;
+    color: #155799;
+}
+
+/* Cost and time columns */
+.cost-cell, .time-cell {
     font-size: 0.9em;
+}
+
+/* Sort indicators in headers */
+.sortable-header {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.sortable-header:hover {
+    background: #e9ecef;
+}
+
+.sortable-header.active {
+    background: #155799;
+    color: white;
+}
+
+.sort-indicator {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .recommendations-table {
+        font-size: 0.85em;
+    }
+    
+    .recommendations-table th,
+    .recommendations-table td {
+        padding: 10px 8px;
+    }
+    
+    .intervention-name {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .recommendations-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .recommendations-table th,
+    .recommendations-table td {
+        padding: 8px 6px;
+        min-width: 80px;
+    }
+    
+    .intervention-name {
+        min-width: 120px;
+        white-space: normal;
+    }
+    
+    .intervention-link {
+        font-size: 0.95em;
+    }
 }
 
 /* Mobile responsiveness */
@@ -334,8 +376,17 @@ title: Fitness Test - Personalised Recommendations
         gap: 30px;
     }
     
-    .recommendations-grid {
-        grid-template-columns: 1fr;
+    .recommendations-table {
+        font-size: 0.8em;
+    }
+    
+    .recommendations-table th,
+    .recommendations-table td {
+        padding: 8px 4px;
+    }
+    
+    .intervention-name {
+        min-width: 100px;
     }
     
     .pie-chart {
@@ -350,16 +401,6 @@ title: Fitness Test - Personalised Recommendations
     .sort-controls {
         flex-direction: column;
         align-items: center;
-    }
-    
-    .card-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    
-    .card-score {
-        align-self: flex-end;
     }
 }
 
@@ -491,7 +532,7 @@ title: Fitness Test - Personalised Recommendations
             <h2>Your Recommended Interventions</h2>
             <p>Based on your priorities, here are the fitness interventions that will give you the best results:</p>
             <div class="methodology-note">
-                <p><strong>How scoring works:</strong> Each intervention is scored against how much benefit it provides to each value, using a logarithmic scale where each point represents roughly 2× the impact. The Expected Benefit Scores are then weighted according to your personal value settings to calculate Weighted Benefit Scores (WBS). To see the Expected Return on Investment (EROI) for each hour and dollar, consult the Time and Money EROI figures. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
+                <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2× the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
             </div>
         </div>
 
@@ -501,9 +542,31 @@ title: Fitness Test - Personalised Recommendations
             <button class="sort-button" data-sort="money-eroi">Sort by Money EROI</button>
         </div>
 
-        <div class="recommendations-grid" id="recommendationsGrid">
-            <div class="loading">Loading recommendations...</div>
-        </div>
+        <table class="recommendations-table" id="recommendationsTable">
+            <thead>
+                <tr>
+                    <th>Intervention</th>
+                    <th class="sortable-header" data-sort="wbs">
+                        WBS <span class="sort-indicator">↓</span>
+                    </th>
+                    <th>Upfront Cost</th>
+                    <th>Ongoing Cost</th>
+                    <th>Upfront Time</th>
+                    <th>Ongoing Time</th>
+                    <th class="sortable-header" data-sort="time-eroi">
+                        Time EROI <span class="sort-indicator"></span>
+                    </th>
+                    <th class="sortable-header" data-sort="money-eroi">
+                        Money EROI <span class="sort-indicator"></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="recommendationsBody">
+                <tr>
+                    <td colspan="8" class="loading">Loading recommendations...</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -585,7 +648,8 @@ const percentLabels = {
 
 const canvas = document.getElementById('pieChart');
 const ctx = canvas.getContext('2d');
-const recommendationsGrid = document.getElementById('recommendationsGrid');
+const recommendationsTable = document.getElementById('recommendationsTable');
+const recommendationsBody = document.getElementById('recommendationsBody');
 
 // Smart slider adjustment function
 function adjustSliders(changedSlider, newValue) {
@@ -740,36 +804,49 @@ function updateRecommendations() {
             break;
     }
     
-    // Display all interventions
-    recommendationsGrid.innerHTML = scoredInterventions.map(intervention => `
-        <div class="recommendation-card">
-            <div class="card-header">
-                <div class="card-title-container">
-                    <a href="${getInterventionUrl(intervention.key)}" class="card-title">${intervention.name}</a>
-                    <span class="card-description-icon" onclick="showDescriptionPopup('${intervention.name.replace(/'/g, "\\'")}', '${intervention.description.replace(/'/g, "\\'")}')">i</span>
+    // Update sort indicators
+    updateSortIndicators();
+    
+    // Display all interventions in table format
+    recommendationsBody.innerHTML = scoredInterventions.map(intervention => `
+        <tr>
+            <td>
+                <div class="intervention-name">
+                    <a href="${getInterventionUrl(intervention.key)}" class="intervention-link">${intervention.name}</a>
+                    <span class="table-description-icon" onclick="showDescriptionPopup('${intervention.name.replace(/'/g, "\\'")}', '${intervention.description.replace(/'/g, "\\'")}')">i</span>
                 </div>
-                <div class="card-score">WBS: ${intervention.wbs.toFixed(1)}</div>
-            </div>
-            
-            <div class="card-stats">
-                <div><strong>Upfront Cost:</strong><br>$${intervention.resources.upfront_cost}</div>
-                <div><strong>Ongoing Cost:</strong><br>$${intervention.resources.ongoing_cost}/${intervention.resources.ongoing_cost_period}</div>
-                <div><strong>Upfront Time:</strong><br>${intervention.resources.upfront_time}h</div>
-                <div><strong>Ongoing Time:</strong><br>${intervention.resources.ongoing_time}h/${intervention.resources.ongoing_time_period}</div>
-            </div>
-            
-            <div class="card-eroi">
-                <div class="eroi-item">
-                    <span class="eroi-value">${intervention.timeEROI.toFixed(2)}</span>
-                    <div class="eroi-label">Time EROI</div>
-                </div>
-                <div class="eroi-item">
-                    <span class="eroi-value">${intervention.moneyEROI.toFixed(2)}</span>
-                    <div class="eroi-label">Money EROI</div>
-                </div>
-            </div>
-        </div>
+            </td>
+            <td class="wbs-score">${intervention.wbs.toFixed(1)}</td>
+            <td class="cost-cell">${intervention.resources.upfront_cost}</td>
+            <td class="cost-cell">${intervention.resources.ongoing_cost}/${intervention.resources.ongoing_cost_period}</td>
+            <td class="time-cell">${intervention.resources.upfront_time}h</td>
+            <td class="time-cell">${intervention.resources.ongoing_time}h/${intervention.resources.ongoing_time_period}</td>
+            <td class="eroi-score">${intervention.timeEROI.toFixed(2)}</td>
+            <td class="eroi-score">${intervention.moneyEROI.toFixed(2)}</td>
+        </tr>
     `).join('');
+}
+
+function updateSortIndicators() {
+    // Clear all indicators
+    document.querySelectorAll('.sort-indicator').forEach(indicator => {
+        indicator.textContent = '';
+    });
+    
+    // Remove active class from all headers
+    document.querySelectorAll('.sortable-header').forEach(header => {
+        header.classList.remove('active');
+    });
+    
+    // Set active indicator
+    const activeHeader = document.querySelector(`[data-sort="${currentSort}"]`);
+    if (activeHeader && activeHeader.classList.contains('sortable-header')) {
+        activeHeader.classList.add('active');
+        const indicator = activeHeader.querySelector('.sort-indicator');
+        if (indicator) {
+            indicator.textContent = '↓';
+        }
+    }
 }
 
 // Event listeners for sliders
@@ -788,6 +865,22 @@ document.querySelectorAll('.sort-button').forEach(button => {
         
         // Update sort method and refresh recommendations
         currentSort = this.dataset.sort;
+        updateRecommendations();
+    });
+});
+
+// Event listeners for table header sorting
+document.querySelectorAll('.sortable-header').forEach(header => {
+    header.addEventListener('click', function() {
+        // Update sort method
+        currentSort = this.dataset.sort;
+        
+        // Update button states
+        document.querySelectorAll('.sort-button').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.sort === currentSort);
+        });
+        
+        // Refresh recommendations
         updateRecommendations();
     });
 });
