@@ -555,7 +555,7 @@ body .main-content {
                 
                 <div class="value-slider performance-slider">
                     <div class="slider-header">
-                        <label class="slider-label">Physical Performance</label>
+                        <label class="slider-label">Performance</label>
                         <span class="slider-percentage" id="performancePercent">30%</span>
                     </div>
                     <input type="range" min="0" max="100" value="30" class="slider-track" id="performanceSlider">
