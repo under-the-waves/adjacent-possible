@@ -36,6 +36,7 @@ body .main-content {
 }
 
 /* Controls layout */
+/* Controls layout */
 .controls-section {
     display: flex;
     gap: 40px;
@@ -44,13 +45,13 @@ body .main-content {
 }
 
 .sliders-container {
-    flex: 1;
-    min-width: 300px;
+    flex: 2;
+    min-width: 400px;
 }
 
 .chart-container {
     flex: 1;
-    min-width: 300px;
+    min-width: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,27 +59,52 @@ body .main-content {
 
 /* Slider styling */
 .value-slider {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
 .slider-label {
-    display: block;
     font-weight: 600;
-    margin-bottom: 8px;
     color: #333;
     font-size: 1.1em;
+    margin: 0;
+}
+
+.slider-percentage {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #155799;
+    min-width: 40px;
+    text-align: right;
 }
 
 .slider-track {
     width: 100%;
-    height: 8px;
-    border-radius: 4px;
+    height: 6px;
+    border-radius: 3px;
     background: #e9ecef;
     outline: none;
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.slider-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .slider-track::-webkit-slider-thumb {
@@ -116,37 +142,16 @@ body .main-content {
 .enjoyment-slider .slider-track { background: #007bff; }
 
 /* Pie chart */
+/* Pie chart */
 .pie-chart {
-    width: 280px;
-    height: 280px;
-    margin-bottom: 20px;
+    width: 240px;
+    height: 240px;
 }
 
+/* Hide legend since we don't need it */
 .chart-legend {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 280px;
+    display: none;
 }
-
-.legend-item {
-    display: flex;
-    align-items: center;
-    font-size: 0.9em;
-}
-
-.legend-color {
-    width: 16px;
-    height: 16px;
-    border-radius: 3px;
-    margin-right: 8px;
-}
-
-.legend-health { background: #28a745; }
-.legend-performance { background: #dc3545; }
-.legend-appearance { background: #ffc107; }
-.legend-enjoyment { background: #007bff; }
 
 /* Recommendations section */
 .recommendations-section {
@@ -251,6 +256,7 @@ body .main-content {
     align-items: center;
     gap: 8px;
     min-width: 200px;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .intervention-link {
@@ -270,7 +276,7 @@ body .main-content {
     border-radius: 50%;
     width: 18px;
     height: 18px;
-    display: inline-flex;
+    display: flex; /* Changed from inline-flex */
     align-items: center;
     justify-content: center;
     font-size: 11px;
@@ -468,51 +474,55 @@ body .main-content {
         <p>Adjust the sliders below to reflect what matters most to you in fitness, and we'll recommend the best interventions for your priorities.</p>
     </div>
 
-    <div class="controls-section">
-        <div class="sliders-container">
-            <div class="value-slider health-slider">
-                <label class="slider-label" for="healthSlider">Health & Longevity</label>
-                <input type="range" min="0" max="100" value="35" class="slider-track" id="healthSlider">
-            </div>
-            
-            <div class="value-slider performance-slider">
-                <label class="slider-label" for="performanceSlider">Performance</label>
-                <input type="range" min="0" max="100" value="30" class="slider-track" id="performanceSlider">
-            </div>
-            
-            <div class="value-slider appearance-slider">
-                <label class="slider-label" for="appearanceSlider">Appearance</label>
-                <input type="range" min="0" max="100" value="20" class="slider-track" id="appearanceSlider">
-            </div>
-            
-            <div class="value-slider enjoyment-slider">
-                <label class="slider-label" for="enjoymentSlider">Enjoyment</label>
-                <input type="range" min="0" max="100" value="15" class="slider-track" id="enjoymentSlider">
-            </div>
-        </div>
 
-        <div class="chart-container">
-            <canvas class="pie-chart" id="pieChart" width="280" height="280"></canvas>
-            <div class="chart-legend">
-                <div class="legend-item">
-                    <div class="legend-color legend-health"></div>
-                    <span id="healthPercent">35%</span> Health
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color legend-performance"></div>
-                    <span id="performancePercent">30%</span> Performance
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color legend-appearance"></div>
-                    <span id="appearancePercent">20%</span> Appearance
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color legend-enjoyment"></div>
-                    <span id="enjoymentPercent">15%</span> Enjoyment
-                </div>
+
+
+<div class="controls-section">
+    <div class="sliders-container">
+        <h3>Adjust Your Fitness Priorities</h3>
+        
+        <div class="value-slider health-slider">
+            <div class="slider-header">
+                <label class="slider-label">Health & Longevity</label>
+                <span class="slider-percentage" id="healthPercent">35%</span>
             </div>
+            <input type="range" min="0" max="100" value="35" class="slider-track" id="healthSlider">
+            <p class="slider-description">Fitness that supports long-term wellbeing and disease prevention.</p>
+        </div>
+        
+        <div class="value-slider performance-slider">
+            <div class="slider-header">
+                <label class="slider-label">Physical Performance</label>
+                <span class="slider-percentage" id="performancePercent">30%</span>
+            </div>
+            <input type="range" min="0" max="100" value="30" class="slider-track" id="performanceSlider">
+            <p class="slider-description">Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills.</p>
+        </div>
+        
+        <div class="value-slider appearance-slider">
+            <div class="slider-header">
+                <label class="slider-label">Appearance</label>
+                <span class="slider-percentage" id="appearancePercent">20%</span>
+            </div>
+            <input type="range" min="0" max="100" value="20" class="slider-track" id="appearanceSlider">
+            <p class="slider-description">Physical aesthetics including muscle definition, body composition, and overall physique.</p>
+        </div>
+        
+        <div class="value-slider enjoyment-slider">
+            <div class="slider-header">
+                <label class="slider-label">Enjoyment & Psychological Benefits</label>
+                <span class="slider-percentage" id="enjoymentPercent">15%</span>
+            </div>
+            <input type="range" min="0" max="100" value="15" class="slider-track" id="enjoymentSlider">
+            <p class="slider-description">The pleasure, mental health benefits, and positive experiences derived from physical activity.</p>
         </div>
     </div>
+
+    <div class="chart-container">
+        <h3>Priority Distribution</h3>
+        <canvas class="pie-chart" id="pieChart" width="240" height="240"></canvas>
+    </div>
+</div>
 
     <div class="recommendations-section">
         <div class="recommendations-header">
