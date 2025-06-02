@@ -26,7 +26,7 @@ title: Fitness Personalised
     max-width: none !important;
     width: 95% !important;
     margin: 0 auto;
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 /* Update controls layout for 2x2 grid */
@@ -49,7 +49,7 @@ title: Fitness Personalised
 .sliders-container h3 {
     grid-column: 1 / -1; /* Span across both columns */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .chart-container {
@@ -192,7 +192,7 @@ body .main-content {
 .recommendations-section {
     background: white;
     border-radius: 8px;
-    padding: 30px;
+    padding: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
