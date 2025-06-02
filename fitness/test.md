@@ -25,7 +25,7 @@ title: Fitness Test - Personalised Recommendations
     max-width: none !important;
     width: 95% !important;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 /* Update controls layout for 2x2 grid */
@@ -33,14 +33,14 @@ title: Fitness Test - Personalised Recommendations
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .sliders-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
     max-width: 600px;
     width: 100%;
 }
@@ -55,7 +55,7 @@ title: Fitness Test - Personalised Recommendations
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
     
 body .main-content {
@@ -65,7 +65,7 @@ body .main-content {
     
 .header-section {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .header-section h1 {
@@ -93,7 +93,7 @@ body .main-content {
 
 /* Slider styling */
 .value-slider {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     padding: 12px;
     border-radius: 8px;
     background: #f8f9fa;
@@ -103,7 +103,7 @@ body .main-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .slider-label {
@@ -131,14 +131,14 @@ body .main-content {
     appearance: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .slider-description {
     font-size: 0.9em;
     color: #666;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 .slider-track::-webkit-slider-thumb {
@@ -196,7 +196,7 @@ body .main-content {
 }
 
 .recommendations-header {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
