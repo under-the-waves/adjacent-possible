@@ -527,28 +527,28 @@ body .main-content {
             <thead>
                 <tr>
                     <th data-sort="name">
-                        Intervention <span class="sort-indicator">^v</span>
+                        Intervention ⇵<span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="wbs" class="active">
-                        WBS <span class="sort-indicator">↓</span>
+                        WBS ⇵<span class="sort-indicator">↓</span>
                     </th>
                     <th data-sort="upfront-cost">
                         Upfront Cost (USD) <span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="ongoing-cost">
-                        Ongoing Cost <span class="sort-indicator">^v</span>
+                        Ongoing Cost ⇵<span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="upfront-time">
-                        Upfront Time <span class="sort-indicator">^v</span>
+                        Upfront Time ⇵<span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="ongoing-time">
-                        Ongoing Time <span class="sort-indicator">^v</span>
+                        Ongoing Time ⇵<span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="time-eroi">
-                        Time EROI <span class="sort-indicator">^v</span>
+                        Time EROI ⇵<span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="money-eroi">
-                        Money EROI <span class="sort-indicator">^v</span>
+                        Money EROI ⇵<span class="sort-indicator">^v</span>
                     </th>
                 </tr>
             </thead>
