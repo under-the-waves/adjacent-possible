@@ -13,6 +13,11 @@ title: Fitness Test - Personalised Recommendations
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+body .main-content {
+    max-width: none !important;
+    padding: 1rem !important;
+}
+    
 .header-section {
     text-align: center;
     margin-bottom: 40px;
@@ -298,12 +303,10 @@ title: Fitness Test - Personalised Recommendations
 
 /* Sort indicators in headers */
 .sort-indicator {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.9em;
-    opacity: 0.6;
+    display: inline;
+    margin-left: 5px;
+    font-size: 1em;
+    opacity: 1;
 }
 
 .recommendations-table th:hover .sort-indicator {
