@@ -17,7 +17,7 @@ title: Fitness Test - Personalised Recommendations
 .top-section {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
 }
 
 /* Container for bottom section - full width */
@@ -33,8 +33,8 @@ title: Fitness Test - Personalised Recommendations
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
 .sliders-container {
@@ -55,7 +55,7 @@ title: Fitness Test - Personalised Recommendations
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
     
 body .main-content {
@@ -65,7 +65,7 @@ body .main-content {
     
 .header-section {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .header-section h1 {
@@ -93,8 +93,8 @@ body .main-content {
 
 /* Slider styling */
 .value-slider {
-    margin-bottom: 30px;
-    padding: 15px;
+    margin-bottom: 15px;
+    padding: 12px;
     border-radius: 8px;
     background: #f8f9fa;
 }
@@ -178,8 +178,8 @@ body .main-content {
 /* Pie chart */
 /* Pie chart */
 .pie-chart {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
 }
 
 /* Hide legend since we don't need it */
@@ -513,13 +513,10 @@ body .main-content {
 
         <div class="controls-section">
             <div class="chart-container">
-                <h3>Priority Distribution</h3>
-                <canvas class="pie-chart" id="pieChart" width="240" height="240"></canvas>
+                <canvas class="pie-chart" id="pieChart" width="200" height="200"></canvas>
             </div>
             
             <div class="sliders-container">
-                <h3>Adjust Your Fitness Priorities</h3>
-                
                 <div class="value-slider health-slider">
                     <div class="slider-header">
                         <label class="slider-label">Health & Longevity</label>
