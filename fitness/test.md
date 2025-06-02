@@ -18,6 +18,7 @@ title: Fitness Personalised
     max-width: 800px;
     margin: 0 auto;
     padding: 15px;
+    margin-bottom: 5px
 }
 
 /* Container for bottom section - full width */
@@ -25,7 +26,7 @@ title: Fitness Personalised
     max-width: none !important;
     width: 95% !important;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 5px 20px;
 }
 
 /* Update controls layout for 2x2 grid */
@@ -33,14 +34,14 @@ title: Fitness Personalised
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .sliders-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 10px;
     max-width: 600px;
     width: 100%;
 }
@@ -103,7 +104,7 @@ body .main-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .slider-label {
@@ -131,7 +132,7 @@ body .main-content {
     appearance: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .slider-description {
@@ -196,7 +197,7 @@ body .main-content {
 }
 
 .recommendations-header {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
