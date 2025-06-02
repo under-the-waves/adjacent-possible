@@ -7,6 +7,8 @@ A well-maintained home environment serves as the foundation for virtually every 
 ## Housework Values
 There's no universal standard for home management. Your approach depends on what aspects of housework you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
 
+This guide also focuses on five core components: cleanliness and hygiene, organisation and storage, home maintenance and systems, time and resource efficiency, and sustainability impact.
+
 For personalised recommendations based on your unique priorities, visit [Housework Personalised]({{ site.baseurl }}/housework/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
 ### Functional Efficiency (40%)
