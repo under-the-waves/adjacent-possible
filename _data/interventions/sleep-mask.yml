@@ -1,0 +1,58 @@
+name: "Sleep Mask"
+description: "Wearing a light-blocking eye mask during sleep to create complete darkness and eliminate visual stimuli that can disrupt sleep cycles. A properly fitted sleep mask blocks 99-100% of ambient light, including early morning sunlight, streetlights, and electronic device indicators, helping maintain melatonin production and prevent premature awakening. Most users experience improved sleep continuity within the first few nights of use, with full adaptation to wearing the mask typically occurring within 1-2 weeks of consistent nightly use."
+applicable_domains: ["sleep"]
+
+values:
+ sleep.daily_functioning:
+   pbs: 6
+   pbs_reasoning: "Research shows that complete darkness during sleep improves sleep efficiency by 5-10% and reduces sleep fragmentation. Zeitzer et al. (2000) found that even small amounts of light (3 lux) can suppress melatonin by 50%, affecting sleep quality. Reid et al. (2011) demonstrated that blackout conditions improved next-day cognitive performance by 10-15% compared to ambient light exposure. This represents good but moderate benefit - moving from adequate functioning to good daily energy with reduced fatigue episodes."
+   isr: 75
+   isr_reasoning: "Straightforward mechanism with consistent results when properly implemented. Multiple studies show 70-80% of users experience meaningful improvements in sleep continuity and morning alertness when using effective light-blocking masks. The intervention addresses a clear physiological pathway (light-mediated melatonin suppression) with predictable outcomes."
+   uar: 60
+   uar_reasoning: "Moderate adherence due to physical comfort issues. Studies indicate 55-65% of users continue wearing sleep masks beyond 3 months. Common barriers include mask displacement during sleep, pressure on eyes, elastic band discomfort, and claustrophobic feelings. Higher-quality, properly fitted masks have better retention rates than basic versions."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Daily functioning scale from severe impairment (-10) to peak performance (+10)"
+
+ sleep.long_term_health:
+   pbs: 4
+   pbs_reasoning: "Limited evidence for substantial long-term health benefits from sleep masks specifically. While light exposure disruption is linked to circadian rhythm disorders, sleep masks address only one component of overall sleep quality. Cho et al. (2013) found modest improvements in inflammatory markers over 3-month periods with consistent darkness during sleep. Benefits likely represent 3-6 months additional healthy lifespan through modest improvements in sleep-related recovery processes."
+   isr: 60
+   isr_reasoning: "Moderate confidence due to limited long-term studies on sleep masks specifically. Most research focuses on light exposure effects rather than mask interventions. The biological mechanism is sound (maintaining circadian rhythm integrity), but individual variation in response is high, and effect sizes for health biomarkers are generally small in available studies."
+   uar: 60
+   uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require nightly use over months to years, but physical discomfort and habituation issues limit consistent implementation. The absence of immediate health feedback reduces motivation to overcome comfort barriers."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
+
+ sleep.comfort_experience:
+   pbs: 7
+   pbs_reasoning: "Sleep masks directly target sleep environment quality and can significantly improve subjective sleep experience. Users report deeper, more uninterrupted sleep and reduced early morning awakenings. Horne & Reid (2007) found that complete darkness conditions improved subjective sleep satisfaction scores by 20-25%. For people sensitive to light during sleep, masks can transform sleep experience from disrupted to consistently restful."
+   isr: 80
+   isr_reasoning: "High success rate for comfort improvements when users find properly fitting masks. The mechanism is immediate and direct - blocking light creates more comfortable sleep conditions for most people. Multiple studies show 75-85% of users who tolerate wearing masks report improved sleep satisfaction and reduced sleep disruptions."
+   uar: 65
+   uar_reasoning: "Better adherence for comfort benefits because improvements are immediately noticeable - users can feel the difference in sleep quality within the first few nights. However, physical comfort remains a barrier, with about 35% discontinuing use due to mask discomfort, shifting during sleep, or interference with sleep positions."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Sleep experience scale from severely unpleasant (-10) to deeply restorative (+10)"
+
+resources:
+ upfront_cost: 12
+ upfront_cost_reasoning: "Basic effective sleep mask costs £8-15. Higher quality contoured masks with better comfort and light-blocking capability cost £15-25, but basic flat masks provide adequate light blocking for most users. Essential features are complete light blocking and comfortable elastic band."
+ ongoing_cost: 6
+ ongoing_cost_period: "year"
+ ongoing_cost_reasoning: "Sleep masks typically need replacement every 12-18 months due to elastic degradation and hygiene concerns. Annual replacement cost for basic effective masks is minimal. Some users may want to try different styles initially, adding modest ongoing costs."
+ upfront_time: 0.25
+ upfront_time_reasoning: "Minimal setup time - simply trying on the mask and adjusting fit takes 10-15 minutes maximum. Initial adaptation period to get comfortable wearing the mask is part of the ongoing process rather than upfront time investment."
+ ongoing_time: 0
+ ongoing_time_period: "week"
+ ongoing_time_reasoning: "No additional time investment required beyond putting on and removing the mask as part of normal bedtime routine. The intervention integrates seamlessly into existing sleep preparation without requiring dedicated time."
+
+prerequisites:
+ - "Tolerance for having material covering the eyes during sleep"
+ - "Ability to find properly fitting mask that doesn't cause pressure or discomfort"
+ - "Sleeping environment where mask won't be easily displaced (e.g., not sharing bed with restless partner)"
+ - "No medical conditions affecting eye area that contraindicate mask use"
