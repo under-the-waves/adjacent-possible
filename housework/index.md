@@ -5,7 +5,9 @@
 A well-maintained home environment serves as the foundation for virtually every other area of life. Beyond basic shelter, your home significantly impacts your mental health, productivity, relationships, and overall quality of life. People with clean houses are healthier than those with messy homes ([Indiana University](https://news.iu.edu/stories/2015/08/iub/releases/24-housework-physical-activity.html)), while physical clutter competes for attention, reducing your ability to focus and process information ([Princeton Neuroscience Institute](https://www.jneurosci.org/content/31/2/587)).
 
 ## Housework Values
-There's no universal standard for home management. Your approach depends on what aspects of housework you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations:
+There's no universal standard for home management. Your approach depends on what aspects of housework you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+
+For personalised recommendations based on your unique priorities, visit [Housework Personalised]({{ site.baseurl }}/housework/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
 ### Functional Efficiency (40%)
 Home management that creates smooth operation and reduced friction in daily life. This includes logical organization systems, streamlined workflows, intuitive storage, and time-saving routines. People who prioritize this value focus on creating systems that minimize effort while maximizing effectiveness, with particular attention to how their space functions.
@@ -23,11 +25,12 @@ Your optimal approach will also be influenced by your household size, living spa
 
 _Note: Your own priorities may differ from the weightings used in this guide. While these values often complement each other, there can be trade-offs—for example, some highly efficient systems might initially require more time to implement, or certain aesthetic choices might require more maintenance._
 
-## Levels
+## Levels and personalisation
 - [Level 1: Awareness](level-1)
 - [Level 2: Foundations](level-2)
 - [Level 3: Proficiency](level-3)
 - [Level 4: Excellence](level-4)
 - [Level 5: Mastery](level-5)
+- [Housework Personalised]({{ site.baseurl }}/housework/personalised)
 
 [← Back to Life Levels Home](../)
