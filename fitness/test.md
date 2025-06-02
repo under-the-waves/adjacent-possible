@@ -533,7 +533,7 @@ body .main-content {
                         WBS ⇵<span class="sort-indicator">↓</span>
                     </th>
                     <th data-sort="upfront-cost">
-                        Upfront Cost (USD) <span class="sort-indicator">^v</span>
+                        Upfront Cost (USD) ⇵<span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="ongoing-cost">
                         Ongoing Cost ⇵<span class="sort-indicator">^v</span>
