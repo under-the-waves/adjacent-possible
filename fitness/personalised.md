@@ -204,17 +204,19 @@ body .main-content {
 .recommendations-section {
     background: white;
     border-radius: 8px;
-    padding: 15px;
+    padding: 5px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .recommendations-header {
+    margin-top: 0;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .recommendations-header h2 {
     color: #000000;
+    margin-top: 0;
     margin-bottom: 10px;
     font-weight: normal;
 }
