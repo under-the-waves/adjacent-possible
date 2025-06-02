@@ -21,4 +21,38 @@ values:
    isr: 75
    isr_reasoning: "Strong epidemiological evidence supported by mechanistic studies. Large longitudinal studies consistently demonstrate health benefits of circadian regularity. However, most evidence is observational rather than experimental for long-term outcomes. The biological mechanisms (hormone regulation, metabolic function) are well-established, supporting good confidence in intervention effectiveness."
    uar: 55
-   uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require sustained consistency over years, but social
+   uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require sustained consistency over years, but social pressures and lifestyle demands make perfect adherence difficult. The delayed nature of health benefits (no immediate feedback) combined with social costs of rigid scheduling limit long-term maintenance."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
+
+ sleep.comfort_experience:
+   pbs: 6
+   pbs_reasoning: "Consistent wake times improve sleep architecture and natural sleep drive. Walker (2017) research indicates that stable circadian rhythms enhance deep sleep stages by 15-20% and reduce sleep fragmentation. Users report more natural, refreshing wake-ups and improved sleep satisfaction scores. However, the initial adjustment period can be uncomfortable, and the intervention doesn't directly address sleep environment or relaxation factors that significantly impact comfort."
+   isr: 85
+   isr_reasoning: "High success rate for subjective sleep improvements when consistently implemented. The circadian mechanism is straightforward and reliable - consistent wake times naturally regulate sleep pressure and timing. Multiple studies show 80-90% of adherent participants report improved sleep quality and more refreshing mornings within 4-6 weeks."
+   uar: 60
+   uar_reasoning: "Slightly better adherence for comfort benefits because users notice improvements in morning alertness and sleep quality relatively quickly (2-3 weeks). The positive reinforcement from feeling more rested helps maintain motivation. However, social and lifestyle barriers still limit perfect consistency for most people long-term."
+   anchor_type: "subjective"
+   anchor_max: 10
+   anchor_unit: ""
+   anchor_description: "Sleep experience scale from severely unpleasant (-10) to deeply restorative (+10)"
+
+resources:
+ upfront_cost: 15
+ upfront_cost_reasoning: "Basic alarm clock or smartphone alarm setup costs minimal. Optional: sunrise alarm clock (£15-25) or sleep tracking device for monitoring consistency. Most people can implement with existing smartphone alarm functionality at no additional cost."
+ ongoing_cost: 0
+ ongoing_cost_period: "month"
+ ongoing_cost_reasoning: "No recurring expenses required. The intervention relies on behavioural consistency rather than products or services. Optional sleep tracking apps may have subscription costs but are not necessary for implementation."
+ upfront_time: 1
+ upfront_time_reasoning: "Minimal setup time to establish target wake time and set consistent alarms. Initial planning to identify optimal wake time based on schedule requirements and sleep needs takes under one hour."
+ ongoing_time: 0
+ ongoing_time_period: "week"
+ ongoing_time_reasoning: "No additional time investment beyond normal wake routine. The intervention involves maintaining timing consistency rather than adding new activities. May actually save time by reducing decision-making about wake times."
+
+prerequisites:
+ - "Ability to control wake time most days (not required for shift workers with rotating schedules)"
+ - "Access to reliable alarm system or wake-up method"
+ - "Understanding of personal sleep needs and realistic schedule constraints"
+ - "Willingness to prioritise sleep consistency over some social activities"
