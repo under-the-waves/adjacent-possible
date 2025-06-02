@@ -48,7 +48,7 @@ title: Fitness Personalised
 .controls-section {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
     margin-bottom: 10px;
     justify-content: center;
@@ -97,10 +97,12 @@ body .main-content {
 .header-description {
     max-width: 800px; /* Increase from 400px to match the combined width */
     margin: 0 auto;
+    text-align: left;
 }
 
 .header-description p {
     margin-bottom: 0;
+    font-size: 0.95em;
 }
     
 /* Controls layout */
