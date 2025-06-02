@@ -45,13 +45,13 @@ title: Fitness Personalised
     padding: 0px 20px;
 }
 
-/* Update controls layout for 2x2 grid */
 .controls-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 0px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 10px;
+    justify-content: center;
 }
 
 .sliders-container {
@@ -60,19 +60,15 @@ title: Fitness Personalised
     gap: 10px;
     max-width: 600px;
     width: 100%;
-}
-
-.sliders-container h3 {
-    grid-column: 1 / -1; /* Span across both columns */
-    text-align: center;
-    margin-bottom: 5px;
+    flex: 1;
 }
 
 .chart-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5px;
+    justify-content: center;
+    flex-shrink: 0;
 }
     
 body .main-content {
@@ -418,7 +414,12 @@ body .main-content {
 @media (max-width: 768px) {
     .controls-section {
         flex-direction: column;
-        gap: 30px;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .sliders-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
     }
     
     .recommendations-table {
