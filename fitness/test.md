@@ -523,28 +523,28 @@ title: Fitness Test - Personalised Recommendations
             <thead>
                 <tr>
                     <th data-sort="name">
-                        Intervention <span class="sort-indicator">⇅</span>
+                        Intervention <span class="sort-indicator">↕</span>
                     </th>
                     <th data-sort="wbs" class="active">
                         WBS <span class="sort-indicator">↓</span>
                     </th>
                     <th data-sort="upfront-cost">
-                        Upfront Cost (USD) <span class="sort-indicator">⇅</span>
+                        Upfront Cost (USD) <span class="sort-indicator">↕</span>
                     </th>
                     <th data-sort="ongoing-cost">
-                        Ongoing Cost <span class="sort-indicator">⇅</span>
+                        Ongoing Cost <span class="sort-indicator">↕</span>
                     </th>
                     <th data-sort="upfront-time">
-                        Upfront Time <span class="sort-indicator">⇅</span>
+                        Upfront Time <span class="sort-indicator">↕</span>
                     </th>
                     <th data-sort="ongoing-time">
-                        Ongoing Time <span class="sort-indicator">⇅</span>
+                        Ongoing Time <span class="sort-indicator">↕</span>
                     </th>
                     <th data-sort="time-eroi">
-                        Time EROI <span class="sort-indicator">⇅</span>
+                        Time EROI <span class="sort-indicator">↕</span>
                     </th>
                     <th data-sort="money-eroi">
-                        Money EROI <span class="sort-indicator">⇅</span>
+                        Money EROI <span class="sort-indicator">↕</span>
                     </th>
                 </tr>
             </thead>
@@ -843,29 +843,11 @@ Object.keys(sliders).forEach(key => {
     });
 });
 
-// Event listeners for sort buttons
-document.querySelectorAll('.sort-button').forEach(button => {
-    button.addEventListener('click', function() {
-        // Update active state
-        document.querySelectorAll('.sort-button').forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Update sort method and refresh recommendations
-        currentSort = this.dataset.sort;
-        updateRecommendations();
-    });
-});
-
 // Event listeners for table header sorting
-document.querySelectorAll('.sortable-header').forEach(header => {
+document.querySelectorAll('th[data-sort]').forEach(header => {
     header.addEventListener('click', function() {
         // Update sort method
         currentSort = this.dataset.sort;
-        
-        // Update button states
-        document.querySelectorAll('.sort-button').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.sort === currentSort);
-        });
         
         // Refresh recommendations
         updateRecommendations();
