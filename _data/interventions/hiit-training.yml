@@ -1,0 +1,70 @@
+name: "High Intensity Interval Training"
+description: "HIIT involves alternating periods of high-intensity exercise (typically 80-95% maximum heart rate) with active recovery or rest periods. Sessions typically last 15-30 minutes total, performed 3 times per week, with work intervals ranging from 30 seconds to 4 minutes. The high-intensity phases recruit maximum muscle fiber activation and stress cardiovascular systems, while recovery periods allow partial physiological restoration before the next interval. Results typically emerge within 2-4 weeks, with significant improvements seen by 8-12 weeks."
+applicable_domains: ["fitness"]
+
+values:
+  fitness.health:
+    pbs: 7
+    pbs_reasoning: "Large-scale meta-analyses demonstrate HIIT produces significant improvements in 14 clinically relevant cardiometabolic health parameters. Studies show 37-49% lower all-cause mortality risk compared to current physical activity guidelines and moderate continuous training. HIIT improves VO2max by 0.58 standard deviations in meta-analyses, along with substantial improvements in blood pressure, glucose regulation, and cardiovascular risk factors. However, while substantial, these benefits represent approximately 12.5% of the theoretical maximum health benefit on the logarithmic scale."
+    isr: 85
+    isr_reasoning: "Very high-quality evidence from multiple large meta-analyses across diverse populations consistently demonstrates HIIT effectiveness. Recent umbrella review of 24 systematic reviews representing 429 primary studies and 12,967 participants confirms robust, replicated benefits. Multiple RCTs show significant improvements in cardiovascular fitness, metabolic health, and mortality risk with high statistical confidence and low heterogeneity."
+    uar: 65
+    uar_reasoning: "Real-world adherence data shows HIIT compliance averages 89.4% in supervised settings but drops to 63% in unsupervised environments. Dropout rates from HIIT interventions average 17.6% overall, with evidence showing 60.8% adherence to prescribed sessions declining to 19.6% by 12 months in unsupervised settings. Time constraints and intensity demands create moderate barriers to long-term adherence."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "15+ years additional healthy lifespan through comprehensive cardiometabolic improvements"
+
+  fitness.performance:
+    pbs: 6
+    pbs_reasoning: "Meta-analyses show HIIT significantly improves VO2max in elite athletes by 0.58 standardized mean difference compared to conventional training. Elite athletes can achieve VO2max values of 70-85 ml/kg/min (men) and 60-75 ml/kg/min (women) with some exceeding 90 ml/kg/min. However, VO2max improvements in already-trained athletes are more modest, and performance gains represent roughly 6.25% of theoretical maximum elite competitive performance on the logarithmic scale."
+    isr: 75
+    isr_reasoning: "Strong evidence from controlled studies in athletic populations demonstrates consistent VO2max improvements and performance gains. Meta-analysis of 9 studies with 176 elite athletes shows significant improvements over conventional training methods. However, evidence base is smaller than for health outcomes, with some studies having small sample sizes and varied protocols."
+    uar: 70
+    uar_reasoning: "Athletes typically show higher adherence rates than general population due to performance motivation and existing training habits. Supervised compliance rates exceed 85% in athletic populations. However, the high intensity demands and time requirements still create challenges for consistent long-term implementation, particularly during competitive seasons."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "Elite competitive athletic performance across endurance and power-based sports"
+
+  fitness.appearance:
+    pbs: 5
+    pbs_reasoning: "Meta-analyses show HIIT produces modest but significant body composition improvements. Studies demonstrate 1.53% reduction in body fat percentage, 1.86 kg reduction in fat mass, and significant reductions in abdominal (-8.3%) and visceral fat (-24.2%). However, effects are similar to moderate continuous training, requiring 40% less time. Body composition changes are modest and represent approximately 3.125% of maximum theoretical appearance benefits on the logarithmic scale."
+    isr: 70
+    isr_reasoning: "Moderate-quality evidence shows consistent but modest body composition effects across multiple meta-analyses. Some studies show no significant differences between HIIT and continuous training for body composition. Evidence is robust for fat loss but limited for muscle building, with resistance training showing superior effects for fat-free mass development."
+    uar: 65
+    uar_reasoning: "Similar adherence challenges as health domain, with supervised compliance around 89% dropping to 63% unsupervised. Body composition changes are slower to manifest than fitness gains, potentially affecting motivation. However, time efficiency of HIIT may appeal to those seeking appearance improvements with limited time availability."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "Dramatic visible body composition transformation with significant fat loss and muscle definition"
+
+  fitness.enjoyment:
+    pbs: 6
+    pbs_reasoning: "Meta-analyses demonstrate HIIT elicits similar or higher enjoyment compared to moderate continuous training. Studies show beneficial effects on enjoyment scales (PACES) with effect sizes classified as small positive. HIIT protocols with shorter intervals (30-60 seconds) show higher enjoyment than longer intervals or continuous exercise. The time-efficient nature and variety in HIIT protocols contribute to positive psychological responses, representing moderate enjoyment benefits."
+    isr: 75
+    isr_reasoning: "Good quality evidence from multiple controlled studies consistently shows neutral to positive enjoyment responses. Systematic reviews and meta-analyses demonstrate that HIIT can be as enjoyable as traditional exercise when properly designed. However, responses vary significantly based on interval structure, fitness level, and individual preferences."
+    uar: 65
+    uar_reasoning: "Enjoyment benefits support adherence but real-world implementation still faces challenges. While HIIT may be more enjoyable than traditional exercise, the high-intensity nature can still be intimidating for sedentary individuals. Proper progression and interval selection are crucial for maintaining positive experiences over time."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "score"
+    anchor_description: "Maximum exercise enjoyment and intrinsic motivation leading to sustained lifelong physical activity engagement"
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "HIIT can be performed with bodyweight exercises, running, or basic equipment like stairs. No mandatory equipment purchases required to begin effective implementation."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Can be performed in public spaces, at home, or using existing facilities. No mandatory subscription or membership fees required for basic implementation."
+  upfront_time: 2
+  upfront_time_reasoning: "Minimal learning required - basic understanding of interval timing and intensity monitoring. One session to learn proper form and timing structure."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective dose is 45-90 minutes per week (3 sessions of 15-30 minutes each including warm-up and cool-down)"
+
+prerequisites:
+  - "Medical clearance for high-intensity exercise, especially for individuals over 40 or with cardiovascular risk factors"
+  - "Basic cardiovascular fitness to safely tolerate high-intensity efforts without immediate exhaustion"
+  - "Access to safe exercise environment (space for movement, non-slip surfaces, emergency assistance if needed)"
+  - "Ability to monitor exercise intensity through perceived exertion, heart rate, or other intensity markers"
