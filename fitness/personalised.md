@@ -13,12 +13,28 @@ title: Fitness Personalised
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+    
 /* Container for top section - normal width */
 .top-section {
     max-width: 800px;
     margin: 0 auto;
     padding: 15px;
-    margin-bottom: 5px
+    margin-bottom: 0px
 }
 
 /* Container for bottom section - full width */
@@ -35,7 +51,7 @@ title: Fitness Personalised
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .sliders-container {
@@ -288,10 +304,10 @@ body .main-content {
 /* Intervention name column */
 .intervention-name {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     min-width: 200px;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: wrap;
 }
 
 .intervention-link {
@@ -319,6 +335,7 @@ body .main-content {
     transition: background-color 0.3s;
     user-select: none;
     flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .table-description-icon:hover {
@@ -504,6 +521,12 @@ body .main-content {
 </style>
 
 <div class="fitness-test-container">
+    <div class="breadcrumb-nav">
+        <a href="{{ site.baseurl }}/">Home</a> > 
+        <a href="{{ site.baseurl }}/fitness/">Fitness</a> > 
+        Personalised Recommendations
+    </div>
+    
     <div class="top-section">
         <div class="header-section">
             <h1>Fitness Personalised</h1>
