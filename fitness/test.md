@@ -6,7 +6,7 @@ title: Fitness Test - Personalised Recommendations
 <style>
 /* Main container */
 .fitness-test-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -171,6 +171,7 @@ title: Fitness Test - Personalised Recommendations
     border-radius: 6px;
     margin-top: 15px;
     font-size: 0.9em;
+    text-align: left;
 }
 
 .methodology-note p {
@@ -188,32 +189,7 @@ title: Fitness Test - Personalised Recommendations
 
 /* Sort controls */
 .sort-controls {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.sort-button {
-    background: #f8f9fa;
-    border: 2px solid #dee2e6;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9em;
-    font-weight: 500;
-}
-
-.sort-button:hover {
-    background: #e9ecef;
-}
-
-.sort-button.active {
-    background: #155799;
-    color: white;
-    border-color: #155799;
+    display: none;
 }
 
 /* Table styling */
@@ -234,6 +210,19 @@ title: Fitness Test - Personalised Recommendations
     color: #333;
     border-bottom: 2px solid #dee2e6;
     font-size: 0.9em;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.recommendations-table th:hover {
+    background: #e9ecef;
+}
+
+.recommendations-table th.active {
+    background: #155799;
+    color: white;
 }
 
 .recommendations-table td {
@@ -307,27 +296,21 @@ title: Fitness Test - Personalised Recommendations
 }
 
 /* Sort indicators in headers */
-.sortable-header {
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-}
-
-.sortable-header:hover {
-    background: #e9ecef;
-}
-
-.sortable-header.active {
-    background: #155799;
-    color: white;
-}
-
 .sort-indicator {
     position: absolute;
-    right: 5px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0.8em;
+    font-size: 0.9em;
+    opacity: 0.6;
+}
+
+.recommendations-table th:hover .sort-indicator {
+    opacity: 1;
+}
+
+.recommendations-table th.active .sort-indicator {
+    opacity: 1;
 }
 
 /* Mobile responsiveness */
@@ -536,28 +519,32 @@ title: Fitness Test - Personalised Recommendations
             </div>
         </div>
 
-        <div class="sort-controls">
-            <button class="sort-button active" data-sort="wbs">Sort by WBS</button>
-            <button class="sort-button" data-sort="time-eroi">Sort by Time EROI</button>
-            <button class="sort-button" data-sort="money-eroi">Sort by Money EROI</button>
-        </div>
-
         <table class="recommendations-table" id="recommendationsTable">
             <thead>
                 <tr>
-                    <th>Intervention</th>
-                    <th class="sortable-header" data-sort="wbs">
+                    <th data-sort="name">
+                        Intervention <span class="sort-indicator">⇅</span>
+                    </th>
+                    <th data-sort="wbs" class="active">
                         WBS <span class="sort-indicator">↓</span>
                     </th>
-                    <th>Upfront Cost</th>
-                    <th>Ongoing Cost</th>
-                    <th>Upfront Time</th>
-                    <th>Ongoing Time</th>
-                    <th class="sortable-header" data-sort="time-eroi">
-                        Time EROI <span class="sort-indicator"></span>
+                    <th data-sort="upfront-cost">
+                        Upfront Cost (USD) <span class="sort-indicator">⇅</span>
                     </th>
-                    <th class="sortable-header" data-sort="money-eroi">
-                        Money EROI <span class="sort-indicator"></span>
+                    <th data-sort="ongoing-cost">
+                        Ongoing Cost <span class="sort-indicator">⇅</span>
+                    </th>
+                    <th data-sort="upfront-time">
+                        Upfront Time <span class="sort-indicator">⇅</span>
+                    </th>
+                    <th data-sort="ongoing-time">
+                        Ongoing Time <span class="sort-indicator">⇅</span>
+                    </th>
+                    <th data-sort="time-eroi">
+                        Time EROI <span class="sort-indicator">⇅</span>
+                    </th>
+                    <th data-sort="money-eroi">
+                        Money EROI <span class="sort-indicator">⇅</span>
                     </th>
                 </tr>
             </thead>
