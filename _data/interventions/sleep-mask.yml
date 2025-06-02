@@ -15,17 +15,20 @@ values:
    anchor_unit: ""
    anchor_description: "Daily functioning scale from severe impairment (-10) to peak performance (+10)"
 
- sleep.long_term_health:
-   pbs: 4
-   pbs_reasoning: "Limited evidence for substantial long-term health benefits from sleep masks specifically. While light exposure disruption is linked to circadian rhythm disorders, sleep masks address only one component of overall sleep quality. Cho et al. (2013) found modest improvements in inflammatory markers over 3-month periods with consistent darkness during sleep. Benefits likely represent 3-6 months additional healthy lifespan through modest improvements in sleep-related recovery processes."
-   isr: 60
-   isr_reasoning: "Moderate confidence due to limited long-term studies on sleep masks specifically. Most research focuses on light exposure effects rather than mask interventions. The biological mechanism is sound (maintaining circadian rhythm integrity), but individual variation in response is high, and effect sizes for health biomarkers are generally small in available studies."
-   uar: 60
-   uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require nightly use over months to years, but physical discomfort and habituation issues limit consistent implementation. The absence of immediate health feedback reduces motivation to overcome comfort barriers."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
+sleep.long_term_health:
+  pbs: 4
+  pbs_reasoning: |
+    Limited evidence for substantial long-term health benefits from sleep masks specifically. While light exposure disruption is linked to circadian rhythm disorders, sleep masks address only one component of overall sleep quality. Cho et al. (2013) found modest improvements in inflammatory markers over 3-month periods with consistent darkness during sleep. Benefits likely represent 3-6 months additional healthy lifespan through modest improvements in sleep-related recovery processes.
+  isr: 60
+  isr_reasoning: |
+    Moderate confidence due to limited long-term studies on sleep masks specifically. Most research focuses on light exposure effects rather than mask interventions. The biological mechanism is sound (maintaining circadian rhythm integrity), but individual variation in response is high, and effect sizes for health biomarkers are generally small in available studies.
+  uar: 60
+  uar_reasoning: |
+    Same adherence challenges as daily functioning. Long-term health benefits require nightly use over months to years, but physical discomfort and habituation issues limit consistent implementation. The absence of immediate health feedback reduces motivation to overcome comfort barriers.
+  anchor_type: "subjective"
+  anchor_max: 10
+  anchor_unit: ""
+  anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
 
  sleep.comfort_experience:
    pbs: 7
