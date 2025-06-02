@@ -12,14 +12,7 @@ The Adjacent Possible guides break down progress into five distinct stages, allo
 
 ### Level 1: Awareness
 
-Level 1 requires minimal investment—typically 1 hour of time with no financial cost. It focuses on:
-
-- Understanding why this life area is important
-- Learning what's possible to achieve
-- Assessing your current capabilities
-- Creating a simple improvement plan
-
-This phase creates clarity without requiring immediate habit changes, giving you direction before you invest significant time or resources.
+This level involves assessment and understanding only. It requires no habit changes or financial investment – just evaluation of your current situation and planning for improvement.
 
 ### Level 2: Foundations
 
