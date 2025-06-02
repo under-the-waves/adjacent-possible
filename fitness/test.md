@@ -186,6 +186,36 @@ title: Fitness Test - Personalised Recommendations
     text-decoration: underline;
 }
 
+/* Sort controls */
+.sort-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.sort-button {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.sort-button:hover {
+    background: #e9ecef;
+}
+
+.sort-button.active {
+    background: #155799;
+    color: white;
+    border-color: #155799;
+}
+
 .recommendations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -196,27 +226,27 @@ title: Fitness Test - Personalised Recommendations
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 20px;
-    transition: all 0.3s ease;
     background: #fafafa;
-}
-
-.recommendation-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
+    /* Removed hover effects */
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 15px;
+    gap: 15px;
+}
+
+.card-title-container {
+    flex: 1;
 }
 
 .card-title {
     font-size: 1.3em;
     font-weight: bold;
     color: #155799;
-    margin: 0;
+    margin: 0 0 5px 0;
     text-decoration: none;
 }
 
@@ -224,52 +254,78 @@ title: Fitness Test - Personalised Recommendations
     text-decoration: underline;
 }
 
+.card-description-icon {
+    background-color: #155799;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+    margin-left: 8px;
+}
+
+.card-description-icon:hover {
+    background-color: #0d47a1;
+}
+
 .card-score {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
     color: #e63946;
     background: #f8f9fa;
     padding: 6px 12px;
     border-radius: 15px;
-    margin-left: auto;
-}
-
-.card-description {
-    color: #666;
-    margin-bottom: 15px;
-    font-size: 0.95em;
-    line-height: 1.4;
+    text-align: center;
+    min-width: 80px;
 }
 
 .card-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-stats div {
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card-eroi {
     display: flex;
     justify-content: space-between;
     font-size: 0.85em;
     color: #888;
-    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
 }
 
-.value-bars {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-}
-
-.value-bar {
+.eroi-item {
     text-align: center;
-    font-size: 0.8em;
+    flex: 1;
 }
 
-.value-bar-fill {
-    height: 6px;
-    border-radius: 3px;
-    margin-bottom: 4px;
+.eroi-value {
+    font-weight: bold;
+    color: #155799;
+    display: block;
+    font-size: 1.1em;
 }
 
-.bar-health { background: #28a745; }
-.bar-performance { background: #dc3545; }
-.bar-appearance { background: #ffc107; }
-.bar-enjoyment { background: #007bff; }
+.eroi-label {
+    color: #666;
+    font-size: 0.9em;
+}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -290,6 +346,21 @@ title: Fitness Test - Personalised Recommendations
     .chart-legend {
         max-width: 240px;
     }
+    
+    .sort-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .card-score {
+        align-self: flex-end;
+    }
 }
 
 /* Loading state */
@@ -297,6 +368,69 @@ title: Fitness Test - Personalised Recommendations
     text-align: center;
     padding: 40px;
     color: #666;
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.popup-overlay.visible {
+    display: block;
+}
+
+.description-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.description-popup.visible {
+    display: block;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #155799;
+    font-size: 1.2em;
+}
+
+.popup-content {
+    line-height: 1.5;
+    color: #333;
 }
 </style>
 
@@ -357,13 +491,30 @@ title: Fitness Test - Personalised Recommendations
             <h2>Your Recommended Interventions</h2>
             <p>Based on your priorities, here are the fitness interventions that will give you the best results:</p>
             <div class="methodology-note">
-                <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2× the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate total scores. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
+                <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2× the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
             </div>
         </div>
+
+        <div class="sort-controls">
+            <button class="sort-button active" data-sort="wbs">Sort by WBS</button>
+            <button class="sort-button" data-sort="time-eroi">Sort by Time EROI</button>
+            <button class="sort-button" data-sort="money-eroi">Sort by Money EROI</button>
+        </div>
+
         <div class="recommendations-grid" id="recommendationsGrid">
             <div class="loading">Loading recommendations...</div>
         </div>
     </div>
+</div>
+
+<!-- Popup overlay -->
+<div class="popup-overlay" id="popupOverlay" onclick="hideDescriptionPopup()"></div>
+
+<!-- Description popup -->
+<div class="description-popup" id="descriptionPopup">
+    <button class="popup-close" onclick="hideDescriptionPopup()">×</button>
+    <div class="popup-title" id="popupTitle"></div>
+    <div class="popup-content" id="popupContent"></div>
 </div>
 
 <script>
@@ -384,8 +535,12 @@ const fitnessInterventions = {
         },
         resources: {
             upfront_cost: {{ intervention_data.resources.upfront_cost | plus: 0 }},
+            ongoing_cost: {{ intervention_data.resources.ongoing_cost | plus: 0.0 }},
+            ongoing_cost_period: {{ intervention_data.resources.ongoing_cost_period | jsonify }},
             ongoing_cost_weekly: {% if intervention_data.resources.ongoing_cost_period == "week" %}{{ intervention_data.resources.ongoing_cost | plus: 0.0 }}{% elsif intervention_data.resources.ongoing_cost_period == "month" %}{{ intervention_data.resources.ongoing_cost | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ intervention_data.resources.ongoing_cost | plus: 0.0 | divided_by: 52.0 }}{% endif %},
             upfront_time: {{ intervention_data.resources.upfront_time | plus: 0 }},
+            ongoing_time: {{ intervention_data.resources.ongoing_time | plus: 0.0 }},
+            ongoing_time_period: {{ intervention_data.resources.ongoing_time_period | jsonify }},
             ongoing_time_weekly: {% if intervention_data.resources.ongoing_time_period == "week" %}{{ intervention_data.resources.ongoing_time | plus: 0.0 }}{% elsif intervention_data.resources.ongoing_time_period == "month" %}{{ intervention_data.resources.ongoing_time | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ intervention_data.resources.ongoing_time | plus: 0.0 | divided_by: 52.0 }}{% endif %}
         }
     }{% unless forloop.last %},{% endunless %}
@@ -403,13 +558,15 @@ const colors = {
     enjoyment: '#007bff'    // Blue
 };
 
-// Current values
+// Current values and sort method
 let currentValues = {
     health: 35,
     performance: 30,
     appearance: 20,
     enjoyment: 15
 };
+
+let currentSort = 'wbs';
 
 // Get DOM elements
 const sliders = {
@@ -466,7 +623,7 @@ function adjustSliders(changedSlider, newValue) {
         currentValues[changedSlider] += adjustment;
     }
     
-    // Update all sliders and labels
+    // Update all controls
     updateAllControls();
 }
 
@@ -525,54 +682,92 @@ function getInterventionUrl(key) {
     return '{{ site.baseurl }}/resources/intervention-database/' + urlKey;
 }
 
-function calculateScore(intervention, userValues) {
-    const total = Object.keys(userValues).reduce((sum, key) => {
+function calculateWBS(intervention, userValues) {
+    return Object.keys(userValues).reduce((sum, key) => {
         return sum + (intervention.values[key] * userValues[key] / 100);
     }, 0);
-    return total;
+}
+
+function calculateTimeEROI(wbs, timeWeekly) {
+    if (timeWeekly === 0) return wbs * 1000; // Avoid division by zero
+    return wbs / timeWeekly;
+}
+
+function calculateMoneyEROI(wbs, upfrontCost, ongoingCostWeekly) {
+    // Calculate equivalent weekly cost (assuming 1 year timeframe for upfront costs)
+    const weeklyEquivalentCost = (upfrontCost / 52) + ongoingCostWeekly;
+    if (weeklyEquivalentCost === 0) return wbs * 1000; // Avoid division by zero
+    return wbs / weeklyEquivalentCost;
+}
+
+function showDescriptionPopup(interventionName, description) {
+    document.getElementById('popupTitle').textContent = interventionName;
+    document.getElementById('popupContent').textContent = description;
+    document.getElementById('popupOverlay').classList.add('visible');
+    document.getElementById('descriptionPopup').classList.add('visible');
+}
+
+function hideDescriptionPopup() {
+    document.getElementById('popupOverlay').classList.remove('visible');
+    document.getElementById('descriptionPopup').classList.remove('visible');
 }
 
 function updateRecommendations() {
     // Calculate scores for all interventions
     const scoredInterventions = Object.keys(fitnessInterventions).map(key => {
         const intervention = fitnessInterventions[key];
-        const score = calculateScore(intervention, currentValues);
-        return { key, ...intervention, totalScore: score };
+        const wbs = calculateWBS(intervention, currentValues);
+        const timeEROI = calculateTimeEROI(wbs, intervention.resources.ongoing_time_weekly);
+        const moneyEROI = calculateMoneyEROI(wbs, intervention.resources.upfront_cost, intervention.resources.ongoing_cost_weekly);
+        
+        return { 
+            key, 
+            ...intervention, 
+            wbs: wbs,
+            timeEROI: timeEROI,
+            moneyEROI: moneyEROI
+        };
     });
     
-    // Sort by score (highest first)
-    scoredInterventions.sort((a, b) => b.totalScore - a.totalScore);
+    // Sort by current sort method
+    switch(currentSort) {
+        case 'wbs':
+            scoredInterventions.sort((a, b) => b.wbs - a.wbs);
+            break;
+        case 'time-eroi':
+            scoredInterventions.sort((a, b) => b.timeEROI - a.timeEROI);
+            break;
+        case 'money-eroi':
+            scoredInterventions.sort((a, b) => b.moneyEROI - a.moneyEROI);
+            break;
+    }
     
-    // Display top 6 recommendations
-    const topRecommendations = scoredInterventions.slice(0, 6);
-    
-    recommendationsGrid.innerHTML = topRecommendations.map(intervention => `
+    // Display all interventions
+    recommendationsGrid.innerHTML = scoredInterventions.map(intervention => `
         <div class="recommendation-card">
             <div class="card-header">
-                <a href="${getInterventionUrl(intervention.key)}" class="card-title">${intervention.name}</a>
-                <div class="card-score">${intervention.totalScore.toFixed(1)}</div>
+                <div class="card-title-container">
+                    <a href="${getInterventionUrl(intervention.key)}" class="card-title">${intervention.name}</a>
+                    <span class="card-description-icon" onclick="showDescriptionPopup('${intervention.name.replace(/'/g, "\\'")}', '${intervention.description.replace(/'/g, "\\'")}')">i</span>
+                </div>
+                <div class="card-score">WBS: ${intervention.wbs.toFixed(1)}</div>
             </div>
-            <p class="card-description">${intervention.description}</p>
+            
             <div class="card-stats">
-                <span>Cost: $${intervention.resources.upfront_cost}</span>
-                <span>Time: ${intervention.resources.ongoing_time_weekly.toFixed(1)}h/week</span>
+                <div><strong>Upfront Cost:</strong><br>$${intervention.resources.upfront_cost}</div>
+                <div><strong>Ongoing Cost:</strong><br>$${intervention.resources.ongoing_cost}/${intervention.resources.ongoing_cost_period}</div>
+                <div><strong>Upfront Time:</strong><br>${intervention.resources.upfront_time}h</div>
+                <div><strong>Ongoing Time:</strong><br>${intervention.resources.ongoing_time}h/${intervention.resources.ongoing_time_period}</div>
             </div>
-            <div class="value-bars">
-                <div class="value-bar">
-                    <div class="value-bar-fill bar-health" style="width: ${Math.max(0, (intervention.values.health / 10) * 100)}%"></div>
-                    <div>H: ${intervention.values.health.toFixed(1)}</div>
+            
+            <div class="card-eroi">
+                <div class="eroi-item">
+                    <span class="eroi-value">${intervention.timeEROI.toFixed(2)}</span>
+                    <div class="eroi-label">Time EROI</div>
                 </div>
-                <div class="value-bar">
-                    <div class="value-bar-fill bar-performance" style="width: ${Math.max(0, (intervention.values.performance / 10) * 100)}%"></div>
-                    <div>P: ${intervention.values.performance.toFixed(1)}</div>
-                </div>
-                <div class="value-bar">
-                    <div class="value-bar-fill bar-appearance" style="width: ${Math.max(0, (intervention.values.appearance / 10) * 100)}%"></div>
-                    <div>A: ${intervention.values.appearance.toFixed(1)}</div>
-                </div>
-                <div class="value-bar">
-                    <div class="value-bar-fill bar-enjoyment" style="width: ${Math.max(0, (intervention.values.enjoyment / 10) * 100)}%"></div>
-                    <div>E: ${intervention.values.enjoyment.toFixed(1)}</div>
+                <div class="eroi-item">
+                    <span class="eroi-value">${intervention.moneyEROI.toFixed(2)}</span>
+                    <div class="eroi-label">Money EROI</div>
                 </div>
             </div>
         </div>
@@ -584,6 +779,26 @@ Object.keys(sliders).forEach(key => {
     sliders[key].addEventListener('input', function() {
         adjustSliders(key, parseFloat(this.value));
     });
+});
+
+// Event listeners for sort buttons
+document.querySelectorAll('.sort-button').forEach(button => {
+    button.addEventListener('click', function() {
+        // Update active state
+        document.querySelectorAll('.sort-button').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Update sort method and refresh recommendations
+        currentSort = this.dataset.sort;
+        updateRecommendations();
+    });
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        hideDescriptionPopup();
+    }
 });
 
 // Initialize
