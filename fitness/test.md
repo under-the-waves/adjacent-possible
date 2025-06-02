@@ -35,6 +35,15 @@ body .main-content {
     margin-bottom: 0;
 }
 
+.header-description {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.header-description p {
+    margin-bottom: 0;
+}
+    
 /* Controls layout */
 /* Controls layout */
 .controls-section {
@@ -468,15 +477,6 @@ body .main-content {
     color: #333;
 }
 </style>
-
-.header-description {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.header-description p {
-    margin-bottom: 0;
-}
 
 <div class="fitness-test-container">
     <div class="header-section">
