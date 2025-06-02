@@ -9,7 +9,7 @@ Beyond internal benefits, fitness transforms physical appearance, sculpting the 
 Perhaps most importantly, fitness [extends both lifespan and "healthspan"](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61031-9/fulltext)—the period of life spent in good health. Regular exercise helps maintain independence, mobility, and [cognitive function](https://www.sciencedirect.com/science/article/abs/pii/S1087079214000811) well into advanced age, fundamentally changing the experience of getting older. These combined benefits make fitness one of the highest-leverage investments you can make in your quality of life.
 
 ## Fitness values
-There's no one-size-fits-all approach to fitness. Your optimal path depends on which aspects of fitness you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations:
+There's no one-size-fits-all approach to fitness. Your optimal path depends on which aspects of fitness you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations. To customise how you balance between these values, check out the [Fitness Personalised]({{ site.baseurl }}/fitness/personalised) page.
 
 ### Health & Longevity (35%)
 Fitness that supports long-term wellbeing and disease prevention. This includes cardiovascular health, maintaining muscle mass for healthy aging, joint integrity, and metabolic health. People who prioritise this value focus on sustainable practices that provide health benefits with minimal injury risk.
@@ -33,5 +33,7 @@ _Note: Your own priorities may differ from the weightings used in this guide. So
 - [Level 3: Proficiency](level-3)
 - [Level 4: Excellence](level-4)
 - [Level 5: Mastery](level-5)
+
+[Fitness Personalised]({{ site.baseurl }}/fitness/personalised)
 
 [← Back to Life Levels Home](../)
