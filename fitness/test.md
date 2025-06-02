@@ -6,7 +6,8 @@ title: Fitness Test - Personalised Recommendations
 <style>
 /* Main container */
 .fitness-test-container {
-    max-width: 1400px;
+    max-width: none !important;
+    width: 95% !important;
     margin: 0 auto;
     padding: 20px;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -523,28 +524,28 @@ title: Fitness Test - Personalised Recommendations
             <thead>
                 <tr>
                     <th data-sort="name">
-                        Intervention <span class="sort-indicator">⇵</span>
+                        Intervention <span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="wbs" class="active">
                         WBS <span class="sort-indicator">↓</span>
                     </th>
                     <th data-sort="upfront-cost">
-                        Upfront Cost (USD) <span class="sort-indicator">⇵</span>
+                        Upfront Cost (USD) <span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="ongoing-cost">
-                        Ongoing Cost <span class="sort-indicator">⇵</span>
+                        Ongoing Cost <span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="upfront-time">
-                        Upfront Time <span class="sort-indicator">⇵</span>
+                        Upfront Time <span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="ongoing-time">
-                        Ongoing Time <span class="sort-indicator">⇵</span>
+                        Ongoing Time <span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="time-eroi">
-                        Time EROI <span class="sort-indicator">⇵</span>
+                        Time EROI <span class="sort-indicator">^v</span>
                     </th>
                     <th data-sort="money-eroi">
-                        Money EROI <span class="sort-indicator">⇵</span>
+                        Money EROI <span class="sort-indicator">^v</span>
                     </th>
                 </tr>
             </thead>
@@ -804,8 +805,8 @@ function updateRecommendations() {
                 </div>
             </td>
             <td class="wbs-score">${intervention.wbs.toFixed(1)}</td>
-            <td class="cost-cell">${intervention.resources.upfront_cost}</td>
-            <td class="cost-cell">${intervention.resources.ongoing_cost}/${intervention.resources.ongoing_cost_period}</td>
+            <td class="cost-cell">$${intervention.resources.upfront_cost}</td>
+            <td class="cost-cell">$${intervention.resources.ongoing_cost}/${intervention.resources.ongoing_cost_period}</td>
             <td class="time-cell">${intervention.resources.upfront_time}h</td>
             <td class="time-cell">${intervention.resources.ongoing_time}h/${intervention.resources.ongoing_time_period}</td>
             <td class="eroi-score">${intervention.timeEROI.toFixed(2)}</td>
