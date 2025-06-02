@@ -9,6 +9,8 @@ Fitness also transforms physical appearance and boosts confidence, whilst [exten
 ## Fitness values
 There's no one-size-fits-all approach to fitness. Your optimal path depends on which aspects of fitness you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
 
+This guide also focuses on five core components: cardiovascular endurance, muscular strength and endurance, flexibility and mobility, body composition, and balance and coordination.
+
 For personalised recommendations based on your unique priorities, visit [Fitness Personalised]({{ site.baseurl }}/fitness/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
 ### Health & Longevity (35%)
