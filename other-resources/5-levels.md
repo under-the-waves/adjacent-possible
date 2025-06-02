@@ -16,11 +16,11 @@ This level involves assessment and understanding only. It requires no habit chan
 
 ### Level 2: Foundations
 
-This level represents what the top 20% of the general population achieve in this life area. At this level, you've established solid fundamentals that put you ahead of most people. The effort required varies significantly by life area – some foundations can be built quickly, others require sustained commitment over months or years.
+This level represents what the top 20% of the general population achieve in this life area. The effort required varies significantly by life area – some foundations can be built quickly, others require sustained commitment over months or years.
 
 ### Level 3: Proficiency
 
-This level represents what the top 5% of the general population achieve in this life area. You've developed genuine proficiency that exceeds the vast majority of people. This level represents what most dedicated individuals can achieve with focused effort and good systems.
+This level represents what the top 5% of the general population achieve in this life area. This level represents what most dedicated individuals can achieve with focused effort and good systems.
 
 ### Level 4: Excellence
 
