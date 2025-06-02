@@ -573,7 +573,7 @@ body .main-content {
                 
                 <div class="value-slider enjoyment-slider">
                     <div class="slider-header">
-                        <label class="slider-label">Enjoyment & Psychological Benefits</label>
+                        <label class="slider-label">Enjoyment</label>
                         <span class="slider-percentage" id="enjoymentPercent">15%</span>
                     </div>
                     <input type="range" min="0" max="100" value="15" class="slider-track" id="enjoymentSlider">
