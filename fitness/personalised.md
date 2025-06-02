@@ -538,11 +538,7 @@ body .main-content {
             </div>
         </div>
 
-        <div class="controls-section">
-            <div class="chart-container">
-                <canvas class="pie-chart" id="pieChart" width="200" height="200"></canvas>
-            </div>
-            
+        <div class="controls-section">          
             <div class="sliders-container">
                 <div class="value-slider health-slider">
                     <div class="slider-header">
@@ -579,6 +575,9 @@ body .main-content {
                     <input type="range" min="0" max="100" value="15" class="slider-track" id="enjoymentSlider">
                     <p class="slider-description">The pleasure, mental health benefits, and positive experiences derived from physical activity.</p>
                 </div>
+            </div>
+            <div class="chart-container">
+                <canvas class="pie-chart" id="pieChart" width="200" height="200"></canvas>
             </div>
         </div>
     </div>
