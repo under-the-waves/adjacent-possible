@@ -132,7 +132,7 @@ body .main-content {
     appearance: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .slider-description {
