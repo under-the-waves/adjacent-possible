@@ -265,6 +265,52 @@ body .main-content {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* Table column widths */
+.recommendations-table th:nth-child(1),
+.recommendations-table td:nth-child(1) {
+    width: 25%; /* Intervention name - make wider */
+    min-width: 200px;
+}
+
+.recommendations-table th:nth-child(3),
+.recommendations-table td:nth-child(3) {
+    width: 10%; /* Upfront Cost - make thinner */
+    min-width: 80px;
+}
+
+.recommendations-table th:nth-child(5),
+.recommendations-table td:nth-child(5) {
+    width: 10%; /* Upfront Time - make thinner */
+    min-width: 80px;
+}
+
+/* Keep other columns at reasonable sizes */
+.recommendations-table th:nth-child(2),
+.recommendations-table td:nth-child(2) {
+    width: 10%; /* WBS */
+}
+
+.recommendations-table th:nth-child(4),
+.recommendations-table td:nth-child(4) {
+    width: 12%; /* Ongoing Cost */
+}
+
+.recommendations-table th:nth-child(6),
+.recommendations-table td:nth-child(6) {
+    width: 12%; /* Ongoing Time */
+}
+
+.recommendations-table th:nth-child(7),
+.recommendations-table td:nth-child(7) {
+    width: 10%; /* Time EROI */
+}
+
+.recommendations-table th:nth-child(8),
+.recommendations-table td:nth-child(8) {
+    width: 11%; /* Money EROI */
+}
+
+    
 .recommendations-table th {
     background: #f8f9fa;
     padding: 15px 12px;
