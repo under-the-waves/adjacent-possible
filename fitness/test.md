@@ -523,28 +523,28 @@ title: Fitness Test - Personalised Recommendations
             <thead>
                 <tr>
                     <th data-sort="name">
-                        Intervention <span class="sort-indicator">↕</span>
+                        Intervention <span class="sort-indicator">⇵</span>
                     </th>
                     <th data-sort="wbs" class="active">
                         WBS <span class="sort-indicator">↓</span>
                     </th>
                     <th data-sort="upfront-cost">
-                        Upfront Cost (USD) <span class="sort-indicator">↕</span>
+                        Upfront Cost (USD) <span class="sort-indicator">⇵</span>
                     </th>
                     <th data-sort="ongoing-cost">
-                        Ongoing Cost <span class="sort-indicator">↕</span>
+                        Ongoing Cost <span class="sort-indicator">⇵</span>
                     </th>
                     <th data-sort="upfront-time">
-                        Upfront Time <span class="sort-indicator">↕</span>
+                        Upfront Time <span class="sort-indicator">⇵</span>
                     </th>
                     <th data-sort="ongoing-time">
-                        Ongoing Time <span class="sort-indicator">↕</span>
+                        Ongoing Time <span class="sort-indicator">⇵</span>
                     </th>
                     <th data-sort="time-eroi">
-                        Time EROI <span class="sort-indicator">↕</span>
+                        Time EROI <span class="sort-indicator">⇵</span>
                     </th>
                     <th data-sort="money-eroi">
-                        Money EROI <span class="sort-indicator">↕</span>
+                        Money EROI <span class="sort-indicator">⇵</span>
                     </th>
                 </tr>
             </thead>
