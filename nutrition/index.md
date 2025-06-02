@@ -10,6 +10,8 @@ Good nutrition involves balancing science-based approaches with personal prefere
 ## Food and Nutrition Values
 There's no universal standard for optimal nutrition. Your approach depends on what aspects of food and eating you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
+This guide also focuses on five core components: nutritional knowledge and application, taste and diversity, food sourcing and planning, preparation skills and efficiency, and food ecosystem management.
+
 For personalised recommendations based on your unique priorities, visit [Nutrition Personalised]({{ site.baseurl }}/nutrition/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
 ### Physical Wellbeing (45%)
