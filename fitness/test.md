@@ -689,15 +689,13 @@ function calculateWBS(intervention, userValues) {
 }
 
 function calculateTimeEROI(wbs, timeWeekly) {
-    if (timeWeekly === 0) return wbs; // Maximum efficiency when no time required
-    return wbs / timeWeekly;
+    return wbs / Math.max(1, timeWeekly);
 }
 
 function calculateMoneyEROI(wbs, upfrontCost, ongoingCostWeekly) {
     // Calculate equivalent weekly cost (assuming 1 year timeframe for upfront costs)
     const weeklyEquivalentCost = (upfrontCost / 52) + ongoingCostWeekly;
-    if (weeklyEquivalentCost === 0) return wbs; // Maximum efficiency when no cost required
-    return wbs / weeklyEquivalentCost;
+    return wbs / Math.max(1, weeklyEquivalentCost);
 }
 
 function showDescriptionPopup(interventionName, description) {
