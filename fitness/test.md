@@ -491,7 +491,7 @@ title: Fitness Test - Personalised Recommendations
             <h2>Your Recommended Interventions</h2>
             <p>Based on your priorities, here are the fitness interventions that will give you the best results:</p>
             <div class="methodology-note">
-                <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2× the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
+                <p><strong>How scoring works:</strong> Each intervention is scored against how much benefit it provides to each value, using a logarithmic scale where each point represents roughly 2× the impact. The Expected Benefit Scores are then weighted according to your personal value settings to calculate Weighted Benefit Scores (WBS). To see the Expected Return on Investment (EROI) for each hour and dollar, consult the Time and Money EROI figures. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
             </div>
         </div>
 
