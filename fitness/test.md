@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Fitness Test - Personalised Recommendations
+title: Fitness Personalised
 ---
 
 <style>
@@ -505,7 +505,7 @@ body .main-content {
 <div class="fitness-test-container">
     <div class="top-section">
         <div class="header-section">
-            <h1>Fitness: Custom values</h1>
+            <h1>Fitness Personalised</h1>
             <div class="header-description">
                 <p>Adjust the sliders below to reflect what matters most to you in fitness, and we'll recommend the best interventions for your priorities.</p>
             </div>
