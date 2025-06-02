@@ -13,6 +13,51 @@ title: Fitness Test - Personalised Recommendations
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* Container for top section - normal width */
+.top-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Container for bottom section - full width */
+.bottom-section {
+    max-width: none !important;
+    width: 95% !important;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Update controls layout for 2x2 grid */
+.controls-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.sliders-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.sliders-container h3 {
+    grid-column: 1 / -1; /* Span across both columns */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+    
 body .main-content {
     max-width: none !important;
     padding: 1rem !important;
@@ -45,27 +90,6 @@ body .main-content {
 }
     
 /* Controls layout */
-/* Controls layout */
-.controls-section {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 40px;
-    align-items: flex-start;
-}
-
-.sliders-container {
-    flex: 1;
-    max-width: 400px;
-    min-width: 300px;
-}
-
-.chart-container {
-    flex: 2;
-    min-width: 260px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* Slider styling */
 .value-slider {
@@ -479,107 +503,108 @@ body .main-content {
 </style>
 
 <div class="fitness-test-container">
-    <div class="header-section">
-        <h1>Fitness Interventions</h1>
-        <div class="header-description">
-        <p>Adjust the sliders below to reflect what matters most to you in fitness, and we'll recommend the best interventions for your priorities.</p>
+    <div class="top-section">
+        <div class="header-section">
+            <h1>Personalised Fitness Recommendations</h1>
+            <div class="header-description">
+                <p>Adjust the sliders below to reflect what matters most to you in fitness, and we'll recommend the best interventions for your priorities.</p>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <div class="chart-container">
+                <h3>Priority Distribution</h3>
+                <canvas class="pie-chart" id="pieChart" width="240" height="240"></canvas>
+            </div>
+            
+            <div class="sliders-container">
+                <h3>Adjust Your Fitness Priorities</h3>
+                
+                <div class="value-slider health-slider">
+                    <div class="slider-header">
+                        <label class="slider-label">Health & Longevity</label>
+                        <span class="slider-percentage" id="healthPercent">35%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="35" class="slider-track" id="healthSlider">
+                    <p class="slider-description">Fitness that supports long-term wellbeing and disease prevention.</p>
+                </div>
+                
+                <div class="value-slider performance-slider">
+                    <div class="slider-header">
+                        <label class="slider-label">Physical Performance</label>
+                        <span class="slider-percentage" id="performancePercent">30%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="30" class="slider-track" id="performanceSlider">
+                    <p class="slider-description">Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills.</p>
+                </div>
+                
+                <div class="value-slider appearance-slider">
+                    <div class="slider-header">
+                        <label class="slider-label">Appearance</label>
+                        <span class="slider-percentage" id="appearancePercent">20%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="20" class="slider-track" id="appearanceSlider">
+                    <p class="slider-description">Physical aesthetics including muscle definition, body composition, and overall physique.</p>
+                </div>
+                
+                <div class="value-slider enjoyment-slider">
+                    <div class="slider-header">
+                        <label class="slider-label">Enjoyment & Psychological Benefits</label>
+                        <span class="slider-percentage" id="enjoymentPercent">15%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="15" class="slider-track" id="enjoymentSlider">
+                    <p class="slider-description">The pleasure, mental health benefits, and positive experiences derived from physical activity.</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-
-
-
-<div class="controls-section">
-    <div class="sliders-container">
-        <h3>Adjust Your Fitness Priorities</h3>
-        
-        <div class="value-slider health-slider">
-            <div class="slider-header">
-                <label class="slider-label">Health & Longevity</label>
-                <span class="slider-percentage" id="healthPercent">35%</span>
+    <div class="bottom-section">
+        <div class="recommendations-section">
+            <div class="recommendations-header">
+                <h2>Your Recommended Interventions</h2>
+                <p>Based on your priorities, here are the fitness interventions that will give you the best results:</p>
+                <div class="methodology-note">
+                    <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2× the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
+                </div>
             </div>
-            <input type="range" min="0" max="100" value="35" class="slider-track" id="healthSlider">
-            <p class="slider-description">Fitness that supports long-term wellbeing and disease prevention.</p>
-        </div>
-        
-        <div class="value-slider performance-slider">
-            <div class="slider-header">
-                <label class="slider-label">Physical Performance</label>
-                <span class="slider-percentage" id="performancePercent">30%</span>
-            </div>
-            <input type="range" min="0" max="100" value="30" class="slider-track" id="performanceSlider">
-            <p class="slider-description">Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills.</p>
-        </div>
-        
-        <div class="value-slider appearance-slider">
-            <div class="slider-header">
-                <label class="slider-label">Appearance</label>
-                <span class="slider-percentage" id="appearancePercent">20%</span>
-            </div>
-            <input type="range" min="0" max="100" value="20" class="slider-track" id="appearanceSlider">
-            <p class="slider-description">Physical aesthetics including muscle definition, body composition, and overall physique.</p>
-        </div>
-        
-        <div class="value-slider enjoyment-slider">
-            <div class="slider-header">
-                <label class="slider-label">Enjoyment & Psychological Benefits</label>
-                <span class="slider-percentage" id="enjoymentPercent">15%</span>
-            </div>
-            <input type="range" min="0" max="100" value="15" class="slider-track" id="enjoymentSlider">
-            <p class="slider-description">The pleasure, mental health benefits, and positive experiences derived from physical activity.</p>
-        </div>
-    </div>
 
-    <div class="chart-container">
-        <h3>Priority Distribution</h3>
-        <canvas class="pie-chart" id="pieChart" width="240" height="240"></canvas>
-    </div>
-</div>
-
-    <div class="recommendations-section">
-        <div class="recommendations-header">
-            <h2>Your Recommended Interventions</h2>
-            <p>Based on your priorities, here are the fitness interventions that will give you the best results:</p>
-            <div class="methodology-note">
-                <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2× the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively. <a href="{{ site.baseurl }}/fitness/value-scoring-framework">Learn more about the methodology.</a></p>
-            </div>
+            <table class="recommendations-table" id="recommendationsTable">
+                <thead>
+                    <tr>
+                        <th data-sort="name">
+                            Intervention <span class="sort-indicator">^v</span>
+                        </th>
+                        <th data-sort="wbs" class="active">
+                            WBS <span class="sort-indicator">↓</span>
+                        </th>
+                        <th data-sort="upfront-cost">
+                            Upfront Cost (USD) <span class="sort-indicator">^v</span>
+                        </th>
+                        <th data-sort="ongoing-cost">
+                            Ongoing Cost <span class="sort-indicator">^v</span>
+                        </th>
+                        <th data-sort="upfront-time">
+                            Upfront Time <span class="sort-indicator">^v</span>
+                        </th>
+                        <th data-sort="ongoing-time">
+                            Ongoing Time <span class="sort-indicator">^v</span>
+                        </th>
+                        <th data-sort="time-eroi">
+                            Time EROI <span class="sort-indicator">^v</span>
+                        </th>
+                        <th data-sort="money-eroi">
+                            Money EROI <span class="sort-indicator">^v</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="recommendationsBody">
+                    <tr>
+                        <td colspan="8" class="loading">Loading recommendations...</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <table class="recommendations-table" id="recommendationsTable">
-            <thead>
-                <tr>
-                    <th data-sort="name">
-                        Intervention ⇵<span class="sort-indicator">^v</span>
-                    </th>
-                    <th data-sort="wbs" class="active">
-                        WBS ⇵<span class="sort-indicator">↓</span>
-                    </th>
-                    <th data-sort="upfront-cost">
-                        Upfront Cost (USD) ⇵<span class="sort-indicator">^v</span>
-                    </th>
-                    <th data-sort="ongoing-cost">
-                        Ongoing Cost ⇵<span class="sort-indicator">^v</span>
-                    </th>
-                    <th data-sort="upfront-time">
-                        Upfront Time ⇵<span class="sort-indicator">^v</span>
-                    </th>
-                    <th data-sort="ongoing-time">
-                        Ongoing Time ⇵<span class="sort-indicator">^v</span>
-                    </th>
-                    <th data-sort="time-eroi">
-                        Time EROI ⇵<span class="sort-indicator">^v</span>
-                    </th>
-                    <th data-sort="money-eroi">
-                        Money EROI ⇵<span class="sort-indicator">^v</span>
-                    </th>
-                </tr>
-            </thead>
-            <tbody id="recommendationsBody">
-                <tr>
-                    <td colspan="8" class="loading">Loading recommendations...</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 
