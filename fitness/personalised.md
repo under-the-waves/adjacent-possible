@@ -268,61 +268,67 @@ body .main-content {
 /* Table column widths */
 .recommendations-table th:nth-child(1),
 .recommendations-table td:nth-child(1) {
-    width: 25%; /* Intervention name - make wider */
-    min-width: 200px;
+    width: 28%; /* Intervention name - make wider */
+    min-width: 220px;
 }
 
 .recommendations-table th:nth-child(3),
 .recommendations-table td:nth-child(3) {
-    width: 10%; /* Upfront Cost - make thinner */
-    min-width: 80px;
+    width: 12%; /* Upfront Cost */
+    min-width: 90px;
 }
 
 .recommendations-table th:nth-child(5),
 .recommendations-table td:nth-child(5) {
-    width: 10%; /* Upfront Time - make thinner */
-    min-width: 80px;
+    width: 12%; /* Upfront Time */
+    min-width: 90px;
 }
 
 /* Keep other columns at reasonable sizes */
 .recommendations-table th:nth-child(2),
 .recommendations-table td:nth-child(2) {
-    width: 10%; /* WBS */
+    width: 8%; /* WBS - smaller */
+    min-width: 60px;
 }
 
 .recommendations-table th:nth-child(4),
 .recommendations-table td:nth-child(4) {
-    width: 12%; /* Ongoing Cost */
+    width: 14%; /* Ongoing Cost */
+    min-width: 100px;
 }
 
 .recommendations-table th:nth-child(6),
 .recommendations-table td:nth-child(6) {
-    width: 12%; /* Ongoing Time */
+    width: 14%; /* Ongoing Time */
+    min-width: 100px;
 }
 
 .recommendations-table th:nth-child(7),
 .recommendations-table td:nth-child(7) {
-    width: 10%; /* Time EROI */
+    width: 6%; /* Time EROI - smaller */
+    min-width: 50px;
 }
 
 .recommendations-table th:nth-child(8),
 .recommendations-table td:nth-child(8) {
-    width: 11%; /* Money EROI */
+    width: 6%; /* Money EROI - smaller */
+    min-width: 50px;
 }
 
     
 .recommendations-table th {
     background: #f8f9fa;
-    padding: 15px 12px;
+    padding: 12px 8px; /* Reduce horizontal padding */
     text-align: left;
     font-weight: 600;
     color: #333;
     border-bottom: 2px solid #dee2e6;
-    font-size: 0.9em;
+    font-size: 0.85em; /* Make header text smaller */
     cursor: pointer;
     position: relative;
     user-select: none;
     transition: background-color 0.3s;
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 .recommendations-table th:hover {
@@ -354,14 +360,15 @@ body .main-content {
     align-items: flex-start;
     gap: 8px;
     min-width: 200px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .intervention-link {
     color: #155799;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05em;
+    font-size: 0.95em;
+    line-height: 1.2
 }
 
 .intervention-link:hover {
