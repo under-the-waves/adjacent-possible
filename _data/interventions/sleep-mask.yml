@@ -27,8 +27,9 @@ sleep.long_term_health:
     Same adherence challenges as daily functioning. Long-term health benefits require nightly use over months to years, but physical discomfort and habituation issues limit consistent implementation. The absence of immediate health feedback reduces motivation to overcome comfort barriers.
   anchor_type: "subjective"
   anchor_max: 10
-  anchor_unit: ""
-  anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
+  anchor_unit: null
+  anchor_description: |
+    Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)
 
  sleep.comfort_experience:
    pbs: 7
