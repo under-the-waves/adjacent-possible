@@ -45,12 +45,13 @@ body .main-content {
 }
 
 .sliders-container {
-    flex: 2;
-    min-width: 400px;
+    flex: 1;
+    max-width: 400px;
+    min-width: 300px;
 }
 
 .chart-container {
-    flex: 1;
+    flex: 2;
     min-width: 260px;
     display: flex;
     flex-direction: column;
@@ -468,11 +469,22 @@ body .main-content {
 }
 </style>
 
+.header-description {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.header-description p {
+    margin-bottom: 0;
+}
+
 <div class="fitness-test-container">
     <div class="header-section">
         <h1>Fitness Interventions</h1>
+        <div class="header-description">
         <p>Adjust the sliders below to reflect what matters most to you in fitness, and we'll recommend the best interventions for your priorities.</p>
     </div>
+</div>
 
 
 
