@@ -144,17 +144,14 @@ Seeking novelty, challenge, and transformative experiences through leisure. This
     display: block;
 }
 </style>
-
 <!-- Popup overlay -->
 <div class="popup-overlay" id="popupOverlay" onclick="hideReasoning()"></div>
-
 <!-- Reasoning popup -->
 <div class="reasoning-popup" id="reasoningPopup">
     <button class="popup-close" onclick="hideReasoning()">×</button>
     <div class="popup-header" id="popupHeader"></div>
     <div id="popupContent"></div>
 </div>
-
 <script>
 // Research data for info buttons
 const researchData = {
@@ -176,7 +173,7 @@ function showReasoning(key) {
     const data = researchData[key];
     if (data) {
         document.getElementById('popupHeader').textContent = data.title;
-        document.getElementById('popupContent').textContent = data.content;
+        document.getElementById('popupContent').innerHTML = data.content;
         document.getElementById('popupOverlay').classList.add('visible');
         document.getElementById('reasoningPopup').classList.add('visible');
     }
