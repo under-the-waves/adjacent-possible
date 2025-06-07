@@ -890,3 +890,18 @@ a.completed-guide:hover,
 .nav-menu {
     background-color: white;
 }
+
+/* Domain label color logic */
+.domain-label {
+    color: #333; /* Default black */
+    font-weight: 500;
+}
+
+/* Make domain red if it has class 'all-unavailable' */
+.dropdown-item.all-unavailable .domain-label {
+    color: #e63946 !important;
+}
+
+.all-areas-link:hover {
+    background-color: #dee2e6 !important;
+}
