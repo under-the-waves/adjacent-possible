@@ -84,14 +84,14 @@
         {% if self_awareness_page %}
           <a href="{{ site.baseurl }}/values/self-awareness/">Self-awareness</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Self-awareness</a>
+          <span class="unavailable-guide">Self-awareness</span>
         {% endif %}
         
         {% assign value_system_page = site.pages | where: "url", "/values/value-system/" | first %}
         {% if value_system_page %}
           <a href="{{ site.baseurl }}/values/value-system/">Value system</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Value system</a>
+          <span class="unavailable-guide">Value system</span>
         {% endif %}
       </div>
     </div>
@@ -107,28 +107,28 @@
         {% if life_purpose_page %}
           <a href="{{ site.baseurl }}/purpose/life-purpose/">Life purpose</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Life purpose</a>
+          <span class="unavailable-guide">Life purpose</span>
         {% endif %}
         
         {% assign global_impact_page = site.pages | where: "url", "/purpose/global-impact/" | first %}
         {% if global_impact_page %}
           <a href="{{ site.baseurl }}/purpose/global-impact/">Global impact</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Global impact</a>
+          <span class="unavailable-guide">Global impact</span>
         {% endif %}
         
         {% assign community_contribution_page = site.pages | where: "url", "/purpose/community-contribution/" | first %}
         {% if community_contribution_page %}
           <a href="{{ site.baseurl }}/purpose/community-contribution/">Community contribution</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Community contribution</a>
+          <span class="unavailable-guide">Community contribution</span>
         {% endif %}
         
         {% assign ethics_page = site.pages | where: "url", "/purpose/ethics/" | first %}
         {% if ethics_page %}
           <a href="{{ site.baseurl }}/purpose/ethics/">Ethics</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Ethics</a>
+          <span class="unavailable-guide">Ethics</span>
         {% endif %}
       </div>
     </div>
@@ -144,28 +144,28 @@
         {% if rationality_page %}
           <a href="{{ site.baseurl }}/knowledge/rationality/">Rationality</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Rationality</a>
+          <span class="unavailable-guide">Rationality</span>
         {% endif %}
         
         {% assign worldview_page = site.pages | where: "url", "/knowledge/worldview/" | first %}
         {% if worldview_page %}
           <a href="{{ site.baseurl }}/knowledge/worldview/">Worldview</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Worldview</a>
+          <span class="unavailable-guide">Worldview</span>
         {% endif %}
         
         {% assign media_diet_page = site.pages | where: "url", "/knowledge/media-diet/" | first %}
         {% if media_diet_page %}
           <a href="{{ site.baseurl }}/knowledge/media-diet/">Media diet</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Media diet</a>
+          <span class="unavailable-guide">Media diet</span>
         {% endif %}
         
         {% assign info_management_page = site.pages | where: "url", "/knowledge/information-management/" | first %}
         {% if info_management_page %}
           <a href="{{ site.baseurl }}/knowledge/information-management/">Information management</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Information management</a>
+          <span class="unavailable-guide">Information management</span>
         {% endif %}
       </div>
     </div>
@@ -181,21 +181,21 @@
         {% if cognitive_skills_page %}
           <a href="{{ site.baseurl }}/learning/cognitive-skills/">Cognitive skills</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Cognitive skills</a>
+          <span class="unavailable-guide">Cognitive skills</span>
         {% endif %}
         
         {% assign life_skills_page = site.pages | where: "url", "/learning/life-skills/" | first %}
         {% if life_skills_page %}
           <a href="{{ site.baseurl }}/learning/life-skills/">Life skills</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Life skills</a>
+          <span class="unavailable-guide">Life skills</span>
         {% endif %}
         
         {% assign learning_methods_page = site.pages | where: "url", "/learning/learning-methods/" | first %}
         {% if learning_methods_page %}
           <a href="{{ site.baseurl }}/learning/learning-methods/">Learning methods</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Learning methods</a>
+          <span class="unavailable-guide">Learning methods</span>
         {% endif %}
       </div>
     </div>
@@ -211,28 +211,28 @@
         {% if housing_page %}
           <a href="{{ site.baseurl }}/environment/housing/">Housing</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Housing</a>
+          <span class="unavailable-guide">Housing</span>
         {% endif %}
         
         {% assign possessions_page = site.pages | where: "url", "/environment/possessions/" | first %}
         {% if possessions_page %}
           <a href="{{ site.baseurl }}/environment/possessions/">Possessions</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Possessions</a>
+          <span class="unavailable-guide">Possessions</span>
         {% endif %}
         
         {% assign transportation_page = site.pages | where: "url", "/environment/transportation/" | first %}
         {% if transportation_page %}
           <a href="{{ site.baseurl }}/environment/transportation/">Transportation</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Transportation</a>
+          <span class="unavailable-guide">Transportation</span>
         {% endif %}
         
         {% assign housework_page = site.pages | where: "url", "/housework/" | first %}
         {% if housework_page %}
           <a href="{{ site.baseurl }}/housework/">Housework</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Housework</a>
+          <span class="unavailable-guide">Housework</span>
         {% endif %}
       </div>
     </div>
@@ -248,21 +248,21 @@
         {% if planning_tracking_page %}
           <a href="{{ site.baseurl }}/finances/planning-and-tracking/">Planning and Tracking</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Planning and Tracking</a>
+          <span class="unavailable-guide">Planning and Tracking</span>
         {% endif %}
         
         {% assign saving_page = site.pages | where: "url", "/finances/saving/" | first %}
         {% if saving_page %}
           <a href="{{ site.baseurl }}/finances/saving/">Saving</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Saving</a>
+          <span class="unavailable-guide">Saving</span>
         {% endif %}
         
         {% assign investing_page = site.pages | where: "url", "/finances/investing/" | first %}
         {% if investing_page %}
           <a href="{{ site.baseurl }}/finances/investing/">Investing</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Investing</a>
+          <span class="unavailable-guide">Investing</span>
         {% endif %}
       </div>
     </div>
@@ -278,21 +278,21 @@
         {% if current_work_page %}
           <a href="{{ site.baseurl }}/career/current-work/">Current work</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Current work</a>
+          <span class="unavailable-guide">Current work</span>
         {% endif %}
         
         {% assign career_planning_page = site.pages | where: "url", "/career/career-planning/" | first %}
         {% if career_planning_page %}
           <a href="{{ site.baseurl }}/career/career-planning/">Career planning</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Career planning</a>
+          <span class="unavailable-guide">Career planning</span>
         {% endif %}
         
         {% assign networks_page = site.pages | where: "url", "/career/networks/" | first %}
         {% if networks_page %}
           <a href="{{ site.baseurl }}/career/networks/">Networks</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Networks</a>
+          <span class="unavailable-guide">Networks</span>
         {% endif %}
       </div>
     </div>
@@ -308,28 +308,28 @@
         {% if fitness_page %}
           <a href="{{ site.baseurl }}/fitness/">Fitness</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Fitness</a>
+          <span class="unavailable-guide">Fitness</span>
         {% endif %}
         
         {% assign nutrition_page = site.pages | where: "url", "/nutrition/" | first %}
         {% if nutrition_page %}
           <a href="{{ site.baseurl }}/nutrition/">Nutrition</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Nutrition</a>
+          <span class="unavailable-guide">Nutrition</span>
         {% endif %}
         
         {% assign sleep_page = site.pages | where: "url", "/sleep/" | first %}
         {% if sleep_page %}
           <a href="{{ site.baseurl }}/sleep/">Sleep</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Sleep</a>
+          <span class="unavailable-guide">Sleep</span>
         {% endif %}
         
         {% assign preventative_health_page = site.pages | where: "url", "/health/preventative-health/" | first %}
         {% if preventative_health_page %}
           <a href="{{ site.baseurl }}/health/preventative-health/">Preventative health</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Preventative health</a>
+          <span class="unavailable-guide">Preventative health</span>
         {% endif %}
       </div>
     </div>
@@ -345,28 +345,28 @@
         {% if family_page %}
           <a href="{{ site.baseurl }}/relationships/family/">Family</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Family</a>
+          <span class="unavailable-guide">Family</span>
         {% endif %}
         
         {% assign friends_page = site.pages | where: "url", "/relationships/friends/" | first %}
         {% if friends_page %}
           <a href="{{ site.baseurl }}/relationships/friends/">Friends</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Friends</a>
+          <span class="unavailable-guide">Friends</span>
         {% endif %}
         
         {% assign romantic_page = site.pages | where: "url", "/relationships/romantic-relationships/" | first %}
         {% if romantic_page %}
           <a href="{{ site.baseurl }}/relationships/romantic-relationships/">Romantic relationships</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Romantic relationships</a>
+          <span class="unavailable-guide">Romantic relationships</span>
         {% endif %}
         
         {% assign children_page = site.pages | where: "url", "/relationships/children/" | first %}
         {% if children_page %}
           <a href="{{ site.baseurl }}/relationships/children/">Children</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Children</a>
+          <span class="unavailable-guide">Children</span>
         {% endif %}
       </div>
     </div>
@@ -382,21 +382,21 @@
         {% if mindfulness_page %}
           <a href="{{ site.baseurl }}/wellbeing/mindfulness/">Mindfulness</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Mindfulness</a>
+          <span class="unavailable-guide">Mindfulness</span>
         {% endif %}
         
         {% assign mental_health_page = site.pages | where: "url", "/wellbeing/mental-health/" | first %}
         {% if mental_health_page %}
           <a href="{{ site.baseurl }}/wellbeing/mental-health/">Mental health</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Mental health</a>
+          <span class="unavailable-guide">Mental health</span>
         {% endif %}
         
         {% assign behaviours_page = site.pages | where: "url", "/wellbeing/behaviours/" | first %}
         {% if behaviours_page %}
           <a href="{{ site.baseurl }}/wellbeing/behaviours/">Behaviours</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Behaviours</a>
+          <span class="unavailable-guide">Behaviours</span>
         {% endif %}
       </div>
     </div>
@@ -412,28 +412,28 @@
         {% if appearance_page %}
           <a href="{{ site.baseurl }}/identity/appearance/">Appearance</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Appearance</a>
+          <span class="unavailable-guide">Appearance</span>
         {% endif %}
         
         {% assign personality_page = site.pages | where: "url", "/identity/personality/" | first %}
         {% if personality_page %}
           <a href="{{ site.baseurl }}/identity/personality/">Personality</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Personality</a>
+          <span class="unavailable-guide">Personality</span>
         {% endif %}
         
         {% assign communication_page = site.pages | where: "url", "/identity/communication/" | first %}
         {% if communication_page %}
           <a href="{{ site.baseurl }}/identity/communication/">Communication</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Communication</a>
+          <span class="unavailable-guide">Communication</span>
         {% endif %}
         
         {% assign personal_style_page = site.pages | where: "url", "/identity/personal-style/" | first %}
         {% if personal_style_page %}
           <a href="{{ site.baseurl }}/identity/personal-style/">Personal style</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Personal style</a>
+          <span class="unavailable-guide">Personal style</span>
         {% endif %}
       </div>
     </div>
@@ -449,35 +449,35 @@
         {% if organisation_page %}
           <a href="{{ site.baseurl }}/productivity/organisation/">Organisation</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Organisation</a>
+          <span class="unavailable-guide">Organisation</span>
         {% endif %}
         
         {% assign systems_page = site.pages | where: "url", "/productivity/systems/" | first %}
         {% if systems_page %}
           <a href="{{ site.baseurl }}/productivity/systems/">Systems</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Systems</a>
+          <span class="unavailable-guide">Systems</span>
         {% endif %}
         
         {% assign time_management_page = site.pages | where: "url", "/productivity/time-management/" | first %}
         {% if time_management_page %}
           <a href="{{ site.baseurl }}/productivity/time-management/">Time management</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Time management</a>
+          <span class="unavailable-guide">Time management</span>
         {% endif %}
         
         {% assign goals_page = site.pages | where: "url", "/productivity/goals/" | first %}
         {% if goals_page %}
           <a href="{{ site.baseurl }}/productivity/goals/">Goals</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Goals</a>
+          <span class="unavailable-guide">Goals</span>
         {% endif %}
         
         {% assign habits_page = site.pages | where: "url", "/productivity/habits/" | first %}
         {% if habits_page %}
           <a href="{{ site.baseurl }}/productivity/habits/">Habits</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Habits</a>
+          <span class="unavailable-guide">Habits</span>
         {% endif %}
       </div>
     </div>
@@ -493,28 +493,28 @@
         {% if physical_safety_page %}
           <a href="{{ site.baseurl }}/security/physical-safety/">Physical safety</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Physical safety</a>
+          <span class="unavailable-guide">Physical safety</span>
         {% endif %}
         
         {% assign emergency_prep_page = site.pages | where: "url", "/security/emergency-preparedness/" | first %}
         {% if emergency_prep_page %}
           <a href="{{ site.baseurl }}/security/emergency-preparedness/">Emergency preparedness</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Emergency preparedness</a>
+          <span class="unavailable-guide">Emergency preparedness</span>
         {% endif %}
         
         {% assign digital_safety_page = site.pages | where: "url", "/security/digital-safety/" | first %}
         {% if digital_safety_page %}
           <a href="{{ site.baseurl }}/security/digital-safety/">Digital safety</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Digital safety</a>
+          <span class="unavailable-guide">Digital safety</span>
         {% endif %}
         
         {% assign legal_matters_page = site.pages | where: "url", "/security/legal-matters/" | first %}
         {% if legal_matters_page %}
           <a href="{{ site.baseurl }}/security/legal-matters/">Legal matters</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Legal matters</a>
+          <span class="unavailable-guide">Legal matters</span>
         {% endif %}
       </div>
     </div>
@@ -533,17 +533,18 @@
         {% if participatory_leisure_page %}
           <a href="{{ site.baseurl }}/leisure/participatory-leisure/">Participatory leisure</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Participatory leisure</a>
+          <span class="unavailable-guide">Participatory leisure</span>
         {% endif %}
         
         {% assign consumptive_leisure_page = site.pages | where: "url", "/leisure/consumptive-leisure/" | first %}
         {% if consumptive_leisure_page %}
           <a href="{{ site.baseurl }}/leisure/consumptive-leisure/">Consumptive leisure</a>
         {% else %}
-          <a href="#" class="unavailable-guide">Consumptive leisure</a>
+          <span class="unavailable-guide">Consumptive leisure</span>
         {% endif %}
       </div>
     </div>
+    
   </div>
 </div>
   
