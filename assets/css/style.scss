@@ -729,6 +729,20 @@
   align-items: center;
 }
 
+.submenu span.unavailable-guide {
+    display: block;
+    padding: 10px 16px;
+    color: #e63946 !important;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: default;
+}
+
+.submenu span.unavailable-guide:hover {
+    background-color: transparent;
+    color: #e63946 !important;
+}
+
 /* Style for unavailable/planned content */
 .unavailable-guide {
   color: #e63946 !important; /* Red color for unavailable */
