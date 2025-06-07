@@ -3,9 +3,9 @@
 
 ## Why Participatory Leisure Matters
 
-Participatory leisure – activities we actively engage in for enjoyment rather than passive consumption – serves as a cornerstone of psychological wellbeing and social connection. Regular engagement in meaningful leisure activities reduces stress hormones by up to 68% and significantly improves life satisfaction <span class="info-icon" onclick="showReasoning('stress-reduction')">i</span>. Unlike passive entertainment, participatory leisure builds skills, creates lasting memories, and fosters deep social bonds that contribute to resilience during difficult periods.
+Participatory leisure – activities we actively engage in for enjoyment rather than passive consumption – serves as a cornerstone of psychological wellbeing and social connection. Active engagement in meaningful leisure activities provides significant stress reduction and life satisfaction benefits <span class="info-icon" onclick="showReasoning('stress-reduction')">i</span>. Unlike passive entertainment, participatory leisure builds skills, creates lasting memories, and fosters deep social bonds that contribute to resilience during difficult periods.
 
-People with rich leisure lives report 40% higher life satisfaction and demonstrate better stress management <span class="info-icon" onclick="showReasoning('life-satisfaction')">i</span>, whilst those who maintain diverse leisure interests show significantly better cognitive function as they age <span class="info-icon" onclick="showReasoning('cognitive-function')">i</span>. Perhaps most importantly, participatory leisure provides opportunities for self-expression, personal growth, and the kind of deep social connections that form the foundation of mental health and community belonging.
+People who cultivate rich leisure lives demonstrate better stress management and higher overall life satisfaction <span class="info-icon" onclick="showReasoning('life-satisfaction')">i</span>, whilst diverse leisure interests provide protective cognitive benefits throughout life <span class="info-icon" onclick="showReasoning('cognitive-function')">i</span>. Perhaps most importantly, participatory leisure offers unique opportunities for self-expression, personal growth, and the kind of deep social connections that form the foundation of mental health and community belonging.
 
 ## Participatory Leisure Values
 
@@ -160,15 +160,15 @@ Seeking novelty, challenge, and transformative experiences through leisure. This
 const researchData = {
     'stress-reduction': {
         title: 'Stress Reduction Research',
-        content: 'Study published in PLOS ONE found that engagement in meaningful leisure activities led to significant reductions in cortisol levels (stress hormone) by up to 68% and improved overall life satisfaction scores. The research followed participants over 6 months and measured both physiological and psychological markers of wellbeing. Source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4393818/'
+        content: 'Study published in PLOS ONE found that engagement in meaningful leisure activities led to significant reductions in cortisol levels (stress hormone) by up to 68% and improved overall life satisfaction scores. The research followed participants over 6 months and measured both physiological and psychological markers of wellbeing. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4393818/" target="_blank">View study</a>'
     },
     'life-satisfaction': {
         title: 'Life Satisfaction Research',
-        content: 'Longitudinal research in the Journal of Leisure Research demonstrated that individuals with rich, diverse leisure lives reported 40% higher life satisfaction scores and showed significantly better stress management capabilities compared to those with limited leisure engagement. The study controlled for income, education, and other demographic factors. Source: https://psycnet.apa.org/record/2016-38486-001'
+        content: 'Longitudinal research in the Journal of Leisure Research demonstrated that individuals with rich, diverse leisure lives reported 40% higher life satisfaction scores and showed significantly better stress management capabilities compared to those with limited leisure engagement. The study controlled for income, education, and other demographic factors. <a href="https://psycnet.apa.org/record/2016-38486-001" target="_blank">View study</a>'
     },
     'cognitive-function': {
         title: 'Cognitive Function Research',
-        content: 'Research published in the New England Journal of Medicine followed adults over 21 years and found that those who maintained diverse leisure interests, particularly those requiring active mental engagement, showed significantly better cognitive function as they aged and reduced risk of dementia. The protective effect was dose-dependent, with more diverse leisure activities providing greater benefits. Source: https://www.nejm.org/doi/full/10.1056/NEJMoa022252'
+        content: 'Research published in the New England Journal of Medicine followed adults over 21 years and found that those who maintained diverse leisure interests, particularly those requiring active mental engagement, showed significantly better cognitive function as they aged and reduced risk of dementia. The protective effect was dose-dependent, with more diverse leisure activities providing greater benefits. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa022252" target="_blank">View study</a>'
     }
 };
 
