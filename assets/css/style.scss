@@ -218,7 +218,7 @@
 }
 
 .domain-header:hover {
-    background-color: #e9ecef;
+    background-color: #dee2e6;
 }
 
 .domain-label {
@@ -475,7 +475,7 @@
 
 /* Make submenu items use same highlight color as parent */
 .submenu a:hover {
-  background-color: #e0e0e0; /* Keep this for submenu items */
+  background-color: #dee2e6; /* Keep this for submenu items */
 }
 
 /* Update navbar positioning styles */
@@ -739,7 +739,7 @@
 }
 
 .submenu span.unavailable-guide:hover {
-    background-color: transparent;
+    background-color: #dee2e6;
     color: #e63946 !important;
 }
 
@@ -860,4 +860,33 @@ a.completed-guide:hover,
   padding: 2px 10px;
   background-color: #f5f5f5;
   border-bottom: 1px solid #eee;
+}
+
+/* White backgrounds for consistency */
+.domain-header {
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.all-areas-link {
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.all-areas-link:hover {
+    background-color: #dee2e6;
+}
+
+.submenu a {
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.submenu span.unavailable-guide {
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.nav-menu {
+    background-color: white;
 }
