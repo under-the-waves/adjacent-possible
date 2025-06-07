@@ -606,7 +606,27 @@
     <!-- Load the JavaScript at the end for better performance -->
 <!-- JavaScript for Dropdowns -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+function toggleSubmenu(domainHeader) {
+    const dropdownItem = domainHeader.closest('.dropdown-item');
+    const wasActive = dropdownItem.classList.contains('active');
+    
+    // Close all other submenus in the same menu
+    const parentMenu = dropdownItem.closest('.nav-menu');
+    parentMenu.querySelectorAll('.dropdown-item.active').forEach(item => {
+        if (item !== dropdownItem) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle this submenu
+    if (wasActive) {
+        dropdownItem.classList.remove('active');
+    } else {
+        dropdownItem.classList.add('active');
+    }
+}
+  
+  document.addEventListener('DOMContentLoaded', function() {
   // Get all dropdown buttons
   const dropdownButtons = document.querySelectorAll('.nav-button');
   const dropdownMenus = document.querySelectorAll('.nav-menu');
@@ -632,24 +652,7 @@ document.addEventListener('DOMContentLoaded', function() {
       menu.classList.toggle('visible');
     });
   });
-  
-  // Setup for submenu toggles using event delegation
-  document.querySelectorAll('.nav-menu').forEach(menu => {
-    menu.addEventListener('click', function(e) {
-      // Check if the clicked element is an expand icon
-      if (e.target.classList.contains('expand-icon')) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // Find the parent dropdown-item and toggle its active class
-        const dropdownItem = e.target.closest('.dropdown-item');
-        if (dropdownItem) {
-          dropdownItem.classList.toggle('active');
-        }
-      }
-    });
-  });
-  
+    
   // Close all menus when clicking outside
   document.addEventListener('click', function(event) {
     let clickedInsideNav = false;
