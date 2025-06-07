@@ -11,8 +11,6 @@ People with rich leisure lives report 40% higher life satisfaction and demonstra
 
 Your optimal approach to leisure depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
-This guide focuses on four core components: skill development and mastery, social engagement and community building, novel experiences and adventure, and creative expression and personal growth.
-
 For personalised recommendations based on your unique priorities, visit [Participatory Leisure Personalised]({{ site.baseurl }}/participatory-leisure/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
 ### Social Connection (40%)
