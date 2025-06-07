@@ -519,39 +519,39 @@
       </div>
     </div>
     
-    <!-- Leisure Domain -->
-    {% assign participatory_leisure_page = site.pages | where: "path", "leisure/participatory-leisure/index.md" | first %}
-    {% unless participatory_leisure_page %}
-      {% assign participatory_leisure_page = site.pages | where: "url", "/leisure/participatory-leisure/" | first %}
-    {% endunless %}
-    {% unless participatory_leisure_page %}
-      {% for page in site.pages %}
-        {% if page.url contains "participatory-leisure" %}
-          {% assign participatory_leisure_page = page %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-    {% endunless %}
-    {% assign consumptive_leisure_page = site.pages | where: "url", "/leisure/consumptive-leisure/" | first %}
-    <div class="dropdown-item{% unless participatory_leisure_page or consumptive_leisure_page %} all-unavailable{% endunless %}">
-      <div class="domain-header" onclick="toggleSubmenu(this)">
-        <span class="domain-label">Leisure</span>
-        <span class="expand-icon">▸</span>
-      </div>
-      <div class="submenu">
-        {% if participatory_leisure_page %}
-          <a href="{{ site.baseurl }}/leisure/participatory-leisure/">Participatory leisure</a>
-        {% else %}
-          <span class="unavailable-guide">Participatory leisure</span>
-        {% endif %}
-        
-        {% if consumptive_leisure_page %}
-          <a href="{{ site.baseurl }}/leisure/consumptive-leisure/">Consumptive leisure</a>
-        {% else %}
-          <span class="unavailable-guide">Consumptive leisure</span>
-        {% endif %}
-      </div>
-    </div>
+<!-- Leisure Domain -->
+{% assign participatory_leisure_page = site.pages | where: "path", "participatory-leisure/index.md" | first %}
+{% unless participatory_leisure_page %}
+  {% assign participatory_leisure_page = site.pages | where: "url", "/participatory-leisure/" | first %}
+{% endunless %}
+{% unless participatory_leisure_page %}
+  {% for page in site.pages %}
+    {% if page.url contains "participatory-leisure" %}
+      {% assign participatory_leisure_page = page %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
+{% assign consumptive_leisure_page = site.pages | where: "url", "/leisure/consumptive-leisure/" | first %}
+<div class="dropdown-item{% unless participatory_leisure_page or consumptive_leisure_page %} all-unavailable{% endunless %}">
+  <div class="domain-header" onclick="toggleSubmenu(this)">
+    <span class="domain-label">Leisure</span>
+    <span class="expand-icon">▸</span>
+  </div>
+  <div class="submenu">
+    {% if participatory_leisure_page %}
+      <a href="{{ site.baseurl }}/participatory-leisure/">Participatory leisure</a>
+    {% else %}
+      <span class="unavailable-guide">Participatory leisure</span>
+    {% endif %}
+    
+    {% if consumptive_leisure_page %}
+      <a href="{{ site.baseurl }}/leisure/consumptive-leisure/">Consumptive leisure</a>
+    {% else %}
+      <span class="unavailable-guide">Consumptive leisure</span>
+    {% endif %}
+  </div>
+</div>
     
   </div>
 </div>
