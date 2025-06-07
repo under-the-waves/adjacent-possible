@@ -75,8 +75,10 @@
     
     <!-- Values Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Values</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Values</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign self_awareness_page = site.pages | where: "url", "/values/self-awareness/" | first %}
         {% if self_awareness_page %}
@@ -96,8 +98,10 @@
     
     <!-- Purpose Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Purpose</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Purpose</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign life_purpose_page = site.pages | where: "url", "/purpose/life-purpose/" | first %}
         {% if life_purpose_page %}
@@ -131,8 +135,10 @@
     
     <!-- Knowledge Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Knowledge</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Knowledge</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign rationality_page = site.pages | where: "url", "/knowledge/rationality/" | first %}
         {% if rationality_page %}
@@ -166,8 +172,10 @@
     
     <!-- Learning Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Learning</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Learning</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign cognitive_skills_page = site.pages | where: "url", "/learning/cognitive-skills/" | first %}
         {% if cognitive_skills_page %}
@@ -194,8 +202,10 @@
     
     <!-- Environment Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Environment</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Environment</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign housing_page = site.pages | where: "url", "/environment/housing/" | first %}
         {% if housing_page %}
@@ -229,8 +239,10 @@
     
     <!-- Finances Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Finances</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Finances</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign planning_tracking_page = site.pages | where: "url", "/finances/planning-and-tracking/" | first %}
         {% if planning_tracking_page %}
@@ -257,8 +269,10 @@
     
     <!-- Career Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Career</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Career</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign current_work_page = site.pages | where: "url", "/career/current-work/" | first %}
         {% if current_work_page %}
@@ -285,8 +299,10 @@
     
     <!-- Health Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Health</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Health</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign fitness_page = site.pages | where: "url", "/fitness/" | first %}
         {% if fitness_page %}
@@ -320,8 +336,10 @@
     
     <!-- Relationships Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Relationships</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Relationships</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign family_page = site.pages | where: "url", "/relationships/family/" | first %}
         {% if family_page %}
@@ -355,8 +373,10 @@
     
     <!-- Wellbeing Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Wellbeing</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Wellbeing</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign mindfulness_page = site.pages | where: "url", "/wellbeing/mindfulness/" | first %}
         {% if mindfulness_page %}
@@ -383,8 +403,10 @@
     
     <!-- Identity Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Identity</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Identity</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign appearance_page = site.pages | where: "url", "/identity/appearance/" | first %}
         {% if appearance_page %}
@@ -418,8 +440,10 @@
     
     <!-- Productivity Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Productivity</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Productivity</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign organisation_page = site.pages | where: "url", "/productivity/organisation/" | first %}
         {% if organisation_page %}
@@ -460,8 +484,10 @@
     
     <!-- Security Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Security</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Security</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
         {% assign physical_safety_page = site.pages | where: "url", "/security/physical-safety/" | first %}
         {% if physical_safety_page %}
@@ -495,10 +521,15 @@
     
     <!-- Leisure Domain -->
     <div class="dropdown-item">
-      <span class="parent-link">Leisure</span>
-      <span class="expand-icon">▸</span>
+      <div class="domain-header" onclick="toggleSubmenu(this)">
+        <span class="domain-label">Leisure</span>
+        <span class="expand-icon">▸</span>
+      </div>
       <div class="submenu">
-        {% assign participatory_leisure_page = site.pages | where: "url", "/leisure/participatory-leisure/" | first %}
+        {% assign participatory_leisure_page = site.pages | where: "path", "leisure/participatory-leisure/index.md" | first %}
+        {% unless participatory_leisure_page %}
+          {% assign participatory_leisure_page = site.pages | where: "url", "/leisure/participatory-leisure/" | first %}
+        {% endunless %}
         {% if participatory_leisure_page %}
           <a href="{{ site.baseurl }}/leisure/participatory-leisure/">Participatory leisure</a>
         {% else %}
