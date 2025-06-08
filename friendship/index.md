@@ -1,5 +1,5 @@
 [← Back to Home](../)
-# Friends
+# Friendship
 
 ## Why Friends Matter
 
@@ -7,7 +7,7 @@ Friendships serve as one of the most powerful predictors of wellbeing and life s
 
 Beyond individual benefits, friendships create meaning and purpose through shared experiences, mutual support, and opportunities for personal growth. People who maintain close friendships report higher life satisfaction than those who prioritise marriage, children, or financial success <span class="info-icon" onclick="showReasoning('research-life-satisfaction')">i</span>. The absence of close friendships carries health risks equivalent to smoking or obesity, whilst strong social connections can reduce mortality risk by up to 50%.
 
-## Friends Values
+## Friendship Values
 
 Your approach to friendship depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
