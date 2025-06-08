@@ -1,7 +1,7 @@
 [← Back to Home](../)
 # Friendship
 
-## Why Friends Matter
+## Why Friendship Matters
 
 Friendships serve as one of the most powerful predictors of wellbeing and life satisfaction across the lifespan. Research consistently demonstrates that people with strong social connections live longer, experience better physical and mental health, and show greater resilience during difficult periods <span class="info-icon" onclick="showReasoning('research-health-benefits')">i</span>. Quality friendships provide emotional support that can be more beneficial for cognitive health than family relationships, particularly as we age <span class="info-icon" onclick="showReasoning('research-cognitive-benefits')">i</span>.
 
