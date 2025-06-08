@@ -336,10 +336,10 @@
     
     <!-- Relationships Domain -->
     {% assign family_page = site.pages | where: "url", "/relationships/family/" | first %}
-    {% assign friends_page = site.pages | where: "url", "/relationships/friends/" | first %}
+    {% assign friendship_page = site.pages | where: "url", "/relationships/friendship/" | first %}
     {% assign romantic_page = site.pages | where: "url", "/relationships/romantic-relationships/" | first %}
     {% assign children_page = site.pages | where: "url", "/relationships/children/" | first %}
-    <div class="dropdown-item{% unless family_page or friends_page or romantic_page or children_page %} all-unavailable{% endunless %}">
+    <div class="dropdown-item{% unless family_page or friendship_page or romantic_page or children_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Relationships</span>
         <span class="expand-icon">▸</span>
@@ -351,10 +351,10 @@
           <span class="unavailable-guide">Family</span>
         {% endif %}
         
-        {% if friends_page %}
-          <a href="{{ site.baseurl }}/relationships/friends/">Friends</a>
+        {% if friendship_page %}
+          <a href="{{ site.baseurl }}/relationships/friendship/">Friendship</a>
         {% else %}
-          <span class="unavailable-guide">Friends</span>
+          <span class="unavailable-guide">Friendship</span>
         {% endif %}
         
         {% if romantic_page %}
