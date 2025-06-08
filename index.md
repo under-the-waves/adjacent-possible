@@ -20,6 +20,6 @@ These guides aim to help improve our lives according to three foundational princ
 
 New to the site? [Start here]({{ site.baseurl }}/start-here/overview) to learn about the framework and how to use it effectively.
 
-Looking for immediate improvements? Take a look at the quick wins page [under development] for high-impact, low-effort actions across all life domains.
+Looking for immediate improvements? Take a look at the [quick wins]({{ site.baseurl }}/prioritisation/quick-wins) page [under development] for high-impact, low-effort actions across all life domains.
 
 Ready to explore specific areas? [Browse the life areas]({{ site.baseurl }}/life-areas/) to find detailed guides for each domain.
