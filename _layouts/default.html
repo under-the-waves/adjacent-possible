@@ -74,8 +74,8 @@
     <a href="{{ site.baseurl }}/life-areas/" class="all-areas-link"><strong>View All Life Areas</strong></a>
     
     <!-- Values Domain -->
-    {% assign self_awareness_page = site.pages | where: "url", "/values/self-awareness/" | first %}
-    {% assign value_system_page = site.pages | where: "url", "/values/value-system/" | first %}
+    {% assign self_awareness_page = site.pages | where: "url", "/self-awareness/" | first %}
+    {% assign value_system_page = site.pages | where: "url", "/value-system/" | first %}
     <div class="dropdown-item{% unless self_awareness_page or value_system_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Values</span>
@@ -83,13 +83,13 @@
       </div>
       <div class="submenu">
         {% if self_awareness_page %}
-          <a href="{{ site.baseurl }}/values/self-awareness/">Self-awareness</a>
+          <a href="{{ site.baseurl }}/self-awareness/">Self-awareness</a>
         {% else %}
           <span class="unavailable-guide">Self-awareness</span>
         {% endif %}
         
         {% if value_system_page %}
-          <a href="{{ site.baseurl }}/values/value-system/">Value system</a>
+          <a href="{{ site.baseurl }}/value-system/">Value system</a>
         {% else %}
           <span class="unavailable-guide">Value system</span>
         {% endif %}
@@ -97,10 +97,10 @@
     </div>
     
     <!-- Purpose Domain -->
-    {% assign life_purpose_page = site.pages | where: "url", "/purpose/life-purpose/" | first %}
-    {% assign global_impact_page = site.pages | where: "url", "/purpose/global-impact/" | first %}
-    {% assign community_contribution_page = site.pages | where: "url", "/purpose/community-contribution/" | first %}
-    {% assign ethics_page = site.pages | where: "url", "/purpose/ethics/" | first %}
+    {% assign life_purpose_page = site.pages | where: "url", "/life-purpose/" | first %}
+    {% assign global_impact_page = site.pages | where: "url", "/global-impact/" | first %}
+    {% assign community_contribution_page = site.pages | where: "url", "/community-contribution/" | first %}
+    {% assign ethics_page = site.pages | where: "url", "/ethics/" | first %}
     <div class="dropdown-item{% unless life_purpose_page or global_impact_page or community_contribution_page or ethics_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Purpose</span>
@@ -108,25 +108,25 @@
       </div>
       <div class="submenu">
         {% if life_purpose_page %}
-          <a href="{{ site.baseurl }}/purpose/life-purpose/">Life purpose</a>
+          <a href="{{ site.baseurl }}/life-purpose/">Life purpose</a>
         {% else %}
           <span class="unavailable-guide">Life purpose</span>
         {% endif %}
         
         {% if global_impact_page %}
-          <a href="{{ site.baseurl }}/purpose/global-impact/">Global impact</a>
+          <a href="{{ site.baseurl }}/global-impact/">Global impact</a>
         {% else %}
           <span class="unavailable-guide">Global impact</span>
         {% endif %}
         
         {% if community_contribution_page %}
-          <a href="{{ site.baseurl }}/purpose/community-contribution/">Community contribution</a>
+          <a href="{{ site.baseurl }}/community-contribution/">Community contribution</a>
         {% else %}
           <span class="unavailable-guide">Community contribution</span>
         {% endif %}
         
         {% if ethics_page %}
-          <a href="{{ site.baseurl }}/purpose/ethics/">Ethics</a>
+          <a href="{{ site.baseurl }}/ethics/">Ethics</a>
         {% else %}
           <span class="unavailable-guide">Ethics</span>
         {% endif %}
@@ -134,10 +134,10 @@
     </div>
     
     <!-- Knowledge Domain -->
-    {% assign rationality_page = site.pages | where: "url", "/knowledge/rationality/" | first %}
-    {% assign worldview_page = site.pages | where: "url", "/knowledge/worldview/" | first %}
-    {% assign media_diet_page = site.pages | where: "url", "/knowledge/media-diet/" | first %}
-    {% assign info_management_page = site.pages | where: "url", "/knowledge/information-management/" | first %}
+    {% assign rationality_page = site.pages | where: "url", "/rationality/" | first %}
+    {% assign worldview_page = site.pages | where: "url", "/worldview/" | first %}
+    {% assign media_diet_page = site.pages | where: "url", "/media-diet/" | first %}
+    {% assign info_management_page = site.pages | where: "url", "/information-management/" | first %}
     <div class="dropdown-item{% unless rationality_page or worldview_page or media_diet_page or info_management_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Knowledge</span>
@@ -145,25 +145,25 @@
       </div>
       <div class="submenu">
         {% if rationality_page %}
-          <a href="{{ site.baseurl }}/knowledge/rationality/">Rationality</a>
+          <a href="{{ site.baseurl }}/rationality/">Rationality</a>
         {% else %}
           <span class="unavailable-guide">Rationality</span>
         {% endif %}
         
         {% if worldview_page %}
-          <a href="{{ site.baseurl }}/knowledge/worldview/">Worldview</a>
+          <a href="{{ site.baseurl }}/worldview/">Worldview</a>
         {% else %}
           <span class="unavailable-guide">Worldview</span>
         {% endif %}
         
         {% if media_diet_page %}
-          <a href="{{ site.baseurl }}/knowledge/media-diet/">Media diet</a>
+          <a href="{{ site.baseurl }}/media-diet/">Media diet</a>
         {% else %}
           <span class="unavailable-guide">Media diet</span>
         {% endif %}
         
         {% if info_management_page %}
-          <a href="{{ site.baseurl }}/knowledge/information-management/">Information management</a>
+          <a href="{{ site.baseurl }}/information-management/">Information management</a>
         {% else %}
           <span class="unavailable-guide">Information management</span>
         {% endif %}
@@ -171,9 +171,9 @@
     </div>
     
     <!-- Learning Domain -->
-    {% assign cognitive_skills_page = site.pages | where: "url", "/learning/cognitive-skills/" | first %}
-    {% assign life_skills_page = site.pages | where: "url", "/learning/life-skills/" | first %}
-    {% assign learning_methods_page = site.pages | where: "url", "/learning/learning-methods/" | first %}
+    {% assign cognitive_skills_page = site.pages | where: "url", "/cognitive-skills/" | first %}
+    {% assign life_skills_page = site.pages | where: "url", "/life-skills/" | first %}
+    {% assign learning_methods_page = site.pages | where: "url", "/learning-methods/" | first %}
     <div class="dropdown-item{% unless cognitive_skills_page or life_skills_page or learning_methods_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Learning</span>
@@ -181,19 +181,19 @@
       </div>
       <div class="submenu">
         {% if cognitive_skills_page %}
-          <a href="{{ site.baseurl }}/learning/cognitive-skills/">Cognitive skills</a>
+          <a href="{{ site.baseurl }}/cognitive-skills/">Cognitive skills</a>
         {% else %}
           <span class="unavailable-guide">Cognitive skills</span>
         {% endif %}
         
         {% if life_skills_page %}
-          <a href="{{ site.baseurl }}/learning/life-skills/">Life skills</a>
+          <a href="{{ site.baseurl }}/life-skills/">Life skills</a>
         {% else %}
           <span class="unavailable-guide">Life skills</span>
         {% endif %}
         
         {% if learning_methods_page %}
-          <a href="{{ site.baseurl }}/learning/learning-methods/">Learning methods</a>
+          <a href="{{ site.baseurl }}/learning-methods/">Learning methods</a>
         {% else %}
           <span class="unavailable-guide">Learning methods</span>
         {% endif %}
@@ -201,9 +201,9 @@
     </div>
     
     <!-- Environment Domain -->
-    {% assign housing_page = site.pages | where: "url", "/environment/housing/" | first %}
-    {% assign possessions_page = site.pages | where: "url", "/environment/possessions/" | first %}
-    {% assign transportation_page = site.pages | where: "url", "/environment/transportation/" | first %}
+    {% assign housing_page = site.pages | where: "url", "/housing/" | first %}
+    {% assign possessions_page = site.pages | where: "url", "/possessions/" | first %}
+    {% assign transportation_page = site.pages | where: "url", "/transportation/" | first %}
     {% assign housework_page = site.pages | where: "url", "/housework/" | first %}
     <div class="dropdown-item{% unless housing_page or possessions_page or transportation_page or housework_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
@@ -212,19 +212,19 @@
       </div>
       <div class="submenu">
         {% if housing_page %}
-          <a href="{{ site.baseurl }}/environment/housing/">Housing</a>
+          <a href="{{ site.baseurl }}/housing/">Housing</a>
         {% else %}
           <span class="unavailable-guide">Housing</span>
         {% endif %}
         
         {% if possessions_page %}
-          <a href="{{ site.baseurl }}/environment/possessions/">Possessions</a>
+          <a href="{{ site.baseurl }}/possessions/">Possessions</a>
         {% else %}
           <span class="unavailable-guide">Possessions</span>
         {% endif %}
         
         {% if transportation_page %}
-          <a href="{{ site.baseurl }}/environment/transportation/">Transportation</a>
+          <a href="{{ site.baseurl }}/transportation/">Transportation</a>
         {% else %}
           <span class="unavailable-guide">Transportation</span>
         {% endif %}
@@ -238,9 +238,9 @@
     </div>
     
     <!-- Finances Domain -->
-    {% assign planning_tracking_page = site.pages | where: "url", "/finances/planning-and-tracking/" | first %}
-    {% assign saving_page = site.pages | where: "url", "/finances/saving/" | first %}
-    {% assign investing_page = site.pages | where: "url", "/finances/investing/" | first %}
+    {% assign planning_tracking_page = site.pages | where: "url", "/planning-and-tracking/" | first %}
+    {% assign saving_page = site.pages | where: "url", "/saving/" | first %}
+    {% assign investing_page = site.pages | where: "url", "/investing/" | first %}
     <div class="dropdown-item{% unless planning_tracking_page or saving_page or investing_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Finances</span>
@@ -248,19 +248,19 @@
       </div>
       <div class="submenu">
         {% if planning_tracking_page %}
-          <a href="{{ site.baseurl }}/finances/planning-and-tracking/">Planning and Tracking</a>
+          <a href="{{ site.baseurl }}/planning-and-tracking/">Planning and Tracking</a>
         {% else %}
           <span class="unavailable-guide">Planning and Tracking</span>
         {% endif %}
         
         {% if saving_page %}
-          <a href="{{ site.baseurl }}/finances/saving/">Saving</a>
+          <a href="{{ site.baseurl }}/saving/">Saving</a>
         {% else %}
           <span class="unavailable-guide">Saving</span>
         {% endif %}
         
         {% if investing_page %}
-          <a href="{{ site.baseurl }}/finances/investing/">Investing</a>
+          <a href="{{ site.baseurl }}/investing/">Investing</a>
         {% else %}
           <span class="unavailable-guide">Investing</span>
         {% endif %}
@@ -268,9 +268,9 @@
     </div>
     
     <!-- Career Domain -->
-    {% assign current_work_page = site.pages | where: "url", "/career/current-work/" | first %}
-    {% assign career_planning_page = site.pages | where: "url", "/career/career-planning/" | first %}
-    {% assign networks_page = site.pages | where: "url", "/career/networks/" | first %}
+    {% assign current_work_page = site.pages | where: "url", "/current-work/" | first %}
+    {% assign career_planning_page = site.pages | where: "url", "/career-planning/" | first %}
+    {% assign networks_page = site.pages | where: "url", "/networks/" | first %}
     <div class="dropdown-item{% unless current_work_page or career_planning_page or networks_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Career</span>
@@ -278,19 +278,19 @@
       </div>
       <div class="submenu">
         {% if current_work_page %}
-          <a href="{{ site.baseurl }}/career/current-work/">Current work</a>
+          <a href="{{ site.baseurl }}/current-work/">Current work</a>
         {% else %}
           <span class="unavailable-guide">Current work</span>
         {% endif %}
         
         {% if career_planning_page %}
-          <a href="{{ site.baseurl }}/career/career-planning/">Career planning</a>
+          <a href="{{ site.baseurl }}/career-planning/">Career planning</a>
         {% else %}
           <span class="unavailable-guide">Career planning</span>
         {% endif %}
         
         {% if networks_page %}
-          <a href="{{ site.baseurl }}/career/networks/">Networks</a>
+          <a href="{{ site.baseurl }}/networks/">Networks</a>
         {% else %}
           <span class="unavailable-guide">Networks</span>
         {% endif %}
@@ -327,7 +327,7 @@
         {% endif %}
         
         {% if preventative_health_page %}
-          <a href="{{ site.baseurl }}/health/preventative-health/">Preventative health</a>
+          <a href="{{ site.baseurl }}/preventative-health/">Preventative health</a>
         {% else %}
           <span class="unavailable-guide">Preventative health</span>
         {% endif %}
@@ -335,7 +335,7 @@
     </div>
     
     <!-- Relationships Domain -->
-    {% assign family_page = site.pages | where: "url", "/relationships/family/" | first %}
+    {% assign family_page = site.pages | where: "url", "/family/" | first %}
     {% assign friendship_page = site.pages | where: "url", "/friendship/" | first %}
     {% assign romantic_page = site.pages | where: "url", "/romantic-relationships/" | first %}
     {% assign children_page = site.pages | where: "url", "/children/" | first %}
@@ -346,7 +346,7 @@
       </div>
       <div class="submenu">
         {% if family_page %}
-          <a href="{{ site.baseurl }}/relationships/family/">Family</a>
+          <a href="{{ site.baseurl }}/family/">Family</a>
         {% else %}
           <span class="unavailable-guide">Family</span>
         {% endif %}
@@ -358,13 +358,13 @@
         {% endif %}
         
         {% if romantic_page %}
-          <a href="{{ site.baseurl }}/relationships/romantic-relationships/">Romantic relationships</a>
+          <a href="{{ site.baseurl }}/romantic-relationships/">Romantic relationships</a>
         {% else %}
           <span class="unavailable-guide">Romantic relationships</span>
         {% endif %}
         
         {% if children_page %}
-          <a href="{{ site.baseurl }}/relationships/children/">Children</a>
+          <a href="{{ site.baseurl }}/children/">Children</a>
         {% else %}
           <span class="unavailable-guide">Children</span>
         {% endif %}
@@ -372,9 +372,9 @@
     </div>
     
     <!-- Wellbeing Domain -->
-    {% assign mindfulness_page = site.pages | where: "url", "/wellbeing/mindfulness/" | first %}
-    {% assign mental_health_page = site.pages | where: "url", "/wellbeing/mental-health/" | first %}
-    {% assign behaviours_page = site.pages | where: "url", "/wellbeing/behaviours/" | first %}
+    {% assign mindfulness_page = site.pages | where: "url", "/mindfulness/" | first %}
+    {% assign mental_health_page = site.pages | where: "url", "/mental-health/" | first %}
+    {% assign behaviours_page = site.pages | where: "url", "/behaviours/" | first %}
     <div class="dropdown-item{% unless mindfulness_page or mental_health_page or behaviours_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Wellbeing</span>
@@ -382,19 +382,19 @@
       </div>
       <div class="submenu">
         {% if mindfulness_page %}
-          <a href="{{ site.baseurl }}/wellbeing/mindfulness/">Mindfulness</a>
+          <a href="{{ site.baseurl }}/mindfulness/">Mindfulness</a>
         {% else %}
           <span class="unavailable-guide">Mindfulness</span>
         {% endif %}
         
         {% if mental_health_page %}
-          <a href="{{ site.baseurl }}/wellbeing/mental-health/">Mental health</a>
+          <a href="{{ site.baseurl }}/mental-health/">Mental health</a>
         {% else %}
           <span class="unavailable-guide">Mental health</span>
         {% endif %}
         
         {% if behaviours_page %}
-          <a href="{{ site.baseurl }}/wellbeing/behaviours/">Behaviours</a>
+          <a href="{{ site.baseurl }}/behaviours/">Behaviours</a>
         {% else %}
           <span class="unavailable-guide">Behaviours</span>
         {% endif %}
@@ -402,10 +402,10 @@
     </div>
     
     <!-- Identity Domain -->
-    {% assign appearance_page = site.pages | where: "url", "/identity/appearance/" | first %}
-    {% assign personality_page = site.pages | where: "url", "/identity/personality/" | first %}
-    {% assign communication_page = site.pages | where: "url", "/identity/communication/" | first %}
-    {% assign personal_style_page = site.pages | where: "url", "/identity/personal-style/" | first %}
+    {% assign appearance_page = site.pages | where: "url", "/appearance/" | first %}
+    {% assign personality_page = site.pages | where: "url", "/personality/" | first %}
+    {% assign communication_page = site.pages | where: "url", "/communication/" | first %}
+    {% assign personal_style_page = site.pages | where: "url", "/personal-style/" | first %}
     <div class="dropdown-item{% unless appearance_page or personality_page or communication_page or personal_style_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Identity</span>
@@ -413,25 +413,25 @@
       </div>
       <div class="submenu">
         {% if appearance_page %}
-          <a href="{{ site.baseurl }}/identity/appearance/">Appearance</a>
+          <a href="{{ site.baseurl }}/appearance/">Appearance</a>
         {% else %}
           <span class="unavailable-guide">Appearance</span>
         {% endif %}
         
         {% if personality_page %}
-          <a href="{{ site.baseurl }}/identity/personality/">Personality</a>
+          <a href="{{ site.baseurl }}/personality/">Personality</a>
         {% else %}
           <span class="unavailable-guide">Personality</span>
         {% endif %}
         
         {% if communication_page %}
-          <a href="{{ site.baseurl }}/identity/communication/">Communication</a>
+          <a href="{{ site.baseurl }}/communication/">Communication</a>
         {% else %}
           <span class="unavailable-guide">Communication</span>
         {% endif %}
         
         {% if personal_style_page %}
-          <a href="{{ site.baseurl }}/identity/personal-style/">Personal style</a>
+          <a href="{{ site.baseurl }}/personal-style/">Personal style</a>
         {% else %}
           <span class="unavailable-guide">Personal style</span>
         {% endif %}
@@ -439,11 +439,11 @@
     </div>
     
     <!-- Productivity Domain -->
-    {% assign organisation_page = site.pages | where: "url", "/productivity/organisation/" | first %}
-    {% assign systems_page = site.pages | where: "url", "/productivity/systems/" | first %}
+    {% assign organisation_page = site.pages | where: "url", "/organisation/" | first %}
+    {% assign systems_page = site.pages | where: "url", "/systems/" | first %}
     {% assign time_management_page = site.pages | where: "url", "/productivity/time-management/" | first %}
-    {% assign goals_page = site.pages | where: "url", "/productivity/goals/" | first %}
-    {% assign habits_page = site.pages | where: "url", "/productivity/habits/" | first %}
+    {% assign goals_page = site.pages | where: "url", "/goals/" | first %}
+    {% assign habits_page = site.pages | where: "url", "/habits/" | first %}
     <div class="dropdown-item{% unless organisation_page or systems_page or time_management_page or goals_page or habits_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Productivity</span>
@@ -451,31 +451,31 @@
       </div>
       <div class="submenu">
         {% if organisation_page %}
-          <a href="{{ site.baseurl }}/productivity/organisation/">Organisation</a>
+          <a href="{{ site.baseurl }}/organisation/">Organisation</a>
         {% else %}
           <span class="unavailable-guide">Organisation</span>
         {% endif %}
         
         {% if systems_page %}
-          <a href="{{ site.baseurl }}/productivity/systems/">Systems</a>
+          <a href="{{ site.baseurl }}/systems/">Systems</a>
         {% else %}
           <span class="unavailable-guide">Systems</span>
         {% endif %}
         
         {% if time_management_page %}
-          <a href="{{ site.baseurl }}/productivity/time-management/">Time management</a>
+          <a href="{{ site.baseurl }}/time-management/">Time management</a>
         {% else %}
           <span class="unavailable-guide">Time management</span>
         {% endif %}
         
         {% if goals_page %}
-          <a href="{{ site.baseurl }}/productivity/goals/">Goals</a>
+          <a href="{{ site.baseurl }}/goals/">Goals</a>
         {% else %}
           <span class="unavailable-guide">Goals</span>
         {% endif %}
         
         {% if habits_page %}
-          <a href="{{ site.baseurl }}/productivity/habits/">Habits</a>
+          <a href="{{ site.baseurl }}/habits/">Habits</a>
         {% else %}
           <span class="unavailable-guide">Habits</span>
         {% endif %}
@@ -483,10 +483,10 @@
     </div>
     
     <!-- Security Domain -->
-    {% assign physical_safety_page = site.pages | where: "url", "/security/physical-safety/" | first %}
-    {% assign emergency_prep_page = site.pages | where: "url", "/security/emergency-preparedness/" | first %}
-    {% assign digital_safety_page = site.pages | where: "url", "/security/digital-safety/" | first %}
-    {% assign legal_matters_page = site.pages | where: "url", "/security/legal-matters/" | first %}
+    {% assign physical_safety_page = site.pages | where: "url", "/physical-safety/" | first %}
+    {% assign emergency_prep_page = site.pages | where: "url", "/emergency-preparedness/" | first %}
+    {% assign digital_safety_page = site.pages | where: "url", "/digital-safety/" | first %}
+    {% assign legal_matters_page = site.pages | where: "url", "/legal-matters/" | first %}
     <div class="dropdown-item{% unless physical_safety_page or emergency_prep_page or digital_safety_page or legal_matters_page %} all-unavailable{% endunless %}">
       <div class="domain-header" onclick="toggleSubmenu(this)">
         <span class="domain-label">Security</span>
@@ -494,25 +494,25 @@
       </div>
       <div class="submenu">
         {% if physical_safety_page %}
-          <a href="{{ site.baseurl }}/security/physical-safety/">Physical safety</a>
+          <a href="{{ site.baseurl }}/physical-safety/">Physical safety</a>
         {% else %}
           <span class="unavailable-guide">Physical safety</span>
         {% endif %}
         
         {% if emergency_prep_page %}
-          <a href="{{ site.baseurl }}/security/emergency-preparedness/">Emergency preparedness</a>
+          <a href="{{ site.baseurl }}/emergency-preparedness/">Emergency preparedness</a>
         {% else %}
           <span class="unavailable-guide">Emergency preparedness</span>
         {% endif %}
         
         {% if digital_safety_page %}
-          <a href="{{ site.baseurl }}/security/digital-safety/">Digital safety</a>
+          <a href="{{ site.baseurl }}/digital-safety/">Digital safety</a>
         {% else %}
           <span class="unavailable-guide">Digital safety</span>
         {% endif %}
         
         {% if legal_matters_page %}
-          <a href="{{ site.baseurl }}/security/legal-matters/">Legal matters</a>
+          <a href="{{ site.baseurl }}/legal-matters/">Legal matters</a>
         {% else %}
           <span class="unavailable-guide">Legal matters</span>
         {% endif %}
@@ -532,7 +532,7 @@
     {% endif %}
   {% endfor %}
 {% endunless %}
-{% assign consumptive_leisure_page = site.pages | where: "url", "/leisure/consumptive-leisure/" | first %}
+{% assign consumptive_leisure_page = site.pages | where: "url", "/consumptive-leisure/" | first %}
 <div class="dropdown-item{% unless participatory_leisure_page or consumptive_leisure_page %} all-unavailable{% endunless %}">
   <div class="domain-header" onclick="toggleSubmenu(this)">
     <span class="domain-label">Leisure</span>
@@ -546,7 +546,7 @@
     {% endif %}
     
     {% if consumptive_leisure_page %}
-      <a href="{{ site.baseurl }}/leisure/consumptive-leisure/">Consumptive leisure</a>
+      <a href="{{ site.baseurl }}/consumptive-leisure/">Consumptive leisure</a>
     {% else %}
       <span class="unavailable-guide">Consumptive leisure</span>
     {% endif %}
