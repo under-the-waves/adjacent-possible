@@ -7,7 +7,7 @@ title: How to Use This Site
 
 This guide explains different ways to navigate the content based on your goals.
 
-For detailed definitions of terminology used throughout the framework, see the [Key Terms]({{ site.baseurl }}/start-here/key-terms/) page.
+For detailed definitions of terminology used throughout the framework, see the [Key Terms]({{ site.baseurl }}/start-here/key-terms) page.
 
 ## Understanding Values and Personalisation
 
