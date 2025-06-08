@@ -18,8 +18,8 @@ These guides aim to help improve our lives according to three foundational princ
 - **Using the 80/20 rule** to get the most benefit for your time and money
 - **A holistic approach** ensuring important areas aren't neglected
 
-New to the site? [Start here]({{ site.baseurl }}/start-here/) to learn about the framework and how to use it effectively.
+New to the site? [Start here]({{ site.baseurl }}/start-here/overview) to learn about the framework and how to use it effectively.
 
-Looking for immediate improvements? Take a look at the [quick wins]({{ site.baseurl }}/prioritisation/low-hanging-fruit/) page for high-impact, low-effort actions across all life domains.
+Looking for immediate improvements? Take a look at the quick wins page [under development] for high-impact, low-effort actions across all life domains.
 
 Ready to explore specific areas? [Browse the life areas]({{ site.baseurl }}/life-areas/) to find detailed guides for each domain.
