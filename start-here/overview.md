@@ -18,7 +18,7 @@ Now that we have access to AI systems that can reason and synthesise information
 
 Adjacent Possible offers a comprehensive framework covering [14 life domains]({{ site.baseurl }}/life-areas/), from values and health to relationships and productivity. Each domain includes evidence-based recommendations organised into five progressive levels, with clear benchmarks and resource requirements at each stage.
 
-The system's key innovation is values-based personalisation. Rather than generic advice, you receive recommendations optimised for your specific priorities. Someone who values health over appearance gets different fitness guidance than someone focused on performance. Someone preferring simple systems receives different advice than someone wanting detailed control.
+The system's key innovation is values-based personalisation. Rather than generic advice, you receive recommendations optimised for your specific priorities. Someone who values health gets different fitness guidance than someone focused on appearance. Someone preferring simple systems receives different advice than someone wanting detailed control.
 
 The framework ensures you don't miss high-impact opportunities by covering all major life areas systematically. Most people naturally focus on areas they find interesting while neglecting others that might provide greater returns.
 
@@ -26,8 +26,8 @@ Rather than choosing between different approaches or experts, you can understand
 
 ## Coming Features
 
-As this system develops, it will become increasingly sophisticated through AI-powered personalisation. The long-term vision includes assessment tools that identify your current levels across all domains, personalised dashboards showing your highest-leverage opportunities, and AI recommendations that adapt dynamically as your circumstances and priorities change - [see demo here]({{ site.baseurl }}/fitness/test).
+As this system develops, it will become increasingly sophisticated through AI-powered personalisation. The long-term vision includes assessment tools that identify your current levels across all domains, personalised dashboards showing your highest-leverage opportunities, and AI recommendations that [adapt dynamically]({{ site.baseurl }}/fitness/personalised) as your circumstances and priorities change.
 
 Eventually, you'll interact with an intelligent system that understands your values, constraints, and goals, providing customised guidance that evolves with you. Rather than browsing static advice, you'll have conversations with AI that can synthesise the entire evidence base, understand your specific context, and suggest optimal next steps for your unique situation.
 
-The framework will expand to include community validation of interventions, integration with tracking tools and services, and increasingly sophisticated optimisation as more people use the system. The goal is creating a comprehensive personal development engine that makes evidence-based life improvement accessible and practical for everyone.
+The ultimate goal is to create a comprehensive personal development engine that makes evidence-based life improvement accessible and practical for everyone.
