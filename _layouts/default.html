@@ -238,7 +238,7 @@
     </div>
     
     <!-- Finances Domain -->
-    {% assign planning_tracking_page = site.pages | where: "url", "/planning-and-tracking/" | first %}
+    {% assign planning_tracking_page = site.pages | where: "url", "/financial-planning-tracking/" | first %}
     {% assign saving_page = site.pages | where: "url", "/saving/" | first %}
     {% assign investing_page = site.pages | where: "url", "/investing/" | first %}
     <div class="dropdown-item{% unless planning_tracking_page or saving_page or investing_page %} all-unavailable{% endunless %}">
@@ -248,7 +248,7 @@
       </div>
       <div class="submenu">
         {% if planning_tracking_page %}
-          <a href="{{ site.baseurl }}/planning-and-tracking/">Planning and Tracking</a>
+          <a href="{{ site.baseurl }}/financial-planning-tracking/">Planning and Tracking</a>
         {% else %}
           <span class="unavailable-guide">Planning and Tracking</span>
         {% endif %}
