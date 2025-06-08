@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Financial Planning & Tracking
+title: Financial Planning and Tracking
 ---
 
 [← Back to Finances](../)
-# Financial Planning & Tracking
+# Financial Planning and Tracking
 
-## Why Financial Planning & Tracking Matter
+## Why Planning and Tracking Matter
 
 Financial planning and tracking serve as the foundation for virtually all other financial decisions throughout life. Beyond simply monitoring money flows, systematic financial planning reduces stress and anxiety whilst improving decision-making quality across all domains <span class="info-icon" onclick="showReasoning('stress-reduction')">i</span>. Effective financial tracking enhances cognitive performance by providing clear information for financial decisions <span class="info-icon" onclick="showReasoning('cognitive-benefits')">i</span>, whilst comprehensive planning delivers measurable improvements in wealth accumulation and financial confidence <span class="info-icon" onclick="showReasoning('planning-benefits')">i</span>.
 
 The psychological benefits extend far beyond money management itself. Having a clear financial plan reduces the mental burden of constant financial uncertainty and creates a sense of control that influences overall wellbeing and life satisfaction.
 
-## Financial Planning & Tracking Values
+## Planning & Tracking Values
 
 Your optimal approach to financial planning and tracking depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
