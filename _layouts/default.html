@@ -619,17 +619,34 @@
     <!-- Load the JavaScript at the end for better performance -->
 <!-- JavaScript for Dropdowns -->
 <script>
-function toggleSubmenu(domainHeader) {
-    const dropdownItem = domainHeader.closest('.dropdown-item');
+// Updated toggleSubmenu function to handle pillar/domain hierarchy properly
+function toggleSubmenu(headerElement) {
+    const dropdownItem = headerElement.closest('.dropdown-item');
     const wasActive = dropdownItem.classList.contains('active');
     
-    // Close all other submenus in the same menu
-    const parentMenu = dropdownItem.closest('.nav-menu');
-    parentMenu.querySelectorAll('.dropdown-item.active').forEach(item => {
-        if (item !== dropdownItem) {
-            item.classList.remove('active');
+    // Check if this is a pillar header or domain header
+    if (headerElement.classList.contains('pillar-header')) {
+        // This is a pillar header - close other pillars
+        const parentMenu = dropdownItem.closest('.nav-menu');
+        parentMenu.querySelectorAll('.dropdown-item.active').forEach(item => {
+            // Only close other pillars, not domain items within this pillar
+            if (item !== dropdownItem && item.querySelector('.pillar-header')) {
+                item.classList.remove('active');
+            }
+        });
+    } else if (headerElement.classList.contains('domain-header')) {
+        // This is a domain header - close other domains within the same pillar
+        // Find the pillar submenu this domain belongs to
+        const pillarSubmenu = headerElement.closest('.pillar-header + .submenu, .submenu');
+        if (pillarSubmenu) {
+            // Close other domains within this pillar, but keep the pillar open
+            pillarSubmenu.querySelectorAll('.dropdown-item.active').forEach(item => {
+                if (item !== dropdownItem && item.querySelector('.domain-header')) {
+                    item.classList.remove('active');
+                }
+            });
         }
-    });
+    }
     
     // Toggle this submenu
     if (wasActive) {
