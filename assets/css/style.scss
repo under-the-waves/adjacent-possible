@@ -929,12 +929,6 @@ a.completed-guide:hover,
     font-size: 1.05em; /* Slightly larger than domain labels */
 }
 
-/* Pillar label color logic */
-.pillar-label {
-    color: #2c3e50; /* Default darker color for pillar headers */
-    font-weight: 600;
-}
-
 /* Make pillar red if it has class 'all-unavailable' */
 .dropdown-item.all-unavailable .pillar-label {
     color: #e63946 !important;
@@ -945,12 +939,12 @@ a.completed-guide:hover,
     transform: rotate(90deg);
 }
 
-/* Ensure pillar submenus work with the existing structure */
+/* Pillar submenus - show when pillar is active */
 .pillar-header + .submenu {
     display: none;
     background-color: white;
-    padding-left: 0; /* No left padding for pillar submenus since they contain domain headers */
-    border-left: none; /* No border for pillar submenus */
+    padding-left: 0;
+    border-left: none;
 }
 
 .dropdown-item.active .pillar-header + .submenu {
@@ -964,10 +958,22 @@ a.completed-guide:hover,
     padding-left: 20px; /* Indent domain headers within pillars */
 }
 
-/* Domain submenus within pillar structure */
+/* CRITICAL: Domain submenus within pillars should be hidden by default */
 .pillar-header + .submenu .domain-header + .submenu {
+    display: none; /* Hide by default */
     padding-left: 35px; /* Further indent for life area links */
     background-color: #f9f9f9;
+    border-left: 3px solid #ddd;
+}
+
+/* CRITICAL: Only show domain submenus when the specific domain is active */
+.pillar-header + .submenu .dropdown-item.active .domain-header + .submenu {
+    display: block; /* Show only when domain is active */
+}
+
+/* Domain arrow rotation when domain submenu is active */
+.pillar-header + .submenu .dropdown-item.active .domain-header .expand-icon {
+    transform: rotate(90deg);
 }
 
 /* Ensure proper spacing for the nested structure */
@@ -983,4 +989,9 @@ a.completed-guide:hover,
 /* Remove border from first pillar */
 .dropdown-item:first-of-type .pillar-header {
     border-top: none;
+}
+
+/* Ensure domain headers are clickable and respond to hover */
+.pillar-header + .submenu .domain-header:hover {
+    background-color: #f1f1f1;
 }
