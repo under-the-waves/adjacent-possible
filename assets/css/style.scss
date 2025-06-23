@@ -905,3 +905,82 @@ a.completed-guide:hover,
 .all-areas-link:hover {
     background-color: #dee2e6 !important;
 }
+
+/* Pillar header styling */
+.pillar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+    background-color: #f5f5f5; /* Light gray background to distinguish from domains */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pillar-header:hover {
+    background-color: #e9ecef;
+}
+
+.pillar-label {
+    color: #2c3e50; /* Darker blue-gray for pillar names */
+    font-weight: 600;
+    font-size: 1.05em; /* Slightly larger than domain labels */
+}
+
+/* Pillar label color logic */
+.pillar-label {
+    color: #2c3e50; /* Default darker color for pillar headers */
+    font-weight: 600;
+}
+
+/* Make pillar red if it has class 'all-unavailable' */
+.dropdown-item.all-unavailable .pillar-label {
+    color: #e63946 !important;
+}
+
+/* Arrow rotation when pillar submenu is active */
+.dropdown-item.active .pillar-header .expand-icon {
+    transform: rotate(90deg);
+}
+
+/* Ensure pillar submenus work with the existing structure */
+.pillar-header + .submenu {
+    display: none;
+    background-color: white;
+    padding-left: 0; /* No left padding for pillar submenus since they contain domain headers */
+    border-left: none; /* No border for pillar submenus */
+}
+
+.dropdown-item.active .pillar-header + .submenu {
+    display: block;
+}
+
+/* Domain headers within pillar submenus */
+.pillar-header + .submenu .domain-header {
+    background-color: white;
+    border-bottom: 1px solid #f0f0f0;
+    padding-left: 20px; /* Indent domain headers within pillars */
+}
+
+/* Domain submenus within pillar structure */
+.pillar-header + .submenu .domain-header + .submenu {
+    padding-left: 35px; /* Further indent for life area links */
+    background-color: #f9f9f9;
+}
+
+/* Ensure proper spacing for the nested structure */
+.pillar-header + .submenu .dropdown-item {
+    margin-bottom: 0;
+}
+
+/* Visual separator between pillars */
+.pillar-header {
+    border-top: 2px solid #dee2e6;
+}
+
+/* Remove border from first pillar */
+.dropdown-item:first-of-type .pillar-header {
+    border-top: none;
+}
