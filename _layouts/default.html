@@ -739,37 +739,3 @@ function toggleSubmenu(headerElement) {
 </script>
   </body>
 </html>
-
-// Update the toggleSubmenu function to handle both pillar and domain headers
-function toggleSubmenu(headerElement) {
-    const dropdownItem = headerElement.closest('.dropdown-item');
-    const wasActive = dropdownItem.classList.contains('active');
-    
-    // If this is a pillar header, close all other pillars
-    if (headerElement.classList.contains('pillar-header')) {
-        const parentMenu = dropdownItem.closest('.nav-menu');
-        parentMenu.querySelectorAll('.dropdown-item.active').forEach(item => {
-            // Only close other pillars, not domain items within this pillar
-            if (item !== dropdownItem && item.querySelector('.pillar-header')) {
-                item.classList.remove('active');
-            }
-        });
-    } else {
-        // This is a domain header - close other domains within the same pillar
-        const parentSubmenu = dropdownItem.closest('.submenu');
-        if (parentSubmenu) {
-            parentSubmenu.querySelectorAll('.dropdown-item.active').forEach(item => {
-                if (item !== dropdownItem) {
-                    item.classList.remove('active');
-                }
-            });
-        }
-    }
-    
-    // Toggle this submenu
-    if (wasActive) {
-        dropdownItem.classList.remove('active');
-    } else {
-        dropdownItem.classList.add('active');
-    }
-}
