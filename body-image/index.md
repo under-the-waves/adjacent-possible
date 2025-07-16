@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Body Image</title>
-</head>
-<body>
+---
+layout: default
+title: Body Image
+---
 
 [← Back to Home](../)
 # Body Image
@@ -318,6 +314,3 @@ document.addEventListener('keydown', function(e) {
     }
 });
 </script>
-
-</body>
-</html>
