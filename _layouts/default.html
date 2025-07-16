@@ -304,20 +304,26 @@
       <div class="submenu">
         
         <!-- Expression Domain -->
-        {% assign appearance_page = site.pages | where: "url", "/appearance/" | first %}
+        {% assign body_image_page = site.pages | where: "url", "/body-image/" | first %}
+        {% assign style_page = site.pages | where: "url", "/style/" | first %}
         {% assign personality_page = site.pages | where: "url", "/personality/" | first %}
         {% assign communication_page = site.pages | where: "url", "/communication/" | first %}
-        {% assign personal_style_page = site.pages | where: "url", "/personal-style/" | first %}
-        <div class="dropdown-item{% unless appearance_page or personality_page or communication_page or personal_style_page %} all-unavailable{% endunless %}">
+        <div class="dropdown-item{% unless body_image_page or personality_page or communication_page or style_page %} all-unavailable{% endunless %}">
           <div class="domain-header" onclick="toggleSubmenu(this)">
             <span class="domain-label">Expression</span>
             <span class="expand-icon">▸</span>
           </div>
           <div class="submenu">
-            {% if appearance_page %}
-              <a href="{{ site.baseurl }}/appearance/">Appearance</a>
+            {% if body_image_page %}
+              <a href="{{ site.baseurl }}/body-image/">Body Image</a>
             {% else %}
-              <span class="unavailable-guide">Appearance</span>
+              <span class="unavailable-guide">Body Image</span>
+            {% endif %}
+
+            {% if style_page %}
+              <a href="{{ site.baseurl }}/style/">Style</a>
+            {% else %}
+              <span class="unavailable-guide">Style</span>
             {% endif %}
             
             {% if personality_page %}
@@ -330,12 +336,6 @@
               <a href="{{ site.baseurl }}/communication/">Communication</a>
             {% else %}
               <span class="unavailable-guide">Communication</span>
-            {% endif %}
-            
-            {% if personal_style_page %}
-              <a href="{{ site.baseurl }}/personal-style/">Personal style</a>
-            {% else %}
-              <span class="unavailable-guide">Personal style</span>
             {% endif %}
           </div>
         </div>
