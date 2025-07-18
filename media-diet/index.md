@@ -3,7 +3,7 @@
 
 ## What is a Media Diet?
 
-A media diet encompasses all informational content you regularly consume – news articles, podcasts, newsletters, magazines, non-fiction books, documentaries, and online publications. This excludes entertainment media (which belongs in [consumptive leisure]({{ site.baseurl }}/consumptive-leisure/)), formal educational courses (which belongs in [learning]({{ site.baseurl }}/learning/)), and the systems you use to organise this information (which belongs in [information management]({{ site.baseurl }}/information-management/)). Your media diet shapes how well-informed you are about the world and provides the raw material for developing your worldview.
+A media diet encompasses all informational content you regularly consume – news articles, podcasts, newsletters, magazines, non-fiction books, documentaries, and online publications. This excludes entertainment media (which belongs in [consumptive leisure]({{ site.baseurl }}/consumptive-leisure/)), formal educational courses (which belongs in [learning]({{ site.baseurl }}/learning/)), and the systems you use to organise this information (which belongs in [information management]({{ site.baseurl }}/information-management/)). Your media diet shapes how well-informed you are about the world and provides the raw material for developing your [worldview]({{ site.baseurl }}/worldview/).
 
 Unlike passive consumption driven by algorithms and notifications, a deliberate media diet involves conscious choices about what information to consume, when, and in what format to best serve your goals and cognitive wellbeing.
 
