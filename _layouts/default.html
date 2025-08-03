@@ -340,7 +340,7 @@
           </div>
         </div>
         
-        <!-- Family Domain -->
+<!-- Family Domain -->
         {% assign family_of_origin_page = site.pages | where: "url", "/family-of-origin/" | first %}
         {% assign extended_family_page = site.pages | where: "url", "/extended-family/" | first %} 
         {% assign children_page = site.pages | where: "url", "/children/" | first %}
@@ -355,18 +355,18 @@
             {% else %}
               <span class="unavailable-guide">Family of Origin</span>
             {% endif %}
-
             {% if extended_family_page %}
               <a href="{{ site.baseurl }}/extended-family/">Extended Family</a>
             {% else %}
               <span class="unavailable-guide">Extended Family</span>
             {% endif %}
-
             {% if children_page %}
               <a href="{{ site.baseurl }}/children/">Children</a>
             {% else %}
               <span class="unavailable-guide">Children</span>
             {% endif %}
+          </div>
+        </div>
                       
         <!-- Friends and Relationships Domain -->
         {% assign friendship_page = site.pages | where: "url", "/friendship/" | first %}
@@ -383,23 +383,18 @@
             {% else %}
               <span class="unavailable-guide">Friendship</span>
             {% endif %}
-
             {% if romantic_page %}
               <a href="{{ site.baseurl }}/romantic-relationships/">Romantic relationships</a>
             {% else %}
               <span class="unavailable-guide">Romantic relationships</span>
             {% endif %}
-
             {% if sex_page %}
               <a href="{{ site.baseurl }}/sex/">Sex</a>
             {% else %}
               <span class="unavailable-guide">Sex</span>
             {% endif %}
-            
           </div>
         </div>
-      </div>
-    </div>
     
     <!-- Pillar 4: Organise Your Life -->
     <div class="dropdown-item">
