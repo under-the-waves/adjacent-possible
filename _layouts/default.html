@@ -341,20 +341,27 @@
         </div>
         
         <!-- Relationships Domain -->
-        {% assign family_page = site.pages | where: "url", "/family/" | first %}
+        {% assign family_of_origin_page = site.pages | where: "url", "/family-of-origin/" | first %}
+        {% assign family_networks_page = site.pages | where: "url", "/family-networks/" | first %}
         {% assign friendship_page = site.pages | where: "url", "/friendship/" | first %}
         {% assign romantic_page = site.pages | where: "url", "/romantic-relationships/" | first %}
         {% assign children_page = site.pages | where: "url", "/children/" | first %}
-        <div class="dropdown-item{% unless family_page or friendship_page or romantic_page or children_page %} all-unavailable{% endunless %}">
+        <div class="dropdown-item{% unless family_of_origin_page or friendship_page or romantic_page or children_page %} all-unavailable{% endunless %}">
           <div class="domain-header" onclick="toggleSubmenu(this)">
             <span class="domain-label">Relationships</span>
             <span class="expand-icon">▸</span>
           </div>
           <div class="submenu">
-            {% if family_page %}
-              <a href="{{ site.baseurl }}/family/">Family</a>
+            {% if family_of_origin_page %}
+              <a href="{{ site.baseurl }}/family-of-origin/">Family of Origin</a>
             {% else %}
-              <span class="unavailable-guide">Family</span>
+              <span class="unavailable-guide">Family of Origin</span>
+            {% endif %}
+
+            {% if family_networks_page %}
+              <a href="{{ site.baseurl }}/family-networks/">Family Networks</a>
+            {% else %}
+              <span class="unavailable-guide">Family Networks</span>
             {% endif %}
             
             {% if friendship_page %}
