@@ -3,7 +3,7 @@ description: "A deliberate practice programme to learn and internalise keyboard 
 applicable_domains: ["current-work"]
 
 values:
-  current_work.competence:
+  current-work.competence:
     pbs: 6
     pbs_reasoning: "Mastering keyboard shortcuts produces a measurable improvement in task execution speed. Research indicates approximately 2 seconds saved per minute of computer work, which compounds to roughly 8 full working days per year for a standard office worker. Lane (2005) measured 0.5-1.5 seconds saved per individual task. Beyond raw speed, shortcuts reduce context-switching between mouse and keyboard, enabling smoother workflow and fewer interruptions to train of thought. This represents a meaningful but bounded competence gain -- you become notably faster at executing known tasks, but shortcuts do not improve the quality of your thinking or decision-making."
     isr: 90
@@ -15,7 +15,7 @@ values:
     anchor_unit: "competence_level"
     anchor_description: "Work competence from completely unskilled (0) to exceptional mastery of role with elite-level execution (10)"
 
-  current_work.engagement:
+  current-work.engagement:
     pbs: 4
     pbs_reasoning: "Keyboard shortcuts contribute modestly to engagement by reducing friction between intention and action. When you can execute commands as fast as you think of them, there is less interruption to flow state. However, engagement is primarily driven by the nature of the work itself -- whether tasks are meaningful, challenging, and aligned with your interests -- not by input method efficiency. Shortcuts remove a small source of frustration but do not transform boring work into engaging work. The benefit is real but peripheral to the core drivers of workplace engagement."
     isr: 90
@@ -27,7 +27,7 @@ values:
     anchor_unit: "engagement_level"
     anchor_description: "Work engagement from completely disengaged and dreading tasks (0) to deeply absorbed and energised by daily work (10)"
 
-  current_work.impact:
+  current-work.impact:
     pbs: 3
     pbs_reasoning: "The link between keyboard shortcuts and work impact is indirect and modest. Faster execution frees up time that could theoretically be redirected toward higher-impact activities, but the actual time saved (roughly 30-40 minutes per day) is often absorbed by other low-value tasks rather than strategically redeployed. Shortcuts do not improve the quality, creativity, or strategic value of your output -- they only speed up execution of decisions already made. For roles where speed of execution is a bottleneck (e.g., data entry, coding under time pressure), the impact benefit is somewhat higher, but for most knowledge workers, thinking quality matters far more than typing speed."
     isr: 90
