@@ -1,1 +1,70 @@
+name: "Yoga"
+description: "Regular practice of yoga combining physical postures (asanas), breathing techniques (pranayama), and meditation or mindfulness elements, typically 3-5 sessions per week of 30-75 minutes each. Styles range from gentle and restorative (yin, hatha) to physically demanding (ashtanga, vinyasa, power yoga). Practice develops flexibility, balance, core stability, body awareness, and stress resilience. Yoga can be practised at home with minimal equipment or in studio classes with instruction. Noticeable flexibility and stress management improvements emerge within 2-4 weeks, with significant physical and psychological benefits developing over 2-3 months of consistent practice."
+applicable_domains: ["fitness"]
 
+values:
+  fitness.health:
+    pbs: 7
+    pbs_reasoning: "Meta-analyses demonstrate yoga significantly reduces cardiovascular disease risk factors including blood pressure (systolic reduction of 5-10 mmHg), blood lipids, blood glucose, and body weight. A 15-year follow-up RCT of yoga-based cardiac rehabilitation showed significant reduction in major adverse cardiac events and mortality in post-CABG patients. Yoga improves flexibility, balance (reducing fall risk in elderly), chronic pain outcomes, and immune function markers. Stress reduction effects lower cortisol and inflammatory markers. However, yoga provides lower cardiovascular stimulus than aerobic exercise and limited stimulus for bone density or muscular strength compared to resistance training."
+    isr: 75
+    isr_reasoning: "Evidence base is substantial but heterogeneous due to the wide variety of yoga styles, intensities, and study populations. Meta-analyses note moderate quality of RCTs with small sample sizes as a limitation. Health benefits for stress reduction and flexibility are highly reliable. Cardiovascular risk factor improvements are consistently demonstrated but effect sizes are smaller than those of dedicated aerobic or resistance training. The 81% CVD mortality reduction reported in one meditation study is an outlier that should be interpreted cautiously."
+    uar: 70
+    uar_reasoning: "Yoga has notably high adherence rates compared to other exercise modalities. A meta-analysis of 168 RCTs found only 11.4% dropout from yoga groups (Cramer et al. 2016), substantially better than the 50% general exercise dropout benchmark. For programmes longer than 12 weeks, dropout increased to 15.2% but remained well below other exercise interventions. The accessibility of home practice, low physical barrier to entry, stress relief benefits, and meditative enjoyment all contribute to strong retention. Class attendance among completers averages 77%."
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan years"
+
+  fitness.performance:
+    pbs: 5
+    pbs_reasoning: "Yoga develops flexibility, balance, coordination, and body awareness to a high degree. Core stability improvements benefit posture and movement quality across other activities. Studies show significant improvements in muscular strength, power, endurance, and flexibility in previously sedentary populations. However, yoga provides limited development of maximal strength, explosive power, cardiovascular endurance, or sport-specific capacities. Its primary performance contribution is as a complementary practice that enhances mobility, recovery, and injury prevention for other training modalities."
+    isr: 75
+    isr_reasoning: "Flexibility and balance improvements from yoga are highly reliable and well-documented across populations and styles. Core stability gains are consistent. However, strength and power adaptations are limited to bodyweight capacities and are less predictable than those from structured resistance training. The performance benefits are most reliable when yoga serves a complementary role rather than as the primary performance training modality."
+    uar: 65
+    uar_reasoning: "Performance-focused yoga practitioners tend to have moderate-to-good retention as they experience steady improvement in flexibility and movement quality. However, those seeking significant strength or cardiovascular performance gains may become frustrated with yoga's limitations in these areas and supplement or replace it with more targeted training. The meditative and stress-management benefits provide a secondary motivation that supports retention."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "performance_level"
+    anchor_description: "Elite competitive athletic performance capability"
+
+  fitness.appearance:
+    pbs: 5
+    pbs_reasoning: "Yoga produces moderate body composition changes through increased muscle tone, improved posture, and modest caloric expenditure (150-400 kcal/hour depending on style). More vigorous styles (power yoga, vinyasa) produce greater lean mass development and fat loss. Yoga improves postural alignment, which can significantly enhance the appearance of existing musculature. However, yoga provides insufficient mechanical tension for significant muscle hypertrophy and lower caloric expenditure than aerobic or resistance training, limiting its capacity for dramatic physique transformation."
+    isr: 65
+    isr_reasoning: "Appearance changes from yoga are modest and slow, with high dependency on the style of yoga practised, session frequency, and dietary factors. Postural improvements are reliable and can make a noticeable visual difference within weeks. Body composition changes require consistent practice of more vigorous styles over several months. The evidence base for yoga-specific body composition changes is limited and heterogeneous."
+    uar: 65
+    uar_reasoning: "Appearance-motivated yoga practitioners have reasonable retention due to the relatively quick postural improvements and the enjoyment of practice providing secondary motivation. However, those expecting significant muscle development or dramatic fat loss may become dissatisfied with the rate of visible change and seek more intensive alternatives. The mind-body benefits help retain practitioners who initially came for appearance but discover broader benefits."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "aesthetic_achievement"
+    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+
+  fitness.enjoyment:
+    pbs: 8
+    pbs_reasoning: "Yoga combines physical movement with mindfulness, breathing practice, and often a contemplative or spiritual dimension that many practitioners find deeply satisfying. The stress-reduction effect is immediately noticeable and provides strong positive reinforcement. Studies show yoga significantly reduces anxiety (SMD = -0.44 in meta-analyses) and improves overall well-being. The practice can be adapted to any fitness level, performed anywhere, and integrated with personal values and philosophical interests. The variety of styles, the progressive nature of posture mastery, and the community aspect of studio practice all contribute to high enjoyment."
+    isr: 80
+    isr_reasoning: "Enjoyment and psychological well-being improvements from yoga are among its most consistently documented outcomes. The combination of physical movement, breathwork, and mindfulness reliably produces positive subjective experiences. The very low dropout rates in RCTs (11.4%) partially reflect high enjoyment. Individual responses vary by yoga style and teaching quality, but the broad accessibility and adaptability of practice make positive experiences reliably achievable."
+    uar: 70
+    uar_reasoning: "Yoga's high enjoyment translates to strong long-term adherence. The low injury risk, scalable difficulty, home practice option, and stress-relief benefits create multiple reinforcement pathways that sustain engagement. The 11.4% RCT dropout rate and 77% class attendance rate among completers are among the best in exercise intervention research. The meditative and contemplative dimensions provide meaning beyond physical fitness that deepens commitment over time."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "satisfaction_level"
+    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+
+resources:
+  upfront_cost: 50
+  upfront_cost_reasoning: "Yoga mat ($30-50) and comfortable stretchy clothing ($20). No specialised equipment required. Many practitioners begin with no mat at all, using carpet or a towel. Optional blocks, straps, and bolsters ($20-40) enhance practice but are not essential for beginners."
+  ongoing_cost: 30
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Optional studio membership or class packages ($50-150/month for regular studio attendance). However, yoga can be practised entirely free at home using YouTube channels, free apps, or self-directed practice, reducing ongoing cost to zero. A moderate estimate assumes a mix of occasional studio classes and home practice."
+  upfront_time: 2
+  upfront_time_reasoning: "Learning basic postures, breathing techniques, and practice structure. An introductory class or beginner video series covers the essentials in 1-2 hours. Yoga has one of the lowest barriers to entry among physical activities, as practice can begin immediately with guided instruction."
+  ongoing_time: 4
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Three to five sessions of 30-60 minutes per week. Shorter sessions (15-20 minutes) can be effective for stress management and flexibility maintenance, but 30+ minute sessions are recommended for meaningful physical and psychological benefits. Home practice eliminates travel time, improving time efficiency."
+
+prerequisites:
+  - "Sufficient mobility to get down to and up from the floor without assistance, or access to chair yoga modifications"
+  - "Access to a quiet practice space with enough room to extend arms and legs fully in all directions"
+  - "Willingness to engage with breathwork and mindfulness elements that accompany physical postures"
+  - "Awareness of any musculoskeletal limitations that may require pose modifications, particularly for spinal, hip, or shoulder conditions"

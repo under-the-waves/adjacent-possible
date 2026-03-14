@@ -1,1 +1,70 @@
+name: "Trail Running"
+description: "Regular running on natural terrain including dirt paths, forest trails, mountain tracks, and mixed surfaces, typically 3-4 sessions per week ranging from 30-90 minutes each. Trail running combines cardiovascular endurance training with the proprioceptive demands of uneven footing, elevation changes, and variable conditions, engaging stabiliser muscles and requiring greater neuromuscular coordination than road running. The natural environment provides additional psychological benefits through nature exposure. Cardiovascular improvements become noticeable within 3-4 weeks, with significant VO2max and endurance gains developing over 8-16 weeks of consistent training."
+applicable_domains: ["fitness"]
 
+values:
+  fitness.health:
+    pbs: 8
+    pbs_reasoning: "Running is among the most well-evidenced activities for reducing all-cause mortality. Meta-analyses show regular running reduces cardiovascular mortality by 30-45% and all-cause mortality by 25-30%. Each 1-MET increase in cardiorespiratory fitness is associated with an 11-17% reduction in all-cause mortality. Trail running adds balance and proprioceptive benefits over road running, plus nature exposure which independently reduces cortisol, blood pressure, and inflammatory markers. The uneven terrain develops ankle and knee stabiliser strength. However, injury rates in trail running (0.7-61.2 per 1000 hours, with considerable variability) are a health cost that must be weighed against cardiovascular benefits."
+    isr: 85
+    isr_reasoning: "The cardiovascular and metabolic health benefits of running are among the most robustly evidenced in exercise science, supported by decades of epidemiological data and large cohort studies. The relationship between cardiorespiratory fitness and longevity is described as the strongest and most consistent predictor across 199 unique cohort studies representing over 20.9 million observations. Trail-specific evidence is thinner but the underlying physiological mechanisms are identical to well-studied road running."
+    uar: 55
+    uar_reasoning: "Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes. Trail running may have modestly better adherence than road running due to the enjoyment factor of natural environments and variety of terrain, but is constrained by weather dependency, geographic access to trails, and higher acute injury risk (ankle sprains in particular). The time commitment for travel to trailheads adds a logistical barrier not present in road running."
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan years"
+
+  fitness.performance:
+    pbs: 7
+    pbs_reasoning: "Trail running builds excellent cardiovascular endurance, with VO2max improvements of 10-20% in previously untrained individuals over 8-16 weeks. The variable terrain develops superior proprioception, ankle stability, and neuromuscular coordination compared to road running. Hill climbing builds lower body power and muscular endurance. Trail runners develop strong aerobic base, lactate threshold, and running economy on mixed surfaces. However, it provides limited upper body development, maximal strength, or power output compared to strength-based activities."
+    isr: 80
+    isr_reasoning: "Cardiovascular performance improvements from running are highly reliable and well-characterised in the literature. VO2max increases follow predictable dose-response relationships. Trail-specific adaptations (balance, proprioception, hill power) are consistently developed through regular practice. Individual variation exists in the rate of improvement, but directional performance gains are nearly universal among those who maintain consistent training."
+    uar: 55
+    uar_reasoning: "Performance-oriented trail runners benefit from measurable progress through pace improvements, distance milestones, and race results. The trail running community and event calendar provide strong external motivation. However, overuse injuries (particularly knee, ankle, and lower leg) can interrupt training and lead to dropout. Seasonal variation and weather affect consistency, and the time commitment for longer trail sessions can conflict with other obligations."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "performance_level"
+    anchor_description: "Elite competitive athletic performance capability"
+
+  fitness.appearance:
+    pbs: 5
+    pbs_reasoning: "Trail running produces moderate body composition changes, primarily through caloric expenditure driving fat loss (400-600 kcal/hour depending on terrain and pace). Runners typically develop lean, defined lower body musculature and low body fat percentages. However, running provides minimal upper body hypertrophy and, at higher volumes, can promote muscle catabolism that works against muscular physique goals. The aesthetic outcome favours lean endurance builds rather than muscular development."
+    isr: 70
+    isr_reasoning: "Fat loss from running is reliably produced when caloric expenditure exceeds intake, but the magnitude depends heavily on dietary behaviour. Running alone without dietary modification produces modest weight loss (1-3 kg over 12 weeks in meta-analyses). Body composition changes are more reliable than pure weight loss, with consistent reductions in visceral fat even when scale weight changes are small."
+    uar: 50
+    uar_reasoning: "Appearance-motivated runners may be frustrated by slow visible progress, particularly if expecting upper body development. The endurance-adapted physique is not universally desired, and some runners find their appearance goals conflict with performance optimisation. Those primarily motivated by aesthetics tend to add resistance training rather than relying on running alone."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "aesthetic_achievement"
+    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+
+  fitness.enjoyment:
+    pbs: 8
+    pbs_reasoning: "Trail running consistently scores highly for enjoyment due to nature immersion, exploration, variety of terrain and routes, meditative flow states, and the adventure element of navigating natural environments. Research on green exercise shows nature-based physical activity produces greater improvements in mood, self-esteem, and well-being than equivalent indoor exercise. The sense of exploration and discovery on new trails, wildlife encounters, and seasonal variation in landscapes provide ongoing novelty. The trail running community is notably supportive and non-competitive at the recreational level."
+    isr: 80
+    isr_reasoning: "Nature exposure reliably enhances exercise enjoyment across multiple studies. The combination of physical challenge, flow state potential, and environmental variety creates consistently positive experiences. However, adverse weather, insect exposure, and trail conditions can reduce enjoyment on individual sessions. The overall pattern of high satisfaction is robust among those who have access to appealing trail networks."
+    uar: 60
+    uar_reasoning: "Enjoyment-driven trail runners tend to have better long-term retention than road runners, as the variety of trails and natural environments prevents the monotony that drives road running dropout. The community aspect, race culture, and personal exploration goals provide sustained motivation. Weather dependency and seasonal access issues in some climates reduce year-round consistency, but many trail runners adapt by transitioning to road or treadmill running in poor conditions."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "satisfaction_level"
+    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+
+resources:
+  upfront_cost: 150
+  upfront_cost_reasoning: "Trail running shoes with appropriate lugged soles ($120) and moisture-wicking trail-appropriate clothing ($30). Trail shoes are essential for safety and performance on uneven, potentially slippery terrain. A basic hydration vest ($40-80) is recommended for longer runs but not strictly required to begin."
+  ongoing_cost: 10
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Trail running is a low-cost activity once initial gear is acquired. Shoe replacement every 400-600 miles ($120, amortised to approximately $10/month at moderate mileage). Optional race entry fees ($30-100 per event). Trail access is typically free on public land. No gym membership required."
+  upfront_time: 2
+  upfront_time_reasoning: "Identifying local trail networks, planning initial routes, and building basic trail navigation skills. Runners with existing road running fitness can transition to trails immediately with minimal preparation. Complete beginners should build a base of walk-run fitness before tackling technical terrain."
+  ongoing_time: 4
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Three to four sessions of 30-75 minutes per week, plus travel time to trailheads. Effective cardiovascular adaptations occur at this volume. Trail sessions tend to be longer than equivalent road sessions due to slower pace on uneven terrain. Travel time to trails adds 30-60 minutes per session depending on location."
+
+prerequisites:
+  - "Baseline cardiovascular fitness sufficient to sustain 20-30 minutes of continuous jogging on flat terrain without distress"
+  - "Access to trail networks, parks, or natural terrain within reasonable travel distance for regular sessions"
+  - "Adequate ankle stability and proprioception for uneven surfaces, or willingness to build these gradually on easier trails"
+  - "Awareness of trail-specific risks including wildlife, weather exposure, navigation, and the need for self-sufficiency on remote trails"

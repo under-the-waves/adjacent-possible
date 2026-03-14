@@ -1,0 +1,58 @@
+name: "Keyboard Shortcuts Mastery"
+description: "A deliberate practice programme to learn and internalise keyboard shortcuts for your most-used applications, replacing mouse-driven menu navigation with direct key combinations. The approach involves identifying the 20-30 most impactful shortcuts across your core tools (IDE, browser, email, OS), practising them through spaced repetition or forced usage (e.g., temporarily disabling mouse access to menus), and gradually expanding your repertoire as earlier shortcuts become automatic. Research suggests that keyboard shortcuts save approximately 2 seconds per minute of computer work, and Lane (2005) found they shave 0.5-1.5 seconds off common tasks compared to toolbar or menu alternatives. Full internalisation of a core shortcut set typically takes 2-4 weeks of consistent practice."
+applicable_domains: ["current-work"]
+
+values:
+  current_work.competence:
+    pbs: 6
+    pbs_reasoning: "Mastering keyboard shortcuts produces a measurable improvement in task execution speed. Research indicates approximately 2 seconds saved per minute of computer work, which compounds to roughly 8 full working days per year for a standard office worker. Lane (2005) measured 0.5-1.5 seconds saved per individual task. Beyond raw speed, shortcuts reduce context-switching between mouse and keyboard, enabling smoother workflow and fewer interruptions to train of thought. This represents a meaningful but bounded competence gain -- you become notably faster at executing known tasks, but shortcuts do not improve the quality of your thinking or decision-making."
+    isr: 90
+    isr_reasoning: "The mechanism is essentially deterministic: pressing a key combination performs the action faster than navigating a menu. There is no ambiguity about whether shortcuts work. The only variability comes from application-specific inconsistencies and the occasional shortcut conflict, but these are minor. Multiple studies confirm reliable time savings when shortcuts are used, making this one of the most mechanistically certain interventions available."
+    uar: 60
+    uar_reasoning: "Research on keyboard shortcut adoption shows that even experienced computer users largely do not learn or use shortcuts, and years of computer experience do not correlate with shortcut knowledge. Most people learn a handful of basics (Ctrl+C, Ctrl+V) and plateau. The primary barriers are the initial slowdown during learning (shortcuts are slower than familiar mouse actions until they become automatic), the effort of memorisation, and the lack of external reinforcement. Deliberate practice programmes improve adoption rates, but many people still revert to mouse habits within weeks."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "competence_level"
+    anchor_description: "Work competence from completely unskilled (0) to exceptional mastery of role with elite-level execution (10)"
+
+  current_work.engagement:
+    pbs: 4
+    pbs_reasoning: "Keyboard shortcuts contribute modestly to engagement by reducing friction between intention and action. When you can execute commands as fast as you think of them, there is less interruption to flow state. However, engagement is primarily driven by the nature of the work itself -- whether tasks are meaningful, challenging, and aligned with your interests -- not by input method efficiency. Shortcuts remove a small source of frustration but do not transform boring work into engaging work. The benefit is real but peripheral to the core drivers of workplace engagement."
+    isr: 90
+    isr_reasoning: "The flow-state mechanism is well-supported by cognitive research: reducing mechanical friction between intention and execution does facilitate immersion. Studies on tool fluency consistently show that faster tool operation correlates with reduced cognitive load and fewer workflow interruptions. The effect is reliable but modest in magnitude -- it is a necessary but not sufficient condition for deep engagement."
+    uar: 60
+    uar_reasoning: "Same adherence pattern as competence. The engagement benefit only materialises once shortcuts are fully internalised, which requires sustained practice through the initial awkward phase. Many people give up before reaching the fluency threshold where shortcuts feel natural and begin to support flow. Those who persist do reliably experience smoother workflows, but the dropout rate during the learning phase is significant."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "engagement_level"
+    anchor_description: "Work engagement from completely disengaged and dreading tasks (0) to deeply absorbed and energised by daily work (10)"
+
+  current_work.impact:
+    pbs: 3
+    pbs_reasoning: "The link between keyboard shortcuts and work impact is indirect and modest. Faster execution frees up time that could theoretically be redirected toward higher-impact activities, but the actual time saved (roughly 30-40 minutes per day) is often absorbed by other low-value tasks rather than strategically redeployed. Shortcuts do not improve the quality, creativity, or strategic value of your output -- they only speed up execution of decisions already made. For roles where speed of execution is a bottleneck (e.g., data entry, coding under time pressure), the impact benefit is somewhat higher, but for most knowledge workers, thinking quality matters far more than typing speed."
+    isr: 90
+    isr_reasoning: "The time-saving mechanism is highly reliable -- shortcuts consistently save time. However, the conversion of saved time into actual impact depends entirely on how the individual uses that freed time, which is outside the intervention's control. The mechanical component (saving time) is near-certain; the impact component (using that time well) is uncertain but not part of the intervention's direct mechanism."
+    uar: 60
+    uar_reasoning: "Same adherence pattern as other current_work values. The additional challenge for impact is that the connection between shortcuts and meaningful outcomes is so indirect that it provides even less motivational reinforcement. People rarely think 'I closed that important deal because I used Ctrl+Shift+T instead of clicking the menu,' which makes it harder to sustain motivation for continued practice."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "impact_level"
+    anchor_description: "Work impact from no meaningful contribution (0) to transformative contribution that significantly advances organisational goals (10)"
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost to begin learning keyboard shortcuts. All major applications publish their shortcut lists for free. Optional tools like shortcut trainers or cheat sheet posters are available but not required."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. Keyboard shortcuts are built into existing software and require no subscriptions, equipment, or consumables to maintain."
+  upfront_time: 2
+  upfront_time_reasoning: "Time to audit your most-used applications, identify the 20-30 highest-value shortcuts, create or print a cheat sheet, and set up any practice tools or reminders. Can be completed in a single focused session."
+  ongoing_time: 3
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "During the initial learning phase (first 2-4 weeks), approximately 15-20 minutes per day of deliberate practice or intentional shortcut usage, totalling around 3 hours per month. After internalisation, ongoing time drops to near zero as shortcuts become automatic. Periodic time may be needed when adopting new tools or applications."
+
+prerequisites:
+  - "Regular daily computer use in applications that support keyboard shortcuts"
+  - "A physical keyboard (laptop or external) -- shortcuts are impractical on tablets or touchscreens"
+  - "Willingness to tolerate a temporary slowdown during the learning phase as muscle memory develops"
+  - "Basic familiarity with your most-used applications and their core functions"

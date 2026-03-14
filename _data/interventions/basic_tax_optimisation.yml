@@ -1,0 +1,95 @@
+name: "Basic Tax Optimisation"
+description: "Implementing foundational tax-efficient strategies for saving and investing, including maximising ISA allowances (£20,000/year), utilising pension tax relief (20-45% depending on tax band), salary sacrifice arrangements where available, and ensuring capital gains and dividend allowances are used before triggering tax liabilities. This is not aggressive tax planning or avoidance -- it is simply using the government-provided tax wrappers as intended. For a basic-rate taxpayer contributing to a pension, every £80 contributed becomes £100 due to tax relief. A higher-rate taxpayer pays effectively £60 for £100 of pension contributions. These are guaranteed, risk-free returns that compound over decades."
+applicable_domains: ["saving", "investing"]
+
+values:
+  saving.security:
+    pbs: 5
+    pbs_reasoning: "Tax optimisation indirectly improves security by ensuring more of each pound saved is retained rather than lost to tax. Using ISAs means interest and growth are tax-free, protecting the real value of savings. However, the primary impact on security comes from the amount saved (addressed by automated savings), not the tax wrapper. A PBS of 5 reflects meaningful but secondary impact on financial security -- the tax savings add up over time but the effect is incremental rather than transformative in the short term."
+    isr: 85
+    isr_reasoning: "The tax benefits of ISAs and pensions are guaranteed by legislation and extremely reliable when properly implemented. Tax relief on pension contributions is automatic (through salary sacrifice) or claimable (through self-assessment). The main risk is future changes to tax legislation, which historically have been grandfathered for existing holdings. ISA and pension tax benefits have been stable features of the UK tax system for decades."
+    uar: 50
+    uar_reasoning: "Tax optimisation requires more active management than automated savings -- annual ISA allowance usage, pension contribution monitoring, and staying current with changing allowances and thresholds. Many people set up ISAs or pensions initially but fail to optimise annually (e.g., not using the full ISA allowance, not adjusting pension contributions after pay rises, not claiming higher-rate tax relief). Research from HMRC suggests a significant proportion of higher-rate taxpayers fail to claim additional pension tax relief they are entitled to."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "security_level"
+    anchor_description: "Complete financial security with fully funded emergency reserves and protection against income disruption"
+
+  saving.growth:
+    pbs: 6
+    pbs_reasoning: "Tax optimisation has a meaningful impact on savings growth because tax drag is one of the most significant long-term costs to wealth accumulation. A basic-rate taxpayer using an ISA rather than a taxable account for savings earning 4% effectively gains an additional 0.8% annually. For pension contributions, the immediate 25% uplift from basic-rate tax relief (or 67% for higher-rate) significantly accelerates growth through a larger invested base that compounds. Over 30 years, the difference between tax-optimised and non-optimised saving can amount to 20-40% more wealth."
+    isr: 85
+    isr_reasoning: "The mathematical benefit of tax wrappers is certain and well-documented. The compound effect of avoiding tax drag is reliable and predictable. The main uncertainty relates to future tax policy changes, but the UK government has historically protected existing ISA and pension holdings."
+    uar: 50
+    uar_reasoning: "Same adherence dynamics as saving.security. Initial setup is often done but annual optimisation (maximising allowances, rebalancing within tax wrappers, timing contributions) requires ongoing attention that many people neglect. The complexity of optimisation increases with income and assets, which can lead to procrastination."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "growth_level"
+    anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
+
+  saving.freedom:
+    pbs: 5
+    pbs_reasoning: "Tax optimisation contributes to financial freedom by accelerating the accumulation of tax-efficient wealth. ISAs provide flexibility (accessible at any time, tax-free) while pensions provide long-term locked-away wealth with tax advantages. The combination enables both near-term optionality (ISA) and long-term security (pension). A PBS of 5 reflects that tax optimisation meaningfully accelerates the path to financial freedom but is a multiplier on other savings behaviours rather than a standalone driver."
+    isr: 80
+    isr_reasoning: "The pathway from tax optimisation to increased financial freedom is reliable but indirect. The tax savings must be combined with disciplined saving and investing to translate into actual freedom. The pension component has additional uncertainty due to access restrictions (currently age 57+) that limit near-term freedom."
+    uar: 45
+    uar_reasoning: "Freedom-oriented individuals may initially be motivated by tax efficiency but the ongoing optimisation work (annual ISA contributions, pension reviews, tax return claims) can feel bureaucratic and disconnected from the goal of freedom. The complexity can deter continued optimisation, particularly for those who have already set up basic tax wrappers and see diminishing returns from further optimisation."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "freedom_level"
+    anchor_description: "Complete financial independence with full optionality over work and lifestyle choices"
+
+  investing.returns:
+    pbs: 6
+    pbs_reasoning: "Tax optimisation provides a guaranteed boost to investment returns by eliminating tax drag on growth. Within an ISA, all capital gains, dividends, and interest are tax-free. Pension contributions receive immediate tax relief that increases the invested capital base. Over a 30-year investment horizon, avoiding the 20% capital gains tax and dividend tax can increase terminal wealth by 15-30% compared to identical investments held outside tax wrappers. A PBS of 6 reflects a significant but not maximal impact -- the returns themselves come from the underlying investments, while tax optimisation protects and enhances them."
+    isr: 85
+    isr_reasoning: "The return enhancement from tax wrappers is mathematically certain for as long as the current tax regime persists. ISA tax benefits are particularly reliable as they have been a stable feature since 1999. Pension tax relief has been subject to more political debate but the basic structure has persisted. The main uncertainty is future legislative change."
+    uar: 50
+    uar_reasoning: "Maintaining optimal tax efficiency across investments requires annual attention -- ensuring new contributions go into tax wrappers before taxable accounts, using bed-and-ISA strategies, managing capital gains allowances, and rebalancing within tax-efficient structures. Many investors set up tax-efficient accounts initially but do not maintain optimal allocation between wrappers over time. The UAR of 50 reflects that initial setup is common but ongoing optimisation is often neglected."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "returns_level"
+    anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
+
+  investing.knowledge:
+    pbs: 6
+    pbs_reasoning: "Understanding tax optimisation requires and develops meaningful financial knowledge -- tax bands, allowances, wrapper types, relief mechanisms, and the interaction between different tax-efficient vehicles. This knowledge has high practical value and transferability to other financial decisions. A PBS of 6 reflects that the knowledge gained is substantial and practically useful, though it is domain-specific (UK tax system) rather than broadly transferable to investment analysis."
+    isr: 80
+    isr_reasoning: "The learning pathway for basic tax optimisation is well-supported by HMRC guidance, platform educational content, and financial media. The concepts are concrete and verifiable. However, the UK tax system changes annually (budget changes, threshold adjustments), requiring ongoing learning to maintain current knowledge. Some complexity in the interaction between different tax wrappers can lead to misunderstanding."
+    uar: 55
+    uar_reasoning: "Tax knowledge requires active maintenance as rules change. Many people learn the basics (ISAs good, pensions get tax relief) but do not keep up with annual changes to allowances, thresholds, and rules. The bureaucratic nature of tax optimisation can make ongoing learning feel like a chore rather than an interesting pursuit. However, those who engage tend to find the knowledge genuinely useful."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "knowledge_level"
+    anchor_description: "Comprehensive investment knowledge enabling sophisticated financial decision-making across all asset classes"
+
+  investing.discipline:
+    pbs: 4
+    pbs_reasoning: "Tax optimisation requires moderate discipline -- primarily the discipline to complete annual administrative tasks (using ISA allowances before the tax year end, filing self-assessment for pension relief, reviewing allowances). However, it does not test discipline under emotional stress in the same way that maintaining investments during a crash does. The discipline required is more administrative than psychological. A PBS of 4 reflects real but moderate discipline development."
+    isr: 75
+    isr_reasoning: "The discipline benefits of tax optimisation are reliable for those who engage with the process -- annual routines develop naturally. However, the administrative nature means the discipline built is specific to financial administration rather than broader investment discipline. The annual deadline structure (ISA year-end) provides natural cadence for habit formation."
+    uar: 45
+    uar_reasoning: "Administrative discipline tends to decay over time without strong external reinforcement. Many people start with good intentions to optimise annually but gradually let tasks slip. The annual nature of the task (rather than monthly or weekly) makes habit formation harder. Tax year-end articles and media reminders help but are not sufficient for most people to maintain rigorous annual optimisation."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "discipline_level"
+    anchor_description: "Unwavering financial discipline maintained through all market conditions and life circumstances"
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Opening ISAs, SIPPs, and other tax-efficient accounts is free with most UK providers. There are no costs to claiming tax relief through self-assessment. Some people choose to pay for financial advice (typically £500-2,000 for initial advice), but this is optional and basic tax optimisation can be self-directed using free resources."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "There are no direct costs to maintaining tax-efficient structures. Platform and fund fees exist but are attributable to the underlying saving and investing activities, not to the tax optimisation itself. Filing self-assessment is free. Using ISA and pension allowances incurs no additional fees."
+  upfront_time: 8
+  upfront_time_reasoning: "Approximately 6-10 hours to understand the UK tax system basics (income tax bands, ISA rules, pension tax relief), assess personal circumstances (tax band, employer pension scheme, existing tax wrappers), open necessary accounts, and make initial allocation decisions. This is a meaningful learning investment but is a one-time activity."
+  ongoing_time: 2
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Approximately 1-3 hours per month averaged across the year, with effort concentrated around tax year-end (April) and self-assessment deadlines (January). Ongoing tasks include monitoring allowance usage, adjusting pension contributions, reviewing capital gains position, and staying current with tax changes announced in budgets."
+
+prerequisites:
+  - "UK tax residency and understanding of which tax band personal income falls into"
+  - "Existing savings or investment activity that can be moved into tax-efficient wrappers"
+  - "Willingness to engage with basic tax concepts and annual administrative tasks"
+  - "Access to online banking and investment platforms that offer ISA and SIPP accounts"
+  - "For pension optimisation: understanding of employer pension scheme rules and any salary sacrifice options available"

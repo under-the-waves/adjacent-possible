@@ -1,0 +1,58 @@
+name: "Informational Interviews"
+description: "Structured conversations with professionals in fields or roles you are curious about, conducted to gather career intelligence rather than to ask for a job. Each interview typically lasts 20-30 minutes and covers the person's career path, daily responsibilities, industry trends, and advice for someone considering the field. A programme of 2-4 interviews per month over several months exposes you to a wide range of career possibilities, builds a professional network organically, and surfaces opportunities that never appear on job boards. Research by Kanar (2023) found that informational interviews significantly increase networking self-efficacy, and career services literature consistently identifies them as one of the highest-value activities for career exploration and positioning."
+applicable_domains: ["career-planning"]
+
+values:
+  career_planning.direction:
+    pbs: 8
+    pbs_reasoning: "Informational interviews are one of the most direct ways to resolve career uncertainty. Kanar (2023) demonstrated significant gains in networking self-efficacy and career clarity among students who completed informational interviews. Each conversation exposes the interviewer to a real career trajectory, typical day-to-day realities, and industry-specific opportunities they could not have discovered through desk research alone. A programme of 10-15 interviews across different fields can dramatically reshape someone's mental map of viable career options, moving them from vague aspiration to concrete, informed direction."
+    isr: 85
+    isr_reasoning: "When people actually conduct informational interviews, the mechanism is highly reliable: direct conversation with a practitioner almost always yields useful directional information. Kanar's (2023) two studies (n=90 and n=72) showed consistent gains in career-related self-efficacy. The main risk factor is interview quality -- poorly prepared questions or mismatched interviewees reduce value -- but even mediocre interviews typically surface at least one useful insight about a field or role."
+    uar: 55
+    uar_reasoning: "The biggest barrier is sustained execution. Many people conduct one or two interviews in a burst of enthusiasm, then stop due to the social discomfort of reaching out to strangers, difficulty scheduling, or the feeling that they have 'enough' information after a small sample. Career services professionals consistently report that fewer than half of students who learn about informational interviewing go on to conduct them regularly. The intervention requires ongoing initiative without external accountability structures."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "direction_level"
+    anchor_description: "Career direction clarity from completely lost (0) to fully confident in a specific, well-researched path (10)"
+
+  career_planning.positioning:
+    pbs: 7
+    pbs_reasoning: "Informational interviews build professional network connections that are qualitatively different from cold applications or LinkedIn requests. Each conversation creates a warm contact who knows your name, interests, and initiative. UC Berkeley Extension's career resources note that 70-80% of jobs are filled through networking rather than public postings, and informational interviews are the primary mechanism for building such networks from scratch. Over 6-12 months of consistent interviewing, you accumulate a web of contacts who may refer you to opportunities, introduce you to colleagues, or remember you when a role opens."
+    isr: 85
+    isr_reasoning: "The network-building mechanism is well-established: showing genuine interest in someone's career creates goodwill and a memorable interaction. Research on professional networking consistently shows that people are willing to help those who have invested time in understanding their field. The success rate for converting informational interviews into useful professional relationships is high, provided the interviewer follows up appropriately and maintains contact."
+    uar: 55
+    uar_reasoning: "Same adherence challenges as direction: the social effort of reaching out, scheduling, and following up is the primary barrier. Additionally, positioning benefits require sustained effort over months -- a handful of interviews rarely builds enough network density to generate opportunities. Many people stop before reaching the critical mass of contacts needed for meaningful career positioning."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "positioning_level"
+    anchor_description: "Career positioning from completely unknown in target field (0) to well-connected insider with strong reputation (10)"
+
+  career_planning.resilience:
+    pbs: 5
+    pbs_reasoning: "Informational interviews contribute to career resilience indirectly by diversifying your understanding of available options and building a broader professional network. If your current role or industry contracts, having explored alternatives and maintaining contacts across fields provides a safety net of knowledge and relationships. However, the resilience benefit is secondary to direction and positioning -- interviews primarily inform and connect rather than directly building portable skills or financial buffers."
+    isr: 85
+    isr_reasoning: "The resilience mechanism -- broader awareness of options and a wider network to activate during career disruption -- is reliable when the prerequisite interviews have been conducted. People who have explored multiple fields through informational interviews consistently report feeling less trapped and more confident about their ability to pivot. The limiting factor is whether enough interviews were conducted across sufficiently diverse fields to provide genuine optionality."
+    uar: 55
+    uar_reasoning: "Resilience-building through informational interviews requires the same sustained interviewing effort as direction and positioning. The additional challenge is that resilience benefits are latent -- you may not see the value until a career crisis occurs, which makes it harder to stay motivated. Without an immediate payoff, many people deprioritise this activity in favour of more urgent career tasks."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "resilience_level"
+    anchor_description: "Career resilience from completely dependent on single role with no alternatives (0) to highly adaptable with multiple viable options and strong network (10)"
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Informational interviews are free. They are typically conducted over coffee (which you might buy, but this is optional and negligible) or via video call. No equipment, courses, or subscriptions are required to begin."
+  ongoing_cost: 15
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Occasional coffee purchases when meeting in person, estimated at 2-3 coffees per month at approximately 5 GBP each. Video calls are free. No other recurring costs."
+  upfront_time: 3
+  upfront_time_reasoning: "Initial time to research target fields and roles, identify potential interviewees through LinkedIn or professional networks, craft an outreach template, and prepare a core set of interview questions. Most of this can be done in a single focused session."
+  ongoing_time: 6
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "2-4 interviews per month, each requiring approximately 30 minutes of preparation, 30 minutes for the interview itself, and 15 minutes for follow-up notes and thank-you messages. Total of approximately 1.5 hours per interview, or 3-6 hours per month depending on frequency."
+
+prerequisites:
+  - "Willingness to reach out to strangers or near-strangers with a professional request"
+  - "Basic professional communication skills for email outreach and in-person or video conversation"
+  - "Access to LinkedIn or other professional networks for identifying potential interviewees"
+  - "Enough career self-awareness to formulate meaningful questions about fields of interest"

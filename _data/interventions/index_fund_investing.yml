@@ -1,0 +1,59 @@
+name: "Index Fund Investing"
+description: "Regularly investing in broad-market index funds (such as global equity trackers, S&P 500 trackers, or total world funds) through a low-cost investment platform. The strategy involves consistent contributions via pound-cost averaging, minimal trading, and a long time horizon of 10+ years. SPIVA data consistently shows that 92-95% of actively managed funds fail to beat their benchmark index over 15 years, making passive index investing the evidence-backed default for retail investors. Historical annualised returns for global equity indices average 7-10% nominal (5-7% real) over multi-decade periods, though with significant short-term volatility."
+applicable_domains: ["investing"]
+
+values:
+  investing.returns:
+    pbs: 8
+    pbs_reasoning: "Index fund investing delivers market-rate returns, which over long periods (20+ years) represent substantial wealth creation. Historical data shows global equity indices returning 7-10% annualised nominal returns. SPIVA research demonstrates that passive indexing outperforms 92-95% of active managers over 15 years, making it the highest-probability path to strong long-term returns available to retail investors. A PBS of 8 reflects that this is one of the most impactful things a typical person can do for investment returns -- only higher-risk strategies or exceptional skill could score higher."
+    isr: 80
+    isr_reasoning: "Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns with high reliability. However, shorter timeframes introduce meaningful uncertainty -- the S&P 500 has experienced drawdowns of 30-50% that took 2-7 years to recover from. The ISR of 80 reflects high long-term reliability tempered by genuine short-to-medium-term uncertainty that affects many investors' actual experience."
+    uar: 65
+    uar_reasoning: "Index fund adherence is moderate. While the strategy is simple, behavioural challenges are substantial: Dalbar's annual studies consistently show the average equity fund investor underperforms the market by 3-4% annually due to buying high and selling low. During the 2008-09 crash, significant numbers of retail investors sold at or near the bottom. Vanguard estimates behavioural coaching alone is worth ~2% per year, implying that without it, many investors deviate from buy-and-hold. A UAR of 65 reflects that while many persist, a meaningful minority capitulate during drawdowns or chase performance."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "returns_level"
+    anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
+
+  investing.knowledge:
+    pbs: 5
+    pbs_reasoning: "Index fund investing requires and develops a moderate level of financial knowledge. Understanding asset allocation, risk tolerance, fee structures, and the logic of passive investing represents genuine financial education. However, the strategy is specifically designed to minimise the need for deep investment knowledge -- you do not need to analyse individual companies, read balance sheets, or time markets. A PBS of 5 reflects meaningful but bounded knowledge development."
+    isr: 85
+    isr_reasoning: "The learning that occurs from index fund investing is reliable -- investors consistently develop understanding of market behaviour, volatility, compounding, and long-term thinking. The educational pathway is well-supported by free resources from platform providers, financial media, and communities. The main risk is that some investors develop false confidence and move to more complex strategies prematurely."
+    uar: 70
+    uar_reasoning: "Knowledge acquisition tends to be front-loaded (the first year teaches the most), after which ongoing learning requires deliberate effort. Many index fund investors reach a 'good enough' level of knowledge and stop actively learning, which is actually the appropriate outcome for a passive strategy. The UAR reflects that continued knowledge growth tapers naturally."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "knowledge_level"
+    anchor_description: "Comprehensive investment knowledge enabling sophisticated financial decision-making across all asset classes"
+
+  investing.discipline:
+    pbs: 7
+    pbs_reasoning: "Index fund investing is fundamentally a discipline intervention -- the entire value proposition rests on maintaining consistent behaviour through market cycles. Successfully practising buy-and-hold through a full market cycle (including a significant drawdown) builds durable financial discipline that transfers to other financial decisions. The discipline required is substantial: resisting the urge to sell during crashes, avoiding performance chasing, and maintaining contributions during uncertainty. A PBS of 7 reflects that this is a powerful discipline-building intervention."
+    isr: 75
+    isr_reasoning: "The discipline-building mechanism is well-understood and reliably operates for those who stick with the strategy. However, discipline is only built through the experience of weathering volatility, which means the intervention's disciplinary benefits are contingent on encountering and surviving market stress. An investor who starts during a prolonged bull market may not develop the same discipline as one who experiences a crash early on."
+    uar: 60
+    uar_reasoning: "Maintaining investment discipline is genuinely difficult during market stress. Research consistently shows that many retail investors abandon disciplined strategies during drawdowns -- precisely when discipline matters most. The UAR of 60 reflects that while a majority maintain their strategy, a substantial minority (30-40%) deviate meaningfully from their plan during periods of high volatility or sustained losses."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "discipline_level"
+    anchor_description: "Unwavering financial discipline maintained through all market conditions and life circumstances"
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Opening an investment account (stocks and shares ISA, SIPP, or general investment account) is free with most UK platforms. No minimum investment is required on many platforms (e.g., Vanguard UK minimum is £100 lump sum or £25/month). The money invested is an asset transfer, not a cost."
+  ongoing_cost: 5
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Platform fees typically range from 0.15-0.45% of assets annually (e.g., Vanguard UK charges 0.15%, iWeb charges a flat annual fee). Fund OCFs (Ongoing Charges Figures) for index trackers are typically 0.05-0.25%. On a £10,000 portfolio, total annual costs would be approximately £20-70, or roughly £2-6 per month. The £5/month estimate assumes a moderate portfolio size."
+  upfront_time: 5
+  upfront_time_reasoning: "Approximately 3-5 hours to research platforms, understand different account types (ISA vs SIPP vs GIA), select an appropriate fund or funds, open accounts, complete identity verification, and set up initial contributions. This includes time spent on basic financial education to understand the strategy."
+  ongoing_time: 1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Minimal ongoing time required for a passive strategy. Approximately 30-60 minutes per month to review portfolio performance, ensure contributions are processing, and rebalance if needed (most platforms offer automatic rebalancing). Annual tasks include ISA allowance management and tax-year planning."
+
+prerequisites:
+  - "Emergency fund of at least 3 months' essential expenses in an accessible savings account before investing"
+  - "Stable income with disposable income available after essential expenses and emergency savings"
+  - "Investment time horizon of at least 5 years, ideally 10+ years, for the money being invested"
+  - "Basic understanding of investment risk, including the possibility of short-term losses of 30-50% during market downturns"
+  - "Access to a UK investment platform and eligibility to open a stocks and shares ISA or other investment account"

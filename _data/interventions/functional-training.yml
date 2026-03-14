@@ -1,1 +1,70 @@
+name: "Functional Training"
+description: "Structured resistance training using compound movements, kettlebells, bodyweight exercises, and free weights to develop strength, coordination, and movement quality applicable to everyday life. Sessions typically last 45-60 minutes, 3-4 times per week, emphasising multi-joint exercises like squats, deadlifts, presses, rows, carries, and Turkish get-ups. Progressive overload is applied through load, volume, or movement complexity. Meaningful strength and body composition changes become apparent within 6-8 weeks of consistent training, with substantial functional improvements developing over 3-6 months."
+applicable_domains: ["fitness"]
 
+values:
+  fitness.health:
+    pbs: 8
+    pbs_reasoning: "Meta-analyses show resistance/muscle-strengthening activity reduces all-cause mortality by 15-23% (Momma et al. 2022, Br J Sports Med). Maximum risk reduction of ~27% observed at 60 minutes per week. When combined with aerobic exercise, mortality risk drops by 40%. Resistance training independently reduces type 2 diabetes risk by 17%, improves glucose homeostasis, blood pressure, and bone mineral density. Functional training's emphasis on compound multi-joint movements provides broader systemic benefits than isolated machine-based resistance training."
+    isr: 85
+    isr_reasoning: "Robust evidence from multiple large RCTs and cohort studies (n > 80,000 in pooled analyses) consistently demonstrates health benefits across diverse populations. The dose-response relationship is well-characterised with a J-shaped curve peaking at 30-60 minutes per week. Benefits are reliable when training is performed with adequate intensity and progressive overload, though proper form is important to avoid injury."
+    uar: 55
+    uar_reasoning: "Long-term adherence to functional/high-intensity functional training is challenging. Research shows ~60% abandon HIFT programmes within three months, and only 12.8% remain beyond twelve months (Claudino et al. 2023). General gym dropout rates range from 47-96% within 12 months. However, functional training's variety and scalability offer modestly better retention than traditional gym programmes. The learning curve for proper movement patterns and the physical demands contribute to early dropout."
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan years"
+
+  fitness.performance:
+    pbs: 7
+    pbs_reasoning: "Functional training develops broad-spectrum physical capacity including maximal and relative strength, power output, muscular endurance, coordination, balance, and mobility. Compound movements like squats and deadlifts produce significant strength gains (20-40% in novices over 12 weeks). Kettlebell training improves VO2max by 6-14% while simultaneously building strength. The movement variety translates well to general athletic performance, recreational sports, and everyday physical tasks, though it lacks the specificity of dedicated sport-specific training."
+    isr: 80
+    isr_reasoning: "Performance improvements from progressive resistance training are among the most well-documented effects in exercise science. Novice lifters reliably gain strength when following established programming principles. However, the breadth of functional training means no single capacity is maximised. Individual variation in response to training, programme quality, and coaching competence introduce moderate variability."
+    uar: 55
+    uar_reasoning: "Performance-focused functional trainees have moderately better retention due to measurable progress (weight on the bar, movement quality improvements). However, plateaus, injury risk from complex movements, and the technical learning curve contribute to dropout. CrossFit-style communities report better retention than solo training, but overall long-term adherence remains below 50% at 12 months."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "performance_level"
+    anchor_description: "Elite competitive athletic performance capability"
+
+  fitness.appearance:
+    pbs: 7
+    pbs_reasoning: "Functional training produces meaningful body composition changes through muscle hypertrophy, fat loss, and improved posture. Compound movements stimulate significant muscle protein synthesis across multiple muscle groups simultaneously. Studies show 1-2 kg lean mass gain and 2-4% body fat reduction over 12 weeks in novices. The emphasis on full-body movements creates balanced muscular development. However, dedicated bodybuilding-style training with isolation work produces greater localised hypertrophy for maximal aesthetic transformation."
+    isr: 75
+    isr_reasoning: "Body composition improvements from resistance training are well-supported by evidence, though the magnitude depends heavily on nutrition, sleep, and training consistency. Functional training reliably improves body composition when combined with appropriate caloric intake, but aesthetic results are more variable than pure strength gains due to the greater influence of dietary factors."
+    uar: 55
+    uar_reasoning: "Appearance-motivated functional trainees face the same general adherence challenges as other populations, with the added complexity that aesthetic results take longer to manifest than strength gains. The 3-6 month timeline for visible changes exceeds many participants' patience threshold. Those who persist past the initial plateau tend to develop longer-term habits."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "aesthetic_achievement"
+    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+
+  fitness.enjoyment:
+    pbs: 7
+    pbs_reasoning: "Functional training offers high variety through diverse movement patterns, equipment options, and programming structures. The skill acquisition component (learning Olympic lifts, kettlebell work, gymnastics movements) provides ongoing cognitive engagement. Community-based formats like CrossFit and group functional fitness classes add social reinforcement. Measurable progress through load increases and movement mastery provides strong intrinsic motivation. However, the physical discomfort of challenging sessions and technical frustration with complex movements limit enjoyment for some populations."
+    isr: 70
+    isr_reasoning: "Enjoyment is highly dependent on training environment, coaching quality, and individual temperament. Those who thrive on challenge and measurable progress report high satisfaction, while those intimidated by complex movements or uncomfortable with physical exertion may not find it enjoyable. Group settings reliably enhance enjoyment through social support and accountability."
+    uar: 55
+    uar_reasoning: "Enjoyment-based retention in functional training is moderate. The variety helps prevent boredom, but the physical demands and technical requirements create barriers that recreational exercisers find discouraging. Community-embedded programmes show significantly better retention than solo training, but overall long-term adherence remains challenged by the intensity expectations."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "satisfaction_level"
+    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+
+resources:
+  upfront_cost: 200
+  upfront_cost_reasoning: "Quality training shoes ($100), basic equipment for home training such as a kettlebell and resistance bands ($60), and appropriate workout clothing ($40). Alternatively, this covers the first month's gym membership or a few introductory personal training sessions to learn proper form."
+  ongoing_cost: 60
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Gym membership or functional fitness facility membership ($40-80/month). Optional periodic coaching or programming ($20-50/month). Costs vary significantly between self-directed training at a budget gym and coached group functional fitness classes (e.g., CrossFit affiliates at $150-250/month)."
+  upfront_time: 5
+  upfront_time_reasoning: "Learning fundamental movement patterns (squat, hinge, press, pull, carry) with proper form. Includes initial movement screening, programme selection, and familiarisation with equipment. A few introductory sessions with a coach or thorough self-study of movement technique."
+  ongoing_time: 4
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Three to four sessions of 45-60 minutes per week, including warm-up, working sets, and cool-down. This represents the minimum effective dose for meaningful strength and health adaptations based on resistance training literature."
+
+prerequisites:
+  - "Ability to perform basic bodyweight movements (squat to parallel, push-up, hinge pattern) without significant pain or mobility restrictions"
+  - "Access to a gym with free weights, kettlebells, or pull-up bars, or a suitable home training space with basic equipment"
+  - "Willingness to invest initial time learning proper movement mechanics, ideally with qualified coaching"
+  - "Medical clearance for vigorous physical activity if over 50, previously sedentary, or with existing musculoskeletal or cardiovascular conditions"

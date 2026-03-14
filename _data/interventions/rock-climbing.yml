@@ -1,1 +1,70 @@
+name: "Rock Climbing"
+description: "Regular indoor and/or outdoor rock climbing practice encompassing bouldering, top-rope, and lead climbing, typically 2-3 sessions per week of 60-120 minutes each. Climbing involves ascending vertical or overhanging surfaces using holds of varying size and difficulty, demanding grip strength, upper body pulling power, core stability, balance, flexibility, and route-reading problem-solving skills. Participants progress through graded difficulty systems (V-scale for bouldering, YDS for roped climbing). Noticeable strength and technique improvements emerge within 4-6 weeks, with significant performance gains developing over 6-12 months."
+applicable_domains: ["fitness"]
 
+values:
+  fitness.health:
+    pbs: 6
+    pbs_reasoning: "Climbing provides moderate cardiovascular benefits, with recreational sessions eliciting heart rates consistent with CDC/ACSM guidelines for cardiovascular health (average 122 bpm over 90-minute sessions). A meta-analysis (Orth et al. 2016) showed significant VO2max improvements (P<0.05). Climbing builds substantial upper body and grip strength, which correlates with reduced all-cause mortality in epidemiological studies. However, climbing lacks the sustained aerobic stimulus of continuous cardio and carries higher acute injury risk (4.2 injuries per 1000 hours overall, 0.29 per 1000 hours indoors) than lower-impact activities."
+    isr: 70
+    isr_reasoning: "Health benefits from climbing are supported by a growing but still limited evidence base compared to traditional exercise modalities. The meta-analysis by Orth et al. (2016) examined only nine studies. Benefits are reliable for grip strength and upper body development but less consistent for cardiovascular markers. The intermittent nature of climbing (climb-rest-climb cycles) produces different physiological adaptations than sustained exercise, with variable effects depending on climbing style and intensity."
+    uar: 50
+    uar_reasoning: "Climbing has moderate long-term adherence, limited by access to facilities, injury risk (particularly finger tendon overuse injuries, which account for the majority of climbing injuries), cost of gym membership, and the steep difficulty curve at intermediate levels. The social and problem-solving aspects enhance retention for those who engage with the community, but geographic and financial barriers contribute to dropout. No large-scale adherence studies exist specifically for climbing."
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan years"
+
+  fitness.performance:
+    pbs: 8
+    pbs_reasoning: "Climbing develops exceptional grip strength (effect size d=0.81 in meta-analysis), upper body pulling power, core stability, balance, flexibility, and body tension. Studies show significant improvements in handgrip strength, pull-ups, push-ups, sit-ups, vertical jump, and sit-and-reach (all P<0.01). The problem-solving demands develop spatial awareness, body proprioception, and movement efficiency under fatigue. Climbing performance has a uniquely high skill ceiling with decades of progression possible. However, it develops a relatively narrow performance profile compared to general athletic capacity."
+    isr: 75
+    isr_reasoning: "Performance improvements in climbing are well-documented for the specific capacities it develops, particularly grip strength and upper body pulling power. The meta-analysis by Orth et al. (2016) found consistent significant improvements across multiple fitness parameters. However, the technical skill component means that progress is not purely a function of physical training - movement quality, fear management, and route-reading ability introduce variability in outcomes."
+    uar: 55
+    uar_reasoning: "Performance-oriented climbers tend to have better retention than casual participants due to the clear grading system providing measurable progression and the addictive nature of 'sending' harder routes. However, finger injuries are common at intermediate-to-advanced levels and can force extended breaks. Plateaus in the V4-V6 range are a well-known dropout point where progress slows significantly."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "performance_level"
+    anchor_description: "Elite competitive athletic performance capability"
+
+  fitness.appearance:
+    pbs: 5
+    pbs_reasoning: "Climbing produces a characteristic lean, low-body-fat physique with well-developed back, forearm, and shoulder musculature. The high relative strength demands favour lower body weight, which can drive fat loss. However, climbing provides limited lower body hypertrophy, chest development, or overall muscle mass compared to resistance training. The aesthetic outcome is distinctive but narrow - well-suited for lean, defined physiques rather than muscular size. Body fat reduction of climbing-related studies did not reach statistical significance."
+    isr: 65
+    isr_reasoning: "Appearance changes from climbing are moderately reliable for upper body definition and leanness, but highly dependent on climbing volume, supplementary training, and nutrition. The research base for body composition changes specifically from climbing is thin, with most studies showing non-significant effects on body fat percentage. Those climbing 3+ times per week at moderate-to-high intensity tend to develop noticeable physique changes over 6-12 months."
+    uar: 50
+    uar_reasoning: "Appearance-motivated climbers may be disappointed by the slow and uneven aesthetic development, particularly the limited lower body and chest hypertrophy. Those primarily seeking physique changes tend to migrate to more targeted resistance training. Climbers who stay tend to be motivated by performance and enjoyment rather than appearance."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "aesthetic_achievement"
+    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+
+  fitness.enjoyment:
+    pbs: 9
+    pbs_reasoning: "Rock climbing consistently rates among the highest-enjoyment physical activities due to its unique combination of physical challenge, mental problem-solving, social interaction, flow-state induction, and adventure elements. The puzzle-like nature of route reading, the tangible feedback of completing climbs, the supportive community culture, and the option for outdoor adventure create strong intrinsic motivation. Climbing induces flow states more reliably than most exercise modalities due to the balance of challenge, skill, and immediate feedback. The variety of styles (bouldering, sport, trad, outdoor) prevents monotony."
+    isr: 85
+    isr_reasoning: "Studies on climbing psychology consistently report high enjoyment and well-being outcomes. Research with diverse populations including people with disabilities (VA adaptive climbing programmes) shows strong psychological benefits. The game-like structure of graded difficulty, combined with social bonding through belaying partnerships, creates reliable positive experiences for most participants who engage beyond initial sessions."
+    uar: 60
+    uar_reasoning: "Enjoyment-based retention in climbing is higher than most exercise modalities for those who pass the initial learning phase. The social community, progression system, and variety provide strong hooks for long-term engagement. However, fear of falling, self-consciousness in gym settings, and frustration during plateaus cause dropout among a significant minority. Those who climb for 6+ months tend to become long-term participants."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "satisfaction_level"
+    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+
+resources:
+  upfront_cost: 250
+  upfront_cost_reasoning: "Climbing shoes ($100-150), chalk bag and chalk ($25), harness for roped climbing ($60), and belay device ($25). Indoor bouldering requires only shoes and chalk ($125 minimum). Outdoor climbing requires additional gear investment. First-time introductory courses or belay certification ($20-50) at most gyms."
+  ongoing_cost: 80
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Indoor climbing gym membership ($60-100/month depending on location). Shoe resoling every 6-12 months ($40-60, amortised). Chalk replenishment ($5/month). Outdoor climbing is essentially free once gear is owned, though travel costs apply. Day passes ($15-25 per session) are an alternative to membership for less frequent climbers."
+  upfront_time: 4
+  upfront_time_reasoning: "Introductory course or belay certification (2 hours), learning basic climbing technique and gym etiquette (2 hours across first few sessions). Bouldering has a lower barrier as it requires no rope skills. Most climbers become self-sufficient for indoor sessions within 2-3 visits."
+  ongoing_time: 5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Two to three sessions of 90-120 minutes per week, including warm-up, climbing, and cool-down/stretching. Sessions tend to be longer than other exercise modalities due to rest between climbs and the social nature of the activity. Minimum effective dose for progression is approximately 2 sessions per week."
+
+prerequisites:
+  - "Sufficient upper body strength to hang from a bar briefly and perform basic pulling movements without shoulder pain"
+  - "Access to an indoor climbing gym or suitable outdoor climbing areas with appropriate safety equipment and partners"
+  - "Willingness to manage height-related discomfort and accept minor skin abrasion on hands during the initial learning phase"
+  - "No significant finger, wrist, or shoulder injuries that would be aggravated by gripping and pulling movements under load"

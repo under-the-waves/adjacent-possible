@@ -1,1 +1,70 @@
+name: "Zone 2 Cardio"
+description: "Sustained low-intensity aerobic exercise performed at 60-70% of maximum heart rate, below the first ventilatory or lactate threshold, for 30-60 minutes per session, 3-5 times per week. Zone 2 intensity is characterised by the ability to maintain a conversation throughout the session. Modalities include cycling, jogging, swimming, rowing, or elliptical training. This intensity preferentially develops mitochondrial oxidative capacity, fat oxidation, and aerobic base fitness. The approach is popularised by exercise physiologists including Iñigo San Millán and promoted for metabolic health and longevity. Meaningful cardiovascular and metabolic adaptations develop over 6-12 weeks of consistent training."
+applicable_domains: ["fitness"]
 
+values:
+  fitness.health:
+    pbs: 8
+    pbs_reasoning: "Zone 2 training targets the aerobic metabolic pathways most strongly associated with longevity and metabolic health. Cardiorespiratory fitness (CRF) is the strongest and most consistent predictor of morbidity and mortality across 199 cohort studies representing over 20.9 million observations. Each 1-MET increase in CRF is associated with 11-17% reduction in all-cause mortality. Zone 2 specifically improves mitochondrial oxidative capacity and fat oxidation, which are central to metabolic health, insulin sensitivity, and chronic disease prevention. However, a recent narrative review (2025) notes that current evidence does not conclusively support Zone 2 as superior to higher intensities for mitochondrial adaptations - higher intensities may produce greater improvements per unit of training time."
+    isr: 80
+    isr_reasoning: "The relationship between CRF and longevity is among the most robustly established in preventive medicine. All exercise training intensities robustly increase VO2max. Zone 2 training reliably produces aerobic adaptations when performed at adequate volume. However, the specific claim that Zone 2 is optimal for mitochondrial biogenesis lacks strong RCT support - only a few randomised controlled trials directly test Zone 2 against other intensities for health outcomes. The overall health benefit of sustained aerobic exercise at this intensity is well-supported; the superiority claim over other intensities is not."
+    uar: 70
+    uar_reasoning: "Zone 2 cardio has relatively high adherence potential due to its low perceived exertion, minimal post-exercise fatigue, and low injury risk. The comfortable intensity makes it accessible to beginners and sustainable for experienced exercisers as a daily practice. It can be combined with other activities (reading, watching content, socialising) without performance decrement. However, some individuals find the enforced low intensity boring or frustrating, particularly those accustomed to higher-intensity training. The requirement for heart rate monitoring adds a minor complexity barrier."
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "years"
+    anchor_description: "Additional healthy lifespan years"
+
+  fitness.performance:
+    pbs: 5
+    pbs_reasoning: "Zone 2 training builds the aerobic base that underpins endurance performance across all sports. It develops mitochondrial density, capillary networks, stroke volume, and fat oxidation capacity. These adaptations form the foundation upon which higher-intensity training produces peak performance. VO2max improvements are reliable but smaller per session than higher-intensity training. Zone 2 alone produces limited improvements in lactate threshold, VO2max ceiling, anaerobic power, strength, or speed. Its primary performance value is as one component of a polarised training model rather than a standalone performance programme."
+    isr: 75
+    isr_reasoning: "Aerobic base adaptations from sustained low-intensity training are reliably produced and well-characterised in exercise physiology. The adaptations are predictable and consistent across individuals. However, the performance ceiling from Zone 2 alone is limited - higher intensities are needed to maximise VO2max and lactate threshold. The evidence supports Zone 2 as a necessary but insufficient component of optimal endurance performance training."
+    uar: 65
+    uar_reasoning: "Performance-focused Zone 2 practitioners tend to be disciplined endurance athletes who understand the training rationale and can tolerate monotony for long-term gains. Adherence is supported by the low recovery cost, which allows high training frequency. However, the delayed and indirect nature of performance benefits (improved base over months rather than immediate performance gains) can test motivation. Athletes who track heart rate data and understand the physiological rationale have better adherence than those who find the pace frustratingly slow."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "performance_level"
+    anchor_description: "Elite competitive athletic performance capability"
+
+  fitness.appearance:
+    pbs: 4
+    pbs_reasoning: "Zone 2 cardio produces modest body composition changes through sustained caloric expenditure (300-500 kcal/hour depending on modality and body mass). The low intensity preferentially burns fat as a fuel source during exercise, though total caloric expenditure matters more than substrate utilisation for body composition. At the prescribed intensity, Zone 2 provides insufficient mechanical stimulus for muscle hypertrophy. Extended Zone 2 training without resistance training can contribute to a 'skinny fat' appearance by failing to develop or maintain muscle mass. Its primary appearance contribution is gradual fat loss rather than physique development."
+    isr: 65
+    isr_reasoning: "Fat loss from sustained aerobic exercise is reliably produced when it creates a caloric deficit, but the rate of visible change is slow at Zone 2 intensities. Body composition research consistently shows that higher-intensity exercise and resistance training produce superior aesthetic outcomes per unit of time invested. Zone 2's contribution to appearance is genuine but modest and slow-acting."
+    uar: 60
+    uar_reasoning: "Appearance-motivated individuals may find Zone 2 cardio frustratingly slow for visible results compared to higher-intensity alternatives. The low perceived exertion can feel insufficiently challenging to produce meaningful change, leading to abandonment in favour of more intense approaches. Those who persist tend to be motivated by health or performance goals rather than appearance per se."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "aesthetic_achievement"
+    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
+
+  fitness.enjoyment:
+    pbs: 6
+    pbs_reasoning: "Zone 2 cardio offers moderate enjoyment through several pathways: the comfortable intensity allows consumption of podcasts, audiobooks, music, or social conversation during exercise; outdoor modalities (cycling, jogging) provide nature exposure; and the low stress of the activity makes sessions feel manageable rather than punishing. However, the enforced low intensity can feel boring or frustrating, particularly for those who enjoy pushing themselves. The lack of skill progression, competitive element, or movement variety limits the intrinsic engagement compared to activities like climbing, team sports, or dance."
+    isr: 70
+    isr_reasoning: "Enjoyment of Zone 2 is highly individual and depends on tolerance for monotony and the availability of secondary engagement (podcasts, scenery, social partners). Those who find a compatible modality and context report high satisfaction with the sustainable, low-stress nature of the sessions. Those who prefer intensity, variety, or competition find it tedious. The evidence base for Zone 2-specific enjoyment is limited, but general low-intensity exercise enjoyment data supports moderate satisfaction for most populations."
+    uar: 65
+    uar_reasoning: "Enjoyment-based retention for Zone 2 is moderate. The low barrier, low fatigue, and compatibility with daily routines support long-term habit formation. However, the monotony risk is real - sustained low-intensity exercise without environmental variety or social engagement becomes tedious for many. Rotating modalities (cycling one day, swimming the next) and outdoor settings improve retention. Those who pair Zone 2 with valued secondary activities (learning via podcasts, socialising) report the highest sustained enjoyment."
+    anchor_type: "subjective"
+    anchor_max: 10
+    anchor_unit: "satisfaction_level"
+    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
+
+resources:
+  upfront_cost: 100
+  upfront_cost_reasoning: "Heart rate monitor (chest strap preferred for accuracy, $50-80) and appropriate footwear or equipment for chosen modality ($50-100). A heart rate monitor is effectively required to train in Zone 2 accurately, as perceived exertion is unreliable at this intensity. If using cycling, the cost of a bicycle ($300-1000+) or gym membership significantly increases the upfront investment."
+  ongoing_cost: 20
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Minimal ongoing costs if using running or outdoor cycling as the modality. Gym membership ($30-60/month) if using indoor equipment. Heart rate monitor battery or subscription costs are negligible. Shoe replacement for runners ($120 every 4-6 months, amortised). The estimate assumes a mix of outdoor and indoor training."
+  upfront_time: 2
+  upfront_time_reasoning: "Establishing personal heart rate zones through a max heart rate test or lactate threshold estimation, learning to use a heart rate monitor, and identifying appropriate modalities and routes. The conceptual learning curve (understanding Zone 2 and why to stay in it) takes minimal time but is important for adherence."
+  ongoing_time: 4
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Three to four sessions of 30-60 minutes per week represents the minimum effective dose for meaningful aerobic base development. Some Zone 2 proponents recommend 150-180 minutes per week as a minimum, aligning with WHO physical activity guidelines. The low intensity means sessions can be longer without excessive fatigue or recovery demands."
+
+prerequisites:
+  - "Baseline cardiovascular health sufficient to sustain 20-30 minutes of low-intensity continuous movement without distress"
+  - "A heart rate monitor (chest strap or optical) to accurately maintain the target intensity zone during sessions"
+  - "Access to at least one appropriate cardio modality (walking, jogging, cycling, swimming, rowing, or gym cardio equipment)"
+  - "Understanding of personal heart rate zones, derived from a maximum heart rate test, age-based estimation, or lactate threshold testing"
