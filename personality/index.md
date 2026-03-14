@@ -151,9 +151,6 @@ Research reveals that most people develop their personality unconsciously throug
 <div class="reasoning-popup" id="reasoningPopup">
     <button class="popup-close" onclick="hideReasoning()">×</button>
     <div class="popup-header" id="popupHeader"></div>
-    <div id="popupContent"></div>
-</div>
-
 <script>
 // Research data for info buttons
 const researchData = {

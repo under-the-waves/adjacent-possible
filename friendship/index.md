@@ -77,94 +77,6 @@ Research reveals concerning trends in friendship patterns across the population.
 
 [← Back to Life Levels Home](../)
 
-<style>
-.info-icon {
-    background-color: #155799;
-    color: white;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    user-select: none;
-    margin-left: 3px;
-}
-
-.info-icon:hover {
-    background-color: #0d47a1;
-}
-
-.reasoning-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    z-index: 1000;
-}
-
-.reasoning-popup.visible {
-    display: block;
-}
-
-.popup-header {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #155799;
-}
-
-.popup-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #666;
-}
-
-.popup-close:hover {
-    color: #333;
-}
-
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 999;
-}
-
-.popup-overlay.visible {
-    display: block;
-}
-</style>
-
-<!-- Popup overlay -->
-<div class="popup-overlay" id="popupOverlay" onclick="hideReasoning()"></div>
-
-<!-- Reasoning popup -->
-<div class="reasoning-popup" id="reasoningPopup">
-    <button class="popup-close" onclick="hideReasoning()">×</button>
-    <div class="popup-header" id="popupHeader"></div>
-    <div id="popupContent"></div>
-</div>
-
 <script>
 // Research data for info buttons
 const researchData = {
@@ -242,25 +154,6 @@ const researchData = {
     }
 };
 
-function showReasoning(key) {
-    const data = researchData[key];
-    if (data) {
-        document.getElementById('popupHeader').textContent = data.title;
-        document.getElementById('popupContent').innerHTML = data.content;
-        document.getElementById('popupOverlay').classList.add('visible');
-        document.getElementById('reasoningPopup').classList.add('visible');
-    }
-}
-
-function hideReasoning() {
-    document.getElementById('popupOverlay').classList.remove('visible');
-    document.getElementById('reasoningPopup').classList.remove('visible');
-}
-
-// Close popup with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        hideReasoning();
-    }
-});
 </script>
+
+{% include popup-boilerplate.html %}
