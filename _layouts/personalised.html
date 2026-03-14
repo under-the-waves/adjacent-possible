@@ -1,0 +1,836 @@
+---
+layout: default
+---
+
+<style>
+/* Main container */
+.personalised-container {
+    max-width: none !important;
+    width: 95% !important;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container for top section - normal width */
+.top-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    margin-bottom: 0px;
+}
+
+/* Container for bottom section - full width */
+.bottom-section {
+    max-width: none !important;
+    width: 95% !important;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+body .main-content {
+    max-width: none !important;
+    padding: 1rem !important;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-section h1 {
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.header-section p {
+    color: #000000;
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+.header-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header-description p {
+    margin-bottom: 0;
+    font-size: 0.95em;
+}
+
+/* Controls layout */
+.controls-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.sliders-container {
+    display: grid;
+    grid-template-columns: {% if page.values.size <= 3 %}1fr{% else %}1fr 1fr{% endif %};
+    gap: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Stacked bar chart */
+.weight-bar-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.weight-bar {
+    display: flex;
+    height: 32px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.weight-bar-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.75em;
+    font-weight: 600;
+    transition: width 0.3s ease;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.weight-bar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Slider styling */
+.value-slider {
+    margin-bottom: 0px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.slider-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.slider-percentage {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #155799;
+    min-width: 40px;
+    text-align: right;
+}
+
+.slider-track {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #e9ecef;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.slider-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.slider-track::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #155799;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.slider-track::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.slider-track::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #155799;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Recommendations section */
+.recommendations-section {
+    background: white;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.recommendations-header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.recommendations-header h2 {
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.recommendations-header p {
+    color: #000000;
+}
+
+.methodology-note {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.methodology-note p {
+    margin: 0;
+}
+
+.methodology-note a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.methodology-note a:hover {
+    text-decoration: underline;
+}
+
+/* Table styling */
+.recommendations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.recommendations-table th:nth-child(1),
+.recommendations-table td:nth-child(1) {
+    width: 28%;
+    min-width: 220px;
+}
+
+.recommendations-table th:nth-child(2),
+.recommendations-table td:nth-child(2) {
+    width: 8%;
+    min-width: 60px;
+}
+
+.recommendations-table th:nth-child(3),
+.recommendations-table td:nth-child(3) {
+    width: 12%;
+    min-width: 90px;
+}
+
+.recommendations-table th:nth-child(4),
+.recommendations-table td:nth-child(4) {
+    width: 14%;
+    min-width: 100px;
+}
+
+.recommendations-table th:nth-child(5),
+.recommendations-table td:nth-child(5) {
+    width: 12%;
+    min-width: 90px;
+}
+
+.recommendations-table th:nth-child(6),
+.recommendations-table td:nth-child(6) {
+    width: 14%;
+    min-width: 100px;
+}
+
+.recommendations-table th:nth-child(7),
+.recommendations-table td:nth-child(7) {
+    width: 6%;
+    min-width: 50px;
+}
+
+.recommendations-table th:nth-child(8),
+.recommendations-table td:nth-child(8) {
+    width: 6%;
+    min-width: 50px;
+}
+
+.recommendations-table th {
+    background: #f8f9fa;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+    font-size: 0.85em;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.recommendations-table th:hover {
+    background: #e9ecef;
+}
+
+.recommendations-table th.active {
+    background: #155799;
+    color: white;
+}
+
+.recommendations-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.recommendations-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.recommendations-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Intervention name column */
+.intervention-name {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 200px;
+    flex-wrap: nowrap;
+}
+
+.intervention-link {
+    color: #155799;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    line-height: 1.2;
+}
+
+.intervention-link:hover {
+    text-decoration: underline;
+}
+
+.table-description-icon {
+    background-color: #155799;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.table-description-icon:hover {
+    background-color: #0d47a1;
+}
+
+/* Score columns */
+.wbs-score {
+    font-weight: bold;
+    color: #e63946;
+    font-size: 1.1em;
+}
+
+.eroi-score {
+    font-weight: 600;
+    color: #155799;
+}
+
+/* Cost and time columns */
+.cost-cell, .time-cell {
+    font-size: 0.9em;
+}
+
+/* Sort indicators in headers */
+.sort-indicator {
+    display: inline;
+    margin-left: 5px;
+    font-size: 1em;
+    opacity: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .recommendations-table {
+        font-size: 0.85em;
+    }
+
+    .recommendations-table th,
+    .recommendations-table td {
+        padding: 10px 8px;
+    }
+
+    .intervention-name {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .controls-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sliders-container {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendations-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8em;
+    }
+
+    .recommendations-table th,
+    .recommendations-table td {
+        padding: 8px 4px;
+    }
+
+    .intervention-name {
+        min-width: 100px;
+    }
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.popup-overlay.visible {
+    display: block;
+}
+
+.description-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.description-popup.visible {
+    display: block;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #155799;
+    font-size: 1.2em;
+}
+
+.popup-content {
+    line-height: 1.5;
+    color: #333;
+}
+</style>
+
+<div class="personalised-container">
+    <div class="breadcrumb-nav">
+        <a href="{{ site.baseurl }}/">Home</a> >
+        <a href="{{ site.baseurl }}/{{ page.domain }}/">{{ page.domain_label | default: page.domain | capitalize }}</a> >
+        Personalised Recommendations
+    </div>
+
+    <div class="top-section">
+        <div class="header-section">
+            <h1>{{ page.title }}</h1>
+            <div class="header-description">
+                <p>Adjust the sliders below to reflect what matters most to you, and we'll recommend the best interventions for your priorities.</p>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <div class="sliders-container">
+                {% for value in page.values %}
+                <div class="value-slider" id="slider-wrapper-{{ value.key }}">
+                    <div class="slider-header">
+                        <label class="slider-label">{{ value.label }}</label>
+                        <span class="slider-percentage" id="percent-{{ value.key }}">{{ value.default_weight }}%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="{{ value.default_weight }}" class="slider-track" id="slider-{{ value.key }}" style="background: {{ value.color }};">
+                    <p class="slider-description">{{ value.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="weight-bar-container">
+                <div class="weight-bar" id="weightBar">
+                    {% for value in page.values %}
+                    <div class="weight-bar-segment" id="bar-{{ value.key }}" style="width: {{ value.default_weight }}%; background-color: {{ value.color }};">{{ value.default_weight }}%</div>
+                    {% endfor %}
+                </div>
+                <div class="weight-bar-legend">
+                    {% for value in page.values %}
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background-color: {{ value.color }};"></span>
+                        {{ value.label }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="recommendations-section">
+            <div class="recommendations-header">
+                <h2>Your Recommended Interventions</h2>
+                <p>Based on your priorities, here are the interventions that will give you the best results:</p>
+                <div class="methodology-note">
+                    <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
+                </div>
+            </div>
+
+            <table class="recommendations-table" id="recommendationsTable">
+                <thead>
+                    <tr>
+                        <th data-sort="name">Intervention <span class="sort-indicator"></span></th>
+                        <th data-sort="wbs" class="active">WBS <span class="sort-indicator">&#8595;</span></th>
+                        <th data-sort="upfront-cost">Upfront Cost (USD) <span class="sort-indicator"></span></th>
+                        <th data-sort="ongoing-cost">Ongoing Cost <span class="sort-indicator"></span></th>
+                        <th data-sort="upfront-time">Upfront Time <span class="sort-indicator"></span></th>
+                        <th data-sort="ongoing-time">Ongoing Time <span class="sort-indicator"></span></th>
+                        <th data-sort="time-eroi">Time EROI <span class="sort-indicator"></span></th>
+                        <th data-sort="money-eroi">Money EROI <span class="sort-indicator"></span></th>
+                    </tr>
+                </thead>
+                <tbody id="recommendationsBody">
+                    <tr>
+                        <td colspan="8" class="loading">Loading recommendations...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Popup overlay -->
+<div class="popup-overlay" id="popupOverlay" onclick="hideDescriptionPopup()"></div>
+
+<!-- Description popup -->
+<div class="description-popup" id="descriptionPopup">
+    <button class="popup-close" onclick="hideDescriptionPopup()">x</button>
+    <div class="popup-title" id="popupTitle"></div>
+    <div class="popup-content" id="popupContent"></div>
+</div>
+
+<script>
+// Build values config from frontmatter
+const valueConfig = [
+{% for value in page.values %}
+    { key: {{ value.key | jsonify }}, label: {{ value.label | jsonify }}, color: {{ value.color | jsonify }}, defaultWeight: {{ value.default_weight }} }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+
+const domain = {{ page.domain | jsonify }};
+
+// Build interventions data from Jekyll data files
+const interventions = {
+{% for intervention_file in site.data.interventions %}
+    {% assign ikey = intervention_file[0] %}
+    {% assign idata = intervention_file[1] %}
+    {% if idata.applicable_domains contains page.domain %}
+    {{ ikey | jsonify }}: {
+        name: {{ idata.name | jsonify }},
+        description: {{ idata.description | jsonify }},
+        values: {
+            {% for value in page.values %}
+            {{ value.key | jsonify }}: {% if idata.values[page.domain] %}{% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{{ idata.values[vkey].pbs | plus: 0.0 }} + Math.log2({{ idata.values[vkey].isr | plus: 0.0 }}/100) + Math.log2({{ idata.values[vkey].uar | plus: 0.0 }}/100){% else %}0{% endif %}{% else %}0{% endif %}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        },
+        resources: {
+            upfront_cost: {{ idata.resources.upfront_cost | plus: 0 }},
+            ongoing_cost: {{ idata.resources.ongoing_cost | plus: 0.0 }},
+            ongoing_cost_period: {{ idata.resources.ongoing_cost_period | jsonify }},
+            ongoing_cost_weekly: {% if idata.resources.ongoing_cost_period == "week" %}{{ idata.resources.ongoing_cost | plus: 0.0 }}{% elsif idata.resources.ongoing_cost_period == "month" %}{{ idata.resources.ongoing_cost | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ idata.resources.ongoing_cost | plus: 0.0 | divided_by: 52.0 }}{% endif %},
+            upfront_time: {{ idata.resources.upfront_time | plus: 0 }},
+            ongoing_time: {{ idata.resources.ongoing_time | plus: 0.0 }},
+            ongoing_time_period: {{ idata.resources.ongoing_time_period | jsonify }},
+            ongoing_time_weekly: {% if idata.resources.ongoing_time_period == "week" %}{{ idata.resources.ongoing_time | plus: 0.0 }}{% elsif idata.resources.ongoing_time_period == "month" %}{{ idata.resources.ongoing_time | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ idata.resources.ongoing_time | plus: 0.0 | divided_by: 52.0 }}{% endif %}
+        }
+    },
+    {% endif %}
+{% endfor %}
+};
+
+// Current values and sort
+let currentValues = {};
+valueConfig.forEach(v => { currentValues[v.key] = v.defaultWeight; });
+let currentSort = 'wbs';
+
+// Get DOM elements
+const sliders = {};
+const percentLabels = {};
+valueConfig.forEach(v => {
+    sliders[v.key] = document.getElementById('slider-' + v.key);
+    percentLabels[v.key] = document.getElementById('percent-' + v.key);
+});
+
+const recommendationsBody = document.getElementById('recommendationsBody');
+
+// Smart slider adjustment
+function adjustSliders(changedSlider, newValue) {
+    currentValues[changedSlider] = newValue;
+
+    const otherKeys = Object.keys(currentValues).filter(k => k !== changedSlider);
+    const otherTotal = otherKeys.reduce((sum, k) => sum + currentValues[k], 0);
+
+    if (otherTotal === 0) {
+        const remaining = 100 - newValue;
+        const per = remaining / otherKeys.length;
+        otherKeys.forEach(k => { currentValues[k] = per; });
+    } else {
+        const remaining = 100 - newValue;
+        const scale = remaining / otherTotal;
+        otherKeys.forEach(k => { currentValues[k] = Math.max(0, currentValues[k] * scale); });
+    }
+
+    const total = Object.values(currentValues).reduce((s, v) => s + v, 0);
+    if (total !== 100) { currentValues[changedSlider] += 100 - total; }
+
+    updateAllControls();
+}
+
+function updateAllControls() {
+    Object.keys(sliders).forEach(k => { sliders[k].value = currentValues[k]; });
+    Object.keys(percentLabels).forEach(k => {
+        percentLabels[k].textContent = Math.round(currentValues[k]) + '% ';
+    });
+    updateWeightBar();
+    updateRecommendations();
+}
+
+function updateWeightBar() {
+    valueConfig.forEach(v => {
+        const seg = document.getElementById('bar-' + v.key);
+        const pct = Math.round(currentValues[v.key]);
+        seg.style.width = pct + '%';
+        seg.textContent = pct > 8 ? pct + '%' : '';
+    });
+}
+
+function getInterventionUrl(key) {
+    const urlKey = key.replace(/_/g, '-');
+    return '{{ site.baseurl }}/resources/intervention-database/' + urlKey;
+}
+
+function calculateWBS(intervention, userValues) {
+    return Object.keys(userValues).reduce((sum, k) => {
+        return sum + (intervention.values[k] * userValues[k] / 100);
+    }, 0);
+}
+
+function calculateTimeEROI(wbs, timeWeekly) {
+    return wbs / Math.max(1, timeWeekly);
+}
+
+function calculateMoneyEROI(wbs, upfrontCost, ongoingCostWeekly) {
+    const weeklyEquivalentCost = (upfrontCost / 52) + ongoingCostWeekly;
+    return wbs / Math.max(1, weeklyEquivalentCost);
+}
+
+function showDescriptionPopup(name, description) {
+    document.getElementById('popupTitle').textContent = name;
+    document.getElementById('popupContent').textContent = description;
+    document.getElementById('popupOverlay').classList.add('visible');
+    document.getElementById('descriptionPopup').classList.add('visible');
+}
+
+function hideDescriptionPopup() {
+    document.getElementById('popupOverlay').classList.remove('visible');
+    document.getElementById('descriptionPopup').classList.remove('visible');
+}
+
+function updateRecommendations() {
+    const scored = Object.keys(interventions).map(key => {
+        const i = interventions[key];
+        const wbs = calculateWBS(i, currentValues);
+        return {
+            key, ...i, wbs,
+            timeEROI: calculateTimeEROI(wbs, i.resources.ongoing_time_weekly),
+            moneyEROI: calculateMoneyEROI(wbs, i.resources.upfront_cost, i.resources.ongoing_cost_weekly)
+        };
+    });
+
+    switch(currentSort) {
+        case 'wbs': scored.sort((a, b) => b.wbs - a.wbs); break;
+        case 'time-eroi': scored.sort((a, b) => b.timeEROI - a.timeEROI); break;
+        case 'money-eroi': scored.sort((a, b) => b.moneyEROI - a.moneyEROI); break;
+        case 'name': scored.sort((a, b) => a.name.localeCompare(b.name)); break;
+        case 'upfront-cost': scored.sort((a, b) => a.resources.upfront_cost - b.resources.upfront_cost); break;
+        case 'ongoing-cost': scored.sort((a, b) => a.resources.ongoing_cost_weekly - b.resources.ongoing_cost_weekly); break;
+        case 'upfront-time': scored.sort((a, b) => a.resources.upfront_time - b.resources.upfront_time); break;
+        case 'ongoing-time': scored.sort((a, b) => a.resources.ongoing_time_weekly - b.resources.ongoing_time_weekly); break;
+    }
+
+    recommendationsBody.innerHTML = scored.map(i => `
+        <tr>
+            <td>
+                <div class="intervention-name">
+                    <a href="${getInterventionUrl(i.key)}" class="intervention-link">${i.name}</a>
+                    <span class="table-description-icon" onclick="showDescriptionPopup('${i.name.replace(/'/g, "\\'")}', '${i.description.replace(/'/g, "\\'")}')">i</span>
+                </div>
+            </td>
+            <td class="wbs-score">${i.wbs.toFixed(1)}</td>
+            <td class="cost-cell">$${i.resources.upfront_cost}</td>
+            <td class="cost-cell">$${i.resources.ongoing_cost}/${i.resources.ongoing_cost_period}</td>
+            <td class="time-cell">${i.resources.upfront_time}h</td>
+            <td class="time-cell">${i.resources.ongoing_time}h/${i.resources.ongoing_time_period}</td>
+            <td class="eroi-score">${i.timeEROI.toFixed(2)}</td>
+            <td class="eroi-score">${i.moneyEROI.toFixed(2)}</td>
+        </tr>
+    `).join('');
+}
+
+// Event listeners for sliders
+Object.keys(sliders).forEach(k => {
+    sliders[k].addEventListener('input', function() {
+        adjustSliders(k, parseFloat(this.value));
+    });
+});
+
+// Event listeners for table header sorting
+document.querySelectorAll('th[data-sort]').forEach(header => {
+    header.addEventListener('click', function() {
+        currentSort = this.dataset.sort;
+        document.querySelectorAll('th[data-sort]').forEach(h => {
+            h.classList.remove('active');
+            h.querySelector('.sort-indicator').textContent = '';
+        });
+        this.classList.add('active');
+        this.querySelector('.sort-indicator').innerHTML = '&#8595;';
+        updateRecommendations();
+    });
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { hideDescriptionPopup(); }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateAllControls();
+});
+</script>
