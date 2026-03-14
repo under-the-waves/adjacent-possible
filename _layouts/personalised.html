@@ -658,7 +658,7 @@ const interventions = {
         description: {{ idata.description | jsonify }},
         values: {
             {% for value in page.values %}
-            {{ value.key | jsonify }}: {% if idata.values[page.domain] %}{% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{{ idata.values[vkey].pbs | plus: 0.0 }} + Math.log2({{ idata.values[vkey].isr | plus: 0.0 }}/100) + Math.log2({{ idata.values[vkey].uar | plus: 0.0 }}/100){% else %}0{% endif %}{% else %}0{% endif %}{% unless forloop.last %},{% endunless %}
+            {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{{ idata.values[vkey].pbs | plus: 0.0 }} + Math.log2({{ idata.values[vkey].isr | plus: 0.0 }}/100) + Math.log2({{ idata.values[vkey].uar | plus: 0.0 }}/100){% else %}0{% endif %}{% unless forloop.last %},{% endunless %}
             {% endfor %}
         },
         resources: {

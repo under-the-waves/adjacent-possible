@@ -11,6 +11,8 @@ The gap between intention and achievement is stark: 92% of goal-setters never re
 
 Your approach to goals depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
+For personalised recommendations based on your unique priorities, visit [Goals Personalised]({{ site.baseurl }}/goals/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+
 ### Clarity (40%)
 Precisely defined, measurable goals with clear criteria for success. This includes articulating exactly what achievement looks like, establishing quantifiable milestones, setting deadlines, and distinguishing between lead and lag indicators. People who prioritise this value invest significant time in goal architecture before taking action, ensuring every objective has unambiguous success criteria and a logical relationship to broader life aims.
 

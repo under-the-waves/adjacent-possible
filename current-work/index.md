@@ -11,6 +11,8 @@ The gap between typical and exceptional performance is staggering. Flow states o
 
 Your approach to current work depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
+For personalised recommendations based on your unique priorities, visit [Current Work Personalised]({{ site.baseurl }}/current-work/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+
 ### Competence (40%)
 Skill and effectiveness at performing your current role's core responsibilities. This includes technical proficiency, consistent quality of output, the ability to handle increasing complexity, and the speed at which you deliver results. People who prioritise competence focus on mastering the craft of their work, reducing errors, seeking feedback on deliverables, and continuously raising the standard of what they produce. High competence means your work rarely needs revision, colleagues trust your judgement, and you can operate independently across a widening scope.
 

@@ -11,6 +11,8 @@ Career planning is not about rigid five-year plans that crumble on contact with 
 
 Your approach to career planning depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
+For personalised recommendations based on your unique priorities, visit [Career Planning Personalised]({{ site.baseurl }}/career-planning/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+
 ### Direction (40%)
 Having a clear, informed understanding of where your career is heading and why. This includes articulating a career thesis, understanding industry trajectories, identifying the roles and contributions you want to make over different time horizons, and regularly revisiting your direction as you learn more about yourself and the landscape. People who prioritise this value invest time in reflection, research, and strategic thinking rather than defaulting to the next obvious step.
 

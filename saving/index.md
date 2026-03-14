@@ -11,6 +11,8 @@ Beyond material security, saving directly affects psychological health. People w
 
 Your approach to saving depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
+For personalised recommendations based on your unique priorities, visit [Saving Personalised]({{ site.baseurl }}/saving/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+
 ### Security (45%)
 Building and maintaining a financial buffer against unexpected expenses and income disruption. This includes emergency funds to cover job loss, medical costs, car repairs, and other unplanned expenditures without resorting to debt. People who prioritise this value focus on liquidity, accessibility, and ensuring they can absorb financial shocks without derailing their broader financial trajectory.
 

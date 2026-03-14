@@ -61,6 +61,17 @@ body .main-content {
     border-color: #155799;
 }
 
+.dashboard-controls button.btn-danger {
+    color: #c62828;
+    border-color: #e0b0b0;
+}
+
+.dashboard-controls button.btn-danger:hover {
+    background: #c62828;
+    color: white;
+    border-color: #c62828;
+}
+
 .summary-bar {
     display: flex;
     justify-content: center;
@@ -81,6 +92,12 @@ body .main-content {
     font-size: 1.8em;
     font-weight: bold;
     color: #155799;
+}
+
+.summary-stat .stat-value.stat-text {
+    font-size: 0.95em;
+    line-height: 1.2;
+    word-break: break-word;
 }
 
 .summary-stat .stat-label {
@@ -120,6 +137,24 @@ body .main-content {
 
 .pillar-body {
     padding: 15px 20px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+.pillar-section.collapsed .pillar-body {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.pillar-header .collapse-icon {
+    font-size: 0.8em;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.pillar-section.collapsed .collapse-icon {
+    transform: rotate(-90deg);
 }
 
 .domain-group {
@@ -288,7 +323,7 @@ body .main-content {
     </div>
 
     <div class="dashboard-controls">
-        <button onclick="resetAll()">Reset All</button>
+        <button class="btn-danger" onclick="resetAll()">Reset All</button>
         <button onclick="exportData()">Export CSV</button>
     </div>
 
@@ -514,14 +549,24 @@ function renderDashboard() {
         bodyHTML += '</div>';
 
         const avg = pillarCount > 0 ? (pillarTotal / pillarCount).toFixed(1) : '--';
-        section.innerHTML = `<div class="pillar-header"><span>${pillar.name}</span><span class="pillar-avg">Avg: ${avg}</span></div>${bodyHTML}`;
+        section.innerHTML = `<div class="pillar-header" onclick="togglePillar(this)"><span>${pillar.name} <span class="collapse-icon">&#9660;</span></span><span class="pillar-avg">Avg: ${avg}</span></div>${bodyHTML}`;
         grid.appendChild(section);
     });
 
-    document.getElementById('areasAssessed').textContent = totalAssessed;
+    const totalAreas = PILLARS.reduce((s, p) => s + p.domains.reduce((s2, d) => s2 + d.areas.length, 0), 0);
+    document.getElementById('areasAssessed').textContent = `${totalAssessed} / ${totalAreas}`;
     document.getElementById('averageLevel').textContent = totalAssessed > 0 ? (totalLevel / totalAssessed).toFixed(1) : '--';
-    document.getElementById('lowestArea').textContent = lowest.level < 6 ? lowest.name : '--';
-    document.getElementById('highestArea').textContent = highest.level > 0 ? highest.name : '--';
+
+    const lowestEl = document.getElementById('lowestArea');
+    const highestEl = document.getElementById('highestArea');
+    lowestEl.textContent = lowest.level < 6 ? lowest.name : '--';
+    highestEl.textContent = highest.level > 0 ? highest.name : '--';
+    lowestEl.className = 'stat-value' + (lowest.level < 6 ? ' stat-text' : '');
+    highestEl.className = 'stat-value' + (highest.level > 0 ? ' stat-text' : '');
+}
+
+function togglePillar(header) {
+    header.parentElement.classList.toggle('collapsed');
 }
 
 document.addEventListener('DOMContentLoaded', renderDashboard);

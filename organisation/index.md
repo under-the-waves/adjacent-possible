@@ -11,6 +11,8 @@ The downstream effects of disorganisation extend well beyond lost time. 41% of t
 
 Your approach to organisation depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
+For personalised recommendations based on your unique priorities, visit [Organisation Personalised]({{ site.baseurl }}/organisation/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+
 ### Efficiency (40%)
 Minimising time and energy wasted on searching, deciding, and recovering from disorganisation. This includes having designated places for everything, streamlined routines for recurring tasks, and systems that reduce the number of decisions you need to make each day. People who prioritise this value focus on eliminating friction, automating where possible, and ensuring that the mechanics of daily life require minimal cognitive effort.
 
