@@ -1,3 +1,6 @@
+---
+life_area_slug: fitness
+---
 [← Back to Home](../)
 # Fitness
 ## Why Fitness Matters
@@ -13,17 +16,7 @@ This guide also focuses on five core components: cardiovascular endurance, muscu
 
 For personalised recommendations based on your unique priorities, visit [Fitness Personalised]({{ site.baseurl }}/fitness/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Health & Longevity (35%)
-Fitness that supports long-term wellbeing and disease prevention. This includes cardiovascular health, maintaining muscle mass for healthy aging, joint integrity, and metabolic health. People who prioritise this value focus on sustainable practices that provide health benefits with minimal injury risk.
-
-### Physical Performance (30%)
-Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills. This value emphasises what your body can do rather than how it looks. Those who prioritise performance may focus on sport-specific training, measurable improvements in capacity, or achieving particular physical feats.
-
-### Appearance (20%)
-Physical aesthetics including muscle definition, body composition, and overall physique. While appearance changes often accompany health and performance improvements, some training approaches specifically optimise for visual results. Those who prioritise this value may focus more on specific muscle development, fat loss protocols, or physique-oriented goals.
-
-### Enjoyment & Psychological Benefits (15%)
-The pleasure, mental health benefits, and positive experiences derived from physical activity. This includes stress reduction, mood enhancement, community connection, and the inherent satisfaction of movement itself. Those who prioritise this value select activities they genuinely enjoy and that support their mental wellbeing.
+{% include life-area-values.html %}
 
 ## Levels and personalisation
 - [Level 1: Awareness](level-1)

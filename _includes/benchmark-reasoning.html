@@ -1,0 +1,7 @@
+{% assign area_data = site.data.life_areas[page.life_area_slug] %}
+{% for value in area_data.values %}{% if value.benchmarks %}{% for level_num in (1..5) %}{% assign level_key = "level_" | append: level_num %}{% if value.benchmarks[level_key] %}
+    'level{{ level_num }}-{{ value.key }}': {
+        title: 'Level {{ level_num }} {{ value.name }} Reasoning',
+        content: '{{ value.benchmarks[level_key].reasoning | replace: "'", "\\'" }}'
+    },
+{% endif %}{% endfor %}{% endif %}{% endfor %}

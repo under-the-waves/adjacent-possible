@@ -1,0 +1,78 @@
+slug: saving
+name: Saving
+domain: Finances
+pillar: "Organise Your Life"
+domain_representative: false
+
+values:
+  - key: security
+    name: "Security"
+    weight: 35
+    description:
+      - "Building and maintaining a financial buffer against unexpected expenses and income disruption."
+      - "Emergency funds, insurance, and ensuring reserves can absorb shocks without resorting to debt."
+      - "People who prioritise this value focus on stability and protection from downside scenarios."
+    benchmarks:
+      level_1:
+        text: "Know your monthly expenses and can identify how many weeks of financial buffer you currently hold"
+        reasoning: "Awareness is the prerequisite for improvement. Many people cannot accurately state their monthly expenses or quantify their financial buffer. Knowing how many weeks you can sustain your current lifestyle without income provides the baseline from which all saving behaviour begins."
+      level_2:
+        text: "3 -- 6 months of expenses saved in accessible accounts, able to absorb a GBP 1,000 -- 2,000 unexpected cost without borrowing"
+        reasoning: "Having 3 -- 6 months of expenses saved places you above 54% of the population who lack this buffer (<a href=\"https://www.bankrate.com/banking/savings/emergency-savings-report/\" target=\"_blank\">Bankrate 2026</a>). The ability to absorb a GBP 1,000 -- 2,000 unexpected cost without borrowing represents genuine financial stability that the majority of adults have not achieved."
+      level_3:
+        text: "6 -- 12 months of expenses saved, able to weather job loss without any change to financial trajectory"
+        reasoning: "Only 27 -- 28% of adults have six or more months of expenses saved (<a href=\"https://www.bankrate.com/banking/savings/emergency-savings-report/\" target=\"_blank\">Bankrate 2026</a>). Having 6 -- 12 months and the ability to weather job loss without changing financial trajectory represents approximately 95th percentile financial resilience."
+      level_4:
+        text: "12 -- 24 months of expenses saved, maintained through at least one major financial shock"
+        reasoning: "Maintaining 12 -- 24 months of expenses through a major financial shock (job loss, medical emergency, market crash) represents top 1% financial resilience. Many people who accumulate this buffer deplete it during crises -- maintaining it through adversity demonstrates exceptional financial management."
+      level_5:
+        text: "24+ months of liquid savings distributed across multiple institutions and currencies"
+        reasoning: "Holding 24+ months of liquid savings across multiple institutions and currencies represents 99.9th percentile financial resilience (1 in 1,000). This level of buffer provides protection against not just personal financial shocks but institutional failures, currency crises, and geopolitical disruption."
+
+  - key: lifestyle
+    name: "Lifestyle"
+    weight: 35
+    description:
+      - "Saving toward specific lifestyle goals -- holidays, experiences, purchases, and planned upgrades to quality of life."
+      - "Targeted savings accounts for near-term goals, balancing present enjoyment with future security, and ensuring saving enhances rather than restricts your daily life."
+      - "People who prioritise this value see saving as a tool for living better, not just surviving emergencies."
+    benchmarks:
+      level_1:
+        text: "Know what proportion of your savings is instantly accessible versus locked away"
+        reasoning: "Most people do not know what proportion of their savings they could access immediately versus what is locked in pensions, notice accounts, or other restricted vehicles. Simply understanding the liquidity profile of your savings -- how much you can access within 24 hours, within a week, and within a month -- is the first step toward making informed trade-offs between accessibility and returns."
+      level_2:
+        text: "80%+ of savings in instantly accessible accounts; can access GBP 5,000+ within 24 hours"
+        reasoning: "Having 80%+ of savings in instantly accessible accounts and the ability to access GBP 5,000+ within 24 hours represents 80th percentile liquidity. Most people have a significant portion of their savings locked in pensions or fixed-term products. Maintaining high accessibility provides genuine flexibility to respond to both emergencies and opportunities."
+      level_3:
+        text: "Tiered liquidity structure: instant access, 30-day notice, and longer-term; can access 3+ months of expenses within 48 hours"
+        reasoning: "A tiered liquidity structure -- with distinct instant access, 30-day notice, and longer-term tiers -- and the ability to access 3+ months of expenses within 48 hours represents 95th percentile liquidity management. This deliberate structuring captures better returns on less-liquid tiers whilst maintaining rapid access to a meaningful buffer."
+      level_4:
+        text: "Optimised liquidity ladder across multiple account types; can access 6+ months of expenses within 48 hours; remaining wealth accessible within 30 days"
+        reasoning: "An optimised liquidity ladder across multiple account types, with 6+ months of expenses accessible within 48 hours and all remaining wealth accessible within 30 days, represents 99th percentile liquidity management. At this level, the saver has deliberately chosen any lock-in periods for strategic reasons rather than through inertia, and can deploy capital rapidly for any purpose."
+      level_5:
+        text: "Full liquidity across all savings; can access 12+ months of expenses within 24 hours; no locked-in vehicles without deliberate strategic rationale"
+        reasoning: "Full liquidity across all savings -- with 12+ months of expenses accessible within 24 hours and no locked-in vehicles without deliberate strategic rationale -- represents 99.9th percentile liquidity mastery. At this level, every restriction on access is a conscious, reviewed choice rather than a default. The saver can mobilise substantial capital immediately for any purpose, maintaining maximum optionality at all times."
+
+  - key: growth
+    name: "Growth"
+    weight: 30
+    description:
+      - "Accumulating wealth over time through consistently high savings rates."
+      - "Steadily increasing net worth, maximising the rate at which savings compound, and sustaining saving discipline across years."
+      - "People who prioritise this value focus on the long-term trajectory of their wealth."
+    benchmarks:
+      level_1:
+        text: "Know your current savings rate -- what percentage of income you save each month"
+        reasoning: "Most people do not know their actual savings rate. The national average sits between 3 -- 5% (<a href=\"https://fred.stlouisfed.org/series/PSAVERT\" target=\"_blank\">FRED data</a>), and the bottom 40% of earners have negative savings rates (<a href=\"https://www.bls.gov/cex/tables.htm\" target=\"_blank\">BLS Consumer Expenditure Survey</a>). Simply calculating and tracking this number is the first step toward improving it."
+      level_2:
+        text: "15 -- 20% savings rate sustained for 12+ months"
+        reasoning: "A 15 -- 20% savings rate sustained for 12+ months represents roughly 80th percentile achievement. With the national savings rate between 3 -- 5% and the bottom 40% saving nothing or going into debt, consistently saving 15 -- 20% of income requires discipline that most households do not maintain."
+      level_3:
+        text: "25 -- 40% savings rate sustained for 3+ years, with 2 -- 5x annual expenses saved"
+        reasoning: "A 25 -- 40% savings rate sustained for 3+ years with 2 -- 5x annual expenses accumulated represents top 5% achievement. This level of sustained saving discipline requires not just high income but genuine lifestyle design and long-term commitment to financial goals."
+      level_4:
+        text: "40 -- 60% savings rate sustained, with 10x annual expenses saved"
+        reasoning: "A sustained 40 -- 60% savings rate with 10x annual expenses accumulated represents top 1% saving behaviour. This level typically requires both above-average income and significantly below-average spending relative to income -- a combination achieved by very few households."
+      level_5:
+        text: "60%+ savings rate sustained for 5+ years, with 25x annual expenses saved -- the full FI number"
+        reasoning: "A 60%+ savings rate sustained for 5+ years with 25x annual expenses (the full FI number) represents 99.9th percentile saving behaviour. This level of sustained extreme saving is achieved by fewer than 1 in 1,000 people and typically enables complete financial independence within 10 -- 15 years of working life."

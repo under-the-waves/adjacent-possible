@@ -1,0 +1,78 @@
+slug: friendship
+name: Friendship
+domain: "Friends and Relationships"
+pillar: "Connect with Others"
+domain_representative: false
+
+values:
+  - key: depth
+    name: "Depth"
+    weight: 45
+    description:
+      - "Investing heavily in a smaller number of very close friendships that involve high levels of trust, vulnerability, and mutual understanding."
+      - "Regular meaningful conversations, emotional support during difficult times, sharing personal struggles and dreams, and developing relationships that deepen over many years."
+      - "People who prioritise this value focus their social energy on cultivating intimate bonds with a select few rather than maintaining many lighter connections."
+    benchmarks:
+      level_1:
+        text: "Recognise your current capacity for emotional vulnerability and the level of mutual support in your existing close relationships"
+        reasoning: "Awareness involves understanding your current patterns. Research shows most people significantly overestimate their emotional intimacy levels - only 30% of men and 48% of women share personal feelings with friends weekly, suggesting many lack deep emotional connection despite believing they have close relationships."
+      level_2:
+        text: "Maintain regular meaningful contact with 2-3 close friends, including sharing personal feelings or challenges at least monthly with at least one friend"
+        reasoning: "Regular emotional sharing with 2-3 people represents top 20% achievement. Given that 30% of men and 48% of women share feelings weekly with any friend, maintaining this with multiple friends plus monthly deeper sharing exceeds what 80% of adults sustain. <a href=\"https://www.americansurveycenter.org/research/the-state-of-american-friendship-change-challenges-and-loss/\" target=\"_blank\">Source study</a>"
+      level_3:
+        text: "Sustain 3-5 intimate friendships characterised by regular emotional support exchange, with weekly meaningful conversations with at least one close friend and monthly deep conversations with others"
+        reasoning: "3-5 intimate friendships with weekly meaningful contact represents 95th percentile capability. This exceeds what 95% achieve - requires exceptional emotional skills, time investment, and mutual commitment that most people never develop or sustain long-term."
+      level_4:
+        text: "Cultivate relationships with depth that most people never experience - regular vulnerable conversations, reliable emotional support during major life challenges, and friendships that significantly influence major life decisions"
+        reasoning: "Friendship depth that influences major life decisions represents top 1% achievement. This level of intimacy and trust - where friends significantly shape important choices - requires exceptional vulnerability, communication skills, and mutual commitment that 99% never achieve."
+      level_5:
+        text: "Achieve friendship intimacy and support exchange that rivals family relationships - daily meaningful contact with closest friends, complete emotional transparency, and friendships that provide primary life direction and major decision guidance"
+        reasoning: "Friendship intimacy rivaling family bonds represents 99.9th percentile achievement (1 in 1,000 people). Daily meaningful contact with multiple friends while maintaining complete emotional transparency requires extraordinary emotional capacity and time investment that virtually no one achieves."
+
+  - key: breadth
+    name: "Breadth"
+    weight: 35
+    description:
+      - "Building and maintaining a diverse network of friendships across different contexts, interests, and social circles."
+      - "Workplace friends, hobby-based connections, neighbourhood relationships, and casual social acquaintances who provide variety, opportunities, and a sense of belonging to multiple communities."
+      - "Those who prioritise this value enjoy meeting new people, participating in group activities, and having friends for different aspects of their lives."
+    benchmarks:
+      level_1:
+        text: "Understand your current social network size, the diversity of contexts where you have friends, and gaps in your social ecosystem"
+        reasoning: "Self-assessment of network diversity often reveals gaps. Most people have friends concentrated in 1-2 contexts (usually work and family), missing opportunities for varied perspectives and support types that come from diverse social connections."
+      level_2:
+        text: "Actively maintain friendships across 3-4 different contexts (work, neighbourhood, hobbies, family connections) with total network of 8-12 people you consider friends"
+        reasoning: "Network of 8-12 friends across 3-4 contexts represents 80th percentile. Research shows 53% of adults have 1-4 close friends total, with only 38% having 5+. Maintaining friendships across multiple contexts requires intentional effort that most people do not sustain. <a href=\"https://www.pewresearch.org/short-reads/2023/10/12/what-does-friendship-look-like-in-america/\" target=\"_blank\">Source study</a>"
+      level_3:
+        text: "Maintain diverse friendship network of 12-20 people across multiple contexts, actively nurturing connections through regular contact and shared activities"
+        reasoning: "Network of 12-20 active friendships requires sophisticated social management skills. Only 13% of people reported having 10+ close friends in recent surveys, and maintaining meaningful contact with 12-20 people represents exceptional social capacity and time management."
+      level_4:
+        text: "Maintain extensive network of 20+ meaningful friendships across varied contexts whilst successfully balancing time and emotional investment across all relationships"
+        reasoning: "Maintaining 20+ meaningful friendships whilst balancing emotional investment represents top 1% social capacity. This requires exceptional social intelligence, time management, and emotional energy that exceeds what 99% of people can sustain."
+      level_5:
+        text: "Successfully coordinate complex social ecosystem of 30+ active friendships across multiple life domains whilst maintaining quality connections with each person and facilitating connections between friends"
+        reasoning: "Coordinating 30+ active friendships whilst maintaining quality represents exceptional social mastery. This level of social network management and emotional investment exceeds what 999 out of 1,000 people ever achieve, requiring extraordinary social intelligence and time dedication."
+
+  - key: growth
+    name: "Growth"
+    weight: 20
+    description:
+      - "Seeking friendships that challenge you to improve, learn, and develop as a person."
+      - "Friends who offer different perspectives, hold you accountable to your goals, introduce you to new ideas or experiences, and aren't afraid to give honest feedback."
+      - "People who prioritise this value actively seek relationships that push them outside their comfort zone and contribute to their personal development."
+    benchmarks:
+      level_1:
+        text: "Identify how friendships have influenced your personal development and what you seek from these relationships in terms of challenge and learning"
+        reasoning: "Understanding how friendships influence development requires reflection. Many people maintain comfortable relationships that avoid challenge or growth, missing the transformative potential of friendships that push boundaries and introduce new perspectives."
+      level_2:
+        text: "Engage in conversations with friends that challenge your perspectives or introduce new ideas at least several times per year"
+        reasoning: "Regular perspective-challenging conversations represent significant achievement. Most friendships focus on comfortable agreement rather than growth-oriented challenge. Having friends who regularly introduce new ideas or challenge views is uncommon in typical social circles."
+      level_3:
+        text: "Consistently seek and provide honest feedback with close friends, actively pursue new perspectives through friendship connections, and adapt behaviour based on insights gained from these relationships"
+        reasoning: "Consistent growth-oriented friendship practices represent top 5% achievement. Most people avoid difficult conversations or challenging feedback. Actively seeking personal development through friendships and adapting based on insights requires exceptional emotional maturity."
+      level_4:
+        text: "Actively seek friendships that consistently challenge comfort zones, maintain relationships with people holding significantly different worldviews, and demonstrate measurable personal growth directly attributable to friendship influences"
+        reasoning: "Demonstrable personal transformation through friendship requires exceptional openness to change and ability to seek challenging relationships. Most people prefer comfortable similarity - actively maintaining growth-oriented friendships represents top 1% achievement."
+      level_5:
+        text: "Maintain friendships that consistently transform your perspectives and capabilities, actively seek relationships with people from dramatically different backgrounds or expertise areas, and demonstrate continuous personal evolution directly driven by friendship-based learning and challenge"
+        reasoning: "Continuous personal transformation through diverse challenging friendships represents extraordinary achievement. Actively seeking dramatically different perspectives and demonstrating measurable evolution driven by friendship learning requires exceptional personal development capacity that less than 0.1% sustain."

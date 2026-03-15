@@ -1,0 +1,8 @@
+{% assign area_data = site.data.life_areas[page.life_area_slug] %}
+{% for value in area_data.values %}
+
+### {{ value.name }} ({{ value.weight }}%)
+{% for bullet in value.description %}
+- {{ bullet }}
+{% endfor %}
+{% endfor %}

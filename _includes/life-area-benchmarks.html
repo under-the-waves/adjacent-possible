@@ -1,0 +1,10 @@
+{% assign area_data = site.data.life_areas[page.life_area_slug] %}
+{% assign level_names = "Awareness|Foundation (80th percentile capability)|Proficiency (95th percentile capability)|Excellence (99th percentile capability)|Mastery (99.9th percentile capability)" | split: "|" %}
+{% for level_num in (1..5) %}{% assign level_key = "level_" | append: level_num %}
+
+### Level {{ level_num }}: {{ level_names[forloop.index0] }}
+
+{% for value in area_data.values %}{% if value.benchmarks[level_key] %}
+**{{ value.name }}**: {{ value.benchmarks[level_key].text }} <span class="info-icon" onclick="showReasoning('level{{ level_num }}-{{ value.key }}')">i</span>
+
+{% endif %}{% endfor %}{% endfor %}
