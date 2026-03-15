@@ -1,11 +1,15 @@
 [← Back to Home](../)
 # Housing
 
-## Why Housing Matters
+## What is Housing?
 
-Housing is the single largest expense for most households and one of the strongest determinants of daily quality of life. Households spending more than 30% of their income on housing report significantly lower life satisfaction, and those spending more than 50% report even steeper declines <span class="info-icon" onclick="showReasoning('research-cost-burden')">i</span>. Nearly half of renter households (49.7%) and 23.7% of homeowner households are cost-burdened, meaning housing costs consume a disproportionate share of their income <span class="info-icon" onclick="showReasoning('research-cost-statistics')">i</span>.
+Your living situation -- where you live, what your home is like, how much it costs, and how well it supports your daily life.
 
-Beyond financial impact, housing quality affects physical health, mental health, relationships, and children's development. Research links housing cost burdens to material hardship, decreased wellbeing, lower cognitive achievement for children, higher maternal stress, and strained social relationships <span class="info-icon" onclick="showReasoning('research-broader-impacts')">i</span>. Your housing situation determines the backdrop against which every other life domain plays out -- it shapes your commute, your neighbourhood relationships, your financial flexibility, and your daily comfort.
+## Why Housing matters
+
+- **Largest household expense** -- Households spending more than 30% of income on housing report significantly lower life satisfaction. Nearly half of renters (49.7%) and 23.7% of homeowners are cost-burdened <span class="info-icon" onclick="showReasoning('research-cost-burden')">i</span> <span class="info-icon" onclick="showReasoning('research-cost-statistics')">i</span>.
+- **Affects everything else** -- Housing quality shapes physical health, mental health, relationships, and children's development. Cost burdens are linked to material hardship, lower cognitive achievement, and strained social relationships <span class="info-icon" onclick="showReasoning('research-broader-impacts')">i</span>.
+- **Backdrop to every other domain** -- Your housing situation determines your commute, your neighbourhood relationships, your financial flexibility, and your daily comfort. It is the foundation on which other life areas rest.
 
 ## Housing Values
 

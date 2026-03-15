@@ -3,7 +3,7 @@ description: "Structured conversations with professionals in fields or roles you
 applicable_domains: ["career-planning"]
 
 values:
-  career-planning.direction:
+  career-planning.clarity:
     pbs: 8
     pbs_reasoning: "Informational interviews are one of the most direct ways to resolve career uncertainty. Kanar (2023) demonstrated significant gains in networking self-efficacy and career clarity among students who completed informational interviews. Each conversation exposes the interviewer to a real career trajectory, typical day-to-day realities, and industry-specific opportunities they could not have discovered through desk research alone. A programme of 10-15 interviews across different fields can dramatically reshape someone's mental map of viable career options, moving them from vague aspiration to concrete, informed direction."
     isr: 85
@@ -15,7 +15,7 @@ values:
     anchor_unit: "direction_level"
     anchor_description: "Career direction clarity from completely lost (0) to fully confident in a specific, well-researched path (10)"
 
-  career-planning.positioning:
+  career-planning.advancement:
     pbs: 7
     pbs_reasoning: "Informational interviews build professional network connections that are qualitatively different from cold applications or LinkedIn requests. Each conversation creates a warm contact who knows your name, interests, and initiative. UC Berkeley Extension's career resources note that 70-80% of jobs are filled through networking rather than public postings, and informational interviews are the primary mechanism for building such networks from scratch. Over 6-12 months of consistent interviewing, you accumulate a web of contacts who may refer you to opportunities, introduce you to colleagues, or remember you when a role opens."
     isr: 85
@@ -27,7 +27,7 @@ values:
     anchor_unit: "positioning_level"
     anchor_description: "Career positioning from completely unknown in target field (0) to well-connected insider with strong reputation (10)"
 
-  career-planning.resilience:
+  career-planning.security:
     pbs: 5
     pbs_reasoning: "Informational interviews contribute to career resilience indirectly by diversifying your understanding of available options and building a broader professional network. If your current role or industry contracts, having explored alternatives and maintaining contacts across fields provides a safety net of knowledge and relationships. However, the resilience benefit is secondary to direction and positioning -- interviews primarily inform and connect rather than directly building portable skills or financial buffers."
     isr: 85

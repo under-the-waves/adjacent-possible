@@ -3,7 +3,7 @@ description: "A structured monthly session dedicated to reviewing progress again
 applicable_domains: ["goals"]
 
 values:
-  goals.ambition:
+  goals.follow_through:
     pbs: 7
     pbs_reasoning: "Monthly reviews directly and substantially support ambitious goal-setting. The structured review process forces explicit confrontation with whether goals are genuinely stretching or merely comfortable. Over time, the regular cadence builds confidence in taking on bigger challenges, as past stretch targets that were met provide evidence for raising the bar further. The Harkin et al. meta-analysis demonstrates that monitoring promotes attainment, which in turn enables more ambitious future goals. Monthly cadence allows enough time for meaningful progress data while being frequent enough to catch when ambition has quietly downshifted to safety."
     isr: 72
@@ -15,7 +15,7 @@ values:
     anchor_unit: "ambition_level"
     anchor_description: "Consistently setting and pursuing transformative goals that push well beyond the comfort zone"
 
-  goals.realism:
+  goals.clarity:
     pbs: 7
     pbs_reasoning: "Monthly reviews are one of the highest-leverage interventions for realistic goal calibration. The review process catches goals that are drifting, identifies where original estimates were too aggressive or too conservative, and builds a longitudinal record of actual capacity versus planned capacity. Over time, this data makes goal-setting progressively more realistic — not by lowering ambition, but by improving the accuracy of what can genuinely be achieved in a given timeframe. The 42% improvement in achievement from writing goals down (Matthews, 2015) compounds with regular review. However, monthly cadence may be too infrequent for fast-moving goals that need weekly recalibration, limiting the score below the maximum."
     isr: 70
@@ -27,7 +27,7 @@ values:
     anchor_unit: "realism_level"
     anchor_description: "Goals perfectly calibrated to actual capacity, with milestones reliably achieved through honest constraint assessment"
 
-  goals.flexibility:
+  goals.adaptability:
     pbs: 6
     pbs_reasoning: "Monthly reviews provide a natural mechanism for goal flexibility — the structured decision point where goals can be modified, reprioritised, or retired based on new information. Without regular reviews, most people either cling to failing goals out of sunk-cost bias or abandon them impulsively. The monthly cadence creates a disciplined window for strategic adjustment, treating goals as hypotheses to be evaluated rather than commitments to be honoured. However, truly flexible goal management also requires real-time responsiveness to major changes (job loss, health crisis, new opportunities), which a monthly cadence cannot fully provide."
     isr: 65

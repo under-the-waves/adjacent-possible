@@ -28,22 +28,6 @@ layout: default
     text-decoration: underline;
 }
 
-/* Container for top section - normal width */
-.top-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 15px;
-    margin-bottom: 0px;
-}
-
-/* Container for bottom section - full width */
-.bottom-section {
-    max-width: none !important;
-    width: 95% !important;
-    margin: 0 auto;
-    padding: 0px 20px;
-}
-
 body .main-content {
     max-width: none !important;
     padding: 1rem !important;
@@ -77,27 +61,43 @@ body .main-content {
     font-size: 0.95em;
 }
 
+/* Side-by-side layout */
+.side-by-side {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.left-column {
+    width: 340px;
+    min-width: 300px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 0;
+}
+
 /* Controls layout */
 .controls-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 10px;
+    gap: 15px;
 }
 
 .sliders-container {
-    display: grid;
-    grid-template-columns: {% if page.values.size <= 3 %}1fr{% else %}1fr 1fr{% endif %};
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    max-width: 600px;
     width: 100%;
 }
 
 /* Stacked bar chart */
 .weight-bar-container {
     width: 100%;
-    max-width: 600px;
 }
 
 .weight-bar {
@@ -126,7 +126,6 @@ body .main-content {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 8px;
-    justify-content: center;
 }
 
 .legend-item {
@@ -162,13 +161,13 @@ body .main-content {
 .slider-label {
     font-weight: 600;
     color: #333;
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 0;
 }
 
 .slider-percentage {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1em;
     color: #155799;
     min-width: 40px;
     text-align: right;
@@ -184,11 +183,11 @@ body .main-content {
     appearance: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .slider-description {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #666;
     margin: 0;
     line-height: 1.3;
@@ -197,8 +196,8 @@ body .main-content {
 .slider-track::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: #155799;
     cursor: pointer;
@@ -213,8 +212,8 @@ body .main-content {
 }
 
 .slider-track::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: #155799;
     cursor: pointer;
@@ -282,49 +281,49 @@ body .main-content {
 .recommendations-table th:nth-child(1),
 .recommendations-table td:nth-child(1) {
     width: 28%;
-    min-width: 220px;
+    min-width: 180px;
 }
 
 .recommendations-table th:nth-child(2),
 .recommendations-table td:nth-child(2) {
     width: 8%;
-    min-width: 60px;
+    min-width: 50px;
 }
 
 .recommendations-table th:nth-child(3),
 .recommendations-table td:nth-child(3) {
     width: 12%;
-    min-width: 90px;
+    min-width: 80px;
 }
 
 .recommendations-table th:nth-child(4),
 .recommendations-table td:nth-child(4) {
     width: 14%;
-    min-width: 100px;
+    min-width: 90px;
 }
 
 .recommendations-table th:nth-child(5),
 .recommendations-table td:nth-child(5) {
     width: 12%;
-    min-width: 90px;
+    min-width: 80px;
 }
 
 .recommendations-table th:nth-child(6),
 .recommendations-table td:nth-child(6) {
     width: 14%;
-    min-width: 100px;
+    min-width: 90px;
 }
 
 .recommendations-table th:nth-child(7),
 .recommendations-table td:nth-child(7) {
     width: 6%;
-    min-width: 50px;
+    min-width: 45px;
 }
 
 .recommendations-table th:nth-child(8),
 .recommendations-table td:nth-child(8) {
     width: 6%;
-    min-width: 50px;
+    min-width: 45px;
 }
 
 .recommendations-table th {
@@ -352,7 +351,7 @@ body .main-content {
 }
 
 .recommendations-table td {
-    padding: 15px 12px;
+    padding: 12px 8px;
     border-bottom: 1px solid #e9ecef;
     vertical-align: middle;
 }
@@ -370,7 +369,7 @@ body .main-content {
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    min-width: 200px;
+    min-width: 160px;
     flex-wrap: nowrap;
 }
 
@@ -430,112 +429,6 @@ body .main-content {
     margin-left: 5px;
     font-size: 1em;
     opacity: 1;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 1024px) {
-    .recommendations-table {
-        font-size: 0.85em;
-    }
-
-    .recommendations-table th,
-    .recommendations-table td {
-        padding: 10px 8px;
-    }
-
-    .intervention-name {
-        min-width: 150px;
-    }
-}
-
-@media (max-width: 768px) {
-    .controls-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .sliders-container {
-        grid-template-columns: 1fr;
-    }
-
-    .recommendations-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        font-size: 0.8em;
-    }
-
-    .recommendations-table th,
-    .recommendations-table td {
-        padding: 8px 4px;
-    }
-
-    .intervention-name {
-        min-width: 100px;
-    }
-}
-
-/* Sticky controls */
-#sticky-controls {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.sticky-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 20px;
-    max-width: 640px;
-    margin: 0 auto;
-}
-
-.compact-weight-bar {
-    flex: 1;
-    display: flex;
-    height: 24px;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.compact-weight-bar .weight-bar-segment {
-    height: 24px;
-    font-size: 0.7em;
-}
-
-.drawer-toggle {
-    background: #155799;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 14px;
-    cursor: pointer;
-    font-size: 0.85em;
-    white-space: nowrap;
-    transition: background 0.2s;
-}
-
-.drawer-toggle:hover {
-    background: #0d47a1;
-}
-
-#sliderDrawer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-}
-
-#sliderDrawer.open {
-    max-height: 600px;
-}
-
-.drawer-inner {
-    padding: 10px 0 15px;
 }
 
 /* Loading state */
@@ -607,6 +500,56 @@ body .main-content {
     line-height: 1.5;
     color: #333;
 }
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 1024px) {
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .left-column {
+        width: 100%;
+        min-width: 0;
+        position: static;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .right-column {
+        width: 100%;
+    }
+
+    .recommendations-table {
+        font-size: 0.85em;
+    }
+
+    .recommendations-table th,
+    .recommendations-table td {
+        padding: 10px 8px;
+    }
+
+    .intervention-name {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .recommendations-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8em;
+    }
+
+    .recommendations-table th,
+    .recommendations-table td {
+        padding: 8px 4px;
+    }
+
+    .intervention-name {
+        min-width: 100px;
+    }
+}
 </style>
 
 <div class="personalised-container">
@@ -616,90 +559,79 @@ body .main-content {
         Personalised Recommendations
     </div>
 
-    <div class="top-section">
-        <div class="header-section">
-            <h1>{{ page.title }}</h1>
-            <div class="header-description">
-                <p>Adjust the sliders below to reflect what matters most to you, and we'll recommend the best interventions for your priorities.</p>
-            </div>
+    <div class="header-section">
+        <h1>{{ page.title }}</h1>
+        <div class="header-description">
+            <p>Adjust the sliders to reflect what matters most to you, and the table will re-rank interventions for your priorities.</p>
         </div>
     </div>
 
-    <div id="sticky-controls">
-        <div class="sticky-header">
-            <div class="compact-weight-bar" id="compactWeightBar">
-                {% for value in page.values %}
-                <div class="weight-bar-segment" id="compact-bar-{{ value.key }}" style="width: {{ value.default_weight }}%; background-color: {{ value.color }};">{{ value.default_weight }}%</div>
-                {% endfor %}
-            </div>
-            <button class="drawer-toggle" id="drawerToggle" onclick="toggleDrawer()">Hide weights</button>
-        </div>
-        <div id="sliderDrawer" class="open">
-            <div class="drawer-inner">
-                <div class="controls-section">
-                    <div class="sliders-container">
+    <div class="side-by-side">
+        <div class="left-column">
+            <div class="controls-section">
+                <div class="weight-bar-container">
+                    <div class="weight-bar" id="weightBar">
                         {% for value in page.values %}
-                        <div class="value-slider" id="slider-wrapper-{{ value.key }}">
-                            <div class="slider-header">
-                                <label class="slider-label">{{ value.label }}</label>
-                                <span class="slider-percentage" id="percent-{{ value.key }}">{{ value.default_weight }}%</span>
-                            </div>
-                            <input type="range" min="0" max="100" value="{{ value.default_weight }}" class="slider-track" id="slider-{{ value.key }}" style="background: {{ value.color }};">
-                            <p class="slider-description">{{ value.description }}</p>
+                        <div class="weight-bar-segment" id="bar-{{ value.key }}" style="width: {{ value.default_weight }}%; background-color: {{ value.color }};">{{ value.default_weight }}%</div>
+                        {% endfor %}
+                    </div>
+                    <div class="weight-bar-legend">
+                        {% for value in page.values %}
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background-color: {{ value.color }};"></span>
+                            {{ value.label }}
                         </div>
                         {% endfor %}
                     </div>
-
-                    <div class="weight-bar-container">
-                        <div class="weight-bar" id="weightBar">
-                            {% for value in page.values %}
-                            <div class="weight-bar-segment" id="bar-{{ value.key }}" style="width: {{ value.default_weight }}%; background-color: {{ value.color }};">{{ value.default_weight }}%</div>
-                            {% endfor %}
-                        </div>
-                        <div class="weight-bar-legend">
-                            {% for value in page.values %}
-                            <div class="legend-item">
-                                <span class="legend-dot" style="background-color: {{ value.color }};"></span>
-                                {{ value.label }}
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="bottom-section">
-        <div class="recommendations-section">
-            <div class="recommendations-header">
-                <h2>Your Recommended Interventions</h2>
-                <p>Based on your priorities, here are the interventions that will give you the best results:</p>
+                <div class="sliders-container">
+                    {% for value in page.values %}
+                    <div class="value-slider" id="slider-wrapper-{{ value.key }}">
+                        <div class="slider-header">
+                            <label class="slider-label">{{ value.label }}</label>
+                            <span class="slider-percentage" id="percent-{{ value.key }}">{{ value.default_weight }}%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="{{ value.default_weight }}" class="slider-track" id="slider-{{ value.key }}" style="background: {{ value.color }};">
+                        <p class="slider-description">{{ value.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
                 <details class="methodology-note">
                     <summary><strong>How scoring works</strong></summary>
                     <p>Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
                 </details>
             </div>
+        </div>
 
-            <table class="recommendations-table" id="recommendationsTable">
-                <thead>
-                    <tr>
-                        <th data-sort="name">Intervention <span class="sort-indicator"></span></th>
-                        <th data-sort="wbs" class="active">WBS <span class="sort-indicator">&#8595;</span></th>
-                        <th data-sort="upfront-cost">Upfront Cost (USD) <span class="sort-indicator"></span></th>
-                        <th data-sort="ongoing-cost">Ongoing Cost <span class="sort-indicator"></span></th>
-                        <th data-sort="upfront-time">Upfront Time <span class="sort-indicator"></span></th>
-                        <th data-sort="ongoing-time">Ongoing Time <span class="sort-indicator"></span></th>
-                        <th data-sort="time-eroi">Time EROI <span class="sort-indicator"></span></th>
-                        <th data-sort="money-eroi">Money EROI <span class="sort-indicator"></span></th>
-                    </tr>
-                </thead>
-                <tbody id="recommendationsBody">
-                    <tr>
-                        <td colspan="8" class="loading">Loading recommendations...</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="right-column">
+            <div class="recommendations-section">
+                <div class="recommendations-header">
+                    <h2>Your Recommended Interventions</h2>
+                    <p>Ranked by your priorities. Click column headers to re-sort.</p>
+                </div>
+
+                <table class="recommendations-table" id="recommendationsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="name">Intervention <span class="sort-indicator"></span></th>
+                            <th data-sort="wbs" class="active">WBS <span class="sort-indicator">&#8595;</span></th>
+                            <th data-sort="upfront-cost">Upfront Cost (USD) <span class="sort-indicator"></span></th>
+                            <th data-sort="ongoing-cost">Ongoing Cost <span class="sort-indicator"></span></th>
+                            <th data-sort="upfront-time">Upfront Time <span class="sort-indicator"></span></th>
+                            <th data-sort="ongoing-time">Ongoing Time <span class="sort-indicator"></span></th>
+                            <th data-sort="time-eroi">Time EROI <span class="sort-indicator"></span></th>
+                            <th data-sort="money-eroi">Money EROI <span class="sort-indicator"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="recommendationsBody">
+                        <tr>
+                            <td colspan="8" class="loading">Loading recommendations...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
@@ -803,20 +735,10 @@ function updateAllControls() {
 function updateWeightBar() {
     valueConfig.forEach(v => {
         const seg = document.getElementById('bar-' + v.key);
-        const compactSeg = document.getElementById('compact-bar-' + v.key);
         const pct = Math.round(currentValues[v.key]);
         seg.style.width = pct + '%';
         seg.textContent = pct > 8 ? pct + '%' : '';
-        compactSeg.style.width = pct + '%';
-        compactSeg.textContent = pct > 8 ? pct + '%' : '';
     });
-}
-
-function toggleDrawer() {
-    const drawer = document.getElementById('sliderDrawer');
-    const btn = document.getElementById('drawerToggle');
-    drawer.classList.toggle('open');
-    btn.textContent = drawer.classList.contains('open') ? 'Hide weights' : 'Adjust weights';
 }
 
 function getInterventionUrl(key) {

@@ -4,19 +4,24 @@ title: Career Planning Personalised
 domain: career-planning
 domain_label: Career Planning
 values:
-  - key: direction
-    label: "Direction"
-    description: "Having a clear, informed sense of where your career is heading and why."
-    default_weight: 40
+  - key: clarity
+    label: "Clarity"
+    description: "Having a clear, informed understanding of where your career is heading and why."
+    default_weight: 30
     color: "#28a745"
-  - key: positioning
-    label: "Positioning"
-    description: "Building the skills, credentials, network, and reputation that open doors to your target opportunities."
-    default_weight: 35
-    color: "#dc3545"
-  - key: resilience
-    label: "Resilience"
-    description: "Developing career optionality and adaptability that protects against disruption and stagnation."
+  - key: advancement
+    label: "Advancement"
+    description: "Progressing toward higher levels of responsibility, compensation, and influence."
     default_weight: 25
+    color: "#dc3545"
+  - key: security
+    label: "Security"
+    description: "Protecting yourself against career disruption through financial runway and transferable skills."
+    default_weight: 25
+    color: "#ffc107"
+  - key: meaning
+    label: "Meaning"
+    description: "Finding genuine purpose and significance in your professional life."
+    default_weight: 20
     color: "#007bff"
 ---

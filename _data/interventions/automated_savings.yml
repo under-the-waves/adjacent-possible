@@ -27,7 +27,7 @@ values:
     anchor_unit: "growth_level"
     anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
 
-  saving.liquidity:
+  saving.lifestyle:
     pbs: 6
     pbs_reasoning: "Automated savings directly improves liquidity by consistently building accessible cash reserves. When directed to instant-access accounts, the intervention ensures a growing pool of funds available without penalties or delays. However, the liquidity benefit depends on where the automation directs funds -- transfers to locked-in vehicles like pensions or fixed-term accounts may increase total savings whilst reducing liquidity. A PBS of 6 reflects a strong positive impact on liquidity when configured for accessible accounts, tempered by the possibility of automation into less liquid vehicles."
     isr: 90

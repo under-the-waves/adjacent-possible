@@ -1,11 +1,16 @@
 [← Back to Home](../)
 # Consumptive Leisure
 
-## Why Consumptive Leisure Matters
+## What is Consumptive Leisure?
 
-Consumptive leisure -- reading, watching films, listening to music and podcasts, playing games, and other media consumption -- is how most people spend the majority of their free time. How we spend our leisure has enormous influence on our subjective quality of life <span class="info-icon" onclick="showReasoning('research-leisure-wellbeing')">i</span>. Yet not all leisure is created equal. Research consistently shows that active leisure (social activities, cultural events, sports) is associated with better wellbeing, while passive leisure (screen time, passive viewing) is associated with poorer wellbeing <span class="info-icon" onclick="showReasoning('research-active-passive')">i</span>.
+The media and content you consume for leisure -- reading, watching films, listening to music and podcasts, playing games, and other forms of entertainment and learning during your free time.
 
-Screen-based leisure is related to physical and mental health, relationships, and prosocial behaviours, though the causal mechanisms are still debated. Longitudinal studies examining 24 parameters of wellbeing found that the effects of screen time vary significantly by type -- social media, news consumption, and video viewing have different profiles <span class="info-icon" onclick="showReasoning('research-screen-effects')">i</span>. The key distinction is not between screen and non-screen activities but between consumption that restores, enriches, and satisfies versus consumption that merely fills time. Deliberate curation of consumptive leisure is one of the most accessible quality-of-life improvements available.
+## Why Consumptive Leisure matters
+
+- **It dominates free time** -- Most people spend the majority of their leisure hours on media consumption, making it one of the strongest influences on subjective quality of life <span class="info-icon" onclick="showReasoning('research-leisure-wellbeing')">i</span>.
+- **Not all leisure is equal** -- Active leisure (social activities, cultural events) is associated with better wellbeing, while passive leisure (screen time, passive viewing) is associated with poorer wellbeing <span class="info-icon" onclick="showReasoning('research-active-passive')">i</span>.
+- **Type matters more than screen time** -- Longitudinal studies found that social media, news consumption, and video viewing have different wellbeing profiles. The key distinction is between consumption that restores and enriches versus consumption that merely fills time <span class="info-icon" onclick="showReasoning('research-screen-effects')">i</span>.
+- **Deliberate curation is accessible** -- Unlike many life improvements that require money or major life changes, curating your consumptive leisure is one of the most accessible quality-of-life upgrades available.
 
 ## Consumptive Leisure Values
 

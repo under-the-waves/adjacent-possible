@@ -4,19 +4,19 @@ title: Investing Personalised
 domain: investing
 domain_label: Investing
 values:
-  - key: returns
-    label: "Returns"
-    description: "Maximising risk-adjusted returns on invested capital over time through appropriate allocation, low fees, and efficient compounding."
-    default_weight: 35
+  - key: growth
+    label: "Growth"
+    description: "Maximising the long-term increase in invested wealth through appropriate asset allocation, compounding, and consistent contributions."
+    default_weight: 40
     color: "#28a745"
-  - key: risk
-    label: "Risk management"
-    description: "Minimising downside exposure and maintaining portfolio stability through diversification, position sizing, and drawdown management."
+  - key: safety
+    label: "Safety"
+    description: "Protecting invested capital from catastrophic loss through diversification, appropriate risk sizing, and conservative positioning."
     default_weight: 35
     color: "#dc3545"
-  - key: independence
-    label: "Financial independence"
-    description: "Accumulating sufficient invested wealth to make paid employment optional, oriented around specific FI milestones and a freedom number."
-    default_weight: 30
+  - key: simplicity
+    label: "Simplicity"
+    description: "Keeping your investment approach as straightforward and low-maintenance as possible, using evidence-based strategies you can sustain for decades."
+    default_weight: 25
     color: "#007bff"
 ---

@@ -27,7 +27,7 @@ values:
     anchor_unit: "growth_level"
     anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
 
-  saving.liquidity:
+  saving.lifestyle:
     pbs: 5
     pbs_reasoning: "Tax optimisation has a mixed impact on liquidity. ISAs preserve full liquidity -- funds are accessible at any time, tax-free -- making them the ideal vehicle for liquid savings. However, pensions sacrifice liquidity entirely until age 57+, creating a direct tension between tax efficiency and accessibility. A PBS of 5 reflects that ISA usage genuinely improves tax-efficient liquidity, but pension contributions -- often the highest-impact tax optimisation -- actively reduce it."
     isr: 80
@@ -39,7 +39,7 @@ values:
     anchor_unit: "liquidity_level"
     anchor_description: "Fully accessible savings with no penalties, lock-in periods, or delays when funds are needed"
 
-  investing.returns:
+  investing.growth:
     pbs: 6
     pbs_reasoning: "Tax optimisation provides a guaranteed boost to investment returns by eliminating tax drag on growth. Within an ISA, all capital gains, dividends, and interest are tax-free. Pension contributions receive immediate tax relief that increases the invested capital base. Over a 30-year investment horizon, avoiding the 20% capital gains tax and dividend tax can increase terminal wealth by 15-30% compared to identical investments held outside tax wrappers. A PBS of 6 reflects a significant but not maximal impact -- the returns themselves come from the underlying investments, while tax optimisation protects and enhances them."
     isr: 85
@@ -51,7 +51,7 @@ values:
     anchor_unit: "returns_level"
     anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
 
-  investing.risk:
+  investing.safety:
     pbs: 6
     pbs_reasoning: "Tax optimisation contributes meaningfully to risk management by ensuring more of each pound invested is protected from erosion. ISA wrappers eliminate the risk of unexpected tax liabilities on gains, dividends, and interest, providing certainty about net returns. Pension wrappers add employer contributions and tax relief that create a larger invested base, reducing the risk of falling short of targets. A PBS of 6 reflects that tax efficiency reduces a specific and important category of risk -- the risk of tax drag undermining long-term outcomes -- though it does not address market or portfolio construction risk."
     isr: 80
@@ -63,7 +63,7 @@ values:
     anchor_unit: "risk_level"
     anchor_description: "Comprehensive portfolio risk management with minimised downside exposure across all market conditions"
 
-  investing.independence:
+  investing.simplicity:
     pbs: 4
     pbs_reasoning: "Tax optimisation accelerates progress toward financial independence by ensuring more of each pound contributes to the FI target. The pension tax relief uplift (25% for basic-rate, 67% for higher-rate) directly increases the invested base compounding toward a freedom number. ISA wrappers ensure that withdrawals in retirement are tax-free, making the effective FI number lower. A PBS of 4 reflects that tax optimisation is a meaningful accelerator on the path to FI, but is a multiplier on other behaviours (savings rate, investment returns) rather than a primary driver."
     isr: 75

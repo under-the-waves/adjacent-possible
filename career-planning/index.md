@@ -1,26 +1,34 @@
 [← Back to Home](../)
 # Career Planning
 
-## Why Career Planning Matters
+## What is Career Planning?
 
-Most people spend over 80,000 hours working across their lifetime, yet remarkably few approach their career with deliberate strategy. Half of workers view their job as "just a job" rather than a career or calling <span class="info-icon" onclick="showReasoning('research-just-a-job')">i</span>, and only 37% have a mentor despite mentees being five times more likely to be promoted <span class="info-icon" onclick="showReasoning('research-mentorship')">i</span>. The gap between those who plan and those who drift compounds dramatically over time.
+The deliberate, ongoing process of shaping your professional trajectory -- choosing directions, building capabilities, and positioning yourself for the career you want rather than the one that happens to you.
 
-Career planning is not about rigid five-year plans that crumble on contact with reality. It is about maintaining a clear direction, building strategic positioning, and developing the resilience to adapt when circumstances shift. With 85% of jobs filled through networking <span class="info-icon" onclick="showReasoning('research-networking')">i</span> and 39% of core skills expected to change by 2030 <span class="info-icon" onclick="showReasoning('research-skills-change')">i</span>, passive career management is increasingly dangerous. Meanwhile, 59% of people cannot cover more than three months of expenses <span class="info-icon" onclick="showReasoning('research-financial-buffer')">i</span>, leaving them vulnerable to any disruption at all.
+## Why Career Planning matters
+
+- **Most people drift rather than plan** -- half of workers view their job as "just a job" rather than a career or calling <span class="info-icon" onclick="showReasoning('research-just-a-job')">i</span>, and only 37% have a mentor despite mentees being five times more likely to be promoted <span class="info-icon" onclick="showReasoning('research-mentorship')">i</span>
+- **Networking drives opportunity** -- 85% of jobs are filled through networking rather than formal applications <span class="info-icon" onclick="showReasoning('research-networking')">i</span>, making deliberate relationship-building one of the highest-return career investments
+- **Skills are expiring faster** -- 39% of core skills required for existing jobs are expected to change by 2030 <span class="info-icon" onclick="showReasoning('research-skills-change')">i</span>, making passive career management increasingly dangerous
+- **Most people lack financial runway** -- 59% of people cannot cover more than three months of expenses <span class="info-icon" onclick="showReasoning('research-financial-buffer')">i</span>, leaving them unable to take strategic risks or weather disruption
 
 ## Career Planning Values
 
-Your approach to career planning depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+Your approach to career planning depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
 
 For personalised recommendations based on your unique priorities, visit [Career Planning Personalised]({{ site.baseurl }}/career-planning/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Direction (40%)
-Having a clear, informed understanding of where your career is heading and why. This includes articulating a career thesis, understanding industry trajectories, identifying the roles and contributions you want to make over different time horizons, and regularly revisiting your direction as you learn more about yourself and the landscape. People who prioritise this value invest time in reflection, research, and strategic thinking rather than defaulting to the next obvious step.
+### Clarity (30%)
+Having a clear, informed understanding of where your career is heading and why. This includes articulating a career thesis, understanding industry trajectories, and regularly revisiting your direction. People who prioritise this value invest in reflection and research rather than defaulting to the next obvious step.
 
-### Positioning (35%)
-Strategically building skills, credentials, and relationships that open future opportunities. This includes deliberate skill development beyond your current role, cultivating mentors and sponsors, maintaining a professional network, and ensuring your reputation and visibility match your ambitions. Those who prioritise this value treat their professional capital as an asset to be actively managed, not something that accumulates passively.
+### Advancement (25%)
+Progressing toward higher levels of responsibility, compensation, and influence. This includes building skills beyond your current role, pursuing promotions, developing your professional reputation, and ensuring your trajectory moves upward. People who prioritise this value treat career progression as an active project.
 
-### Resilience (25%)
-Ability to adapt career trajectory in response to industry changes, setbacks, or new opportunities. This includes maintaining transferable skills, building financial runway, developing alternative income capabilities, and cultivating the flexibility to pivot when circumstances demand it. People who prioritise this value build careers that are robust to disruption rather than optimised solely for the current environment.
+### Security (25%)
+Protecting yourself against career disruption through financial runway, transferable skills, and professional optionality. This includes maintaining multiple income capabilities, building financial buffers, and developing skills that are valuable across industries. People who prioritise this value build careers that are robust to disruption.
+
+### Meaning (20%)
+Finding genuine purpose and significance in your professional life -- work that aligns with your values and contributes to something you care about. This includes choosing roles based on mission fit, seeking work that feels inherently worthwhile, and ensuring your career contributes to your sense of identity. People who prioritise this value make career decisions based on purpose, not just advancement.
 
 ## Benchmarks by Level
 
@@ -28,43 +36,53 @@ Career planning capability varies enormously across the population. Most people 
 
 ### Level 1: Awareness
 
-**Direction**: Can name one or two fields of interest; no documented plan <span class="info-icon" onclick="showReasoning('level1-direction')">i</span>
+**Clarity**: Can name one or two fields of interest; no documented plan <span class="info-icon" onclick="showReasoning('level1-clarity')">i</span>
 
-**Positioning**: Minimum qualifications; LinkedIn profile; handful of contacts <span class="info-icon" onclick="showReasoning('level1-positioning')">i</span>
+**Advancement**: Minimum qualifications; LinkedIn profile; handful of contacts <span class="info-icon" onclick="showReasoning('level1-advancement')">i</span>
 
-**Resilience**: Has CV; transferable skills not articulated; less than three months financial buffer <span class="info-icon" onclick="showReasoning('level1-resilience')">i</span>
+**Security**: Has CV; transferable skills not articulated; less than three months financial buffer <span class="info-icon" onclick="showReasoning('level1-security')">i</span>
+
+**Meaning**: Vague sense of what kind of work feels worthwhile; no deliberate alignment between career and personal values <span class="info-icon" onclick="showReasoning('level1-meaning')">i</span>
 
 ### Level 2: Foundation (80th percentile capability)
 
-**Direction**: Written two-to-three year direction; understands industry trajectory <span class="info-icon" onclick="showReasoning('level2-direction')">i</span>
+**Clarity**: Written two-to-three year direction; understands industry trajectory <span class="info-icon" onclick="showReasoning('level2-clarity')">i</span>
 
-**Positioning**: Developing one skill beyond role; has mentor; contacts in two or three organisations <span class="info-icon" onclick="showReasoning('level2-positioning')">i</span>
+**Advancement**: Developing one skill beyond role; has mentor; contacts in two or three organisations <span class="info-icon" onclick="showReasoning('level2-advancement')">i</span>
 
-**Resilience**: Up-to-date CV; five or more transferable skills identified; three-to-six months financial buffer <span class="info-icon" onclick="showReasoning('level2-resilience')">i</span>
+**Security**: Up-to-date CV; five or more transferable skills identified; three-to-six months financial buffer <span class="info-icon" onclick="showReasoning('level2-security')">i</span>
+
+**Meaning**: Can articulate what makes work meaningful to them; current role partially aligns with personal values <span class="info-icon" onclick="showReasoning('level2-meaning')">i</span>
 
 ### Level 3: Proficiency (95th percentile capability)
 
-**Direction**: Living five-to-ten year strategy updated annually; two or three plausible paths mapped <span class="info-icon" onclick="showReasoning('level3-direction')">i</span>
+**Clarity**: Living five-to-ten year strategy updated annually; two or three plausible paths mapped <span class="info-icon" onclick="showReasoning('level3-clarity')">i</span>
 
-**Positioning**: Deliberate skill plan; 50+ professional relationships; mentor and sponsor in place <span class="info-icon" onclick="showReasoning('level3-positioning')">i</span>
+**Advancement**: Deliberate skill plan; 50+ professional relationships; mentor and sponsor in place <span class="info-icon" onclick="showReasoning('level3-advancement')">i</span>
 
-**Resilience**: Survived one major disruption; two or three alternative income capabilities; six-to-twelve month runway <span class="info-icon" onclick="showReasoning('level3-resilience')">i</span>
+**Security**: Survived one major disruption; two or three alternative income capabilities; six-to-twelve month runway <span class="info-icon" onclick="showReasoning('level3-security')">i</span>
+
+**Meaning**: Career choices consistently reflect personal values; work is experienced as genuinely purposeful most of the time <span class="info-icon" onclick="showReasoning('level3-meaning')">i</span>
 
 ### Level 4: Excellence (99th percentile capability)
 
-**Direction**: Clear thesis refined quarterly; knows emerging roles three to five years ahead <span class="info-icon" onclick="showReasoning('level4-direction')">i</span>
+**Clarity**: Clear thesis refined quarterly; knows emerging roles three to five years ahead <span class="info-icon" onclick="showReasoning('level4-clarity')">i</span>
 
-**Positioning**: Go-to expert in area; senior advocates; personal board of advisors <span class="info-icon" onclick="showReasoning('level4-positioning')">i</span>
+**Advancement**: Go-to expert in area; senior advocates; personal board of advisors <span class="info-icon" onclick="showReasoning('level4-advancement')">i</span>
 
-**Resilience**: Antifragile career structure; multiple income streams; 12+ month runway <span class="info-icon" onclick="showReasoning('level4-resilience')">i</span>
+**Security**: Antifragile career structure; multiple income streams; 12+ month runway <span class="info-icon" onclick="showReasoning('level4-security')">i</span>
+
+**Meaning**: Career is a direct expression of personal mission; work consistently contributes to something the individual finds deeply significant <span class="info-icon" onclick="showReasoning('level4-meaning')">i</span>
 
 ### Level 5: Mastery (99.9th percentile capability)
 
-**Direction**: Career shapes market demand; 20+ year arc with phase transitions planned <span class="info-icon" onclick="showReasoning('level5-direction')">i</span>
+**Clarity**: Career shapes market demand; 20+ year arc with phase transitions planned <span class="info-icon" onclick="showReasoning('level5-clarity')">i</span>
 
-**Positioning**: Name alone opens doors; network spans industries and geographies <span class="info-icon" onclick="showReasoning('level5-positioning')">i</span>
+**Advancement**: Name alone opens doors; network spans industries and geographies <span class="info-icon" onclick="showReasoning('level5-advancement')">i</span>
 
-**Resilience**: Disruption-proof; three or more cross-industry transitions completed; offers within weeks of any disruption <span class="info-icon" onclick="showReasoning('level5-resilience')">i</span>
+**Security**: Disruption-proof; three or more cross-industry transitions completed; offers within weeks of any disruption <span class="info-icon" onclick="showReasoning('level5-security')">i</span>
+
+**Meaning**: Professional identity and personal purpose are fully integrated; career legacy reflects a coherent life philosophy <span class="info-icon" onclick="showReasoning('level5-meaning')">i</span>
 
 ## Levels
 
@@ -99,65 +117,85 @@ const researchData = {
         title: 'Emergency Savings Shortfall',
         content: 'A 2026 Bankrate survey found that 59% of Americans cannot cover more than three months of expenses from savings. Without financial runway, career decisions become reactive and constrained -- people cannot afford to leave bad situations, invest in retraining, or take strategic risks. <a href="https://www.bankrate.com/banking/savings/emergency-savings-report/" target="_blank">View study</a>'
     },
-    'level1-direction': {
-        title: 'Level 1 Direction Reasoning',
+    'level1-clarity': {
+        title: 'Level 1 Clarity Reasoning',
         content: 'Having vague fields of interest without a documented plan is the baseline. With 50% of workers treating their job as "just a job," even basic career interest identification places you near the median. No written plan means career progression is largely reactive and opportunistic. <a href="https://www.pewresearch.org/social-trends/2024/07/24/how-americans-view-their-jobs/" target="_blank">Pew Research (2024)</a>'
     },
-    'level1-positioning': {
-        title: 'Level 1 Positioning Reasoning',
+    'level1-advancement': {
+        title: 'Level 1 Advancement Reasoning',
         content: 'Minimum qualifications and a basic online presence represent the starting point. Most people have a LinkedIn profile but rarely update it, and maintain only a small number of professional contacts -- typically those they happen to work with rather than strategically chosen connections.'
     },
-    'level1-resilience': {
-        title: 'Level 1 Resilience Reasoning',
+    'level1-security': {
+        title: 'Level 1 Security Reasoning',
         content: 'Having a CV but no articulated transferable skills and less than three months of savings is the norm. With 59% of people unable to cover more than three months of expenses, this baseline resilience level represents roughly the population median. <a href="https://www.bankrate.com/banking/savings/emergency-savings-report/" target="_blank">Bankrate (2026)</a>'
     },
-    'level2-direction': {
-        title: 'Level 2 Direction Reasoning',
+    'level1-meaning': {
+        title: 'Level 1 Meaning Reasoning',
+        content: 'A vague sense of what kind of work feels worthwhile without deliberate alignment between career and values is the baseline. Most people have not formally examined what makes work meaningful to them, and career choices are driven by opportunity and compensation rather than purpose.'
+    },
+    'level2-clarity': {
+        title: 'Level 2 Clarity Reasoning',
         content: 'A written two-to-three year direction with industry awareness represents 80th percentile capability. Most people have never written down their career goals or researched their industry trajectory. Simply documenting a plan and understanding where your sector is heading exceeds what 80% of professionals do.'
     },
-    'level2-positioning': {
-        title: 'Level 2 Positioning Reasoning',
+    'level2-advancement': {
+        title: 'Level 2 Advancement Reasoning',
         content: 'Developing skills beyond your current role and having a mentor places you at the 80th percentile. With only 37% of professionals having a mentor, and most people limiting skill development to what their job requires, deliberately building beyond your role requirements is uncommon. <a href="https://mentorcliq.com/mentoring-resources/mentoring-statistics" target="_blank">MentorCliq data</a>'
     },
-    'level2-resilience': {
-        title: 'Level 2 Resilience Reasoning',
+    'level2-security': {
+        title: 'Level 2 Security Reasoning',
         content: 'An up-to-date CV with identified transferable skills and three-to-six months of financial buffer represents 80th percentile resilience. Most people update their CV only when actively job-hunting, and the majority lack sufficient savings to weather a career transition.'
     },
-    'level3-direction': {
-        title: 'Level 3 Direction Reasoning',
+    'level2-meaning': {
+        title: 'Level 2 Meaning Reasoning',
+        content: 'Being able to articulate what makes work meaningful and having a role that partially aligns with personal values represents 80th percentile meaning. Most workers have never examined their values systematically or made career choices based on purpose rather than pay.'
+    },
+    'level3-clarity': {
+        title: 'Level 3 Clarity Reasoning',
         content: 'Maintaining a living five-to-ten year strategy with multiple plausible paths mapped represents 95th percentile capability. This requires regular strategic reflection, scenario planning, and willingness to update direction based on new information -- practices that fewer than 5% of professionals sustain.'
     },
-    'level3-positioning': {
-        title: 'Level 3 Positioning Reasoning',
+    'level3-advancement': {
+        title: 'Level 3 Advancement Reasoning',
         content: 'A deliberate skill plan, 50+ professional relationships, and both a mentor and sponsor represents 95th percentile positioning. Building this level of professional capital requires years of intentional effort and sophisticated relationship management that very few achieve.'
     },
-    'level3-resilience': {
-        title: 'Level 3 Resilience Reasoning',
+    'level3-security': {
+        title: 'Level 3 Security Reasoning',
         content: 'Having survived a major career disruption whilst maintaining alternative income capabilities and six-to-twelve months of runway represents 95th percentile resilience. This combination of experience, capability, and financial preparation exceeds what 95% of professionals possess.'
     },
-    'level4-direction': {
-        title: 'Level 4 Direction Reasoning',
+    'level3-meaning': {
+        title: 'Level 3 Meaning Reasoning',
+        content: 'Career choices that consistently reflect personal values, with work experienced as genuinely purposeful most of the time, represents 95th percentile meaning. Few professionals achieve sustained alignment between what they do and what they believe matters.'
+    },
+    'level4-clarity': {
+        title: 'Level 4 Clarity Reasoning',
         content: 'A quarterly-refined career thesis with awareness of emerging roles three to five years ahead represents top 1% achievement. This requires deep industry engagement, trend analysis, and the intellectual discipline to regularly challenge and update your strategic direction.'
     },
-    'level4-positioning': {
-        title: 'Level 4 Positioning Reasoning',
+    'level4-advancement': {
+        title: 'Level 4 Advancement Reasoning',
         content: 'Being the go-to expert with senior advocates and a personal board of advisors represents top 1% positioning. This level of professional reputation and strategic relationship architecture requires exceptional skill development and years of deliberate network cultivation.'
     },
-    'level4-resilience': {
-        title: 'Level 4 Resilience Reasoning',
+    'level4-security': {
+        title: 'Level 4 Security Reasoning',
         content: 'An antifragile career structure with multiple income streams and 12+ months of runway represents top 1% resilience. At this level, disruptions actually create opportunities because the structural redundancy and financial capacity allow strategic pivots that others cannot make.'
     },
-    'level5-direction': {
-        title: 'Level 5 Direction Reasoning',
+    'level4-meaning': {
+        title: 'Level 4 Meaning Reasoning',
+        content: 'A career that directly expresses personal mission, with work consistently contributing to something deeply significant, represents top 1% meaning. At this level, career decisions are made primarily on the basis of purpose rather than compensation or status.'
+    },
+    'level5-clarity': {
+        title: 'Level 5 Clarity Reasoning',
         content: 'A career that shapes market demand with a 20+ year arc and planned phase transitions represents 99.9th percentile achievement (1 in 1,000 people). At this level, you are not following industry trends -- you are creating them, with a multi-decade vision that transcends any single role or organisation.'
     },
-    'level5-positioning': {
-        title: 'Level 5 Positioning Reasoning',
+    'level5-advancement': {
+        title: 'Level 5 Advancement Reasoning',
         content: 'Name recognition that opens doors across industries and geographies represents extraordinary positioning. Fewer than 1 in 1,000 professionals build a reputation and network of this calibre, where opportunities flow to them regardless of employment status or market conditions.'
     },
-    'level5-resilience': {
-        title: 'Level 5 Resilience Reasoning',
+    'level5-security': {
+        title: 'Level 5 Security Reasoning',
         content: 'Being disruption-proof with three or more cross-industry transitions and the ability to secure offers within weeks represents 99.9th percentile resilience. This level of career robustness -- built through diverse experience, broad capability, and deep networks -- makes virtually any disruption an opportunity.'
+    },
+    'level5-meaning': {
+        title: 'Level 5 Meaning Reasoning',
+        content: 'Full integration of professional identity and personal purpose, with a career legacy that reflects a coherent life philosophy, represents 99.9th percentile meaning. At this level, the distinction between career achievement and personal fulfilment effectively disappears.'
     }
 };
 

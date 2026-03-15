@@ -3,7 +3,7 @@ description: "Systematically identifying and removing or automating low-stakes r
 applicable_domains: ["organisation"]
 
 values:
-  organisation.speed:
+  organisation.tracking:
     pbs: 6
     pbs_reasoning: "Eliminating micro-decisions directly targets one of the largest drags on organisational speed: the cumulative time lost to low-value deliberation. Knowledge workers make an estimated 35,000 decisions per day, many of which are trivial but still consume cognitive resources and slow down processing. By establishing defaults and decision rules, this intervention removes deliberation pauses throughout the day, enabling faster movement from intention to action. The speed gain is substantial but not transformative on its own — it addresses the friction layer rather than the structural layer of personal organisation."
     isr: 55
@@ -15,7 +15,7 @@ values:
     anchor_unit: "speed_level"
     anchor_description: "Zero time lost to organisational overhead; instant movement from intention to action with no deliberation delays"
 
-  organisation.thoroughness:
+  organisation.order:
     pbs: 5
     pbs_reasoning: "Eliminating micro-decisions moderately improves thoroughness by reducing the number of points where procrastination, forgetfulness, or poor judgment can occur. When routine matters are handled by defaults rather than active choices, there are fewer opportunities for things to fall through the cracks. Decision rules for recurring situations ('if a meeting has no agenda, decline it') prevent inconsistent responses to similar situations. However, thoroughness ultimately depends more on capture systems, review practices, and follow-through habits than on decision reduction alone."
     isr: 50
@@ -27,7 +27,7 @@ values:
     anchor_unit: "thoroughness_level"
     anchor_description: "Zero missed commitments; every obligation tracked and fulfilled with complete consistency through comprehensive systems"
 
-  organisation.simplicity:
+  organisation.speed:
     pbs: 4
     pbs_reasoning: "Eliminating micro-decisions provides a modest simplicity benefit by reducing the number of active choice points in daily life, effectively making your operational system less complex. When routine matters are handled by defaults rather than deliberation, the cognitive architecture of your day becomes simpler. However, this is an indirect effect — the intervention does not itself simplify your organisational tools or processes. It reduces the decision layer rather than streamlining the system layer."
     isr: 45

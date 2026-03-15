@@ -3,7 +3,7 @@ description: "Attaching a new desired behaviour to an existing established habit
 applicable_domains: ["goals"]
 
 values:
-  goals.ambition:
+  goals.follow_through:
     pbs: 5
     pbs_reasoning: "Habit stacking forces explicit articulation of when and where a behaviour will occur, which supports ambitious goals by making stretch targets actionable at the daily level. Research on implementation intentions (Gollwitzer, 1999) shows that specifying the situational cue for a behaviour roughly doubles follow-through rates. By breaking ambitious goals into micro-behaviours attached to existing routines, habit stacking makes outsized goals feel manageable. However, the technique primarily supports execution of ambitious goals rather than the ambition itself — it does not help with setting stretch targets or cultivating the mindset to aim higher."
     isr: 60
@@ -15,7 +15,7 @@ values:
     anchor_unit: "ambition_level"
     anchor_description: "Consistently setting and pursuing transformative goals that push well beyond the comfort zone"
 
-  goals.realism:
+  goals.clarity:
     pbs: 6
     pbs_reasoning: "Habit stacking directly addresses the execution gap between intention and action — the point where most goals fail. By embedding goal-relevant behaviours into existing routines, it bypasses the need for willpower-dependent initiation. The 64% improvement in success rates found in executive populations is meaningful. Crucially, habit stacking improves the realism of ambitious goals by providing a concrete mechanism for daily progress, turning abstract aspirations into grounded, repeatable actions. However, it is most effective for small, repeatable behaviours rather than complex multi-step goals. It raises the floor of daily consistency but does not address capacity assessment, constraint modelling, or milestone calibration."
     isr: 55
@@ -27,7 +27,7 @@ values:
     anchor_unit: "realism_level"
     anchor_description: "Goals perfectly calibrated to actual capacity, with milestones reliably achieved through honest constraint assessment"
 
-  goals.flexibility:
+  goals.adaptability:
     pbs: 3
     pbs_reasoning: "Habit stacking provides minimal direct benefit to goal flexibility. The technique is inherently about building fixed routines, which can actually reduce flexibility if over-applied. It does not include mechanisms for reviewing whether goals remain worth pursuing, adjusting timelines, or changing course when new information emerges. The modest score reflects the indirect benefit that stable daily habits free cognitive resources for higher-order strategic thinking, but this is a second-order effect rather than a direct contribution."
     isr: 50

@@ -3,7 +3,7 @@ description: "Regularly investing in broad-market index funds (such as global eq
 applicable_domains: ["investing"]
 
 values:
-  investing.returns:
+  investing.growth:
     pbs: 8
     pbs_reasoning: "Index fund investing delivers market-rate returns, which over long periods (20+ years) represent substantial wealth creation. Historical data shows global equity indices returning 7-10% annualised nominal returns. SPIVA research demonstrates that passive indexing outperforms 92-95% of active managers over 15 years, making it the highest-probability path to strong long-term returns available to retail investors. A PBS of 8 reflects that this is one of the most impactful things a typical person can do for investment returns -- only higher-risk strategies or exceptional skill could score higher."
     isr: 80
@@ -15,7 +15,7 @@ values:
     anchor_unit: "returns_level"
     anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
 
-  investing.risk:
+  investing.safety:
     pbs: 5
     pbs_reasoning: "Index fund investing provides meaningful risk management through broad diversification across hundreds or thousands of securities, eliminating single-stock risk entirely. However, it does not address market-level risk -- a global index fund still experiences full drawdowns during crashes. The strategy is specifically designed to accept market risk in exchange for market returns, rather than actively managing downside exposure. A PBS of 5 reflects genuine but bounded risk management benefit."
     isr: 85
@@ -27,7 +27,7 @@ values:
     anchor_unit: "risk_level"
     anchor_description: "Comprehensive portfolio risk management with minimised downside exposure across all market conditions"
 
-  investing.independence:
+  investing.simplicity:
     pbs: 7
     pbs_reasoning: "Index fund investing is one of the most reliable paths to financial independence for retail investors. The combination of market-rate returns (7-10% nominal), low costs, and tax efficiency through ISAs and SIPPs compounds effectively toward FI milestones. For someone targeting a specific freedom number, passive indexing provides the highest-probability route to reaching it. A PBS of 7 reflects that this is a powerful FI-building intervention, though it does not address savings rate or spending -- only the investment returns component of the FI equation."
     isr: 75

@@ -1,11 +1,17 @@
 [← Back to Home](../)
 # Systems
 
-## Why Systems Matter
+## What is Systems?
 
-Personal systems -- the tools, automations, and workflows you use to manage information, tasks, and recurring processes -- determine how much of your cognitive capacity goes toward administration versus meaningful work. 94% of employees regularly perform repetitive tasks and manual processes, and around 54% believe automation tools could save them more than 5 hours per week <span class="info-icon" onclick="showReasoning('research-repetitive-tasks')">i</span>. Workflow automation can reduce repetitive tasks by 60 -- 95%, leading to time savings of up to 77% on routine activities <span class="info-icon" onclick="showReasoning('research-automation-savings')">i</span>.
+Systems are the tools, automations, and workflows you build to handle recurring tasks and manage information without relying on memory or willpower. They are the infrastructure that lets you spend your attention on what matters rather than on administration.
 
-Despite these potential gains, most people operate without deliberate systems. Approximately 70% of projects fall short of their goals, and teams that prioritise tasks effectively are 1.4 times more likely to outperform their peers <span class="info-icon" onclick="showReasoning('research-task-management')">i</span>. The gap between people who build and maintain personal systems and those who rely on memory and improvisation widens over time, as systematic approaches compound their benefits while ad hoc approaches accumulate their costs. The best personal systems are invisible when working and obvious only in their absence.
+## Why Systems matter
+
+- **Most work is repetitive and automatable** -- 94% of employees regularly perform repetitive tasks, and around 54% believe automation could save them more than 5 hours per week <span class="info-icon" onclick="showReasoning('research-repetitive-tasks')">i</span>
+- **Automation delivers enormous time savings** -- workflow automation can reduce repetitive tasks by 60 -- 95%, saving up to 77% of time on routine activities <span class="info-icon" onclick="showReasoning('research-automation-savings')">i</span>
+- **Without systems, projects fail** -- approximately 70% of projects fall short of their goals, whilst teams that prioritise tasks effectively are 1.4 times more likely to outperform their peers <span class="info-icon" onclick="showReasoning('research-task-management')">i</span>
+- **The gap compounds over time** -- systematic approaches accumulate benefits whilst ad hoc approaches accumulate costs, meaning the difference between people with good systems and those without widens with every year
+- **The best systems are invisible** -- they are obvious only in their absence, working quietly in the background so you can focus on decisions and creative work rather than logistics
 
 ## Systems Values
 

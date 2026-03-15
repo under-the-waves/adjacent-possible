@@ -27,7 +27,7 @@ values:
     anchor_unit: "engagement_level"
     anchor_description: "Work engagement from completely disengaged and dreading tasks (0) to deeply absorbed and energised by daily work (10)"
 
-  current-work.impact:
+  current-work.rewards:
     pbs: 3
     pbs_reasoning: "The link between keyboard shortcuts and work impact is indirect and modest. Faster execution frees up time that could theoretically be redirected toward higher-impact activities, but the actual time saved (roughly 30-40 minutes per day) is often absorbed by other low-value tasks rather than strategically redeployed. Shortcuts do not improve the quality, creativity, or strategic value of your output -- they only speed up execution of decisions already made. For roles where speed of execution is a bottleneck (e.g., data entry, coding under time pressure), the impact benefit is somewhat higher, but for most knowledge workers, thinking quality matters far more than typing speed."
     isr: 90
