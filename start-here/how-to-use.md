@@ -1,6 +1,7 @@
 ---
 layout: default
 title: How to Use This Site
+permalink: /start-here/how-to-use/
 ---
 
 # How to Use This Site

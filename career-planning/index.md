@@ -101,7 +101,7 @@ const researchData = {
     },
     'level1-direction': {
         title: 'Level 1 Direction Reasoning',
-        content: 'Having vague fields of interest without a documented plan is the baseline. With 50% of workers treating their job as "just a job," even basic career interest identification places you near the median. No written plan means career progression is largely reactive and opportunistic.'
+        content: 'Having vague fields of interest without a documented plan is the baseline. With 50% of workers treating their job as "just a job," even basic career interest identification places you near the median. No written plan means career progression is largely reactive and opportunistic. <a href="https://www.pewresearch.org/social-trends/2024/07/24/how-americans-view-their-jobs/" target="_blank">Pew Research (2024)</a>'
     },
     'level1-positioning': {
         title: 'Level 1 Positioning Reasoning',
@@ -109,7 +109,7 @@ const researchData = {
     },
     'level1-resilience': {
         title: 'Level 1 Resilience Reasoning',
-        content: 'Having a CV but no articulated transferable skills and less than three months of savings is the norm. With 59% of people unable to cover more than three months of expenses, this baseline resilience level represents roughly the population median.'
+        content: 'Having a CV but no articulated transferable skills and less than three months of savings is the norm. With 59% of people unable to cover more than three months of expenses, this baseline resilience level represents roughly the population median. <a href="https://www.bankrate.com/banking/savings/emergency-savings-report/" target="_blank">Bankrate (2026)</a>'
     },
     'level2-direction': {
         title: 'Level 2 Direction Reasoning',
@@ -117,7 +117,7 @@ const researchData = {
     },
     'level2-positioning': {
         title: 'Level 2 Positioning Reasoning',
-        content: 'Developing skills beyond your current role and having a mentor places you at the 80th percentile. With only 37% of professionals having a mentor, and most people limiting skill development to what their job requires, deliberately building beyond your role requirements is uncommon.'
+        content: 'Developing skills beyond your current role and having a mentor places you at the 80th percentile. With only 37% of professionals having a mentor, and most people limiting skill development to what their job requires, deliberately building beyond your role requirements is uncommon. <a href="https://mentorcliq.com/mentoring-resources/mentoring-statistics" target="_blank">MentorCliq data</a>'
     },
     'level2-resilience': {
         title: 'Level 2 Resilience Reasoning',

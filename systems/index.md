@@ -11,14 +11,14 @@ Despite these potential gains, most people operate without deliberate systems. A
 
 Your approach to personal systems depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
-### Automation (40%)
-Reducing manual effort through automated workflows, templates, recurring processes, and tools that handle routine decisions without your intervention. This includes automated bill payments, email filters, backup systems, and any process that runs reliably without ongoing attention. People who prioritise this value invest upfront in building systems that save time indefinitely.
+### Power (35%)
+Maximising what your personal systems can do -- automation depth, feature richness, customisation, and the ability to handle complex workflows and edge cases. This includes sophisticated automations, multi-step integrations, and systems that can handle anything you throw at them. People who prioritise this value invest significant time building systems that save large amounts of time once complete, accepting complexity as a worthwhile cost.
 
-### Integration (35%)
-Ensuring your tools and systems work together seamlessly, with information flowing between them without manual transfer. This includes connected calendars, synchronised task managers, unified note-taking systems, and workflows where data entered once is available everywhere it is needed. Those who prioritise this value eliminate the friction of disconnected tools.
+### Simplicity (35%)
+Keeping personal systems as minimal, intuitive, and easy to understand as possible. This includes using fewer tools, avoiding over-engineering, choosing solutions that require no documentation to use, and preferring manual processes over complex automations that might break. People who prioritise this value believe the best system is one you actually use consistently, and that complexity is the enemy of sustained adoption.
 
-### Maintainability (25%)
-Building systems that are simple enough to sustain, easy to update, and resilient to changes in tools or circumstances. This includes documentation, regular reviews, and choosing robust over clever solutions. People who prioritise this value design systems that work reliably over years rather than impressive setups that collapse under neglect.
+### Reliability (30%)
+Ensuring your systems work consistently and fail gracefully, with minimal unplanned maintenance or debugging. This includes choosing proven tools over cutting-edge ones, building in redundancy, testing automations before depending on them, and designing systems that degrade gracefully when something breaks. People who prioritise this value accept less capability or more manual work in exchange for systems they can trust.
 
 ## Benchmarks by Level
 
@@ -26,43 +26,43 @@ Most people operate without intentional personal systems. They rely on memory, i
 
 ### Level 1: Awareness
 
-**Automation**: Identify which of your recurring tasks could be automated and estimate the time currently spent on manual repetitive work <span class="info-icon" onclick="showReasoning('level1-automation')">i</span>
+**Power**: Identify the full range of tasks your systems could handle and estimate how much capability you are leaving on the table with your current setup <span class="info-icon" onclick="showReasoning('level1-power')">i</span>
 
-**Integration**: Map your current tools and identify where you manually transfer information between systems <span class="info-icon" onclick="showReasoning('level1-integration')">i</span>
+**Simplicity**: Audit your current tools and workflows for unnecessary complexity -- identify systems that are harder to use than they need to be or that you avoid because they are too complicated <span class="info-icon" onclick="showReasoning('level1-simplicity')">i</span>
 
-**Maintainability**: Assess which of your current systems (if any) are actually maintained and which have been abandoned or fallen into disrepair <span class="info-icon" onclick="showReasoning('level1-maintainability')">i</span>
+**Reliability**: Assess which of your current systems actually work consistently and which regularly fail, break, or require unplanned maintenance <span class="info-icon" onclick="showReasoning('level1-reliability')">i</span>
 
 ### Level 2: Foundation (80th percentile capability)
 
-**Automation**: Core financial tasks automated (bill payments, savings transfers), email filters handling routine messages, and at least one recurring workflow automated <span class="info-icon" onclick="showReasoning('level2-automation')">i</span>
+**Power**: Core workflows covered by capable tools -- task management, calendar, note-taking, and financial tracking -- with at least one multi-step automation handling a recurring process <span class="info-icon" onclick="showReasoning('level2-power')">i</span>
 
-**Integration**: A single trusted task management system and calendar, with key tools connected where possible <span class="info-icon" onclick="showReasoning('level2-integration')">i</span>
+**Simplicity**: A small number of well-chosen tools that you actually use consistently, with straightforward workflows that require no documentation to follow <span class="info-icon" onclick="showReasoning('level2-simplicity')">i</span>
 
-**Maintainability**: Systems reviewed at least quarterly, with clear documentation of key processes and passwords <span class="info-icon" onclick="showReasoning('level2-maintainability')">i</span>
+**Reliability**: Systems that work without intervention for weeks at a time, with key processes backed up and passwords securely stored <span class="info-icon" onclick="showReasoning('level2-reliability')">i</span>
 
 ### Level 3: Proficiency (95th percentile capability)
 
-**Automation**: Most recurring processes automated -- finances, backups, routine communications, data collection, and scheduling. Manual intervention is the exception, not the default <span class="info-icon" onclick="showReasoning('level3-automation')">i</span>
+**Power**: Systems that handle most of your recurring processes -- finances, backups, communications, scheduling, and data collection -- with the ability to manage edge cases and exceptions without manual workarounds <span class="info-icon" onclick="showReasoning('level3-power')">i</span>
 
-**Integration**: Tools connected into a coherent ecosystem where information entered once flows to all relevant destinations. Minimal manual data transfer <span class="info-icon" onclick="showReasoning('level3-integration')">i</span>
+**Simplicity**: A coherent, minimal toolkit where each tool earns its place. Workflows are intuitive enough that you could explain them to someone else in under a minute <span class="info-icon" onclick="showReasoning('level3-simplicity')">i</span>
 
-**Maintainability**: All systems documented, regularly reviewed, and designed to be simple enough that they survive changes in tools or priorities <span class="info-icon" onclick="showReasoning('level3-maintainability')">i</span>
+**Reliability**: All critical systems tested and proven, with documented fallback procedures. Failures are rare and, when they occur, are caught quickly and resolved without data loss <span class="info-icon" onclick="showReasoning('level3-reliability')">i</span>
 
 ### Level 4: Excellence (99th percentile capability)
 
-**Automation**: Comprehensive automation covering personal finances, household management, information management, and professional workflows. Systems handle edge cases gracefully with minimal oversight <span class="info-icon" onclick="showReasoning('level4-automation')">i</span>
+**Power**: Comprehensive systems covering personal, household, and professional domains, with sophisticated automations that handle complex conditional logic and edge cases gracefully <span class="info-icon" onclick="showReasoning('level4-power')">i</span>
 
-**Integration**: A fully integrated personal information system where task management, notes, calendar, finances, and health data are connected and accessible from any context <span class="info-icon" onclick="showReasoning('level4-integration')">i</span>
+**Simplicity**: Despite high capability, systems remain understandable and maintainable. Complexity is hidden behind clean interfaces, and any component can be replaced without rebuilding the whole <span class="info-icon" onclick="showReasoning('level4-simplicity')">i</span>
 
-**Maintainability**: Systems designed with graceful degradation -- if any single tool fails, the overall system continues functioning. Regular stress-testing and improvement cycles <span class="info-icon" onclick="showReasoning('level4-maintainability')">i</span>
+**Reliability**: Systems designed with graceful degradation -- if any single tool fails, the overall system continues functioning. Regular stress-testing and proactive maintenance prevent failures before they occur <span class="info-icon" onclick="showReasoning('level4-reliability')">i</span>
 
 ### Level 5: Mastery (99.9th percentile capability)
 
-**Automation**: Near-complete automation of all routine life administration, with systems sophisticated enough to handle exceptions and alert you only when genuine decisions are needed <span class="info-icon" onclick="showReasoning('level5-automation')">i</span>
+**Power**: Near-complete coverage of all life administration, with systems sophisticated enough to handle exceptions, learn from patterns, and alert you only when genuine decisions are needed <span class="info-icon" onclick="showReasoning('level5-power')">i</span>
 
-**Integration**: A seamless personal operating system where all tools, data, and workflows form a unified whole -- information is always available in the right context without searching or manual transfer <span class="info-icon" onclick="showReasoning('level5-integration')">i</span>
+**Simplicity**: Extraordinary capability delivered through systems that feel effortless to use. The underlying complexity is invisible -- interactions are intuitive, and the system adapts to you rather than requiring you to adapt to it <span class="info-icon" onclick="showReasoning('level5-simplicity')">i</span>
 
-**Maintainability**: Systems that are self-documenting, self-monitoring, and designed to evolve. The infrastructure has survived multiple tool migrations and life changes without losing functionality <span class="info-icon" onclick="showReasoning('level5-maintainability')">i</span>
+**Reliability**: Systems that are self-monitoring, self-healing where possible, and have survived multiple tool migrations and life changes without losing functionality. Unplanned downtime is essentially zero <span class="info-icon" onclick="showReasoning('level5-reliability')">i</span>
 
 ## Levels
 
@@ -88,21 +88,21 @@ const researchData = {
         title: 'Task Management and Performance',
         content: 'Approximately 70% of projects fall short of their goals in timely delivery, budget, or scope. Teams that prioritise tasks effectively are 1.4 times more likely to outperform their peers. Structured task management practices significantly improve project goal achievement. <a href="https://www.breeze.pm/blog/task-management-statistics" target="_blank">View statistics</a>'
     },
-    'level1-automation': { title: 'Level 1 Automation Reasoning', content: 'Most people have never audited their recurring tasks to identify automation candidates. The first step is recognising how much time goes to repetitive manual processes that could be eliminated.' },
-    'level1-integration': { title: 'Level 1 Integration Reasoning', content: 'Mapping your tool landscape reveals how much time is lost to manual information transfer. Most people use 5 -- 10 tools with minimal connection between them, creating constant low-level friction.' },
-    'level1-maintainability': { title: 'Level 1 Maintainability Reasoning', content: 'Most people have started systems they no longer maintain -- abandoned to-do apps, outdated filing systems, forgotten automations. Assessing what actually works is the foundation for improvement.' },
-    'level2-automation': { title: 'Level 2 Automation Reasoning', content: 'Automated bills, savings, and email filters represent 80th percentile automation. Most people still manually pay bills, transfer savings, and process all email without filters.' },
-    'level2-integration': { title: 'Level 2 Integration Reasoning', content: 'A single trusted task system and calendar with key integrations places you above 80% of people. Many use multiple disconnected lists, paper notes, and rely on memory.' },
-    'level2-maintainability': { title: 'Level 2 Maintainability Reasoning', content: 'Quarterly system reviews with documented processes represent 80th percentile maintenance. Most personal systems are set up once and never reviewed or updated.' },
-    'level3-automation': { title: 'Level 3 Automation Reasoning', content: 'Most recurring processes automated with manual intervention as the exception represents top 5%. This requires significant upfront investment and technical capability that most people lack.' },
-    'level3-integration': { title: 'Level 3 Integration Reasoning', content: 'A coherent tool ecosystem with minimal manual data transfer represents top 5% integration. Building connected systems requires both technical skill and deliberate design.' },
-    'level3-maintainability': { title: 'Level 3 Maintainability Reasoning', content: 'All systems documented, regularly reviewed, and designed for simplicity represents top 5% system management. Most people build complexity they cannot maintain.' },
-    'level4-automation': { title: 'Level 4 Automation Reasoning', content: 'Comprehensive automation across personal, household, and professional domains with graceful edge-case handling represents top 1% system sophistication.' },
-    'level4-integration': { title: 'Level 4 Integration Reasoning', content: 'A fully integrated personal information system accessible from any context represents top 1% digital infrastructure. This level of integration requires exceptional design thinking and technical capability.' },
-    'level4-maintainability': { title: 'Level 4 Maintainability Reasoning', content: 'Systems with graceful degradation and regular stress-testing represent top 1% resilience. Most personal systems have single points of failure that would cause cascading problems.' },
-    'level5-automation': { title: 'Level 5 Automation Reasoning', content: 'Near-complete life administration automation with intelligent exception handling represents 99.9th percentile -- fewer than 1 in 1,000 people achieve this level of systematic living.' },
-    'level5-integration': { title: 'Level 5 Integration Reasoning', content: 'A seamless personal operating system where all information is contextually available without searching represents 99.9th percentile integration -- an achievement requiring years of deliberate system building.' },
-    'level5-maintainability': { title: 'Level 5 Maintainability Reasoning', content: 'Self-documenting, self-monitoring systems that survive multiple tool migrations represent 99.9th percentile resilience. Fewer than 1 in 1,000 people build personal infrastructure this robust.' }
+    'level1-power': { title: 'Level 1 Power Reasoning', content: 'Most people have never assessed the full capability gap between what their systems do and what they could do. The first step is recognising how much potential is untapped -- tasks that could be automated, workflows that could be streamlined, and capabilities that existing tools offer but you have never configured.' },
+    'level1-simplicity': { title: 'Level 1 Simplicity Reasoning', content: 'Many people accumulate tools and workflows without auditing them for unnecessary complexity. Recognising which systems you avoid because they are too complicated, or which tools duplicate each other, is the foundation for simplification.' },
+    'level1-reliability': { title: 'Level 1 Reliability Reasoning', content: 'Most people have systems that fail silently -- automations that stopped working, backups that are not running, or tools that produce errors they ignore. Honestly assessing what actually works consistently is the prerequisite for building trustworthy systems.' },
+    'level2-power': { title: 'Level 2 Power Reasoning', content: 'Core workflows handled by capable tools with at least one multi-step automation represents 80th percentile system power. Most people use basic tools without leveraging their full capabilities and have no automations at all.' },
+    'level2-simplicity': { title: 'Level 2 Simplicity Reasoning', content: 'A small, well-chosen toolkit used consistently represents 80th percentile simplicity. Many people accumulate dozens of apps and tools, using each one partially and creating friction through constant context-switching.' },
+    'level2-reliability': { title: 'Level 2 Reliability Reasoning', content: 'Systems that work without intervention for weeks with secure backups represent 80th percentile reliability. Most personal systems require frequent manual intervention or have single points of failure that the user has never addressed.' },
+    'level3-power': { title: 'Level 3 Power Reasoning', content: 'Systems that handle most recurring processes including edge cases represent top 5% capability. This requires significant investment in configuration, automation, and the technical skill to build systems that go beyond basic functionality.' },
+    'level3-simplicity': { title: 'Level 3 Simplicity Reasoning', content: 'A minimal, coherent toolkit where every tool earns its place and workflows are instantly explainable represents top 5% simplicity. Achieving this while maintaining real capability requires exceptional design thinking and ruthless elimination of unnecessary complexity.' },
+    'level3-reliability': { title: 'Level 3 Reliability Reasoning', content: 'Tested and proven systems with documented fallback procedures represent top 5% reliability. Most people have never stress-tested their systems or prepared for component failure, leaving them vulnerable to cascading problems.' },
+    'level4-power': { title: 'Level 4 Power Reasoning', content: 'Comprehensive systems with sophisticated conditional logic across personal, household, and professional domains represent top 1% capability. This level of system sophistication requires both deep technical skill and sustained investment over years.' },
+    'level4-simplicity': { title: 'Level 4 Simplicity Reasoning', content: 'High capability with maintained understandability -- complexity hidden behind clean interfaces with replaceable components -- represents top 1% system design. Most powerful systems become incomprehensible to their creators over time; keeping them simple despite growing capability is exceptionally rare.' },
+    'level4-reliability': { title: 'Level 4 Reliability Reasoning', content: 'Systems with graceful degradation, regular stress-testing, and proactive maintenance represent top 1% resilience. Most personal systems have single points of failure that would cause cascading problems if any component failed.' },
+    'level5-power': { title: 'Level 5 Power Reasoning', content: 'Near-complete life administration coverage with intelligent exception handling represents 99.9th percentile capability -- fewer than 1 in 1,000 people build systems this powerful and comprehensive.' },
+    'level5-simplicity': { title: 'Level 5 Simplicity Reasoning', content: 'Extraordinary capability that feels effortless -- where the system adapts to the user rather than the reverse -- represents 99.9th percentile design. This level of invisible complexity requires years of refinement and is achieved by fewer than 1 in 1,000 system builders.' },
+    'level5-reliability': { title: 'Level 5 Reliability Reasoning', content: 'Self-monitoring, self-healing systems that survive multiple tool migrations with essentially zero unplanned downtime represent 99.9th percentile resilience. Fewer than 1 in 1,000 people build personal infrastructure this robust.' }
 };
 
 </script>

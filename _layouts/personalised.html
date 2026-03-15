@@ -476,6 +476,68 @@ body .main-content {
     }
 }
 
+/* Sticky controls */
+#sticky-controls {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.sticky-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 20px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.compact-weight-bar {
+    flex: 1;
+    display: flex;
+    height: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.compact-weight-bar .weight-bar-segment {
+    height: 24px;
+    font-size: 0.7em;
+}
+
+.drawer-toggle {
+    background: #155799;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 0.85em;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.drawer-toggle:hover {
+    background: #0d47a1;
+}
+
+#sliderDrawer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+#sliderDrawer.open {
+    max-height: 600px;
+}
+
+.drawer-inner {
+    padding: 10px 0 15px;
+}
+
 /* Loading state */
 .loading {
     text-align: center;
@@ -561,34 +623,48 @@ body .main-content {
                 <p>Adjust the sliders below to reflect what matters most to you, and we'll recommend the best interventions for your priorities.</p>
             </div>
         </div>
+    </div>
 
-        <div class="controls-section">
-            <div class="sliders-container">
+    <div id="sticky-controls">
+        <div class="sticky-header">
+            <div class="compact-weight-bar" id="compactWeightBar">
                 {% for value in page.values %}
-                <div class="value-slider" id="slider-wrapper-{{ value.key }}">
-                    <div class="slider-header">
-                        <label class="slider-label">{{ value.label }}</label>
-                        <span class="slider-percentage" id="percent-{{ value.key }}">{{ value.default_weight }}%</span>
-                    </div>
-                    <input type="range" min="0" max="100" value="{{ value.default_weight }}" class="slider-track" id="slider-{{ value.key }}" style="background: {{ value.color }};">
-                    <p class="slider-description">{{ value.description }}</p>
-                </div>
+                <div class="weight-bar-segment" id="compact-bar-{{ value.key }}" style="width: {{ value.default_weight }}%; background-color: {{ value.color }};">{{ value.default_weight }}%</div>
                 {% endfor %}
             </div>
-
-            <div class="weight-bar-container">
-                <div class="weight-bar" id="weightBar">
-                    {% for value in page.values %}
-                    <div class="weight-bar-segment" id="bar-{{ value.key }}" style="width: {{ value.default_weight }}%; background-color: {{ value.color }};">{{ value.default_weight }}%</div>
-                    {% endfor %}
-                </div>
-                <div class="weight-bar-legend">
-                    {% for value in page.values %}
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background-color: {{ value.color }};"></span>
-                        {{ value.label }}
+            <button class="drawer-toggle" id="drawerToggle" onclick="toggleDrawer()">Hide weights</button>
+        </div>
+        <div id="sliderDrawer" class="open">
+            <div class="drawer-inner">
+                <div class="controls-section">
+                    <div class="sliders-container">
+                        {% for value in page.values %}
+                        <div class="value-slider" id="slider-wrapper-{{ value.key }}">
+                            <div class="slider-header">
+                                <label class="slider-label">{{ value.label }}</label>
+                                <span class="slider-percentage" id="percent-{{ value.key }}">{{ value.default_weight }}%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="{{ value.default_weight }}" class="slider-track" id="slider-{{ value.key }}" style="background: {{ value.color }};">
+                            <p class="slider-description">{{ value.description }}</p>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+
+                    <div class="weight-bar-container">
+                        <div class="weight-bar" id="weightBar">
+                            {% for value in page.values %}
+                            <div class="weight-bar-segment" id="bar-{{ value.key }}" style="width: {{ value.default_weight }}%; background-color: {{ value.color }};">{{ value.default_weight }}%</div>
+                            {% endfor %}
+                        </div>
+                        <div class="weight-bar-legend">
+                            {% for value in page.values %}
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background-color: {{ value.color }};"></span>
+                                {{ value.label }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -599,9 +675,10 @@ body .main-content {
             <div class="recommendations-header">
                 <h2>Your Recommended Interventions</h2>
                 <p>Based on your priorities, here are the interventions that will give you the best results:</p>
-                <div class="methodology-note">
-                    <p><strong>How scoring works:</strong> Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
-                </div>
+                <details class="methodology-note">
+                    <summary><strong>How scoring works</strong></summary>
+                    <p>Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
+                </details>
             </div>
 
             <table class="recommendations-table" id="recommendationsTable">
@@ -726,10 +803,20 @@ function updateAllControls() {
 function updateWeightBar() {
     valueConfig.forEach(v => {
         const seg = document.getElementById('bar-' + v.key);
+        const compactSeg = document.getElementById('compact-bar-' + v.key);
         const pct = Math.round(currentValues[v.key]);
         seg.style.width = pct + '%';
         seg.textContent = pct > 8 ? pct + '%' : '';
+        compactSeg.style.width = pct + '%';
+        compactSeg.textContent = pct > 8 ? pct + '%' : '';
     });
+}
+
+function toggleDrawer() {
+    const drawer = document.getElementById('sliderDrawer');
+    const btn = document.getElementById('drawerToggle');
+    drawer.classList.toggle('open');
+    btn.textContent = drawer.classList.contains('open') ? 'Hide weights' : 'Adjust weights';
 }
 
 function getInterventionUrl(key) {

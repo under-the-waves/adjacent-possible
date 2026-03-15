@@ -13,58 +13,58 @@ Your approach to investing depends on what aspects you value most. This guide ba
 
 For personalised recommendations based on your unique priorities, visit [Investing Personalised]({{ site.baseurl }}/investing/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Returns (40%)
-Maximising risk-adjusted returns on invested capital. This includes selecting appropriate asset allocations, minimising unnecessary costs and taxes, capturing available risk premia, and compounding wealth efficiently over time. People who prioritise this value focus on measurable outcomes - net returns relative to benchmarks, drawdown management, and long-term wealth accumulation.
+### Returns (35%)
+Maximising risk-adjusted returns on invested capital over time. This includes selecting appropriate asset allocations, minimising fees and taxes, capturing risk premia, and compounding wealth as efficiently as possible. People who prioritise this value focus on net performance relative to benchmarks and long-term wealth accumulation.
 
-### Knowledge (35%)
-Understanding investment principles, markets, and portfolio construction. This includes grasping how asset classes behave, why diversification works, how fees compound, and what drives market returns over different time horizons. Those who prioritise this value invest in their own financial education, study market history, and develop frameworks for evaluating opportunities and risks.
+### Risk management (35%)
+Minimising downside exposure and maintaining portfolio stability through market cycles. This includes diversification, appropriate position sizing, understanding sequence-of-returns risk, and ensuring drawdowns remain within tolerable limits. People who prioritise this value accept potentially lower expected returns in exchange for smoother outcomes and protection against catastrophic losses.
 
-### Discipline (25%)
-Maintaining consistent investment behaviour through market cycles. This includes automating contributions, adhering to a rebalancing schedule, resisting the urge to time the market, and staying the course during downturns. People who prioritise this value recognise that the greatest threat to returns is their own behaviour, and they build systems to protect against emotional decision-making.
+### Financial independence (30%)
+Accumulating sufficient invested wealth to make paid employment optional. This includes targeting specific FI milestones (Coast FI, Lean FI, full FI), optimising savings rate alongside investment returns, and making allocation decisions that prioritise reaching a threshold rather than maximising absolute wealth. People who prioritise this value orient their entire investment strategy around a specific freedom number.
 
 ## Benchmarks by Level
 
-Research reveals a stark gap between investment participation and investment competence. Most investors lack basic financial literacy, trade too frequently, chase recent performance, and panic during downturns. The average investor's behaviour gap - the difference between fund returns and investor returns - costs 3 - 5% annually. Even among professionals, 94% of active funds underperform their benchmark over 20 years. These patterns mean that even modest discipline and knowledge represent significantly higher capability than the norm.
+Research reveals a stark gap between investment participation and investment competence. Most investors lack basic financial literacy, trade too frequently, chase recent performance, and panic during downturns. The average investor's behaviour gap - the difference between fund returns and investor returns - <a href="https://www.dalbar.com/QAIB/Index" target="_blank">costs 3 - 5% annually</a>. Even among professionals, <a href="https://www.spglobal.com/spdji/en/research-insights/spiva/" target="_blank">94% of active funds underperform their benchmark over 20 years</a>. These patterns mean that even modest discipline and knowledge represent significantly higher capability than the norm.
 
 ### Level 1: Awareness
 
 **Returns**: Holds some investments; returns unexamined; underperforms market by 3 - 5%/yr <span class="info-icon" onclick="showReasoning('level1-returns')">i</span>
 
-**Knowledge**: Knows investing exists; cannot answer basic financial literacy questions <span class="info-icon" onclick="showReasoning('level1-knowledge')">i</span>
+**Risk management**: No awareness of portfolio risk; no diversification strategy; fully exposed to drawdowns <span class="info-icon" onclick="showReasoning('level1-risk')">i</span>
 
-**Discipline**: Invests sporadically; no plan; susceptible to panic selling <span class="info-icon" onclick="showReasoning('level1-discipline')">i</span>
+**Financial independence**: No FI target; investing without reference to a freedom number or milestone <span class="info-icon" onclick="showReasoning('level1-independence')">i</span>
 
 ### Level 2: Foundation (80th percentile capability)
 
 **Returns**: Matches broad market indices (~8 - 10% nominal); behaviour gap <1% <span class="info-icon" onclick="showReasoning('level2-returns')">i</span>
 
-**Knowledge**: Understands asset allocation, fees, compounding, and diversification <span class="info-icon" onclick="showReasoning('level2-knowledge')">i</span>
+**Risk management**: Diversified across asset classes; understands own risk tolerance; portfolio drawdown within planned limits <span class="info-icon" onclick="showReasoning('level2-risk')">i</span>
 
-**Discipline**: Automated regular contributions; annual rebalancing; survived one downturn <span class="info-icon" onclick="showReasoning('level2-discipline')">i</span>
+**Financial independence**: Knows FI number; tracks progress; investment allocation reflects FI timeline <span class="info-icon" onclick="showReasoning('level2-independence')">i</span>
 
 ### Level 3: Proficiency (95th percentile capability)
 
 **Returns**: Market + tax alpha; 9 - 12% net; Sharpe >0.5 over 10yr <span class="info-icon" onclick="showReasoning('level3-returns')">i</span>
 
-**Knowledge**: Factor investing, MPT, behavioural finance; CFA L1/L2 equivalent <span class="info-icon" onclick="showReasoning('level3-knowledge')">i</span>
+**Risk management**: Quantified risk budget; tail-risk hedging; portfolio survived 30%+ drawdown within planned parameters <span class="info-icon" onclick="showReasoning('level3-risk')">i</span>
 
-**Discipline**: Written IPS; threshold rebalancing; survived two bear markets; <5 trades/yr <span class="info-icon" onclick="showReasoning('level3-discipline')">i</span>
+**Financial independence**: Achieved Coast FI; allocation strategy shifts as FI milestones approach; glide path planned <span class="info-icon" onclick="showReasoning('level3-independence')">i</span>
 
 ### Level 4: Excellence (99th percentile capability)
 
 **Returns**: 2 - 5% above market over 10yr; Sharpe >1.0 <span class="info-icon" onclick="showReasoning('level4-returns')">i</span>
 
-**Knowledge**: Derivatives, macro, microstructure; CFA/PhD equivalent <span class="info-icon" onclick="showReasoning('level4-knowledge')">i</span>
+**Risk management**: Stress-tested portfolio against historical crises; options overlays or hedging strategies; maximum drawdown consistently below market <span class="info-icon" onclick="showReasoning('level4-risk')">i</span>
 
-**Discipline**: Rules-based framework; survived 3+ bear markets; risk-calibrated sizing <span class="info-icon" onclick="showReasoning('level4-discipline')">i</span>
+**Financial independence**: Lean FI achieved; portfolio structured for sustainable withdrawal; sequence-of-returns risk mitigated <span class="info-icon" onclick="showReasoning('level4-independence')">i</span>
 
 ### Level 5: Mastery (99.9th percentile capability)
 
 **Returns**: 10%+ above market over 15yr; Sharpe >2.0 <span class="info-icon" onclick="showReasoning('level5-returns')">i</span>
 
-**Knowledge**: Proprietary analytical edge; multi-disciplinary mastery <span class="info-icon" onclick="showReasoning('level5-knowledge')">i</span>
+**Risk management**: Proprietary risk models; portfolio resilient across all historical regimes; anti-fragile positioning that profits from volatility <span class="info-icon" onclick="showReasoning('level5-risk')">i</span>
 
-**Discipline**: Fully systematised; immune to emotional interference; decades of consistency <span class="info-icon" onclick="showReasoning('level5-discipline')">i</span>
+**Financial independence**: Full FI achieved and sustained; portfolio generates reliable income across market regimes; work is entirely optional <span class="info-icon" onclick="showReasoning('level5-independence')">i</span>
 
 ## Levels
 
@@ -102,63 +102,63 @@ const researchData = {
     },
     'level1-returns': {
         title: 'Level 1 Returns Reasoning',
-        content: 'Most investors hold some investments but never examine their actual returns. DALBAR data shows the average equity fund investor underperforms the S&P 500 by 3 - 5% annually, placing unexamined, behaviourally-impaired returns squarely at the baseline level. Simply holding investments without tracking performance is the default state for the majority.'
+        content: 'Most investors hold some investments but never examine their actual returns. DALBAR data shows the average equity fund investor underperforms the S&P 500 by 3 - 5% annually, placing unexamined, behaviourally-impaired returns squarely at the baseline level. Simply holding investments without tracking performance is the default state for the majority. <a href="https://www.dalbar.com/QAIB/Index" target="_blank">DALBAR research</a>'
     },
-    'level1-knowledge': {
-        title: 'Level 1 Knowledge Reasoning',
-        content: 'Only 43% of adults correctly answer all three basic financial literacy questions (Lusardi & Mitchell). The majority cannot explain compound interest, inflation\'s effect on purchasing power, or why diversification reduces risk. Awareness that investing exists, without foundational understanding, represents the most common knowledge level.'
+    'level1-risk': {
+        title: 'Level 1 Risk Management Reasoning',
+        content: 'Most investors have no explicit awareness of portfolio risk. They hold whatever investments they happened to acquire without considering diversification, correlation, or downside exposure. Studies show the majority of retail investors cannot quantify their potential losses in a downturn and are fully exposed to single-asset or single-market risk.'
     },
-    'level1-discipline': {
-        title: 'Level 1 Discipline Reasoning',
-        content: 'Sporadic investing with no written plan is the norm. The average NYSE holding period of ~8.3 months suggests frequent trading driven by emotion or news rather than strategy. Studies consistently show that retail investors buy high and sell low, particularly during market stress.'
+    'level1-independence': {
+        title: 'Level 1 Financial Independence Reasoning',
+        content: 'The vast majority of investors have no FI target and have never calculated a freedom number. They invest without reference to specific milestones or withdrawal timelines. Investing at this level is disconnected from any structured plan to make paid employment optional.'
     },
     'level2-returns': {
         title: 'Level 2 Returns Reasoning',
-        content: 'Matching broad market indices through low-cost index funds with a behaviour gap below 1% represents 80th percentile achievement. Since the average investor underperforms by 3 - 5%, simply capturing market returns through buy-and-hold indexing exceeds what 80% of investors achieve. This requires minimal skill but exceptional patience.'
+        content: 'Matching broad market indices through low-cost index funds with a behaviour gap below 1% represents 80th percentile achievement. Since the average investor underperforms by 3 - 5%, simply capturing market returns through buy-and-hold indexing exceeds what 80% of investors achieve. This requires minimal skill but exceptional patience. <a href="https://www.dalbar.com/QAIB/Index" target="_blank">DALBAR research</a>'
     },
-    'level2-knowledge': {
-        title: 'Level 2 Knowledge Reasoning',
-        content: 'Understanding asset allocation, the impact of fees, how compounding works, and why diversification matters places an investor above the majority who cannot answer basic literacy questions. This level of knowledge is sufficient to construct a sound portfolio using index funds and avoid the most common mistakes.'
+    'level2-risk': {
+        title: 'Level 2 Risk Management Reasoning',
+        content: 'Diversifying across asset classes and understanding one\'s own risk tolerance places an investor above the majority who hold concentrated or poorly constructed portfolios. At this level, the investor can articulate their maximum acceptable drawdown and has positioned their portfolio accordingly, keeping losses within planned limits during moderate market stress.'
     },
-    'level2-discipline': {
-        title: 'Level 2 Discipline Reasoning',
-        content: 'Automated regular contributions remove the temptation to time the market. Annual rebalancing maintains target allocations. Having survived one downturn without panic selling demonstrates baseline emotional resilience. These habits alone place an investor well above the median.'
+    'level2-independence': {
+        title: 'Level 2 Financial Independence Reasoning',
+        content: 'Knowing your FI number (typically 25x annual expenses) and tracking progress toward it represents 80th percentile awareness. At this level, investment allocation reflects the FI timeline -- longer horizons allow more equity exposure, whilst approaching milestones triggers appropriate de-risking. Most investors never connect their portfolio to a specific independence target.'
     },
     'level3-returns': {
         title: 'Level 3 Returns Reasoning',
         content: 'Adding tax alpha (through tax-loss harvesting, asset location, and tax-efficient withdrawal strategies) on top of market returns, achieving 9 - 12% net with a Sharpe ratio above 0.5 over a decade, represents 95th percentile performance. This requires both knowledge and discipline that very few investors sustain.'
     },
-    'level3-knowledge': {
-        title: 'Level 3 Knowledge Reasoning',
-        content: 'Understanding factor investing (value, size, momentum, quality), Modern Portfolio Theory, and behavioural finance biases at a CFA Level 1/2 equivalent places an investor in the top 5% of knowledge. This enables evidence-based portfolio construction and the ability to critically evaluate investment claims.'
+    'level3-risk': {
+        title: 'Level 3 Risk Management Reasoning',
+        content: 'Having a quantified risk budget, implementing tail-risk hedging strategies, and surviving a 30%+ drawdown within planned parameters represents 95th percentile risk management. At this level, the investor has explicitly modelled worst-case scenarios and built a portfolio that behaves predictably under stress rather than one that merely hopes for the best.'
     },
-    'level3-discipline': {
-        title: 'Level 3 Discipline Reasoning',
-        content: 'A written Investment Policy Statement (IPS) codifies rules and removes discretion. Threshold-based rebalancing (e.g., rebalance when allocations drift by 5%+) is more efficient than calendar-based. Surviving two bear markets without abandoning strategy, with fewer than 5 discretionary trades per year, demonstrates exceptional discipline.'
+    'level3-independence': {
+        title: 'Level 3 Financial Independence Reasoning',
+        content: 'Achieving Coast FI -- where existing investments will compound to full FI by traditional retirement age without further contributions -- represents 95th percentile progress. At this level, the investor has a planned glide path that shifts allocation as milestones approach, balancing growth needs against the increasing importance of capital preservation near the finish line.'
     },
     'level4-returns': {
         title: 'Level 4 Returns Reasoning',
-        content: 'Consistently outperforming the market by 2 - 5% annually over a decade with a Sharpe ratio above 1.0 represents 99th percentile achievement. Given that 94% of professional fund managers fail to beat the market over 20 years, sustained outperformance at this level requires genuine skill, not luck.'
+        content: 'Consistently outperforming the market by 2 - 5% annually over a decade with a Sharpe ratio above 1.0 represents 99th percentile achievement. Given that 94% of professional fund managers fail to beat the market over 20 years, sustained outperformance at this level requires genuine skill, not luck. <a href="https://www.spglobal.com/spdji/en/research-insights/spiva/" target="_blank">SPIVA scorecard</a>'
     },
-    'level4-knowledge': {
-        title: 'Level 4 Knowledge Reasoning',
-        content: 'Deep understanding of derivatives, macroeconomic dynamics, and market microstructure at CFA charterholder or PhD level represents the top 1% of investment knowledge. This enables sophisticated strategies including options overlays, macro hedging, and understanding of market plumbing and liquidity dynamics.'
+    'level4-risk': {
+        title: 'Level 4 Risk Management Reasoning',
+        content: 'Stress-testing portfolios against historical crises (1929, 1973, 2000, 2008, 2020), implementing options overlays or hedging strategies, and consistently achieving maximum drawdowns below the broader market represents 99th percentile risk management. This requires both deep understanding of tail risks and the discipline to pay the ongoing cost of hedging.'
     },
-    'level4-discipline': {
-        title: 'Level 4 Discipline Reasoning',
-        content: 'A fully rules-based investment framework removes emotional decision-making. Surviving three or more bear markets whilst maintaining strategy demonstrates battle-tested discipline. Risk-calibrated position sizing ensures no single bet threatens the portfolio. This level of systematisation is rare even among professionals.'
+    'level4-independence': {
+        title: 'Level 4 Financial Independence Reasoning',
+        content: 'Achieving Lean FI -- where invested wealth can sustain a modest but comfortable lifestyle indefinitely -- with a portfolio structured for sustainable withdrawal and sequence-of-returns risk mitigated represents 99th percentile FI progress. At this level, the investor has moved beyond accumulation into decumulation planning, ensuring their portfolio can sustain withdrawals through adverse market conditions.'
     },
     'level5-returns': {
         title: 'Level 5 Returns Reasoning',
         content: 'Outperforming the market by 10%+ annually over 15 years with a Sharpe ratio above 2.0 represents 99.9th percentile achievement. This level of sustained outperformance is historically associated with investors like Buffett, Simons, or Medallion Fund-tier performance. Fewer than 1 in 1,000 investors achieve this.'
     },
-    'level5-knowledge': {
-        title: 'Level 5 Knowledge Reasoning',
-        content: 'A proprietary analytical edge developed through multi-disciplinary mastery - combining finance with mathematics, computer science, psychology, or domain expertise - represents the pinnacle of investment knowledge. This is the level of Renaissance Technologies, not traditional finance education.'
+    'level5-risk': {
+        title: 'Level 5 Risk Management Reasoning',
+        content: 'Proprietary risk models that maintain portfolio resilience across all historical regimes, with anti-fragile positioning that profits from volatility, represent 99.9th percentile risk management. This is the level of institutional risk management -- where the portfolio is not merely protected against extreme events but structured to benefit from the dislocations they create.'
     },
-    'level5-discipline': {
-        title: 'Level 5 Discipline Reasoning',
-        content: 'Fully systematised investment processes that are immune to emotional interference over decades of market cycles represent extraordinary discipline. This requires not just rules but complete automation of decision-making, continuous stress-testing, and the ability to trust systems through extreme market conditions spanning an entire career.'
+    'level5-independence': {
+        title: 'Level 5 Financial Independence Reasoning',
+        content: 'Full financial independence achieved and sustained -- with a portfolio that generates reliable income across all market regimes and makes work entirely optional -- represents 99.9th percentile achievement. Fewer than 1 in 1,000 investors reach a point where their invested wealth sustains their lifestyle indefinitely regardless of market conditions, economic cycles, or inflation.'
     }
 };
 

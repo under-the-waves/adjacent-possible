@@ -4,19 +4,19 @@ title: Goals Personalised
 domain: goals
 domain_label: Goals
 values:
-  - key: clarity
-    label: "Clarity"
-    description: "Defining goals with enough specificity and personal alignment that you know exactly what success looks like."
-    default_weight: 40
+  - key: ambition
+    label: "Ambition"
+    description: "Setting goals that push beyond what feels comfortable and aiming for transformative outcomes rather than incremental progress."
+    default_weight: 35
     color: "#28a745"
-  - key: achievement
-    label: "Achievement"
-    description: "Consistently completing goals through effective execution, follow-through, and accountability."
-    default_weight: 40
+  - key: realism
+    label: "Realism"
+    description: "Setting goals grounded in honest assessment of current capacity, available resources, and probability of success."
+    default_weight: 35
     color: "#dc3545"
-  - key: adaptability
-    label: "Adaptability"
-    description: "Adjusting goals intelligently as circumstances, priorities, and self-knowledge evolve."
-    default_weight: 20
+  - key: flexibility
+    label: "Flexibility"
+    description: "Maintaining the ability to change course, adjust timelines, reprioritise, or abandon goals as new information emerges."
+    default_weight: 30
     color: "#007bff"
 ---

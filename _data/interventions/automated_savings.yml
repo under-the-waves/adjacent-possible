@@ -27,17 +27,17 @@ values:
     anchor_unit: "growth_level"
     anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
 
-  saving.freedom:
+  saving.liquidity:
     pbs: 6
-    pbs_reasoning: "Financial freedom is directly enabled by consistent saving -- having savings provides optionality, reduces dependence on a single income source, and enables career flexibility. Research from the FIRE (Financial Independence, Retire Early) community and financial planning literature consistently identifies automated saving as the single most impactful behavioural change for improving financial freedom. A PBS of 6 reflects that while automated saving is necessary for freedom, it is not sufficient alone -- investment returns and income growth also matter."
+    pbs_reasoning: "Automated savings directly improves liquidity by consistently building accessible cash reserves. When directed to instant-access accounts, the intervention ensures a growing pool of funds available without penalties or delays. However, the liquidity benefit depends on where the automation directs funds -- transfers to locked-in vehicles like pensions or fixed-term accounts may increase total savings whilst reducing liquidity. A PBS of 6 reflects a strong positive impact on liquidity when configured for accessible accounts, tempered by the possibility of automation into less liquid vehicles."
     isr: 90
-    isr_reasoning: "The pathway from automated saving to increased financial freedom is well-established and reliable. Regular saving predictably increases net worth and optionality. The main uncertainty is the timeframe -- freedom timelines vary based on income, expenses, and life circumstances -- but the directional impact is highly reliable."
+    isr_reasoning: "The mechanism for building liquid savings through automation is highly reliable -- regular transfers to accessible accounts predictably increase available funds. The main risk to liquidity is if the saver later moves accumulated funds into locked-in products, but the automation itself reliably builds an accessible buffer."
     uar: 90
-    uar_reasoning: "Freedom-motivated savers tend to be slightly more engaged with their savings goals, which can paradoxically reduce the advantage of automation (they might adjust amounts more frequently). However, the automated baseline remains very sticky, and freedom-oriented savers rarely eliminate automation entirely."
+    uar_reasoning: "Liquidity-focused savers benefit strongly from automation because accessible savings feel less 'locked away' than pension contributions or fixed-term deposits. The instant-access nature of the savings reduces the psychological friction that causes some people to cancel automated transfers. The UAR of 90 reflects that automation into liquid accounts is exceptionally sticky."
     anchor_type: "subjective"
     anchor_max: 10
-    anchor_unit: "freedom_level"
-    anchor_description: "Complete financial independence with full optionality over work and lifestyle choices"
+    anchor_unit: "liquidity_level"
+    anchor_description: "Fully accessible savings with no penalties, lock-in periods, or delays when funds are needed"
 
 resources:
   upfront_cost: 0

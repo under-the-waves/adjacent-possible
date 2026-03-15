@@ -27,17 +27,17 @@ values:
     anchor_unit: "growth_level"
     anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
 
-  saving.freedom:
+  saving.liquidity:
     pbs: 5
-    pbs_reasoning: "Tax optimisation contributes to financial freedom by accelerating the accumulation of tax-efficient wealth. ISAs provide flexibility (accessible at any time, tax-free) while pensions provide long-term locked-away wealth with tax advantages. The combination enables both near-term optionality (ISA) and long-term security (pension). A PBS of 5 reflects that tax optimisation meaningfully accelerates the path to financial freedom but is a multiplier on other savings behaviours rather than a standalone driver."
+    pbs_reasoning: "Tax optimisation has a mixed impact on liquidity. ISAs preserve full liquidity -- funds are accessible at any time, tax-free -- making them the ideal vehicle for liquid savings. However, pensions sacrifice liquidity entirely until age 57+, creating a direct tension between tax efficiency and accessibility. A PBS of 5 reflects that ISA usage genuinely improves tax-efficient liquidity, but pension contributions -- often the highest-impact tax optimisation -- actively reduce it."
     isr: 80
-    isr_reasoning: "The pathway from tax optimisation to increased financial freedom is reliable but indirect. The tax savings must be combined with disciplined saving and investing to translate into actual freedom. The pension component has additional uncertainty due to access restrictions (currently age 57+) that limit near-term freedom."
+    isr_reasoning: "The liquidity characteristics of tax wrappers are well-defined and predictable. ISAs reliably maintain full accessibility. Pensions reliably restrict access until a known age. The main uncertainty is future legislative changes to access rules (the pension access age has already increased from 55 to 57). The ISR of 80 reflects high predictability tempered by long-term legislative risk."
     uar: 45
-    uar_reasoning: "Freedom-oriented individuals may initially be motivated by tax efficiency but the ongoing optimisation work (annual ISA contributions, pension reviews, tax return claims) can feel bureaucratic and disconnected from the goal of freedom. The complexity can deter continued optimisation, particularly for those who have already set up basic tax wrappers and see diminishing returns from further optimisation."
+    uar_reasoning: "Liquidity-focused individuals may resist pension contributions precisely because of the access restrictions, reducing adherence to the most tax-efficient strategies. They may over-weight ISAs (which have lower contribution limits) and under-weight pensions, limiting the overall tax benefit. The ongoing administrative work of annual optimisation can also deter continued engagement."
     anchor_type: "subjective"
     anchor_max: 10
-    anchor_unit: "freedom_level"
-    anchor_description: "Complete financial independence with full optionality over work and lifestyle choices"
+    anchor_unit: "liquidity_level"
+    anchor_description: "Fully accessible savings with no penalties, lock-in periods, or delays when funds are needed"
 
   investing.returns:
     pbs: 6
@@ -51,29 +51,29 @@ values:
     anchor_unit: "returns_level"
     anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
 
-  investing.knowledge:
+  investing.risk:
     pbs: 6
-    pbs_reasoning: "Understanding tax optimisation requires and develops meaningful financial knowledge -- tax bands, allowances, wrapper types, relief mechanisms, and the interaction between different tax-efficient vehicles. This knowledge has high practical value and transferability to other financial decisions. A PBS of 6 reflects that the knowledge gained is substantial and practically useful, though it is domain-specific (UK tax system) rather than broadly transferable to investment analysis."
+    pbs_reasoning: "Tax optimisation contributes meaningfully to risk management by ensuring more of each pound invested is protected from erosion. ISA wrappers eliminate the risk of unexpected tax liabilities on gains, dividends, and interest, providing certainty about net returns. Pension wrappers add employer contributions and tax relief that create a larger invested base, reducing the risk of falling short of targets. A PBS of 6 reflects that tax efficiency reduces a specific and important category of risk -- the risk of tax drag undermining long-term outcomes -- though it does not address market or portfolio construction risk."
     isr: 80
-    isr_reasoning: "The learning pathway for basic tax optimisation is well-supported by HMRC guidance, platform educational content, and financial media. The concepts are concrete and verifiable. However, the UK tax system changes annually (budget changes, threshold adjustments), requiring ongoing learning to maintain current knowledge. Some complexity in the interaction between different tax wrappers can lead to misunderstanding."
+    isr_reasoning: "The risk-reduction benefits of tax wrappers are well-defined and reliable. ISAs eliminate tax risk on growth with certainty. Pension tax relief provides a guaranteed uplift to the invested base. The main uncertainty is future legislative changes, but the UK has historically grandfathered existing holdings. The ISR of 80 reflects high reliability tempered by long-term policy risk."
     uar: 55
-    uar_reasoning: "Tax knowledge requires active maintenance as rules change. Many people learn the basics (ISAs good, pensions get tax relief) but do not keep up with annual changes to allowances, thresholds, and rules. The bureaucratic nature of tax optimisation can make ongoing learning feel like a chore rather than an interesting pursuit. However, those who engage tend to find the knowledge genuinely useful."
+    uar_reasoning: "Maintaining optimal tax efficiency requires ongoing attention -- annual ISA allowance usage, pension contribution reviews, and staying current with changing rules. Many people set up tax-efficient structures initially but fail to optimise annually, gradually losing the risk-management benefit of maximum tax efficiency. The bureaucratic nature of tax administration can make ongoing engagement feel like a chore."
     anchor_type: "subjective"
     anchor_max: 10
-    anchor_unit: "knowledge_level"
-    anchor_description: "Comprehensive investment knowledge enabling sophisticated financial decision-making across all asset classes"
+    anchor_unit: "risk_level"
+    anchor_description: "Comprehensive portfolio risk management with minimised downside exposure across all market conditions"
 
-  investing.discipline:
+  investing.independence:
     pbs: 4
-    pbs_reasoning: "Tax optimisation requires moderate discipline -- primarily the discipline to complete annual administrative tasks (using ISA allowances before the tax year end, filing self-assessment for pension relief, reviewing allowances). However, it does not test discipline under emotional stress in the same way that maintaining investments during a crash does. The discipline required is more administrative than psychological. A PBS of 4 reflects real but moderate discipline development."
+    pbs_reasoning: "Tax optimisation accelerates progress toward financial independence by ensuring more of each pound contributes to the FI target. The pension tax relief uplift (25% for basic-rate, 67% for higher-rate) directly increases the invested base compounding toward a freedom number. ISA wrappers ensure that withdrawals in retirement are tax-free, making the effective FI number lower. A PBS of 4 reflects that tax optimisation is a meaningful accelerator on the path to FI, but is a multiplier on other behaviours (savings rate, investment returns) rather than a primary driver."
     isr: 75
-    isr_reasoning: "The discipline benefits of tax optimisation are reliable for those who engage with the process -- annual routines develop naturally. However, the administrative nature means the discipline built is specific to financial administration rather than broader investment discipline. The annual deadline structure (ISA year-end) provides natural cadence for habit formation."
+    isr_reasoning: "The pathway from tax optimisation to faster FI is reliable and well-documented -- the mathematical benefit of eliminating tax drag on compounding growth is certain. However, the pension component introduces a tension with FI goals: pension wealth is inaccessible until age 57+, which may not align with early FI timelines. The ISR of 75 reflects reliable benefit with a meaningful constraint for early-FI seekers."
     uar: 45
-    uar_reasoning: "Administrative discipline tends to decay over time without strong external reinforcement. Many people start with good intentions to optimise annually but gradually let tasks slip. The annual nature of the task (rather than monthly or weekly) makes habit formation harder. Tax year-end articles and media reminders help but are not sufficient for most people to maintain rigorous annual optimisation."
+    uar_reasoning: "FI-focused individuals may find the administrative burden of annual tax optimisation at odds with their desire for simplicity and freedom. The tension between pension lock-in and early FI goals can reduce motivation to maximise pension contributions. Many FI-oriented savers optimise initially but do not maintain rigorous annual attention to changing allowances and thresholds."
     anchor_type: "subjective"
     anchor_max: 10
-    anchor_unit: "discipline_level"
-    anchor_description: "Unwavering financial discipline maintained through all market conditions and life circumstances"
+    anchor_unit: "independence_level"
+    anchor_description: "Sufficient invested wealth to make paid employment entirely optional, with sustainable withdrawal rates across market conditions"
 
 resources:
   upfront_cost: 0

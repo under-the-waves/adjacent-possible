@@ -11,14 +11,14 @@ Yet maintaining extended family ties requires deliberate effort. More than half 
 
 Your approach to extended family depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
-### Connection (40%)
-Maintaining regular, meaningful contact with extended family members across geographic and generational boundaries. This includes visits, calls, shared celebrations, and ongoing awareness of each other's lives. People who prioritise this value invest time in sustaining relationships that might otherwise atrophy through distance or busy schedules.
+### Closeness (35%)
+Maintaining deep, regular, emotionally intimate relationships with extended family members across geographic and generational boundaries. This includes frequent contact, shared experiences, knowing each other's daily lives, and investing time and energy in relationships that might otherwise atrophy. People who prioritise this value actively seek greater involvement with their extended family.
 
-### Support (35%)
-Building reciprocal support networks within the extended family -- practical help during crises, emotional support during difficult periods, and resource sharing across generations. Those who prioritise this value develop relationships where family members can reliably turn to one another, creating a safety net that complements but extends beyond the nuclear family.
+### Independence (35%)
+Maintaining healthy boundaries with extended family, preserving personal autonomy, and ensuring family relationships enhance rather than constrain your life choices. This includes the ability to decline invitations without guilt, make major decisions without family approval, and set limits on emotional or practical demands. People who prioritise this value believe that strong boundaries make family relationships healthier and more sustainable.
 
-### Heritage (25%)
-Preserving and transmitting family history, traditions, cultural identity, and intergenerational wisdom. This includes maintaining family stories, celebrating cultural practices, and ensuring younger generations understand their roots. People who prioritise this value see the extended family as a living repository of identity and meaning.
+### Duty (30%)
+Fulfilling obligations to extended family out of a sense of responsibility, loyalty, and reciprocity -- even when it requires personal sacrifice. This includes caring for aging relatives, attending family events, providing financial support, preserving family traditions, and maintaining relationships out of commitment rather than just enjoyment. People who prioritise this value see family as a web of mutual obligations that transcends personal preference.
 
 ## Benchmarks by Level
 
@@ -26,43 +26,43 @@ Extended family engagement varies enormously across populations. While 55% of ad
 
 ### Level 1: Awareness
 
-**Connection**: Know who your living extended family members are and have contact information for immediate relatives (grandparents, aunts, uncles, first cousins) <span class="info-icon" onclick="showReasoning('level1-connection')">i</span>
+**Closeness**: Assess the current emotional depth of your extended family relationships -- identify which relatives you genuinely know well and which you have only surface-level contact with <span class="info-icon" onclick="showReasoning('level1-closeness')">i</span>
 
-**Support**: Understand what practical and emotional support your extended family currently provides and identify gaps in the support network <span class="info-icon" onclick="showReasoning('level1-support')">i</span>
+**Independence**: Recognise where extended family expectations may be constraining your choices, and where you may be sacrificing personal boundaries to avoid conflict or guilt <span class="info-icon" onclick="showReasoning('level1-independence')">i</span>
 
-**Heritage**: Know basic family history -- where your grandparents came from, major family events, and core cultural or religious traditions <span class="info-icon" onclick="showReasoning('level1-heritage')">i</span>
+**Duty**: Understand what obligations you feel toward extended family -- both those you fulfil willingly and those you resent -- and identify gaps between what you do and what you believe you should do <span class="info-icon" onclick="showReasoning('level1-duty')">i</span>
 
 ### Level 2: Foundation (80th percentile capability)
 
-**Connection**: Monthly contact with at least 3 -- 5 extended family members through calls, messages, or visits, and attendance at major family gatherings <span class="info-icon" onclick="showReasoning('level2-connection')">i</span>
+**Closeness**: Monthly meaningful contact with at least 3 -- 5 extended family members that goes beyond logistics -- genuine conversations about each other's lives, feelings, and experiences <span class="info-icon" onclick="showReasoning('level2-closeness')">i</span>
 
-**Support**: Able to call on at least 2 extended family members for practical help in a crisis, and have provided support to extended family at least once in the past year <span class="info-icon" onclick="showReasoning('level2-support')">i</span>
+**Independence**: Clear boundaries maintained with extended family without damaging relationships -- able to decline requests, set limits on visits, and make life decisions independently while remaining connected <span class="info-icon" onclick="showReasoning('level2-independence')">i</span>
 
-**Heritage**: Actively participate in at least 2 -- 3 family traditions annually and can relay key family stories to others <span class="info-icon" onclick="showReasoning('level2-heritage')">i</span>
+**Duty**: Core family obligations met consistently -- attending major family events, checking in on elderly relatives regularly, and providing practical support when genuinely needed <span class="info-icon" onclick="showReasoning('level2-duty')">i</span>
 
 ### Level 3: Proficiency (95th percentile capability)
 
-**Connection**: Weekly contact with multiple extended family members, regular visits across geographic distance, and active maintenance of relationships across at least 2 generations beyond your own <span class="info-icon" onclick="showReasoning('level3-connection')">i</span>
+**Closeness**: Weekly contact with multiple extended family members, regular visits across geographic distance, and relationships of genuine emotional depth across at least 2 generations beyond your own <span class="info-icon" onclick="showReasoning('level3-closeness')">i</span>
 
-**Support**: Established mutual support patterns with extended family -- regularly giving and receiving practical, financial, or emotional assistance across multiple family branches <span class="info-icon" onclick="showReasoning('level3-support')">i</span>
+**Independence**: Boundaries that are understood and respected by extended family, with the ability to navigate family pressure without guilt or resentment. Family relationships feel chosen rather than obligatory <span class="info-icon" onclick="showReasoning('level3-independence')">i</span>
 
-**Heritage**: Actively documenting family history, maintaining photo archives or family trees, and introducing children or younger relatives to family traditions and elders <span class="info-icon" onclick="showReasoning('level3-heritage')">i</span>
+**Duty**: Proactive fulfilment of family obligations -- anticipating needs rather than reacting to crises, coordinating support across family members, and maintaining traditions with genuine investment <span class="info-icon" onclick="showReasoning('level3-duty')">i</span>
 
 ### Level 4: Excellence (99th percentile capability)
 
-**Connection**: Sustained deep relationships with 10+ extended family members across multiple branches, regular multi-generational gatherings that you help organise, and meaningful connection with distant relatives <span class="info-icon" onclick="showReasoning('level4-connection')">i</span>
+**Closeness**: Sustained emotionally intimate relationships with 10+ extended family members across multiple branches, with regular multi-generational gatherings and meaningful connection that extends to distant relatives <span class="info-icon" onclick="showReasoning('level4-closeness')">i</span>
 
-**Support**: Function as a hub in the family support network -- coordinating care for elderly relatives, mediating family conflicts, and mobilising family resources during crises <span class="info-icon" onclick="showReasoning('level4-support')">i</span>
+**Independence**: Complete autonomy in life decisions while maintaining warm family relationships. Family members respect your boundaries because you have demonstrated that independence and closeness coexist <span class="info-icon" onclick="showReasoning('level4-independence')">i</span>
 
-**Heritage**: Comprehensive family archive maintained and shared, cultural traditions adapted for modern life whilst preserving their meaning, and active mentoring relationships across generations <span class="info-icon" onclick="showReasoning('level4-heritage')">i</span>
+**Duty**: Function as a pillar of the family support network -- coordinating care for elderly relatives, mediating conflicts, mobilising family resources during crises, and preserving traditions that give the family its identity <span class="info-icon" onclick="showReasoning('level4-duty')">i</span>
 
 ### Level 5: Mastery (99.9th percentile capability)
 
-**Connection**: Deep, sustained relationships across the entire extended family network spanning 3+ generations, with regular contact maintained with 20+ relatives and the ability to bring together distant branches of the family <span class="info-icon" onclick="showReasoning('level5-connection')">i</span>
+**Closeness**: Deep, sustained emotional intimacy across the entire extended family network spanning 3+ generations, with regular contact maintained with 20+ relatives and the ability to bring together distant branches into a cohesive family community <span class="info-icon" onclick="showReasoning('level5-closeness')">i</span>
 
-**Support**: The family operates as a coordinated support system with clear communication channels, shared resources, and reliable mutual aid -- functioning more like a community than a loose collection of relatives <span class="info-icon" onclick="showReasoning('level5-support')">i</span>
+**Independence**: Family relationships that are entirely free of coercion or guilt, where every member's autonomy is respected as a matter of family culture. Your independence is not just tolerated but valued as a model for healthy family functioning <span class="info-icon" onclick="showReasoning('level5-independence')">i</span>
 
-**Heritage**: Published or professionally preserved family history, living cultural traditions actively practised across generations, and a family identity that provides meaning and belonging to all members <span class="info-icon" onclick="showReasoning('level5-heritage')">i</span>
+**Duty**: The family operates as a coordinated mutual-support system with shared resources, clear communication channels, and reliable aid -- sustained not by guilt but by genuine commitment and a shared sense of family identity that transcends individual preference <span class="info-icon" onclick="showReasoning('level5-duty')">i</span>
 
 ## Levels
 
@@ -88,65 +88,65 @@ const researchData = {
         title: 'Family Relationship Quality and Health',
         content: 'Longitudinal research shows that positive family relationships from adolescence through midlife predict better mental health trajectories. The quality of family ties -- not merely their existence -- determines the wellbeing benefit. Family social networks that include regular contact and emotional support show the strongest health associations. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6784807/" target="_blank">View study</a>'
     },
-    'level1-connection': {
-        title: 'Level 1 Connection Reasoning',
-        content: 'Many adults lack basic awareness of their extended family. Geographic mobility means that some people cannot name their living aunts, uncles, or cousins, let alone maintain contact information. Simple awareness is the prerequisite for any deeper connection.'
+    'level1-closeness': {
+        title: 'Level 1 Closeness Reasoning',
+        content: 'Many adults have extended family contact that is logistical rather than emotionally meaningful. Assessing which relationships have genuine depth -- and which are maintained only through obligation or habit -- is the prerequisite for building closer family ties.'
     },
-    'level1-support': {
-        title: 'Level 1 Support Reasoning',
-        content: 'Understanding your existing support network requires honest assessment. Many people assume family support exists without testing it, or overlook support that is available because they have never asked. Mapping what is actually there -- and what is not -- is the foundation for improvement.'
+    'level1-independence': {
+        title: 'Level 1 Independence Reasoning',
+        content: 'Many people are unaware of how much extended family expectations shape their choices -- from where they live to how they spend holidays. Recognising where family pressure constrains your autonomy is the first step toward healthier boundaries.'
     },
-    'level1-heritage': {
-        title: 'Level 1 Heritage Reasoning',
-        content: 'Basic family knowledge is surprisingly rare. Many adults cannot describe their grandparents\' lives in any detail or explain the origins of family traditions they participate in. This knowledge is often lost within a single generation if not actively preserved.'
+    'level1-duty': {
+        title: 'Level 1 Duty Reasoning',
+        content: 'Understanding your sense of family obligation -- both fulfilled and unfulfilled -- reveals whether duty is a source of meaning or resentment. Many people either over-commit out of guilt or under-commit out of avoidance, without examining the pattern.'
     },
-    'level2-connection': {
-        title: 'Level 2 Connection Reasoning',
-        content: 'Monthly contact with 3 -- 5 extended family members and attendance at family gatherings places you above 80% of adults. Most people maintain contact with only 1 -- 2 extended family members beyond their nuclear family, and many attend family events only at holidays or funerals.'
+    'level2-closeness': {
+        title: 'Level 2 Closeness Reasoning',
+        content: 'Monthly meaningful contact with 3 -- 5 extended family members that goes beyond logistics places you above 80% of adults. Most people maintain only surface-level contact with extended family, limited to holidays and family emergencies.'
     },
-    'level2-support': {
-        title: 'Level 2 Support Reasoning',
-        content: 'Having 2+ extended family members you could call in a crisis represents genuine social capital. Research shows that many adults -- particularly those who have moved away from family -- have no reliable extended family support to draw on during emergencies.'
+    'level2-independence': {
+        title: 'Level 2 Independence Reasoning',
+        content: 'Maintaining clear boundaries without damaging relationships represents 80th percentile family independence. Many adults either submit to family pressure or create distance through conflict -- the ability to set limits warmly is surprisingly rare.'
     },
-    'level2-heritage': {
-        title: 'Level 2 Heritage Reasoning',
-        content: 'Active participation in family traditions and the ability to relay family stories represents top 20% engagement. Most adults passively attend traditions without understanding their significance, and many family stories are lost because no one actively maintains them.'
+    'level2-duty': {
+        title: 'Level 2 Duty Reasoning',
+        content: 'Consistently meeting core family obligations -- attending events, checking on elderly relatives, providing practical support -- places you above 80% of adults. Many people fulfil family duties only sporadically or only when directly asked.'
     },
-    'level3-connection': {
-        title: 'Level 3 Connection Reasoning',
-        content: 'Weekly contact with multiple extended family members across generations represents exceptional commitment. This level of engagement requires deliberate scheduling and genuine prioritisation of family relationships, which fewer than 5% of adults sustain.'
+    'level3-closeness': {
+        title: 'Level 3 Closeness Reasoning',
+        content: 'Weekly contact with multiple extended family members across generations represents exceptional commitment. This level of emotional investment in extended family requires deliberate prioritisation that fewer than 5% of adults sustain.'
     },
-    'level3-support': {
-        title: 'Level 3 Support Reasoning',
-        content: 'Established mutual support patterns across family branches represent top 5% family functioning. Most extended families operate reactively -- helping during crises but lacking the ongoing reciprocal support that builds deep trust and reliability.'
+    'level3-independence': {
+        title: 'Level 3 Independence Reasoning',
+        content: 'Boundaries that are understood and respected -- where family relationships feel chosen rather than obligatory -- represent top 5% family functioning. Achieving this requires honest communication and sustained boundary-setting that most families never reach.'
     },
-    'level3-heritage': {
-        title: 'Level 3 Heritage Reasoning',
-        content: 'Active documentation and transmission of family history is rare. Fewer than 5% of families have anyone who systematically preserves stories, photos, and traditions, leading to the loss of cultural knowledge that later generations cannot recover.'
+    'level3-duty': {
+        title: 'Level 3 Duty Reasoning',
+        content: 'Proactive family obligation -- anticipating needs and coordinating support rather than reacting to crises -- represents top 5% family commitment. Most extended families operate reactively, helping only when problems become acute.'
     },
-    'level4-connection': {
-        title: 'Level 4 Connection Reasoning',
-        content: 'Sustained deep relationships with 10+ extended family members while organising gatherings represents top 1% family engagement. This requires exceptional social energy, organisational ability, and genuine commitment that very few people maintain.'
+    'level4-closeness': {
+        title: 'Level 4 Closeness Reasoning',
+        content: 'Sustained emotionally intimate relationships with 10+ extended family members while organising gatherings represents top 1% family closeness. This requires exceptional social energy, organisational ability, and genuine emotional investment that very few people maintain.'
     },
-    'level4-support': {
-        title: 'Level 4 Support Reasoning',
-        content: 'Functioning as a family hub -- coordinating care, mediating conflicts, and mobilising resources -- is a role that fewer than 1 in 100 family members take on. This level of family leadership requires emotional maturity, diplomacy, and sustained effort.'
+    'level4-independence': {
+        title: 'Level 4 Independence Reasoning',
+        content: 'Complete life autonomy while maintaining warm family relationships represents top 1% family independence. Most people experience independence and family closeness as a trade-off; achieving both simultaneously requires exceptional emotional maturity and communication skill.'
     },
-    'level4-heritage': {
-        title: 'Level 4 Heritage Reasoning',
-        content: 'Comprehensive family archives with adapted traditions represents extraordinary cultural stewardship. Maintaining living traditions while preserving their meaning across changing circumstances requires both dedication and creativity that 99% of families never achieve.'
+    'level4-duty': {
+        title: 'Level 4 Duty Reasoning',
+        content: 'Functioning as a family pillar -- coordinating care, mediating conflicts, and mobilising resources -- is a role that fewer than 1 in 100 family members take on. This level of family leadership requires emotional maturity, diplomacy, and sustained commitment.'
     },
-    'level5-connection': {
-        title: 'Level 5 Connection Reasoning',
-        content: 'Deep relationships across 3+ generations with 20+ relatives represents 99.9th percentile family connection. Bringing together distant family branches requires exceptional social capacity, resources, and commitment that fewer than 1 in 1,000 people sustain.'
+    'level5-closeness': {
+        title: 'Level 5 Closeness Reasoning',
+        content: 'Deep emotional intimacy across 3+ generations with 20+ relatives represents 99.9th percentile family closeness. Building a cohesive family community from distant branches requires exceptional social capacity, resources, and commitment that fewer than 1 in 1,000 people sustain.'
     },
-    'level5-support': {
-        title: 'Level 5 Support Reasoning',
-        content: 'A family that operates as a coordinated support community with clear communication and shared resources is extraordinarily rare. This level of family organisation resembles the extended family structures of pre-industrial societies and requires leadership, trust, and collective commitment that virtually no modern family achieves.'
+    'level5-independence': {
+        title: 'Level 5 Independence Reasoning',
+        content: 'Family relationships entirely free of coercion or guilt, where autonomy is valued as part of family culture, represents 99.9th percentile independence. This level of healthy family functioning is extraordinarily rare and typically requires generational effort to establish.'
     },
-    'level5-heritage': {
-        title: 'Level 5 Heritage Reasoning',
-        content: 'Published family history with living traditions practised across generations represents the highest level of cultural preservation. Fewer than 1 in 1,000 families achieve this combination of documentation, practice, and identity that provides deep meaning and belonging to all members.'
+    'level5-duty': {
+        title: 'Level 5 Duty Reasoning',
+        content: 'A family operating as a coordinated mutual-support community sustained by genuine commitment rather than guilt is extraordinarily rare. This level of family organisation resembles pre-industrial extended family structures and requires leadership, trust, and collective identity that virtually no modern family achieves.'
     }
 };
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Key Terms
+permalink: /start-here/key-terms/
 ---
 
 # Key Terms

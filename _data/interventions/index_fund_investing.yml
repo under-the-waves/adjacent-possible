@@ -15,29 +15,29 @@ values:
     anchor_unit: "returns_level"
     anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
 
-  investing.knowledge:
+  investing.risk:
     pbs: 5
-    pbs_reasoning: "Index fund investing requires and develops a moderate level of financial knowledge. Understanding asset allocation, risk tolerance, fee structures, and the logic of passive investing represents genuine financial education. However, the strategy is specifically designed to minimise the need for deep investment knowledge -- you do not need to analyse individual companies, read balance sheets, or time markets. A PBS of 5 reflects meaningful but bounded knowledge development."
+    pbs_reasoning: "Index fund investing provides meaningful risk management through broad diversification across hundreds or thousands of securities, eliminating single-stock risk entirely. However, it does not address market-level risk -- a global index fund still experiences full drawdowns during crashes. The strategy is specifically designed to accept market risk in exchange for market returns, rather than actively managing downside exposure. A PBS of 5 reflects genuine but bounded risk management benefit."
     isr: 85
-    isr_reasoning: "The learning that occurs from index fund investing is reliable -- investors consistently develop understanding of market behaviour, volatility, compounding, and long-term thinking. The educational pathway is well-supported by free resources from platform providers, financial media, and communities. The main risk is that some investors develop false confidence and move to more complex strategies prematurely."
+    isr_reasoning: "The diversification benefit of index funds is mathematically reliable and well-documented -- holding a broad index eliminates idiosyncratic risk with near-certainty. However, the strategy provides no protection against systematic market drawdowns (30-50% declines), which means the risk management is partial. The ISR of 85 reflects high reliability for the specific risk it addresses (concentration risk) tempered by the risks it deliberately accepts."
     uar: 70
-    uar_reasoning: "Knowledge acquisition tends to be front-loaded (the first year teaches the most), after which ongoing learning requires deliberate effort. Many index fund investors reach a 'good enough' level of knowledge and stop actively learning, which is actually the appropriate outcome for a passive strategy. The UAR reflects that continued knowledge growth tapers naturally."
+    uar_reasoning: "Most index fund investors maintain their diversified position passively, which means the risk management benefit persists through inertia. However, during severe drawdowns some investors abandon the strategy entirely, converting paper losses into real ones. The UAR of 70 reflects that the majority sustain the risk management benefit but a meaningful minority capitulate during precisely the periods when diversification matters most."
     anchor_type: "subjective"
     anchor_max: 10
-    anchor_unit: "knowledge_level"
-    anchor_description: "Comprehensive investment knowledge enabling sophisticated financial decision-making across all asset classes"
+    anchor_unit: "risk_level"
+    anchor_description: "Comprehensive portfolio risk management with minimised downside exposure across all market conditions"
 
-  investing.discipline:
+  investing.independence:
     pbs: 7
-    pbs_reasoning: "Index fund investing is fundamentally a discipline intervention -- the entire value proposition rests on maintaining consistent behaviour through market cycles. Successfully practising buy-and-hold through a full market cycle (including a significant drawdown) builds durable financial discipline that transfers to other financial decisions. The discipline required is substantial: resisting the urge to sell during crashes, avoiding performance chasing, and maintaining contributions during uncertainty. A PBS of 7 reflects that this is a powerful discipline-building intervention."
+    pbs_reasoning: "Index fund investing is one of the most reliable paths to financial independence for retail investors. The combination of market-rate returns (7-10% nominal), low costs, and tax efficiency through ISAs and SIPPs compounds effectively toward FI milestones. For someone targeting a specific freedom number, passive indexing provides the highest-probability route to reaching it. A PBS of 7 reflects that this is a powerful FI-building intervention, though it does not address savings rate or spending -- only the investment returns component of the FI equation."
     isr: 75
-    isr_reasoning: "The discipline-building mechanism is well-understood and reliably operates for those who stick with the strategy. However, discipline is only built through the experience of weathering volatility, which means the intervention's disciplinary benefits are contingent on encountering and surviving market stress. An investor who starts during a prolonged bull market may not develop the same discipline as one who experiences a crash early on."
+    isr_reasoning: "Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns that compound toward FI targets with high reliability. However, the timeline to FI depends heavily on savings rate and starting point, and sequence-of-returns risk can significantly affect when FI is actually achieved. The ISR of 75 reflects high directional reliability tempered by genuine uncertainty about timing."
     uar: 60
-    uar_reasoning: "Maintaining investment discipline is genuinely difficult during market stress. Research consistently shows that many retail investors abandon disciplined strategies during drawdowns -- precisely when discipline matters most. The UAR of 60 reflects that while a majority maintain their strategy, a substantial minority (30-40%) deviate meaningfully from their plan during periods of high volatility or sustained losses."
+    uar_reasoning: "Maintaining a consistent index fund strategy oriented toward FI is genuinely difficult over the 10-20 year timescales typically required. Many investors lose focus on their FI target, redirect funds to consumption, or abandon the strategy during drawdowns. The UAR of 60 reflects that while a majority persist, the long timeframes involved mean a substantial minority deviate from their FI-oriented investment plan."
     anchor_type: "subjective"
     anchor_max: 10
-    anchor_unit: "discipline_level"
-    anchor_description: "Unwavering financial discipline maintained through all market conditions and life circumstances"
+    anchor_unit: "independence_level"
+    anchor_description: "Sufficient invested wealth to make paid employment entirely optional, with sustainable withdrawal rates across market conditions"
 
 resources:
   upfront_cost: 0

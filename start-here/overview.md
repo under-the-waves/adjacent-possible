@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Overview
+permalink: /start-here/overview/
 ---
 # What is Adjacent Possible?
 

@@ -86,7 +86,7 @@ const researchData = {
     },
     'research-stress': {
         title: 'Clutter and Stress',
-        content: 'Over a lifetime, the average person spends 3,680 hours (153 days) searching for misplaced items. Research found that women who are bothered by household clutter showed increased levels of the stress hormone cortisol, a physiological stress response with long-term health implications. Men were unaffected by the same measure.'
+        content: 'Over a lifetime, the average person spends 3,680 hours (153 days) searching for misplaced items. Research found that women who are bothered by household clutter showed increased levels of the stress hormone cortisol, a physiological stress response with long-term health implications. Men were unaffected by the same measure. <a href="https://pubmed.ncbi.nlm.nih.gov/19934011/" target="_blank">View study</a>'
     },
     'level1-functionality': { title: 'Level 1 Functionality Reasoning', content: 'Most people cannot identify which possessions they actually use. Research suggests a large proportion of household items go unused for over a year, yet most people have never conducted an inventory or audit of their belongings.' },
     'level1-simplicity': { title: 'Level 1 Simplicity Reasoning', content: 'Understanding your acquisition patterns -- what you buy, why, and how often -- is the prerequisite for controlling possession volume. Most consumers operate on autopilot, accumulating without awareness.' },
@@ -101,7 +101,7 @@ const researchData = {
     'level4-simplicity': { title: 'Level 4 Simplicity Reasoning', content: 'Genuinely minimal possessions maintained effortlessly represents top 1% simplicity. In a consumer culture, this level of restraint requires deeply internalised values and consistent practice.' },
     'level4-quality': { title: 'Level 4 Quality Reasoning', content: 'Every significant possession being the optimal choice with a clear guiding philosophy represents top 1% consumer intentionality and expertise.' },
     'level5-functionality': { title: 'Level 5 Functionality Reasoning', content: 'Zero friction from possessions -- every item optimally functional and perfectly maintained -- represents 99.9th percentile material management achieved by fewer than 1 in 1,000 households.' },
-    'level5-simplicity': { title: 'Level 5 Simplicity Reasoning', content: 'Possessions few enough to inventory from memory, each deeply valued, represents 99.9th percentile simplicity. Some minimalists achieve this with 100 -- 300 total items versus the average 300,000.' },
+    'level5-simplicity': { title: 'Level 5 Simplicity Reasoning', content: 'Possessions few enough to inventory from memory, each deeply valued, represents 99.9th percentile simplicity. Some minimalists achieve this with 100 -- 300 total items versus the average 300,000. <a href="https://www.becomingminimalist.com/clutter-stats/" target="_blank">View source</a>' },
     'level5-quality': { title: 'Level 5 Quality Reasoning', content: 'A small collection of exceptional items that provide compounding satisfaction represents 99.9th percentile possession mastery -- fewer than 1 in 1,000 people achieve this relationship with their material environment.' }
 };
 

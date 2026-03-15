@@ -24,7 +24,7 @@ The tangible difference your work makes to your team, organisation, or field. Th
 
 ## Benchmarks by Level
 
-Research reveals a stark divide between typical and exceptional work performance. Most workers operate well below their potential, with engagement, productivity, and impact heavily concentrated among a small minority. Only 21% of employees worldwide are engaged, the average worker produces genuine output for under 3 hours per day, and the top 5% of performers account for over a quarter of total output. These patterns mean that even moderate improvements in competence, engagement, or impact can place you significantly above the norm.
+Research reveals a stark divide between typical and exceptional work performance. Most workers operate well below their potential, with engagement, productivity, and impact heavily concentrated among a small minority. <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank">Only 21% of employees worldwide are engaged</a>, the average worker <a href="https://www.vouchercloud.com/resources/office-worker-productivity" target="_blank">produces genuine output for under 3 hours per day</a>, and the <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights" target="_blank">top 5% of performers account for over a quarter of total output</a>. These patterns mean that even moderate improvements in competence, engagement, or impact can place you significantly above the norm.
 
 ### Level 1: Awareness
 
@@ -85,7 +85,7 @@ const researchData = {
     },
     'research-productivity': {
         title: 'Daily Productive Hours',
-        content: 'Research on workplace productivity consistently finds that the average worker is genuinely productive for approximately 2 hours and 53 minutes out of an 8-hour working day. The remaining time is consumed by meetings, administrative tasks, context-switching, and distraction.'
+        content: 'Research on workplace productivity consistently finds that the average worker is genuinely productive for approximately 2 hours and 53 minutes out of an 8-hour working day. The remaining time is consumed by meetings, administrative tasks, context-switching, and distraction. <a href="https://www.vouchercloud.com/resources/office-worker-productivity" target="_blank">View VoucherCloud study</a>'
     },
     'research-flow': {
         title: 'Flow and Productivity',
@@ -101,7 +101,7 @@ const researchData = {
     },
     'level1-engagement': {
         title: 'Level 1 Engagement Reasoning',
-        content: 'With only 21% of employees engaged globally and 45% working primarily for pay, the disengaged-but-not-destructive worker represents the statistical norm. This level describes the majority of the workforce \u2013 showing up, completing tasks, but finding little intrinsic motivation or meaning in daily work.'
+        content: 'With only 21% of employees engaged globally and 45% working primarily for pay, the disengaged-but-not-destructive worker represents the statistical norm. This level describes the majority of the workforce \u2013 showing up, completing tasks, but finding little intrinsic motivation or meaning in daily work. <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank">Gallup (2025)</a>'
     },
     'level1-impact': {
         title: 'Level 1 Impact Reasoning',
@@ -113,7 +113,7 @@ const researchData = {
     },
     'level2-engagement': {
         title: 'Level 2 Engagement Reasoning',
-        content: 'Genuine engagement with regular flow states (10 \u2013 15% of focused time) represents the top 20% of workers. Given that only 21% of employees are engaged globally and average flow is around 5% of working hours, regularly experiencing flow and taking initiative places you well above the norm.'
+        content: 'Genuine engagement with regular flow states (10 \u2013 15% of focused time) represents the top 20% of workers. Given that only 21% of employees are engaged globally and average flow is around 5% of working hours, regularly experiencing flow and taking initiative places you well above the norm. <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank">Gallup (2025)</a>'
     },
     'level2-impact': {
         title: 'Level 2 Impact Reasoning',
@@ -125,7 +125,7 @@ const researchData = {
     },
     'level3-engagement': {
         title: 'Level 3 Engagement Reasoning',
-        content: 'Work as a primary source of meaning, with flow 15 \u2013 25% of focused time, represents 95th percentile engagement. This far exceeds the 5% flow average and goes beyond simple engagement into genuine fulfilment and intrinsic drive. Few workers consistently find deep meaning in daily tasks.'
+        content: 'Work as a primary source of meaning, with flow 15 \u2013 25% of focused time, represents 95th percentile engagement. This far exceeds the 5% flow average and goes beyond simple engagement into genuine fulfilment and intrinsic drive. Few workers consistently find deep meaning in daily tasks. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights" target="_blank">McKinsey research</a>'
     },
     'level3-impact': {
         title: 'Level 3 Impact Reasoning',
@@ -133,7 +133,7 @@ const researchData = {
     },
     'level4-competence': {
         title: 'Level 4 Competence Reasoning',
-        content: 'Dreyfus mastery with 8x average output represents the top 1% of performers. McKinsey data confirms that top performers in complex roles can be 800% more productive. At this level, you define the quality standard and your work serves as the benchmark others aspire to reach.'
+        content: 'Dreyfus mastery with 8x average output represents the top 1% of performers. McKinsey data confirms that top performers in complex roles can be 800% more productive. At this level, you define the quality standard and your work serves as the benchmark others aspire to reach. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights" target="_blank">McKinsey research</a>'
     },
     'level4-engagement': {
         title: 'Level 4 Engagement Reasoning',

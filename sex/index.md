@@ -82,7 +82,7 @@ const researchData = {
     },
     'research-health-benefits': {
         title: 'Health Benefits of Sexual Activity',
-        content: 'Sexual satisfaction and regular sexual activity have been linked to greater mental and physical health, including improved wellbeing, cardiovascular health, decreased levels of depression, lower death rates, and increased relationship satisfaction. Sexual frequency is a strong positive predictor of self-reported happiness among a representative sample of 16,000 adult Americans.'
+        content: 'Sexual satisfaction and regular sexual activity have been linked to greater mental and physical health, including improved wellbeing, cardiovascular health, decreased levels of depression, lower death rates, and increased relationship satisfaction. Sexual frequency is a strong positive predictor of self-reported happiness among a representative sample of 16,000 adult Americans. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11601183/" target="_blank">View study</a>'
     },
     'research-predictors': {
         title: 'Predictors of Sexual Satisfaction',

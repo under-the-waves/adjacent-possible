@@ -78,7 +78,7 @@ Most consumptive leisure is unintentional -- people default to whatever is easie
 const researchData = {
     'research-leisure-wellbeing': {
         title: 'Leisure and Quality of Life',
-        content: 'Leisure activities are positively correlated with measures of quality of life and subjective wellbeing. How we spend our free time has a great deal of influence on how we subjectively assess the quality of our lives. Research consistently shows leisure as a key predictor of life satisfaction.'
+        content: 'Leisure activities are positively correlated with measures of quality of life and subjective wellbeing. How we spend our free time has a great deal of influence on how we subjectively assess the quality of our lives. Research consistently shows leisure as a key predictor of life satisfaction. <a href="https://pubmed.ncbi.nlm.nih.gov/25602273/" target="_blank">View study</a>'
     },
     'research-active-passive': {
         title: 'Active vs Passive Leisure',
