@@ -31,3 +31,11 @@ For personalised recommendations based on your unique priorities, visit [Fitness
 - [Fitness Personalised]({{ site.baseurl }}/fitness/personalised)
 
 [← Back to Life Levels Home](../)
+
+<script>
+const researchData = {
+    {% include benchmark-reasoning.html %}
+};
+</script>
+
+{% include popup-boilerplate.html %}
