@@ -18,6 +18,10 @@ For personalised recommendations based on your unique priorities, visit [Fitness
 
 {% include life-area-values.html %}
 
+## Benchmarks by Level
+
+{% include life-area-benchmarks.html %}
+
 ## Levels and personalisation
 - [Level 1: Awareness](level-1)
 - [Level 2: Foundations](level-2)
