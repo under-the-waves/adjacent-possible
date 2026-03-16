@@ -2,6 +2,7 @@ slug: relationship-status
 name: Relationship Status
 domain: Friends and Relationships
 pillar: Connect with Others
+survey_description: "Whether your current relationship status matches what you want."
 domain_representative: false
 values:
 - key: partner-selection

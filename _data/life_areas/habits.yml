@@ -2,6 +2,7 @@ slug: habits
 name: Habits
 domain: Productivity
 pillar: Organise Your Life
+survey_description: "Your ability to build and maintain positive habits."
 domain_representative: false
 values:
 - key: impact

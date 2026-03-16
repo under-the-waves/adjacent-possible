@@ -2,6 +2,7 @@ slug: organisation
 name: Organisation
 domain: Productivity
 pillar: Organise Your Life
+survey_description: "How well you keep your tasks, spaces, and commitments in order."
 domain_representative: true
 values:
 - key: tracking

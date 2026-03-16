@@ -2,6 +2,7 @@ slug: nutrition
 name: Nutrition
 domain: Health
 pillar: Look After Yourself
+survey_description: "Your eating habits, diet quality, and relationship with food."
 domain_representative: false
 values:
 - key: physical

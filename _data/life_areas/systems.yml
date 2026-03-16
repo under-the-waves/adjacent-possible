@@ -2,6 +2,7 @@ slug: systems
 name: Systems
 domain: Productivity
 pillar: Organise Your Life
+survey_description: "The tools and workflows you use to manage your life and work."
 domain_representative: false
 values:
 - key: power

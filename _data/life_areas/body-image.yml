@@ -2,6 +2,7 @@ slug: body-image
 name: Body Image
 domain: Expression
 pillar: Connect with Others
+survey_description: "How you perceive and feel about your physical appearance."
 domain_representative: true
 values:
 - key: vitality

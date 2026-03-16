@@ -2,6 +2,7 @@ slug: physical-safety
 name: Physical Safety
 domain: Security
 pillar: Look After Yourself
+survey_description: "Your personal safety practices and physical risk management."
 domain_representative: true
 values:
 - key: risk

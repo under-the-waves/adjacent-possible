@@ -2,6 +2,7 @@ slug: self-awareness
 name: Self Awareness
 domain: Values
 pillar: Expand Your Awareness
+survey_description: "Your understanding of your own emotions, patterns, and motivations."
 domain_representative: true
 values:
 - key: psychological
@@ -16,29 +17,29 @@ values:
   benchmarks:
     level_1:
       text: |-
-        Recognise that you may have blind spots and biases about yourself, understanding that most people overestimate their self-awareness
+        You recognise that most people -- including yourself -- likely have significant blind spots about their own psychology.
       reasoning: |-
-        Research by Tasha Eurich shows that 95% of people believe they are self-aware but only 10-15% actually meet the criteria. Level 1 represents simply recognising this gap - awareness that you may not see yourself as clearly as you think, which is more insight than most people have.
+        Awareness only -- no practice required. Eurich: 95% think they are self-aware but only 10-15% meet criteria (self vs other ratings, n~5,000). Recognising this gap is meaningful and places you ahead of the majority who assume their self-perception is accurate.
     level_2:
       text: |-
-        Engage with structured self-reflection through therapy, counselling, or systematic introspection, joining the ~20% of adults who pursue mental health support annually
+        You can identify at least 3 recurring emotional triggers in your life and, for each, distinguish the surface emotion from a deeper underlying emotion or need.
       reasoning: |-
-        Statistics show only about 20% of US adults receive mental health treatment annually. Engaging with therapy or structured self-reflection puts you in the top 20% of people actively working on psychological self-understanding through proven methods.
+        Requires pattern recognition across multiple life contexts. LEAS Level 4 (emotional blends) is above median. Eurich's 10-15% "truly self-aware" sets the ceiling; approaching but not reaching it places you at roughly top 20%. No proxy activities (therapy hours) -- tests the actual skill.
     level_3:
       text: |-
-        Understand your major emotional triggers, recurring thought patterns, and primary defence mechanisms, with clear insight into why these patterns developed and how they influence your behaviour
+        Given a novel emotionally charged scenario relevant to your life, you can predict your likely emotional reaction and its approximate intensity -- and your prediction proves accurate.
       reasoning: |-
-        About 5% of people develop clear understanding of their major triggers, thought patterns, and defence mechanisms through psychological self-awareness work. This represents meaningful self-knowledge about your inner psychological landscape and its origins.
+        Directly tests self-knowledge via prediction. Affective forecasting research (Gilbert): 75-81% of people misestimate the intensity of future emotions (impact bias). Someone at L3 has corrected for this. Well within Eurich's "truly self-aware" bracket.
     level_4:
       text: |-
-        Accurately predict your emotional reactions and behavioural responses in challenging situations, with deep understanding of your unconscious patterns and psychological dynamics
+        Three people who know you well, asked independently to describe your main emotional patterns, produce descriptions that substantially overlap with your own self-assessment.
       reasoning: |-
-        Perhaps 1% of people can accurately predict their reactions and understand unconscious psychological dynamics through advanced psychological self-awareness. This represents sophisticated self-knowledge about your psychological makeup and patterns.
+        Eurich's key finding: internal and external self-awareness are virtually uncorrelated. Having verified alignment between self-perception and others' perception requires having done the internal work (top 5%) AND having that model confirmed externally. Requiring 3 independent informants eliminates lucky agreement.
     level_5:
       text: |-
-        Understand your psychological makeup with such depth that you can navigate any complex situation with complete clarity about your motivations, unconscious drives, and optimal responses
+        You can trace a current emotional pattern to its developmental origin, articulate the protective function it once served, and specify the conditions under which it is and is not adaptive today -- corroborated by evidence spanning 2+ years.
       reasoning: |-
-        Perhaps 1 in 1,000 people understand their psychological makeup with complete depth and clarity through mastery-level psychological self-awareness. This represents the pinnacle of self-knowledge about your motivations and unconscious drives.
+        Psychodynamic gold standard ("earned security" in attachment theory). Even among long-term therapy clients, few achieve this depth. Longitudinal corroboration (journals, records, informant testimony) prevents confabulation. Roughly 1 in 1,000 adults.
 - key: contemplative
   name: Contemplative/Somatic
   weight: 25

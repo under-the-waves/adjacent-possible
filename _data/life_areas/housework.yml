@@ -2,6 +2,7 @@ slug: housework
 name: Housework
 domain: Environment
 pillar: Organise Your Life
+survey_description: "How you manage cleaning, maintenance, and domestic responsibilities."
 domain_representative: false
 values:
 - key: functional

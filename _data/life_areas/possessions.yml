@@ -2,6 +2,7 @@ slug: possessions
 name: Possessions
 domain: Environment
 pillar: Organise Your Life
+survey_description: "How well your belongings serve your needs without creating clutter."
 domain_representative: false
 values:
 - key: functionality

@@ -2,6 +2,7 @@ slug: behaviours
 name: Behaviours
 domain: Wellbeing
 pillar: Look After Yourself
+survey_description: "Your behavioural patterns, habits of conduct, and self-regulation."
 domain_representative: false
 values:
 - key: freedom

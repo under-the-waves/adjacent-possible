@@ -2,6 +2,7 @@ slug: housing
 name: Housing
 domain: Environment
 pillar: Organise Your Life
+survey_description: "Your living situation, including comfort, location, and affordability."
 domain_representative: true
 values:
 - key: comfort

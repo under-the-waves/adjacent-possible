@@ -2,6 +2,7 @@ slug: current-work
 name: Current Work
 domain: Career
 pillar: Create & Contribute
+survey_description: "Your current job or primary occupation, including satisfaction and performance."
 domain_representative: true
 values:
 - key: rewards

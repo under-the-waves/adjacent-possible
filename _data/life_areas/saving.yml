@@ -2,6 +2,7 @@ slug: saving
 name: Saving
 domain: Finances
 pillar: "Organise Your Life"
+survey_description: "Your savings habits and progress towards financial goals."
 domain_representative: false
 
 values:
@@ -14,20 +15,30 @@ values:
       - "People who prioritise this value focus on stability and protection from downside scenarios."
     benchmarks:
       level_1:
-        text: "Know your monthly expenses and can identify how many weeks of financial buffer you currently hold"
-        reasoning: "Awareness is the prerequisite for improvement. Many people cannot accurately state their monthly expenses or quantify their financial buffer. Knowing how many weeks you can sustain your current lifestyle without income provides the baseline from which all saving behaviour begins."
+        text: |-
+          You know your monthly essential expenses and how many weeks of financial buffer you currently hold.
+        reasoning: |-
+          Awareness only. Most people cannot accurately state their monthly essential expenses or quantify their financial buffer. Knowing these numbers is the prerequisite for any saving behaviour.
       level_2:
-        text: "3 -- 6 months of expenses saved in accessible accounts, able to absorb a GBP 1,000 -- 2,000 unexpected cost without borrowing"
-        reasoning: "Having 3 -- 6 months of expenses saved places you above 54% of the population who lack this buffer (<a href=\"https://www.bankrate.com/banking/savings/emergency-savings-report/\" target=\"_blank\">Bankrate 2026</a>). The ability to absorb a GBP 1,000 -- 2,000 unexpected cost without borrowing represents genuine financial stability that the majority of adults have not achieved."
+        text: |-
+          You have 6 months of essential expenses saved in accessible accounts.
+        reasoning: |-
+          27% of adults have 6+ months of expenses saved (<a href="https://www.bankrate.com/banking/savings/emergency-savings-report/" target="_blank">Bankrate 2026</a>). Close to the top 20% threshold. The previous L2 (3-6 months) was actually median -- 46% already have 3+ months.
       level_3:
-        text: "6 -- 12 months of expenses saved, able to weather job loss without any change to financial trajectory"
-        reasoning: "Only 27 -- 28% of adults have six or more months of expenses saved (<a href=\"https://www.bankrate.com/banking/savings/emergency-savings-report/\" target=\"_blank\">Bankrate 2026</a>). Having 6 -- 12 months and the ability to weather job loss without changing financial trajectory represents approximately 95th percentile financial resilience."
+        text: |-
+          You have 12 months of essential expenses saved in accessible accounts.
+        reasoning: |-
+          Well beyond the 6-month mark that only 27% reach. Surveys rarely track above 6 months, but 12 months of liquid savings represents roughly top 5% financial resilience among working-age adults.
       level_4:
-        text: "12 -- 24 months of expenses saved, maintained through at least one major financial shock"
-        reasoning: "Maintaining 12 -- 24 months of expenses through a major financial shock (job loss, medical emergency, market crash) represents top 1% financial resilience. Many people who accumulate this buffer deplete it during crises -- maintaining it through adversity demonstrates exceptional financial management."
+        text: |-
+          You could maintain your essential lifestyle for 5 years with no earned income, drawing on all accessible assets (savings, investments, and realisable assets -- excluding retirement accounts and primary residence).
+        reasoning: |-
+          Shifts from "cash buffer" to "total financial resilience." Having 5 years of accessible runway requires meaningful invested assets beyond cash. Roughly top 1% of working-age adults. Does not incentivise hoarding cash -- investing is the rational strategy at this level.
       level_5:
-        text: "24+ months of liquid savings distributed across multiple institutions and currencies"
-        reasoning: "Holding 24+ months of liquid savings across multiple institutions and currencies represents 99.9th percentile financial resilience (1 in 1,000). This level of buffer provides protection against not just personal financial shocks but institutional failures, currency crises, and geopolitical disruption."
+        text: |-
+          You could maintain your essential lifestyle indefinitely with no earned income, from accessible invested assets alone (excluding retirement accounts and primary residence).
+        reasoning: |-
+          The ultimate security benchmark -- essential needs permanently decoupled from ability to earn. Roughly equivalent to 25x annual essential expenses invested. Approximately top 0.1-0.5% of working-age adults.
 
   - key: lifestyle
     name: "Lifestyle"

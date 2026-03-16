@@ -2,6 +2,7 @@ slug: goals
 name: Goals
 domain: Productivity
 pillar: Organise Your Life
+survey_description: "How you set, track, and achieve meaningful goals."
 domain_representative: false
 values:
 - key: follow_through

@@ -2,6 +2,7 @@ slug: communication
 name: Communication
 domain: Expression
 pillar: Connect with Others
+survey_description: "How effectively you express yourself and listen to others."
 domain_representative: false
 values:
 - key: influence

@@ -2,6 +2,7 @@ slug: mindfulness
 name: Mindfulness
 domain: Wellbeing
 pillar: Look After Yourself
+survey_description: "Your capacity for present-moment awareness and stress management."
 domain_representative: true
 values:
 - key: clarity

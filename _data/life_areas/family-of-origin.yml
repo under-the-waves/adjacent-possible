@@ -2,6 +2,7 @@ slug: family-of-origin
 name: Family Of Origin
 domain: Family
 pillar: Connect with Others
+survey_description: "Your relationship with your parents and siblings."
 domain_representative: true
 values:
 - key: autonomy

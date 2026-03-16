@@ -2,6 +2,7 @@ slug: emergency-preparedness
 name: Emergency Preparedness
 domain: Security
 pillar: Look After Yourself
+survey_description: "Your readiness to handle emergencies, disasters, and unexpected crises."
 domain_representative: false
 values:
 - key: self-reliance

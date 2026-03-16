@@ -2,6 +2,7 @@ slug: value-system
 name: Value System
 domain: Values
 pillar: Expand Your Awareness
+survey_description: "The principles and values that guide your decisions and priorities."
 domain_representative: false
 values:
 - key: practical

@@ -2,6 +2,7 @@ slug: digital-safety
 name: Digital Safety
 domain: Security
 pillar: Look After Yourself
+survey_description: "Your online security, privacy practices, and protection from digital threats."
 domain_representative: false
 values:
 - key: security

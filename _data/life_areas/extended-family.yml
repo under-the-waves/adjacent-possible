@@ -2,6 +2,7 @@ slug: extended-family
 name: Extended Family
 domain: Family
 pillar: Connect with Others
+survey_description: "Your relationships with extended family members."
 domain_representative: false
 values:
 - key: harmony

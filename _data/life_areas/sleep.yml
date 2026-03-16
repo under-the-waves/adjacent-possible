@@ -2,6 +2,7 @@ slug: sleep
 name: Sleep
 domain: Health
 pillar: Look After Yourself
+survey_description: "Your sleep quality, duration, and bedtime routines."
 domain_representative: false
 values:
 - key: daily

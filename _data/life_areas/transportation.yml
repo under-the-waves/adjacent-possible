@@ -2,6 +2,7 @@ slug: transportation
 name: Transportation
 domain: Environment
 pillar: Organise Your Life
+survey_description: "How you get around and whether your transport meets your needs."
 domain_representative: false
 values:
 - key: efficiency

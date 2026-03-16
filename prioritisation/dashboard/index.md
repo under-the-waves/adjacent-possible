@@ -170,6 +170,13 @@ body .main-content {
     margin-bottom: 16px;
 }
 
+.question-card .q-area-desc {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
 .question-card .q-prompt {
     font-size: 0.95em;
     color: #444;
@@ -242,10 +249,6 @@ body .main-content {
     background: #0d47a1;
 }
 
-.question-nav button.btn-skip {
-    color: #888;
-    border-color: #e0e0e0;
-}
 
 /* ── Results grid (reused from original dashboard) ── */
 
@@ -345,11 +348,7 @@ body .main-content {
     opacity: 0.9;
 }
 
-.pillar-1 .pillar-header { background: #6a1b9a; }
-.pillar-2 .pillar-header { background: #1565c0; }
-.pillar-3 .pillar-header { background: #2e7d32; }
-.pillar-4 .pillar-header { background: #e65100; }
-.pillar-5 .pillar-header { background: #c62828; }
+.pillar-header { background: #37474f; }
 
 .pillar-body {
     padding: 15px 20px;
@@ -913,8 +912,33 @@ function startSurvey(tier) {
     surveyQuestions = getQuestions(tier);
     surveyIndex = 0;
     surveyAnswers = {};
-    renderQuestion();
+    renderIntro();
     showView('survey');
+}
+
+function renderIntro() {
+    const el = document.getElementById('viewSurvey');
+    const questionCount = surveyQuestions.filter(x => x.type === 'question').length;
+    el.innerHTML = `<div class="survey-container">
+        <div class="question-card">
+            <h2 style="margin-top:0;">Before you begin</h2>
+            <p>This survey assesses your current level across <strong>${questionCount} life areas</strong>. For each area, pick the description that best matches where you are right now.</p>
+            <h3>What the levels mean</h3>
+            <p>The five levels correspond to population percentiles among American adults:</p>
+            <ul style="line-height:1.8;">
+                <li><strong>Level 1 &ndash; Awareness:</strong> You know this area exists and have basic awareness.</li>
+                <li><strong>Level 2 &ndash; Foundation:</strong> Top 20%. You have solid basics in place.</li>
+                <li><strong>Level 3 &ndash; Proficiency:</strong> Top 5%. You are notably better than most people.</li>
+                <li><strong>Level 4 &ndash; Excellence:</strong> Top 1%. Exceptional achievement.</li>
+                <li><strong>Level 5 &ndash; Mastery:</strong> Top 0.1%. Among the best in 1,000 people.</li>
+            </ul>
+            <p style="color:#555;"><strong>Most people are at levels 1&ndash;2 in most areas.</strong> That is completely normal. No one is at level 5 for everything &ndash; there simply is not enough time in life to excel at everything. The purpose of this survey is not to score highly. It is to identify where you are now so you can decide where to focus.</p>
+            <div class="question-nav" style="margin-top:24px;">
+                <div></div>
+                <button class="btn-primary" onclick="renderQuestion()">Begin survey</button>
+            </div>
+        </div>
+    </div>`;
 }
 
 function renderQuestion() {
@@ -928,7 +952,6 @@ function renderQuestion() {
     const q = surveyQuestions[surveyIndex];
     const totalQ = surveyQuestions.filter(x => x.type === 'question' || x.type === 'weights').length;
     const answeredQ = surveyQuestions.slice(0, surveyIndex).filter(x => x.type === 'question' || x.type === 'weights').length;
-    const pillarColor = q.pillar ? q.pillar.color : '#155799';
 
     let html = '<div class="survey-container">';
 
@@ -936,7 +959,7 @@ function renderQuestion() {
     const pct = totalQ > 0 ? Math.round((answeredQ / totalQ) * 100) : 0;
     html += `<div class="progress-bar-container">
         <div class="progress-bar-outer">
-            <div class="progress-bar-fill" style="width:${pct}%; background:${pillarColor};"></div>
+            <div class="progress-bar-fill" style="width:${pct}%; background:#155799;"></div>
         </div>
         <div class="progress-info">
             <span>${answeredQ} of ${totalQ}</span>
@@ -945,7 +968,7 @@ function renderQuestion() {
     </div>`;
 
     if (q.type === 'divider') {
-        html += `<div class="pillar-divider" style="color:${q.pillar.color};">
+        html += `<div class="pillar-divider" style="color:#37474f;">
             <div class="pillar-divider-name">${q.pillar.name}</div>
             <div class="pillar-divider-desc">Next section</div>
         </div>
@@ -978,12 +1001,21 @@ function renderQuestion() {
     } else {
         // Question card
         const answerKey = q.tier3 ? q.slug + ':' + q.valueKey : q.slug;
-        const currentAnswer = surveyAnswers[answerKey] || 0;
+        const currentAnswer = surveyAnswers[answerKey];
 
+        const areaDesc = SURVEY_DATA[q.slug] && SURVEY_DATA[q.slug].survey_description ? SURVEY_DATA[q.slug].survey_description : '';
         html += `<div class="question-card">
             <div class="q-area-name">${q.label}</div>
             <div class="q-domain-name">${q.domain} ${q.tier3 ? ' -- ' + q.valueName : ''}</div>
+            ${areaDesc ? '<div class="q-area-desc">' + areaDesc + '</div>' : ''}
             <div class="q-prompt">Which best describes you?</div>`;
+
+        // "I'm not sure" option
+        html += `<label class="radio-option${currentAnswer === -1 ? ' selected' : ''}" onclick="selectAnswer('${answerKey}', -1)">
+            <input type="radio" name="q-${surveyIndex}" value="-1" ${currentAnswer === -1 ? 'checked' : ''}>
+            <span class="level-label">I'm not sure</span>
+            I haven't thought about this, or I'm not sure where I stand.
+        </label>`;
 
         for (let lvl = 1; lvl <= 5; lvl++) {
             const bKey = 'level_' + lvl;
@@ -998,12 +1030,10 @@ function renderQuestion() {
         }
 
         html += `</div>`;
+        const notAnswered = surveyAnswers[answerKey] === undefined;
         html += `<div class="question-nav">
             ${surveyIndex > 0 ? '<button onclick="surveyBack()">Back</button>' : '<div></div>'}
-            <div style="display:flex;gap:10px;">
-                <button class="btn-skip" onclick="skipQuestion('${answerKey}')">Skip</button>
-                <button class="btn-primary" onclick="nextQuestion()" ${currentAnswer === 0 ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''} id="btnNext">Next</button>
-            </div>
+            <button class="btn-primary" onclick="nextQuestion()" ${notAnswered ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''} id="btnNext">Next</button>
         </div>`;
     }
 
@@ -1012,12 +1042,21 @@ function renderQuestion() {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+let autoAdvanceTimer = null;
+
 function selectAnswer(key, level) {
+    if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
     surveyAnswers[key] = level;
     renderQuestion();
+    autoAdvanceTimer = setTimeout(() => {
+        autoAdvanceTimer = null;
+        surveyIndex++;
+        renderQuestion();
+    }, 350);
 }
 
 function skipQuestion(key) {
+    if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
     delete surveyAnswers[key];
     surveyIndex++;
     renderQuestion();
@@ -1029,6 +1068,7 @@ function nextQuestion() {
 }
 
 function surveyBack() {
+    if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
     if (surveyIndex > 0) surveyIndex--;
     renderQuestion();
 }
@@ -1070,6 +1110,7 @@ function finishSurvey() {
     if (tier === 1) {
         // Propagate domain representative answers to all areas in domain
         for (const [slug, level] of Object.entries(surveyAnswers)) {
+            if (level === -1) continue; // "I'm not sure" -- skip
             const info = getDomainForSlug(slug);
             if (info) {
                 info.domain.areas.forEach(a => {
@@ -1085,6 +1126,7 @@ function finishSurvey() {
         }
     } else if (tier === 2) {
         for (const [slug, level] of Object.entries(surveyAnswers)) {
+            if (level === -1) continue; // "I'm not sure" -- skip
             levels[slug] = level;
             delete levels['_propagated_' + slug];
         }
@@ -1094,6 +1136,7 @@ function finishSurvey() {
         const savedWeights = loadWeights();
 
         for (const [key, level] of Object.entries(surveyAnswers)) {
+            if (level === -1) continue; // "I'm not sure" -- skip
             const parts = key.split(':');
             const slug = parts[0];
             const valueKey = parts[1];

@@ -2,6 +2,7 @@ slug: health-management
 name: Health Management
 domain: Health
 pillar: Look After Yourself
+survey_description: "How you monitor and manage your physical health and medical needs."
 domain_representative: false
 values:
 - key: longterm

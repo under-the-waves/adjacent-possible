@@ -2,6 +2,7 @@ slug: consumptive-leisure
 name: Consumptive Leisure
 domain: Leisure
 pillar: Create & Contribute
+survey_description: "Entertainment and leisure you consume, such as reading, watching, and listening."
 domain_representative: false
 values:
 - key: restoration

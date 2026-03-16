@@ -2,6 +2,7 @@ slug: personality
 name: Personality
 domain: Expression
 pillar: Connect with Others
+survey_description: "Your understanding of your personality traits and social tendencies."
 domain_representative: false
 values:
 - key: alignment

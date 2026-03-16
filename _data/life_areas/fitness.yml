@@ -2,6 +2,7 @@ slug: fitness
 name: Fitness
 domain: Health
 pillar: "Look After Yourself"
+survey_description: "Your physical exercise habits, training approach, and overall fitness level."
 domain_representative: true
 
 values:
@@ -12,6 +13,32 @@ values:
       - "Fitness that supports long-term wellbeing and disease prevention."
       - "Cardiovascular health, maintaining muscle mass for healthy aging, joint integrity, and metabolic health."
       - "People who prioritise this value focus on sustainable practices that provide health benefits with minimal injury risk."
+    benchmarks:
+      level_1:
+        text: |-
+          You know how many minutes of exercise you typically get per week and whether that meets the CDC minimum guideline of 150 minutes.
+        reasoning: |-
+          Awareness only -- no behaviour change required. Most people cannot accurately estimate their weekly activity. Simply knowing where you stand relative to the 150-minute guideline is a meaningful first step.
+      level_2:
+        text: |-
+          You complete at least 150 minutes of moderate aerobic activity and at least 2 strength-training sessions per week, every week.
+        reasoning: |-
+          Only 24-26% of US adults meet both CDC guidelines for aerobic and strength training (<a href="https://www.cdc.gov/nchs/data/nhis/earlyrelease/EarlyRelease202409-07.pdf" target="_blank">CDC NHIS 2024</a>). 58% do no strength training at all (<a href="https://www.cdc.gov/mmwr/volumes/73/wr/mm7340a1.htm" target="_blank">CDC MMWR</a>). Sustained weekly compliance is lower than self-report suggests.
+      level_3:
+        text: |-
+          You follow a structured training programme of 5 or more sessions per week, totalling at least 300 minutes.
+        reasoning: |-
+          About 27% exercise 5+ days/week (Gallup), but far fewer follow a structured programme at 300+ minutes/week. This meets the CDC "additional benefits" threshold and represents roughly top 5% when structured and sustained.
+      level_4:
+        text: |-
+          Your VO2 max is above the 95th percentile for your age and sex (e.g. ~51 ml/kg/min for men aged 30-39).
+        reasoning: |-
+          ACSM "Superior" category. Requires years of consistent cardiorespiratory training. Less than 1% of the general adult population achieves this. At this level, behaviour alone does not guarantee fitness -- physiological outcomes matter.
+      level_5:
+        text: |-
+          Your VO2 max exceeds the 99th percentile for your age and sex (e.g. ~55+ ml/kg/min for men aged 30-39).
+        reasoning: |-
+          FRIEND registry data. Characteristic of competitive endurance athletes, roughly 1 in 1,000 adults. Represents the ceiling of cardiorespiratory fitness achievable through training.
 
   - key: performance
     name: "Physical Performance"
