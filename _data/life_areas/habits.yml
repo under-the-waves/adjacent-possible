@@ -1,0 +1,95 @@
+slug: habits
+name: Habits
+domain: Productivity
+pillar: Organise Your Life
+domain_representative: false
+values:
+- key: impact
+  name: Impact
+  weight: 40
+  description:
+  - Choosing and designing habits that create meaningful positive change in important life areas.
+  - |-
+    Focusing on keystone habits that trigger other positive behaviours, aligning habits with personal values and goals, and ensuring habit choices deliver measurable benefits.
+  - |-
+    People who prioritise this value want their habit energy invested in behaviours that create the greatest life improvement.
+  benchmarks:
+    level_1:
+      text: Identify current daily and weekly routines, both helpful and unhelpful
+      reasoning: |-
+        Research shows about 40% of daily activities are performed habitually, but most people lack awareness of these patterns. Simply recognising current habits - both beneficial and detrimental - forms the foundation for any meaningful change. This assessment-level benchmark requires no behaviour change, just observation and understanding.
+    level_2:
+      text: Successfully maintain 1-2 simple daily habits for at least 30 consecutive days
+      reasoning: |-
+        Research shows that 80% of participants in structured programmes can develop habits within 10-15 weeks, but only with proper support. Successfully maintaining 1-2 simple habits for 30+ days represents genuine achievement, as studies indicate 77% of people abandon new behaviours within one week. <a href="https://www.weforum.org/stories/2024/04/healthy-habit-formation-public-health/" target="_blank">Source study</a>
+    level_3:
+      text: Maintain 3-5 beneficial daily habits with 85%+ consistency over 3+ months
+      reasoning: |-
+        Research indicates that maintaining multiple habits simultaneously is genuinely challenging, with studies showing 43-77% of people fail to maintain stable patterns across different lifestyle factors over time. Successfully managing 3-5 habits with 85%+ consistency over 3+ months represents achievement that few people sustain. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9500162/" target="_blank">Source study</a>
+    level_4:
+      text: Design and maintain complex habit systems across multiple life areas simultaneously
+      reasoning: |-
+        Complex habit systems across multiple life domains require advanced planning and coordination skills. Research suggests that successful habit formation becomes increasingly difficult with complexity, as cognitive load and potential interference between habits increases significantly.
+    level_5:
+      text: Create personalised habit formation systems that work reliably across different contexts and life phases
+      reasoning: |-
+        Creating personalised habit formation systems represents mastery of individual differences, contextual factors, and psychological principles. This level involves understanding how to adapt approaches across different personalities, life circumstances, and changing priorities - skills achieved by very few people.
+- key: consistency
+  name: Consistency
+  weight: 35
+  description:
+  - Building habits that stick and perform reliably over time without constant conscious effort.
+  - |-
+    Establishing routines that become automatic, maintaining behaviours even during difficult periods, and creating systems that work regardless of motivation levels.
+  - "Those who prioritise this value focus on habit durability and want behaviours that persist through life's ups and downs."
+  benchmarks:
+    level_1:
+      text: Recognise personal patterns around habit formation and breaking
+      reasoning: |-
+        Studies reveal highly individual patterns in habit formation, with some people forming habits in 18 days while others need over 6 months. Understanding your personal tendencies around consistency, what triggers lapses, and what supports maintenance provides crucial insight for designing effective habit systems.
+    level_2:
+      text: Identify and modify environmental cues that trigger unwanted behaviours
+      reasoning: |-
+        Environmental cue modification forms the foundation of effective habit change. Research demonstrates that identifying and changing environmental triggers for unwanted behaviours is more effective than relying on willpower alone. This represents basic but crucial habit engineering skills.
+    level_3:
+      text: Successfully replace at least one significant negative habit with a positive alternative
+      reasoning: |-
+        Breaking established negative habits requires different skills than forming new ones, as it involves disrupting existing neural pathways. Successfully replacing a significant negative habit demonstrates advanced understanding of habit mechanics and represents 95th percentile achievement in behaviour change.
+    level_4:
+      text: Help others successfully adopt new habits through modelling or direct support
+      reasoning: |-
+        Successfully teaching habit formation to others indicates deep understanding of the psychological principles involved. Research shows that social modelling and support significantly improve habit formation success, representing mastery-level application of habit psychology.
+    level_5:
+      text: Integrate habit formation with identity change and long-term life design
+      reasoning: |-
+        Integrating habit formation with identity change represents advanced psychological understanding. Research shows that habits linked to identity are more durable, but this integration requires sophisticated self-knowledge and long-term planning skills that few people develop systematically.
+- key: enjoyment
+  name: Enjoyment
+  weight: 25
+  description:
+  - Making habit formation and maintenance as pleasant and rewarding as possible.
+  - |-
+    Choosing habits that feel intrinsically satisfying, designing routines that enhance daily experience, and creating positive associations with beneficial behaviours.
+  - |-
+    People who prioritise this value seek habits that improve both outcomes and quality of life, preferring approaches that feel good rather than burdensome.
+  benchmarks:
+    level_1:
+      text: Understand which environmental factors support or undermine your consistency
+      reasoning: |-
+        Environmental factors significantly influence habit success rates. Research shows context stability is crucial for habit formation - understanding which situations support or undermine your consistency helps identify optimal conditions for habit development without requiring actual habit changes.
+    level_2:
+      text: Use habit stacking (linking new habits to existing routines)
+      reasoning: |-
+        Habit stacking - linking new behaviours to existing routines - significantly improves success rates. Studies show this approach works because it leverages existing neural pathways and provides reliable cues, making new behaviours feel more natural and sustainable from the start.
+    level_3:
+      text: Use habit design principles (cue, routine, reward) to create sustainable behaviours
+      reasoning: |-
+        Understanding and applying cue-routine-reward loops represents sophisticated habit design. Research shows that deliberately engineering these components creates more sustainable and enjoyable habits, moving beyond simple repetition to psychological satisfaction and intrinsic motivation.
+    level_4:
+      text: Adapt existing habits smoothly when life circumstances change
+      reasoning: |-
+        Adapting habits during life transitions requires sophisticated flexibility while maintaining beneficial patterns. Studies show most habits break during major life changes, so successfully navigating these transitions while preserving beneficial behaviours represents exceptional skill.
+    level_5:
+      text: Develop expertise in habit psychology that enables teaching or professional application
+      reasoning: |-
+        Developing expertise sufficient for teaching or professional application requires deep knowledge of habit psychology, individual differences, and practical implementation challenges. This represents mastery achieved by roughly 1 in 1,000 people who work extensively with habit formation.

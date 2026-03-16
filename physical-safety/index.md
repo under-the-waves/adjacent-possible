@@ -1,3 +1,6 @@
+---
+life_area_slug: physical-safety
+---
 [← Back to Home](../)
 # Physical Safety
 
@@ -19,45 +22,13 @@ Your optimal approach to physical safety depends on what aspects you value most.
 
 For personalised recommendations based on your unique priorities, visit [Physical Safety Personalised]({{ site.baseurl }}/physical-safety/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Risk Reduction (70%)
-Minimising the probability and severity of physical harm through systematic hazard management, protective measures, and evidence-based safety practices. People who prioritise this value focus on comprehensive protection, preventive systems, and proven methods for reducing various categories of risk including accidents, violence, and property crime.
-
-### Freedom and Convenience (30%)
-Maintaining lifestyle flexibility and spontaneity whilst achieving reasonable safety. This encompasses the ability to travel, explore, and engage in desired activities without excessive safety-related restrictions, delays, or anxiety. Those who prioritise this value seek protective capabilities that integrate smoothly into daily life rather than comprehensive systems that may limit choices or require significant lifestyle modifications.
+{% include life-area-values.html %}
 
 ## Benchmarks by Level
 
 Research reveals significant gaps in physical safety competencies across the population. While most people have basic safety awareness, only small percentages develop systematic protective skills. CPR training reaches 65% at some point but only 18% maintain current certification. Self-defence training involves just 2.1% of the population annually. Home security adoption is moderate (72% have some devices) but comprehensive protection is less common (32% have alarm systems). These patterns mean that even modest systematic safety practices represent higher population percentiles than might be expected.
 
-### Level 1: Awareness
-
-**Risk Reduction**: Understand personal vulnerability patterns and identify obvious hazards in daily environments <span class="info-icon" onclick="showReasoning('level1-risk')">i</span>
-
-**Freedom and Convenience**: Recognise how safety concerns currently limit activities and identify situations where increased confidence would be beneficial <span class="info-icon" onclick="showReasoning('level1-freedom')">i</span>
-
-### Level 2: Foundation (80th percentile capability)
-
-**Risk Reduction**: Implement basic protective measures reducing common risks by 50-70%, including consistent seat belt use, basic home security practices, and fundamental situational awareness <span class="info-icon" onclick="showReasoning('level2-risk')">i</span>
-
-**Freedom and Convenience**: Navigate most environments confidently using simple safety protocols that don't significantly restrict normal activities <span class="info-icon" onclick="showReasoning('level2-freedom')">i</span>
-
-### Level 3: Proficiency (95th percentile capability)
-
-**Risk Reduction**: Maintain current CPR/first aid certification, implement professionally monitored home security with visible deterrents, and demonstrate consistent threat recognition in daily environments <span class="info-icon" onclick="showReasoning('level3-risk')">i</span>
-
-**Freedom and Convenience**: Travel confidently to unfamiliar areas, engage in desired activities without safety-related anxiety, using protective skills that integrate smoothly into lifestyle <span class="info-icon" onclick="showReasoning('level3-freedom')">i</span>
-
-### Level 4: Excellence (99th percentile capability)
-
-**Risk Reduction**: Demonstrate effective self-defence capabilities, maintain advanced safety certifications, and implement comprehensive risk management, reducing preventable incident mortality risk by an estimated 30-50% below population average <span class="info-icon" onclick="showReasoning('level4-risk')">i</span>
-
-**Freedom and Convenience**: Operate confidently in challenging environments while maintaining efficient safety protocols that don't significantly impact lifestyle choices <span class="info-icon" onclick="showReasoning('level4-freedom')">i</span>
-
-### Level 5: Mastery (99.9th percentile capability)
-
-**Risk Reduction**: Achieve advanced competency in 2-3 safety domains with systematic threat assessment, reducing preventable incident mortality risk by an estimated 50-70% below population average <span class="info-icon" onclick="showReasoning('level5-risk')">i</span>
-
-**Freedom and Convenience**: Maintain complete lifestyle freedom through advanced protective capabilities, enabling confident engagement in any desired activity without safety-based restrictions <span class="info-icon" onclick="showReasoning('level5-freedom')">i</span>
+{% include life-area-benchmarks.html %}
 
 ## Levels
 
@@ -85,46 +56,7 @@ const researchData = {
         title: 'Effectiveness of Safety Knowledge in Prevention',
         content: 'Comprehensive safety awareness significantly reduces victimisation rates. University of North Carolina research found that 83% of burglars check for security systems before attempting entry, and 60% would choose alternative targets if alarms are present. Self-defence training shows 46% reduction in completed sexual assault rates. CPR training can double or triple survival rates from cardiac arrest. Basic safety protocols (situational awareness, secure habits) create multiple layers of protection that compound to meaningfully reduce incident probability.'
     },
-    'level1-risk': {
-        title: 'Level 1 Risk Reduction Reasoning',
-        content: 'Level 1 focuses purely on assessment and awareness without requiring behaviour change. Understanding personal vulnerability patterns means recognising individual risk factors (living situation, travel patterns, physical capabilities) and identifying obvious hazards in daily environments (home safety issues, traffic patterns, neighbourhood risks). This represents basic safety consciousness that most adults possess but many haven\'t systematically considered.'
-    },
-    'level1-freedom': {
-        title: 'Level 1 Freedom and Convenience Reasoning',
-        content: 'Level 1 involves recognising how current safety concerns may limit choices - perhaps avoiding certain areas, declining activities due to safety worries, or feeling anxious about being alone in various situations. This awareness-only level helps identify where increased safety confidence could expand lifestyle options without requiring immediate skill development or system implementation.'
-    },
-    'level2-risk': {
-        title: 'Level 2 Risk Reduction Reasoning',
-        content: 'Level 2 represents 80th percentile capability based on research showing most people lack systematic safety practices. Only 18% maintain current CPR training, and basic home security practices (locking doors, basic awareness) are inconsistently applied. The 50-70% risk reduction estimate comes from proxy evidence: consistent safety practices (seat belt use, basic security measures, situational awareness) cumulatively provide substantial protection against common incidents. This level represents what the top 20% of people actually achieve through basic systematic attention to safety.'
-    },
-    'level2-freedom': {
-        title: 'Level 2 Freedom and Convenience Reasoning',
-        content: 'Level 2 enables confident navigation of most environments using simple protocols that don\'t significantly restrict activities. This represents the capability to feel comfortable in typical urban environments, travel to common destinations, and engage in normal social activities without safety-related anxiety. Simple safety protocols integrate easily into daily life without creating significant inconvenience or lifestyle limitations.'
-    },
-            'level3-risk': {
-        title: 'Level 3 Risk Reduction Reasoning',
-        content: 'Level 3 represents 95th percentile capability. Only 18% of Americans maintain current CPR certification, approximately 16% have professionally monitored security systems, and even fewer have visible deterrents (cameras, signage, motion sensors) that research shows actually deter burglars. The combination of current CPR certification plus professionally monitored home security with proper visible deterrents plus consistent threat recognition skills represents capabilities achieved by approximately 5% of the population. This creates meaningful protection across medical emergencies, property security, and personal safety domains.'
-    },
-    'level3-freedom': {
-        title: 'Level 3 Freedom and Convenience Reasoning',
-        content: 'Level 3 enables confident travel to unfamiliar areas and engagement in desired activities without safety-related anxiety. This represents the ability to travel domestically, explore new environments, participate in evening activities, and maintain normal lifestyle choices while using protective skills that integrate smoothly. The key is achieving security without significant lifestyle restrictions or convenience costs.'
-    },
-    'level4-risk': {
-        title: 'Level 4 Risk Reduction Reasoning',
-        content: 'Level 4 represents 99th percentile capability. Based on proxy evidence: self-defence training shows 46% reduction in assault completion rates, CPR training can triple survival rates, home security reduces burglary risk by 300%. Conservatively estimating 30-50% reduction in preventable incident mortality risk compared to population average, though specific micro-mort data isn\'t available. This level requires sustained training across multiple safety domains, achieved by roughly 1% of the population. Individual results vary based on baseline risk and implementation quality.'
-    },
-    'level4-freedom': {
-        title: 'Level 4 Freedom and Convenience Reasoning',
-        content: 'Level 4 enables confident operation in challenging environments while maintaining efficient safety protocols. This includes international travel, late-night activities in unfamiliar areas, and engagement with higher-risk activities without significant lifestyle impact. The protocols at this level are sophisticated enough to provide protection whilst remaining efficient enough not to substantially limit choices or create major inconvenience.'
-    },
-    'level5-risk': {
-        title: 'Level 5 Risk Reduction Reasoning',
-        content: 'Level 5 represents 99.9th percentile capability - approximately 340,000 Americans. Advanced training across multiple safety domains likely provides substantial protection. Conservative estimate of 50-70% reduction in preventable incident mortality risk compared to population average through sophisticated threat assessment and response capabilities, extrapolated from limited proxy evidence on advanced training effectiveness. Population plausibility confirmed by martial arts retention data showing <0.1% achieve sustained proficiency across multiple safety disciplines.'
-    },
-    'level5-freedom': {
-        title: 'Level 5 Freedom and Convenience Reasoning',
-        content: 'Level 5 represents complete lifestyle freedom through advanced protective capabilities. This enables confident engagement in any desired activity or environment without safety-based restrictions - including high-risk travel, extreme sports, or any other activities that others might avoid for safety reasons. The individual has developed sufficient skills and systems to maintain protection whilst preserving complete freedom of choice and spontaneity.'
-    }
+    {% include benchmark-reasoning.html %}
 };
 
 </script>

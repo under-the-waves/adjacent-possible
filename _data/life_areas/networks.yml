@@ -1,0 +1,108 @@
+slug: networks
+name: Networks
+domain: Career
+pillar: Create & Contribute
+domain_representative: false
+values:
+- key: depth
+  name: Depth
+  weight: 40
+  description:
+  - |-
+    The quality and strength of key professional relationships -- trusted advisors, mentors, collaborators, and allies who genuinely understand your work and advocate for you.
+  - |-
+    Investing time in deepening important relationships, providing genuine value, and building trust that leads to meaningful opportunities.
+  - People who prioritise this value cultivate a smaller number of high-value relationships.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify which professional relationships are genuinely strong (mutual trust and willingness to advocate) versus superficial
+      reasoning: |-
+        Distinguishing between genuine professional relationships (mutual trust and advocacy) and superficial connections requires honest assessment. Most LinkedIn connections would not actively help in a career transition.
+    level_2:
+      text: 5 -- 10 strong professional relationships with people who would actively recommend or advocate for you
+      reasoning: |-
+        5 -- 10 advocates who would actively recommend you represents 80th percentile professional relationship quality. Most people have 1 -- 3 such relationships at most.
+    level_3:
+      text: |-
+        15 -- 20 strong relationships including mentors, peers, and mentees, with regular meaningful contact and mutual investment
+      reasoning: |-
+        15 -- 20 strong relationships including mentors, peers, and mentees represents top 5% network depth. Maintaining this many meaningful professional relationships requires exceptional social investment.
+    level_4:
+      text: |-
+        Deep, trusted relationships with influential professionals who actively champion your career and seek your input on important decisions
+      reasoning: |-
+        Deep, trusted relationships with influential professionals who actively champion you represents top 1% network quality. This requires years of mutual investment and demonstrated trustworthiness.
+    level_5:
+      text: |-
+        Relationships of extraordinary depth with leaders across multiple fields, built over decades of mutual investment, trust, and shared accomplishment
+      reasoning: |-
+        Decades-long relationships with leaders across multiple fields represents 99.9th percentile network depth. This level of relational capital is extraordinarily rare and compounds over a lifetime.
+- key: breadth
+  name: Breadth
+  weight: 35
+  description:
+  - |-
+    The range and diversity of your professional network -- connections across different industries, roles, seniority levels, and backgrounds.
+  - |-
+    Building beyond your immediate field, maintaining weak ties, and ensuring your network provides access to diverse information.
+  - People who prioritise this value actively expand their circle.
+  benchmarks:
+    level_1:
+      text: |-
+        Know the approximate size and diversity of your current professional network, and identify gaps in industries or roles you lack connections to
+      reasoning: |-
+        Most people have never audited their professional network for diversity. Understanding where your connections are concentrated and where you have gaps is the prerequisite for strategic network building.
+    level_2:
+      text: |-
+        Active connections across at least 3 professional contexts (current work, previous roles, industry groups), with new connections added regularly
+      reasoning: |-
+        Active connections across 3+ contexts with regular new additions represents top 20%. Most people network only within their current workplace and let previous connections atrophy.
+    level_3:
+      text: |-
+        Broad network spanning multiple industries and seniority levels, with systematic approach to meeting new people and maintaining connections across diverse contexts
+      reasoning: |-
+        Systematic cross-industry networking represents top 5%. Most professionals' networks are concentrated in their current industry and seniority level.
+    level_4:
+      text: |-
+        Extensive network across industries, geographies, and seniority levels, with the ability to reach almost anyone through 1 -- 2 introductions
+      reasoning: |-
+        Reaching anyone through 1 -- 2 introductions represents top 1% network breadth -- a level of connectivity that typically takes decades to build through sustained, strategic relationship development.
+    level_5:
+      text: |-
+        A network so broad and diverse that you are regularly connected to emerging opportunities, talent, and ideas before they become widely known
+      reasoning: |-
+        A network that surfaces emerging opportunities before they are widely known represents 99.9th percentile breadth -- fewer than 1 in 1,000 professionals achieve this level of information access through their connections.
+- key: relevance
+  name: Relevance
+  weight: 25
+  description:
+  - Ensuring your network connections are aligned with your current and future professional direction.
+  - |-
+    Regularly evaluating whether your network serves your goals, pruning connections that no longer add value, and deliberately building relationships in areas where you are heading.
+  - People who prioritise this value maintain a strategically focused network.
+  benchmarks:
+    level_1:
+      text: Assess whether your current network connections are aligned with where your career is heading
+      reasoning: |-
+        Most people have never assessed whether their network connections align with their current professional direction. Many maintain networks that reflect past roles rather than future aspirations.
+    level_2:
+      text: |-
+        Network connections that reflect your current professional direction, with at least some relationships in areas where you are building toward future goals
+      reasoning: |-
+        Network connections reflecting your current direction with some forward-looking relationships represents 80th percentile strategic focus. Most people accumulate connections without evaluating their relevance.
+    level_3:
+      text: |-
+        Network deliberately shaped around your professional trajectory -- connections regularly reviewed and new relationships built in strategic areas
+      reasoning: |-
+        Deliberately shaping your network around your professional trajectory with regular review represents top 5% strategic networking. Most people let their network evolve passively.
+    level_4:
+      text: |-
+        A strategically curated network where every significant relationship serves your current or future direction, with minimal legacy connections that no longer add value
+      reasoning: |-
+        A strategically curated network with minimal legacy connections represents top 1% relevance -- a level of intentionality that requires regular pruning and deliberate relationship building in emerging areas.
+    level_5:
+      text: |-
+        A network that evolves in perfect alignment with your professional direction -- your connections anticipate where you are heading and proactively surface relevant opportunities
+      reasoning: |-
+        A network that evolves in perfect alignment with your direction, with connections anticipating where you are heading, represents 99.9th percentile relevance -- fewer than 1 in 1,000 professionals achieve this level of strategic network alignment.

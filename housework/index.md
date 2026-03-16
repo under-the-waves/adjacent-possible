@@ -1,3 +1,6 @@
+---
+life_area_slug: housework
+---
 [← Back to Home](../)
 # Housework
 ## Why Housework Matters
@@ -11,21 +14,7 @@ This guide also focuses on five core components: cleanliness and hygiene, organi
 
 For personalised recommendations based on your unique priorities, visit [Housework Personalised]({{ site.baseurl }}/housework/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Functional Efficiency (40%)
-Home management that creates smooth operation and reduced friction in daily life. This includes logical organization systems, streamlined workflows, intuitive storage, and time-saving routines. People who prioritize this value focus on creating systems that minimize effort while maximizing effectiveness, with particular attention to how their space functions.
-
-### Health & Wellbeing (30%)
-Housework that supports physical and psychological wellbeing. This encompasses cleanliness standards, air quality, absence of toxins, and creating spaces that reduce stress and support relaxation. Those who prioritize this value focus on cleaning protocols that eliminate health hazards and maintenance practices that create a physically and mentally supportive environment.
-
-### Aesthetics & Enjoyment (20%)
-The visual appeal and sensory pleasure derived from your living space. This includes design considerations, organization that creates visual calm, and the satisfaction of personalized spaces that reflect your tastes. Those who prioritize this value focus on creating environments that are not just functional but also beautiful and emotionally nurturing.
-
-### Environmental Impact (10%)
-The ecological footprint of home management practices. This includes sustainable cleaning methods, waste reduction, energy efficiency, and considerate resource use. Those who prioritise this value focus on eco-friendly products, minimal consumption, and practices that reduce environmental harm.
-
-Your optimal approach will also be influenced by your household size, living space, cultural background, personal preferences, health conditions, income level, and competing priorities. This guide focuses on evidence-based principles that benefit most people across five core components: cleanliness and hygiene, organisation and storage, home maintenance and systems, time and resource efficiency, and sustainability impact.
-
-_Note: Your own priorities may differ from the weightings used in this guide. While these values often complement each other, there can be trade-offs—for example, some highly efficient systems might initially require more time to implement, or certain aesthetic choices might require more maintenance._
+{% include life-area-values.html %}
 
 ## Levels and personalisation
 - [Level 1: Awareness](level-1)

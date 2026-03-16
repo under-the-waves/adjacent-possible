@@ -370,23 +370,29 @@
                       
         <!-- Friends and Relationships Domain -->
         {% assign friendship_page = site.pages | where: "url", "/friendship/" | first %}
+        {% assign relationship_status_page = site.pages | where: "url", "/relationship-status/" | first %}
         {% assign romantic_page = site.pages | where: "url", "/romantic-relationships/" | first %}
         {% assign sex_page = site.pages | where: "url", "/sex/" | first %}
-        <div class="dropdown-item{% unless friendship_page or romantic_page or sex_page %} all-unavailable{% endunless %}">
+        <div class="dropdown-item{% unless friendship_page or relationship_status_page or romantic_page or sex_page %} all-unavailable{% endunless %}">
           <div class="domain-header" onclick="toggleSubmenu(this)">
             <span class="domain-label">Friends and Relationships</span>
             <span class="expand-icon">▸</span>
           </div>
-          <div class="submenu">            
+          <div class="submenu">
             {% if friendship_page %}
               <a href="{{ site.baseurl }}/friendship/">Friendship</a>
             {% else %}
               <span class="unavailable-guide">Friendship</span>
             {% endif %}
-            {% if romantic_page %}
-              <a href="{{ site.baseurl }}/romantic-relationships/">Romantic relationships</a>
+            {% if relationship_status_page %}
+              <a href="{{ site.baseurl }}/relationship-status/">Relationship Status</a>
             {% else %}
-              <span class="unavailable-guide">Romantic relationships</span>
+              <span class="unavailable-guide">Relationship Status</span>
+            {% endif %}
+            {% if romantic_page %}
+              <a href="{{ site.baseurl }}/romantic-relationships/">Relationship Quality</a>
+            {% else %}
+              <span class="unavailable-guide">Relationship Quality</span>
             {% endif %}
             {% if sex_page %}
               <a href="{{ site.baseurl }}/sex/">Sex</a>

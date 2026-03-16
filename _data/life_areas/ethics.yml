@@ -1,0 +1,145 @@
+slug: ethics
+name: Ethics
+domain: Purpose
+pillar: Expand Your Awareness
+domain_representative: false
+values:
+- key: philosophical
+  name: Philosophical Depth
+  weight: 25
+  description:
+  - Comprehensive understanding of ethical theories, moral philosophy, and rigorous reasoning about complex moral questions.
+  - |-
+    Studying major ethical frameworks like utilitarianism, deontology, and virtue ethics, understanding their historical development and contemporary applications, and developing sophisticated analytical skills for moral reasoning.
+  - |-
+    People who prioritise this value seek deep engagement with ethics as an intellectual discipline and want to understand the theoretical foundations underlying moral judgments.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise that there are different approaches to thinking about right and wrong beyond personal opinion or cultural tradition
+      reasoning: |-
+        Most people operate with inherited moral frameworks without questioning them. Recognising that there are systematic approaches to ethics (utilitarian, deontological, virtue-based) represents the beginning of ethical development beyond cultural programming.
+    level_2:
+      text: |-
+        Understand basic differences between major ethical approaches (rules-based thinking, outcome-focused thinking, character-based thinking) and recognise their applications to common moral questions
+      reasoning: |-
+        Research suggests that 80% of adults can engage with basic ethical concepts when explained clearly. Understanding the difference between rules-based and outcome-based thinking represents significant ethical literacy that most adults can achieve with modest effort.
+    level_3:
+      text: |-
+        Engage thoughtfully with complex ethical theories and apply sophisticated moral reasoning to difficult dilemmas, understanding the strengths and limitations of different philosophical frameworks
+      reasoning: |-
+        Only about 5% of adults have formal training in ethics, but perhaps 15-20% develop sophisticated moral reasoning through life experience, religious study, or professional requirements. This represents significant intellectual achievement.
+    level_4:
+      text: |-
+        Demonstrate deep understanding of multiple ethical traditions and sophisticated ability to synthesise insights from different moral frameworks into coherent approaches to complex ethical questions
+      reasoning: |-
+        Deep understanding across multiple ethical traditions requiring years of study. This includes academics, serious students of philosophy, and thoughtful practitioners who have invested significant time in ethical development.
+    level_5:
+      text: |-
+        Achieve sophisticated understanding across multiple ethical traditions with ability to contribute original insights to moral reasoning and help advance ethical thinking in your areas of engagement
+      reasoning: |-
+        Contributing original insights to moral reasoning represents exceptional achievement. This includes moral philosophers, innovative ethical thinkers, and individuals whose frameworks influence others significantly.
+- key: practical
+  name: Practical Guidance
+  weight: 35
+  description:
+  - Clear, actionable ethical frameworks that provide reliable guidance for daily decisions and life choices.
+  - |-
+    Developing decision-making processes for common moral dilemmas, creating personal principles that can be applied consistently across different contexts, and translating abstract moral insights into concrete behavioural guidelines.
+  - |-
+    Those who prioritise this value focus on ethics that actually helps them navigate real-world situations with confidence and clarity.
+  benchmarks:
+    level_1:
+      text: Identify areas where your moral decision-making feels unclear or inconsistent
+      reasoning: |-
+        Self-awareness about moral blind spots and inconsistencies is the foundation for ethical development. Most people have never systematically examined where their moral decision-making breaks down or feels uncertain.
+    level_2:
+      text: |-
+        Have reliable principles for most everyday ethical decisions (honesty, fairness, keeping promises) that you can apply consistently across different contexts
+      reasoning: |-
+        Having consistent principles for common moral situations (honesty, fairness, promise-keeping) represents basic ethical functioning that roughly 80% of adults demonstrate in their daily lives, though not always consciously.
+    level_3:
+      text: |-
+        Have well-developed decision-making processes for complex moral situations that consistently lead to choices you can defend and feel confident about over time
+      reasoning: |-
+        Having reliable decision-making processes for complex moral situations requires significant development. Perhaps 5% of adults have frameworks sophisticated enough to handle novel ethical dilemmas consistently well.
+    level_4:
+      text: |-
+        Apply ethical reasoning effectively to novel and complex situations, including professional dilemmas, family conflicts, and societal issues, with decisions that prove wise over time
+      reasoning: |-
+        Frameworks that prove wise across decades and diverse situations represent exceptional practical wisdom. This includes people whose judgment others seek and whose decisions consistently prove sound over time.
+    level_5:
+      text: |-
+        Develop ethical frameworks that prove consistently wise across decades and diverse life circumstances, with decision-making processes that others study and adapt
+      reasoning: |-
+        Decision-making processes that others study and adapt represent exceptional practical wisdom. This includes moral exemplars whose approaches become models for others to follow.
+- key: integrity
+  name: Moral Integrity
+  weight: 30
+  description:
+  - |-
+    Living according to your ethical convictions consistently, even when it requires personal sacrifice, social awkwardness, or going against popular opinion.
+  - |-
+    Developing the courage to act on moral principles when it's difficult, maintaining consistency between private beliefs and public behaviour, and building character traits that support ethical action under pressure.
+  - "People who prioritise this value focus on closing the gap between knowing what's right and actually doing it."
+  benchmarks:
+    level_1:
+      text: Acknowledge gaps between what you believe is right and how you actually behave in challenging situations
+      reasoning: |-
+        Research shows significant gaps between stated values and actual behaviour across populations. Acknowledging this gap honestly, without defensiveness, is the starting point for building authentic moral integrity.
+    level_2:
+      text: |-
+        Act according to your stated moral beliefs in most situations, even when it involves minor personal costs or mild social disapproval
+      reasoning: |-
+        Acting on moral beliefs despite minor costs represents basic character that most functional adults display regularly. This excludes situations requiring significant sacrifice or courage, which are much rarer achievements.
+    level_3:
+      text: |-
+        Demonstrate consistent moral courage in challenging situations, acting on ethical convictions despite significant personal costs, social pressure, or professional consequences
+      reasoning: |-
+        Demonstrating moral courage despite significant costs is rare. Studies of whistleblowing, civil disobedience, and moral exemplars suggest this level of integrity is achieved by roughly 5% of the population.
+    level_4:
+      text: |-
+        Maintain exceptional consistency between moral beliefs and actions even in extreme circumstances, demonstrating rare moral courage that others recognise and respect
+      reasoning: |-
+        Maintaining exceptional consistency even in extreme circumstances represents rare moral courage. Historical examples include civil rights leaders, moral reformers, and individuals who maintained integrity despite severe persecution.
+    level_5:
+      text: |-
+        Demonstrate exceptional moral character that serves as an inspiring example to others, with integrity that remains uncompromised across a lifetime of challenges and changes
+      reasoning: |-
+        Exceptional moral character that inspires others across a lifetime represents the pinnacle of integrity. Historical moral exemplars like Gandhi, King, or Mandela demonstrate this level of character development.
+- key: community
+  name: Community Ethics & Belonging
+  weight: 10
+  description:
+  - |-
+    Understanding and fulfilling your moral obligations within your communities, families, and relationships whilst contributing to collective moral flourishing.
+  - |-
+    Aligning with the ethical expectations of groups you value belonging to, understanding your moral duties to others based on your roles and relationships, and seeing ethics as fundamentally about service to others rather than individual virtue alone.
+  - |-
+    Those who prioritise this value focus on how their ethical choices strengthen their communities and honour their responsibilities to others.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your moral obligations within your important relationships and communities, recognising how your ethical choices affect others
+      reasoning: |-
+        Many people act ethically primarily from habit or social pressure without understanding their moral obligations to others. Recognising these obligations as genuine ethical duties represents basic moral maturity.
+    level_2:
+      text: |-
+        Fulfil basic moral obligations within your family, friendships, and community roles, understanding and generally meeting the ethical expectations of groups you belong to
+      reasoning: |-
+        Understanding and meeting basic social moral expectations represents normal social functioning that roughly 80% of adults demonstrate within their families and communities, though many do this unconsciously.
+    level_3:
+      text: |-
+        Actively contribute to the moral health and flourishing of your communities, taking responsibility for collective ethical well-being beyond just personal virtue
+      reasoning: |-
+        Actively contributing to community moral health beyond personal virtue represents significant civic engagement. Community leaders, volunteers, and engaged citizens who take responsibility for collective wellbeing represent roughly 5% of adults.
+    level_4:
+      text: |-
+        Serve as a trusted moral guide within your communities, helping to establish and maintain ethical standards that strengthen community bonds and collective flourishing
+      reasoning: |-
+        Serving as trusted moral guides who help establish community ethical standards represents significant moral leadership. This includes respected community elders, religious leaders, and ethical exemplars others turn to for guidance.
+    level_5:
+      text: |-
+        Create lasting positive change in the moral culture of your communities, establishing ethical legacies that continue to benefit others long after your direct involvement
+      reasoning: |-
+        Creating lasting positive change in moral culture represents exceptional community contribution. This includes moral reformers, community builders, and individuals whose ethical legacies continue benefiting others long-term.

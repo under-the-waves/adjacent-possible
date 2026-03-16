@@ -1,0 +1,107 @@
+slug: life-purpose
+name: Life Purpose
+domain: Purpose
+pillar: Expand Your Awareness
+domain_representative: true
+values:
+- key: clarity
+  name: Clarity & Direction
+  weight: 45
+  description:
+  - Having a clear sense of what you want to achieve and why it matters to you personally.
+  - |-
+    Understanding your core motivations, having frameworks for major life decisions, and feeling confident about your chosen path.
+  - |-
+    People who prioritise this value focus on reducing existential confusion, developing coherent long-term vision, and maintaining certainty about their direction even when circumstances change.
+  benchmarks:
+    level_1:
+      text: Recognise that you lack clear life direction and understand this as something worth developing
+      reasoning: |-
+        Awareness represents recognising the importance of life direction. Most people never explicitly consider whether they have clear life purpose, making this recognition itself a meaningful first step.
+    level_2:
+      text: |-
+        Articulate 2-3 potential life directions you're genuinely excited about exploring and can explain why each appeals to you
+      reasoning: |-
+        Studies show 75% of people cannot articulate clear life directions they're excited about. Being able to identify and explain multiple potential paths represents significant clarity development. <a href="https://psycnet.apa.org/record/2013-44248-000" target="_blank">Source study</a>
+    level_3:
+      text: Maintain a clear, written life purpose that provides guidance for major decisions consistently over 12+ months
+      reasoning: |-
+        Maintaining written life purpose over 12+ months requires sustained commitment and regular refinement. Research shows only 5% of people maintain written purpose statements beyond initial enthusiasm. <a href="https://www.dominican.edu/dominicannews/study-highlights-strategies-for-achieving-goals" target="_blank">Source study</a>
+    level_4:
+      text: |-
+        Demonstrate consistent decision-making aligned with purpose across multiple life transitions, major challenges, and changing circumstances
+      reasoning: |-
+        Consistent purpose-aligned decision-making across major transitions demonstrates exceptional clarity. Most people's sense of purpose wavers during significant changes, making this stability rare (top 1% of population).
+    level_5:
+      text: |-
+        Maintain unwavering clarity about your purpose and direction even through major life upheavals, career changes, or personal crises
+      reasoning: |-
+        Unwavering clarity through major upheavals demonstrates mastery-level purpose development. This represents the most stable and mature form of life direction, achieved by approximately 1 in 1,000 people.
+- key: meaning
+  name: Meaning & Fulfillment
+  weight: 35
+  description:
+  - |-
+    The degree to which your life purpose provides deep satisfaction, emotional resonance, and a sense that your existence matters.
+  - |-
+    Feeling that your goals are personally meaningful rather than externally imposed, experiencing regular fulfillment from working toward your purpose, and having a sense that your life has significance.
+  - Those who prioritise this value seek purposes that genuinely inspire and motivate them.
+  benchmarks:
+    level_1:
+      text: "Identify times when you've felt most and least fulfilled and begin noticing patterns in what provides meaning"
+      reasoning: |-
+        Beginning to notice patterns in fulfillment requires stepping back from automatic living. This meta-awareness of what provides meaning is the foundation for all purpose development.
+    level_2:
+      text: Identify activities and contexts that consistently provide deep satisfaction and actively seek more of these experiences
+      reasoning: |-
+        Research indicates most people can identify what drains them but struggle to identify what consistently fulfills them. Actively seeking more meaningful experiences represents purposeful life design rather than passive acceptance.
+    level_3:
+      text: |-
+        Experience regular fulfillment from working toward your purpose, maintaining motivation even during difficult periods or setbacks
+      reasoning: |-
+        Experiencing fulfillment during difficult periods demonstrates deep purpose connection. Most people lose motivation during setbacks, making sustained meaning during challenges a mark of true purpose development.
+    level_4:
+      text: |-
+        Maintain sense of meaning and motivation even during extended periods of setbacks, external pressure, or when outcomes don't match expectations
+      reasoning: |-
+        Maintaining meaning during extended setbacks or external pressure requires deep purpose integration. This resilience during adversity characterises those with exceptionally well-developed life purpose.
+    level_5:
+      text: |-
+        Experience profound fulfillment that remains stable across major life changes, providing consistent motivation and satisfaction regardless of external circumstances
+      reasoning: |-
+        Profound fulfillment stable across all circumstances represents the pinnacle of purpose development. This level of consistent meaning regardless of external conditions characterises true mastery in life purpose.
+- key: integration
+  name: Integration & Coherence
+  weight: 20
+  description:
+  - |-
+    How well your life purpose connects with and organises other aspects of your life -- career, relationships, daily activities, and personal growth.
+  - |-
+    Having a purpose that provides a unifying framework for life decisions, reduces internal conflict between different life domains, and creates synergy between various activities.
+  - |-
+    People who prioritise this value want their purpose to serve as an organising principle that makes their whole life more coherent.
+  benchmarks:
+    level_1:
+      text: Assess how well your current activities align with your stated values and priorities
+      reasoning: |-
+        Most people never assess alignment between stated values and actual behaviour. This assessment reveals gaps between intentions and actions, enabling conscious choice about life direction.
+    level_2:
+      text: |-
+        Make at least one significant life decision (career change, relationship, location) based on purpose considerations rather than external expectations or default paths
+      reasoning: |-
+        Making major decisions based on purpose rather than external expectations requires considerable self-awareness and courage. Most people follow default paths, making purpose-driven decisions relatively rare.
+    level_3:
+      text: |-
+        Align major life domains (work, relationships, lifestyle choices) with your stated purpose, creating mutual reinforcement rather than conflict
+      reasoning: |-
+        Aligning major life domains with purpose requires deliberate life design. Research shows most people experience conflict between different life areas, making coherent alignment a significant achievement representing the 95th percentile.
+    level_4:
+      text: |-
+        Create lifestyle and commitments that actively reinforce rather than compete with your life purpose, achieving synergy across life domains
+      reasoning: |-
+        Creating lifestyle that actively reinforces purpose represents sophisticated life design. Most people struggle with competing priorities, making this level of integration exceptional and characteristic of the top 1%.
+    level_5:
+      text: |-
+        Achieve seamless integration where pursuing your purpose enhances rather than conflicts with other life priorities, creating positive feedback loops across all life domains
+      reasoning: |-
+        Seamless integration where purpose enhances all life priorities represents optimal life design. This creates positive feedback loops across domains, achievable by approximately 0.1% of the population through exceptional purpose development.

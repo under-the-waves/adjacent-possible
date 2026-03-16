@@ -1,7 +1,10 @@
+---
+life_area_slug: possessions
+---
 [← Back to Home](../)
 # Possessions
 
-## What is Possessions?
+## What are Possessions?
 
 Your relationship with the physical objects you own -- how you acquire, maintain, curate, and let go of the things that fill your daily environment.
 
@@ -16,71 +19,13 @@ Your relationship with the physical objects you own -- how you acquire, maintain
 
 Your approach to possessions depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
 
-### Functionality (30%)
-Ensuring that the things you own serve clear purposes and support your daily activities effectively. This includes having the right tools, maintaining them in working order, and ensuring possessions enhance rather than hinder your routines. People who prioritise this value assess items by their utility.
-
-### Simplicity (25%)
-Maintaining a curated, manageable collection of possessions that reduces cognitive load. This includes regular decluttering, resistance to unnecessary acquisition, and a preference for fewer, well-chosen items over abundance. People who prioritise this value find freedom in owning less.
-
-### Quality (25%)
-Investing in well-made, durable items that provide lasting value. This includes understanding materials and construction, maintaining items properly, and accepting higher upfront costs for lower lifetime costs. People who prioritise this value buy less but buy better.
-
-### Meaning (20%)
-Owning items that carry personal, sentimental, or aesthetic significance beyond mere function. This includes heirlooms, handmade objects, curated collections, and possessions that tell a story or connect you to people and experiences you value. People who prioritise this value see certain objects as expressions of identity and memory.
+{% include life-area-values.html %}
 
 ## Benchmarks by Level
 
 Consumer culture normalises accumulation, making deliberate management of possessions genuinely countercultural. The average American woman owns 30 outfits (up from 9 in 1930), the storage industry has doubled since the early 2000s, and most households contain hundreds of thousands of items. Against this backdrop, even modest intentionality about what you own and why places you well above population norms. Systematic, principle-driven possession management is exceptionally rare.
 
-### Level 1: Awareness
-
-**Functionality**: Can identify which possessions you use regularly and which you have not used in over a year <span class="info-icon" onclick="showReasoning('level1-functionality')">i</span>
-
-**Simplicity**: Know approximately how many possessions you own in key categories and understand your acquisition patterns <span class="info-icon" onclick="showReasoning('level1-simplicity')">i</span>
-
-**Quality**: Understand the difference between purchase price and lifetime cost, and can identify where cheap purchases have cost you more in the long run <span class="info-icon" onclick="showReasoning('level1-quality')">i</span>
-
-**Meaning**: Identify which possessions have genuine personal significance versus those acquired without thought <span class="info-icon" onclick="showReasoning('level1-meaning')">i</span>
-
-### Level 2: Foundation (80th percentile capability)
-
-**Functionality**: All regularly used possessions are in good working order, with broken items either repaired or replaced, and a clear system for finding what you need <span class="info-icon" onclick="showReasoning('level2-functionality')">i</span>
-
-**Simplicity**: Completed at least one major declutter in the past year, removing items you no longer use, and maintaining awareness of what comes into your home <span class="info-icon" onclick="showReasoning('level2-simplicity')">i</span>
-
-**Quality**: Key items (tools, clothing, furniture) selected for durability and fitness for purpose rather than lowest price <span class="info-icon" onclick="showReasoning('level2-quality')">i</span>
-
-**Meaning**: Key possessions chosen partly for personal meaning; can articulate why important items matter to you <span class="info-icon" onclick="showReasoning('level2-meaning')">i</span>
-
-### Level 3: Proficiency (95th percentile capability)
-
-**Functionality**: Every possession has a designated place and serves a clear purpose, with regular review and maintenance schedules for key items <span class="info-icon" onclick="showReasoning('level3-functionality')">i</span>
-
-**Simplicity**: Consistent one-in-one-out discipline for new acquisitions, regular decluttering cycles, and a home environment that feels spacious and uncluttered <span class="info-icon" onclick="showReasoning('level3-simplicity')">i</span>
-
-**Quality**: A curated collection where most items are the best practical option for their purpose, maintained to extend their lifespan <span class="info-icon" onclick="showReasoning('level3-quality')">i</span>
-
-**Meaning**: Possessions deliberately curated for personal significance -- heirlooms preserved, meaningful gifts treasured, and sentimental items given pride of place in your environment <span class="info-icon" onclick="showReasoning('level3-meaning')">i</span>
-
-### Level 4: Excellence (99th percentile capability)
-
-**Functionality**: A precisely calibrated inventory where each item earns its place through regular use and clear purpose, with nothing redundant and nothing missing <span class="info-icon" onclick="showReasoning('level4-functionality')">i</span>
-
-**Simplicity**: A living environment with genuinely minimal possessions that supports calm and focus, maintained effortlessly through ingrained habits <span class="info-icon" onclick="showReasoning('level4-simplicity')">i</span>
-
-**Quality**: Every significant possession is the optimal choice -- durable, beautiful, and perfectly suited to its purpose, with a clear philosophy guiding all acquisition decisions <span class="info-icon" onclick="showReasoning('level4-quality')">i</span>
-
-**Meaning**: Every significant possession carries a story or connection you value -- your material environment is an expression of your identity, relationships, and personal history <span class="info-icon" onclick="showReasoning('level4-meaning')">i</span>
-
-### Level 5: Mastery (99.9th percentile capability)
-
-**Functionality**: Complete mastery of your material environment -- every item is optimally functional, perfectly maintained, and contributes to a seamless daily experience with zero friction from possessions <span class="info-icon" onclick="showReasoning('level5-functionality')">i</span>
-
-**Simplicity**: A radically curated life where possessions are few enough to inventory from memory, each deeply valued, and the absence of excess creates genuine freedom and clarity <span class="info-icon" onclick="showReasoning('level5-simplicity')">i</span>
-
-**Quality**: A small collection of exceptional items, each chosen with extraordinary care, maintained impeccably, and providing satisfaction that compounds rather than depreciates over years <span class="info-icon" onclick="showReasoning('level5-quality')">i</span>
-
-**Meaning**: A deeply personal collection where every object is imbued with significance -- possessions that connect you to the people, places, and experiences that define your life, curated with the care of a personal museum <span class="info-icon" onclick="showReasoning('level5-meaning')">i</span>
+{% include life-area-benchmarks.html %}
 
 ## Levels
 
@@ -93,6 +38,7 @@ Consumer culture normalises accumulation, making deliberate management of posses
 [← Back to Life Levels Home](../)
 
 <script>
+// Research data for info buttons
 const researchData = {
     'research-volume': {
         title: 'Volume of Possessions',
@@ -106,26 +52,7 @@ const researchData = {
         title: 'Clutter and Stress',
         content: 'Over a lifetime, the average person spends 3,680 hours (153 days) searching for misplaced items. Research found that women who are bothered by household clutter showed increased levels of the stress hormone cortisol, a physiological stress response with long-term health implications. Men were unaffected by the same measure. <a href="https://pubmed.ncbi.nlm.nih.gov/19934011/" target="_blank">View study</a>'
     },
-    'level1-functionality': { title: 'Level 1 Functionality Reasoning', content: 'Most people cannot identify which possessions they actually use. Research suggests a large proportion of household items go unused for over a year, yet most people have never conducted an inventory or audit of their belongings.' },
-    'level1-simplicity': { title: 'Level 1 Simplicity Reasoning', content: 'Understanding your acquisition patterns -- what you buy, why, and how often -- is the prerequisite for controlling possession volume. Most consumers operate on autopilot, accumulating without awareness.' },
-    'level1-quality': { title: 'Level 1 Quality Reasoning', content: 'The distinction between purchase price and lifetime cost is one most consumers do not make. Cheap items that break and need replacing often cost more than durable alternatives over time.' },
-    'level2-functionality': { title: 'Level 2 Functionality Reasoning', content: 'All possessions in working order with a system for finding things represents 80th percentile. Most households have broken items they work around and no consistent organisation system.' },
-    'level2-simplicity': { title: 'Level 2 Simplicity Reasoning', content: 'Completing a major declutter and maintaining acquisition awareness places you above 80% of households. Most people accumulate continuously without periodic review.' },
-    'level2-quality': { title: 'Level 2 Quality Reasoning', content: 'Selecting key items for durability rather than lowest price represents top 20% consumer behaviour. The default consumer pattern prioritises low upfront cost.' },
-    'level3-functionality': { title: 'Level 3 Functionality Reasoning', content: 'Every possession with a designated place and clear purpose, with maintenance schedules, represents top 5%. This level of systematic management is rare in household contexts.' },
-    'level3-simplicity': { title: 'Level 3 Simplicity Reasoning', content: 'Consistent one-in-one-out discipline and regular decluttering cycles represent top 5% possession management. Most people accumulate faster than they declutter.' },
-    'level3-quality': { title: 'Level 3 Quality Reasoning', content: 'A curated collection where most items are the best practical option, properly maintained, represents top 5% consumer intentionality.' },
-    'level4-functionality': { title: 'Level 4 Functionality Reasoning', content: 'A precisely calibrated inventory with nothing redundant and nothing missing represents top 1% possession management -- a level of intentionality that requires sustained effort and clear principles.' },
-    'level4-simplicity': { title: 'Level 4 Simplicity Reasoning', content: 'Genuinely minimal possessions maintained effortlessly represents top 1% simplicity. In a consumer culture, this level of restraint requires deeply internalised values and consistent practice.' },
-    'level4-quality': { title: 'Level 4 Quality Reasoning', content: 'Every significant possession being the optimal choice with a clear guiding philosophy represents top 1% consumer intentionality and expertise.' },
-    'level5-functionality': { title: 'Level 5 Functionality Reasoning', content: 'Zero friction from possessions -- every item optimally functional and perfectly maintained -- represents 99.9th percentile material management achieved by fewer than 1 in 1,000 households.' },
-    'level5-simplicity': { title: 'Level 5 Simplicity Reasoning', content: 'Possessions few enough to inventory from memory, each deeply valued, represents 99.9th percentile simplicity. Some minimalists achieve this with 100 -- 300 total items versus the average 300,000. <a href="https://www.becomingminimalist.com/clutter-stats/" target="_blank">View source</a>' },
-    'level5-quality': { title: 'Level 5 Quality Reasoning', content: 'A small collection of exceptional items that provide compounding satisfaction represents 99.9th percentile possession mastery -- fewer than 1 in 1,000 people achieve this relationship with their material environment.' },
-    'level1-meaning': { title: 'Level 1 Meaning Reasoning', content: 'Most people have never considered which of their possessions carry genuine personal significance. Distinguishing meaningful items from those acquired without thought is the first step toward a more intentional relationship with your material environment.' },
-    'level2-meaning': { title: 'Level 2 Meaning Reasoning', content: 'Choosing key possessions partly for personal meaning and being able to articulate why important items matter represents 80th percentile intentionality. Most people acquire possessions without considering their personal significance.' },
-    'level3-meaning': { title: 'Level 3 Meaning Reasoning', content: 'Deliberately curating possessions for personal significance -- preserving heirlooms, treasuring meaningful gifts, giving sentimental items pride of place -- represents top 5% intentionality about the emotional dimension of ownership.' },
-    'level4-meaning': { title: 'Level 4 Meaning Reasoning', content: 'A material environment that expresses your identity, relationships, and personal history represents top 1% -- a level where possessions serve as a tangible record of what matters most to you.' },
-    'level5-meaning': { title: 'Level 5 Meaning Reasoning', content: 'A deeply personal collection curated with the care of a personal museum represents 99.9th percentile -- fewer than 1 in 1,000 people achieve this level of intentional meaning in their material environment.' }
+    {% include benchmark-reasoning.html %}
 };
 
 </script>

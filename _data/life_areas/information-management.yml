@@ -1,0 +1,140 @@
+slug: information-management
+name: Information Management
+domain: Knowledge
+pillar: Expand Your Awareness
+domain_representative: false
+values:
+- key: retention
+  name: Information Retention
+  weight: 35
+  description:
+  - Capturing and preserving valuable insights, ideas, and knowledge from various sources without losing them over time.
+  - Comprehensive coverage -- the more you retain, the more valuable your knowledge base becomes.
+  - People who prioritise this value focus on broad capture across many sources and contexts.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand what information you currently capture and lose; recognise which sources provide valuable insights; identify gaps in your coverage across different contexts and sources
+      reasoning: |-
+        Awareness level focuses on understanding current patterns without requiring behavior change. Most people can assess their information capture and loss patterns through simple reflection.
+    level_2:
+      text: |-
+        Have some consistent method for capturing important information from multiple sources; preserve valuable insights that would otherwise be forgotten; maintain basic coverage across your main information streams
+      reasoning: |-
+        Having any consistent capture method puts someone in the top 20% since most people take scattered, unorganized notes. Basic systematic capture across multiple sources is relatively uncommon.
+    level_3:
+      text: |-
+        Systematically capture information across multiple sources and contexts; maintain comprehensive coverage of your reading, conversations, and experiences; sustain information capture systems consistently for over a year without abandoning them
+      reasoning: |-
+        Systematic capture across multiple sources with comprehensive coverage represents top 5% capability. Sustaining systems for over a year demonstrates exceptional consistency compared to typical abandonment patterns.
+    level_4:
+      text: |-
+        Build comprehensive knowledge bases with broad coverage that accumulate value over multiple years; capture insights across diverse domains and contexts; integrate information capture seamlessly into daily workflows across all information sources
+      reasoning: |-
+        Building comprehensive knowledge bases that accumulate value over multiple years requires exceptional discipline and system design achieved by roughly 1% of people.
+    level_5:
+      text: |-
+        Maintain extensive knowledge systems with exceptional breadth spanning multiple domains and contexts; demonstrate comprehensive coverage that captures valuable information others miss; achieve near-complete preservation of valuable insights across all encountered sources
+      reasoning: |-
+        Maintaining extensive knowledge systems with exceptional breadth that capture information others miss represents the pinnacle of systematic information management achieved by roughly 0.1% of people.
+- key: retrieval
+  name: Retrieval Efficiency
+  weight: 30
+  description:
+  - Finding the right information quickly when you need it.
+  - |-
+    Having relevant knowledge accessible at decision points is what makes information management valuable for real-world outcomes.
+  - People who prioritise this value focus on search capabilities, organisation schemes, and fast access.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand how much time you spend searching for any type of information; recognise which types of information are most difficult to locate when needed; identify current gaps between information needs and access speed across all life areas
+      reasoning: |-
+        Awareness involves recognizing time spent searching and identifying pain points. This requires no system changes, just observation of current retrieval challenges.
+    level_2:
+      text: |-
+        Have basic methods for organising information across different contexts; can usually find important items (notes, documents, files) within 5-10 minutes when needed; occasionally apply previously captured insights to current decisions and problems
+      reasoning: |-
+        Being able to find information within 5-10 minutes represents significant improvement over typical ad-hoc searching. Most people struggle to locate specific information beyond recent items.
+    level_3:
+      text: |-
+        Find most information within a few minutes, whether knowledge insights or practical documents; maintain organisation systems that consistently deliver relevant results across multiple life areas; regularly apply captured insights to improve decision-making and problem-solving
+      reasoning: |-
+        Finding most information within minutes across multiple contexts requires sophisticated organization that very few people maintain consistently.
+    level_4:
+      text: |-
+        Access relevant information almost immediately through highly optimised systems; consistently have the right knowledge or documents available when making important decisions; integrate information retrieval seamlessly across all life contexts, from intellectual insights to practical documents
+      reasoning: |-
+        Near-instantaneous access to information across all life contexts through optimized systems represents sophisticated information architecture achieved by very few people.
+    level_5:
+      text: |-
+        Achieve near-instantaneous access to any previously captured information regardless of type or context; maintain systems where relevant information surfaces contextually when needed; demonstrate exceptional ability to connect current practical needs with precisely the right information from any domain
+      reasoning: |-
+        Near-instantaneous access to any information with contextual surfacing represents the highest level of information system sophistication and optimization.
+- key: insight
+  name: Insight Generation
+  weight: 20
+  description:
+  - Connecting ideas across sources to generate new understanding, identify patterns, and develop original thinking.
+  - |-
+    People who prioritise this value focus on systems that help them see relationships between concepts and build coherent mental models.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise when you generate new insights by connecting information; understand which information sources and formats best support your thinking; identify missed opportunities for knowledge synthesis
+      reasoning: |-
+        Awareness means noticing when connections between ideas occur naturally and recognizing missed opportunities for synthesis.
+    level_2:
+      text: |-
+        Occasionally generate new understanding by connecting ideas from different sources; document insights rather than losing them to memory; notice when current situations relate to previously encountered information
+      reasoning: |-
+        Occasionally connecting ideas from different sources and documenting insights represents systematic thinking that most people do not practice regularly.
+    level_3:
+      text: |-
+        Regularly develop original thinking through connecting information from multiple sources; build mental models that integrate insights across different domains; generate actionable insights that improve decision-making
+      reasoning: |-
+        Regularly developing original thinking through systematic information synthesis represents advanced knowledge work capabilities achieved by relatively few people.
+    level_4:
+      text: |-
+        Consistently produce novel insights through sophisticated knowledge synthesis; maintain information systems that actively support creative thinking; develop expertise that others recognise as distinctively insightful
+      reasoning: |-
+        Consistently producing novel insights through sophisticated synthesis that others recognize represents exceptional intellectual capability and systematic approach.
+    level_5:
+      text: |-
+        Generate breakthrough insights through masterful information synthesis; build knowledge systems that consistently produce non-obvious connections; demonstrate exceptional ability to see patterns and implications others miss
+      reasoning: |-
+        Generating breakthrough insights through masterful synthesis that produces non-obvious connections represents exceptional intellectual capability combined with superior systematic approaches.
+- key: simplicity
+  name: System Simplicity
+  weight: 15
+  description:
+  - |-
+    Preferring approaches that minimise ongoing cognitive overhead and maintenance burden, whether through minimal analogue systems (notebooks, index cards) or highly automated digital setups.
+  - |-
+    People who prioritise this value want their information system to support their thinking without becoming a project unto itself.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your preferences for information management complexity; recognise the trade-offs between system sophistication and maintenance burden; identify what level of structure feels natural and sustainable
+      reasoning: |-
+        Understanding personal preferences for complexity vs simplicity requires reflection on past experiences with organizational systems.
+    level_2:
+      text: |-
+        Maintain an information approach for several months without abandoning it; achieve useful results with minimal daily overhead; choose methods that match your natural working style
+      reasoning: |-
+        Maintaining any information approach for several months without abandoning it represents better adherence than most people achieve with organizational systems.
+    level_3:
+      text: |-
+        Sustain effective information systems for multiple years; minimise maintenance while maximising benefit; adapt systems to changing needs without complete overhauls
+      reasoning: |-
+        Sustaining effective systems for multiple years while adapting to changing needs represents exceptional system design and maintenance discipline.
+    level_4:
+      text: |-
+        Achieve sophisticated results through elegantly simple approaches; maintain systems that work reliably with minimal intervention; balance comprehensiveness with ease of use exceptionally well
+      reasoning: |-
+        Achieving sophisticated results through elegantly simple approaches represents mastery of system design principles that balances comprehensiveness with usability.
+    level_5:
+      text: |-
+        Demonstrate mastery through apparent effortlessness; achieve maximum benefit with minimal visible system complexity; inspire others through the elegant simplicity of your approach
+      reasoning: |-
+        Demonstrating mastery through apparent effortlessness while achieving maximum benefit represents the highest level of system design and personal methodology development.

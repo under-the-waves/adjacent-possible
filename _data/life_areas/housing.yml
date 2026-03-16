@@ -1,0 +1,104 @@
+slug: housing
+name: Housing
+domain: Environment
+pillar: Organise Your Life
+domain_representative: true
+values:
+- key: comfort
+  name: Comfort
+  weight: 40
+  description:
+  - |-
+    The physical quality of your living environment -- space, light, temperature, noise levels, maintenance condition, and overall pleasantness.
+  - |-
+    Having enough room for your activities, a well-functioning home that does not create daily friction, and an environment that supports rest and productivity.
+  - People who prioritise this value invest in the quality of their living space.
+  benchmarks:
+    level_1:
+      text: Can articulate what aspects of your current living space work well and what causes daily friction
+      reasoning: |-
+        Many people adapt to housing discomfort without consciously identifying it. Articulating what causes daily friction -- noise, temperature, space constraints, poor lighting -- is the prerequisite for improvement.
+    level_2:
+      text: |-
+        Housing that meets all basic needs -- adequate space, good repair, comfortable temperature, reasonable noise levels, and no significant maintenance issues
+      reasoning: |-
+        Housing that meets all basic needs without significant maintenance issues places you above the majority. Many households live with deferred maintenance, inadequate space, or comfort issues they have normalised.
+    level_3:
+      text: |-
+        Housing that actively enhances daily life -- well-designed spaces for work, rest, and socialising, natural light, outdoor access, and no deferred maintenance
+      reasoning: |-
+        Housing that actively enhances daily life -- purpose-designed spaces, natural light, outdoor access -- represents top 5% housing quality. Most people compromise significantly on at least one comfort dimension.
+    level_4:
+      text: |-
+        Housing tailored to your specific needs and preferences -- purpose-designed spaces, excellent energy efficiency, low maintenance burden, and an environment that actively supports wellbeing
+      reasoning: |-
+        Housing specifically tailored to your needs with excellent efficiency and low maintenance burden represents top 1%. This typically requires either significant financial resources or exceptional housing choices.
+    level_5:
+      text: |-
+        A home that is genuinely exceptional -- architecturally thoughtful, perfectly maintained, and designed around your daily rhythms and needs with no compromise on quality
+      reasoning: |-
+        An architecturally thoughtful, perfectly maintained home designed around your daily rhythms represents 99.9th percentile housing quality achieved by fewer than 1 in 1,000 households.
+- key: affordability
+  name: Affordability
+  weight: 35
+  description:
+  - Keeping housing costs at a sustainable level that preserves financial flexibility for other life goals.
+  - Mortgage or rent payments, utilities, maintenance, insurance, and taxes remaining below burdensome thresholds.
+  - Those who prioritise this value make housing decisions that protect their broader financial health.
+  benchmarks:
+    level_1:
+      text: Know your total housing costs as a percentage of income, including all associated expenses
+      reasoning: |-
+        Many households do not know their true housing cost-to-income ratio when all expenses are included. The 30% threshold is widely used as the standard for housing affordability. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9914515/" target="_blank">View source</a>
+    level_2:
+      text: Total housing costs below 30% of gross income, with a financial buffer for unexpected repairs or rent increases
+      reasoning: |-
+        Housing costs below 30% of income with a repair buffer represents 80th percentile achievement given that nearly half of renters and a quarter of homeowners exceed this threshold. <a href="https://www.census.gov/newsroom/press-releases/2024/renter-households-cost-burdened-race.html" target="_blank">View source</a>
+    level_3:
+      text: |-
+        Housing costs below 25% of income with equity building or savings accumulation, and financial resilience to absorb housing-related shocks
+      reasoning: |-
+        Housing costs below 25% of income with equity building represents top 5% financial efficiency. This level of affordability while maintaining quality is increasingly rare in most housing markets.
+    level_4:
+      text: |-
+        Housing costs below 20% of income, substantial equity or assets, and the financial flexibility to relocate or upgrade without stress
+      reasoning: |-
+        Housing below 20% of income with substantial equity and relocation flexibility represents top 1% housing affordability -- a level of financial freedom regarding housing that very few achieve.
+    level_5:
+      text: |-
+        Housing represents a negligible financial burden, with full ownership or minimal costs relative to income, and complete financial freedom regarding housing decisions
+      reasoning: |-
+        Housing as a negligible financial burden with complete freedom regarding housing decisions represents 99.9th percentile housing affordability -- full ownership or minimal costs relative to substantial income.
+- key: location
+  name: Location
+  weight: 25
+  description:
+  - Proximity to work, social connections, amenities, nature, and the quality of the surrounding neighbourhood.
+  - |-
+    Commute time, access to services, safety, community character, and the fit between your lifestyle needs and what the location provides.
+  - People who prioritise this value choose where to live based on how the location supports their daily life.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand how your current location affects your daily life -- commute time, access to amenities, and social connections
+      reasoning: |-
+        Understanding how location affects daily life requires tracking actual commute times, frequency of amenity access, and social connection patterns. Many people underestimate location's impact on their wellbeing.
+    level_2:
+      text: Commute under 30 minutes, convenient access to grocery shops and healthcare, and a neighbourhood where you feel safe
+      reasoning: |-
+        A commute under 30 minutes with convenient access to essentials represents above-average location quality. Average commute times range from 40 -- 80 minutes, and many people lack walkable access to basic services. <a href="https://link.springer.com/article/10.1007/s11116-019-09983-9" target="_blank">View source</a>
+    level_3:
+      text: |-
+        Walkable access to daily needs, strong community connections in the neighbourhood, and a location that supports your lifestyle priorities
+      reasoning: |-
+        Walkable daily needs, strong community connections, and lifestyle-supporting location represents top 5% location quality. Achieving this while maintaining affordability and comfort is a rare combination.
+    level_4:
+      text: |-
+        An ideal location for your life stage and priorities -- excellent schools if relevant, strong community, beautiful surroundings, and minimal compromise on accessibility
+      reasoning: |-
+        An ideal location for your life stage with minimal compromise represents top 1% achievement. Most people make significant location trade-offs between affordability, comfort, and accessibility.
+    level_5:
+      text: |-
+        Optimal location with no meaningful compromise -- the neighbourhood, community, natural environment, and accessibility all align with your values and lifestyle
+      reasoning: |-
+        Optimal location with zero meaningful compromise across neighbourhood, community, nature, and accessibility represents 99.9th percentile -- a combination achieved by fewer than 1 in 1,000 households.

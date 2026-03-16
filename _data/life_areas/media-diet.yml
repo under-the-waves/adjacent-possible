@@ -1,0 +1,143 @@
+slug: media-diet
+name: Media Diet
+domain: Knowledge
+pillar: Expand Your Awareness
+domain_representative: true
+values:
+- key: quality
+  name: Information Quality & Depth
+  weight: 30
+  description:
+  - The accuracy, nuance, and intellectual rigour of consumed information.
+  - |-
+    Prioritising books over articles, primary sources over summaries, expert analysis over hot takes, and comprehensive coverage over fragmented updates.
+  - |-
+    People who prioritise this value invest time in fewer, higher-quality sources that provide deep understanding rather than broad coverage.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise the difference between primary and secondary sources; understand your current mix of shallow vs deep content consumption
+      reasoning: |-
+        This represents basic media literacy that should be achievable by anyone with internet access. Understanding the difference between primary and secondary sources is fundamental information literacy taught in schools.
+    level_2:
+      text: Regularly consume at least one high-quality source monthly; can distinguish between opinion and reporting
+      reasoning: |-
+        Based on Pew Research showing 75% of Americans read at least one book annually, consuming one quality source monthly represents achievable improvement for the top 20% of information consumers. The ability to distinguish opinion from reporting represents basic media literacy.
+    level_3:
+      text: |-
+        Read 12+ non-fiction books annually; regularly consume in-depth analysis rather than just headlines; can trace information back to primary sources when needed
+      reasoning: |-
+        Reading 12+ books annually places someone in the top 5% according to Pew Research (only 23% read 12+ books yearly). Regularly consuming in-depth analysis and tracing to primary sources represents sophisticated information literacy achieved by few.
+    level_4:
+      text: |-
+        Regularly engage with academic papers and primary research; read 25+ books annually across diverse domains; can quickly assess source credibility and bias
+      reasoning: |-
+        Regular engagement with academic papers and reading 25+ books annually represents academic-level information consumption achieved by roughly 1% of the population. Quick credibility assessment requires expertise developed through extensive practice.
+    level_5:
+      text: |-
+        Contribute to information quality through expert networks; maintain relationships with primary sources; read 40+ books annually with high retention
+      reasoning: |-
+        Contributing to information quality and maintaining primary source relationships represents expert-level engagement achieved by roughly 1 in 1000 people. Reading 40+ books with high retention indicates exceptional capacity.
+- key: relevance
+  name: Actionable Relevance
+  weight: 25
+  description:
+  - How directly the information supports decision-making and practical outcomes in your life.
+  - |-
+    Career-relevant developments, investment insights, health discoveries, and information that changes behaviour or choices.
+  - |-
+    Those who prioritise this value curate their consumption around information with clear utility for their specific circumstances and goals.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify which information sources have actually influenced your decisions in the past year; assess whether your current consumption aligns with your goals
+      reasoning: |-
+        Simple self-reflection about what information has actually influenced decisions requires no external resources. This basic awareness represents the starting point for intentional media consumption.
+    level_2:
+      text: |-
+        Have 2-3 information sources directly relevant to your career or major life areas; occasionally change behaviour based on information consumed
+      reasoning: |-
+        Having 2-3 targeted information sources and occasionally changing behaviour based on information represents intentional but modest curation. This aligns with the top 20% who actively seek career-relevant information rather than consuming passively.
+    level_3:
+      text: |-
+        Have curated information sources for each major life domain; regularly implement insights from information consumed; avoid information that provides no decision-making value
+      reasoning: |-
+        Having curated sources for each life domain and regularly implementing insights represents systematic information management. Avoiding non-actionable information requires discipline that few demonstrate consistently.
+    level_4:
+      text: |-
+        Information diet directly drives major life decisions; curated sources provide competitive advantages; systematic approach to filtering signal from noise
+      reasoning: |-
+        Information diet driving major life decisions and providing competitive advantages represents professional-level information management. Systematic signal filtering indicates sophisticated frameworks used by top performers.
+    level_5:
+      text: |-
+        Information diet provides substantial competitive advantages; others seek your perspective on information quality; systematic frameworks for evaluating information value
+      reasoning: |-
+        Substantial competitive advantages from information diet and others seeking your perspective represents recognised expertise. Systematic evaluation frameworks indicate professional-level information management achieved by very few.
+- key: breadth
+  name: Breadth & Discovery
+  weight: 25
+  description:
+  - Exposure to diverse perspectives, unexpected insights, and information outside your existing knowledge areas.
+  - |-
+    Following curiosity into unfamiliar domains, consuming content from different cultural perspectives, and maintaining intellectual openness to ideas that might reshape your thinking.
+  - |-
+    People who prioritise this value deliberately seek out information that challenges assumptions and expands mental models.
+  benchmarks:
+    level_1:
+      text: Understand your information comfort zone and echo chambers; recognise areas where you lack diverse perspectives
+      reasoning: |-
+        Recognising echo chambers and information comfort zones requires only self-awareness and honest reflection about one's information sources and perspectives.
+    level_2:
+      text: |-
+        Deliberately expose yourself to at least one unfamiliar topic or perspective monthly; consume information from sources outside your usual political alignment
+      reasoning: |-
+        Monthly exposure to unfamiliar topics and consuming information from outside one's political alignment represents deliberate effort to avoid echo chambers. Pew Research indicates only about 20% regularly consume diverse perspectives.
+    level_3:
+      text: |-
+        Systematically explore new domains quarterly; maintain information sources from multiple countries; comfortable engaging with ideas that challenge existing beliefs
+      reasoning: |-
+        Systematic quarterly exploration and maintaining international sources represents deliberate intellectual curiosity. Being comfortable with challenging ideas requires intellectual confidence that characterises the top 5% of information consumers.
+    level_4:
+      text: |-
+        Actively seek contrarian viewpoints and edge cases; information consumption spans multiple cultural contexts; comfortable with high intellectual uncertainty
+      reasoning: |-
+        Actively seeking contrarian viewpoints and spanning multiple cultural contexts requires intellectual sophistication. Comfort with uncertainty represents advanced cognitive flexibility achieved by few.
+    level_5:
+      text: |-
+        Information consumption leads to novel connections others miss; comfortable operating at knowledge frontiers; includes significant untranslated or specialist sources
+      reasoning: |-
+        Making novel connections others miss and operating at knowledge frontiers represents exceptional intellectual capability. Including untranslated sources indicates rare linguistic and intellectual sophistication.
+- key: efficiency
+  name: Cognitive Efficiency
+  weight: 20
+  description:
+  - Optimising the retention-to-effort ratio and minimising cognitive overhead from information consumption.
+  - |-
+    Choosing formats that match your processing style, avoiding redundant coverage, and consuming information at optimal timing and frequency.
+  - Those who prioritise this value focus on maximum informational value with minimal mental fatigue or wasted attention.
+  benchmarks:
+    level_1:
+      text: |-
+        Track how much time you spend consuming information vs how much you retain; notice patterns of information overload or cognitive fatigue
+      reasoning: |-
+        Basic self-monitoring of time spent consuming information and retention rates requires only attention to one's own patterns. This awareness forms the foundation for optimisation.
+    level_2:
+      text: |-
+        Spend less than 2 hours daily on news and information; have basic systems to avoid duplicate coverage of the same stories
+      reasoning: |-
+        Limiting daily news consumption to under 2 hours and avoiding duplicate coverage represents basic time management around information. Studies show average Americans spend 3+ hours daily on news and social media, making this a meaningful improvement.
+    level_3:
+      text: |-
+        Optimised information consumption schedule that maximises retention; efficient methods for processing different content types; rarely experience information overload
+      reasoning: |-
+        Optimised consumption schedules and efficient processing methods represent sophisticated information management. Rarely experiencing overload indicates mastery of cognitive load management that few achieve.
+    level_4:
+      text: |-
+        Sophisticated systems for information processing and synthesis; optimal timing and format selection; information consumption enhances cognitive performance
+      reasoning: |-
+        Sophisticated processing systems and optimal format selection represent expert-level information management. Information consumption enhancing rather than detracting from cognitive performance indicates mastery.
+    level_5:
+      text: |-
+        Information consumption seamlessly integrated with productive work; optimal cognitive load management; measurably enhanced decision-making quality
+      reasoning: |-
+        Seamless integration with productive work and optimal cognitive load management represents mastery achieved by exceptional individuals. Measurably enhanced decision-making indicates systematic improvement through information consumption.

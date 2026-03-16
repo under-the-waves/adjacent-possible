@@ -1,0 +1,100 @@
+slug: mental-health
+name: Mental Health
+domain: Wellbeing
+pillar: Look After Yourself
+domain_representative: false
+values:
+- key: professional
+  name: Professional Treatment & Support
+  weight: 40
+  description:
+  - Working with qualified mental health professionals and building strong support networks.
+  - Therapy, counselling, medication when appropriate, and leveraging relationships for mental health support.
+  - People who prioritise this value focus on expert guidance and community-based approaches to mental wellness.
+  benchmarks:
+    level_1:
+      text: Recognise personal mental health patterns and know when professional support might be beneficial
+      reasoning: |-
+        This represents basic awareness of mental health needs and available resources. Most people (approximately 80%) either are unaware of when they might benefit from professional support or don't know how to access it effectively.
+    level_2:
+      text: |-
+        Have at least one trusted person to discuss mental health concerns with and know how to access professional help when needed
+      reasoning: |-
+        Research shows that having social support for mental health is achieved by only about 20% of the population. Many people lack trusted confidants for mental health concerns and don't know how to navigate professional mental health resources. <a href="https://www.nami.org/about-mental-illness/mental-health-by-the-numbers/" target="_blank">Source: NAMI</a>
+    level_3:
+      text: |-
+        Actively work with mental health professionals when needed and maintain supportive relationships that contribute to psychological wellbeing
+      reasoning: |-
+        Only about 30% of adults have accessed therapy since 2020, and much smaller percentages maintain ongoing professional relationships for mental health enhancement rather than crisis management. This level represents the top 5% who proactively use professional resources. <a href="https://mydenvertherapy.com/therapy-mental-health-statistics/" target="_blank">Source: Denver Therapy Statistics</a>
+    level_4:
+      text: Maintain comprehensive support networks and integrate professional insights into ongoing mental health enhancement
+      reasoning: |-
+        Maintaining comprehensive professional support networks for enhancement rather than crisis management represents exceptional mental health resource utilisation achieved by roughly 1% of the population. This includes ongoing relationships with mental health professionals and sophisticated peer support systems.
+    level_5:
+      text: |-
+        Access and integrate advanced therapeutic approaches while maintaining sophisticated support systems that enhance rather than merely sustain mental health
+      reasoning: |-
+        Advanced therapeutic integration represents the pinnacle of professional mental health resource utilisation, achieved by approximately 0.1% of the population. This includes accessing cutting-edge therapeutic approaches and maintaining support systems that actively enhance rather than merely sustain mental health.
+- key: self-management
+  name: Self-Management & Independence
+  weight: 35
+  description:
+  - Developing personal skills and practices to manage your own mental health independently.
+  - |-
+    Mindfulness, journaling, exercise, and other self-directed interventions that don't require ongoing professional support.
+  - Those who prioritise this value focus on building internal capabilities and self-reliance.
+  benchmarks:
+    level_1:
+      text: Understand which emotions and stressors most commonly affect your daily functioning
+      reasoning: |-
+        Basic emotional awareness is surprisingly uncommon. Many people struggle to identify specific emotions or understand their triggers, representing a fundamental gap in self-knowledge that awareness-level achievement addresses.
+    level_2:
+      text: Use 2-3 reliable stress management techniques and maintain basic emotional awareness during daily challenges
+      reasoning: |-
+        Having reliable coping strategies represents significant achievement. Most adults (approximately 80%) lack structured approaches to stress management and emotional regulation, instead relying on reactive responses or avoidance. <a href="https://positivepsychology.com/emotion-regulation/" target="_blank">Source: Positive Psychology</a>
+    level_3:
+      text: |-
+        Practice regular mental health maintenance activities and effectively manage emotional responses in most stressful situations
+      reasoning: |-
+        Regular mental health practices like meditation are maintained by only 17% of the population, and effective emotional regulation across most situations represents even rarer capability. This achievement places individuals in the top 5% for emotional self-management. <a href="https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" target="_blank">Source: NCCIH</a>
+    level_4:
+      text: |-
+        Demonstrate consistent emotional regulation across various life stressors and adapt mental health strategies based on changing circumstances
+      reasoning: |-
+        Consistent emotional regulation across diverse stressors represents advanced emotional intelligence achieved by approximately 1% of adults. This includes adapting strategies based on context and maintaining stability during major life transitions and challenges.
+    level_5:
+      text: |-
+        Maintain optimal psychological functioning across major life transitions and challenges, with advanced self-awareness and adaptive capacity
+      reasoning: |-
+        Optimal psychological functioning across major life transitions represents exceptional emotional mastery achieved by roughly 1 in 1,000 people. This includes advanced self-awareness, sophisticated adaptation strategies, and the ability to maintain mental health excellence during extreme circumstances.
+- key: integration
+  name: Integration & Holistic Approach
+  weight: 25
+  description:
+  - |-
+    Viewing mental health as interconnected with all other life areas and addressing it through lifestyle, relationships, purpose, and environment rather than as an isolated domain.
+  - People who prioritise this value see mental wellness as emerging from overall life balance and meaning.
+  benchmarks:
+    level_1:
+      text: Identify how mental health connects to other life areas like relationships, work performance, and physical health
+      reasoning: |-
+        Understanding the connections between mental health and other life areas requires stepping back from seeing mental health as isolated. Most people don't systematically consider how work stress affects sleep or how social relationships impact mood.
+    level_2:
+      text: |-
+        Recognise how lifestyle factors (sleep, exercise, social connection) directly impact your mental state and adjust accordingly
+      reasoning: |-
+        Understanding and acting on lifestyle-mental health connections requires sophistication that most people haven't developed. Research shows that while many people intellectually understand these connections, translating this into consistent behaviour change represents top 20% achievement.
+    level_3:
+      text: |-
+        Systematically address mental health through lifestyle choices and create environments that support psychological wellbeing
+      reasoning: |-
+        Systematic lifestyle design for mental health represents sophisticated understanding that few people achieve. This requires coordinating multiple life areas (work, relationships, environment, habits) to support psychological wellbeing, representing top 5% integration capability.
+    level_4:
+      text: Create coherent lifestyle approaches where all life areas mutually support psychological flourishing
+      reasoning: |-
+        Creating coherent lifestyle systems where all areas support mental health represents sophisticated life design achieved by roughly 1% of the population. This requires advanced understanding of how different life domains interact to influence psychological wellbeing.
+    level_5:
+      text: |-
+        Achieve seamless integration where mental health enhancement emerges naturally from life design rather than requiring separate interventions
+      reasoning: |-
+        Seamless life integration where mental health enhancement emerges naturally from life design represents extraordinary achievement by approximately 0.1% of the population. This involves creating living systems where psychological flourishing is the natural outcome of how life is structured rather than requiring separate interventions.

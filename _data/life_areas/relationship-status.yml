@@ -1,0 +1,107 @@
+slug: relationship-status
+name: Relationship Status
+domain: Friends and Relationships
+pillar: Connect with Others
+domain_representative: false
+values:
+- key: partner-selection
+  name: Partner Selection
+  weight: 35
+  description:
+  - 'Choosing well: understanding what you genuinely need in a partner vs. what you think you want.'
+  - |-
+    Evaluating compatibility effectively, recognising red flags early, avoiding common selection biases like prioritising excitement over stability.
+  - People who prioritise this value invest in self-knowledge and dating skills before committing.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify your own relationship patterns -- what has attracted you in the past, which choices led to good outcomes, and which selection biases (e.g., prioritising excitement over stability) you tend to repeat
+      reasoning: |-
+        Awareness of one's own selection patterns is the first step. Research on mate preferences shows that people's stated ideals often diverge from their revealed preferences -- what they say they want in a partner does not reliably predict who they actually choose. Self-assessment at this level means honestly cataloguing past choices and their outcomes.
+    level_2:
+      text: |-
+        Articulate clear, evidence-based criteria for what you need in a partner (distinct from superficial preferences), and consistently apply those criteria when evaluating potential partners rather than being swept up by initial chemistry
+      reasoning: |-
+        Having clear criteria and applying them consistently places someone in the top 20%. Research on compatibility dimensions shows that the most important factors -- similar values on key issues, shared life goals -- are often deprioritised in favour of physical attraction and excitement. People who can distinguish genuine needs from superficial preferences and resist being driven by initial chemistry are uncommon. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7071359/" target="_blank">Source study</a>
+    level_3:
+      text: |-
+        Systematically evaluate compatibility across multiple dimensions -- values, life goals, conflict style, attachment patterns -- using structured reflection or external input, and consistently avoid partners who match on surface traits but diverge on fundamentals
+      reasoning: |-
+        Systematic compatibility evaluation across multiple dimensions is rare. Most people rely on intuition and chemistry, which research shows are poor predictors of long-term satisfaction. Consistently screening for values alignment, conflict style compatibility, and attachment patterns using structured reflection places someone in the top 5% of partner selectors. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7071359/" target="_blank">Source study</a>
+    level_4:
+      text: |-
+        Demonstrate a track record of selecting partners with strong fundamental compatibility, integrating self-knowledge, feedback from trusted others, and deliberate evaluation of relationship dynamics during the dating phase before committing
+      reasoning: |-
+        A demonstrable track record of strong partner selection -- integrating self-knowledge, external feedback, and deliberate evaluation -- represents top 1% achievement. Most people repeat selection mistakes across relationships. Consistently choosing fundamentally compatible partners requires exceptional self-awareness and the discipline to override short-term attraction in favour of long-term compatibility.
+    level_5:
+      text: |-
+        Achieve near-optimal partner selection through deep self-knowledge, refined evaluation frameworks, and the discipline to decline good-enough matches in favour of genuinely excellent ones -- resulting in partnerships that are strong from the outset with minimal corrective effort required
+      reasoning: |-
+        Near-optimal partner selection -- choosing partners who are genuinely excellent matches requiring minimal corrective effort -- represents 99.9th percentile capability (1 in 1,000). This requires deep self-knowledge, refined evaluation frameworks, and the discipline to decline good-enough matches, a combination that virtually no one achieves consistently.
+- key: independence
+  name: Independence
+  weight: 35
+  description:
+  - Being comfortable and fulfilled without a romantic partner.
+  - Building a rich single life, resisting social pressure to couple up, knowing when being single is the right choice.
+  - People who prioritise this value ensure their happiness does not depend on relationship status.
+  benchmarks:
+    level_1:
+      text: |-
+        Honestly assess how much of your life satisfaction depends on having a romantic partner, and notice when decisions are driven by fear of being alone rather than genuine desire
+      reasoning: |-
+        Spielmann et al. (2013) found that fear of being single operates largely below conscious awareness, driving partner choices and relationship persistence without people recognising it. Honest self-assessment of how much one's decisions are driven by this fear is foundational and already uncommon -- most people do not examine this motivation explicitly.
+    level_2:
+      text: |-
+        Maintain a fulfilling daily life while single -- active friendships, personal projects, and stable mental health -- without treating singleness as a problem to be solved
+      reasoning: |-
+        While 50% of single adults say they are not looking for a relationship, many of those still experience their singleness as a deficit. Maintaining genuinely fulfilling daily life while single -- with active friendships, personal projects, and stable mental health -- without treating singleness as a waiting period represents roughly 80th percentile achievement. <a href="https://www.pewresearch.org/social-trends/2020/08/20/a-profile-of-single-americans/" target="_blank">Source study</a>
+    level_3:
+      text: |-
+        Thrive while single to the point where entering a relationship is a genuine choice rather than a response to loneliness or social pressure, with life satisfaction scores comparable to those of happily partnered peers
+      reasoning: |-
+        Walsh et al. (2023) found that the happiest single people had life satisfaction comparable to happily partnered people, but this profile was the minority. Thriving while single to the point where partnering is a genuine choice -- not a response to loneliness or social pressure -- represents roughly 95th percentile achievement given that most single adults still experience some deficit from their status. <a href="https://journals.sagepub.com/doi/10.1177/02654075231197728" target="_blank">Source study</a>
+    level_4:
+      text: |-
+        Build a single life so rich and intentional that partnering is purely additive -- deep friendships, meaningful work, physical health, and emotional regulation are all independently strong, with no gap that a relationship is expected to fill
+      reasoning: |-
+        Building a single life so complete that a relationship is purely additive -- with no gap it is expected to fill -- represents top 1% achievement. Research shows that even among content singles, most still report some areas where a partner would improve their life. Full self-sufficiency across friendships, work, health, and emotional regulation while single is exceptionally rare.
+    level_5:
+      text: |-
+        Reach a level of self-sufficiency and life richness where relationship status is fully decoupled from identity and wellbeing -- capable of moving between single and partnered life without emotional disruption, and modelling healthy singleness to others
+      reasoning: |-
+        Fully decoupling relationship status from identity and wellbeing -- moving between single and partnered life without emotional disruption -- represents 99.9th percentile capability. This level of self-sufficiency, where one can model healthy singleness to others and experience no identity threat from status changes, is achieved by fewer than 1 in 1,000 people.
+- key: transition-navigation
+  name: Transition Navigation
+  weight: 30
+  description:
+  - |-
+    Managing romantic transitions gracefully -- entering relationships deliberately, leaving when needed, processing breakups constructively.
+  - Recognising when a relationship should end, having the courage to act, and recovering without prolonged suffering.
+  - People who prioritise this value develop emotional resilience and decision-making skills around relationship changes.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise your patterns around relationship transitions -- how you enter relationships, how long you stay past the point of knowing it is not working, and how you handle breakups emotionally
+      reasoning: |-
+        Recognising one's own patterns around relationship transitions requires emotional honesty that most people avoid. Research shows that many people stay in relationships an average of months to years past recognising dissatisfaction, and 44% of Americans have returned to an ex-partner, suggesting limited awareness of their own transition patterns.
+    level_2:
+      text: |-
+        End relationships within a few months of recognising they are not working, rather than lingering for years, and recover from breakups to baseline wellbeing within roughly three months
+      reasoning: |-
+        Research indicates that 71% of people feel better within three months of a breakup, but many delay the breakup itself for months or years. Ending a relationship within a few months of recognising it is not working, and recovering to baseline within roughly three months, represents top-20% competence -- most people either delay the decision or take substantially longer to recover. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6051550/" target="_blank">Source study</a>
+    level_3:
+      text: |-
+        Make relationship stay-or-leave decisions based on clear criteria rather than emotion alone, communicate those decisions respectfully, and process breakups constructively -- extracting lessons without prolonged rumination or rebound behaviour
+      reasoning: |-
+        Making stay-or-leave decisions based on clear criteria rather than emotion alone is exceptionally uncommon. Most relationship endings are reactive rather than deliberate, and constructive post-breakup processing -- extracting lessons without prolonged rumination or rebound behaviour -- requires emotional skills that fewer than 5% of people develop. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6051550/" target="_blank">Source study</a>
+    level_4:
+      text: |-
+        Navigate even major relationship endings (long-term breakups, divorce) with minimal disruption to overall functioning, process grief efficiently, and re-enter dating with clear-eyed self-awareness rather than reactivity
+      reasoning: |-
+        Navigating major relationship endings with minimal disruption to overall functioning represents top 1% emotional resilience. Research on breakup recovery shows that even well-adjusted people experience significant disruption after long-term relationship endings. Processing grief efficiently and re-entering dating with clear-eyed awareness rather than reactivity requires exceptional emotional skills.
+    level_5:
+      text: |-
+        Handle all romantic transitions -- entering, deepening, pausing, ending -- with exceptional emotional clarity, minimal collateral damage to either party, rapid recovery, and the ability to maintain respectful post-relationship dynamics where appropriate
+      reasoning: |-
+        Handling all romantic transitions with exceptional emotional clarity, minimal collateral damage, rapid recovery, and respectful post-relationship dynamics represents 99.9th percentile capability. This level of transition mastery -- where even major endings are processed with grace and efficiency -- is achieved by fewer than 1 in 1,000 people and requires extraordinary emotional intelligence and resilience.

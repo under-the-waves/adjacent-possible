@@ -1,0 +1,143 @@
+slug: self-awareness
+name: Self Awareness
+domain: Values
+pillar: Expand Your Awareness
+domain_representative: true
+values:
+- key: psychological
+  name: Psychological
+  weight: 30
+  description:
+  - Understanding yourself through analysis of mental patterns, triggers, unconscious processes, and emotional dynamics.
+  - |-
+    This approach appeals to people who are naturally introspective and analytical, often drawn to therapy, psychology books, or structured self-reflection.
+  - |-
+    They want to understand the "why" behind their reactions and behaviours through systematic examination of their inner landscape.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise that you may have blind spots and biases about yourself, understanding that most people overestimate their self-awareness
+      reasoning: |-
+        Research by Tasha Eurich shows that 95% of people believe they are self-aware but only 10-15% actually meet the criteria. Level 1 represents simply recognising this gap - awareness that you may not see yourself as clearly as you think, which is more insight than most people have.
+    level_2:
+      text: |-
+        Engage with structured self-reflection through therapy, counselling, or systematic introspection, joining the ~20% of adults who pursue mental health support annually
+      reasoning: |-
+        Statistics show only about 20% of US adults receive mental health treatment annually. Engaging with therapy or structured self-reflection puts you in the top 20% of people actively working on psychological self-understanding through proven methods.
+    level_3:
+      text: |-
+        Understand your major emotional triggers, recurring thought patterns, and primary defence mechanisms, with clear insight into why these patterns developed and how they influence your behaviour
+      reasoning: |-
+        About 5% of people develop clear understanding of their major triggers, thought patterns, and defence mechanisms through psychological self-awareness work. This represents meaningful self-knowledge about your inner psychological landscape and its origins.
+    level_4:
+      text: |-
+        Accurately predict your emotional reactions and behavioural responses in challenging situations, with deep understanding of your unconscious patterns and psychological dynamics
+      reasoning: |-
+        Perhaps 1% of people can accurately predict their reactions and understand unconscious psychological dynamics through advanced psychological self-awareness. This represents sophisticated self-knowledge about your psychological makeup and patterns.
+    level_5:
+      text: |-
+        Understand your psychological makeup with such depth that you can navigate any complex situation with complete clarity about your motivations, unconscious drives, and optimal responses
+      reasoning: |-
+        Perhaps 1 in 1,000 people understand their psychological makeup with complete depth and clarity through mastery-level psychological self-awareness. This represents the pinnacle of self-knowledge about your motivations and unconscious drives.
+- key: contemplative
+  name: Contemplative/Somatic
+  weight: 25
+  description:
+  - Awareness through meditation, mindfulness, body sensations, breathwork, and embodied presence.
+  - |-
+    This approach resonates with people who are present-moment oriented and body-aware, preferring direct experience over analysis.
+  - |-
+    They trust what they can observe in real-time and find traditional "thinking about thinking" approaches overwhelming or ineffective.
+  benchmarks:
+    level_1:
+      text: |-
+        Notice basic physical sensations, breathing patterns, and present-moment experiences during daily activities without systematic practice
+      reasoning: |-
+        This represents basic awareness of present-moment experience without formal practice. Most people are caught up in mental activity and rarely notice physical sensations or breathing patterns, so simply recognising these exists is a meaningful first step.
+    level_2:
+      text: |-
+        Maintain a regular mindfulness or meditation practice, joining the 14-17% of adults who practice these techniques consistently
+      reasoning: |-
+        Research indicates 14-17% of US adults practice meditation regularly. Maintaining a consistent mindfulness practice for self-awareness places you among this minority who use contemplative methods systematically for self-understanding.
+    level_3:
+      text: |-
+        Recognise your emotional states and physical tension patterns as they arise, understanding how your body and mind signal different internal experiences throughout daily life
+      reasoning: |-
+        Roughly 5% of people can recognise their emotional states and physical patterns as they arise through contemplative self-awareness. This represents significant self-knowledge about the mind-body connection and internal experience.
+    level_4:
+      text: |-
+        Detect subtle shifts in your internal state before they influence your behaviour, understanding the intimate connection between your physical sensations, emotions, and mental responses
+      reasoning: |-
+        About 1% of people can detect subtle internal shifts and understand the mind-body connection intimately through advanced contemplative self-awareness. This represents refined self-knowledge about your internal landscape.
+    level_5:
+      text: |-
+        Know your internal landscape so intimately that you understand the subtle interplay between thoughts, emotions, and physical sensations, recognising even minute changes in your inner state
+      reasoning: |-
+        About 1 in 1,000 people know their internal landscape so intimately they can recognise minute changes through mastery-level contemplative self-awareness. This represents exceptional self-knowledge about your mind-body connection.
+- key: relational
+  name: Relational
+  weight: 25
+  description:
+  - Understanding through social feedback, interpersonal patterns, and how you show up with others.
+  - |-
+    This approach appeals to socially oriented people who learn best through interaction, value feedback from trusted sources, and see themselves as fundamentally shaped by relationships.
+  - They often find that others see them more clearly than they see themselves.
+  benchmarks:
+    level_1:
+      text: |-
+        Occasionally ask trusted friends or family members for honest feedback about your behaviour patterns and how others experience you
+      reasoning: |-
+        Most people receive very little honest feedback about their behaviour and impact on others. Occasionally asking trusted people for their perspective represents basic recognition that others may see you differently than you see yourself.
+    level_2:
+      text: |-
+        Actively seek feedback from multiple sources and engage in structured conversations about your interpersonal patterns and impact on others
+      reasoning: |-
+        While workplace 360 reviews exist, most people never actively seek feedback about their personal relationships and social impact. Systematically gathering interpersonal insight is uncommon outside professional contexts.
+    level_3:
+      text: |-
+        Know your consistent behavioural patterns across different relationship types and understand how others typically experience you in various social contexts
+      reasoning: |-
+        About 5% of people understand their consistent patterns across relationship types and their social impact through relational self-awareness. This represents meaningful self-knowledge about your interpersonal dynamics.
+    level_4:
+      text: |-
+        Understand precisely how you impact others and how different people bring out different aspects of your personality, with clear knowledge of your relational patterns across all contexts
+      reasoning: |-
+        Roughly 1% of people understand precisely how they impact others and their relational patterns across all contexts through advanced relational self-awareness. This represents sophisticated self-knowledge about your social dynamics.
+    level_5:
+      text: |-
+        Understand both yourself and your impact on others with such precision that you can predict and explain interpersonal dynamics across any social context or relationship type
+      reasoning: |-
+        About 1 in 1,000 people understand themselves and their impact with such precision they can predict interpersonal dynamics across any context through mastery-level relational self-awareness.
+- key: experiential
+  name: Experiential
+  weight: 20
+  description:
+  - Self-discovery through trying new experiences, challenges, and actively using insights for personal development.
+  - |-
+    This approach resonates with action-oriented and future-focused people who prefer to learn about themselves by doing rather than thinking.
+  - They see self-knowledge primarily as a tool for becoming better rather than an end in itself.
+  benchmarks:
+    level_1:
+      text: Recognise that new experiences and challenges can reveal different aspects of your personality and preferences
+      reasoning: |-
+        This is simply recognising that new experiences can reveal different aspects of yourself. Many people avoid unfamiliar situations, so understanding that experiences can be learning opportunities is a foundational insight.
+    level_2:
+      text: |-
+        Deliberately seek new experiences, challenges, or situations specifically to learn about your responses, preferences, and capabilities
+      reasoning: |-
+        Most people avoid unfamiliar situations or experiences. Deliberately seeking new experiences specifically for self-discovery requires intentionality and courage that represents top 20% behaviour in active self-development.
+    level_3:
+      text: |-
+        Understand how different experiences and challenges reveal various aspects of your personality, with clear knowledge of how you respond under different types of pressure
+      reasoning: |-
+        Roughly 5% of people understand how different experiences reveal personality aspects and their responses under pressure through experiential self-awareness. This represents significant self-knowledge gained through varied experiences.
+    level_4:
+      text: |-
+        Know how you will likely respond to new types of challenges and understand the deeper aspects of your character that emerge under various forms of pressure or opportunity
+      reasoning: |-
+        About 1% of people know how they will respond to new challenges and understand deeper character aspects through advanced experiential self-awareness. This represents sophisticated self-knowledge about your authentic nature.
+    level_5:
+      text: |-
+        Know your authentic nature so completely that you understand exactly how you will respond to any type of experience, challenge, or opportunity, with deep insight into your core character
+      reasoning: |-
+        About 1 in 1,000 people know their authentic nature so completely they understand exactly how they will respond to any experience through mastery-level experiential self-awareness.

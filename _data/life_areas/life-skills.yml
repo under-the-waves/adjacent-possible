@@ -1,0 +1,81 @@
+slug: life-skills
+name: Life Skills
+domain: Learning
+pillar: Expand Your Awareness
+domain_representative: false
+values:
+- key: high
+  name: High-Impact Capabilities
+  weight: 45
+  description:
+  - |-
+    Focusing on learning specific skills that provide disproportionate benefits when needed -- the handful of practical abilities that save significant money, prevent major problems, or handle important situations.
+  - Skills like first aid, basic car maintenance, essential home repairs, and core cooking techniques.
+  - |-
+    People who prioritise this value want to master the specific capabilities that matter most, rather than trying to learn everything.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify 5-10 practical skills that would provide significant benefit in your specific life situation and assess current competence in each area.
+    level_2:
+      text: |-
+        Successfully perform 4-5 essential skills such as changing a car tyre, basic first aid/CPR, cooking meals from scratch, simple sewing repairs (sewing on buttons, mending small tears), unclogging drains, and basic computer troubleshooting. Complete own tax returns or handle equivalent financial paperwork without professional assistance.
+    level_3:
+      text: |-
+        Demonstrate competence in 8-10 practical skills including basic plumbing repairs (fixing leaks, replacing faucets), simple electrical work (replacing outlets, installing ceiling fans), interior painting to good standards, intermediate cooking techniques, and advanced computer/technology troubleshooting. Handle most routine practical problems without professional assistance.
+    level_4:
+      text: |-
+        Master advanced skills such as building furniture or woodworking projects, complex home repairs, automotive maintenance beyond basics, and demonstrate professional-level competence in 2-3 specialized practical domains. Successfully diagnose and resolve complex, multi-faceted problems.
+    level_5:
+      text: |-
+        Complete major projects like installing flooring, building decks, or significant home renovations while maintaining broad competence across most practical domains relevant to daily life. Achieve near-professional competence in chosen practical domains while handling complex, multi-faceted problems across all areas.
+- key: systematic
+  name: Systematic Competence
+  weight: 35
+  description:
+  - |-
+    Building organised, methodical approaches to practical knowledge and maintenance rather than learning skills reactively as problems arise.
+  - |-
+    Creating reference systems, following preventive schedules, maintaining proper tools, and developing frameworks for tackling unfamiliar tasks.
+  - Those who prioritise this value want structured, reliable approaches to practical life management.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your current approach to handling practical problems and recognize patterns in how you typically respond to household, automotive, or personal maintenance needs.
+    level_2:
+      text: |-
+        Maintain organized toolbox with essential tools, follow basic car maintenance schedule, and keep accessible reference materials for common household tasks. Approach problems systematically rather than randomly attempting solutions.
+    level_3:
+      text: |-
+        Implement comprehensive home maintenance schedules, maintain professional-quality tool organization, and consistently apply systematic approaches to new practical challenges. Prevent most problems through proactive maintenance rather than reactive repairs.
+    level_4:
+      text: |-
+        Maintain sophisticated systems for practical knowledge management, implement comprehensive preventive approaches that prevent most problems before they occur, and consistently apply professional-level problem-solving methods across all practical domains.
+    level_5:
+      text: |-
+        Develop and refine comprehensive systems that others adopt, demonstrate exceptional efficiency in practical problem-solving, and maintain professional-level organization and preventive approaches across all practical domains. Serve as a model of systematic practical competence.
+- key: teaching
+  name: Teaching & Sharing
+  weight: 20
+  description:
+  - Using practical skills as opportunities to help others, connect with family and friends, or contribute to community.
+  - |-
+    Teaching skills to children, helping neighbours with projects, being the person others turn to for practical advice, or participating in skill-sharing activities.
+  - |-
+    Those who prioritise this value see life skills as ways to build relationships and contribute meaningfully to others' lives.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognize opportunities where practical skills could strengthen relationships with family, friends, or community members and identify what you might want to learn or share.
+    level_2:
+      text: |-
+        Successfully help family members or friends with practical tasks and share knowledge in areas where you have developed competence. Serve as a reliable resource for basic practical problems within your immediate circle.
+    level_3:
+      text: |-
+        Regularly help others develop practical skills, serve as a go-to resource for practical problems in your social network, and participate in community skill-sharing activities or informal mentoring relationships.
+    level_4:
+      text: |-
+        Mentor others systematically in practical skill development, contribute meaningfully to community resilience through your capabilities, and regularly expand others' practical competence through formal or informal teaching.
+    level_5:
+      text: |-
+        Significantly enhance others' practical capabilities through systematic knowledge transfer, contribute to community education or preparedness initiatives, and create lasting improvements in practical competence within your sphere of influence. Develop others who themselves become skilled practitioners.

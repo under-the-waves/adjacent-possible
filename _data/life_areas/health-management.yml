@@ -1,0 +1,141 @@
+slug: health-management
+name: Health Management
+domain: Health
+pillar: Look After Yourself
+domain_representative: false
+values:
+- key: longterm
+  name: Long-term Health
+  weight: 35
+  description:
+  - Focusing on disease prevention, longevity optimisation, and maintaining physical and cognitive function throughout life.
+  - |-
+    Comprehensive preventive care, understanding and managing genetic risks, and implementing evidence-based interventions for healthy ageing.
+  - |-
+    People who prioritise this value invest time and resources in preventing future health problems and maximising their healthspan.
+  benchmarks:
+    level_1:
+      text: Understand your current health status through basic assessment and identify major gaps in preventive care
+      reasoning: |-
+        At the awareness level, understanding current health status requires basic self-assessment of health history, current symptoms, and identifying obvious gaps in care. This represents the foundation needed before implementing any health management strategy.
+    level_2:
+      text: |-
+        Attend regular checkups with primary care provider, complete basic recommended screenings when due, and avoid major health risks like smoking
+      reasoning: |-
+        Based on national health statistics, approximately 20% of Americans maintain regular primary care relationships and complete basic preventive screenings consistently. About 89% avoid smoking, making this a reasonable component of 80th percentile health management.
+    level_3:
+      text: |-
+        Complete age-appropriate preventive screenings consistently, maintain healthy weight and blood pressure, and take proactive steps based on family history or risk factors
+      reasoning: |-
+        Comprehensive preventive care achievement represents the top 5% of the population. Only 28% of Americans maintain healthy weight, 52% have healthy blood pressure, and even fewer complete all age-appropriate screenings consistently. Achieving multiple prevention targets simultaneously is rare.
+    level_4:
+      text: |-
+        Implement comprehensive preventive care strategy with advanced screenings, track health metrics over time, and use evidence-based lifestyle interventions to optimise health outcomes
+      reasoning: |-
+        Comprehensive preventive strategies with metric tracking and evidence-based optimisation represent the top 1% of health management. This requires sustained commitment to multiple interventions and sophisticated understanding of health optimisation research.
+    level_5:
+      text: |-
+        Maintain measurably optimal health markers across multiple systems with sophisticated preventive strategies including genetic testing, advanced biomarkers, and cutting-edge interventions
+      reasoning: |-
+        Optimal health markers across multiple systems with cutting-edge interventions represents the 99.9th percentile of health optimisation. This includes access to advanced testing, personalised medicine approaches, and emerging health technologies.
+- key: vitality
+  name: Present Vitality
+  weight: 30
+  description:
+  - Emphasising immediate energy, cognitive function, and daily wellbeing through optimised health practices.
+  - |-
+    Addressing symptoms that affect quality of life, maintaining peak performance, and ensuring health decisions support current life goals and activities.
+  - Those who prioritise this value focus on feeling their best day-to-day while maintaining overall health.
+  benchmarks:
+    level_1:
+      text: Recognise patterns in your energy, sleep, and daily function that may indicate health opportunities
+      reasoning: |-
+        Recognition of energy and function patterns is the first step toward optimising daily wellbeing. This involves identifying correlations between lifestyle factors and how you feel, which serves as the basis for future interventions.
+    level_2:
+      text: |-
+        Have health insurance coverage and address persistent symptoms that affect daily life promptly rather than delaying care due to cost or access barriers
+      reasoning: |-
+        About 92% of Americans have health insurance coverage, but only about 60% have prompt access to care when needed. The 80th percentile represents those who both have coverage and use it effectively for maintaining daily function.
+    level_3:
+      text: |-
+        Maintain generally good energy levels and sleep quality through attention to lifestyle factors, and have systems for addressing health issues before they significantly impact daily function
+      reasoning: |-
+        The ability to maintain consistently good energy and function through lifestyle management, while also having systems for early health issue detection, represents sophisticated health management achieved by approximately 5% of the population.
+    level_4:
+      text: |-
+        Achieve consistently high energy and cognitive function through optimised sleep, nutrition, and exercise protocols, with sophisticated understanding of how lifestyle factors affect wellbeing
+      reasoning: |-
+        Achieving consistently high energy and cognitive function through optimised protocols represents mastery of lifestyle medicine. This level of performance and self-knowledge is achieved by approximately 1% of the population.
+    level_5:
+      text: |-
+        Sustain peak cognitive and physical performance through personalised interventions based on detailed self-knowledge, with exceptional resilience to health challenges
+      reasoning: |-
+        Peak performance maintenance through personalised interventions requires sophisticated self-knowledge and access to cutting-edge health optimisation approaches. This represents the top 0.1% of vitality achievement.
+- key: control
+  name: Personal Control
+  weight: 25
+  description:
+  - |-
+    Developing the knowledge, skills, and confidence to make informed health decisions and advocate effectively within healthcare systems.
+  - |-
+    Understanding medical information, building productive relationships with providers, and taking ownership of health outcomes.
+  - People who prioritise this value want to be active participants in their healthcare rather than passive recipients.
+  benchmarks:
+    level_1:
+      text: Assess your current level of health knowledge and comfort with medical decision-making
+      reasoning: |-
+        Assessing current health knowledge and comfort with medical systems establishes baseline capability for self-advocacy. This includes understanding your current level of health literacy and confidence in healthcare interactions.
+    level_2:
+      text: |-
+        Ask questions during medical appointments, understand basic information about any medications or conditions you have, and feel comfortable advocating for your health needs
+      reasoning: |-
+        Research on patient activation shows that approximately 20% of patients actively engage with healthcare providers, ask questions, and take ownership of their health decisions. This represents a significant improvement over passive healthcare participation.
+    level_3:
+      text: |-
+        Research health conditions when they arise, seek second opinions for significant health decisions, and communicate effectively with healthcare providers about treatment preferences and concerns
+      reasoning: |-
+        Active health information seeking, second opinion procurement, and effective provider communication represent advanced patient activation levels. Research suggests only about 5% of patients engage at this level consistently.
+    level_4:
+      text: |-
+        Navigate complex medical decisions confidently, coordinate care across multiple specialists when needed, and influence treatment decisions through informed advocacy and partnership with providers
+      reasoning: |-
+        The ability to navigate complex medical decisions and influence treatment through informed advocacy represents exceptional healthcare competency. This requires extensive health knowledge and strong provider relationships, achieved by roughly 1% of patients.
+    level_5:
+      text: |-
+        Serve as collaborative partner with healthcare providers in developing cutting-edge treatment approaches, with deep understanding of personal health patterns and access to specialist expertise
+      reasoning: |-
+        Serving as collaborative partner in developing cutting-edge approaches requires exceptional health knowledge and access to specialist expertise. This represents the 99.9th percentile of patient activation and medical collaboration.
+- key: simplicity
+  name: Simplicity
+  weight: 10
+  description:
+  - |-
+    Creating efficient, low-maintenance systems that deliver good health outcomes without consuming excessive time or mental energy.
+  - |-
+    Streamlined approaches to preventive care, clear protocols for common health issues, and automated systems for health management.
+  - Those who prioritise this value seek effective health management that integrates seamlessly with their lifestyle.
+  benchmarks:
+    level_1:
+      text: Understand your current healthcare providers and identify areas where care could be streamlined
+      reasoning: |-
+        Understanding current healthcare providers and identifying streamlining opportunities requires basic mapping of your current healthcare landscape and recognition of inefficiencies or gaps in coordination.
+    level_2:
+      text: |-
+        Know who your primary care provider is, keep basic health information organised, and have clear understanding of your insurance coverage and how to use it
+      reasoning: |-
+        Studies show that about 80% of Americans can identify their primary care provider, but only about 20% maintain organised health records and understand their insurance benefits clearly. This level represents basic healthcare navigation competency.
+    level_3:
+      text: |-
+        Use patient portals and digital tools for health management, maintain organised health records, and coordinate care efficiently when multiple providers are involved
+      reasoning: |-
+        Effective use of health technology and coordinated care management requires both technical competency and organisational systems. Studies suggest approximately 5% of patients achieve this level of healthcare efficiency.
+    level_4:
+      text: |-
+        Operate efficient health management systems that require minimal daily attention while maintaining high standards, with trusted provider relationships and streamlined processes
+      reasoning: |-
+        Operating efficient, high-standard health management systems with minimal daily effort requires exceptional organisational capability and provider relationships. This represents the top 1% of healthcare efficiency achievement.
+    level_5:
+      text: |-
+        Operate sophisticated health management systems that appear effortless, with trusted provider networks and automated monitoring that prevents issues before they require intervention
+      reasoning: |-
+        Sophisticated health management systems that appear effortless require exceptional infrastructure and provider networks. The automation and prevention capabilities at this level represent the top 0.1% of healthcare efficiency.

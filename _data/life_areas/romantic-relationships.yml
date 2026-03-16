@@ -1,0 +1,108 @@
+slug: romantic-relationships
+name: Romantic Relationships
+domain: Friends and Relationships
+pillar: Connect with Others
+domain_representative: false
+values:
+- key: connection
+  name: Connection
+  weight: 40
+  description:
+  - Emotional closeness, vulnerability, trust, and deep mutual understanding.
+  - |-
+    Sharing your inner life, feeling genuinely known and accepted, and maintaining emotional and physical intimacy through life's changes.
+  - |-
+    People who prioritise this value invest in communication skills, emotional availability, and the courage to be vulnerable.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your own attachment style and its impact on how you connect, communicate, and handle conflict in relationships
+      reasoning: |-
+        Understanding your own attachment style is the prerequisite for improving intimate relationships. Research shows that attachment patterns formed in childhood strongly predict adult relationship behaviour, but awareness of these patterns is the first step toward changing them.
+    level_2:
+      text: |-
+        Regular emotional check-ins with your partner, ability to express needs and feelings without escalation, and weekly quality time dedicated to connection
+      reasoning: |-
+        Regular emotional check-ins and weekly dedicated quality time represent top 20% relationship investment. Couples who spend quality time together weekly report significantly higher satisfaction than those who do not.
+    level_3:
+      text: |-
+        Deep emotional attunement where both partners feel genuinely understood, regular vulnerable conversations about fears and aspirations, and physical and emotional intimacy that both rate as highly satisfying
+      reasoning: |-
+        Deep emotional attunement where both partners feel genuinely understood is achieved by approximately 5% of couples. This requires consistent emotional availability and vulnerability that most people find difficult to sustain.
+    level_4:
+      text: |-
+        A relationship characterised by profound trust, complete emotional safety, and the kind of deep knowing that comes from years of attentive, responsive connection
+      reasoning: |-
+        Profound trust and complete emotional safety developed over years represents top 1% relationship quality. This level of intimacy requires sustained vulnerability and responsiveness that 99% of couples never fully achieve.
+    level_5:
+      text: |-
+        Sustained emotional and physical intimacy across decades that deepens rather than plateaus, with both partners reporting the relationship as a primary source of meaning and joy
+      reasoning: |-
+        Sustained deepening intimacy across decades is 99.9th percentile achievement. Most long-term relationships plateau in intimacy even when satisfaction remains adequate. Continued deepening requires extraordinary commitment to growth.
+- key: harmony
+  name: Harmony
+  weight: 35
+  description:
+  - Low-conflict, smoothly functioning daily life together.
+  - |-
+    Constructive disagreement, equitable division of responsibilities, aligned approaches to finances and parenting, and the ability to navigate differences without erosion of goodwill.
+  - People who prioritise this value focus on making the partnership work well day to day.
+  benchmarks:
+    level_1:
+      text: |-
+        Know your relationship's current strengths and pain points -- where you collaborate well and where friction consistently arises
+      reasoning: |-
+        Honest assessment of where a relationship works well and where it consistently struggles provides the foundation for improvement. Many couples avoid this assessment, allowing chronic issues to compound over years.
+    level_2:
+      text: |-
+        Clear division of household and financial responsibilities, constructive conflict resolution without contempt or stonewalling, and aligned approach to major decisions
+      reasoning: |-
+        Constructive conflict resolution without the "Four Horsemen" (criticism, contempt, defensiveness, stonewalling) represents 80th percentile capability. Gottman research identifies these behaviours as the strongest predictors of divorce. <a href="https://www.gottman.com/blog/the-four-horsemen-recognizing-criticism-contempt-defensiveness-and-stonewalling/" target="_blank">View source</a>
+    level_3:
+      text: |-
+        Seamless collaboration on logistics, finances, and parenting with minimal friction, effective repair after conflicts, and shared decision-making that consistently produces outcomes both partners support
+      reasoning: |-
+        Seamless collaboration with effective repair after conflicts represents top 5% partnership quality. Most couples either avoid conflict or resolve it poorly, accumulating resentment over time.
+    level_4:
+      text: |-
+        Exceptional teamwork maintained through major life transitions -- career changes, illness, parenting challenges, financial stress -- without sustained relationship deterioration
+      reasoning: |-
+        Maintaining exceptional teamwork through major life transitions without sustained deterioration represents top 1%. Most relationships experience significant quality decline during at least one major transition.
+    level_5:
+      text: |-
+        A partnership that others look to as a model -- consistently effective collaboration, graceful conflict resolution, and the ability to navigate any challenge as a unified team
+      reasoning: |-
+        A partnership that others model their own relationships on represents extraordinary achievement. Consistently graceful conflict resolution and unified navigation of any challenge is achieved by fewer than 1 in 1,000 couples.
+- key: alignment
+  name: Alignment
+  weight: 25
+  description:
+  - "Shared values, compatible life goals, and a common vision for the relationship's future."
+  - Agreement on major life decisions, compatible priorities, and the sense that you are building toward the same things.
+  - People who prioritise this value ensure long-term compatibility underpins the relationship.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise whether you and your partner share compatible values and life goals, and identify areas of significant divergence
+      reasoning: |-
+        Recognising whether you and your partner share compatible values and life goals is the foundation for long-term relationship success. Many couples assume alignment without explicitly examining it, only to discover fundamental divergence during major life decisions.
+    level_2:
+      text: |-
+        Explicit agreement on major life priorities -- children, finances, career, location -- with a shared sense of direction that both partners can articulate
+      reasoning: |-
+        Explicit agreement on major life priorities with a shared sense of direction represents 80th percentile alignment. Most couples have never systematically discussed their values, goals, and expectations, relying on assumption rather than articulation.
+    level_3:
+      text: |-
+        Deeply compatible values and goals tested through major life decisions; both partners feel they are building the same life and are willing to adjust individual ambitions to maintain shared direction
+      reasoning: |-
+        Deeply compatible values and goals tested through major life decisions, with willingness to adjust individual ambitions for shared direction, represents top 5% alignment. Most couples discover misalignment during crises rather than proactively ensuring compatibility.
+    level_4:
+      text: |-
+        A shared life vision that has been tested by adversity and refined over years; both partners can articulate not just what they are building together but why, with genuine conviction
+      reasoning: |-
+        A shared life vision tested by adversity and refined over years, where both partners can articulate what they are building and why, represents top 1% alignment. Most long-term couples drift apart in their goals rather than converging.
+    level_5:
+      text: |-
+        A relationship built on alignment so deep that it has weathered significant adversity and emerged stronger each time, with both partners fundamentally shaped for the better by the shared vision they have pursued
+      reasoning: |-
+        A relationship built on alignment so deep that it has been strengthened rather than damaged by significant adversity, with both partners fundamentally shaped for the better, represents 99.9th percentile achievement.

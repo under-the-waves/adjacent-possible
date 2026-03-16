@@ -1,0 +1,142 @@
+slug: global-impact
+name: Global Impact
+domain: Impact
+pillar: Create & Contribute
+domain_representative: true
+values:
+- key: impartiality
+  name: Impartiality
+  weight: 30
+  description:
+  - Directing resources toward causes based on evidence of impact rather than personal connection or emotional appeal.
+  - |-
+    Cost-effectiveness analysis, cause prioritisation informed by research, and willingness to support unfamiliar causes if the evidence warrants it.
+  - People who prioritise this value treat philanthropy as a problem to be optimised.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand the concept of cost-effectiveness in charity -- that different interventions produce vastly different outcomes per pound spent
+      reasoning: |-
+        Most donors have never considered cost-effectiveness in their giving decisions. Understanding that a 100x difference exists between the best and average charities is the fundamental insight that transforms philanthropic impact. <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness" target="_blank">View source</a>
+    level_2:
+      text: |-
+        Donations directed primarily to evidence-backed charities evaluated by organisations like GiveWell, The Life You Can Save, or Animal Charity Evaluators
+      reasoning: |-
+        Directing donations to evaluated, evidence-backed charities represents 80th percentile effectiveness. Most donors choose charities based on personal connection, marketing, or emotional response rather than evidence of impact. <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness" target="_blank">View source</a>
+    level_3:
+      text: |-
+        Deep understanding of cause prioritisation, with giving allocated across a researched portfolio of high-impact interventions and regular review of evidence
+      reasoning: |-
+        Deep understanding of cause prioritisation with a researched giving portfolio represents top 5% philanthropic sophistication. This requires significant intellectual investment in understanding global priorities.
+    level_4:
+      text: |-
+        Sophisticated understanding of global priorities, counterfactual reasoning, and impact measurement, with giving strategy informed by the latest research and adjusted accordingly
+      reasoning: |-
+        Sophisticated understanding of counterfactual reasoning and impact measurement represents top 1% philanthropic effectiveness -- a level of strategic thinking that most professional philanthropists do not achieve.
+    level_5:
+      text: |-
+        Among the most informed and strategic philanthropists at your resource level, with a giving approach that rivals professional grant-makers in rigour and impact per pound
+      reasoning: |-
+        Rivalling professional grant-makers in rigour represents 99.9th percentile effectiveness -- fewer than 1 in 1,000 individual donors achieve this level of philanthropic sophistication.
+- key: passion
+  name: Passion
+  weight: 25
+  description:
+  - |-
+    Contributing to causes you genuinely care about -- areas that resonate with your personal experience, interests, and values.
+  - |-
+    Supporting causes you have direct connection to, volunteering in areas that energise you, and choosing impact channels that sustain your motivation over decades.
+  - People who prioritise this value believe sustained commitment requires personal meaning.
+  benchmarks:
+    level_1:
+      text: Know which causes genuinely resonate with you and why, distinguishing personal connection from habit or social pressure
+      reasoning: |-
+        Many people give out of social pressure or habit rather than genuine connection to a cause. Identifying which causes truly resonate with you is the prerequisite for sustained, motivated giving.
+    level_2:
+      text: |-
+        Regular contributions to at least one cause you genuinely care about, with engagement that goes beyond transactional giving
+      reasoning: |-
+        Regular, engaged contributions to a cause you genuinely care about represents 80th percentile passion. Most donors give reactively rather than from sustained personal motivation.
+    level_3:
+      text: |-
+        Deep, sustained engagement with causes that energise you, with volunteering or advocacy that leverages your personal strengths and interests
+      reasoning: |-
+        Deep, sustained engagement with causes that energise you, leveraging personal strengths, represents top 5% passion. This level of personal investment sustains impact over decades.
+    level_4:
+      text: |-
+        A signature cause or impact area where you are deeply invested, knowledgeable, and recognised as a committed advocate with sustained personal motivation
+      reasoning: |-
+        A signature cause where you are deeply invested and recognised as a committed advocate represents top 1% passion -- sustained personal motivation that drives exceptional impact over years.
+    level_5:
+      text: |-
+        A lifetime of passionate commitment to causes that matter to you, with influence and expertise that has meaningfully advanced those causes
+      reasoning: |-
+        A lifetime of passionate commitment that has meaningfully advanced your chosen causes represents 99.9th percentile -- fewer than 1 in 1,000 donors sustain this level of motivated, personal engagement over decades.
+- key: sustainability
+  name: Sustainability
+  weight: 25
+  description:
+  - Maintaining your global impact practice over the long term without burnout, guilt, or financial strain.
+  - |-
+    Setting sustainable giving levels, building impact habits that fit your life, and ensuring that your philanthropic practice enhances rather than diminishes your wellbeing.
+  - People who prioritise this value plan for decades of contribution.
+  benchmarks:
+    level_1:
+      text: |-
+        Know your current giving patterns -- how much you donate annually, to whom, and whether the level is sustainable without strain
+      reasoning: |-
+        Many people cannot state how much they give annually or whether their giving level is sustainable. Awareness of your current giving behaviour and its fit with your finances is the prerequisite for a lasting impact practice.
+    level_2:
+      text: |-
+        A consistent giving practice of at least 1 -- 3% of income annually, with a clear budget and regular donations rather than sporadic impulse giving
+      reasoning: |-
+        Consistent giving of 1 -- 3% of income represents above-average philanthropic commitment. Many people give sporadically and without a budget, making their total impact unpredictable.
+    level_3:
+      text: |-
+        Giving at 5 -- 10% of income with a formal pledge or commitment mechanism, integrated into financial planning as a non-negotiable line item
+      reasoning: |-
+        Giving at 5 -- 10% of income with a formal pledge represents top 5% commitment. Organisations like Giving What We Can facilitate pledges of 10% of income, with over 10,000 lifetime members worldwide. <a href="https://www.givingwhatwecan.org/about-us/members" target="_blank">View source</a>
+    level_4:
+      text: |-
+        Giving at 10%+ of income or equivalent career impact, with a lifetime giving plan and complete integration of impact practice into your financial and life planning
+      reasoning: |-
+        Giving at 10%+ with a lifetime plan represents top 1% commitment. This level of sustained, planned philanthropy is exceptionally rare and requires deep integration with financial and life planning.
+    level_5:
+      text: |-
+        Extraordinary sustained commitment -- whether through major pledges, career dedication to high-impact work, or lifetime giving that represents a transformative share of resources
+      reasoning: |-
+        Extraordinary sustained commitment through major pledges or career dedication represents 99.9th percentile -- a level of sacrifice and dedication that is transformative both personally and for the world.
+- key: fulfilment
+  name: Fulfilment
+  weight: 20
+  description:
+  - The personal satisfaction and sense of purpose derived from making a positive difference.
+  - |-
+    Feeling that your contributions matter, experiencing gratitude and meaning from giving, and ensuring that your impact work is a source of joy rather than obligation.
+  - People who prioritise this value see giving as enriching their own life.
+  benchmarks:
+    level_1:
+      text: |-
+        Assess whether your current giving and impact activities are a source of satisfaction or a source of guilt and obligation
+      reasoning: |-
+        Many people experience guilt rather than satisfaction around giving -- either guilt for not giving enough or resentment when they do. Understanding your emotional relationship with impact work is the foundation for making it sustainable and rewarding.
+    level_2:
+      text: |-
+        Giving that reliably feels good -- you experience satisfaction from your contributions and look forward to your impact activities
+      reasoning: |-
+        Giving that reliably feels good represents 80th percentile fulfilment. Many donors experience ambivalence or obligation rather than genuine satisfaction from their contributions.
+    level_3:
+      text: |-
+        Impact work that is a meaningful source of purpose in your life -- you derive genuine joy and identity from your contributions
+      reasoning: |-
+        Impact work as a meaningful source of purpose represents top 5% fulfilment. At this level, giving is not obligation but a genuine source of identity and joy.
+    level_4:
+      text: |-
+        Global impact work as one of the most fulfilling dimensions of your life -- a source of deep meaning that enhances your overall wellbeing
+      reasoning: |-
+        Global impact as one of the most fulfilling dimensions of your life represents top 1% -- a level where giving genuinely enhances your overall wellbeing rather than competing with it.
+    level_5:
+      text: |-
+        Your impact work is inseparable from your sense of purpose and identity -- giving and contribution are among the richest sources of meaning in your life
+      reasoning: |-
+        Impact work inseparable from your sense of purpose and identity represents 99.9th percentile fulfilment -- fewer than 1 in 1,000 people achieve this depth of meaning from their philanthropic practice.

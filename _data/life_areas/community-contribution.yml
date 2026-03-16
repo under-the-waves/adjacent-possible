@@ -1,0 +1,105 @@
+slug: community-contribution
+name: Community Contribution
+domain: Impact
+pillar: Create & Contribute
+domain_representative: false
+values:
+- key: impact
+  name: Impact
+  weight: 40
+  description:
+  - Making a measurable, tangible difference in your community through your contributions.
+  - |-
+    Choosing high-leverage volunteer activities, leading projects that produce real outcomes, and evaluating whether your community work is actually improving things rather than just filling time.
+  - People who prioritise this value focus on results.
+  benchmarks:
+    level_1:
+      text: Know which community organisations operate in your area and what volunteer opportunities are available
+      reasoning: |-
+        Most people cannot name the volunteer organisations in their area or the opportunities available. Awareness of community needs and available channels for contribution is the prerequisite for meaningful impact.
+    level_2:
+      text: |-
+        Regular volunteering commitment of at least 2 -- 4 hours per month with a local organisation, contributing meaningfully to community needs
+      reasoning: |-
+        Regular volunteering of 2 -- 4 hours per month represents above-average community contribution. With only 23% of adults formally volunteering at all, any consistent commitment places you well above the norm. <a href="https://americorps.gov/about/our-impact/volunteering-civic-life" target="_blank">View source</a>
+    level_3:
+      text: |-
+        Consistent volunteering of 100+ hours per year, with skills-based contributions that leverage your professional expertise for community benefit
+      reasoning: |-
+        100+ hours per year of skills-based volunteering represents top 5% community contribution. This level of commitment yields the documented health benefits and provides significant value to organisations. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3890753/" target="_blank">View source</a>
+    level_4:
+      text: |-
+        Leadership role in community organisations, coordinating volunteer efforts and driving measurable improvements in community outcomes
+      reasoning: |-
+        Leadership in community organisations with measurable impact represents top 1% -- a level of commitment that shapes community outcomes and inspires others to contribute.
+    level_5:
+      text: |-
+        Transformative community impact through years of dedicated service -- you have measurably improved the quality of life in your community through sustained, strategic contribution
+      reasoning: |-
+        Transformative, measurable community improvement through years of dedicated service represents 99.9th percentile -- fewer than 1 in 1,000 people achieve this level of sustained community impact.
+- key: belonging
+  name: Belonging
+  weight: 35
+  description:
+  - Feeling genuinely connected to and part of your local community through shared participation.
+  - |-
+    Knowing your neighbours, being recognised as a community member, participating in local traditions, and experiencing the sense of home that comes from mutual investment.
+  - People who prioritise this value see community contribution as building their own roots.
+  benchmarks:
+    level_1:
+      text: Know your immediate neighbours by name and have a basic sense of the social dynamics in your local community
+      reasoning: |-
+        Surveys show that a significant proportion of people do not know their neighbours by name. Pew Research found that only 26% of U.S. adults know all or most of their neighbours, while 12% do not know any. <a href="https://www.pewresearch.org/short-reads/2025/05/08/how-connected-do-americans-feel-to-their-neighbors/" target="_blank">View source</a>
+    level_2:
+      text: |-
+        Active relationships with neighbours and participation in at least one community group, event series, or local organisation
+      reasoning: |-
+        Active neighbour relationships and participation in a community group represents 80th percentile belonging. Social isolation has increased significantly, making even modest community connection above average.
+    level_3:
+      text: |-
+        A broad local network spanning different community groups, with a reputation as someone who connects people and strengthens neighbourhood ties
+      reasoning: |-
+        A broad local network with a reputation as a connector represents top 5% community belonging. Building bridges between different community groups requires sustained effort and genuine generosity.
+    level_4:
+      text: |-
+        A central node in your community's social fabric, trusted across diverse groups and able to mobilise collective action when needed
+      reasoning: |-
+        Being a central, trusted node across diverse community groups represents top 1% belonging -- a position that enables collective action and community resilience.
+    level_5:
+      text: |-
+        Your community is measurably more connected, trusting, and resilient because of the social infrastructure you have helped build over years of deliberate investment
+      reasoning: |-
+        A community measurably more connected because of your investment represents 99.9th percentile belonging -- fewer than 1 in 1,000 people achieve this level of community infrastructure development.
+- key: fulfilment
+  name: Fulfilment
+  weight: 25
+  description:
+  - The personal satisfaction and meaning derived from contributing to community life.
+  - |-
+    Volunteering in ways that energise you, finding purpose in service, and ensuring community work is a source of joy rather than obligation.
+  - People who prioritise this value seek contributions that nourish them as well as the community.
+  benchmarks:
+    level_1:
+      text: Assess whether your current community involvement is a source of satisfaction or a source of obligation
+      reasoning: |-
+        Many people experience community involvement as obligation rather than satisfaction. Understanding whether your contributions energise or drain you is the prerequisite for sustainable, fulfilling participation.
+    level_2:
+      text: |-
+        Community involvement that you genuinely enjoy -- you look forward to your contributions rather than treating them as duty
+      reasoning: |-
+        Community involvement you genuinely enjoy represents 80th percentile fulfilment. Many volunteers contribute out of duty rather than enthusiasm, which limits both satisfaction and sustained commitment.
+    level_3:
+      text: |-
+        Community work that is a meaningful source of purpose -- you derive genuine identity and energy from your local contributions
+      reasoning: |-
+        Community work as a meaningful source of purpose and identity represents top 5% fulfilment. At this level, contribution is not obligation but a genuine source of energy and meaning.
+    level_4:
+      text: |-
+        Community contribution as one of the most fulfilling dimensions of your life -- a source of deep meaning that enhances your overall wellbeing
+      reasoning: |-
+        Community contribution as one of the most fulfilling dimensions of your life represents top 1% -- a level where local involvement genuinely enhances your overall wellbeing.
+    level_5:
+      text: |-
+        Your community work is inseparable from your sense of purpose and identity -- contribution is among the richest sources of meaning in your life
+      reasoning: |-
+        Community work inseparable from your sense of purpose and identity represents 99.9th percentile fulfilment -- fewer than 1 in 1,000 people achieve this depth of meaning from their local contributions.

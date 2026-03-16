@@ -1,0 +1,132 @@
+slug: legal-matters
+name: Legal Matters
+domain: Security
+pillar: Look After Yourself
+domain_representative: false
+values:
+- key: protection
+  name: Comprehensive Protection
+  weight: 40
+  description:
+  - |-
+    Complete safeguarding of assets, rights, and interests through proper documentation, risk mitigation, and legal structures.
+  - |-
+    Having essential documents like wills and powers of attorney, understanding potential legal vulnerabilities, and implementing protective strategies.
+  - |-
+    People who prioritise this value focus on maximising legal security even when it requires some complexity or ongoing maintenance.
+  benchmarks:
+    level_1:
+      text: Understand current legal vulnerabilities and identify essential documents you lack
+      reasoning: |-
+        This represents awareness-level benchmark where individuals understand what legal documents exist and can identify which ones they currently lack. Given that 55-73% of Americans have no estate planning documents, simply knowing what documents you need already puts someone ahead of the majority.
+    level_2:
+      text: Have basic will and healthcare directive, understand major legal risks affecting you personally
+      reasoning: |-
+        Having basic will and healthcare directive represents 80th percentile achievement. Research shows only 31-46% of Americans have wills, and even fewer have healthcare directives, so this combination puts someone well above average in legal preparedness.
+    level_3:
+      text: Have will, power of attorney, healthcare directive, and have considered main legal risks in your specific situation
+      reasoning: |-
+        Having comprehensive estate planning documents represents 95th percentile achievement. Research shows only 18% of Americans 55+ have the recommended essentials (will, healthcare directive, power of attorney), so this represents top 5% capability.
+    level_4:
+      text: Comprehensive estate planning with professional guidance, proactive risk assessment across major life areas
+      reasoning: |-
+        Comprehensive estate planning with professional guidance represents 99th percentile achievement. This includes sophisticated document preparation and proactive risk assessment across major life areas, which very few Americans achieve.
+    level_5:
+      text: |-
+        Sophisticated legal planning addressing complex scenarios, with multiple protective structures and regular professional review
+      reasoning: |-
+        Sophisticated legal planning with multiple protective structures represents 99.9th percentile achievement. This includes advanced estate planning, asset protection, and comprehensive risk management across all life domains.
+- key: simplicity
+  name: Simplicity & Peace of Mind
+  weight: 30
+  description:
+  - Maintaining legal affairs in a streamlined, low-maintenance way that reduces anxiety and cognitive load.
+  - |-
+    Straightforward arrangements, clear documentation, and systems that "just work" without constant attention or complexity.
+  - |-
+    Those who prioritise this value prefer basic but effective legal structures over sophisticated arrangements that require ongoing management.
+  benchmarks:
+    level_1:
+      text: Recognize which legal matters cause you anxiety and know basic steps to address them
+      reasoning: |-
+        Basic awareness of which legal matters create personal anxiety and knowing simple steps to address them. This includes recognizing that legal uncertainty contributes to stress and having a basic plan for addressing legal concerns.
+    level_2:
+      text: Keep legal documents organized and accessible, with family knowing their location
+      reasoning: |-
+        Organized, accessible legal documents with family awareness represents significant improvement over typical American households. Research shows 52% of people don't know where their parents store estate planning documents, making clear organization and communication a meaningful achievement.
+    level_3:
+      text: "Well-organized legal documents with clear instructions, and you've discussed arrangements with family"
+      reasoning: |-
+        Well-organized legal arrangements with clear family communication represents sophisticated but achievable organization. This level eliminates most legal anxiety through proper preparation and clear systems.
+    level_4:
+      text: Professional legal consultation has created clear, maintainable systems requiring minimal ongoing attention
+      reasoning: |-
+        Professional legal consultation creating maintainable systems represents sophisticated but achievable legal organization. This level provides comprehensive protection while remaining manageable.
+    level_5:
+      text: Elegant legal arrangements providing comprehensive protection while remaining straightforward to manage and understand
+      reasoning: |-
+        Elegant legal arrangements providing maximum protection while remaining straightforward represents mastery of legal planning. This achieves comprehensive security without complexity burden.
+- key: strategic
+  name: Strategic Advantage
+  weight: 15
+  description:
+  - |-
+    Leveraging legal knowledge and structures to optimise outcomes in business, taxes, estate planning, and major life decisions.
+  - |-
+    Using legal entities effectively, understanding regulatory advantages, and structuring affairs to maximise beneficial legal treatment.
+  - People who prioritise this value are willing to invest in sophisticated planning that goes beyond basic protection.
+  benchmarks:
+    level_1:
+      text: Identify situations where legal planning could benefit your financial or personal goals
+      reasoning: |-
+        Understanding that legal planning can provide benefits beyond basic protection, such as tax advantages, business opportunities, or estate planning benefits. This awareness level helps people recognize when legal consultation might be worthwhile.
+    level_2:
+      text: Understand your rights as employee/tenant/consumer and research legal requirements before major decisions
+      reasoning: |-
+        Understanding basic rights and researching legal requirements before major decisions. Research shows most Americans don't recognize legal issues as legal problems, so proactive legal research represents 80th percentile capability.
+    level_3:
+      text: Understand legal implications of major life decisions and know when professional consultation is worthwhile
+      reasoning: |-
+        Understanding legal implications of major decisions and knowing when professional consultation provides value. This represents sophisticated legal thinking that helps optimize outcomes across life decisions.
+    level_4:
+      text: Effectively use legal structures for business, tax, or estate planning purposes with professional guidance
+      reasoning: |-
+        Effective use of legal structures for business, tax, or estate planning with professional guidance. This represents sophisticated legal planning that creates measurable advantages, achieved by very few Americans.
+    level_5:
+      text: |-
+        Advanced legal strategies creating meaningful advantages in business, taxes, or wealth management with optimal structure selection
+      reasoning: |-
+        Advanced legal strategies creating meaningful competitive advantages through optimal structure selection. This represents sophisticated legal planning that provides substantial benefits in business, taxes, and wealth management.
+- key: access
+  name: Access & Empowerment
+  weight: 15
+  description:
+  - Understanding your rights and having the knowledge to navigate legal situations confidently.
+  - |-
+    Knowing how to interact with law enforcement, understanding consumer and employment rights, recognising when you need legal help, and being able to advocate for yourself effectively.
+  - |-
+    Those who prioritise this value prefer developing personal legal literacy over relying entirely on professional services or avoidance.
+  benchmarks:
+    level_1:
+      text: Know basic rights in common situations and understand when legal issues require professional help
+      reasoning: |-
+        Basic rights awareness and understanding when professional help is needed. Given that 56% of Americans incorrectly believe they have right to counsel in civil matters, even basic legal literacy represents meaningful achievement.
+    level_2:
+      text: Know your rights during police encounters and in housing/employment situations, can find appropriate legal resources
+      reasoning: |-
+        Knowing specific rights in common situations and being able to find appropriate resources. This represents practical legal literacy that enables effective self-advocacy in routine situations, which research suggests most Americans lack.
+    level_3:
+      text: |-
+        Comfortable handling routine legal interactions and can effectively research and understand your rights in unfamiliar situations
+      reasoning: |-
+        Comfortable handling routine legal interactions and effective rights research represents significant legal literacy. Given that 74% don't know if lawyers can help with problems, this confident navigation ability represents top 5% capability.
+    level_4:
+      text: |-
+        Strong understanding of legal processes, can handle moderately complex legal matters and confidently advocate for your rights
+      reasoning: |-
+        Strong legal process understanding and ability to handle moderately complex matters represents exceptional legal literacy. This enables confident self-advocacy in challenging situations that intimidate most people.
+    level_5:
+      text: |-
+        Comprehensive legal literacy enabling confident navigation of complex legal situations and effective self-advocacy in challenging circumstances
+      reasoning: |-
+        Comprehensive legal literacy enabling confident navigation of complex situations represents exceptional capability. This includes effective self-advocacy in challenging circumstances and strategic use of legal knowledge for advantage.

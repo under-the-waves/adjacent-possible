@@ -1,0 +1,56 @@
+slug: personality
+name: Personality
+domain: Expression
+pillar: Connect with Others
+domain_representative: false
+values:
+- key: alignment
+  name: Personality Alignment
+  weight: 40
+  description:
+  - Working with your natural personality patterns rather than against them.
+  - |-
+    Understanding your Big Five trait profile, attachment style, cognitive preferences, and motivational patterns, then designing your life, environment, career choices, and daily approaches to leverage your psychological makeup.
+  - |-
+    People who prioritise this value focus on optimising around their inherent tendencies, choosing situations that naturally suit their traits, and building systems that work with rather than against their psychological nature.
+  benchmarks:
+    level_1:
+      text: |-
+        Complete at least one personality assessment (Big Five, attachment style, or similar) and understand your basic personality patterns
+    level_2:
+      text: |-
+        Occasionally consider your personality traits when making decisions, even informally, rather than purely external factors
+    level_3:
+      text: |-
+        Make at least one major life choice (career direction, relationship approach, or living situation) with deliberate consideration of your personality patterns and needs
+    level_4:
+      text: |-
+        Consistently consider personality patterns when making major decisions across multiple life domains, with systematic awareness of strengths and limitations
+    level_5:
+      text: |-
+        Systematically optimize major life choices around personality strengths while building effective systems to compensate for natural limitations
+- key: growth
+  name: Personality Growth
+  weight: 60
+  description:
+  - Actively working to develop and modify your personality characteristics beyond your baseline tendencies.
+  - |-
+    Deliberately building confidence, emotional stability, social effectiveness, conscientiousness, openness, or other traits through targeted interventions and sustained practice.
+  - |-
+    Those who prioritise this value focus on expanding their psychological capabilities, pushing beyond their comfort zones, and systematically developing traits that will serve their goals even if they don't come naturally.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognize specific personality patterns that help or hinder you in daily situations and identify areas you'd like to develop
+    level_2:
+      text: |-
+        Make conscious effort to work on a personality-related habit or behavior, demonstrating measurable improvement in one targeted trait (e.g., become more assertive, organized, or calm under stress than 4 out of 5 people)
+    level_3:
+      text: |-
+        Successfully work on specific personality-related behaviors for 2-3 months with observable progress, developing targeted traits to top 5% levels (e.g., more emotionally stable, conscientious, socially confident, or open to experiences than 19 out of 20 people)
+    level_4:
+      text: |-
+        Demonstrate sustained personality development across multiple areas over 6+ months, achieving exceptional capability in targeted traits where you're more capable than 99 out of 100 people in specific areas (e.g., more disciplined, charismatic, emotionally regulated, or intellectually curious than 99% of people)
+    level_5:
+      text: |-
+        Achieve fundamental personality transformation through sustained professional intervention over multiple years, reaching the highest levels of development in targeted traits where you're more capable than 999 out of 1000 people through intensive intervention and practice

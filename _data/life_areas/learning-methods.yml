@@ -1,0 +1,106 @@
+slug: learning-methods
+name: Learning Methods
+domain: Learning
+pillar: Expand Your Awareness
+domain_representative: false
+values:
+- key: efficiency
+  name: Efficiency & Speed
+  weight: 35
+  description:
+  - Maximising learning outcomes per unit of time invested.
+  - Techniques that accelerate comprehension, improve retention rates, and enable faster skill acquisition.
+  - |-
+    People who prioritise this value focus on methods with proven time-to-competency ratios and systematic approaches that eliminate wasted effort.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise that cramming the night before an exam is less effective than studying over multiple days and that some study methods work better than others
+      reasoning: |-
+        Basic awareness that some methods work better than others represents achievement relative to the 80% of people who believe cramming is as effective as spaced practice. Simply recognising that last-minute studying is suboptimal puts someone ahead of most of the population.
+    level_2:
+      text: |-
+        Occasionally space out studying over several days rather than always cramming, sometimes use active recall instead of just rereading, and plan study sessions in advance
+      reasoning: |-
+        Research shows most students rely primarily on cramming. Occasionally spacing out study sessions and using active recall represents meaningful improvement over typical study habits, placing someone in the top 20% of learners based on method usage studies.
+    level_3:
+      text: |-
+        Systematically space out learning over time rather than cramming for most important goals, regularly use self-testing as a primary study method, and apply basic spaced repetition principles
+      reasoning: |-
+        Systematic application of spaced repetition and self-testing represents sophisticated learning behaviour documented in fewer than 5% of students in learning strategy studies. This level requires understanding and consistently applying evidence-based principles.
+    level_4:
+      text: |-
+        Systematically apply multiple evidence-based learning techniques across different domains with measurably superior retention and acquisition rates compared to typical approaches
+      reasoning: |-
+        Systematically applying multiple evidence-based techniques across domains requires extensive knowledge of learning science and exceptional implementation skills, found in roughly 1% of learners based on advanced learning strategy usage patterns.
+    level_5:
+      text: |-
+        Apply sophisticated learning methods systematically across multiple domains with consistent results and achieve learning rates that clearly exceed those of other dedicated learners
+      reasoning: |-
+        Achieving consistently superior learning rates across multiple domains represents mastery of learning as a meta-skill, demonstrated by approximately 1 in 1000 people based on longitudinal studies of learning achievement.
+- key: depth
+  name: Depth & Mastery
+  weight: 30
+  description:
+  - Achieving deep, transferable understanding rather than surface-level knowledge.
+  - |-
+    Techniques that build robust mental models, support long-term retention, and enable creative application across contexts.
+  - |-
+    Those who prioritise this value prefer methods that sacrifice speed for comprehensive understanding and lasting expertise.
+  benchmarks:
+    level_1:
+      text: Understand the difference between memorising something temporarily versus truly learning it for long-term use
+      reasoning: |-
+        Understanding the difference between temporary memorisation and lasting learning reflects awareness of the forgetting curve. Most people experience rapid forgetting after cramming but don't connect this to their study methods.
+    level_2:
+      text: |-
+        Sometimes seek feedback on learning progress and occasionally connect new information to existing knowledge rather than treating everything as isolated facts
+      reasoning: |-
+        Studies of student learning show that most treat new information as isolated facts. Occasionally connecting information and seeking feedback represents more sophisticated learning behaviour that correlates with better academic outcomes.
+    level_3:
+      text: |-
+        Engage in deliberate practice for at least one skill area, actively working on specific weaknesses rather than just general practice, and consistently seek and apply feedback
+      reasoning: |-
+        Engaging in deliberate practice requires understanding of specific improvement principles that most people never learn. Research shows that systematic practice with feedback targeting specific weaknesses is rare even among dedicated learners.
+    level_4:
+      text: |-
+        Consistently engage in high-quality deliberate practice across multiple skill areas, achieving development rates that significantly exceed typical timelines while maintaining depth
+      reasoning: |-
+        Consistent deliberate practice across multiple skill areas with accelerated development timelines represents expertise in learning itself, achieved by approximately 1% of dedicated learners according to expertise development research.
+    level_5:
+      text: |-
+        Consistently apply deliberate practice principles across several skill areas with sustained results over many years, achieving expertise in multiple challenging domains
+      reasoning: |-
+        Sustained deliberate practice across several skill areas over many years with genuine expertise development represents exceptional dedication and capability, achieved by roughly 1 in 1000 dedicated learners.
+- key: enjoyment
+  name: Enjoyment & Motivation
+  weight: 35
+  description:
+  - Learning approaches that maintain engagement and intrinsic motivation over time.
+  - Methods that feel rewarding, align with personal learning preferences, and sustain curiosity.
+  - |-
+    People who prioritise this value choose techniques they can maintain consistently because they find the process inherently satisfying.
+  benchmarks:
+    level_1:
+      text: Recognise that different learning approaches feel more or less sustainable personally
+      reasoning: |-
+        Recognising that learning approaches vary in sustainability reflects basic metacognitive awareness. Many people use methods they find unpleasant without considering alternatives that might be both effective and enjoyable.
+    level_2:
+      text: Develop basic study routines that can be maintained for a few weeks during important periods like exam season
+      reasoning: |-
+        Maintaining consistent study routines for weeks requires more self-regulation than most people demonstrate. Research on study habits shows that sustained routines, even basic ones, are relatively uncommon outside of intensive periods.
+    level_3:
+      text: |-
+        Maintain effective learning routines over months rather than just weeks and successfully complete challenging learning projects that most people abandon
+      reasoning: |-
+        Maintaining learning routines over months and completing challenging projects that others abandon requires exceptional self-regulation and motivation management, characteristics found in fewer than 5% of the population according to persistence studies.
+    level_4:
+      text: |-
+        Sustain challenging learning projects over years while maintaining motivation and complete goals that require exceptional persistence and self-regulation
+      reasoning: |-
+        Sustaining challenging learning projects over years requires exceptional motivation regulation and goal persistence, characteristics documented in roughly 1% of people who undertake significant learning goals.
+    level_5:
+      text: |-
+        Maintain effective learning habits over many years (10+ years) and complete substantial learning projects requiring exceptional consistency and dedication
+      reasoning: |-
+        Maintaining effective learning habits over 10+ years and completing substantial learning projects requiring exceptional consistency represents the top 0.1% of learning dedication and capability based on longitudinal achievement studies.

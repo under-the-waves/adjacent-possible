@@ -1,0 +1,144 @@
+slug: communication
+name: Communication
+domain: Expression
+pillar: Connect with Others
+domain_representative: false
+values:
+- key: influence
+  name: Influence
+  weight: 30
+  description:
+  - The ability to persuade others, drive decisions, and create change through your communication.
+  - |-
+    Getting your ideas adopted at work, motivating others to take action, and effectively advocating for yourself and your positions.
+  - |-
+    People who prioritise this value focus on strategic messaging, understanding what motivates different audiences, and developing the credibility and presence needed to shape outcomes through communication.
+  benchmarks:
+    level_1:
+      text: Recognize current persuasive abilities and identify key stakeholder relationships where influence matters most
+      reasoning: |-
+        Level 1 focuses on assessment and awareness. Most people can identify obvious cases where they have or lack influence but haven't systematically evaluated their persuasive abilities across different contexts and relationships.
+    level_2:
+      text: |-
+        Express your opinion clearly in group discussions and occasionally persuade others to consider your perspective. People generally listen when you speak and respect your input.
+      reasoning: |-
+        Based on research showing that less than 5% of people communicate assertively, being able to express opinions clearly and occasionally persuade others represents 80th percentile capability. Most people struggle to make their voice heard in group settings.
+    level_3:
+      text: |-
+        Consistently get ideas adopted in team meetings and successfully persuade colleagues and friends in most situations. Can influence people across different personality types by adapting your approach.
+      reasoning: |-
+        Consistently getting ideas adopted and successfully persuading across personality types represents top 5% influence ability. This requires significant social intelligence and adaptability that most people haven't developed.
+    level_4:
+      text: |-
+        Successfully persuade in challenging workplace situations and gain support for initiatives that require sustained buy-in from multiple stakeholders over months.
+      reasoning: |-
+        Successfully persuading in challenging situations and gaining sustained stakeholder buy-in over months represents top 1% influence ability. This requires exceptional persistence, strategic thinking, and relationship management.
+    level_5:
+      text: |-
+        Demonstrate exceptional ability to change minds in situations where others have failed, with people regularly seeking your input on important decisions.
+      reasoning: |-
+        Demonstrating exceptional ability to change minds when others have failed represents top 0.1% influence capability. People at this level are recognized by their communities as exceptionally persuasive and are regularly consulted on important decisions.
+- key: connection
+  name: Connection
+  weight: 35
+  description:
+  - Building genuine relationships, emotional intimacy, and mutual understanding through communication.
+  - |-
+    Both forming new relationships and deepening existing ones through meaningful conversation, empathy, and authentic expression that strengthens bonds over time.
+  - |-
+    Those who prioritise this value focus on listening deeply, sharing vulnerably, and creating the emotional safety that allows relationships to flourish.
+  benchmarks:
+    level_1:
+      text: Understand personal communication patterns and assess quality of current relationships across different contexts
+      reasoning: |-
+        Understanding your communication patterns is the foundation for improvement. This includes recognizing how you typically interact in different settings and honestly assessing the depth and quality of your current relationships.
+    level_2:
+      text: |-
+        Maintain several meaningful friendships and have conversations that go beyond small talk. Others feel comfortable around you and you can sense when someone is upset or stressed.
+      reasoning: |-
+        Having several meaningful friendships and emotional awareness puts someone in the top 20% of social connection. Many people have primarily surface-level relationships and struggle to sense others' emotional states.
+    level_3:
+      text: |-
+        Build friendships relatively easily and maintain strong relationships with minimal friction. Others often come to you for advice and feel comfortable sharing personal matters.
+      reasoning: |-
+        Building friendships easily and being someone others seek out for advice represents exceptional social connection skills. This level of relationship building is achieved by only about 1 in 20 people.
+    level_4:
+      text: |-
+        Build strong relationships across different personality types and backgrounds, with people actively seeking your perspective during difficult times.
+      reasoning: |-
+        Building strong relationships across diverse backgrounds and being someone people actively seek during difficult times represents exceptional connection ability achieved by roughly 1 in 100 people.
+    level_5:
+      text: |-
+        Create unusually deep bonds with people from diverse backgrounds, with others frequently commenting on your exceptional understanding and empathy.
+      reasoning: |-
+        Creating unusually deep bonds across diverse backgrounds with others frequently commenting on your exceptional understanding represents top 0.1% connection ability - roughly 1 in 1000 people achieve this level of interpersonal skill.
+- key: performance
+  name: Performance
+  weight: 20
+  description:
+  - |-
+    Excelling in high-stakes or formal communication situations such as public speaking, presentations, job interviews, media appearances, or large group facilitation.
+  - |-
+    Managing communication anxiety, projecting confidence under pressure, and delivering effectively when being evaluated or observed by others.
+  - |-
+    People who prioritise this value develop skills specifically for moments when communication performance directly impacts important outcomes.
+  benchmarks:
+    level_1:
+      text: Assess comfort level with formal communication situations and identify specific presentation anxieties or strengths
+      reasoning: |-
+        Given that 75% of people experience public speaking anxiety, simply assessing your comfort level with formal communication represents valuable self-awareness that many people lack.
+    level_2:
+      text: |-
+        Give straightforward presentations to small groups (5-10 people) without anxiety interfering and participate actively in meetings. Handle routine workplace communications like updates, explanations, or requests without major difficulty.
+      reasoning: |-
+        Being able to present to small groups without anxiety interfering represents top 20% performance, as research shows 75% of people experience public speaking anxiety that affects their delivery quality.
+    level_3:
+      text: |-
+        Give presentations to teams (10-25 people) with confidence and handle challenging workplace conversations like performance reviews or client complaints effectively.
+      reasoning: |-
+        Presenting confidently to 10-25 people and handling challenging conversations effectively represents top 5% performance ability, as most people struggle with groups larger than close colleagues.
+    level_4:
+      text: |-
+        Speak confidently to audiences of 30-50 people and handle challenging questions or unexpected situations without losing composure.
+      reasoning: |-
+        Speaking confidently to 30-50 people and handling challenging questions without losing composure represents top 1% performance ability. Most people would struggle significantly with audiences of this size.
+    level_5:
+      text: |-
+        Handle very challenging communication situations - like angry customers, tense meetings, or presenting bad news - with remarkable skill that others notice and admire.
+      reasoning: |-
+        Handling very challenging communication situations with remarkable skill that others notice and admire represents top 0.1% performance ability. This includes situations that would cause most people significant stress or failure.
+- key: conflict
+  name: Conflict Navigation
+  weight: 15
+  description:
+  - |-
+    Handling disagreements, difficult conversations, and interpersonal tensions constructively while maintaining relationships.
+  - |-
+    De-escalation skills, finding common ground, addressing problems directly but diplomatically, and mediating disputes between others.
+  - |-
+    Those who prioritise this value become comfortable with necessary tension and develop frameworks for working through differences without damaging relationships.
+  benchmarks:
+    level_1:
+      text: Evaluate typical responses to disagreement and recognize personal conflict avoidance or escalation patterns
+      reasoning: |-
+        Many people automatically avoid or escalate conflicts without conscious awareness. Recognizing your typical patterns is the first step toward more constructive conflict navigation.
+    level_2:
+      text: |-
+        Address minor disagreements directly rather than avoiding them. Can apologize effectively when wrong and discuss problems calmly rather than getting defensive or aggressive.
+      reasoning: |-
+        Most people either avoid difficult conversations entirely or become defensive when confronted. The ability to address disagreements directly and apologize effectively represents strong foundational conflict skills.
+    level_3:
+      text: |-
+        Successfully resolve most interpersonal disagreements before they escalate. Can navigate workplace tension and help colleagues work through their differences constructively.
+      reasoning: |-
+        Successfully resolving most disagreements before escalation and helping colleagues work through differences represents top 5% conflict resolution ability. Most workplace tensions persist or worsen without skilled intervention.
+    level_4:
+      text: |-
+        Help resolve disputes that have persisted for weeks or months, finding solutions when initial attempts by others have failed.
+      reasoning: |-
+        Resolving disputes that have persisted for weeks or months when others have failed represents exceptional conflict resolution skills achieved by roughly 1 in 100 people. This requires sophisticated understanding of human psychology and negotiation.
+    level_5:
+      text: |-
+        Successfully resolve conflicts that seem impossible to others, finding creative solutions in situations involving strong emotions, competing interests, and relationship damage.
+      reasoning: |-
+        Successfully resolving conflicts that seem impossible to others represents top 0.1% conflict resolution ability. This involves finding creative solutions in situations with strong emotions, competing interests, and relationship damage that most people would consider hopeless.

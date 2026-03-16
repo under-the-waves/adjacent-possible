@@ -1,3 +1,6 @@
+---
+life_area_slug: life-purpose
+---
 [← Back to Home](../)
 # Life Purpose
 
@@ -13,58 +16,13 @@ Your optimal approach to developing life purpose depends on what aspects you val
 
 For personalised recommendations based on your unique priorities, visit [Life Purpose Personalised]({{ site.baseurl }}/life-purpose/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Clarity & Direction (45%)
-Having a clear sense of what you want to achieve and why it matters to you personally. This includes understanding your core motivations, having frameworks for major life decisions, and feeling confident about your chosen path. People who prioritise this value focus on reducing existential confusion, developing coherent long-term vision, and maintaining certainty about their direction even when circumstances change.
-
-### Meaning & Fulfillment (35%)
-The degree to which your life purpose provides deep satisfaction, emotional resonance, and a sense that your existence matters. This encompasses feeling that your goals are personally meaningful rather than externally imposed, experiencing regular fulfillment from working toward your purpose, and having a sense that your life has significance. Those who prioritise this value seek purposes that genuinely inspire and motivate them.
-
-### Integration & Coherence (20%)
-How well your life purpose connects with and organises other aspects of your life – career, relationships, daily activities, and personal growth. This involves having a purpose that provides a unifying framework for life decisions, reduces internal conflict between different life domains, and creates synergy between various activities. People who prioritise this value want their purpose to serve as an organising principle that makes their whole life more coherent.
+{% include life-area-values.html %}
 
 ## Benchmarks by Level
 
 Research reveals that most people have limited explicit engagement with life purpose, with approximately 70% reporting they've never seriously considered what they want their life to be about beyond immediate goals <span class="info-icon" onclick="showReasoning('population-patterns')">i</span>. Studies show that only 25% of adults have written personal mission statements or clear life direction, and fewer than 10% regularly use purpose-based frameworks for major decisions <span class="info-icon" onclick="showReasoning('purpose-statistics')">i</span>. These patterns mean that even modest achievements in life purpose development represent higher population percentiles than might initially be expected.
 
-### Level 1: Awareness
-
-**Clarity & Direction**: Recognise that you lack clear life direction and understand this as something worth developing <span class="info-icon" onclick="showReasoning('level1-clarity')">i</span>
-
-**Meaning & Fulfillment**: Identify times when you've felt most and least fulfilled and begin noticing patterns in what provides meaning <span class="info-icon" onclick="showReasoning('level1-meaning')">i</span>
-
-**Integration & Coherence**: Assess how well your current activities align with your stated values and priorities <span class="info-icon" onclick="showReasoning('level1-integration')">i</span>
-
-### Level 2: Foundation (80th percentile capability)
-
-**Clarity & Direction**: Articulate 2-3 potential life directions you're genuinely excited about exploring and can explain why each appeals to you <span class="info-icon" onclick="showReasoning('level2-clarity')">i</span>
-
-**Meaning & Fulfillment**: Identify activities and contexts that consistently provide deep satisfaction and actively seek more of these experiences <span class="info-icon" onclick="showReasoning('level2-meaning')">i</span>
-
-**Integration & Coherence**: Make at least one significant life decision (career change, relationship, location) based on purpose considerations rather than external expectations or default paths <span class="info-icon" onclick="showReasoning('level2-integration')">i</span>
-
-### Level 3: Proficiency (95th percentile capability)
-
-**Clarity & Direction**: Maintain a clear, written life purpose that provides guidance for major decisions consistently over 12+ months <span class="info-icon" onclick="showReasoning('level3-clarity')">i</span>
-
-**Meaning & Fulfillment**: Experience regular fulfillment from working toward your purpose, maintaining motivation even during difficult periods or setbacks <span class="info-icon" onclick="showReasoning('level3-meaning')">i</span>
-
-**Integration & Coherence**: Align major life domains (work, relationships, lifestyle choices) with your stated purpose, creating mutual reinforcement rather than conflict <span class="info-icon" onclick="showReasoning('level3-integration')">i</span>
-
-### Level 4: Excellence (99th percentile capability)
-
-**Clarity & Direction**: Demonstrate consistent decision-making aligned with purpose across multiple life transitions, major challenges, and changing circumstances <span class="info-icon" onclick="showReasoning('level4-clarity')">i</span>
-
-**Meaning & Fulfillment**: Maintain sense of meaning and motivation even during extended periods of setbacks, external pressure, or when outcomes don't match expectations <span class="info-icon" onclick="showReasoning('level4-meaning')">i</span>
-
-**Integration & Coherence**: Create lifestyle and commitments that actively reinforce rather than compete with your life purpose, achieving synergy across life domains <span class="info-icon" onclick="showReasoning('level4-integration')">i</span>
-
-### Level 5: Mastery (99.9th percentile capability)
-
-**Clarity & Direction**: Maintain unwavering clarity about your purpose and direction even through major life upheavals, career changes, or personal crises <span class="info-icon" onclick="showReasoning('level5-clarity')">i</span>
-
-**Meaning & Fulfillment**: Experience profound fulfillment that remains stable across major life changes, providing consistent motivation and satisfaction regardless of external circumstances <span class="info-icon" onclick="showReasoning('level5-meaning')">i</span>
-
-**Integration & Coherence**: Achieve seamless integration where pursuing your purpose enhances rather than conflicts with other life priorities, creating positive feedback loops across all life domains <span class="info-icon" onclick="showReasoning('level5-integration')">i</span>
+{% include life-area-benchmarks.html %}
 
 ## Levels
 
@@ -100,66 +58,7 @@ const researchData = {
         title: 'Life Purpose Development Statistics', 
         content: 'Research by Duckworth & Gross (2014) indicates only 25% of adults have written personal mission statements, and McKnight & Kashdan (2009) found fewer than 10% regularly use purpose-based frameworks for major decisions. Most decision-making is reactive rather than purposeful. <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-010213-115037" target="_blank">Source study</a>'
     },
-    'level1-clarity': {
-        title: 'Level 1 Clarity & Direction Reasoning',
-        content: 'Awareness represents recognising the importance of life direction. Most people never explicitly consider whether they have clear life purpose, making this recognition itself a meaningful first step.'
-    },
-    'level1-meaning': {
-        title: 'Level 1 Meaning & Fulfillment Reasoning',
-        content: 'Beginning to notice patterns in fulfillment requires stepping back from automatic living. This meta-awareness of what provides meaning is the foundation for all purpose development.'
-    },
-    'level1-integration': {
-        title: 'Level 1 Integration & Coherence Reasoning',
-        content: 'Most people never assess alignment between stated values and actual behaviour. This assessment reveals gaps between intentions and actions, enabling conscious choice about life direction.'
-    },
-    'level2-clarity': {
-        title: 'Level 2 Clarity & Direction Reasoning',
-        content: 'Studies show 75% of people cannot articulate clear life directions they\'re excited about. Being able to identify and explain multiple potential paths represents significant clarity development. <a href="https://psycnet.apa.org/record/2013-44248-000" target="_blank">Source study</a>'
-    },
-    'level2-meaning': {
-        title: 'Level 2 Meaning & Fulfillment Reasoning',
-        content: 'Research indicates most people can identify what drains them but struggle to identify what consistently fulfills them. Actively seeking more meaningful experiences represents purposeful life design rather than passive acceptance.'
-    },
-    'level2-integration': {
-        title: 'Level 2 Integration & Coherence Reasoning',
-        content: 'Making major decisions based on purpose rather than external expectations requires considerable self-awareness and courage. Most people follow default paths, making purpose-driven decisions relatively rare.'
-    },
-    'level3-clarity': {
-        title: 'Level 3 Clarity & Direction Reasoning',
-        content: 'Maintaining written life purpose over 12+ months requires sustained commitment and regular refinement. Research shows only 5% of people maintain written purpose statements beyond initial enthusiasm. <a href="https://www.dominican.edu/dominicannews/study-highlights-strategies-for-achieving-goals" target="_blank">Source study</a>'
-    },
-    'level3-meaning': {
-        title: 'Level 3 Meaning & Fulfillment Reasoning',
-        content: 'Experiencing fulfillment during difficult periods demonstrates deep purpose connection. Most people lose motivation during setbacks, making sustained meaning during challenges a mark of true purpose development.'
-    },
-    'level3-integration': {
-        title: 'Level 3 Integration & Coherence Reasoning',
-        content: 'Aligning major life domains with purpose requires deliberate life design. Research shows most people experience conflict between different life areas, making coherent alignment a significant achievement representing the 95th percentile.'
-    },
-    'level4-clarity': {
-        title: 'Level 4 Clarity & Direction Reasoning',
-        content: 'Consistent purpose-aligned decision-making across major transitions demonstrates exceptional clarity. Most people\'s sense of purpose wavers during significant changes, making this stability rare (top 1% of population).'
-    },
-    'level4-meaning': {
-        title: 'Level 4 Meaning & Fulfillment Reasoning',
-        content: 'Maintaining meaning during extended setbacks or external pressure requires deep purpose integration. This resilience during adversity characterises those with exceptionally well-developed life purpose.'
-    },
-    'level4-integration': {
-        title: 'Level 4 Integration & Coherence Reasoning',
-        content: 'Creating lifestyle that actively reinforces purpose represents sophisticated life design. Most people struggle with competing priorities, making this level of integration exceptional and characteristic of the top 1%.'
-    },
-    'level5-clarity': {
-        title: 'Level 5 Clarity & Direction Reasoning',
-        content: 'Unwavering clarity through major upheavals demonstrates mastery-level purpose development. This represents the most stable and mature form of life direction, achieved by approximately 1 in 1,000 people.'
-    },
-    'level5-meaning': {
-        title: 'Level 5 Meaning & Fulfillment Reasoning',
-        content: 'Profound fulfillment stable across all circumstances represents the pinnacle of purpose development. This level of consistent meaning regardless of external conditions characterises true mastery in life purpose.'
-    },
-    'level5-integration': {
-        title: 'Level 5 Integration & Coherence Reasoning',
-        content: 'Seamless integration where purpose enhances all life priorities represents optimal life design. This creates positive feedback loops across domains, achievable by approximately 0.1% of the population through exceptional purpose development.'
-    }
+    {% include benchmark-reasoning.html %}
 };
 
 </script>

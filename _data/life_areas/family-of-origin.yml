@@ -1,0 +1,145 @@
+slug: family-of-origin
+name: Family Of Origin
+domain: Family
+pillar: Connect with Others
+domain_representative: true
+values:
+- key: autonomy
+  name: Personal Autonomy
+  weight: 30
+  description:
+  - Being true to yourself and setting limits that protect your wellbeing, even when this creates family conflict or guilt.
+  - |-
+    People who prioritise this value focus on establishing healthy boundaries, making life choices based on their own values rather than family expectations, and refusing to participate in dysfunctional family patterns.
+  - |-
+    The freedom to live where you want, pursue careers that fulfill you, and express your authentic identity regardless of family approval.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognize patterns where family expectations conflict with personal values and identify situations where you compromise your wellbeing to avoid family conflict
+      reasoning: |-
+        Level 1 focuses on self-awareness without requiring change. Research shows that many adults struggle with family boundaries but most haven't systematically assessed these patterns. Simple recognition of conflicts between personal values and family expectations represents the foundation for later boundary work.
+    level_2:
+      text: |-
+        Can make major life decisions (career, relationships, living situation) based on your own values rather than family pressure; experience minimal guilt when setting basic boundaries
+      reasoning: |-
+        Research shows that while 26% of adults experience some estrangement from fathers and 6% from mothers, the majority (80%+) maintain ongoing relationships despite disagreements. Level 2 represents the ability to make decisions based on personal values rather than family pressure - a capability most adults develop but many struggle with initially.
+    level_3:
+      text: |-
+        Live authentically according to your values without significant guilt or internal conflict about family disapproval; can disagree with family members while remaining emotionally regulated
+      reasoning: |-
+        This represents the top 5% who can live authentically without significant guilt about family disapproval. Research on family boundaries suggests that while most people struggle with guilt and manipulation, a small percentage achieve genuine internal freedom from family conditioning.
+    level_4:
+      text: |-
+        Experience genuine freedom from family guilt and manipulation; can express disagreement calmly and maintain your position without emotional reactivity; completely comfortable with your authentic self regardless of family opinions
+      reasoning: |-
+        Top 1% capability where personal authenticity is maintained without emotional reactivity to family pressure. This requires exceptional emotional regulation and boundary skills that very few people develop, representing perhaps 1 in 100 adults who achieve this level of internal freedom.
+    level_5:
+      text: |-
+        Achieve complete internal freedom from family conditioning; no emotional reactivity to family dysfunction; can maintain your values and boundaries under extreme family pressure without internal conflict
+      reasoning: |-
+        Top 0.1% achievement representing complete internal freedom from family conditioning. This level of emotional mastery is extremely rare, found in perhaps 1 in 1000 adults who can maintain values and boundaries under extreme pressure without internal conflict.
+- key: connection
+  name: Emotional Connection
+  weight: 25
+  description:
+  - Maintaining close emotional bonds and investing significant time and energy in family relationships.
+  - |-
+    Those who prioritise this value focus on regular communication, being present for important family events, creating shared experiences, and preserving the emotional intimacy that comes from deep family ties.
+  - |-
+    Prioritising family time even when it competes with other life goals and working to understand and empathise with family members.
+  benchmarks:
+    level_1:
+      text: |-
+        Assess the current quality and frequency of emotional interactions with family members and understand what strengthens or weakens these bonds
+      reasoning: |-
+        Level 1 focuses on assessment and understanding without requiring relationship changes. Most people can evaluate their current family relationship patterns and identify what affects connection quality.
+    level_2:
+      text: |-
+        Have regular, pleasant contact with most family members; can navigate family gatherings without major conflict; maintain emotional closeness with at least some family members
+      reasoning: |-
+        Research shows 60% of parents report "excellent" relationships with children, while most families can navigate gatherings without major conflict. Level 2 represents the 80th percentile who maintain regular, pleasant family contact despite typical family challenges.
+    level_3:
+      text: |-
+        Sustain deep, adult relationships with family members based on mutual respect; can provide and receive emotional support effectively; family gatherings are generally enjoyable and connecting
+      reasoning: |-
+        This represents the top 5% who achieve deep, adult relationships characterized by mutual respect and effective emotional support. While many maintain pleasant contact, fewer achieve truly intimate adult relationships with family members.
+    level_4:
+      text: |-
+        Exceptionally close, secure relationships characterized by unconditional love and deep understanding; family serves as a primary source of emotional strength and joy; strong emotional intimacy without enmeshment
+      reasoning: |-
+        Top 1% capability representing exceptionally close relationships that serve as primary sources of emotional strength. This level of family intimacy without enmeshment is rare, requiring both exceptional emotional skills and cooperative family members.
+    level_5:
+      text: |-
+        Develop transcendent emotional connections that move beyond typical family dynamics; can love family members unconditionally while remaining completely unattached to their choices or opinions of you
+      reasoning: |-
+        Top 0.1% achievement representing transcendent emotional connections that move beyond typical family dynamics. This level involves unconditional love while remaining unattached to family members' choices - an extremely rare capability.
+- key: healing
+  name: Active Healing
+  weight: 20
+  description:
+  - |-
+    Working through family dysfunction, addressing past trauma, and pushing for healthier dynamics rather than accepting problematic patterns for the sake of peace.
+  - |-
+    People who prioritise this value are willing to have difficult conversations, seek therapy or family counselling, confront past hurts, and challenge generational patterns even when this creates temporary instability or discomfort within the family system.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify unresolved family issues, recurring conflict patterns, and areas where past experiences continue to affect current relationships
+      reasoning: |-
+        Level 1 focuses on identifying rather than resolving family issues. Most people can recognize unresolved problems and recurring patterns when they examine their family relationships systematically.
+    level_2:
+      text: |-
+        Address obvious dysfunctional patterns rather than avoiding them; can have difficult conversations about past issues when necessary; no longer repeating the most harmful family patterns
+      reasoning: |-
+        Level 2 represents addressing obvious dysfunction rather than avoiding it. Research suggests that while many people recognize family problems, fewer actively work to address them through difficult conversations or behavior change.
+    level_3:
+      text: |-
+        Work through moderate family trauma or dysfunction with professional help or sustained effort; can discuss difficult topics constructively; have broken harmful generational patterns in your own behavior
+      reasoning: |-
+        This represents the top 5% who work through moderate family trauma with sustained effort. While family dysfunction is common, only a small percentage engage in serious healing work through therapy or sustained personal effort.
+    level_4:
+      text: |-
+        Have transformed significant family dysfunction in your own responses and patterns; can facilitate healing conversations; serve as a stabilizing force during family crises through excellent emotional regulation
+      reasoning: |-
+        Top 1% capability representing transformation of significant dysfunction in personal responses. This requires exceptional emotional regulation and healing work that very few people complete successfully.
+    level_5:
+      text: |-
+        Master your own emotional responses to family dysfunction so completely that you're unaffected by family chaos; can remain centered and helpful during extreme family crises
+      reasoning: |-
+        Top 0.1% achievement representing complete mastery of emotional responses to family dysfunction. This level of emotional regulation during family chaos is extremely rare, found in perhaps 1 in 1000 adults.
+- key: duty
+  name: Family Duty
+  weight: 25
+  description:
+  - |-
+    Fulfilling obligations to family members, providing concrete support, and meeting cultural or family expectations about your role.
+  - |-
+    Those who prioritise this value focus on financial support for aging parents, helping siblings with opportunities, maintaining family traditions and reputation, and ensuring family members have what they need to thrive.
+  - Making life choices that honor family values and represent the family well in the community.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand current and potential future obligations to family members, including financial, practical, and cultural expectations
+      reasoning: |-
+        Level 1 focuses on understanding obligations without requiring action. Most people can assess their current and potential family responsibilities when prompted to consider them systematically.
+    level_2:
+      text: |-
+        Provide regular financial or practical support to family members when they need it; help with family obligations like caring for aging parents or supporting siblings during difficulties; contribute to maintaining family traditions and reputation
+      reasoning: |-
+        Studies show 75% believe in responsibility to support aging parents, while 32% of adults with elderly parents actually provide financial support. Level 2 represents those who provide regular support when needed - achievable by most adults but not universal.
+    level_3:
+      text: |-
+        Take on significant responsibility for family welfare, such as being a primary support for aging parents or helping multiple family members with major challenges; consistently contribute to family honor through your choices and achievements; actively preserve and create family traditions
+      reasoning: |-
+        This represents the top 5% who take on significant family welfare responsibilities. Research shows 23% are in "sandwich generation" providing substantial support, making primary caregiving responsibility realistic for 95th percentile achievement.
+    level_4:
+      text: |-
+        Serve as a central pillar of family stability by coordinating care, managing family resources, and ensuring family members' needs are met; make substantial personal sacrifices to fulfill family obligations; bring significant honor to the family through your achievements and conduct
+      reasoning: |-
+        Top 1% capability representing central family coordination with substantial personal sacrifice. This level of family leadership and resource coordination is rare, requiring both capability and circumstances that allow such contributions.
+    level_5:
+      text: |-
+        Dedicate substantial resources and effort to family welfare, potentially including significant financial support, full-time caregiving, or managing complex family enterprises; ensure multiple generations of family members thrive through your contributions; become the family member who upholds and elevates the family's standing in the community
+      reasoning: |-
+        Top 0.1% achievement representing dedication of substantial life resources to multiple generations of family welfare. This might include full-time caregiving, major financial support, or managing complex family enterprises - extremely rare dedication.

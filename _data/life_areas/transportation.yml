@@ -1,0 +1,104 @@
+slug: transportation
+name: Transportation
+domain: Environment
+pillar: Organise Your Life
+domain_representative: false
+values:
+- key: efficiency
+  name: Efficiency
+  weight: 40
+  description:
+  - Minimising the time, money, and cognitive effort spent on transportation.
+  - |-
+    Optimising commute routes, reducing unnecessary trips, combining errands, and choosing modes that maximise productive or enjoyable use of travel time.
+  - People who prioritise this value treat transportation as a resource to optimise.
+  benchmarks:
+    level_1:
+      text: Track your total weekly transportation time and cost, including commute, errands, and leisure travel
+      reasoning: |-
+        Tracking total weekly transportation time and cost often reveals surprising numbers. Most people significantly underestimate how much time and money they spend on transportation each week.
+    level_2:
+      text: |-
+        Total commute under 30 minutes each way, errands batched and route-optimised, and transportation costs below 15% of income
+      reasoning: |-
+        A sub-30-minute commute with batched errands and costs below 15% of income represents 80th percentile efficiency. Average commutes are 40 -- 80 minutes and many households spend 15 -- 20% of income on transportation. <a href="https://www.bts.gov/data-spotlight/household-cost-transportation-it-affordable" target="_blank">View source</a>
+    level_3:
+      text: |-
+        Commute under 20 minutes or productively used, transportation costs below 10% of income, and minimal time lost to unnecessary travel
+      reasoning: |-
+        A sub-20-minute or productive commute with costs below 10% of income represents top 5% transportation efficiency, typically requiring deliberate location and lifestyle design.
+    level_4:
+      text: |-
+        Commute is either negligible (remote work, walkable) or genuinely enjoyable, with transportation costs minimal relative to income
+      reasoning: |-
+        Negligible or genuinely enjoyable commute represents top 1% transportation efficiency, typically achieved through remote work, walkable living, or active commutes in good conditions.
+    level_5:
+      text: |-
+        Transportation optimised to near-zero wasted time and minimal cost, with location and lifestyle choices that eliminate unnecessary travel entirely
+      reasoning: |-
+        Near-zero wasted time and minimal cost through location and lifestyle optimisation represents 99.9th percentile transportation efficiency -- a level that requires fundamental life design choices.
+- key: comfort
+  name: Comfort
+  weight: 35
+  description:
+  - |-
+    The physical and psychological experience of your daily transportation -- pleasant, stress-free, and compatible with your preferences.
+  - Vehicle quality, commute environment, protection from weather, and the overall pleasantness of your travel experience.
+  - People who prioritise this value invest in making the journey itself enjoyable.
+  benchmarks:
+    level_1:
+      text: Know which aspects of your daily transportation are pleasant and which cause stress or discomfort
+      reasoning: |-
+        Many people accept transportation discomfort -- cramped vehicles, stressful routes, unpleasant commute environments -- without consciously identifying what causes friction. Knowing what is pleasant and what is not is the prerequisite for improvement.
+    level_2:
+      text: |-
+        Daily transportation is reliably comfortable -- a well-maintained vehicle or pleasant transit experience with protection from weather and minimal stress
+      reasoning: |-
+        Reliably comfortable daily transportation represents 80th percentile. Many people endure uncomfortable commutes -- overcrowded transit, poorly maintained vehicles, or exposure to weather -- as a normalised part of daily life.
+    level_3:
+      text: |-
+        Transportation that is genuinely enjoyable -- a pleasant commute environment, reliable climate control, and a travel experience you look forward to rather than endure
+      reasoning: |-
+        A genuinely enjoyable commute experience represents top 5%. Most people merely tolerate their commute; actively looking forward to it requires deliberate investment in vehicle quality, route choice, or mode selection.
+    level_4:
+      text: |-
+        Transportation is a consistently pleasant experience -- premium vehicle or ideal commute conditions, with no aspect of daily travel causing discomfort or frustration
+      reasoning: |-
+        Consistently pleasant transportation with no aspect causing discomfort represents top 1% -- a level that typically requires premium vehicles, ideal commute conditions, or exceptional lifestyle design.
+    level_5:
+      text: |-
+        Every aspect of transportation is a pleasure -- whether driving, cycling, walking, or flying, your travel experience is consistently among the best available and a genuine source of enjoyment
+      reasoning: |-
+        Every aspect of transportation being a genuine pleasure represents 99.9th percentile -- fewer than 1 in 1,000 people experience this level of consistent travel enjoyment across all modes.
+- key: safety
+  name: Safety
+  weight: 25
+  description:
+  - Minimising the risk of injury, accident, or incident during transportation.
+  - |-
+    Vehicle safety features, route selection, defensive driving or cycling practices, and choosing modes with strong safety records.
+  - People who prioritise this value make travel decisions based on risk reduction.
+  benchmarks:
+    level_1:
+      text: Understand the risks associated with your current transportation modes and routes
+      reasoning: |-
+        Most people have never assessed the actual risk profile of their transportation choices. Understanding which modes, routes, and behaviours carry the highest risk is essential for informed decision-making.
+    level_2:
+      text: Vehicle or mode in good safety condition, safe route choices, and basic defensive practices that reduce accident risk
+      reasoning: |-
+        A vehicle or mode in good safety condition with basic defensive practices represents 80th percentile. Many people drive poorly maintained vehicles, skip safety checks, or use routes with higher accident rates without awareness.
+    level_3:
+      text: |-
+        Proactive safety measures -- advanced vehicle safety features, well-practised defensive habits, and route selection that minimises exposure to risk
+      reasoning: |-
+        Proactive safety measures with advanced vehicle features and well-practised defensive habits represent top 5% transportation safety. Most people are reactive about safety rather than systematically reducing risk.
+    level_4:
+      text: |-
+        Near-zero risk exposure through optimal vehicle safety, defensive expertise, and life structured to minimise time in high-risk transportation contexts
+      reasoning: |-
+        Near-zero risk exposure through optimal safety features, defensive expertise, and risk-minimising life design represents top 1% transportation safety -- a level that requires sustained, deliberate attention.
+    level_5:
+      text: |-
+        Complete transportation safety mastery -- negligible accident risk through a combination of vehicle choice, skill, route design, and lifestyle choices that minimise exposure to danger
+      reasoning: |-
+        Complete transportation safety mastery with negligible accident risk represents 99.9th percentile -- fewer than 1 in 1,000 people achieve this combination of vehicle choice, skill, and lifestyle design for safety.

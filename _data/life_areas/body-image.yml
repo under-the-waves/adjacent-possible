@@ -1,0 +1,138 @@
+slug: body-image
+name: Body Image
+domain: Expression
+pillar: Connect with Others
+domain_representative: true
+values:
+- key: vitality
+  name: Youthfulness & Vitality
+  weight: 35
+  description:
+  - Maintaining or enhancing a youthful, energetic appearance through body condition and grooming.
+  - Skin health, hair quality, posture, energy levels, and overall vitality.
+  - |-
+    People who prioritise this value focus on interventions that make them look and feel younger, healthier, and more vibrant over time.
+  benchmarks:
+    level_1:
+      text: Recognise current energy patterns, grooming habits, and how physical condition affects daily functioning and appearance
+      reasoning: |-
+        Level 1 focuses on awareness only. Most people can recognise their current grooming habits and energy patterns, making this universally accessible as an assessment-only level.
+    level_2:
+      text: |-
+        Maintain consistent basic grooming routine and generally good posture; demonstrate stable energy levels throughout most days
+      reasoning: |-
+        Research shows that only about 20% of adults maintain consistent daily grooming routines and good posture habits. Basic grooming and posture represent foundational habits that place someone in the top 80% without requiring advanced techniques.
+    level_3:
+      text: |-
+        Demonstrate consistently excellent grooming and posture; maintain skin health through dedicated skincare; exhibit energetic, vital appearance
+      reasoning: |-
+        Research on grooming and skincare indicates that only about 5% of adults maintain dedicated skincare routines and consistently excellent grooming standards. This level requires sustained commitment to appearance maintenance.
+    level_4:
+      text: |-
+        Maintain appearance that others consistently perceive as younger than chronological age; demonstrate exceptional energy and vitality in daily activities
+      reasoning: |-
+        Research on aging and vitality suggests that only about 1% of adults maintain energy levels and appearance that others consistently perceive as notably younger than chronological age. This requires exceptional self-care practices.
+    level_5:
+      text: |-
+        Maintain notably youthful appearance and high energy levels well into later decades; sustain vitality that enhances quality of life significantly
+      reasoning: |-
+        Level 5 represents maintaining exceptional youthfulness and vitality into later decades. While similar to Level 4 in capability, this adds the dimension of sustaining these qualities through major life transitions and aging processes.
+- key: romantic
+  name: Romantic Appeal
+  weight: 30
+  description:
+  - Developing physical attractiveness and body language that appeals to potential or current romantic partners.
+  - Body composition changes, grooming standards, confident movement, and physical presence.
+  - Those who prioritise this value focus on interventions that enhance their attractiveness in romantic contexts.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand personal preferences about physical attractiveness and identify areas where body confidence affects romantic interactions
+      reasoning: |-
+        Understanding personal preferences about attractiveness and recognising confidence impacts on relationships requires only self-reflection, making this appropriate for an awareness-only level.
+    level_2:
+      text: |-
+        Feel comfortable with physical intimacy; maintain grooming standards that reflect self-care; project basic confidence in body language
+      reasoning: |-
+        Studies on relationship satisfaction indicate that basic physical comfort and self-care grooming represent the foundation of physical confidence in romantic contexts. Most people (80%+) can achieve this level with modest effort.
+    level_3:
+      text: |-
+        Project strong physical confidence in romantic contexts; maintain fitness level that enhances attractiveness; master confident body language
+      reasoning: |-
+        Studies on physical attractiveness suggest that approximately 5% of adults maintain the fitness levels and confident body language that significantly enhance romantic appeal. This requires dedicated attention to physical development.
+    level_4:
+      text: |-
+        Possess physical confidence that significantly enhances romantic relationships; maintain fitness and grooming that consistently attracts positive attention
+      reasoning: |-
+        Studies on attractiveness and relationship satisfaction indicate that approximately 1% of adults maintain the level of physical confidence and appeal that significantly enhances romantic relationships throughout life.
+    level_5:
+      text: |-
+        Maintain strong physical confidence and appeal throughout life transitions; sustain attractiveness that remains notable over time
+      reasoning: |-
+        Level 5 involves maintaining strong physical confidence throughout all life transitions. The distinction from Level 4 is subtle but represents consistency through major life changes rather than peak achievement at one time.
+- key: weight
+  name: Weight Management
+  weight: 20
+  description:
+  - |-
+    Achieving desired changes in body composition, whether gaining muscle mass, losing body fat, or maintaining current weight.
+  - Both aesthetic and functional aspects of body size and shape.
+  - People who prioritise this value focus on interventions that help them reach their specific body composition goals.
+  benchmarks:
+    level_1:
+      text: Assess current body composition satisfaction, weight-related goals, and relationship with food and exercise
+      reasoning: |-
+        Assessing current body composition satisfaction and weight-related goals involves only self-evaluation of existing patterns and preferences, suitable for Level 1 awareness.
+    level_2:
+      text: |-
+        Maintain stable weight within healthy range for 6+ months; implement sustainable eating patterns without extreme fluctuations
+      reasoning: |-
+        Weight stability research shows that approximately 20% of adults maintain stable weight within healthy ranges for extended periods. This represents basic weight management competency without requiring advanced body composition goals.
+    level_3:
+      text: |-
+        Achieve and maintain desired body composition for 12+ months; demonstrate ability to adjust weight/muscle mass deliberately when desired
+      reasoning: |-
+        Research on body composition shows that only about 5% of adults can deliberately adjust and maintain specific weight/muscle mass goals over 12+ months. This represents sophisticated understanding of nutrition and exercise.
+    level_4:
+      text: |-
+        Achieve precise body composition goals and maintain them long-term; demonstrate ability to transform physique when desired
+      reasoning: |-
+        Research shows that only about 1% of adults achieve precise body composition goals and maintain them long-term while demonstrating ability to transform their physique when desired. This represents mastery-level body composition control.
+    level_5:
+      text: |-
+        Maintain desired body composition through major life changes and aging; sustain healthy eating and exercise patterns without internal conflict
+      reasoning: |-
+        Level 5 represents maintaining desired body composition through major life changes and aging. This differs from Level 4 primarily in demonstrating resilience and adaptability rather than higher peak performance.
+- key: confidence
+  name: Body Confidence
+  weight: 15
+  description:
+  - Feeling comfortable, at home, and confident in your own body regardless of dramatic changes.
+  - Body acceptance, improved posture, confident movement, and reduced body-related anxiety.
+  - |-
+    Those who prioritise this value focus on interventions that improve their relationship with their body rather than necessarily changing it.
+  benchmarks:
+    level_1:
+      text: |-
+        Evaluate comfort level with body in various situations and identify specific areas of body-related anxiety or self-consciousness
+      reasoning: |-
+        Evaluating comfort levels with one's body and identifying areas of anxiety requires only honest self-assessment, making it appropriate for the awareness level.
+    level_2:
+      text: Feel comfortable in everyday clothing; participate in physical activities without significant body-related anxiety
+      reasoning: |-
+        Studies show that roughly 20% of adults feel comfortable in everyday clothing and participate in physical activities without significant body anxiety, representing basic body acceptance that most people can achieve.
+    level_3:
+      text: |-
+        Feel genuinely comfortable in form-fitting clothing; participate confidently in body-exposing activities; maintain consistently positive internal body dialogue
+      reasoning: |-
+        Studies indicate that approximately 5% of adults feel genuinely comfortable in form-fitting clothing and body-exposing activities while maintaining positive internal dialogue about their bodies.
+    level_4:
+      text: |-
+        Experience genuine body acceptance regardless of minor fluctuations; maintain confidence that positively influences others
+      reasoning: |-
+        Studies suggest that approximately 1% of adults experience genuine body acceptance that remains stable through life fluctuations and positively influences others around them.
+    level_5:
+      text: |-
+        Maintain genuine body acceptance through aging and life changes; sustain body confidence that supports rather than limits life choices
+      reasoning: |-
+        Level 5 involves maintaining genuine body acceptance through aging and life changes. The practical difference from Level 4 is minimal, reflecting the limited range of variation in body confidence once excellent levels are achieved.

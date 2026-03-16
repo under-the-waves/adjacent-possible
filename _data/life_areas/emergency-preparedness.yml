@@ -1,0 +1,136 @@
+slug: emergency-preparedness
+name: Emergency Preparedness
+domain: Security
+pillar: Look After Yourself
+domain_representative: false
+values:
+- key: self-reliance
+  name: Self-Reliance
+  weight: 25
+  description:
+  - Building personal and family capability to handle emergencies independently without requiring external assistance.
+  - |-
+    Maintaining adequate supplies, developing essential skills, and creating systems that allow you to sustain your household during disruptions.
+  - |-
+    People who prioritise this value focus on stockpiling resources, learning practical skills like first aid and basic repairs, and ensuring their family can function autonomously when normal support systems fail.
+  benchmarks:
+    level_1:
+      text: "Understand your household's current preparedness gaps and resource needs for basic emergencies"
+      reasoning: |-
+        This represents basic awareness activities that most people can complete regardless of resources. Given that approximately 50% of Americans lack emergency plans, simply conducting a household assessment places someone ahead of a significant portion of the population.
+    level_2:
+      text: Maintain 3-7 days of food, water, and essential supplies for your household without external assistance
+      reasoning: |-
+        FEMA data shows that 68% of Americans have taken 3+ preparedness actions, but comprehensive 3-7 day household independence represents the top 20% of preparedness. This includes not just supplies but the knowledge and plans to use them effectively during a real emergency.
+    level_3:
+      text: |-
+        Sustain your household for 2-4 weeks with comprehensive supplies including food, water, medications, and basic first aid capabilities
+      reasoning: |-
+        FEMA research shows approximately 6% of Americans can sustain 31+ days without external assistance. The 2-4 week capability with comprehensive supplies and basic skills represents the top 5% of preparedness, requiring significant planning and investment beyond basic emergency kits.
+    level_4:
+      text: Achieve 3-6 months of household supply autonomy with backup power sources and comprehensive medical supplies
+      reasoning: |-
+        FEMA data indicates approximately 2% of Americans achieve 97+ days of preparedness capability. The 3-6 month household autonomy with backup systems represents top 1% preparedness requiring substantial space, financial investment, and skill development.
+    level_5:
+      text: Sustain complete household independence for 1+ years with renewable resource systems and extensive skill development
+      reasoning: |-
+        Complete household independence for 1+ years with renewable systems represents the top 0.1% of preparedness - approximately 340,000 Americans. This requires homesteading-level skills, substantial land, and comprehensive infrastructure development.
+- key: community
+  name: Community Resilience
+  weight: 25
+  description:
+  - Developing collective preparedness through social networks, mutual aid, and coordinated community response capabilities.
+  - |-
+    Building relationships with neighbours, participating in local emergency response groups, sharing resources and knowledge, and creating systems for collective support during crises.
+  - |-
+    Those who prioritise this value focus on strengthening social bonds, organising neighbourhood preparedness efforts, and building trust networks that can mobilise quickly during emergencies.
+  benchmarks:
+    level_1:
+      text: Recognise the emergency response resources and networks available in your immediate area
+      reasoning: |-
+        Basic awareness of local emergency resources requires minimal effort but most people have never systematically identified what resources exist in their area. This foundational knowledge is prerequisite to any community engagement.
+    level_2:
+      text: Know your immediate neighbours and have basic contact information for local emergency resources
+      reasoning: |-
+        While most people know some neighbours casually, systematic emergency contact collection and resource identification represents meaningful community preparedness that most people never complete. This provides the foundation for mutual aid during emergencies.
+    level_3:
+      text: |-
+        Actively participate in neighbourhood preparedness discussions and maintain mutual aid relationships with multiple households
+      reasoning: |-
+        Active participation in neighbourhood preparedness and maintaining multiple household relationships for mutual aid represents the top 5% of community engagement. Most community preparedness programs report very low sustained participation rates.
+    level_4:
+      text: |-
+        Maintain strong relationships with multiple emergency response groups and actively coordinate neighbourhood preparedness efforts
+      reasoning: |-
+        Active coordination with multiple emergency response groups while maintaining neighbourhood leadership represents exceptional community engagement achieved by very few people. This requires sustained commitment and relationship building over years.
+    level_5:
+      text: |-
+        Maintain extensive mutual aid networks across multiple communities and possess deep knowledge of regional emergency resources
+      reasoning: |-
+        Extensive multi-community networks and deep regional resource knowledge represents exceptional community preparedness achieved by very few individuals. This requires years of relationship building and comprehensive regional emergency knowledge.
+- key: baseline
+  name: Baseline Resilience
+  weight: 30
+  description:
+  - Focusing preparation efforts on probable, manageable disruptions that occur within stable social systems.
+  - |-
+    Preparing for regional natural disasters (bushfires, floods, severe storms), infrastructure failures (power outages, water disruptions), economic downturns affecting your area, temporary supply chain interruptions, and health emergencies requiring isolation.
+  - |-
+    People who prioritise this value concentrate on realistic scenarios they're likely to face, ensuring solid preparation for events that happen regularly in their region whilst maintaining normal life circumstances.
+  benchmarks:
+    level_1:
+      text: Assess your vulnerability to probable regional risks and seasonal hazards affecting your location
+      reasoning: |-
+        Understanding regional risks through research and hazard mapping is a fundamental first step that requires no financial investment. Many people live in areas without understanding their specific vulnerabilities to natural disasters or infrastructure failures.
+    level_2:
+      text: Have a household emergency plan and basic supplies for the most likely regional emergencies
+      reasoning: |-
+        Although 50.5% of Americans report having household emergency plans, comprehensive plans that address multiple regional risks with appropriate supplies represent higher-level preparedness achieved by roughly 20% of households.
+    level_3:
+      text: |-
+        Implement specific protective measures for regional risks with documented plans for evacuation and shelter-in-place scenarios
+      reasoning: |-
+        Implementing specific protective measures and documented procedures for regional risks represents sophisticated preparedness that goes far beyond basic planning. This level requires testing, refinement, and substantial preparation investment.
+    level_4:
+      text: Implement robust protective infrastructure and maintain tested response procedures exceeding standard recommendations
+      reasoning: |-
+        Professional-grade protective infrastructure and tested procedures exceeding standard recommendations represents institutional-level preparedness rarely achieved by private households. This requires significant technical knowledge and investment.
+    level_5:
+      text: Achieve institutional-level preparedness capabilities with professional monitoring and response systems
+      reasoning: |-
+        Institutional-level preparedness with professional monitoring systems represents capabilities typically found in emergency management agencies or large corporations, rarely achieved by private households.
+- key: catastrophic
+  name: Catastrophic Resilience
+  weight: 20
+  description:
+  - |-
+    Focusing preparation efforts on rare but potentially civilization-altering scenarios that could fundamentally disrupt society.
+  - |-
+    Preparing for global pandemics, economic collapse, technological failures affecting critical infrastructure, supply chain breakdown, social unrest, climate-related mass displacement, or existential risks from emerging technologies.
+  - |-
+    Those who prioritise this value invest significant resources in scenarios that might require extended self-sufficiency, fundamental lifestyle changes, or adaptation to entirely new social conditions.
+  benchmarks:
+    level_1:
+      text: Understand the types of rare but potentially severe scenarios that could disrupt normal life
+      reasoning: |-
+        Basic education about potential catastrophic scenarios helps people understand the difference between everyday emergencies and civilization-threatening events. This awareness helps inform later preparation priorities.
+    level_2:
+      text: |-
+        Maintain emergency cash reserves, alternative communication methods, and awareness of potential societal disruption threats
+      reasoning: |-
+        Basic catastrophic preparation (cash reserves, alternative communication) requires minimal investment but represents preparation beyond everyday emergencies. While 68% have emergency savings, comprehensive catastrophic preparation is much rarer.
+    level_3:
+      text: |-
+        Prepare for rapid relocation with mobile supplies, basic security measures, and plans for breakdown of supply chains and social order
+      reasoning: |-
+        Preparation for rapid relocation and social order breakdown represents specialized catastrophic thinking that very few people systematically address. This goes beyond stockpiling to mobility and security considerations.
+    level_4:
+      text: |-
+        Maintain multiple location options, advanced security capabilities, and preparation for scenarios like economic collapse or widespread civil unrest
+      reasoning: |-
+        Multiple location options and advanced security preparation for economic collapse scenarios represents top 1% catastrophic preparedness. This requires substantial resources and strategic thinking about civilization-level threats.
+    level_5:
+      text: |-
+        Demonstrate comprehensive adaptability to civilization-ending scenarios including nuclear war, pandemic collapse, or climate catastrophe with maximum mobility and security preparation
+      reasoning: |-
+        Comprehensive adaptability to civilization-ending scenarios with maximum mobility represents the most extreme preparedness - the top 0.1% who seriously prepare for complete societal collapse with multiple contingency plans and advanced capabilities.

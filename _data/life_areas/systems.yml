@@ -1,0 +1,109 @@
+slug: systems
+name: Systems
+domain: Productivity
+pillar: Organise Your Life
+domain_representative: false
+values:
+- key: power
+  name: Power
+  weight: 35
+  description:
+  - |-
+    Maximising what your personal systems can do -- automation depth, feature richness, customisation, and the ability to handle complex workflows and edge cases.
+  - Sophisticated automations, multi-step integrations, and systems that can handle anything you throw at them.
+  - |-
+    People who prioritise this value invest significant time building systems that save large amounts of time once complete, accepting complexity as a worthwhile cost.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify the full range of tasks your systems could handle and estimate how much capability you are leaving on the table with your current setup
+      reasoning: |-
+        Most people have never assessed the full capability gap between what their systems do and what they could do. The first step is recognising how much potential is untapped -- tasks that could be automated, workflows that could be streamlined, and capabilities that existing tools offer but you have never configured.
+    level_2:
+      text: |-
+        Core workflows covered by capable tools -- task management, calendar, note-taking, and financial tracking -- with at least one multi-step automation handling a recurring process
+      reasoning: |-
+        Core workflows handled by capable tools with at least one multi-step automation represents 80th percentile system power. Most people use basic tools without leveraging their full capabilities and have no automations at all.
+    level_3:
+      text: |-
+        Systems that handle most of your recurring processes -- finances, backups, communications, scheduling, and data collection -- with the ability to manage edge cases and exceptions without manual workarounds
+      reasoning: |-
+        Systems that handle most recurring processes including edge cases represent top 5% capability. This requires significant investment in configuration, automation, and the technical skill to build systems that go beyond basic functionality.
+    level_4:
+      text: |-
+        Comprehensive systems covering personal, household, and professional domains, with sophisticated automations that handle complex conditional logic and edge cases gracefully
+      reasoning: |-
+        Comprehensive systems with sophisticated conditional logic across personal, household, and professional domains represent top 1% capability. This level of system sophistication requires both deep technical skill and sustained investment over years.
+    level_5:
+      text: |-
+        Near-complete coverage of all life administration, with systems sophisticated enough to handle exceptions, learn from patterns, and alert you only when genuine decisions are needed
+      reasoning: |-
+        Near-complete life administration coverage with intelligent exception handling represents 99.9th percentile capability -- fewer than 1 in 1,000 people build systems this powerful and comprehensive.
+- key: simplicity
+  name: Simplicity
+  weight: 35
+  description:
+  - Keeping personal systems as minimal, intuitive, and easy to understand as possible.
+  - |-
+    Using fewer tools, avoiding over-engineering, choosing solutions that require no documentation to use, and preferring manual processes over complex automations that might break.
+  - |-
+    People who prioritise this value believe the best system is one you actually use consistently, and that complexity is the enemy of sustained adoption.
+  benchmarks:
+    level_1:
+      text: |-
+        Audit your current tools and workflows for unnecessary complexity -- identify systems that are harder to use than they need to be or that you avoid because they are too complicated
+      reasoning: |-
+        Many people accumulate tools and workflows without auditing them for unnecessary complexity. Recognising which systems you avoid because they are too complicated, or which tools duplicate each other, is the foundation for simplification.
+    level_2:
+      text: |-
+        A small number of well-chosen tools that you actually use consistently, with straightforward workflows that require no documentation to follow
+      reasoning: |-
+        A small, well-chosen toolkit used consistently represents 80th percentile simplicity. Many people accumulate dozens of apps and tools, using each one partially and creating friction through constant context-switching.
+    level_3:
+      text: |-
+        A coherent, minimal toolkit where each tool earns its place. Workflows are intuitive enough that you could explain them to someone else in under a minute
+      reasoning: |-
+        A minimal, coherent toolkit where every tool earns its place and workflows are instantly explainable represents top 5% simplicity. Achieving this while maintaining real capability requires exceptional design thinking and ruthless elimination of unnecessary complexity.
+    level_4:
+      text: |-
+        Despite high capability, systems remain understandable and maintainable. Complexity is hidden behind clean interfaces, and any component can be replaced without rebuilding the whole
+      reasoning: |-
+        High capability with maintained understandability -- complexity hidden behind clean interfaces with replaceable components -- represents top 1% system design. Most powerful systems become incomprehensible to their creators over time; keeping them simple despite growing capability is exceptionally rare.
+    level_5:
+      text: |-
+        Extraordinary capability delivered through systems that feel effortless to use. The underlying complexity is invisible -- interactions are intuitive, and the system adapts to you rather than requiring you to adapt to it
+      reasoning: |-
+        Extraordinary capability that feels effortless -- where the system adapts to the user rather than the reverse -- represents 99.9th percentile design. This level of invisible complexity requires years of refinement and is achieved by fewer than 1 in 1,000 system builders.
+- key: reliability
+  name: Reliability
+  weight: 30
+  description:
+  - Ensuring your systems work consistently and fail gracefully, with minimal unplanned maintenance or debugging.
+  - |-
+    Choosing proven tools over cutting-edge ones, building in redundancy, testing automations before depending on them, and designing systems that degrade gracefully when something breaks.
+  - People who prioritise this value accept less capability or more manual work in exchange for systems they can trust.
+  benchmarks:
+    level_1:
+      text: |-
+        Assess which of your current systems actually work consistently and which regularly fail, break, or require unplanned maintenance
+      reasoning: |-
+        Most people have systems that fail silently -- automations that stopped working, backups that are not running, or tools that produce errors they ignore. Honestly assessing what actually works consistently is the prerequisite for building trustworthy systems.
+    level_2:
+      text: Systems that work without intervention for weeks at a time, with key processes backed up and passwords securely stored
+      reasoning: |-
+        Systems that work without intervention for weeks with secure backups represent 80th percentile reliability. Most personal systems require frequent manual intervention or have single points of failure that the user has never addressed.
+    level_3:
+      text: |-
+        All critical systems tested and proven, with documented fallback procedures. Failures are rare and, when they occur, are caught quickly and resolved without data loss
+      reasoning: |-
+        Tested and proven systems with documented fallback procedures represent top 5% reliability. Most people have never stress-tested their systems or prepared for component failure, leaving them vulnerable to cascading problems.
+    level_4:
+      text: |-
+        Systems designed with graceful degradation -- if any single tool fails, the overall system continues functioning. Regular stress-testing and proactive maintenance prevent failures before they occur
+      reasoning: |-
+        Systems with graceful degradation, regular stress-testing, and proactive maintenance represent top 1% resilience. Most personal systems have single points of failure that would cause cascading problems if any component failed.
+    level_5:
+      text: |-
+        Systems that are self-monitoring, self-healing where possible, and have survived multiple tool migrations and life changes without losing functionality. Unplanned downtime is essentially zero
+      reasoning: |-
+        Self-monitoring, self-healing systems that survive multiple tool migrations with essentially zero unplanned downtime represent 99.9th percentile resilience. Fewer than 1 in 1,000 people build personal infrastructure this robust.

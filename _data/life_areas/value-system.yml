@@ -1,0 +1,136 @@
+slug: value-system
+name: Value System
+domain: Values
+pillar: Expand Your Awareness
+domain_representative: false
+values:
+- key: practical
+  name: Practical Decision-Making
+  weight: 35
+  description:
+  - Having a values framework that actively improves daily choices and major life decisions.
+  - |-
+    Values as a functional tool for resource allocation, career moves, and life direction, treating values as stable inputs to efficient decision processes.
+  - People who prioritise this value want clear guidance that reduces decision fatigue and increases confidence in choices.
+  benchmarks:
+    level_1:
+      text: Recognise that many daily choices involve value conflicts and that clearer values could improve decision quality
+      reasoning: |-
+        This represents basic awareness that values influence decisions. Most people make choices without explicitly considering their values, operating on autopilot or social expectations. Simply recognizing the connection between values and decision quality represents the first step toward conscious choice-making.
+    level_2:
+      text: |-
+        Consistently use 3-5 core values to guide major life decisions like career choices, relationships, and significant purchases without extensive deliberation
+      reasoning: |-
+        Research suggests that only about 20% of adults consistently use explicit values frameworks for major decisions. Most people make choices based on immediate emotions, social expectations, or financial considerations without systematic reference to deeper principles. This level requires conscious values application.
+    level_3:
+      text: |-
+        Navigate complex decisions involving competing values systematically, understanding trade-offs and when to compromise versus hold firm across all life domains
+      reasoning: |-
+        Systematic navigation of competing values across all life domains represents sophisticated decision-making that research shows only about 5% of adults achieve. This requires understanding trade-offs, knowing when to compromise, and having frameworks for complex moral reasoning.
+    level_4:
+      text: |-
+        Make values-aligned decisions instinctively in most situations, with sophisticated frameworks for handling uncertainty and multiple stakeholder considerations
+      reasoning: |-
+        Instinctive values-aligned decision-making represents integration that research suggests only about 1% of adults achieve. This requires years of practice until values become so internalized that they guide behavior without conscious effort, even in complex situations.
+    level_5:
+      text: |-
+        Achieve unconscious integration where values naturally guide behaviour without deliberate effort, handling complex moral dilemmas with clear reasoning
+      reasoning: |-
+        Unconscious integration where values naturally guide behavior represents the pinnacle of moral development that research suggests only about 0.1% of adults achieve. This is the level of moral exemplars who demonstrate consistent ethical behavior across all contexts.
+- key: insight
+  name: Comprehensive Insight
+  weight: 30
+  description:
+  - |-
+    Deep understanding of your authentic values, including recognising inherited versus genuine values, understanding value hierarchies and trade-offs, and knowing when enough is enough for different values.
+  - |-
+    Thorough values discovery and analysis to achieve clarity about what truly matters to you and why, assuming relatively stable core values once discovered.
+  benchmarks:
+    level_1:
+      text: "Understand the difference between values you've inherited from family/culture versus those you've consciously chosen"
+      reasoning: |-
+        Understanding the distinction between inherited and chosen values is foundational. Research shows most people unconsciously adopt family and cultural values without examination. This awareness level simply involves recognizing that not all your current values may be authentically yours.
+    level_2:
+      text: |-
+        Distinguish between your intrinsic values (meaningful in themselves) and instrumental values (useful tools), with clear understanding of your top 3 intrinsic values
+      reasoning: |-
+        The distinction between intrinsic and instrumental values requires philosophical sophistication that most people lack. Understanding that money, status, and possessions are tools rather than end goals represents clearer thinking than the majority demonstrates about what truly matters.
+    level_3:
+      text: |-
+        Understand your values hierarchy deeply, including which values dominate others in conflicts and recognition of "enough" thresholds for different values
+      reasoning: |-
+        Deep understanding of values hierarchy and "enough" thresholds requires self-knowledge that few people develop. Research on hedonic adaptation and values clarification suggests that most people struggle to understand when material or status gains stop contributing to wellbeing.
+    level_4:
+      text: |-
+        Understand the psychological and cultural origins of your values, distinguishing authentic preferences from unconscious conditioning with philosophical sophistication
+      reasoning: |-
+        Understanding the psychological and cultural origins of values, plus philosophical sophistication about ethical frameworks, represents academic-level knowledge that very few people possess. This requires extensive study and self-reflection beyond what most people undertake.
+    level_5:
+      text: |-
+        Demonstrate deep understanding of different ethical frameworks and their applications, with ability to articulate sophisticated values-based reasoning
+      reasoning: |-
+        Deep understanding of different ethical frameworks with ability to articulate sophisticated values-based reasoning represents philosophical expertise that very few people possess. This level approaches academic or professional ethics expertise.
+- key: authentic
+  name: Authentic Expression
+  weight: 25
+  description:
+  - |-
+    The courage to live in alignment with your discovered values even when they conflict with social expectations, family pressure, or external incentives.
+  - |-
+    Identity integrity and congruence between inner beliefs and outer behaviour, prioritising being true to yourself over efficiency or social approval.
+  benchmarks:
+    level_1:
+      text: Identify specific situations where you act differently than your stated values due to social pressure or fear
+      reasoning: |-
+        This involves basic self-awareness about inconsistencies between stated values and actual behavior. Most people experience cognitive dissonance when they act against their values but may not consciously recognize the pattern. Level 1 is simply identifying these disconnects.
+    level_2:
+      text: |-
+        Act according to personal values in most situations despite mild social pressure, even when it creates minor discomfort or disagreement
+      reasoning: |-
+        Acting according to personal values despite social pressure requires courage that research shows most people lack. Studies on conformity and social pressure demonstrate that the majority will compromise their stated values to avoid social discomfort or conflict.
+    level_3:
+      text: Maintain values-based behaviour even when facing significant social pressure, financial costs, or relationship strain
+      reasoning: |-
+        Maintaining values-based behavior under significant pressure requires exceptional moral courage. Research shows that when facing financial stress, relationship threats, or social ostracism, the vast majority of people will compromise their stated values rather than endure the consequences.
+    level_4:
+      text: |-
+        Maintain values alignment consistently through major life transitions, crises, and extreme external pressure to compromise
+      reasoning: |-
+        Maintaining values alignment through major life transitions and extreme pressure represents exceptional strength that research shows is extremely rare. Most people compromise their values during crises, making this level of consistency remarkable.
+    level_5:
+      text: Achieve natural congruence between inner values and outer behaviour that creates consistency across all life contexts
+      reasoning: |-
+        Natural congruence between inner values and outer behavior across all contexts represents the highest form of personal integration. Research on moral exemplars suggests this level of consistency is achieved by only the most remarkable individuals.
+- key: evolution
+  name: Values Evolution
+  weight: 10
+  description:
+  - |-
+    Viewing values as potentially changeable and being open to intentional value development through new experiences, reflection, and life transitions.
+  - |-
+    Willingness to seek transformational experiences and regularly reassess whether current values still serve you, treating values work as ongoing growth rather than one-time discovery.
+  benchmarks:
+    level_1:
+      text: Recognise that values can legitimately change through life experiences and personal growth
+      reasoning: |-
+        Many people view values as fixed and unchangeable, inherited from childhood. Recognizing that values can legitimately evolve through life experiences represents a growth mindset about personal development that not everyone possesses.
+    level_2:
+      text: |-
+        Consciously update values based on major life experiences (parenthood, career changes, relationships) rather than unconsciously drifting
+      reasoning: |-
+        Consciously updating values based on life experiences, rather than unconsciously drifting, requires self-awareness and intentionality that research suggests most people don't apply to their personal development. This represents deliberate rather than accidental growth.
+    level_3:
+      text: |-
+        Deliberately seek experiences that might challenge existing values, with regular reassessment of whether current values serve personal growth
+      reasoning: |-
+        Deliberately seeking experiences that might challenge existing values requires intellectual humility and growth mindset that research suggests most people lack. This represents active rather than passive personal development, with regular self-assessment and willingness to change.
+    level_4:
+      text: |-
+        Intentionally cultivate specific values through targeted practices and experiences, with wisdom about when stability versus change serves wellbeing
+      reasoning: |-
+        Intentionally cultivating specific values through targeted practices, with wisdom about when to change versus remain stable, represents mastery of personal development that very few people achieve. This requires both discipline and sophisticated self-knowledge.
+    level_5:
+      text: |-
+        Exhibit mastery of the balance between values stability and adaptive change, with personal wisdom about values development across lifespan
+      reasoning: |-
+        Mastery of the balance between values stability and adaptive change, with personal wisdom about values development across lifespan, represents the pinnacle of human development. This level combines deep self-knowledge with philosophical wisdom about human nature and growth.

@@ -1,0 +1,143 @@
+slug: style
+name: Style
+domain: Expression
+pillar: Connect with Others
+domain_representative: false
+values:
+- key: attractiveness
+  name: Attractiveness
+  weight: 30
+  description:
+  - |-
+    Looking appealing to others across romantic and social contexts through deliberate clothing, grooming, and presentation choices.
+  - |-
+    Flattering fit, body-appropriate silhouettes, staying current with trends, grooming standards, and overall physical presentation.
+  - |-
+    People who prioritise this value focus on building wardrobes that make them look their best to the widest range of people.
+  benchmarks:
+    level_1:
+      text: |-
+        Assess how current clothing fits your body and identify obvious gaps where garments are unflattering, dated, or poorly maintained
+      reasoning: |-
+        At awareness level, recognising how your current clothing fits and where it falls short is the foundation for improvement. Most people have not systematically assessed which garments are flattering versus unflattering on their body.
+    level_2:
+      text: |-
+        Wear clothes that fit properly, maintain basic grooming standards, and avoid obviously dated or unflattering pieces; understand which colours and silhouettes suit your body
+      reasoning: |-
+        Wearing well-fitting clothes in suitable colours and silhouettes exceeds what most people achieve. Many wear ill-fitting or dated clothing without realising the effect, making basic fit and grooming awareness an 80th percentile achievement.
+    level_3:
+      text: |-
+        Consistently present well across contexts -- work, social, dating -- with flattering fits, coordinated outfits, and grooming that enhances your best features
+      reasoning: |-
+        Consistently presenting well across multiple contexts -- work, social, dating -- with coordinated, flattering outfits represents 95th percentile capability. Most people manage this only occasionally; doing it reliably requires deliberate skill.
+    level_4:
+      text: |-
+        Present a polished, appealing image in every context with minimal effort; understand advanced fit, proportion, and colour theory well enough to maximise physical presentation consistently
+      reasoning: |-
+        Presenting a polished, appealing image across all contexts with minimal effort represents top 1% capability. This requires internalised knowledge of fit, proportion, colour, and grooming that goes well beyond following basic advice.
+    level_5:
+      text: |-
+        Achieve a level of presentation where you are consistently among the best-dressed people in any room; others regularly seek your advice on clothing and grooming
+      reasoning: |-
+        Being consistently among the best-dressed in any room and having others seek your style advice represents top 0.1% presentation. This requires refined taste, deep understanding of aesthetics, and habitual attention to detail.
+- key: status-professional
+  name: Status & Professional
+  weight: 25
+  description:
+  - Signalling competence, authority, wealth, and taste through clothing in career and social settings.
+  - |-
+    Understanding dress codes, projecting professional credibility, luxury brands, quality materials, and strategic wardrobe investments for advancement.
+  - |-
+    People who prioritise this value invest in pieces that communicate success and command respect in professional and social hierarchies.
+  benchmarks:
+    level_1:
+      text: Understand basic workplace dress codes and identify current gaps in professional wardrobe appropriateness
+      reasoning: |-
+        Understanding basic workplace dress expectations and gaps represents the foundation needed before improvement. Most people lack clear understanding of appropriate professional dress standards for their specific context.
+    level_2:
+      text: |-
+        Dress appropriately for workplace context without obvious missteps; understand basic quality indicators and maintain grooming standards that support career credibility
+      reasoning: |-
+        Achieving appropriate workplace dress without obvious mistakes represents 80th percentile capability. Many struggle with professional dress standards, making basic competence a significant achievement relative to population patterns.
+    level_3:
+      text: |-
+        Consistently dress in ways that enhance professional presence and communicate competence; make strategic wardrobe investments that project authority and credibility
+      reasoning: |-
+        Consistently enhancing professional presence through strategic dress choices represents 95th percentile capability. This requires sophisticated understanding of workplace dynamics and consistent execution that few achieve.
+    level_4:
+      text: |-
+        Dress at executive or high-professional standards that command respect; understand how clothing choices impact leadership presence and business outcomes
+      reasoning: |-
+        Executive-level style sophistication that commands respect and influences business outcomes represents top 1% professional capability. This requires mastery of style hierarchies and strategic wardrobe investment.
+    level_5:
+      text: |-
+        Achieve style sophistication that supports senior leadership or public-facing roles; influence others through appearance choices and serve as a style reference within your professional context
+      reasoning: |-
+        Style sophistication that supports senior leadership and public-facing roles, where you serve as a style reference for others, represents top 0.1% achievement. This requires mastery that supports the highest levels of professional presence.
+- key: expression
+  name: Self-Expression
+  weight: 25
+  description:
+  - Communicating identity, values, and affiliations through distinctive clothing choices.
+  - |-
+    Personal aesthetic development, subcultural belonging, creative or unconventional choices, and visual storytelling about who you are.
+  - |-
+    People who prioritise this value choose clothing that reflects their personality and signals membership in chosen communities.
+  benchmarks:
+    level_1:
+      text: Assess how current clothing choices reflect personal identity and whether they align with the image you want to project
+      reasoning: |-
+        Assessing whether current clothing reflects your identity is a crucial first step. Research shows clothing significantly impacts self-concept and social group identification, but many people have not consciously evaluated this connection.
+    level_2:
+      text: |-
+        Develop a consistent personal aesthetic that feels authentic; choose clothing that expresses personality while fitting comfortably within social contexts
+      reasoning: |-
+        Developing a consistent personal aesthetic while maintaining social appropriateness represents top 20% achievement. Most people struggle with either authenticity or social fit, making a balanced approach a significant accomplishment.
+    level_3:
+      text: |-
+        Create distinctive personal style that authentically represents values and personality while adapting appropriately to different social contexts and communities
+      reasoning: |-
+        Creating distinctive personal style that authentically represents values while adapting to different contexts represents sophisticated style capability achieved by approximately 5% of the population.
+    level_4:
+      text: |-
+        Develop signature style elements that create a memorable personal aesthetic while maintaining versatility across diverse social and professional environments
+      reasoning: |-
+        Developing signature style elements that create a memorable personal aesthetic while maintaining versatility represents top 1% style achievement, requiring sophisticated understanding of personal branding through clothing.
+    level_5:
+      text: |-
+        Create an influential personal style that others recognise and draw inspiration from; adapt seamlessly across cultural contexts while preserving a distinctive aesthetic identity
+      reasoning: |-
+        Creating an influential personal style that others recognise and draw inspiration from while maintaining authenticity across cultural contexts represents top 0.1% achievement in style leadership and cultural fluency.
+- key: comfort
+  name: Comfort & Function
+  weight: 20
+  description:
+  - Prioritising clothing that supports daily activities, physical comfort, and practical needs.
+  - Weather appropriateness, ease of movement, durable and low-maintenance fabrics, and minimal decision fatigue.
+  - |-
+    Those who prioritise this value focus on building wardrobes that work seamlessly with their lifestyle and daily requirements.
+  benchmarks:
+    level_1:
+      text: Evaluate current wardrobe for practical needs, comfort issues, and lifestyle compatibility across different activities
+      reasoning: |-
+        Evaluating current wardrobe for practical compatibility with lifestyle needs establishes baseline understanding. Many people tolerate discomfort or impracticality without systematic assessment of functional requirements.
+    level_2:
+      text: |-
+        Build a wardrobe that supports daily activities without discomfort; streamline morning routines to reduce decision fatigue while maintaining appropriate appearance standards
+      reasoning: |-
+        Building a functional wardrobe that reduces decision fatigue represents a major improvement over the average experience of 17 minutes daily clothing selection and frequent wardrobe-related stress.
+    level_3:
+      text: |-
+        Maintain efficient wardrobe systems that eliminate daily clothing stress; dress appropriately for any situation while prioritising physical comfort and practical needs
+      reasoning: |-
+        Eliminating daily clothing stress through efficient systems while maintaining appropriate appearance represents a significant systematic achievement that few people successfully implement long-term.
+    level_4:
+      text: |-
+        Design comprehensive wardrobe systems that seamlessly support all lifestyle demands; maintain consistently high appearance standards with minimal daily effort or thought
+      reasoning: |-
+        Comprehensive wardrobe systems that seamlessly support all lifestyle demands with minimal effort represent top 1% systematic organisation and planning capability in personal style management.
+    level_5:
+      text: |-
+        Maintain effortless style mastery where appearance needs are fully automated through systematic approaches; achieve consistent excellence across all contexts while optimising for comfort and practicality
+      reasoning: |-
+        Effortless style mastery with fully automated appearance systems achieving consistent excellence represents top 0.1% systematic approach where style needs are seamlessly integrated into life architecture.

@@ -1,0 +1,107 @@
+slug: consumptive-leisure
+name: Consumptive Leisure
+domain: Leisure
+pillar: Create & Contribute
+domain_representative: false
+values:
+- key: restoration
+  name: Restoration
+  weight: 40
+  description:
+  - |-
+    Using leisure consumption to genuinely recover from work and stress -- activities that leave you feeling recharged rather than drained.
+  - |-
+    Choosing media that relaxes without numbing, entertainment that provides genuine mental rest, and consumption patterns that respect your need for recovery.
+  - People who prioritise this value are deliberate about using leisure for genuine rest.
+  benchmarks:
+    level_1:
+      text: |-
+        Track how different leisure activities affect your energy and mood -- which leave you genuinely rested and which leave you drained
+      reasoning: |-
+        Most people have never tracked how different leisure activities affect their energy. Many default to screen scrolling that feels easy but leaves them more depleted than before. Tracking the actual restorative value of different activities is the foundation for improvement.
+    level_2:
+      text: |-
+        Deliberate use of restorative leisure activities -- reading, nature, music -- as a regular recovery practice, with screen time managed to avoid depletion
+      reasoning: |-
+        Deliberate use of restorative leisure as a regular practice represents top 20%. Most people consume media reactively rather than selecting it based on what would genuinely restore them.
+    level_3:
+      text: |-
+        A deliberate restoration practice where leisure consumption is selected based on what your current energy state needs, with reliable methods for deep rest
+      reasoning: |-
+        Selecting leisure based on current energy state with reliable deep rest methods represents top 5% restoration skill. This requires self-awareness and a repertoire of proven restorative activities.
+    level_4:
+      text: |-
+        Masterful use of leisure for recovery -- you can reliably restore yourself from significant fatigue or stress through deliberate consumption choices
+      reasoning: |-
+        Reliable recovery from significant fatigue through deliberate leisure choices represents top 1% restoration mastery -- a skill that most people never develop.
+    level_5:
+      text: |-
+        Complete mastery of restorative leisure -- you can recover from any level of depletion through precisely calibrated consumption choices and never feel drained by your leisure time
+      reasoning: |-
+        Complete mastery of restorative leisure represents 99.9th percentile -- fewer than 1 in 1,000 people have this level of deliberate control over their recovery through consumption choices.
+- key: enrichment
+  name: Enrichment
+  weight: 35
+  description:
+  - Consuming media and content that expands your knowledge, perspectives, and capabilities.
+  - |-
+    Reading non-fiction, watching documentaries, listening to educational podcasts, engaging with challenging art, and choosing entertainment that leaves you with something valuable.
+  - Those who prioritise this value seek to grow through their leisure.
+  benchmarks:
+    level_1:
+      text: Assess the proportion of your media consumption that teaches you something valuable versus merely occupies time
+      reasoning: |-
+        Assessing the proportion of learning versus time-filling in your media diet often reveals surprising imbalance. Most people overestimate how much they learn from their leisure consumption.
+    level_2:
+      text: |-
+        Regular consumption of high-quality non-fiction, educational content, or challenging art -- at least several hours per week dedicated to learning through leisure
+      reasoning: |-
+        Several hours per week of deliberate learning through leisure represents 80th percentile engagement. Most leisure consumption is entertainment-focused with learning as an incidental byproduct.
+    level_3:
+      text: |-
+        Systematic learning through leisure across multiple domains, with retention strategies and application of insights from books, podcasts, and other media
+      reasoning: |-
+        Systematic learning with retention strategies through leisure represents top 5%. Most people consume without deliberately retaining or applying what they learn.
+    level_4:
+      text: |-
+        Consumptive leisure meaningfully advances your knowledge and perspectives, with insights from reading and media regularly integrated into your thinking and decision-making
+      reasoning: |-
+        Leisure that substantively advances your knowledge and decision-making represents top 1% -- a level where consumptive leisure genuinely contributes to professional and personal capability.
+    level_5:
+      text: |-
+        Transformative learning through leisure that substantively shapes your worldview, career, and relationships -- your consumptive leisure is a genuine education
+      reasoning: |-
+        Transformative learning through leisure that shapes worldview and career represents 99.9th percentile -- a level where consumptive leisure is genuinely equivalent to a continuous education.
+- key: enjoyment
+  name: Enjoyment
+  weight: 25
+  description:
+  - The direct pleasure and satisfaction derived from leisure activities.
+  - |-
+    Choosing what genuinely delights you rather than what feels productive, following curiosity, and allowing yourself pure entertainment without guilt.
+  - People who prioritise this value recognise that joy is a legitimate end in itself.
+  benchmarks:
+    level_1:
+      text: Identify which leisure activities bring genuine satisfaction versus habitual consumption you do not actually enjoy
+      reasoning: |-
+        Distinguishing genuine enjoyment from habitual consumption is surprisingly difficult. Many people watch shows, scroll feeds, or play games out of habit rather than genuine pleasure.
+    level_2:
+      text: |-
+        A curated list of media sources, genres, and activities that you reliably enjoy, with minimal time spent on consumption you do not actually like
+      reasoning: |-
+        A curated list of reliably enjoyable sources with minimal time wasted on unsatisfying consumption represents top 20% leisure intentionality.
+    level_3:
+      text: |-
+        Deep appreciation and engagement with chosen media -- able to discuss, recommend, and derive sustained pleasure from a well-curated media diet
+      reasoning: |-
+        Deep engagement with a well-curated media diet that provides sustained pleasure and enables rich discussion represents top 5% leisure satisfaction.
+    level_4:
+      text: |-
+        A rich, diverse media diet that provides deep, sustained satisfaction -- you genuinely look forward to your leisure time and it consistently delivers
+      reasoning: |-
+        A diverse media diet providing deep, consistent satisfaction represents top 1% leisure quality -- a level where leisure time is genuinely one of the best parts of your life.
+    level_5:
+      text: |-
+        A relationship with media and leisure that is a consistent source of deep joy, aesthetic appreciation, and meaning -- one of the most satisfying dimensions of your life
+      reasoning: |-
+        Leisure as a consistent source of deep joy, aesthetic appreciation, and meaning represents 99.9th percentile -- fewer than 1 in 1,000 people have this relationship with their consumptive leisure.

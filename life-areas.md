@@ -58,7 +58,7 @@ Each area of life follows a systematic [five-level framework]({{ site.baseurl }}
   <!-- 9. Relationships -->
   <div class="life-area-card">
     <h3><a href="{{ site.baseurl }}/relationships/">Relationships</a></h3>
-    <p>Nurture <a href="{{ site.baseurl }}/relationships/family/">family</a> connections, cultivate meaningful <a href="{{ site.baseurl }}/relationships/friends/">friendships</a>, and develop fulfilling <a href="{{ site.baseurl }}/relationships/romantic-relationships/">romantic relationships</a>.</p>
+    <p>Nurture <a href="{{ site.baseurl }}/relationships/family/">family</a> connections, cultivate meaningful <a href="{{ site.baseurl }}/relationships/friends/">friendships</a>, navigate your <a href="{{ site.baseurl }}/relationship-status/">relationship status</a>, and develop fulfilling <a href="{{ site.baseurl }}/romantic-relationships/">relationship quality</a>.</p>
   </div>
   
   <!-- 10. Wellbeing -->

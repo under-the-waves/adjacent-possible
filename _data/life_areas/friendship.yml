@@ -2,7 +2,7 @@ slug: friendship
 name: Friendship
 domain: "Friends and Relationships"
 pillar: "Connect with Others"
-domain_representative: false
+domain_representative: true
 
 values:
   - key: depth

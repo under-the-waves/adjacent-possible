@@ -1,3 +1,6 @@
+---
+life_area_slug: nutrition
+---
 [← Back to Home](../)
 # Food and Nutrition
 
@@ -14,14 +17,7 @@ This guide also focuses on five core components: nutritional knowledge and appli
 
 For personalised recommendations based on your unique priorities, visit [Nutrition Personalised]({{ site.baseurl }}/nutrition/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Physical Wellbeing (45%)
-Nutrition that supports bodily health and function. This includes nutrient adequacy, disease prevention, energy provision, digestive health, and metabolic balance. People who prioritize this value focus on food choices that deliver optimal nutrition for immediate function and long-term health, with particular attention to nutrient density and physiological effects.
-
-### Pleasure & Connection (35%)
-The sensory enjoyment and social aspects of food. This encompasses taste satisfaction, variety, cultural expression, and the role of food in relationships and community. Those who prioritize this value emphasize cooking skills that enhance flavor, meals as social experiences, and maintaining food traditions that connect us to others and our heritage.
-
-### Ethical & Environmental Impact (20%)
-The broader consequences of food choices on the planet and other beings. This includes sustainability considerations, carbon footprint, animal welfare, biodiversity, and fair labor practices. Those who prioritize this value focus on sourcing decisions, waste reduction, and choosing foods with lower environmental impact.
+{% include life-area-values.html %}
 
 ## Levels
 - [Level 1: Awareness](level-1)

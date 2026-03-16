@@ -1,0 +1,124 @@
+slug: career-planning
+name: Career Planning
+domain: Career
+pillar: Create & Contribute
+domain_representative: false
+values:
+- key: clarity
+  name: Clarity
+  weight: 30
+  description:
+  - Having a clear, informed understanding of where your career is heading and why.
+  - Articulating a career thesis, understanding industry trajectories, and regularly revisiting your direction.
+  - People who prioritise this value invest in reflection and research rather than defaulting to the next obvious step.
+  benchmarks:
+    level_1:
+      text: Can name one or two fields of interest; no documented plan
+      reasoning: |-
+        Having vague fields of interest without a documented plan is the baseline. With 50% of workers treating their job as "just a job," even basic career interest identification places you near the median. No written plan means career progression is largely reactive and opportunistic. <a href="https://www.pewresearch.org/social-trends/2024/07/24/how-americans-view-their-jobs/" target="_blank">Pew Research (2024)</a>
+    level_2:
+      text: Written two-to-three year direction; understands industry trajectory
+      reasoning: |-
+        A written two-to-three year direction with industry awareness represents 80th percentile capability. Most people have never written down their career goals or researched their industry trajectory. Simply documenting a plan and understanding where your sector is heading exceeds what 80% of professionals do.
+    level_3:
+      text: Living five-to-ten year strategy updated annually; two or three plausible paths mapped
+      reasoning: |-
+        Maintaining a living five-to-ten year strategy with multiple plausible paths mapped represents 95th percentile capability. This requires regular strategic reflection, scenario planning, and willingness to update direction based on new information -- practices that fewer than 5% of professionals sustain.
+    level_4:
+      text: Clear thesis refined quarterly; knows emerging roles three to five years ahead
+      reasoning: |-
+        A quarterly-refined career thesis with awareness of emerging roles three to five years ahead represents top 1% achievement. This requires deep industry engagement, trend analysis, and the intellectual discipline to regularly challenge and update your strategic direction.
+    level_5:
+      text: Career shapes market demand; 20+ year arc with phase transitions planned
+      reasoning: |-
+        A career that shapes market demand with a 20+ year arc and planned phase transitions represents 99.9th percentile achievement (1 in 1,000 people). At this level, you are not following industry trends -- you are creating them, with a multi-decade vision that transcends any single role or organisation.
+- key: advancement
+  name: Advancement
+  weight: 25
+  description:
+  - Progressing toward higher levels of responsibility, compensation, and influence.
+  - |-
+    Building skills beyond your current role, pursuing promotions, developing your professional reputation, and ensuring your trajectory moves upward.
+  - People who prioritise this value treat career progression as an active project.
+  benchmarks:
+    level_1:
+      text: Minimum qualifications; LinkedIn profile; handful of contacts
+      reasoning: |-
+        Minimum qualifications and a basic online presence represent the starting point. Most people have a LinkedIn profile but rarely update it, and maintain only a small number of professional contacts -- typically those they happen to work with rather than strategically chosen connections.
+    level_2:
+      text: Developing one skill beyond role; has mentor; contacts in two or three organisations
+      reasoning: |-
+        Developing skills beyond your current role and having a mentor places you at the 80th percentile. With only 37% of professionals having a mentor, and most people limiting skill development to what their job requires, deliberately building beyond your role requirements is uncommon. <a href="https://mentorcliq.com/mentoring-resources/mentoring-statistics" target="_blank">MentorCliq data</a>
+    level_3:
+      text: Deliberate skill plan; 50+ professional relationships; mentor and sponsor in place
+      reasoning: |-
+        A deliberate skill plan, 50+ professional relationships, and both a mentor and sponsor represents 95th percentile positioning. Building this level of professional capital requires years of intentional effort and sophisticated relationship management that very few achieve.
+    level_4:
+      text: Go-to expert in area; senior advocates; personal board of advisors
+      reasoning: |-
+        Being the go-to expert with senior advocates and a personal board of advisors represents top 1% positioning. This level of professional reputation and strategic relationship architecture requires exceptional skill development and years of deliberate network cultivation.
+    level_5:
+      text: Name alone opens doors; network spans industries and geographies
+      reasoning: |-
+        Name recognition that opens doors across industries and geographies represents extraordinary positioning. Fewer than 1 in 1,000 professionals build a reputation and network of this calibre, where opportunities flow to them regardless of employment status or market conditions.
+- key: security
+  name: Security
+  weight: 25
+  description:
+  - |-
+    Protecting yourself against career disruption through financial runway, transferable skills, and professional optionality.
+  - |-
+    Maintaining multiple income capabilities, building financial buffers, and developing skills that are valuable across industries.
+  - People who prioritise this value build careers that are robust to disruption.
+  benchmarks:
+    level_1:
+      text: Has CV; transferable skills not articulated; less than three months financial buffer
+      reasoning: |-
+        Having a CV but no articulated transferable skills and less than three months of savings is the norm. With 59% of people unable to cover more than three months of expenses, this baseline resilience level represents roughly the population median. <a href="https://www.bankrate.com/banking/savings/emergency-savings-report/" target="_blank">Bankrate (2026)</a>
+    level_2:
+      text: Up-to-date CV; five or more transferable skills identified; three-to-six months financial buffer
+      reasoning: |-
+        An up-to-date CV with identified transferable skills and three-to-six months of financial buffer represents 80th percentile resilience. Most people update their CV only when actively job-hunting, and the majority lack sufficient savings to weather a career transition.
+    level_3:
+      text: Survived one major disruption; two or three alternative income capabilities; six-to-twelve month runway
+      reasoning: |-
+        Having survived a major career disruption whilst maintaining alternative income capabilities and six-to-twelve months of runway represents 95th percentile resilience. This combination of experience, capability, and financial preparation exceeds what 95% of professionals possess.
+    level_4:
+      text: Antifragile career structure; multiple income streams; 12+ month runway
+      reasoning: |-
+        An antifragile career structure with multiple income streams and 12+ months of runway represents top 1% resilience. At this level, disruptions actually create opportunities because the structural redundancy and financial capacity allow strategic pivots that others cannot make.
+    level_5:
+      text: Disruption-proof; three or more cross-industry transitions completed; offers within weeks of any disruption
+      reasoning: |-
+        Being disruption-proof with three or more cross-industry transitions and the ability to secure offers within weeks represents 99.9th percentile resilience. This level of career robustness -- built through diverse experience, broad capability, and deep networks -- makes virtually any disruption an opportunity.
+- key: meaning
+  name: Meaning
+  weight: 20
+  description:
+  - |-
+    Finding genuine purpose and significance in your professional life -- work that aligns with your values and contributes to something you care about.
+  - |-
+    Choosing roles based on mission fit, seeking work that feels inherently worthwhile, and ensuring your career contributes to your sense of identity.
+  - People who prioritise this value make career decisions based on purpose, not just advancement.
+  benchmarks:
+    level_1:
+      text: Vague sense of what kind of work feels worthwhile; no deliberate alignment between career and personal values
+      reasoning: |-
+        A vague sense of what kind of work feels worthwhile without deliberate alignment between career and values is the baseline. Most people have not formally examined what makes work meaningful to them, and career choices are driven by opportunity and compensation rather than purpose.
+    level_2:
+      text: Can articulate what makes work meaningful to them; current role partially aligns with personal values
+      reasoning: |-
+        Being able to articulate what makes work meaningful and having a role that partially aligns with personal values represents 80th percentile meaning. Most workers have never examined their values systematically or made career choices based on purpose rather than pay.
+    level_3:
+      text: Career choices consistently reflect personal values; work is experienced as genuinely purposeful most of the time
+      reasoning: |-
+        Career choices that consistently reflect personal values, with work experienced as genuinely purposeful most of the time, represents 95th percentile meaning. Few professionals achieve sustained alignment between what they do and what they believe matters.
+    level_4:
+      text: |-
+        Career is a direct expression of personal mission; work consistently contributes to something the individual finds deeply significant
+      reasoning: |-
+        A career that directly expresses personal mission, with work consistently contributing to something deeply significant, represents top 1% meaning. At this level, career decisions are made primarily on the basis of purpose rather than compensation or status.
+    level_5:
+      text: Professional identity and personal purpose are fully integrated; career legacy reflects a coherent life philosophy
+      reasoning: |-
+        Full integration of professional identity and personal purpose, with a career legacy that reflects a coherent life philosophy, represents 99.9th percentile meaning. At this level, the distinction between career achievement and personal fulfilment effectively disappears.

@@ -1,0 +1,30 @@
+slug: nutrition
+name: Nutrition
+domain: Health
+pillar: Look After Yourself
+domain_representative: false
+values:
+- key: physical
+  name: Physical Wellbeing
+  weight: 45
+  description:
+  - Nutrition that supports bodily health and function.
+  - Nutrient adequacy, disease prevention, energy provision, digestive health, and metabolic balance.
+  - |-
+    People who prioritize this value focus on food choices that deliver optimal nutrition for immediate function and long-term health, with particular attention to nutrient density and physiological effects.
+- key: pleasure
+  name: Pleasure & Connection
+  weight: 35
+  description:
+  - The sensory enjoyment and social aspects of food.
+  - Taste satisfaction, variety, cultural expression, and the role of food in relationships and community.
+  - |-
+    Those who prioritize this value emphasize cooking skills that enhance flavor, meals as social experiences, and maintaining food traditions that connect us to others and our heritage.
+- key: ethical
+  name: Ethical & Environmental Impact
+  weight: 20
+  description:
+  - The broader consequences of food choices on the planet and other beings.
+  - Sustainability considerations, carbon footprint, animal welfare, biodiversity, and fair labor practices.
+  - |-
+    Those who prioritize this value focus on sourcing decisions, waste reduction, and choosing foods with lower environmental impact.

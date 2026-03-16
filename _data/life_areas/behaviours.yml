@@ -1,0 +1,143 @@
+slug: behaviours
+name: Behaviours
+domain: Wellbeing
+pillar: Look After Yourself
+domain_representative: false
+values:
+- key: freedom
+  name: Freedom & Control
+  weight: 25
+  description:
+  - Liberation from compulsive patterns and automatic responses that limit your individual choices.
+  - Breaking free from addictions, managing impulses, and developing the ability to pause between trigger and response.
+  - |-
+    People who prioritise this value focus on interventions that restore genuine choice in their actions, even when it requires significant upfront effort or temporary discomfort.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise specific patterns where you act compulsively or automatically against your better judgment, identifying 2-3 primary triggers that lead to unwanted behaviours
+      reasoning: |-
+        Awareness-level benchmarks focus on pattern recognition. Research shows most people with problematic behaviours never address them systematically, with only 23.6% of those needing addiction treatment actually receiving it. Basic trigger identification represents the foundation for any behavioural change.
+    level_2:
+      text: |-
+        Successfully interrupt problematic patterns 60-70% of the time when noticed, maintaining basic environmental modifications that reduce exposure to major triggers
+      reasoning: |-
+        This represents 80th percentile capability based on behavioural change success rates. Research shows 60-70% interruption success aligns with early recovery patterns where people can respond differently most of the time but still struggle with consistency. <a href="https://substanceabusepolicy.biomedcentral.com/articles/10.1186/1747-597X-6-17" target="_blank">Relapse Prevention Research</a>
+    level_3:
+      text: |-
+        Maintain freedom from compulsive behaviours 85-90% of the time, with rare lapses being brief and quickly corrected rather than leading to extended cycles
+      reasoning: |-
+        85-90% success represents 95th percentile based on addiction recovery data showing that sustained behavioural control is rare. Research indicates that those who achieve consistent behavioural control represent a small percentage of people who initially struggle with compulsive patterns. <a href="https://www.addictionhelp.com/recovery/statistics/" target="_blank">Recovery Success Rates</a>
+    level_4:
+      text: |-
+        Demonstrate consistent choice and intentionality across all life domains, with automatic problematic patterns being rare exceptions rather than ongoing struggles
+      reasoning: |-
+        Consistent choice across all life domains represents 99th percentile capability. Research shows that even people successful in one area often struggle with compulsive patterns in others. This level represents rare across-the-board behavioural mastery.
+    level_5:
+      text: |-
+        Maintain complete freedom from compulsive patterns even during extreme stress, major crises, or prolonged difficult circumstances
+      reasoning: |-
+        Complete freedom from compulsive patterns during extreme circumstances represents 99.9th percentile capability (1 in 1000 people). Research on trauma and extreme stress shows that even highly skilled individuals often revert to automatic patterns during crisis situations.
+- key: emotional
+  name: Emotional Regulation
+  weight: 30
+  description:
+  - Developing healthier responses to emotional triggers like stress, anxiety, anger, or boredom.
+  - Moving from reactive emotional patterns to more measured, intentional responses.
+  - |-
+    Those who prioritise this value focus on building emotional skills and alternative coping strategies, accepting that feeling emotions fully may be temporarily more difficult than numbing them.
+  benchmarks:
+    level_1:
+      text: |-
+        Notice emotional states that typically lead to problematic behaviours and understand the connection between specific feelings and your reactive patterns
+      reasoning: |-
+        Most people experience emotional triggers but lack systematic understanding of their patterns. WHO data shows widespread anxiety and depression, suggesting that emotional pattern recognition represents basic awareness that many people never develop.
+    level_2:
+      text: |-
+        Use 2-3 healthy coping strategies effectively during emotional triggers, with stress-driven reactive behaviours occurring no more than 2-3 times weekly during normal periods
+      reasoning: |-
+        WHO data shows 1 in 8 people globally live with anxiety or depression. Level 2 represents developing basic emotional skills beyond the reactive patterns that characterise most of the population. 2-3 episodes weekly represents significant improvement over baseline reactivity. <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank">WHO Mental Health Data</a>
+    level_3:
+      text: |-
+        Respond rather than react to emotional triggers in most situations, using sophisticated regulation techniques and maintaining stability during moderately stressful periods
+      reasoning: |-
+        Sophisticated emotional regulation skills are rare in the general population. Research shows that most people rely on basic coping strategies. Consistent use of advanced regulation techniques during moderate stress represents 95th percentile emotional capability.
+    level_4:
+      text: |-
+        Maintain emotional equilibrium and healthy responses even during high-stress periods, major crises, or when multiple stressors occur simultaneously
+      reasoning: |-
+        Maintaining emotional equilibrium during high-stress periods and multiple crises represents 99th percentile emotional regulation capability. Research shows that even people with good baseline emotional skills struggle during intense stress.
+    level_5:
+      text: |-
+        Demonstrate exceptional regulation capabilities that remain stable regardless of external circumstances, maintaining healthy responses even during trauma or major loss
+      reasoning: |-
+        Exceptional emotional regulation that remains stable regardless of circumstances represents 99.9th percentile capability. Research shows that maintaining healthy emotional responses during trauma or major loss requires extraordinary psychological sophistication achieved by very few people.
+- key: social
+  name: Social & Relational Patterns
+  weight: 25
+  description:
+  - |-
+    Changing automatic interpersonal behaviours like people-pleasing, conflict avoidance, codependency, social withdrawal, or defensive reactions.
+  - Learning to respond rather than react in relationships and developing healthier patterns of connection.
+  - |-
+    People who prioritise this value work on assertiveness, boundary-setting, and staying present during difficult social situations.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify your default interpersonal responses during conflict or social pressure, recognising automatic patterns like people-pleasing, withdrawal, or defensiveness
+      reasoning: |-
+        Research indicates that people-pleasing and conflict avoidance are extremely common but rarely recognised as automatic patterns. Basic pattern identification in interpersonal relationships represents foundational self-awareness that many people lack.
+    level_2:
+      text: |-
+        Express basic needs and boundaries in most relationships without excessive anxiety, avoiding major people-pleasing or conflict-avoidance behaviours in routine situations
+      reasoning: |-
+        Assertiveness training research shows significant improvements in social anxiety and interpersonal functioning, but participation rates are very low (~1-2% of population). Basic boundary expression represents 80th percentile capability as most people struggle with people-pleasing and conflict avoidance. <a href="https://www.scirp.org/html/14-6901413_56572.htm" target="_blank">Assertiveness Training Effectiveness</a>
+    level_3:
+      text: |-
+        Navigate conflict and social pressure with assertiveness and emotional regulation, maintaining authentic responses even in challenging interpersonal dynamics
+      reasoning: |-
+        Assertiveness research shows that navigating challenging interpersonal dynamics while maintaining authenticity requires skills that few people develop. This level represents 95th percentile social-emotional capability based on assertiveness training outcomes.
+    level_4:
+      text: |-
+        Navigate highly challenging social situations with consistent authenticity and healthy boundaries, maintaining equilibrium even when others are highly reactive
+      reasoning: |-
+        Maintaining authenticity and boundaries in highly challenging social situations represents 99th percentile interpersonal capability. Research indicates that even trained professionals struggle to maintain optimal responses when others are highly reactive or manipulative.
+    level_5:
+      text: |-
+        Navigate the most challenging interpersonal situations with consistent authenticity, maintaining equilibrium even when others are highly manipulative or reactive
+      reasoning: |-
+        Maintaining authenticity and equilibrium in the most challenging interpersonal situations represents 99.9th percentile capability. Research indicates that even trained therapists and professionals struggle to maintain optimal responses when facing highly manipulative or abusive individuals.
+- key: resilience
+  name: Resilience & Adaptability
+  weight: 20
+  description:
+  - "Building sustainable behavioural change that survives life disruptions and doesn't require constant vigilance."
+  - |-
+    Developing multiple coping strategies, planning for setbacks, and creating robust systems rather than fragile single approaches.
+  - |-
+    Those who prioritise this value are willing to progress more slowly to ensure changes last permanently through major life transitions or crises.
+  benchmarks:
+    level_1:
+      text: |-
+        Assess which current coping strategies are sustainable versus which tend to fail during challenging periods or major life changes
+      reasoning: |-
+        Most people use coping strategies unconsciously without assessing their effectiveness. Research on behavioural change shows that strategy assessment is essential for sustainable change but rarely occurs without deliberate effort.
+    level_2:
+      text: |-
+        Maintain behavioural improvements for 3-6 months consistently, including through minor life stressors, with clear plans for handling predictable high-risk situations
+      reasoning: |-
+        Research shows that 3-6 month maintenance represents significant achievement in behavioural change. Studies indicate that most behaviour change attempts fail within the first few months, making sustained improvement for this period represent 80th percentile capability.
+    level_3:
+      text: Sustain behavioural changes through major life transitions with only temporary disruptions that are quickly restored
+      reasoning: |-
+        Maintaining behavioural changes through major life transitions represents exceptional resilience. Research on behavioural change shows that most people struggle to maintain improvements during significant life stressors, making this 95th percentile capability.
+    level_4:
+      text: |-
+        Adapt behavioural strategies effectively to completely new environments or circumstances while maintaining core healthy patterns
+      reasoning: |-
+        Adapting behavioural strategies to completely new environments while maintaining core patterns represents 99th percentile adaptability. Research shows that environmental changes typically disrupt even well-established behavioural patterns for most people.
+    level_5:
+      text: |-
+        Sustain optimal behavioural patterns through any life circumstance, adapting strategies seamlessly while maintaining core principles and demonstrating extraordinary psychological flexibility
+      reasoning: |-
+        Sustaining optimal patterns through any circumstance while adapting seamlessly represents 99.9th percentile psychological flexibility. Research shows this level of adaptability combined with stability is achieved by fewer than 1 in 1000 people, representing extraordinary psychological mastery.

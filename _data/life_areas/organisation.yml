@@ -1,0 +1,102 @@
+slug: organisation
+name: Organisation
+domain: Productivity
+pillar: Organise Your Life
+domain_representative: true
+values:
+- key: tracking
+  name: Tracking
+  weight: 40
+  description:
+  - Capturing and monitoring all commitments, tasks, and information so nothing falls through the cracks.
+  - |-
+    Maintaining a trusted system for recording what needs doing, reviewing progress regularly, and ensuring everything important is visible and accounted for.
+  - People who prioritise this value invest in comprehensive capture and review systems.
+  benchmarks:
+    level_1:
+      text: |-
+        Spend 8 - 10 minutes per day searching for misplaced items; lose 2+ hours per day at work searching for information; no consistent storage or retrieval system
+      reasoning: |-
+        Level 1 represents the population baseline. Spending 8 - 10 minutes per day searching for items and 2+ hours at work searching for information are average figures drawn from large-scale studies. Most people operate at this level without recognising the cumulative cost to their speed of execution. <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy" target="_blank">McKinsey report</a>
+    level_2:
+      text: |-
+        Spend fewer than 3 minutes per day searching for items; retrieve any document within 5 minutes; process incoming tasks within 24 hours
+      reasoning: |-
+        Reducing search time to under 3 minutes per day, retrieving documents within 5 minutes, and processing incoming tasks within 24 hours represents a significant improvement over baseline. A basic capture system -- even a single notebook or app used consistently -- places you above 80% of the population in organisational speed.
+    level_3:
+      text: Rarely search for anything; retrieve any document within 60 seconds; achieve daily inbox-zero across all capture points
+      reasoning: |-
+        Rarely searching for anything, retrieving documents within 60 seconds, and achieving daily inbox-zero represent 95th-percentile speed. This requires well-designed storage systems, consistent filing habits, and disciplined daily processing routines that prioritise throughput.
+    level_4:
+      text: Retrieve any item in seconds; digital retrieval under 30 seconds; routine decisions systematised and largely automated
+      reasoning: |-
+        Retrieving any item in seconds, digital retrieval under 30 seconds, and systematised decision-making represent 99th-percentile speed. At this level, organisational systems are so well-tuned that they operate almost invisibly, freeing cognitive resources for higher-order work.
+    level_5:
+      text: |-
+        Zero search time; fully integrated physical and digital systems with seamless transitions; zero cognitive overhead from organisational maintenance
+      reasoning: |-
+        Zero search time and fully integrated systems with zero cognitive overhead represent the theoretical maximum of organisational speed. At this level, the system is so deeply embedded that organisation requires no conscious effort, and every transition between contexts is seamless.
+- key: order
+  name: Order
+  weight: 35
+  description:
+  - Maintaining structured, predictable systems for physical and digital environments.
+  - |-
+    Consistent filing, clear storage systems, labelled locations for everything, and routines that keep spaces and information organised.
+  - People who prioritise this value believe that external order supports internal clarity.
+  benchmarks:
+    level_1:
+      text: |-
+        41% of intended tasks never completed; 52% chance of missing a healthcare appointment in the past year; no trusted capture system for commitments
+      reasoning: |-
+        With 41% of to-do items never completed and over half of people missing healthcare appointments, the baseline thoroughness level is remarkably low. Without a trusted external capture system, commitments depend on memory, which fails predictably under cognitive load. <a href="https://blog.idonethis.com/how-to-master-the-art-of-to-do-lists/" target="_blank">iDoneThis research</a>
+    level_2:
+      text: Fewer than 3 missed commitments per month; 75%+ task completion rate; say-do ratio of 80% or higher
+      reasoning: |-
+        Fewer than 3 missed commitments per month and a 75%+ task completion rate exceeds what 80% of people achieve. An 80% say-do ratio -- doing 4 out of every 5 things you say you will do -- requires consistent use of an external tracking system and regular enough review to catch slipping items.
+    level_3:
+      text: Fewer than 2 missed commitments per quarter; 90%+ task completion rate; say-do ratio of 90% or higher
+      reasoning: |-
+        Fewer than 2 missed commitments per quarter and a 90%+ completion rate place you in the top 5%. A 90% say-do ratio requires a comprehensive capture system, regular review, and the discipline to decline commitments you cannot fulfil -- thoroughness at this level is systematic rather than effortful.
+    level_4:
+      text: |-
+        Approximately zero missed commitments per year; say-do ratio of 97% or higher; proactive risk flagging for anything at risk of slipping
+      reasoning: |-
+        Approximately zero missed commitments per year and a 97%+ say-do ratio require exceptional systems and habits. Proactive risk flagging -- identifying threats to commitments before they materialise -- distinguishes this level from mere diligence and represents thoroughness as a structural property of the system rather than personal vigilance.
+    level_5:
+      text: |-
+        Say-do ratio of 99% or higher; systems resilient to disruption, illness, travel, and life changes; thoroughness maintained without conscious effort
+      reasoning: |-
+        A 99%+ say-do ratio maintained even through disruption, illness, and major life changes represents mastery-level thoroughness. Systems at this level are antifragile -- they absorb shocks and continue functioning without degradation. Fewer than 1 in 1,000 people achieve this consistency.
+- key: speed
+  name: Speed
+  weight: 25
+  description:
+  - Minimising the time spent on organisational overhead so you can move quickly from intention to action.
+  - Rapid processing of incoming tasks, fast retrieval of information, and systems designed for throughput over perfection.
+  - People who prioritise this value accept occasional missed details in exchange for getting more done.
+  benchmarks:
+    level_1:
+      text: Systems are either non-existent or a chaotic patchwork of apps, notes, and memory; no coherent organisational approach
+      reasoning: |-
+        Most people have no coherent organisational system at all, or use a chaotic mix of apps, sticky notes, email drafts, and memory. The absence of a system is not the same as simplicity -- it is the absence of any deliberate design, which produces complexity through accumulation rather than intention.
+    level_2:
+      text: |-
+        Use 1 - 2 core tools consistently rather than a scattered collection; maintain a single capture point for all incoming tasks and ideas
+      reasoning: |-
+        Using 1 - 2 core tools consistently and maintaining a single capture point already exceeds what most people manage. The majority scatter their organisational efforts across many tools without mastering any. Consolidation to a simple, consistent system is an 80th-percentile practice.
+    level_3:
+      text: |-
+        Organisational system fits on one page; new tools or processes added only when existing ones prove inadequate; minimal maintenance overhead
+      reasoning: |-
+        An organisational system that fits on one page, with new tools added only when existing ones prove inadequate, represents 95th-percentile simplicity. Most people who reach this level of organisation do so by adding complexity; keeping the system minimal while maintaining effectiveness is a rare and deliberate achievement.
+    level_4:
+      text: |-
+        System is so streamlined that someone else could learn it in an hour; every component earns its place through demonstrated value; elegantly handles complexity without becoming complex itself
+      reasoning: |-
+        A system simple enough that someone else could learn it in an hour, where every component earns its place through demonstrated value, represents 99th-percentile simplicity. At this level, the system elegantly handles complexity without becoming complex itself -- a design achievement that requires ruthless editing and deep understanding of what actually matters.
+    level_5:
+      text: |-
+        "Mind like water" -- complete trust in a system so minimal and intuitive that it feels like an extension of thought rather than a separate practice; system survives life changes without needing redesign
+      reasoning: |-
+        The "mind like water" state described by David Allen represents the pinnacle of organisational simplicity -- a system so minimal and intuitive that it feels like an extension of thought rather than a separate practice. At this level, the system survives major life changes without needing redesign because it is built on fundamental principles rather than elaborate structures.

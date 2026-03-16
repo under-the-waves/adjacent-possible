@@ -1,0 +1,129 @@
+slug: mindfulness
+name: Mindfulness
+domain: Wellbeing
+pillar: Look After Yourself
+domain_representative: true
+values:
+- key: clarity
+  name: Mental Clarity
+  weight: 30
+  description:
+  - Enhanced cognitive function including sustained attention, mental focus, and clarity of thinking.
+  - |-
+    Improved concentration at work, reduced mental fog, greater ability to stay present during conversations, and enhanced capacity to direct attention deliberately.
+  - |-
+    People who prioritise this value focus on practices that strengthen the "mental muscle" of attention and develop sharper, more disciplined thinking.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your current attention patterns, notice when your mind wanders during daily activities, and recognise the difference between focused and scattered mental states
+      reasoning: |-
+        This represents basic awareness of attention patterns that any person can develop through simple observation. No formal practice required - just recognition of how the mind works during daily activities.
+    level_2:
+      text: Practice mindfulness irregularly but know how to return attention to the present moment when you remember to do so
+      reasoning: |-
+        Given that only 17.3% of adults practice meditation at all, irregular but informed mindfulness practice represents approximately 80th percentile achievement. This reflects basic competency without demanding consistency.
+    level_3:
+      text: Practice mindfulness for 10-15 minutes most days, maintain some present-moment awareness during routine activities
+      reasoning: |-
+        Daily practice for 10-15 minutes represents significant commitment that research shows only about 5% of the population maintains consistently. This level demonstrates genuine skill development in attention regulation.
+    level_4:
+      text: Maintain 20-30 minute daily practice consistently, demonstrate improved focus and attention regulation
+      reasoning: |-
+        Daily 20-30 minute practice sustained over time represents serious commitment found in approximately 1% of the population. This demonstrates advanced attention regulation skills and significant dedication to practice.
+    level_5:
+      text: Practice 45+ minutes daily for many years, complete multiple retreats, demonstrate exceptional mental clarity
+      reasoning: |-
+        Intensive daily practice maintained for many years with retreat experience represents 0.1% achievement. This demonstrates exceptional commitment and skill development comparable to dedicated contemplatives and experienced retreat participants.
+- key: emotional
+  name: Emotional Wellbeing
+  weight: 35
+  description:
+  - Increased emotional resilience, reduced reactivity, and greater equanimity during challenging situations.
+  - |-
+    Better stress management, less overwhelm during difficult periods, improved mood stability, and the ability to respond rather than react to emotional triggers.
+  - Those who prioritise this value seek practices that provide immediate stress relief and long-term emotional balance.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify your typical stress responses and emotional triggers, recognise the physical sensations that accompany different emotional states, and understand how your current coping mechanisms affect your wellbeing
+      reasoning: |-
+        Basic emotional awareness through noticing stress responses and triggers. This foundational self-knowledge requires no special training, just deliberate attention to emotional experiences as they occur.
+    level_2:
+      text: Use basic mindfulness techniques occasionally for stress, notice some reduction in reactivity to daily frustrations
+      reasoning: |-
+        Occasional use of mindfulness for stress management with some noticeable benefits. Research shows even minimal practice can reduce reactivity, making this realistic for top 20% of population in mindfulness engagement.
+    level_3:
+      text: Handle everyday stress with noticeably greater calm, recover from upsets more quickly than before
+      reasoning: |-
+        Noticeable improvements in stress management and emotional recovery time. Studies show this level of emotional regulation occurs in practitioners with several months of consistent practice - approximately 95th percentile achievement.
+    level_4:
+      text: "Remain calm during significant challenges, show emotional stability that's apparent to close family and friends"
+      reasoning: |-
+        Emotional stability during major challenges that others notice represents substantial emotional mastery. Research suggests this level of equanimity develops after years of consistent practice in dedicated practitioners.
+    level_5:
+      text: Maintain equanimity during major life crises, serve as emotional stability for loved ones
+      reasoning: |-
+        Maintaining equanimity during major life crises while supporting others represents extraordinary emotional mastery. This level of stability requires many years of intensive practice and retreat experience.
+- key: knowledge
+  name: Self-Knowledge
+  weight: 25
+  description:
+  - Deeper understanding of your own thought patterns, emotional triggers, habitual behaviours, and unconscious motivations.
+  - |-
+    Gaining insight into why you react certain ways, recognising recurring mental patterns, and developing awareness of previously hidden aspects of your psychology.
+  - |-
+    People who prioritise this value are drawn to practices that reveal truth about themselves, even when initially uncomfortable.
+  benchmarks:
+    level_1:
+      text: |-
+        Observe your habitual thought patterns without trying to change them, notice recurring mental themes or preoccupations, and develop basic awareness of how your mind processes experiences
+      reasoning: |-
+        Simple observation of thought patterns without attempting to change them. This represents the starting point for self-awareness that anyone can begin immediately through paying attention to mental activity.
+    level_2:
+      text: Recognise some of your most obvious thought patterns and emotional habits
+      reasoning: |-
+        Recognition of obvious patterns represents basic mindfulness skill that separates practitioners from non-practitioners. This level of self-awareness is achievable for those with minimal but genuine engagement.
+    level_3:
+      text: Understand many of your psychological patterns and what triggers strong reactions
+      reasoning: |-
+        Understanding psychological patterns and triggers represents substantial self-awareness development. This insight typically emerges after months of regular practice and reflection, achievable by dedicated practitioners.
+    level_4:
+      text: Gain deep insight into your conditioning and mental habits, see through many personal assumptions
+      reasoning: |-
+        Deep insight into conditioning and assumptions represents advanced self-understanding typically developed through years of practice and reflection. This psychological insight is characteristic of experienced practitioners.
+    level_5:
+      text: Achieve deep insights into consciousness and identity, demonstrate freedom from limiting psychological patterns
+      reasoning: |-
+        Deep insights into consciousness and identity with freedom from limiting patterns represents advanced contemplative understanding achieved by long-term practitioners with intensive retreat experience and years of dedicated practice.
+- key: spiritual
+  name: Spiritual Development
+  weight: 10
+  description:
+  - Connection to meaning, purpose, transcendence, and broader spiritual or existential questions.
+  - |-
+    Experiences of interconnectedness, encounters with the sacred or mysterious, development of compassion and loving-kindness, and exploration of consciousness itself.
+  - |-
+    Those who prioritise this value seek practices that address life's deeper questions and cultivate a sense of connection beyond the individual self.
+  benchmarks:
+    level_1:
+      text: |-
+        Explore different contemplative approaches to understand personal preferences, recognise moments of deeper meaning or connection in daily life, and clarify your relationship with transcendent or spiritual experiences
+      reasoning: |-
+        Exploration of personal preferences regarding contemplative practices and recognition of meaningful moments. This requires no commitment to particular traditions, just openness to spiritual or transcendent experiences.
+    level_2:
+      text: Experience occasional moments of calm or peace during informal mindfulness
+      reasoning: |-
+        Occasional experiences of peace or calm during informal practice. This represents the spiritual benefits available to casual practitioners without requiring deep commitment to contemplative traditions.
+    level_3:
+      text: Experience regular moments of deeper meaning during practice, feel some connection beyond immediate personal concerns
+      reasoning: |-
+        Regular meaningful experiences during practice with some integration into daily life. This represents genuine spiritual development that occurs in committed practitioners who maintain consistent engagement.
+    level_4:
+      text: Experience profound states during intensive practice, live with strong sense of meaning and purpose
+      reasoning: |-
+        Profound states during intensive practice with integration into life purpose. This represents significant spiritual development found in practitioners with years of experience and possible retreat attendance.
+    level_5:
+      text: Experience sustained transcendent states, embody wisdom and compassion in daily life
+      reasoning: |-
+        Sustained transcendent states with embodied wisdom represents the pinnacle of contemplative achievement found in the most dedicated practitioners with decades of experience and extensive retreat practice.

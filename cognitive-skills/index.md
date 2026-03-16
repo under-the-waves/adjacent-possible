@@ -1,7 +1,10 @@
+---
+life_area_slug: cognitive-skills
+---
 [← Back to Home](../)
 # Cognitive Skills
 
-## What is Cognitive Skills?
+## What are Cognitive Skills?
 
 Cognitive Skills encompasses the development and enhancement of core mental abilities including memory, attention, reasoning, and problem-solving. This covers systematic approaches to improving how you encode and retrieve information, maintain focus and concentration, think through complex problems, and optimise your brain's performance through lifestyle choices. While some cognitive abilities have genetic components, substantial improvements are possible through evidence-based training methods, memory techniques, attention practices, and lifestyle optimisation.
 
@@ -17,71 +20,13 @@ Your optimal approach to cognitive skills depends on what aspects you value most
 
 For personalised recommendations based on your unique priorities, visit [Cognitive Skills Personalised]({{ site.baseurl }}/cognitive-skills/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Memory (35%)
-Developing systematic approaches to encode, store, and retrieve information efficiently. This includes memory techniques like method of loci, spaced repetition systems, elaborative encoding, and other evidence-based memory strategies. People prioritising this value want measurably better memory performance for learning, professional tasks, and accessing stored knowledge when needed.
-
-### Focus (30%)
-Developing sustained attention, concentration, and cognitive control through practices like mindfulness meditation and attention training. This includes resistance to distraction, task-switching ability, maintaining focus under pressure, and deliberate control over mental resources. Those prioritising this value want better command over where their mind goes and stays during demanding cognitive tasks.
-
-### Reasoning & Problem-Solving (25%)
-Developing fluid intelligence and reasoning abilities through targeted training in working memory, abstract reasoning, and creative problem-solving. This includes both general reasoning capacity and domain-specific thinking skills such as logical analysis and pattern recognition. People valuing this recognise that while challenging, reasoning ability can be enhanced with proper training.
-
-### Lifestyle Integration (10%)
-Cognitive enhancement through sustainable daily practices rather than intensive training regimens. This emphasises improving cognitive function through sleep, exercise, nutrition, stress management, and other lifestyle factors that naturally support brain health and mental performance. Those prioritising this value want cognitive benefits that emerge from overall wellbeing rather than dedicated cognitive exercises.
+{% include life-area-values.html %}
 
 ## Benchmarks by Level
 
 Research reveals that most people rely on basic, unoptimised cognitive approaches. Studies show approximately 90% of adults have never learned systematic memory techniques, with only 2-3% using evidence-based methods like spaced repetition regularly. Most adults struggle with sustained attention – fewer than 10% can maintain focus on demanding cognitive work for 30+ minutes without distraction. Problem-solving training is virtually absent from most education systems, with fewer than 5% of adults having formal training in reasoning techniques. These patterns mean that even modest improvements in cognitive skills represent substantially higher population percentiles than might initially be expected.
 
-### Level 1: Awareness
-
-**Memory**: Understand your current memory strengths and weaknesses through simple self-assessment of recall ability for names, facts, and procedures you encounter regularly <span class="info-icon" onclick="showReasoning('level1-memory')">i</span>
-
-**Focus**: Recognise your typical attention patterns, distraction triggers, and the longest period you can sustain concentration on a single demanding task <span class="info-icon" onclick="showReasoning('level1-focus')">i</span>
-
-**Reasoning & Problem-Solving**: Identify your preferred approach to complex problems and assess your current ability to think through multi-step logical challenges systematically <span class="info-icon" onclick="showReasoning('level1-reasoning')">i</span>
-
-**Lifestyle Integration**: Evaluate how your sleep, exercise, nutrition, and stress levels currently affect your mental clarity and cognitive performance <span class="info-icon" onclick="showReasoning('level1-lifestyle')">i</span>
-
-### Level 2: Foundation (80th percentile capability)
-
-**Memory**: Remember names of 2-3 new people you meet in social situations and retain key points from articles or presentations for a few days without special effort <span class="info-icon" onclick="showReasoning('level2-memory')">i</span>
-
-**Focus**: Sustain focused attention on demanding work for 15-20 minute blocks without checking phone or getting significantly distracted <span class="info-icon" onclick="showReasoning('level2-focus')">i</span>
-
-**Reasoning & Problem-Solving**: Approach problems more systematically than pure intuition – taking time to consider different approaches rather than jumping immediately to solutions <span class="info-icon" onclick="showReasoning('level2-reasoning')">i</span>
-
-**Lifestyle Integration**: Maintain basic practices that support mental clarity – getting adequate sleep most nights and some awareness of how lifestyle affects your thinking <span class="info-icon" onclick="showReasoning('level2-lifestyle')">i</span>
-
-### Level 3: Proficiency (95th percentile capability)
-
-**Memory**: Learn and apply basic memory techniques like creating mental associations or stories to remember lists, sequences, or study materials with noticeably improved retention <span class="info-icon" onclick="showReasoning('level3-memory')">i</span>
-
-**Focus**: Maintain focused attention for 30-40 minute periods during cognitively demanding work, with ability to notice when attention wanders and redirect it <span class="info-icon" onclick="showReasoning('level3-focus')">i</span>
-
-**Reasoning & Problem-Solving**: Consistently use systematic approaches to complex problems – breaking them into components and working through logical steps rather than relying primarily on intuition <span class="info-icon" onclick="showReasoning('level3-reasoning')">i</span>
-
-**Lifestyle Integration**: Deliberately maintain 1-2 practices specifically for cognitive benefit – such as consistent sleep schedule or regular exercise chosen partly for brain health <span class="info-icon" onclick="showReasoning('level3-lifestyle')">i</span>
-
-### Level 4: Excellence (99th percentile capability)
-
-**Memory**: Apply memory techniques to learn substantial amounts of information – such as memorising 20-30 items in sequence or retaining detailed study materials with minimal forgetting over weeks <span class="info-icon" onclick="showReasoning('level4-memory')">i</span>
-
-**Focus**: Achieve sustained focus for 60+ minutes during complex cognitive work and maintain attention effectively under moderate stress or time pressure <span class="info-icon" onclick="showReasoning('level4-focus')">i</span>
-
-**Reasoning & Problem-Solving**: Demonstrate measurably improved reasoning through practice – consistently solving complex problems and generating creative solutions to challenging situations <span class="info-icon" onclick="showReasoning('level4-reasoning')">i</span>
-
-**Lifestyle Integration**: Consistently maintain 2-3 lifestyle practices specifically chosen for cognitive benefit – such as optimised sleep, targeted exercise, and basic stress management – with understanding of how these affect mental performance <span class="info-icon" onclick="showReasoning('level4-lifestyle')">i</span>
-
-### Level 5: Mastery (99.9th percentile capability)
-
-**Memory**: Achieve memory performance requiring dedicated training – such as memorising a deck of cards in 10-15 minutes or rapidly learning extensive factual information with exceptional retention <span class="info-icon" onclick="showReasoning('level5-memory')">i</span>
-
-**Focus**: Demonstrate exceptional attentional control – maintaining focus during high-pressure situations or achieving deep focus states that enable breakthrough thinking in your domain <span class="info-icon" onclick="showReasoning('level5-focus')">i</span>
-
-**Reasoning & Problem-Solving**: Apply reasoning skills that create new insights in your chosen area – consistently generating novel approaches or demonstrating cognitive abilities that enable professional-level expertise <span class="info-icon" onclick="showReasoning('level5-reasoning')">i</span>
-
-**Lifestyle Integration**: Maintain sophisticated practices that consistently support peak cognitive performance – such as optimised sleep protocols, targeted nutrition, and advanced stress management techniques requiring significant knowledge and commitment <span class="info-icon" onclick="showReasoning('level5-lifestyle')">i</span>
+{% include life-area-benchmarks.html %}
 
 ## Levels
 
@@ -113,86 +58,7 @@ const researchData = {
         title: 'Lifestyle Cognitive Enhancement',
         content: 'Exercise increases BDNF by 15-30%, improving learning and memory. Sleep optimisation enhances memory consolidation by 40%. Nutrition interventions can improve cognitive performance by 10-20%. Cotman & Berchtold (2002) review comprehensive lifestyle effects on brain function. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2441149/" target="_blank">View study</a>'
     },
-    'level1-memory': {
-        title: 'Level 1 Memory Assessment',
-        content: 'Basic self-assessment involves testing recall of names, facts, and procedures encountered in daily life. This provides baseline understanding of current memory strengths and weaknesses without requiring formal testing.'
-    },
-    'level1-focus': {
-        title: 'Level 1 Focus Assessment',
-        content: 'Attention pattern recognition involves observing how long you can maintain focus on demanding tasks, what triggers distraction, and when attention naturally wanes throughout the day.'
-    },
-    'level1-reasoning': {
-        title: 'Level 1 Reasoning Assessment',
-        content: 'Problem-solving approach assessment involves reflecting on how you typically tackle complex challenges - whether through systematic analysis, intuitive leaps, or seeking external input.'
-    },
-    'level1-lifestyle': {
-        title: 'Level 1 Lifestyle Assessment',
-        content: 'Cognitive lifestyle assessment involves noting how sleep quality, exercise, nutrition, and stress levels affect your mental clarity, focus, and thinking ability on different days.'
-    },
-    'level2-memory': {
-        title: 'Level 2 Memory Capability',
-        content: 'Research suggests approximately 20% of adults can consistently remember names of 2-3 new people and retain key information for several days. This represents basic but reliable memory function without special techniques.'
-    },
-    'level2-focus': {
-        title: 'Level 2 Focus Capability',
-        content: 'Studies indicate roughly 20% of adults can maintain focused attention for 15-20 minutes on demanding tasks without significant distraction. This represents basic but functional attention control.'
-    },
-    'level2-reasoning': {
-        title: 'Level 2 Reasoning Capability',
-        content: 'Approximately 20% of adults consistently approach problems systematically rather than relying purely on intuition, taking time to consider multiple approaches before choosing solutions.'
-    },
-    'level2-lifestyle': {
-        title: 'Level 2 Lifestyle Integration',
-        content: 'About 20% of adults maintain basic practices that support cognitive function - getting adequate sleep most nights and having awareness of lifestyle impacts on thinking.'
-    },
-    'level3-memory': {
-        title: 'Level 3 Memory Capability',
-        content: 'Research indicates approximately 5% of adults learn and apply basic memory techniques like creating associations or stories to improve retention of lists and study materials.'
-    },
-    'level3-focus': {
-        title: 'Level 3 Focus Capability',
-        content: 'Studies suggest about 5% of adults can maintain focused attention for 30-40 minutes on cognitively demanding work, with ability to notice and redirect wandering attention.'
-    },
-    'level3-reasoning': {
-        title: 'Level 3 Reasoning Capability',
-        content: 'Approximately 5% of adults consistently use systematic approaches to complex problems - breaking them into components and working through logical steps methodically.'
-    },
-    'level3-lifestyle': {
-        title: 'Level 3 Lifestyle Integration',
-        content: 'About 5% of adults deliberately maintain 1-2 practices specifically for cognitive benefit, such as consistent sleep schedules or exercise chosen partly for brain health.'
-    },
-    'level4-memory': {
-        title: 'Level 4 Memory Capability',
-        content: 'Research suggests roughly 1% of adults apply memory techniques to learn substantial amounts of information - memorising 20-30 items in sequence or retaining detailed study materials for weeks.'
-    },
-    'level4-focus': {
-        title: 'Level 4 Focus Capability',
-        content: 'Studies indicate about 1% of adults can achieve sustained focus for 60+ minutes during complex cognitive work and maintain attention effectively under moderate stress.'
-    },
-    'level4-reasoning': {
-        title: 'Level 4 Reasoning Capability',
-        content: 'Approximately 1% of adults demonstrate measurably improved reasoning through practice - consistently solving complex problems and generating creative solutions to challenging situations.'
-    },
-    'level4-lifestyle': {
-        title: 'Level 4 Lifestyle Integration',
-        content: 'About 1% of adults consistently maintain 2-3 lifestyle practices specifically chosen for cognitive benefit with understanding of how these affect mental performance.'
-    },
-    'level5-memory': {
-        title: 'Level 5 Memory Capability',
-        content: 'Research indicates approximately 0.1% of adults achieve memory performance requiring dedicated training - memorising cards in 10-15 minutes or rapidly learning extensive factual information.'
-    },
-    'level5-focus': {
-        title: 'Level 5 Focus Capability',
-        content: 'Studies suggest about 0.1% of adults demonstrate exceptional attentional control - maintaining focus during high-pressure situations or achieving deep focus states enabling breakthrough thinking.'
-    },
-    'level5-reasoning': {
-        title: 'Level 5 Reasoning Capability',
-        content: 'Approximately 0.1% of adults apply reasoning skills that create new insights in their chosen area - consistently generating novel approaches or demonstrating professional-level cognitive abilities.'
-    },
-    'level5-lifestyle': {
-        title: 'Level 5 Lifestyle Integration',
-        content: 'About 0.1% of adults maintain sophisticated practices that consistently support peak cognitive performance through optimised sleep, nutrition, and stress management requiring significant knowledge and commitment.'
-    }
+    {% include benchmark-reasoning.html %}
 };
 
 </script>

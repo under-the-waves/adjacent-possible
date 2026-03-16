@@ -1,0 +1,145 @@
+slug: cognitive-skills
+name: Cognitive Skills
+domain: Learning
+pillar: Expand Your Awareness
+domain_representative: true
+values:
+- key: memory
+  name: Memory
+  weight: 35
+  description:
+  - Developing systematic approaches to encode, store, and retrieve information efficiently.
+  - |-
+    Memory techniques like method of loci, spaced repetition systems, elaborative encoding, and other evidence-based memory strategies.
+  - |-
+    People prioritising this value want measurably better memory performance for learning, professional tasks, and accessing stored knowledge when needed.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your current memory strengths and weaknesses through simple self-assessment of recall ability for names, facts, and procedures you encounter regularly
+      reasoning: |-
+        Basic self-assessment involves testing recall of names, facts, and procedures encountered in daily life. This provides baseline understanding of current memory strengths and weaknesses without requiring formal testing.
+    level_2:
+      text: |-
+        Remember names of 2-3 new people you meet in social situations and retain key points from articles or presentations for a few days without special effort
+      reasoning: |-
+        Research suggests approximately 20% of adults can consistently remember names of 2-3 new people and retain key information for several days. This represents basic but reliable memory function without special techniques.
+    level_3:
+      text: |-
+        Learn and apply basic memory techniques like creating mental associations or stories to remember lists, sequences, or study materials with noticeably improved retention
+      reasoning: |-
+        Research indicates approximately 5% of adults learn and apply basic memory techniques like creating associations or stories to improve retention of lists and study materials.
+    level_4:
+      text: |-
+        Apply memory techniques to learn substantial amounts of information – such as memorising 20-30 items in sequence or retaining detailed study materials with minimal forgetting over weeks
+      reasoning: |-
+        Research suggests roughly 1% of adults apply memory techniques to learn substantial amounts of information - memorising 20-30 items in sequence or retaining detailed study materials for weeks.
+    level_5:
+      text: |-
+        Achieve memory performance requiring dedicated training – such as memorising a deck of cards in 10-15 minutes or rapidly learning extensive factual information with exceptional retention
+      reasoning: |-
+        Research indicates approximately 0.1% of adults achieve memory performance requiring dedicated training - memorising cards in 10-15 minutes or rapidly learning extensive factual information.
+- key: focus
+  name: Focus
+  weight: 30
+  description:
+  - |-
+    Developing sustained attention, concentration, and cognitive control through practices like mindfulness meditation and attention training.
+  - |-
+    Resistance to distraction, task-switching ability, maintaining focus under pressure, and deliberate control over mental resources.
+  - Those prioritising this value want better command over where their mind goes and stays during demanding cognitive tasks.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise your typical attention patterns, distraction triggers, and the longest period you can sustain concentration on a single demanding task
+      reasoning: |-
+        Attention pattern recognition involves observing how long you can maintain focus on demanding tasks, what triggers distraction, and when attention naturally wanes throughout the day.
+    level_2:
+      text: |-
+        Sustain focused attention on demanding work for 15-20 minute blocks without checking phone or getting significantly distracted
+      reasoning: |-
+        Studies indicate roughly 20% of adults can maintain focused attention for 15-20 minutes on demanding tasks without significant distraction. This represents basic but functional attention control.
+    level_3:
+      text: |-
+        Maintain focused attention for 30-40 minute periods during cognitively demanding work, with ability to notice when attention wanders and redirect it
+      reasoning: |-
+        Studies suggest about 5% of adults can maintain focused attention for 30-40 minutes on cognitively demanding work, with ability to notice and redirect wandering attention.
+    level_4:
+      text: |-
+        Achieve sustained focus for 60+ minutes during complex cognitive work and maintain attention effectively under moderate stress or time pressure
+      reasoning: |-
+        Studies indicate about 1% of adults can achieve sustained focus for 60+ minutes during complex cognitive work and maintain attention effectively under moderate stress.
+    level_5:
+      text: |-
+        Demonstrate exceptional attentional control – maintaining focus during high-pressure situations or achieving deep focus states that enable breakthrough thinking in your domain
+      reasoning: |-
+        Studies suggest about 0.1% of adults demonstrate exceptional attentional control - maintaining focus during high-pressure situations or achieving deep focus states enabling breakthrough thinking.
+- key: reasoning
+  name: Reasoning & Problem-Solving
+  weight: 25
+  description:
+  - |-
+    Developing fluid intelligence and reasoning abilities through targeted training in working memory, abstract reasoning, and creative problem-solving.
+  - Both general reasoning capacity and domain-specific thinking skills such as logical analysis and pattern recognition.
+  - People valuing this recognise that while challenging, reasoning ability can be enhanced with proper training.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify your preferred approach to complex problems and assess your current ability to think through multi-step logical challenges systematically
+      reasoning: |-
+        Problem-solving approach assessment involves reflecting on how you typically tackle complex challenges - whether through systematic analysis, intuitive leaps, or seeking external input.
+    level_2:
+      text: |-
+        Approach problems more systematically than pure intuition – taking time to consider different approaches rather than jumping immediately to solutions
+      reasoning: |-
+        Approximately 20% of adults consistently approach problems systematically rather than relying purely on intuition, taking time to consider multiple approaches before choosing solutions.
+    level_3:
+      text: |-
+        Consistently use systematic approaches to complex problems – breaking them into components and working through logical steps rather than relying primarily on intuition
+      reasoning: |-
+        Approximately 5% of adults consistently use systematic approaches to complex problems - breaking them into components and working through logical steps methodically.
+    level_4:
+      text: |-
+        Demonstrate measurably improved reasoning through practice – consistently solving complex problems and generating creative solutions to challenging situations
+      reasoning: |-
+        Approximately 1% of adults demonstrate measurably improved reasoning through practice - consistently solving complex problems and generating creative solutions to challenging situations.
+    level_5:
+      text: |-
+        Apply reasoning skills that create new insights in your chosen area – consistently generating novel approaches or demonstrating cognitive abilities that enable professional-level expertise
+      reasoning: |-
+        Approximately 0.1% of adults apply reasoning skills that create new insights in their chosen area - consistently generating novel approaches or demonstrating professional-level cognitive abilities.
+- key: lifestyle
+  name: Lifestyle Integration
+  weight: 10
+  description:
+  - Cognitive enhancement through sustainable daily practices rather than intensive training regimens.
+  - |-
+    Improving cognitive function through sleep, exercise, nutrition, stress management, and other lifestyle factors that naturally support brain health and mental performance.
+  - |-
+    Those prioritising this value want cognitive benefits that emerge from overall wellbeing rather than dedicated cognitive exercises.
+  benchmarks:
+    level_1:
+      text: |-
+        Evaluate how your sleep, exercise, nutrition, and stress levels currently affect your mental clarity and cognitive performance
+      reasoning: |-
+        Cognitive lifestyle assessment involves noting how sleep quality, exercise, nutrition, and stress levels affect your mental clarity, focus, and thinking ability on different days.
+    level_2:
+      text: |-
+        Maintain basic practices that support mental clarity – getting adequate sleep most nights and some awareness of how lifestyle affects your thinking
+      reasoning: |-
+        About 20% of adults maintain basic practices that support cognitive function - getting adequate sleep most nights and having awareness of lifestyle impacts on thinking.
+    level_3:
+      text: |-
+        Deliberately maintain 1-2 practices specifically for cognitive benefit – such as consistent sleep schedule or regular exercise chosen partly for brain health
+      reasoning: |-
+        About 5% of adults deliberately maintain 1-2 practices specifically for cognitive benefit, such as consistent sleep schedules or exercise chosen partly for brain health.
+    level_4:
+      text: |-
+        Consistently maintain 2-3 lifestyle practices specifically chosen for cognitive benefit – such as optimised sleep, targeted exercise, and basic stress management – with understanding of how these affect mental performance
+      reasoning: |-
+        About 1% of adults consistently maintain 2-3 lifestyle practices specifically chosen for cognitive benefit with understanding of how these affect mental performance.
+    level_5:
+      text: |-
+        Maintain sophisticated practices that consistently support peak cognitive performance – such as optimised sleep protocols, targeted nutrition, and advanced stress management techniques requiring significant knowledge and commitment
+      reasoning: |-
+        About 0.1% of adults maintain sophisticated practices that consistently support peak cognitive performance through optimised sleep, nutrition, and stress management requiring significant knowledge and commitment.

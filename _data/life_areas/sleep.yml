@@ -1,0 +1,33 @@
+slug: sleep
+name: Sleep
+domain: Health
+pillar: Look After Yourself
+domain_representative: false
+values:
+- key: daily
+  name: Daily Functioning
+  weight: 50
+  description:
+  - Sleep that enhances your immediate cognitive and physical performance.
+  - Mental alertness, energy levels, focus, mood regulation, and physical recovery.
+  - |-
+    People who prioritize this value focus on sleep practices that consistently deliver noticeable improvements in how they think, feel, and perform throughout the day.
+- key: long
+  name: Long-term Health
+  weight: 30
+  description:
+  - Sleep that supports disease prevention, longevity, and brain health over time.
+  - |-
+    Reducing inflammation, supporting immune function, maintaining hormonal balance, and protecting against cognitive decline.
+  - |-
+    Those who prioritize health may focus on sleep duration consistency and quality even when immediate benefits aren't obvious.
+- key: comfort
+  name: Comfort & Experience
+  weight: 20
+  description:
+  - The subjective quality and enjoyment of your sleep experience.
+  - Ease of falling asleep, staying asleep throughout the night, and waking feeling refreshed.
+  - The comfort of your sleep environment and the pleasure of pre-sleep routines.
+  - Those who prioritize this value focus on creating pleasant, relaxing sleep experiences.
+  - |-
+    Your approach will also be influenced by your chronotype (natural tendency toward morningness or eveningness), age, health conditions, work schedule, family responsibilities, and environmental constraints.

@@ -1,0 +1,101 @@
+slug: time-management
+name: Time Management
+domain: Productivity
+pillar: Organise Your Life
+domain_representative: false
+values:
+- key: productivity
+  name: Productivity & Achievement
+  weight: 40
+  description:
+  - Maximising output and accomplishing meaningful goals efficiently.
+  - Getting more done in less time, meeting deadlines consistently, and making tangible progress on important projects.
+  - |-
+    People who prioritise this value focus on systems and techniques that measurably increase their productive capacity and help them achieve concrete results.
+  benchmarks:
+    level_1:
+      text: Understand current productivity patterns and identify major time drains and peak performance periods
+      reasoning: |-
+        Level 1 focuses on assessment only. Research shows most people (82%) lack structured time management systems and struggle to identify their productivity patterns. This awareness stage helps establish baseline understanding before implementing any changes.
+    level_2:
+      text: |-
+        Maintain a consistent system for capturing and organising tasks, complete 70-80% of planned important work within intended timeframes
+      reasoning: |-
+        Research shows only 23% of people schedule tasks in calendars, and only 18% have formal time management systems. Maintaining consistent task capture and completing 70-80% of planned work represents top 20% achievement, as most people struggle with basic organisation.
+    level_3:
+      text: |-
+        Use structured planning methods (weekly reviews, calendar blocking), consistently meet deadlines and complete 85-90% of planned tasks
+      reasoning: |-
+        Only 5% of people use structured methods like time blocking, and studies show structured goal-setters are 10x more likely to achieve objectives. Completing 85-90% of planned tasks consistently represents top 5% achievement given that most people complete far less of their intended work.
+    level_4:
+      text: |-
+        Integrate sophisticated time management across all life domains, demonstrate exceptional consistency in meeting complex, long-term objectives
+      reasoning: |-
+        Research shows only 8% of people successfully achieve their goals consistently. Integrating sophisticated time management across all life domains while meeting complex long-term objectives represents top 1% achievement, requiring advanced planning and execution skills.
+    level_5:
+      text: |-
+        Design and continuously optimise personalised time management systems that achieve exceptional results across multiple complex domains
+      reasoning: |-
+        Designing and optimising personalised time management systems that achieve exceptional results across multiple domains represents mastery achieved by roughly 1 in 1,000 people. This requires deep understanding of productivity principles and ability to create novel solutions.
+- key: balance
+  name: Balance & Wellbeing
+  weight: 35
+  description:
+  - Creating sustainable rhythms that support long-term effectiveness while maintaining personal wellbeing.
+  - |-
+    Managing energy levels, preventing burnout, maintaining boundaries between work and personal time, and ensuring time for rest and relationships.
+  - Those who prioritise this value seek approaches that enhance both performance and life satisfaction.
+  benchmarks:
+    level_1:
+      text: Assess current work-life boundaries and stress levels related to time management
+      reasoning: |-
+        Assessment of current work-life boundaries. Studies show that 71% of knowledge workers experienced burnout, often due to poor time boundaries. Level 1 involves recognising these patterns without yet implementing solutions.
+    level_2:
+      text: Establish clear boundaries between work and personal time, schedule regular breaks and avoid consistent overtime
+      reasoning: |-
+        Studies indicate 32% cite inability to disconnect as a primary burnout cause. Establishing clear work-life boundaries and regular breaks represents significant achievement, as most people work without structured rest periods.
+    level_3:
+      text: Maintain sustainable work rhythms with protected time for relationships, health, and personal interests
+      reasoning: |-
+        Research indicates sustainable work rhythms with protected personal time are rare, with most people struggling to maintain boundaries. Creating systems that support both productivity and personal relationships represents top 5% achievement in work-life integration.
+    level_4:
+      text: |-
+        Design sustainable systems that support peak performance while maintaining rich personal relationships and excellent health
+      reasoning: |-
+        Studies indicate maintaining peak performance while sustaining excellent relationships and health is extremely rare. This level represents mastery of sustainable high performance that only 1% achieve, avoiding the common trap of sacrificing health or relationships for productivity.
+    level_5:
+      text: |-
+        Maintain optimal productivity and life satisfaction across decades, with systems that promote both achievement and deep personal fulfilment
+      reasoning: |-
+        Maintaining optimal productivity and life satisfaction across decades represents the pinnacle of time management mastery. Only about 0.1% of people achieve sustained high performance in both work and personal domains over extended periods without burnout or major life disruption.
+- key: flexibility
+  name: Flexibility & Responsiveness
+  weight: 25
+  description:
+  - Maintaining the ability to adapt to changing priorities and unexpected demands while staying effective.
+  - Handling interruptions gracefully, pivoting between tasks smoothly, and remaining productive despite uncertainty.
+  - |-
+    People who prioritise this value want systems that work across different contexts and can accommodate life's unpredictability.
+  benchmarks:
+    level_1:
+      text: Recognise how well you currently handle interruptions and changing priorities
+      reasoning: |-
+        Understanding current response patterns to interruptions and changes. Research indicates people are interrupted 275 times per day on average. Level 1 involves recognising how these interruptions currently affect your work.
+    level_2:
+      text: Handle routine interruptions without losing track of priorities, adapt daily plans when urgent tasks arise
+      reasoning: |-
+        Research shows people experience 275 interruptions daily, with 25 minutes needed to refocus after each interruption. Successfully handling routine interruptions without losing priorities represents top 20% capability in maintaining focus.
+    level_3:
+      text: Smoothly adjust plans when priorities shift, maintain effectiveness across different work contexts and environments
+      reasoning: |-
+        Studies show most people struggle when priorities shift, with only 26% resolving conflicts quickly and effectively. Maintaining effectiveness across different contexts while adapting smoothly to changes represents top 5% adaptability skills.
+    level_4:
+      text: |-
+        Maintain high effectiveness across major life transitions and crises, adapt time management systems to changing circumstances
+      reasoning: |-
+        Research shows most people struggle significantly during major life transitions. Maintaining high effectiveness across life crises and major changes represents top 1% resilience and adaptability, as evidenced by how few people successfully navigate major changes without significant productivity loss.
+    level_5:
+      text: |-
+        Demonstrate mastery of time management principles that work effectively across any context, major life change, or unexpected challenge
+      reasoning: |-
+        Demonstrating time management mastery that works across any context or major life change represents the highest level of skill. This level of adaptability and effectiveness across all circumstances is achieved by approximately 1 in 1,000 people.

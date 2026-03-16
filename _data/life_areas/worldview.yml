@@ -1,0 +1,140 @@
+slug: worldview
+name: Worldview
+domain: Knowledge
+pillar: Expand Your Awareness
+domain_representative: false
+values:
+- key: breadth
+  name: Breadth
+  weight: 30
+  description:
+  - |-
+    Developing understanding across multiple domains that shape how the world works -- history, economics, psychology, politics, culture, and technology.
+  - |-
+    People who prioritise breadth focus on seeing connections between different fields and avoiding blind spots that come from narrow knowledge.
+  - Comprehensive coverage over deep specialization.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognize the major domains that shape how the world works and identify your knowledge gaps versus areas of familiarity across history, economics, psychology, and politics
+      reasoning: |-
+        At the awareness level, people need to recognize what domains exist and where their knowledge gaps are. Most people have opinions about politics, economics, and history but may not have systematically assessed what they actually know versus assume.
+    level_2:
+      text: |-
+        Demonstrate primary school to early secondary level understanding across core domains: basic history of your country, elementary economics concepts, fundamental psychology principles, and basic political systems
+      reasoning: |-
+        Primary to early secondary level knowledge across core domains represents what approximately 80% of people never achieve through deliberate study. Most adults retain limited knowledge from school and don't pursue systematic learning across multiple domains.
+    level_3:
+      text: |-
+        Demonstrate secondary school level understanding across 5-6 core domains: basic global history, elementary economics, fundamental psychology, political systems, and one additional area like philosophy or culture
+      reasoning: |-
+        Secondary school level understanding across 5-6 domains requires deliberate study that surveys show only about 5% of adults undertake. This represents significant time investment beyond normal educational requirements.
+    level_4:
+      text: |-
+        Demonstrate solid secondary school to early undergraduate level understanding across 6-7 domains: world history, economics (micro and macro basics), psychology, political systems, major ideologies, and 1-2 additional areas like philosophy, culture, or technology
+      reasoning: |-
+        Early undergraduate level across 6-7 domains represents exceptional breadth that educational data shows is achieved by roughly 1% of the population, requiring sustained intellectual curiosity beyond professional requirements.
+    level_5:
+      text: |-
+        Achieve undergraduate level understanding in 4-5 core domains (history, economics, psychology, politics, plus specialization areas) with solid secondary level knowledge across 3-4 additional relevant fields
+      reasoning: |-
+        Undergraduate level in 4-5 core domains plus secondary knowledge in additional fields represents extraordinary breadth achieved by roughly 1 in 1000 people, requiring decades of dedicated learning.
+- key: depth
+  name: Depth
+  weight: 30
+  description:
+  - Building sophisticated, nuanced understanding within specific domains rather than surface-level familiarity.
+  - |-
+    Those who prioritise depth focus on mastering fewer areas thoroughly, understanding complex theories and being able to analyze subtle distinctions rather than having broad but shallow knowledge across many fields.
+  benchmarks:
+    level_1:
+      text: |-
+        Assess whether your understanding in key areas is superficial or substantial, identifying topics where you rely on assumptions versus those you genuinely comprehend
+      reasoning: |-
+        Self-assessment of knowledge depth is crucial for worldview development. Many people confuse familiarity with understanding, so awareness-level involves honest evaluation of where knowledge is substantial versus superficial.
+    level_2:
+      text: |-
+        Achieve secondary school level knowledge in 1-2 areas of particular interest, moving beyond surface familiarity to understand underlying principles and key debates
+      reasoning: |-
+        Secondary school level depth in 1-2 areas means moving beyond casual interest to understanding underlying principles. Research shows only about 20% of adults pursue serious learning in domains outside their professional requirements.
+    level_3:
+      text: |-
+        Achieve early undergraduate level knowledge in 1-2 chosen areas, understanding key theories and able to see connections between your areas of focus
+      reasoning: |-
+        Early undergraduate level knowledge in 1-2 areas, plus ability to see connections, represents analytical capability that educational statistics show is achieved by a small minority of the population.
+    level_4:
+      text: |-
+        Achieve undergraduate level expertise in 2 chosen domains while maintaining solid secondary level knowledge in most others, with ability to integrate insights across your areas of knowledge
+      reasoning: |-
+        Undergraduate expertise in 2 domains while maintaining breadth, plus integration ability, represents a rare combination. Most people either specialize narrowly or remain broadly superficial.
+    level_5:
+      text: |-
+        Develop graduate level expertise in 1-2 chosen domains while maintaining undergraduate level competency in 3-4 other areas, with exceptional ability to synthesize insights across domains
+      reasoning: |-
+        Graduate expertise in 1-2 domains plus undergraduate competency in 3-4 others represents the type of polymathic knowledge achieved by a tiny fraction of the population.
+- key: utility
+  name: Utility
+  weight: 25
+  description:
+  - A worldview that enhances real-world decision-making, prediction, and practical navigation of complex situations.
+  - |-
+    People who prioritise utility focus on understanding how systems actually work versus how they're supposed to work, emphasizing frameworks that improve their ability to achieve goals and avoid common mistakes.
+  benchmarks:
+    level_1:
+      text: |-
+        Evaluate how well your current understanding helps you navigate real-world situations, make predictions, and avoid common pitfalls like scams or manipulation
+      reasoning: |-
+        Understanding how current worldview serves practical needs helps identify areas for improvement. This includes recognizing where worldview helps versus hinders real-world navigation and decision-making.
+    level_2:
+      text: |-
+        Recognize common manipulation tactics, make basic economic decisions with understanding of incentives, engage meaningfully in political discussions, and navigate workplace dynamics effectively
+      reasoning: |-
+        Basic practical applications like recognizing manipulation and understanding incentives represent skills that surveys show most people lack. Studies on financial literacy and political knowledge demonstrate these gaps.
+    level_3:
+      text: |-
+        Spot misinformation and propaganda, make strategic life decisions based on understanding systems, engage substantively with people from diverse backgrounds, and predict likely outcomes of social or political changes
+      reasoning: |-
+        Spotting misinformation and making strategic decisions based on systems understanding represents practical wisdom that research on prediction and decision-making shows is uncommon in the general population.
+    level_4:
+      text: |-
+        Make consistently wise decisions by understanding subtle patterns and long-term consequences, navigate complex institutional dynamics, and apply understanding to achieve exceptional results in chosen domains
+      reasoning: |-
+        Consistently wise decisions and exceptional results in chosen domains represents practical wisdom that studies of expertise and decision-making suggest is achieved by approximately 1% of people.
+    level_5:
+      text: |-
+        Apply comprehensive understanding to achieve consistently exceptional results across multiple complex domains, demonstrating profound practical wisdom in navigating systems and predicting outcomes
+      reasoning: |-
+        Consistently exceptional results across multiple complex domains represents mastery-level practical wisdom that studies suggest is achieved by roughly 1 in 1000 people.
+- key: meaning
+  name: Meaning
+  weight: 15
+  description:
+  - Developing understanding that provides psychological grounding, moral framework, and sense of purpose in life.
+  - |-
+    Those who prioritise meaning focus on worldviews that offer coherent narratives about human nature, progress, and their place in the larger story, providing stability and direction during uncertainty.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand how your worldview currently provides (or fails to provide) psychological grounding, moral guidance, and sense of purpose in your daily life
+      reasoning: |-
+        Assessing how worldview currently provides psychological grounding and moral guidance helps establish baseline for meaning-oriented development. Many people have not explicitly considered these functions of their beliefs.
+    level_2:
+      text: |-
+        Experience basic sense of purpose and moral direction that guides everyday decisions, with worldview providing some psychological stability during moderate stress or uncertainty
+      reasoning: |-
+        Basic psychological stability and moral guidance from worldview represents what psychological research suggests is achieved by people with coherent belief systems, which is less common than might be expected.
+    level_3:
+      text: |-
+        Worldview provides reliable psychological grounding during difficult periods, clear moral framework that guides ethical decisions, and genuine sense of meaning that persists through life's challenges
+      reasoning: |-
+        Reliable psychological grounding and persistent meaning through challenges represents psychological resilience that research shows is achieved by a minority of people with well-developed meaning-making systems.
+    level_4:
+      text: |-
+        Maintain deep sense of purpose and psychological stability even during major life crises, with worldview that transforms how you experience both suffering and joy while actions consistently align with core values
+      reasoning: |-
+        Deep purpose and stability during major crises, plus transformative worldview effects, represents psychological development that research on meaning and resilience shows is rare but achievable.
+    level_5:
+      text: |-
+        Experience profound sense of connection to larger purpose that infuses daily life with meaning, with worldview providing unshakeable psychological foundation that supports you through any circumstances while remaining open to growth
+      reasoning: |-
+        Profound connection to larger purpose that infuses daily life, plus unshakeable foundation, represents the type of meaning-making that research on psychological development suggests is extremely rare.

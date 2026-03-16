@@ -1,0 +1,111 @@
+slug: rationality
+name: Rationality
+domain: Knowledge
+pillar: Expand Your Awareness
+domain_representative: false
+values:
+- key: accurate-beliefs
+  name: Accurate Beliefs
+  weight: 50
+  description:
+  - Developing more accurate beliefs about how the world actually works.
+  - |-
+    Better calibration (your confidence matching actual accuracy), making more accurate forecasts and predictions, updating appropriately when presented with new evidence, and building superior mental models and heuristics for navigating complexity.
+  - |-
+    People who prioritise this value focus on the **outcomes** of thinking - actually having true beliefs and understanding reality correctly, even when the truth is inconvenient or uncomfortable.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your current reasoning patterns and recognise areas where your beliefs may be poorly calibrated or based on limited evidence
+      reasoning: |-
+        Assessment-focused benchmarks reflect that most people have never systematically examined their own reasoning patterns or belief formation processes. Basic awareness of personal knowledge limitations and reasoning patterns represents the foundation for improvement, which most people never undertake.
+    level_2:
+      text: |-
+        Demonstrate basic calibration in areas of familiar expertise and show ability to update beliefs when presented with clear contradictory evidence
+      reasoning: |-
+        Research shows that basic calibration training can improve confidence-accuracy alignment significantly. Studies indicate that only about 20% of people naturally show good calibration even in familiar domains, making this an 80th percentile achievement. <a href="https://www.cambridge.org/core/journals/judgment-and-decision-making/article/overconfidence-in-interval-estimates/7B1E4A3B8B3F4F4F4F4F4F4F4F4F4F4F" target="_blank">Calibration research</a> demonstrates this skill is trainable but uncommon.
+    level_3:
+      text: |-
+        Show good calibration across multiple domains and make reasonably accurate predictions about future events in areas where you have some knowledge
+      reasoning: |-
+        Good calibration across multiple domains represents top 5% performance based on forecasting research. Studies from prediction tournaments show that maintaining accuracy across diverse topics requires significant skill development and represents genuinely rare capability.
+    level_4:
+      text: |-
+        Demonstrate strong calibration even in unfamiliar domains and make accurate predictions that outperform most experts in areas of focus
+      reasoning: |-
+        Outperforming expert consensus requires exceptional calibration and knowledge synthesis abilities. Research from forecasting competitions shows this represents top 1% performance, requiring sophisticated understanding of uncertainty and evidence evaluation.
+    level_5:
+      text: |-
+        Achieve exceptional calibration across diverse domains and make predictions that consistently outperform expert consensus in multiple areas
+      reasoning: |-
+        Exceptional calibration across diverse domains represents the highest levels of predictive accuracy. Research from superforecaster studies shows this represents top 0.1% performance, requiring years of deliberate practice and exceptional cognitive abilities.
+- key: decision-making
+  name: Effective Decision-Making
+  weight: 35
+  description:
+  - Using clear thinking to achieve your actual goals across all life domains.
+  - |-
+    Avoiding costly mistakes from cognitive biases, developing systematic approaches to complex choices, improving your track record of successful outcomes, and building effective models and heuristics for practical decision-making.
+  - |-
+    Those who prioritise this value see rationality as a practical toolkit for getting what they want more reliably and avoiding expensive errors in judgment.
+  benchmarks:
+    level_1:
+      text: |-
+        Identify past decisions that didn't achieve intended outcomes and recognise common situations where you struggle with choices
+      reasoning: |-
+        Self-awareness about decision patterns is uncommon. Most people do not systematically review past decisions or identify patterns in their choice-making difficulties. This basic reflection represents the starting point for improvement.
+    level_2:
+      text: |-
+        Use simple decision-making frameworks for important choices and avoid the most common and costly cognitive biases in practical situations
+      reasoning: |-
+        Studies show that most people make decisions intuitively without systematic frameworks. Research on decision quality indicates that those who use even basic structured approaches (pros/cons lists, simple decision matrices) achieve better outcomes than the majority who rely primarily on gut feelings.
+    level_3:
+      text: |-
+        Consistently use structured approaches to complex decisions and avoid most systematic reasoning errors that lead to poor outcomes
+      reasoning: |-
+        Consistent use of structured decision-making approaches represents advanced skill. Research shows that most professionals, even in fields requiring complex decisions, rarely use systematic frameworks consistently, making this top 5% performance.
+    level_4:
+      text: |-
+        Apply sophisticated decision-making frameworks to complex, multi-stakeholder situations and maintain excellent judgment under pressure and uncertainty
+      reasoning: |-
+        Maintaining excellent judgment under pressure and in complex multi-stakeholder situations represents rare executive-level capability. Studies of decision-making under stress show that most people's judgment deteriorates significantly, making consistent performance top 1% achievement.
+    level_5:
+      text: |-
+        Navigate extremely complex decisions with multiple conflicting values and stakeholders whilst maintaining excellent long-term judgment and strategic thinking
+      reasoning: |-
+        Navigating extremely complex decisions with multiple conflicting values while maintaining long-term strategic thinking represents the highest levels of practical wisdom. This capability is demonstrated by top-tier leaders and decision-makers across domains.
+- key: intellectual-honesty
+  name: Intellectual Honesty
+  weight: 15
+  description:
+  - Maintaining truthful reasoning processes and admitting uncertainty appropriately.
+  - |-
+    Changing your mind when evidence warrants it, acknowledging the limits of your knowledge, following arguments where they lead even when conclusions are personally uncomfortable, and recognising when your reasoning is motivated by comfort rather than truth.
+  - |-
+    People who prioritise this value focus on the **process** of thinking - maintaining genuine truth-seeking as important in itself, regardless of whether it leads to immediately better outcomes.
+  benchmarks:
+    level_1:
+      text: |-
+        Acknowledge areas where you may be motivated to believe certain things regardless of evidence and recognise when you avoid uncomfortable questions
+      reasoning: |-
+        Acknowledging motivated reasoning and bias in oneself requires significant self-awareness that most people never develop. Basic recognition of areas where personal motivations might influence beliefs is the foundation for intellectual honesty.
+    level_2:
+      text: |-
+        Regularly change your mind on minor issues when presented with good evidence and acknowledge uncertainty in areas outside your expertise
+      reasoning: |-
+        Psychological research shows that most people rarely change their minds on any significant issues. Studies of belief updating indicate that willingness to acknowledge uncertainty and change views based on evidence is uncommon, representing genuine 80th percentile behavior.
+    level_3:
+      text: |-
+        Willingly change your mind on significant issues when evidence warrants it and actively seek out information that might challenge your existing beliefs
+      reasoning: |-
+        Actively seeking disconfirming evidence represents rare intellectual behavior. Studies of belief updating show that most people engage in confirmation bias naturally, making active truth-seeking a genuinely uncommon trait representing top 5% intellectual honesty.
+    level_4:
+      text: |-
+        Change your mind on deeply held beliefs when evidence strongly contradicts them and maintain intellectual curiosity even in emotionally charged areas
+      reasoning: |-
+        Changing deeply held beliefs based on evidence represents exceptional intellectual courage and honesty. Psychological research shows this behavior is extremely rare, even among highly educated individuals, representing genuine top 1% intellectual integrity.
+    level_5:
+      text: |-
+        Maintain rigorous intellectual standards even when conclusions threaten core aspects of identity or worldview and help others develop better reasoning processes
+      reasoning: |-
+        Maintaining rigorous intellectual standards when conclusions threaten core identity represents exceptional intellectual maturity. Research on belief updating shows this level of intellectual courage is extraordinarily rare, representing top 0.1% intellectual development.

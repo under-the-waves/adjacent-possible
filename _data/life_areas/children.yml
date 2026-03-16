@@ -1,0 +1,141 @@
+slug: children
+name: Children
+domain: Family
+pillar: Connect with Others
+domain_representative: false
+values:
+- key: wellbeing
+  name: Wellbeing
+  weight: 30
+  description:
+  - "Supporting your child's overall physical, emotional, and psychological health."
+  - |-
+    Creating a stable, nurturing environment, attending to mental health, ensuring adequate sleep and nutrition, and prioritising the child's current happiness alongside future outcomes.
+  - People who prioritise this value focus on the child thriving now, not just preparing for later.
+  benchmarks:
+    level_1:
+      text: |-
+        Assess your child's current physical, emotional, and psychological health -- notice patterns of stress, sleep quality, mood, and whether the home environment supports or undermines their sense of safety
+      reasoning: |-
+        Many parents are unaware of the emotional climate they create. Noticing patterns of pressure, unpredictability, or conditional warmth -- and how the child responds to stress -- is the foundation for building a more secure emotional environment and supporting the child's overall health.
+    level_2:
+      text: |-
+        Consistent daily routines, reliable emotional availability, and a home environment where the child visibly feels safe to express both positive and negative emotions; adequate sleep, nutrition, and physical activity are maintained
+      reasoning: |-
+        Consistent routines, reliable emotional availability, and a home where the child feels safe expressing all emotions, combined with adequate physical health basics, places a family above 80% of peers. Many homes have unpredictable emotional climates where children learn to suppress rather than express difficult feelings.
+    level_3:
+      text: |-
+        Deep attunement where the child readily shares their inner life, recovers quickly from setbacks, and shows confidence in exploring new situations, reflecting a secure emotional base; physical health is actively optimised
+      reasoning: |-
+        A child who readily shares their inner life, recovers quickly from setbacks, and shows confidence exploring new situations -- with actively optimised physical health -- indicates deep wellbeing. This level of emotional and physical thriving is relatively rare and depends on years of responsive, attuned caregiving that fewer than 5% of parents consistently provide.
+    level_4:
+      text: |-
+        Child thrives emotionally across contexts -- handling peer conflict, academic pressure, and family stress with resilience and emotional vocabulary that reflects years of consistent secure caregiving
+      reasoning: |-
+        A child who thrives emotionally across diverse stressful contexts -- peer conflict, academic pressure, family stress -- with genuine resilience and emotional vocabulary reflects top 1% wellbeing. This depth of emotional foundation is achieved by fewer than 1 in 100 families.
+    level_5:
+      text: |-
+        Child exhibits 99.9th percentile emotional resilience -- able to maintain wellbeing through significant adversity, with a deep sense of being unconditionally loved that serves as a secure base for ambitious exploration of the world
+      reasoning: |-
+        A child who maintains wellbeing through significant adversity with a deep sense of being unconditionally loved represents extraordinary emotional resilience -- the outcome of 99.9th percentile caregiving sustained across years.
+- key: relationship
+  name: Relationship
+  weight: 25
+  description:
+  - The quality of the parent-child bond -- warmth, trust, communication, and genuine connection.
+  - |-
+    Being emotionally available, enjoying time together, knowing your child's inner life, and building a relationship they want to maintain into adulthood.
+  - People who prioritise this value invest in connection as an end in itself.
+  benchmarks:
+    level_1:
+      text: |-
+        Evaluate the emotional quality of your bond with your child -- how often you share genuine connection versus logistical interaction, and whether your child seeks you out for comfort and conversation
+      reasoning: |-
+        Many parents interact with their children primarily around logistics -- meals, homework, transport -- without examining how much genuine emotional connection occurs. Assessing whether the child actively seeks you out for comfort and conversation reveals the true quality of the bond.
+    level_2:
+      text: |-
+        Regular one-on-one time with genuine emotional connection; child readily shares their day, seeks comfort from you, and the relationship feels warm rather than transactional
+      reasoning: |-
+        Regular one-on-one time with genuine emotional connection, where the child readily shares and seeks comfort, represents 80th percentile relationship quality. Most parent-child interactions are dominated by logistics and instruction rather than genuine connection.
+    level_3:
+      text: |-
+        A relationship of genuine mutual enjoyment and trust where the child shares feelings, fears, and aspirations openly; parent knows the child's inner world and the child feels deeply known
+      reasoning: |-
+        A relationship of genuine mutual enjoyment where the child shares feelings, fears, and aspirations openly, and the parent knows the child's inner world, represents top 5% parent-child bond quality. This depth of connection requires sustained emotional investment that most parents do not maintain.
+    level_4:
+      text: |-
+        A bond characterised by deep mutual respect, genuine enjoyment of each other's company, and the kind of trust that allows the child to bring difficult topics to the parent without fear; the relationship is one the child actively values
+      reasoning: |-
+        A bond of deep mutual respect and enjoyment where the child brings difficult topics without fear represents top 1% relationship quality. This level of trust is the product of years of consistently responsive, non-judgemental parenting that very few families sustain.
+    level_5:
+      text: |-
+        A parent-child relationship of extraordinary depth that both parties describe as one of the most important in their lives; built through years of consistent emotional investment, the bond strengthens rather than strains as the child matures
+      reasoning: |-
+        A parent-child relationship of extraordinary depth that both parties describe as one of the most important in their lives, strengthening rather than straining as the child matures, represents 99.9th percentile bond quality. This is the product of years of exceptional emotional investment.
+- key: achievement
+  name: Achievement
+  weight: 25
+  description:
+  - "Supporting your child's cognitive, academic, and skill development."
+  - Structured enrichment, high expectations communicated warmly, and preparation for future success.
+  - People who prioritise this value believe parents should actively cultivate capability.
+  benchmarks:
+    level_1:
+      text: |-
+        Understand your child's current academic and skill levels relative to age expectations, and identify areas where structured support could accelerate growth
+      reasoning: |-
+        Many parents lack clear awareness of where their child stands relative to age expectations in academic and skill development. Understanding current levels and identifying high-impact areas for structured support is the prerequisite for effective achievement-focused parenting.
+    level_2:
+      text: |-
+        Regular engagement in structured enrichment -- daily reading, age-appropriate academic challenges, and at least one skill-building activity -- with clear expectations communicated warmly
+      reasoning: |-
+        Daily reading and structured enrichment with clear expectations represents 80th percentile achievement support. Despite strong evidence that deliberate skill-building improves outcomes, only a minority of parents consistently provide structured academic and developmental enrichment.
+    level_3:
+      text: |-
+        Deliberately scaffolded development plan adapted to the child's specific strengths and challenges, with regular review and adjustment. Child demonstrates measurable progress in targeted competency areas
+      reasoning: |-
+        A deliberately scaffolded development plan tailored to the individual child with measurable progress represents top 5% achievement support. This requires ongoing observation, knowledge of developmental science, and the ability to adjust strategies -- a level of intentionality most parents do not sustain.
+    level_4:
+      text: |-
+        Child consistently demonstrates above-age competence across cognitive, academic, and practical domains, supported by a parent who adapts evidence-based strategies to the child's individual temperament and learning style
+      reasoning: |-
+        Children who demonstrate above-age competence across multiple domains have typically benefited from exceptionally responsive, evidence-informed parenting over many years. Adapting strategies to individual temperament and learning style requires knowledge and skill that the top 1% of parents possess.
+    level_5:
+      text: |-
+        Child demonstrates exceptional capability and a love of learning that is clearly self-sustaining, developed through years of parenting that balanced high expectations with deep respect for the child's own pace and interests
+      reasoning: |-
+        Exceptional capability combined with a self-sustaining love of learning reflects years of masterful parenting that balanced high expectations with deep respect for the child's autonomy. This combination is achieved by fewer than 1 in 1,000 families.
+- key: development
+  name: Development
+  weight: 20
+  description:
+  - |-
+    Fostering independence, resilience, and character through age-appropriate challenges and progressively expanding autonomy.
+  - Allowing risk-taking, supporting self-direction, and building executive function.
+  - People who prioritise this value focus on who the child is becoming, not just what they can do.
+  benchmarks:
+    level_1:
+      text: |-
+        Recognise where you may be over-directing your child's choices and identify age-appropriate areas where they could exercise more independent decision-making
+      reasoning: |-
+        Most parents over-direct without realising it -- choosing activities, solving problems, and making decisions that the child could handle independently. Recognising where you control unnecessarily is the first step toward fostering genuine self-direction.
+    level_2:
+      text: |-
+        Child makes genuine choices in daily life -- selecting activities, managing age-appropriate responsibilities, and experiencing natural consequences with parental support rather than rescue
+      reasoning: |-
+        Allowing genuine choices with natural consequences represents 80th percentile development support. Most parents either over-control (removing choice) or under-support (leaving children without the scaffolding to learn from their decisions).
+    level_3:
+      text: |-
+        Child initiates projects, pursues self-chosen interests with sustained effort, and demonstrates age-advanced decision-making skills. Parent provides structure without controlling outcomes
+      reasoning: |-
+        A child who initiates projects and pursues self-chosen interests with sustained effort reflects top 5% development. This level of self-direction requires years of parent restraint -- providing structure without controlling outcomes -- which most parents find genuinely difficult.
+    level_4:
+      text: |-
+        Child demonstrates sophisticated self-direction -- setting their own goals, managing their time, self-correcting after mistakes, and pursuing interests that the parent did not choose for them -- with intrinsic motivation clearly evident
+      reasoning: |-
+        Sophisticated self-direction -- self-set goals, self-managed time, and the confidence to pursue genuinely independent interests -- reflects top 1% development. This requires parents who can tolerate their child making choices they would not make themselves, sustained over years.
+    level_5:
+      text: |-
+        Child exhibits remarkable self-direction, independent thinking, and the confidence to diverge from peers and authority figures when their own judgement warrants it -- the product of years of progressively expanded freedom
+      reasoning: |-
+        Remarkable self-direction and the confidence to diverge from peers and authority figures based on independent judgement represents 99.9th percentile development. This level of independent thinking is the product of years of progressively expanded freedom -- an approach most parents find too frightening to sustain.

@@ -1,0 +1,98 @@
+slug: investing
+name: Investing
+domain: Finances
+pillar: Organise Your Life
+domain_representative: false
+values:
+- key: growth
+  name: Growth
+  weight: 40
+  description:
+  - |-
+    Maximising the long-term increase in invested wealth through appropriate asset allocation, compounding, and consistent contributions.
+  - |-
+    Selecting growth-oriented investments, reinvesting returns, and maintaining the patience to let compounding work over decades.
+  - People who prioritise this value focus on net wealth trajectory rather than short-term fluctuations.
+  benchmarks:
+    level_1:
+      text: Holds some investments; returns unexamined; underperforms market by 3 - 5%/yr
+      reasoning: |-
+        Most investors hold some investments but never examine their actual returns. DALBAR data shows the average equity fund investor underperforms the S&P 500 by 3 - 5% annually, placing unexamined, behaviourally-impaired returns squarely at the baseline level. Simply holding investments without tracking performance is the default state for the majority. <a href="https://www.dalbar.com/QAIB/Index" target="_blank">DALBAR research</a>
+    level_2:
+      text: Matches broad market indices (~8 - 10% nominal); behaviour gap <1%
+      reasoning: |-
+        Matching broad market indices through low-cost index funds with a behaviour gap below 1% represents 80th percentile achievement. Since the average investor underperforms by 3 - 5%, simply capturing market returns through buy-and-hold indexing exceeds what 80% of investors achieve. This requires minimal skill but exceptional patience. <a href="https://www.dalbar.com/QAIB/Index" target="_blank">DALBAR research</a>
+    level_3:
+      text: Market + tax alpha; 9 - 12% net; Sharpe >0.5 over 10yr
+      reasoning: |-
+        Adding tax alpha (through tax-loss harvesting, asset location, and tax-efficient withdrawal strategies) on top of market returns, achieving 9 - 12% net with a Sharpe ratio above 0.5 over a decade, represents 95th percentile performance. This requires both knowledge and discipline that very few investors sustain.
+    level_4:
+      text: 2 - 5% above market over 10yr; Sharpe >1.0
+      reasoning: |-
+        Consistently outperforming the market by 2 - 5% annually over a decade with a Sharpe ratio above 1.0 represents 99th percentile achievement. Given that 94% of professional fund managers fail to beat the market over 20 years, sustained outperformance at this level requires genuine skill, not luck. <a href="https://www.spglobal.com/spdji/en/research-insights/spiva/" target="_blank">SPIVA scorecard</a>
+    level_5:
+      text: 10%+ above market over 15yr; Sharpe >2.0
+      reasoning: |-
+        Outperforming the market by 10%+ annually over 15 years with a Sharpe ratio above 2.0 represents 99.9th percentile achievement. This level of sustained outperformance is historically associated with investors like Buffett, Simons, or Medallion Fund-tier performance. Fewer than 1 in 1,000 investors achieve this.
+- key: safety
+  name: Safety
+  weight: 35
+  description:
+  - |-
+    Protecting invested capital from catastrophic loss through diversification, appropriate risk sizing, and conservative positioning during uncertainty.
+  - |-
+    Understanding your true risk tolerance, avoiding concentrated bets, and ensuring drawdowns remain within limits you can tolerate psychologically and financially.
+  - People who prioritise this value accept lower expected returns in exchange for predictability and downside protection.
+  benchmarks:
+    level_1:
+      text: No awareness of portfolio risk; no diversification strategy; fully exposed to drawdowns
+      reasoning: |-
+        Most investors have no explicit awareness of portfolio risk. They hold whatever investments they happened to acquire without considering diversification, correlation, or downside exposure. Studies show the majority of retail investors cannot quantify their potential losses in a downturn and are fully exposed to single-asset or single-market risk.
+    level_2:
+      text: Diversified across asset classes; understands own risk tolerance; portfolio drawdown within planned limits
+      reasoning: |-
+        Diversifying across asset classes and understanding one's own risk tolerance places an investor above the majority who hold concentrated or poorly constructed portfolios. At this level, the investor can articulate their maximum acceptable drawdown and has positioned their portfolio accordingly, keeping losses within planned limits during moderate market stress.
+    level_3:
+      text: Quantified risk budget; tail-risk hedging; portfolio survived 30%+ drawdown within planned parameters
+      reasoning: |-
+        Having a quantified risk budget, implementing tail-risk hedging strategies, and surviving a 30%+ drawdown within planned parameters represents 95th percentile risk management. At this level, the investor has explicitly modelled worst-case scenarios and built a portfolio that behaves predictably under stress rather than one that merely hopes for the best.
+    level_4:
+      text: |-
+        Stress-tested portfolio against historical crises; options overlays or hedging strategies; maximum drawdown consistently below market
+      reasoning: |-
+        Stress-testing portfolios against historical crises (1929, 1973, 2000, 2008, 2020), implementing options overlays or hedging strategies, and consistently achieving maximum drawdowns below the broader market represents 99th percentile risk management. This requires both deep understanding of tail risks and the discipline to pay the ongoing cost of hedging.
+    level_5:
+      text: |-
+        Proprietary risk models; portfolio resilient across all historical regimes; anti-fragile positioning that profits from volatility
+      reasoning: |-
+        Proprietary risk models that maintain portfolio resilience across all historical regimes, with anti-fragile positioning that profits from volatility, represent 99.9th percentile risk management. This is the level of institutional risk management -- where the portfolio is not merely protected against extreme events but structured to benefit from the dislocations they create.
+- key: simplicity
+  name: Simplicity
+  weight: 25
+  description:
+  - Keeping your investment approach as straightforward and low-maintenance as possible.
+  - |-
+    Using index funds over active strategies, minimising the number of accounts and holdings, automating contributions, and resisting the urge to optimise beyond what evidence supports.
+  - |-
+    People who prioritise this value believe the best investment strategy is one you can sustain for decades without tinkering.
+  benchmarks:
+    level_1:
+      text: No FI target; investing without reference to a freedom number or milestone
+      reasoning: |-
+        The vast majority of investors have no FI target and have never calculated a freedom number. They invest without reference to specific milestones or withdrawal timelines. Investing at this level is disconnected from any structured plan to make paid employment optional.
+    level_2:
+      text: Knows FI number; tracks progress; investment allocation reflects FI timeline
+      reasoning: |-
+        Knowing your FI number (typically 25x annual expenses) and tracking progress toward it represents 80th percentile awareness. At this level, investment allocation reflects the FI timeline -- longer horizons allow more equity exposure, whilst approaching milestones triggers appropriate de-risking. Most investors never connect their portfolio to a specific independence target.
+    level_3:
+      text: Achieved Coast FI; allocation strategy shifts as FI milestones approach; glide path planned
+      reasoning: |-
+        Achieving Coast FI -- where existing investments will compound to full FI by traditional retirement age without further contributions -- represents 95th percentile progress. At this level, the investor has a planned glide path that shifts allocation as milestones approach, balancing growth needs against the increasing importance of capital preservation near the finish line.
+    level_4:
+      text: Lean FI achieved; portfolio structured for sustainable withdrawal; sequence-of-returns risk mitigated
+      reasoning: |-
+        Achieving Lean FI -- where invested wealth can sustain a modest but comfortable lifestyle indefinitely -- with a portfolio structured for sustainable withdrawal and sequence-of-returns risk mitigated represents 99th percentile FI progress. At this level, the investor has moved beyond accumulation into decumulation planning, ensuring their portfolio can sustain withdrawals through adverse market conditions.
+    level_5:
+      text: Full FI achieved and sustained; portfolio generates reliable income across market regimes; work is entirely optional
+      reasoning: |-
+        Full financial independence achieved and sustained -- with a portfolio that generates reliable income across all market regimes and makes work entirely optional -- represents 99.9th percentile achievement. Fewer than 1 in 1,000 investors reach a point where their invested wealth sustains their lifestyle indefinitely regardless of market conditions, economic cycles, or inflation.

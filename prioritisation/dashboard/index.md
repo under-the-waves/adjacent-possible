@@ -33,6 +33,222 @@ body .main-content {
     margin: 0 auto;
 }
 
+/* ── Tier selector cards ── */
+
+.tier-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.tier-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.tier-card:hover:not(.disabled) {
+    border-color: #155799;
+    box-shadow: 0 4px 12px rgba(21,87,153,0.15);
+}
+
+.tier-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tier-card .tier-name {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.tier-card .tier-time {
+    color: #155799;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.tier-card .tier-desc {
+    color: #666;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+.tier-card .tier-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.tier-card .tier-badge.recommended {
+    background: #e3f2fd;
+    color: #155799;
+}
+
+.tier-card .tier-badge.coming-soon {
+    background: #f5f5f5;
+    color: #999;
+}
+
+/* ── Question card ── */
+
+.survey-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.progress-bar-container {
+    margin-bottom: 24px;
+}
+
+.progress-bar-outer {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.pillar-divider {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 0;
+}
+
+.pillar-divider .pillar-divider-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.pillar-divider .pillar-divider-desc {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.question-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.question-card .q-area-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.question-card .q-domain-name {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.question-card .q-prompt {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.radio-option {
+    display: block;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #333;
+}
+
+.radio-option:hover {
+    border-color: #155799;
+    background: #f8fbff;
+}
+
+.radio-option.selected {
+    border-color: #155799;
+    background: #e3f2fd;
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+.radio-option .level-label {
+    font-weight: 600;
+    color: #155799;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.85em;
+}
+
+.question-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.question-nav button {
+    padding: 10px 24px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.question-nav button:hover {
+    background: #e9ecef;
+}
+
+.question-nav button.btn-primary {
+    background: #155799;
+    color: white;
+    border-color: #155799;
+}
+
+.question-nav button.btn-primary:hover {
+    background: #0d47a1;
+}
+
+.question-nav button.btn-skip {
+    color: #888;
+    border-color: #e0e0e0;
+}
+
+/* ── Results grid (reused from original dashboard) ── */
+
 .dashboard-controls {
     display: flex;
     justify-content: center;
@@ -213,42 +429,29 @@ body .main-content {
     text-decoration: underline;
 }
 
-.level-selector {
-    display: flex;
-    gap: 2px;
-}
-
-.level-btn {
-    width: 28px;
+.area-level-badge {
+    display: inline-block;
+    min-width: 28px;
     height: 28px;
-    border: 1px solid #ddd;
+    line-height: 28px;
+    text-align: center;
     border-radius: 4px;
-    background: white;
-    cursor: pointer;
-    font-size: 0.75em;
+    font-size: 0.8em;
     font-weight: 600;
-    color: #666;
-    transition: all 0.15s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.level-btn:hover {
-    background: #e9ecef;
-}
-
-.level-btn.selected {
     color: white;
-    border-color: transparent;
 }
 
-.level-btn.selected.l0 { background: #bdbdbd; }
-.level-btn.selected.l1 { background: #e53935; }
-.level-btn.selected.l2 { background: #fb8c00; }
-.level-btn.selected.l3 { background: #fdd835; color: #333; }
-.level-btn.selected.l4 { background: #43a047; }
-.level-btn.selected.l5 { background: #1565c0; }
+.area-level-badge.lb-0 { background: #bdbdbd; }
+.area-level-badge.lb-1 { background: #e53935; }
+.area-level-badge.lb-2 { background: #fb8c00; }
+.area-level-badge.lb-3 { background: #fdd835; color: #333; }
+.area-level-badge.lb-4 { background: #43a047; }
+.area-level-badge.lb-5 { background: #1565c0; }
+
+.area-level-badge.propagated {
+    font-style: italic;
+    opacity: 0.75;
+}
 
 .level-legend {
     display: flex;
@@ -272,6 +475,47 @@ body .main-content {
     border-radius: 3px;
 }
 
+/* ── Weight sliders (Tier 3) ── */
+
+.weight-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.weight-card h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.weight-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.weight-slider-row label {
+    min-width: 160px;
+    font-size: 0.9em;
+}
+
+.weight-slider-row input[type="range"] {
+    flex: 1;
+}
+
+.weight-slider-row .weight-val {
+    min-width: 40px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* ── Responsive ── */
+
 @media (max-width: 768px) {
     .area-grid {
         grid-template-columns: 1fr;
@@ -285,56 +529,45 @@ body .main-content {
         min-width: 80px;
         padding: 8px 12px;
     }
+
+    .tier-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .question-card {
+        padding: 20px;
+    }
+
+    .weight-slider-row {
+        flex-wrap: wrap;
+    }
+
+    .weight-slider-row label {
+        min-width: 100%;
+    }
 }
 </style>
 
 <div class="dashboard-container">
-    <div class="dashboard-header">
-        <h1>Life Areas Dashboard</h1>
-        <p>Self-assess your current level (1 -- 5) in each life area. Your selections are saved locally in your browser.</p>
-    </div>
-
-    <div class="level-legend">
-        <div class="legend-item"><span class="legend-dot" style="background: #bdbdbd;"></span> Not assessed</div>
-        <div class="legend-item"><span class="legend-dot" style="background: #e53935;"></span> 1 -- Awareness</div>
-        <div class="legend-item"><span class="legend-dot" style="background: #fb8c00;"></span> 2 -- Foundation</div>
-        <div class="legend-item"><span class="legend-dot" style="background: #fdd835;"></span> 3 -- Proficiency</div>
-        <div class="legend-item"><span class="legend-dot" style="background: #43a047;"></span> 4 -- Excellence</div>
-        <div class="legend-item"><span class="legend-dot" style="background: #1565c0;"></span> 5 -- Mastery</div>
-    </div>
-
-    <div class="summary-bar">
-        <div class="summary-stat">
-            <div class="stat-value" id="areasAssessed">0</div>
-            <div class="stat-label">Areas assessed</div>
-        </div>
-        <div class="summary-stat">
-            <div class="stat-value" id="averageLevel">--</div>
-            <div class="stat-label">Average level</div>
-        </div>
-        <div class="summary-stat">
-            <div class="stat-value" id="lowestArea">--</div>
-            <div class="stat-label">Lowest area</div>
-        </div>
-        <div class="summary-stat">
-            <div class="stat-value" id="highestArea">--</div>
-            <div class="stat-label">Highest area</div>
-        </div>
-    </div>
-
-    <div class="dashboard-controls">
-        <button class="btn-danger" onclick="resetAll()">Reset All</button>
-        <button onclick="exportData()">Export CSV</button>
-    </div>
-
-    <div id="dashboardGrid"></div>
+    <div id="viewLanding" style="display:none;"></div>
+    <div id="viewSurvey" style="display:none;"></div>
+    <div id="viewResults" style="display:none;"></div>
 </div>
 
 <script>
+// ── YAML data embedded via Liquid ──
+const SURVEY_DATA = {
+{% for area in site.data.life_areas %}
+    '{{ area[0] }}': {{ area[1] | jsonify }},
+{% endfor %}
+};
+
+// ── Layout ordering ──
 const PILLARS = [
     {
         name: "Expand Your Awareness",
         class: "pillar-1",
+        color: "#6a1b9a",
         domains: [
             { name: "Values", areas: [
                 { slug: "self-awareness", label: "Self-awareness" },
@@ -360,6 +593,7 @@ const PILLARS = [
     {
         name: "Look After Yourself",
         class: "pillar-2",
+        color: "#1565c0",
         domains: [
             { name: "Health", areas: [
                 { slug: "fitness", label: "Fitness" },
@@ -383,6 +617,7 @@ const PILLARS = [
     {
         name: "Connect with Others",
         class: "pillar-3",
+        color: "#2e7d32",
         domains: [
             { name: "Expression", areas: [
                 { slug: "body-image", label: "Body image" },
@@ -397,7 +632,8 @@ const PILLARS = [
             ]},
             { name: "Friends and Relationships", areas: [
                 { slug: "friendship", label: "Friendship" },
-                { slug: "romantic-relationships", label: "Romantic relationships" },
+                { slug: "relationship-status", label: "Relationship Status" },
+                { slug: "romantic-relationships", label: "Relationship Quality" },
                 { slug: "sex", label: "Sex" }
             ]}
         ]
@@ -405,6 +641,7 @@ const PILLARS = [
     {
         name: "Organise Your Life",
         class: "pillar-4",
+        color: "#e65100",
         domains: [
             { name: "Environment", areas: [
                 { slug: "housing", label: "Housing" },
@@ -429,6 +666,7 @@ const PILLARS = [
     {
         name: "Create & Contribute",
         class: "pillar-5",
+        color: "#c62828",
         domains: [
             { name: "Career", areas: [
                 { slug: "current-work", label: "Current work" },
@@ -447,47 +685,564 @@ const PILLARS = [
     }
 ];
 
-const STORAGE_KEY = 'ap-dashboard-levels';
+const LEVEL_NAMES = ['Not assessed', 'Awareness', 'Foundation', 'Proficiency', 'Excellence', 'Mastery'];
+const LEVEL_COLORS = ['#bdbdbd', '#e53935', '#fb8c00', '#fdd835', '#43a047', '#1565c0'];
+
+// ── localStorage ──
+const STORAGE_LEVELS = 'ap-dashboard-levels';
+const STORAGE_TIER = 'ap-survey-tier';
+const STORAGE_RESPONSES = 'ap-survey-responses';
+const STORAGE_WEIGHTS = 'ap-survey-weights';
 
 function loadLevels() {
-    try {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        return stored ? JSON.parse(stored) : {};
-    } catch (e) {
-        return {};
+    try { return JSON.parse(localStorage.getItem(STORAGE_LEVELS)) || {}; }
+    catch(e) { return {}; }
+}
+function saveLevels(levels) { localStorage.setItem(STORAGE_LEVELS, JSON.stringify(levels)); }
+function loadTier() { return parseInt(localStorage.getItem(STORAGE_TIER)) || 0; }
+function saveTier(t) { localStorage.setItem(STORAGE_TIER, String(t)); }
+function loadResponses() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_RESPONSES)) || {}; }
+    catch(e) { return {}; }
+}
+function saveResponses(r) { localStorage.setItem(STORAGE_RESPONSES, JSON.stringify(r)); }
+function loadWeights() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_WEIGHTS)) || {}; }
+    catch(e) { return {}; }
+}
+function saveWeights(w) { localStorage.setItem(STORAGE_WEIGHTS, JSON.stringify(w)); }
+
+// ── Helpers ──
+
+function getPrimaryValue(slug) {
+    const data = SURVEY_DATA[slug];
+    if (!data || !data.values) return null;
+    // Highest-weight value that has benchmarks
+    let best = null;
+    for (const v of data.values) {
+        if (v.benchmarks && v.benchmarks.level_1) {
+            if (!best || v.weight > best.weight) best = v;
+        }
     }
+    return best;
 }
 
-function saveLevels(levels) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(levels));
+function areaBenchmarks(slug) {
+    const pv = getPrimaryValue(slug);
+    if (!pv) return null;
+    return pv.benchmarks;
 }
 
-function setLevel(slug, level) {
-    const levels = loadLevels();
-    if (level === 0) {
-        delete levels[slug];
+function areaHasBenchmarks(slug) {
+    return !!areaBenchmarks(slug);
+}
+
+function isDomainRep(slug) {
+    const data = SURVEY_DATA[slug];
+    return data && data.domain_representative === true;
+}
+
+function getAllAreas() {
+    const areas = [];
+    PILLARS.forEach(p => p.domains.forEach(d => d.areas.forEach(a => areas.push(a))));
+    return areas;
+}
+
+function getDomainForSlug(slug) {
+    for (const p of PILLARS) {
+        for (const d of p.domains) {
+            for (const a of d.areas) {
+                if (a.slug === slug) return { pillar: p, domain: d };
+            }
+        }
+    }
+    return null;
+}
+
+// ── Question generation ──
+
+function getQuestions(tier) {
+    const questions = [];
+    PILLARS.forEach((pillar, pi) => {
+        // Add pillar divider
+        questions.push({ type: 'divider', pillar: pillar });
+        pillar.domains.forEach(domain => {
+            domain.areas.forEach(area => {
+                if (tier === 1) {
+                    // Tier 1: domain representatives only
+                    if (!isDomainRep(area.slug)) return;
+                    if (!areaHasBenchmarks(area.slug)) return;
+                    const pv = getPrimaryValue(area.slug);
+                    questions.push({
+                        type: 'question',
+                        slug: area.slug,
+                        label: area.label,
+                        domain: domain.name,
+                        pillar: pillar,
+                        valueName: pv.name,
+                        benchmarks: pv.benchmarks,
+                        propagate: true
+                    });
+                } else if (tier === 2) {
+                    // Tier 2: all areas with benchmarks, primary value only
+                    if (!areaHasBenchmarks(area.slug)) return;
+                    const pv = getPrimaryValue(area.slug);
+                    questions.push({
+                        type: 'question',
+                        slug: area.slug,
+                        label: area.label,
+                        domain: domain.name,
+                        pillar: pillar,
+                        valueName: pv.name,
+                        benchmarks: pv.benchmarks,
+                        propagate: false
+                    });
+                } else if (tier === 3) {
+                    // Tier 3: all areas, all values with benchmarks
+                    const data = SURVEY_DATA[area.slug];
+                    if (!data) return;
+                    const valuesWithBench = data.values.filter(v => v.benchmarks && v.benchmarks.level_1);
+                    if (valuesWithBench.length === 0) return;
+                    // Add weight card before questions
+                    questions.push({
+                        type: 'weights',
+                        slug: area.slug,
+                        label: area.label,
+                        domain: domain.name,
+                        pillar: pillar,
+                        values: valuesWithBench
+                    });
+                    valuesWithBench.forEach(v => {
+                        questions.push({
+                            type: 'question',
+                            slug: area.slug,
+                            label: area.label,
+                            domain: domain.name,
+                            pillar: pillar,
+                            valueName: v.name,
+                            valueKey: v.key,
+                            benchmarks: v.benchmarks,
+                            propagate: false,
+                            tier3: true
+                        });
+                    });
+                }
+            });
+        });
+    });
+    // Remove trailing/leading dividers with no questions after them
+    return cleanDividers(questions);
+}
+
+function cleanDividers(questions) {
+    const cleaned = [];
+    for (let i = 0; i < questions.length; i++) {
+        if (questions[i].type === 'divider') {
+            // Only keep if there's a non-divider after it
+            let hasContent = false;
+            for (let j = i + 1; j < questions.length; j++) {
+                if (questions[j].type === 'divider') break;
+                hasContent = true;
+                break;
+            }
+            if (hasContent) cleaned.push(questions[i]);
+        } else {
+            cleaned.push(questions[i]);
+        }
+    }
+    return cleaned;
+}
+
+// ── Survey state ──
+let surveyQuestions = [];
+let surveyIndex = 0;
+let surveyAnswers = {};  // slug -> level (tier 1/2) or slug:valueKey -> level (tier 3)
+let currentTier = 0;
+
+// ── Views ──
+
+function showView(name) {
+    document.getElementById('viewLanding').style.display = name === 'landing' ? '' : 'none';
+    document.getElementById('viewSurvey').style.display = name === 'survey' ? '' : 'none';
+    document.getElementById('viewResults').style.display = name === 'results' ? '' : 'none';
+}
+
+// ── LANDING ──
+
+function renderLanding() {
+    const hasResults = Object.keys(loadLevels()).length > 0;
+    if (hasResults) {
+        renderResults();
+        showView('results');
+        return;
+    }
+
+    const el = document.getElementById('viewLanding');
+    el.innerHTML = `
+        <div class="dashboard-header">
+            <h1>Life Areas Assessment</h1>
+            <p>Assess your current level across ${getAllAreas().length} life areas. Choose a survey depth that suits you.</p>
+        </div>
+        <div class="tier-cards">
+            <div class="tier-card" onclick="startSurvey(1)">
+                <div class="tier-name">Quick</div>
+                <div class="tier-time">~2 minutes</div>
+                <div class="tier-desc">One question per domain (16 questions). Your answer is applied to all areas in that domain.</div>
+            </div>
+            <div class="tier-card" onclick="startSurvey(2)">
+                <div class="tier-name">Standard</div>
+                <div class="tier-time">~10 minutes</div>
+                <div class="tier-desc">One question per life area, using the most important value for each. Covers all areas with benchmarks.</div>
+                <span class="tier-badge recommended">Recommended</span>
+            </div>
+            <div class="tier-card" onclick="startSurvey(3)">
+                <div class="tier-name">Detailed</div>
+                <div class="tier-time">~30 minutes</div>
+                <div class="tier-desc">Multiple questions per life area (one per value). Optional weight adjustment. Most precise scoring.</div>
+            </div>
+        </div>
+    `;
+    showView('landing');
+}
+
+// ── SURVEY ──
+
+function startSurvey(tier) {
+    currentTier = tier;
+    saveTier(tier);
+    surveyQuestions = getQuestions(tier);
+    surveyIndex = 0;
+    surveyAnswers = {};
+    renderQuestion();
+    showView('survey');
+}
+
+function renderQuestion() {
+    const el = document.getElementById('viewSurvey');
+
+    if (surveyIndex >= surveyQuestions.length) {
+        finishSurvey();
+        return;
+    }
+
+    const q = surveyQuestions[surveyIndex];
+    const totalQ = surveyQuestions.filter(x => x.type === 'question' || x.type === 'weights').length;
+    const answeredQ = surveyQuestions.slice(0, surveyIndex).filter(x => x.type === 'question' || x.type === 'weights').length;
+    const pillarColor = q.pillar ? q.pillar.color : '#155799';
+
+    let html = '<div class="survey-container">';
+
+    // Progress bar
+    const pct = totalQ > 0 ? Math.round((answeredQ / totalQ) * 100) : 0;
+    html += `<div class="progress-bar-container">
+        <div class="progress-bar-outer">
+            <div class="progress-bar-fill" style="width:${pct}%; background:${pillarColor};"></div>
+        </div>
+        <div class="progress-info">
+            <span>${answeredQ} of ${totalQ}</span>
+            <span>${q.pillar ? q.pillar.name : ''}</span>
+        </div>
+    </div>`;
+
+    if (q.type === 'divider') {
+        html += `<div class="pillar-divider" style="color:${q.pillar.color};">
+            <div class="pillar-divider-name">${q.pillar.name}</div>
+            <div class="pillar-divider-desc">Next section</div>
+        </div>
+        <div class="question-nav">
+            <div></div>
+            <button class="btn-primary" onclick="surveyIndex++; renderQuestion();">Continue</button>
+        </div>`;
+    } else if (q.type === 'weights') {
+        // Tier 3 weight adjustment card
+        const savedWeights = loadWeights();
+        html += `<div class="weight-card">
+            <h3>Adjust weights for ${q.label}</h3>
+            <p style="color:#666;font-size:0.85em;margin-bottom:16px;">How important is each value to you? Adjust the sliders or keep the defaults.</p>`;
+        q.values.forEach(v => {
+            const savedW = savedWeights[q.slug + ':' + v.key];
+            const w = savedW !== undefined ? savedW : v.weight;
+            html += `<div class="weight-slider-row">
+                <label>${v.name}</label>
+                <input type="range" min="0" max="100" value="${w}" oninput="updateWeightDisplay(this, '${q.slug}:${v.key}')">
+                <span class="weight-val" id="wv-${q.slug}-${v.key}">${w}</span>
+            </div>`;
+        });
+        html += `<div style="margin-top:12px;">
+            <button onclick="resetWeightsForArea('${q.slug}')" style="font-size:0.85em;padding:4px 12px;border:1px solid #ddd;border-radius:4px;background:#f8f9fa;cursor:pointer;">Use defaults</button>
+        </div></div>`;
+        html += `<div class="question-nav">
+            ${surveyIndex > 0 ? '<button onclick="surveyBack()">Back</button>' : '<div></div>'}
+            <button class="btn-primary" onclick="saveCurrentWeights(); surveyIndex++; renderQuestion();">Continue</button>
+        </div>`;
     } else {
-        levels[slug] = level;
+        // Question card
+        const answerKey = q.tier3 ? q.slug + ':' + q.valueKey : q.slug;
+        const currentAnswer = surveyAnswers[answerKey] || 0;
+
+        html += `<div class="question-card">
+            <div class="q-area-name">${q.label}</div>
+            <div class="q-domain-name">${q.domain} ${q.tier3 ? ' -- ' + q.valueName : ''}</div>
+            <div class="q-prompt">Which best describes you?</div>`;
+
+        for (let lvl = 1; lvl <= 5; lvl++) {
+            const bKey = 'level_' + lvl;
+            const bench = q.benchmarks[bKey];
+            if (!bench) continue;
+            const sel = currentAnswer === lvl ? ' selected' : '';
+            html += `<label class="radio-option${sel}" onclick="selectAnswer('${answerKey}', ${lvl})">
+                <input type="radio" name="q-${surveyIndex}" value="${lvl}" ${currentAnswer === lvl ? 'checked' : ''}>
+                <span class="level-label">Level ${lvl}: ${LEVEL_NAMES[lvl]}</span>
+                ${bench.text}
+            </label>`;
+        }
+
+        html += `</div>`;
+        html += `<div class="question-nav">
+            ${surveyIndex > 0 ? '<button onclick="surveyBack()">Back</button>' : '<div></div>'}
+            <div style="display:flex;gap:10px;">
+                <button class="btn-skip" onclick="skipQuestion('${answerKey}')">Skip</button>
+                <button class="btn-primary" onclick="nextQuestion()" ${currentAnswer === 0 ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''} id="btnNext">Next</button>
+            </div>
+        </div>`;
     }
-    saveLevels(levels);
-    renderDashboard();
+
+    html += '</div>';
+    el.innerHTML = html;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function resetAll() {
-    if (confirm('Reset all self-assessments? This cannot be undone.')) {
-        localStorage.removeItem(STORAGE_KEY);
-        renderDashboard();
+function selectAnswer(key, level) {
+    surveyAnswers[key] = level;
+    renderQuestion();
+}
+
+function skipQuestion(key) {
+    delete surveyAnswers[key];
+    surveyIndex++;
+    renderQuestion();
+}
+
+function nextQuestion() {
+    surveyIndex++;
+    renderQuestion();
+}
+
+function surveyBack() {
+    if (surveyIndex > 0) surveyIndex--;
+    renderQuestion();
+}
+
+function updateWeightDisplay(input, key) {
+    const slug = key.split(':')[0];
+    const vkey = key.split(':')[1];
+    document.getElementById('wv-' + slug + '-' + vkey).textContent = input.value;
+}
+
+function saveCurrentWeights() {
+    const q = surveyQuestions[surveyIndex];
+    if (!q || q.type !== 'weights') return;
+    const weights = loadWeights();
+    q.values.forEach(v => {
+        const el = document.querySelector(`input[type="range"][oninput*="${q.slug}:${v.key}"]`);
+        if (el) weights[q.slug + ':' + v.key] = parseInt(el.value);
+    });
+    saveWeights(weights);
+}
+
+function resetWeightsForArea(slug) {
+    const data = SURVEY_DATA[slug];
+    if (!data) return;
+    const weights = loadWeights();
+    data.values.forEach(v => {
+        weights[slug + ':' + v.key] = v.weight;
+    });
+    saveWeights(weights);
+    renderQuestion(); // re-render to update slider positions
+}
+
+// ── Finish survey ──
+
+function finishSurvey() {
+    const levels = loadLevels();
+    const tier = currentTier;
+
+    if (tier === 1) {
+        // Propagate domain representative answers to all areas in domain
+        for (const [slug, level] of Object.entries(surveyAnswers)) {
+            const info = getDomainForSlug(slug);
+            if (info) {
+                info.domain.areas.forEach(a => {
+                    levels[a.slug] = level;
+                    // Mark propagated
+                    if (a.slug !== slug) {
+                        levels['_propagated_' + a.slug] = true;
+                    } else {
+                        delete levels['_propagated_' + a.slug];
+                    }
+                });
+            }
+        }
+    } else if (tier === 2) {
+        for (const [slug, level] of Object.entries(surveyAnswers)) {
+            levels[slug] = level;
+            delete levels['_propagated_' + slug];
+        }
+    } else if (tier === 3) {
+        // Weighted average per area
+        const areaScores = {};  // slug -> [{level, weight}]
+        const savedWeights = loadWeights();
+
+        for (const [key, level] of Object.entries(surveyAnswers)) {
+            const parts = key.split(':');
+            const slug = parts[0];
+            const valueKey = parts[1];
+            if (!areaScores[slug]) areaScores[slug] = [];
+
+            // Get weight
+            const savedW = savedWeights[key];
+            const data = SURVEY_DATA[slug];
+            let weight = 1;
+            if (data) {
+                const v = data.values.find(x => x.key === valueKey);
+                weight = savedW !== undefined ? savedW : (v ? v.weight : 1);
+            }
+            areaScores[slug].push({ level, weight });
+        }
+
+        for (const [slug, scores] of Object.entries(areaScores)) {
+            const totalWeight = scores.reduce((s, x) => s + x.weight, 0);
+            if (totalWeight > 0) {
+                const avg = scores.reduce((s, x) => s + x.level * x.weight, 0) / totalWeight;
+                levels[slug] = Math.round(avg);
+                delete levels['_propagated_' + slug];
+            }
+        }
+    }
+
+    saveLevels(levels);
+    saveResponses(surveyAnswers);
+    renderResults();
+    showView('results');
+}
+
+// ── RESULTS ──
+
+function renderResults() {
+    const levels = loadLevels();
+    const el = document.getElementById('viewResults');
+    const baseUrl = '{{ site.baseurl }}';
+
+    let totalAssessed = 0, totalLevel = 0;
+    let lowest = { name: '', level: 6 };
+    let highest = { name: '', level: 0 };
+
+    let gridHTML = '';
+    PILLARS.forEach(pillar => {
+        let pillarTotal = 0, pillarCount = 0;
+        let bodyHTML = '<div class="pillar-body">';
+
+        pillar.domains.forEach(domain => {
+            bodyHTML += `<div class="domain-group"><div class="domain-label">${domain.name}</div><div class="area-grid">`;
+            domain.areas.forEach(area => {
+                const level = levels[area.slug] || 0;
+                const propagated = levels['_propagated_' + area.slug];
+
+                if (level > 0) {
+                    totalAssessed++;
+                    totalLevel += level;
+                    pillarTotal += level;
+                    pillarCount++;
+                    if (level < lowest.level) lowest = { name: area.label, level };
+                    if (level > highest.level) highest = { name: area.label, level };
+                }
+
+                const propClass = propagated ? ' propagated' : '';
+                const badge = level > 0
+                    ? `<span class="area-level-badge lb-${level}${propClass}" title="${LEVEL_NAMES[level]}${propagated ? ' (estimated)' : ''}">${level}</span>`
+                    : `<span class="area-level-badge lb-0">-</span>`;
+
+                bodyHTML += `<div class="area-card level-${level}">
+                    <span class="area-name"><a href="${baseUrl}/${area.slug}/">${area.label}</a></span>
+                    ${badge}
+                </div>`;
+            });
+            bodyHTML += '</div></div>';
+        });
+        bodyHTML += '</div>';
+
+        const avg = pillarCount > 0 ? (pillarTotal / pillarCount).toFixed(1) : '--';
+        gridHTML += `<div class="pillar-section ${pillar.class}">
+            <div class="pillar-header" onclick="togglePillar(this)">
+                <span>${pillar.name} <span class="collapse-icon">&#9660;</span></span>
+                <span class="pillar-avg">Avg: ${avg}</span>
+            </div>${bodyHTML}</div>`;
+    });
+
+    const totalAreas = getAllAreas().length;
+    const tierLabel = loadTier() > 0 ? ` (Tier ${loadTier()})` : '';
+
+    el.innerHTML = `
+        <div class="dashboard-header">
+            <h1>Life Areas Dashboard${tierLabel}</h1>
+            <p>Your self-assessment results. Areas link to detailed guides.</p>
+        </div>
+
+        <div class="level-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#bdbdbd;"></span> Not assessed</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#e53935;"></span> 1 -- Awareness</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#fb8c00;"></span> 2 -- Foundation</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#fdd835;"></span> 3 -- Proficiency</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#43a047;"></span> 4 -- Excellence</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#1565c0;"></span> 5 -- Mastery</div>
+        </div>
+
+        <div class="summary-bar">
+            <div class="summary-stat">
+                <div class="stat-value">${totalAssessed} / ${totalAreas}</div>
+                <div class="stat-label">Areas assessed</div>
+            </div>
+            <div class="summary-stat">
+                <div class="stat-value">${totalAssessed > 0 ? (totalLevel / totalAssessed).toFixed(1) : '--'}</div>
+                <div class="stat-label">Average level</div>
+            </div>
+            <div class="summary-stat">
+                <div class="stat-value${lowest.level < 6 ? ' stat-text' : ''}">${lowest.level < 6 ? lowest.name : '--'}</div>
+                <div class="stat-label">Lowest area</div>
+            </div>
+            <div class="summary-stat">
+                <div class="stat-value${highest.level > 0 ? ' stat-text' : ''}">${highest.level > 0 ? highest.name : '--'}</div>
+                <div class="stat-label">Highest area</div>
+            </div>
+        </div>
+
+        <div class="dashboard-controls">
+            <button onclick="retakeSurvey()">Retake Survey</button>
+            <button onclick="exportData()">Export CSV</button>
+        </div>
+
+        <div id="dashboardGrid">${gridHTML}</div>
+    `;
+}
+
+function retakeSurvey() {
+    if (confirm('Start a new assessment? Your current results will be replaced.')) {
+        localStorage.removeItem(STORAGE_LEVELS);
+        localStorage.removeItem(STORAGE_RESPONSES);
+        localStorage.removeItem(STORAGE_WEIGHTS);
+        renderLanding();
     }
 }
 
 function exportData() {
     const levels = loadLevels();
-    let csv = 'Pillar,Domain,Life Area,Level\n';
+    let csv = 'Pillar,Domain,Life Area,Level,Propagated\n';
     PILLARS.forEach(pillar => {
         pillar.domains.forEach(domain => {
             domain.areas.forEach(area => {
                 const level = levels[area.slug] || '';
-                csv += `"${pillar.name}","${domain.name}","${area.label}",${level}\n`;
+                const prop = levels['_propagated_' + area.slug] ? 'yes' : '';
+                csv += `"${pillar.name}","${domain.name}","${area.label}",${level},${prop}\n`;
             });
         });
     });
@@ -500,74 +1255,10 @@ function exportData() {
     URL.revokeObjectURL(url);
 }
 
-function renderDashboard() {
-    const levels = loadLevels();
-    const grid = document.getElementById('dashboardGrid');
-    grid.innerHTML = '';
-
-    let totalAssessed = 0;
-    let totalLevel = 0;
-    let lowest = { name: '', level: 6 };
-    let highest = { name: '', level: 0 };
-
-    PILLARS.forEach(pillar => {
-        const section = document.createElement('div');
-        section.className = `pillar-section ${pillar.class}`;
-
-        let pillarTotal = 0;
-        let pillarCount = 0;
-
-        let bodyHTML = '<div class="pillar-body">';
-        pillar.domains.forEach(domain => {
-            bodyHTML += `<div class="domain-group"><div class="domain-label">${domain.name}</div><div class="area-grid">`;
-            domain.areas.forEach(area => {
-                const level = levels[area.slug] || 0;
-                if (level > 0) {
-                    totalAssessed++;
-                    totalLevel += level;
-                    pillarTotal += level;
-                    pillarCount++;
-                    if (level < lowest.level) { lowest = { name: area.label, level }; }
-                    if (level > highest.level) { highest = { name: area.label, level }; }
-                }
-
-                let btns = '';
-                for (let i = 0; i <= 5; i++) {
-                    const sel = i === level ? `selected l${i}` : '';
-                    const label = i === 0 ? '-' : i;
-                    btns += `<button class="level-btn ${sel}" onclick="setLevel('${area.slug}', ${i})">${label}</button>`;
-                }
-
-                const baseUrl = '{{ site.baseurl }}';
-                bodyHTML += `<div class="area-card level-${level}">
-                    <span class="area-name"><a href="${baseUrl}/${area.slug}/">${area.label}</a></span>
-                    <div class="level-selector">${btns}</div>
-                </div>`;
-            });
-            bodyHTML += '</div></div>';
-        });
-        bodyHTML += '</div>';
-
-        const avg = pillarCount > 0 ? (pillarTotal / pillarCount).toFixed(1) : '--';
-        section.innerHTML = `<div class="pillar-header" onclick="togglePillar(this)"><span>${pillar.name} <span class="collapse-icon">&#9660;</span></span><span class="pillar-avg">Avg: ${avg}</span></div>${bodyHTML}`;
-        grid.appendChild(section);
-    });
-
-    const totalAreas = PILLARS.reduce((s, p) => s + p.domains.reduce((s2, d) => s2 + d.areas.length, 0), 0);
-    document.getElementById('areasAssessed').textContent = `${totalAssessed} / ${totalAreas}`;
-    document.getElementById('averageLevel').textContent = totalAssessed > 0 ? (totalLevel / totalAssessed).toFixed(1) : '--';
-
-    const lowestEl = document.getElementById('lowestArea');
-    const highestEl = document.getElementById('highestArea');
-    lowestEl.textContent = lowest.level < 6 ? lowest.name : '--';
-    highestEl.textContent = highest.level > 0 ? highest.name : '--';
-    lowestEl.className = 'stat-value' + (lowest.level < 6 ? ' stat-text' : '');
-    highestEl.className = 'stat-value' + (highest.level > 0 ? ' stat-text' : '');
-}
-
 function togglePillar(header) {
     header.parentElement.classList.toggle('collapsed');
 }
 
-document.addEventListener('DOMContentLoaded', renderDashboard);
+// ── Init ──
+document.addEventListener('DOMContentLoaded', renderLanding);
 </script>

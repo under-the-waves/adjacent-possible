@@ -1,3 +1,6 @@
+---
+life_area_slug: learning-methods
+---
 [← Back to Home](../)
 # Learning Methods
 
@@ -15,58 +18,13 @@ Your optimal approach to learning methods depends on what aspects you value most
 
 For personalised recommendations based on your unique priorities, visit [Learning Methods Personalised]({{ site.baseurl }}/learning-methods/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
-### Efficiency & Speed (35%)
-Maximising learning outcomes per unit of time invested. This includes techniques that accelerate comprehension, improve retention rates, and enable faster skill acquisition. People who prioritise this value focus on methods with proven time-to-competency ratios and systematic approaches that eliminate wasted effort.
-
-### Depth & Mastery (30%)
-Achieving deep, transferable understanding rather than surface-level knowledge. This emphasises techniques that build robust mental models, support long-term retention, and enable creative application across contexts. Those who prioritise this value prefer methods that sacrifice speed for comprehensive understanding and lasting expertise.
-
-### Enjoyment & Motivation (35%)
-Learning approaches that maintain engagement and intrinsic motivation over time. This includes methods that feel rewarding, align with personal learning preferences, and sustain curiosity. People who prioritise this value choose techniques they can maintain consistently because they find the process inherently satisfying.
+{% include life-area-values.html %}
 
 ## Benchmarks by Level
 
 Research reveals that most people have minimal understanding of effective learning principles. Averaged across studies, more than 80% of participants rated cramming as equally or more effective than spaced practice, despite cramming being demonstrably inferior. Even among college students, few use active learning strategies, with most relying on passive techniques like rereading <span class="info-icon" onclick="showReasoning('population-patterns')">i</span>. This means that even basic awareness of effective learning methods represents a significant achievement relative to the general population.
 
-### Level 1: Awareness
-
-**Efficiency & Speed**: Recognise that cramming the night before an exam is less effective than studying over multiple days and that some study methods work better than others <span class="info-icon" onclick="showReasoning('level1-efficiency')">i</span>
-
-**Depth & Mastery**: Understand the difference between memorising something temporarily versus truly learning it for long-term use <span class="info-icon" onclick="showReasoning('level1-depth')">i</span>
-
-**Enjoyment & Motivation**: Recognise that different learning approaches feel more or less sustainable personally <span class="info-icon" onclick="showReasoning('level1-enjoyment')">i</span>
-
-### Level 2: Foundation (80th percentile capability)
-
-**Efficiency & Speed**: Occasionally space out studying over several days rather than always cramming, sometimes use active recall instead of just rereading, and plan study sessions in advance <span class="info-icon" onclick="showReasoning('level2-efficiency')">i</span>
-
-**Depth & Mastery**: Sometimes seek feedback on learning progress and occasionally connect new information to existing knowledge rather than treating everything as isolated facts <span class="info-icon" onclick="showReasoning('level2-depth')">i</span>
-
-**Enjoyment & Motivation**: Develop basic study routines that can be maintained for a few weeks during important periods like exam season <span class="info-icon" onclick="showReasoning('level2-enjoyment')">i</span>
-
-### Level 3: Proficiency (95th percentile capability)
-
-**Efficiency & Speed**: Systematically space out learning over time rather than cramming for most important goals, regularly use self-testing as a primary study method, and apply basic spaced repetition principles <span class="info-icon" onclick="showReasoning('level3-efficiency')">i</span>
-
-**Depth & Mastery**: Engage in deliberate practice for at least one skill area, actively working on specific weaknesses rather than just general practice, and consistently seek and apply feedback <span class="info-icon" onclick="showReasoning('level3-depth')">i</span>
-
-**Enjoyment & Motivation**: Maintain effective learning routines over months rather than just weeks and successfully complete challenging learning projects that most people abandon <span class="info-icon" onclick="showReasoning('level3-enjoyment')">i</span>
-
-### Level 4: Excellence (99th percentile capability)
-
-**Efficiency & Speed**: Systematically apply multiple evidence-based learning techniques across different domains with measurably superior retention and acquisition rates compared to typical approaches <span class="info-icon" onclick="showReasoning('level4-efficiency')">i</span>
-
-**Depth & Mastery**: Consistently engage in high-quality deliberate practice across multiple skill areas, achieving development rates that significantly exceed typical timelines while maintaining depth <span class="info-icon" onclick="showReasoning('level4-depth')">i</span>
-
-**Enjoyment & Motivation**: Sustain challenging learning projects over years while maintaining motivation and complete goals that require exceptional persistence and self-regulation <span class="info-icon" onclick="showReasoning('level4-enjoyment')">i</span>
-
-### Level 5: Mastery (99.9th percentile capability)
-
-**Efficiency & Speed**: Apply sophisticated learning methods systematically across multiple domains with consistent results and achieve learning rates that clearly exceed those of other dedicated learners <span class="info-icon" onclick="showReasoning('level5-efficiency')">i</span>
-
-**Depth & Mastery**: Consistently apply deliberate practice principles across several skill areas with sustained results over many years, achieving expertise in multiple challenging domains <span class="info-icon" onclick="showReasoning('level5-depth')">i</span>
-
-**Enjoyment & Motivation**: Maintain effective learning habits over many years (10+ years) and complete substantial learning projects requiring exceptional consistency and dedication <span class="info-icon" onclick="showReasoning('level5-enjoyment')">i</span>
+{% include life-area-benchmarks.html %}
 
 ## Levels
 
@@ -98,66 +56,7 @@ const researchData = {
         title: 'Population Learning Patterns Research',
         content: 'Kornell and Bjork found that over 80% of participants incorrectly rated cramming as equally or more effective than spaced practice. Research by Karpicke et al. showed college students listed an average of only 2.9 study strategies, with most being passive techniques like rereading rather than active methods like self-testing. <a href="https://link.springer.com/article/10.3758/s13421-010-0035-2" target="_blank">View study</a>'
     },
-    'level1-efficiency': {
-        title: 'Level 1 Efficiency Reasoning',
-        content: 'Basic awareness that some methods work better than others represents achievement relative to the 80% of people who believe cramming is as effective as spaced practice. Simply recognising that last-minute studying is suboptimal puts someone ahead of most of the population.'
-    },
-    'level1-depth': {
-        title: 'Level 1 Depth Reasoning',
-        content: 'Understanding the difference between temporary memorisation and lasting learning reflects awareness of the forgetting curve. Most people experience rapid forgetting after cramming but don\'t connect this to their study methods.'
-    },
-    'level1-enjoyment': {
-        title: 'Level 1 Enjoyment Reasoning',
-        content: 'Recognising that learning approaches vary in sustainability reflects basic metacognitive awareness. Many people use methods they find unpleasant without considering alternatives that might be both effective and enjoyable.'
-    },
-    'level2-efficiency': {
-        title: 'Level 2 Efficiency Reasoning',
-        content: 'Research shows most students rely primarily on cramming. Occasionally spacing out study sessions and using active recall represents meaningful improvement over typical study habits, placing someone in the top 20% of learners based on method usage studies.'
-    },
-    'level2-depth': {
-        title: 'Level 2 Depth Reasoning',
-        content: 'Studies of student learning show that most treat new information as isolated facts. Occasionally connecting information and seeking feedback represents more sophisticated learning behaviour that correlates with better academic outcomes.'
-    },
-    'level2-enjoyment': {
-        title: 'Level 2 Enjoyment Reasoning',
-        content: 'Maintaining consistent study routines for weeks requires more self-regulation than most people demonstrate. Research on study habits shows that sustained routines, even basic ones, are relatively uncommon outside of intensive periods.'
-    },
-    'level3-efficiency': {
-        title: 'Level 3 Efficiency Reasoning',
-        content: 'Systematic application of spaced repetition and self-testing represents sophisticated learning behaviour documented in fewer than 5% of students in learning strategy studies. This level requires understanding and consistently applying evidence-based principles.'
-    },
-    'level3-depth': {
-        title: 'Level 3 Depth Reasoning',
-        content: 'Engaging in deliberate practice requires understanding of specific improvement principles that most people never learn. Research shows that systematic practice with feedback targeting specific weaknesses is rare even among dedicated learners.'
-    },
-    'level3-enjoyment': {
-        title: 'Level 3 Enjoyment Reasoning',
-        content: 'Maintaining learning routines over months and completing challenging projects that others abandon requires exceptional self-regulation and motivation management, characteristics found in fewer than 5% of the population according to persistence studies.'
-    },
-    'level4-efficiency': {
-        title: 'Level 4 Efficiency Reasoning',
-        content: 'Systematically applying multiple evidence-based techniques across domains requires extensive knowledge of learning science and exceptional implementation skills, found in roughly 1% of learners based on advanced learning strategy usage patterns.'
-    },
-    'level4-depth': {
-        title: 'Level 4 Depth Reasoning',
-        content: 'Consistent deliberate practice across multiple skill areas with accelerated development timelines represents expertise in learning itself, achieved by approximately 1% of dedicated learners according to expertise development research.'
-    },
-    'level4-enjoyment': {
-        title: 'Level 4 Enjoyment Reasoning',
-        content: 'Sustaining challenging learning projects over years requires exceptional motivation regulation and goal persistence, characteristics documented in roughly 1% of people who undertake significant learning goals.'
-    },
-    'level5-efficiency': {
-        title: 'Level 5 Efficiency Reasoning',
-        content: 'Achieving consistently superior learning rates across multiple domains represents mastery of learning as a meta-skill, demonstrated by approximately 1 in 1000 people based on longitudinal studies of learning achievement.'
-    },
-    'level5-depth': {
-        title: 'Level 5 Depth Reasoning',
-        content: 'Sustained deliberate practice across several skill areas over many years with genuine expertise development represents exceptional dedication and capability, achieved by roughly 1 in 1000 dedicated learners.'
-    },
-    'level5-enjoyment': {
-        title: 'Level 5 Enjoyment Reasoning',
-        content: 'Maintaining effective learning habits over 10+ years and completing substantial learning projects requiring exceptional consistency represents the top 0.1% of learning dedication and capability based on longitudinal achievement studies.'
-    }
+    {% include benchmark-reasoning.html %}
 };
 
 </script>
