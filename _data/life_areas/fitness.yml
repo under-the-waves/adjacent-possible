@@ -31,14 +31,14 @@ values:
           About 27% exercise 5+ days/week (Gallup), but far fewer follow a structured programme at 300+ minutes/week. This meets the CDC "additional benefits" threshold and represents roughly top 5% when structured and sustained.
       level_4:
         text: |-
-          Your VO2 max is above the 95th percentile for your age and sex (e.g. ~51 ml/kg/min for men aged 30-39).
+          Your VO2 max is above the 99th percentile for your age and sex (e.g. ~60 ml/kg/min for men aged 30-39).
         reasoning: |-
-          ACSM "Superior" category. Requires years of consistent cardiorespiratory training. Less than 1% of the general adult population achieves this. At this level, behaviour alone does not guarantee fitness -- physiological outcomes matter.
+          Modelled from FRIEND registry data (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4711926/" target="_blank">Kaminsky et al. 2017</a>). Characteristic of competitive amateur endurance athletes -- serious club-level runners and cyclists. Requires years of consistent cardiorespiratory training. At this level, behaviour alone does not guarantee fitness -- physiological outcomes matter.
       level_5:
         text: |-
-          Your VO2 max exceeds the 99th percentile for your age and sex (e.g. ~55+ ml/kg/min for men aged 30-39).
+          Your VO2 max exceeds the 99.9th percentile for your age and sex (e.g. ~70 ml/kg/min for men aged 30-39).
         reasoning: |-
-          FRIEND registry data. Characteristic of competitive endurance athletes, roughly 1 in 1,000 adults. Represents the ceiling of cardiorespiratory fitness achievable through training.
+          Extrapolated from FRIEND registry percentile models (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4711926/" target="_blank">Kaminsky et al. 2017</a>). Sub-elite endurance athlete territory -- roughly 1 in 1,000 adults. Represents near the ceiling of cardiorespiratory fitness achievable through training.
 
   - key: performance
     name: "Physical Performance"
