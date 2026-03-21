@@ -4,8 +4,11 @@ applicable_domains: ["investing"]
 
 values:
   investing.growth:
-    pbs: 8
-    pbs_reasoning: "Index fund investing delivers market-rate returns, which over long periods (20+ years) represent substantial wealth creation. Historical data shows global equity indices returning 7-10% annualised nominal returns. SPIVA research demonstrates that passive indexing outperforms 92-95% of active managers over 15 years, making it the highest-probability path to strong long-term returns available to retail investors. A PBS of 8 reflects that this is one of the most impactful things a typical person can do for investment returns -- only higher-risk strategies or exceptional skill could score higher."
+    pbs: 5
+    pbs_reasoning: |
+      - Historical data shows global equity indices returning [7-10% annualised nominal returns](https://www.msci.com/documents/10199/178e6643-6ae6-47b9-82be-e1fc565ededb) over multi-decade periods, turning $10,000 into approximately $150,000-$175,000 over 30 years.
+      - [SPIVA research](https://www.spglobal.com/spdji/en/research-insights/spiva/) shows passive indexing outperforms 92-95% of active managers over 15 years, making it the highest-reliability growth path for retail investors.
+      - Score 5 reflects solid wealth growth (~$175k from $10k) but well below the ceiling achievable through entrepreneurship or concentrated investments. On this scale, passive equity returns sit between scores 4 ($156k) and 6 ($625k).
     isr: 80
     isr_reasoning: "Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns with high reliability. However, shorter timeframes introduce meaningful uncertainty -- the S&P 500 has experienced drawdowns of 30-50% that took 2-7 years to recover from. The ISR of 80 reflects high long-term reliability tempered by genuine short-to-medium-term uncertainty that affects many investors' actual experience."
     uar: 65

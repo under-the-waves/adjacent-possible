@@ -158,15 +158,15 @@ investing:
   growth:
     name: "Growth"
     anchor_type: "linear"
-    anchor_max: 175000
+    anchor_max: 10000000
     anchor_unit: "dollars"
-    anchor_description: "What a $10,000 investment grows to over 30 years (in today's dollars)"
+    anchor_description: "What $10,000 could grow to over 30 years across all strategies (in today's dollars)"
     scale_levels:
-      10: "$175,000 – optimal passive equity returns (~10% real annual)"
-      8: "$44,000 – strong returns (~5% real annual)"
-      6: "$11,000 – modest real returns, barely beating inflation"
-      4: "$2,700 – losing purchasing power after inflation"
-      2: "$680 – severe capital loss"
+      10: "$10,000,000 – transformative entrepreneurial or investment success (1000x)"
+      8: "$2,500,000 – very successful business or concentrated bets (250x)"
+      6: "$625,000 – strong active investing or small business success (62.5x)"
+      4: "$156,000 – solid passive equity returns at ~10% real annual (15.6x)"
+      2: "$39,000 – barely keeping pace with inflation (3.9x)"
 
   safety:
     name: "Safety"
