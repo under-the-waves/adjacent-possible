@@ -490,7 +490,9 @@ function calculateEBS() {
     function getScaleDescription(valueKey, score) {
         const def = valueDefinitions[valueKey];
         if (!def || !def.scale_levels) return '';
+        if (score < 0) return 'Net negative expected outcome';
         const scoreRounded = Math.round(score / 2) * 2;
+        if (scoreRounded === 0) return 'Negligible expected benefit';
         return def.scale_levels[scoreRounded] || 'Moderate benefit level';
     }
 
@@ -500,7 +502,9 @@ function calculateEBS() {
         let display;
         let reasoningSuffix = '.';
 
-        if (!def) {
+        if (ebs < 0) {
+            display = ebs.toFixed(1) + ' (Net negative expected outcome)';
+        } else if (!def) {
             console.warn('No value definition found in values.yml for: ' + key);
             display = ebs.toFixed(1);
         } else if (def.anchor_type === 'linear' && def.anchor_max) {

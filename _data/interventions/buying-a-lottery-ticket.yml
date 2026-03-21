@@ -5,18 +5,27 @@ applicable_domains: ["investing"]
 values:
   investing.growth:
     pbs: 9
-    pbs_reasoning: "If a lottery ticket wins, the wealth growth is transformative. UK Lotto jackpots average £5-10 million; US Powerball regularly exceeds $100 million. For someone on a median income, a major jackpot represents more wealth accumulation than decades of optimal conventional investing could achieve. This places it near the top of the scale for sheer magnitude of growth if it works. Not 10 because the anchor describes 'optimal risk-adjusted returns compounding consistently over decades', which doesn't perfectly fit a one-time windfall, and because research on lottery winners (Hankins, Hoekstra & Skiba, 2011) shows that a significant proportion end up in financial difficulty within years due to poor management of the windfall."
+    pbs_reasoning: |
+      - UK Lotto jackpots average [£5-10 million](https://www.national-lottery.co.uk/results/lotto/draw-history); US Powerball regularly exceeds [$100 million](https://www.powerball.com/previous-results). For someone on median income, a jackpot dwarfs what decades of conventional investing could produce.
+      - Not 10 because a one-time windfall doesn't match the anchor's framing of compounding returns, and [Hankins, Hoekstra & Skiba (2011)](https://doi.org/10.1162/REST_a_00114) found that large lottery winners show increased bankruptcy rates within 3-5 years.
+      - On the logarithmic scale, score 9 represents ~50% of maximum growth potential – appropriate for an outcome that is transformative but not reliably retained.
     isr: 0.1
-    isr_reasoning: "The probability of meaningful wealth growth from lottery tickets is vanishingly small. For a regular player buying 2 tickets per week, the annual probability of a major jackpot is approximately 0.0002% (UK Lotto) to 0.000004% (US Powerball). Including smaller prizes, fewer than 0.1% of regular players achieve a net positive return in any given year, and those returns are typically small. Clotfelter and Cook (1989) and subsequent analyses consistently show that lotteries function as a regressive tax on participants, returning $0.45-0.80 per dollar spent (Matheson & Grote, 2004). Over a 30-year horizon of regular play at $10/week, the cumulative expected loss is $9,000-$12,000, while the same money in index funds would grow to $50,000-$65,000. The ISR of 0.1% reflects that the intervention almost never produces the growth benefit it theoretically could."
+    isr_reasoning: |
+      - Annual jackpot probability for a regular player (2 tickets/week) is ~0.0002% for [UK Lotto](https://www.national-lottery.co.uk/games/lotto) and ~0.000004% for [US Powerball](https://www.powerball.com/about).
+      - Including smaller prizes, fewer than 0.1% of regular players achieve a net positive return in any given year. [Clotfelter & Cook (1989)](https://doi.org/10.4159/harvard.9780674423084) established that lotteries function as a regressive tax on participants.
+      - [Matheson & Grote (2004)](https://doi.org/10.1111/j.1465-7295.2004.tb01384.x) calculated that US lottery tickets return $0.45-0.80 per dollar spent, confirming a consistent negative expected return.
     uar: 85
-    uar_reasoning: "Lottery ticket purchasing has remarkably high adherence. The UK National Lottery reports that regular players (those who play at least once a month) maintain the habit for years, with Camelot's annual reports showing stable or growing player bases over decades. The simplicity of the action (buy a ticket at the shop or set up a direct debit), the low per-transaction cost, the intermittent reinforcement from small wins, and the aspirational fantasy of a jackpot all support sustained engagement. Griffiths and Wood (2001) found that lottery play is one of the most persistent forms of gambling due to its social acceptability and low perceived stakes. The UAR of 85% reflects that most people who start playing regularly continue to do so."
+    uar_reasoning: |
+      - [Camelot annual reports](https://www.national-lottery.co.uk/life-changing) show stable or growing regular player bases over decades, with most monthly players maintaining the habit for years.
+      - [Griffiths & Wood (2001)](https://doi.org/10.1080/14459790108732861) found lottery play is among the most persistent gambling forms due to social acceptability, low per-transaction cost, and intermittent reinforcement from small wins.
+      - The 'set and forget' option (direct debit subscriptions) further boosts retention by removing the active purchase decision.
 
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No setup costs. Lottery tickets are available at any newsagent, supermarket, or online. No account, equipment, or training required."
   ongoing_cost: 10
   ongoing_cost_period: "week"
-  ongoing_cost_reasoning: "Two tickets per week at $2-5 each. Using $10/week as a conservative estimate for regular play across one or two games. Some players spend substantially more."
+  ongoing_cost_reasoning: "Two tickets per week at $2-5 each. Using $10/week as a conservative estimate for regular play across one or two games."
   upfront_time: 0.1
   upfront_time_reasoning: "A few minutes to choose a game and learn how to buy a ticket. Essentially zero setup required."
   ongoing_time: 0.1
