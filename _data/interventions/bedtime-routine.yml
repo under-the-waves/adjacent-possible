@@ -10,10 +10,6 @@ values:
    isr_reasoning: "Multiple randomised controlled trials demonstrate high success rates when bedtime routines are followed consistently. Mindell et al. (2015) systematic review found 85-90% of participants showed meaningful improvement in sleep metrics when adhering to structured bedtime routines for 4+ weeks. The intervention is well-established with replicated results across diverse populations and age groups."
    uar: 70
    uar_reasoning: "Adherence studies show 70-75% of adults maintain bedtime routines beyond 3 months. Barriers include irregular work schedules, social commitments, and initial motivation decline. Harvey et al. (2014) found that simplified routines (3-4 activities vs 6+) had significantly higher long-term adherence rates, suggesting realistic routine design is crucial for sustained implementation."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Daily functioning scale from severe impairment (-10) to peak performance (+10)"
 
  sleep.long_term_health:
    pbs: 6
@@ -22,10 +18,6 @@ values:
    isr_reasoning: "Strong epidemiological evidence links consistent sleep patterns with health outcomes. Multiple longitudinal studies (n>50,000) demonstrate reliable associations between regular sleep routines and reduced disease risk. However, most evidence is observational rather than experimental, and effect sizes are moderate, supporting good but not maximum confidence in intervention success."
    uar: 70
    uar_reasoning: "Same adherence patterns as daily functioning - approximately 70% maintain routines long-term. Health benefits require sustained implementation over months to years, which many people struggle with due to lifestyle changes, competing priorities, and gradual motivation decline despite not seeing immediate health improvements."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
 
  sleep.comfort_experience:
    pbs: 8
@@ -34,10 +26,6 @@ values:
    isr_reasoning: "The mechanism is straightforward and well-supported: consistent routines create psychological and physiological cues for sleep preparation. Multiple RCTs show very high success rates (90%+) for improved subjective sleep experience when routines are properly implemented. The intervention directly targets comfort and experience rather than complex physiological processes."
    uar: 75
    uar_reasoning: "Slightly higher adherence than other sleep benefits because comfort improvements are immediately noticeable, providing positive reinforcement. However, 25% still struggle with long-term consistency due to lifestyle demands, travel, and competing evening activities. The immediate feedback loop from improved comfort helps sustain motivation better than health-focused outcomes."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Sleep experience scale from severely unpleasant (-10) to deeply restorative (+10)"
 
 resources:
  upfront_cost: 25

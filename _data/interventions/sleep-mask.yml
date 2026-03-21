@@ -14,10 +14,6 @@ values:
     uar: 60
     uar_reasoning: |
       Moderate adherence due to physical comfort issues. Studies indicate 55-65% of users continue wearing sleep masks beyond 3 months. Common barriers include mask displacement during sleep, pressure on eyes, elastic band discomfort, and claustrophobic feelings. Higher-quality, properly fitted masks have better retention rates than basic versions.
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: null
-    anchor_description: |
       Daily functioning scale from severe impairment (-10) to peak performance (+10)
 
   sleep.long_term_health:
@@ -30,10 +26,6 @@ values:
     uar: 60
     uar_reasoning: |
       Same adherence challenges as daily functioning. Long-term health benefits require nightly use over months to years, but physical discomfort and habituation issues limit consistent implementation. The absence of immediate health feedback reduces motivation to overcome comfort barriers.
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: null
-    anchor_description: |
       Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)
 
   sleep.comfort_experience:
@@ -46,10 +38,6 @@ values:
     uar: 65
     uar_reasoning: |
       Better adherence for comfort benefits because improvements are immediately noticeable - users can feel the difference in sleep quality within the first few nights. However, physical comfort remains a barrier, with about 35% discontinuing use due to mask discomfort, shifting during sleep, or interference with sleep positions.
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: null
-    anchor_description: |
       Sleep experience scale from severely unpleasant (-10) to deeply restorative (+10)
 
 resources:

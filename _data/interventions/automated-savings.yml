@@ -10,10 +10,6 @@ values:
     isr_reasoning: "The mechanism is almost trivially reliable when implemented -- money moves automatically with no human decision required at each instance. The evidence base from 401(k) auto-enrolment research (Madrian & Shea 2001, Chetty et al. 2014) consistently shows near-universal effectiveness. The only failure mode is insufficient income to cover the transfers, which is a prerequisite issue rather than an intervention failure."
     uar: 92
     uar_reasoning: "Automated savings has among the highest adherence rates of any financial intervention precisely because adherence is the default. Vanguard's 2024 How America Saves report shows 94% participation persistence for auto-enrolled plans. Opt-out rates are typically only 5-10% in the first year and decline further over time. The status quo bias that usually works against good financial behaviour here works in its favour."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "security_level"
-    anchor_description: "Complete financial security with fully funded emergency reserves and protection against income disruption"
 
   saving.growth:
     pbs: 5
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "The accumulation mechanism is highly reliable -- regular deposits will build capital predictably. However, the growth component (interest, returns) is subject to market conditions and the specific savings vehicle chosen. For basic savings accounts, the nominal growth is reliable but real returns may be near zero in high-inflation environments."
     uar: 92
     uar_reasoning: "Same adherence dynamics as saving.security -- automation removes the decision point, and status quo bias maintains the behaviour. Slightly higher than security because growth-oriented savers who see their balance increasing receive positive reinforcement."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "growth_level"
-    anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
 
   saving.lifestyle:
     pbs: 6
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "The mechanism for building liquid savings through automation is highly reliable -- regular transfers to accessible accounts predictably increase available funds. The main risk to liquidity is if the saver later moves accumulated funds into locked-in products, but the automation itself reliably builds an accessible buffer."
     uar: 90
     uar_reasoning: "Liquidity-focused savers benefit strongly from automation because accessible savings feel less 'locked away' than pension contributions or fixed-term deposits. The instant-access nature of the savings reduces the psychological friction that causes some people to cancel automated transfers. The UAR of 90 reflects that automation into liquid accounts is exceptionally sticky."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "liquidity_level"
-    anchor_description: "Fully accessible savings with no penalties, lock-in periods, or delays when funds are needed"
 
 resources:
   upfront_cost: 0

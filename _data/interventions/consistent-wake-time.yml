@@ -10,10 +10,6 @@ values:
    isr_reasoning: "Robust evidence base with large effect sizes when properly implemented. Multiple studies including Reid et al. (2014) longitudinal trial (n=447) show 80-85% of participants achieve meaningful improvements in alertness and cognitive metrics when maintaining wake time consistency for 4+ weeks. The intervention targets fundamental circadian mechanisms with well-established physiological pathways."
    uar: 55
    uar_reasoning: "Moderate adherence due to social and lifestyle challenges. Weekend social activities, shift work, and 'social jetlag' create significant barriers. Studies show approximately 50-60% maintain strict consistency beyond 3 months. Hirshkowitz sleep foundation data indicates most adults vary wake times by 2+ hours between weekdays and weekends, making consistent implementation challenging despite understanding the benefits."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Daily functioning scale from severe impairment (-10) to peak performance (+10)"
 
  sleep.long_term_health:
    pbs: 7
@@ -22,10 +18,6 @@ values:
    isr_reasoning: "Strong epidemiological evidence supported by mechanistic studies. Large longitudinal studies consistently demonstrate health benefits of circadian regularity. However, most evidence is observational rather than experimental for long-term outcomes. The biological mechanisms (hormone regulation, metabolic function) are well-established, supporting good confidence in intervention effectiveness."
    uar: 55
    uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require sustained consistency over years, but social pressures and lifestyle demands make perfect adherence difficult. The delayed nature of health benefits (no immediate feedback) combined with social costs of rigid scheduling limit long-term maintenance."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
 
  sleep.comfort_experience:
    pbs: 6
@@ -34,10 +26,6 @@ values:
    isr_reasoning: "High success rate for subjective sleep improvements when consistently implemented. The circadian mechanism is straightforward and reliable - consistent wake times naturally regulate sleep pressure and timing. Multiple studies show 80-90% of adherent participants report improved sleep quality and more refreshing mornings within 4-6 weeks."
    uar: 60
    uar_reasoning: "Slightly better adherence for comfort benefits because users notice improvements in morning alertness and sleep quality relatively quickly (2-3 weeks). The positive reinforcement from feeling more rested helps maintain motivation. However, social and lifestyle barriers still limit perfect consistency for most people long-term."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Sleep experience scale from severely unpleasant (-10) to deeply restorative (+10)"
 
 resources:
  upfront_cost: 15

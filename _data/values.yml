@@ -119,3 +119,207 @@ sleep:
       6: "Generally good sleep quality"
       4: "Adequate sleep with some issues"
       2: "Poor sleep quality and comfort"
+
+saving:
+  security:
+    name: "Security"
+    anchor_type: "subjective"
+    anchor_description: "Complete financial security with fully funded emergency reserves and protection against income disruption"
+    scale_levels:
+      10: "Fully funded emergency reserves covering 12+ months of expenses"
+      8: "Robust financial buffer covering 6 months of expenses"
+      6: "Moderate safety net covering 3 months of expenses"
+      4: "Small buffer covering 1 month of expenses"
+      2: "Minimal savings providing negligible financial cushion"
+
+  growth:
+    name: "Growth"
+    anchor_type: "subjective"
+    anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
+    scale_levels:
+      10: "Wealth compounding rapidly toward long-term financial targets"
+      8: "Strong consistent capital accumulation with meaningful growth"
+      6: "Steady savings growth at a moderate pace"
+      4: "Slow but positive wealth accumulation"
+      2: "Negligible growth with savings barely keeping pace with inflation"
+
+  lifestyle:
+    name: "Lifestyle"
+    anchor_type: "subjective"
+    anchor_description: "Fully accessible savings enabling lifestyle flexibility with no penalties, lock-in periods, or delays when funds are needed"
+    scale_levels:
+      10: "Complete lifestyle flexibility with ample liquid savings for any opportunity or need"
+      8: "Strong liquidity enabling most lifestyle choices without financial constraint"
+      6: "Moderate accessible savings supporting reasonable lifestyle flexibility"
+      4: "Limited liquidity with some lifestyle choices constrained by cash availability"
+      2: "Minimal accessible savings with most lifestyle options financially out of reach"
+
+investing:
+  growth:
+    name: "Growth"
+    anchor_type: "subjective"
+    anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
+    scale_levels:
+      10: "Optimal risk-adjusted returns compounding consistently over decades"
+      8: "Strong long-term returns outperforming most alternatives"
+      6: "Solid positive real returns above inflation"
+      4: "Modest returns with limited compounding benefit"
+      2: "Negligible or negative real returns after costs and inflation"
+
+  safety:
+    name: "Safety"
+    anchor_type: "subjective"
+    anchor_description: "Comprehensive portfolio risk management with minimised downside exposure across all market conditions"
+    scale_levels:
+      10: "Comprehensive risk management with minimal downside in all market conditions"
+      8: "Strong diversification eliminating most concentration risk"
+      6: "Moderate risk management with some downside protection"
+      4: "Basic diversification but significant exposure to market drawdowns"
+      2: "Concentrated portfolio with high vulnerability to losses"
+
+  simplicity:
+    name: "Simplicity"
+    anchor_type: "subjective"
+    anchor_description: "A simple, low-maintenance investment approach that reliably builds wealth toward financial independence"
+    scale_levels:
+      10: "Effortless system reliably compounding toward financial independence"
+      8: "Simple strategy requiring minimal oversight with strong progress"
+      6: "Manageable approach with moderate complexity and steady progress"
+      4: "Somewhat complex system requiring regular attention"
+      2: "Overly complicated or unreliable approach with little progress toward independence"
+
+career-planning:
+  clarity:
+    name: "Clarity"
+    anchor_type: "subjective"
+    anchor_description: "Complete career direction clarity with a specific, well-researched path confidently chosen"
+    scale_levels:
+      10: "Fully confident in a specific, well-researched career path"
+      8: "Clear direction with strong understanding of target field and realistic plan"
+      6: "General direction identified with some remaining uncertainty"
+      4: "Vague sense of interests but no concrete career direction"
+      2: "Completely lost with no clarity on career options or preferences"
+
+  advancement:
+    name: "Advancement"
+    anchor_type: "subjective"
+    anchor_description: "Well-connected insider in target field with strong reputation and access to unadvertised opportunities"
+    scale_levels:
+      10: "Well-connected insider with strong reputation and opportunities flowing to you"
+      8: "Established network with active referrals and industry recognition"
+      6: "Growing professional network with some warm contacts in target field"
+      4: "Limited connections with mostly cold outreach required"
+      2: "Completely unknown in target field with no professional network"
+
+  security:
+    name: "Security"
+    anchor_type: "subjective"
+    anchor_description: "Highly adaptable career position with multiple viable options and a strong network to activate during disruption"
+    scale_levels:
+      10: "Highly adaptable with multiple viable career options and strong safety net"
+      8: "Good resilience with several alternative paths and contacts across fields"
+      6: "Moderate adaptability with some awareness of alternative options"
+      4: "Limited alternatives with most knowledge and contacts in a single field"
+      2: "Completely dependent on current role with no alternatives explored"
+
+current-work:
+  competence:
+    name: "Competence"
+    anchor_type: "subjective"
+    anchor_description: "Exceptional mastery of role with elite-level execution speed and quality"
+    scale_levels:
+      10: "Exceptional mastery with elite-level execution across all role demands"
+      8: "Highly skilled with consistently fast, high-quality output"
+      6: "Competent and reliable with good execution speed"
+      4: "Adequate performance with room for improvement in speed or quality"
+      2: "Struggling with basic role demands and slow task execution"
+
+  engagement:
+    name: "Engagement"
+    anchor_type: "subjective"
+    anchor_description: "Deeply absorbed and energised by daily work with frequent flow states"
+    scale_levels:
+      10: "Deeply absorbed and energised by daily work with sustained flow"
+      8: "Highly engaged with regular enjoyment and motivation"
+      6: "Generally engaged with reasonable interest in most tasks"
+      4: "Partially disengaged with frequent boredom or distraction"
+      2: "Completely disengaged and dreading daily tasks"
+
+  rewards:
+    name: "Rewards"
+    anchor_type: "subjective"
+    anchor_description: "Transformative contribution that significantly advances organisational goals and is recognised accordingly"
+    scale_levels:
+      10: "Transformative contributions advancing organisational goals with full recognition"
+      8: "High-impact work consistently producing valued outcomes"
+      6: "Meaningful contributions with visible positive results"
+      4: "Adequate output meeting expectations but with limited broader impact"
+      2: "No meaningful contribution or recognition from work efforts"
+
+organisation:
+  tracking:
+    name: "Tracking"
+    anchor_type: "subjective"
+    anchor_description: "Zero time lost to organisational overhead with instant movement from intention to action"
+    scale_levels:
+      10: "Zero organisational overhead; instant movement from intention to action"
+      8: "Highly streamlined with minimal deliberation delays"
+      6: "Generally efficient with occasional slowdowns from disorganisation"
+      4: "Noticeable time lost to searching, deciding, or reorganising"
+      2: "Constant delays and friction from poor organisational systems"
+
+  order:
+    name: "Order"
+    anchor_type: "subjective"
+    anchor_description: "Zero missed commitments with every obligation tracked and fulfilled through comprehensive systems"
+    scale_levels:
+      10: "Zero missed commitments; every obligation tracked and fulfilled consistently"
+      8: "Very few things fall through the cracks with strong tracking systems"
+      6: "Most commitments met with occasional oversights"
+      4: "Frequent missed commitments due to patchy tracking"
+      2: "Regularly dropping obligations with no reliable system for follow-through"
+
+  speed:
+    name: "Speed"
+    anchor_type: "subjective"
+    anchor_description: "A perfectly minimal organisational system with the fewest possible tools, steps, and rules that still captures everything important"
+    scale_levels:
+      10: "Perfectly minimal system capturing everything with fewest possible tools and steps"
+      8: "Clean, streamlined system with little redundancy"
+      6: "Functional system with some unnecessary complexity"
+      4: "Cluttered system with redundant tools and convoluted processes"
+      2: "Chaotic or over-engineered system that creates more overhead than it resolves"
+
+goals:
+  clarity:
+    name: "Clarity"
+    anchor_type: "subjective"
+    anchor_description: "Goals perfectly calibrated to actual capacity with milestones reliably achieved through honest constraint assessment"
+    scale_levels:
+      10: "Goals perfectly calibrated to capacity with milestones consistently hit"
+      8: "Well-calibrated goals with realistic timelines and few surprises"
+      6: "Reasonably realistic goals with occasional misjudgements of capacity"
+      4: "Frequently over- or under-committing due to poor capacity awareness"
+      2: "Goals bear no relation to actual capacity; chronic over-promising or aimlessness"
+
+  follow_through:
+    name: "Follow-through"
+    anchor_type: "subjective"
+    anchor_description: "Consistently setting and pursuing transformative goals that push well beyond the comfort zone"
+    scale_levels:
+      10: "Consistently pursuing transformative goals with sustained daily execution"
+      8: "Ambitious goals actively progressed with strong follow-through habits"
+      6: "Moderate goals with reasonable consistency in daily action"
+      4: "Goals set but frequently abandoned or progressed only in sporadic bursts"
+      2: "No sustained progress on any goals; chronic intention-action gap"
+
+  adaptability:
+    name: "Adaptability"
+    anchor_type: "subjective"
+    anchor_description: "Proactive goal portfolio management with systematic review and strategic flexibility to change course as needed"
+    scale_levels:
+      10: "Proactive portfolio management with systematic review and strategic pivots"
+      8: "Regular goal review with willingness to modify or retire goals when warranted"
+      6: "Occasional reassessment of goals with some flexibility"
+      4: "Rigid adherence to original goals despite changing circumstances"
+      2: "No review or adjustment; clinging to failing goals or abandoning them impulsively"

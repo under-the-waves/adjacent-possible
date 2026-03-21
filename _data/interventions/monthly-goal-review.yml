@@ -10,10 +10,6 @@ values:
     isr_reasoning: "Strong evidence base. Harkin et al.'s meta-analysis across 138 studies (N = 19,951) found a reliable positive effect of progress monitoring on goal attainment (d = 0.40, 95% CI [0.32, 0.48]). The effect was stronger when progress was physically recorded — which a monthly review inherently involves. Additional research by Matthews (Dominican University, 2015) found that writing goals down increases achievement by 42%. The combination of structured review and written recording is well-supported, though most studies examined monitoring frequency rather than monthly review specifically."
     uar: 55
     uar_reasoning: "Monthly reviews have moderate adherence. The time commitment is manageable (1 - 2 hours monthly), but the practice requires discipline and can feel tedious when progress is slow or goals feel out of reach. Studies of GTD and similar review-based systems suggest that weekly reviews are sustained by roughly 30 - 40% of practitioners beyond 6 months; monthly reviews likely fare somewhat better due to lower frequency, estimated at 50 - 60%. The main dropout risk is skipping one month and never resuming. Those who pair reviews with calendar blocking and accountability partners show significantly higher retention."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "ambition_level"
-    anchor_description: "Consistently setting and pursuing transformative goals that push well beyond the comfort zone"
 
   goals.clarity:
     pbs: 7
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "The evidence linking goal monitoring to goal achievement is among the strongest in the self-regulation literature. The Harkin et al. effect size of d = 0.40 is moderate and highly reliable across 138 studies. Monthly review specifically has less direct experimental evidence than monitoring in general, but the mechanism is well-understood and the meta-analytic findings generalise well to structured review practices. The score reflects strong but slightly indirect evidence."
     uar: 55
     uar_reasoning: "Same adherence profile as ambition. The monthly cadence is both an advantage (lower burden) and a disadvantage (easier to let slide without noticing). Practitioners focused on realistic calibration tend to sustain reviews longer, as they see direct causal links between reviews and improved accuracy of their goal-setting. Estimated 50 - 60% sustained at 6 months."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "realism_level"
-    anchor_description: "Goals perfectly calibrated to actual capacity, with milestones reliably achieved through honest constraint assessment"
 
   goals.adaptability:
     pbs: 6
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "The link between structured review and flexible goal management is supported by organisational behaviour research and practical frameworks (OKRs, quarterly business reviews). The Harkin et al. findings on monitoring generalise to the review-and-adjust cycle, though flexibility as a specific outcome variable has received less direct experimental attention than achievement. The evidence is solid but somewhat more theoretical than empirical for this specific value."
     uar: 55
     uar_reasoning: "Adherence for the flexibility dimension is the same as for other goal review dimensions, since it is the same practice being sustained. The challenge is that flexibility requires honest self-assessment about failed or inappropriate goals, which is psychologically uncomfortable and may reduce engagement over time. Those with growth mindsets and lower sunk-cost sensitivity tend to sustain the practice longer."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "flexibility_level"
-    anchor_description: "Proactive goal portfolio management with systematic review and strategic flexibility to change course as needed"
 
 resources:
   upfront_cost: 0

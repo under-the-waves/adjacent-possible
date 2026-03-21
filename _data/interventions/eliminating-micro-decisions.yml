@@ -10,10 +10,6 @@ values:
     isr_reasoning: "The evidence base is mixed. Decision fatigue as a concept has strong theoretical support and some empirical backing — Vohs et al. and Baumeister's ego depletion work established the framework, and practical evidence from figures like Barack Obama and Mark Zuckerberg (who eliminated clothing decisions) popularised the approach. However, recent large-scale studies have challenged the strength of the decision fatigue effect, with a 2025 healthcare study finding no credible evidence for decision fatigue in medical contexts, and a systematic review finding significant effects in only 45% of assessed cases. The intervention's effectiveness likely depends heavily on individual susceptibility to decision fatigue and the baseline number of unnecessary decisions."
     uar: 75
     uar_reasoning: "Once established, micro-decision elimination is highly sticky. Default choices and decision rules require no ongoing willpower to maintain — they operate by removing the need for deliberation rather than adding a new behaviour. The main setup cost is the initial audit and design phase. Adherence is high because the intervention reduces effort rather than adding it. The primary failure mode is scope creep (gradually re-introducing decisions that were previously defaulted) or life changes that invalidate existing defaults. Estimated 70 - 80% sustained at 6 months."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "speed_level"
-    anchor_description: "Zero time lost to organisational overhead; instant movement from intention to action with no deliberation delays"
 
   organisation.order:
     pbs: 5
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "The link between reduced decision load and improved thoroughness is theoretically sound but has limited direct empirical support. Most decision fatigue research focuses on decision quality rather than task completion or commitment fulfilment. The thoroughness benefit is inferred from the mechanism (fewer decision points = fewer failure points) rather than directly measured in studies. The moderate score reflects this inferential gap."
     uar: 75
     uar_reasoning: "Same adherence profile as speed — the intervention reduces cognitive load rather than adding it, making sustained adoption relatively easy. Thoroughness-relevant defaults (e.g., always processing email at set times, always filing documents immediately) tend to be especially sticky because their benefits are immediately visible when commitments stop being missed."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "thoroughness_level"
-    anchor_description: "Zero missed commitments; every obligation tracked and fulfilled with complete consistency through comprehensive systems"
 
   organisation.speed:
     pbs: 4
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "The link between reduced decision load and system simplicity is primarily supported by theoretical frameworks (cognitive load theory, ego depletion) rather than direct experimental evidence. Studies on decision fatigue have focused on decision quality and willpower rather than on system design or organisational simplicity. The score reflects the plausible but weakly evidenced nature of this connection."
     uar: 75
     uar_reasoning: "Same adherence profile as other organisation values — the intervention is inherently low-maintenance once established, supporting sustained adoption regardless of which specific value dimension it serves."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "simplicity_level"
-    anchor_description: "A perfectly minimal organisational system with the fewest possible tools, steps, and rules that still captures everything important"
 
 resources:
   upfront_cost: 0

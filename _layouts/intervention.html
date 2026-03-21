@@ -456,16 +456,13 @@ const interventionData = {
     '{{ value_key }}': {
         pbs: {{ value_data.pbs }},
         isr: {{ value_data.isr }},
-        uar: {{ value_data.uar }},
-        anchor_type: {{ value_data.anchor_type | jsonify }}{% if value_data.anchor_max %},
-        anchor_max: {{ value_data.anchor_max }},
-        anchor_unit: {{ value_data.anchor_unit | jsonify }}{% endif %}
+        uar: {{ value_data.uar }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 };
 
-// Build scale levels dynamically from Jekyll data
-const scaleLevels = {
+// Value definitions from values.yml (single source of truth for anchors)
+const valueDefinitions = {
 {% for domain_pair in site.data.values %}
     {% assign domain_name = domain_pair[0] %}
     {% assign domain_data = domain_pair[1] %}
@@ -473,11 +470,16 @@ const scaleLevels = {
         {% assign value_name = value_pair[0] %}
         {% assign value_data = value_pair[1] %}
         '{{ domain_name }}.{{ value_name }}': {
-            {% for level_pair in value_data.scale_levels %}
-                {% assign score = level_pair[0] %}
-                {% assign description = level_pair[1] %}
-                {{ score }}: {{ description | jsonify }}{% unless forloop.last %},{% endunless %}
-            {% endfor %}
+            anchor_type: {{ value_data.anchor_type | jsonify }},
+            {% if value_data.anchor_max %}anchor_max: {{ value_data.anchor_max }},{% endif %}
+            {% if value_data.anchor_unit %}anchor_unit: {{ value_data.anchor_unit | jsonify }},{% endif %}
+            scale_levels: {
+                {% for level_pair in value_data.scale_levels %}
+                    {% assign score = level_pair[0] %}
+                    {% assign description = level_pair[1] %}
+                    {{ score }}: {{ description | jsonify }}{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            }
         }{% unless forloop.last %},{% endunless %}
     {% endfor %}{% unless forloop.last %},{% endunless %}
 {% endfor %}
@@ -486,43 +488,38 @@ const scaleLevels = {
 // Calculate EBS and populate displays
 function calculateEBS() {
     function getScaleDescription(valueKey, score) {
-        const levels = scaleLevels[valueKey];
-        if (!levels) return '';
-        
-        // Find the closest scale level
-        const scoreRounded = Math.round(score / 2) * 2; // Round to nearest even number
-        return levels[scoreRounded] || 'Moderate benefit level';
+        const def = valueDefinitions[valueKey];
+        if (!def || !def.scale_levels) return '';
+        const scoreRounded = Math.round(score / 2) * 2;
+        return def.scale_levels[scoreRounded] || 'Moderate benefit level';
     }
 
-    {% for value_pair in intervention.values %}
-    {% assign value_key = value_pair[0] %}
-    {% assign value_data = value_pair[1] %}
-    {% assign value_name = value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
-    
-    // Calculate EBS for {{ value_key }}
-    const {{ value_key | replace: '.', '_' }}EBS = {{ value_data.pbs }} + Math.log2({{ value_data.isr }}/100) + Math.log2({{ value_data.uar }}/100);
-    
-    {% if value_data.anchor_type == "linear" %}
-    // Convert to linear for {{ value_key }}
-    const {{ value_key | replace: '.', '_' }}Linear = (Math.pow(2, {{ value_key | replace: '.', '_' }}EBS) / Math.pow(2, 10)) * {{ value_data.anchor_max }};
-    const {{ value_key | replace: '.', '_' }}Display = {{ value_key | replace: '.', '_' }}EBS.toFixed(1) + ' (+' + {{ value_key | replace: '.', '_' }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }})';
-    {% else %}
-    // Subjective scale for {{ value_key }}
-    const {{ value_key | replace: '.', '_' }}ScaleDesc = getScaleDescription('{{ value_key }}', {{ value_key | replace: '.', '_' }}EBS);
-    const {{ value_key | replace: '.', '_' }}Display = {{ value_key | replace: '.', '_' }}EBS.toFixed(1) + ' (' + {{ value_key | replace: '.', '_' }}ScaleDesc + ')';
-    {% endif %}
-    
-    document.getElementById('ebs-{{ value_key }}').textContent = {{ value_key | replace: '.', '_' }}EBS.toFixed(1);
-    document.getElementById('summary-{{ value_key }}').textContent = {{ value_key | replace: '.', '_' }}Display;
-    
-    // Update reasoning for calculation
-    reasoningData['ebs-{{ value_key }}'].content = 
-        'Logarithmic calculation: {{ value_data.pbs }} + log₂({{ value_data.isr }}%) + log₂({{ value_data.uar }}%) = ' + 
-        '{{ value_data.pbs }} + ' + Math.log2({{ value_data.isr }}/100).toFixed(3) + ' + ' + Math.log2({{ value_data.uar }}/100).toFixed(3) + ' = ' + 
-        {{ value_key | replace: '.', '_' }}EBS.toFixed(1){% if value_data.anchor_type == "linear" %} + 
-        '. Converted to linear: ' + {{ value_key | replace: '.', '_' }}Linear.toFixed(1) + ' {{ value_data.anchor_unit }}.'{% else %} + '.'{% endif %};
-    
-    {% endfor %}
+    for (const [key, data] of Object.entries(interventionData)) {
+        const ebs = data.pbs + Math.log2(data.isr / 100) + Math.log2(data.uar / 100);
+        const def = valueDefinitions[key];
+        let display;
+        let reasoningSuffix = '.';
+
+        if (!def) {
+            console.warn('No value definition found in values.yml for: ' + key);
+            display = ebs.toFixed(1);
+        } else if (def.anchor_type === 'linear' && def.anchor_max) {
+            const linearValue = (Math.pow(2, ebs) / Math.pow(2, 10)) * def.anchor_max;
+            display = ebs.toFixed(1) + ' (+' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
+            reasoningSuffix = '. Converted to linear: ' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + '.';
+        } else {
+            const scaleDesc = getScaleDescription(key, ebs);
+            display = ebs.toFixed(1) + ' (' + scaleDesc + ')';
+        }
+
+        document.getElementById('ebs-' + key).textContent = ebs.toFixed(1);
+        document.getElementById('summary-' + key).textContent = display;
+
+        reasoningData['ebs-' + key].content =
+            'Logarithmic calculation: ' + data.pbs + ' + log₂(' + data.isr + '%) + log₂(' + data.uar + '%) = ' +
+            data.pbs + ' + ' + Math.log2(data.isr / 100).toFixed(3) + ' + ' + Math.log2(data.uar / 100).toFixed(3) + ' = ' +
+            ebs.toFixed(1) + reasoningSuffix;
+    }
 }
 
 function showReasoning(key) {

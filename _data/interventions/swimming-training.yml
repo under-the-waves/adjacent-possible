@@ -10,10 +10,6 @@ values:
    isr_reasoning: "Extensive research from multiple large-scale studies and systematic reviews consistently demonstrate health benefits. The Cooper Institute longitudinal studies (40+ years) and multiple meta-analyses provide high-quality evidence with large sample sizes showing reliable health improvements across diverse populations when proper training volume is maintained."
    uar: 60
    uar_reasoning: "Pool access limitations and scheduling constraints create significant barriers. Studies show 40-50% dropout rates in the first 6 months due to facility access, time commitments, and technical learning curve. However, those who establish routine often maintain long-term adherence due to low injury rates and joint-friendly nature."
-   anchor_type: "linear"
-   anchor_max: 15
-   anchor_unit: "years"
-   anchor_description: "Additional healthy lifespan years"
 
  fitness.performance:
    pbs: 9
@@ -22,10 +18,6 @@ values:
    isr_reasoning: "Well-documented training adaptations occur reliably in coached athletes. Studies consistently show significant VO2 max improvements (15-25%), stroke volume increases, and muscular power gains. However, technique complexity means performance gains require proper instruction and progressive programming for optimal results."
    uar: 45
    uar_reasoning: "Performance-focused training requires 4-6 sessions weekly with structured progression, creating high adherence barriers. Elite training demands are substantial, with studies showing 60-70% dropout rates from competitive programs. Success requires access to coaching, facilities, and significant time commitment that limits long-term adherence for recreational athletes."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: "performance_level"
-   anchor_description: "Elite competitive athletic performance capability"
 
  fitness.appearance:
    pbs: 7
@@ -34,10 +26,6 @@ values:
    isr_reasoning: "Body composition changes are well-documented in controlled studies, with consistent fat loss and muscle tone improvements. However, dramatic physique transformation requires high training volumes and dietary discipline. Research shows reliable but moderate aesthetic changes for recreational swimmers, with more dramatic results requiring competitive-level commitment."
    uar: 55
    uar_reasoning: "Aesthetic goals require consistent 4-5 weekly sessions plus dietary changes. Appearance-focused swimmers show better adherence than performance athletes (less intensity required) but face pool access barriers. Studies indicate 45-55% maintain programs long enough for significant aesthetic changes due to gradual visible progress providing motivation."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: "aesthetic_achievement"
-   anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
 
  fitness.enjoyment:
    pbs: 8
@@ -46,10 +34,6 @@ values:
    isr_reasoning: "Research consistently demonstrates high satisfaction and psychological benefits among regular swimmers. Studies show significant stress reduction, mood improvement, and exercise enjoyment scores. The low-impact nature and meditative qualities create reliable positive experiences for those who develop basic competency."
    uar: 65
    uar_reasoning: "Swimmers who overcome initial technical barriers and establish routine often develop strong exercise adherence due to enjoyment factor. However, pool access and scheduling create ongoing challenges. Studies show bimodal distribution - either high long-term adherence (5+ years) or early dropout, with 65% of those swimming regularly for 6+ months continuing long-term."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: "satisfaction_level"
-   anchor_description: "Activity becomes primary source of physical and mental satisfaction"
 
 resources:
  upfront_cost: 150

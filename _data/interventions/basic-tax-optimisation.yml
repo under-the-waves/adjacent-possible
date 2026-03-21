@@ -10,10 +10,6 @@ values:
     isr_reasoning: "The tax benefits of ISAs and pensions are guaranteed by legislation and extremely reliable when properly implemented. Tax relief on pension contributions is automatic (through salary sacrifice) or claimable (through self-assessment). The main risk is future changes to tax legislation, which historically have been grandfathered for existing holdings. ISA and pension tax benefits have been stable features of the UK tax system for decades."
     uar: 50
     uar_reasoning: "Tax optimisation requires more active management than automated savings -- annual ISA allowance usage, pension contribution monitoring, and staying current with changing allowances and thresholds. Many people set up ISAs or pensions initially but fail to optimise annually (e.g., not using the full ISA allowance, not adjusting pension contributions after pay rises, not claiming higher-rate tax relief). Research from HMRC suggests a significant proportion of higher-rate taxpayers fail to claim additional pension tax relief they are entitled to."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "security_level"
-    anchor_description: "Complete financial security with fully funded emergency reserves and protection against income disruption"
 
   saving.growth:
     pbs: 6
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "The mathematical benefit of tax wrappers is certain and well-documented. The compound effect of avoiding tax drag is reliable and predictable. The main uncertainty relates to future tax policy changes, but the UK government has historically protected existing ISA and pension holdings."
     uar: 50
     uar_reasoning: "Same adherence dynamics as saving.security. Initial setup is often done but annual optimisation (maximising allowances, rebalancing within tax wrappers, timing contributions) requires ongoing attention that many people neglect. The complexity of optimisation increases with income and assets, which can lead to procrastination."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "growth_level"
-    anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
 
   saving.lifestyle:
     pbs: 5
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "The liquidity characteristics of tax wrappers are well-defined and predictable. ISAs reliably maintain full accessibility. Pensions reliably restrict access until a known age. The main uncertainty is future legislative changes to access rules (the pension access age has already increased from 55 to 57). The ISR of 80 reflects high predictability tempered by long-term legislative risk."
     uar: 45
     uar_reasoning: "Liquidity-focused individuals may resist pension contributions precisely because of the access restrictions, reducing adherence to the most tax-efficient strategies. They may over-weight ISAs (which have lower contribution limits) and under-weight pensions, limiting the overall tax benefit. The ongoing administrative work of annual optimisation can also deter continued engagement."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "liquidity_level"
-    anchor_description: "Fully accessible savings with no penalties, lock-in periods, or delays when funds are needed"
 
   investing.growth:
     pbs: 6
@@ -46,10 +34,6 @@ values:
     isr_reasoning: "The return enhancement from tax wrappers is mathematically certain for as long as the current tax regime persists. ISA tax benefits are particularly reliable as they have been a stable feature since 1999. Pension tax relief has been subject to more political debate but the basic structure has persisted. The main uncertainty is future legislative change."
     uar: 50
     uar_reasoning: "Maintaining optimal tax efficiency across investments requires annual attention -- ensuring new contributions go into tax wrappers before taxable accounts, using bed-and-ISA strategies, managing capital gains allowances, and rebalancing within tax-efficient structures. Many investors set up tax-efficient accounts initially but do not maintain optimal allocation between wrappers over time. The UAR of 50 reflects that initial setup is common but ongoing optimisation is often neglected."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "returns_level"
-    anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
 
   investing.safety:
     pbs: 6
@@ -58,10 +42,6 @@ values:
     isr_reasoning: "The risk-reduction benefits of tax wrappers are well-defined and reliable. ISAs eliminate tax risk on growth with certainty. Pension tax relief provides a guaranteed uplift to the invested base. The main uncertainty is future legislative changes, but the UK has historically grandfathered existing holdings. The ISR of 80 reflects high reliability tempered by long-term policy risk."
     uar: 55
     uar_reasoning: "Maintaining optimal tax efficiency requires ongoing attention -- annual ISA allowance usage, pension contribution reviews, and staying current with changing rules. Many people set up tax-efficient structures initially but fail to optimise annually, gradually losing the risk-management benefit of maximum tax efficiency. The bureaucratic nature of tax administration can make ongoing engagement feel like a chore."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "risk_level"
-    anchor_description: "Comprehensive portfolio risk management with minimised downside exposure across all market conditions"
 
   investing.simplicity:
     pbs: 4
@@ -70,10 +50,6 @@ values:
     isr_reasoning: "The pathway from tax optimisation to faster FI is reliable and well-documented -- the mathematical benefit of eliminating tax drag on compounding growth is certain. However, the pension component introduces a tension with FI goals: pension wealth is inaccessible until age 57+, which may not align with early FI timelines. The ISR of 75 reflects reliable benefit with a meaningful constraint for early-FI seekers."
     uar: 45
     uar_reasoning: "FI-focused individuals may find the administrative burden of annual tax optimisation at odds with their desire for simplicity and freedom. The tension between pension lock-in and early FI goals can reduce motivation to maximise pension contributions. Many FI-oriented savers optimise initially but do not maintain rigorous annual attention to changing allowances and thresholds."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "independence_level"
-    anchor_description: "Sufficient invested wealth to make paid employment entirely optional, with sustainable withdrawal rates across market conditions"
 
 resources:
   upfront_cost: 0

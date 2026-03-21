@@ -10,10 +10,6 @@ values:
    isr_reasoning: "Mixed evidence quality limits confidence. Shechter et al. (2018) systematic review found significant heterogeneity between studies, with effect sizes varying considerably. Approximately 60-70% of participants show meaningful improvement in controlled trials, but many studies have small sample sizes (n<50) and short durations (1-2 weeks). Replication across diverse populations is limited."
    uar: 45
    uar_reasoning: "Poor long-term adherence due to practical barriers. Studies show only 40-50% of users consistently wear blue light glasses or use filters beyond 2 months. Common barriers include forgetting to use devices, discomfort with glasses, colour distortion affecting evening activities, and social awkwardness when wearing tinted glasses around others."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Daily functioning scale from severe impairment (-10) to peak performance (+10)"
 
  sleep.long_term_health:
    pbs: 4
@@ -22,10 +18,6 @@ values:
    isr_reasoning: "Weak evidence base for long-term health outcomes. Most studies focus on short-term sleep metrics rather than health biomarkers. The few longer-term studies (>3 months) show inconsistent results, and effect sizes for health-related outcomes are small. Individual variation appears high, with some people showing no measurable benefit even with consistent use."
    uar: 45
    uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require sustained use over months to years, but practical barriers significantly limit consistent implementation. The delayed nature of health benefits (no immediate feedback) further reduces motivation to maintain the intervention."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Health impact scale from severe consequences (-10) to maximum longevity benefit (+10)"
 
  sleep.comfort_experience:
    pbs: 6
@@ -34,10 +26,6 @@ values:
    isr_reasoning: "Moderate confidence in subjective improvements. Multiple studies consistently show that users who adhere to blue light blocking report better evening comfort and easier sleep transitions. The mechanism is well-understood (melatonin suppression prevention), and subjective outcomes are more consistently reported than objective sleep metrics across studies."
    uar: 50
    uar_reasoning: "Slightly better adherence for comfort benefits because users notice immediate effects (reduced eye strain, easier wind-down feeling). However, still limited by practical barriers of remembering to use devices, discomfort with glasses, and interference with evening activities like watching television or social interactions."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: ""
-   anchor_description: "Sleep experience scale from severely unpleasant (-10) to deeply restorative (+10)"
 
 resources:
  upfront_cost: 20

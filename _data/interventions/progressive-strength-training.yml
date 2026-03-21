@@ -10,10 +10,6 @@ values:
     isr_reasoning: "Extensive high-quality evidence from multiple large RCTs and meta-analyses consistently demonstrate health benefits when resistance training protocols are followed properly. The physiological mechanisms are well-understood and reliably reproduced across diverse populations."
     uar: 35
     uar_reasoning: "Gym membership retention rates show ~80% dropout within 5 months. Long-term resistance training adherence studies indicate only 30-40% maintain consistent training beyond one year due to time constraints, injury concerns, and motivation challenges."
-    anchor_type: "subjective"
-    anchor_max: null
-    anchor_unit: null
-    anchor_description: "15+ years additional healthy lifespan"
 
   fitness.performance:
     pbs: 9
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "Strength gains from progressive resistance training are among the most reliable and well-documented adaptations in exercise science. Multiple systematic reviews confirm consistent strength improvements when programs follow progressive overload principles."
     uar: 45
     uar_reasoning: "Athletes and serious fitness enthusiasts show higher adherence rates (~40-50%) due to clear performance goals and often external accountability (coaches, teammates). However, the demanding nature still limits long-term adherence for recreational users."
-    anchor_type: "subjective"
-    anchor_max: null
-    anchor_unit: null
-    anchor_description: "Elite competitive athletic performance"
 
   fitness.appearance:
     pbs: 8
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "Muscle hypertrophy response to resistance training is well-established with consistent results across studies. However, physique transformation also depends heavily on nutrition compliance and genetic factors, introducing more variability than pure strength gains."
     uar: 30
     uar_reasoning: "Physique transformation requires sustained effort over 6-12+ months with high training consistency and dietary discipline. Real-world adherence data shows only 25-35% maintain the necessary consistency for significant visual changes."
-    anchor_type: "subjective"
-    anchor_max: null
-    anchor_unit: null
-    anchor_description: "Complete physique transformation"
 
   fitness.enjoyment:
     pbs: 7
@@ -46,10 +34,6 @@ values:
     isr_reasoning: "Research consistently shows psychological benefits from resistance training, including reduced anxiety and depression symptoms. However, individual variation in enjoyment response is high, and some find the activity inherently unpleasant despite benefits."
     uar: 25
     uar_reasoning: "Enjoyment-based adherence is particularly challenging as resistance training can be uncomfortable and repetitive. Many individuals require external motivation rather than intrinsic enjoyment to maintain consistency long-term."
-    anchor_type: "subjective"
-    anchor_max: null
-    anchor_unit: null
-    anchor_description: "Primary source of satisfaction"
 
 resources:
   upfront_cost: 100

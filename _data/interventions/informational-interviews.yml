@@ -10,10 +10,6 @@ values:
     isr_reasoning: "When people actually conduct informational interviews, the mechanism is highly reliable: direct conversation with a practitioner almost always yields useful directional information. Kanar's (2023) two studies (n=90 and n=72) showed consistent gains in career-related self-efficacy. The main risk factor is interview quality -- poorly prepared questions or mismatched interviewees reduce value -- but even mediocre interviews typically surface at least one useful insight about a field or role."
     uar: 55
     uar_reasoning: "The biggest barrier is sustained execution. Many people conduct one or two interviews in a burst of enthusiasm, then stop due to the social discomfort of reaching out to strangers, difficulty scheduling, or the feeling that they have 'enough' information after a small sample. Career services professionals consistently report that fewer than half of students who learn about informational interviewing go on to conduct them regularly. The intervention requires ongoing initiative without external accountability structures."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "direction_level"
-    anchor_description: "Career direction clarity from completely lost (0) to fully confident in a specific, well-researched path (10)"
 
   career-planning.advancement:
     pbs: 7
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "The network-building mechanism is well-established: showing genuine interest in someone's career creates goodwill and a memorable interaction. Research on professional networking consistently shows that people are willing to help those who have invested time in understanding their field. The success rate for converting informational interviews into useful professional relationships is high, provided the interviewer follows up appropriately and maintains contact."
     uar: 55
     uar_reasoning: "Same adherence challenges as direction: the social effort of reaching out, scheduling, and following up is the primary barrier. Additionally, positioning benefits require sustained effort over months -- a handful of interviews rarely builds enough network density to generate opportunities. Many people stop before reaching the critical mass of contacts needed for meaningful career positioning."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "positioning_level"
-    anchor_description: "Career positioning from completely unknown in target field (0) to well-connected insider with strong reputation (10)"
 
   career-planning.security:
     pbs: 5
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "The resilience mechanism -- broader awareness of options and a wider network to activate during career disruption -- is reliable when the prerequisite interviews have been conducted. People who have explored multiple fields through informational interviews consistently report feeling less trapped and more confident about their ability to pivot. The limiting factor is whether enough interviews were conducted across sufficiently diverse fields to provide genuine optionality."
     uar: 55
     uar_reasoning: "Resilience-building through informational interviews requires the same sustained interviewing effort as direction and positioning. The additional challenge is that resilience benefits are latent -- you may not see the value until a career crisis occurs, which makes it harder to stay motivated. Without an immediate payoff, many people deprioritise this activity in favour of more urgent career tasks."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "resilience_level"
-    anchor_description: "Career resilience from completely dependent on single role with no alternatives (0) to highly adaptable with multiple viable options and strong network (10)"
 
 resources:
   upfront_cost: 0

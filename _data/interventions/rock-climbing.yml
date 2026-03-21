@@ -10,10 +10,6 @@ values:
     isr_reasoning: "Health benefits from climbing are supported by a growing but still limited evidence base compared to traditional exercise modalities. The meta-analysis by Orth et al. (2016) examined only nine studies. Benefits are reliable for grip strength and upper body development but less consistent for cardiovascular markers. The intermittent nature of climbing (climb-rest-climb cycles) produces different physiological adaptations than sustained exercise, with variable effects depending on climbing style and intensity."
     uar: 50
     uar_reasoning: "Climbing has moderate long-term adherence, limited by access to facilities, injury risk (particularly finger tendon overuse injuries, which account for the majority of climbing injuries), cost of gym membership, and the steep difficulty curve at intermediate levels. The social and problem-solving aspects enhance retention for those who engage with the community, but geographic and financial barriers contribute to dropout. No large-scale adherence studies exist specifically for climbing."
-    anchor_type: "linear"
-    anchor_max: 15
-    anchor_unit: "years"
-    anchor_description: "Additional healthy lifespan years"
 
   fitness.performance:
     pbs: 8
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "Performance improvements in climbing are well-documented for the specific capacities it develops, particularly grip strength and upper body pulling power. The meta-analysis by Orth et al. (2016) found consistent significant improvements across multiple fitness parameters. However, the technical skill component means that progress is not purely a function of physical training - movement quality, fear management, and route-reading ability introduce variability in outcomes."
     uar: 55
     uar_reasoning: "Performance-oriented climbers tend to have better retention than casual participants due to the clear grading system providing measurable progression and the addictive nature of 'sending' harder routes. However, finger injuries are common at intermediate-to-advanced levels and can force extended breaks. Plateaus in the V4-V6 range are a well-known dropout point where progress slows significantly."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "performance_level"
-    anchor_description: "Elite competitive athletic performance capability"
 
   fitness.appearance:
     pbs: 5
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "Appearance changes from climbing are moderately reliable for upper body definition and leanness, but highly dependent on climbing volume, supplementary training, and nutrition. The research base for body composition changes specifically from climbing is thin, with most studies showing non-significant effects on body fat percentage. Those climbing 3+ times per week at moderate-to-high intensity tend to develop noticeable physique changes over 6-12 months."
     uar: 50
     uar_reasoning: "Appearance-motivated climbers may be disappointed by the slow and uneven aesthetic development, particularly the limited lower body and chest hypertrophy. Those primarily seeking physique changes tend to migrate to more targeted resistance training. Climbers who stay tend to be motivated by performance and enjoyment rather than appearance."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "aesthetic_achievement"
-    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
 
   fitness.enjoyment:
     pbs: 9
@@ -46,10 +34,6 @@ values:
     isr_reasoning: "Studies on climbing psychology consistently report high enjoyment and well-being outcomes. Research with diverse populations including people with disabilities (VA adaptive climbing programmes) shows strong psychological benefits. The game-like structure of graded difficulty, combined with social bonding through belaying partnerships, creates reliable positive experiences for most participants who engage beyond initial sessions."
     uar: 60
     uar_reasoning: "Enjoyment-based retention in climbing is higher than most exercise modalities for those who pass the initial learning phase. The social community, progression system, and variety provide strong hooks for long-term engagement. However, fear of falling, self-consciousness in gym settings, and frustration during plateaus cause dropout among a significant minority. Those who climb for 6+ months tend to become long-term participants."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "satisfaction_level"
-    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
 
 resources:
   upfront_cost: 250

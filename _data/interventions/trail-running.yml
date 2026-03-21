@@ -10,10 +10,6 @@ values:
     isr_reasoning: "The cardiovascular and metabolic health benefits of running are among the most robustly evidenced in exercise science, supported by decades of epidemiological data and large cohort studies. The relationship between cardiorespiratory fitness and longevity is described as the strongest and most consistent predictor across 199 unique cohort studies representing over 20.9 million observations. Trail-specific evidence is thinner but the underlying physiological mechanisms are identical to well-studied road running."
     uar: 55
     uar_reasoning: "Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes. Trail running may have modestly better adherence than road running due to the enjoyment factor of natural environments and variety of terrain, but is constrained by weather dependency, geographic access to trails, and higher acute injury risk (ankle sprains in particular). The time commitment for travel to trailheads adds a logistical barrier not present in road running."
-    anchor_type: "linear"
-    anchor_max: 15
-    anchor_unit: "years"
-    anchor_description: "Additional healthy lifespan years"
 
   fitness.performance:
     pbs: 7
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "Cardiovascular performance improvements from running are highly reliable and well-characterised in the literature. VO2max increases follow predictable dose-response relationships. Trail-specific adaptations (balance, proprioception, hill power) are consistently developed through regular practice. Individual variation exists in the rate of improvement, but directional performance gains are nearly universal among those who maintain consistent training."
     uar: 55
     uar_reasoning: "Performance-oriented trail runners benefit from measurable progress through pace improvements, distance milestones, and race results. The trail running community and event calendar provide strong external motivation. However, overuse injuries (particularly knee, ankle, and lower leg) can interrupt training and lead to dropout. Seasonal variation and weather affect consistency, and the time commitment for longer trail sessions can conflict with other obligations."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "performance_level"
-    anchor_description: "Elite competitive athletic performance capability"
 
   fitness.appearance:
     pbs: 5
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "Fat loss from running is reliably produced when caloric expenditure exceeds intake, but the magnitude depends heavily on dietary behaviour. Running alone without dietary modification produces modest weight loss (1-3 kg over 12 weeks in meta-analyses). Body composition changes are more reliable than pure weight loss, with consistent reductions in visceral fat even when scale weight changes are small."
     uar: 50
     uar_reasoning: "Appearance-motivated runners may be frustrated by slow visible progress, particularly if expecting upper body development. The endurance-adapted physique is not universally desired, and some runners find their appearance goals conflict with performance optimisation. Those primarily motivated by aesthetics tend to add resistance training rather than relying on running alone."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "aesthetic_achievement"
-    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
 
   fitness.enjoyment:
     pbs: 8
@@ -46,10 +34,6 @@ values:
     isr_reasoning: "Nature exposure reliably enhances exercise enjoyment across multiple studies. The combination of physical challenge, flow state potential, and environmental variety creates consistently positive experiences. However, adverse weather, insect exposure, and trail conditions can reduce enjoyment on individual sessions. The overall pattern of high satisfaction is robust among those who have access to appealing trail networks."
     uar: 60
     uar_reasoning: "Enjoyment-driven trail runners tend to have better long-term retention than road runners, as the variety of trails and natural environments prevents the monotony that drives road running dropout. The community aspect, race culture, and personal exploration goals provide sustained motivation. Weather dependency and seasonal access issues in some climates reduce year-round consistency, but many trail runners adapt by transitioning to road or treadmill running in poor conditions."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "satisfaction_level"
-    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
 
 resources:
   upfront_cost: 150

@@ -10,10 +10,6 @@ values:
    isr_reasoning: "Exceptionally robust evidence base with multiple large randomized controlled trials and decades of epidemiological data. Studies consistently show health benefits across diverse populations, ages, and fitness levels. The simplicity and low intensity make benefits highly reliable and reproducible, with minimal risk of adverse effects or contraindications."
    uar: 85
    uar_reasoning: "Walking has the highest adherence rates among exercise interventions due to accessibility, low barrier to entry, and ability to integrate into daily routines. Studies show 70-85% maintain daily walking programs beyond 6 months. Dropout rates are primarily due to weather, motivation fluctuations, or life changes rather than physical limitations or complexity."
-   anchor_type: "linear"
-   anchor_max: 15
-   anchor_unit: "years"
-   anchor_description: "Additional healthy lifespan years"
 
  fitness.performance:
    pbs: 4
@@ -22,10 +18,6 @@ values:
    isr_reasoning: "Research consistently demonstrates reliable but modest performance improvements from walking programs. Studies show predictable cardiovascular adaptations and functional capacity gains across populations. However, performance ceiling is inherently limited by the low-intensity nature of the activity."
    uar: 80
    uar_reasoning: "Performance-focused walkers often maintain programs due to low physical demands and joint-friendly nature. However, those seeking significant athletic gains may abandon walking for more intensive activities. Studies show good adherence among older adults and those with performance limitations, but lower retention among competitive athletes."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: "performance_level"
-   anchor_description: "Elite competitive athletic performance capability"
 
  fitness.appearance:
    pbs: 5
@@ -34,10 +26,6 @@ values:
    isr_reasoning: "Controlled studies consistently show modest weight loss and body composition improvements from walking programs. However, dramatic aesthetic changes require additional dietary modifications and longer timeframes. Research demonstrates reliable but limited physical transformation potential from walking alone."
    uar: 70
    uar_reasoning: "Appearance-focused walkers show moderate adherence, with some frustration over slow visible progress. Studies indicate 60-70% continue programs long enough for noticeable changes, though many supplement with additional activities. The gradual nature of results requires patience and realistic expectations."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: "aesthetic_achievement"
-   anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
 
  fitness.enjoyment:
    pbs: 8
@@ -46,10 +34,6 @@ values:
    isr_reasoning: "Research consistently demonstrates psychological benefits and high satisfaction rates among walkers. Studies show reliable mood improvements, stress reduction, and exercise enjoyment. The low-intensity nature and social opportunities create positive experiences for most participants who establish regular routines."
    uar: 80
    uar_reasoning: "Walkers often develop strong long-term habits due to enjoyment and lifestyle integration. Studies show high satisfaction and adherence rates, with many reporting walking as their preferred form of exercise. Weather dependency and motivation fluctuations are primary barriers, but overall retention is strong among those who find personal enjoyment."
-   anchor_type: "subjective"
-   anchor_max: 10
-   anchor_unit: "satisfaction_level"
-   anchor_description: "Activity becomes primary source of physical and mental satisfaction"
 
 resources:
  upfront_cost: 80

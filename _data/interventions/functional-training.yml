@@ -10,10 +10,6 @@ values:
     isr_reasoning: "Robust evidence from multiple large RCTs and cohort studies (n > 80,000 in pooled analyses) consistently demonstrates health benefits across diverse populations. The dose-response relationship is well-characterised with a J-shaped curve peaking at 30-60 minutes per week. Benefits are reliable when training is performed with adequate intensity and progressive overload, though proper form is important to avoid injury."
     uar: 55
     uar_reasoning: "Long-term adherence to functional/high-intensity functional training is challenging. Research shows ~60% abandon HIFT programmes within three months, and only 12.8% remain beyond twelve months (Claudino et al. 2023). General gym dropout rates range from 47-96% within 12 months. However, functional training's variety and scalability offer modestly better retention than traditional gym programmes. The learning curve for proper movement patterns and the physical demands contribute to early dropout."
-    anchor_type: "linear"
-    anchor_max: 15
-    anchor_unit: "years"
-    anchor_description: "Additional healthy lifespan years"
 
   fitness.performance:
     pbs: 7
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "Performance improvements from progressive resistance training are among the most well-documented effects in exercise science. Novice lifters reliably gain strength when following established programming principles. However, the breadth of functional training means no single capacity is maximised. Individual variation in response to training, programme quality, and coaching competence introduce moderate variability."
     uar: 55
     uar_reasoning: "Performance-focused functional trainees have moderately better retention due to measurable progress (weight on the bar, movement quality improvements). However, plateaus, injury risk from complex movements, and the technical learning curve contribute to dropout. CrossFit-style communities report better retention than solo training, but overall long-term adherence remains below 50% at 12 months."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "performance_level"
-    anchor_description: "Elite competitive athletic performance capability"
 
   fitness.appearance:
     pbs: 7
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "Body composition improvements from resistance training are well-supported by evidence, though the magnitude depends heavily on nutrition, sleep, and training consistency. Functional training reliably improves body composition when combined with appropriate caloric intake, but aesthetic results are more variable than pure strength gains due to the greater influence of dietary factors."
     uar: 55
     uar_reasoning: "Appearance-motivated functional trainees face the same general adherence challenges as other populations, with the added complexity that aesthetic results take longer to manifest than strength gains. The 3-6 month timeline for visible changes exceeds many participants' patience threshold. Those who persist past the initial plateau tend to develop longer-term habits."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "aesthetic_achievement"
-    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
 
   fitness.enjoyment:
     pbs: 7
@@ -46,10 +34,6 @@ values:
     isr_reasoning: "Enjoyment is highly dependent on training environment, coaching quality, and individual temperament. Those who thrive on challenge and measurable progress report high satisfaction, while those intimidated by complex movements or uncomfortable with physical exertion may not find it enjoyable. Group settings reliably enhance enjoyment through social support and accountability."
     uar: 55
     uar_reasoning: "Enjoyment-based retention in functional training is moderate. The variety helps prevent boredom, but the physical demands and technical requirements create barriers that recreational exercisers find discouraging. Community-embedded programmes show significantly better retention than solo training, but overall long-term adherence remains challenged by the intensity expectations."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "satisfaction_level"
-    anchor_description: "Activity becomes primary source of physical and mental satisfaction"
 
 resources:
   upfront_cost: 200

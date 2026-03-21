@@ -10,10 +10,6 @@ values:
     isr_reasoning: "The mechanism is essentially deterministic: pressing a key combination performs the action faster than navigating a menu. There is no ambiguity about whether shortcuts work. The only variability comes from application-specific inconsistencies and the occasional shortcut conflict, but these are minor. Multiple studies confirm reliable time savings when shortcuts are used, making this one of the most mechanistically certain interventions available."
     uar: 60
     uar_reasoning: "Research on keyboard shortcut adoption shows that even experienced computer users largely do not learn or use shortcuts, and years of computer experience do not correlate with shortcut knowledge. Most people learn a handful of basics (Ctrl+C, Ctrl+V) and plateau. The primary barriers are the initial slowdown during learning (shortcuts are slower than familiar mouse actions until they become automatic), the effort of memorisation, and the lack of external reinforcement. Deliberate practice programmes improve adoption rates, but many people still revert to mouse habits within weeks."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "competence_level"
-    anchor_description: "Work competence from completely unskilled (0) to exceptional mastery of role with elite-level execution (10)"
 
   current-work.engagement:
     pbs: 4
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "The flow-state mechanism is well-supported by cognitive research: reducing mechanical friction between intention and execution does facilitate immersion. Studies on tool fluency consistently show that faster tool operation correlates with reduced cognitive load and fewer workflow interruptions. The effect is reliable but modest in magnitude -- it is a necessary but not sufficient condition for deep engagement."
     uar: 60
     uar_reasoning: "Same adherence pattern as competence. The engagement benefit only materialises once shortcuts are fully internalised, which requires sustained practice through the initial awkward phase. Many people give up before reaching the fluency threshold where shortcuts feel natural and begin to support flow. Those who persist do reliably experience smoother workflows, but the dropout rate during the learning phase is significant."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "engagement_level"
-    anchor_description: "Work engagement from completely disengaged and dreading tasks (0) to deeply absorbed and energised by daily work (10)"
 
   current-work.rewards:
     pbs: 3
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "The time-saving mechanism is highly reliable -- shortcuts consistently save time. However, the conversion of saved time into actual impact depends entirely on how the individual uses that freed time, which is outside the intervention's control. The mechanical component (saving time) is near-certain; the impact component (using that time well) is uncertain but not part of the intervention's direct mechanism."
     uar: 60
     uar_reasoning: "Same adherence pattern as other current_work values. The additional challenge for impact is that the connection between shortcuts and meaningful outcomes is so indirect that it provides even less motivational reinforcement. People rarely think 'I closed that important deal because I used Ctrl+Shift+T instead of clicking the menu,' which makes it harder to sustain motivation for continued practice."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "impact_level"
-    anchor_description: "Work impact from no meaningful contribution (0) to transformative contribution that significantly advances organisational goals (10)"
 
 resources:
   upfront_cost: 0

@@ -10,10 +10,6 @@ values:
     isr_reasoning: "Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns with high reliability. However, shorter timeframes introduce meaningful uncertainty -- the S&P 500 has experienced drawdowns of 30-50% that took 2-7 years to recover from. The ISR of 80 reflects high long-term reliability tempered by genuine short-to-medium-term uncertainty that affects many investors' actual experience."
     uar: 65
     uar_reasoning: "Index fund adherence is moderate. While the strategy is simple, behavioural challenges are substantial: Dalbar's annual studies consistently show the average equity fund investor underperforms the market by 3-4% annually due to buying high and selling low. During the 2008-09 crash, significant numbers of retail investors sold at or near the bottom. Vanguard estimates behavioural coaching alone is worth ~2% per year, implying that without it, many investors deviate from buy-and-hold. A UAR of 65 reflects that while many persist, a meaningful minority capitulate during drawdowns or chase performance."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "returns_level"
-    anchor_description: "Optimal risk-adjusted investment returns consistently achieved over long time horizons"
 
   investing.safety:
     pbs: 5
@@ -22,10 +18,6 @@ values:
     isr_reasoning: "The diversification benefit of index funds is mathematically reliable and well-documented -- holding a broad index eliminates idiosyncratic risk with near-certainty. However, the strategy provides no protection against systematic market drawdowns (30-50% declines), which means the risk management is partial. The ISR of 85 reflects high reliability for the specific risk it addresses (concentration risk) tempered by the risks it deliberately accepts."
     uar: 70
     uar_reasoning: "Most index fund investors maintain their diversified position passively, which means the risk management benefit persists through inertia. However, during severe drawdowns some investors abandon the strategy entirely, converting paper losses into real ones. The UAR of 70 reflects that the majority sustain the risk management benefit but a meaningful minority capitulate during precisely the periods when diversification matters most."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "risk_level"
-    anchor_description: "Comprehensive portfolio risk management with minimised downside exposure across all market conditions"
 
   investing.simplicity:
     pbs: 7
@@ -34,10 +26,6 @@ values:
     isr_reasoning: "Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns that compound toward FI targets with high reliability. However, the timeline to FI depends heavily on savings rate and starting point, and sequence-of-returns risk can significantly affect when FI is actually achieved. The ISR of 75 reflects high directional reliability tempered by genuine uncertainty about timing."
     uar: 60
     uar_reasoning: "Maintaining a consistent index fund strategy oriented toward FI is genuinely difficult over the 10-20 year timescales typically required. Many investors lose focus on their FI target, redirect funds to consumption, or abandon the strategy during drawdowns. The UAR of 60 reflects that while a majority persist, the long timeframes involved mean a substantial minority deviate from their FI-oriented investment plan."
-    anchor_type: "subjective"
-    anchor_max: 10
-    anchor_unit: "independence_level"
-    anchor_description: "Sufficient invested wealth to make paid employment entirely optional, with sustainable withdrawal rates across market conditions"
 
 resources:
   upfront_cost: 0
