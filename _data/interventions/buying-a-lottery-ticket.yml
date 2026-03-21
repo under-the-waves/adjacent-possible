@@ -1,0 +1,29 @@
+name: "Buying a Lottery Ticket"
+description: "Purchasing a lottery ticket (e.g. the UK National Lottery or US Powerball) on a regular basis, typically once or twice per week, as a wealth-building strategy. A single ticket costs $2-5 depending on the game. The odds of winning a major jackpot range from approximately 1 in 14 million (UK Lotto) to 1 in 292 million (US Powerball). The expected value of a $2 ticket is approximately $0.50-0.80, meaning the average player loses 60-75% of every dollar spent. Results are immediate per draw, though the probability of a life-changing outcome in any given year is negligible."
+applicable_domains: ["investing"]
+
+values:
+  investing.growth:
+    pbs: 9
+    pbs_reasoning: "If a lottery ticket wins, the wealth growth is transformative. UK Lotto jackpots average £5-10 million; US Powerball regularly exceeds $100 million. For someone on a median income, a major jackpot represents more wealth accumulation than decades of optimal conventional investing could achieve. This places it near the top of the scale for sheer magnitude of growth if it works. Not 10 because the anchor describes 'optimal risk-adjusted returns compounding consistently over decades', which doesn't perfectly fit a one-time windfall, and because research on lottery winners (Hankins, Hoekstra & Skiba, 2011) shows that a significant proportion end up in financial difficulty within years due to poor management of the windfall."
+    isr: 0.1
+    isr_reasoning: "The probability of meaningful wealth growth from lottery tickets is vanishingly small. For a regular player buying 2 tickets per week, the annual probability of a major jackpot is approximately 0.0002% (UK Lotto) to 0.000004% (US Powerball). Including smaller prizes, fewer than 0.1% of regular players achieve a net positive return in any given year, and those returns are typically small. Clotfelter and Cook (1989) and subsequent analyses consistently show that lotteries function as a regressive tax on participants, returning $0.45-0.80 per dollar spent (Matheson & Grote, 2004). Over a 30-year horizon of regular play at $10/week, the cumulative expected loss is $9,000-$12,000, while the same money in index funds would grow to $50,000-$65,000. The ISR of 0.1% reflects that the intervention almost never produces the growth benefit it theoretically could."
+    uar: 85
+    uar_reasoning: "Lottery ticket purchasing has remarkably high adherence. The UK National Lottery reports that regular players (those who play at least once a month) maintain the habit for years, with Camelot's annual reports showing stable or growing player bases over decades. The simplicity of the action (buy a ticket at the shop or set up a direct debit), the low per-transaction cost, the intermittent reinforcement from small wins, and the aspirational fantasy of a jackpot all support sustained engagement. Griffiths and Wood (2001) found that lottery play is one of the most persistent forms of gambling due to its social acceptability and low perceived stakes. The UAR of 85% reflects that most people who start playing regularly continue to do so."
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No setup costs. Lottery tickets are available at any newsagent, supermarket, or online. No account, equipment, or training required."
+  ongoing_cost: 10
+  ongoing_cost_period: "week"
+  ongoing_cost_reasoning: "Two tickets per week at $2-5 each. Using $10/week as a conservative estimate for regular play across one or two games. Some players spend substantially more."
+  upfront_time: 0.1
+  upfront_time_reasoning: "A few minutes to choose a game and learn how to buy a ticket. Essentially zero setup required."
+  ongoing_time: 0.1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Under 10 minutes per week to purchase tickets and check results. Can be reduced to near-zero with direct debit and automatic number selection."
+
+prerequisites:
+  - "Legal gambling age in your jurisdiction (typically 18+)"
+  - "Access to a licensed lottery retailer or online lottery platform"
+  - "Disposable income that can be lost without affecting essential expenses"
