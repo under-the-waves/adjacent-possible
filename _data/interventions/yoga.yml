@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 8
     pbs_reasoning: |
-      - Yoga combines physical movement with mindfulness, breathing practice, and often a contemplative dimension that many practitioners find deeply satisfying; studies show significant anxiety reduction (SMD = -0.44 in meta-analyses) and improved well-being ([Cramer et al. 2018, Cochrane Database](https://doi.org/10.1002/14651858.CD012563.pub2))
-      - The practice can be adapted to any fitness level, performed anywhere, and integrated with personal values and philosophical interests, with variety of styles and progressive posture mastery supporting sustained engagement ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
-      - Score 8 ("highly enjoyable and anticipated") reflects that yoga's combination of physical, psychological, and meditative elements creates multi-layered satisfaction, though it lacks the adventure/exploration dimension that pushes activities like climbing and trail running to score 9 ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
+      - Yoga offers a distinctive enjoyment profile: the integration of physical movement with breathwork and mindfulness creates a contemplative, almost ritualistic quality that feels rewarding beyond the physical effort itself, with progressive posture mastery providing clear skill progression
+      - Adaptability is a major enjoyment strength: practice can be gentle or intense, solo or social, at home or in a studio, and integrated with personal philosophical or spiritual interests, meaning practitioners can tailor the experience to what they find most satisfying
+      - Score 8 (highly enjoyable) rather than 9: the multi-layered satisfaction of body, breath, and mind is genuinely compelling, but yoga lacks the adventure, exploration, and adrenaline dimensions that push outdoor and problem-solving activities to a 9
     isr: 80
     isr_reasoning: |
-      - Enjoyment and psychological well-being improvements from yoga are among its most consistently documented outcomes; the very low dropout rates (11.4% in RCTs) partially reflect high enjoyment ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
-      - The combination of physical movement, breathwork, and mindfulness reliably produces positive subjective experiences across populations and yoga styles ([Cramer et al. 2018, Cochrane Database](https://doi.org/10.1002/14651858.CD012563.pub2))
-      - Individual responses vary by yoga style and teaching quality, but the broad accessibility and adaptability make positive experiences reliably achievable ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+      - Yoga's exceptionally low dropout rate in RCTs (11.4% across 168 trials) is among the best in exercise research, and enjoyment is consistently cited as a primary reason for continuation ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
+      - Enjoyment reliability depends significantly on style match and instructor quality: practitioners in styles mismatched to their preferences (e.g. someone wanting intensity placed in restorative yoga, or vice versa) report lower satisfaction, but the wide range of available styles means most people can find a good fit ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+      - A minority find yoga boring, too slow, or uncomfortably spiritual, but this group is small enough that approximately 80% of those who practise regularly report genuine enjoyment rather than mere tolerance ([Cramer et al. 2018, Cochrane Database](https://doi.org/10.1002/14651858.CD012563.pub2))
     uar: 70
     uar_reasoning: |
       - Yoga's high enjoyment translates to strong long-term adherence; the 11.4% RCT dropout rate and 77% class attendance among completers are among the best in exercise intervention research ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))

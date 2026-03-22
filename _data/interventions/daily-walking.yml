@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 8
     pbs_reasoning: |
-      - Walking provides high psychological satisfaction through stress reduction, nature exposure, social interaction opportunities, and meditative qualities, with studies showing significant mood improvements and anxiety reduction ([Robertson et al. 2012, Br J Sports Med](https://doi.org/10.1136/bjsports-2011-090473))
-      - The activity offers exceptional flexibility and accessibility: can be combined with podcasts, music, socialising, dog walking, or commuting, making it "highly enjoyable and anticipated" (score 8) for many practitioners ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
-      - Walking is consistently rated among the most enjoyable forms of physical activity in population surveys, with its low-effort, non-competitive nature making it broadly appealing across demographics ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Walking is uniquely stackable with other enjoyable activities: podcasts, audiobooks, music, conversation with a companion, dog walking, or simply observing the neighbourhood; this means the experience is rarely just 'exercise' and can be actively looked forward to
+      - Nature exposure, sunlight, fresh air, and changing scenery provide rich sensory variety without any physical discomfort, skill barrier, or performance pressure; the activity is inherently pleasant rather than merely tolerable
+      - Score 8 ('highly enjoyable and anticipated') reflects that walking combines low effort with high flexibility and sensory reward; it falls short of 10 only because it lacks the flow states, skill mastery, or competitive thrill of peak-enjoyment activities
     isr: 85
     isr_reasoning: |
-      - Research consistently demonstrates psychological benefits and high satisfaction rates among walkers, with reliable mood improvements and stress reduction across populations ([Robertson et al. 2012, Br J Sports Med](https://doi.org/10.1136/bjsports-2011-090473))
-      - The low-intensity nature and social opportunities create positive experiences for most participants who establish regular routines, with very few reporting walking as aversive ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Green exercise research shows outdoor walking produces reliably greater mood improvements than indoor exercise, adding a robust enjoyment pathway ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
+      - Walking sits comfortably below the ventilatory threshold for virtually all adults, placing it in the intensity range where affective responses are almost universally positive; Ekkekakis's dual-mode theory predicts reliable pleasure at self-paced low intensities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Population surveys consistently rank walking as the most preferred and most enjoyed form of physical activity across age groups, genders, and fitness levels, with very few people reporting it as aversive ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Green exercise research confirms that outdoor walking produces reliably positive affective responses across populations, with the combination of movement and nature exposure generating consistent enjoyment regardless of individual fitness or temperament ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
     uar: 80
     uar_reasoning: |
       - Walkers often develop strong long-term habits due to enjoyment and lifestyle integration, with many reporting walking as their preferred form of exercise ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))

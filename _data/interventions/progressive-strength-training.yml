@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 7
     pbs_reasoning: |
-      - Resistance training significantly improves mood, self-efficacy, and provides satisfaction through measurable progress (weight on the bar, rep PRs), with meta-analyses showing moderate-to-large effect sizes for anxiety and depression reduction ([Gordon et al. 2018, JAMA Psychiatry](https://doi.org/10.1001/jamapsychiatry.2018.0572))
-      - The activity is generally enjoyable for those who engage long-term, but is not typically reported as a primary source of life satisfaction compared to inherently playful or nature-based activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - Score 7 reflects a position between "generally enjoyable" (6) and "highly enjoyable" (8) on the subjective anchor, matching the evidence that resistance training is satisfying but rarely described as deeply fulfilling or anticipated with excitement by most practitioners ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
+      - Measurable progress is a core enjoyment driver: adding weight to the bar, hitting rep PRs, and tracking strength gains over weeks provides a clear, tangible feedback loop that most goal-oriented people find satisfying
+      - Sessions are structured and predictable but lack the variety, social spontaneity, nature exposure, or playfulness that characterise the most enjoyable activities; rest periods can feel tedious, and the repetitive nature of programmed sets limits novelty
+      - Score 7 sits between 'generally enjoyable' (6) and 'highly enjoyable' (8): satisfying for those who value self-improvement and discipline, but rarely anticipated with excitement or described as a primary source of life satisfaction
     isr: 70
     isr_reasoning: |
-      - Research consistently shows psychological benefits from resistance training, including reduced anxiety and depression symptoms, with high reliability in controlled settings ([Gordon et al. 2017, Sports Med](https://doi.org/10.1007/s40279-017-0692-8))
-      - Individual variation in enjoyment response is high, with some finding the activity inherently satisfying and others experiencing it as effortful and unpleasant despite recognising its benefits ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Enjoyment increases with competence and visible results, meaning the ISR for enjoyment improves over time but many never reach the threshold due to early dropout ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - Affective response research shows that self-selected intensity exercise produces more positive affect than prescribed intensity; strength training's structured loading means many sessions feel effortful rather than pleasant, particularly for newer trainees ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Exercise preference surveys consistently rank resistance training below outdoor, social, and play-based activities for enjoyment, though a dedicated subset reports high intrinsic satisfaction ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Enjoyment reliability improves substantially with competence: those who persist past the initial 3-6 month learning phase report significantly higher intrinsic motivation, but many drop out before reaching that threshold ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
     uar: 25
     uar_reasoning: |
       - Enjoyment-based adherence is particularly challenging as resistance training can be uncomfortable, repetitive, and lacks the social or playful elements of team sports or outdoor activities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))

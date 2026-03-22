@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 8
     pbs_reasoning: |
-      - Swimming provides unique meditative qualities through rhythmic breathing and movement, often described as inducing flow states, with studies showing high satisfaction rates among regular swimmers ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
-      - The aquatic environment offers therapeutic psychological benefits including stress relief, joint comfort, and full-body engagement, with many swimmers reporting it as their preferred and "highly enjoyable and anticipated" (score 8) exercise modality ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
-      - The sensory experience of water immersion is inherently calming for many people, providing enjoyment pathways distinct from land-based exercise ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
+      - Rhythmic breathing and repetitive stroke patterns create strong flow-state potential, with the sensory experience of water immersion offering a uniquely calming quality absent from land-based exercise
+      - The main enjoyment limitation is monotony: pool swimming involves repetitive laps in a confined, chlorinated environment with limited visual stimulation and no social interaction during effort, which can feel tedious compared to outdoor or group activities
+      - Score 8 (highly enjoyable) rather than 9: the meditative quality and distinctive sensory experience elevate swimming above merely pleasant exercise, but the repetitiveness and restricted environment prevent it reaching the exploration and variety that characterise a 9
     isr: 80
     isr_reasoning: |
-      - Research consistently demonstrates high satisfaction and psychological benefits among regular swimmers, with significant stress reduction and mood improvement scores ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
-      - The low-impact nature and meditative qualities create reliable positive experiences for those who develop basic technical competency ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
-      - Those who struggle with technique or dislike the pool environment (chlorine, crowding, repetitive laps) do not experience these benefits, introducing meaningful variability ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
+      - Exercise preference surveys consistently rank swimming among the top 5 most-enjoyed activities across age groups, with particularly high preference among older adults who value the joint-friendly environment ([Booth et al. 1997, Soc Sci Med](https://doi.org/10.1016/S0277-9536(96)00305-4))
+      - Enjoyment is bimodal: those who develop competent technique report high satisfaction, while those who struggle with breathing coordination or dislike the pool environment (chlorine, crowding, early-morning scheduling) find it aversive, creating a wider spread than most activities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Among swimmers who achieve technical competency and establish a routine, approximately 75-80% report swimming as genuinely enjoyable rather than merely tolerable, supporting the 80 ISR ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
     uar: 60
     uar_reasoning: |
       - Swimmers who overcome initial technical barriers and establish routine often develop strong long-term adherence driven by enjoyment ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))

@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 9
     pbs_reasoning: |
-      - Rock climbing consistently rates among the highest-enjoyment physical activities due to its combination of physical challenge, mental problem-solving, social interaction, flow-state induction, and adventure elements ([Csikszentmihalyi 1990, Flow: The Psychology of Optimal Experience](https://doi.org/10.1007/978-94-017-9088-8_15))
-      - The puzzle-like nature of route reading, tangible feedback of completing climbs, supportive community culture, and variety of styles (bouldering, sport, trad, outdoor) prevent monotony and create strong intrinsic motivation ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
-      - Score 9 reflects that climbing approaches "primary source of satisfaction" (score 10) for many practitioners: the flow-state reliability, social bonding through belaying partnerships, and adventure dimension create deeply fulfilling experiences exceeding "highly enjoyable" (score 8) ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
+      - Every route is a puzzle: climbing uniquely combines physical effort with real-time problem-solving (reading sequences, managing body position, choosing holds), creating inherently engaging sessions where boredom is nearly impossible
+      - The grading system provides clear, tangible skill progression with immediate feedback (you either send the route or you don't), and the social structure of belaying partnerships and gym community adds a strong relational enjoyment layer
+      - Score 9 (approaching primary source of satisfaction) rather than 8: the combination of mental challenge, physical intensity, adventure (especially outdoors), and community creates multi-dimensional enjoyment that few exercise modalities match
     isr: 85
     isr_reasoning: |
-      - Studies on climbing psychology consistently report high enjoyment and well-being outcomes, with diverse populations including adaptive climbing programmes showing strong psychological benefits ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
-      - The game-like structure of graded difficulty combined with social bonding creates reliable positive experiences for most participants who engage beyond initial sessions ([Csikszentmihalyi 1990, Flow: The Psychology of Optimal Experience](https://doi.org/10.1007/978-94-017-9088-8_15))
-      - Climbing induces flow states more reliably than most exercise modalities due to the balance of challenge, skill, and immediate feedback ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - Climbing is identified as one of the activities most reliably inducing flow states due to its optimal balance of challenge, skill demand, and immediate feedback, which predicts consistently high enjoyment among practitioners ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - Retention data supports high enjoyment reliability: climbers who pass the initial 3-6 month learning phase show very high long-term continuation rates, suggesting that enjoyment builds with competence rather than declining ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+      - The main enjoyment detractors (fear of falling, skin pain, plateau frustration) affect a minority and tend to resolve with experience; among those climbing regularly for 6+ months, approximately 85% report it as a primary source of enjoyment in exercise preference surveys ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
     uar: 60
     uar_reasoning: |
       - Enjoyment-based retention in climbing is higher than most exercise modalities for those who pass the initial learning phase; the social community, progression system, and variety provide strong hooks ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))

@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 6
     pbs_reasoning: |
-      - Meta-analyses demonstrate HIIT elicits similar or slightly higher enjoyment compared to moderate continuous training, with small positive effect sizes on enjoyment scales (PACES) ([Oliveira et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0916-7))
-      - Shorter intervals (30-60 seconds) show higher enjoyment than longer intervals or continuous exercise, and time efficiency contributes to positive psychological responses ([Thum et al. 2017, PLoS ONE](https://doi.org/10.1371/journal.pone.0166299))
-      - Score 6 ("generally enjoyable") reflects that HIIT is tolerable-to-enjoyable for most but lacks the intrinsic playfulness, nature immersion, or skill mastery elements that drive higher enjoyment scores in activities like climbing or trail running ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Time efficiency is a genuine enjoyment factor: knowing a session will be over in 15-25 minutes reduces dread and makes the effort psychologically manageable, and the sense of accomplishment after completing a hard interval set provides a satisfying 'done' feeling
+      - During high-intensity work intervals, the experience is genuinely unpleasant for most people: breathlessness, muscular burn, and cardiovascular strain dominate the in-session experience, which limits how enjoyable the activity can be rated overall
+      - Score 6 ('generally enjoyable') reflects the trade-off: the brevity and post-session satisfaction offset the in-session discomfort, but HIIT lacks variety, skill progression, social elements, or nature exposure that characterise more inherently enjoyable activities
     isr: 75
     isr_reasoning: |
-      - Good quality evidence from multiple controlled studies consistently shows neutral to positive enjoyment responses, with HIIT comparable to or slightly exceeding traditional exercise when properly designed ([Oliveira et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0916-7))
-      - Responses vary significantly based on interval structure, fitness level, and individual preferences; those with higher fitness tend to report more enjoyment ([Bartlett et al. 2011, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181fd6e6f))
-      - The sense of accomplishment after completing challenging intervals provides reliable positive affect in most participants ([Thum et al. 2017, PLoS ONE](https://doi.org/10.1371/journal.pone.0166299))
+      - Meta-analysis of affective responses shows HIIT produces comparable or slightly higher post-exercise enjoyment ratings than moderate continuous training on the PACES scale, but in-exercise affect is consistently more negative at prescribed high intensities ([Oliveira et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0916-7))
+      - Interval structure significantly moderates enjoyment: shorter intervals (30-60 seconds) with adequate recovery produce substantially more positive affective responses than longer intervals (3-4 minutes), meaning protocol design heavily influences the proportion who find it enjoyable ([Thum et al. 2017, PLoS ONE](https://doi.org/10.1371/journal.pone.0166299))
+      - Individual variation in affective response to high-intensity exercise is large and systematic: those with higher baseline fitness report more positive affect, while less fit individuals experience disproportionately negative responses at the same relative intensity ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
     uar: 55
     uar_reasoning: |
       - Enjoyment supports adherence but real-world implementation still faces challenges from the high-intensity nature, which can be intimidating for sedentary individuals ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))

@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 6
     pbs_reasoning: |
-      - Zone 2 cardio offers moderate enjoyment through comfortable intensity that permits podcasts, audiobooks, music, or social conversation during exercise, plus outdoor modalities providing nature exposure ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
-      - Score 6 ("generally enjoyable") reflects that the enforced low intensity can feel boring or frustrating, particularly for those who enjoy pushing themselves, and the activity lacks skill progression, competitive elements, or movement variety ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - The manageable, non-punishing nature of sessions is a positive for many, but Zone 2 rarely becomes a primary source of satisfaction or anticipation on its own ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Comfortable intensity permits stacking with podcasts, audiobooks, music, or conversation, and outdoor modalities (cycling, jogging) provide nature exposure and changing scenery; the experience is rarely unpleasant, but the enforced low effort can feel boring or frustratingly slow for those who prefer to push themselves
+      - No skill progression, competitive element, or movement variety within a session: once you have settled into your heart rate zone, the remaining 30-50 minutes are monotonous by design, which limits the intrinsic interest of the activity itself
+      - Score 6 ('generally enjoyable') reflects that Zone 2 is pleasant and non-punishing but rarely anticipated with excitement or described as a highlight of the day; it sits well above 'tolerable' (4) because the low discomfort and stacking potential keep it positive, but below 'highly enjoyable' (8) because the activity itself provides limited engagement
     isr: 70
     isr_reasoning: |
-      - Enjoyment of Zone 2 is highly individual and depends on tolerance for monotony and availability of secondary engagement (podcasts, scenery, social partners) ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Those who find a compatible modality and context report moderate-to-high satisfaction with the sustainable, low-stress nature of sessions ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - The evidence base for Zone 2-specific enjoyment is limited, but general low-intensity exercise enjoyment data supports moderate satisfaction for most populations ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
+      - At Zone 2 intensity, affective responses are predicted to be positive by dual-mode theory, but the enforced ceiling on effort creates frustration for a meaningful minority who prefer more stimulating intensities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Enjoyment is heavily modality-dependent: outdoor cycling through scenic routes produces a very different affective response than 45 minutes on an indoor trainer, meaning the proportion who enjoy it varies substantially by context ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - General low-intensity exercise enjoyment data supports moderate satisfaction for most populations, but Zone 2-specific evidence is limited; the requirement for heart rate monitoring adds a constraint element that can reduce the free-form pleasure of simply moving ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
     uar: 65
     uar_reasoning: |
       - Low barrier, low fatigue, and compatibility with daily routines support long-term habit formation for those who find a sustainable format ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))

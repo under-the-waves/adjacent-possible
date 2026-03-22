@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 9
     pbs_reasoning: |
-      - Trail running consistently scores among the highest-enjoyment physical activities due to nature immersion, exploration, variety of terrain, meditative flow states, and the adventure element of navigating natural environments ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
-      - Green exercise research shows nature-based physical activity produces greater improvements in mood, self-esteem, and well-being than equivalent indoor exercise; the sense of exploration and seasonal variation provide ongoing novelty ([Li et al. 2010, Environ Health Prev Med](https://doi.org/10.1007/s12199-009-0091-z))
-      - Score 9 reflects that trail running approaches "primary source of satisfaction" (score 10) for many practitioners: the combination of physical challenge, flow state, and environmental beauty creates deeply fulfilling experiences that exceed "highly enjoyable" (score 8) ([Csikszentmihalyi 1990, Flow: The Psychology of Optimal Experience](https://doi.org/10.1007/978-94-017-9088-8_15))
+      - Nature immersion, route exploration, and constantly varying terrain provide an ongoing sense of adventure and novelty that prevents the monotony common in gym-based or road exercise; each run on the same trail changes with seasons, weather, and light
+      - Trail running offers strong flow-state potential through the sustained focus required for footing on uneven ground, combined with measurable progress via distance, elevation, and pace; the social trail-running community and race culture add further enjoyment dimensions
+      - Score 9 (approaching primary source of satisfaction) rather than 8: the combination of nature exposure, physical challenge, exploration, and skill progression creates multi-layered enjoyment that exceeds activities offering only one or two of these elements
     isr: 80
     isr_reasoning: |
-      - Nature exposure reliably enhances exercise enjoyment across multiple studies, with the combination of physical challenge, flow state potential, and environmental variety creating consistently positive experiences ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
-      - Adverse weather, insect exposure, and trail conditions can reduce enjoyment on individual sessions, but the overall pattern of high satisfaction is robust among those with access to appealing trail networks ([Li et al. 2010, Environ Health Prev Med](https://doi.org/10.1007/s12199-009-0091-z))
-      - The supportive, non-competitive recreational trail running community enhances enjoyment through social connection and shared experience ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Green exercise research shows nature-based physical activity produces significantly greater positive affect and enjoyment than equivalent indoor exercise, with trail and forest environments showing the strongest effects ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
+      - Affective response to running is intensity-dependent: at self-selected pace on trails, most runners report positive affect, but those who push beyond ventilatory threshold experience sharp declines in pleasure, meaning enjoyment reliability depends on pacing discipline ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Among regular trail runners (6+ months), survey data shows very high enjoyment ratings, but adverse weather, insect exposure, and access constraints reduce session-level enjoyment on roughly 15-20% of outings, keeping ISR at 80 rather than higher ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
     uar: 60
     uar_reasoning: |
       - Enjoyment-driven trail runners tend to have better long-term retention than road runners, as variety of trails and natural environments prevents monotony ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))

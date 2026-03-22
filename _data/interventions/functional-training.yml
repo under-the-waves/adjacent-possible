@@ -57,14 +57,14 @@ values:
   fitness.enjoyment:
     pbs: 7
     pbs_reasoning: |
-      - Functional training offers high variety through diverse movement patterns, equipment options, and programming structures, with skill acquisition (Olympic lifts, kettlebell work) providing ongoing cognitive engagement ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
-      - Community-based formats add strong social reinforcement, and measurable progress through load increases and movement mastery provides intrinsic motivation, placing enjoyment between "generally enjoyable" (6) and "highly enjoyable" (8) ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
-      - Physical discomfort of challenging sessions and technical frustration with complex movements limit enjoyment ceiling for some populations, preventing a score of 8 ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - High movement variety (kettlebells, Olympic lifts, bodyweight, carries) keeps sessions mentally engaging and reduces the repetitiveness that limits enjoyment in conventional strength training; skill progression through increasingly complex movements provides ongoing novelty
+      - Strong social and community potential, especially in group formats: shared suffering during challenging workouts, friendly competition on whiteboard scores, and coaching interaction add layers of enjoyment beyond the exercise itself
+      - Score 7 sits between 'generally enjoyable' (6) and 'highly enjoyable' (8): the variety and social elements elevate it above standard gym work, but high-intensity discomfort, technical frustration with complex movements, and post-session fatigue prevent it from reaching 8
     isr: 70
     isr_reasoning: |
-      - Enjoyment is highly dependent on training environment, coaching quality, and individual temperament; those who thrive on challenge report high satisfaction while others find it intimidating ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Group settings reliably enhance enjoyment through social support and accountability, with CrossFit participants reporting significantly higher exercise enjoyment than traditional gym users ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
-      - The variability in individual response and dependence on context means roughly 70% of adherent participants experience meaningful enjoyment ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
+      - CrossFit participants report significantly higher exercise enjoyment than traditional gym users in comparative studies, but this partly reflects self-selection into community-oriented formats rather than the training modality itself ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
+      - Affective responses to high-intensity functional training vary substantially by individual: those with higher fitness and tolerance for discomfort report positive affect, while others find the intensity aversive ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Enjoyment is heavily context-dependent: the same movements performed in a supportive group environment produce markedly different affective responses than solo training, introducing significant variability in the proportion who genuinely enjoy it ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
     uar: 50
     uar_reasoning: |
       - Enjoyment-based retention in functional training is moderate; variety helps prevent boredom, but physical demands and technical requirements create barriers for recreational exercisers ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))

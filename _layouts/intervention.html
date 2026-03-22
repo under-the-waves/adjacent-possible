@@ -272,6 +272,30 @@ layout: default
     color: #333;
 }
 
+#popupContent a {
+    color: #155799;
+    text-decoration: underline;
+}
+
+#popupContent a:hover {
+    color: #0d47a1;
+}
+
+#popupContent ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+#popupContent li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+#popupContent p {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
 .popup-overlay {
     display: none;
     position: fixed;
@@ -533,11 +557,38 @@ function calculateEBS() {
     }
 }
 
+function renderReasoning(text) {
+    if (!text) return '';
+    // Escape HTML entities first
+    var div = document.createElement('div');
+    div.textContent = text;
+    var escaped = div.innerHTML;
+    // Convert markdown links [text](url) to <a> tags
+    escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+        '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    // Convert lines starting with "- " to list items
+    var lines = escaped.split('\n');
+    var inList = false;
+    var result = [];
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (line.match(/^- /)) {
+            if (!inList) { result.push('<ul>'); inList = true; }
+            result.push('<li>' + line.substring(2) + '</li>');
+        } else {
+            if (inList) { result.push('</ul>'); inList = false; }
+            if (line) result.push('<p>' + line + '</p>');
+        }
+    }
+    if (inList) result.push('</ul>');
+    return result.join('');
+}
+
 function showReasoning(key) {
     const data = reasoningData[key];
     if (data) {
         document.getElementById('popupHeader').textContent = data.title;
-        document.getElementById('popupContent').textContent = data.content;
+        document.getElementById('popupContent').innerHTML = renderReasoning(data.content);
         document.getElementById('popupOverlay').classList.add('visible');
         document.getElementById('reasoningPopup').classList.add('visible');
     }
