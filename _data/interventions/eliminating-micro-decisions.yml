@@ -1,5 +1,9 @@
 name: "Eliminating Micro-Decisions"
-description: "Systematically identifying and removing or automating low-stakes recurring decisions that consume cognitive resources without meaningful returns. This includes establishing default choices for routine matters (meals, clothing, routes, scheduling), creating decision rules for recurring situations ('if X, then always Y'), and batching unavoidable decisions into dedicated time blocks. The intervention draws on decision fatigue research showing that the cumulative cognitive load of many small choices degrades the quality of subsequent important decisions. Implementation involves auditing a typical week for recurring decision points, categorising each as high-stakes or low-stakes, and designing defaults or automation for the low-stakes category. Most practitioners can eliminate 15 - 30 micro-decisions per day within the first 2 - 3 weeks, with the full system stabilising over 4 - 8 weeks."
+description: |
+  - Systematically identifying and removing or automating low-stakes recurring decisions (meals, clothing, routes, scheduling) by establishing default choices and creating decision rules for recurring situations ('if X, then always Y')
+  - Implementation involves auditing a typical week for recurring decision points, categorising each as high-stakes or low-stakes, and designing defaults or automation for the low-stakes category, with most practitioners eliminating 15-30 micro-decisions per day within 2-3 weeks
+  - Draws on [decision fatigue research](https://doi.org/10.1111/j.1467-9280.2008.02057.x) showing accumulated decisions deplete self-regulatory resources, though [replication attempts](https://doi.org/10.1177/1745691616652873) have found smaller effects than originally reported
+  - Once defaults are established, the intervention operates by removing effort rather than adding it, which [habit research](https://doi.org/10.1002/ejsp.674) identifies as the strongest predictor of sustained behaviour change, with full system stabilisation over 4-8 weeks
 applicable_domains: ["organisation"]
 
 values:

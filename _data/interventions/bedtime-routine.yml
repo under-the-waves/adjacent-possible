@@ -1,5 +1,9 @@
 name: "Bedtime Routine"
-description: "A consistent sequence of relaxing activities performed 30-90 minutes before sleep at the same time each night, typically including activities like dimming lights, avoiding screens, taking a warm bath or shower, reading, gentle stretching, or meditation. The routine signals to the body that it's time to wind down and prepares the mind and body for sleep through predictable, calming behaviours performed in the same order nightly. Most people see improvements in sleep onset time within 1-2 weeks of consistent implementation, with full benefits typically achieved within 4-6 weeks."
+description: |
+  - A consistent sequence of relaxing activities performed 30-90 minutes before sleep at the same time each night
+  - Typical activities include dimming lights, avoiding screens, warm bath or shower, reading, gentle stretching, or meditation
+  - The fixed sequence signals wind-down through predictable, calming behaviours performed in the same order nightly
+  - Most people see improvements in sleep onset within 1-2 weeks, with full benefits typically achieved within 4-6 weeks
 applicable_domains: ["sleep"]
 
 values:

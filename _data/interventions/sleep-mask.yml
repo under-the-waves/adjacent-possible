@@ -1,6 +1,9 @@
 name: "Sleep Mask"
 description: |
-  Wearing a light-blocking eye mask during sleep to create complete darkness and eliminate visual stimuli that can disrupt sleep cycles. A properly fitted sleep mask blocks 99-100% of ambient light, including early morning sunlight, streetlights, and electronic device indicators, helping maintain melatonin production and prevent premature awakening. Most users experience improved sleep continuity within the first few nights of use, with full adaptation to wearing the mask typically occurring within 1-2 weeks of consistent nightly use.
+  - Wearing a light-blocking eye mask during sleep to create complete darkness and eliminate visual stimuli that can disrupt sleep cycles
+  - A properly fitted mask blocks 99-100% of ambient light including early morning sunlight, streetlights, and device indicators
+  - Maintains melatonin production and prevents premature awakening
+  - Most users see improved sleep continuity within the first few nights, with full adaptation to wearing the mask within 1-2 weeks
 applicable_domains: ["sleep"]
 
 values:

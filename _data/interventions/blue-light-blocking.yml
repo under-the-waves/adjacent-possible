@@ -1,5 +1,8 @@
 name: "Blue Light Blocking"
-description: "The practice of reducing exposure to blue light (wavelengths 400-490nm) in the 2-3 hours before bedtime through blue light blocking glasses, screen filters, or device settings that filter blue wavelengths. This intervention aims to prevent suppression of melatonin production caused by artificial light exposure, particularly from electronic devices like phones, computers, and LED lighting. Most users see improvements in sleep onset time within 1-2 weeks of consistent evening use, with optimal benefits typically achieved after 3-4 weeks of regular implementation."
+description: |
+  - Reducing exposure to blue light (400-490nm wavelengths) in the 2-3 hours before bedtime using blocking glasses, screen filters, or device night-mode settings
+  - Prevents suppression of melatonin production caused by artificial light from phones, computers, and LED lighting
+  - Most users see improvements in sleep onset within 1-2 weeks of consistent evening use, with full benefits after 3-4 weeks
 applicable_domains: ["sleep"]
 
 values:

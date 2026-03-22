@@ -1,5 +1,10 @@
 name: "Rock Climbing"
-description: "Regular indoor and/or outdoor rock climbing practice encompassing bouldering, top-rope, and lead climbing, typically 2-3 sessions per week of 60-120 minutes each. Climbing involves ascending vertical or overhanging surfaces using holds of varying size and difficulty, demanding grip strength, upper body pulling power, core stability, balance, flexibility, and route-reading problem-solving skills. Participants progress through graded difficulty systems (V-scale for bouldering, YDS for roped climbing). Noticeable strength and technique improvements emerge within 4-6 weeks, with significant performance gains developing over 6-12 months."
+description: |
+  - Indoor and/or outdoor climbing (bouldering, top-rope, lead) typically 2-3 sessions per week of 60-120 minutes, ascending routes of graded difficulty (V-scale for bouldering, YDS for roped climbing)
+  - Demands grip strength, upper body pulling power, core stability, balance, flexibility, and route-reading problem-solving, making it uniquely cognitive among exercise modalities
+  - Distinguished from conventional strength training by its emphasis on relative strength, movement problem-solving, and skill progression rather than absolute load; [flow-state research](https://doi.org/10.1348/000712607X183614) identifies climbing as one of the activities most reliably inducing flow
+  - [Meta-analytic evidence](https://doi.org/10.1080/02640414.2016.1151924) shows significant improvements in grip strength (d=0.81), upper body pulling, and core stability, though cardiovascular benefits are limited by the intermittent climb-rest pattern
+  - Noticeable strength and technique improvements emerge within 4-6 weeks, with significant performance gains developing over 6-12 months
 applicable_domains: ["fitness"]
 
 values:

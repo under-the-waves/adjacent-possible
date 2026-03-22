@@ -1,5 +1,10 @@
 name: "Zone 2 Cardio"
-description: "Sustained low-intensity aerobic exercise performed at 60-70% of maximum heart rate, below the first ventilatory or lactate threshold, for 30-60 minutes per session, 3-5 times per week. Zone 2 intensity is characterised by the ability to maintain a conversation throughout the session. Modalities include cycling, jogging, swimming, rowing, or elliptical training. This intensity preferentially develops mitochondrial oxidative capacity, fat oxidation, and aerobic base fitness. The approach is popularised by exercise physiologists including Inigo San Millan and promoted for metabolic health and longevity. Meaningful cardiovascular and metabolic adaptations develop over 6-12 weeks of consistent training."
+description: |
+  - Sustained low-intensity aerobic exercise at 60-70% of maximum heart rate (below the first ventilatory or lactate threshold), for 30-60 minutes per session, 3-5 times per week
+  - Modalities include cycling, jogging, swimming, rowing, or elliptical training, with intensity characterised by the ability to maintain a conversation throughout
+  - Preferentially develops mitochondrial oxidative capacity, fat oxidation, and aerobic base fitness, though [recent reviews](https://doi.org/10.1113/JP279564) note current evidence does not conclusively show Zone 2 is superior to higher intensities for mitochondrial adaptations
+  - Distinguished from HIIT by its low perceived exertion and minimal recovery cost, allowing high training frequency; serves as the foundation of [polarised training models](https://doi.org/10.1123/ijspp.5.3.275) used by elite endurance athletes
+  - Meaningful cardiovascular and metabolic adaptations develop over 6-12 weeks of consistent training
 applicable_domains: ["fitness"]
 
 values:

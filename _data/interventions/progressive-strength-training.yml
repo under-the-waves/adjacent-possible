@@ -1,5 +1,9 @@
 name: "Progressive Strength Training"
-description: "A systematic approach to resistance training where individuals gradually increase the weight, repetitions, or sets over time to continuously challenge muscles and promote adaptation. Training typically involves compound movements (squats, deadlifts, bench press) and isolation exercises performed 3-4 times per week for 45-75 minutes per session, with progressive overload applied weekly or bi-weekly. Results for strength gains become noticeable within 4-6 weeks, while significant physique changes typically occur after 12-16 weeks of consistent training."
+description: |
+  - Resistance training built around gradually increasing weight, repetitions, or sets over time to drive continuous muscular adaptation
+  - Sessions typically last 45-75 minutes, 3-4 times per week, combining compound movements (squats, deadlifts, bench press) with isolation exercises and applying progressive overload weekly or bi-weekly
+  - Distinct from other resistance modalities in its systematic load progression, which provides a clear, measurable feedback loop and underpins long-term strength development
+  - [Meta-analytic evidence](https://doi.org/10.1136/bjsports-2021-105099) links resistance training to a 15-21% reduction in all-cause mortality, with strength gains noticeable within 4-6 weeks and significant physique changes after 12-16 weeks of consistent training
 applicable_domains: ["fitness"]
 
 values:

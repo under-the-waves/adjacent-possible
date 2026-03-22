@@ -1,5 +1,9 @@
 name: "Monthly Goal Review"
-description: "A structured monthly session dedicated to reviewing progress against all active goals, evaluating whether goals remain worth pursuing, updating timelines and priorities, and planning the next month's focus. The review follows a consistent format: assess completion status of each goal, identify obstacles and enablers, decide whether to continue, modify, or retire each goal, and set concrete next actions for the coming month. Harkin et al.'s meta-analysis (2016) of 138 studies found that progress monitoring significantly promotes goal attainment (d = 0.40), with physically recording progress and public reporting producing stronger effects. Monthly cadence balances the need for regular course correction against the overhead of frequent reviews, and is particularly effective when combined with weekly check-ins."
+description: |
+  - A structured monthly session for reviewing progress against all active goals, evaluating whether each remains worth pursuing, updating timelines and priorities, and planning the next month's focus
+  - Follows a consistent format: assess completion status, identify obstacles and enablers, decide whether to continue, modify, or retire each goal, and set concrete next actions for the coming month
+  - A [meta-analysis of 138 studies](https://doi.org/10.1037/bul0000025) found that progress monitoring significantly promotes goal attainment (d = 0.40), with physically recording progress and public reporting producing stronger effects
+  - Monthly cadence balances regular course correction against review overhead, and is particularly effective when combined with weekly check-ins and calendar blocking to protect the review session from interruption
 applicable_domains: ["goals"]
 
 values:

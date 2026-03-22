@@ -1,5 +1,9 @@
 name: "Yoga"
-description: "Regular practice of yoga combining physical postures (asanas), breathing techniques (pranayama), and meditation or mindfulness elements, typically 3-5 sessions per week of 30-75 minutes each. Styles range from gentle and restorative (yin, hatha) to physically demanding (ashtanga, vinyasa, power yoga). Practice develops flexibility, balance, core stability, body awareness, and stress resilience. Yoga can be practised at home with minimal equipment or in studio classes with instruction. Noticeable flexibility and stress management improvements emerge within 2-4 weeks, with significant physical and psychological benefits developing over 2-3 months of consistent practice."
+description: |
+  - Combining physical postures (asanas), breathing techniques (pranayama), and meditation elements across 3-5 sessions per week of 30-75 minutes each, with styles ranging from gentle (yin, hatha) to physically demanding (ashtanga, vinyasa, power yoga)
+  - Develops flexibility, balance, core stability, body awareness, and stress resilience, with noticeable improvements emerging within 2-4 weeks and significant benefits over 2-3 months of consistent practice
+  - [Meta-analytic evidence](https://doi.org/10.1177/2047487314523132) shows yoga significantly reduces cardiovascular risk factors including blood pressure, blood lipids, and blood glucose, while [comparative research](https://doi.org/10.1089/acm.2009.0044) finds stress reduction effects that lower cortisol and inflammatory markers
+  - Can be practised at home with minimal equipment (a mat and comfortable clothing) or in studio classes with instruction, contributing to [exceptionally low dropout rates](https://doi.org/10.1371/journal.pone.0159665) of around 11% across 168 trials
 applicable_domains: ["fitness"]
 
 values:

@@ -1,5 +1,8 @@
 name: "Consistent Wake Time"
-description: "Waking up at the same time every day (within 15-30 minutes) including weekends and days off, regardless of when you went to bed the previous night. This circadian rhythm intervention helps stabilise the body's internal clock by maintaining a fixed anchor point for the sleep-wake cycle, which naturally regulates bedtime through homeostatic sleep pressure. Most people experience improved sleep quality and daytime alertness within 2-3 weeks of consistent implementation, with full circadian adaptation typically occurring within 4-6 weeks of maintaining the same wake time daily."
+description: |
+  - Waking up at the same time every day (within 15-30 minutes) including weekends and days off, regardless of when you went to bed
+  - Stabilises the body's internal clock by maintaining a fixed anchor point for the sleep-wake cycle, naturally regulating bedtime through homeostatic sleep pressure
+  - Most people see improved sleep quality and daytime alertness within 2-3 weeks, with full circadian adaptation within 4-6 weeks
 applicable_domains: ["sleep"]
 
 values:

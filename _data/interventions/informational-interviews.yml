@@ -1,5 +1,9 @@
 name: "Informational Interviews"
-description: "Structured conversations with professionals in fields or roles you are curious about, conducted to gather career intelligence rather than to ask for a job. Each interview typically lasts 20-30 minutes and covers the person's career path, daily responsibilities, industry trends, and advice for someone considering the field. A programme of 2-4 interviews per month over several months exposes you to a wide range of career possibilities, builds a professional network organically, and surfaces opportunities that never appear on job boards. Research by Kanar (2023) found that informational interviews significantly increase networking self-efficacy, and career services literature consistently identifies them as one of the highest-value activities for career exploration and positioning."
+description: |
+  - Structured 20-30 minute conversations with professionals in fields or roles of interest, conducted to gather career intelligence rather than to ask for a job, covering career paths, daily responsibilities, industry trends, and advice
+  - A programme of 2-4 interviews per month over several months exposes you to a wide range of career possibilities, builds a professional network organically, and surfaces opportunities that never appear on job boards
+  - [Research across two studies](https://doi.org/10.1177/10690727221150185) found that informational interviews significantly increase networking self-efficacy and career clarity, while [experiential career exploration research](https://doi.org/10.1002/j.2161-0045.2010.tb00035.x) shows larger gains in career decidedness than purely self-directed methods
+  - The primary barrier is the social effort of sustained outreach, as [research on proactive career behaviours](https://doi.org/10.1016/j.jvb.2022.103781) shows these decline sharply without structural support such as scheduling templates and accountability partners
 applicable_domains: ["career-planning"]
 
 values:

@@ -319,6 +319,28 @@ body .main-content {
     color: #333;
 }
 
+.popup-content a {
+    color: #155799;
+    text-decoration: underline;
+}
+
+.popup-content a:hover {
+    color: #0d47a1;
+}
+
+.popup-content ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.popup-content li {
+    margin-bottom: 6px;
+}
+
+.popup-content p {
+    margin: 8px 0;
+}
+
 /* No results */
 .no-results {
     text-align: center;
@@ -622,10 +644,35 @@ document.querySelectorAll('th.sortable').forEach(header => {
     });
 });
 
+// Render markdown-style text to HTML
+function renderDescription(text) {
+    if (!text) return '';
+    var div = document.createElement('div');
+    div.textContent = text;
+    var escaped = div.innerHTML;
+    escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+        '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    var lines = escaped.split('\n');
+    var inList = false;
+    var result = [];
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (line.match(/^- /)) {
+            if (!inList) { result.push('<ul>'); inList = true; }
+            result.push('<li>' + line.substring(2) + '</li>');
+        } else {
+            if (inList) { result.push('</ul>'); inList = false; }
+            if (line) result.push('<p>' + line + '</p>');
+        }
+    }
+    if (inList) result.push('</ul>');
+    return result.join('');
+}
+
 // Popup
 function showPopup(name, description) {
     document.getElementById('popupTitle').textContent = name;
-    document.getElementById('popupContent').textContent = description;
+    document.getElementById('popupContent').innerHTML = renderDescription(description);
     document.getElementById('popupOverlay').classList.add('visible');
     document.getElementById('descriptionPopup').classList.add('visible');
 }

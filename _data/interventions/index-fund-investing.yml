@@ -1,5 +1,9 @@
 name: "Index Fund Investing"
-description: "Regularly investing in broad-market index funds (such as global equity trackers, S&P 500 trackers, or total world funds) through a low-cost investment platform. The strategy involves consistent contributions via pound-cost averaging, minimal trading, and a long time horizon of 10+ years. SPIVA data consistently shows that 92-95% of actively managed funds fail to beat their benchmark index over 15 years, making passive index investing the evidence-backed default for retail investors. Historical annualised returns for global equity indices average 7-10% nominal (5-7% real) over multi-decade periods, though with significant short-term volatility."
+description: |
+  - Regularly investing in broad-market index funds (global equity trackers, S&P 500, or total world funds) through a low-cost platform
+  - Consistent contributions via pound-cost averaging, minimal trading, and a time horizon of 10+ years
+  - [SPIVA data](https://www.spglobal.com/spdji/en/research-insights/spiva/) consistently shows 92-95% of actively managed funds fail to beat their benchmark over 15 years
+  - Historical annualised returns for global equity indices average 7-10% nominal (5-7% real) over multi-decade periods, with significant short-term volatility
 applicable_domains: ["investing"]
 
 values:

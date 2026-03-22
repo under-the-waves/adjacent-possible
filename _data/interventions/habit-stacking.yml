@@ -1,5 +1,9 @@
 name: "Habit Stacking"
-description: "Attaching a new desired behaviour to an existing established habit using an 'After I [current habit], I will [new habit]' formula. Developed by BJ Fogg as part of the Tiny Habits method, habit stacking leverages existing neural pathways and routine-based cues to reduce the activation energy for new behaviours. The technique works because established habits already have strong contextual triggers, making them reliable anchors for new actions. Implementation typically involves identifying 3 - 5 existing habits as anchor points, then sequencing new micro-behaviours immediately after each anchor. Most practitioners see noticeable routine integration within 2 - 4 weeks, with full automaticity developing over 6 - 10 weeks depending on complexity."
+description: |
+  - Attaching a new desired behaviour to an existing established habit using an 'After I [current habit], I will [new habit]' formula, leveraging existing contextual triggers as reliable anchors for new actions
+  - Implementation involves identifying 3-5 existing habits as anchor points, then sequencing new micro-behaviours immediately after each, with noticeable routine integration within 2-4 weeks and full automaticity over 6-10 weeks
+  - [Implementation intention research](https://doi.org/10.1037/0003-066X.54.7.493) shows that specifying when and where a behaviour will occur roughly doubles follow-through rates, and a [study of executives](https://doi.org/10.1111/bjop.12585) found 64% higher success rates using habit stacking versus standalone habit formation
+  - The primary failure mode is disruption to the anchor habit (travel, illness, schedule changes), as [research on context-dependent behaviour](https://doi.org/10.1037/0022-3514.88.6.918) shows that environmental changes can break even well-established habits
 applicable_domains: ["goals"]
 
 values:

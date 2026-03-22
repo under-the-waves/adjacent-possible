@@ -1,5 +1,9 @@
 name: "Buying a Lottery Ticket"
-description: "Purchasing a lottery ticket (e.g. the UK National Lottery or US Powerball) on a regular basis, typically once or twice per week, as a wealth-building strategy. A single ticket costs $2-5 depending on the game. The odds of winning a major jackpot range from approximately 1 in 14 million (UK Lotto) to 1 in 292 million (US Powerball). The expected value of a $2 ticket is approximately $0.50-0.80, meaning the average player loses 60-75% of every dollar spent. Results are immediate per draw, though the probability of a life-changing outcome in any given year is negligible."
+description: |
+  - Purchasing a lottery ticket once or twice per week as a wealth-building strategy, costing $2-5 per ticket depending on the game
+  - Jackpot odds range from ~1 in 14 million ([UK Lotto](https://www.national-lottery.co.uk/games/lotto)) to ~1 in 292 million ([US Powerball](https://www.powerball.com/about))
+  - The expected value of a $2 ticket is approximately $0.50-0.80, meaning the average player loses 60-75% of every dollar spent
+  - Results are immediate per draw, though the probability of a life-changing outcome in any given year is negligible
 applicable_domains: ["investing"]
 
 values:

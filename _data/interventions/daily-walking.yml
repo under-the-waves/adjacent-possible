@@ -1,5 +1,10 @@
 name: "Daily Walking"
-description: "Consistent daily ambulatory exercise involving brisk walking for 30-60 minutes at a moderate pace (3-4 mph or conversational intensity). Walking can be performed continuously or accumulated throughout the day in 10+ minute bouts, typically targeting 7,000-10,000+ steps daily. Participants focus on maintaining consistent pace, good posture, and regular breathing while gradually increasing duration and intensity. Health benefits become noticeable within 2-4 weeks, with significant cardiovascular and metabolic improvements developing over 8-12 weeks of consistent daily practice."
+description: |
+  - Brisk walking for 30-60 minutes daily at conversational intensity (3-4 mph), performed continuously or accumulated in 10+ minute bouts, targeting 7,000-10,000+ steps
+  - Requires no equipment, facilities, or technical skill, making it the most accessible structured exercise intervention available
+  - Distinguished from other cardio modalities by its exceptionally high adherence rate and negligible injury risk, though its low intensity limits performance and body composition outcomes
+  - [Large-scale meta-analyses](https://doi.org/10.1136/bjsports-2014-094157) show walking reduces all-cause mortality by 20-30%, with [step-count research](https://doi.org/10.1016/S2468-2667(21)00302-9) indicating diminishing returns above 7,000-8,000 steps per day
+  - Health benefits become noticeable within 2-4 weeks, with significant cardiovascular and metabolic improvements developing over 8-12 weeks
 applicable_domains: ["fitness"]
 
 values:

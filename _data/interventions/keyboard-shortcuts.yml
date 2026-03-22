@@ -1,5 +1,9 @@
 name: "Keyboard Shortcuts Mastery"
-description: "A deliberate practice programme to learn and internalise keyboard shortcuts for your most-used applications, replacing mouse-driven menu navigation with direct key combinations. The approach involves identifying the 20-30 most impactful shortcuts across your core tools (IDE, browser, email, OS), practising them through spaced repetition or forced usage (e.g., temporarily disabling mouse access to menus), and gradually expanding your repertoire as earlier shortcuts become automatic. Research suggests that keyboard shortcuts save approximately 2 seconds per minute of computer work, and Lane (2005) found they shave 0.5-1.5 seconds off common tasks compared to toolbar or menu alternatives. Full internalisation of a core shortcut set typically takes 2-4 weeks of consistent practice."
+description: |
+  - A deliberate practice programme to learn and internalise keyboard shortcuts for your most-used applications, replacing mouse-driven menu navigation with direct key combinations across your core tools (IDE, browser, email, OS)
+  - Involves identifying the 20-30 highest-impact shortcuts, practising through spaced repetition or forced usage (e.g., temporarily disabling mouse access to menus), and gradually expanding your repertoire as earlier shortcuts become automatic
+  - [Research on input methods](https://doi.org/10.1080/10447310500196737) found shortcuts save 0.5-1.5 seconds per task compared to toolbar or menu alternatives, compounding to roughly 30-40 minutes saved daily for regular computer users
+  - Full internalisation typically takes 2-4 weeks, but [studies on user behaviour](https://doi.org/10.1016/j.intcom.2013.07.004) show most people plateau after learning a handful of basics, as the initial slowdown during learning deters adoption – a phenomenon known as the [production paradox](https://doi.org/10.1016/B978-0-12-515210-9.50006-X)
 applicable_domains: ["current-work"]
 
 values:

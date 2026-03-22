@@ -1,5 +1,9 @@
 name: "Automated Savings"
-description: "Setting up automatic transfers from current accounts to savings accounts on a fixed schedule, typically aligned with payday. This includes configuring standing orders, direct debits into ISAs or savings accounts, and using employer-based salary sacrifice schemes where available. The core principle is removing the decision point from each savings event, leveraging default bias and status quo effects documented extensively in behavioural economics. Research from Thaler and Benartzi's Save More Tomorrow programme and subsequent studies show that auto-enrolment raises participation from ~37% to ~94%, with remarkably high persistence rates due to the 'set and forget' nature of automated systems."
+description: |
+  - Setting up automatic transfers from current accounts to savings accounts on a fixed schedule, typically aligned with payday
+  - Includes standing orders, direct debits into ISAs or savings accounts, and employer-based salary sacrifice schemes where available
+  - Removes the decision point from each savings event, leveraging default bias and status quo effects from behavioural economics
+  - [Auto-enrolment research](https://doi.org/10.1086/380085) shows participation rises from ~37% to ~94%, with high persistence due to the 'set and forget' nature
 applicable_domains: ["saving"]
 
 values:

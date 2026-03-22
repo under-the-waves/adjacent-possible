@@ -1,5 +1,9 @@
 name: "Basic Tax Optimisation"
-description: "Implementing foundational tax-efficient strategies for saving and investing, including maximising ISA allowances (£20,000/year), utilising pension tax relief (20-45% depending on tax band), salary sacrifice arrangements where available, and ensuring capital gains and dividend allowances are used before triggering tax liabilities. This is not aggressive tax planning or avoidance -- it is simply using the government-provided tax wrappers as intended. For a basic-rate taxpayer contributing to a pension, every £80 contributed becomes £100 due to tax relief. A higher-rate taxpayer pays effectively £60 for £100 of pension contributions. These are guaranteed, risk-free returns that compound over decades."
+description: |
+  - Using government-provided tax wrappers as intended: maximising ISA allowances (£20,000/year), pension tax relief (20-45% depending on band), salary sacrifice, and capital gains/dividend allowances
+  - Not aggressive tax planning or avoidance – simply ensuring money is held in the most tax-efficient structures available
+  - A basic-rate taxpayer gets £100 of pension for every £80 contributed; a higher-rate taxpayer pays effectively £60 for £100 of contributions
+  - These are guaranteed, risk-free returns that compound over decades
 applicable_domains: ["saving", "investing"]
 
 values:

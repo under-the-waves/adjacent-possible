@@ -1,5 +1,9 @@
 name: "High Intensity Interval Training"
-description: "HIIT involves alternating periods of high-intensity exercise (typically 80-95% maximum heart rate) with active recovery or rest periods. Sessions typically last 15-30 minutes total, performed 3 times per week, with work intervals ranging from 30 seconds to 4 minutes. The high-intensity phases recruit maximum muscle fiber activation and stress cardiovascular systems, while recovery periods allow partial physiological restoration before the next interval. Results typically emerge within 2-4 weeks, with significant improvements seen by 8-12 weeks."
+description: |
+  - Alternating periods of high-intensity exercise (80-95% maximum heart rate) with active recovery or rest, in sessions lasting 15-30 minutes, typically 3 times per week
+  - Work intervals range from 30 seconds to 4 minutes, recruiting maximal muscle fibre activation and stressing cardiovascular systems before partial recovery
+  - Distinct from steady-state cardio in its time efficiency and superior VO2max stimulus per minute; distinct from strength training in its metabolic rather than mechanical emphasis
+  - [Umbrella review evidence](https://doi.org/10.1007/s40279-021-01505-1) across 429 primary studies shows significant improvements in 14 cardiometabolic health parameters, with results emerging within 2-4 weeks and substantial gains by 8-12 weeks
 applicable_domains: ["fitness"]
 
 values:

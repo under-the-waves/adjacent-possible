@@ -1,5 +1,10 @@
 name: "Functional Training"
-description: "Structured resistance training using compound movements, kettlebells, bodyweight exercises, and free weights to develop strength, coordination, and movement quality applicable to everyday life. Sessions typically last 45-60 minutes, 3-4 times per week, emphasising multi-joint exercises like squats, deadlifts, presses, rows, carries, and Turkish get-ups. Progressive overload is applied through load, volume, or movement complexity. Meaningful strength and body composition changes become apparent within 6-8 weeks of consistent training, with substantial functional improvements developing over 3-6 months."
+description: |
+  - Structured resistance training using compound movements, kettlebells, bodyweight exercises, and free weights to develop strength, coordination, and movement quality applicable to everyday life
+  - Sessions last 45-60 minutes, 3-4 times per week, emphasising multi-joint exercises (squats, deadlifts, presses, rows, carries, Turkish get-ups) with progressive overload applied through load, volume, or movement complexity
+  - Distinguished from conventional strength training by its emphasis on movement quality and real-world transfer rather than maximal load, and from HIIT by its lower metabolic intensity and greater focus on controlled technique
+  - [Community-based formats](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/) such as CrossFit affiliates improve retention through social accountability, though [long-term adherence data](https://doi.org/10.1007/s40279-022-01756-0) shows only ~13% remain beyond twelve months
+  - Meaningful strength and body composition changes become apparent within 6-8 weeks, with substantial functional improvements developing over 3-6 months
 applicable_domains: ["fitness"]
 
 values:

@@ -322,7 +322,7 @@ layout: default
 <h1>{{ intervention.name }}</h1>
 
 <div class="description">
-    {{ intervention.description }}
+    {{ intervention.description | markdownify }}
 </div>
 
 <h2>Score Summary</h2>

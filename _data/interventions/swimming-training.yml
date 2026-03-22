@@ -1,5 +1,10 @@
 name: "Swimming Training"
-description: "Structured aquatic exercise involving regular pool sessions with progressive training protocols including technique refinement, endurance building, and strength development. Swimmers typically train 3-6 times per week for 45-90 minutes per session, focusing on stroke mechanics, cardiovascular conditioning, and muscular endurance through various distances and intensities. Results in cardiovascular fitness and body composition changes typically become noticeable within 4-6 weeks, with significant improvements in technique and endurance developing over 3-6 months of consistent practice."
+description: |
+  - Structured pool-based training involving progressive protocols for technique refinement, endurance building, and strength development, typically 3-6 sessions per week of 45-90 minutes each
+  - Focuses on stroke mechanics, cardiovascular conditioning, and muscular endurance across varying distances and intensities, with a higher technical skill requirement than most exercise modalities
+  - The low-impact, joint-friendly nature makes it uniquely sustainable into old age, with [longitudinal data](https://doi.org/10.2165/00007256-200939050-00004) showing swimmers have significantly lower mortality rates than sedentary individuals
+  - [Cohort studies](https://doi.org/10.25035/ijare.02.03.03) show swimming reduces all-cause mortality by 28% and cardiovascular disease risk by 41%, though pool access and scheduling constraints create meaningful adherence barriers
+  - Cardiovascular and body composition improvements become noticeable within 4-6 weeks, with significant technique and endurance gains developing over 3-6 months
 applicable_domains: ["fitness"]
 
 values:
