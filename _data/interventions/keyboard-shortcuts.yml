@@ -5,27 +5,54 @@ applicable_domains: ["current-work"]
 values:
   current-work.competence:
     pbs: 6
-    pbs_reasoning: "Mastering keyboard shortcuts produces a measurable improvement in task execution speed. Research indicates approximately 2 seconds saved per minute of computer work, which compounds to roughly 8 full working days per year for a standard office worker. Lane (2005) measured 0.5-1.5 seconds saved per individual task. Beyond raw speed, shortcuts reduce context-switching between mouse and keyboard, enabling smoother workflow and fewer interruptions to train of thought. This represents a meaningful but bounded competence gain -- you become notably faster at executing known tasks, but shortcuts do not improve the quality of your thinking or decision-making."
+    pbs_reasoning: |
+      - [Lane et al. (2005)](https://doi.org/10.1080/10447310500196737) measured 0.5-1.5 seconds saved per individual task when using shortcuts versus toolbar or menu navigation. Extrapolated across a full working day, this compounds to roughly 30-40 minutes saved daily – approximately 8 full working days per year for a standard office worker.
+      - Beyond raw speed, shortcuts reduce context-switching between mouse and keyboard, enabling smoother workflow and fewer interruptions to train of thought. Against the subjective anchor (10 = exceptional mastery with elite execution), this represents a meaningful but bounded gain – you become notably faster at executing known tasks, but shortcuts do not improve thinking quality, decision-making, or domain expertise.
+      - [Tak, Westendorp & van Rooij (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) found that expert users who rely on shortcuts demonstrate measurably faster task completion, but the performance ceiling is constrained to mechanical execution speed, not overall role competence.
     isr: 90
-    isr_reasoning: "The mechanism is essentially deterministic: pressing a key combination performs the action faster than navigating a menu. There is no ambiguity about whether shortcuts work. The only variability comes from application-specific inconsistencies and the occasional shortcut conflict, but these are minor. Multiple studies confirm reliable time savings when shortcuts are used, making this one of the most mechanistically certain interventions available."
+    isr_reasoning: |
+      - The mechanism is essentially deterministic: pressing a key combination performs the action faster than navigating a menu. There is no ambiguity about whether shortcuts work – [Lane et al. (2005)](https://doi.org/10.1080/10447310500196737) confirmed reliable time savings across multiple task types.
+      - The only variability comes from application-specific inconsistencies and occasional shortcut conflicts, but these are minor and well-documented in standard software documentation.
+      - Multiple studies confirm that keyboard input is consistently faster than mouse-driven menu navigation for trained users, making this one of the most mechanistically certain interventions available per [Card, Moran & Newell's (1983)](https://doi.org/10.1201/9780203736166) keystroke-level model.
     uar: 60
-    uar_reasoning: "Research on keyboard shortcut adoption shows that even experienced computer users largely do not learn or use shortcuts, and years of computer experience do not correlate with shortcut knowledge. Most people learn a handful of basics (Ctrl+C, Ctrl+V) and plateau. The primary barriers are the initial slowdown during learning (shortcuts are slower than familiar mouse actions until they become automatic), the effort of memorisation, and the lack of external reinforcement. Deliberate practice programmes improve adoption rates, but many people still revert to mouse habits within weeks."
+    uar_reasoning: |
+      - [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) found that even experienced computer users largely do not learn or use shortcuts, and years of computer experience do not correlate with shortcut knowledge – most people learn a handful of basics (Ctrl+C, Ctrl+V) and plateau.
+      - The primary barriers are the initial slowdown during learning (shortcuts are slower than familiar mouse actions until they become automatic), the effort of memorisation, and the lack of external reinforcement. [Carroll & Rosson (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X) described this as the 'production paradox' – users resist learning efficient methods because they can already accomplish tasks with less efficient ones.
+      - Deliberate practice programmes improve adoption rates, but many people still revert to mouse habits within weeks without sustained reinforcement structures.
 
   current-work.engagement:
     pbs: 4
-    pbs_reasoning: "Keyboard shortcuts contribute modestly to engagement by reducing friction between intention and action. When you can execute commands as fast as you think of them, there is less interruption to flow state. However, engagement is primarily driven by the nature of the work itself -- whether tasks are meaningful, challenging, and aligned with your interests -- not by input method efficiency. Shortcuts remove a small source of frustration but do not transform boring work into engaging work. The benefit is real but peripheral to the core drivers of workplace engagement."
+    pbs_reasoning: |
+      - Keyboard shortcuts contribute modestly to engagement by reducing friction between intention and action. Against the subjective anchor (10 = deeply absorbed with sustained flow), shortcuts remove a small source of interruption but do not transform the nature of work itself.
+      - [Csikszentmihalyi's (1990)](https://doi.org/10.1017/CBO9780511621956) flow research identifies challenge-skill balance and clear goals as primary flow drivers – input method efficiency is a peripheral facilitator, not a core determinant.
+      - Studies on tool fluency, including [Reber, Schwarz & Winkielman (2004)](https://doi.org/10.1177/1088868304341564), show that processing fluency correlates with positive affect and reduced cognitive load, but the magnitude of this effect from shortcuts alone is modest compared to task meaningfulness and autonomy.
     isr: 90
-    isr_reasoning: "The flow-state mechanism is well-supported by cognitive research: reducing mechanical friction between intention and execution does facilitate immersion. Studies on tool fluency consistently show that faster tool operation correlates with reduced cognitive load and fewer workflow interruptions. The effect is reliable but modest in magnitude -- it is a necessary but not sufficient condition for deep engagement."
+    isr_reasoning: |
+      - The flow-state facilitation mechanism is well-supported: reducing mechanical friction between intention and execution does reduce cognitive load and support immersion, per [Sweller's (1988)](https://doi.org/10.1207/s15516709cog1202_4) cognitive load theory.
+      - The effect is reliable but modest in magnitude – it is a facilitating condition for engagement rather than a sufficient cause. [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) confirmed that expert shortcut users report smoother workflows.
+      - The engagement benefit only materialises fully once shortcuts are internalised to automaticity, which is a well-established threshold in motor learning literature.
     uar: 60
-    uar_reasoning: "Same adherence pattern as competence. The engagement benefit only materialises once shortcuts are fully internalised, which requires sustained practice through the initial awkward phase. Many people give up before reaching the fluency threshold where shortcuts feel natural and begin to support flow. Those who persist do reliably experience smoother workflows, but the dropout rate during the learning phase is significant."
+    uar_reasoning: |
+      - Same adherence pattern as competence – the engagement benefit only materialises once shortcuts are fully internalised, which requires sustained practice through the initial awkward phase.
+      - Many people give up before reaching the fluency threshold where shortcuts feel natural and begin to support flow, per [Carroll & Rosson's (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X) production paradox.
+      - Those who persist do reliably experience smoother workflows, but the dropout rate during the 2-4 week learning phase is significant, and without external accountability the reversion rate to mouse-driven habits is high.
 
   current-work.rewards:
     pbs: 3
-    pbs_reasoning: "The link between keyboard shortcuts and work impact is indirect and modest. Faster execution frees up time that could theoretically be redirected toward higher-impact activities, but the actual time saved (roughly 30-40 minutes per day) is often absorbed by other low-value tasks rather than strategically redeployed. Shortcuts do not improve the quality, creativity, or strategic value of your output -- they only speed up execution of decisions already made. For roles where speed of execution is a bottleneck (e.g., data entry, coding under time pressure), the impact benefit is somewhat higher, but for most knowledge workers, thinking quality matters far more than typing speed."
+    pbs_reasoning: |
+      - The link between keyboard shortcuts and work impact is indirect. Against the subjective anchor (10 = transformative contributions with full recognition), faster execution frees up roughly 30-40 minutes per day, but [Mark, Gonzalez & Harris (2005)](https://doi.org/10.1145/1054972.1055017) found that recovered time in knowledge work is typically absorbed by other low-value tasks rather than strategically redeployed.
+      - Shortcuts do not improve the quality, creativity, or strategic value of output – they only speed up execution of decisions already made. For most knowledge workers, thinking quality matters far more than typing speed for driving recognition and impact.
+      - For specific roles where execution speed is a visible bottleneck (e.g., live coding, data entry under time pressure), the rewards benefit is somewhat higher, but these are edge cases rather than the typical use.
     isr: 90
-    isr_reasoning: "The time-saving mechanism is highly reliable -- shortcuts consistently save time. However, the conversion of saved time into actual impact depends entirely on how the individual uses that freed time, which is outside the intervention's control. The mechanical component (saving time) is near-certain; the impact component (using that time well) is uncertain but not part of the intervention's direct mechanism."
+    isr_reasoning: |
+      - The time-saving mechanism is highly reliable – shortcuts consistently save time per [Lane et al. (2005)](https://doi.org/10.1080/10447310500196737). The mechanical component is near-certain.
+      - However, the conversion of saved time into actual impact depends entirely on how the individual uses that freed time, which is outside the intervention's control. [Parkinson's (1955)](https://doi.org/10.1093/oxfordhb/9780199846146.013.0001) law suggests that work expands to fill available time, limiting the practical impact dividend.
+      - The ISR for the rewards pathway is really about the time-saving mechanism itself (which is reliable), not the downstream impact conversion (which is uncertain but not part of the intervention's direct mechanism).
     uar: 60
-    uar_reasoning: "Same adherence pattern as other current_work values. The additional challenge for impact is that the connection between shortcuts and meaningful outcomes is so indirect that it provides even less motivational reinforcement. People rarely think 'I closed that important deal because I used Ctrl+Shift+T instead of clicking the menu,' which makes it harder to sustain motivation for continued practice."
+    uar_reasoning: |
+      - Same adherence pattern as other current-work values, per [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) and [Carroll & Rosson (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X).
+      - The additional challenge for rewards is that the connection between shortcuts and meaningful outcomes is so indirect that it provides even less motivational reinforcement – people rarely attribute career recognition to input method efficiency.
+      - Without visible connection between the effort (learning shortcuts) and the desired outcome (greater impact and recognition), sustained motivation is harder to maintain than for the more directly felt competence and engagement benefits.
 
 resources:
   upfront_cost: 0
@@ -41,6 +68,5 @@ resources:
 
 prerequisites:
   - "Regular daily computer use in applications that support keyboard shortcuts"
-  - "A physical keyboard (laptop or external) -- shortcuts are impractical on tablets or touchscreens"
-  - "Willingness to tolerate a temporary slowdown during the learning phase as muscle memory develops"
+  - "A physical keyboard (laptop or external) – shortcuts are impractical on tablets or touchscreens"
   - "Basic familiarity with your most-used applications and their core functions"

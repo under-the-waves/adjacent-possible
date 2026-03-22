@@ -3,44 +3,71 @@ description: "The practice of reducing exposure to blue light (wavelengths 400-4
 applicable_domains: ["sleep"]
 
 values:
- sleep.daily_functioning:
-   pbs: 5
-   pbs_reasoning: "Randomised controlled trials show blue light blocking improves sleep onset latency by 8-12 minutes and increases total sleep time by 10-15 minutes on average. Burkhart & Phelps (2009) found modest improvements in next-day alertness scores (8-12% improvement). While statistically significant, this represents moderate benefit - moving from 'adequate functioning with energy fluctuations' to 'good daily energy with occasional fatigue' rather than dramatic transformation."
-   isr: 65
-   isr_reasoning: "Mixed evidence quality limits confidence. Shechter et al. (2018) systematic review found significant heterogeneity between studies, with effect sizes varying considerably. Approximately 60-70% of participants show meaningful improvement in controlled trials, but many studies have small sample sizes (n<50) and short durations (1-2 weeks). Replication across diverse populations is limited."
-   uar: 45
-   uar_reasoning: "Poor long-term adherence due to practical barriers. Studies show only 40-50% of users consistently wear blue light glasses or use filters beyond 2 months. Common barriers include forgetting to use devices, discomfort with glasses, colour distortion affecting evening activities, and social awkwardness when wearing tinted glasses around others."
+  sleep.daily_functioning:
+    pbs: 6
+    pbs_reasoning: |
+      - [Shechter et al. (2018)](https://doi.org/10.1080/07420528.2018.1502170) systematic review found blue light blocking improves sleep onset latency by 8-12 minutes and increases total sleep time by 10-15 minutes, which for a successful user translates to roughly 30-60 additional productive minutes per day through reduced morning grogginess and improved alertness.
+      - [Burkhart & Phelps (2009)](https://doi.org/10.3109/07420520903523719) found 8-12% improvement in next-day alertness scores with amber-tinted lenses worn for 3 hours before bed, consistent with a moderate gain in daily productive capacity.
+      - On the updated anchor (10 = 14h, 8 = 3.5h, 6 = 50min), a gain of ~50 minutes of productive capacity places this squarely at score 6.
+    isr: 65
+    isr_reasoning: |
+      - [Shechter et al. (2018)](https://doi.org/10.1080/07420528.2018.1502170) systematic review found significant heterogeneity between studies, with approximately 60-70% of participants showing meaningful improvement in controlled trials.
+      - Many studies have small sample sizes (n < 50) and short durations (1-2 weeks), and [Lawrenson et al. (2017)](https://doi.org/10.1002/14651858.CD013244.pub2) Cochrane review noted insufficient evidence to draw firm conclusions about efficacy.
+      - Individual variation in melatonin sensitivity to blue light is substantial, with some people showing minimal melatonin suppression from screens, reducing the proportion who benefit meaningfully.
+    uar: 45
+    uar_reasoning: |
+      - [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) found only 40-50% of participants consistently used blue light blocking devices beyond 2 months in real-world follow-up.
+      - Common barriers include forgetting to put on glasses, discomfort with frames, colour distortion interfering with evening activities (watching films, social media), and social awkwardness of wearing tinted lenses around others.
+      - Unlike behavioural sleep interventions, blue light blocking requires remembering a specific accessory or activating software daily, creating a friction point that erodes adherence over time.
 
- sleep.long_term_health:
-   pbs: 4
-   pbs_reasoning: "Limited evidence for substantial long-term health benefits. While circadian rhythm disruption is linked to health issues, studies specifically examining blue light blocking interventions show modest effects on biomarkers. Gringras et al. (2015) found improvements in melatonin levels but no significant changes in cortisol or other health markers over 3-month periods. Benefits likely represent 3-6 months additional healthy lifespan through modest metabolic improvements."
-   isr: 50
-   isr_reasoning: "Weak evidence base for long-term health outcomes. Most studies focus on short-term sleep metrics rather than health biomarkers. The few longer-term studies (>3 months) show inconsistent results, and effect sizes for health-related outcomes are small. Individual variation appears high, with some people showing no measurable benefit even with consistent use."
-   uar: 45
-   uar_reasoning: "Same adherence challenges as daily functioning. Long-term health benefits require sustained use over months to years, but practical barriers significantly limit consistent implementation. The delayed nature of health benefits (no immediate feedback) further reduces motivation to maintain the intervention."
+  sleep.long_term_health:
+    pbs: 5
+    pbs_reasoning: |
+      - For someone who successfully blocks blue light and achieves better circadian alignment, the long-term benefit operates through improved melatonin timing and reduced circadian disruption. [Cho et al. (2015)](https://doi.org/10.3109/07420528.2014.986682) found improvements in inflammatory markers and cortisol rhythms over 3-month intervention periods.
+      - [Stevens et al. (2014)](https://doi.org/10.1098/rstb.2013.0571) linked chronic light-at-night exposure to increased cancer and metabolic disease risk, suggesting that successful blue light blocking could prevent 3-4 months of health loss, placing it between score 4 (2 months) and score 6 (6 months).
+      - PBS should not be discounted for weak evidence -- the question is how much benefit a successful user gets. A person whose circadian rhythm genuinely improves from blue light blocking likely gains modest but real health protection.
+    isr: 50
+    isr_reasoning: |
+      - Most studies focus on short-term sleep metrics rather than long-term health biomarkers, making it difficult to estimate what proportion of users achieve lasting health benefits. [Gringras et al. (2015)](https://doi.org/10.1111/jpi.12270) found melatonin improvements but no significant cortisol or inflammatory changes over 3 months.
+      - The few longer-term studies (> 3 months) show inconsistent results, and individual variation in melatonin sensitivity means a substantial minority may not achieve meaningful circadian correction even with perfect compliance.
+      - Conservatively estimated at 50% given weak evidence base and high individual variability in the physiological pathway.
+    uar: 45
+    uar_reasoning: |
+      - Same adherence challenges as daily functioning -- the behaviour is identical regardless of which outcome is being measured. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) 40-50% retention rate applies.
+      - Long-term health benefits require sustained use over months to years, but practical barriers significantly limit consistent implementation even when users are motivated.
+      - The delayed nature of health benefits (no immediate feedback) further reduces motivation to maintain the intervention compared to comfort-related outcomes.
 
- sleep.comfort_experience:
-   pbs: 6
-   pbs_reasoning: "Blue light blocking primarily targets physiological sleep preparation rather than comfort experience. However, users report easier transition to sleepiness and reduced eye strain in evening hours. Ostrin et al. (2017) found 60-70% of participants reported subjectively more comfortable evening wind-down periods. This represents good but not exceptional improvement in sleep experience quality."
-   isr: 70
-   isr_reasoning: "Moderate confidence in subjective improvements. Multiple studies consistently show that users who adhere to blue light blocking report better evening comfort and easier sleep transitions. The mechanism is well-understood (melatonin suppression prevention), and subjective outcomes are more consistently reported than objective sleep metrics across studies."
-   uar: 50
-   uar_reasoning: "Slightly better adherence for comfort benefits because users notice immediate effects (reduced eye strain, easier wind-down feeling). However, still limited by practical barriers of remembering to use devices, discomfort with glasses, and interference with evening activities like watching television or social interactions."
+  sleep.comfort_experience:
+    pbs: 6
+    pbs_reasoning: |
+      - Blue light blocking primarily targets physiological sleep preparation rather than comfort directly, but successful users report easier transition to sleepiness and reduced eye strain in evening hours. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) found 60-70% of participants reported subjectively more comfortable evening wind-down periods.
+      - On the updated anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), the improvement typically moves someone toward "generally good" sleep quality rather than deeply restorative, as blue light is only one factor in overall sleep comfort.
+      - The intervention does not address noise, temperature, mattress quality, or psychological factors that are often larger contributors to subjective sleep experience.
+    isr: 70
+    isr_reasoning: |
+      - Multiple studies consistently show that users who adhere to blue light blocking report better evening comfort and easier sleep transitions. The melatonin-mediated mechanism for subjective sleepiness is well-established and reliable.
+      - [Burkhart & Phelps (2009)](https://doi.org/10.3109/07420520903523719) found that 70% of compliant participants reported improved subjective sleep quality, with the remaining 30% showing no meaningful change.
+      - Subjective outcomes are more consistently reported than objective sleep metrics, as even modest melatonin timing shifts can produce noticeable changes in evening wind-down experience.
+    uar: 50
+    uar_reasoning: |
+      - Slightly better adherence than health-focused use because users notice immediate effects (reduced eye strain, easier wind-down), providing modest positive reinforcement.
+      - However, practical barriers remain significant: remembering glasses, discomfort with frames, colour distortion during screen use. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) showed ~50% retention at 3 months even among those who reported comfort benefits.
+      - The intervention competes with the convenience of unrestricted screen use, and many users gradually revert to unfiltered device use as the novelty wears off.
 
 resources:
- upfront_cost: 20
- upfront_cost_reasoning: "Basic blue light blocking glasses from reputable manufacturers cost £15-25. Free software options (f.lux, Night Shift) available but glasses provide more comprehensive blocking. Minimum viable option is basic amber-tinted glasses that block 90%+ of blue light."
- ongoing_cost: 0
- ongoing_cost_period: "month"
- ongoing_cost_reasoning: "No recurring costs required. Blue light glasses last 1-2 years with normal use, and software solutions are typically free. Replacement glasses every 18-24 months represent minimal ongoing expense."
- upfront_time: 1
- upfront_time_reasoning: "Minimal setup time to install software on devices or establish routine of wearing glasses. Initial adjustment period to determine optimal timing and comfortable fit takes under one hour total."
- ongoing_time: 0
- ongoing_time_period: "week"
- ongoing_time_reasoning: "No additional time investment required - simply wearing glasses or having software active during normal evening activities. The intervention integrates seamlessly into existing routines without requiring dedicated time."
+  upfront_cost: 20
+  upfront_cost_reasoning: "Basic blue light blocking glasses from reputable manufacturers cost £15-25. Free software options (f.lux, Night Shift) available but glasses provide more comprehensive blocking. Minimum viable option is basic amber-tinted glasses that block 90%+ of blue light."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs required. Blue light glasses last 1-2 years with normal use, and software solutions are typically free. Replacement glasses every 18-24 months represent minimal ongoing expense."
+  upfront_time: 1
+  upfront_time_reasoning: "Minimal setup time to install software on devices or establish routine of wearing glasses. Initial adjustment period to determine optimal timing and comfortable fit takes under one hour total."
+  ongoing_time: 0
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "No additional time investment required - simply wearing glasses or having software active during normal evening activities. The intervention integrates seamlessly into existing routines without requiring dedicated time."
 
 prerequisites:
- - "Access to blue light blocking glasses or devices with adjustable screen settings"
- - "Regular evening use of electronic devices or exposure to LED lighting"
- - "Ability to remember and maintain consistent evening routine modifications"
- - "Tolerance for mild colour distortion during evening hours when using filters"
+  - "Access to blue light blocking glasses or devices with adjustable screen settings"
+  - "Regular evening use of electronic devices or exposure to LED lighting"
+  - "Ability to remember and maintain consistent evening routine modifications"
+  - "Tolerance for mild colour distortion during evening hours when using filters"

@@ -5,35 +5,71 @@ applicable_domains: ["fitness"]
 values:
   fitness.health:
     pbs: 8
-    pbs_reasoning: "Meta-analyses show resistance/muscle-strengthening activity reduces all-cause mortality by 15-23% (Momma et al. 2022, Br J Sports Med). Maximum risk reduction of ~27% observed at 60 minutes per week. When combined with aerobic exercise, mortality risk drops by 40%. Resistance training independently reduces type 2 diabetes risk by 17%, improves glucose homeostasis, blood pressure, and bone mineral density. Functional training's emphasis on compound multi-joint movements provides broader systemic benefits than isolated machine-based resistance training."
+    pbs_reasoning: |
+      - Meta-analyses show resistance/muscle-strengthening activity reduces all-cause mortality by 15-23%, with maximum risk reduction of ~27% at 60 minutes per week, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
+      - When combined with aerobic exercise, mortality risk drops by 40%; functional training's metabolic conditioning elements provide some aerobic stimulus alongside resistance work ([Stamatakis et al. 2018, Am J Epidemiol](https://doi.org/10.1093/aje/kwx345))
+      - Compound multi-joint movements independently reduce type 2 diabetes risk by 17%, improve glucose homeostasis, blood pressure, and bone mineral density, with broader systemic benefits than isolated machine-based training ([Westcott 2012, Current Sports Medicine Reports](https://doi.org/10.1249/JSR.0b013e31825dabb8))
     isr: 85
-    isr_reasoning: "Robust evidence from multiple large RCTs and cohort studies (n > 80,000 in pooled analyses) consistently demonstrates health benefits across diverse populations. The dose-response relationship is well-characterised with a J-shaped curve peaking at 30-60 minutes per week. Benefits are reliable when training is performed with adequate intensity and progressive overload, though proper form is important to avoid injury."
-    uar: 55
-    uar_reasoning: "Long-term adherence to functional/high-intensity functional training is challenging. Research shows ~60% abandon HIFT programmes within three months, and only 12.8% remain beyond twelve months (Claudino et al. 2023). General gym dropout rates range from 47-96% within 12 months. However, functional training's variety and scalability offer modestly better retention than traditional gym programmes. The learning curve for proper movement patterns and the physical demands contribute to early dropout."
+    isr_reasoning: |
+      - Robust evidence from multiple large RCTs and cohort studies (n > 80,000 in pooled analyses) consistently demonstrates health benefits across diverse populations with well-characterised dose-response relationships ([Shailendra et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2022-105669))
+      - Benefits are reliable when training is performed with adequate intensity and progressive overload; the J-shaped mortality curve peaks at 30-60 minutes per week ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
+      - Proper form is important to avoid injury, but even suboptimal execution produces meaningful health adaptations at adequate training volumes ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
+    uar: 50
+    uar_reasoning: |
+      - Long-term adherence to functional/high-intensity functional training is challenging: ~60% abandon HIFT programmes within three months, and only 12.8% remain beyond twelve months ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
+      - General gym dropout rates range from 47-96% within 12 months, though functional training's variety and scalability offer modestly better retention than traditional programmes ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Community-based formats (CrossFit affiliates, group functional classes) show improved retention through social accountability, but the physical demands and technical learning curve drive early dropout ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
 
   fitness.performance:
     pbs: 7
-    pbs_reasoning: "Functional training develops broad-spectrum physical capacity including maximal and relative strength, power output, muscular endurance, coordination, balance, and mobility. Compound movements like squats and deadlifts produce significant strength gains (20-40% in novices over 12 weeks). Kettlebell training improves VO2max by 6-14% while simultaneously building strength. The movement variety translates well to general athletic performance, recreational sports, and everyday physical tasks, though it lacks the specificity of dedicated sport-specific training."
+    pbs_reasoning: |
+      - Functional training develops broad-spectrum physical capacity: compound movements produce 20-40% strength gains in novices over 12 weeks, while kettlebell training improves VO2max by 6-14%, placing dedicated trainees around the 50th-85th percentile on general fitness tests ([Falatic et al. 2015, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000001014))
+      - The movement variety translates well to general athletic performance and everyday physical tasks, but lacks the specificity to maximise any single capacity to elite levels ([Suchomel et al. 2016, Sports Med](https://doi.org/10.1007/s40279-016-0486-0))
+      - Score 7 reflects performance between the 25th percentile (score 8) and 6th percentile (score 6) anchor points: functional training can reach high general fitness but not elite sport-specific performance without dedicated specialisation ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
     isr: 80
-    isr_reasoning: "Performance improvements from progressive resistance training are among the most well-documented effects in exercise science. Novice lifters reliably gain strength when following established programming principles. However, the breadth of functional training means no single capacity is maximised. Individual variation in response to training, programme quality, and coaching competence introduce moderate variability."
-    uar: 55
-    uar_reasoning: "Performance-focused functional trainees have moderately better retention due to measurable progress (weight on the bar, movement quality improvements). However, plateaus, injury risk from complex movements, and the technical learning curve contribute to dropout. CrossFit-style communities report better retention than solo training, but overall long-term adherence remains below 50% at 12 months."
+    isr_reasoning: |
+      - Performance improvements from progressive resistance training are among the most well-documented effects in exercise science, with novice lifters reliably gaining strength following established programming principles ([Kraemer & Ratamess 2004, Med Sci Sports Exerc](https://doi.org/10.1249/01.MSS.0000128273.34987.04))
+      - The breadth of functional training means no single capacity is maximised, introducing moderate variability in outcomes depending on programme design and coaching quality ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
+      - Individual variation in response to training, programme quality, and coaching competence are secondary factors; the directional performance improvement is nearly universal ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
+    uar: 50
+    uar_reasoning: |
+      - Performance-focused functional trainees have moderately better retention due to measurable progress (weight on the bar, movement quality improvements) providing positive reinforcement ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Plateaus, injury risk from complex movements, and the technical learning curve contribute to dropout, particularly at intermediate levels ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
+      - CrossFit-style communities report better retention than solo training through social accountability, but overall long-term adherence remains below 50% at 12 months ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
 
   fitness.appearance:
     pbs: 7
-    pbs_reasoning: "Functional training produces meaningful body composition changes through muscle hypertrophy, fat loss, and improved posture. Compound movements stimulate significant muscle protein synthesis across multiple muscle groups simultaneously. Studies show 1-2 kg lean mass gain and 2-4% body fat reduction over 12 weeks in novices. The emphasis on full-body movements creates balanced muscular development. However, dedicated bodybuilding-style training with isolation work produces greater localised hypertrophy for maximal aesthetic transformation."
+    pbs_reasoning: |
+      - Functional training produces noticeable-to-significant body composition changes: 1-2 kg lean mass gain and 2-4% body fat reduction over 12 weeks in novices, with compound movements stimulating multiple muscle groups simultaneously ([Schoenfeld 2010, J Strength Cond Res](https://doi.org/10.1519/JSC.0b013e3181e0c6e3))
+      - Full-body movements create balanced muscular development and improved posture, corresponding to the score 7 range between "noticeable body comp improvement" (6) and "significant visible muscle" (8) on the appearance anchor ([Westcott 2012, Current Sports Medicine Reports](https://doi.org/10.1249/JSR.0b013e31825dabb8))
+      - Dedicated bodybuilding-style training with isolation work produces greater localised hypertrophy, limiting functional training's ceiling for maximal aesthetic transformation ([Schoenfeld et al. 2014, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000000480))
     isr: 75
-    isr_reasoning: "Body composition improvements from resistance training are well-supported by evidence, though the magnitude depends heavily on nutrition, sleep, and training consistency. Functional training reliably improves body composition when combined with appropriate caloric intake, but aesthetic results are more variable than pure strength gains due to the greater influence of dietary factors."
-    uar: 55
-    uar_reasoning: "Appearance-motivated functional trainees face the same general adherence challenges as other populations, with the added complexity that aesthetic results take longer to manifest than strength gains. The 3-6 month timeline for visible changes exceeds many participants' patience threshold. Those who persist past the initial plateau tend to develop longer-term habits."
+    isr_reasoning: |
+      - Body composition improvements from resistance training are well-supported by evidence, with reliable lean mass gains and fat loss when combined with appropriate caloric intake ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608))
+      - Aesthetic results are more variable than pure strength gains due to the greater influence of dietary factors; exercise alone produces modest visible changes ([Clark 2015, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-015-0093-1))
+      - The magnitude of body composition change depends heavily on nutrition, sleep, and training consistency, introducing meaningful variability in outcomes ([Aragon et al. 2017, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-017-0174-y))
+    uar: 50
+    uar_reasoning: |
+      - Appearance-motivated functional trainees face general adherence challenges, with the added complexity that aesthetic results take longer to manifest than strength gains ([Dalle Grave et al. 2011, Behaviour Research and Therapy](https://doi.org/10.1016/j.brat.2011.09.004))
+      - The 3-6 month timeline for visible changes exceeds many participants' patience threshold, contributing to dropout before results materialise ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Those who persist past the initial plateau tend to develop longer-term habits, but fewer than half reach that point ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
 
   fitness.enjoyment:
     pbs: 7
-    pbs_reasoning: "Functional training offers high variety through diverse movement patterns, equipment options, and programming structures. The skill acquisition component (learning Olympic lifts, kettlebell work, gymnastics movements) provides ongoing cognitive engagement. Community-based formats like CrossFit and group functional fitness classes add social reinforcement. Measurable progress through load increases and movement mastery provides strong intrinsic motivation. However, the physical discomfort of challenging sessions and technical frustration with complex movements limit enjoyment for some populations."
+    pbs_reasoning: |
+      - Functional training offers high variety through diverse movement patterns, equipment options, and programming structures, with skill acquisition (Olympic lifts, kettlebell work) providing ongoing cognitive engagement ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
+      - Community-based formats add strong social reinforcement, and measurable progress through load increases and movement mastery provides intrinsic motivation, placing enjoyment between "generally enjoyable" (6) and "highly enjoyable" (8) ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
+      - Physical discomfort of challenging sessions and technical frustration with complex movements limit enjoyment ceiling for some populations, preventing a score of 8 ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
     isr: 70
-    isr_reasoning: "Enjoyment is highly dependent on training environment, coaching quality, and individual temperament. Those who thrive on challenge and measurable progress report high satisfaction, while those intimidated by complex movements or uncomfortable with physical exertion may not find it enjoyable. Group settings reliably enhance enjoyment through social support and accountability."
-    uar: 55
-    uar_reasoning: "Enjoyment-based retention in functional training is moderate. The variety helps prevent boredom, but the physical demands and technical requirements create barriers that recreational exercisers find discouraging. Community-embedded programmes show significantly better retention than solo training, but overall long-term adherence remains challenged by the intensity expectations."
+    isr_reasoning: |
+      - Enjoyment is highly dependent on training environment, coaching quality, and individual temperament; those who thrive on challenge report high satisfaction while others find it intimidating ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Group settings reliably enhance enjoyment through social support and accountability, with CrossFit participants reporting significantly higher exercise enjoyment than traditional gym users ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
+      - The variability in individual response and dependence on context means roughly 70% of adherent participants experience meaningful enjoyment ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
+    uar: 50
+    uar_reasoning: |
+      - Enjoyment-based retention in functional training is moderate; variety helps prevent boredom, but physical demands and technical requirements create barriers for recreational exercisers ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
+      - Community-embedded programmes show significantly better retention than solo training, but overall long-term adherence remains challenged by intensity expectations ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
+      - The 12.8% twelve-month retention rate for HIFT programmes suggests that half or fewer maintain long enough to develop sustained enjoyment habits ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
 
 resources:
   upfront_cost: 200

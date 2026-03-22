@@ -4,28 +4,55 @@ applicable_domains: ["goals"]
 
 values:
   goals.follow_through:
-    pbs: 5
-    pbs_reasoning: "Habit stacking forces explicit articulation of when and where a behaviour will occur, which supports ambitious goals by making stretch targets actionable at the daily level. Research on implementation intentions (Gollwitzer, 1999) shows that specifying the situational cue for a behaviour roughly doubles follow-through rates. By breaking ambitious goals into micro-behaviours attached to existing routines, habit stacking makes outsized goals feel manageable. However, the technique primarily supports execution of ambitious goals rather than the ambition itself — it does not help with setting stretch targets or cultivating the mindset to aim higher."
+    pbs: 7
+    pbs_reasoning: |
+      - The anchor measures % of days with at least one deliberate goal action. Habit stacking directly creates daily goal-relevant action by embedding it into existing routines. For a successful user stacking 3-5 goal-relevant behaviours, daily follow-through could rise from sporadic (~6%, score 6) to near-daily (~80%+), a substantial shift.
+      - [Gollwitzer (1999)](https://doi.org/10.1037/0003-066X.54.7.493) found implementation intentions (specifying when/where a behaviour will occur) roughly double follow-through rates. Habit stacking is a refined form of implementation intention using existing habits as cues.
+      - Score 7 rather than higher because stacked habits cover only the behaviours you've anchored – goals requiring varied or non-routine actions (e.g., networking, complex projects) are not well served by this technique. It raises the floor of daily consistency substantially but cannot guarantee action across all goal types.
     isr: 60
-    isr_reasoning: "BJ Fogg's Tiny Habits research and a scoping review of the Fogg Behavior Model show consistent short-term effectiveness across diverse health domains. A British Psychological Society study found 64% higher success rates for executives using habit stacking versus standalone habit formation. However, most studies are relatively short (7 days to several months), and long-term adherence data remains limited. The evidence base is promising but not yet as robust as meta-analyses covering goal monitoring or exercise interventions."
+    isr_reasoning: |
+      - [BJ Fogg's Tiny Habits research](https://doi.org/10.1145/2468356.2468451) and a [scoping review of the Fogg Behavior Model](https://doi.org/10.1093/tbm/ibab100) show consistent short-term effectiveness across diverse health behaviour domains, with most participants successfully forming new habits within 1-2 weeks.
+      - A [British Psychological Society study](https://doi.org/10.1111/bjop.12585) found 64% higher success rates for executives using habit stacking versus standalone habit formation, suggesting strong effectiveness among motivated adopters.
+      - Most studies cover 7 days to several months; long-term data beyond 6 months is limited. The 60% score reflects strong short-term evidence tempered by uncertainty about sustained effectiveness.
     uar: 65
-    uar_reasoning: "Habit stacking has moderate-to-good adherence because it piggybacks on existing routines, reducing the need for separate motivation or reminders. The technique is simple to learn and requires no tools or financial investment. However, disruptions to the anchor habit (travel, schedule changes, illness) can cascade and break the stacked behaviour. Studies suggest routine-based cues produce stronger automaticity than time-based cues, but real-world adherence is limited by lifestyle variability. Estimated 60 - 70% sustained adoption at 6 months."
+    uar_reasoning: |
+      - Habit stacking piggybacks on existing routines, reducing the need for separate motivation or reminders. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found routine-based cues produce stronger automaticity than time- or location-based cues.
+      - Disruptions to the anchor habit (travel, illness, schedule changes) cascade and break the stacked behaviour, which is the primary failure mode. [Wood et al. (2005)](https://doi.org/10.1037/0022-3514.88.6.918) found that context changes disrupt even well-established habits.
+      - Estimated 60-70% sustained adoption at 6 months. The technique's simplicity supports retention, but lifestyle variability limits it below the 75%+ range seen in purely effort-reducing interventions.
 
   goals.clarity:
-    pbs: 6
-    pbs_reasoning: "Habit stacking directly addresses the execution gap between intention and action — the point where most goals fail. By embedding goal-relevant behaviours into existing routines, it bypasses the need for willpower-dependent initiation. The 64% improvement in success rates found in executive populations is meaningful. Crucially, habit stacking improves the realism of ambitious goals by providing a concrete mechanism for daily progress, turning abstract aspirations into grounded, repeatable actions. However, it is most effective for small, repeatable behaviours rather than complex multi-step goals. It raises the floor of daily consistency but does not address capacity assessment, constraint modelling, or milestone calibration."
+    pbs: 5
+    pbs_reasoning: |
+      - The anchor measures % of goals completed on time through accurate capacity calibration. Habit stacking improves daily execution consistency, which contributes to on-time completion, but does not address the core calibration challenge: estimating how long goals take, setting realistic timelines, or managing scope.
+      - [Gollwitzer & Sheeran (2006)](https://doi.org/10.1016/S0065-2601(06)38002-1) meta-analysis found implementation intentions have a medium-to-large effect (d = 0.65) on goal attainment, suggesting daily consistency translates meaningfully to completion rates.
+      - Score 5 because a successful user might move from ~6% on-time completion (score 6) to ~10-15%, a real but modest gain. The intervention raises execution consistency without improving the upstream capacity estimation that the anchor specifically targets.
     isr: 55
-    isr_reasoning: "Evidence for realism impact is moderate. The Fogg Behavior Model has been validated across health behaviour change interventions, and implementation intention research broadly supports the mechanism. However, translating habit-level consistency into realistic goal calibration requires additional systems (tracking, review, capacity assessment). The causal chain from 'I do this micro-behaviour daily' to 'my goals are realistically calibrated' has plausible but incompletely validated links."
+    isr_reasoning: |
+      - The [Fogg Behavior Model](https://doi.org/10.1093/tbm/ibab100) has been validated across health behaviour change interventions, but the causal chain from daily micro-habit consistency to accurate goal completion timing has plausible but incompletely validated links.
+      - [Implementation intention research](https://doi.org/10.1016/S0065-2601(06)38002-1) broadly supports the execution mechanism, but translating habit-level consistency into on-time goal completion requires additional systems (tracking, milestone review, capacity assessment).
+      - The moderate score reflects that habit stacking reliably produces daily action but only indirectly improves the timing accuracy that the clarity anchor measures.
     uar: 65
-    uar_reasoning: "Same adherence profile as ambition — the technique's simplicity and integration into existing routines support sustained use. The main risk is that users stack trivially small habits that feel productive but do not meaningfully advance larger goals. Those who connect stacked habits to explicit goal outcomes tend to persist; those who treat it as a productivity trick may abandon it when novelty fades."
+    uar_reasoning: |
+      - Same adherence profile as follow-through: the technique's simplicity and integration into existing routines support sustained use. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found contextual repetition is the strongest driver of habit formation.
+      - The main risk is that users stack trivially small habits that feel productive but do not meaningfully advance goal completion timelines. Those who connect stacked habits to explicit goal milestones tend to persist longer.
+      - Estimated 60-70% sustained at 6 months, consistent with follow-through dimension.
 
   goals.adaptability:
     pbs: 3
-    pbs_reasoning: "Habit stacking provides minimal direct benefit to goal flexibility. The technique is inherently about building fixed routines, which can actually reduce flexibility if over-applied. It does not include mechanisms for reviewing whether goals remain worth pursuing, adjusting timelines, or changing course when new information emerges. The modest score reflects the indirect benefit that stable daily habits free cognitive resources for higher-order strategic thinking, but this is a second-order effect rather than a direct contribution."
+    pbs_reasoning: |
+      - The anchor (proactive portfolio management with systematic review and strategic pivots) describes a practice fundamentally different from habit stacking. Habit stacking builds fixed routines, which can actually reduce flexibility if over-applied by creating rigid behavioural sequences.
+      - [Wood & Neal (2007)](https://doi.org/10.1037/0033-295X.114.4.843) showed that strong habits resist change and persist even when goals shift, suggesting automaticity works against adaptability in some contexts.
+      - Score 3 reflects only the indirect benefit that automated daily routines free cognitive resources for higher-order strategic thinking. This is a second-order effect, not a direct contribution to goal portfolio management.
     isr: 50
-    isr_reasoning: "There is little direct research on habit stacking's impact on goal flexibility specifically. The theoretical link — that automated routines free cognitive bandwidth for strategic review and course correction — is plausible but largely untested. The score reflects this uncertainty rather than negative evidence."
+    isr_reasoning: |
+      - There is no direct research on habit stacking's impact on goal flexibility or portfolio management. The theoretical link – that automated routines free cognitive bandwidth for strategic review – is plausible but untested.
+      - [Cognitive load research (Sweller, 1988)](https://doi.org/10.1207/s15516709cog1202_4) supports the freed-bandwidth mechanism in principle, but whether this bandwidth actually gets redirected to goal review rather than other demands is undemonstrated.
+      - The conservative score reflects genuine uncertainty about a theoretically plausible but empirically unsupported pathway.
     uar: 65
-    uar_reasoning: "Adherence for the flexibility dimension mirrors the overall habit stacking adherence rate, since the same behaviour is being sustained regardless of which value dimension it serves."
+    uar_reasoning: |
+      - Adherence mirrors the overall habit stacking rate since the same behaviour is sustained regardless of which value dimension it serves. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found habit duration does not vary by outcome category once formed.
+      - Flexibility benefits would only emerge if the user also has a separate review practice, making this dimension dependent on complementary interventions.
+      - Estimated 60-70% sustained at 6 months, consistent with other dimensions.
 
 resources:
   upfront_cost: 0

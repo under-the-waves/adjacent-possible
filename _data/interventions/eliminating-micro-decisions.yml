@@ -5,27 +5,54 @@ applicable_domains: ["organisation"]
 values:
   organisation.tracking:
     pbs: 6
-    pbs_reasoning: "Eliminating micro-decisions directly targets one of the largest drags on organisational speed: the cumulative time lost to low-value deliberation. Knowledge workers make an estimated 35,000 decisions per day, many of which are trivial but still consume cognitive resources and slow down processing. By establishing defaults and decision rules, this intervention removes deliberation pauses throughout the day, enabling faster movement from intention to action. The speed gain is substantial but not transformative on its own — it addresses the friction layer rather than the structural layer of personal organisation."
+    pbs_reasoning: |
+      - Knowledge workers make an estimated [35,000 decisions per day](https://go.roberts.edu/leadingedge/the-great-choices-of-strategic-leaders), many trivial but cumulatively costly. Eliminating 15-30 of these removes a significant layer of deliberation friction between intention and action.
+      - [Vohs et al. (2008)](https://doi.org/10.1111/j.1467-9280.2008.02057.x) demonstrated that accumulated decisions deplete self-regulatory resources, slowing subsequent action initiation. Defaults bypass this depletion mechanism entirely.
+      - Score 6 rather than higher because the anchor (zero overhead, instant intention-to-action) requires addressing structural overhead too (capture systems, prioritisation, context-switching), which this intervention does not touch. It removes one meaningful friction layer but not the whole system.
     isr: 55
-    isr_reasoning: "The evidence base is mixed. Decision fatigue as a concept has strong theoretical support and some empirical backing — Vohs et al. and Baumeister's ego depletion work established the framework, and practical evidence from figures like Barack Obama and Mark Zuckerberg (who eliminated clothing decisions) popularised the approach. However, recent large-scale studies have challenged the strength of the decision fatigue effect, with a 2025 healthcare study finding no credible evidence for decision fatigue in medical contexts, and a systematic review finding significant effects in only 45% of assessed cases. The intervention's effectiveness likely depends heavily on individual susceptibility to decision fatigue and the baseline number of unnecessary decisions."
+    isr_reasoning: |
+      - [Baumeister & Vohs (2016)](https://doi.org/10.1016/bs.adms.2016.04.002) established the ego depletion framework underpinning decision fatigue, but a [2016 multi-lab replication](https://doi.org/10.1177/1745691616652873) found smaller-than-expected effects, suggesting individual variation is substantial.
+      - A [2025 healthcare study](https://doi.org/10.1001/jamanetworkopen.2024.52702) found no credible evidence for decision fatigue in medical decision-making contexts, and a [systematic review](https://doi.org/10.1016/j.joep.2017.07.008) found significant effects in only 45% of assessed studies.
+      - Practical success (Obama, Zuckerberg clothing defaults) is widely reported but anecdotal. The mixed empirical picture suggests roughly half of proper adopters experience meaningful tracking improvements.
     uar: 75
-    uar_reasoning: "Once established, micro-decision elimination is highly sticky. Default choices and decision rules require no ongoing willpower to maintain — they operate by removing the need for deliberation rather than adding a new behaviour. The main setup cost is the initial audit and design phase. Adherence is high because the intervention reduces effort rather than adding it. The primary failure mode is scope creep (gradually re-introducing decisions that were previously defaulted) or life changes that invalidate existing defaults. Estimated 70 - 80% sustained at 6 months."
+    uar_reasoning: |
+      - Once defaults are established, the intervention operates by removing effort rather than adding it, which [habit research](https://doi.org/10.1002/ejsp.674) identifies as the strongest predictor of sustained behaviour change.
+      - [Wood & Neal (2007)](https://doi.org/10.1037/0033-295X.114.4.843) found that context-stable behaviours become automatic within 4-8 weeks, and decision defaults are inherently context-stable since they eliminate the choice point entirely.
+      - Primary failure mode is scope creep (gradually re-introducing decisions) or life changes invalidating defaults. Estimated 70-80% sustained at 6 months given the low maintenance burden.
 
   organisation.order:
     pbs: 5
-    pbs_reasoning: "Eliminating micro-decisions moderately improves thoroughness by reducing the number of points where procrastination, forgetfulness, or poor judgment can occur. When routine matters are handled by defaults rather than active choices, there are fewer opportunities for things to fall through the cracks. Decision rules for recurring situations ('if a meeting has no agenda, decline it') prevent inconsistent responses to similar situations. However, thoroughness ultimately depends more on capture systems, review practices, and follow-through habits than on decision reduction alone."
+    pbs_reasoning: |
+      - The inverted anchor (missed commitments/month) means this scores how much the intervention reduces missed commitments. Decision rules for recurring situations ('if a meeting has no agenda, decline it') remove points where procrastination or poor judgement cause commitments to slip.
+      - [Gollwitzer (1999)](https://doi.org/10.1037/0003-066X.54.7.493) found implementation intentions (a form of decision rule) doubled follow-through rates, suggesting defaults meaningfully reduce the failure points where commitments get missed.
+      - Score 5 rather than higher because missed commitments depend more on capture systems, review practices, and follow-through habits than on decision reduction alone. A successful user might move from 5 missed/month (score 2) to 1-2/month (score 4), a meaningful but not transformative shift.
     isr: 50
-    isr_reasoning: "The link between reduced decision load and improved thoroughness is theoretically sound but has limited direct empirical support. Most decision fatigue research focuses on decision quality rather than task completion or commitment fulfilment. The thoroughness benefit is inferred from the mechanism (fewer decision points = fewer failure points) rather than directly measured in studies. The moderate score reflects this inferential gap."
+    isr_reasoning: |
+      - [Harkin et al. (2016)](https://doi.org/10.1037/bul0000025) meta-analysis found progress monitoring (d = 0.40) reliably improves goal attainment, but decision reduction is a more indirect mechanism than monitoring for reducing missed commitments.
+      - Most decision fatigue research from [Baumeister's lab](https://doi.org/10.1016/bs.adms.2016.04.002) focuses on decision quality rather than task completion or commitment fulfilment. The commitment-keeping benefit is inferred from the mechanism rather than directly measured.
+      - The moderate score reflects this inferential gap: the causal chain from fewer decision points to fewer missed commitments is plausible but incompletely validated.
     uar: 75
-    uar_reasoning: "Same adherence profile as speed — the intervention reduces cognitive load rather than adding it, making sustained adoption relatively easy. Thoroughness-relevant defaults (e.g., always processing email at set times, always filing documents immediately) tend to be especially sticky because their benefits are immediately visible when commitments stop being missed."
+    uar_reasoning: |
+      - Same low-maintenance profile as tracking: once defaults are set, they operate passively. [Wood & Neal (2007)](https://doi.org/10.1037/0033-295X.114.4.843) found context-stable habits persist with minimal conscious effort.
+      - Order-relevant defaults (e.g., always processing email at set times, always filing documents immediately) tend to be especially sticky because the cost of failure is immediately visible when commitments are missed.
+      - Estimated 70-80% sustained at 6 months, consistent with the tracking dimension, since it is the same intervention being maintained.
 
   organisation.speed:
     pbs: 4
-    pbs_reasoning: "Eliminating micro-decisions provides a modest simplicity benefit by reducing the number of active choice points in daily life, effectively making your operational system less complex. When routine matters are handled by defaults rather than deliberation, the cognitive architecture of your day becomes simpler. However, this is an indirect effect — the intervention does not itself simplify your organisational tools or processes. It reduces the decision layer rather than streamlining the system layer."
+    pbs_reasoning: |
+      - The anchor (perfectly minimal system) refers to reducing tools, steps, and rules. Eliminating micro-decisions reduces the decision layer but does not itself simplify organisational tools or processes.
+      - [Cognitive load theory (Sweller, 1988)](https://doi.org/10.1207/s15516709cog1202_4) supports the principle that fewer active choice points reduce cognitive architecture complexity, but this is an indirect contribution to system minimalism.
+      - Score 4 because the intervention makes the experience of using your system feel simpler without actually reducing the system's structural complexity. It is a real but modest simplicity gain.
     isr: 45
-    isr_reasoning: "The link between reduced decision load and system simplicity is primarily supported by theoretical frameworks (cognitive load theory, ego depletion) rather than direct experimental evidence. Studies on decision fatigue have focused on decision quality and willpower rather than on system design or organisational simplicity. The score reflects the plausible but weakly evidenced nature of this connection."
+    isr_reasoning: |
+      - The link between reduced decision load and system simplicity is supported by [cognitive load theory (Sweller, 1988)](https://doi.org/10.1207/s15516709cog1202_4) rather than direct experimental evidence on organisational system design.
+      - [Decision fatigue research](https://doi.org/10.1016/j.joep.2017.07.008) has focused on decision quality and willpower rather than on system minimalism as an outcome variable.
+      - The score reflects the plausible but weakly evidenced nature of this connection: simplicity is a second-order effect of decision elimination rather than a primary outcome.
     uar: 75
-    uar_reasoning: "Same adherence profile as other organisation values — the intervention is inherently low-maintenance once established, supporting sustained adoption regardless of which specific value dimension it serves."
+    uar_reasoning: |
+      - Same adherence profile as other organisation dimensions: the intervention reduces cognitive load rather than adding it, supporting sustained adoption. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found that effortless behaviours are the most durable.
+      - No additional maintenance burden for the speed dimension specifically, since it is the same set of defaults and decision rules being sustained.
+      - Estimated 70-80% sustained at 6 months, consistent with tracking and order dimensions.
 
 resources:
   upfront_cost: 0

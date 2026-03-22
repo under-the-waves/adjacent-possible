@@ -1,54 +1,90 @@
 name: "Swimming Training"
 description: "Structured aquatic exercise involving regular pool sessions with progressive training protocols including technique refinement, endurance building, and strength development. Swimmers typically train 3-6 times per week for 45-90 minutes per session, focusing on stroke mechanics, cardiovascular conditioning, and muscular endurance through various distances and intensities. Results in cardiovascular fitness and body composition changes typically become noticeable within 4-6 weeks, with significant improvements in technique and endurance developing over 3-6 months of consistent practice."
-applicable_domains: ["fitness", "recreation"]
+applicable_domains: ["fitness"]
 
 values:
- fitness.health:
-   pbs: 8
-   pbs_reasoning: "Meta-analyses show swimming reduces all-cause mortality by 28% and cardiovascular disease risk by 41% (Swimmers live 3-5 years longer on average). Large cohort studies demonstrate significant reductions in diabetes, hypertension, and metabolic syndrome. The low-impact nature provides joint protection while delivering full-body cardiovascular and muscular benefits comparable to running with less injury risk."
-   isr: 85
-   isr_reasoning: "Extensive research from multiple large-scale studies and systematic reviews consistently demonstrate health benefits. The Cooper Institute longitudinal studies (40+ years) and multiple meta-analyses provide high-quality evidence with large sample sizes showing reliable health improvements across diverse populations when proper training volume is maintained."
-   uar: 60
-   uar_reasoning: "Pool access limitations and scheduling constraints create significant barriers. Studies show 40-50% dropout rates in the first 6 months due to facility access, time commitments, and technical learning curve. However, those who establish routine often maintain long-term adherence due to low injury rates and joint-friendly nature."
+  fitness.health:
+    pbs: 8
+    pbs_reasoning: |
+      - Large cohort studies show swimming reduces all-cause mortality by 28% and cardiovascular disease risk by 41%, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Chase et al. 2008, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.02.03.03))
+      - The Cooper Institute longitudinal studies (40+ years of data) demonstrate swimmers have significantly lower mortality rates than sedentary individuals, walkers, and runners in some analyses ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - The low-impact nature provides joint protection while delivering full-body cardiovascular and muscular benefits with substantially lower injury risk than running or contact sports ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
+    isr: 85
+    isr_reasoning: |
+      - Extensive research from multiple large-scale studies and systematic reviews consistently demonstrates health benefits, with high statistical confidence and large sample sizes ([Chase et al. 2008, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.02.03.03))
+      - Cardiovascular adaptations from swimming are well-characterised and reliably reproduced across diverse populations including elderly and clinical groups ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Benefits require adequate training volume and technique competence; those who can swim continuously for 20+ minutes at moderate intensity reliably achieve health improvements ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
+    uar: 55
+    uar_reasoning: |
+      - Pool access limitations and scheduling constraints create significant barriers, with studies showing 40-50% dropout in the first 6 months due to facility access, time commitments, and technical learning curve ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Those who establish routine often maintain long-term adherence due to low injury rates and the joint-friendly nature providing a sustainable exercise option into old age ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - The technical skill requirement (efficient swimming technique) is a meaningful barrier that distinguishes swimming from simpler activities like walking or cycling ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
 
- fitness.performance:
-   pbs: 9
-   pbs_reasoning: "Swimming develops exceptional cardiovascular efficiency, with elite swimmers achieving VO2 max values of 65-75 ml/kg/min. Training produces superior lung capacity (vital capacity 15-25% above average), enhanced cardiac output, and full-body muscular endurance. Olympic swimmers demonstrate near-maximum human aquatic performance capabilities, with technique and conditioning transferring to other athletic endeavors."
-   isr: 75
-   isr_reasoning: "Well-documented training adaptations occur reliably in coached athletes. Studies consistently show significant VO2 max improvements (15-25%), stroke volume increases, and muscular power gains. However, technique complexity means performance gains require proper instruction and progressive programming for optimal results."
-   uar: 45
-   uar_reasoning: "Performance-focused training requires 4-6 sessions weekly with structured progression, creating high adherence barriers. Elite training demands are substantial, with studies showing 60-70% dropout rates from competitive programs. Success requires access to coaching, facilities, and significant time commitment that limits long-term adherence for recreational athletes."
+  fitness.performance:
+    pbs: 8
+    pbs_reasoning: |
+      - Swimming develops exceptional cardiovascular efficiency, with elite swimmers achieving VO2max values of 65-75 ml/kg/min and superior lung capacity (vital capacity 15-25% above average), placing dedicated swimmers in the 25th-90th+ percentile on general fitness tests ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Full-body muscular endurance, cardiac output, and training produce near-maximum aquatic performance, though transfer to land-based fitness tests is somewhat reduced compared to running ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
+      - Score 8 rather than 9 because swimming performance is sport-specific; the 25th percentile anchor (score 8) matches the cross-domain fitness level achievable through dedicated swimming alone ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+    isr: 75
+    isr_reasoning: |
+      - Well-documented training adaptations occur reliably in coached athletes, with studies consistently showing significant VO2max improvements (15-25%), stroke volume increases, and muscular power gains ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Technique complexity means performance gains require proper instruction and progressive programming; raw effort without technique produces limited fitness improvements ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
+      - Individual variation in technique acquisition rate introduces meaningful variability in performance outcomes, particularly in the first 6-12 months ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
+    uar: 45
+    uar_reasoning: |
+      - Performance-focused training requires 4-6 sessions weekly with structured progression, creating high adherence barriers; studies show 60-70% dropout rates from competitive programmes ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Success requires access to coaching, pool facilities, and significant time commitment (including travel and changing time) that limits long-term adherence for recreational athletes ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Shoulder overuse injuries are a common barrier at higher training volumes, with prevalence of 40-91% in competitive swimmers ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
 
- fitness.appearance:
-   pbs: 7
-   pbs_reasoning: "Swimming produces distinct physique adaptations including broad shoulders, lean muscle mass, and low body fat percentages. Studies show 8-15% body fat reduction over 6 months with significant improvements in muscle definition, particularly upper body. Elite swimmers exhibit classic V-taper physiques, though genetic factors influence achievable aesthetic outcomes."
-   isr: 70
-   isr_reasoning: "Body composition changes are well-documented in controlled studies, with consistent fat loss and muscle tone improvements. However, dramatic physique transformation requires high training volumes and dietary discipline. Research shows reliable but moderate aesthetic changes for recreational swimmers, with more dramatic results requiring competitive-level commitment."
-   uar: 55
-   uar_reasoning: "Aesthetic goals require consistent 4-5 weekly sessions plus dietary changes. Appearance-focused swimmers show better adherence than performance athletes (less intensity required) but face pool access barriers. Studies indicate 45-55% maintain programs long enough for significant aesthetic changes due to gradual visible progress providing motivation."
+  fitness.appearance:
+    pbs: 6
+    pbs_reasoning: |
+      - Swimming produces a noticeable body composition improvement: broad shoulders, lean muscle mass, and low body fat, with studies showing 8-15% body fat reduction over 6 months of consistent training ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Score 6 ("noticeable body composition improvement") rather than 7 because swimming builds a lean but not heavily muscled physique; the water-supported environment provides less resistance stimulus than gravity-based activities for maximal hypertrophy ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
+      - Elite swimmers exhibit distinctive V-taper physiques, but this requires competitive-level training volumes (20+ hours/week) beyond what recreational swimmers achieve ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
+    isr: 70
+    isr_reasoning: |
+      - Body composition changes are well-documented in controlled studies, with consistent fat loss and muscle tone improvements at adequate training volumes ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Dramatic aesthetic changes require high training volumes and dietary discipline; recreational swimmers see reliable but moderate visual changes ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
+      - Swimming's appetite-stimulating effect (cold water exposure increases hunger) can counteract fat loss if dietary intake is not managed ([White et al. 2005, Int J Sport Nutr Exerc Metab](https://doi.org/10.1123/ijsnem.15.1.38))
+    uar: 50
+    uar_reasoning: |
+      - Aesthetic goals require consistent 4-5 weekly sessions plus dietary changes, facing the same pool access barriers as health-motivated swimming ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Appearance-focused swimmers may be frustrated by the appetite-stimulating effect of cold water and the lean-rather-than-muscular aesthetic outcome ([White et al. 2005, Int J Sport Nutr Exerc Metab](https://doi.org/10.1123/ijsnem.15.1.38))
+      - Studies indicate 45-55% maintain programmes long enough for significant aesthetic changes, with gradual visible progress providing moderate motivation ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
 
- fitness.enjoyment:
-   pbs: 8
-   pbs_reasoning: "Swimming provides unique meditative qualities through rhythmic breathing and movement, often described as 'flow state' activity. Studies show high satisfaction rates among regular swimmers due to stress relief, joint comfort, and full-body engagement. The aquatic environment offers therapeutic psychological benefits and escape from daily stressors, with many swimmers reporting it as their preferred exercise modality."
-   isr: 80
-   isr_reasoning: "Research consistently demonstrates high satisfaction and psychological benefits among regular swimmers. Studies show significant stress reduction, mood improvement, and exercise enjoyment scores. The low-impact nature and meditative qualities create reliable positive experiences for those who develop basic competency."
-   uar: 65
-   uar_reasoning: "Swimmers who overcome initial technical barriers and establish routine often develop strong exercise adherence due to enjoyment factor. However, pool access and scheduling create ongoing challenges. Studies show bimodal distribution - either high long-term adherence (5+ years) or early dropout, with 65% of those swimming regularly for 6+ months continuing long-term."
+  fitness.enjoyment:
+    pbs: 8
+    pbs_reasoning: |
+      - Swimming provides unique meditative qualities through rhythmic breathing and movement, often described as inducing flow states, with studies showing high satisfaction rates among regular swimmers ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - The aquatic environment offers therapeutic psychological benefits including stress relief, joint comfort, and full-body engagement, with many swimmers reporting it as their preferred and "highly enjoyable and anticipated" (score 8) exercise modality ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
+      - The sensory experience of water immersion is inherently calming for many people, providing enjoyment pathways distinct from land-based exercise ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
+    isr: 80
+    isr_reasoning: |
+      - Research consistently demonstrates high satisfaction and psychological benefits among regular swimmers, with significant stress reduction and mood improvement scores ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - The low-impact nature and meditative qualities create reliable positive experiences for those who develop basic technical competency ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
+      - Those who struggle with technique or dislike the pool environment (chlorine, crowding, repetitive laps) do not experience these benefits, introducing meaningful variability ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
+    uar: 60
+    uar_reasoning: |
+      - Swimmers who overcome initial technical barriers and establish routine often develop strong long-term adherence driven by enjoyment ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Pool access and scheduling create ongoing challenges; the bimodal distribution shows either high long-term adherence (5+ years) or early dropout ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Approximately 65% of those swimming regularly for 6+ months continue long-term, but the initial dropout phase reduces the overall enjoyment-based adherence rate ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
 
 resources:
- upfront_cost: 150
- upfront_cost_reasoning: "Basic equipment including quality swimsuit ($40), goggles ($20), kickboard ($25), pull buoy ($20), swim cap ($15), and pool access fees/membership initiation ($30). Conservative estimate for essential gear to begin effective training."
- ongoing_cost: 80
- ongoing_cost_period: "month"
- ongoing_cost_reasoning: "Budget gym/pool membership at community centers or basic chain facilities. Does not include premium club memberships or private coaching, representing minimum viable ongoing access costs."
- upfront_time: 8
- upfront_time_reasoning: "Initial technique assessment, basic stroke instruction, and pool orientation. Minimum time needed to swim safely and begin structured training, assuming some basic swimming ability."
- ongoing_time: 6
- ongoing_time_period: "week"
- ongoing_time_reasoning: "Three 45-minute sessions plus travel time representing minimum effective training frequency for meaningful fitness and health benefits."
+  upfront_cost: 150
+  upfront_cost_reasoning: "Basic equipment including quality swimsuit ($40), goggles ($20), kickboard ($25), pull buoy ($20), swim cap ($15), and pool access fees/membership initiation ($30). Conservative estimate for essential gear to begin effective training."
+  ongoing_cost: 80
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Budget gym/pool membership at community centres or basic chain facilities. Does not include premium club memberships or private coaching, representing minimum viable ongoing access costs."
+  upfront_time: 8
+  upfront_time_reasoning: "Initial technique assessment, basic stroke instruction, and pool orientation. Minimum time needed to swim safely and begin structured training, assuming some basic swimming ability."
+  ongoing_time: 6
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Three 45-minute sessions plus travel time representing minimum effective training frequency for meaningful fitness and health benefits."
 
 prerequisites:
- - "Basic swimming competency and water safety skills (ability to swim 100+ meters continuously)"
- - "Medical clearance for vigorous exercise, particularly for individuals with heart or respiratory conditions"
- - "Regular access to lap swimming facilities with appropriate lane availability and hours"
- - "Absence of serious shoulder, back, or neck injuries that could be aggravated by repetitive overhead motion"
+  - "Basic swimming competency and water safety skills (ability to swim 100+ metres continuously)"
+  - "Medical clearance for vigorous exercise, particularly for individuals with heart or respiratory conditions"
+  - "Regular access to lap swimming facilities with appropriate lane availability and hours"
+  - "Absence of serious shoulder, back, or neck injuries that could be aggravated by repetitive overhead motion"

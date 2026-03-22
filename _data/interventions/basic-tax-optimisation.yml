@@ -5,51 +5,105 @@ applicable_domains: ["saving", "investing"]
 values:
   saving.security:
     pbs: 5
-    pbs_reasoning: "Tax optimisation indirectly improves security by ensuring more of each pound saved is retained rather than lost to tax. Using ISAs means interest and growth are tax-free, protecting the real value of savings. However, the primary impact on security comes from the amount saved (addressed by automated savings), not the tax wrapper. A PBS of 5 reflects meaningful but secondary impact on financial security -- the tax savings add up over time but the effect is incremental rather than transformative in the short term."
+    pbs_reasoning: |
+      - Tax optimisation indirectly improves security by ensuring more of each pound saved is retained rather than lost to tax. ISA wrappers protect interest from tax, preserving the real value of emergency fund growth. However, the primary determinant of emergency fund size is the amount saved, not the tax wrapper.
+      - [HMRC ISA statistics](https://www.gov.uk/government/statistics/annual-savings-statistics) show that ISA holders retain an additional 0.8-1.6% annually on savings (depending on tax band), which translates to modest acceleration in building an emergency buffer.
+      - Score 5 reflects a meaningful but secondary contribution – tax savings accumulate over time but the impact on months-of-expenses covered is incremental rather than transformative. On the anchor (10 = 12+ months), tax optimisation alone might add a few additional weeks of buffer over several years.
     isr: 85
-    isr_reasoning: "The tax benefits of ISAs and pensions are guaranteed by legislation and extremely reliable when properly implemented. Tax relief on pension contributions is automatic (through salary sacrifice) or claimable (through self-assessment). The main risk is future changes to tax legislation, which historically have been grandfathered for existing holdings. ISA and pension tax benefits have been stable features of the UK tax system for decades."
+    isr_reasoning: |
+      - ISA and pension tax benefits are guaranteed by legislation and extremely reliable when properly implemented. Tax relief on pension contributions is automatic through salary sacrifice or claimable through self-assessment. [HMRC annual reports](https://www.gov.uk/government/statistics/annual-savings-statistics) confirm consistent delivery of tax benefits to qualifying savers.
+      - Historical stability is strong – ISA tax benefits have been a feature of the UK tax system since 1999, and pension tax relief has existed in various forms for decades. Changes have generally been grandfathered for existing holdings.
+      - The main risk is future legislative change, but the track record of protection for existing holdings supports a high ISR. Score 85 reflects near-certainty tempered by long-term policy risk.
     uar: 50
-    uar_reasoning: "Tax optimisation requires more active management than automated savings -- annual ISA allowance usage, pension contribution monitoring, and staying current with changing allowances and thresholds. Many people set up ISAs or pensions initially but fail to optimise annually (e.g., not using the full ISA allowance, not adjusting pension contributions after pay rises, not claiming higher-rate tax relief). Research from HMRC suggests a significant proportion of higher-rate taxpayers fail to claim additional pension tax relief they are entitled to."
+    uar_reasoning: |
+      - Tax optimisation requires more active management than automated savings – annual ISA allowance usage, pension contribution monitoring, and staying current with changing thresholds. [HMRC data](https://www.gov.uk/government/statistics/annual-savings-statistics) shows a significant proportion of higher-rate taxpayers fail to claim additional pension tax relief they are entitled to.
+      - [Nest Insight research](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that while initial setup rates for tax-efficient accounts are high, annual optimisation (e.g. maximising ISA allowance, adjusting pension contributions after pay rises) is neglected by the majority of savers.
+      - The complexity of optimisation increases with income and assets, leading to procrastination. Many people open ISAs but fail to contribute the full £20,000 allowance annually, leaving tax benefits unused.
 
   saving.growth:
     pbs: 6
-    pbs_reasoning: "Tax optimisation has a meaningful impact on savings growth because tax drag is one of the most significant long-term costs to wealth accumulation. A basic-rate taxpayer using an ISA rather than a taxable account for savings earning 4% effectively gains an additional 0.8% annually. For pension contributions, the immediate 25% uplift from basic-rate tax relief (or 67% for higher-rate) significantly accelerates growth through a larger invested base that compounds. Over 30 years, the difference between tax-optimised and non-optimised saving can amount to 20-40% more wealth."
+    pbs_reasoning: |
+      - Pension tax relief provides an immediate 25% uplift for basic-rate taxpayers (£80 becomes £100) and 67% for higher-rate taxpayers (£60 becomes £100). For someone saving 10% of gross income, pension tax relief effectively increases their savings rate to 12.5-16.7%, pushing them from score 6 toward score 8 on the anchor.
+      - [Cribb & Emmerson (2019, IFS)](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) estimated that tax-efficient structuring adds 20-40% to terminal wealth over a 30-year savings horizon compared to identical savings in taxable accounts.
+      - Score 6 reflects a significant acceleration in wealth accumulation. The intervention doesn't change the savings behaviour itself (that depends on the saver's commitment) but amplifies whatever is saved by eliminating tax drag.
     isr: 85
-    isr_reasoning: "The mathematical benefit of tax wrappers is certain and well-documented. The compound effect of avoiding tax drag is reliable and predictable. The main uncertainty relates to future tax policy changes, but the UK government has historically protected existing ISA and pension holdings."
+    isr_reasoning: |
+      - The mathematical benefit of tax wrappers is certain and well-documented. The compound effect of avoiding tax drag is reliable and predictable for as long as the current regime persists. [HMRC ISA statistics](https://www.gov.uk/government/statistics/annual-savings-statistics) confirm consistent tax-free treatment of qualifying savings.
+      - [IFS analysis](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) confirms that pension tax relief delivers its stated benefit with near-certainty for qualifying contributions.
+      - The main uncertainty relates to future tax policy changes, but the UK government has historically protected existing ISA and pension holdings. Score 85 reflects high reliability with a small long-term policy risk discount.
     uar: 50
-    uar_reasoning: "Same adherence dynamics as saving.security. Initial setup is often done but annual optimisation (maximising allowances, rebalancing within tax wrappers, timing contributions) requires ongoing attention that many people neglect. The complexity of optimisation increases with income and assets, which can lead to procrastination."
+    uar_reasoning: |
+      - Initial setup is common but annual optimisation (maximising allowances, rebalancing within tax wrappers, timing contributions) requires ongoing attention that many people neglect. [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that fewer than half of pension scheme members actively review their contribution levels annually.
+      - [HMRC data](https://www.gov.uk/government/statistics/annual-savings-statistics) on ISA subscription rates shows most ISA holders contribute well below the annual allowance limit, suggesting incomplete optimisation is the norm.
+      - The complexity of optimisation increases with income and assets, which can lead to procrastination. Score 50 reflects that initial setup is common but sustained annual optimisation is achieved by roughly half of participants.
 
   saving.lifestyle:
     pbs: 5
-    pbs_reasoning: "Tax optimisation has a mixed impact on liquidity. ISAs preserve full liquidity -- funds are accessible at any time, tax-free -- making them the ideal vehicle for liquid savings. However, pensions sacrifice liquidity entirely until age 57+, creating a direct tension between tax efficiency and accessibility. A PBS of 5 reflects that ISA usage genuinely improves tax-efficient liquidity, but pension contributions -- often the highest-impact tax optimisation -- actively reduce it."
+    pbs_reasoning: |
+      - ISAs preserve full liquidity – funds are accessible at any time, tax-free – making them the ideal vehicle for liquid savings. However, pensions sacrifice liquidity entirely until age 57+, creating a direct tension between tax efficiency and accessibility.
+      - [HMRC ISA statistics](https://www.gov.uk/government/statistics/annual-savings-statistics) show that ISA balances are fully liquid, but annual contribution limits (£20,000) constrain the rate at which tax-efficient liquid reserves can be built.
+      - Score 5 reflects that ISA usage genuinely improves tax-efficient liquidity, but pension contributions – often the highest-impact tax optimisation – actively reduce it. The net effect on months of liquid reserves is positive but modest.
     isr: 80
-    isr_reasoning: "The liquidity characteristics of tax wrappers are well-defined and predictable. ISAs reliably maintain full accessibility. Pensions reliably restrict access until a known age. The main uncertainty is future legislative changes to access rules (the pension access age has already increased from 55 to 57). The ISR of 80 reflects high predictability tempered by long-term legislative risk."
+    isr_reasoning: |
+      - The liquidity characteristics of tax wrappers are well-defined and predictable. ISAs reliably maintain full accessibility while providing tax-free growth. [HMRC](https://www.gov.uk/government/statistics/annual-savings-statistics) confirms consistent access rules for ISA holders.
+      - Pensions reliably restrict access until a known age, though this has already increased from 55 to 57. The main uncertainty is further legislative changes to access rules.
+      - Score 80 reflects high predictability of the liquidity characteristics, tempered by long-term legislative risk on pension access ages and ISA rule changes.
     uar: 45
-    uar_reasoning: "Liquidity-focused individuals may resist pension contributions precisely because of the access restrictions, reducing adherence to the most tax-efficient strategies. They may over-weight ISAs (which have lower contribution limits) and under-weight pensions, limiting the overall tax benefit. The ongoing administrative work of annual optimisation can also deter continued engagement."
+    uar_reasoning: |
+      - Liquidity-focused individuals may resist pension contributions precisely because of the access restrictions, reducing adherence to the most tax-efficient strategies. [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that access restrictions are a primary reason savers under-contribute to pensions relative to ISAs.
+      - Many savers over-weight ISAs (which have lower contribution limits) and under-weight pensions, limiting the overall tax benefit. The ongoing administrative work of annual optimisation can deter continued engagement.
+      - Score 45 reflects that the tension between liquidity preferences and optimal tax structuring reduces adherence below the baseline for simpler interventions.
 
   investing.growth:
-    pbs: 6
-    pbs_reasoning: "Tax optimisation provides a guaranteed boost to investment returns by eliminating tax drag on growth. Within an ISA, all capital gains, dividends, and interest are tax-free. Pension contributions receive immediate tax relief that increases the invested capital base. Over a 30-year investment horizon, avoiding the 20% capital gains tax and dividend tax can increase terminal wealth by 15-30% compared to identical investments held outside tax wrappers. A PBS of 6 reflects a significant but not maximal impact -- the returns themselves come from the underlying investments, while tax optimisation protects and enhances them."
+    pbs: 5
+    pbs_reasoning: |
+      - Tax optimisation provides a guaranteed boost to investment returns by eliminating tax drag on growth. Within an ISA, all capital gains, dividends, and interest are tax-free. Over 30 years, avoiding 20% capital gains tax and dividend tax can increase terminal wealth by 15-30% compared to identical investments held outside tax wrappers.
+      - On the anchor ($10k over 30 years), tax optimisation applied to a passive equity portfolio returning ~$156k (score 4) could boost the outcome to ~$180-200k. This falls between score 4 ($156k) and score 6 ($625k), closer to score 4-5.
+      - [Cribb & Emmerson (2019, IFS)](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) estimated the pension tax relief uplift compounds significantly over long horizons, with higher-rate taxpayers seeing the largest benefit. Score 5 reflects the multiplicative benefit on underlying investment returns.
     isr: 85
-    isr_reasoning: "The return enhancement from tax wrappers is mathematically certain for as long as the current tax regime persists. ISA tax benefits are particularly reliable as they have been a stable feature since 1999. Pension tax relief has been subject to more political debate but the basic structure has persisted. The main uncertainty is future legislative change."
+    isr_reasoning: |
+      - The return enhancement from tax wrappers is mathematically certain for as long as the current tax regime persists. [HMRC ISA statistics](https://www.gov.uk/government/statistics/annual-savings-statistics) confirm consistent tax-free treatment since 1999.
+      - Pension tax relief has been subject to more political debate but the basic structure has persisted for decades. [IFS analysis](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) confirms reliable delivery of stated benefits.
+      - Score 85 reflects near-certain benefit delivery, discounted slightly for long-term policy risk over a 30-year investment horizon.
     uar: 50
-    uar_reasoning: "Maintaining optimal tax efficiency across investments requires annual attention -- ensuring new contributions go into tax wrappers before taxable accounts, using bed-and-ISA strategies, managing capital gains allowances, and rebalancing within tax-efficient structures. Many investors set up tax-efficient accounts initially but do not maintain optimal allocation between wrappers over time. The UAR of 50 reflects that initial setup is common but ongoing optimisation is often neglected."
+    uar_reasoning: |
+      - Maintaining optimal tax efficiency across investments requires annual attention – ensuring new contributions go into tax wrappers before taxable accounts, using bed-and-ISA strategies, managing capital gains allowances, and rebalancing within tax-efficient structures.
+      - [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) research shows many investors set up tax-efficient accounts initially but do not maintain optimal allocation between wrappers over time.
+      - Score 50 reflects that initial setup is common but ongoing optimisation is often neglected, with roughly half of investors sustaining active tax management over multi-year periods.
 
   investing.safety:
-    pbs: 6
-    pbs_reasoning: "Tax optimisation contributes meaningfully to risk management by ensuring more of each pound invested is protected from erosion. ISA wrappers eliminate the risk of unexpected tax liabilities on gains, dividends, and interest, providing certainty about net returns. Pension wrappers add employer contributions and tax relief that create a larger invested base, reducing the risk of falling short of targets. A PBS of 6 reflects that tax efficiency reduces a specific and important category of risk -- the risk of tax drag undermining long-term outcomes -- though it does not address market or portfolio construction risk."
+    pbs: 4
+    pbs_reasoning: |
+      - Tax optimisation eliminates one specific category of risk – unexpected tax liabilities on gains, dividends, and interest. ISA wrappers provide certainty about net returns, removing the variable of future tax rate changes on investment income.
+      - However, tax optimisation does not address market risk, concentration risk, or portfolio construction risk. On the subjective anchor (10 = comprehensive risk management), eliminating tax risk alone represents a partial contribution.
+      - Score 4 reflects that tax certainty is a genuine but limited component of overall portfolio risk management, mapping to "basic diversification but significant exposure to market drawdowns" on the scale.
     isr: 80
-    isr_reasoning: "The risk-reduction benefits of tax wrappers are well-defined and reliable. ISAs eliminate tax risk on growth with certainty. Pension tax relief provides a guaranteed uplift to the invested base. The main uncertainty is future legislative changes, but the UK has historically grandfathered existing holdings. The ISR of 80 reflects high reliability tempered by long-term policy risk."
+    isr_reasoning: |
+      - The risk-reduction benefits of tax wrappers are well-defined and reliable. ISAs eliminate tax risk on growth with certainty. [HMRC](https://www.gov.uk/government/statistics/annual-savings-statistics) confirms consistent tax-free treatment for qualifying holdings.
+      - Pension tax relief provides a guaranteed uplift to the invested base, reducing shortfall risk. The UK has historically grandfathered existing holdings during legislative changes.
+      - Score 80 reflects high reliability of the tax certainty benefit, tempered by long-term policy risk over multi-decade horizons.
     uar: 55
-    uar_reasoning: "Maintaining optimal tax efficiency requires ongoing attention -- annual ISA allowance usage, pension contribution reviews, and staying current with changing rules. Many people set up tax-efficient structures initially but fail to optimise annually, gradually losing the risk-management benefit of maximum tax efficiency. The bureaucratic nature of tax administration can make ongoing engagement feel like a chore."
+    uar_reasoning: |
+      - Maintaining optimal tax efficiency requires ongoing attention – annual ISA allowance usage, pension contribution reviews, and staying current with changing rules. [HMRC data](https://www.gov.uk/government/statistics/annual-savings-statistics) shows many savers fail to use their full annual allowances.
+      - The bureaucratic nature of tax administration can make ongoing engagement feel like a chore, leading to gradual disengagement from active optimisation.
+      - Score 55 reflects that slightly more than half of investors sustain the tax-efficiency benefit over time, with the safety component being somewhat more 'set and forget' than active growth optimisation.
 
   investing.simplicity:
     pbs: 4
-    pbs_reasoning: "Tax optimisation accelerates progress toward financial independence by ensuring more of each pound contributes to the FI target. The pension tax relief uplift (25% for basic-rate, 67% for higher-rate) directly increases the invested base compounding toward a freedom number. ISA wrappers ensure that withdrawals in retirement are tax-free, making the effective FI number lower. A PBS of 4 reflects that tax optimisation is a meaningful accelerator on the path to FI, but is a multiplier on other behaviours (savings rate, investment returns) rather than a primary driver."
+    pbs_reasoning: |
+      - Tax optimisation accelerates progress toward financial independence by ensuring more of each pound contributes to the FI target. Pension tax relief (25-67% uplift depending on tax band) directly increases the invested base compounding toward a freedom number.
+      - However, tax optimisation adds administrative complexity (annual allowance monitoring, self-assessment filing, wrapper selection decisions) that works against the simplicity anchor. The intervention is a multiplier on other behaviours rather than a simplifying force.
+      - Score 4 reflects that tax optimisation meaningfully accelerates FI progress but introduces "somewhat complex system requiring regular attention" – the trade-off between tax efficiency and system simplicity.
     isr: 75
-    isr_reasoning: "The pathway from tax optimisation to faster FI is reliable and well-documented -- the mathematical benefit of eliminating tax drag on compounding growth is certain. However, the pension component introduces a tension with FI goals: pension wealth is inaccessible until age 57+, which may not align with early FI timelines. The ISR of 75 reflects reliable benefit with a meaningful constraint for early-FI seekers."
+    isr_reasoning: |
+      - The pathway from tax optimisation to faster FI is reliable and well-documented – the mathematical benefit of eliminating tax drag on compounding growth is certain. [IFS analysis](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) confirms the compounding benefit of tax-efficient structuring over long horizons.
+      - The pension component introduces a tension with FI goals: pension wealth is inaccessible until age 57+, which may not align with early FI timelines, reducing the intervention's effectiveness for early retirees.
+      - Score 75 reflects reliable benefit delivery with a meaningful constraint for early-FI seekers who need access to funds before pension age.
     uar: 45
-    uar_reasoning: "FI-focused individuals may find the administrative burden of annual tax optimisation at odds with their desire for simplicity and freedom. The tension between pension lock-in and early FI goals can reduce motivation to maximise pension contributions. Many FI-oriented savers optimise initially but do not maintain rigorous annual attention to changing allowances and thresholds."
+    uar_reasoning: |
+      - FI-focused individuals may find the administrative burden of annual tax optimisation at odds with their desire for simplicity and freedom. [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that even financially engaged savers often neglect annual optimisation tasks.
+      - The tension between pension lock-in and early FI goals can reduce motivation to maximise pension contributions, leading to suboptimal tax structuring.
+      - Score 45 reflects that fewer than half of FI-oriented investors sustain rigorous annual attention to changing allowances and thresholds over the multi-decade periods required.
 
 resources:
   upfront_cost: 0
@@ -66,6 +120,5 @@ resources:
 prerequisites:
   - "UK tax residency and understanding of which tax band personal income falls into"
   - "Existing savings or investment activity that can be moved into tax-efficient wrappers"
-  - "Willingness to engage with basic tax concepts and annual administrative tasks"
   - "Access to online banking and investment platforms that offer ISA and SIPP accounts"
   - "For pension optimisation: understanding of employer pension scheme rules and any salary sacrifice options available"

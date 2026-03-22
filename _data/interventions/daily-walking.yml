@@ -1,54 +1,90 @@
 name: "Daily Walking"
 description: "Consistent daily ambulatory exercise involving brisk walking for 30-60 minutes at a moderate pace (3-4 mph or conversational intensity). Walking can be performed continuously or accumulated throughout the day in 10+ minute bouts, typically targeting 7,000-10,000+ steps daily. Participants focus on maintaining consistent pace, good posture, and regular breathing while gradually increasing duration and intensity. Health benefits become noticeable within 2-4 weeks, with significant cardiovascular and metabolic improvements developing over 8-12 weeks of consistent daily practice."
-applicable_domains: ["fitness", "recreation"]
+applicable_domains: ["fitness"]
 
 values:
- fitness.health:
-   pbs: 7
-   pbs_reasoning: "Large-scale meta-analyses show daily walking reduces all-cause mortality by 20-30% and cardiovascular disease risk by 30-35%. The Harvard Health Study and other longitudinal research demonstrate 2-4 additional healthy years for regular walkers. Walking significantly reduces diabetes risk (30-40%), improves blood pressure, and enhances metabolic health, though benefits plateau compared to more vigorous activities."
-   isr: 95
-   isr_reasoning: "Exceptionally robust evidence base with multiple large randomized controlled trials and decades of epidemiological data. Studies consistently show health benefits across diverse populations, ages, and fitness levels. The simplicity and low intensity make benefits highly reliable and reproducible, with minimal risk of adverse effects or contraindications."
-   uar: 85
-   uar_reasoning: "Walking has the highest adherence rates among exercise interventions due to accessibility, low barrier to entry, and ability to integrate into daily routines. Studies show 70-85% maintain daily walking programs beyond 6 months. Dropout rates are primarily due to weather, motivation fluctuations, or life changes rather than physical limitations or complexity."
+  fitness.health:
+    pbs: 7
+    pbs_reasoning: |
+      - Large-scale meta-analyses show daily walking reduces all-cause mortality by 20-30% and cardiovascular disease risk by 30-35%, corresponding to roughly 2-4 additional healthy years on the linear anchor ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
+      - The Nurses' Health Study and other longitudinal research demonstrate 2-4 additional healthy years for regular walkers, with walking significantly reducing diabetes risk (30-40%), improving blood pressure, and enhancing metabolic health ([Manson et al. 2002, N Engl J Med](https://doi.org/10.1056/NEJMoa020694))
+      - Score 7 reflects a position between 1 year (score 6) and 3-4 years (score 8) on the health anchor: strong evidence but benefits plateau relative to more vigorous activities, with diminishing returns above 7,000-8,000 steps/day ([Paluch et al. 2022, Lancet Public Health](https://doi.org/10.1016/S2468-2667(21)00302-9))
+    isr: 95
+    isr_reasoning: |
+      - Exceptionally robust evidence base with multiple large RCTs and decades of epidemiological data; walking health benefits are among the most replicated findings in exercise science ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
+      - Studies consistently show health benefits across diverse populations, ages, and fitness levels, with minimal risk of adverse effects or contraindications ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
+      - The simplicity and low intensity make benefits highly reliable and reproducible; virtually everyone who walks consistently derives health benefit ([Paluch et al. 2022, Lancet Public Health](https://doi.org/10.1016/S2468-2667(21)00302-9))
+    uar: 85
+    uar_reasoning: |
+      - Walking has the highest adherence rates among exercise interventions due to accessibility, low barrier to entry, and ability to integrate into daily routines ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+      - Studies show 70-85% maintain daily walking programmes beyond 6 months, far exceeding gym-based or structured exercise retention ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
+      - Dropout is primarily due to weather, motivation fluctuations, or life changes rather than physical limitations or complexity; pedometer-based interventions further improve adherence ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
 
- fitness.performance:
-   pbs: 4
-   pbs_reasoning: "Walking provides modest cardiovascular improvements with VO2 max increases of 5-15% in sedentary individuals. Benefits include improved walking economy, basic endurance, and functional capacity. However, walking lacks the intensity and specificity needed for elite athletic performance, providing minimal power development, anaerobic capacity, or sport-specific adaptations compared to high-intensity training modalities."
-   isr: 90
-   isr_reasoning: "Research consistently demonstrates reliable but modest performance improvements from walking programs. Studies show predictable cardiovascular adaptations and functional capacity gains across populations. However, performance ceiling is inherently limited by the low-intensity nature of the activity."
-   uar: 80
-   uar_reasoning: "Performance-focused walkers often maintain programs due to low physical demands and joint-friendly nature. However, those seeking significant athletic gains may abandon walking for more intensive activities. Studies show good adherence among older adults and those with performance limitations, but lower retention among competitive athletes."
+  fitness.performance:
+    pbs: 4
+    pbs_reasoning: |
+      - Walking provides modest cardiovascular improvements with VO2max increases of 5-15% in sedentary individuals, placing most walkers around the 2nd-6th percentile on cardiorespiratory fitness tests relative to the general exercising population ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
+      - Benefits include improved walking economy, basic endurance, and functional capacity, but walking lacks the intensity for significant anaerobic capacity, power development, or sport-specific adaptations ([Swain & Franklin 2006, Am Heart J](https://doi.org/10.1016/j.ahj.2005.03.052))
+      - Score 4 corresponds to the 2nd percentile anchor point: walking develops functional baseline fitness but cannot approach general fitness test performance achieved by higher-intensity modalities ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
+    isr: 90
+    isr_reasoning: |
+      - Research consistently demonstrates reliable but modest performance improvements from walking programmes, with predictable cardiovascular adaptations and functional capacity gains across populations ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
+      - The performance ceiling is inherently limited by the low-intensity nature of the activity, but within that ceiling, improvements are highly consistent ([Swain & Franklin 2006, Am Heart J](https://doi.org/10.1016/j.ahj.2005.03.052))
+      - Essentially zero risk of overtraining or maladaptation, making the success rate for achievable performance gains very high ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
+    uar: 80
+    uar_reasoning: |
+      - Performance-focused walkers often maintain programmes due to low physical demands and joint-friendly nature, with high adherence among older adults and rehabilitation populations ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+      - Those seeking significant athletic gains may abandon walking for more intensive activities, reducing the walking-specific adherence pool ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Studies show good long-term retention for walkers who set realistic performance expectations (step counts, walking pace, distance) rather than broader athletic goals ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
 
- fitness.appearance:
-   pbs: 5
-   pbs_reasoning: "Walking produces moderate body composition changes with 5-10% body fat reduction over 6 months when combined with dietary awareness. Studies show modest muscle tone improvement and weight loss of 1-2 pounds per month. However, walking lacks sufficient intensity for significant muscle building or dramatic physique transformation compared to resistance training or high-intensity activities."
-   isr: 75
-   isr_reasoning: "Controlled studies consistently show modest weight loss and body composition improvements from walking programs. However, dramatic aesthetic changes require additional dietary modifications and longer timeframes. Research demonstrates reliable but limited physical transformation potential from walking alone."
-   uar: 70
-   uar_reasoning: "Appearance-focused walkers show moderate adherence, with some frustration over slow visible progress. Studies indicate 60-70% continue programs long enough for noticeable changes, though many supplement with additional activities. The gradual nature of results requires patience and realistic expectations."
+  fitness.appearance:
+    pbs: 4
+    pbs_reasoning: |
+      - Walking produces modest body composition changes with gradual fat reduction over 6+ months when combined with dietary awareness, but insufficient intensity for significant muscle building or dramatic physique transformation ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
+      - Meta-analyses show walking produces modest weight loss of 0.5-1 kg over 12-week interventions without dietary changes, corresponding to "modest visible changes" (score 4) on the appearance anchor ([Richardson et al. 2008, Ann Intern Med](https://doi.org/10.7326/0003-4819-148-5-200803040-00007))
+      - Walking lacks sufficient mechanical tension for meaningful hypertrophy and produces lower caloric expenditure per session than vigorous activities, limiting appearance transformation potential ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
+    isr: 75
+    isr_reasoning: |
+      - Controlled studies consistently show modest weight loss and body composition improvements from walking programmes, but dramatic aesthetic changes require additional dietary modifications and longer timeframes ([Richardson et al. 2008, Ann Intern Med](https://doi.org/10.7326/0003-4819-148-5-200803040-00007))
+      - The reliability of modest fat loss is high, but the magnitude is limited by the low caloric expenditure of walking relative to vigorous exercise ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
+      - Results are more reliable than higher-intensity modalities because the low intensity permits very consistent execution, though the ceiling is lower ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
+    uar: 70
+    uar_reasoning: |
+      - Appearance-focused walkers show moderate adherence, with some frustration over slow visible progress reducing retention among those with ambitious aesthetic goals ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - Studies indicate 60-70% continue programmes long enough for noticeable changes, with many supplementing walking with additional activities ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+      - The gradual nature of results requires patience and realistic expectations; those who accept walking's modest aesthetic contribution tend to have high long-term adherence ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
 
- fitness.enjoyment:
-   pbs: 8
-   pbs_reasoning: "Walking provides high psychological satisfaction through stress reduction, nature exposure, social interaction opportunities, and meditative qualities. Studies show significant mood improvements, anxiety reduction, and enhanced well-being among regular walkers. The activity offers flexibility, accessibility, and can be combined with other enjoyable activities like podcasts, music, or socializing."
-   isr: 85
-   isr_reasoning: "Research consistently demonstrates psychological benefits and high satisfaction rates among walkers. Studies show reliable mood improvements, stress reduction, and exercise enjoyment. The low-intensity nature and social opportunities create positive experiences for most participants who establish regular routines."
-   uar: 80
-   uar_reasoning: "Walkers often develop strong long-term habits due to enjoyment and lifestyle integration. Studies show high satisfaction and adherence rates, with many reporting walking as their preferred form of exercise. Weather dependency and motivation fluctuations are primary barriers, but overall retention is strong among those who find personal enjoyment."
+  fitness.enjoyment:
+    pbs: 8
+    pbs_reasoning: |
+      - Walking provides high psychological satisfaction through stress reduction, nature exposure, social interaction opportunities, and meditative qualities, with studies showing significant mood improvements and anxiety reduction ([Robertson et al. 2012, Br J Sports Med](https://doi.org/10.1136/bjsports-2011-090473))
+      - The activity offers exceptional flexibility and accessibility: can be combined with podcasts, music, socialising, dog walking, or commuting, making it "highly enjoyable and anticipated" (score 8) for many practitioners ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
+      - Walking is consistently rated among the most enjoyable forms of physical activity in population surveys, with its low-effort, non-competitive nature making it broadly appealing across demographics ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+    isr: 85
+    isr_reasoning: |
+      - Research consistently demonstrates psychological benefits and high satisfaction rates among walkers, with reliable mood improvements and stress reduction across populations ([Robertson et al. 2012, Br J Sports Med](https://doi.org/10.1136/bjsports-2011-090473))
+      - The low-intensity nature and social opportunities create positive experiences for most participants who establish regular routines, with very few reporting walking as aversive ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Green exercise research shows outdoor walking produces reliably greater mood improvements than indoor exercise, adding a robust enjoyment pathway ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
+    uar: 80
+    uar_reasoning: |
+      - Walkers often develop strong long-term habits due to enjoyment and lifestyle integration, with many reporting walking as their preferred form of exercise ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+      - High satisfaction and adherence rates reflect the low barrier: walking requires no special skills, equipment, or facilities, and can be done almost anywhere ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
+      - Weather dependency and seasonal motivation fluctuations are the primary barriers, but overall retention is strong among those who find personal enjoyment in walking routines ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
 
 resources:
- upfront_cost: 80
- upfront_cost_reasoning: "Quality walking shoes ($60) and basic weather-appropriate clothing ($20). Conservative estimate for essential footwear and minimal weather protection to begin safe, comfortable daily walking."
- ongoing_cost: 0
- ongoing_cost_period: "month"
- ongoing_cost_reasoning: "No recurring costs required as walking utilizes public spaces, sidewalks, and free outdoor areas. Optional expenses like gym memberships or guided programs not necessary for effective implementation."
- upfront_time: 1
- upfront_time_reasoning: "Minimal setup time needed - primarily route planning and initial pace assessment. Activity can begin immediately with basic safety awareness and appropriate footwear."
- ongoing_time: 4
- ongoing_time_period: "week"
- ongoing_time_reasoning: "Minimum effective dose of 30 minutes daily for 4 days weekly, representing conservative baseline for meaningful health benefits while maintaining high adherence potential."
+  upfront_cost: 80
+  upfront_cost_reasoning: "Quality walking shoes ($60) and basic weather-appropriate clothing ($20). Conservative estimate for essential footwear and minimal weather protection to begin safe, comfortable daily walking."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs required as walking utilises public spaces, sidewalks, and free outdoor areas. Optional expenses like gym memberships or guided programmes not necessary for effective implementation."
+  upfront_time: 1
+  upfront_time_reasoning: "Minimal setup time needed - primarily route planning and initial pace assessment. Activity can begin immediately with basic safety awareness and appropriate footwear."
+  ongoing_time: 4
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective dose of 30 minutes daily for 4 days weekly, representing conservative baseline for meaningful health benefits while maintaining high adherence potential."
 
 prerequisites:
- - "Ability to walk continuously for 15+ minutes without significant pain or breathing difficulty"
- - "Access to safe walking areas such as sidewalks, parks, or indoor facilities during preferred exercise times"
- - "Basic understanding of weather-appropriate clothing and hydration needs for outdoor activity"
- - "Medical clearance for moderate physical activity if over 50 or with existing cardiovascular conditions"
+  - "Ability to walk continuously for 15+ minutes without significant pain or breathing difficulty"
+  - "Access to safe walking areas such as sidewalks, parks, or indoor facilities during preferred exercise times"
+  - "Basic understanding of weather-appropriate clothing and hydration needs for outdoor activity"
+  - "Medical clearance for moderate physical activity if over 50 or with existing cardiovascular conditions"

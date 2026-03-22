@@ -1,39 +1,75 @@
 name: "Progressive Strength Training"
 description: "A systematic approach to resistance training where individuals gradually increase the weight, repetitions, or sets over time to continuously challenge muscles and promote adaptation. Training typically involves compound movements (squats, deadlifts, bench press) and isolation exercises performed 3-4 times per week for 45-75 minutes per session, with progressive overload applied weekly or bi-weekly. Results for strength gains become noticeable within 4-6 weeks, while significant physique changes typically occur after 12-16 weeks of consistent training."
-applicable_domains: ["fitness", "health", "appearance", "mental_health"]
+applicable_domains: ["fitness"]
 
 values:
   fitness.health:
     pbs: 8
-    pbs_reasoning: "Meta-analyses show resistance training reduces all-cause mortality by 15-20% and provides substantial benefits for bone density, metabolic health, and sarcopenia prevention. Studies demonstrate 10-15% reduction in cardiovascular disease risk and significant improvements in insulin sensitivity. While substantial, this represents ~25% of maximum possible longevity benefit on the logarithmic scale."
+    pbs_reasoning: |
+      - Meta-analyses show resistance training reduces all-cause mortality by 15-21%, with maximum benefit at 30-60 minutes per week, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
+      - Substantial independent benefits for bone mineral density, sarcopenia prevention, and type 2 diabetes risk reduction (17% lower risk) that compound over decades ([Westcott 2012, Current Sports Medicine Reports](https://doi.org/10.1249/JSR.0b013e31825dabb8))
+      - When combined with aerobic exercise, mortality risk drops by up to 40%, placing strength training among the top longevity interventions ([Stamatakis et al. 2018, Am J Epidemiol](https://doi.org/10.1093/aje/kwx345))
     isr: 85
-    isr_reasoning: "Extensive high-quality evidence from multiple large RCTs and meta-analyses consistently demonstrate health benefits when resistance training protocols are followed properly. The physiological mechanisms are well-understood and reliably reproduced across diverse populations."
+    isr_reasoning: |
+      - Extensive high-quality evidence from multiple large RCTs and meta-analyses consistently demonstrates health benefits when resistance training protocols are followed with adequate intensity ([Schoenfeld et al. 2017, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000002200))
+      - Physiological mechanisms (muscle protein synthesis, bone remodelling, glucose uptake) are well-understood and reliably reproduced across diverse populations including elderly, diabetic, and cardiac patients ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
+      - The dose-response relationship is well-characterised: even modest resistance training volumes produce measurable health improvements ([Shailendra et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2022-105669))
     uar: 35
-    uar_reasoning: "Gym membership retention rates show ~80% dropout within 5 months. Long-term resistance training adherence studies indicate only 30-40% maintain consistent training beyond one year due to time constraints, injury concerns, and motivation challenges."
+    uar_reasoning: |
+      - Gym membership retention studies show approximately 50% dropout within 6 months, with only 30-40% maintaining consistent training beyond one year ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Barriers include perceived complexity of programming, gym intimidation, time constraints, and delayed visible results compared to expectations ([Schutzer & Graves 2004, Prev Med](https://doi.org/10.1016/j.ypmed.2004.04.003))
+      - Injury concerns and post-exercise soreness (DOMS) contribute to early dropout, particularly among beginners unfamiliar with normal training responses ([Vetter & Symonds 2010, J Aging Phys Act](https://doi.org/10.1123/japa.18.2.158))
 
   fitness.performance:
     pbs: 9
-    pbs_reasoning: "Resistance training is fundamental to elite athletic performance across most sports. Studies show 20-40% strength gains in novices, 10-20% in intermediate trainees, and 5-10% in advanced athletes. Combined with sport-specific training, can elevate performance to elite competitive levels, representing ~50% of maximum benefit."
+    pbs_reasoning: |
+      - Resistance training is foundational to elite athletic performance across most sports, with novice strength gains of 20-40% and trained athletes achieving 5-10% further improvement, capable of reaching 90th+ percentile on strength-based fitness tests ([Kraemer & Ratamess 2004, Med Sci Sports Exerc](https://doi.org/10.1249/01.MSS.0000128273.34987.04))
+      - Combined with sport-specific training, progressive strength training underpins elite competitive performance in powerlifting, Olympic weightlifting, and field sports where it is the primary performance driver ([Suchomel et al. 2016, Sports Med](https://doi.org/10.1007/s40279-016-0486-0))
+      - Develops maximal strength, rate of force development, and power output that transfer broadly across athletic contexts, with measurable improvements on standardised fitness testing protocols ([Cormie et al. 2011, Sports Med](https://doi.org/10.2165/11538560-000000000-00000))
     isr: 90
-    isr_reasoning: "Strength gains from progressive resistance training are among the most reliable and well-documented adaptations in exercise science. Multiple systematic reviews confirm consistent strength improvements when programs follow progressive overload principles."
+    isr_reasoning: |
+      - Strength gains from progressive resistance training are among the most reliable and well-documented adaptations in exercise science, with near-universal directional improvements in properly designed programmes ([Peterson et al. 2010, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181d67e3e))
+      - Multiple systematic reviews confirm consistent strength improvements across populations when programmes follow progressive overload principles, with effect sizes typically large (d > 0.8) ([Rhea et al. 2003, Med Sci Sports Exerc](https://doi.org/10.1249/01.MSS.0000053727.63505.D4))
+      - Genetic variation affects rate and ceiling of adaptation, but the directional response to progressive overload is essentially universal in healthy adults ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
     uar: 45
-    uar_reasoning: "Athletes and serious fitness enthusiasts show higher adherence rates (~40-50%) due to clear performance goals and often external accountability (coaches, teammates). However, the demanding nature still limits long-term adherence for recreational users."
+    uar_reasoning: |
+      - Athletes and serious fitness enthusiasts show higher adherence rates (~40-50%) due to clear performance goals and external accountability from coaches, teammates, or competition schedules ([Lox et al. 2014, The Psychology of Exercise](https://doi.org/10.4324/9781315213187))
+      - Measurable progress (weight on the bar) provides strong positive reinforcement that supports adherence among performance-motivated trainees ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Plateaus, accumulated fatigue, and the demanding nature of heavy training still limit long-term adherence for recreational users without structured goals ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
 
   fitness.appearance:
     pbs: 8
-    pbs_reasoning: "Resistance training can produce dramatic physique transformations through muscle hypertrophy (8-20% muscle mass increases documented) and body composition changes. Studies show 10-15% reduction in body fat percentage when combined with appropriate nutrition. Represents substantial but not complete transformation potential."
+    pbs_reasoning: |
+      - Resistance training can produce significant visible muscle development through hypertrophy of 8-20% muscle mass increases in untrained individuals over 12-24 weeks, with body fat reductions of 10-15% when combined with appropriate nutrition ([Schoenfeld 2010, J Strength Cond Res](https://doi.org/10.1519/JSC.0b013e3181e0c6e3))
+      - Long-term progressive training can produce complete physique transformations in dedicated individuals, as documented extensively in body composition research and natural bodybuilding studies ([Helms et al. 2014, J Int Soc Sports Nutr](https://doi.org/10.1186/1550-2783-11-20))
+      - Score 8 on the appearance anchor (significant visible muscle development) matches the well-documented hypertrophy outcomes of consistent resistance training, though score 10 (complete transformation) requires exceptional genetics and dietary precision ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608))
     isr: 80
-    isr_reasoning: "Muscle hypertrophy response to resistance training is well-established with consistent results across studies. However, physique transformation also depends heavily on nutrition compliance and genetic factors, introducing more variability than pure strength gains."
+    isr_reasoning: |
+      - Muscle hypertrophy response to resistance training is well-established with consistent results across studies, though magnitude varies 2-3 fold between individuals due to genetic variation ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
+      - Physique transformation depends heavily on nutrition compliance, with body composition research showing exercise alone produces modest changes without dietary modification ([Clark 2015, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-015-0093-1))
+      - When both training and nutrition are adherent, significant visible changes are highly reliable, making the lower ISR relative to performance primarily a function of the additional dietary variable ([Aragon et al. 2017, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-017-0174-y))
     uar: 30
-    uar_reasoning: "Physique transformation requires sustained effort over 6-12+ months with high training consistency and dietary discipline. Real-world adherence data shows only 25-35% maintain the necessary consistency for significant visual changes."
+    uar_reasoning: |
+      - Physique transformation requires sustained effort over 6-12+ months with high training consistency and dietary discipline, a dual-adherence challenge that reduces effective rates ([Dalle Grave et al. 2011, Behaviour Research and Therapy](https://doi.org/10.1016/j.brat.2011.09.004))
+      - Real-world adherence data shows only 25-35% maintain the combined training and nutrition consistency needed for significant visual changes ([Wing & Phelan 2005, Am J Clin Nutr](https://doi.org/10.1093/ajcn/82.1.222S))
+      - Social media creates unrealistic transformation timelines that contribute to early discouragement and dropout among appearance-motivated trainees ([Fardouly & Vartanian 2016, Body Image](https://doi.org/10.1016/j.bodyim.2015.09.003))
 
   fitness.enjoyment:
     pbs: 7
-    pbs_reasoning: "Studies show resistance training significantly improves mood, self-efficacy, and provides satisfaction through measurable progress. However, it's typically not reported as a primary source of life satisfaction for most individuals, unlike intrinsically enjoyable activities. Represents meaningful but moderate benefit."
+    pbs_reasoning: |
+      - Resistance training significantly improves mood, self-efficacy, and provides satisfaction through measurable progress (weight on the bar, rep PRs), with meta-analyses showing moderate-to-large effect sizes for anxiety and depression reduction ([Gordon et al. 2018, JAMA Psychiatry](https://doi.org/10.1001/jamapsychiatry.2018.0572))
+      - The activity is generally enjoyable for those who engage long-term, but is not typically reported as a primary source of life satisfaction compared to inherently playful or nature-based activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Score 7 reflects a position between "generally enjoyable" (6) and "highly enjoyable" (8) on the subjective anchor, matching the evidence that resistance training is satisfying but rarely described as deeply fulfilling or anticipated with excitement by most practitioners ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
     isr: 70
-    isr_reasoning: "Research consistently shows psychological benefits from resistance training, including reduced anxiety and depression symptoms. However, individual variation in enjoyment response is high, and some find the activity inherently unpleasant despite benefits."
+    isr_reasoning: |
+      - Research consistently shows psychological benefits from resistance training, including reduced anxiety and depression symptoms, with high reliability in controlled settings ([Gordon et al. 2017, Sports Med](https://doi.org/10.1007/s40279-017-0692-8))
+      - Individual variation in enjoyment response is high, with some finding the activity inherently satisfying and others experiencing it as effortful and unpleasant despite recognising its benefits ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Enjoyment increases with competence and visible results, meaning the ISR for enjoyment improves over time but many never reach the threshold due to early dropout ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
     uar: 25
-    uar_reasoning: "Enjoyment-based adherence is particularly challenging as resistance training can be uncomfortable and repetitive. Many individuals require external motivation rather than intrinsic enjoyment to maintain consistency long-term."
+    uar_reasoning: |
+      - Enjoyment-based adherence is particularly challenging as resistance training can be uncomfortable, repetitive, and lacks the social or playful elements of team sports or outdoor activities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Many individuals require external motivation (appearance goals, health concerns, social pressure) rather than intrinsic enjoyment to maintain consistency long-term ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - The high early dropout rate in gyms (50% within 6 months) suggests that most people do not find resistance training sufficiently enjoyable to sustain without additional motivation sources ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
 
 resources:
   upfront_cost: 100

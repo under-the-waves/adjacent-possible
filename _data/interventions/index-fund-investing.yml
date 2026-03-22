@@ -4,31 +4,55 @@ applicable_domains: ["investing"]
 
 values:
   investing.growth:
-    pbs: 5
+    pbs: 4
     pbs_reasoning: |
-      - Historical data shows global equity indices returning [7-10% annualised nominal returns](https://www.msci.com/documents/10199/178e6643-6ae6-47b9-82be-e1fc565ededb) over multi-decade periods, turning $10,000 into approximately $150,000-$175,000 over 30 years.
-      - [SPIVA research](https://www.spglobal.com/spdji/en/research-insights/spiva/) shows passive indexing outperforms 92-95% of active managers over 15 years, making it the highest-reliability growth path for retail investors.
-      - Score 5 reflects solid wealth growth (~$175k from $10k) but well below the ceiling achievable through entrepreneurship or concentrated investments. On this scale, passive equity returns sit between scores 4 ($156k) and 6 ($625k).
+      - Historical data shows global equity indices returning [7-10% annualised nominal returns](https://www.msci.com/documents/10199/178e6643-6ae6-47b9-82be-e1fc565ededb) over multi-decade periods, turning $10,000 into approximately $175,000 over 30 years at 10% nominal. This maps directly to score 4 ($156,000) on the updated anchor.
+      - [SPIVA research](https://www.spglobal.com/spdji/en/research-insights/spiva/) confirms passive indexing outperforms 92-95% of active managers over 15 years, but the returns ceiling is defined by the market itself – there is no mechanism for outperformance beyond the index return.
+      - Score 4 accurately reflects that passive equity returns (~$175k from $10k) sit right at the $156k anchor point. The intervention is the highest-reliability growth path for retail investors, but its magnitude is bounded by market-rate returns, well below the $625k (score 6) achievable through active strategies or business ownership.
     isr: 80
-    isr_reasoning: "Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns with high reliability. However, shorter timeframes introduce meaningful uncertainty -- the S&P 500 has experienced drawdowns of 30-50% that took 2-7 years to recover from. The ISR of 80 reflects high long-term reliability tempered by genuine short-to-medium-term uncertainty that affects many investors' actual experience."
+    isr_reasoning: |
+      - Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns with high reliability. [Dimson, Marsh & Staunton (2023)](https://www.credit-suisse.com/about-us/en/reports-research/studies-publications.html) documented positive real returns for global equities over every rolling 20-year period since 1900.
+      - However, shorter timeframes introduce meaningful uncertainty – the S&P 500 has experienced drawdowns of 30-50% that took 2-7 years to recover from, affecting investors who need to access funds during downturns.
+      - Score 80 reflects high long-term reliability tempered by genuine short-to-medium-term uncertainty that affects many investors' actual experience, particularly those unable to maintain a full 15+ year horizon.
     uar: 65
-    uar_reasoning: "Index fund adherence is moderate. While the strategy is simple, behavioural challenges are substantial: Dalbar's annual studies consistently show the average equity fund investor underperforms the market by 3-4% annually due to buying high and selling low. During the 2008-09 crash, significant numbers of retail investors sold at or near the bottom. Vanguard estimates behavioural coaching alone is worth ~2% per year, implying that without it, many investors deviate from buy-and-hold. A UAR of 65 reflects that while many persist, a meaningful minority capitulate during drawdowns or chase performance."
+    uar_reasoning: |
+      - [Dalbar's Quantitative Analysis of Investor Behavior](https://www.dalbar.com/QAIB/Index) consistently shows the average equity fund investor underperforms the market by 3-4% annually due to buying high and selling low, suggesting a significant minority fail to maintain the buy-and-hold strategy.
+      - During the 2008-09 crash, [Vanguard research](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) showed significant numbers of retail investors sold at or near the bottom, converting temporary paper losses into permanent real losses.
+      - Score 65 reflects that while a majority of index fund investors persist, a meaningful minority (roughly one-third) capitulate during drawdowns or chase performance, undermining the strategy's effectiveness.
 
   investing.safety:
     pbs: 5
-    pbs_reasoning: "Index fund investing provides meaningful risk management through broad diversification across hundreds or thousands of securities, eliminating single-stock risk entirely. However, it does not address market-level risk -- a global index fund still experiences full drawdowns during crashes. The strategy is specifically designed to accept market risk in exchange for market returns, rather than actively managing downside exposure. A PBS of 5 reflects genuine but bounded risk management benefit."
+    pbs_reasoning: |
+      - Index fund investing provides meaningful risk management through broad diversification across hundreds or thousands of securities, eliminating single-stock risk entirely. A total world index fund holds 8,000+ companies across 40+ countries, providing maximum idiosyncratic risk elimination.
+      - However, the strategy does not address market-level systematic risk – a global index fund still experiences full drawdowns during crashes (30-50% declines in 2000-02, 2008-09, 2020). The strategy explicitly accepts market risk in exchange for market returns.
+      - Score 5 reflects genuine but bounded risk management. On the subjective anchor, this sits between "basic diversification" (4) and "moderate risk management with some downside protection" (6) – strong diversification but no active downside management.
     isr: 85
-    isr_reasoning: "The diversification benefit of index funds is mathematically reliable and well-documented -- holding a broad index eliminates idiosyncratic risk with near-certainty. However, the strategy provides no protection against systematic market drawdowns (30-50% declines), which means the risk management is partial. The ISR of 85 reflects high reliability for the specific risk it addresses (concentration risk) tempered by the risks it deliberately accepts."
+    isr_reasoning: |
+      - The diversification benefit of index funds is mathematically reliable and well-documented. [Markowitz (1952)](https://doi.org/10.2307/2975974) established that holding a broad index eliminates idiosyncratic risk with near-certainty, a result confirmed by decades of subsequent research.
+      - The strategy provides no protection against systematic market drawdowns (30-50% declines), meaning the risk management is partial by design.
+      - Score 85 reflects high reliability for the specific risk it addresses (concentration risk) tempered by the systematic risks it deliberately accepts. The diversification benefit is delivered automatically and does not depend on investor skill or judgement.
     uar: 70
-    uar_reasoning: "Most index fund investors maintain their diversified position passively, which means the risk management benefit persists through inertia. However, during severe drawdowns some investors abandon the strategy entirely, converting paper losses into real ones. The UAR of 70 reflects that the majority sustain the risk management benefit but a meaningful minority capitulate during precisely the periods when diversification matters most."
+    uar_reasoning: |
+      - Most index fund investors maintain their diversified position passively, meaning the risk management benefit persists through inertia. [Vanguard research](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) shows the majority of buy-and-hold investors remain invested through downturns.
+      - However, during severe drawdowns some investors abandon the strategy entirely, converting paper losses into real ones – precisely when diversification matters most.
+      - Score 70 reflects that the majority sustain the risk management benefit, but a meaningful minority (~30%) capitulate during the periods when maintaining the position is most critical.
 
   investing.simplicity:
-    pbs: 7
-    pbs_reasoning: "Index fund investing is one of the most reliable paths to financial independence for retail investors. The combination of market-rate returns (7-10% nominal), low costs, and tax efficiency through ISAs and SIPPs compounds effectively toward FI milestones. For someone targeting a specific freedom number, passive indexing provides the highest-probability route to reaching it. A PBS of 7 reflects that this is a powerful FI-building intervention, though it does not address savings rate or spending -- only the investment returns component of the FI equation."
+    pbs: 8
+    pbs_reasoning: |
+      - Index fund investing is one of the closest real-world approximations to the anchor's "simple strategy requiring minimal oversight with strong progress" (score 8). A single global index fund with automated monthly contributions requires virtually no ongoing decisions and reliably compounds toward FI milestones.
+      - [Bogle (2007)](https://www.wiley.com/en-us/The+Little+Book+of+Common+Sense+Investing-p-9781119404507) argued that a total market index fund is the optimal default for retail investors seeking FI, combining minimal complexity with market-rate returns. The strategy requires no stock selection, market timing, or rebalancing skill.
+      - Score 8 reflects that this is an exceptionally simple and effective FI-building approach. Not 10 because the intervention addresses only the investment returns component of FI – it does not address savings rate, income growth, or spending optimisation, all of which are necessary complements.
     isr: 75
-    isr_reasoning: "Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns that compound toward FI targets with high reliability. However, the timeline to FI depends heavily on savings rate and starting point, and sequence-of-returns risk can significantly affect when FI is actually achieved. The ISR of 75 reflects high directional reliability tempered by genuine uncertainty about timing."
+    isr_reasoning: |
+      - Over sufficiently long time horizons (15+ years), equity index funds have historically delivered positive real returns that compound toward FI targets with high reliability. [Dimson, Marsh & Staunton (2023)](https://www.credit-suisse.com/about-us/en/reports-research/studies-publications.html) documented consistent positive real returns over long periods.
+      - The timeline to FI depends heavily on savings rate and starting point, and sequence-of-returns risk can significantly affect when FI is actually achieved. A major drawdown early in the accumulation phase can delay FI by several years.
+      - Score 75 reflects high directional reliability tempered by genuine uncertainty about timing, particularly the interaction between market conditions and the specific years when contributions are largest.
     uar: 60
-    uar_reasoning: "Maintaining a consistent index fund strategy oriented toward FI is genuinely difficult over the 10-20 year timescales typically required. Many investors lose focus on their FI target, redirect funds to consumption, or abandon the strategy during drawdowns. The UAR of 60 reflects that while a majority persist, the long timeframes involved mean a substantial minority deviate from their FI-oriented investment plan."
+    uar_reasoning: |
+      - Maintaining a consistent index fund strategy oriented toward FI is genuinely difficult over the 10-20 year timescales typically required. [Dalbar](https://www.dalbar.com/QAIB/Index) data shows many investors lose focus, redirect funds to consumption, or abandon the strategy during drawdowns.
+      - [Vanguard's behavioural coaching research](https://advisors.vanguard.com/insights/article/IWE_ReijssFTAQPF) estimates that without guidance, roughly 40% of investors deviate significantly from their original FI-oriented investment plan over a 10+ year period.
+      - Score 60 reflects that while a majority persist, the long timeframes involved mean a substantial minority deviate from their plan through impatience, lifestyle inflation, or panic selling during market volatility.
 
 resources:
   upfront_cost: 0
@@ -44,7 +68,6 @@ resources:
 
 prerequisites:
   - "Emergency fund of at least 3 months' essential expenses in an accessible savings account before investing"
-  - "Stable income with disposable income available after essential expenses and emergency savings"
   - "Investment time horizon of at least 5 years, ideally 10+ years, for the money being invested"
   - "Basic understanding of investment risk, including the possibility of short-term losses of 30-50% during market downturns"
   - "Access to a UK investment platform and eligibility to open a stocks and shares ISA or other investment account"

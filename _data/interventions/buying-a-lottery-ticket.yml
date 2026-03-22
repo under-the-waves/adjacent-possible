@@ -4,11 +4,11 @@ applicable_domains: ["investing"]
 
 values:
   investing.growth:
-    pbs: 9
+    pbs: 10
     pbs_reasoning: |
-      - UK Lotto jackpots average [£5-10 million](https://www.national-lottery.co.uk/results/lotto/draw-history); US Powerball regularly exceeds [$100 million](https://www.powerball.com/previous-results). For someone on median income, a jackpot dwarfs what decades of conventional investing could produce.
-      - Not 10 because a one-time windfall doesn't match the anchor's framing of compounding returns, and [Hankins, Hoekstra & Skiba (2011)](https://doi.org/10.1162/REST_a_00114) found that large lottery winners show increased bankruptcy rates within 3-5 years.
-      - On the logarithmic scale, score 9 represents ~50% of maximum growth potential – appropriate for an outcome that is transformative but not reliably retained.
+      - UK Lotto jackpots average [£5-10 million](https://www.national-lottery.co.uk/results/lotto/draw-history); US Powerball regularly exceeds [$100 million](https://www.powerball.com/previous-results). These sums vastly exceed the $10M anchor maximum, placing a successful outcome at the ceiling of the scale.
+      - PBS measures magnitude assuming success, not probability. A jackpot win is unambiguously transformative and exceeds what any conventional investment strategy could produce from $10k over 30 years.
+      - [Hankins, Hoekstra & Skiba (2011)](https://doi.org/10.1162/REST_a_00114) found large winners show increased bankruptcy rates within 3-5 years, but the initial windfall magnitude still meets the $10M+ threshold for score 10 – retention risk is a separate consideration from the size of the payout itself.
     isr: 0.1
     isr_reasoning: |
       - Annual jackpot probability for a regular player (2 tickets/week) is ~0.0002% for [UK Lotto](https://www.national-lottery.co.uk/games/lotto) and ~0.000004% for [US Powerball](https://www.powerball.com/about).
