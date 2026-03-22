@@ -1,0 +1,646 @@
+---
+layout: default
+---
+
+<style>
+.db-container {
+    max-width: none !important;
+    width: 95% !important;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body .main-content {
+    max-width: none !important;
+    padding: 1rem !important;
+}
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header-section h1 {
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.header-section p {
+    color: #000;
+    font-size: 1.05em;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Domain filter bar */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 6px 14px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.filter-btn:hover {
+    opacity: 0.85;
+}
+
+.filter-btn.active {
+    color: white;
+    border-color: transparent;
+}
+
+.filter-btn.all-btn {
+    border-color: #333;
+    color: #333;
+}
+
+.filter-btn.all-btn.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* Search */
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95em;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #155799;
+    box-shadow: 0 0 0 2px rgba(21, 87, 153, 0.15);
+}
+
+/* Table */
+.db-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.db-table th {
+    background: #f8f9fa;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+    font-size: 0.85em;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.db-table th.sortable {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.db-table th.sortable:hover {
+    background: #e9ecef;
+}
+
+.db-table th.active {
+    background: #155799;
+    color: white;
+}
+
+.db-table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+.db-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.db-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sort-indicator {
+    display: inline;
+    margin-left: 4px;
+    font-size: 1em;
+}
+
+/* Intervention name */
+.intervention-name {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 160px;
+}
+
+.intervention-link {
+    color: #155799;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    line-height: 1.2;
+}
+
+.intervention-link:hover {
+    text-decoration: underline;
+}
+
+.info-icon {
+    background-color: #155799;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-icon:hover {
+    background-color: #0d47a1;
+}
+
+/* Domain badges */
+.domain-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.domain-badge {
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.75em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Score columns */
+.ebs-score {
+    font-weight: bold;
+    color: #e63946;
+    font-size: 1.1em;
+}
+
+.eroi-score {
+    font-weight: 600;
+    color: #155799;
+}
+
+.best-value-cell {
+    font-size: 0.85em;
+}
+
+.best-value-name {
+    color: #666;
+    display: block;
+    font-size: 0.9em;
+}
+
+.best-value-score {
+    font-weight: 600;
+    color: #155799;
+}
+
+.cost-cell, .time-cell {
+    font-size: 0.9em;
+}
+
+/* Popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.popup-overlay.visible {
+    display: block;
+}
+
+.description-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.description-popup.visible {
+    display: block;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #155799;
+    font-size: 1.2em;
+}
+
+.popup-content {
+    line-height: 1.5;
+    color: #333;
+}
+
+/* No results */
+.no-results {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .db-table {
+        font-size: 0.85em;
+    }
+    .db-table th, .db-table td {
+        padding: 10px 6px;
+    }
+    .intervention-name {
+        min-width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .db-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8em;
+    }
+    .db-table th, .db-table td {
+        padding: 8px 4px;
+    }
+}
+</style>
+
+<div class="db-container">
+    <div class="breadcrumb-nav">
+        <a href="{{ site.baseurl }}/">Home</a> >
+        <a href="{{ site.baseurl }}/resources/">Resources</a> >
+        Intervention Database
+    </div>
+
+    <div class="header-section">
+        <h1>{{ page.title }}</h1>
+        <p>Browse, filter, and compare all scored interventions across every life domain.</p>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+        <button class="filter-btn all-btn active" data-domain="all" onclick="toggleFilter('all')">All</button>
+        <button class="filter-btn" data-domain="fitness" style="color: #28a745; border-color: #28a745;" onclick="toggleFilter('fitness')">Fitness</button>
+        <button class="filter-btn" data-domain="sleep" style="color: #6f42c1; border-color: #6f42c1;" onclick="toggleFilter('sleep')">Sleep</button>
+        <button class="filter-btn" data-domain="saving" style="color: #20c997; border-color: #20c997;" onclick="toggleFilter('saving')">Saving</button>
+        <button class="filter-btn" data-domain="investing" style="color: #155799; border-color: #155799;" onclick="toggleFilter('investing')">Investing</button>
+        <button class="filter-btn" data-domain="organisation" style="color: #fd7e14; border-color: #fd7e14;" onclick="toggleFilter('organisation')">Organisation</button>
+        <button class="filter-btn" data-domain="goals" style="color: #dc3545; border-color: #dc3545;" onclick="toggleFilter('goals')">Goals</button>
+        <button class="filter-btn" data-domain="current-work" style="color: #0d6efd; border-color: #0d6efd;" onclick="toggleFilter('current-work')">Current Work</button>
+        <button class="filter-btn" data-domain="career-planning" style="color: #6c757d; border-color: #6c757d;" onclick="toggleFilter('career-planning')">Career Planning</button>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search interventions..." oninput="applyFilters()">
+    </div>
+
+    <table class="db-table" id="dbTable">
+        <thead>
+            <tr>
+                <th class="sortable" data-sort="name">Intervention <span class="sort-indicator"></span></th>
+                <th>Domains</th>
+                <th class="sortable active" data-sort="avg-ebs">Avg. EBS <span class="sort-indicator">&#8595;</span></th>
+                <th>Best Value</th>
+                <th class="sortable" data-sort="upfront-cost">Upfront Cost <span class="sort-indicator"></span></th>
+                <th class="sortable" data-sort="ongoing-cost">Ongoing Cost <span class="sort-indicator"></span></th>
+                <th class="sortable" data-sort="ongoing-time">Ongoing Time <span class="sort-indicator"></span></th>
+                <th class="sortable" data-sort="time-eroi">Time EROI <span class="sort-indicator"></span></th>
+            </tr>
+        </thead>
+        <tbody id="dbBody">
+            <tr><td colspan="8" class="no-results">Loading...</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Popup overlay -->
+<div class="popup-overlay" id="popupOverlay" onclick="hidePopup()"></div>
+
+<!-- Description popup -->
+<div class="description-popup" id="descriptionPopup">
+    <button class="popup-close" onclick="hidePopup()">x</button>
+    <div class="popup-title" id="popupTitle"></div>
+    <div class="popup-content" id="popupContent"></div>
+</div>
+
+<script>
+// Domain colours
+const domainColours = {
+    'fitness': '#28a745',
+    'sleep': '#6f42c1',
+    'saving': '#20c997',
+    'investing': '#155799',
+    'organisation': '#fd7e14',
+    'goals': '#dc3545',
+    'current-work': '#0d6efd',
+    'career-planning': '#6c757d'
+};
+
+// Build interventions data from Jekyll
+const interventions = [
+{% for intervention_file in site.data.interventions %}
+    {% assign ikey = intervention_file[0] %}
+    {% assign idata = intervention_file[1] %}
+    {
+        key: {{ ikey | jsonify }},
+        name: {{ idata.name | jsonify }},
+        description: {{ idata.description | jsonify }},
+        domains: {{ idata.applicable_domains | jsonify }},
+        values: {
+            {% for value_pair in idata.values %}
+            {% assign vkey = value_pair[0] %}
+            {% assign vdata = value_pair[1] %}
+            {{ vkey | jsonify }}: { pbs: {{ vdata.pbs }}, isr: {{ vdata.isr }}, uar: {{ vdata.uar }} }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        },
+        resources: {
+            upfront_cost: {{ idata.resources.upfront_cost | plus: 0 }},
+            ongoing_cost: {{ idata.resources.ongoing_cost | plus: 0.0 }},
+            ongoing_cost_period: {{ idata.resources.ongoing_cost_period | jsonify }},
+            ongoing_time: {{ idata.resources.ongoing_time | plus: 0.0 }},
+            ongoing_time_period: {{ idata.resources.ongoing_time_period | jsonify }},
+            ongoing_time_weekly: {% if idata.resources.ongoing_time_period == "week" %}{{ idata.resources.ongoing_time | plus: 0.0 }}{% elsif idata.resources.ongoing_time_period == "month" %}{{ idata.resources.ongoing_time | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ idata.resources.ongoing_time | plus: 0.0 | divided_by: 52.0 }}{% endif %}
+        }
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+
+// Value definitions for display names
+const valueNames = {
+{% for domain_pair in site.data.values %}
+    {% assign dname = domain_pair[0] %}
+    {% assign ddata = domain_pair[1] %}
+    {% for value_pair in ddata %}
+    {% assign vname = value_pair[0] %}
+    {% assign vdata = value_pair[1] %}
+    '{{ dname }}.{{ vname }}': {{ vdata.name | jsonify }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
+
+// State
+let activeFilters = new Set();
+let currentSort = 'avg-ebs';
+let sortAsc = false;
+
+// Compute EBS for a single value
+function computeEBS(v) {
+    return v.pbs + Math.log2(v.isr / 100) + Math.log2(v.uar / 100);
+}
+
+// Compute avg EBS and best value for an intervention
+function computeScores(intervention) {
+    const valueKeys = Object.keys(intervention.values);
+    if (valueKeys.length === 0) return { avgEbs: 0, bestValueName: '', bestValueEbs: 0 };
+
+    let total = 0;
+    let bestEbs = -Infinity;
+    let bestKey = '';
+
+    for (const key of valueKeys) {
+        const ebs = computeEBS(intervention.values[key]);
+        total += ebs;
+        if (ebs > bestEbs) {
+            bestEbs = ebs;
+            bestKey = key;
+        }
+    }
+
+    return {
+        avgEbs: total / valueKeys.length,
+        bestValueName: valueNames[bestKey] || bestKey,
+        bestValueEbs: bestEbs
+    };
+}
+
+// Precompute scores
+interventions.forEach(i => {
+    const scores = computeScores(i);
+    i.avgEbs = scores.avgEbs;
+    i.bestValueName = scores.bestValueName;
+    i.bestValueEbs = scores.bestValueEbs;
+    i.timeEroi = i.resources.ongoing_time_weekly > 0 ? i.avgEbs / i.resources.ongoing_time_weekly : Infinity;
+});
+
+function getInterventionUrl(key) {
+    return '{{ site.baseurl }}/resources/intervention-database/' + key.replace(/_/g, '-');
+}
+
+function toggleFilter(domain) {
+    if (domain === 'all') {
+        activeFilters.clear();
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector('.all-btn').classList.add('active');
+    } else {
+        document.querySelector('.all-btn').classList.remove('active');
+        const btn = document.querySelector('[data-domain="' + domain + '"]');
+        if (activeFilters.has(domain)) {
+            activeFilters.delete(domain);
+            btn.classList.remove('active');
+            btn.style.color = domainColours[domain];
+            btn.style.background = 'white';
+        } else {
+            activeFilters.add(domain);
+            btn.classList.add('active');
+            btn.style.color = 'white';
+            btn.style.background = domainColours[domain];
+        }
+        if (activeFilters.size === 0) {
+            document.querySelector('.all-btn').classList.add('active');
+        }
+    }
+    applyFilters();
+}
+
+function applyFilters() {
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const body = document.getElementById('dbBody');
+
+    let filtered = interventions.filter(i => {
+        if (activeFilters.size > 0) {
+            if (!i.domains.some(d => activeFilters.has(d))) return false;
+        }
+        if (search) {
+            const text = (i.name + ' ' + i.description).toLowerCase();
+            if (!text.includes(search)) return false;
+        }
+        return true;
+    });
+
+    // Sort
+    filtered.sort((a, b) => {
+        let cmp = 0;
+        switch (currentSort) {
+            case 'name': cmp = a.name.localeCompare(b.name); break;
+            case 'avg-ebs': cmp = a.avgEbs - b.avgEbs; break;
+            case 'upfront-cost': cmp = a.resources.upfront_cost - b.resources.upfront_cost; break;
+            case 'ongoing-cost': cmp = a.resources.ongoing_cost - b.resources.ongoing_cost; break;
+            case 'ongoing-time': cmp = a.resources.ongoing_time - b.resources.ongoing_time; break;
+            case 'time-eroi': cmp = a.timeEroi - b.timeEroi; break;
+        }
+        return sortAsc ? cmp : -cmp;
+    });
+
+    if (filtered.length === 0) {
+        body.innerHTML = '<tr><td colspan="8" class="no-results">No interventions match your filters.</td></tr>';
+        return;
+    }
+
+    body.innerHTML = filtered.map(i => {
+        const domainBadges = i.domains.map(d =>
+            '<span class="domain-badge" style="background-color: ' + (domainColours[d] || '#999') + ';">' + d + '</span>'
+        ).join('');
+
+        const escapedName = i.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        const escapedDesc = i.description.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+
+        return '<tr>' +
+            '<td><div class="intervention-name">' +
+                '<a href="' + getInterventionUrl(i.key) + '" class="intervention-link">' + i.name + '</a>' +
+                '<span class="info-icon" onclick="showPopup(\'' + escapedName + '\', \'' + escapedDesc + '\')">i</span>' +
+            '</div></td>' +
+            '<td><div class="domain-badges">' + domainBadges + '</div></td>' +
+            '<td class="ebs-score">' + i.avgEbs.toFixed(1) + '</td>' +
+            '<td class="best-value-cell"><span class="best-value-score">' + i.bestValueEbs.toFixed(1) + '</span> <span class="best-value-name">' + i.bestValueName + '</span></td>' +
+            '<td class="cost-cell">$' + i.resources.upfront_cost + '</td>' +
+            '<td class="cost-cell">$' + i.resources.ongoing_cost + '/' + i.resources.ongoing_cost_period + '</td>' +
+            '<td class="time-cell">' + i.resources.ongoing_time + 'h/' + i.resources.ongoing_time_period + '</td>' +
+            '<td class="eroi-score">' + (i.timeEroi === Infinity ? '–' : i.timeEroi.toFixed(2)) + '</td>' +
+        '</tr>';
+    }).join('');
+}
+
+// Sort handling
+let sortLastClicked = 'avg-ebs';
+
+document.querySelectorAll('th.sortable').forEach(header => {
+    header.addEventListener('click', function() {
+        const sort = this.dataset.sort;
+        if (currentSort === sort) {
+            sortAsc = !sortAsc;
+        } else {
+            currentSort = sort;
+            // Default sort direction: desc for scores, asc for costs
+            sortAsc = ['name', 'upfront-cost', 'ongoing-cost', 'ongoing-time'].includes(sort);
+        }
+        sortLastClicked = sort;
+
+        document.querySelectorAll('th.sortable').forEach(h => {
+            h.classList.remove('active');
+            h.querySelector('.sort-indicator').textContent = '';
+        });
+        this.classList.add('active');
+        this.querySelector('.sort-indicator').innerHTML = sortAsc ? '&#8593;' : '&#8595;';
+        applyFilters();
+    });
+});
+
+// Popup
+function showPopup(name, description) {
+    document.getElementById('popupTitle').textContent = name;
+    document.getElementById('popupContent').textContent = description;
+    document.getElementById('popupOverlay').classList.add('visible');
+    document.getElementById('descriptionPopup').classList.add('visible');
+}
+
+function hidePopup() {
+    document.getElementById('popupOverlay').classList.remove('visible');
+    document.getElementById('descriptionPopup').classList.remove('visible');
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') hidePopup();
+});
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    applyFilters();
+});
+</script>
