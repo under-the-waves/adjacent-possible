@@ -473,6 +473,7 @@ const valueDefinitions = {
             anchor_type: {{ value_data.anchor_type | jsonify }},
             {% if value_data.anchor_max %}anchor_max: {{ value_data.anchor_max }},{% endif %}
             {% if value_data.anchor_unit %}anchor_unit: {{ value_data.anchor_unit | jsonify }},{% endif %}
+            {% if value_data.anchor_inverted %}anchor_inverted: true,{% endif %}
             scale_levels: {
                 {% for level_pair in value_data.scale_levels %}
                     {% assign score = level_pair[0] %}
@@ -508,8 +509,14 @@ function calculateEBS() {
             console.warn('No value definition found in values.yml for: ' + key);
             display = ebs.toFixed(1);
         } else if (def.anchor_type === 'linear' && def.anchor_max) {
-            const linearValue = (Math.pow(2, ebs) / Math.pow(2, 10)) * def.anchor_max;
-            display = ebs.toFixed(1) + ' (+' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
+            let linearValue;
+            if (def.anchor_inverted) {
+                linearValue = def.anchor_max / Math.pow(2, ebs);
+                display = ebs.toFixed(1) + ' (' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
+            } else {
+                linearValue = (Math.pow(2, ebs) / Math.pow(2, 10)) * def.anchor_max;
+                display = ebs.toFixed(1) + ' (+' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
+            }
             reasoningSuffix = '. Converted to linear: ' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + '.';
         } else {
             const scaleDesc = getScaleDescription(key, ebs);

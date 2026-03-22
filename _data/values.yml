@@ -17,14 +17,16 @@ fitness:
 
   performance:
     name: "Performance"
-    anchor_type: "subjective"
-    anchor_description: "Elite athletic capabilities enabling competitive performance"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "fitness test percentile"
+    anchor_description: "Fitness test percentile ranking among age-matched population"
     scale_levels:
-      10: "Elite competitive athletic performance"
-      8: "Advanced recreational athlete level"
-      6: "Solid recreational fitness"
-      4: "Basic functional fitness"
-      2: "Minimal performance improvement"
+      10: "99th+ fitness test percentile"
+      8: "25th fitness test percentile"
+      6: "6th fitness test percentile"
+      4: "2nd fitness test percentile"
+      2: "Below 1st fitness test percentile"
 
   appearance:
     name: "Appearance"
@@ -87,14 +89,16 @@ nutrition:
 sleep:
   daily_functioning:
     name: "Daily Functioning"
-    anchor_type: "subjective"
-    anchor_description: "Optimal cognitive and physical performance throughout day"
+    anchor_type: "linear"
+    anchor_max: 14
+    anchor_unit: "productive hours per day"
+    anchor_description: "Productive hours per day of sustained cognitive and physical performance"
     scale_levels:
-      10: "Peak cognitive and physical performance all day"
-      8: "Consistently high energy and mental clarity"
-      6: "Good daily energy and focus"
-      4: "Adequate functioning with occasional fatigue"
-      2: "Frequent tiredness affecting performance"
+      10: "14 productive hours per day"
+      8: "3.5 productive hours per day"
+      6: "50 productive minutes per day"
+      4: "13 productive minutes per day"
+      2: "3 productive minutes per day"
 
   long_term_health:
     name: "Long-term Health"
@@ -123,36 +127,42 @@ sleep:
 saving:
   security:
     name: "Security"
-    anchor_type: "subjective"
-    anchor_description: "Complete financial security with fully funded emergency reserves and protection against income disruption"
+    anchor_type: "linear"
+    anchor_max: 12
+    anchor_unit: "months of emergency fund"
+    anchor_description: "Months of expenses covered by emergency fund reserves"
     scale_levels:
-      10: "Fully funded emergency reserves covering 12+ months of expenses"
-      8: "Robust financial buffer covering 6 months of expenses"
-      6: "Moderate safety net covering 3 months of expenses"
-      4: "Small buffer covering 1 month of expenses"
-      2: "Minimal savings providing negligible financial cushion"
+      10: "12+ months of emergency fund"
+      8: "3 months of emergency fund"
+      6: "3 weeks of emergency fund"
+      4: "5-6 days of emergency fund"
+      2: "1-2 days of emergency fund"
 
   growth:
     name: "Growth"
-    anchor_type: "subjective"
-    anchor_description: "Optimal long-term wealth accumulation through disciplined saving and compound growth"
+    anchor_type: "linear"
+    anchor_max: 50
+    anchor_unit: "percent of gross income saved"
+    anchor_description: "Percentage of gross income saved and invested for long-term wealth accumulation"
     scale_levels:
-      10: "Wealth compounding rapidly toward long-term financial targets"
-      8: "Strong consistent capital accumulation with meaningful growth"
-      6: "Steady savings growth at a moderate pace"
-      4: "Slow but positive wealth accumulation"
-      2: "Negligible growth with savings barely keeping pace with inflation"
+      10: "50%+ of gross income saved"
+      8: "12-13% of gross income saved"
+      6: "3% of gross income saved"
+      4: "0.8% of gross income saved"
+      2: "0.2% of gross income saved"
 
   lifestyle:
     name: "Lifestyle"
-    anchor_type: "subjective"
-    anchor_description: "Fully accessible savings enabling lifestyle flexibility with no penalties, lock-in periods, or delays when funds are needed"
+    anchor_type: "linear"
+    anchor_max: 12
+    anchor_unit: "months of liquid reserves"
+    anchor_description: "Months of expenses covered by accessible liquid savings for lifestyle flexibility"
     scale_levels:
-      10: "Complete lifestyle flexibility with ample liquid savings for any opportunity or need"
-      8: "Strong liquidity enabling most lifestyle choices without financial constraint"
-      6: "Moderate accessible savings supporting reasonable lifestyle flexibility"
-      4: "Limited liquidity with some lifestyle choices constrained by cash availability"
-      2: "Minimal accessible savings with most lifestyle options financially out of reach"
+      10: "12+ months of liquid reserves"
+      8: "3 months of liquid reserves"
+      6: "3 weeks of liquid reserves"
+      4: "5-6 days of liquid reserves"
+      2: "1-2 days of liquid reserves"
 
 investing:
   growth:
@@ -204,14 +214,16 @@ career-planning:
 
   advancement:
     name: "Advancement"
-    anchor_type: "subjective"
-    anchor_description: "Well-connected insider in target field with strong reputation and access to unadvertised opportunities"
+    anchor_type: "linear"
+    anchor_max: 50
+    anchor_unit: "warm professional contacts in target field"
+    anchor_description: "Number of warm professional contacts in target field who would take your call"
     scale_levels:
-      10: "Well-connected insider with strong reputation and opportunities flowing to you"
-      8: "Established network with active referrals and industry recognition"
-      6: "Growing professional network with some warm contacts in target field"
-      4: "Limited connections with mostly cold outreach required"
-      2: "Completely unknown in target field with no professional network"
+      10: "50+ warm contacts in target field"
+      8: "12-13 warm contacts in target field"
+      6: "3 warm contacts in target field"
+      4: "1 warm contact in target field"
+      2: "No meaningful contacts yet"
 
   security:
     name: "Security"
@@ -272,14 +284,17 @@ organisation:
 
   order:
     name: "Order"
-    anchor_type: "subjective"
-    anchor_description: "Zero missed commitments with every obligation tracked and fulfilled through comprehensive systems"
+    anchor_type: "linear"
+    anchor_max: 20
+    anchor_unit: "missed commitments per month"
+    anchor_inverted: true
+    anchor_description: "Number of missed commitments per month (lower is better)"
     scale_levels:
-      10: "Zero missed commitments; every obligation tracked and fulfilled consistently"
-      8: "Very few things fall through the cracks with strong tracking systems"
-      6: "Most commitments met with occasional oversights"
-      4: "Frequent missed commitments due to patchy tracking"
-      2: "Regularly dropping obligations with no reliable system for follow-through"
+      10: "Near-zero missed commitments per month"
+      8: "Less than 1 missed commitment per month"
+      6: "1 missed commitment every 3 months"
+      4: "1-2 missed commitments per month"
+      2: "5 missed commitments per month"
 
   speed:
     name: "Speed"
@@ -295,25 +310,29 @@ organisation:
 goals:
   clarity:
     name: "Clarity"
-    anchor_type: "subjective"
-    anchor_description: "Goals perfectly calibrated to actual capacity with milestones reliably achieved through honest constraint assessment"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent of goals completed on time"
+    anchor_description: "Percentage of goals completed on time through accurate capacity calibration"
     scale_levels:
-      10: "Goals perfectly calibrated to capacity with milestones consistently hit"
-      8: "Well-calibrated goals with realistic timelines and few surprises"
-      6: "Reasonably realistic goals with occasional misjudgements of capacity"
-      4: "Frequently over- or under-committing due to poor capacity awareness"
-      2: "Goals bear no relation to actual capacity; chronic over-promising or aimlessness"
+      10: "100% of goals completed on time"
+      8: "25% of goals completed on time"
+      6: "6% of goals completed on time"
+      4: "1-2% of goals completed on time"
+      2: "Less than 1% of goals completed on time"
 
   follow_through:
     name: "Follow-through"
-    anchor_type: "subjective"
-    anchor_description: "Consistently setting and pursuing transformative goals that push well beyond the comfort zone"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent of days with goal action"
+    anchor_description: "Percentage of days with at least one deliberate action toward an active goal"
     scale_levels:
-      10: "Consistently pursuing transformative goals with sustained daily execution"
-      8: "Ambitious goals actively progressed with strong follow-through habits"
-      6: "Moderate goals with reasonable consistency in daily action"
-      4: "Goals set but frequently abandoned or progressed only in sporadic bursts"
-      2: "No sustained progress on any goals; chronic intention-action gap"
+      10: "100% of days with goal action"
+      8: "25% of days with goal action"
+      6: "6% of days with goal action"
+      4: "1-2% of days with goal action"
+      2: "Less than 1% of days with goal action"
 
   adaptability:
     name: "Adaptability"
