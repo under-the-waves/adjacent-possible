@@ -60,17 +60,18 @@ values:
       - Weather dependency and seasonal motivation fluctuations are the primary barriers, but overall retention is strong among those who find personal enjoyment in walking routines ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
 
   body-image.fat_loss:
-    pbs: 5
+    pbs: 6
     pbs_reasoning: |
-      - Meta-analysis of pedometer-based walking interventions shows mean weight loss of 1.4 kg without dietary changes, with longer programmes producing greater losses up to 3.7 kg ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
-      - Overview of 12 systematic reviews (149 studies) found exercise alone produces 1.5 – 3.5 kg weight loss; walking-specific estimates sit at the lower end of this range ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
-      - With dietary awareness, walkers can sustain 3 – 5% body weight loss at 12 months when maintaining 200+ minutes per week, corresponding to roughly score 5 – 6 on the linear anchor where 6% = score 8 ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - PBS measures magnitude for successful adherents; walking's low intensity limits caloric expenditure, capping weight loss potential below more vigorous modalities
-    isr: 85
+      - Meta-analysis of pedometer-based walking interventions shows successful adherents lose 1.3 – 3.7 kg depending on programme duration, with longer programmes (1 year+) at the upper end ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
+      - With dietary awareness, walkers maintaining 200+ minutes per week sustain 3 – 5% body weight loss at 12 months; dose-response meta-analysis confirms losses increase linearly up to 300 minutes per week ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333); [JAMA Network Open 2024](https://doi.org/10.1001/jamanetworkopen.2024.52185))
+      - Walking's low intensity caps caloric expenditure at roughly 200 – 400 kcal per session, limiting maximum sustainable loss compared to vigorous modalities ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
+      - Score 6 corresponds to ~1.5% sustained loss on the anchor; successful walkers with dietary awareness sit in the 2 – 4% range, placing them between score 6 and 7
+    isr: 55
     isr_reasoning: |
-      - Weight loss from walking programmes is consistently reproduced across multiple meta-analyses and population studies, with predictable dose-response relationships ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
-      - The modest magnitude is itself highly reliable: virtually all controlled trials show directional weight loss, with very low heterogeneity in effect estimates ([Murtagh et al. 2015, Prev Med](https://doi.org/10.1016/j.ypmed.2014.12.026))
-      - Low injury risk and minimal contraindications mean the intervention can be implemented as designed in nearly all participants, reducing protocol deviation as a source of failure ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
+      - Exercise-alone trials show roughly half of participants are 'non-responders' who compensate for exercise energy expenditure through increased food intake or reduced non-exercise activity; one study found compensators offset 63% of exercise calories ([King et al. 2008, PLoS ONE](https://doi.org/10.1371/journal.pone.0002398); [Myers et al. 2023, Front Psychol](https://doi.org/10.3389/fpsyg.2023.1098394))
+      - Walking without dietary co-intervention produces mean weight loss of only 1.3 kg across meta-analyses, with many individual participants showing zero or negative weight change, indicating a large non-response fraction ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
+      - Constrained energy expenditure theory suggests the body downregulates other energy costs when exercise increases, making walking particularly vulnerable to compensation given its modest caloric burn ([Pontzer et al. 2016, Curr Biol](https://doi.org/10.1016/j.cub.2015.12.046))
+      - Score 55 reflects that while the mechanism is sound, only about half of consistent walkers achieve meaningful scale weight reduction without explicit dietary management
     uar: 80
     uar_reasoning: |
       - Walking has the highest long-term adherence of any exercise modality, with 70 – 85% maintaining programmes beyond 6 months, directly supporting sustained weight management ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))

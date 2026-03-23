@@ -10,16 +10,16 @@ values:
   body-image.fat_loss:
     pbs: 7
     pbs_reasoning: |
-      - [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/17904936/) from weight loss clinical trials with 1+ year follow-up shows behavioural diet interventions produce mean weight loss of 5 – 9% of initial body weight at 6 months, stabilising at approximately 4.5 – 7.5% at 12 months; 5 – 7% sustained loss maps to PBS 7 on the linear anchor (where 6% = 8)
-      - [Consistent self-monitoring in an app-based trial](https://link.springer.com/article/10.1007/s10865-019-00091-8) found that 54% of consistent trackers (6+ days/week) achieved 5%+ weight loss at 6 months, with mean losses in this group around 5 – 8%
-      - [Long-term maintenance data](https://www.sciencedirect.com/science/article/pii/S0002916523063748) shows that 5 years after structured weight loss programmes, the average individual maintains >3% loss from starting weight, indicating some regression from peak loss
-      - PBS reflects what a successful, adherent calorie tracker achieves – typically 5 – 8% sustained body weight loss – rather than discounting for those who fail to adhere (that is captured by ISR and UAR)
-    isr: 75
+      - [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/17904936/) from behavioural diet interventions with 1+ year follow-up shows successful participants sustain 5 – 7% body weight loss at 12 months, with peak losses of 5 – 9% at 6 months before partial regain
+      - [Long-term maintenance data](https://www.sciencedirect.com/science/article/pii/S0002916523063748) shows that 5 years after structured weight loss programmes, successful maintainers retain >3% loss from baseline, though the best adherents sustain 5 – 8%
+      - [An app-based tracking trial](https://link.springer.com/article/10.1007/s10865-019-00091-8) found mean losses of 5 – 8% among those who achieved clinically significant results, confirming the effect size ceiling for this intervention
+      - On the anchor scale (6% = score 8, 1.5% = score 6), sustained 5 – 7% loss for a successful calorie tracker maps to PBS 7
+    isr: 60
     isr_reasoning: |
-      - [A systematic review of dietary self-monitoring](https://pmc.ncbi.nlm.nih.gov/articles/PMC8928602/) found that 61 – 67% of interventions using intake monitoring produced significant weight loss compared with controls, indicating high but not universal success when the method is followed
-      - [App-based trial data](https://link.springer.com/article/10.1007/s10865-019-00091-8) shows that among consistent trackers (tracking 6/7 days for 75%+ of targeted weeks), 54% achieved clinically significant weight loss (5%+) at 6 months – meaning roughly half of even diligent trackers fall short of a meaningful threshold
-      - Accuracy of self-reported intake is a known limitation; [research on dietary assessment](https://pmc.ncbi.nlm.nih.gov/articles/PMC6543803/) shows systematic underreporting of 10 – 45%, which reduces the effective success rate even among those who log consistently
-      - 'Doing it properly' requires both consistent logging and maintaining an actual calorie deficit, a dual condition that not all adherent trackers meet; score of 75 reflects strong but imperfect mechanistic reliability
+      - [App-based trial data](https://link.springer.com/article/10.1007/s10865-019-00091-8) shows that among consistent trackers (logging 6/7 days for 75%+ of targeted weeks), only 54% achieved clinically significant weight loss (5%+) at 6 months – roughly half of even diligent trackers fall short
+      - [A separate mobile intervention trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC9469733/) found similar proportions reaching 5% loss (43%) despite consistent self-monitoring, confirming that reliable tracking does not guarantee a meaningful deficit
+      - [Research on dietary assessment accuracy](https://pmc.ncbi.nlm.nih.gov/articles/PMC6543803/) shows systematic underreporting of 10 – 45%, meaning many who log consistently still fail to achieve an actual deficit – a mechanistic failure mode specific to self-reported intake
+      - Score of 60 reflects that only about half to two-thirds of proper adherents achieve meaningful fat loss, because tracking requires both accurate logging and maintaining a real deficit – a dual condition many consistent trackers do not meet
     uar: 15
     uar_reasoning: |
       - [A systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) found that only 25% of participants were still self-monitoring by the end of intervention periods, with adherence declining sharply after the first few weeks

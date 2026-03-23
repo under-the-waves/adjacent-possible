@@ -10,16 +10,16 @@ values:
   body-image.fat_loss:
     pbs: 8
     pbs_reasoning: |
-      - [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) showed mean weight loss of 14.9% at 68 weeks with semaglutide 2.4 mg vs 2.4% with placebo; [STEP 5](https://www.nature.com/articles/s41591-022-02026-4) confirmed 15.2% sustained at 104 weeks
-      - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) showed tirzepatide achieving 16.0% (5 mg), 21.4% (10 mg), and 22.5% (15 mg) weight loss at 72 weeks, with 36% of the highest-dose group losing over 25% body weight
-      - On the linear anchor (25% = score 10), semaglutide's ~15% maps to approximately 6.0 and tirzepatide's ~21% maps to approximately 8.4; weighting toward the class midpoint and noting most prescriptions start with semaglutide, PBS of 8 reflects the realistic upper range
-      - PBS measures benefit for those who succeed and sustain use; these figures assume continued treatment, which is the intended use case
+      - [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) showed mean weight loss of 14.9% at 68 weeks with semaglutide 2.4 mg; [STEP 5](https://www.nature.com/articles/s41591-022-02026-4) confirmed 15.2% sustained at 104 weeks of continuous use
+      - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) showed tirzepatide achieving 16.0% (5 mg), 21.4% (10 mg), and 22.5% (15 mg) weight loss at 72 weeks, with the highest-dose group averaging over 20% loss
+      - On the linear anchor (25% = score 10), semaglutide's ~15% maps to ~6.0 and tirzepatide's ~21% maps to ~8.4; weighting toward the class midpoint and noting most prescriptions start with semaglutide, PBS 8 reflects the realistic upper range for a successful user on continued treatment
+      - These are the largest sustained effect sizes of any non-surgical fat loss intervention, driven by potent appetite suppression and metabolic effects
     isr: 88
     isr_reasoning: |
-      - [STEP 1](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) found 86.4% of semaglutide participants achieved clinically meaningful (greater than 5%) weight loss vs 31.5% with placebo, with 69.1% exceeding 10% loss
-      - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) reported 89-96% of tirzepatide participants achieved greater than 5% weight loss across dose groups, indicating near-universal response in adherent patients
-      - Physiological mechanism of action (GLP-1/GIP receptor activation) is well-characterised and produces directional weight loss in virtually all compliant users; non-response is rare in clinical data
-      - ISR reflects the proportion who achieve meaningful results given proper sustained use; the high trial response rates support a score of 88
+      - [STEP 1](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) found 86.4% of semaglutide participants achieved >5% weight loss vs 31.5% with placebo, and 69.1% exceeded 10% loss – indicating the vast majority of adherent users respond meaningfully
+      - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) reported 89 – 96% of tirzepatide participants achieved >5% weight loss across dose groups, confirming near-universal response in adherent patients
+      - The pharmacological mechanism (GLP-1/GIP receptor activation) bypasses behavioural variability – the drug directly suppresses appetite and slows gastric emptying, producing reliable caloric reduction in virtually all compliant users; true non-response is rare in clinical data
+      - Score of 88 reflects that out of 100 people who sustain proper use, approximately 86 – 96 achieve clinically meaningful fat loss, with the small minority of non-responders likely explained by genetic variation in receptor sensitivity
     uar: 25
     uar_reasoning: |
       - [STEP 1 extension](https://pmc.ncbi.nlm.nih.gov/articles/PMC9542252/) showed participants regained two-thirds of lost weight within one year of stopping, reducing net weight loss from 17.3% to 5.6% – the requirement for indefinite use is the single largest adherence barrier

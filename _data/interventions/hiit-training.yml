@@ -61,15 +61,16 @@ values:
   body-image.fat_loss:
     pbs: 6
     pbs_reasoning: |
-      - Meta-analysis of 39 studies found HIIT significantly reduces total fat mass (1.38 kg), with particularly strong effects on abdominal fat (-8.3%) and visceral fat (-24.2%), corresponding to roughly 1.5 – 3% body weight loss in most populations ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
-      - Comparative meta-analysis shows HIIT produces similar fat loss to moderate-intensity continuous training with 40% less time investment, with body fat percentage reductions of 1.5 – 2% over 8 – 12 weeks ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
-      - Running-based HIIT protocols are more effective than cycling for total and visceral fat loss; programmes exceeding 8 weeks produce significantly greater body composition changes ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
-      - Score 6 corresponds to approximately 1.5% sustained weight loss on the anchor; HIIT's caloric afterburn (EPOC) and metabolic rate elevation provide a modest edge over steady-state cardio for fat oxidation
-    isr: 80
+      - Meta-analysis of 39 studies found successful HIIT practitioners lose 1.4 kg fat mass on average, with body fat percentage reductions of 1.5 – 2.4% over 8 – 12 weeks; running-based protocols produce stronger results than cycling ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
+      - Umbrella meta-analysis confirms interval training reduces body fat by a pooled 1.5% with fat mass losses of 1.8 kg, and programmes exceeding 12 weeks in overweight populations produce the largest effects ([Atakan et al. 2024, Sports Med](https://doi.org/10.1007/s40279-024-02070-9))
+      - HIIT produces similar total fat loss to moderate-intensity continuous training despite 40% less time investment, with the caloric afterburn (EPOC) providing a modest additional edge ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
+      - Score 6 corresponds to ~1.5% sustained body weight loss on the anchor; successful HIIT adherents sit in the 2 – 4% range, placing them solidly around score 6
+    isr: 70
     isr_reasoning: |
-      - Multiple large meta-analyses consistently confirm HIIT effectiveness for fat reduction across diverse populations, with low heterogeneity in effect estimates for total fat mass outcomes ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
-      - Some meta-analyses find HIIT is not superior to continuous aerobic training for body fat reduction, suggesting the fat loss effect is reliable but not uniquely large ([Keating et al. 2017, Sports Med](https://doi.org/10.1007/s40279-016-0650-6))
-      - Protocol variation (interval duration, intensity, modality) introduces meaningful heterogeneity; poorly designed HIIT protocols underperform well-structured moderate-intensity programmes ([Buchheit & Laursen 2013, Sports Med](https://doi.org/10.1007/s40279-013-0029-x))
+      - Exercise-alone trials show large individual variation in fat loss response to HIIT, ranging from 8 kg lost to 0.1 kg gained within the same study; compensatory eating offsets a substantial fraction of exercise energy expenditure in many participants ([Boutcher 2011, J Obes](https://doi.org/10.1155/2011/868305); [King et al. 2008, PLoS ONE](https://doi.org/10.1371/journal.pone.0002398))
+      - HIIT's high caloric burn per session (~400 – 600 kcal) makes it more resistant to full compensation than low-intensity exercise, and some evidence suggests HIIT may suppress appetite acutely more than moderate-intensity training ([Deighton et al. 2013, Appetite](https://doi.org/10.1016/j.appet.2013.06.006))
+      - Protocol variation introduces meaningful heterogeneity: shorter intervals (30 – 60 seconds) and running-based formats produce more consistent fat loss than longer intervals or cycling protocols ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
+      - Score 70 reflects that roughly two-thirds to three-quarters of consistent HIIT practitioners achieve meaningful fat loss, with the higher caloric demand reducing but not eliminating compensatory non-response
     uar: 40
     uar_reasoning: |
       - Real-world unsupervised HIIT adherence drops to 19.6% at 12 months, compared with 89% in supervised settings – a large gap that severely limits sustained weight loss outcomes ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))

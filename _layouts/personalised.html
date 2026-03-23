@@ -246,6 +246,21 @@ body .main-content {
     color: #000000;
 }
 
+.reset-sliders-btn {
+    margin-top: 10px;
+    padding: 6px 14px;
+    font-size: 0.85em;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+}
+
+.reset-sliders-btn:hover {
+    background: #e9ecef;
+}
+
 .methodology-note {
     background: #f8f9fa;
     padding: 15px;
@@ -597,6 +612,7 @@ body .main-content {
                     </div>
                     {% endfor %}
                 </div>
+                <button class="reset-sliders-btn" id="resetSliders">Reset to defaults</button>
 
                 <details class="methodology-note">
                     <summary><strong>How scoring works</strong></summary>
@@ -685,9 +701,17 @@ const interventions = {
 {% endfor %}
 };
 
-// Current values and sort
+// Current values and sort – restore from saved weights if available
 let currentValues = {};
-valueConfig.forEach(v => { currentValues[v.key] = v.defaultWeight; });
+const savedSliderWeights = (typeof APStorage !== 'undefined') ? APStorage.load('ap-slider-weights') || {} : {};
+if (savedSliderWeights[domain]) {
+    valueConfig.forEach(v => {
+        currentValues[v.key] = savedSliderWeights[domain][v.key] !== undefined
+            ? savedSliderWeights[domain][v.key] : v.defaultWeight;
+    });
+} else {
+    valueConfig.forEach(v => { currentValues[v.key] = v.defaultWeight; });
+}
 let currentSort = 'wbs';
 
 // Get DOM elements
@@ -719,6 +743,13 @@ function adjustSliders(changedSlider, newValue) {
 
     const total = Object.values(currentValues).reduce((s, v) => s + v, 0);
     if (total !== 100) { currentValues[changedSlider] += 100 - total; }
+
+    // Persist slider weights
+    if (typeof APStorage !== 'undefined') {
+        const allWeights = APStorage.load('ap-slider-weights') || {};
+        allWeights[domain] = { ...currentValues };
+        APStorage.save('ap-slider-weights', allWeights);
+    }
 
     updateAllControls();
 }
@@ -761,9 +792,14 @@ function calculateMoneyEROI(wbs, upfrontCost, ongoingCostWeekly) {
     return wbs / Math.max(1, weeklyEquivalentCost);
 }
 
-function showDescriptionPopup(name, description) {
-    document.getElementById('popupTitle').textContent = name;
-    document.getElementById('popupContent').textContent = description;
+function showDescriptionPopup(key) {
+    const i = interventions[key];
+    if (!i) return;
+    document.getElementById('popupTitle').textContent = i.name;
+    const html = i.description
+        .replace(/^- /gm, '&bull; ')
+        .replace(/\n/g, '<br>');
+    document.getElementById('popupContent').innerHTML = html;
     document.getElementById('popupOverlay').classList.add('visible');
     document.getElementById('descriptionPopup').classList.add('visible');
 }
@@ -800,7 +836,7 @@ function updateRecommendations() {
             <td>
                 <div class="intervention-name">
                     <a href="${getInterventionUrl(i.key)}" class="intervention-link">${i.name}</a>
-                    <span class="table-description-icon" onclick="showDescriptionPopup('${i.name.replace(/'/g, "\\'")}', '${i.description.replace(/'/g, "\\'")}')">i</span>
+                    <span class="table-description-icon" onclick="showDescriptionPopup('${i.key}')">i</span>
                 </div>
             </td>
             <td class="wbs-score">${i.wbs.toFixed(1)}</td>
@@ -837,6 +873,29 @@ document.querySelectorAll('th[data-sort]').forEach(header => {
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') { hideDescriptionPopup(); }
+});
+
+// Reset sliders to defaults
+document.getElementById('resetSliders').addEventListener('click', function() {
+    valueConfig.forEach(v => { currentValues[v.key] = v.defaultWeight; });
+    if (typeof APStorage !== 'undefined') {
+        const allWeights = APStorage.load('ap-slider-weights') || {};
+        delete allWeights[domain];
+        APStorage.save('ap-slider-weights', allWeights);
+    }
+    updateAllControls();
+});
+
+// Re-apply if data syncs from Clerk
+window.addEventListener('ap-storage-sync', function() {
+    const synced = (typeof APStorage !== 'undefined') ? APStorage.load('ap-slider-weights') || {} : {};
+    if (synced[domain]) {
+        valueConfig.forEach(v => {
+            currentValues[v.key] = synced[domain][v.key] !== undefined
+                ? synced[domain][v.key] : v.defaultWeight;
+        });
+        updateAllControls();
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {

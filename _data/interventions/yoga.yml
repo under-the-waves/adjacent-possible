@@ -61,14 +61,16 @@ values:
   body-image.fat_loss:
     pbs: 4
     pbs_reasoning: |
-      - A systematic review of 30 trials (n = 2,173) found no significant effect of yoga on body weight in the overall population, but in overweight/obese subgroups yoga reduced BMI (SMD = −0.99) and body weight by approximately 3.5 kg versus usual care – roughly 1–2% of body weight ([Thind et al. 2017, Prev Med](https://doi.org/10.1016/j.ypmed.2016.03.013))
-      - Yoga's caloric expenditure is modest (150–400 kcal/hour depending on style), insufficient for substantial weight loss without dietary change; weight-related benefits likely operate partly through stress reduction and improved eating behaviours ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
-      - Score 4 (approximately 0.4% sustained weight change on the anchor scale): yoga produces modest weight loss in overweight populations but negligible change in normal-weight individuals, placing it at the lower end of meaningful effect ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
-    isr: 60
+      - [A systematic review of 30 trials](https://doi.org/10.1016/j.ypmed.2016.03.013) (n = 2,173; Thind et al. 2017) found that in overweight/obese subgroups, yoga reduced body weight by approximately 3.5 kg versus usual care – roughly 1 – 2% of body weight sustained over 12+ months
+      - Yoga's caloric expenditure is modest (150 – 400 kcal/hour depending on style), meaning any weight loss among successful practitioners likely operates partly through stress-mediated cortisol reduction and improved eating behaviours rather than direct energy expenditure ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
+      - In normal-weight populations, yoga produces negligible weight change; the 1 – 2% effect is confined to overweight/obese individuals practising consistently for 6+ months ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+      - PBS 4 aligns with the 0.4% anchor: even among successful adherents, yoga's direct fat loss effect is small, sitting between the 0.1% (score 2) and 1.5% (score 6) anchors
+    isr: 35
     isr_reasoning: |
-      - The Thind et al. (2017) meta-analysis noted high risk of bias across included trials and risk of publication bias, with small sample sizes limiting confidence in effect estimates ([Thind et al. 2017, Prev Med](https://doi.org/10.1016/j.ypmed.2016.03.013))
-      - Weight loss effects are inconsistent across yoga styles and populations – vigorous styles (vinyasa, power yoga) likely produce larger effects than gentle styles (yin, restorative), but few studies compare styles head-to-head ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
-      - Mechanisms remain unclear – whether benefits come from caloric expenditure, cortisol reduction, mindful eating, or self-selection effects is not well established, reducing confidence in the causal pathway ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+      - Yoga's caloric burn is too low (150 – 400 kcal/hour) to create a meaningful energy deficit for most practitioners; weight loss depends on indirect pathways (stress reduction, mindful eating) that are inconsistent across individuals ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
+      - The Thind et al. (2017) meta-analysis found no significant weight loss effect in the overall population – only in the overweight/obese subgroup, suggesting the majority of yoga practitioners see no meaningful fat loss ([Thind et al. 2017, Prev Med](https://doi.org/10.1016/j.ypmed.2016.03.013))
+      - Weight loss effects are highly inconsistent across yoga styles: vigorous styles (vinyasa, power yoga) likely produce larger effects than gentle styles (yin, restorative), but few studies compare styles head-to-head, and most community yoga classes are not at vigorous intensity ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+      - Estimated 30 – 40% meaningful response rate: most consistent yoga practitioners do not lose meaningful weight, as the energy expenditure is simply too low to drive fat loss without concurrent dietary change
     uar: 55
     uar_reasoning: |
       - Yoga has exceptionally low dropout rates (11.4% across 168 RCTs), suggesting strong general adherence, but weight loss-specific motivation may wane when results are modest ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))

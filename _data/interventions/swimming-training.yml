@@ -60,17 +60,18 @@ values:
       - Approximately 65% of those swimming regularly for 6+ months continue long-term, but the initial dropout phase reduces the overall enjoyment-based adherence rate ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
 
   body-image.fat_loss:
-    pbs: 5
+    pbs: 4
     pbs_reasoning: |
-      - [A systematic review and meta-analysis](https://doi.org/10.1111/obr.13256) of exercise training in adults with overweight/obesity found aerobic exercise produces mean weight loss of 1.5 – 3.5 kg, but swimming-specific trials show results at the lower end due to compensatory appetite increases from cold water exposure
-      - [The SWEAT 2 trial](https://doi.org/10.1016/j.metabol.2010.02.001) (Cox et al. 2010) found swimmers lost approximately 1.1 kg more than walkers over 12 months in older women, but absolute losses remained modest at roughly 1 – 2% of body weight
-      - [A systematic review of water-based exercise and appetite](https://doi.org/10.1016/j.appet.2022.106371) confirmed that cold-water exercise stimulates greater post-exercise energy intake than land-based exercise, partially offsetting the caloric deficit from swimming
-      - PBS 5 reflects sustained weight loss of approximately 1 – 1.5% of body weight, sitting between the 1.5% anchor (score 6) and 0.4% anchor (score 4); swimming burns 400 – 700 kcal/hour but appetite compensation limits net fat loss
-    isr: 65
+      - The SWEAT 2 trial found swimmers lost approximately 1.1 kg more than walkers over 12 months in older women, but absolute losses remained modest at roughly 1 – 2% of body weight ([Cox et al. 2010, Metabolism](https://doi.org/10.1016/j.metabol.2010.02.001))
+      - Swimming burns 400 – 700 kcal per hour, but cold-water appetite compensation limits net fat loss; successful swimmers who manage dietary intake sustain roughly 1 – 2% body weight loss ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
+      - A 12-week swimming study in young women found a 2.3% reduction in body fat percentage but no significant change in total body weight, illustrating how modest the scale-weight effect is even with consistent training ([PMC 2019, Effect of Swimming Training on Body Composition](https://pmc.ncbi.nlm.nih.gov/articles/PMC6388213/))
+      - Score 4 corresponds to ~0.4% sustained weight loss on the anchor; successful swimmers sit in the 1 – 2% range, placing them between score 4 and 5, below land-based cardio due to the appetite effect
+    isr: 50
     isr_reasoning: |
-      - [The dose-response meta-analysis](https://doi.org/10.1001/jamanetworkopen.2024.52185) (JAMA Network Open, 2024) confirms a linear relationship between aerobic exercise volume and weight loss, but swimming-specific evidence is thinner and more variable than for land-based modalities
-      - [Experimental data](https://doi.org/10.1016/j.appet.2022.106371) shows cold-water exercise increases post-exercise energy intake by approximately 40% compared to thermoneutral conditions, introducing a confound that makes swimming outcomes less predictable than running or cycling for weight loss
-      - The mechanism (caloric deficit via exercise) is sound, but individual variation in appetite compensation after swimming is large, with some participants fully offsetting the exercise-induced deficit
+      - Cold-water exercise increases post-exercise energy intake by approximately 44% compared to thermoneutral conditions; exercising in cool water (~21 °C) can double ad libitum food intake relative to warm water, introducing a systematic compensation mechanism largely absent from land-based exercise ([Berneis et al. 2022, Appetite](https://doi.org/10.1016/j.appet.2022.106371))
+      - One controlled study found women assigned to swimming lost no weight over 6 months, while walkers lost 10% and cyclists 12%, suggesting a high non-response rate specific to swimming as a fat loss modality ([Gwinup 1987, Am J Sports Med](https://doi.org/10.1177/036354658701500306))
+      - Individual variation in appetite compensation after swimming is large: some participants fully offset the exercise-induced caloric deficit while others do not, making outcomes less predictable than for running or cycling ([White et al. 2005, Int J Sport Nutr Exerc Metab](https://doi.org/10.1123/ijsnem.15.1.38))
+      - Score 50 reflects that roughly half of consistent swimmers achieve meaningful scale weight reduction, with cold-water appetite stimulation being a well-documented mechanism driving non-response
     uar: 45
     uar_reasoning: |
       - Pool access constraints and scheduling barriers produce approximately 40 – 50% dropout within 6 months ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199)), limiting the proportion who sustain swimming long enough for meaningful weight loss
