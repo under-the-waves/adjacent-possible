@@ -65,7 +65,7 @@ values:
       - [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) (Bellicha et al. 2021) found aerobic exercise training produces mean weight loss of 1.5 – 3.5 kg in overweight/obese adults; at Zone 2 volumes of 150 – 300 min/week, successful adherents sustain roughly 2 – 3% body weight loss over 12+ months without dietary intervention
       - [A dose-response meta-analysis](https://doi.org/10.1001/jamanetworkopen.2024.52185) of 116 RCTs (JAMA Network Open, 2024) found aerobic exercise at moderate intensity produces linear weight loss of approximately 0.52 kg per 30-minute weekly increment; a dedicated Zone 2 practitioner doing 4 – 5 hours/week can expect approximately 2 – 3 kg sustained loss
       - [Meta-analytic evidence](https://doi.org/10.1007/s40279-016-0650-6) (Keating et al. 2017) shows no difference in fat loss between moderate and vigorous intensities when total energy expenditure is matched, meaning Zone 2's lower per-minute burn is offset by higher sustainable weekly volume
-      - PBS 6 aligns with the 1.5% anchor: successful Zone 2 practitioners sustain approximately 1.5 – 3% body weight loss, placing this between the 1.5% (score 6) and 6% (score 8) anchors
+      - On the logarithmic anchor, 2% sustained loss maps to 10 + log₂(2/25) = 6.36, rounding to PBS 6
     isr: 65
     isr_reasoning: |
       - The [Midwest Exercise Trial 2](https://doi.org/10.1002/oby.21073) found that approximately 46% of overweight adults completing a 10-month supervised aerobic programme failed to achieve clinically significant ( greater than 5%) weight loss, largely due to compensatory increases in energy intake

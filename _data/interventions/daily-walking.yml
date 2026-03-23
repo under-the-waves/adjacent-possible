@@ -60,12 +60,12 @@ values:
       - Weather dependency and seasonal motivation fluctuations are the primary barriers, but overall retention is strong among those who find personal enjoyment in walking routines ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
 
   body-image.fat_loss:
-    pbs: 6
+    pbs: 7
     pbs_reasoning: |
       - Meta-analysis of pedometer-based walking interventions shows successful adherents lose 1.3 – 3.7 kg depending on programme duration, with longer programmes (1 year+) at the upper end ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
       - With dietary awareness, walkers maintaining 200+ minutes per week sustain 3 – 5% body weight loss at 12 months; dose-response meta-analysis confirms losses increase linearly up to 300 minutes per week ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333); [JAMA Network Open 2024](https://doi.org/10.1001/jamanetworkopen.2024.52185))
       - Walking's low intensity caps caloric expenditure at roughly 200 – 400 kcal per session, limiting maximum sustainable loss compared to vigorous modalities ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
-      - Score 6 corresponds to ~1.5% sustained loss on the anchor; successful walkers with dietary awareness sit in the 2 – 4% range, placing them between score 6 and 7
+      - On the logarithmic anchor, 3% sustained loss maps to 10 + log₂(3/25) = 6.94, rounding to PBS 7
     isr: 55
     isr_reasoning: |
       - Exercise-alone trials show roughly half of participants are 'non-responders' who compensate for exercise energy expenditure through increased food intake or reduced non-exercise activity; one study found compensators offset 63% of exercise calories ([King et al. 2008, PLoS ONE](https://doi.org/10.1371/journal.pone.0002398); [Myers et al. 2023, Front Psychol](https://doi.org/10.3389/fpsyg.2023.1098394))

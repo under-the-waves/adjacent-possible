@@ -59,12 +59,12 @@ values:
       - The lack of variety, social interaction, and environmental stimulation in typical HIIT formats reduces long-term engagement compared to more inherently enjoyable activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
 
   body-image.fat_loss:
-    pbs: 6
+    pbs: 7
     pbs_reasoning: |
       - Meta-analysis of 39 studies found successful HIIT practitioners lose 1.4 kg fat mass on average, with body fat percentage reductions of 1.5 – 2.4% over 8 – 12 weeks; running-based protocols produce stronger results than cycling ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
       - Umbrella meta-analysis confirms interval training reduces body fat by a pooled 1.5% with fat mass losses of 1.8 kg, and programmes exceeding 12 weeks in overweight populations produce the largest effects ([Atakan et al. 2024, Sports Med](https://doi.org/10.1007/s40279-024-02070-9))
       - HIIT produces similar total fat loss to moderate-intensity continuous training despite 40% less time investment, with the caloric afterburn (EPOC) providing a modest additional edge ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
-      - Score 6 corresponds to ~1.5% sustained body weight loss on the anchor; successful HIIT adherents sit in the 2 – 4% range, placing them solidly around score 6
+      - On the logarithmic anchor, 3% sustained loss maps to 10 + log₂(3/25) = 6.94, rounding to PBS 7
     isr: 70
     isr_reasoning: |
       - Exercise-alone trials show large individual variation in fat loss response to HIIT, ranging from 8 kg lost to 0.1 kg gained within the same study; compensatory eating offsets a substantial fraction of exercise energy expenditure in many participants ([Boutcher 2011, J Obes](https://doi.org/10.1155/2011/868305); [King et al. 2008, PLoS ONE](https://doi.org/10.1371/journal.pone.0002398))

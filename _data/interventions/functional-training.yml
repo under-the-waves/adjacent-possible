@@ -60,12 +60,12 @@ values:
       - The 12.8% twelve-month retention rate for HIFT programmes suggests that half or fewer maintain long enough to develop sustained enjoyment habits ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
 
   body-image.fat_loss:
-    pbs: 5
+    pbs: 6
     pbs_reasoning: |
       - [A systematic review of 114 trials](https://doi.org/10.1111/obr.13428) (n = 4,184; Lopez et al. 2022) found resistance training alone reduces body fat percentage by 1.6% and fat mass by 1.0 kg versus controls, with a concurrent increase in lean mass of 0.8 kg – successful adherents sustain roughly 1 – 2% net body weight reduction
       - Functional training's compound movements and metabolic conditioning elements produce higher caloric expenditure than traditional resistance training, with circuit-style sessions burning 400 – 600 kcal/hour; for those who respond well, this supports approximately 1 – 2% sustained fat loss without dietary intervention ([Westcott 2012, Curr Sports Med Rep](https://doi.org/10.1249/JSR.0b013e31825dabb8))
       - The primary body composition benefit for successful practitioners is fat-to-muscle recomposition rather than scale weight reduction; true non-responders to resistance training are rare for muscle gain, but scale weight may not shift substantially ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
-      - PBS 5 sits between the 0.4% (score 4) and 1.5% (score 6) anchors: successful functional training practitioners lose approximately 1 – 2% body fat, with recomposition effects that may understate the visual change
+      - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
     isr: 60
     isr_reasoning: |
       - Without caloric restriction, fat loss from resistance training is partially offset by lean mass gains, making net scale weight change small and variable; many practitioners experience recomposition without meaningful weight loss ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608))

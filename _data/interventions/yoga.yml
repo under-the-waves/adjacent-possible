@@ -59,12 +59,12 @@ values:
       - The meditative and contemplative dimensions provide meaning beyond physical fitness that deepens commitment over time ([Cramer et al. 2018, Cochrane Database](https://doi.org/10.1002/14651858.CD012563.pub2))
 
   body-image.fat_loss:
-    pbs: 4
+    pbs: 6
     pbs_reasoning: |
       - [A systematic review of 30 trials](https://doi.org/10.1016/j.ypmed.2016.03.013) (n = 2,173; Thind et al. 2017) found that in overweight/obese subgroups, yoga reduced body weight by approximately 3.5 kg versus usual care – roughly 1 – 2% of body weight sustained over 12+ months
       - Yoga's caloric expenditure is modest (150 – 400 kcal/hour depending on style), meaning any weight loss among successful practitioners likely operates partly through stress-mediated cortisol reduction and improved eating behaviours rather than direct energy expenditure ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
       - In normal-weight populations, yoga produces negligible weight change; the 1 – 2% effect is confined to overweight/obese individuals practising consistently for 6+ months ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
-      - PBS 4 aligns with the 0.4% anchor: even among successful adherents, yoga's direct fat loss effect is small, sitting between the 0.1% (score 2) and 1.5% (score 6) anchors
+      - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
     isr: 35
     isr_reasoning: |
       - Yoga's caloric burn is too low (150 – 400 kcal/hour) to create a meaningful energy deficit for most practitioners; weight loss depends on indirect pathways (stress reduction, mindful eating) that are inconsistent across individuals ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))

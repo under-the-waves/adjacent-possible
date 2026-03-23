@@ -65,7 +65,7 @@ values:
       - Running is among the highest calorie-burning exercises at 600 – 900 kcal/hour depending on pace and body weight; trail running adds elevation gain which further increases energy expenditure by 10 – 20% compared to flat-surface running ([Hall et al. 2011, J Strength Cond Res](https://doi.org/10.1519/JSC.0b013e31822e592c))
       - [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) (Bellicha et al. 2021) found aerobic exercise alone produces 1.5 – 3.5 kg mean weight loss; running's higher energy expenditure per unit time places successful adherents at the upper end, sustaining approximately 3 – 5% body weight loss over 12+ months
       - [A dose-response meta-analysis](https://doi.org/10.1001/jamanetworkopen.2024.52185) of 116 RCTs (JAMA Network Open, 2024) shows aerobic exercise produces linear weight loss up to 300 min/week; at typical trail running volumes (3 – 4 hours/week at vigorous intensity), the best-case sustained result is 3 – 4% body weight reduction without strict dietary intervention
-      - PBS 7 reflects sustained weight loss between the 1.5% anchor (score 6) and 6% anchor (score 8): trail running's high caloric burn makes 3 – 5% achievable for those who respond well
+      - On the logarithmic anchor, 4% sustained loss maps to 10 + log₂(4/25) = 7.36, rounding to PBS 7
     isr: 70
     isr_reasoning: |
       - The [Midwest Exercise Trial 2](https://doi.org/10.1002/oby.21073) found approximately 54% of participants achieved clinically significant weight loss from supervised aerobic exercise alone; running's higher energy expenditure per session improves this ratio modestly compared to moderate-intensity modalities

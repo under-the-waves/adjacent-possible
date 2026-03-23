@@ -60,12 +60,12 @@ values:
       - Approximately 65% of those swimming regularly for 6+ months continue long-term, but the initial dropout phase reduces the overall enjoyment-based adherence rate ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
 
   body-image.fat_loss:
-    pbs: 4
+    pbs: 6
     pbs_reasoning: |
       - The SWEAT 2 trial found swimmers lost approximately 1.1 kg more than walkers over 12 months in older women, but absolute losses remained modest at roughly 1 – 2% of body weight ([Cox et al. 2010, Metabolism](https://doi.org/10.1016/j.metabol.2010.02.001))
       - Swimming burns 400 – 700 kcal per hour, but cold-water appetite compensation limits net fat loss; successful swimmers who manage dietary intake sustain roughly 1 – 2% body weight loss ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
       - A 12-week swimming study in young women found a 2.3% reduction in body fat percentage but no significant change in total body weight, illustrating how modest the scale-weight effect is even with consistent training ([PMC 2019, Effect of Swimming Training on Body Composition](https://pmc.ncbi.nlm.nih.gov/articles/PMC6388213/))
-      - Score 4 corresponds to ~0.4% sustained weight loss on the anchor; successful swimmers sit in the 1 – 2% range, placing them between score 4 and 5, below land-based cardio due to the appetite effect
+      - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
     isr: 50
     isr_reasoning: |
       - Cold-water exercise increases post-exercise energy intake by approximately 44% compared to thermoneutral conditions; exercising in cool water (~21 °C) can double ad libitum food intake relative to warm water, introducing a systematic compensation mechanism largely absent from land-based exercise ([Berneis et al. 2022, Appetite](https://doi.org/10.1016/j.appet.2022.106371))

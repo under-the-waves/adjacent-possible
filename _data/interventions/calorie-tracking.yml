@@ -8,12 +8,12 @@ applicable_domains: ["body-image"]
 
 values:
   body-image.fat_loss:
-    pbs: 7
+    pbs: 8
     pbs_reasoning: |
       - [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/17904936/) from behavioural diet interventions with 1+ year follow-up shows successful participants sustain 5 – 7% body weight loss at 12 months, with peak losses of 5 – 9% at 6 months before partial regain
       - [Long-term maintenance data](https://www.sciencedirect.com/science/article/pii/S0002916523063748) shows that 5 years after structured weight loss programmes, successful maintainers retain >3% loss from baseline, though the best adherents sustain 5 – 8%
       - [An app-based tracking trial](https://link.springer.com/article/10.1007/s10865-019-00091-8) found mean losses of 5 – 8% among those who achieved clinically significant results, confirming the effect size ceiling for this intervention
-      - On the anchor scale (6% = score 8, 1.5% = score 6), sustained 5 – 7% loss for a successful calorie tracker maps to PBS 7
+      - On the logarithmic anchor, 6.5% sustained loss maps to 10 + log₂(6.5/25) = 8.06, rounding to PBS 8
     isr: 60
     isr_reasoning: |
       - [App-based trial data](https://link.springer.com/article/10.1007/s10865-019-00091-8) shows that among consistent trackers (logging 6/7 days for 75%+ of targeted weeks), only 54% achieved clinically significant weight loss (5%+) at 6 months – roughly half of even diligent trackers fall short

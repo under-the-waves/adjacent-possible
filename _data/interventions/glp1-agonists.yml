@@ -8,11 +8,11 @@ applicable_domains: ["body-image"]
 
 values:
   body-image.fat_loss:
-    pbs: 8
+    pbs: 9
     pbs_reasoning: |
       - [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) showed mean weight loss of 14.9% at 68 weeks with semaglutide 2.4 mg; [STEP 5](https://www.nature.com/articles/s41591-022-02026-4) confirmed 15.2% sustained at 104 weeks of continuous use
       - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) showed tirzepatide achieving 16.0% (5 mg), 21.4% (10 mg), and 22.5% (15 mg) weight loss at 72 weeks, with the highest-dose group averaging over 20% loss
-      - On the linear anchor (25% = score 10), semaglutide's ~15% maps to ~6.0 and tirzepatide's ~21% maps to ~8.4; weighting toward the class midpoint and noting most prescriptions start with semaglutide, PBS 8 reflects the realistic upper range for a successful user on continued treatment
+      - On the logarithmic anchor (25% = score 10, each point = 2x), semaglutide's ~15% maps to 10 + log₂(15/25) = 9.3 and tirzepatide's ~21% maps to 9.75; weighting toward semaglutide as the more commonly prescribed starting agent, PBS 9 reflects a successful user on continued treatment
       - These are the largest sustained effect sizes of any non-surgical fat loss intervention, driven by potent appetite suppression and metabolic effects
     isr: 88
     isr_reasoning: |

@@ -60,12 +60,12 @@ values:
       - Those who climb for 6+ months tend to become long-term participants, but the initial dropout reduces the overall enjoyment-based adherence rate to approximately 60% ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
 
   body-image.fat_loss:
-    pbs: 5
+    pbs: 6
     pbs_reasoning: |
       - Rock climbing burns 8 – 11 kcal per active minute (approximately 500 – 700 kcal/hour at moderate-to-high intensity), though rest periods between climbs reduce net session expenditure to approximately 400 – 500 kcal for a typical 90-minute session ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
       - Interventions lasting 24+ weeks show significant body fat decreases; climbing's emphasis on relative strength naturally incentivises leaner body composition, with successful climbers sustaining approximately 1 – 2% body fat reduction over 6+ months ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
       - Climbing engages nearly every major muscle group (forearms, back, core, legs) creating high metabolic demand through sustained isometric contractions and dynamic movements, which supports modest recomposition alongside fat loss ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - PBS 5 sits between the 0.4% (score 4) and 1.5% (score 6) anchors: successful climbers sustain approximately 1 – 2% fat loss, comparable to resistance training effects
+      - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
     isr: 55
     isr_reasoning: |
       - The evidence base for climbing-specific weight loss is thin – most body composition studies in climbers are cross-sectional (comparing climbers to non-climbers) rather than interventional, limiting causal inference about what proportion actually lose fat ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
