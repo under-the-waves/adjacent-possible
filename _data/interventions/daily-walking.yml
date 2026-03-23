@@ -42,23 +42,6 @@ values:
       - Those seeking significant athletic gains may abandon walking for more intensive activities, reducing the walking-specific adherence pool ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Studies show good long-term retention for walkers who set realistic performance expectations (step counts, walking pace, distance) rather than broader athletic goals ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
 
-  fitness.appearance:
-    pbs: 4
-    pbs_reasoning: |
-      - Walking produces modest body composition changes with gradual fat reduction over 6+ months when combined with dietary awareness, but insufficient intensity for significant muscle building or dramatic physique transformation ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
-      - Meta-analyses show walking produces modest weight loss of 0.5-1 kg over 12-week interventions without dietary changes, corresponding to "modest visible changes" (score 4) on the appearance anchor ([Richardson et al. 2008, Ann Intern Med](https://doi.org/10.7326/0003-4819-148-5-200803040-00007))
-      - Walking lacks sufficient mechanical tension for meaningful hypertrophy and produces lower caloric expenditure per session than vigorous activities, limiting appearance transformation potential ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-    isr: 75
-    isr_reasoning: |
-      - Controlled studies consistently show modest weight loss and body composition improvements from walking programmes, but dramatic aesthetic changes require additional dietary modifications and longer timeframes ([Richardson et al. 2008, Ann Intern Med](https://doi.org/10.7326/0003-4819-148-5-200803040-00007))
-      - The reliability of modest fat loss is high, but the magnitude is limited by the low caloric expenditure of walking relative to vigorous exercise ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - Results are more reliable than higher-intensity modalities because the low intensity permits very consistent execution, though the ceiling is lower ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
-    uar: 70
-    uar_reasoning: |
-      - Appearance-focused walkers show moderate adherence, with some frustration over slow visible progress reducing retention among those with ambitious aesthetic goals ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
-      - Studies indicate 60-70% continue programmes long enough for noticeable changes, with many supplementing walking with additional activities ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - The gradual nature of results requires patience and realistic expectations; those who accept walking's modest aesthetic contribution tend to have high long-term adherence ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
-
   fitness.enjoyment:
     pbs: 8
     pbs_reasoning: |

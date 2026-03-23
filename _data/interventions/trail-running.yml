@@ -42,23 +42,6 @@ values:
       - Overuse injuries (knee, ankle, lower leg) can interrupt training and lead to dropout, with running injury incidence of 19-79% per year depending on volume and terrain ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299))
       - Seasonal variation and weather affect consistency; the time commitment for longer trail sessions can conflict with other obligations ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
 
-  fitness.appearance:
-    pbs: 5
-    pbs_reasoning: |
-      - Trail running produces moderate body composition changes through caloric expenditure (400-600 kcal/hour), developing lean, defined lower body musculature and low body fat, corresponding to "modest visible changes" to "noticeable body comp improvement" ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - Running alone without dietary modification produces modest weight loss (1-3 kg over 12 weeks in meta-analyses), with more reliable reductions in visceral fat even when scale weight changes are small ([Swift et al. 2014, Prog Cardiovasc Dis](https://doi.org/10.1016/j.pcad.2013.09.012))
-      - Running provides minimal upper body hypertrophy and, at higher volumes, can promote muscle catabolism that works against muscular physique goals; the lean endurance build is not universally desired ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-    isr: 70
-    isr_reasoning: |
-      - Fat loss from running is reliably produced when caloric expenditure exceeds intake, but magnitude depends heavily on dietary behaviour ([Swift et al. 2014, Prog Cardiovasc Dis](https://doi.org/10.1016/j.pcad.2013.09.012))
-      - Body composition changes (reduced visceral fat, improved body fat percentage) are more reliable than scale weight loss, with consistent effects across studies ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - The aesthetic outcome favours lean endurance builds rather than muscular development, which is a reliable but narrowly appealing transformation ([Swift et al. 2014, Prog Cardiovasc Dis](https://doi.org/10.1016/j.pcad.2013.09.012))
-    uar: 45
-    uar_reasoning: |
-      - Appearance-motivated runners may be frustrated by slow visible progress, particularly if expecting upper body development or muscular physique ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
-      - The endurance-adapted physique is not universally desired, and some runners find their appearance goals conflict with performance optimisation ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - Those primarily motivated by aesthetics tend to add resistance training rather than relying on running alone, reducing trail-running-specific adherence for this goal ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-
   fitness.enjoyment:
     pbs: 9
     pbs_reasoning: |

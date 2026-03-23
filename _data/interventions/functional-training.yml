@@ -42,23 +42,6 @@ values:
       - Plateaus, injury risk from complex movements, and the technical learning curve contribute to dropout, particularly at intermediate levels ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - CrossFit-style communities report better retention than solo training through social accountability, but overall long-term adherence remains below 50% at 12 months ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
 
-  fitness.appearance:
-    pbs: 7
-    pbs_reasoning: |
-      - Functional training produces noticeable-to-significant body composition changes: 1-2 kg lean mass gain and 2-4% body fat reduction over 12 weeks in novices, with compound movements stimulating multiple muscle groups simultaneously ([Schoenfeld 2010, J Strength Cond Res](https://doi.org/10.1519/JSC.0b013e3181e0c6e3))
-      - Full-body movements create balanced muscular development and improved posture, corresponding to the score 7 range between "noticeable body comp improvement" (6) and "significant visible muscle" (8) on the appearance anchor ([Westcott 2012, Current Sports Medicine Reports](https://doi.org/10.1249/JSR.0b013e31825dabb8))
-      - Dedicated bodybuilding-style training with isolation work produces greater localised hypertrophy, limiting functional training's ceiling for maximal aesthetic transformation ([Schoenfeld et al. 2014, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000000480))
-    isr: 75
-    isr_reasoning: |
-      - Body composition improvements from resistance training are well-supported by evidence, with reliable lean mass gains and fat loss when combined with appropriate caloric intake ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608))
-      - Aesthetic results are more variable than pure strength gains due to the greater influence of dietary factors; exercise alone produces modest visible changes ([Clark 2015, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-015-0093-1))
-      - The magnitude of body composition change depends heavily on nutrition, sleep, and training consistency, introducing meaningful variability in outcomes ([Aragon et al. 2017, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-017-0174-y))
-    uar: 50
-    uar_reasoning: |
-      - Appearance-motivated functional trainees face general adherence challenges, with the added complexity that aesthetic results take longer to manifest than strength gains ([Dalle Grave et al. 2011, Behaviour Research and Therapy](https://doi.org/10.1016/j.brat.2011.09.004))
-      - The 3-6 month timeline for visible changes exceeds many participants' patience threshold, contributing to dropout before results materialise ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
-      - Those who persist past the initial plateau tend to develop longer-term habits, but fewer than half reach that point ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
-
   fitness.enjoyment:
     pbs: 7
     pbs_reasoning: |

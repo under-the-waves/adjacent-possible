@@ -42,23 +42,6 @@ values:
       - Success requires access to coaching, pool facilities, and significant time commitment (including travel and changing time) that limits long-term adherence for recreational athletes ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
       - Shoulder overuse injuries are a common barrier at higher training volumes, with prevalence of 40-91% in competitive swimmers ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
 
-  fitness.appearance:
-    pbs: 6
-    pbs_reasoning: |
-      - Swimming produces a noticeable body composition improvement: broad shoulders, lean muscle mass, and low body fat, with studies showing 8-15% body fat reduction over 6 months of consistent training ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
-      - Score 6 ("noticeable body composition improvement") rather than 7 because swimming builds a lean but not heavily muscled physique; the water-supported environment provides less resistance stimulus than gravity-based activities for maximal hypertrophy ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
-      - Elite swimmers exhibit distinctive V-taper physiques, but this requires competitive-level training volumes (20+ hours/week) beyond what recreational swimmers achieve ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
-    isr: 70
-    isr_reasoning: |
-      - Body composition changes are well-documented in controlled studies, with consistent fat loss and muscle tone improvements at adequate training volumes ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
-      - Dramatic aesthetic changes require high training volumes and dietary discipline; recreational swimmers see reliable but moderate visual changes ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
-      - Swimming's appetite-stimulating effect (cold water exposure increases hunger) can counteract fat loss if dietary intake is not managed ([White et al. 2005, Int J Sport Nutr Exerc Metab](https://doi.org/10.1123/ijsnem.15.1.38))
-    uar: 50
-    uar_reasoning: |
-      - Aesthetic goals require consistent 4-5 weekly sessions plus dietary changes, facing the same pool access barriers as health-motivated swimming ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
-      - Appearance-focused swimmers may be frustrated by the appetite-stimulating effect of cold water and the lean-rather-than-muscular aesthetic outcome ([White et al. 2005, Int J Sport Nutr Exerc Metab](https://doi.org/10.1123/ijsnem.15.1.38))
-      - Studies indicate 45-55% maintain programmes long enough for significant aesthetic changes, with gradual visible progress providing moderate motivation ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
-
   fitness.enjoyment:
     pbs: 8
     pbs_reasoning: |

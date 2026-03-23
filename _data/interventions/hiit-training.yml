@@ -41,23 +41,6 @@ values:
       - Supervised compliance rates exceed 85% in athletic populations, but self-directed HIIT adherence drops significantly without external accountability ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
       - The time efficiency of HIIT is a significant adherence advantage for time-constrained individuals, partially offsetting the intensity barrier ([Gibala et al. 2012, J Physiol](https://doi.org/10.1113/jphysiol.2011.224725))
 
-  fitness.appearance:
-    pbs: 5
-    pbs_reasoning: |
-      - Meta-analyses show HIIT produces modest but significant body composition improvements: 1.53% body fat reduction, 1.86 kg fat mass reduction, and significant reductions in abdominal (-8.3%) and visceral fat (-24.2%) ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
-      - Effects are similar to moderate continuous training with 40% less time investment, but provide limited muscle hypertrophy stimulus compared to resistance training ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
-      - Score 5 reflects modest visible changes on the appearance anchor: fat loss without significant muscle building produces a leaner but not dramatically transformed physique ([Keating et al. 2017, Sports Med](https://doi.org/10.1007/s40279-016-0650-6))
-    isr: 70
-    isr_reasoning: |
-      - Consistent but modest body composition effects across multiple meta-analyses, with some studies showing no significant differences between HIIT and continuous training for body composition ([Keating et al. 2017, Sports Med](https://doi.org/10.1007/s40279-016-0650-6))
-      - Evidence is robust for fat loss but limited for muscle building, with resistance training showing superior effects for fat-free mass development ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
-      - Moderate-quality evidence overall, with substantial heterogeneity in study protocols affecting comparability ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
-    uar: 55
-    uar_reasoning: |
-      - Similar adherence challenges as health domain, with body composition changes slower to manifest than fitness gains, potentially affecting motivation ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
-      - Time efficiency of HIIT may appeal to those seeking appearance improvements with limited time, but results plateau without dietary modification ([Keating et al. 2017, Sports Med](https://doi.org/10.1007/s40279-016-0650-6))
-      - Appearance-motivated exercisers often supplement HIIT with resistance training, suggesting HIIT alone is insufficient for their goals ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
-
   fitness.enjoyment:
     pbs: 6
     pbs_reasoning: |

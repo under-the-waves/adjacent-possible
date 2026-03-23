@@ -7,16 +7,18 @@ life_area_slug: fitness
 
 Fitness serves as a cornerstone of overall wellbeing, influencing virtually every aspect of daily life. Regular physical activity [strengthens your cardiovascular system](https://www.health.harvard.edu/staying-healthy/the-secret-to-better-health-exercise) and builds muscle and bone density, while simultaneously [improving memory, concentration, and creative thinking](https://bjsm.bmj.com/content/52/3/154). The neurochemical changes from exercise [effectively combat depression and anxiety](https://jamanetwork.com/journals/jamapsychiatry/article-abstract/2720689), creating cascading benefits in mood, relationships, and life satisfaction.
 
-Fitness also transforms physical appearance and boosts confidence, whilst [extending both lifespan and "healthspan"](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61031-9/fulltext)—the period of life spent in good health. These combined benefits make fitness one of the highest-leverage investments you can make in your quality of life.
+Fitness also boosts confidence, whilst [extending both lifespan and "healthspan"](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61031-9/fulltext)—the period of life spent in good health. These combined benefits make fitness one of the highest-leverage investments you can make in your quality of life.
 
 ## Fitness values
-There's no one-size-fits-all approach to fitness. Your optimal path depends on which aspects of fitness you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+There's no one-size-fits-all approach to fitness. Your optimal path depends on which aspects of fitness you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
 
 This guide also focuses on five core components: cardiovascular endurance, muscular strength and endurance, flexibility and mobility, body composition, and balance and coordination.
 
 For personalised recommendations based on your unique priorities, visit [Fitness Personalised]({{ site.baseurl }}/fitness/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
 
 {% include life-area-values.html %}
+
+Looking for fitness interventions focused on weight loss or muscle gain? Visit [Body Image]({{ site.baseurl }}/body-image/), where the same fitness interventions are scored on appearance-specific values like fat loss and muscle gain.
 
 ## Benchmarks by Level
 

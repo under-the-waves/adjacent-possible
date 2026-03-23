@@ -28,17 +28,6 @@ fitness:
       4: "2nd fitness test percentile"
       2: "Below 1st fitness test percentile"
 
-  appearance:
-    name: "Appearance"
-    anchor_type: "subjective"
-    anchor_description: "Dramatic physique transformation achieving ideal personal aesthetic goals"
-    scale_levels:
-      10: "Complete physique transformation"
-      8: "Significant visible muscle development"
-      6: "Noticeable body composition improvement"
-      4: "Modest visible changes"
-      2: "Minimal appearance changes"
-
   enjoyment:
     name: "Enjoyment"
     anchor_type: "subjective"

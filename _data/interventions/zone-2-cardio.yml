@@ -42,23 +42,6 @@ values:
       - The low recovery cost allows high training frequency, supporting adherence, but the delayed and indirect nature of performance benefits can test motivation ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - Athletes who track heart rate data and understand the physiological rationale have better adherence than those who find the pace frustratingly slow ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
 
-  fitness.appearance:
-    pbs: 4
-    pbs_reasoning: |
-      - Zone 2 cardio produces modest body composition changes through sustained caloric expenditure (300-500 kcal/hour), but provides insufficient mechanical stimulus for muscle hypertrophy ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - Extended Zone 2 training without resistance training can contribute to a lean but unmuscular appearance; the aesthetic outcome is gradual fat loss rather than physique development, matching "modest visible changes" (score 4) on the appearance anchor ([Schwingshackl et al. 2013, Obes Rev](https://doi.org/10.1111/obr.12010))
-      - Total caloric expenditure matters more than substrate utilisation for body composition, and Zone 2's moderate calorie burn rate limits the speed of visible change ([Keating et al. 2017, Sports Med](https://doi.org/10.1007/s40279-016-0650-6))
-    isr: 65
-    isr_reasoning: |
-      - Fat loss from sustained aerobic exercise is reliably produced when it creates a caloric deficit, but the rate of visible change is slow at Zone 2 intensities ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - Higher-intensity exercise and resistance training produce superior aesthetic outcomes per unit of time invested, limiting Zone 2's comparative effectiveness for appearance ([Schwingshackl et al. 2013, Obes Rev](https://doi.org/10.1111/obr.12010))
-      - The contribution to appearance is genuine but modest and slow-acting, with high dependency on accompanying dietary changes ([Keating et al. 2017, Sports Med](https://doi.org/10.1007/s40279-016-0650-6))
-    uar: 60
-    uar_reasoning: |
-      - Appearance-motivated individuals may find Zone 2 cardio frustratingly slow for visible results compared to higher-intensity alternatives ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
-      - The low perceived exertion can feel insufficiently challenging to produce meaningful change, leading to abandonment for more intense approaches ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Those who persist tend to be motivated by health or performance goals rather than appearance, with appearance functioning as a secondary benefit ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-
   fitness.enjoyment:
     pbs: 6
     pbs_reasoning: |

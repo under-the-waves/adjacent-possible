@@ -8,7 +8,7 @@ domain_representative: true
 values:
   - key: health
     name: "Health & Longevity"
-    weight: 35
+    weight: 40
     description:
       - "Fitness that supports long-term wellbeing and disease prevention."
       - "Cardiovascular health, maintaining muscle mass for healthy aging, joint integrity, and metabolic health."
@@ -42,23 +42,15 @@ values:
 
   - key: performance
     name: "Physical Performance"
-    weight: 30
+    weight: 35
     description:
       - "Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills."
       - "What your body can do rather than how it looks."
       - "Those who prioritise performance may focus on sport-specific training, measurable improvements in capacity, or achieving particular physical feats."
 
-  - key: appearance
-    name: "Appearance"
-    weight: 20
-    description:
-      - "Physical aesthetics including muscle definition, body composition, and overall physique."
-      - "While appearance changes often accompany health and performance improvements, some training approaches specifically optimise for visual results."
-      - "Those who prioritise this value may focus more on specific muscle development, fat loss protocols, or physique-oriented goals."
-
   - key: enjoyment
     name: "Enjoyment & Psychological Benefits"
-    weight: 15
+    weight: 25
     description:
       - "The pleasure, mental health benefits, and positive experiences derived from physical activity."
       - "Stress reduction, mood enhancement, community connection, and the inherent satisfaction of movement itself."

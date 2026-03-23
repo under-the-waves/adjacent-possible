@@ -41,23 +41,6 @@ values:
       - Measurable progress (weight on the bar) provides strong positive reinforcement that supports adherence among performance-motivated trainees ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Plateaus, accumulated fatigue, and the demanding nature of heavy training still limit long-term adherence for recreational users without structured goals ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
 
-  fitness.appearance:
-    pbs: 8
-    pbs_reasoning: |
-      - Resistance training can produce significant visible muscle development through hypertrophy of 8-20% muscle mass increases in untrained individuals over 12-24 weeks, with body fat reductions of 10-15% when combined with appropriate nutrition ([Schoenfeld 2010, J Strength Cond Res](https://doi.org/10.1519/JSC.0b013e3181e0c6e3))
-      - Long-term progressive training can produce complete physique transformations in dedicated individuals, as documented extensively in body composition research and natural bodybuilding studies ([Helms et al. 2014, J Int Soc Sports Nutr](https://doi.org/10.1186/1550-2783-11-20))
-      - Score 8 on the appearance anchor (significant visible muscle development) matches the well-documented hypertrophy outcomes of consistent resistance training, though score 10 (complete transformation) requires exceptional genetics and dietary precision ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608))
-    isr: 80
-    isr_reasoning: |
-      - Muscle hypertrophy response to resistance training is well-established with consistent results across studies, though magnitude varies 2-3 fold between individuals due to genetic variation ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
-      - Physique transformation depends heavily on nutrition compliance, with body composition research showing exercise alone produces modest changes without dietary modification ([Clark 2015, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-015-0093-1))
-      - When both training and nutrition are adherent, significant visible changes are highly reliable, making the lower ISR relative to performance primarily a function of the additional dietary variable ([Aragon et al. 2017, J Int Soc Sports Nutr](https://doi.org/10.1186/s12970-017-0174-y))
-    uar: 30
-    uar_reasoning: |
-      - Physique transformation requires sustained effort over 6-12+ months with high training consistency and dietary discipline, a dual-adherence challenge that reduces effective rates ([Dalle Grave et al. 2011, Behaviour Research and Therapy](https://doi.org/10.1016/j.brat.2011.09.004))
-      - Real-world adherence data shows only 25-35% maintain the combined training and nutrition consistency needed for significant visual changes ([Wing & Phelan 2005, Am J Clin Nutr](https://doi.org/10.1093/ajcn/82.1.222S))
-      - Social media creates unrealistic transformation timelines that contribute to early discouragement and dropout among appearance-motivated trainees ([Fardouly & Vartanian 2016, Body Image](https://doi.org/10.1016/j.bodyim.2015.09.003))
-
   fitness.enjoyment:
     pbs: 7
     pbs_reasoning: |

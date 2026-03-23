@@ -42,23 +42,6 @@ values:
       - Finger injuries are common at intermediate-to-advanced levels and can force extended breaks; plateaus in the V4-V6 range are a well-known dropout point ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
       - Those who climb regularly for 6+ months tend to become long-term participants, but the initial attrition due to technical difficulty and physical demands is significant ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
 
-  fitness.appearance:
-    pbs: 5
-    pbs_reasoning: |
-      - Climbing produces a characteristic lean, low-body-fat physique with well-developed back, forearm, and shoulder musculature, but provides limited lower body hypertrophy, chest development, or overall muscle mass, corresponding to "modest visible changes" (score 4-5) on the appearance anchor ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - The high relative strength demands favour lower body weight, which can drive fat loss, but body fat reduction in climbing-specific studies did not reach statistical significance ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Score 5 reflects a distinctive but narrow aesthetic outcome: well-suited for lean, defined physiques rather than muscular size, between "modest visible changes" (4) and "noticeable body comp improvement" (6) ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-    isr: 65
-    isr_reasoning: |
-      - Appearance changes are moderately reliable for upper body definition and leanness, but highly dependent on climbing volume, supplementary training, and nutrition ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - The research base for body composition changes specifically from climbing is thin, with most studies showing non-significant effects on body fat percentage ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - Those climbing 3+ times per week at moderate-to-high intensity tend to develop noticeable physique changes over 6-12 months, but the aesthetic outcome is narrower than resistance training ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-    uar: 45
-    uar_reasoning: |
-      - Appearance-motivated climbers may be disappointed by slow and uneven aesthetic development, particularly limited lower body and chest hypertrophy ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Those primarily seeking physique changes tend to migrate to more targeted resistance training over time ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
-      - Climbers who stay tend to be motivated by performance and enjoyment rather than appearance, making the appearance-specific adherence rate lower than general climbing retention ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-
   fitness.enjoyment:
     pbs: 9
     pbs_reasoning: |
