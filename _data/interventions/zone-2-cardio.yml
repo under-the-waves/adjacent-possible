@@ -5,7 +5,7 @@ description: |
   - Preferentially develops mitochondrial oxidative capacity, fat oxidation, and aerobic base fitness, though [recent reviews](https://doi.org/10.1113/JP279564) note current evidence does not conclusively show Zone 2 is superior to higher intensities for mitochondrial adaptations
   - Distinguished from HIIT by its low perceived exertion and minimal recovery cost, allowing high training frequency; serves as the foundation of [polarised training models](https://doi.org/10.1123/ijspp.5.3.275) used by elite endurance athletes
   - Meaningful cardiovascular and metabolic adaptations develop over 6-12 weeks of consistent training
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -75,6 +75,24 @@ values:
       - Low barrier, low fatigue, and compatibility with daily routines support long-term habit formation for those who find a sustainable format ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - Monotony risk is real; rotating modalities and outdoor settings improve retention, as does pairing with valued secondary activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Those who pair Zone 2 with podcasts, learning, or socialising report the highest sustained enjoyment and adherence ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+
+  body-image.fat_loss:
+    pbs: 6
+    pbs_reasoning: |
+      - [A dose-response meta-analysis](https://doi.org/10.1001/jamanetworkopen.2024.52185) of 116 RCTs (JAMA Network Open, 2024) found aerobic exercise at moderate intensity produces linear weight loss of approximately 0.52 kg per 30-minute weekly increment, with 150+ minutes/week needed for clinically significant reductions in body fat and waist circumference
+      - [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) (Bellicha et al. 2021) found aerobic exercise training produces mean weight loss of 1.5 – 3.5 kg in overweight/obese adults; at Zone 2 volumes of 150 – 300 min/week, this corresponds to roughly 1.5 – 3% body weight sustained over 12+ months
+      - Zone 2's moderate calorie burn rate (300 – 500 kcal/hour) is lower than vigorous exercise but compensated by higher sustainable weekly volume and lower appetite stimulation; [meta-analytic evidence](https://doi.org/10.1007/s40279-016-0650-6) (Keating et al. 2017) shows no difference in fat loss between moderate and vigorous intensities when total energy expenditure is matched
+      - PBS 6 aligns with the 1.5% anchor: a dedicated Zone 2 practitioner doing 4 – 5 hours/week can sustain approximately 1.5 – 2% body weight loss without dietary intervention
+    isr: 80
+    isr_reasoning: |
+      - [The dose-response relationship](https://doi.org/10.1001/jamanetworkopen.2024.52185) between aerobic exercise volume and weight loss is among the most robustly established findings in exercise science, with monotonic decreases in body weight, waist circumference, and body fat percentage across 116 RCTs
+      - Unlike swimming, Zone 2 land-based exercise (walking, cycling, jogging) does not trigger cold-water appetite compensation, making the caloric deficit more predictable ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
+      - The primary uncertainty is dietary compensation: some individuals increase caloric intake to match increased expenditure, but the mechanism itself (sustained caloric deficit produces weight loss) is highly reliable when intake is controlled
+    uar: 55
+    uar_reasoning: |
+      - Zone 2's low perceived exertion, minimal recovery cost, and compatibility with daily routines support higher long-term adherence than vigorous exercise ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000)), but weight-loss-specific adherence requires sustained commitment over 6 – 12+ months
+      - [General exercise adherence data](https://doi.org/10.1136/bjsports-2015-095948) (Rhodes et al. 2017) shows approximately 50 – 60% of adults maintain moderate exercise programmes beyond 6 months; Zone 2's tolerability places it at the higher end of this range
+      - The slow rate of visible change (1 – 2 kg over 3 months without dietary change) can be demotivating for weight-loss-focused individuals, leading some to abandon the approach for more aggressive strategies ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
 
 resources:
   upfront_cost: 100

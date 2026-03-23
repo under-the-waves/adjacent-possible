@@ -5,7 +5,7 @@ description: |
   - Distinguished from road running by the terrain variety, nature immersion, and balance demands, which [green exercise research](https://doi.org/10.1021/es903183r) links to significantly greater positive affect and enjoyment
   - [Meta-analyses](https://doi.org/10.1016/j.jacc.2014.04.058) show running reduces all-cause mortality by 25-30%, though trail-specific injury rates and travel time to trailheads are meaningful adherence barriers
   - Cardiovascular improvements become noticeable within 3-4 weeks, with significant VO2max and endurance gains developing over 8-16 weeks
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -75,6 +75,24 @@ values:
       - Enjoyment-driven trail runners tend to have better long-term retention than road runners, as variety of trails and natural environments prevents monotony ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
       - The community aspect, race culture, and personal exploration goals provide sustained motivation beyond physical fitness ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Weather dependency and seasonal access issues reduce year-round consistency in some climates, but many trail runners adapt by transitioning to road or treadmill running in poor conditions ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+
+  body-image.fat_loss:
+    pbs: 7
+    pbs_reasoning: |
+      - Running is among the highest calorie-burning exercises at 600 – 900 kcal/hour depending on pace and body weight; trail running adds elevation gain which further increases energy expenditure by 10 – 20% compared to flat-surface running ([Hall et al. 2011, J Strength Cond Res](https://doi.org/10.1519/JSC.0b013e31822e592c))
+      - [A dose-response meta-analysis](https://doi.org/10.1001/jamanetworkopen.2024.52185) of 116 RCTs (JAMA Network Open, 2024) shows aerobic exercise produces linear weight loss up to 300 min/week; at typical trail running volumes (3 – 4 hours/week at vigorous intensity), expected weight loss is 2 – 4% of body weight sustained over 12+ months
+      - [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) (Bellicha et al. 2021) found aerobic exercise alone produces 1.5 – 3.5 kg mean weight loss; running's higher energy expenditure per unit time places it at the upper end of this range, corresponding to approximately 2 – 4% for a 80 kg individual
+      - PBS 7 reflects sustained weight loss between the 1.5% anchor (score 6) and 6% anchor (score 8): trail running's high caloric burn makes 3 – 4% achievable for consistent practitioners without strict dietary intervention
+    isr: 80
+    isr_reasoning: |
+      - [The dose-response relationship](https://doi.org/10.1001/jamanetworkopen.2024.52185) between aerobic exercise volume and weight loss is well established across 116 RCTs; running is one of the most-studied modalities and produces among the most reliable weight loss outcomes for a given time investment
+      - [Meta-analytic evidence](https://doi.org/10.1016/j.pcad.2013.09.012) (Swift et al. 2014) shows running without dietary modification produces modest but reliable weight loss of 1 – 3 kg over 12 weeks, with more consistent reductions in visceral fat even when scale weight changes are small
+      - The primary source of variability is dietary compensation rather than exercise effectiveness; among those who do not increase caloric intake, running produces highly predictable weight loss proportional to training volume
+    uar: 45
+    uar_reasoning: |
+      - Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92)); trail running adds travel-to-trailhead barriers that further constrain session frequency
+      - Overuse injuries (knee, ankle, lower leg) are a significant adherence barrier, with running injury incidence of 19 – 79% per year depending on volume and terrain ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299)); injuries interrupt the consistency needed for sustained weight loss
+      - Weight-loss-motivated runners who experience slow visible progress may shift to dietary interventions or abandon the approach; those who persist tend to be motivated by performance or enjoyment rather than weight loss alone ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
 
 resources:
   upfront_cost: 150

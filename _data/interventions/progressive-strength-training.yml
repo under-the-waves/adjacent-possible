@@ -4,7 +4,7 @@ description: |
   - Sessions typically last 45-75 minutes, 3-4 times per week, combining compound movements (squats, deadlifts, bench press) with isolation exercises and applying progressive overload weekly or bi-weekly
   - Distinct from other resistance modalities in its systematic load progression, which provides a clear, measurable feedback loop and underpins long-term strength development
   - [Meta-analytic evidence](https://doi.org/10.1136/bjsports-2021-105099) links resistance training to a 15-21% reduction in all-cause mortality, with strength gains noticeable within 4-6 weeks and significant physique changes after 12-16 weeks of consistent training
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -74,6 +74,24 @@ values:
       - Enjoyment-based adherence is particularly challenging as resistance training can be uncomfortable, repetitive, and lacks the social or playful elements of team sports or outdoor activities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Many individuals require external motivation (appearance goals, health concerns, social pressure) rather than intrinsic enjoyment to maintain consistency long-term ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
       - The high early dropout rate in gyms (50% within 6 months) suggests that most people do not find resistance training sufficiently enjoyable to sustain without additional motivation sources ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+
+  body-image.fat_loss:
+    pbs: 5
+    pbs_reasoning: |
+      - Meta-analysis of 58 trials found resistance training alone reduces body fat percentage by 1.46% and fat mass by 0.55 kg in healthy adults, while simultaneously increasing lean mass – meaning scale weight changes are minimal despite meaningful recomposition ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2))
+      - In overweight/obese populations, resistance training alone produces 1.6% body fat reduction and 1.0 kg fat mass loss; combined with caloric restriction, fat loss reaches 5.3 kg ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
+      - Resistance training uniquely preserves or increases fat-free mass (0.7 kg gain on average), which offsets fat loss on the scale and limits total body weight change to roughly 1 – 3% ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
+      - PBS measures scale weight change specifically; strength training's body composition benefits are substantial but largely invisible to this metric, capping the score at 5 – 6
+    isr: 70
+    isr_reasoning: |
+      - Fat loss from resistance training is well-replicated across meta-analyses, but the magnitude is modest and highly variable between individuals (2 – 3 fold variation in hypertrophy response affects recomposition outcomes) ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
+      - Weight change on the scale is unreliable as a measure because simultaneous muscle gain masks fat loss, leading to apparent non-response in many participants despite genuine recomposition ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2))
+      - Dietary compliance is a major moderator: resistance training without nutritional modification produces small weight changes, and most studies showing large effects include dietary co-intervention ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
+    uar: 50
+    uar_reasoning: |
+      - Gym-based adherence is challenging, with approximately 50% dropout within 6 months and only 30 – 40% maintaining consistent training beyond one year ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - Weight-focused trainees may become discouraged when scale weight does not change despite genuine body composition improvements, reducing motivation to continue ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - Those who persist and add dietary modification show substantially better long-term weight outcomes, but the dual-adherence requirement (training + nutrition) reduces the effective uptake rate ([Wing & Phelan 2005, Am J Clin Nutr](https://doi.org/10.1093/ajcn/82.1.222S))
 
 resources:
   upfront_cost: 100

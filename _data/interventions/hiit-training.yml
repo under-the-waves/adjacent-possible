@@ -4,7 +4,7 @@ description: |
   - Work intervals range from 30 seconds to 4 minutes, recruiting maximal muscle fibre activation and stressing cardiovascular systems before partial recovery
   - Distinct from steady-state cardio in its time efficiency and superior VO2max stimulus per minute; distinct from strength training in its metabolic rather than mechanical emphasis
   - [Umbrella review evidence](https://doi.org/10.1007/s40279-021-01505-1) across 429 primary studies shows significant improvements in 14 cardiometabolic health parameters, with results emerging within 2-4 weeks and substantial gains by 8-12 weeks
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -74,6 +74,24 @@ values:
       - Enjoyment supports adherence but real-world implementation still faces challenges from the high-intensity nature, which can be intimidating for sedentary individuals ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Proper progression and interval selection are crucial for maintaining positive experiences over time; poorly designed protocols produce aversive responses ([Oliveira et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0916-7))
       - The lack of variety, social interaction, and environmental stimulation in typical HIIT formats reduces long-term engagement compared to more inherently enjoyable activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+
+  body-image.fat_loss:
+    pbs: 6
+    pbs_reasoning: |
+      - Meta-analysis of 39 studies found HIIT significantly reduces total fat mass (1.38 kg), with particularly strong effects on abdominal fat (-8.3%) and visceral fat (-24.2%), corresponding to roughly 1.5 – 3% body weight loss in most populations ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
+      - Comparative meta-analysis shows HIIT produces similar fat loss to moderate-intensity continuous training with 40% less time investment, with body fat percentage reductions of 1.5 – 2% over 8 – 12 weeks ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
+      - Running-based HIIT protocols are more effective than cycling for total and visceral fat loss; programmes exceeding 8 weeks produce significantly greater body composition changes ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
+      - Score 6 corresponds to approximately 1.5% sustained weight loss on the anchor; HIIT's caloric afterburn (EPOC) and metabolic rate elevation provide a modest edge over steady-state cardio for fat oxidation
+    isr: 80
+    isr_reasoning: |
+      - Multiple large meta-analyses consistently confirm HIIT effectiveness for fat reduction across diverse populations, with low heterogeneity in effect estimates for total fat mass outcomes ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
+      - Some meta-analyses find HIIT is not superior to continuous aerobic training for body fat reduction, suggesting the fat loss effect is reliable but not uniquely large ([Keating et al. 2017, Sports Med](https://doi.org/10.1007/s40279-016-0650-6))
+      - Protocol variation (interval duration, intensity, modality) introduces meaningful heterogeneity; poorly designed HIIT protocols underperform well-structured moderate-intensity programmes ([Buchheit & Laursen 2013, Sports Med](https://doi.org/10.1007/s40279-013-0029-x))
+    uar: 40
+    uar_reasoning: |
+      - Real-world unsupervised HIIT adherence drops to 19.6% at 12 months, compared with 89% in supervised settings – a large gap that severely limits sustained weight loss outcomes ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
+      - The intensity barrier is the primary adherence limiter: many people find sustained high-intensity effort aversive, and weight-motivated exercisers may lack the intrinsic drive to tolerate discomfort long-term ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Time efficiency partially offsets the intensity barrier for time-constrained individuals, but weight maintenance requires ongoing consistency that few achieve without external accountability ([Gibala et al. 2012, J Physiol](https://doi.org/10.1113/jphysiol.2011.224725))
 
 resources:
   upfront_cost: 0

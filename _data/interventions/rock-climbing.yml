@@ -5,7 +5,7 @@ description: |
   - Distinguished from conventional strength training by its emphasis on relative strength, movement problem-solving, and skill progression rather than absolute load; [flow-state research](https://doi.org/10.1348/000712607X183614) identifies climbing as one of the activities most reliably inducing flow
   - [Meta-analytic evidence](https://doi.org/10.1080/02640414.2016.1151924) shows significant improvements in grip strength (d=0.81), upper body pulling, and core stability, though cardiovascular benefits are limited by the intermittent climb-rest pattern
   - Noticeable strength and technique improvements emerge within 4-6 weeks, with significant performance gains developing over 6-12 months
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -75,6 +75,23 @@ values:
       - Enjoyment-based retention in climbing is higher than most exercise modalities for those who pass the initial learning phase; the social community, progression system, and variety provide strong hooks ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
       - Fear of falling, self-consciousness in gym settings, and frustration during plateaus cause dropout among a significant minority during the first 3-6 months ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
       - Those who climb for 6+ months tend to become long-term participants, but the initial dropout reduces the overall enjoyment-based adherence rate to approximately 60% ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
+
+  body-image.fat_loss:
+    pbs: 5
+    pbs_reasoning: |
+      - Rock climbing burns 8–11 kcal per active minute (approximately 500–700 kcal/hour at moderate-to-high intensity), comparable to vigorous aerobic exercise, though rest periods between climbs reduce net session expenditure ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
+      - A meta-analysis of climbing intervention studies found no significant reduction in body fat percentage over short interventions (8–12 weeks), but interventions lasting 24+ weeks showed significant body fat decreases; climbing's emphasis on relative strength naturally incentivises lower body weight ([Aras & Ewert 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
+      - Score 5 (approximately 1.5% sustained weight change on the anchor scale): climbing produces moderate caloric expenditure and favours lean body composition, but limited direct weight loss evidence and the intermittent nature of sessions reduce the magnitude of effect compared to continuous aerobic exercise ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
+    isr: 65
+    isr_reasoning: |
+      - The evidence base for climbing-specific weight loss is thin – most body composition studies in climbers are cross-sectional (comparing climbers to non-climbers) rather than interventional, limiting causal inference ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
+      - Caloric expenditure estimates are well-established (MET value of 8.0 for general climbing), but translation to sustained weight loss depends heavily on compensatory eating and session frequency ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
+      - Active climbers consistently show lower body fat than non-climbing controls in observational studies, but self-selection and dietary confounds limit the reliability of attributing this to climbing itself ([Michailov et al. 2023, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph20105831))
+    uar: 40
+    uar_reasoning: |
+      - Climbing has significant access barriers (gym membership costs of $60–100/month, geographic availability, need for partners or belay certification) that reduce the population who can sustain regular practice for weight management ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+      - Weight loss-motivated individuals may find climbing's indirect and slow body composition effects frustrating compared to more predictable modalities like running or cycling ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - Finger and upper extremity injuries are common at intermediate levels and can force extended breaks that disrupt any weight management trajectory ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
 
 resources:
   upfront_cost: 250

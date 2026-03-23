@@ -146,6 +146,21 @@ layout: default
     text-decoration: underline;
 }
 
+.domain-group-header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #dee2e6;
+    color: #495057;
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+.score-summary .domain-group-header {
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
 .value-section {
     margin-bottom: 25px;
     padding: 15px;
@@ -327,9 +342,18 @@ layout: default
 
 <h2>Score Summary</h2>
 <div class="score-summary">
+    {% assign previous_domain = "" %}
     {% for value_pair in intervention.values %}
         {% assign value_key = value_pair[0] %}
-        {% assign value_name = value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
+        {% assign value_parts = value_key | split: '.' %}
+        {% assign current_domain = value_parts[0] %}
+        {% assign vkey = value_parts[1] %}
+        {% assign value_def = site.data.values[current_domain][vkey] %}
+        {% assign value_name = value_def.name | default: value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
+        {% if current_domain != previous_domain and intervention.applicable_domains.size > 1 %}
+            <h3 class="domain-group-header">{{ current_domain | replace: '-', ' ' | capitalize }}</h3>
+            {% assign previous_domain = current_domain %}
+        {% endif %}
         <div class="summary-item">
             <span class="summary-label">{{ value_name }}:</span>
             <span class="summary-score" id="summary-{{ value_key }}">Loading...</span>
@@ -366,11 +390,20 @@ layout: default
     <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
 </div>
 
+{% assign previous_detail_domain = "" %}
 {% for value_pair in intervention.values %}
     {% assign value_key = value_pair[0] %}
     {% assign value_data = value_pair[1] %}
-    {% assign value_name = value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
-    
+    {% assign value_parts = value_key | split: '.' %}
+    {% assign current_detail_domain = value_parts[0] %}
+    {% assign vkey_detail = value_parts[1] %}
+    {% assign value_def_detail = site.data.values[current_detail_domain][vkey_detail] %}
+    {% assign value_name = value_def_detail.name | default: value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
+    {% if current_detail_domain != previous_detail_domain and intervention.applicable_domains.size > 1 %}
+        <h3 class="domain-group-header">{{ current_detail_domain | replace: '-', ' ' | capitalize }}</h3>
+        {% assign previous_detail_domain = current_detail_domain %}
+    {% endif %}
+
     <div class="value-section">
         <h3>{{ value_name }}</h3>
         

@@ -5,7 +5,7 @@ description: |
   - Distinguished from conventional strength training by its emphasis on movement quality and real-world transfer rather than maximal load, and from HIIT by its lower metabolic intensity and greater focus on controlled technique
   - [Community-based formats](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/) such as CrossFit affiliates improve retention through social accountability, though [long-term adherence data](https://doi.org/10.1007/s40279-022-01756-0) shows only ~13% remain beyond twelve months
   - Meaningful strength and body composition changes become apparent within 6-8 weeks, with substantial functional improvements developing over 3-6 months
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -75,6 +75,23 @@ values:
       - Enjoyment-based retention in functional training is moderate; variety helps prevent boredom, but physical demands and technical requirements create barriers for recreational exercisers ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - Community-embedded programmes show significantly better retention than solo training, but overall long-term adherence remains challenged by intensity expectations ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
       - The 12.8% twelve-month retention rate for HIFT programmes suggests that half or fewer maintain long enough to develop sustained enjoyment habits ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
+
+  body-image.fat_loss:
+    pbs: 5
+    pbs_reasoning: |
+      - A systematic review of 114 trials (n = 4,184) found resistance training alone reduces body fat percentage by 1.6% and fat mass by 1.0 kg versus controls, with a concurrent increase in lean mass of 0.8 kg – corresponding to roughly 1–2% net body weight reduction ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
+      - Functional training's compound movements and metabolic conditioning elements produce higher caloric expenditure than traditional resistance training, with circuit-style sessions burning 400–600 kcal/hour, supporting modest weight loss even without dietary intervention ([Westcott 2012, Curr Sports Med Rep](https://doi.org/10.1249/JSR.0b013e31825dabb8))
+      - Score 5 (approximately 1.5% sustained weight change on the anchor scale): resistance training alone produces meaningful but moderate weight loss; the primary body composition benefit is fat-to-muscle recomposition rather than scale weight reduction ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
+    isr: 70
+    isr_reasoning: |
+      - The Lopez et al. (2022) meta-analysis draws on a large evidence base with consistent directional effects for body fat reduction, though effect sizes are modest and heterogeneous across programme designs ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
+      - Weight loss outcomes from resistance training are highly dependent on dietary context – without caloric restriction, fat loss is partially offset by lean mass gains, making net weight change small and variable ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608))
+      - Functional training specifically (as distinct from conventional resistance training) has a thinner evidence base for weight outcomes; most meta-analyses aggregate all resistance modalities together ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
+    uar: 45
+    uar_reasoning: |
+      - Long-term adherence to functional training is poor: only 12.8% remain in HIFT programmes beyond twelve months, and general gym dropout ranges from 47–96% within 12 months ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
+      - Weight loss-motivated exercisers face additional attrition because the scale may not move substantially even when body composition improves, creating a perceived lack of progress ([Dalle Grave et al. 2011, Behav Res Ther](https://doi.org/10.1016/j.brat.2011.09.004))
+      - Community-based formats (CrossFit affiliates, group classes) improve retention through social accountability, but the physical intensity and technical demands still drive early dropout among weight loss-focused participants ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
 
 resources:
   upfront_cost: 200

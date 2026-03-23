@@ -344,3 +344,29 @@ goals:
       6: "Occasional reassessment of goals with some flexibility"
       4: "Rigid adherence to original goals despite changing circumstances"
       2: "No review or adjustment; clinging to failing goals or abandoning them impulsively"
+
+body-image:
+  fat_loss:
+    name: "Fat Loss"
+    anchor_type: "linear"
+    anchor_max: 25
+    anchor_unit: "percent body fat lost"
+    anchor_description: "Percentage of body weight lost as fat, sustained for 12+ months"
+    scale_levels:
+      10: "25%+ body weight lost and sustained"
+      8: "6% body weight lost and sustained"
+      6: "1.5% body weight lost and sustained"
+      4: "0.4% body weight lost and sustained"
+      2: "0.1% body weight lost and sustained"
+  muscle_gain:
+    name: "Muscle Gain"
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "kg lean mass gained"
+    anchor_description: "Kilograms of lean muscle mass gained and sustained for 12+ months"
+    scale_levels:
+      10: "15+ kg lean mass gained"
+      8: "3.75 kg lean mass gained"
+      6: "0.9 kg lean mass gained"
+      4: "0.25 kg lean mass gained"
+      2: "0.06 kg lean mass gained"

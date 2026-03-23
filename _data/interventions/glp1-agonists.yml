@@ -1,0 +1,46 @@
+name: "GLP-1 Receptor Agonists"
+description: |
+  - Pharmaceutical weight management using injectable GLP-1 receptor agonists – primarily semaglutide 2.4 mg (Wegovy) and the dual GIP/GLP-1 agonist tirzepatide (Mounjaro/Zepbound) – which mimic gut satiety hormones to reduce appetite, slow gastric emptying, and alter central reward signalling
+  - Administered as a weekly subcutaneous injection, with dose titration over 16-20 weeks to minimise gastrointestinal side effects; maintenance dosing is indefinite, as weight regain occurs rapidly on cessation
+  - [Phase III trials](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) demonstrate 15-22% body weight loss sustained over 68-104 weeks, making these the most effective non-surgical obesity treatments currently available
+  - Key distinction: prescription-only pharmaceutical intervention with significant cost, side effect burden, and near-complete weight regain within one year of stopping – effectively requiring lifelong use to maintain benefit
+applicable_domains: ["body-image"]
+
+values:
+  body-image.fat_loss:
+    pbs: 8
+    pbs_reasoning: |
+      - [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) showed mean weight loss of 14.9% at 68 weeks with semaglutide 2.4 mg vs 2.4% with placebo; [STEP 5](https://www.nature.com/articles/s41591-022-02026-4) confirmed 15.2% sustained at 104 weeks
+      - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) showed tirzepatide achieving 16.0% (5 mg), 21.4% (10 mg), and 22.5% (15 mg) weight loss at 72 weeks, with 36% of the highest-dose group losing over 25% body weight
+      - On the linear anchor (25% = score 10), semaglutide's ~15% maps to approximately 6.0 and tirzepatide's ~21% maps to approximately 8.4; weighting toward the class midpoint and noting most prescriptions start with semaglutide, PBS of 8 reflects the realistic upper range
+      - PBS measures benefit for those who succeed and sustain use; these figures assume continued treatment, which is the intended use case
+    isr: 88
+    isr_reasoning: |
+      - [STEP 1](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) found 86.4% of semaglutide participants achieved clinically meaningful (greater than 5%) weight loss vs 31.5% with placebo, with 69.1% exceeding 10% loss
+      - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) reported 89-96% of tirzepatide participants achieved greater than 5% weight loss across dose groups, indicating near-universal response in adherent patients
+      - Physiological mechanism of action (GLP-1/GIP receptor activation) is well-characterised and produces directional weight loss in virtually all compliant users; non-response is rare in clinical data
+      - ISR reflects the proportion who achieve meaningful results given proper sustained use; the high trial response rates support a score of 88
+    uar: 25
+    uar_reasoning: |
+      - [STEP 1 extension](https://pmc.ncbi.nlm.nih.gov/articles/PMC9542252/) showed participants regained two-thirds of lost weight within one year of stopping, reducing net weight loss from 17.3% to 5.6% – the requirement for indefinite use is the single largest adherence barrier
+      - [Real-world discontinuation data](https://www.biospace.com/drug-development/glp-1-side-effects-only-one-factor-driving-patient-discontinuation-rates) shows 64.8% of non-diabetic patients discontinue within the first year, driven primarily by cost ($350-1,350/month without insurance) and gastrointestinal side effects
+      - [Clinical trial data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9821052/) reports gastrointestinal adverse events in 40-70% of patients during dose escalation (nausea, vomiting, diarrhoea), with 6.5% discontinuing due to adverse events in trials – real-world rates are substantially higher
+      - Additional barriers include injection aversion, prescription access requirements, supply constraints, and the psychological burden of indefinite pharmaceutical dependence for weight maintenance
+
+resources:
+  upfront_cost: 250
+  upfront_cost_reasoning: "Initial GP or specialist consultation ($150-250) plus baseline blood work and BMI assessment. Some patients require multiple visits before receiving a prescription."
+  ongoing_cost: 500
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Semaglutide (Wegovy) lists at ~$1,350/month but manufacturer discount programmes reduce this to $199-349/month for eligible uninsured patients. With insurance copays or out-of-pocket, $300-600/month is typical. Tirzepatide (Zepbound) is similarly priced. Score uses $500 as a realistic midpoint given variable coverage."
+  upfront_time: 4
+  upfront_time_reasoning: "Two to three medical appointments for eligibility assessment, prescription, and injection training (1-2 hours each including travel). Additional time for insurance pre-authorisation paperwork."
+  ongoing_time: 1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Weekly self-injection takes under 5 minutes. Quarterly follow-up appointments add roughly 1-2 hours every 3 months, averaging about 1 hour per month overall."
+
+prerequisites:
+  - "BMI of 30 or above, or BMI of 27 or above with at least one weight-related comorbidity (hypertension, type 2 diabetes, dyslipidaemia) – standard prescribing criteria"
+  - "Prescription from a licensed physician, typically requiring an in-person consultation and documented medical history"
+  - "Financial capacity for sustained monthly medication costs ($300-1,000+/month depending on insurance coverage), as benefits reverse on cessation"
+  - "Willingness to self-administer weekly subcutaneous injections indefinitely and tolerate dose-titration side effects (nausea, reduced appetite) during the first 16-20 weeks"

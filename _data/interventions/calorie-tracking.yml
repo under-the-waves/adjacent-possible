@@ -1,0 +1,46 @@
+name: "Calorie Tracking"
+description: |
+  - Systematically logging all food and drink intake to maintain awareness of energy consumption, typically using a mobile app (e.g. MyFitnessPal, Cronometer, MacroFactor) to scan barcodes, search databases, and record portions against a daily calorie target
+  - Requires daily logging of all meals and snacks, ideally in real time or shortly after eating, with periodic recalibration of calorie targets as body weight changes; most protocols recommend tracking every day, though 5+ days per week appears sufficient for meaningful results
+  - [Systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) identifies dietary self-monitoring as the single strongest behavioural correlate of weight loss, with a consistent and significant positive relationship across 22 studies reviewed
+  - Distinct from other weight loss approaches in that it imposes no specific dietary restrictions – any food pattern is compatible provided total intake stays within target – making it maximally flexible but dependent on sustained logging behaviour
+applicable_domains: ["body-image"]
+
+values:
+  body-image.fat_loss:
+    pbs: 7
+    pbs_reasoning: |
+      - [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/17904936/) from weight loss clinical trials with 1+ year follow-up shows behavioural diet interventions produce mean weight loss of 5 – 9% of initial body weight at 6 months, stabilising at approximately 4.5 – 7.5% at 12 months; 5 – 7% sustained loss maps to PBS 7 on the linear anchor (where 6% = 8)
+      - [Consistent self-monitoring in an app-based trial](https://link.springer.com/article/10.1007/s10865-019-00091-8) found that 54% of consistent trackers (6+ days/week) achieved 5%+ weight loss at 6 months, with mean losses in this group around 5 – 8%
+      - [Long-term maintenance data](https://www.sciencedirect.com/science/article/pii/S0002916523063748) shows that 5 years after structured weight loss programmes, the average individual maintains >3% loss from starting weight, indicating some regression from peak loss
+      - PBS reflects what a successful, adherent calorie tracker achieves – typically 5 – 8% sustained body weight loss – rather than discounting for those who fail to adhere (that is captured by ISR and UAR)
+    isr: 75
+    isr_reasoning: |
+      - [A systematic review of dietary self-monitoring](https://pmc.ncbi.nlm.nih.gov/articles/PMC8928602/) found that 61 – 67% of interventions using intake monitoring produced significant weight loss compared with controls, indicating high but not universal success when the method is followed
+      - [App-based trial data](https://link.springer.com/article/10.1007/s10865-019-00091-8) shows that among consistent trackers (tracking 6/7 days for 75%+ of targeted weeks), 54% achieved clinically significant weight loss (5%+) at 6 months – meaning roughly half of even diligent trackers fall short of a meaningful threshold
+      - Accuracy of self-reported intake is a known limitation; [research on dietary assessment](https://pmc.ncbi.nlm.nih.gov/articles/PMC6543803/) shows systematic underreporting of 10 – 45%, which reduces the effective success rate even among those who log consistently
+      - 'Doing it properly' requires both consistent logging and maintaining an actual calorie deficit, a dual condition that not all adherent trackers meet; score of 75 reflects strong but imperfect mechanistic reliability
+    uar: 15
+    uar_reasoning: |
+      - [A systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) found that only 25% of participants were still self-monitoring by the end of intervention periods, with adherence declining sharply after the first few weeks
+      - [Mobile dietary self-monitoring research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6856872/) shows fewer than half of participants were still tracking after week 10, and only about one-quarter qualified as consistent trackers (6+ days/week for 75%+ of the programme)
+      - [Self-reported dietary adherence data](https://pubmed.ncbi.nlm.nih.gov/19828901/) shows complete adherence dropping from 81% at month 1 to 57% at month 24, but these figures measure diet adherence broadly – adherence to the specific act of daily food logging is substantially lower
+      - The time burden of manual entry, database inaccuracies, and psychological fatigue from constant food vigilance are [well-documented barriers](https://pmc.ncbi.nlm.nih.gov/articles/PMC8409150/) that drive high attrition; 15% reflects the realistic proportion who maintain consistent calorie tracking beyond 12 months without external accountability
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Free calorie tracking apps (MyFitnessPal, Cronometer free tier, Lose It) provide sufficient functionality. A basic kitchen scale ($10-15) is helpful but not strictly required."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Free app tiers are adequate for core tracking. Premium subscriptions ($5-10/month) offer convenience features but are not necessary for effective calorie tracking."
+  upfront_time: 3
+  upfront_time_reasoning: "Learning to use a tracking app, estimating portion sizes, and calculating an appropriate calorie target (TDEE minus deficit). Most people can begin effectively within 2-4 hours of setup and familiarisation."
+  ongoing_time: 1.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 10-15 minutes per day to log all meals and snacks, totalling roughly 1-1.5 hours per week. Time decreases as frequent meals are saved and routines develop."
+
+prerequisites:
+  - "Smartphone or computer with internet access for app-based tracking"
+  - "Basic numeracy and willingness to weigh or estimate food portions"
+  - "No active eating disorder or history of disordered eating, as calorie tracking can exacerbate unhealthy food preoccupation"
+  - "A reasonable calorie target based on current weight, activity level, and goal (online TDEE calculators are sufficient)"

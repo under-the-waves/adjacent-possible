@@ -5,7 +5,7 @@ description: |
   - Distinguished from other cardio modalities by its exceptionally high adherence rate and negligible injury risk, though its low intensity limits performance and body composition outcomes
   - [Large-scale meta-analyses](https://doi.org/10.1136/bjsports-2014-094157) show walking reduces all-cause mortality by 20-30%, with [step-count research](https://doi.org/10.1016/S2468-2667(21)00302-9) indicating diminishing returns above 7,000-8,000 steps per day
   - Health benefits become noticeable within 2-4 weeks, with significant cardiovascular and metabolic improvements developing over 8-12 weeks
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -75,6 +75,24 @@ values:
       - Walkers often develop strong long-term habits due to enjoyment and lifestyle integration, with many reporting walking as their preferred form of exercise ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - High satisfaction and adherence rates reflect the low barrier: walking requires no special skills, equipment, or facilities, and can be done almost anywhere ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
       - Weather dependency and seasonal motivation fluctuations are the primary barriers, but overall retention is strong among those who find personal enjoyment in walking routines ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+
+  body-image.fat_loss:
+    pbs: 5
+    pbs_reasoning: |
+      - Meta-analysis of pedometer-based walking interventions shows mean weight loss of 1.4 kg without dietary changes, with longer programmes producing greater losses up to 3.7 kg ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
+      - Overview of 12 systematic reviews (149 studies) found exercise alone produces 1.5 – 3.5 kg weight loss; walking-specific estimates sit at the lower end of this range ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
+      - With dietary awareness, walkers can sustain 3 – 5% body weight loss at 12 months when maintaining 200+ minutes per week, corresponding to roughly score 5 – 6 on the linear anchor where 6% = score 8 ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
+      - PBS measures magnitude for successful adherents; walking's low intensity limits caloric expenditure, capping weight loss potential below more vigorous modalities
+    isr: 85
+    isr_reasoning: |
+      - Weight loss from walking programmes is consistently reproduced across multiple meta-analyses and population studies, with predictable dose-response relationships ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
+      - The modest magnitude is itself highly reliable: virtually all controlled trials show directional weight loss, with very low heterogeneity in effect estimates ([Murtagh et al. 2015, Prev Med](https://doi.org/10.1016/j.ypmed.2014.12.026))
+      - Low injury risk and minimal contraindications mean the intervention can be implemented as designed in nearly all participants, reducing protocol deviation as a source of failure ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
+    uar: 80
+    uar_reasoning: |
+      - Walking has the highest long-term adherence of any exercise modality, with 70 – 85% maintaining programmes beyond 6 months, directly supporting sustained weight management ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
+      - Individuals maintaining 250+ minutes per week of moderate activity are significantly more likely to sustain weight loss at 12 months ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
+      - Walking integrates into daily routines with minimal scheduling friction, but weight maintenance still requires dietary consistency that not all walkers adopt ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
 
 resources:
   upfront_cost: 80

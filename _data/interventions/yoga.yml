@@ -4,7 +4,7 @@ description: |
   - Develops flexibility, balance, core stability, body awareness, and stress resilience, with noticeable improvements emerging within 2-4 weeks and significant benefits over 2-3 months of consistent practice
   - [Meta-analytic evidence](https://doi.org/10.1177/2047487314523132) shows yoga significantly reduces cardiovascular risk factors including blood pressure, blood lipids, and blood glucose, while [comparative research](https://doi.org/10.1089/acm.2009.0044) finds stress reduction effects that lower cortisol and inflammatory markers
   - Can be practised at home with minimal equipment (a mat and comfortable clothing) or in studio classes with instruction, contributing to [exceptionally low dropout rates](https://doi.org/10.1371/journal.pone.0159665) of around 11% across 168 trials
-applicable_domains: ["fitness"]
+applicable_domains: ["fitness", "body-image"]
 
 values:
   fitness.health:
@@ -74,6 +74,23 @@ values:
       - Yoga's high enjoyment translates to strong long-term adherence; the 11.4% RCT dropout rate and 77% class attendance among completers are among the best in exercise intervention research ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
       - Low injury risk, scalable difficulty, home practice option, and stress-relief benefits create multiple reinforcement pathways sustaining engagement ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - The meditative and contemplative dimensions provide meaning beyond physical fitness that deepens commitment over time ([Cramer et al. 2018, Cochrane Database](https://doi.org/10.1002/14651858.CD012563.pub2))
+
+  body-image.fat_loss:
+    pbs: 4
+    pbs_reasoning: |
+      - A systematic review of 30 trials (n = 2,173) found no significant effect of yoga on body weight in the overall population, but in overweight/obese subgroups yoga reduced BMI (SMD = −0.99) and body weight by approximately 3.5 kg versus usual care – roughly 1–2% of body weight ([Thind et al. 2017, Prev Med](https://doi.org/10.1016/j.ypmed.2016.03.013))
+      - Yoga's caloric expenditure is modest (150–400 kcal/hour depending on style), insufficient for substantial weight loss without dietary change; weight-related benefits likely operate partly through stress reduction and improved eating behaviours ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
+      - Score 4 (approximately 0.4% sustained weight change on the anchor scale): yoga produces modest weight loss in overweight populations but negligible change in normal-weight individuals, placing it at the lower end of meaningful effect ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+    isr: 60
+    isr_reasoning: |
+      - The Thind et al. (2017) meta-analysis noted high risk of bias across included trials and risk of publication bias, with small sample sizes limiting confidence in effect estimates ([Thind et al. 2017, Prev Med](https://doi.org/10.1016/j.ypmed.2016.03.013))
+      - Weight loss effects are inconsistent across yoga styles and populations – vigorous styles (vinyasa, power yoga) likely produce larger effects than gentle styles (yin, restorative), but few studies compare styles head-to-head ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
+      - Mechanisms remain unclear – whether benefits come from caloric expenditure, cortisol reduction, mindful eating, or self-selection effects is not well established, reducing confidence in the causal pathway ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+    uar: 55
+    uar_reasoning: |
+      - Yoga has exceptionally low dropout rates (11.4% across 168 RCTs), suggesting strong general adherence, but weight loss-specific motivation may wane when results are modest ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
+      - Practitioners who begin yoga primarily for weight loss may shift to other modalities offering faster results, though those who stay often find broader wellbeing benefits that sustain practice ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
+      - The accessibility of home practice and low injury risk support continued engagement, but the slow pace of weight change limits reinforcement for weight-focused practitioners ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
 
 resources:
   upfront_cost: 50

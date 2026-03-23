@@ -1,0 +1,46 @@
+name: "High-Protein Diet"
+description: |
+  - Increasing daily protein intake to 1.2 – 2.2 g/kg body weight (typically 25 – 35% of total energy), prioritising lean meats, fish, eggs, dairy, legumes, and whey protein, structured around at least 25 – 30 g protein per meal
+  - Works through three reinforcing mechanisms: higher thermic effect of food (protein costs ~20 – 30% of its energy to digest vs ~5 – 10% for carbohydrates), increased satiety via GLP-1 and reduced ghrelin secretion, and preservation of lean mass during caloric restriction which sustains resting metabolic rate
+  - [Meta-analytic evidence](https://doi.org/10.3945/ajcn.112.044321) from 24 RCTs confirms that energy-restricted high-protein diets produce greater fat mass loss and better lean mass retention than standard-protein diets at equivalent calorie intakes
+  - What makes this distinct from general caloric restriction: body composition improves (better fat-to-muscle loss ratio), not just scale weight, and [review evidence](https://doi.org/10.3945/ajcn.114.084038) suggests the satiety effect reduces voluntary energy intake by 441 kcal/day, making adherence to a deficit easier
+applicable_domains: ["body-image"]
+
+values:
+  body-image.fat_loss:
+    pbs: 7
+    pbs_reasoning: |
+      - [A meta-analysis of 24 RCTs](https://doi.org/10.3945/ajcn.112.044321) found high-protein, energy-restricted diets produced 0.79 kg greater weight loss and 0.87 kg greater fat mass loss than standard-protein diets, with 0.43 kg better lean mass retention; individual trials show successful adherents losing 5 – 10% body weight over 3 – 12 months
+      - [A 12-month RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC7539343/) comparing 1.6 g/kg/day protein versus 0.8 g/kg/day found the high-protein group lost 8.2 kg (roughly 8 – 9% body weight) at 4 months, though some regain occurred by 12 months, placing sustained loss at approximately 5 – 7%
+      - On the anchor scale, 5 – 7% sustained body weight loss maps to approximately PBS 7 (6% = score 8, 1.5% = score 6); scoring 7 reflects that successful adherents achieve meaningful but not extreme weight loss
+      - PBS measures the magnitude for someone who succeeds; the superior body composition outcomes (more fat lost, less muscle lost) are a genuine advantage over generic dieting but the absolute weight change remains moderate
+    isr: 75
+    isr_reasoning: |
+      - [Systematic review of 74 RCTs](https://pubmed.ncbi.nlm.nih.gov/22510792/) consistently shows directional benefits of higher-protein diets for weight, BMI, and waist circumference, with well-characterised dose-response relationships
+      - The mechanistic pathways (thermic effect, satiety hormones, muscle protein synthesis) are [well-established and reliably reproduced](https://pmc.ncbi.nlm.nih.gov/articles/PMC4258944/) across diverse populations including older adults and those with metabolic syndrome
+      - [Meta-analytic data](https://doi.org/10.3945/ajcn.112.044321) shows consistent effect direction across studies, though effect sizes are modest and heterogeneity exists between trials depending on protein source, total calorie intake, and exercise co-intervention
+      - Not scored higher because the intervention still requires a caloric deficit to produce weight loss; protein alone without energy restriction produces minimal weight change
+    uar: 40
+    uar_reasoning: |
+      - [Long-term efficacy reviews](https://pubmed.ncbi.nlm.nih.gov/22411369/) find that prescribed protein intake differences between groups erode substantially over time; in studies targeting a 10%+ energy difference, actual achieved difference was only 2 – 5% after 6 months to 3 years
+      - [RCT data](https://pmc.ncbi.nlm.nih.gov/articles/PMC7539343/) shows dropout rates of 30 – 55% across dietary intervention trials, with the high-protein group retaining slightly better (36% dropout vs 55% for standard protein in one 12-month study), likely due to greater satiety
+      - Practical barriers include higher grocery costs (protein-rich foods cost more per calorie than carbohydrate staples), meal planning burden, social dining constraints, and taste monotony; [consumer surveys](https://www.empower.com/the-currency/life/protein-spending-research) show 52% report noticeably increased grocery spending when prioritising protein
+      - Scored at 40% reflecting that roughly 4 in 10 people who attempt a sustained high-protein approach maintain meaningful adherence beyond 12 months, accounting for partial compliance and the self-selection effect in motivated populations
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment or programme fees required. Optional purchases (food scale, meal prep containers, protein powder starter supply) could add $30 – 60 but are not strictly necessary."
+  ongoing_cost: 40
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Incremental grocery cost of shifting from standard to high-protein diet. Lean meats, fish, and dairy cost more per calorie than grains and starches. Estimated at $8 – 12/week above baseline food spending, using budget sources such as chicken, eggs, canned tuna, and whey protein."
+  upfront_time: 3
+  upfront_time_reasoning: "Learning protein content of common foods, calculating personal protein targets, and planning initial meal templates. Most people can get oriented within 2 – 4 hours using free online resources."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Additional meal preparation time (batch cooking protein sources, portioning meals) and food tracking. High-protein meals often require more cooking than convenience carbohydrate-based options. Estimated at 15 – 20 minutes per day above baseline."
+
+prerequisites:
+  - "No kidney disease or other medical contraindication to increased protein intake (consult GP if uncertain)"
+  - "Access to affordable protein sources (grocery store with fresh or frozen meats, eggs, dairy, legumes, or protein supplements)"
+  - "Basic nutrition literacy: ability to read food labels, estimate portion sizes, and track approximate daily protein intake"
+  - "Cooking facilities and willingness to prepare meals, as high-protein convenience foods are limited and expensive"
