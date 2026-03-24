@@ -12,6 +12,22 @@ layout: default
     margin-bottom: 25px;
 }
 
+.plain-summary {
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #bbdefb;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.plain-summary p {
+    margin: 6px 0;
+}
+
+.plain-summary:empty {
+    display: none;
+}
+
 .summary-item {
     display: flex;
     align-items: center;
@@ -342,6 +358,7 @@ layout: default
 
 <h2>Score Summary</h2>
 <div class="score-summary">
+    <div id="plain-summary" class="plain-summary"></div>
     {% assign previous_domain = "" %}
     {% for value_pair in intervention.values %}
         {% assign value_key = value_pair[0] %}
@@ -527,6 +544,7 @@ const valueDefinitions = {
         {% assign value_name = value_pair[0] %}
         {% assign value_data = value_pair[1] %}
         '{{ domain_name }}.{{ value_name }}': {
+            name: {{ value_data.name | jsonify }},
             anchor_type: {{ value_data.anchor_type | jsonify }},
             {% if value_data.anchor_max %}anchor_max: {{ value_data.anchor_max }},{% endif %}
             {% if value_data.anchor_unit %}anchor_unit: {{ value_data.anchor_unit | jsonify }},{% endif %}
@@ -587,6 +605,49 @@ function calculateEBS() {
             'Logarithmic calculation: ' + data.pbs + ' + log₂(' + data.isr + '%) + log₂(' + data.uar + '%) = ' +
             data.pbs + ' + ' + Math.log2(data.isr / 100).toFixed(3) + ' + ' + Math.log2(data.uar / 100).toFixed(3) + ' = ' +
             ebs.toFixed(1) + reasoningSuffix;
+    }
+
+    // Generate plain English summaries
+    var summaryEl = document.getElementById('plain-summary');
+    if (summaryEl) {
+        var paragraphs = [];
+        for (var vkey in interventionData) {
+            var d = interventionData[vkey];
+            var def = valueDefinitions[vkey];
+            var ebs = d.pbs + Math.log2(d.isr / 100) + Math.log2(d.uar / 100);
+            var parts = vkey.split('.');
+            var valueName = (def && def.name) || parts[1].replace(/_/g, ' ');
+
+            function toRealUnits(score, vdef) {
+                if (!vdef) return 'score ' + score.toFixed(1);
+                if (vdef.anchor_type === 'linear' && vdef.anchor_max) {
+                    var realVal = (Math.pow(2, score) / Math.pow(2, 10)) * vdef.anchor_max;
+                    if (vdef.anchor_inverted) {
+                        realVal = vdef.anchor_max / Math.pow(2, score);
+                    }
+                    if (realVal < 0.1) return realVal.toFixed(2) + ' ' + (vdef.anchor_unit || '');
+                    if (realVal < 1) return realVal.toFixed(1) + ' ' + (vdef.anchor_unit || '');
+                    return realVal.toFixed(1) + ' ' + (vdef.anchor_unit || '');
+                }
+                // Subjective: use nearest scale level description
+                var rounded = Math.round(score / 2) * 2;
+                if (rounded < 2) rounded = 2;
+                if (rounded > 10) rounded = 10;
+                return (vdef.scale_levels && vdef.scale_levels[rounded]) || 'score ' + score.toFixed(1);
+            }
+
+            var pbsReal = toRealUnits(d.pbs, def);
+            var ebsReal = toRealUnits(ebs, def);
+
+            paragraphs.push(
+                '<p><strong>' + valueName + ':</strong> ' +
+                'If this works for you, the effect is ' + pbsReal + '. ' +
+                'We estimate ' + d.isr + '% of people who follow it properly see meaningful results, ' +
+                'and ' + d.uar + '% stick with it long-term. ' +
+                'Expected benefit: ' + ebsReal + '.</p>'
+            );
+        }
+        summaryEl.innerHTML = paragraphs.join('');
     }
 }
 
