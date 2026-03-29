@@ -6,7 +6,7 @@ permalink: /start-here/key-terms/
 
 # Key Terms
 
-This glossary defines the key concepts and terminology used throughout the Adjacent Possible framework, organised to show how they relate to each other.
+This glossary defines the key concepts and terminology used throughout the Worthwhile framework, organised to show how they relate to each other.
 
 ## Framework Structure
 
@@ -30,7 +30,7 @@ This glossary defines the key concepts and terminology used throughout the Adjac
 
 **Interventions** – The complete set of actions and habits recommended for each level, representing proven approaches for improvement in that life area based on evidence and practical experience. See the [Intervention Database]({{ site.baseurl }}/resources/intervention-database/) for detailed examples.
 
-**Tools** – Specific websites, books, podcasts, companies, and services that Adjacent Possible has evaluated and recommends for implementing interventions. While interventions describe general approaches to improvement, tools are particular products or resources that can help you put those approaches into practice.
+**Tools** – Specific websites, books, podcasts, companies, and services that Worthwhile has evaluated and recommends for implementing interventions. While interventions describe general approaches to improvement, tools are particular products or resources that can help you put those approaches into practice.
 
 **Actions** – One-time tasks, projects, or learning activities that help you reach the benchmarks for a particular level. Examples include setting up systems, purchasing equipment, or acquiring new skills.
 

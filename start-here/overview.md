@@ -3,7 +3,7 @@ layout: default
 title: Overview
 permalink: /start-here/overview/
 ---
-# What is Adjacent Possible?
+# What is Worthwhile?
 
 There's an overwhelming amount of personal development advice available today. Books, courses, apps, and expert opinions offer countless approaches to improving your life, but it's nearly impossible to evaluate which advice applies to your specific situation or how different recommendations fit together.
 
@@ -17,7 +17,7 @@ This suggests we need something like a return on investment approach to personal
 
 Now that we have access to AI systems that can reason and synthesise information, it becomes possible to get them to help assess and prioritise advice for us. They just need a structured framework to work within. That's what this website hopes to provide.
 
-Adjacent Possible offers a comprehensive framework covering [14 life domains]({{ site.baseurl }}/life-areas/), from values and health to relationships and productivity. Each domain includes evidence-based recommendations organised into five progressive levels, with clear benchmarks and resource requirements at each stage.
+Worthwhile offers a comprehensive framework covering [14 life domains]({{ site.baseurl }}/life-areas/), from values and health to relationships and productivity. Each domain includes evidence-based recommendations organised into five progressive levels, with clear benchmarks and resource requirements at each stage.
 
 The system's key innovation is values-based personalisation. Rather than generic advice, you receive recommendations optimised for your specific priorities. Someone who values health gets different fitness guidance than someone focused on appearance. Someone preferring simple systems receives different advice than someone wanting detailed control.
 

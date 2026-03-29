@@ -6,7 +6,7 @@ permalink: /5-levels/
 
 # The Five-Level Framework
 
-The Adjacent Possible guides break down progress into five distinct stages, allowing you to identify your current position and plan your next steps in any area of life.
+The Worthwhile guides break down progress into five distinct stages, allowing you to identify your current position and plan your next steps in any area of life.
 
 ## The Five Levels
 

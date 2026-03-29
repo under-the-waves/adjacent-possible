@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Adjacent Possible
+title: Worthwhile
 ---
 
 <div class="hero-section">
   <div class="hero-logo">
-    <img src="{{ site.baseurl }}/assets/images/AP-logo.png" alt="Adjacent Possible Logo">
+    <img src="{{ site.baseurl }}/assets/images/AP-logo.png" alt="Worthwhile Logo">
   </div>
   <div class="hero-content">
     <p class="tagline">A framework for holistic and cost-effective personal development, backed by evidence</p>
