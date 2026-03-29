@@ -1,3 +1,6 @@
-yamltheme: jekyll-theme-cayman
+theme: jekyll-theme-cayman
 title: Adjacent Possible
-baseurl: "/adjacent-possible"
+baseurl: ""
+
+# Clerk authentication (replace with your publishable key)
+clerk_publishable_key: "pk_test_dG9wLWVlbC0yNC5jbGVyay5hY2NvdW50cy5kZXYk"
