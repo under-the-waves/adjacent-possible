@@ -882,6 +882,34 @@ a.completed-guide:hover,
     transition: background-color 0.3s;
 }
 
+/* Auth nav */
+.auth-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.auth-button {
+  background-color: #000000;
+  color: white;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+}
+
+.auth-button:hover {
+  background-color: #333333;
+}
+
+/* Constrain Clerk user button to nav height */
+.auth-nav .cl-userButtonBox {
+  height: 36px;
+  width: 36px;
+}
+
 .submenu span.unavailable-guide {
     background-color: white;
     transition: background-color 0.3s;

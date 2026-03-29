@@ -1,3 +1,8 @@
+---
+layout: default
+title: Adjacent Possible
+---
+
 <div class="hero-section">
   <div class="hero-logo">
     <img src="{{ site.baseurl }}/assets/images/AP-logo.png" alt="Adjacent Possible Logo">

@@ -7,6 +7,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
+    <script async crossorigin="anonymous"
+      data-clerk-publishable-key="{{ site.clerk_publishable_key }}"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+      onload="window.Clerk.load().then(function() { window.APStorage && window.APStorage._onClerkReady(); if (window.mountClerkUI) window.mountClerkUI(); })">
+    </script>
+    <script src="{{ '/assets/js/ap-storage.js' | relative_url }}"></script>
   </head>
   <body>
     
@@ -641,7 +647,8 @@
   <a href="{{ site.baseurl }}/about/" class="nav-button">About</a>
 </div>
 
-
+<!-- Auth -->
+<div class="site-nav auth-nav" id="clerk-auth"></div>
 
 <div class="nav-legend">
     <small><span class="unavailable-guide">●</span> Red means planned content</small>
@@ -761,6 +768,28 @@ function toggleSubmenu(headerElement) {
     }
   });
 });
+
+// Clerk auth UI
+function mountClerkUI() {
+    var el = document.getElementById('clerk-auth');
+    if (!el || !window.Clerk) return;
+    if (window.Clerk.user) {
+        el.innerHTML = '';
+        window.Clerk.mountUserButton(el);
+    } else {
+        el.innerHTML = '';
+        var btn = document.createElement('button');
+        btn.className = 'nav-button auth-button';
+        btn.textContent = 'Sign In';
+        btn.onclick = function() { window.Clerk.openSignIn(); };
+        el.appendChild(btn);
+    }
+}
+// If Clerk already loaded (unlikely but possible), mount now
+if (window.Clerk && window.Clerk.user !== undefined) {
+    mountClerkUI();
+}
+// Otherwise, the onload handler on the Clerk script tag calls mountClerkUI
 </script>
   </body>
 </html>

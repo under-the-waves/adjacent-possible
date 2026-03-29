@@ -687,29 +687,15 @@ const PILLARS = [
 const LEVEL_NAMES = ['Not assessed', 'Awareness', 'Foundation', 'Proficiency', 'Excellence', 'Mastery'];
 const LEVEL_COLORS = ['#bdbdbd', '#e53935', '#fb8c00', '#fdd835', '#43a047', '#1565c0'];
 
-// ── localStorage ──
-const STORAGE_LEVELS = 'ap-dashboard-levels';
-const STORAGE_TIER = 'ap-survey-tier';
-const STORAGE_RESPONSES = 'ap-survey-responses';
-const STORAGE_WEIGHTS = 'ap-survey-weights';
-
-function loadLevels() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_LEVELS)) || {}; }
-    catch(e) { return {}; }
-}
-function saveLevels(levels) { localStorage.setItem(STORAGE_LEVELS, JSON.stringify(levels)); }
-function loadTier() { return parseInt(localStorage.getItem(STORAGE_TIER)) || 0; }
-function saveTier(t) { localStorage.setItem(STORAGE_TIER, String(t)); }
-function loadResponses() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_RESPONSES)) || {}; }
-    catch(e) { return {}; }
-}
-function saveResponses(r) { localStorage.setItem(STORAGE_RESPONSES, JSON.stringify(r)); }
-function loadWeights() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_WEIGHTS)) || {}; }
-    catch(e) { return {}; }
-}
-function saveWeights(w) { localStorage.setItem(STORAGE_WEIGHTS, JSON.stringify(w)); }
+// ── Storage (via APStorage abstraction) ──
+function loadLevels() { return APStorage.load('ap-dashboard-levels') || {}; }
+function saveLevels(levels) { APStorage.save('ap-dashboard-levels', levels); }
+function loadTier() { return APStorage.load('ap-survey-tier') || 0; }
+function saveTier(t) { APStorage.save('ap-survey-tier', t); }
+function loadResponses() { return APStorage.load('ap-survey-responses') || {}; }
+function saveResponses(r) { APStorage.save('ap-survey-responses', r); }
+function loadWeights() { return APStorage.load('ap-survey-weights') || {}; }
+function saveWeights(w) { APStorage.save('ap-survey-weights', w); }
 
 // ── Helpers ──
 
@@ -1304,4 +1290,7 @@ function togglePillar(header) {
 
 // ── Init ──
 document.addEventListener('DOMContentLoaded', renderLanding);
+
+// Re-render if data syncs from Clerk
+window.addEventListener('ap-storage-sync', renderLanding);
 </script>
