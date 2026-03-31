@@ -3,4 +3,4 @@ title: Worthwhile
 baseurl: ""
 
 # Clerk authentication (replace with your publishable key)
-clerk_publishable_key: "pk_test_dG9wLWVlbC0yNC5jbGVyay5hY2NvdW50cy5kZXYk"
+clerk_publishable_key: "pk_live_Y2xlcmsud29ydGh3aGlsZS5ndWlkZSQ"
