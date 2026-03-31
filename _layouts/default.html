@@ -9,7 +9,7 @@
     {% include head-custom.html %}
     <script async crossorigin="anonymous"
       data-clerk-publishable-key="{{ site.clerk_publishable_key }}"
-      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.js"
       onload="window.Clerk.load({ routerMode: 'virtual' }).then(function() { window.APStorage && window.APStorage._onClerkReady(); if (window.mountClerkUI) window.mountClerkUI(); })">
     </script>
     <script src="{{ '/assets/js/ap-storage.js' | relative_url }}"></script>
