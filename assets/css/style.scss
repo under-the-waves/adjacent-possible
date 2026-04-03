@@ -330,10 +330,19 @@
 }
 
 .nav-logo {
-  height: 45px; /* Adjust height as needed */
-  width: auto;
+  height: 45px;
+  width: 45px;
   margin-right: 10px;
   margin-left: 16px;
+  background-color: #4CAF50;
+  -webkit-mask-image: url('../images/AP-logo.png');
+  mask-image: url('../images/AP-logo.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .navbar .logo {
@@ -368,12 +377,32 @@
   flex: 0 0 30%;
   text-align: center;
   padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.hero-logo img {
-  max-width: 100%;
-  height: auto;
-  max-height: 200px; /* Set maximum height */
+.hero-logo-icon {
+  width: 150px;
+  height: 150px;
+  background-color: #4CAF50;
+  -webkit-mask-image: url('../images/AP-logo.png');
+  mask-image: url('../images/AP-logo.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.hero-logo-text {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #4CAF50;
+  letter-spacing: 0.5px;
 }
 
 .hero-content {
