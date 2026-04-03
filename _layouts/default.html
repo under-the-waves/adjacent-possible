@@ -6,6 +6,9 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     {% include head-custom.html %}
     <script async crossorigin="anonymous"
       data-clerk-publishable-key="{{ site.clerk_publishable_key }}"
@@ -775,7 +778,7 @@ function mountClerkUI() {
     if (!el || !window.Clerk) return;
     if (window.Clerk.user) {
         el.innerHTML = '';
-        window.Clerk.mountUserButton(el);
+        window.Clerk.mountUserButton(el, { afterSignOutUrl: '/' });
     } else {
         el.innerHTML = '';
         var btn = document.createElement('button');

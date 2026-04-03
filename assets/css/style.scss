@@ -27,8 +27,10 @@
 }
 
 .navbar .logo {
-  font-weight: bold;
-  font-size: 24px; /* Increased font size for Worthwhile */
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.5px;
 }
 
 /* This pushes elements to the right */
@@ -89,7 +91,7 @@
 }
 
 .nav-menu a:hover {
-  background-color: #f1f1f1;
+  background-color: #e9ecef;
 }
 
 .navbar a:hover, .nav-button:hover {
@@ -218,7 +220,7 @@
 }
 
 .domain-header:hover {
-    background-color: #dee2e6;
+    background-color: #e9ecef;
 }
 
 .domain-label {
@@ -326,9 +328,11 @@
 }
 
 .navbar .logo {
-  font-weight: bold;
-  font-size: 24px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 26px;
   margin-right: 10px;
+  letter-spacing: 0.5px;
 }
 
 /* Remove the direct-links styles since we're no longer using them */
@@ -475,7 +479,7 @@
 
 /* Make submenu items use same highlight color as parent */
 .submenu a:hover {
-  background-color: #dee2e6; /* Keep this for submenu items */
+  background-color: #e9ecef;
 }
 
 /* Update navbar positioning styles */
@@ -666,7 +670,7 @@
 }
 
 .submenu a:hover {
-  background-color: #e0e0e0;
+  background-color: #e9ecef;
 }
 
 /* Link for viewing all life areas */
@@ -739,7 +743,7 @@
 }
 
 .submenu span.unavailable-guide:hover {
-    background-color: #dee2e6;
+    background-color: #e9ecef;
     color: #e63946 !important;
 }
 
@@ -761,13 +765,13 @@
 
 /* For unavailable submenu items */
 .submenu a.unavailable-guide:hover {
-  background-color: #333333;
-  color: #f48c92 !important;
+  background-color: #e9ecef;
+  color: #e63946 !important;
 }
 
 /* Only apply hover to the actual links */
 .dropdown-item .parent-link:hover {
-  background-color: #f1f1f1; /* Move hover effect here */
+  background-color: #e9ecef;
 }
 
 /* Base styles for unavailable guides - these should override any existing styles */
@@ -795,19 +799,19 @@ a.unavailable-guide:hover,
 
 /* Override any background color changes that might affect text visibility */
 .submenu a.unavailable-guide:hover {
-  background-color: #333333;
-  color: #f48c92 !important;
+  background-color: #e9ecef;
+  color: #e63946 !important;
 }
 
 /* Override the problematic hover styles */
 .dropdown-item:hover .parent-link:not(.unavailable-guide) {
-  background-color: #f1f1f1 !important;
+  background-color: #e9ecef !important;
   color: #333 !important;
 }
 
 .dropdown-item:hover .parent-link.unavailable-guide {
-  background-color: #f1f1f1 !important;
-  color: #f48c92 !important;
+  background-color: #e9ecef !important;
+  color: #e63946 !important;
 }
 
 .nav-legend {
@@ -850,8 +854,8 @@ a.completed-guide:hover,
 
 /* Override any background color changes that might affect text visibility */
 .submenu a.completed-guide:hover {
-  background-color: #333333;
-  color: #f48c92 !important;
+  background-color: #e9ecef;
+  color: #e63946 !important;
 }
 
 .nav-legend {
@@ -874,7 +878,7 @@ a.completed-guide:hover,
 }
 
 .all-areas-link:hover {
-    background-color: #dee2e6;
+    background-color: #e9ecef;
 }
 
 .submenu a {
@@ -884,7 +888,7 @@ a.completed-guide:hover,
 
 /* Auth nav */
 .navbar .auth-nav {
-  margin-left: auto;
+  margin-left: auto !important;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -933,7 +937,7 @@ a.completed-guide:hover,
 }
 
 .all-areas-link:hover {
-    background-color: #dee2e6 !important;
+    background-color: #e9ecef !important;
 }
 
 /* Pillar header styling */
@@ -1023,5 +1027,5 @@ a.completed-guide:hover,
 
 /* Ensure domain headers are clickable and respond to hover */
 .pillar-header + .submenu .domain-header:hover {
-    background-color: #f1f1f1;
+    background-color: #e9ecef;
 }
