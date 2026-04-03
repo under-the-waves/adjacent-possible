@@ -718,12 +718,12 @@
     padding-right: 0;
   }
 
-  .navbar .auth-nav {
-    position: static;
-    transform: none;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 10px 16px;
+  #clerk-auth {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    padding: 10px 16px !important;
   }
 }
 
@@ -903,14 +903,14 @@ a.completed-guide:hover,
     transition: background-color 0.3s;
 }
 
-/* Auth nav -- absolute positioning to guarantee right-alignment regardless of Clerk widget DOM */
-.navbar .auth-nav {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
+/* Auth nav -- use ID selector because Clerk replaces classes on mount */
+#clerk-auth {
+  position: absolute !important;
+  right: 16px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .auth-button {
@@ -929,7 +929,7 @@ a.completed-guide:hover,
 }
 
 /* Constrain Clerk user button to nav height */
-.auth-nav .cl-userButtonBox {
+#clerk-auth .cl-userButtonBox {
   height: 36px;
   width: 36px;
 }
