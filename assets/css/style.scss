@@ -260,60 +260,65 @@
   color: white; /* Make the subheading white */
 }
 
-/* Life Areas grid styles */
-.life-areas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+/* Life Areas hierarchy styles */
+.pillar-hierarchy {
   margin: 2rem 0 3rem;
 }
 
-.life-area-card {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1.5rem;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.pillar-section {
+  margin-bottom: 2.5rem;
+}
+
+.pillar-section h2 {
+  color: #155799;
+  font-size: 1.4em;
+  border-bottom: 2px solid #155799;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.domain-group {
+  margin-left: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.domain-group h3 {
+  font-size: 1.05em;
+  color: #333;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.life-area-links {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 0.5rem;
 }
 
-/* Removed hover effects as requested */
-
-.life-area-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-}
-
-.life-area-card h3 a {
+.life-area-links a {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   color: #155799;
   text-decoration: none;
+  font-size: 0.9em;
+  background: #f8f9fa;
+  transition: background 0.2s, border-color 0.2s;
 }
 
-.life-area-card h3 a:hover {
-  text-decoration: underline;
+.life-area-links a:hover {
+  background: #e9ecef;
+  border-color: #155799;
 }
 
-.life-area-card p {
-  margin-bottom: 0;
-  line-height: 1.5;
-}
-
-.life-area-card p a {
-  color: #1a76bb;
-  text-decoration: none;
-}
-
-.life-area-card p a:hover {
-  text-decoration: underline;
-}
-
-/* Media queries for the Life Areas grid */
 @media (max-width: 768px) {
-  .life-areas-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
+  .domain-group {
+    margin-left: 0.5rem;
+  }
+  .life-area-links {
+    margin-left: 0;
   }
 }
 
@@ -903,8 +908,8 @@ a.completed-guide:hover,
     transition: background-color 0.3s;
 }
 
-/* Auth nav -- use ID selector because Clerk replaces classes on mount */
-#clerk-auth {
+/* Auth nav -- use attribute selector because Clerk replaces classes on mount */
+[id="clerk-auth"] {
   position: absolute !important;
   right: 16px !important;
   top: 50% !important;

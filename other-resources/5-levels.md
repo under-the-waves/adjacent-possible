@@ -43,9 +43,6 @@ Remember that these levels represent a general progression. Your personal path m
 
 ## Start Exploring
 
-Apply this framework to fundamental life domains:
+Browse all life areas and find where to apply this framework:
 
-- [Sleep]({{ site.baseurl }}/sleep)
-- [Fitness]({{ site.baseurl }}/fitness)
-- [Food & Nutrition]({{ site.baseurl }}/nutrition)
-- [Housework]({{ site.baseurl }}/housework)
+- [View All Life Areas]({{ site.baseurl }}/life-areas/)

@@ -49,45 +49,19 @@ body .main-content {
     margin: 0 auto;
 }
 
-/* Domain filter bar */
-.filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 15px;
-    justify-content: center;
+/* Acronym legend */
+.acronym-legend {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.filter-btn {
-    padding: 6px 14px;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    background: white;
-    cursor: pointer;
-    font-size: 0.85em;
-    font-weight: 600;
-    transition: all 0.2s;
-    user-select: none;
-}
-
-.filter-btn:hover {
-    opacity: 0.85;
-}
-
-.filter-btn.active {
-    color: white;
-    border-color: transparent;
-}
-
-.filter-btn.all-btn {
-    border-color: #333;
-    color: #333;
-}
-
-.filter-btn.all-btn.active {
-    background: #333;
-    color: white;
-    border-color: #333;
+.acronym-legend a {
+    color: #155799;
 }
 
 /* Search */
@@ -209,20 +183,44 @@ body .main-content {
     background-color: #0d47a1;
 }
 
-/* Domain badges */
-.domain-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
+/* Life area column */
+.life-area-cell {
+    min-width: 140px;
 }
 
-.domain-badge {
-    padding: 2px 8px;
-    border-radius: 10px;
-    color: white;
-    font-size: 0.75em;
+.primary-area {
     font-weight: 600;
+    font-size: 0.9em;
+}
+
+.area-score {
+    color: #666;
+    font-weight: normal;
+    font-size: 0.85em;
+}
+
+.area-expand {
+    color: #155799;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: 4px;
     white-space: nowrap;
+}
+
+.area-expand:hover {
+    text-decoration: underline;
+}
+
+.area-details {
+    margin-top: 4px;
+    padding-left: 8px;
+    border-left: 2px solid #e9ecef;
+}
+
+.area-detail-row {
+    font-size: 0.85em;
+    padding: 2px 0;
+    color: #555;
 }
 
 /* Score columns */
@@ -384,20 +382,13 @@ body .main-content {
 
     <div class="header-section">
         <h1>{{ page.title }}</h1>
-        <p>Browse, filter, and compare all scored interventions across every life domain.</p>
+        <p>Browse and compare all scored interventions across every life area.</p>
     </div>
 
-    <div class="filter-bar" id="filterBar">
-        <button class="filter-btn all-btn active" data-domain="all" onclick="toggleFilter('all')">All</button>
-        <button class="filter-btn" data-domain="fitness" style="color: #28a745; border-color: #28a745;" onclick="toggleFilter('fitness')">Fitness</button>
-        <button class="filter-btn" data-domain="sleep" style="color: #6f42c1; border-color: #6f42c1;" onclick="toggleFilter('sleep')">Sleep</button>
-        <button class="filter-btn" data-domain="saving" style="color: #20c997; border-color: #20c997;" onclick="toggleFilter('saving')">Saving</button>
-        <button class="filter-btn" data-domain="investing" style="color: #155799; border-color: #155799;" onclick="toggleFilter('investing')">Investing</button>
-        <button class="filter-btn" data-domain="organisation" style="color: #fd7e14; border-color: #fd7e14;" onclick="toggleFilter('organisation')">Organisation</button>
-        <button class="filter-btn" data-domain="goals" style="color: #dc3545; border-color: #dc3545;" onclick="toggleFilter('goals')">Goals</button>
-        <button class="filter-btn" data-domain="current-work" style="color: #0d6efd; border-color: #0d6efd;" onclick="toggleFilter('current-work')">Current Work</button>
-        <button class="filter-btn" data-domain="career-planning" style="color: #6c757d; border-color: #6c757d;" onclick="toggleFilter('career-planning')">Career Planning</button>
-        <button class="filter-btn" data-domain="body-image" style="color: #e83e8c; border-color: #e83e8c;" onclick="toggleFilter('body-image')">Body Image</button>
+    <div class="acronym-legend">
+        <p><strong>EBS</strong> = Expected Benefit Score (effectiveness after accounting for success and adherence rates).
+        <strong>Time EROI</strong> = Expected Return on Investment per hour of weekly time.
+        <a href="{{ site.baseurl }}/resources/roi-calculation-explainer/">Full scoring methodology</a></p>
     </div>
 
     <div class="search-container">
@@ -408,7 +399,7 @@ body .main-content {
         <thead>
             <tr>
                 <th class="sortable" data-sort="name">Intervention <span class="sort-indicator"></span></th>
-                <th>Domains</th>
+                <th>Relevant Life Areas</th>
                 <th class="sortable active" data-sort="avg-ebs">Avg. EBS <span class="sort-indicator">&#8595;</span></th>
                 <th>Best Value</th>
                 <th class="sortable" data-sort="upfront-cost">Upfront Cost <span class="sort-indicator"></span></th>
@@ -434,17 +425,11 @@ body .main-content {
 </div>
 
 <script>
-// Domain colours
-const domainColours = {
-    'fitness': '#28a745',
-    'sleep': '#6f42c1',
-    'saving': '#20c997',
-    'investing': '#155799',
-    'organisation': '#fd7e14',
-    'goals': '#dc3545',
-    'current-work': '#0d6efd',
-    'career-planning': '#6c757d',
-    'body-image': '#e83e8c'
+// Life area name lookup from data files
+const lifeAreaNames = {
+{% for la_file in site.data.life_areas %}
+    {{ la_file[0] | jsonify }}: {{ la_file[1].name | jsonify }}{% unless forloop.last %},{% endunless %}
+{% endfor %}
 };
 
 // Build interventions data from Jekyll
@@ -490,7 +475,6 @@ const valueNames = {
 };
 
 // State
-let activeFilters = new Set();
 let currentSort = 'avg-ebs';
 let sortAsc = false;
 
@@ -524,63 +508,61 @@ function computeScores(intervention) {
     };
 }
 
+// Compute per-life-area scores for an intervention
+function computeLifeAreaScores(intervention) {
+    const areaScores = {};
+    for (const key of Object.keys(intervention.values)) {
+        const area = key.split('.')[0];
+        if (!areaScores[area]) areaScores[area] = { total: 0, count: 0 };
+        areaScores[area].total += computeEBS(intervention.values[key]);
+        areaScores[area].count++;
+    }
+    return Object.entries(areaScores)
+        .map(function(entry) { return { area: entry[0], avgEbs: entry[1].total / entry[1].count }; })
+        .sort(function(a, b) { return b.avgEbs - a.avgEbs; });
+}
+
 // Precompute scores
-interventions.forEach(i => {
-    const scores = computeScores(i);
+interventions.forEach(function(i) {
+    var scores = computeScores(i);
     i.avgEbs = scores.avgEbs;
     i.bestValueName = scores.bestValueName;
     i.bestValueEbs = scores.bestValueEbs;
     i.timeEroi = i.resources.ongoing_time_weekly > 0 ? i.avgEbs / i.resources.ongoing_time_weekly : Infinity;
+    i.lifeAreaScores = computeLifeAreaScores(i);
 });
 
 function getInterventionUrl(key) {
     return '{{ site.baseurl }}/resources/intervention-database/' + key.replace(/_/g, '-');
 }
 
-function toggleFilter(domain) {
-    if (domain === 'all') {
-        activeFilters.clear();
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        document.querySelector('.all-btn').classList.add('active');
+function toggleAreaExpand(el) {
+    var details = el.nextElementSibling;
+    var count = details.children.length;
+    if (details.style.display === 'none') {
+        details.style.display = 'block';
+        el.textContent = '- collapse';
     } else {
-        document.querySelector('.all-btn').classList.remove('active');
-        const btn = document.querySelector('[data-domain="' + domain + '"]');
-        if (activeFilters.has(domain)) {
-            activeFilters.delete(domain);
-            btn.classList.remove('active');
-            btn.style.color = domainColours[domain];
-            btn.style.background = 'white';
-        } else {
-            activeFilters.add(domain);
-            btn.classList.add('active');
-            btn.style.color = 'white';
-            btn.style.background = domainColours[domain];
-        }
-        if (activeFilters.size === 0) {
-            document.querySelector('.all-btn').classList.add('active');
-        }
+        details.style.display = 'none';
+        el.textContent = '+' + count + ' more';
     }
-    applyFilters();
 }
 
 function applyFilters() {
-    const search = document.getElementById('searchInput').value.toLowerCase();
-    const body = document.getElementById('dbBody');
+    var search = document.getElementById('searchInput').value.toLowerCase();
+    var body = document.getElementById('dbBody');
 
-    let filtered = interventions.filter(i => {
-        if (activeFilters.size > 0) {
-            if (!i.domains.some(d => activeFilters.has(d))) return false;
-        }
+    var filtered = interventions.filter(function(i) {
         if (search) {
-            const text = (i.name + ' ' + i.description).toLowerCase();
-            if (!text.includes(search)) return false;
+            var text = (i.name + ' ' + i.description).toLowerCase();
+            if (text.indexOf(search) === -1) return false;
         }
         return true;
     });
 
     // Sort
-    filtered.sort((a, b) => {
-        let cmp = 0;
+    filtered.sort(function(a, b) {
+        var cmp = 0;
         switch (currentSort) {
             case 'name': cmp = a.name.localeCompare(b.name); break;
             case 'avg-ebs': cmp = a.avgEbs - b.avgEbs; break;
@@ -593,30 +575,39 @@ function applyFilters() {
     });
 
     if (filtered.length === 0) {
-        body.innerHTML = '<tr><td colspan="8" class="no-results">No interventions match your filters.</td></tr>';
+        body.innerHTML = '<tr><td colspan="8" class="no-results">No interventions match your search.</td></tr>';
         return;
     }
 
-    body.innerHTML = filtered.map(i => {
-        const domainBadges = i.domains.map(d =>
-            '<span class="domain-badge" style="background-color: ' + (domainColours[d] || '#999') + ';">' + d + '</span>'
-        ).join('');
-
-        const escapedName = i.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        const escapedDesc = i.description.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    body.innerHTML = filtered.map(function(i) {
+        // Build life area column
+        var primary = i.lifeAreaScores[0];
+        var primaryName = lifeAreaNames[primary.area] || primary.area;
+        var areaHtml = '<div class="life-area-cell">';
+        areaHtml += '<span class="primary-area">' + primaryName + '</span> <span class="area-score">(' + primary.avgEbs.toFixed(1) + ')</span>';
+        if (i.lifeAreaScores.length > 1) {
+            areaHtml += ' <span class="area-expand" onclick="toggleAreaExpand(this)">+' + (i.lifeAreaScores.length - 1) + ' more</span>';
+            areaHtml += '<div class="area-details" style="display:none;">';
+            for (var j = 1; j < i.lifeAreaScores.length; j++) {
+                var la = i.lifeAreaScores[j];
+                areaHtml += '<div class="area-detail-row">' + (lifeAreaNames[la.area] || la.area) + ' <span class="area-score">(' + la.avgEbs.toFixed(1) + ')</span></div>';
+            }
+            areaHtml += '</div>';
+        }
+        areaHtml += '</div>';
 
         return '<tr>' +
             '<td><div class="intervention-name">' +
                 '<a href="' + getInterventionUrl(i.key) + '" class="intervention-link">' + i.name + '</a>' +
-                '<span class="info-icon" onclick="showPopup(\'' + escapedName + '\', \'' + escapedDesc + '\')">i</span>' +
+                '<span class="info-icon" onclick="showPopup(\'' + i.key + '\')">i</span>' +
             '</div></td>' +
-            '<td><div class="domain-badges">' + domainBadges + '</div></td>' +
+            '<td>' + areaHtml + '</td>' +
             '<td class="ebs-score">' + i.avgEbs.toFixed(1) + '</td>' +
             '<td class="best-value-cell"><span class="best-value-score">' + i.bestValueEbs.toFixed(1) + '</span> <span class="best-value-name">' + i.bestValueName + '</span></td>' +
             '<td class="cost-cell">$' + i.resources.upfront_cost + '</td>' +
             '<td class="cost-cell">$' + i.resources.ongoing_cost + '/' + i.resources.ongoing_cost_period + '</td>' +
             '<td class="time-cell">' + i.resources.ongoing_time + 'h/' + i.resources.ongoing_time_period + '</td>' +
-            '<td class="eroi-score">' + (i.timeEroi === Infinity ? '–' : i.timeEroi.toFixed(2)) + '</td>' +
+            '<td class="eroi-score">' + (i.timeEroi === Infinity ? '&ndash;' : i.timeEroi.toFixed(2)) + '</td>' +
         '</tr>';
     }).join('');
 }
@@ -624,19 +615,18 @@ function applyFilters() {
 // Sort handling
 let sortLastClicked = 'avg-ebs';
 
-document.querySelectorAll('th.sortable').forEach(header => {
+document.querySelectorAll('th.sortable').forEach(function(header) {
     header.addEventListener('click', function() {
-        const sort = this.dataset.sort;
+        var sort = this.dataset.sort;
         if (currentSort === sort) {
             sortAsc = !sortAsc;
         } else {
             currentSort = sort;
-            // Default sort direction: desc for scores, asc for costs
-            sortAsc = ['name', 'upfront-cost', 'ongoing-cost', 'ongoing-time'].includes(sort);
+            sortAsc = ['name', 'upfront-cost', 'ongoing-cost', 'ongoing-time'].indexOf(sort) !== -1;
         }
         sortLastClicked = sort;
 
-        document.querySelectorAll('th.sortable').forEach(h => {
+        document.querySelectorAll('th.sortable').forEach(function(h) {
             h.classList.remove('active');
             h.querySelector('.sort-indicator').textContent = '';
         });
@@ -671,10 +661,12 @@ function renderDescription(text) {
     return result.join('');
 }
 
-// Popup
-function showPopup(name, description) {
-    document.getElementById('popupTitle').textContent = name;
-    document.getElementById('popupContent').innerHTML = renderDescription(description);
+// Popup -- looks up intervention by key to avoid escaping issues
+function showPopup(key) {
+    var intervention = interventions.find(function(i) { return i.key === key; });
+    if (!intervention) return;
+    document.getElementById('popupTitle').textContent = intervention.name;
+    document.getElementById('popupContent').innerHTML = renderDescription(intervention.description);
     document.getElementById('popupOverlay').classList.add('visible');
     document.getElementById('descriptionPopup').classList.add('visible');
 }
