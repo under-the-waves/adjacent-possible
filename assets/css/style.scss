@@ -713,6 +713,18 @@
     border-bottom: 1px solid #ddd;
     max-height: none;
   }
+
+  .navbar {
+    padding-right: 0;
+  }
+
+  .navbar .auth-nav {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 16px;
+  }
 }
 
 /* Make sure all navbar links have consistent styling */
@@ -839,8 +851,8 @@ a.unavailable-guide:hover,
   flex-wrap: wrap;
   width: 100%;
   position: relative;
-  /* Add this to ensure it doesn't interfere with following elements */
   flex-direction: row;
+  padding-right: 80px; /* Reserve space for absolutely-positioned auth button */
 }
 
 /* Hover states for all completed guides */
@@ -891,13 +903,14 @@ a.completed-guide:hover,
     transition: background-color 0.3s;
 }
 
-/* Auth nav */
+/* Auth nav -- absolute positioning to guarantee right-alignment regardless of Clerk widget DOM */
 .navbar .auth-nav {
-  margin-left: auto !important;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 16px;
 }
 
 .auth-button {
