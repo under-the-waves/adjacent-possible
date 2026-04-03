@@ -8,7 +8,6 @@ title: Worthwhile
     <div class="hero-logo-icon"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-logo-text">Worthwhile</div>
     <p class="tagline">A framework for holistic and cost-effective personal development, backed by evidence</p>
   </div>
 </div>
