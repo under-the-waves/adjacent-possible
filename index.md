@@ -6,9 +6,9 @@ title: Worthwhile
 <div class="hero-section">
   <div class="hero-logo">
     <div class="hero-logo-icon"></div>
-    <div class="hero-logo-text">Worthwhile</div>
   </div>
   <div class="hero-content">
+    <div class="hero-logo-text">Worthwhile</div>
     <p class="tagline">A framework for holistic and cost-effective personal development, backed by evidence</p>
   </div>
 </div>
