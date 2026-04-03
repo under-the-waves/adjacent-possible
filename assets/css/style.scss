@@ -343,6 +343,8 @@
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
 }
 
 .navbar .logo {
@@ -395,6 +397,8 @@
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
 }
 
 .hero-logo-text {
