@@ -852,7 +852,7 @@ a.unavailable-guide:hover,
   width: 100%;
   position: relative;
   flex-direction: row;
-  padding-right: 80px; /* Reserve space for absolutely-positioned auth button */
+  padding-right: 0;
 }
 
 /* Hover states for all completed guides */
