@@ -5,7 +5,9 @@ permalink: /about/
 ---
 # About
 
-Worthwhile was inspired by [8760 Hours](https://alexvermeer.com/8760hours/) and [Upgradable](https://www.upgradable.org/). Now that AI has made it possible to quickly evaluate large numbers of ideas, I thought there should exist on the internet a free resource evaluating all the best ways for people to improve their lives.
+Worthwhile was inspired by [8760 Hours](https://alexvermeer.com/8760hours/) and [Upgradable](https://www.upgradable.org/).
+
+Now that AI has made it possible to quickly evaluate large numbers of ideas, I thought there should exist on the internet a free resource evaluating all the best ways for people to improve their lives.
 
 I vibe-coded this site using [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
