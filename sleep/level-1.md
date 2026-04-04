@@ -285,7 +285,7 @@ life_area_slug: sleep
 
 <div class="exemplar-card">
     <div class="exemplar-value">Comfort &amp; Experience &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Roger_Federer" target="_blank">Roger Federer</a> slept 10 &ndash; 12 hours a day throughout his professional tennis career and has said that "if I don't sleep 11 to 12 hours per day, it's not right." He appears to have genuinely enjoyed sleep as an experience rather than treating it purely as recovery, and maintained a 24-year career at the top of professional tennis. Few athletes have spoken about sleep with the same combination of volume and evident satisfaction.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Arianna_Huffington" target="_blank">Arianna Huffington</a> treats her transition to sleep as what she calls a "sacrosanct ritual." She takes a hot bath with epsom salts and a candle, changes into dedicated sleepwear, bans all electronic devices from her bedroom, and reads only physical books in bed. She reportedly gets eight hours of sleep 95% of nights. After collapsing from exhaustion in 2007, she redesigned her entire relationship with sleep around comfort and enjoyment rather than treating it as a necessary inconvenience.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
