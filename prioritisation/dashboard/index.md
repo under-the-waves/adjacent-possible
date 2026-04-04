@@ -905,10 +905,14 @@ function startSurvey(tier) {
 function renderIntro() {
     const el = document.getElementById('viewSurvey');
     const questionCount = surveyQuestions.filter(x => x.type === 'question').length;
+    const areaCount = new Set(surveyQuestions.filter(x => x.type === 'question').map(x => x.slug)).size;
+    const scopeLabel = currentTier === 3
+        ? `<strong>${questionCount} values</strong> across <strong>${areaCount} life areas</strong>`
+        : `<strong>${questionCount} life areas</strong>`;
     el.innerHTML = `<div class="survey-container">
         <div class="question-card">
             <h2 style="margin-top:0;">Before you begin</h2>
-            <p>This survey assesses your current level across <strong>${questionCount} life areas</strong>. For each area, pick the description that best matches where you are right now.</p>
+            <p>This survey assesses your current level across ${scopeLabel}. For each area, pick the description that best matches where you are right now.</p>
             <h3>What the levels mean</h3>
             <p>The five levels correspond to population percentiles among American adults:</p>
             <ul style="line-height:1.8;">
