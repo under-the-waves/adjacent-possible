@@ -10,7 +10,7 @@ The framework covers 52 life areas organised into five pillars, each following a
 
 <div class="pillar-section">
 
-## Expand Your Awareness
+<h2>Expand Your Awareness</h2>
 
 <div class="domain-label">Values</div>
 {% assign a = site.data.life_areas["self-awareness"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/self-awareness/">Self-awareness</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -32,7 +32,7 @@ The framework covers 52 life areas organised into five pillars, each following a
 
 <div class="pillar-section">
 
-## Look After Yourself
+<h2>Look After Yourself</h2>
 
 <div class="domain-label">Health</div>
 {% assign a = site.data.life_areas["fitness"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/fitness/">Fitness</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -54,7 +54,7 @@ The framework covers 52 life areas organised into five pillars, each following a
 
 <div class="pillar-section">
 
-## Connect with Others
+<h2>Connect with Others</h2>
 
 <div class="domain-label">Expression</div>
 {% assign a = site.data.life_areas["body-image"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/body-image/">Body Image</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -75,7 +75,7 @@ The framework covers 52 life areas organised into five pillars, each following a
 
 <div class="pillar-section">
 
-## Organise Your Life
+<h2>Organise Your Life</h2>
 
 <div class="domain-label">Environment</div>
 {% assign a = site.data.life_areas["housing"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/housing/">Housing</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -97,7 +97,7 @@ The framework covers 52 life areas organised into five pillars, each following a
 
 <div class="pillar-section">
 
-## Create and Contribute
+<h2>Create and Contribute</h2>
 
 <div class="domain-label">Career</div>
 {% assign a = site.data.life_areas["current-work"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/current-work/">Current Work</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
