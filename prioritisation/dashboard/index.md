@@ -1124,10 +1124,6 @@ function renderResults() {
                 <div class="stat-label">Areas assessed</div>
             </div>
             <div class="summary-stat">
-                <div class="stat-value">${totalAssessed > 0 ? (totalLevel / totalAssessed).toFixed(1) : '--'}</div>
-                <div class="stat-label">Average level</div>
-            </div>
-            <div class="summary-stat">
                 <div class="stat-value${lowest.level < 6 ? ' stat-text' : ''}">${lowest.level < 6 ? lowest.name : '--'}</div>
                 <div class="stat-label">Lowest area</div>
             </div>

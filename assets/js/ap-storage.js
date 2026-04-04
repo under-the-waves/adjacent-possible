@@ -13,7 +13,9 @@
         'ap-survey-tier': 'tier',
         'ap-survey-responses': 'responses',
         'ap-survey-weights': 'weights',
-        'ap-slider-weights': 'sliderWeights'
+        'ap-slider-weights': 'sliderWeights',
+        'ap-level1-progress': 'level1Progress',
+        'ap-level1-assess': 'level1Assess'
     };
 
     function load(key) {

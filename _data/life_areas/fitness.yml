@@ -45,7 +45,7 @@ values:
     weight: 35
     description:
       - "Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills."
-      - "What your body can do rather than how it looks."
+      - "What your body can do."
       - "Those who prioritise performance may focus on sport-specific training, measurable improvements in capacity, or achieving particular physical feats."
     benchmarks:
       level_1:

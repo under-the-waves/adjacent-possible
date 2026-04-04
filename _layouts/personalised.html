@@ -320,65 +320,31 @@ body .main-content {
 
 .recommendations-table th:nth-child(1),
 .recommendations-table td:nth-child(1) {
-    width: 28%;
-    min-width: 180px;
+    width: auto;
+    min-width: 130px;
 }
 
-.recommendations-table th:nth-child(2),
-.recommendations-table td:nth-child(2) {
-    width: 8%;
-    min-width: 50px;
-}
-
-.recommendations-table th:nth-child(3),
-.recommendations-table td:nth-child(3) {
-    width: 12%;
-    min-width: 80px;
-}
-
-.recommendations-table th:nth-child(4),
-.recommendations-table td:nth-child(4) {
-    width: 14%;
-    min-width: 90px;
-}
-
-.recommendations-table th:nth-child(5),
-.recommendations-table td:nth-child(5) {
-    width: 12%;
-    min-width: 80px;
-}
-
-.recommendations-table th:nth-child(6),
-.recommendations-table td:nth-child(6) {
-    width: 14%;
-    min-width: 90px;
-}
-
-.recommendations-table th:nth-child(7),
-.recommendations-table td:nth-child(7) {
-    width: 6%;
-    min-width: 45px;
-}
-
-.recommendations-table th:nth-child(8),
-.recommendations-table td:nth-child(8) {
-    width: 6%;
-    min-width: 45px;
+.recommendations-table th:nth-child(n+2),
+.recommendations-table td:nth-child(n+2) {
+    width: 1%;
+    white-space: nowrap;
+    text-align: right;
 }
 
 .recommendations-table th {
     background: #f8f9fa;
-    padding: 12px 8px;
+    padding: 8px 6px;
     text-align: left;
     font-weight: 600;
     color: #333;
     border-bottom: 2px solid #dee2e6;
-    font-size: 0.85em;
+    font-size: 0.8em;
     cursor: pointer;
     position: relative;
     user-select: none;
     transition: background-color 0.3s;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.2;
 }
 
 .recommendations-table th:hover {
@@ -391,10 +357,36 @@ body .main-content {
 }
 
 .recommendations-table td {
-    padding: 12px 8px;
+    padding: 8px 6px;
     border-bottom: 1px solid #e9ecef;
     vertical-align: middle;
+    font-size: 0.9em;
 }
+
+/* Level 1 completion banner */
+.l1-complete-banner {
+    text-align: center;
+    padding: 20px 24px;
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+}
+.l1-complete-banner.visible { display: block; }
+.l1-complete-banner h3 { color: #1a6b2a; margin: 0 0 8px 0; }
+.l1-complete-banner p { margin: 0 0 12px 0; color: #444; }
+.l1-complete-banner .btn-dashboard {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #28a745;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.l1-complete-banner .btn-dashboard:hover { background: #218838; }
 
 .recommendations-table tbody tr:hover {
     background: #f8f9fa;
@@ -674,6 +666,12 @@ body .main-content {
                     </tbody>
                 </table>
             </div>
+
+            <div class="l1-complete-banner" id="l1CompleteBanner">
+                <h3>Congratulations! You have achieved Level 1: Awareness in {{ page.domain_label | default: page.domain | capitalize }}.</h3>
+                <p>Your value weightings are saved. Come back any time to adjust them or explore interventions.</p>
+                <a href="{{ site.baseurl }}/prioritisation/dashboard/" class="btn-dashboard">View Dashboard</a>
+            </div>
         </div>
     </div>
 </div>
@@ -739,6 +737,7 @@ if (savedSliderWeights[domain]) {
     valueConfig.forEach(v => { currentValues[v.key] = v.defaultWeight; });
 }
 let currentSort = 'wbs';
+let sortAscending = false;
 
 // Get DOM elements
 const sliders = {};
@@ -846,15 +845,16 @@ function updateRecommendations() {
         };
     });
 
+    const dir = sortAscending ? 1 : -1;
     switch(currentSort) {
-        case 'wbs': scored.sort((a, b) => b.wbs - a.wbs); break;
-        case 'time-eroi': scored.sort((a, b) => b.timeEROI - a.timeEROI); break;
-        case 'money-eroi': scored.sort((a, b) => b.moneyEROI - a.moneyEROI); break;
-        case 'name': scored.sort((a, b) => a.name.localeCompare(b.name)); break;
-        case 'upfront-cost': scored.sort((a, b) => a.resources.upfront_cost - b.resources.upfront_cost); break;
-        case 'ongoing-cost': scored.sort((a, b) => a.resources.ongoing_cost_weekly - b.resources.ongoing_cost_weekly); break;
-        case 'upfront-time': scored.sort((a, b) => a.resources.upfront_time - b.resources.upfront_time); break;
-        case 'ongoing-time': scored.sort((a, b) => a.resources.ongoing_time_weekly - b.resources.ongoing_time_weekly); break;
+        case 'wbs': scored.sort((a, b) => dir * (a.wbs - b.wbs)); break;
+        case 'time-eroi': scored.sort((a, b) => dir * (a.timeEROI - b.timeEROI)); break;
+        case 'money-eroi': scored.sort((a, b) => dir * (a.moneyEROI - b.moneyEROI)); break;
+        case 'name': scored.sort((a, b) => dir * a.name.localeCompare(b.name)); break;
+        case 'upfront-cost': scored.sort((a, b) => dir * (a.resources.upfront_cost - b.resources.upfront_cost)); break;
+        case 'ongoing-cost': scored.sort((a, b) => dir * (a.resources.ongoing_cost_weekly - b.resources.ongoing_cost_weekly)); break;
+        case 'upfront-time': scored.sort((a, b) => dir * (a.resources.upfront_time - b.resources.upfront_time)); break;
+        case 'ongoing-time': scored.sort((a, b) => dir * (a.resources.ongoing_time_weekly - b.resources.ongoing_time_weekly)); break;
     }
 
     recommendationsBody.innerHTML = scored.map(i => `
@@ -880,19 +880,28 @@ function updateRecommendations() {
 Object.keys(sliders).forEach(k => {
     sliders[k].addEventListener('input', function() {
         adjustSliders(k, parseFloat(this.value));
+        slidersModified = true;
+        checkLevel1Completion();
     });
 });
 
 // Event listeners for table header sorting
 document.querySelectorAll('th[data-sort]').forEach(header => {
     header.addEventListener('click', function() {
-        currentSort = this.dataset.sort;
+        const col = this.dataset.sort;
+        if (currentSort === col) {
+            sortAscending = !sortAscending;
+        } else {
+            currentSort = col;
+            // Default: descending for scores/EROI, ascending for costs/time/name
+            sortAscending = ['upfront-cost', 'ongoing-cost', 'upfront-time', 'ongoing-time', 'name'].includes(col);
+        }
         document.querySelectorAll('th[data-sort]').forEach(h => {
             h.classList.remove('active');
             h.querySelector('.sort-indicator').textContent = '';
         });
         this.classList.add('active');
-        this.querySelector('.sort-indicator').innerHTML = '&#8595;';
+        this.querySelector('.sort-indicator').innerHTML = sortAscending ? '&#8593;' : '&#8595;';
         updateRecommendations();
     });
 });
@@ -924,7 +933,55 @@ window.addEventListener('ap-storage-sync', function() {
     }
 });
 
+// Level 1 completion tracking
+let slidersModified = false;
+let l1BannerShown = false;
+
+function checkLevel1Completion() {
+    if (l1BannerShown || typeof APStorage === 'undefined') return;
+
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress[domain] || {};
+    var priorSteps = ['why', 'values', 'achievable', 'assess'];
+    var allPriorDone = priorSteps.every(function(s) { return area[s]; });
+
+    if (allPriorDone && slidersModified) {
+        // Mark Level 1 as fully complete
+        area.interventions = true;
+        progress[domain] = area;
+        APStorage.save('ap-level1-progress', progress);
+
+        // Set dashboard level to 1 (Level 1: Awareness achieved)
+        var levels = APStorage.load('ap-dashboard-levels') || {};
+        if (!levels[domain] || levels[domain] < 1) {
+            levels[domain] = 1;
+            APStorage.save('ap-dashboard-levels', levels);
+        }
+
+        // Show the banner
+        var banner = document.getElementById('l1CompleteBanner');
+        if (banner) {
+            banner.classList.add('visible');
+            banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        l1BannerShown = true;
+    }
+}
+
+// Check if banner should already be shown (returning user who completed everything)
+function checkAlreadyComplete() {
+    if (typeof APStorage === 'undefined') return;
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress[domain] || {};
+    if (area.interventions) {
+        var banner = document.getElementById('l1CompleteBanner');
+        if (banner) banner.classList.add('visible');
+        l1BannerShown = true;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     updateAllControls();
+    checkAlreadyComplete();
 });
 </script>
