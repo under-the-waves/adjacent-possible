@@ -924,7 +924,7 @@ function renderIntro() {
             </ul>
             <p style="color:#555;"><strong>Most people are at levels 1&ndash;2 in most areas.</strong> That is completely normal. No one is at level 5 for everything &ndash; there simply is not enough time in life to excel at everything. The purpose of this survey is not to score highly. It is to identify where you are now so you can decide where to focus.</p>
             <div class="question-nav" style="margin-top:24px;">
-                <div></div>
+                <button onclick="renderLanding(); showView('landing');">Back</button>
                 <button class="btn-primary" onclick="renderQuestion()">Begin survey</button>
             </div>
         </div>
