@@ -1,63 +1,194 @@
 ---
+layout: default
+title: Digital Safety
 life_area_slug: digital-safety
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Look After Yourself &gt;
+    Security &gt;
+    Digital Safety
+</div>
+
 # Digital Safety
 
-## What is Digital Safety?
+**What it is**
+- Your online security, privacy practices, and protection from digital threats. Digital safety covers everything from password hygiene and device security to privacy settings, threat awareness, and how you manage your digital footprint.
 
-Digital safety encompasses protecting your online identity, data, privacy, and digital wellbeing from cyber threats, data breaches, surveillance, and digital manipulation. This includes technical security measures (strong passwords, secure connections), privacy practices (data minimisation, platform settings), and behavioural awareness (recognising scams, managing digital consumption). The scope spans from basic password hygiene to sophisticated threat modelling, covering everything from preventing identity theft to maintaining mental health in digital environments.
+**Why it matters**
+- Cybercrime costs individuals and organisations [hundreds of billions annually](https://secureframe.com/blog/cybersecurity-statistics), and most breaches involve human factors. Even basic security measures like password managers and two-factor authentication can prevent the vast majority of automated attacks, yet fewer than half of people use them.
 
-Digital safety is distinct from but overlaps with productivity (digital organisation) and wellbeing (screen time management). This guide focuses specifically on protection against threats rather than broader questions of digital minimalism or algorithmic manipulation, which are covered in our [Media Diet]({{ site.baseurl }}/media-diet/) and [Consumptive Leisure]({{ site.baseurl }}/consumptive-leisure/) guides.
+**Related life areas**
+- [Physical Safety]({{ site.baseurl }}/physical-safety/) – protecting yourself from physical harm through awareness, preparedness, and environmental choices
+- [Emergency Preparedness]({{ site.baseurl }}/emergency-preparedness/) – planning and readiness for emergencies, disasters, and unexpected disruptions
+- [Information Management]({{ site.baseurl }}/information-management/) – how you organise, store, and retrieve your personal information and digital files
+- [Legal Matters]({{ site.baseurl }}/legal-matters/) – managing legal protections, compliance, and documentation
 
-## Why Digital Safety Matters
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Digital Safety yet.</strong><br>It takes about 15 minutes and helps you understand what digital safety means to you.</p>
+    <a href="{{ site.baseurl }}/digital-safety/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Digital safety serves as a foundation for confident participation in the modern digital economy. Effective protection prevents financial losses from fraud and identity theft <span class="info-icon" onclick="showReasoning('research-key-1')">i</span>, whilst preserving personal privacy from corporate surveillance and data harvesting <span class="info-icon" onclick="showReasoning('research-key-2')">i</span>. Poor digital safety practices can result in significant financial losses, privacy violations, reputational damage, and exposure to sophisticated manipulation techniques <span class="info-icon" onclick="showReasoning('research-key-3')">i</span>.
+## What people value about digital safety
 
-Beyond individual protection, digital safety enables full participation in online services, from banking to healthcare, without excessive vulnerability to various cyber threats that continue to evolve in sophistication and scale.
+People approach digital safety with different priorities. This site scores every digital safety intervention across two core values, and ranks them by how well they deliver on the things you actually care about.
 
-## Digital Safety Values
+<div class="value-card">
+<h3>Comprehensive Security</h3>
+<p>Minimising exposure to cyber threats, data breaches, privacy violations, and digital fraud through systematic security measures, privacy controls, and threat awareness.</p>
+</div>
 
-Your optimal approach to digital safety depends on what aspects you value most. This guide balances two core values, with percentages indicating the relative weight given to each in our recommendations.
+<div class="value-card">
+<h3>Usability and Convenience</h3>
+<p>Maintaining digital functionality and ease of use whilst achieving reasonable security. Protective measures that integrate into existing workflows without excessive friction or complexity.</p>
+</div>
 
-For personalised recommendations based on your unique priorities, visit [Digital Safety Personalised]({{ site.baseurl }}/digital-safety/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/digital-safety/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand digital safety, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/digital-safety/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-values.html %}
-
-## Benchmarks by Level
-
-Research reveals that most people have very limited engagement with digital safety practices, with significant barriers including lack of awareness, mistrust of security tools, and complexity concerns. Studies show that only 36% of Americans use password managers, 32% use VPNs, and 41% enable two-factor authentication for all accounts. Common barriers include cost (22% find security tools too expensive), complexity (20% don't understand benefits), and trust issues (65% don't trust password managers despite their benefits). These patterns mean that even modest achievements in digital safety represent higher population percentiles than might initially be expected.
-
-{% include life-area-benchmarks.html %}
-
-## Levels
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Digital Safety Personalised]({{ site.baseurl }}/digital-safety/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-key-1': {
-        title: 'Financial Impact Research',
-        content: 'Identity theft and cyber fraud create substantial financial losses for individuals. The average cyber insurance claim rose from $145,000 in 2019 to $359,000 in 2020, indicating the growing financial impact of digital threats. Studies show that people with password managers were less likely to experience identity or credential theft (17% affected compared to 32% of those without). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8853293/" target="_blank">View research</a>'
-    },
-    'research-key-2': {
-        title: 'Privacy Surveillance Research', 
-        content: 'Research shows that 73% of people believe organisations gather their personal information without their knowledge, and 77% of Americans have little to no trust in social media leaders regarding data protection. Studies indicate that social media platforms engage in "vast surveillance of consumers" with inadequate privacy controls, collecting extensive personal data for commercial exploitation. <a href="https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-staff-report-finds-large-social-media-video-streaming-companies-have-engaged-vast-surveillance" target="_blank">View FTC report</a>'
-    },
-    'research-key-3': {
-        title: 'Digital Threat Consequences Research',
-        content: 'Cybercrime cost the global economy just under $1 trillion in 2020, with 85% of data breaches involving human factors. Research shows that 26% of people have experienced at least one cyber incident, with consequences including financial loss, identity theft, and reputational damage. Poor digital safety practices increase vulnerability to sophisticated threats including deepfakes (experienced by 47% of organisations) and AI-driven attacks. <a href="https://secureframe.com/blog/cybersecurity-statistics" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var ds = progress['digital-safety'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return ds[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['digital-safety'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Digital Safety.</strong></p>' +
+            '<a href="{{ site.baseurl }}/digital-safety/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/digital-safety/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(ds).length > 0) {
+        var completed = steps.filter(function(s) { return ds[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/digital-safety/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

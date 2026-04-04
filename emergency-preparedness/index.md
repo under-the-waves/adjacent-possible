@@ -1,62 +1,204 @@
 ---
+layout: default
+title: Emergency Preparedness
 life_area_slug: emergency-preparedness
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Look After Yourself &gt;
+    Security &gt;
+    Emergency Preparedness
+</div>
+
 # Emergency Preparedness
 
-## What is Emergency Preparedness?
+**What it is**
+- Your readiness to handle emergencies, disasters, and unexpected crises. Emergency preparedness covers physical supplies, practical skills, planning, and community connections that allow you to maintain safety and quality of life when normal systems are disrupted.
 
-Emergency preparedness encompasses systematic planning and resource allocation to maintain resilience during disruptions – from power outages and severe weather to economic shocks or health crises. This covers physical supplies (food, water, first aid), knowledge and skills (basic medical training, communication protocols), planning (evacuation routes, family coordination), and community connections (neighbourhood networks, mutual aid). It spans immediate response capability through longer-term adaptation to changed circumstances, addressing both likely regional risks and rare but potentially catastrophic scenarios.
+**Why it matters**
+- Research consistently shows that prepared households experience less financial strain, faster recovery, and reduced physical harm during emergencies. Even modest preparation places you well ahead of the general population – roughly [half of Americans](https://www.fema.gov/emergency-managers/national-preparedness/report) lack a basic household emergency plan.
 
-## Why Emergency Preparedness Matters
+**Related life areas**
+- [Physical Safety]({{ site.baseurl }}/physical-safety/) – protecting yourself and others from physical threats and hazards
+- [Digital Safety]({{ site.baseurl }}/digital-safety/) – safeguarding your digital identity, data, and online presence
+- [Financial Planning and Tracking]({{ site.baseurl }}/financial-planning-tracking/) – managing your finances through budgeting, tracking, and forward planning
+- [Health Management]({{ site.baseurl }}/health-management/) – how you monitor and manage your physical health and medical needs
 
-Emergency preparedness serves as a foundation for maintaining safety and quality of life when normal systems fail. Research consistently demonstrates that household preparedness significantly improves outcomes during disasters <span class="info-icon" onclick="showReasoning('research-key-1')">i</span>, whilst community-level preparedness creates multiplying effects that benefit entire neighbourhoods <span class="info-icon" onclick="showReasoning('research-key-2')">i</span>. Studies show that prepared households experience less financial strain, psychological distress, and physical harm during emergencies <span class="info-icon" onclick="showReasoning('research-key-3')">i</span>.
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Emergency Preparedness yet.</strong><br>It takes about 15 minutes and helps you understand what preparedness means to you.</p>
+    <a href="{{ site.baseurl }}/emergency-preparedness/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Beyond individual benefits, emergency preparedness builds resilience that extends throughout communities and reduces strain on emergency services during large-scale events. The skills, relationships, and resources developed through preparedness activities provide value during everyday challenges as well as major crises.
+## What people value about emergency preparedness
 
-## Emergency Preparedness Values
+People pursue preparedness for different reasons. This site scores every emergency preparedness intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-Your optimal approach to emergency preparedness depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+<div class="value-card">
+<h3>Self-Reliance</h3>
+<p>Building personal and family capability to handle emergencies independently without requiring external assistance. Maintaining adequate supplies, developing essential skills, and creating systems that allow you to sustain your household during disruptions.</p>
+</div>
 
-For personalised recommendations based on your unique priorities, visit [Emergency Preparedness Personalised]({{ site.baseurl }}/emergency-preparedness/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Community Resilience</h3>
+<p>Developing collective preparedness through social networks, mutual aid, and coordinated community response capabilities. Building relationships with neighbours, participating in local emergency response groups, and creating systems for collective support during crises.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Baseline Resilience</h3>
+<p>Focusing preparation efforts on probable, manageable disruptions that occur within stable social systems. Preparing for regional natural disasters, infrastructure failures, economic downturns, and temporary supply chain interruptions.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Catastrophic Resilience</h3>
+<p>Focusing preparation efforts on rare but potentially civilisation-altering scenarios that could fundamentally disrupt society. Preparing for global pandemics, economic collapse, technological failures affecting critical infrastructure, or existential risks from emerging technologies.</p>
+</div>
 
-Research reveals that most Americans have limited emergency preparedness engagement, with approximately 50% lacking basic household emergency plans and nearly half having no emergency supply kits. Community preparedness participation rates are particularly low, with most neighbourhood networks having minimal active participation. These patterns mean that even modest preparedness achievements represent higher population percentiles than might initially be expected.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/emergency-preparedness/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand preparedness, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/emergency-preparedness/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Emergency Preparedness Personalised]({{ site.baseurl }}/emergency-preparedness/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-key-1': {
-        title: 'Household Preparedness Outcomes Research',
-        content: 'Multiple studies show that households with emergency plans and supplies experience significantly better outcomes during disasters. FEMA\'s National Household Survey demonstrates that prepared households report less financial strain, faster recovery times, and reduced need for external assistance during emergencies. The Oakland County CASPER study found that households with basic preparedness had 40% fewer secondary health impacts during disasters.'
-    },
-    'research-key-2': {
-        title: 'Community Preparedness Multiplier Effects',
-        content: 'Research from Penn State Extension and community resilience studies shows that neighbourhood-level preparedness creates cascading benefits beyond individual households. Communities with higher preparedness participation rates experience faster emergency response times, more effective resource sharing, and stronger social cohesion during crises. The "Map Your Neighborhood" program demonstrates that even basic community coordination improves overall disaster outcomes.'
-    },
-    'research-key-3': {
-        title: 'Psychological and Financial Benefits of Preparedness',
-        content: 'Studies consistently show that emergency preparedness reduces stress and anxiety related to potential disasters while providing tangible benefits during actual emergencies. Research indicates that prepared households experience 30-50% less financial impact during disasters due to reduced reliance on emergency services, hotels, and emergency purchases at inflated prices.'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var ep = progress['emergency-preparedness'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return ep[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['emergency-preparedness'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Emergency Preparedness.</strong></p>' +
+            '<a href="{{ site.baseurl }}/emergency-preparedness/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/emergency-preparedness/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(ep).length > 0) {
+        var completed = steps.filter(function(s) { return ep[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/emergency-preparedness/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

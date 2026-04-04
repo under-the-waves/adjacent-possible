@@ -1,64 +1,204 @@
 ---
+layout: default
+title: Behaviours
 life_area_slug: behaviours
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Look After Yourself &gt;
+    Wellbeing &gt;
+    Behaviours
+</div>
+
 # Behaviours
 
-## What are Behaviours?
+**What it is**
+- Your automatic patterns of action – addictions, compulsions, emotional reactions, avoidance, and other ingrained responses that you engage in despite knowing they work against you. Unlike habits (deliberately cultivated positive routines), behaviours in this context are typically reactive patterns that emerge as coping mechanisms or responses to unmet emotional needs.
 
-Behaviours encompasses the unconscious, automatic patterns of action that often work against your wellbeing and life goals. This includes addictions, compulsions, emotional reactions, avoidance patterns, and deeply ingrained responses that you engage in despite knowing they're counterproductive. Unlike habits (which are deliberately cultivated positive patterns), behaviours in this context are typically reactive patterns that emerge as coping mechanisms or responses to unmet emotional needs.
+**Why it matters**
+- Automatic behavioural patterns often determine whether you live reactively or respond intentionally. Only about <a href="https://www.addictionhelp.com/recovery/statistics/" target="_blank">24% of people</a> who could benefit from behavioural intervention actually seek help, meaning most problematic patterns persist unchallenged. Developing the capacity to choose your responses – rather than defaulting to compulsive ones – tends to improve relationships, mental health, and overall life satisfaction.
 
-This life area focuses on recognising these automatic patterns, understanding their triggers, and developing the capacity to choose different responses. It covers everything from substance use and compulsive behaviours to emotional reactivity and problematic interpersonal patterns that limit your freedom and authentic expression.
+**Related life areas**
+- [Mental Health]({{ site.baseurl }}/mental-health/) – your psychological wellbeing, including mood, anxiety, and emotional health
+- [Mindfulness]({{ site.baseurl }}/mindfulness/) – your capacity for present-moment awareness and non-reactive observation
+- [Habits]({{ site.baseurl }}/habits/) – your deliberately cultivated positive routines and systems
+- [Self-Awareness]({{ site.baseurl }}/self-awareness/) – your understanding of your own thoughts, emotions, and motivations
 
-## Why Behaviours Matter
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Behaviours yet.</strong><br>It takes about 15 minutes and helps you understand what behavioural change means to you.</p>
+    <a href="{{ site.baseurl }}/behaviours/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Automatic behavioural patterns significantly impact every aspect of life, often determining the difference between living reactively versus responding intentionally. <span class="info-icon" onclick="showReasoning('research-freedom')">i</span> These unconscious responses can undermine relationships, career progress, and personal wellbeing, whilst conscious behavioural choice enhances self-efficacy and life satisfaction.
+## What people value about behaviours
 
-The ability to regulate emotional responses and break free from compulsive patterns correlates strongly with mental health outcomes and relationship quality. <span class="info-icon" onclick="showReasoning('research-emotional')">i</span> People who develop sophisticated behavioural awareness and intervention skills report significantly greater life satisfaction and resilience during challenging periods. <span class="info-icon" onclick="showReasoning('research-resilience')">i</span>
+People pursue behavioural change for different reasons. This site scores every behaviours intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-## Behaviour Values
+<div class="value-card">
+<h3>Freedom & Control</h3>
+<p>Liberation from compulsive patterns and automatic responses that limit your individual choices. Breaking free from addictions, managing impulses, and developing the ability to pause between trigger and response.</p>
+</div>
 
-Your optimal approach to behaviours depends on what aspects of change you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+<div class="value-card">
+<h3>Emotional Regulation</h3>
+<p>Developing healthier responses to emotional triggers like stress, anxiety, anger, or boredom. Moving from reactive emotional patterns to more measured, intentional responses.</p>
+</div>
 
-For personalised recommendations based on your unique priorities, visit [Behaviours Personalised]({{ site.baseurl }}/behaviours/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Social & Relational Patterns</h3>
+<p>Changing automatic interpersonal behaviours like people-pleasing, conflict avoidance, codependency, social withdrawal, or defensive reactions. Learning to respond rather than react in relationships.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Resilience & Adaptability</h3>
+<p>Building sustainable behavioural change that survives life disruptions and does not require constant vigilance. Developing multiple coping strategies, planning for setbacks, and creating robust systems rather than fragile single approaches.</p>
+</div>
 
-## Benchmarks by Level
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/behaviours/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand behaviours, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/behaviours/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-Research reveals that most people have problematic behavioural patterns but rarely address them systematically. Studies show that only 23.6% of those needing behavioural intervention actually seek help, with most people maintaining automatic patterns throughout life without systematic change attempts. Recovery and emotional regulation success rates vary widely, but sustained behavioural mastery represents achievement by only the top percentiles of the population. These patterns mean that even modest improvements in behavioural self-management represent higher population percentiles than might initially be expected.
-
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Behaviours Personalised]({{ site.baseurl }}/behaviours/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-freedom': {
-        title: 'Behavioural Patterns and Life Impact Research',
-        content: 'Research from addiction recovery studies shows that 75% of people with substance use disorders eventually recover, but only 23.6% of those needing treatment actually receive it. This indicates that automatic behavioural patterns significantly impact life outcomes, with most people maintaining problematic patterns without systematic intervention. <a href="https://www.addictionhelp.com/recovery/statistics/" target="_blank">CDC Recovery Research</a>'
-    },
-    'research-emotional': {
-        title: 'Emotional Regulation and Mental Health Research',
-        content: 'WHO data shows 1 in 8 people globally live with anxiety or depression disorders, with emotional regulation difficulties underlying both conditions. Studies consistently demonstrate that people with sophisticated emotional regulation skills have significantly better mental health outcomes and relationship quality. <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank">WHO Mental Health Data</a>'
-    },
-    'research-resilience': {
-        title: 'Behavioural Change and Resilience Research',
-        content: 'Relapse prevention research shows that sustainable behavioural change requires multiple coping strategies and robust systems. Studies indicate that 40-60% of people relapse from behavioural changes, but those who develop comprehensive resilience skills maintain improvements long-term even during major life stressors. <a href="https://substanceabusepolicy.biomedcentral.com/articles/10.1186/1747-597X-6-17" target="_blank">Relapse Prevention Research</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var behaviours = progress.behaviours || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return behaviours[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.behaviours;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Behaviours.</strong></p>' +
+            '<a href="{{ site.baseurl }}/behaviours/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/behaviours/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(behaviours).length > 0) {
+        var completed = steps.filter(function(s) { return behaviours[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/behaviours/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

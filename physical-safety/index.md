@@ -1,64 +1,194 @@
 ---
+layout: default
+title: Physical Safety
 life_area_slug: physical-safety
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Look After Yourself &gt;
+    Security &gt;
+    Physical Safety
+</div>
+
 # Physical Safety
 
-## What is Physical Safety?
+**What it is**
+- Your personal safety practices and physical risk management. Physical safety covers day-to-day hazard awareness, preventive measures for common risks, situational awareness, and the ability to respond effectively to threatening situations.
 
-Physical safety encompasses protecting yourself and those you're responsible for from bodily harm, injury, and dangerous situations. This includes immediate hazard awareness, preventive measures for common risks, personal security practices, emergency response capabilities, and basic protective skills. It covers day-to-day safety practices, situational awareness, violence prevention, accident avoidance, and the ability to respond effectively to threatening situations.
+**Why it matters**
+- Preventable injuries are a leading cause of death for people under 45, and most common safety practices – from consistent seat belt use to basic home security – substantially reduce risk with minimal effort. Good safety skills also reduce anxiety and expand the range of activities you can confidently engage in.
 
-Physical safety is distinct from [emergency preparedness]({{ site.baseurl }}/emergency-preparedness/) (which focuses on disasters and major crises) and [health management]({{ site.baseurl }}/health-management/) (which addresses medical conditions and wellness). This area concentrates on the skills, systems, and awareness needed to prevent harm and respond to immediate physical threats in everyday life.
+**Related life areas**
+- [Emergency Preparedness]({{ site.baseurl }}/emergency-preparedness/) – planning and resources for disasters and major crises
+- [Digital Safety]({{ site.baseurl }}/digital-safety/) – protecting yourself from online threats, fraud, and data breaches
+- [Health Management]({{ site.baseurl }}/health-management/) – how you monitor and manage your physical health and medical needs
+- [Housing]({{ site.baseurl }}/housing/) – the quality, suitability, and security of where you live
 
-## Why Physical Safety Matters
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Physical Safety yet.</strong><br>It takes about 15 minutes and helps you understand what physical safety means to you.</p>
+    <a href="{{ site.baseurl }}/physical-safety/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Physical safety provides the foundation for engaging freely and confidently with the world. Without basic safety competencies, people either expose themselves to unnecessary risks or become overly restricted in their activities and choices <span class="info-icon" onclick="showReasoning('engagement-foundation')">i</span>. Good physical safety practices enable confident participation in work, travel, recreation, and relationships whilst minimising both the probability and severity of harm.
+## What people value about physical safety
 
-Effective safety skills also provide psychological benefits beyond physical protection <span class="info-icon" onclick="showReasoning('psychological-benefits')">i</span>, whilst comprehensive safety knowledge can significantly reduce the likelihood of becoming a victim of preventable incidents <span class="info-icon" onclick="showReasoning('prevention-effectiveness')">i</span>. Physical safety is fundamentally about maintaining the physical integrity and peace of mind needed for pursuing other life goals without undue restriction or anxiety.
+People approach physical safety for different reasons. This site scores every physical safety intervention across two core values, and ranks them by how well they deliver on the things you actually care about.
 
-## Physical Safety Values
+<div class="value-card">
+<h3>Risk Reduction</h3>
+<p>Minimising the probability and severity of physical harm through systematic hazard management, protective measures, and evidence-based safety practices.</p>
+</div>
 
-Your optimal approach to physical safety depends on what aspects you value most. This guide balances two core values, with percentages indicating the relative weight given to each in our recommendations.
+<div class="value-card">
+<h3>Freedom and Convenience</h3>
+<p>Maintaining lifestyle flexibility and spontaneity whilst achieving reasonable safety. The ability to travel, explore, and engage in desired activities without excessive safety-related restrictions, delays, or anxiety.</p>
+</div>
 
-For personalised recommendations based on your unique priorities, visit [Physical Safety Personalised]({{ site.baseurl }}/physical-safety/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/physical-safety/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand physical safety, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/physical-safety/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-values.html %}
-
-## Benchmarks by Level
-
-Research reveals significant gaps in physical safety competencies across the population. While most people have basic safety awareness, only small percentages develop systematic protective skills. CPR training reaches 65% at some point but only 18% maintain current certification. Self-defence training involves just 2.1% of the population annually. Home security adoption is moderate (72% have some devices) but comprehensive protection is less common (32% have alarm systems). These patterns mean that even modest systematic safety practices represent higher population percentiles than might be expected.
-
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Physical Safety Personalised]({{ site.baseurl }}/physical-safety/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'engagement-foundation': {
-        title: 'Physical Safety as Foundation for Life Engagement',
-        content: 'Without basic safety competencies, individuals face a limiting dilemma: either expose themselves to unnecessary risks or restrict their activities and choices. Research on risk perception shows that people with low safety self-efficacy tend to avoid beneficial activities (travel, social engagement, physical exercise) or engage in them with high anxiety levels that reduce enjoyment and effectiveness. Conversely, those with solid safety foundations report greater life satisfaction and broader engagement with opportunities.'
-    },
-    'psychological-benefits': {
-        title: 'Psychological Benefits of Safety Skills',
-        content: 'Studies show that self-defence training increases confidence and reduces anxiety beyond the physical protection provided. Research in the Journal of Interpersonal Violence found that women completing empowerment self-defence courses reported significant improvements in self-efficacy and reduced fear levels. CPR training provides peace of mind for family situations. Basic safety skills create psychological resilience by reducing the feeling of helplessness in uncertain situations.'
-    },
-    'prevention-effectiveness': {
-        title: 'Effectiveness of Safety Knowledge in Prevention',
-        content: 'Comprehensive safety awareness significantly reduces victimisation rates. University of North Carolina research found that 83% of burglars check for security systems before attempting entry, and 60% would choose alternative targets if alarms are present. Self-defence training shows 46% reduction in completed sexual assault rates. CPR training can double or triple survival rates from cardiac arrest. Basic safety protocols (situational awareness, secure habits) create multiple layers of protection that compound to meaningfully reduce incident probability.'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var physicalSafety = progress['physical-safety'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return physicalSafety[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['physical-safety'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Physical Safety.</strong></p>' +
+            '<a href="{{ site.baseurl }}/physical-safety/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/physical-safety/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(physicalSafety).length > 0) {
+        var completed = steps.filter(function(s) { return physicalSafety[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/physical-safety/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
