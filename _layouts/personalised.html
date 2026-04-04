@@ -265,13 +265,38 @@ body .main-content {
     background: #f8f9fa;
     padding: 15px;
     border-radius: 6px;
-    margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 0.9em;
     text-align: left;
 }
 
+.methodology-note summary {
+    cursor: pointer;
+    color: #155799;
+    list-style: none;
+}
+
+.methodology-note summary::-webkit-details-marker {
+    display: none;
+}
+
+.methodology-note summary strong::before {
+    content: "▶ ";
+    font-size: 0.75em;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.methodology-note[open] summary strong::before {
+    content: "▼ ";
+}
+
+.methodology-note summary:hover {
+    text-decoration: underline;
+}
+
 .methodology-note p {
-    margin: 0;
+    margin: 10px 0 0 0;
 }
 
 .methodology-note a {
@@ -614,10 +639,6 @@ body .main-content {
                 </div>
                 <button class="reset-sliders-btn" id="resetSliders">Reset to defaults</button>
 
-                <details class="methodology-note">
-                    <summary><strong>How scoring works</strong></summary>
-                    <p>Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
-                </details>
             </div>
         </div>
 
@@ -627,6 +648,11 @@ body .main-content {
                     <h2>Your Recommended Interventions</h2>
                     <p>Ranked by your priorities. Click column headers to re-sort.</p>
                 </div>
+
+                <details class="methodology-note">
+                    <summary><strong>How scoring works</strong></summary>
+                    <p>Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
+                </details>
 
                 <table class="recommendations-table" id="recommendationsTable">
                     <thead>
