@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Housework – Level 1: Awareness"
-life_area_slug: housework
+title: "Mindfulness – Level 1: Awareness"
+life_area_slug: mindfulness
 ---
 
 <style>
@@ -192,9 +192,9 @@ life_area_slug: housework
 
 <div class="l1-container">
 
-<h1>Housework: Level 1</h1>
+<h1>Mindfulness: Level 1</h1>
 
-<p class="l1-subtitle">Understand what housework means, what's possible, and where you stand. About 15 minutes.</p>
+<p class="l1-subtitle">Understand what mindfulness means, what's possible, and where you stand. About 15 minutes.</p>
 
 <div class="l1-progress">
     <div class="l1-progress-bar">
@@ -207,24 +207,24 @@ life_area_slug: housework
     <div class="l1-progress-label" id="progressLabel">Step 1 of 5</div>
 </div>
 
-<!-- Step 1: Why Housework Matters -->
+<!-- Step 1: Why Mindfulness Matters -->
 <div class="l1-step" id="step-why" data-step="why">
     <div class="l1-step-header" onclick="toggleStep('why')">
         <div class="l1-step-number">1</div>
-        <div class="l1-step-title">Why housework matters</div>
+        <div class="l1-step-title">Why mindfulness matters</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Your home environment shapes your health, stress levels, and cognitive performance more than most people realise. The evidence runs deeper than tidiness preferences.</p>
+<p>Mindfulness &ndash; the systematic practice of present-moment awareness &ndash; is one of the most extensively studied approaches to improving psychological functioning. The evidence base spans thousands of studies and multiple decades.</p>
 
-<p>Physical clutter competes for your attention and degrades your ability to focus and process information, according to research from the <a href="https://doi.org/10.1523/JNEUROSCI.5587-09.2011" target="_blank">Princeton Neuroscience Institute</a>. A <a href="https://pubmed.ncbi.nlm.nih.gov/19934011/" target="_blank">UCLA study</a> of 32 dual-income families found that those who described their homes as cluttered had flatter cortisol slopes throughout the day &ndash; a physiological marker of chronic stress.</p>
+<p>A <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1809754" target="_blank">2014 meta-analysis in JAMA Internal Medicine</a> found that mindfulness meditation programmes produce moderate improvements in anxiety, depression, and pain. These effects are comparable to the benefits of antidepressant medication for mild-to-moderate depression, without the side effects.</p>
 
-<p>On the health side, an <a href="https://news.iu.edu/stories/2015/08/iub/releases/24-housework-physical-activity.html" target="_blank">Indiana University study</a> found that house cleanliness was a stronger predictor of physical health than neighbourhood walkability. Indoor air quality, mould, and allergen exposure have measurable effects on respiratory health and sleep quality.</p>
+<p>Regular practice also improves <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5103185/" target="_blank">attention, working memory, and executive function</a>. People who meditate consistently show measurable changes in brain regions associated with attention regulation, emotional processing, and self-awareness. Even brief interventions &ndash; as short as four days of practice &ndash; produce <a href="https://pubmed.ncbi.nlm.nih.gov/20363650/" target="_blank">detectable improvements in mood and cognitive performance</a>.</p>
 
-<p>Research published in <a href="https://doi.org/10.1073/pnas.1706541114" target="_blank">PNAS</a> found that spending money to buy back time &ndash; including outsourcing household tasks &ndash; produced greater life satisfaction than spending on material goods, regardless of income level. How you manage your home is one of the most underrated levers for daily quality of life.</p>
+<p>Beyond cognitive and emotional benefits, mindfulness practice is associated with reduced blood pressure, improved immune function, and better sleep quality. Few other practices simultaneously improve thinking, emotional regulation, physical health, and subjective wellbeing.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
@@ -236,26 +236,26 @@ life_area_slug: housework
 <div class="l1-step" id="step-values" data-step="values">
     <div class="l1-step-header" onclick="toggleStep('values')">
         <div class="l1-step-number">2</div>
-        <div class="l1-step-title">What different people value about housework</div>
+        <div class="l1-step-title">What different people value about mindfulness</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People care about housework for different reasons. This site scores every housework intervention across four core values. Later, you'll set your own weighting across these four values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People pursue mindfulness for different reasons. This site scores every mindfulness intervention across four core values. Later, you'll set your own weighting across these values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
-<h3>Health & Hygiene</h3>
-<p>Housework that protects physical health by reducing illness, allergens, pests, mould, and toxins. Cleaning protocols, air quality management, and maintenance practices that eliminate health hazards. People who lean towards this value focus on evidence-based cleaning frequencies and methods that have the greatest impact on health outcomes.</p>
+<h3>Mental Clarity</h3>
+<p>Enhanced cognitive function including sustained attention, mental focus, and clarity of thinking. Improved concentration at work, reduced mental fog, greater ability to stay present during conversations, and enhanced capacity to direct attention deliberately. People who prioritise this value focus on practices that strengthen the ability to direct and sustain attention.</p>
 
-<h3>Order</h3>
-<p>The mental calm and cognitive ease that comes from an organised, uncluttered living space. Knowing where everything is, having systems that maintain themselves, and not feeling overwhelmed by mess. People who lean towards this value focus on organisational systems, decluttering, and routines that keep the home orderly without constant effort.</p>
+<h3>Emotional Wellbeing</h3>
+<p>Increased emotional resilience, reduced reactivity, and greater equanimity during challenging situations. Better stress management, less overwhelm during difficult periods, improved mood stability, and the ability to respond rather than react to emotional triggers. Those who prioritise this value seek practices that provide immediate stress relief and long-term emotional balance.</p>
 
-<h3>Aesthetics</h3>
-<p>The visual appeal and sensory pleasure derived from your living space. Design choices, visual harmony, and personalised spaces that reflect your taste and feel inviting. People who lean towards this value focus on creating environments that are pleasing to be in, not just tidy or functional.</p>
+<h3>Self-Knowledge</h3>
+<p>Deeper understanding of your own thought patterns, emotional triggers, habitual behaviours, and unconscious motivations. Gaining insight into why you react certain ways, recognising recurring mental patterns, and developing awareness of previously hidden aspects of your psychology. People who prioritise this value are drawn to practices that reveal truth about themselves, even when initially uncomfortable.</p>
 
-<h3>Environmental Impact</h3>
-<p>The ecological footprint of home management practices. Sustainable cleaning methods, waste reduction, and considerate resource use. People who lean towards this value focus on eco-friendly products, minimal consumption, and practices that reduce environmental harm.</p>
+<h3>Spiritual Development</h3>
+<p>Connection to meaning, purpose, transcendence, and broader existential questions. Experiences of interconnectedness, encounters with the sacred or mysterious, development of compassion and loving-kindness, and exploration of consciousness itself. Those who prioritise this value seek practices that address life's deeper questions and cultivate connection beyond the individual self.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -274,26 +274,26 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each housework value:</p>
+<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each mindfulness value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Health & Hygiene &ndash; Level 5</div>
-    <p><a href="https://www.youtube.com/@CleanMySpace" target="_blank">Melissa Maker</a> runs a cleaning company and has spent over a decade documenting evidence-based cleaning methods across hundreds of videos and a bestselling book. She appears to maintain clinical-grade hygiene standards in her own home, with systematic protocols for air quality, surface sanitisation, and allergen management that go well beyond standard domestic cleaning.</p>
+    <div class="exemplar-value">Mental Clarity &ndash; Level 5</div>
+    <p><a href="https://www.alanwallace.org/about" target="_blank">B. Alan Wallace</a> has practised meditation for over 40 years, including multiple solitary retreats lasting up to five months. He trained for over a decade under the Dalai Lama and other Tibetan teachers. His work centres on <a href="https://www.sbinstitute.com/about" target="_blank">shamatha</a> &ndash; the sustained, deliberate cultivation of attentional stability &ndash; and he appears to maintain exceptionally focused attention well into his seventies.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Order &ndash; Level 5</div>
-    <p><a href="https://konmari.com/" target="_blank">Marie Kondo</a> developed the KonMari method and has reportedly maintained a highly organised living environment since childhood. Her approach &ndash; keeping only items that serve a purpose or bring satisfaction, with every object having a designated place &ndash; seems to produce homes that stay orderly with minimal ongoing effort. Clients who complete her full process report sustained results years later.</p>
+    <div class="exemplar-value">Emotional Wellbeing &ndash; Level 5</div>
+    <p><a href="https://www.richardjdavidson.com/" target="_blank">Matthieu Ricard</a>, a former molecular biologist who became a Tibetan Buddhist monk, has logged over 50,000 hours of meditation practice across four decades. Neuroscientist Richard Davidson's lab at the University of Wisconsin found that Ricard's brain showed <a href="https://www.pnas.org/doi/10.1073/pnas.0407401101" target="_blank">unusually high levels of gamma wave activity</a> associated with positive emotions, leading to widespread coverage describing him as one of the calmest people ever measured in a laboratory setting.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Aesthetics &ndash; Level 5</div>
-    <p><a href="https://www.instagram.com/mikiashdesign/" target="_blank">Mike Mikish</a> is known for transforming everyday living spaces into multi-sensory environments with cohesive colour palettes, layered lighting, and curated objects. His own home appears to function as a gallery-quality space where every material, finish, and decorative element is chosen with intention &ndash; the kind of residential environment that could feature in a design publication.</p>
+    <div class="exemplar-value">Self-Knowledge &ndash; Level 5</div>
+    <p><a href="https://www.tarabrach.com/about/" target="_blank">Tara Brach</a> has maintained a daily meditation practice for over 40 years and holds a PhD in clinical psychology. She combines deep contemplative experience with psychological expertise, and her teaching focuses specifically on recognising and understanding one's own patterns of emotional reactivity, self-judgment, and habitual avoidance.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Environmental Impact &ndash; Level 5</div>
-    <p><a href="https://www.goingzerowaste.com/" target="_blank">Kathryn Kellogg</a> reportedly fits two years of landfill waste into a single jar while maintaining a clean, functional home. She uses exclusively non-toxic, biodegradable cleaning products &ndash; many homemade &ndash; and has eliminated single-use items from her household. Her approach demonstrates that near-zero-waste home management is achievable without sacrificing cleanliness or comfort.</p>
+    <div class="exemplar-value">Spiritual Development &ndash; Level 5</div>
+    <p><a href="https://jackkornfield.com/teachers-biography/" target="_blank">Jack Kornfield</a> trained as a Buddhist monk in Thailand, Burma, and India for several years before returning to the West, where he has practised and taught meditation for over five decades. He co-founded two major retreat centres and his teaching integrates intensive contemplative practice with psychological insight, emphasising compassion, interconnectedness, and the direct investigation of consciousness.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
@@ -313,81 +313,81 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes of honest reflection. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought about it).</p>
 
 <div class="assess-group">
-<h4>Health & Hygiene</h4>
+<h4>Mental Clarity</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clean-freq">
-    <label for="a-clean-freq">I know how often I clean my kitchen and bathroom surfaces.<br><span class="assess-hint">Include countertops, sinks, taps, toilet, and shower or bath.</span></label>
+    <input type="checkbox" id="a-focus-duration">
+    <label for="a-focus-duration">I know roughly how long I can sustain focused attention on a single task before my mind wanders.<br><span class="assess-hint">Think about reading, working, or having a conversation. Minutes? Seconds?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fridge-temp">
-    <label for="a-fridge-temp">I know whether my fridge is at or below 5&deg;C.<br><span class="assess-hint">Check the built-in display, or place a thermometer inside for a few hours.</span></label>
+    <input type="checkbox" id="a-mental-fog">
+    <label for="a-mental-fog">I can identify the times of day when my thinking feels clearest and when it feels most foggy.<br><span class="assess-hint">Morning, afternoon, evening &ndash; when are you sharpest?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mould">
-    <label for="a-mould">I know whether I have any visible mould, damp, or persistent condensation in my home.<br><span class="assess-hint">Check bathroom grout, window seals, behind furniture on external walls, and under sinks.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Order</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clutter">
-    <label for="a-clutter">I know which rooms or areas in my home have the most clutter.<br><span class="assess-hint">Walk through each room and note surfaces, floors, and storage areas with accumulated items.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-find-items">
-    <label for="a-find-items">I know how quickly I can find commonly needed items (keys, scissors, chargers, documents).<br><span class="assess-hint">Think about whether you regularly spend time searching for everyday objects.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tidy-routine">
-    <label for="a-tidy-routine">I know whether I have any regular tidying routine or schedule, or whether I clean reactively.<br><span class="assess-hint">A routine means specific tasks on specific days. Reactive means cleaning when things get noticeably messy.</span></label>
+    <input type="checkbox" id="a-distraction">
+    <label for="a-distraction">I know my main sources of distraction and how often I check my phone or switch tasks involuntarily.<br><span class="assess-hint">Notifications, social media, internal restlessness, boredom &ndash; what pulls your attention away?</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Aesthetics</h4>
+<h4>Emotional Wellbeing</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-visual-appeal">
-    <label for="a-visual-appeal">I've thought about which rooms I find visually pleasing and which feel neglected or uninviting.<br><span class="assess-hint">Consider whether furnishings reflect your taste or are inherited defaults.</span></label>
+    <input type="checkbox" id="a-stress-response">
+    <label for="a-stress-response">I know how my body responds to stress and can recognise the early physical signs.<br><span class="assess-hint">Tight shoulders, shallow breathing, clenched jaw, racing heart &ndash; what are your signals?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-lighting">
-    <label for="a-lighting">I know whether the lighting in my main living spaces suits their function.<br><span class="assess-hint">Bright enough for tasks? Warm enough for relaxation? Or just whatever bulb was already there?</span></label>
+    <input type="checkbox" id="a-recovery-time">
+    <label for="a-recovery-time">I have a rough sense of how long it takes me to recover emotionally after something upsets me.<br><span class="assess-hint">Minutes, hours, days? Do you bounce back quickly or does frustration linger?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sensory">
-    <label for="a-sensory">I've noticed how my home smells, sounds, and feels when I walk in.<br><span class="assess-hint">First impressions matter. Think about what a visitor would notice.</span></label>
+    <input type="checkbox" id="a-coping">
+    <label for="a-coping">I can name my current go-to coping mechanisms when I feel overwhelmed.<br><span class="assess-hint">Exercise, talking to someone, distraction, avoidance, substances, sleep &ndash; what do you actually do?</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Environmental Impact</h4>
+<h4>Self-Knowledge</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-waste">
-    <label for="a-waste">I know roughly how much household waste I generate per week and how much I recycle.<br><span class="assess-hint">Count your bin bags or check how often your bins are full.</span></label>
+    <input type="checkbox" id="a-thought-patterns">
+    <label for="a-thought-patterns">I can identify at least one recurring thought pattern or mental habit I fall into regularly.<br><span class="assess-hint">Rumination, worst-case thinking, self-criticism, comparison, planning &ndash; what theme keeps returning?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-products">
-    <label for="a-products">I know what cleaning products I use and whether any are eco-friendly or plant-based.<br><span class="assess-hint">Check labels for biodegradable, plant-based, or eco-certified claims.</span></label>
+    <input type="checkbox" id="a-triggers">
+    <label for="a-triggers">I know what situations or interactions tend to trigger strong emotional reactions in me.<br><span class="assess-hint">Criticism, feeling ignored, time pressure, conflict &ndash; what sets you off?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wash-temp">
-    <label for="a-wash-temp">I know what temperature I typically wash my clothes at.<br><span class="assess-hint">90% of the energy used in washing goes to heating water.</span></label>
+    <input type="checkbox" id="a-autopilot">
+    <label for="a-autopilot">I have a sense of how much of my day I spend on autopilot versus consciously choosing my actions.<br><span class="assess-hint">Scrolling, snacking, commuting, routine tasks &ndash; how often are you fully present?</span></label>
+</div>
+</div>
+
+<div class="assess-group">
+<h4>Spiritual Development</h4>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-meaning">
+    <label for="a-meaning">I have thought about what gives my life a sense of meaning or purpose beyond daily tasks.<br><span class="assess-hint">Relationships, creative work, service, nature, learning &ndash; what makes it feel worthwhile?</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-awe">
+    <label for="a-awe">I can recall the last time I experienced a moment of awe, wonder, or deep stillness.<br><span class="assess-hint">In nature, during music, in meditation, watching a sunset &ndash; when did you last feel genuinely moved?</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-contemplative">
+    <label for="a-contemplative">I know whether I currently have any contemplative or reflective practice, formal or informal.<br><span class="assess-hint">Meditation, prayer, journaling, walking in nature, sitting quietly &ndash; or none at all.</span></label>
 </div>
 </div>
 
@@ -408,11 +408,11 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>You now understand why housework matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
+<p>You now understand why mindfulness matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
 
-<p>On the interventions page, adjust the sliders to reflect how much you care about health and hygiene, order, aesthetics, and environmental impact. The table will re-rank interventions to match your priorities.</p>
+<p>On the interventions page, adjust the sliders to reflect how much you care about mental clarity, emotional wellbeing, self-knowledge, and spiritual development. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/housework/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Housework Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/mindfulness/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Mindfulness Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -421,8 +421,8 @@ life_area_slug: housework
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
-    <p>You've built your foundation in Housework. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/housework/personalised" class="btn-cta">View Your Interventions</a>
+    <p>You've built your foundation in Mindfulness. Your self-assessment and value weightings are saved.</p>
+    <a href="{{ site.baseurl }}/mindfulness/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -431,13 +431,13 @@ life_area_slug: housework
 (function() {
     'use strict';
 
-    var AREA = 'housework';
+    var AREA = 'mindfulness';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-clean-freq', 'a-fridge-temp', 'a-mould',
-        'a-clutter', 'a-find-items', 'a-tidy-routine',
-        'a-visual-appeal', 'a-lighting', 'a-sensory',
-        'a-waste', 'a-products', 'a-wash-temp'
+        'a-focus-duration', 'a-mental-fog', 'a-distraction',
+        'a-stress-response', 'a-recovery-time', 'a-coping',
+        'a-thought-patterns', 'a-triggers', 'a-autopilot',
+        'a-meaning', 'a-awe', 'a-contemplative'
     ];
 
     function loadProgress() {

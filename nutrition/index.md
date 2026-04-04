@@ -1,54 +1,199 @@
 ---
+layout: default
+title: Nutrition
 life_area_slug: nutrition
 ---
-[← Back to Home](../)
-# Food and Nutrition
 
-## Why Food and Nutrition Matter
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
 
-Food choices affect virtually every aspect of life, from physical health and longevity to cognitive function, environmental sustainability, and financial wellbeing. Poor diet is the leading risk factor for death globally, responsible for more deaths than tobacco, high blood pressure, or any other risk <span class="info-icon" onclick="showReasoning('research-gbd')">i</span>. Yet diet quality in most developed countries is remarkably low -- the average American scores just 59 out of 100 on the Healthy Eating Index, and only 10-12% of adults meet basic fruit and vegetable intake recommendations <span class="info-icon" onclick="showReasoning('research-diet-quality')">i</span>.
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
 
-Beyond personal health, food decisions carry significant ethical implications. The global food system is responsible for roughly 26% of anthropogenic greenhouse gas emissions, with animal products accounting for the majority of that impact <span class="info-icon" onclick="showReasoning('research-environment')">i</span>. Food is also deeply intertwined with culture, pleasure, and social connection -- shared meals strengthen relationships and food traditions carry cultural identity across generations <span class="info-icon" onclick="showReasoning('research-social')">i</span>. Optimising nutrition should enhance, not diminish, these dimensions.
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
 
-## Food and Nutrition Values
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
 
-Your approach to nutrition depends on which aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
 
-For personalised recommendations based on your unique priorities, visit [Nutrition Personalised]({{ site.baseurl }}/nutrition/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
 
-{% include life-area-values.html %}
+<div class="la-home" markdown="1">
 
-## Benchmarks by Level
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Look After Yourself &gt;
+    Health &gt;
+    Nutrition
+</div>
 
-{% include life-area-benchmarks.html %}
+# Nutrition
 
-## Personalisation
+**What it is**
+- Your dietary knowledge, food choices, and the nutritional quality of what you eat.
 
-- [Nutrition Personalised]({{ site.baseurl }}/nutrition/personalised)
+**Why it matters**
+- Poor diet is the <a href="https://doi.org/10.1016/S0140-6736(19)30041-8" target="_blank">leading risk factor</a> for death globally, responsible for more deaths than tobacco, high blood pressure, or any other risk factor.
 
-[← Back to Life Areas]({{ site.baseurl }}/life-areas/)
+**Related life areas**
+- [Fitness]({{ site.baseurl }}/fitness/) &ndash; your physical exercise habits, training approach, and overall activity level
+- [Food Management]({{ site.baseurl }}/food-management/) &ndash; your ability to plan, source, and prepare food reliably
+- [Health Management]({{ site.baseurl }}/health-management/) &ndash; how you monitor and manage your physical health and medical needs
+- [Sleep]({{ site.baseurl }}/sleep/) &ndash; your sleep quality, duration, and bedtime routines
+
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Nutrition yet.</strong><br>It takes about 15 minutes and helps you understand what nutrition means to you.</p>
+    <a href="{{ site.baseurl }}/nutrition/level-1" class="btn-cta">Start Level 1</a>
+</div>
+
+## What people value about nutrition
+
+People pursue good nutrition for different reasons. This site scores every nutrition intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
+
+<div class="value-card">
+<h3>Health & Longevity</h3>
+<p>Diet quality that supports bodily health and function. Nutrient adequacy, disease prevention, energy provision, digestive health, and metabolic balance.</p>
+</div>
+
+<div class="value-card">
+<h3>Enjoyment & Culture</h3>
+<p>The sensory pleasure and social dimensions of eating. Taste satisfaction, dietary variety, cultural food traditions, and the role of meals in relationships and community.</p>
+</div>
+
+<div class="value-card">
+<h3>Ethical & Environmental Impact</h3>
+<p>The broader consequences of dietary choices on the planet and other beings. Sustainability, carbon footprint, animal welfare, biodiversity, and fair labour practices.</p>
+</div>
+
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/nutrition/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand nutrition, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/nutrition/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
+
+</div>
 
 <script>
-const researchData = {
-    'research-gbd': {
-        title: 'Diet as Leading Risk Factor',
-        content: 'The Global Burden of Disease study found that dietary risks are the leading risk factor for deaths globally, associated with 11 million deaths per year -- more than tobacco smoking (8 million), high blood pressure (10.4 million), or any other risk factor. The main dietary risks are high sodium intake, low whole grain intake, and low fruit intake. <a href="https://doi.org/10.1016/S0140-6736(19)30041-8" target="_blank">GBD 2017 Diet Collaborators, The Lancet 2019</a>'
-    },
-    'research-diet-quality': {
-        title: 'Population Diet Quality',
-        content: 'The average Healthy Eating Index score for US adults is approximately 59 out of 100 (USDA CNPP data). Only 12.3% of adults meet fruit intake recommendations and 10% meet vegetable recommendations. In the UK, average fibre intake is 19g/day against a recommendation of 30g, with only 9% meeting the target. <a href="https://www.cdc.gov/mmwr/volumes/71/wr/mm7101a1.htm" target="_blank">CDC MMWR 2022</a>; <a href="https://www.gov.uk/government/statistics/ndns-results-from-years-9-to-11-2016-to-2017-and-2018-to-2019" target="_blank">UK NDNS</a>'
-    },
-    'research-environment': {
-        title: 'Food System Environmental Impact',
-        content: 'A comprehensive meta-analysis of 38,700 farms found that food production is responsible for approximately 26% of global greenhouse gas emissions, 70% of freshwater use, and 78% of freshwater eutrophication. Animal products provide just 18% of calories but account for 58% of food emissions. Moving from current diets to plant-based diets could reduce food-related emissions by up to 73%. <a href="https://doi.org/10.1126/science.aaq0216" target="_blank">Poore & Nemecek, Science 2018</a>'
-    },
-    'research-social': {
-        title: 'Social Dimensions of Eating',
-        content: 'Research consistently shows that sharing meals strengthens social bonds and improves wellbeing. People who eat socially more often feel happier and are more satisfied with their lives, more trusting of others, and more engaged with their local communities. These associations hold after controlling for personality, income, and other social activities. <a href="https://doi.org/10.1016/j.appet.2017.01.007" target="_blank">Dunbar, Appetite 2017</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var nutrition = progress.nutrition || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return nutrition[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.nutrition;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Nutrition.</strong></p>' +
+            '<a href="{{ site.baseurl }}/nutrition/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/nutrition/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(nutrition).length > 0) {
+        var completed = steps.filter(function(s) { return nutrition[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/nutrition/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

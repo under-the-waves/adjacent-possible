@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Housework – Level 1: Awareness"
-life_area_slug: housework
+title: "Health Management – Level 1: Awareness"
+life_area_slug: health-management
 ---
 
 <style>
@@ -192,9 +192,9 @@ life_area_slug: housework
 
 <div class="l1-container">
 
-<h1>Housework: Level 1</h1>
+<h1>Health Management: Level 1</h1>
 
-<p class="l1-subtitle">Understand what housework means, what's possible, and where you stand. About 15 minutes.</p>
+<p class="l1-subtitle">Understand what health management means, what's possible, and where you stand. About 15 minutes.</p>
 
 <div class="l1-progress">
     <div class="l1-progress-bar">
@@ -207,24 +207,24 @@ life_area_slug: housework
     <div class="l1-progress-label" id="progressLabel">Step 1 of 5</div>
 </div>
 
-<!-- Step 1: Why Housework Matters -->
+<!-- Step 1: Why Health Management Matters -->
 <div class="l1-step" id="step-why" data-step="why">
     <div class="l1-step-header" onclick="toggleStep('why')">
         <div class="l1-step-number">1</div>
-        <div class="l1-step-title">Why housework matters</div>
+        <div class="l1-step-title">Why health management matters</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Your home environment shapes your health, stress levels, and cognitive performance more than most people realise. The evidence runs deeper than tidiness preferences.</p>
+<p>How you manage your health &ndash; the decisions you make about prevention, screening, providers, and medical care &ndash; has an outsized effect on your long-term outcomes. The evidence is clear: proactive health management leads to substantially better results than reacting to problems as they arise.</p>
 
-<p>Physical clutter competes for your attention and degrades your ability to focus and process information, according to research from the <a href="https://doi.org/10.1523/JNEUROSCI.5587-09.2011" target="_blank">Princeton Neuroscience Institute</a>. A <a href="https://pubmed.ncbi.nlm.nih.gov/19934011/" target="_blank">UCLA study</a> of 32 dual-income families found that those who described their homes as cluttered had flatter cortisol slopes throughout the day &ndash; a physiological marker of chronic stress.</p>
+<p>Patients who actively engage with their healthcare experience <a href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2012.1061" target="_blank">15 &ndash; 25% better outcomes</a> across chronic conditions, along with lower overall healthcare costs. Yet only <a href="https://www.cdc.gov/mmwr/volumes/68/wr/mm6840a2.htm" target="_blank">8% of Americans</a> receive all recommended preventive services. The gap between what is available and what most people actually do is enormous.</p>
 
-<p>On the health side, an <a href="https://news.iu.edu/stories/2015/08/iub/releases/24-housework-physical-activity.html" target="_blank">Indiana University study</a> found that house cleanliness was a stronger predictor of physical health than neighbourhood walkability. Indoor air quality, mould, and allergen exposure have measurable effects on respiratory health and sleep quality.</p>
+<p>Effective health management extends well beyond annual checkups. It includes understanding your personal risk factors, building relationships with providers who know your history, coordinating care when you need multiple specialists, and creating systems that keep you on track without constant effort. People who develop these capabilities <a href="https://www.commonwealthfund.org/publications/issue-briefs/2019/jan/economic-case-us-foundation-high-performance-health-system" target="_blank">report less health-related stress</a> and catch problems earlier, when treatment is simpler and more effective.</p>
 
-<p>Research published in <a href="https://doi.org/10.1073/pnas.1706541114" target="_blank">PNAS</a> found that spending money to buy back time &ndash; including outsourcing household tasks &ndash; produced greater life satisfaction than spending on material goods, regardless of income level. How you manage your home is one of the most underrated levers for daily quality of life.</p>
+<p>Few investments compound as reliably as learning to manage your own health well. The skills and systems you build now pay dividends for decades.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
@@ -236,26 +236,26 @@ life_area_slug: housework
 <div class="l1-step" id="step-values" data-step="values">
     <div class="l1-step-header" onclick="toggleStep('values')">
         <div class="l1-step-number">2</div>
-        <div class="l1-step-title">What different people value about housework</div>
+        <div class="l1-step-title">What different people value about health management</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People care about housework for different reasons. This site scores every housework intervention across four core values. Later, you'll set your own weighting across these four values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People approach health management for different reasons. This site scores every health management intervention across four core values. Later, you'll set your own weighting across these values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
-<h3>Health & Hygiene</h3>
-<p>Housework that protects physical health by reducing illness, allergens, pests, mould, and toxins. Cleaning protocols, air quality management, and maintenance practices that eliminate health hazards. People who lean towards this value focus on evidence-based cleaning frequencies and methods that have the greatest impact on health outcomes.</p>
+<h3>Long-term Health</h3>
+<p>Disease prevention, longevity optimisation, and maintaining physical and cognitive function throughout life. People who lean towards this value invest time and resources in comprehensive preventive care, understanding genetic risks, and implementing evidence-based interventions for healthy ageing.</p>
 
-<h3>Order</h3>
-<p>The mental calm and cognitive ease that comes from an organised, uncluttered living space. Knowing where everything is, having systems that maintain themselves, and not feeling overwhelmed by mess. People who lean towards this value focus on organisational systems, decluttering, and routines that keep the home orderly without constant effort.</p>
+<h3>Present Vitality</h3>
+<p>Immediate energy, cognitive function, and daily wellbeing through optimised health practices. People who lean towards this value focus on addressing symptoms that affect quality of life and ensuring their health decisions support current life goals and activities.</p>
 
-<h3>Aesthetics</h3>
-<p>The visual appeal and sensory pleasure derived from your living space. Design choices, visual harmony, and personalised spaces that reflect your taste and feel inviting. People who lean towards this value focus on creating environments that are pleasing to be in, not just tidy or functional.</p>
+<h3>Personal Control</h3>
+<p>The knowledge, skills, and confidence to make informed health decisions and advocate effectively within healthcare systems. People who lean towards this value want to be active participants in their healthcare &ndash; understanding medical information, building productive relationships with providers, and taking ownership of health outcomes.</p>
 
-<h3>Environmental Impact</h3>
-<p>The ecological footprint of home management practices. Sustainable cleaning methods, waste reduction, and considerate resource use. People who lean towards this value focus on eco-friendly products, minimal consumption, and practices that reduce environmental harm.</p>
+<h3>Simplicity</h3>
+<p>Efficient, low-maintenance systems that deliver good health outcomes without consuming excessive time or mental energy. People who lean towards this value seek streamlined approaches to preventive care, clear protocols for common health issues, and automated systems that integrate seamlessly with their lifestyle.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -274,26 +274,26 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each housework value:</p>
+<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each health management value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Health & Hygiene &ndash; Level 5</div>
-    <p><a href="https://www.youtube.com/@CleanMySpace" target="_blank">Melissa Maker</a> runs a cleaning company and has spent over a decade documenting evidence-based cleaning methods across hundreds of videos and a bestselling book. She appears to maintain clinical-grade hygiene standards in her own home, with systematic protocols for air quality, surface sanitisation, and allergen management that go well beyond standard domestic cleaning.</p>
+    <div class="exemplar-value">Long-term Health &ndash; Level 5</div>
+    <p><a href="https://peterattiamd.com/about/" target="_blank">Peter Attia</a> is a physician who structures his entire life around longevity optimisation. He undergoes quarterly blood panels, annual full-body MRI and DEXA scans, continuous glucose monitoring, and regular cardiovascular stress testing. He has spoken publicly about adjusting his exercise, nutrition, and sleep protocols based on biomarker trends tracked over more than a decade. His practice centres on what he calls "Medicine 3.0" &ndash; a preventive approach that aims to extend healthspan.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Order &ndash; Level 5</div>
-    <p><a href="https://konmari.com/" target="_blank">Marie Kondo</a> developed the KonMari method and has reportedly maintained a highly organised living environment since childhood. Her approach &ndash; keeping only items that serve a purpose or bring satisfaction, with every object having a designated place &ndash; seems to produce homes that stay orderly with minimal ongoing effort. Clients who complete her full process report sustained results years later.</p>
+    <div class="exemplar-value">Present Vitality &ndash; Level 5</div>
+    <p><a href="https://www.foundmyfitness.com/about" target="_blank">Rhonda Patrick</a> holds a PhD in biomedical science and applies detailed self-experimentation to optimise her daily energy and cognitive performance. She has documented her use of sauna protocols, cold exposure, micronutrient tracking, and time-restricted eating, adjusting each based on how they affect her day-to-day function. She appears to maintain consistently high output across research, public communication, and parenting.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Aesthetics &ndash; Level 5</div>
-    <p><a href="https://www.instagram.com/mikiashdesign/" target="_blank">Mike Mikish</a> is known for transforming everyday living spaces into multi-sensory environments with cohesive colour palettes, layered lighting, and curated objects. His own home appears to function as a gallery-quality space where every material, finish, and decorative element is chosen with intention &ndash; the kind of residential environment that could feature in a design publication.</p>
+    <div class="exemplar-value">Personal Control &ndash; Level 5</div>
+    <p><a href="https://epatientdave.com/about-dave/" target="_blank">Dave deBronkart</a> ("e-Patient Dave") was diagnosed with stage IV kidney cancer in 2007. He researched his condition extensively, identified a clinical trial through an online patient community, and worked with his oncologists to secure access to a treatment that contributed to his full remission. He went on to co-found the Society for Participatory Medicine and has <a href="https://www.bmj.com/content/346/bmj.f1990" target="_blank">published in the BMJ</a> on patient engagement.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Environmental Impact &ndash; Level 5</div>
-    <p><a href="https://www.goingzerowaste.com/" target="_blank">Kathryn Kellogg</a> reportedly fits two years of landfill waste into a single jar while maintaining a clean, functional home. She uses exclusively non-toxic, biodegradable cleaning products &ndash; many homemade &ndash; and has eliminated single-use items from her household. Her approach demonstrates that near-zero-waste home management is achievable without sacrificing cleanliness or comfort.</p>
+    <div class="exemplar-value">Simplicity &ndash; Level 5</div>
+    <p><a href="https://www.atulawande.org/" target="_blank">Atul Gawande</a> is a surgeon and public health researcher whose work focuses on making complex healthcare processes more reliable and efficient. His <a href="https://www.nejm.org/doi/full/10.1056/NEJMsa0810119" target="_blank">surgical checklist research</a> reduced post-operative deaths by 47% across eight hospitals. He applies systems-level thinking to his own health management and has written extensively about building simple, effective protocols for complex problems.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
@@ -313,81 +313,81 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or check. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
 
 <div class="assess-group">
-<h4>Health & Hygiene</h4>
+<h4>Long-term Health</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clean-freq">
-    <label for="a-clean-freq">I know how often I clean my kitchen and bathroom surfaces.<br><span class="assess-hint">Include countertops, sinks, taps, toilet, and shower or bath.</span></label>
+    <input type="checkbox" id="a-last-checkup">
+    <label for="a-last-checkup">I know when I last had a general health checkup or physical examination.<br><span class="assess-hint">Include any visit where a doctor reviewed your overall health, not just a specific complaint.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fridge-temp">
-    <label for="a-fridge-temp">I know whether my fridge is at or below 5&deg;C.<br><span class="assess-hint">Check the built-in display, or place a thermometer inside for a few hours.</span></label>
+    <input type="checkbox" id="a-screenings">
+    <label for="a-screenings">I know which preventive screenings are recommended for my age and sex, and whether I'm up to date on them.<br><span class="assess-hint">Common examples: blood pressure, cholesterol, blood glucose, cancer screenings, dental checkups.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mould">
-    <label for="a-mould">I know whether I have any visible mould, damp, or persistent condensation in my home.<br><span class="assess-hint">Check bathroom grout, window seals, behind furniture on external walls, and under sinks.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Order</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clutter">
-    <label for="a-clutter">I know which rooms or areas in my home have the most clutter.<br><span class="assess-hint">Walk through each room and note surfaces, floors, and storage areas with accumulated items.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-find-items">
-    <label for="a-find-items">I know how quickly I can find commonly needed items (keys, scissors, chargers, documents).<br><span class="assess-hint">Think about whether you regularly spend time searching for everyday objects.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tidy-routine">
-    <label for="a-tidy-routine">I know whether I have any regular tidying routine or schedule, or whether I clean reactively.<br><span class="assess-hint">A routine means specific tasks on specific days. Reactive means cleaning when things get noticeably messy.</span></label>
+    <input type="checkbox" id="a-family-history">
+    <label for="a-family-history">I know my family's major health history and any conditions that increase my personal risk.<br><span class="assess-hint">Heart disease, diabetes, cancer, and mental health conditions in parents, siblings, or grandparents.</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Aesthetics</h4>
+<h4>Present Vitality</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-visual-appeal">
-    <label for="a-visual-appeal">I've thought about which rooms I find visually pleasing and which feel neglected or uninviting.<br><span class="assess-hint">Consider whether furnishings reflect your taste or are inherited defaults.</span></label>
+    <input type="checkbox" id="a-energy-patterns">
+    <label for="a-energy-patterns">I can describe my typical daily energy pattern &ndash; when I feel most alert and when I tend to flag.<br><span class="assess-hint">Morning person vs night owl, post-lunch dip, weekend vs weekday differences.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-lighting">
-    <label for="a-lighting">I know whether the lighting in my main living spaces suits their function.<br><span class="assess-hint">Bright enough for tasks? Warm enough for relaxation? Or just whatever bulb was already there?</span></label>
+    <input type="checkbox" id="a-persistent-symptoms">
+    <label for="a-persistent-symptoms">I know whether I have any persistent symptoms I've been ignoring or tolerating.<br><span class="assess-hint">Recurring headaches, digestive issues, joint pain, skin conditions, fatigue, or anything you've learned to live with.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sensory">
-    <label for="a-sensory">I've noticed how my home smells, sounds, and feels when I walk in.<br><span class="assess-hint">First impressions matter. Think about what a visitor would notice.</span></label>
+    <input type="checkbox" id="a-medications">
+    <label for="a-medications">I can list any medications or supplements I take regularly and I know why I take each one.<br><span class="assess-hint">Include prescriptions, over-the-counter medicines, vitamins, and supplements.</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Environmental Impact</h4>
+<h4>Personal Control</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-waste">
-    <label for="a-waste">I know roughly how much household waste I generate per week and how much I recycle.<br><span class="assess-hint">Count your bin bags or check how often your bins are full.</span></label>
+    <input type="checkbox" id="a-provider-relationship">
+    <label for="a-provider-relationship">I know who my primary care provider is and when I last saw them.<br><span class="assess-hint">A GP, family doctor, or equivalent who knows your health history.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-products">
-    <label for="a-products">I know what cleaning products I use and whether any are eco-friendly or plant-based.<br><span class="assess-hint">Check labels for biodegradable, plant-based, or eco-certified claims.</span></label>
+    <input type="checkbox" id="a-ask-questions">
+    <label for="a-ask-questions">I have a sense of how comfortable I am asking questions and raising concerns during medical appointments.<br><span class="assess-hint">Do you tend to accept what's recommended without question, or do you ask about alternatives and side effects?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wash-temp">
-    <label for="a-wash-temp">I know what temperature I typically wash my clothes at.<br><span class="assess-hint">90% of the energy used in washing goes to heating water.</span></label>
+    <input type="checkbox" id="a-health-records">
+    <label for="a-health-records">I know where my health records are and whether I can access them.<br><span class="assess-hint">Patient portals, paper files, or simply knowing which practices hold your records.</span></label>
+</div>
+</div>
+
+<div class="assess-group">
+<h4>Simplicity</h4>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-insurance">
+    <label for="a-insurance">I understand my health insurance coverage &ndash; what's included, what my excess is, and how to make a claim.<br><span class="assess-hint">Or, if you rely on a public health system, you know what services are available and how to access them.</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-reminders">
+    <label for="a-reminders">I know whether I have any system for tracking upcoming appointments, screenings, or prescription renewals.<br><span class="assess-hint">Calendar reminders, patient portal notifications, a list on your phone, or nothing at all.</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-urgent-care">
+    <label for="a-urgent-care">I know what I would do if I had a health concern outside normal hours &ndash; where to go and who to call.<br><span class="assess-hint">Urgent care clinic, NHS 111, emergency department, or a nurse helpline.</span></label>
 </div>
 </div>
 
@@ -408,11 +408,11 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>You now understand why housework matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
+<p>You now understand why health management matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
 
-<p>On the interventions page, adjust the sliders to reflect how much you care about health and hygiene, order, aesthetics, and environmental impact. The table will re-rank interventions to match your priorities.</p>
+<p>On the interventions page, adjust the sliders to reflect how much you care about long-term health, present vitality, personal control, and simplicity. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/housework/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Housework Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/health-management/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Health Management Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -421,8 +421,8 @@ life_area_slug: housework
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
-    <p>You've built your foundation in Housework. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/housework/personalised" class="btn-cta">View Your Interventions</a>
+    <p>You've built your foundation in Health Management. Your self-assessment and value weightings are saved.</p>
+    <a href="{{ site.baseurl }}/health-management/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -431,13 +431,13 @@ life_area_slug: housework
 (function() {
     'use strict';
 
-    var AREA = 'housework';
+    var AREA = 'health-management';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-clean-freq', 'a-fridge-temp', 'a-mould',
-        'a-clutter', 'a-find-items', 'a-tidy-routine',
-        'a-visual-appeal', 'a-lighting', 'a-sensory',
-        'a-waste', 'a-products', 'a-wash-temp'
+        'a-last-checkup', 'a-screenings', 'a-family-history',
+        'a-energy-patterns', 'a-persistent-symptoms', 'a-medications',
+        'a-provider-relationship', 'a-ask-questions', 'a-health-records',
+        'a-insurance', 'a-reminders', 'a-urgent-care'
     ];
 
     function loadProgress() {

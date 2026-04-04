@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Housework – Level 1: Awareness"
-life_area_slug: housework
+title: "Food Management – Level 1: Awareness"
+life_area_slug: food-management
 ---
 
 <style>
@@ -192,9 +192,9 @@ life_area_slug: housework
 
 <div class="l1-container">
 
-<h1>Housework: Level 1</h1>
+<h1>Food Management: Level 1</h1>
 
-<p class="l1-subtitle">Understand what housework means, what's possible, and where you stand. About 15 minutes.</p>
+<p class="l1-subtitle">Understand what food management involves, what's possible, and where you stand. About 15 minutes.</p>
 
 <div class="l1-progress">
     <div class="l1-progress-bar">
@@ -207,24 +207,24 @@ life_area_slug: housework
     <div class="l1-progress-label" id="progressLabel">Step 1 of 5</div>
 </div>
 
-<!-- Step 1: Why Housework Matters -->
+<!-- Step 1: Why Food Management Matters -->
 <div class="l1-step" id="step-why" data-step="why">
     <div class="l1-step-header" onclick="toggleStep('why')">
         <div class="l1-step-number">1</div>
-        <div class="l1-step-title">Why housework matters</div>
+        <div class="l1-step-title">Why food management matters</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Your home environment shapes your health, stress levels, and cognitive performance more than most people realise. The evidence runs deeper than tidiness preferences.</p>
+<p>Getting food on the table is one of the most repetitive and cognitively demanding tasks in daily life. Most adults make it happen every day without thinking of it as a skill &ndash; but the gap between someone who manages food well and someone who doesn't shows up in stress levels, wasted money, and diet quality.</p>
 
-<p>Physical clutter competes for your attention and degrades your ability to focus and process information, according to research from the <a href="https://doi.org/10.1523/JNEUROSCI.5587-09.2011" target="_blank">Princeton Neuroscience Institute</a>. A <a href="https://pubmed.ncbi.nlm.nih.gov/19934011/" target="_blank">UCLA study</a> of 32 dual-income families found that those who described their homes as cluttered had flatter cortisol slopes throughout the day &ndash; a physiological marker of chronic stress.</p>
+<p>A <a href="https://dentsu-ho.com/en/articles/9478" target="_blank">Dentsu survey</a> found that deciding what to cook is now rated as more burdensome than the actual cooking or cleanup, with the percentage of daily cooks who find cooking troublesome rising from 45.7% to 55.6% between 2022 and 2024. Separately, 77% of people report being too exhausted to cook after work.</p>
 
-<p>On the health side, an <a href="https://news.iu.edu/stories/2015/08/iub/releases/24-housework-physical-activity.html" target="_blank">Indiana University study</a> found that house cleanliness was a stronger predictor of physical health than neighbourhood walkability. Indoor air quality, mould, and allergen exposure have measurable effects on respiratory health and sleep quality.</p>
+<p>The <a href="https://pubmed.ncbi.nlm.nih.gov/24462490/" target="_blank">most cited academic framework for food literacy</a> (Vidgen &amp; Gallegos, 2014) identifies four domains: planning and managing, selecting, preparing, and eating. Higher food literacy is associated with better diet quality, lower food waste, and reduced stress around food provision.</p>
 
-<p>Research published in <a href="https://doi.org/10.1073/pnas.1706541114" target="_blank">PNAS</a> found that spending money to buy back time &ndash; including outsourcing household tasks &ndash; produced greater life satisfaction than spending on material goods, regardless of income level. How you manage your home is one of the most underrated levers for daily quality of life.</p>
+<p>Food management is distinct from nutrition. Nutrition concerns <em>what</em> you eat; food management concerns <em>how you get it</em>. A well-run food system reduces daily decision fatigue, minimises waste, and ensures your nutritional goals are actually achievable in practice.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
@@ -236,26 +236,23 @@ life_area_slug: housework
 <div class="l1-step" id="step-values" data-step="values">
     <div class="l1-step-header" onclick="toggleStep('values')">
         <div class="l1-step-number">2</div>
-        <div class="l1-step-title">What different people value about housework</div>
+        <div class="l1-step-title">What different people value about food management</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People care about housework for different reasons. This site scores every housework intervention across four core values. Later, you'll set your own weighting across these four values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People approach food management for different reasons. This site scores every food management intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
-<h3>Health & Hygiene</h3>
-<p>Housework that protects physical health by reducing illness, allergens, pests, mould, and toxins. Cleaning protocols, air quality management, and maintenance practices that eliminate health hazards. People who lean towards this value focus on evidence-based cleaning frequencies and methods that have the greatest impact on health outcomes.</p>
+<h3>Competence</h3>
+<p>Reliably getting good food on the table through whatever combination of methods works for you. Planning, sourcing, preparation skill, food safety, adaptability, and the ability to make do with what's available. People who prioritise this value focus on building a dependable food provision system &ndash; whether that involves cooking from scratch, meal kits, takeaway, or any combination &ndash; that consistently delivers meals meeting their needs.</p>
 
-<h3>Order</h3>
-<p>The mental calm and cognitive ease that comes from an organised, uncluttered living space. Knowing where everything is, having systems that maintain themselves, and not feeling overwhelmed by mess. People who lean towards this value focus on organisational systems, decluttering, and routines that keep the home orderly without constant effort.</p>
+<h3>Craft</h3>
+<p>Satisfaction and creative expression derived from the process of preparing food. Skill development, mastery of techniques, culinary exploration, and the meditative or therapeutic aspects of cooking. Those who prioritise this value treat food preparation as a rewarding activity in its own right, investing in developing skills and finding genuine pleasure in the process.</p>
 
-<h3>Aesthetics</h3>
-<p>The visual appeal and sensory pleasure derived from your living space. Design choices, visual harmony, and personalised spaces that reflect your taste and feel inviting. People who lean towards this value focus on creating environments that are pleasing to be in, not just tidy or functional.</p>
-
-<h3>Environmental Impact</h3>
-<p>The ecological footprint of home management practices. Sustainable cleaning methods, waste reduction, and considerate resource use. People who lean towards this value focus on eco-friendly products, minimal consumption, and practices that reduce environmental harm.</p>
+<h3>Waste Reduction</h3>
+<p>Minimising the food that gets thrown away through better management practices. Stock management, use-up routines, storage skills, purchasing discipline, and creative use of leftovers. Those who prioritise this value focus on the operational side of waste prevention &ndash; planning purchases carefully, storing food properly, and building habits that ensure food gets eaten.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -274,26 +271,21 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each housework value:</p>
+<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each food management value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Health & Hygiene &ndash; Level 5</div>
-    <p><a href="https://www.youtube.com/@CleanMySpace" target="_blank">Melissa Maker</a> runs a cleaning company and has spent over a decade documenting evidence-based cleaning methods across hundreds of videos and a bestselling book. She appears to maintain clinical-grade hygiene standards in her own home, with systematic protocols for air quality, surface sanitisation, and allergen management that go well beyond standard domestic cleaning.</p>
+    <div class="exemplar-value">Competence &ndash; Level 5</div>
+    <p><a href="https://www.instagram.com/maboroshikitchen/" target="_blank">Samin Nosrat</a>, author of <em>Salt, Fat, Acid, Heat</em>, learned to cook professionally at Chez Panisse and then spent years teaching home cooks to develop reliable instincts. She appears to plan, shop, and cook with the kind of fluency where improvising a meal from whatever is in the fridge is effortless. Her public cooking demonstrates consistent adaptability across cuisines, seasons, and available ingredients.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Order &ndash; Level 5</div>
-    <p><a href="https://konmari.com/" target="_blank">Marie Kondo</a> developed the KonMari method and has reportedly maintained a highly organised living environment since childhood. Her approach &ndash; keeping only items that serve a purpose or bring satisfaction, with every object having a designated place &ndash; seems to produce homes that stay orderly with minimal ongoing effort. Clients who complete her full process report sustained results years later.</p>
+    <div class="exemplar-value">Craft &ndash; Level 5</div>
+    <p><a href="https://www.binging-with-babish.com/" target="_blank">Andrew Rea</a> (Babish Culinary Universe) taught himself to cook as an adult and has spent over a decade documenting his progression from basic techniques to advanced pastry, fermentation, and multi-day projects. His channel catalogues thousands of hours of deliberate skill development, and he regularly attempts dishes well outside his comfort zone on camera.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Aesthetics &ndash; Level 5</div>
-    <p><a href="https://www.instagram.com/mikiashdesign/" target="_blank">Mike Mikish</a> is known for transforming everyday living spaces into multi-sensory environments with cohesive colour palettes, layered lighting, and curated objects. His own home appears to function as a gallery-quality space where every material, finish, and decorative element is chosen with intention &ndash; the kind of residential environment that could feature in a design publication.</p>
-</div>
-
-<div class="exemplar-card">
-    <div class="exemplar-value">Environmental Impact &ndash; Level 5</div>
-    <p><a href="https://www.goingzerowaste.com/" target="_blank">Kathryn Kellogg</a> reportedly fits two years of landfill waste into a single jar while maintaining a clean, functional home. She uses exclusively non-toxic, biodegradable cleaning products &ndash; many homemade &ndash; and has eliminated single-use items from her household. Her approach demonstrates that near-zero-waste home management is achievable without sacrificing cleanliness or comfort.</p>
+    <div class="exemplar-value">Waste Reduction &ndash; Level 5</div>
+    <p><a href="https://en.wikipedia.org/wiki/Bea_Johnson" target="_blank">Bea Johnson</a> fits her family of four's entire annual non-recyclable waste into a single quart-sized jar. Her food management system &ndash; buying in bulk, composting, planning meals around what needs using up &ndash; is central to how she achieves this. She has maintained the practice since 2008 and documented it in her book <em>Zero Waste Home</em>.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
@@ -316,78 +308,59 @@ life_area_slug: housework
 <p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
 
 <div class="assess-group">
-<h4>Health & Hygiene</h4>
+<h4>Competence</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clean-freq">
-    <label for="a-clean-freq">I know how often I clean my kitchen and bathroom surfaces.<br><span class="assess-hint">Include countertops, sinks, taps, toilet, and shower or bath.</span></label>
+    <input type="checkbox" id="a-meals-per-week">
+    <label for="a-meals-per-week">I know how many meals per week I prepare at home versus buy prepared.<br><span class="assess-hint">Count breakfasts, lunches, and dinners separately. Include meal kits and reheated batch-cooked meals as home-prepared.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fridge-temp">
-    <label for="a-fridge-temp">I know whether my fridge is at or below 5&deg;C.<br><span class="assess-hint">Check the built-in display, or place a thermometer inside for a few hours.</span></label>
+    <input type="checkbox" id="a-planning-method">
+    <label for="a-planning-method">I can describe my current meal planning method (or confirm I don't have one).<br><span class="assess-hint">Weekly plan, daily improvisation, rotating set of staples, or something else entirely.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mould">
-    <label for="a-mould">I know whether I have any visible mould, damp, or persistent condensation in my home.<br><span class="assess-hint">Check bathroom grout, window seals, behind furniture on external walls, and under sinks.</span></label>
+    <input type="checkbox" id="a-fallback">
+    <label for="a-fallback">I know what I do when my usual food plan breaks down &ndash; unexpected guests, empty fridge, no energy to cook.<br><span class="assess-hint">Reliable fallback options might include a go-to takeaway, freezer meals, or a 10-minute storecupboard recipe.</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Order</h4>
+<h4>Craft</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clutter">
-    <label for="a-clutter">I know which rooms or areas in my home have the most clutter.<br><span class="assess-hint">Walk through each room and note surfaces, floors, and storage areas with accumulated items.</span></label>
+    <input type="checkbox" id="a-technique-count">
+    <label for="a-technique-count">I know roughly how many cooking techniques I can execute confidently (e.g. roasting, stir-frying, braising, baking).<br><span class="assess-hint">Count only methods you use without needing to look up the basics each time.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-find-items">
-    <label for="a-find-items">I know how quickly I can find commonly needed items (keys, scissors, chargers, documents).<br><span class="assess-hint">Think about whether you regularly spend time searching for everyday objects.</span></label>
+    <input type="checkbox" id="a-new-recipes">
+    <label for="a-new-recipes">I know how often I try a new recipe or technique &ndash; weekly, monthly, rarely, or never.<br><span class="assess-hint">This is about frequency, not success rate. Attempting and failing counts.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tidy-routine">
-    <label for="a-tidy-routine">I know whether I have any regular tidying routine or schedule, or whether I clean reactively.<br><span class="assess-hint">A routine means specific tasks on specific days. Reactive means cleaning when things get noticeably messy.</span></label>
+    <input type="checkbox" id="a-enjoy-cooking">
+    <label for="a-enjoy-cooking">I have a clear sense of whether I enjoy the process of cooking, tolerate it, or actively dislike it.<br><span class="assess-hint">There is no right answer. Knowing your honest reaction helps you choose the right interventions.</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Aesthetics</h4>
+<h4>Waste Reduction</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-visual-appeal">
-    <label for="a-visual-appeal">I've thought about which rooms I find visually pleasing and which feel neglected or uninviting.<br><span class="assess-hint">Consider whether furnishings reflect your taste or are inherited defaults.</span></label>
+    <input type="checkbox" id="a-waste-amount">
+    <label for="a-waste-amount">I know roughly how much food I throw away in a typical week.<br><span class="assess-hint">Check your bin over a few days if you're unsure. Include uneaten leftovers, expired items, and spoiled produce.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-lighting">
-    <label for="a-lighting">I know whether the lighting in my main living spaces suits their function.<br><span class="assess-hint">Bright enough for tasks? Warm enough for relaxation? Or just whatever bulb was already there?</span></label>
+    <input type="checkbox" id="a-fridge-audit">
+    <label for="a-fridge-audit">I know what is currently in the back of my fridge and whether any of it has gone off.<br><span class="assess-hint">Open the fridge and check now if you're not sure. This is a useful baseline.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sensory">
-    <label for="a-sensory">I've noticed how my home smells, sounds, and feels when I walk in.<br><span class="assess-hint">First impressions matter. Think about what a visitor would notice.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Environmental Impact</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-waste">
-    <label for="a-waste">I know roughly how much household waste I generate per week and how much I recycle.<br><span class="assess-hint">Count your bin bags or check how often your bins are full.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-products">
-    <label for="a-products">I know what cleaning products I use and whether any are eco-friendly or plant-based.<br><span class="assess-hint">Check labels for biodegradable, plant-based, or eco-certified claims.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wash-temp">
-    <label for="a-wash-temp">I know what temperature I typically wash my clothes at.<br><span class="assess-hint">90% of the energy used in washing goes to heating water.</span></label>
+    <input type="checkbox" id="a-leftover-plan">
+    <label for="a-leftover-plan">I know what I typically do with leftovers &ndash; eat them, freeze them, or throw them away.<br><span class="assess-hint">Think about the last three times you had food left over after a meal.</span></label>
 </div>
 </div>
 
@@ -408,11 +381,11 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>You now understand why housework matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
+<p>You now understand why food management matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
 
-<p>On the interventions page, adjust the sliders to reflect how much you care about health and hygiene, order, aesthetics, and environmental impact. The table will re-rank interventions to match your priorities.</p>
+<p>On the interventions page, adjust the sliders to reflect how much you care about competence, craft, and waste reduction. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/housework/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Housework Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/food-management/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Food Management Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -421,8 +394,8 @@ life_area_slug: housework
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
-    <p>You've built your foundation in Housework. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/housework/personalised" class="btn-cta">View Your Interventions</a>
+    <p>You've built your foundation in Food Management. Your self-assessment and value weightings are saved.</p>
+    <a href="{{ site.baseurl }}/food-management/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -431,13 +404,12 @@ life_area_slug: housework
 (function() {
     'use strict';
 
-    var AREA = 'housework';
+    var AREA = 'food-management';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-clean-freq', 'a-fridge-temp', 'a-mould',
-        'a-clutter', 'a-find-items', 'a-tidy-routine',
-        'a-visual-appeal', 'a-lighting', 'a-sensory',
-        'a-waste', 'a-products', 'a-wash-temp'
+        'a-meals-per-week', 'a-planning-method', 'a-fallback',
+        'a-technique-count', 'a-new-recipes', 'a-enjoy-cooking',
+        'a-waste-amount', 'a-fridge-audit', 'a-leftover-plan'
     ];
 
     function loadProgress() {

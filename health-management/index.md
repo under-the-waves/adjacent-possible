@@ -1,68 +1,204 @@
 ---
+layout: default
+title: Health Management
 life_area_slug: health-management
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Look After Yourself &gt;
+    Health &gt;
+    Health Management
+</div>
+
 # Health Management
 
-## What is Health Management?
+**What it is**
+- The strategic oversight of your physical health &ndash; from preventive care and early detection to navigating medical decisions, managing conditions, and building systems that keep you healthy without consuming excessive time or energy.
 
-Health management encompasses the strategic oversight and optimisation of your health across the full spectrum – from prevention and early detection to active optimisation, chronic condition management, and recovery protocols. This covers understanding your body's patterns, building relationships with healthcare providers, navigating medical decisions, and creating systems that maintain health with minimal daily effort.
+**Why it matters**
+- People who engage proactively with their health experience <a href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2012.1061" target="_blank">15 &ndash; 25% better outcomes</a> across chronic conditions. Only <a href="https://www.cdc.gov/mmwr/volumes/68/wr/mm6840a2.htm" target="_blank">8% of Americans</a> receive all recommended preventive services, meaning even basic health management practices place you well above average.
 
-This guide focuses on the skills, knowledge, and systems needed to be an effective steward of your own health. While topics related to specific lifestyle interventions are covered in our [Fitness]({{ site.baseurl }}/fitness/), [Nutrition]({{ site.baseurl }}/nutrition/), and [Sleep]({{ site.baseurl }}/sleep/) guides, this area addresses the broader capabilities needed to manage health as a strategic priority.
+**Related life areas**
+- [Fitness]({{ site.baseurl }}/fitness/) &ndash; your physical exercise habits, training approach, and overall activity level
+- [Food and nutrition]({{ site.baseurl }}/nutrition/) &ndash; your dietary knowledge, food choices, and the nutritional quality of what you eat
+- [Sleep]({{ site.baseurl }}/sleep/) &ndash; your sleep quality, duration, and bedtime routines
+- [Mental health]({{ site.baseurl }}/mental-health/) &ndash; your psychological wellbeing, emotional regulation, and resilience
 
-## Why Health Management Matters
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Health Management yet.</strong><br>It takes about 15 minutes and helps you understand what health management means to you.</p>
+    <a href="{{ site.baseurl }}/health-management/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Effective health management serves as the foundation for preventing disease, optimising daily function, and maintaining independence throughout life. Research demonstrates that people who engage proactively with their health experience significantly better outcomes across virtually every health condition <span class="info-icon" onclick="showReasoning('proactive-outcomes')">i</span>. The ability to navigate healthcare systems, advocate for appropriate care, and make informed medical decisions directly influences both immediate wellbeing and long-term health trajectories.
+## What people value about health management
 
-Beyond individual outcomes, skilled health management reduces healthcare costs and eliminates the stress and uncertainty that comes from reactive approaches to health problems <span class="info-icon" onclick="showReasoning('cost-reduction')">i</span>. The systems and knowledge developed through thoughtful health management compound over decades, creating a foundation that supports sustained vitality and resilience <span class="info-icon" onclick="showReasoning('compound-benefits')">i</span>.
+People approach health management for different reasons. This site scores every health management intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-## Health Management Values
+<div class="value-card">
+<h3>Long-term Health</h3>
+<p>Disease prevention, longevity optimisation, and maintaining physical and cognitive function throughout life. Comprehensive preventive care, understanding genetic risks, and implementing evidence-based interventions for healthy ageing.</p>
+</div>
 
-Your optimal approach to health management depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+<div class="value-card">
+<h3>Present Vitality</h3>
+<p>Immediate energy, cognitive function, and daily wellbeing through optimised health practices. Addressing symptoms that affect quality of life and ensuring health decisions support current life goals and activities.</p>
+</div>
 
-For personalised recommendations based on your unique priorities, visit [Health Management Personalised]({{ site.baseurl }}/health-management/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Personal Control</h3>
+<p>The knowledge, skills, and confidence to make informed health decisions and advocate effectively within healthcare systems. Understanding medical information and building productive relationships with providers.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Simplicity</h3>
+<p>Efficient, low-maintenance systems that deliver good health outcomes without consuming excessive time or mental energy. Streamlined approaches to preventive care and clear protocols for common health issues.</p>
+</div>
 
-## Benchmarks by Level
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/health-management/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand health management, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/health-management/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-Research reveals that most Americans have limited engagement with proactive health management. Only 8% of Americans undergo routine preventive screenings consistently, while Americans use preventive services at approximately half the recommended rates <span class="info-icon" onclick="showReasoning('prevention-rates')">i</span>. About 40% report skipping recommended medical tests or treatments due to cost, and most people have limited experience advocating for themselves in healthcare contexts. These patterns mean that even basic health management practices represent higher population percentiles than might initially be expected.
-
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Health Management Personalised]({{ site.baseurl }}/health-management/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'proactive-outcomes': {
-        title: 'Proactive Health Management Outcomes',
-        content: 'Multiple longitudinal studies demonstrate that patients who engage actively in their healthcare experience 15-25% better outcomes across chronic conditions. The Patient Activation Measure studies show that highly activated patients have lower healthcare costs and better clinical outcomes. <a href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2012.1061" target="_blank">View study</a>'
-    },
-    'cost-reduction': {
-        title: 'Healthcare Cost and Stress Reduction',
-        content: 'Research from the Commonwealth Fund shows that preventive care and early intervention can reduce healthcare costs by 20-30% over time. Studies also demonstrate that people with organised healthcare management report 40% less health-related stress and anxiety. <a href="https://www.commonwealthfund.org/publications/issue-briefs/2019/jan/economic-case-us-foundation-high-performance-health-system" target="_blank">View study</a>'
-    },
-    'compound-benefits': {
-        title: 'Compound Benefits of Health Management',
-        content: 'Longitudinal health studies show that systematic health management practices compound over decades. The Nurses Health Study and similar research demonstrate that people who maintain comprehensive health practices from midlife experience dramatically better health outcomes in later decades, with effects becoming more pronounced over time.'
-    },
-    'prevention-rates': {
-        title: 'Preventive Care Participation Rates',
-        content: 'Data from the CDC and National Center for Health Statistics shows that only 8% of Americans receive all high-priority preventive services, while 5% receive none. Americans use preventive services at about 50% of recommended rates across all age groups. <a href="https://www.cdc.gov/mmwr/volumes/68/wr/mm6840a2.htm" target="_blank">View CDC report</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress['health-management'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['health-management'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Health Management.</strong></p>' +
+            '<a href="{{ site.baseurl }}/health-management/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/health-management/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/health-management/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
