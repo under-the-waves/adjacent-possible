@@ -131,7 +131,7 @@ life_area_slug: friendship
 
 **Related life areas**
 - [Communication]({{ site.baseurl }}/communication/) – how you express yourself and connect in conversation
-- [Romantic relationships]({{ site.baseurl }}/romantic-relationships/) – intimate partnerships and their dynamics
+- [Relationship quality]({{ site.baseurl }}/romantic-relationships/) – how well you connect, collaborate, and grow with an intimate partner
 - [Community contribution]({{ site.baseurl }}/community-contribution/) – giving back to the groups you belong to
 - [Personality]({{ site.baseurl }}/personality/) – your social traits and how others experience you
 
