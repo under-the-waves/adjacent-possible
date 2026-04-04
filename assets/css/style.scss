@@ -261,64 +261,99 @@
 }
 
 /* Life Areas hierarchy styles */
+/* ── Life Areas Index ── */
+
 .pillar-hierarchy {
   margin: 2rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.pillar-section {
-  margin-bottom: 2.5rem;
+.pillar-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
-.pillar-section h2 {
-  color: #155799;
-  font-size: 1.4em;
-  border-bottom: 2px solid #155799;
-  padding-bottom: 0.4rem;
-  margin-bottom: 1rem;
+.pillar-card__header {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
 }
 
-.domain-group {
-  margin-left: 1rem;
-  margin-bottom: 1.2rem;
-}
-
-.domain-group h3 {
-  font-size: 1.05em;
+.pillar-card__header h2 {
+  margin: 0;
+  font-size: 1.15em;
   color: #333;
-  margin-bottom: 0.4rem;
   font-weight: 600;
 }
 
-.life-area-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-left: 0.5rem;
+.pillar-card__body {
+  padding: 8px 0;
 }
 
-.life-area-links a {
-  display: inline-block;
-  padding: 4px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.pillar-card .domain-label {
+  padding: 6px 20px 2px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.area-row {
+  display: flex;
+  align-items: baseline;
+  padding: 6px 20px;
+  gap: 12px;
+  transition: background 0.15s;
+}
+
+.area-row:hover {
+  background: #f5f7fa;
+}
+
+.area-row__name {
+  flex-shrink: 0;
+  min-width: 180px;
+}
+
+.area-row__name a {
   color: #155799;
   text-decoration: none;
-  font-size: 0.9em;
-  background: #f8f9fa;
-  transition: background 0.2s, border-color 0.2s;
+  font-size: 0.95em;
 }
 
-.life-area-links a:hover {
-  background: #e9ecef;
-  border-color: #155799;
+.area-row__name a:hover {
+  text-decoration: underline;
+}
+
+.area-row__desc {
+  color: #777;
+  font-size: 0.88em;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
-  .domain-group {
-    margin-left: 0.5rem;
+  .area-row {
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 16px;
   }
-  .life-area-links {
-    margin-left: 0;
+
+  .area-row__name {
+    min-width: 0;
+  }
+
+  .pillar-card__header {
+    padding: 12px 16px;
+  }
+
+  .pillar-card .domain-label {
+    padding: 6px 16px 2px;
   }
 }
 
@@ -1081,4 +1116,161 @@ a.completed-guide:hover,
 /* Ensure domain headers are clickable and respond to hover */
 .pillar-header + .submenu .domain-header:hover {
     background-color: #e9ecef;
+}
+
+/* ============================================
+   MEGA MENU - Life Areas
+   ============================================ */
+
+.site-nav--mega {
+  position: static;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+  padding: 1rem 2rem 1.5rem;
+}
+
+.mega-menu.visible {
+  display: block;
+}
+
+.mega-menu__footer {
+  text-align: center;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid #333;
+}
+
+.mega-menu__footer .all-areas-link {
+  color: #ccc !important;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mega-menu__footer .all-areas-link:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.mega-menu__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.mega-menu__column {
+  min-width: 0;
+}
+
+.mega-menu__pillar-name {
+  font-weight: 600;
+  font-size: 0.95em;
+  color: #fff;
+  padding-bottom: 0.4rem;
+  margin: 0 0 0.5rem 0;
+  border-bottom: 1px solid #555;
+}
+
+.mega-menu__domain {
+  margin-bottom: 0.25rem;
+}
+
+.mega-menu__domain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.mega-menu__domain-header:hover {
+  background-color: #222;
+}
+
+.mega-menu__domain-label {
+  font-size: 0.85em;
+  color: #ddd;
+}
+
+.mega-menu__domain.all-unavailable .mega-menu__domain-label {
+  color: #e63946;
+}
+
+.mega-menu__expand-icon {
+  font-size: 0.85em;
+  color: #888;
+  transition: transform 0.2s;
+  font-family: sans-serif;
+}
+
+.mega-menu__domain.active .mega-menu__expand-icon {
+  /* no rotation needed for +/- */
+}
+
+.mega-menu__domain-items {
+  display: none;
+  padding-left: 12px;
+  border-left: 2px solid #444;
+  margin: 2px 0 6px 8px;
+}
+
+.mega-menu__domain.active .mega-menu__domain-items {
+  display: block;
+}
+
+.mega-menu__domain-items a {
+  display: block;
+  padding: 4px 8px;
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 0.9em;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.mega-menu__domain-items a:hover {
+  background-color: #e9ecef;
+}
+
+.mega-menu__domain-items span.unavailable-guide {
+  display: block;
+  padding: 4px 8px;
+  color: #e63946 !important;
+  font-size: 0.9em;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    position: static;
+    box-shadow: none;
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+  }
+
+  .mega-menu__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .mega-menu__column {
+    margin-bottom: 0.5rem;
+  }
+
+  .mega-menu__pillar-name {
+    padding: 8px 0 4px;
+  }
 }
