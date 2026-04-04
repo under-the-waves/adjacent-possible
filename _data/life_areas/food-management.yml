@@ -1,0 +1,32 @@
+slug: food-management
+name: Food Management
+domain: Health
+pillar: "Look After Yourself"
+survey_description: "Your ability to plan, source, and prepare food reliably through whatever methods work for you."
+domain_representative: false
+
+values:
+- key: competence
+  name: Competence
+  weight: 45
+  description:
+  - Reliably getting good food on the table through whatever combination of methods works for you.
+  - Planning, sourcing, preparation skill, food safety, adaptability, and the ability to make do with what's available.
+  - |-
+    People who prioritise this value focus on building a dependable food provision system – whether that involves cooking from scratch, meal kits, takeaway, or any combination – that consistently delivers meals meeting their needs.
+- key: craft
+  name: Craft
+  weight: 30
+  description:
+  - Satisfaction and creative expression derived from the process of preparing food.
+  - Skill development, mastery of techniques, culinary exploration, and the meditative or therapeutic aspects of cooking.
+  - |-
+    Those who prioritise this value treat food preparation as a rewarding activity in its own right, not merely a means to an end. They invest in developing skills and find genuine pleasure in the process.
+- key: waste_reduction
+  name: Waste Reduction
+  weight: 25
+  description:
+  - Minimising the food that gets thrown away through better management practices.
+  - Stock management, use-up routines, storage skills, purchasing discipline, and creative use of leftovers.
+  - |-
+    Those who prioritise this value focus on the operational side of waste prevention – planning purchases carefully, storing food properly, and building habits that ensure food gets eaten rather than binned.

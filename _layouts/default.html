@@ -200,9 +200,10 @@
         <!-- Health Domain -->
         {% assign fitness_page = site.pages | where: "url", "/fitness/" | first %}
         {% assign nutrition_page = site.pages | where: "url", "/nutrition/" | first %}
+        {% assign food_management_page = site.pages | where: "url", "/food-management/" | first %}
         {% assign sleep_page = site.pages | where: "url", "/sleep/" | first %}
         {% assign health_management_page = site.pages | where: "url", "/health-management/" | first %}
-        <div class="dropdown-item{% unless fitness_page or nutrition_page or sleep_page or health_management_page %} all-unavailable{% endunless %}">
+        <div class="dropdown-item{% unless fitness_page or nutrition_page or food_management_page or sleep_page or health_management_page %} all-unavailable{% endunless %}">
           <div class="domain-header" onclick="toggleSubmenu(this)">
             <span class="domain-label">Health</span>
             <span class="expand-icon">▸</span>
@@ -219,7 +220,13 @@
             {% else %}
               <span class="unavailable-guide">Nutrition</span>
             {% endif %}
-            
+
+            {% if food_management_page %}
+              <a href="{{ site.baseurl }}/food-management/">Food Management</a>
+            {% else %}
+              <span class="unavailable-guide">Food Management</span>
+            {% endif %}
+
             {% if sleep_page %}
               <a href="{{ site.baseurl }}/sleep/">Sleep</a>
             {% else %}

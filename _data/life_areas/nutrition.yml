@@ -1,31 +1,32 @@
 slug: nutrition
 name: Nutrition
 domain: Health
-pillar: Look After Yourself
-survey_description: "Your eating habits, diet quality, and relationship with food."
+pillar: "Look After Yourself"
+survey_description: "Your dietary knowledge, food choices, and the nutritional quality of what you eat."
 domain_representative: false
+
 values:
-- key: physical
-  name: Physical Wellbeing
+- key: health
+  name: Health & Longevity
   weight: 45
   description:
-  - Nutrition that supports bodily health and function.
+  - Diet quality that supports bodily health and function.
   - Nutrient adequacy, disease prevention, energy provision, digestive health, and metabolic balance.
   - |-
-    People who prioritize this value focus on food choices that deliver optimal nutrition for immediate function and long-term health, with particular attention to nutrient density and physiological effects.
-- key: pleasure
-  name: Pleasure & Connection
+    People who prioritise this value focus on food choices that deliver optimal nutrition for immediate function and long-term health, with particular attention to nutrient density and physiological effects.
+- key: enjoyment
+  name: Enjoyment & Culture
   weight: 35
   description:
-  - The sensory enjoyment and social aspects of food.
-  - Taste satisfaction, variety, cultural expression, and the role of food in relationships and community.
+  - The sensory pleasure and social dimensions of eating.
+  - Taste satisfaction, dietary variety, cultural food traditions, and the role of meals in relationships and community.
   - |-
-    Those who prioritize this value emphasize cooking skills that enhance flavor, meals as social experiences, and maintaining food traditions that connect us to others and our heritage.
+    Those who prioritise this value emphasise building a diet they genuinely enjoy, maintaining food traditions that connect them to others, and treating meals as experiences rather than fuel.
 - key: ethical
   name: Ethical & Environmental Impact
   weight: 20
   description:
-  - The broader consequences of food choices on the planet and other beings.
-  - Sustainability considerations, carbon footprint, animal welfare, biodiversity, and fair labor practices.
+  - The broader consequences of dietary choices on the planet and other beings.
+  - Sustainability considerations, carbon footprint, animal welfare, biodiversity, and fair labour practices.
   - |-
-    Those who prioritize this value focus on sourcing decisions, waste reduction, and choosing foods with lower environmental impact.
+    Those who prioritise this value focus on what they choose to eat and where it comes from, favouring diets with lower environmental impact and greater alignment with their moral commitments.
