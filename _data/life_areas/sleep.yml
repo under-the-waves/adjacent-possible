@@ -1,7 +1,7 @@
 slug: sleep
 name: Sleep
 domain: Health
-pillar: Look After Yourself
+pillar: "Look After Yourself"
 survey_description: "Your sleep quality, duration, and bedtime routines."
 domain_representative: false
 values:
@@ -12,7 +12,34 @@ values:
   - Sleep that enhances your immediate cognitive and physical performance.
   - Mental alertness, energy levels, focus, mood regulation, and physical recovery.
   - |-
-    People who prioritize this value focus on sleep practices that consistently deliver noticeable improvements in how they think, feel, and perform throughout the day.
+    People who prioritise this value focus on sleep practices that consistently deliver noticeable improvements in how they think, feel, and perform throughout the day.
+  benchmarks:
+    level_1:
+      text: |-
+        You know your typical sleep duration, bedtime, and wake time, and whether you regularly feel rested during the day.
+      reasoning: |-
+        Awareness only -- no behaviour change required. Most people cannot accurately estimate their sleep duration or quality. Simply tracking your patterns for a week and taking the <a href="https://epworthsleepinessscale.com/about-the-ess/" target="_blank">Epworth Sleepiness Scale</a> provides a baseline.
+    level_2:
+      text: |-
+        You rate your sleep quality as "very good" or better, and you rarely experience daytime sleepiness that interferes with activities (ESS score of 6 or below).
+      reasoning: |-
+        Only 30-35% of adults rate their sleep as "very good" or "excellent" (<a href="https://news.gallup.com/poll/390734/sleep-struggles-common-among-younger-adults-women.aspx" target="_blank">Gallup 2022</a>). Normal ESS range in healthy adults is 0-10, with a mean of 4.6; an ESS of 6 or below represents roughly the better-sleeping majority of healthy adults (<a href="https://epworthsleepinessscale.com/about-the-ess/" target="_blank">ESS norms</a>). Combined, this represents approximately the top 20%.
+    level_3:
+      text: |-
+        You consistently achieve a PSQI score of 2 or below, maintain steady energy throughout the day, and do not rely on caffeine to function.
+      reasoning: |-
+        A PSQI score of 2 or below places you approximately at the 80th percentile of the general population, where the mean is around 4.5 (<a href="https://pubmed.ncbi.nlm.nih.gov/28215264/" target="_blank">Hinz et al. 2017</a>). 85-94% of US adults consume caffeine regularly (<a href="https://www.sleepfoundation.org/sleep-news/94-percent-of-us-drink-caffeinated-beverages" target="_blank">Sleep Foundation</a>), so not relying on caffeine for alertness is itself an indicator of top-5% sleep-supported functioning.
+    level_4:
+      text: |-
+        You achieve a PSQI score of 0-1, an ESS of 0-1, and maintain consistent cognitive performance (alertness, focus, reaction time) across a full 16-hour waking day without stimulants.
+      reasoning: |-
+        A PSQI of 0-1 represents the top few percent of the population. An ESS of 0-1 indicates virtually zero propensity to doze, corresponding to approximately the 2.5th percentile of the ESS distribution (<a href="https://epworthsleepinessscale.com/about-the-ess/" target="_blank">ESS norms</a>). Maintaining consistent cognitive performance across a full day without stimulants is extremely rare, achievable only with sustained optimal sleep.
+    level_5:
+      text: |-
+        You sustain PSQI 0 and ESS 0 over extended periods, maintaining full cognitive performance regardless of schedule variation, travel, or stress. You wake naturally at a consistent time without an alarm and never experience daytime impairment.
+      reasoning: |-
+        This represents the intersection of optimal sleep behaviour, favourable genetics (low sleep reactivity), and a life structure that consistently supports sleep. Approximately 1 in 1,000 adults would sustain this profile across varying conditions. No single study isolates this population; the estimate is extrapolated from the tails of PSQI, ESS, and sleep efficiency distributions.
+
 - key: long
   name: Long-term Health
   weight: 30
@@ -21,7 +48,34 @@ values:
   - |-
     Reducing inflammation, supporting immune function, maintaining hormonal balance, and protecting against cognitive decline.
   - |-
-    Those who prioritize health may focus on sleep duration consistency and quality even when immediate benefits aren't obvious.
+    Those who prioritise health may focus on sleep duration consistency and quality even when immediate benefits aren't obvious.
+  benchmarks:
+    level_1:
+      text: |-
+        You know how many hours you typically sleep and whether your schedule is consistent across the week.
+      reasoning: |-
+        Awareness only. Most people have not systematically assessed their sleep duration or regularity. Simply knowing whether you meet the recommended 7-9 hours and how much your schedule varies between weekdays and weekends is the starting point.
+    level_2:
+      text: |-
+        You consistently sleep 7-9 hours per night, with bedtime and wake time varying by less than 60 minutes across the week, including weekends.
+      reasoning: |-
+        Only 30-35% of US adults consistently achieve 7+ hours of sleep (<a href="https://www.cdc.gov/mmwr/volumes/65/wr/mm6506a1.htm" target="_blank">CDC MMWR 2016</a>). Social jet lag (weekend-weekday schedule shifts) of more than 1 hour affects roughly 70% of the population (<a href="https://pubmed.ncbi.nlm.nih.gov/22939159/" target="_blank">Wittmann et al. 2006</a>). Meeting both criteria places you in approximately the top 20%.
+    level_3:
+      text: |-
+        You maintain 7-8 hours of sleep with less than 30 minutes of bedtime variability across the week. You have been screened for and ruled out common sleep disorders.
+      reasoning: |-
+        Bedtime variability of under 30 minutes is achieved by roughly 10-15% of adults. Higher sleep regularity is associated with 20-48% lower mortality risk independent of sleep duration (<a href="https://pubmed.ncbi.nlm.nih.gov/36758198/" target="_blank">Windred et al. 2023, Sleep</a>). An estimated 80% of people with obstructive sleep apnoea are undiagnosed (<a href="https://pubmed.ncbi.nlm.nih.gov/29198726/" target="_blank">Benjafield et al. 2019</a>), so having been properly screened is itself uncommon.
+    level_4:
+      text: |-
+        Your sleep regularity index (SRI) is in the top decile. You track objective sleep metrics and your sleep duration, timing, and architecture are consistently within optimal ranges for long-term health outcomes.
+      reasoning: |-
+        The Sleep Regularity Index quantifies day-to-day consistency of sleep-wake patterns. An SRI in the top decile is associated with the strongest protective health effects (<a href="https://pubmed.ncbi.nlm.nih.gov/36758198/" target="_blank">Windred et al. 2023</a>). Tracking objective metrics (via wearable or clinical assessment) and acting on them places someone well beyond what the general population achieves. Approximately 1% of adults combine this level of regularity with objective monitoring.
+    level_5:
+      text: |-
+        You maintain optimal sleep regularity, duration, and architecture year-round, confirmed by objective monitoring. Your sleep-associated health biomarkers (resting HRV, inflammatory markers) are consistently in optimal ranges.
+      reasoning: |-
+        This requires sustained optimal behaviour plus favourable biological responses. Biomarker-confirmed sleep health (e.g. high nocturnal HRV, low CRP, healthy cortisol patterns linked to sleep quality) represents the far right tail of the population. Approximately 1 in 1,000 adults sustain this level of sleep-health integration across a full year.
+
 - key: comfort
   name: Comfort & Experience
   weight: 20
@@ -29,6 +83,32 @@ values:
   - The subjective quality and enjoyment of your sleep experience.
   - Ease of falling asleep, staying asleep throughout the night, and waking feeling refreshed.
   - The comfort of your sleep environment and the pleasure of pre-sleep routines.
-  - Those who prioritize this value focus on creating pleasant, relaxing sleep experiences.
+  - Those who prioritise this value focus on creating pleasant, relaxing sleep experiences.
   - |-
     Your approach will also be influenced by your chronotype (natural tendency toward morningness or eveningness), age, health conditions, work schedule, family responsibilities, and environmental constraints.
+  benchmarks:
+    level_1:
+      text: |-
+        You have assessed your sleep environment (light, noise, temperature, mattress quality) and know which factors most affect your comfort.
+      reasoning: |-
+        Awareness only. Most people have not systematically evaluated their sleep environment. Simply noting your room's light level, noise exposure, temperature, and mattress age provides a starting point for improvement.
+    level_2:
+      text: |-
+        You fall asleep within 15 minutes most nights, rarely wake during the night, and report feeling refreshed on most mornings.
+      reasoning: |-
+        About 50-60% of adults fall asleep within 15 minutes (<a href="https://pubmed.ncbi.nlm.nih.gov/15586779/" target="_blank">Ohayon et al. 2004</a>), but only 28% consistently wake feeling restored (<a href="https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2022.935228/full" target="_blank">Frontiers in Sleep 2022</a>). Only 15-25% report sleeping through the night without noticing awakenings. Meeting all three criteria narrows the population to approximately the top 20%.
+    level_3:
+      text: |-
+        You fall asleep within 10-15 minutes consistently (without it indicating sleep debt), achieve sleep efficiency above 90%, and almost always wake feeling fully refreshed.
+      reasoning: |-
+        Sleep efficiency above 90% is achieved by roughly 40-50% of healthy young adults but declines with age; sustaining it consistently is a top-5% achievement across the adult population (<a href="https://pubmed.ncbi.nlm.nih.gov/15586779/" target="_blank">Ohayon et al. 2004</a>). Only about 10-12% of adults describe their sleep as "very satisfying" (<a href="https://www.usa.philips.com/c-e/smartsleep/global-sleep-survey.html" target="_blank">Phillips Global Sleep Survey 2019</a>).
+    level_4:
+      text: |-
+        You achieve sleep efficiency above 95%, experience near-zero awakenings per night, and have systematically optimised your sleep environment across at least four factors (mattress, light, temperature, sound, air quality).
+      reasoning: |-
+        Sleep efficiency above 95% places someone in the top 5-10% of healthy adults. Systematic optimisation of multiple sleep environment factors is extremely uncommon -- most people address at most one or two. Combining elite sleep continuity with a deliberately engineered environment represents roughly the top 1%.
+    level_5:
+      text: |-
+        You maintain near-perfect sleep continuity and comfort regardless of location or circumstances. You fall asleep easily, sleep through the night, and wake fully refreshed every morning. Your sleep experience is a genuine source of pleasure and restoration.
+      reasoning: |-
+        This requires both optimal sleep physiology (low sleep reactivity, minimal age-related disruption) and robust systems that work across travel, stress, and environmental variation. Fewer than 5% of adults describe sleep as genuinely pleasurable rather than merely functional. Sustaining this level consistently represents approximately 1 in 1,000 adults.
