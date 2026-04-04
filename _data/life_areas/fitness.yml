@@ -47,6 +47,32 @@ values:
       - "Developing functional capabilities such as strength, endurance, power, speed, coordination, and specific skills."
       - "What your body can do rather than how it looks."
       - "Those who prioritise performance may focus on sport-specific training, measurable improvements in capacity, or achieving particular physical feats."
+    benchmarks:
+      level_1:
+        text: |-
+          You know your current strength, endurance, and flexibility levels relative to general population norms.
+        reasoning: |-
+          Awareness only -- no behaviour change required. Most adults have never tested their baseline capabilities (e.g. how many push-ups they can do, how far they can run, or their flexibility). Simply assessing where you stand provides direction.
+      level_2:
+        text: |-
+          You can complete 20+ push-ups (male) or 15+ (female), run a 5K without stopping, and maintain basic flexibility (touch your toes).
+        reasoning: |-
+          54% of American adults cannot do more than 10 push-ups (<a href="https://www.prnewswire.com/news-releases/a-new-survey-of-2-000-americans-aged-18-and-over-by-gymlessorg-found-that-the-majority-cannot-perform-more-than-10-push-ups-301367697.html" target="_blank">Gymless.org survey</a>). Only about 15% of the US population participates in a 5K race in any given year. Combined with basic flexibility, this represents approximately the top 20% of adult physical capability.
+      level_3:
+        text: |-
+          You train consistently across at least two fitness domains (e.g. strength and endurance). You can deadlift 1.5x bodyweight (male) or equivalent, run a sub-25 minute 5K, and maintain functional flexibility.
+        reasoning: |-
+          Only 24% of adults meet both aerobic and strength guidelines (<a href="https://www.cdc.gov/nchs/products/databriefs/db443.htm" target="_blank">CDC Data Brief 443</a>). A 1.5x BW deadlift is novice among lifters but well into the top 10-15% of the general adult population, since 58% do no strength training at all. A sub-25 min 5K is faster than 80-85% of race participants. The combination places you in the top 5%.
+      level_4:
+        text: |-
+          You demonstrate high performance across multiple fitness domains simultaneously -- strength, endurance, flexibility, and coordination. You compete in a sport or hold meaningful skill-based credentials, while maintaining breadth rather than specialising narrowly.
+        reasoning: |-
+          Being in the top 20% across 3+ domains simultaneously is rarer than being in the top 5% for any single one, because different training modalities compete for time and recovery. Roughly 3-6% of adults have genuinely well-rounded physical fitness; achieving high levels across all domains is in the 1% range (<a href="https://www.cdc.gov/nchs/products/databriefs/db443.htm" target="_blank">CDC guidelines data</a>, triangulated with strength and endurance population distributions).
+      level_5:
+        text: |-
+          You achieve competition-level performance in at least one strength or endurance discipline while maintaining high capability across all other fitness domains. You represent the rare intersection of elite breadth and depth.
+        reasoning: |-
+          This is where natural talent, years of dedicated training, and broad programming converge -- think competitive CrossFit athletes, military special forces operators, or multi-sport athletes who also maintain strength. Roughly 1 in 1,000 adults sustain this level of multi-domain physical performance.
 
   - key: enjoyment
     name: "Enjoyment & Psychological Benefits"
@@ -55,3 +81,29 @@ values:
       - "The pleasure, mental health benefits, and positive experiences derived from physical activity."
       - "Stress reduction, mood enhancement, community connection, and the inherent satisfaction of movement itself."
       - "Those who prioritise this value select activities they genuinely enjoy and that support their mental wellbeing."
+    benchmarks:
+      level_1:
+        text: |-
+          You have identified which types of physical activity you genuinely enjoy (or might enjoy) and which you find aversive.
+        reasoning: |-
+          Awareness only. Most people who don't exercise have never systematically explored what forms of movement they actually like. Identifying preferences -- team vs solo, indoor vs outdoor, competitive vs non-competitive -- is the first step toward sustainable activity.
+      level_2:
+        text: |-
+          You exercise regularly using activities you genuinely enjoy, report noticeable mood and energy benefits, and have maintained this for at least 6 months.
+        reasoning: |-
+          50% of people who start an exercise programme drop out within 6 months. Only 20-30% of regular exercisers report primarily intrinsic motivation (genuine enjoyment) rather than obligation. Those who exercise because they enjoy it AND sustain it for 6+ months represent approximately the top 20%.
+      level_3:
+        text: |-
+          Exercise is a highlight of your day rather than a chore. You have a regular exercise community or social component, and you would continue exercising even without health benefits.
+        reasoning: |-
+          Only about 15-20% of regular exercisers would exercise purely for enjoyment with no health incentive. Having a regular exercise community (running club, sports team, gym group) applies to roughly 5-8% of all adults. Combined with genuine daily anticipation of exercise, this represents the top 5%.
+      level_4:
+        text: |-
+          Being physically active is a core part of your identity. You experience flow states during exercise, use physical activity as your primary mental health strategy, and have maintained consistent exercise for 5+ years.
+        reasoning: |-
+          Strong exercise identity (top quartile on the Exercise Identity Scale) is present in about 10-15% of all adults (<a href="https://doi.org/10.1123/jsep.16.2.163" target="_blank">Anderson & Cychosz 1994</a>). Regular flow states during exercise are reported by roughly 10% of exercisers. Long-term adherence of 5+ years narrows to about 15-20% of those who start. The intersection represents approximately the top 1%.
+      level_5:
+        text: |-
+          Exercise is inseparable from your sense of self. You experience deep engagement and flow regularly, have sustained joyful physical activity for a decade or more, and your exercise practice has become a source of meaning, community leadership, or creative expression.
+        reasoning: |-
+          This represents the far tail -- people for whom movement is essentially a vocation or calling regardless of whether they compete. Deep community involvement (coaching, organising, mentoring), combined with decades of intrinsically motivated practice and regular flow experiences, describes approximately 1 in 1,000 adults.
