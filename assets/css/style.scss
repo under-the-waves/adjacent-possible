@@ -979,8 +979,8 @@ a.completed-guide:hover,
 
 /* Domain label color logic */
 .domain-label {
-    color: #333; /* Default black */
-    font-weight: 500;
+    color: #333;
+    font-weight: normal;
 }
 
 /* Make domain red if it has class 'all-unavailable' */
