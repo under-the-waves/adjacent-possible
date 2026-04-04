@@ -8,9 +8,10 @@ The framework covers 52 life areas organised into five pillars, each following a
 
 <div class="pillar-hierarchy">
 
-<div class="pillar-card">
-<div class="pillar-card__header"><h2>Expand Your Awareness</h2></div>
-<div class="pillar-card__body">
+<div class="pillar-section">
+
+## Expand Your Awareness
+
 <div class="domain-label">Values</div>
 {% assign a = site.data.life_areas["self-awareness"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/self-awareness/">Self-awareness</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["value-system"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/value-system/">Value System</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -26,12 +27,13 @@ The framework covers 52 life areas organised into five pillars, each following a
 {% assign a = site.data.life_areas["cognitive-skills"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/cognitive-skills/">Cognitive Skills</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["life-skills"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/life-skills/">Life Skills</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["learning-methods"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/learning-methods/">Learning Methods</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
-</div>
+
 </div>
 
-<div class="pillar-card">
-<div class="pillar-card__header"><h2>Look After Yourself</h2></div>
-<div class="pillar-card__body">
+<div class="pillar-section">
+
+## Look After Yourself
+
 <div class="domain-label">Health</div>
 {% assign a = site.data.life_areas["fitness"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/fitness/">Fitness</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["nutrition"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/nutrition/">Nutrition</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -47,12 +49,13 @@ The framework covers 52 life areas organised into five pillars, each following a
 {% assign a = site.data.life_areas["emergency-preparedness"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/emergency-preparedness/">Emergency Preparedness</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["digital-safety"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/digital-safety/">Digital Safety</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["legal-matters"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/legal-matters/">Legal Matters</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
-</div>
+
 </div>
 
-<div class="pillar-card">
-<div class="pillar-card__header"><h2>Connect with Others</h2></div>
-<div class="pillar-card__body">
+<div class="pillar-section">
+
+## Connect with Others
+
 <div class="domain-label">Expression</div>
 {% assign a = site.data.life_areas["body-image"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/body-image/">Body Image</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["style"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/style/">Style</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -67,12 +70,13 @@ The framework covers 52 life areas organised into five pillars, each following a
 {% assign a = site.data.life_areas["relationship-status"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/relationship-status/">Relationship Status</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["romantic-relationships"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/romantic-relationships/">Romantic Relationships</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["sex"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/sex/">Sex</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
-</div>
+
 </div>
 
-<div class="pillar-card">
-<div class="pillar-card__header"><h2>Organise Your Life</h2></div>
-<div class="pillar-card__body">
+<div class="pillar-section">
+
+## Organise Your Life
+
 <div class="domain-label">Environment</div>
 {% assign a = site.data.life_areas["housing"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/housing/">Housing</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["possessions"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/possessions/">Possessions</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -88,12 +92,13 @@ The framework covers 52 life areas organised into five pillars, each following a
 {% assign a = site.data.life_areas["time-management"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/time-management/">Time Management</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["goals"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/goals/">Goals</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["habits"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/habits/">Habits</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
-</div>
+
 </div>
 
-<div class="pillar-card">
-<div class="pillar-card__header"><h2>Create and Contribute</h2></div>
-<div class="pillar-card__body">
+<div class="pillar-section">
+
+## Create and Contribute
+
 <div class="domain-label">Career</div>
 {% assign a = site.data.life_areas["current-work"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/current-work/">Current Work</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["career-planning"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/career-planning/">Career Planning</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
@@ -104,7 +109,7 @@ The framework covers 52 life areas organised into five pillars, each following a
 <div class="domain-label">Impact</div>
 {% assign a = site.data.life_areas["global-impact"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/global-impact/">Global Impact</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["community-contribution"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/community-contribution/">Community Contribution</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
-</div>
+
 </div>
 
 </div>

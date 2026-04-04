@@ -265,95 +265,52 @@
 
 .pillar-hierarchy {
   margin: 2rem 0 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
-.pillar-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
+.pillar-section {
+  margin-bottom: 2.5rem;
 }
 
-.pillar-card__header {
-  padding: 14px 20px;
-  border-bottom: 1px solid #e0e0e0;
-  background: #f8f9fa;
+.pillar-section h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
 }
 
-.pillar-card__header h2 {
-  margin: 0;
-  font-size: 1.15em;
-  color: #333;
+.pillar-section .domain-label {
+  font-size: 0.85em;
   font-weight: 600;
-}
-
-.pillar-card__body {
-  padding: 8px 0;
-}
-
-.pillar-card .domain-label {
-  padding: 6px 20px 2px;
-  font-size: 0.8em;
-  font-weight: 600;
-  color: #888;
+  color: #819198;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
+  margin: 1.2rem 0 0.3rem;
 }
 
 .area-row {
   display: flex;
   align-items: baseline;
-  padding: 6px 20px;
+  padding: 4px 0;
   gap: 12px;
-  transition: background 0.15s;
-}
-
-.area-row:hover {
-  background: #f5f7fa;
 }
 
 .area-row__name {
   flex-shrink: 0;
-  min-width: 180px;
-}
-
-.area-row__name a {
-  color: #155799;
-  text-decoration: none;
-  font-size: 0.95em;
-}
-
-.area-row__name a:hover {
-  text-decoration: underline;
+  min-width: 200px;
 }
 
 .area-row__desc {
-  color: #777;
-  font-size: 0.88em;
-  line-height: 1.4;
+  color: #819198;
+  font-size: 0.9em;
 }
 
 @media (max-width: 768px) {
   .area-row {
     flex-direction: column;
     gap: 2px;
-    padding: 8px 16px;
+    padding: 6px 0;
   }
 
   .area-row__name {
     min-width: 0;
-  }
-
-  .pillar-card__header {
-    padding: 12px 16px;
-  }
-
-  .pillar-card .domain-label {
-    padding: 6px 16px 2px;
   }
 }
 
@@ -1148,16 +1105,19 @@ a.completed-guide:hover,
   padding-top: 0.75rem;
   margin-top: 0.75rem;
   border-top: 1px solid #333;
+  background-color: #000;
 }
 
 .mega-menu__footer .all-areas-link {
-  color: #ccc !important;
+  color: #fff !important;
   font-size: 14px;
   text-decoration: none;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 4px 12px !important;
 }
 
 .mega-menu__footer .all-areas-link:hover {
-  color: #fff !important;
   text-decoration: underline;
 }
 
@@ -1233,15 +1193,17 @@ a.completed-guide:hover,
 .mega-menu__domain-items a {
   display: block;
   padding: 4px 8px;
-  color: #333 !important;
+  color: #ccc !important;
   text-decoration: none;
   font-size: 0.9em;
   border-radius: 2px;
+  text-align: left;
   transition: background-color 0.2s;
 }
 
 .mega-menu__domain-items a:hover {
-  background-color: #e9ecef;
+  background-color: #222;
+  color: #fff !important;
 }
 
 .mega-menu__domain-items span.unavailable-guide {
@@ -1249,6 +1211,7 @@ a.completed-guide:hover,
   padding: 4px 8px;
   color: #e63946 !important;
   font-size: 0.9em;
+  text-align: left;
   cursor: default;
 }
 
