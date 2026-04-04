@@ -59,35 +59,29 @@
   </div>
 </div>
   
-<!-- Life Areas Dropdown with 3-Level Pillar Structure -->
-<div class="site-nav">
+<!-- Life Areas Mega Menu -->
+<div class="site-nav site-nav--mega">
   <button id="lifeAreasButton" class="nav-button">Life Areas ▾</button>
-  <div id="lifeAreasMenu" class="nav-menu">
-    <a href="{{ site.baseurl }}/life-areas/" class="all-areas-link"><strong>View All Life Areas</strong></a>
-    
-    <!-- Pillar 1: Expand Your Awareness -->
-    <div class="dropdown-item">
-      <div class="pillar-header" onclick="toggleSubmenu(this)">
-        <span class="pillar-label">Expand Your Awareness</span>
-        <span class="expand-icon">▸</span>
-      </div>
-      <div class="submenu">
-        
-        <!-- Values Domain -->
+  <div id="lifeAreasMenu" class="mega-menu">
+    <div class="mega-menu__grid">
+
+      <!-- Pillar 1: Expand Your Awareness -->
+      <div class="mega-menu__column">
+        <h3 class="mega-menu__pillar-name">Expand Your Awareness</h3>
+
         {% assign self_awareness_page = site.pages | where: "url", "/self-awareness/" | first %}
         {% assign value_system_page = site.pages | where: "url", "/value-system/" | first %}
-        <div class="dropdown-item{% unless self_awareness_page or value_system_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Values</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless self_awareness_page or value_system_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Values</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if self_awareness_page %}
               <a href="{{ site.baseurl }}/self-awareness/">Self-awareness</a>
             {% else %}
               <span class="unavailable-guide">Self-awareness</span>
             {% endif %}
-            
             {% if value_system_page %}
               <a href="{{ site.baseurl }}/value-system/">Value system</a>
             {% else %}
@@ -95,22 +89,20 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Purpose Domain -->
+
         {% assign life_purpose_page = site.pages | where: "url", "/life-purpose/" | first %}
         {% assign ethics_page = site.pages | where: "url", "/ethics/" | first %}
-        <div class="dropdown-item{% unless life_purpose_page or ethics_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Purpose</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless life_purpose_page or ethics_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Purpose</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if life_purpose_page %}
               <a href="{{ site.baseurl }}/life-purpose/">Life purpose</a>
             {% else %}
               <span class="unavailable-guide">Life purpose</span>
             {% endif %}
-            
             {% if ethics_page %}
               <a href="{{ site.baseurl }}/ethics/">Ethics</a>
             {% else %}
@@ -118,36 +110,32 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Knowledge Domain -->
+
         {% assign media_diet_page = site.pages | where: "url", "/media-diet/" | first %}
         {% assign info_management_page = site.pages | where: "url", "/information-management/" | first %}
         {% assign worldview_page = site.pages | where: "url", "/worldview/" | first %}
         {% assign rationality_page = site.pages | where: "url", "/rationality/" | first %}
-        <div class="dropdown-item{% unless media_diet_page or info_management_page or worldview_page or rationality_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Knowledge</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless media_diet_page or info_management_page or worldview_page or rationality_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Knowledge</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if media_diet_page %}
               <a href="{{ site.baseurl }}/media-diet/">Media diet</a>
             {% else %}
               <span class="unavailable-guide">Media diet</span>
             {% endif %}
-            
             {% if info_management_page %}
               <a href="{{ site.baseurl }}/information-management/">Information management</a>
             {% else %}
               <span class="unavailable-guide">Information management</span>
             {% endif %}
-            
             {% if worldview_page %}
               <a href="{{ site.baseurl }}/worldview/">Worldview</a>
             {% else %}
               <span class="unavailable-guide">Worldview</span>
             {% endif %}
-            
             {% if rationality_page %}
               <a href="{{ site.baseurl }}/rationality/">Rationality</a>
             {% else %}
@@ -155,29 +143,26 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Learning Domain -->
+
         {% assign cognitive_skills_page = site.pages | where: "url", "/cognitive-skills/" | first %}
         {% assign life_skills_page = site.pages | where: "url", "/life-skills/" | first %}
         {% assign learning_methods_page = site.pages | where: "url", "/learning-methods/" | first %}
-        <div class="dropdown-item{% unless cognitive_skills_page or life_skills_page or learning_methods_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Learning</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless cognitive_skills_page or life_skills_page or learning_methods_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Learning</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if cognitive_skills_page %}
               <a href="{{ site.baseurl }}/cognitive-skills/">Cognitive skills</a>
             {% else %}
               <span class="unavailable-guide">Cognitive skills</span>
             {% endif %}
-            
             {% if life_skills_page %}
               <a href="{{ site.baseurl }}/life-skills/">Life skills</a>
             {% else %}
               <span class="unavailable-guide">Life skills</span>
             {% endif %}
-            
             {% if learning_methods_page %}
               <a href="{{ site.baseurl }}/learning-methods/">Learning methods</a>
             {% else %}
@@ -185,54 +170,43 @@
             {% endif %}
           </div>
         </div>
-        
       </div>
-    </div>
-    
-    <!-- Pillar 2: Look After Yourself -->
-    <div class="dropdown-item">
-      <div class="pillar-header" onclick="toggleSubmenu(this)">
-        <span class="pillar-label">Look After Yourself</span>
-        <span class="expand-icon">▸</span>
-      </div>
-      <div class="submenu">
-        
-        <!-- Health Domain -->
+
+      <!-- Pillar 2: Look After Yourself -->
+      <div class="mega-menu__column">
+        <h3 class="mega-menu__pillar-name">Look After Yourself</h3>
+
         {% assign fitness_page = site.pages | where: "url", "/fitness/" | first %}
         {% assign nutrition_page = site.pages | where: "url", "/nutrition/" | first %}
         {% assign food_management_page = site.pages | where: "url", "/food-management/" | first %}
         {% assign sleep_page = site.pages | where: "url", "/sleep/" | first %}
         {% assign health_management_page = site.pages | where: "url", "/health-management/" | first %}
-        <div class="dropdown-item{% unless fitness_page or nutrition_page or food_management_page or sleep_page or health_management_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Health</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless fitness_page or nutrition_page or food_management_page or sleep_page or health_management_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Health</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if fitness_page %}
               <a href="{{ site.baseurl }}/fitness/">Fitness</a>
             {% else %}
               <span class="unavailable-guide">Fitness</span>
             {% endif %}
-            
             {% if nutrition_page %}
               <a href="{{ site.baseurl }}/nutrition/">Nutrition</a>
             {% else %}
               <span class="unavailable-guide">Nutrition</span>
             {% endif %}
-
             {% if food_management_page %}
               <a href="{{ site.baseurl }}/food-management/">Food Management</a>
             {% else %}
               <span class="unavailable-guide">Food Management</span>
             {% endif %}
-
             {% if sleep_page %}
               <a href="{{ site.baseurl }}/sleep/">Sleep</a>
             {% else %}
               <span class="unavailable-guide">Sleep</span>
             {% endif %}
-            
             {% if health_management_page %}
               <a href="{{ site.baseurl }}/health-management/">Health Management</a>
             {% else %}
@@ -240,29 +214,26 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Wellbeing Domain -->
+
         {% assign mindfulness_page = site.pages | where: "url", "/mindfulness/" | first %}
         {% assign mental_health_page = site.pages | where: "url", "/mental-health/" | first %}
         {% assign behaviours_page = site.pages | where: "url", "/behaviours/" | first %}
-        <div class="dropdown-item{% unless mindfulness_page or mental_health_page or behaviours_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Wellbeing</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless mindfulness_page or mental_health_page or behaviours_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Wellbeing</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if mindfulness_page %}
               <a href="{{ site.baseurl }}/mindfulness/">Mindfulness</a>
             {% else %}
               <span class="unavailable-guide">Mindfulness</span>
             {% endif %}
-            
             {% if mental_health_page %}
               <a href="{{ site.baseurl }}/mental-health/">Mental health</a>
             {% else %}
               <span class="unavailable-guide">Mental health</span>
             {% endif %}
-            
             {% if behaviours_page %}
               <a href="{{ site.baseurl }}/behaviours/">Behaviours</a>
             {% else %}
@@ -270,36 +241,32 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Security Domain -->
+
         {% assign physical_safety_page = site.pages | where: "url", "/physical-safety/" | first %}
         {% assign emergency_prep_page = site.pages | where: "url", "/emergency-preparedness/" | first %}
         {% assign digital_safety_page = site.pages | where: "url", "/digital-safety/" | first %}
         {% assign legal_matters_page = site.pages | where: "url", "/legal-matters/" | first %}
-        <div class="dropdown-item{% unless physical_safety_page or emergency_prep_page or digital_safety_page or legal_matters_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Security</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless physical_safety_page or emergency_prep_page or digital_safety_page or legal_matters_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Security</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if physical_safety_page %}
               <a href="{{ site.baseurl }}/physical-safety/">Physical safety</a>
             {% else %}
               <span class="unavailable-guide">Physical safety</span>
             {% endif %}
-            
             {% if emergency_prep_page %}
               <a href="{{ site.baseurl }}/emergency-preparedness/">Emergency preparedness</a>
             {% else %}
               <span class="unavailable-guide">Emergency preparedness</span>
             {% endif %}
-            
             {% if digital_safety_page %}
               <a href="{{ site.baseurl }}/digital-safety/">Digital safety</a>
             {% else %}
               <span class="unavailable-guide">Digital safety</span>
             {% endif %}
-            
             {% if legal_matters_page %}
               <a href="{{ site.baseurl }}/legal-matters/">Legal matters</a>
             {% else %}
@@ -307,47 +274,37 @@
             {% endif %}
           </div>
         </div>
-        
       </div>
-    </div>
-    
-    <!-- Pillar 3: Connect with Others -->
-    <div class="dropdown-item">
-      <div class="pillar-header" onclick="toggleSubmenu(this)">
-        <span class="pillar-label">Connect with Others</span>
-        <span class="expand-icon">▸</span>
-      </div>
-      <div class="submenu">
-        
-        <!-- Expression Domain -->
+
+      <!-- Pillar 3: Connect with Others -->
+      <div class="mega-menu__column">
+        <h3 class="mega-menu__pillar-name">Connect with Others</h3>
+
         {% assign body_image_page = site.pages | where: "url", "/body-image/" | first %}
         {% assign style_page = site.pages | where: "url", "/style/" | first %}
         {% assign personality_page = site.pages | where: "url", "/personality/" | first %}
         {% assign communication_page = site.pages | where: "url", "/communication/" | first %}
-        <div class="dropdown-item{% unless body_image_page or personality_page or communication_page or style_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Expression</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless body_image_page or personality_page or communication_page or style_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Expression</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if body_image_page %}
               <a href="{{ site.baseurl }}/body-image/">Body Image</a>
             {% else %}
               <span class="unavailable-guide">Body Image</span>
             {% endif %}
-
             {% if style_page %}
               <a href="{{ site.baseurl }}/style/">Style</a>
             {% else %}
               <span class="unavailable-guide">Style</span>
             {% endif %}
-            
             {% if personality_page %}
               <a href="{{ site.baseurl }}/personality/">Personality</a>
             {% else %}
               <span class="unavailable-guide">Personality</span>
             {% endif %}
-            
             {% if communication_page %}
               <a href="{{ site.baseurl }}/communication/">Communication</a>
             {% else %}
@@ -355,17 +312,16 @@
             {% endif %}
           </div>
         </div>
-        
-<!-- Family Domain -->
+
         {% assign family_of_origin_page = site.pages | where: "url", "/family-of-origin/" | first %}
-        {% assign extended_family_page = site.pages | where: "url", "/extended-family/" | first %} 
+        {% assign extended_family_page = site.pages | where: "url", "/extended-family/" | first %}
         {% assign children_page = site.pages | where: "url", "/children/" | first %}
-        <div class="dropdown-item{% unless family_of_origin_page or extended_family_page or children_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Family</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless family_of_origin_page or extended_family_page or children_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Family</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if family_of_origin_page %}
               <a href="{{ site.baseurl }}/family-of-origin/">Family of Origin</a>
             {% else %}
@@ -383,18 +339,17 @@
             {% endif %}
           </div>
         </div>
-                      
-        <!-- Friends and Relationships Domain -->
+
         {% assign friendship_page = site.pages | where: "url", "/friendship/" | first %}
         {% assign relationship_status_page = site.pages | where: "url", "/relationship-status/" | first %}
         {% assign romantic_page = site.pages | where: "url", "/romantic-relationships/" | first %}
         {% assign sex_page = site.pages | where: "url", "/sex/" | first %}
-        <div class="dropdown-item{% unless friendship_page or relationship_status_page or romantic_page or sex_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Friends and Relationships</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless friendship_page or relationship_status_page or romantic_page or sex_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Friends and Relationships</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if friendship_page %}
               <a href="{{ site.baseurl }}/friendship/">Friendship</a>
             {% else %}
@@ -417,47 +372,37 @@
             {% endif %}
           </div>
         </div>
-        
       </div>
-    </div>
-    
-    <!-- Pillar 4: Organise Your Life -->
-    <div class="dropdown-item">
-      <div class="pillar-header" onclick="toggleSubmenu(this)">
-        <span class="pillar-label">Organise Your Life</span>
-        <span class="expand-icon">▸</span>
-      </div>
-      <div class="submenu">
-        
-        <!-- Environment Domain -->
+
+      <!-- Pillar 4: Organise Your Life -->
+      <div class="mega-menu__column">
+        <h3 class="mega-menu__pillar-name">Organise Your Life</h3>
+
         {% assign housing_page = site.pages | where: "url", "/housing/" | first %}
         {% assign possessions_page = site.pages | where: "url", "/possessions/" | first %}
         {% assign transportation_page = site.pages | where: "url", "/transportation/" | first %}
         {% assign housework_page = site.pages | where: "url", "/housework/" | first %}
-        <div class="dropdown-item{% unless housing_page or possessions_page or transportation_page or housework_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Environment</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless housing_page or possessions_page or transportation_page or housework_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Environment</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if housing_page %}
               <a href="{{ site.baseurl }}/housing/">Housing</a>
             {% else %}
               <span class="unavailable-guide">Housing</span>
             {% endif %}
-            
             {% if possessions_page %}
               <a href="{{ site.baseurl }}/possessions/">Possessions</a>
             {% else %}
               <span class="unavailable-guide">Possessions</span>
             {% endif %}
-            
             {% if transportation_page %}
               <a href="{{ site.baseurl }}/transportation/">Transportation</a>
             {% else %}
               <span class="unavailable-guide">Transportation</span>
             {% endif %}
-            
             {% if housework_page %}
               <a href="{{ site.baseurl }}/housework/">Housework</a>
             {% else %}
@@ -465,29 +410,26 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Finances Domain -->
+
         {% assign planning_tracking_page = site.pages | where: "url", "/financial-planning-tracking/" | first %}
         {% assign saving_page = site.pages | where: "url", "/saving/" | first %}
         {% assign investing_page = site.pages | where: "url", "/investing/" | first %}
-        <div class="dropdown-item{% unless planning_tracking_page or saving_page or investing_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Finances</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless planning_tracking_page or saving_page or investing_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Finances</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if planning_tracking_page %}
               <a href="{{ site.baseurl }}/financial-planning-tracking/">Planning and tracking</a>
             {% else %}
               <span class="unavailable-guide">Planning and tracking</span>
             {% endif %}
-            
             {% if saving_page %}
               <a href="{{ site.baseurl }}/saving/">Saving</a>
             {% else %}
               <span class="unavailable-guide">Saving</span>
             {% endif %}
-            
             {% if investing_page %}
               <a href="{{ site.baseurl }}/investing/">Investing</a>
             {% else %}
@@ -495,43 +437,38 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Productivity Domain -->
+
         {% assign organisation_page = site.pages | where: "url", "/organisation/" | first %}
         {% assign systems_page = site.pages | where: "url", "/systems/" | first %}
         {% assign time_management_page = site.pages | where: "url", "/time-management/" | first %}
         {% assign goals_page = site.pages | where: "url", "/goals/" | first %}
         {% assign habits_page = site.pages | where: "url", "/habits/" | first %}
-        <div class="dropdown-item{% unless organisation_page or systems_page or time_management_page or goals_page or habits_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Productivity</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless organisation_page or systems_page or time_management_page or goals_page or habits_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Productivity</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if organisation_page %}
               <a href="{{ site.baseurl }}/organisation/">Organisation</a>
             {% else %}
               <span class="unavailable-guide">Organisation</span>
             {% endif %}
-            
             {% if systems_page %}
               <a href="{{ site.baseurl }}/systems/">Systems</a>
             {% else %}
               <span class="unavailable-guide">Systems</span>
             {% endif %}
-            
             {% if time_management_page %}
               <a href="{{ site.baseurl }}/time-management/">Time management</a>
             {% else %}
               <span class="unavailable-guide">Time management</span>
             {% endif %}
-            
             {% if goals_page %}
               <a href="{{ site.baseurl }}/goals/">Goals</a>
             {% else %}
               <span class="unavailable-guide">Goals</span>
             {% endif %}
-            
             {% if habits_page %}
               <a href="{{ site.baseurl }}/habits/">Habits</a>
             {% else %}
@@ -539,40 +476,31 @@
             {% endif %}
           </div>
         </div>
-        
       </div>
-    </div>
-    
-    <!-- Pillar 5: Create & Contribute -->
-    <div class="dropdown-item">
-      <div class="pillar-header" onclick="toggleSubmenu(this)">
-        <span class="pillar-label">Create & Contribute</span>
-        <span class="expand-icon">▸</span>
-      </div>
-      <div class="submenu">
-        
-        <!-- Career Domain -->
+
+      <!-- Pillar 5: Create & Contribute -->
+      <div class="mega-menu__column">
+        <h3 class="mega-menu__pillar-name">Create & Contribute</h3>
+
         {% assign current_work_page = site.pages | where: "url", "/current-work/" | first %}
         {% assign career_planning_page = site.pages | where: "url", "/career-planning/" | first %}
         {% assign networks_page = site.pages | where: "url", "/networks/" | first %}
-        <div class="dropdown-item{% unless current_work_page or career_planning_page or networks_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Career</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless current_work_page or career_planning_page or networks_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Career</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if current_work_page %}
               <a href="{{ site.baseurl }}/current-work/">Current work</a>
             {% else %}
               <span class="unavailable-guide">Current work</span>
             {% endif %}
-            
             {% if career_planning_page %}
               <a href="{{ site.baseurl }}/career-planning/">Career planning</a>
             {% else %}
               <span class="unavailable-guide">Career planning</span>
             {% endif %}
-            
             {% if networks_page %}
               <a href="{{ site.baseurl }}/networks/">Networks</a>
             {% else %}
@@ -580,22 +508,20 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Leisure Domain -->
+
         {% assign participatory_leisure_page = site.pages | where: "url", "/participatory-leisure/" | first %}
         {% assign consumptive_leisure_page = site.pages | where: "url", "/consumptive-leisure/" | first %}
-        <div class="dropdown-item{% unless participatory_leisure_page or consumptive_leisure_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Leisure</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless participatory_leisure_page or consumptive_leisure_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Leisure</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if participatory_leisure_page %}
               <a href="{{ site.baseurl }}/participatory-leisure/">Participatory leisure</a>
             {% else %}
               <span class="unavailable-guide">Participatory leisure</span>
             {% endif %}
-            
             {% if consumptive_leisure_page %}
               <a href="{{ site.baseurl }}/consumptive-leisure/">Consumptive leisure</a>
             {% else %}
@@ -603,22 +529,20 @@
             {% endif %}
           </div>
         </div>
-        
-        <!-- Impact Domain -->
+
         {% assign global_impact_page = site.pages | where: "url", "/global-impact/" | first %}
         {% assign community_contribution_page = site.pages | where: "url", "/community-contribution/" | first %}
-        <div class="dropdown-item{% unless global_impact_page or community_contribution_page %} all-unavailable{% endunless %}">
-          <div class="domain-header" onclick="toggleSubmenu(this)">
-            <span class="domain-label">Impact</span>
-            <span class="expand-icon">▸</span>
+        <div class="mega-menu__domain{% unless global_impact_page or community_contribution_page %} all-unavailable{% endunless %}">
+          <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
+            <span class="mega-menu__domain-label">Impact</span>
+            <span class="mega-menu__expand-icon">+</span>
           </div>
-          <div class="submenu">
+          <div class="mega-menu__domain-items">
             {% if global_impact_page %}
               <a href="{{ site.baseurl }}/global-impact/">Global impact</a>
             {% else %}
               <span class="unavailable-guide">Global impact</span>
             {% endif %}
-            
             {% if community_contribution_page %}
               <a href="{{ site.baseurl }}/community-contribution/">Community contribution</a>
             {% else %}
@@ -626,13 +550,15 @@
             {% endif %}
           </div>
         </div>
-        
       </div>
+
     </div>
-    
+    <div class="mega-menu__footer">
+      <a href="{{ site.baseurl }}/life-areas/" class="all-areas-link"><strong>View All Life Areas</strong></a>
+    </div>
   </div>
 </div>
-  
+
   <!-- Resources Dropdown -->
   <div class="site-nav">
     <button id="resourcesButton" class="nav-button">Resources ▾</button>
@@ -660,9 +586,6 @@
 <!-- Auth -->
 <div class="site-nav auth-nav" id="clerk-auth"></div>
 
-<div class="nav-legend">
-    <small><span class="unavailable-guide">●</span> Red means planned content</small>
-  </div>
 </nav>   
     
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -730,10 +653,18 @@ function toggleSubmenu(headerElement) {
     }
 }
   
+function toggleMegaDomain(headerElement) {
+    var domain = headerElement.closest('.mega-menu__domain');
+    var wasActive = domain.classList.contains('active');
+    domain.classList.toggle('active', !wasActive);
+    var icon = domain.querySelector('.mega-menu__expand-icon');
+    if (icon) icon.textContent = wasActive ? '+' : '−';
+}
+
   document.addEventListener('DOMContentLoaded', function() {
   // Get all dropdown buttons
   const dropdownButtons = document.querySelectorAll('.nav-button');
-  const dropdownMenus = document.querySelectorAll('.nav-menu');
+  const dropdownMenus = document.querySelectorAll('.nav-menu, .mega-menu');
   
   // Setup for each main dropdown
   dropdownButtons.forEach(button => {
