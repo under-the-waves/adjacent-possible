@@ -137,7 +137,7 @@ life_area_slug: fitness
 
 <div class="la-banner la-banner--start" id="level1Banner">
     <p><strong>You haven't completed Level 1 for Fitness yet.</strong><br>It takes about 15 minutes and helps you understand what fitness means to you.</p>
-    <a href="{{ site.baseurl }}/fitness/level-1/" class="btn-cta">Start Level 1</a>
+    <a href="{{ site.baseurl }}/fitness/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
 ## What people value about fitness
@@ -147,23 +147,20 @@ People pursue fitness for different reasons. This site scores every fitness inte
 <div class="value-card">
 <h3>Health & Longevity</h3>
 <p>Cardiovascular health, muscle mass for healthy ageing, joint integrity, and metabolic health. Sustainable practices with minimal injury risk.</p>
-<p class="exemplar">Level 5 example: <a href="https://richroll.com/bio/" target="_blank">Rich Roll</a> went from sedentary at 39 to completing five Ironman-distance triathlons in five days, driven primarily by longevity rather than competition.</p>
 </div>
 
 <div class="value-card">
 <h3>Physical Performance</h3>
 <p>Strength, endurance, power, speed, coordination, and specific skills. What your body can do.</p>
-<p class="exemplar">Level 5 example: <a href="https://games.crossfit.com/athlete/32551" target="_blank">Adam Klink</a>, a CrossFit coach who ran a sub-5-minute mile and back squatted 500 lb in the same day at 97 kg bodyweight.</p>
 </div>
 
 <div class="value-card">
 <h3>Enjoyment & Psychological Benefits</h3>
 <p>Stress reduction, mood enhancement, community connection, and the satisfaction of movement itself.</p>
-<p class="exemplar">Level 5 example: <a href="https://themirnavator.com/" target="_blank">Mirna Valerio</a>, an ultrarunner and 2018 National Geographic Adventurer of the Year who runs primarily for joy and community rather than competition.</p>
 </div>
 
 <div class="la-paths">
-    <a href="{{ site.baseurl }}/fitness/level-1/" class="path-level1">
+    <a href="{{ site.baseurl }}/fitness/level-1" class="path-level1">
         Complete Level 1
         <div class="path-desc">Understand fitness, set your values, assess where you are</div>
     </a>
@@ -191,12 +188,12 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.className = 'la-banner la-banner--complete';
         banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Fitness.</strong></p>' +
             '<a href="{{ site.baseurl }}/fitness/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/fitness/level-1/" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/fitness/level-1" class="btn-secondary">Redo Level 1</a>';
     } else if (Object.keys(fitness).length > 0) {
         var completed = steps.filter(function(s) { return fitness[s]; }).length;
         if (hasSliders) completed++;
         banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/fitness/level-1/" class="btn-cta">Continue Level 1</a>';
+            '<a href="{{ site.baseurl }}/fitness/level-1" class="btn-cta">Continue Level 1</a>';
     }
 });
 </script>

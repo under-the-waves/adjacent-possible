@@ -137,7 +137,7 @@ life_area_slug: sleep
 
 <div class="la-banner la-banner--start" id="level1Banner">
     <p><strong>You haven't completed Level 1 for Sleep yet.</strong><br>It takes about 15 minutes and helps you understand what sleep means to you.</p>
-    <a href="{{ site.baseurl }}/sleep/level-1/" class="btn-cta">Start Level 1</a>
+    <a href="{{ site.baseurl }}/sleep/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
 ## What people value about sleep
@@ -147,23 +147,20 @@ People prioritise sleep for different reasons. This site scores every sleep inte
 <div class="value-card">
 <h3>Daily Functioning</h3>
 <p>Mental alertness, energy, focus, mood, and physical recovery. How well sleep supports what you need to do the next day.</p>
-<p class="exemplar">Level 5 example: <a href="https://ariannahuffington.com/" target="_blank">Arianna Huffington</a> collapsed from exhaustion in 2007 and subsequently rebuilt her daily routine around eight hours of sleep, later founding Thrive Global and writing The Sleep Revolution. She has said that prioritising sleep improved her decision-making and productivity more than any other single change.</p>
 </div>
 
 <div class="value-card">
 <h3>Long-term Health</h3>
 <p>Disease prevention, longevity, and brain health. The cumulative effects of sleep on your body and mind over years and decades.</p>
-<p class="exemplar">Level 5 example: <a href="https://www.sleepdiplomat.com/" target="_blank">Matthew Walker</a>, a neuroscience professor at UC Berkeley, has spent over 20 years researching the long-term health consequences of sleep. His book Why We Sleep draws on his lab's findings to argue that sleep is the single most effective thing you can do to reset brain and body health each day.</p>
 </div>
 
 <div class="value-card">
 <h3>Comfort & Experience</h3>
 <p>The subjective quality of your sleep – how easily you fall asleep, whether you stay asleep, and how rested you feel when you wake up.</p>
-<p class="exemplar">Level 5 example: <a href="https://www.michaelbreus.com/" target="_blank">Michael Breus</a>, a clinical psychologist and fellow of the American Academy of Sleep Medicine, has built his practice around matching sleep routines to individual chronotypes. His work appears to have helped thousands of patients fall asleep more easily and wake more refreshed by tailoring the sleep experience to their biology.</p>
 </div>
 
 <div class="la-paths">
-    <a href="{{ site.baseurl }}/sleep/level-1/" class="path-level1">
+    <a href="{{ site.baseurl }}/sleep/level-1" class="path-level1">
         Complete Level 1
         <div class="path-desc">Understand sleep, set your values, assess where you are</div>
     </a>
@@ -191,12 +188,12 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.className = 'la-banner la-banner--complete';
         banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Sleep.</strong></p>' +
             '<a href="{{ site.baseurl }}/sleep/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/sleep/level-1/" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/sleep/level-1" class="btn-secondary">Redo Level 1</a>';
     } else if (Object.keys(sleep).length > 0) {
         var completed = steps.filter(function(s) { return sleep[s]; }).length;
         if (hasSliders) completed++;
         banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/sleep/level-1/" class="btn-cta">Continue Level 1</a>';
+            '<a href="{{ site.baseurl }}/sleep/level-1" class="btn-cta">Continue Level 1</a>';
     }
 });
 </script>

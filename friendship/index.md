@@ -137,7 +137,7 @@ life_area_slug: friendship
 
 <div class="la-banner la-banner--start" id="level1Banner">
     <p><strong>You haven't completed Level 1 for Friendship yet.</strong><br>It takes about 15 minutes and helps you understand what friendship means to you.</p>
-    <a href="{{ site.baseurl }}/friendship/level-1/" class="btn-cta">Start Level 1</a>
+    <a href="{{ site.baseurl }}/friendship/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
 ## What people value about friendship
@@ -147,23 +147,20 @@ People pursue friendship for different reasons. This site scores every friendshi
 <div class="value-card">
 <h3>Depth</h3>
 <p>Close friendships with high trust, vulnerability, and mutual understanding. People who lean towards this value invest heavily in a smaller number of relationships where they can be fully themselves.</p>
-<p class="exemplar">Level 5 example: <a href="https://www.cs-lewis.com/biography/" target="_blank">C.S. Lewis</a> and <a href="https://www.tolkiensociety.org/author/biography/" target="_blank">J.R.R. Tolkien</a> maintained a friendship at Oxford that lasted over 30 years through the Inklings literary group. Tolkien played a central role in Lewis's conversion to Christianity, and Lewis's encouragement helped Tolkien persist with <em>The Lord of the Rings</em> during years of stalled progress.</p>
 </div>
 
 <div class="value-card">
 <h3>Breadth</h3>
 <p>A diverse network of friendships across different contexts and communities. People who lean towards this value build connections with many different kinds of people and maintain relationships across varied settings.</p>
-<p class="exemplar">Level 5 example: <a href="https://keithferrazzi.com/" target="_blank">Keith Ferrazzi</a>, author of <em>Never Eat Alone</em>, is known for building and maintaining a large network of genuine relationships spanning industries, countries, and social contexts. He reportedly tracks thousands of contacts and makes a deliberate practice of connecting people who would benefit from knowing each other.</p>
 </div>
 
 <div class="value-card">
 <h3>Growth</h3>
 <p>Friendships that challenge you to improve, learn, and develop as a person. People who lean towards this value seek out friends who hold them accountable and push them to think differently.</p>
-<p class="exemplar">Level 5 example: <a href="https://www.fi.edu/en/benjamin-franklin" target="_blank">Benjamin Franklin</a> founded the Junto in 1727, a mutual improvement club of 12 friends from varied trades who met weekly in Philadelphia to share ideas, debate questions of morals and politics, and hold each other accountable. The group ran for over 30 years and spawned several civic institutions, including what became the University of Pennsylvania.</p>
 </div>
 
 <div class="la-paths">
-    <a href="{{ site.baseurl }}/friendship/level-1/" class="path-level1">
+    <a href="{{ site.baseurl }}/friendship/level-1" class="path-level1">
         Complete Level 1
         <div class="path-desc">Understand friendship, set your values, assess where you are</div>
     </a>
@@ -191,12 +188,12 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.className = 'la-banner la-banner--complete';
         banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Friendship.</strong></p>' +
             '<a href="{{ site.baseurl }}/friendship/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/friendship/level-1/" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/friendship/level-1" class="btn-secondary">Redo Level 1</a>';
     } else if (Object.keys(areaProgress).length > 0) {
         var completed = steps.filter(function(s) { return areaProgress[s]; }).length;
         if (hasSliders) completed++;
         banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/friendship/level-1/" class="btn-cta">Continue Level 1</a>';
+            '<a href="{{ site.baseurl }}/friendship/level-1" class="btn-cta">Continue Level 1</a>';
     }
 });
 </script>

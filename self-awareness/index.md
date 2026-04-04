@@ -137,7 +137,7 @@ life_area_slug: self-awareness
 
 <div class="la-banner la-banner--start" id="level1Banner">
     <p><strong>You haven't completed Level 1 for Self-Awareness yet.</strong><br>It takes about 15 minutes and helps you understand what self-awareness means to you.</p>
-    <a href="{{ site.baseurl }}/self-awareness/level-1/" class="btn-cta">Start Level 1</a>
+    <a href="{{ site.baseurl }}/self-awareness/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
 ## What people value about self-awareness
@@ -147,29 +147,25 @@ People develop self-awareness through different approaches. This site scores eve
 <div class="value-card">
 <h3>Psychological</h3>
 <p>Understanding yourself through analysis of mental patterns, triggers, and emotional dynamics.</p>
-<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank">Carl Jung</a> spent decades mapping his own unconscious through dream analysis and active imagination, a process he documented in the Red Book and which formed the basis of analytical psychology.</p>
 </div>
 
 <div class="value-card">
 <h3>Contemplative/Somatic</h3>
 <p>Awareness through meditation, mindfulness, body sensations, and embodied presence.</p>
-<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/Thich_Nhat_Hanh" target="_blank">Thich Nhat Hanh</a> practised daily mindfulness for over 60 years, founded the Plum Village tradition of engaged Buddhism, and wrote extensively on cultivating present-moment awareness in everyday life.</p>
 </div>
 
 <div class="value-card">
 <h3>Relational</h3>
 <p>Understanding through social feedback, interpersonal patterns, and how you show up with others.</p>
-<p class="exemplar">Level 5 example: <a href="https://brenebrown.com/" target="_blank">Bren&eacute; Brown</a> has spent over 20 years as a research professor at the University of Houston studying vulnerability and shame, using her own relational patterns as research material alongside her academic work.</p>
 </div>
 
 <div class="value-card">
 <h3>Experiential</h3>
 <p>Self-discovery through trying new experiences, challenges, and active personal development.</p>
-<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/Viktor_Frankl" target="_blank">Viktor Frankl</a>, a psychiatrist who survived Auschwitz, drew on direct experience of extreme suffering to develop logotherapy, a therapeutic approach centred on finding meaning through lived experience.</p>
 </div>
 
 <div class="la-paths">
-    <a href="{{ site.baseurl }}/self-awareness/level-1/" class="path-level1">
+    <a href="{{ site.baseurl }}/self-awareness/level-1" class="path-level1">
         Complete Level 1
         <div class="path-desc">Understand self-awareness, set your values, assess where you are</div>
     </a>
@@ -197,12 +193,12 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.className = 'la-banner la-banner--complete';
         banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Self-Awareness.</strong></p>' +
             '<a href="{{ site.baseurl }}/self-awareness/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/self-awareness/level-1/" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/self-awareness/level-1" class="btn-secondary">Redo Level 1</a>';
     } else if (Object.keys(areaProgress).length > 0) {
         var completed = steps.filter(function(s) { return areaProgress[s]; }).length;
         if (hasSliders) completed++;
         banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/self-awareness/level-1/" class="btn-cta">Continue Level 1</a>';
+            '<a href="{{ site.baseurl }}/self-awareness/level-1" class="btn-cta">Continue Level 1</a>';
     }
 });
 </script>

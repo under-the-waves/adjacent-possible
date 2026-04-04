@@ -137,7 +137,7 @@ life_area_slug: investing
 
 <div class="la-banner la-banner--start" id="level1Banner">
     <p><strong>You haven't completed Level 1 for Investing yet.</strong><br>It takes about 15 minutes and helps you understand what investing means to you.</p>
-    <a href="{{ site.baseurl }}/investing/level-1/" class="btn-cta">Start Level 1</a>
+    <a href="{{ site.baseurl }}/investing/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
 ## What people value about investing
@@ -147,23 +147,20 @@ People invest for different reasons. This site scores every investing interventi
 <div class="value-card">
 <h3>Growth</h3>
 <p>Maximising long-term wealth increase through compounding, appropriate asset allocation, and consistent contributions.</p>
-<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/Warren_Buffett" target="_blank">Warren Buffett</a> compounded Berkshire Hathaway's book value at roughly 20% annually for over 58 years, largely through disciplined value investing and a willingness to hold positions for decades.</p>
 </div>
 
 <div class="value-card">
 <h3>Safety</h3>
 <p>Protecting capital from catastrophic loss through diversification, appropriate risk sizing, and resilient portfolio construction.</p>
-<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/Ray_Dalio" target="_blank">Ray Dalio</a> designed Bridgewater's All Weather strategy to perform acceptably across economic regimes – growth, recession, rising inflation, and falling inflation – rather than betting on any single outcome.</p>
 </div>
 
 <div class="value-card">
 <h3>Simplicity</h3>
 <p>A low-maintenance, straightforward investment approach using evidence-based strategies you can sustain for decades without active management.</p>
-<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/John_C._Bogle" target="_blank">John C. Bogle</a> founded Vanguard and created the first retail index fund in 1976, championing low-cost passive investing that has since become the dominant approach for individual investors.</p>
 </div>
 
 <div class="la-paths">
-    <a href="{{ site.baseurl }}/investing/level-1/" class="path-level1">
+    <a href="{{ site.baseurl }}/investing/level-1" class="path-level1">
         Complete Level 1
         <div class="path-desc">Understand investing, set your values, assess where you are</div>
     </a>
@@ -191,12 +188,12 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.className = 'la-banner la-banner--complete';
         banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Investing.</strong></p>' +
             '<a href="{{ site.baseurl }}/investing/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/investing/level-1/" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/investing/level-1" class="btn-secondary">Redo Level 1</a>';
     } else if (Object.keys(areaProgress).length > 0) {
         var completed = steps.filter(function(s) { return areaProgress[s]; }).length;
         if (hasSliders) completed++;
         banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/investing/level-1/" class="btn-cta">Continue Level 1</a>';
+            '<a href="{{ site.baseurl }}/investing/level-1" class="btn-cta">Continue Level 1</a>';
     }
 });
 </script>

@@ -288,7 +288,7 @@ life_area_slug: self-awareness
 
 <div class="exemplar-card">
     <div class="exemplar-value">Relational &ndash; Level 5</div>
-    <p><a href="https://brenebrown.com/" target="_blank">Bren&eacute; Brown</a> is a research professor at the University of Houston who has spent over 20 years studying vulnerability, shame, and human connection. She has consistently used her own relational patterns as research material, publicly sharing how feedback from participants and colleagues reshaped her understanding of herself. Her work arguably demonstrates how relational self-awareness and academic rigour can reinforce each other.</p>
+    <p><a href="https://brenebrown.com/" target="_blank">Bren&eacute; Brown</a> has described in detail how her own research into vulnerability forced a personal reckoning &ndash; she sought therapy, confronted her patterns of emotional armour, and began deliberately practising the vulnerability she studied. Her 2010 TED talk, one of the most viewed of all time, was itself an act of public relational exposure. She appears to actively solicit feedback from colleagues, family, and audiences about how she comes across, and has spoken openly about the gap between how she sees herself and how others experience her.</p>
 </div>
 
 <div class="exemplar-card">

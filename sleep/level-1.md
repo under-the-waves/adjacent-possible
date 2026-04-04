@@ -275,17 +275,17 @@ life_area_slug: sleep
 
 <div class="exemplar-card">
     <div class="exemplar-value">Daily Functioning &ndash; Level 5</div>
-    <p><a href="https://ariannahuffington.com/" target="_blank">Arianna Huffington</a> collapsed from sleep deprivation and exhaustion in 2007, breaking her cheekbone on her desk. She overhauled her routine to prioritise eight hours of sleep a night and went on to found Thrive Global, a company focused on workplace wellbeing. Her book The Sleep Revolution documents how the change affected her energy and decision-making. She has described the shift as the single most important factor in sustaining her productivity across a demanding schedule.</p>
+    <p><a href="https://en.wikipedia.org/wiki/LeBron_James" target="_blank">LeBron James</a> averages around 10 &ndash; 12 hours of sleep per day, split between 8 &ndash; 9 hours at night and a 2 &ndash; 3 hour afternoon nap. He keeps his bedroom at 20 &ndash; 21&deg;C, completely dark, and avoids screens for 45 minutes before bed. He has called sleep "the best way for your body to physically and emotionally recover and get back to 100 percent." He seems to have maintained this routine throughout a 21-season NBA career, playing at a high level into his early 40s.</p>
 </div>
 
 <div class="exemplar-card">
     <div class="exemplar-value">Long-term Health &ndash; Level 5</div>
-    <p><a href="https://www.sleepdiplomat.com/" target="_blank">Matthew Walker</a> is a professor of neuroscience and psychology at the University of California, Berkeley, where he directs the Center for Human Sleep Science. His research over more than two decades has focused on the long-term health consequences of sleep, including its role in Alzheimer's disease, cardiovascular health, and immune function. His 2017 book Why We Sleep synthesises this work for a general audience and has likely done more than any other single publication to shift public understanding of sleep as a health priority.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Tom_Brady" target="_blank">Tom Brady</a> went to bed at 8:30 pm and slept at least 9 hours a night for most of his professional career, treating sleep as a central pillar of his TB12 Method alongside nutrition and training. He played in the NFL until age 45, winning his seventh Super Bowl at 43 &ndash; an age at which most players have been retired for over a decade. By all accounts, his sleep discipline was non-negotiable rather than aspirational.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comfort & Experience &ndash; Level 5</div>
-    <p><a href="https://www.michaelbreus.com/" target="_blank">Michael Breus</a> is a clinical psychologist and fellow of the American Academy of Sleep Medicine who has spent over 20 years working with patients on sleep quality. He developed a chronotype-based framework for matching sleep schedules and routines to individual biology, outlined in his book The Power of When. By his account, tailoring sleep timing and environment to a person's natural rhythms tends to reduce the time it takes to fall asleep and improve how rested they feel in the morning.</p>
+    <div class="exemplar-value">Comfort &amp; Experience &ndash; Level 5</div>
+    <p><a href="https://en.wikipedia.org/wiki/Roger_Federer" target="_blank">Roger Federer</a> slept 10 &ndash; 12 hours a day throughout his professional tennis career and has said that "if I don't sleep 11 to 12 hours per day, it's not right." He appears to have genuinely enjoyed sleep as an experience rather than treating it purely as recovery, and maintained a 24-year career at the top of professional tennis. Few athletes have spoken about sleep with the same combination of volume and evident satisfaction.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
