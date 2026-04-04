@@ -14,6 +14,33 @@ values:
   - Nutrient adequacy, disease prevention, energy provision, digestive health, and metabolic balance.
   - |-
     People who prioritise this value focus on food choices that deliver optimal nutrition for immediate function and long-term health, with particular attention to nutrient density and physiological effects.
+  benchmarks:
+    level_1:
+      text: |-
+        You have assessed your current diet quality using a validated tool (e.g. HEI-2015, DASH score, or NHS dietary assessment), tracked your typical intake for at least 3 days, and identified your main nutritional gaps -- but have not yet made deliberate changes.
+      reasoning: |-
+        Awareness only -- no behaviour change required. Most people have never formally assessed their diet quality. Only around 10-15% of adults have used any form of dietary tracking or assessment tool, according to <a href="https://www.cdc.gov/nchs/nhanes/index.htm" target="_blank">NHANES survey data</a>. Simply completing an honest self-assessment places you ahead of the majority who operate on vague assumptions about their diet.
+    level_2:
+      text: |-
+        You consistently eat 5+ servings of fruit and vegetables per day, limit ultra-processed foods to under 30% of total energy intake, meet RDI targets for key micronutrients (iron, calcium, vitamin D, B12, folate), and maintain a Healthy Eating Index score of 60+/100.
+      reasoning: |-
+        Only 12.3% of US adults meet fruit intake recommendations and 10% meet vegetable recommendations per the <a href="https://www.cdc.gov/mmwr/volumes/71/wr/mm7101a1.htm" target="_blank">CDC's 2022 Morbidity and Mortality Weekly Report</a>. Ultra-processed foods constitute 57% of energy intake for UK adults per <a href="https://doi.org/10.1136/bmjopen-2018-027546" target="_blank">Rauber et al. (2019) in BMJ Open</a>. Meeting fruit and vegetable targets simultaneously while also limiting ultra-processed foods puts this bundle comfortably in the top 20%.
+    level_3:
+      text: |-
+        You eat 7+ servings of fruit and vegetables daily with diverse colours and types, keep ultra-processed food below 15% of energy intake, consume 30g+ of fibre daily, eat oily fish or equivalent omega-3 sources 2+ times per week, maintain an HEI score of 75+/100, and have healthy metabolic markers (fasting glucose, blood lipids, blood pressure all within normal ranges).
+      reasoning: |-
+        An HEI score of 75+ is approximately 1.2 standard deviations above the US mean of 59, corresponding to roughly the 88th-90th percentile on score alone. Only 9% of UK adults meet the 30g daily fibre recommendation per the <a href="https://www.gov.uk/government/statistics/ndns-results-from-years-9-to-11-2016-to-2017-and-2018-to-2019" target="_blank">UK National Diet and Nutrition Survey</a>. Roughly 8% of UK adults eat 7+ fruit and veg servings per <a href="https://digital.nhs.uk/data-and-information/publications/statistical/health-survey-for-england" target="_blank">Health Survey for England</a>. UPF under 15% of energy is less than a quarter of the population average. The combination is achievable by approximately 5% of the population.
+    level_4:
+      text: |-
+        You achieve an HEI score of 85+/100, eat 8-10 servings of diverse fruit and vegetables daily, consume under 10% of energy from ultra-processed foods, meet or exceed RDIs for all essential micronutrients through diet alone (supplementing only where clinically indicated), eat 35g+ fibre daily, maintain an optimal omega-6:omega-3 ratio (below 4:1), have had a comprehensive nutrient status blood panel in the last 12 months with all markers in optimal ranges, and follow a dietary pattern closely aligned with a Mediterranean, DASH, or similarly evidence-based framework.
+      reasoning: |-
+        An HEI score of 85+ falls at approximately the 97th-99th percentile of the US population distribution based on <a href="https://www.fns.usda.gov/cnpp/healthy-eating-index-hei" target="_blank">USDA CNPP data</a>. Meeting all micronutrient RDIs through diet alone is achieved by a small minority -- for example, only 5% of US adults meet the adequate intake for potassium per <a href="https://doi.org/10.1093/jn/nxaa285" target="_blank">Reedy et al. (2020)</a>. Maintaining an omega-6:omega-3 ratio below 4:1 is rare in Western diets where the typical ratio is 15-20:1 per <a href="https://doi.org/10.1016/j.plefa.2002.12.004" target="_blank">Simopoulos (2002)</a>. The intersection of all these behaviours is consistent with the top 1%.
+    level_5:
+      text: |-
+        You maintain an HEI score of 90+/100, practise a precisely calibrated dietary pattern informed by personal biomarker data (e.g. continuous glucose monitoring, regular comprehensive blood panels, microbiome testing), with ultra-processed food essentially eliminated (<5% energy). You adjust macronutrient ratios and micronutrient intake based on periodic lab results and life-stage needs. You eat 10+ servings of diverse plant foods daily, maintain optimal biomarkers across all systems (inflammatory, metabolic, hormonal, hepatic), and your diet is designed around peer-reviewed longevity research. You can articulate the evidence base for each major dietary choice you make.
+      reasoning: |-
+        An HEI score of 90+ is achieved by fewer than 1% of the US population per <a href="https://www.fns.usda.gov/cnpp/healthy-eating-index-hei" target="_blank">USDA data</a>. Continuous glucose monitoring for dietary optimisation in non-diabetic individuals is practised by a negligible fraction of the population. Personalised nutrition informed by microbiome analysis is extremely rare -- <a href="https://doi.org/10.1016/j.cell.2015.11.001" target="_blank">Zeevi et al. (2015) in Cell</a> demonstrated the value of personalised glycaemic response prediction, but uptake remains minimal. Integrating longevity-focused research (such as the findings reviewed in <a href="https://doi.org/10.1016/j.cell.2022.04.035" target="_blank">Longo & Anderson (2022) in Cell</a>) into daily dietary decisions represents a level of evidence-informed practice found in well under 0.1% of the population.
+
 - key: enjoyment
   name: Enjoyment & Culture
   weight: 35
@@ -22,6 +49,33 @@ values:
   - Taste satisfaction, dietary variety, cultural food traditions, and the role of meals in relationships and community.
   - |-
     Those who prioritise this value emphasise building a diet they genuinely enjoy, maintaining food traditions that connect them to others, and treating meals as experiences rather than fuel.
+  benchmarks:
+    level_1:
+      text: |-
+        You have reflected on how much you currently enjoy your meals, how varied your diet is (e.g. how many distinct foods you eat in a typical week), how often you eat socially, and what food traditions matter to you -- but have not yet made deliberate changes based on this reflection.
+      reasoning: |-
+        Awareness only -- no behaviour change required. Most people eat habitually without reflecting on enjoyment, variety, or cultural dimensions as distinct values. Research on food literacy (e.g. <a href="https://doi.org/10.3390/nu12010175" target="_blank">Vidgen & Gallegos (2014)</a>) suggests that explicit reflection on the experiential dimensions of eating is practised by a small minority, making even awareness a meaningful first step.
+    level_2:
+      text: |-
+        You eat 20+ distinct whole foods per week, cook from scratch at least 4 times per week using a repertoire of 10+ recipes you enjoy, share at least 3 meals per week with others (household members count), and can identify foods and cuisines you genuinely look forward to eating rather than eating purely out of convenience or obligation.
+      reasoning: |-
+        Dietary diversity of 20+ distinct foods per week exceeds what most people achieve -- <a href="https://doi.org/10.1017/S1368980018002872" target="_blank">Verger et al. (2019)</a> found that higher dietary diversity scores are associated with better nutrient adequacy but are achieved by a minority. Cooking from scratch 4+ times per week places you above average in the UK, where adults cook from scratch 3.4 times per week on average per <a href="https://www.food.gov.uk/research/food-and-you-2" target="_blank">Food Standards Agency Food and You 2 survey</a>. Regular shared meals are declining -- only about 50% of UK families eat together daily per <a href="https://yougov.co.uk/topics/food/articles-reports/2019/05/01/family-meal-times" target="_blank">YouGov data</a>. Achieving all three consistently places you in roughly the top 20%.
+    level_3:
+      text: |-
+        You eat 30+ distinct whole foods per week across multiple food groups, have a cooking repertoire of 25+ dishes spanning at least 4 different cuisines, regularly try new recipes or ingredients (at least 2 new dishes per month), practise mindful eating for most meals (eating without screens, noticing flavours and satiety), share 5+ meals per week socially, and actively maintain or explore at least one cultural food tradition meaningful to you.
+      reasoning: |-
+        A repertoire of 25+ dishes across 4+ cuisines indicates significant culinary skill and cultural curiosity, well above median. Mindful eating -- eating without distraction and attending to sensory experience -- is practised regularly by very few; <a href="https://doi.org/10.1016/j.appet.2017.01.028" target="_blank">Mantzios & Wilson (2015) in Appetite</a> found that most interventions struggle to sustain mindful eating, indicating habitual practice is rare. Dietary diversity of 30+ distinct foods weekly, combined with regular social meals and active cultural food engagement, represents approximately the top 5%.
+    level_4:
+      text: |-
+        You eat 40+ distinct whole foods per week, have a cooking repertoire of 50+ dishes spanning 6+ cuisines that you can prepare confidently, try new recipes or ingredients weekly, eat the majority of meals without screens and with attention to sensory experience, host or participate in shared meals or food events at least twice per month, actively preserve and share cultural food traditions (e.g. teaching family recipes, participating in food-centred cultural events), and can pair flavours and adapt recipes intuitively based on what is available.
+      reasoning: |-
+        A repertoire of 50+ dishes across 6+ cuisines represents advanced home cooking skill -- <a href="https://www.food.gov.uk/research/food-and-you-2" target="_blank">Food and You 2 data</a> suggests most UK adults rely on a rotation of 5-10 regular meals. Weekly experimentation with new foods and recipes indicates a level of culinary curiosity found in dedicated food enthusiasts. Hosting food events and actively transmitting food traditions goes beyond personal enjoyment into cultural stewardship. Intuitive flavour pairing and recipe adaptation without strict recipes is a skill typically associated with experienced cooks. The combination places this at roughly the top 1%.
+    level_5:
+      text: |-
+        You eat 50+ distinct whole foods per week with exceptional diversity across food groups and preparations, have a cooking repertoire of 100+ dishes spanning 8+ global cuisines, regularly create original recipes or meaningfully adapt traditional ones, practise deep sensory engagement with food as a consistent habit (flavour analysis, texture appreciation, aroma awareness), are a focal point for food-centred social gatherings in your community, actively document and transmit cultural food knowledge (e.g. recording family recipes, teaching others), and integrate food into your broader cultural and creative life as a source of meaning and connection.
+      reasoning: |-
+        A repertoire of 100+ dishes across 8+ cuisines rivals that of professional cooks and far exceeds what population surveys show for home cooks. Original recipe creation and deep sensory engagement with food is characteristic of trained chefs, food writers, or deeply dedicated enthusiasts -- a group that constitutes well under 1% of the population. Being a community focal point for food gatherings and actively documenting food traditions moves beyond personal practice into cultural contribution. This level of food-centred social and cultural engagement is found in a very small fraction of any population, consistent with the 99.9th percentile.
+
 - key: ethical
   name: Ethical & Environmental Impact
   weight: 20
@@ -30,3 +84,29 @@ values:
   - Sustainability considerations, carbon footprint, animal welfare, biodiversity, and fair labour practices.
   - |-
     Those who prioritise this value focus on what they choose to eat and where it comes from, favouring diets with lower environmental impact and greater alignment with their moral commitments.
+  benchmarks:
+    level_1:
+      text: |-
+        You have estimated the carbon footprint of your current diet (e.g. using a tool like the BBC Climate Change Food Calculator or MyEmissions), assessed your weekly meat and dairy consumption, estimated your household food waste, and identified where your food typically comes from -- but have not yet made deliberate changes.
+      reasoning: |-
+        Awareness only -- no behaviour change required. Very few consumers have calculated their dietary carbon footprint or systematically assessed the ethical dimensions of their food choices. <a href="https://doi.org/10.1126/science.aaq0216" target="_blank">Poore & Nemecek (2018) in Science</a> highlighted massive variation in food environmental impacts, but public awareness of these specifics remains low. <a href="https://wrap.org.uk/resources/report/food-surplus-and-waste-uk-key-facts" target="_blank">WRAP data</a> shows most UK households significantly underestimate their food waste. Simply establishing a baseline is a meaningful and uncommon step.
+    level_2:
+      text: |-
+        You have reduced meat consumption to 4 or fewer days per week (or under 500g total), waste less than 15% of purchased food, buy at least some seasonal or local produce regularly, choose higher-welfare animal products when buying meat, eggs, or dairy (e.g. free-range eggs, RSPCA Assured), and have a dietary carbon footprint below 2.5 tonnes CO2e per year.
+      reasoning: |-
+        Average UK meat consumption is approximately 70-80g per day per <a href="https://www.gov.uk/government/statistics/ndns-results-from-years-9-to-11-2016-to-2017-and-2018-to-2019" target="_blank">NDNS data</a>; reducing to 4 or fewer days or under 500g/week puts you below average. UK households waste approximately 20-25% of purchased food per <a href="https://wrap.org.uk/resources/report/food-surplus-and-waste-uk-key-facts" target="_blank">WRAP</a>, so under 15% represents meaningful reduction. The average UK dietary carbon footprint is roughly 2.5-3.0 tonnes CO2e per year based on estimates from <a href="https://doi.org/10.1126/science.aaq0216" target="_blank">Poore & Nemecek (2018)</a>. Achieving all of these together places you in approximately the top 20%.
+    level_3:
+      text: |-
+        You eat a predominantly plant-based diet (meat or fish no more than 2 days per week or under 250g total), waste less than 10% of purchased food using active strategies (meal planning, proper storage, using leftovers), buy seasonal produce as a default, choose organic or sustainably certified products for high-impact categories (coffee, chocolate, bananas, palm oil), maintain a dietary carbon footprint below 1.8 tonnes CO2e per year, and avoid the worst-offending products (e.g. air-freighted produce, high-deforestation-risk commodities without certification).
+      reasoning: |-
+        Only about 14% of UK adults identify as flexitarian (eating meat infrequently) per <a href="https://www.food.gov.uk/research/food-and-you-2" target="_blank">Food Standards Agency data</a>, and far fewer sustain this at the 2-day-per-week level consistently. Household food waste below 10% is achieved by a small minority -- <a href="https://wrap.org.uk/resources/report/food-surplus-and-waste-uk-key-facts" target="_blank">WRAP estimates</a> the UK average at roughly £60/month of wasted food per household. A dietary carbon footprint below 1.8 tonnes CO2e approaches what <a href="https://doi.org/10.1126/science.aaq0216" target="_blank">Poore & Nemecek (2018)</a> estimate for a Mediterranean-style diet. This combination is consistent with the top 5%.
+    level_4:
+      text: |-
+        You eat a plant-based diet with minimal animal products (vegetarian or near-vegan, with any animal products sourced from highest-welfare or lowest-impact producers), waste less than 5% of purchased food, buy predominantly seasonal, local, and organic produce, choose Fairtrade or equivalent for all applicable products (coffee, tea, chocolate, sugar, bananas), maintain a dietary carbon footprint below 1.2 tonnes CO2e per year, avoid all high-deforestation-risk products unless sustainably certified, and actively consider supply chain ethics (labour conditions, fair pricing for producers) in purchasing decisions.
+      reasoning: |-
+        Approximately 3-5% of the UK population is vegetarian and 1-2% vegan per <a href="https://www.food.gov.uk/research/food-and-you-2" target="_blank">Food Standards Agency surveys</a>. A dietary carbon footprint below 1.2 tonnes CO2e approaches what <a href="https://doi.org/10.1126/science.aaq0216" target="_blank">Poore & Nemecek (2018)</a> estimate for a fully vegan diet. Fairtrade market share in the UK is around 5-8% for applicable categories per <a href="https://www.fairtrade.org.uk/what-is-fairtrade/facts-and-figures/" target="_blank">Fairtrade Foundation data</a>, meaning consistent Fairtrade purchasing across all categories is rare. Food waste below 5% requires systematic planning and is well below any population average. This combination is consistent with the top 1%.
+    level_5:
+      text: |-
+        You eat a fully or near-fully plant-based diet with a dietary carbon footprint below 0.8 tonnes CO2e per year, waste virtually no food (<2% of purchases), grow some of your own food or participate in community agriculture, source the majority of produce locally and seasonally, ensure all applicable purchases are Fairtrade or direct-trade certified, actively support food system reform (e.g. community-supported agriculture, food co-ops, advocacy for sustainable food policy), have eliminated all high-deforestation and exploitative-labour products from your diet, and can trace the provenance of the majority of your regular food purchases.
+      reasoning: |-
+        A dietary carbon footprint below 0.8 tonnes CO2e is at the very low end of what is achievable -- <a href="https://doi.org/10.1126/science.aaq0216" target="_blank">Poore & Nemecek (2018)</a> estimate that even optimised vegan diets in high-income countries typically produce 0.7-1.0 tonnes CO2e. Near-zero food waste requires extraordinary discipline. Growing food or participating in community agriculture is practised by roughly 3% of UK adults per <a href="https://www.rhs.org.uk/science/gardening-in-a-changing-world/allotment-waiting-lists" target="_blank">RHS and allotment data</a>, but combining this with all the other criteria is far rarer. Active food system advocacy and full supply chain traceability moves beyond personal consumption into systemic engagement. The intersection represents well under 0.1% of the population.

@@ -13,6 +13,32 @@ values:
   - Cleaning protocols, air quality management, and maintenance practices that eliminate health hazards.
   - |-
     Those who prioritise this value focus on evidence-based cleaning frequencies and methods that have the greatest impact on health outcomes.
+  benchmarks:
+    level_1:
+      text: |-
+        You have assessed the current state of health-relevant cleaning in your home: how often you clean bathrooms and kitchens, whether you have visible mould or damp, whether your fridge is at or below 5°C, and whether you use any form of ventilation strategy. You know where the gaps are, even if you haven't addressed them.
+      reasoning: |-
+        Awareness only -- no behaviour change required. Most people have never systematically audited their home for health hazards. The <a href="https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html" target="_blank">CDC</a> recommends regular cleaning of high-touch surfaces, but only 57-63% of UK households even check their fridge temperature (<a href="https://science.food.gov.uk/article/158620-consumers-food-safety-practices-in-the-home-trends-and-insights-from-2020-to-2025" target="_blank">FSA 2020-2025</a>). Simply knowing where you stand is a meaningful first step that most skip.
+    level_2:
+      text: |-
+        You clean bathrooms and kitchens at least weekly, maintain your fridge at or below 5°C, have no visible mould or damp, ventilate your home daily, and wash hands with soap during food preparation. You follow a basic cleaning routine rather than cleaning reactively.
+      reasoning: |-
+        Only 38-51% of households clean bathrooms weekly (<a href="https://www.apartmentguide.com/blog/bathroom-cleanliness-survey/" target="_blank">Apartment Guide survey</a>; <a href="https://www.cleaninginstitute.org/newsroom/releases/2018/survey-results-americans-spend-nearly-six-hours-each-week-cleaning-wonder-it" target="_blank">ACI 2018</a>). Only 43% of UK households know the optimal fridge temperature, and 34 of 65 monitored households had fridges above 5°C (<a href="https://science.food.gov.uk/article/158620-consumers-food-safety-practices-in-the-home-trends-and-insights-from-2020-to-2025" target="_blank">FSA research</a>). Around 28% of UK residents report damp or mould at home (<a href="https://healthequals.org.uk/data_insights/homes-that-harm-health/" target="_blank">Health Equals</a>). Doing all of these consistently puts you above approximately 80% of the population.
+    level_3:
+      text: |-
+        You follow a structured, room-by-room cleaning schedule with daily, weekly, and monthly tasks. You use allergen-reducing measures (e.g. dust mite-proof mattress and pillow encasements, HEPA-filtered vacuum). You deep-clean kitchens and bathrooms weekly, including grout, behind appliances, and extractor fans. You monitor indoor humidity and keep it between 30-60% to prevent mould.
+      reasoning: |-
+        Only 26% of people do thorough deep cleaning rather than surface-level cleaning (<a href="https://rms-cleaning.com/house-cleaning-statistics/" target="_blank">RMS Cleaning Statistics 2025</a>). Dust mite encasements reduce allergen levels by up to 90% (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1746424/" target="_blank">Thorax study</a>) but are used by a small minority. HEPA-filtered vacuums are owned by roughly 15-20% of households. Monitoring humidity with a hygrometer is rarer still. The combination of structured scheduling, allergen management, and deep cleaning represents approximately the top 5%.
+    level_4:
+      text: |-
+        You maintain indoor air quality within WHO guideline levels (PM2.5 below 15 µg/m³ 24-hour mean; VOCs below 200 µg/m³) using air quality monitors and HEPA purifiers. You have a mould prevention system (dehumidifier, ventilation, regular inspection of hidden areas). You use separate chopping boards for raw meat with proper sanitisation. Your cleaning products are selected based on evidence of efficacy against specific pathogens rather than marketing claims.
+      reasoning: |-
+        The WHO recommends PM2.5 below 15 µg/m³ (24-hour) and VOCs below 200 µg/m³ (<a href="https://www.who.int/publications/i/item/9789240034228" target="_blank">WHO Air Quality Guidelines 2021</a>). Owning an air quality monitor and actively managing to these thresholds is extremely uncommon. Only 20% of households properly wash chopping boards with detergent during meals involving raw meat (<a href="https://science.food.gov.uk/article/158620-consumers-food-safety-practices-in-the-home-trends-and-insights-from-2020-to-2025" target="_blank">FSA observational study</a>). This level of systematic, evidence-based health management in the home represents roughly the top 1%.
+    level_5:
+      text: |-
+        Your home meets or exceeds clinical-grade hygiene standards. You maintain PM2.5 below the WHO annual guideline of 5 µg/m³. You have whole-house ventilation with filtration (e.g. MVHR system with F7+ filters). You conduct seasonal deep-cleans of all HVAC systems, behind-wall inspections for moisture, and maintain documented cleaning protocols. Your home could pass a public health inspection with distinction.
+      reasoning: |-
+        The WHO's strictest annual PM2.5 guideline of 5 µg/m³ is met by very few indoor environments without active filtration systems (<a href="https://www.who.int/publications/i/item/9789240034228" target="_blank">WHO 2021</a>). Whole-house mechanical ventilation with heat recovery (MVHR) is installed in under 1% of UK homes. Maintaining documented cleaning protocols and conducting structural moisture inspections goes well beyond what even professional cleaners typically do. This represents approximately 1 in 1,000 households.
 - key: order
   name: Order
   weight: 30
@@ -21,6 +47,32 @@ values:
   - Knowing where everything is, having systems that maintain themselves, and not feeling overwhelmed by mess.
   - |-
     Those who prioritise this value focus on organisational systems, decluttering, and routines that keep the home orderly without constant effort.
+  benchmarks:
+    level_1:
+      text: |-
+        You have honestly assessed the current state of order in your home: which rooms have clutter, whether your belongings have designated places, how often you lose things, and how much cognitive load your environment creates. You know your starting point.
+      reasoning: |-
+        Awareness only -- no behaviour change required. 54% of Americans report being overwhelmed by clutter and not knowing what to do about it (<a href="https://www.prnewswire.com/news-releases/survey-finds-54-percent-of-americans-are-overwhelmed-with-clutter-and-dont-know-what-to-do-with-it-300019518.html" target="_blank">OfferUp/PR Newswire survey</a>). Most people have never formally assessed their organisational state. Simply cataloguing problem areas and understanding the gap between current and desired order is a necessary first step.
+    level_2:
+      text: |-
+        Every item you use daily has a designated place and is returned there after use. Main living areas and walkways are free of clutter. You can find any commonly needed item within 60 seconds. You do a 10-minute daily reset of shared spaces.
+      reasoning: |-
+        80% of household clutter results from disorganisation, not lack of space (<a href="https://www.napo.net/page/caspio_search" target="_blank">NAPO</a>). The average person spends one year of their life looking for lost items (<a href="https://www.napo.net/page/caspio_search" target="_blank">NAPO</a>). About 40% of households have no structured cleaning or tidying schedule (<a href="https://www.ecovacs.com/us/blog/cleaning-habits-in-america" target="_blank">ECOVACS survey</a>). Having designated places for daily items and maintaining clutter-free common areas with a brief daily routine puts you ahead of roughly 80% of households.
+    level_3:
+      text: |-
+        Every item in your home has a designated place -- not just daily-use items. You have completed a full declutter (e.g. category-by-category KonMari-style or room-by-room), reducing possessions to only what you use or value. Storage systems are labelled or intuitive. You rarely spend time looking for anything. Guests could find basic items without asking.
+      reasoning: |-
+        Eliminating clutter reduces housework by 40% (<a href="https://www.becomingminimalist.com/the-statistics-of-clutter/" target="_blank">NSDA via Becoming Minimalist</a>), but few complete a thorough whole-home declutter. 80% of kept items are never used (<a href="https://www.becomingminimalist.com/the-statistics-of-clutter/" target="_blank">NAPO data</a>). The <a href="https://newsroom.ucla.edu/magazine/center-everyday-lives-families-suburban-america" target="_blank">UCLA CELF study</a> of 32 dual-income families found the majority had cluttered homes linked to elevated cortisol, particularly in women. Achieving a fully systematised, decluttered home where every item has a place represents approximately the top 5%.
+    level_4:
+      text: |-
+        Your home is self-maintaining: organisational systems are designed so that order is the path of least resistance. Incoming items (post, purchases, children's belongings) have immediate processing systems. You operate a one-in-one-out policy for possessions. Seasonal rotation and archive systems keep rarely used items accessible but out of the way. Your home stays orderly with minimal active effort.
+      reasoning: |-
+        The <a href="https://newsroom.ucla.edu/magazine/center-everyday-lives-families-suburban-america" target="_blank">UCLA CELF study</a> found that even dual-income families who valued order struggled to maintain it, with cluttered homes correlating with flatter cortisol slopes (a marker of chronic stress) in women (<a href="https://pubmed.ncbi.nlm.nih.gov/19934011/" target="_blank">Saxbe & Repetti 2010</a>). Designing systems where order maintains itself -- rather than requiring constant willpower -- is a fundamentally different approach from regular tidying. Combined with disciplined intake management and seasonal systems, this represents roughly the top 1%.
+    level_5:
+      text: |-
+        Your home functions as a frictionless environment: every system is optimised for cognitive ease. You have documented organisational systems that any household member or guest can follow. Digital and physical inventories exist for stored items. Transitions between activities (cooking, working, relaxing) require zero setup or clearance. Your space actively supports focus and calm rather than merely not detracting from it.
+      reasoning: |-
+        Research from the <a href="https://doi.org/10.1523/JNEUROSCI.5587-09.2011" target="_blank">Princeton Neuroscience Institute</a> shows that physical clutter competes for attention and degrades cognitive performance. Achieving an environment that actively enhances cognition -- with documented systems, inventories, and zero-friction transitions -- goes far beyond decluttering into environmental design. This level of intentionality about cognitive load in the home environment is vanishingly rare, representing approximately 1 in 1,000 households.
 - key: aesthetics
   name: Aesthetics
   weight: 25
@@ -29,6 +81,32 @@ values:
   - Design choices, visual harmony, and personalised spaces that reflect your taste and feel inviting.
   - |-
     Those who prioritise this value focus on creating environments that are pleasing to be in, not just tidy or functional.
+  benchmarks:
+    level_1:
+      text: |-
+        You have assessed your home's aesthetic state: which rooms you find visually pleasing, which feel neglected, whether your furnishings reflect your taste or are inherited defaults, and what sensory elements (light, scent, sound) you notice in each space.
+      reasoning: |-
+        Awareness only -- no behaviour change required. The <a href="https://lifeathome.ikea.com/" target="_blank">IKEA Life at Home Report 2024</a> (38,000 people, 39 countries) found that 36% of people don't find enough enjoyment at home, and only 43% of US homeowners were very satisfied with their living room design (<a href="https://www.statista.com/statistics/630970/satisfaction-of-homeowners-with-the-interior-design-of-their-living-room/" target="_blank">Statista 2016</a>). Most people live with aesthetic defaults they've never consciously evaluated.
+    level_2:
+      text: |-
+        Your main living spaces have a coherent colour palette (even if simple). Walls are not bare or randomly decorated. Lighting serves the room's function (e.g. task lighting for work, warm lighting for relaxation). You have at least some items chosen specifically for their visual appeal. Surfaces are clear enough for the space to feel intentional rather than cluttered.
+      reasoning: |-
+        Only 43% of homeowners report being very satisfied with their living room's interior design (<a href="https://www.statista.com/statistics/630970/satisfaction-of-homeowners-with-the-interior-design-of-their-living-room/" target="_blank">Statista</a>). Having a deliberate colour palette, purposeful lighting, and curated visual elements puts you ahead of the majority. Most households accumulate furnishings opportunistically rather than selecting them for aesthetic coherence. This represents approximately the top 20%.
+    level_3:
+      text: |-
+        Every room has a considered aesthetic: coordinated colours, textures, and materials. You use layered lighting (ambient, task, accent) appropriate to each space. You incorporate natural elements (plants, natural materials, daylight). Art and decorative objects are intentionally placed. The home feels visually harmonious to visitors, not just to you.
+      reasoning: |-
+        66% of US households have at least one houseplant, but only 27% actively garden indoors (<a href="https://gardenpals.com/houseplant-statistics/" target="_blank">Garden Pals</a>). Layered lighting design is standard in professional interior design but rarely implemented in homes -- 81% of consumers have never used an interior designer (<a href="https://www.statista.com/statistics/790184/share-of-consumers-who-have-used-an-interior-designer-us/" target="_blank">Statista 2017</a>). Achieving room-by-room aesthetic cohesion with biophilic elements and intentional lighting without professional help represents approximately the top 5%.
+    level_4:
+      text: |-
+        Your home reflects a distinct personal aesthetic that is consistent across all rooms. You consider sensory experience beyond sight: scent, acoustics, and tactile quality of surfaces and textiles. Seasonal or rotating elements keep the space feeling fresh. Storage and functional items are integrated into the design rather than hidden or tolerated. The space evokes a specific emotional response you have intentionally designed for.
+      reasoning: |-
+        Multi-sensory design -- integrating scent, acoustics, and tactile elements alongside visual aesthetics -- is a hallmark of professional and high-end residential design. Even among the 19% who have used an interior designer (<a href="https://www.statista.com/statistics/790184/share-of-consumers-who-have-used-an-interior-designer-us/" target="_blank">Statista</a>), few achieve full sensory cohesion across every room. Research on <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8871637/" target="_blank">biophilic design</a> shows that multi-sensory environments significantly improve wellbeing, but implementation in private homes is rare. This represents roughly the top 1%.
+    level_5:
+      text: |-
+        Your home is a curated environment at the level of a gallery or boutique hotel: every material, finish, and object is chosen with intention. Lighting is programmable for time of day and activity. Acoustic treatment ensures each room sounds as good as it looks. The space tells a coherent story and could be featured in a design publication. You regularly refresh elements to maintain vitality without losing coherence.
+      reasoning: |-
+        This is the domain of dedicated design enthusiasts and professionals living in their own showcase. The <a href="https://lifeathome.ikea.com/" target="_blank">IKEA Life at Home Report</a> shows that even basic home satisfaction is not universal (58% in the UK report a positive feeling about their home). Programmable lighting, acoustic treatment, and publication-quality curation across an entire home goes far beyond what even affluent homeowners typically achieve. This represents approximately 1 in 1,000 households.
 - key: environmental
   name: Environmental Impact
   weight: 10
@@ -37,3 +115,29 @@ values:
   - Sustainable cleaning methods, waste reduction, and considerate resource use.
   - |-
     Those who prioritise this value focus on eco-friendly products, minimal consumption, and practices that reduce environmental harm.
+  benchmarks:
+    level_1:
+      text: |-
+        You know the approximate environmental impact of your current home management: whether you recycle, what cleaning products you use, how much household waste you generate, and whether you wash clothes at high temperatures. You have a rough sense of where the biggest impacts lie.
+      reasoning: |-
+        Awareness only -- no behaviour change required. The average UK household generates waste at a rate where each person throws out their body weight every seven weeks (<a href="https://www.gov.uk/government/statistics/uk-waste-data/uk-statistics-on-waste" target="_blank">UK Government waste statistics</a>). Most people have never inventoried the environmental footprint of their cleaning products or laundry habits. Simply understanding your baseline is the first step.
+    level_2:
+      text: |-
+        You recycle consistently and correctly (paper, glass, plastics, metals). You wash clothes at 30°C or below for most loads. You use at least some eco-friendly or plant-based cleaning products. You avoid single-use cleaning wipes. You run full loads in the dishwasher and washing machine rather than partial ones.
+      reasoning: |-
+        The UK household recycling rate is 44.6% (<a href="https://www.gov.uk/government/statistics/uk-waste-data/uk-statistics-on-waste" target="_blank">UK Government 2023</a>), meaning consistent, correct recycling already places you above average. 90% of the energy used in washing clothes goes to heating water (<a href="https://www.epa.gov/ghgemissions/assumptions-and-references-household-carbon-footprint-calculator" target="_blank">EPA</a>), so cold washing is high-impact but not yet the default. About 61% of US urban households use at least one green cleaning product weekly (<a href="https://www.grandviewresearch.com/industry-analysis/natural-household-cleaners-market" target="_blank">Grand View Research</a>). Doing all of these consistently puts you at approximately the top 20%.
+    level_3:
+      text: |-
+        You have switched entirely to eco-friendly cleaning products (plant-based, biodegradable, or homemade). You compost food waste. You actively reduce household waste beyond recycling (e.g. buying refills, avoiding excess packaging, repairing rather than replacing). You wash clothes only when genuinely needed, at cold temperatures, and air-dry where possible.
+      reasoning: |-
+        Only 3% of UK households compost at home (<a href="https://www.businesswaste.co.uk/news/97-of-uk-households-dont-compost-britain-forgets-the-art-of-composting/" target="_blank">Business Waste</a>). The US food composting rate is just 4.1% (<a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials" target="_blank">EPA</a>). Switching entirely to eco-friendly cleaning products goes well beyond the 61% who use "at least one" green product. Combining composting, full product switching, waste reduction, and cold-wash laundry represents approximately the top 5%.
+    level_4:
+      text: |-
+        You have systematically minimised the environmental footprint of home management. Cleaning products are concentrated refills, homemade, or from zero-waste suppliers. Household waste is under half the national average. You track and actively reduce water and energy consumption related to housework. You choose durable, repairable, and sustainably sourced household goods.
+      reasoning: |-
+        The average UK household produces roughly 1 tonne of waste per year (<a href="https://www.gov.uk/government/statistics/uk-waste-data/uk-statistics-on-waste" target="_blank">UK Government</a>). Halving this through systematic waste prevention (not just recycling) requires significant lifestyle changes in purchasing, storage, and consumption patterns. An average US household has a carbon footprint of 48 tonnes CO₂e per year (<a href="https://www.pnas.org/doi/10.1073/pnas.1922205117" target="_blank">PNAS 2020</a>); actively tracking and reducing the housework component of this is extremely uncommon. This represents roughly the top 1%.
+    level_5:
+      text: |-
+        Your home management approaches zero-waste principles: you generate minimal non-recyclable waste, use exclusively non-toxic and biodegradable products, and have eliminated single-use items from your household. You have reduced your home's operational carbon footprint by at least 50% through efficiency measures, renewable energy, and conscious consumption. You can quantify your household's environmental impact and demonstrate year-on-year improvement.
+      reasoning: |-
+        True zero-waste households (generating under 1 jar of landfill waste per year) number in the thousands globally -- a vanishingly small fraction. Achieving a 50% reduction in household carbon footprint requires measures like heat pumps, renewable energy, and comprehensive efficiency upgrades, which the <a href="https://www.c2es.org/content/home-energy-use/" target="_blank">Center for Climate and Energy Solutions</a> describes as achievable but rare. Quantifying and tracking year-on-year improvement adds another layer of rigour that almost no household maintains. This represents approximately 1 in 1,000 households.
