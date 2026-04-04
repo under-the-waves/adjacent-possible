@@ -1,72 +1,202 @@
 ---
+layout: default
+title: Investing
 life_area_slug: investing
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Organise Your Life &gt;
+    Finances &gt;
+    Investing
+</div>
+
 # Investing
 
-## What is Investing?
+**What it is**
+- Putting money into assets – stocks, bonds, property, funds – with the expectation that they will grow in value over time, turning earned income into wealth that compounds on your behalf.
 
-Investing is putting money into assets -- stocks, bonds, property, funds -- with the expectation that they will grow in value over time. It is how you turn earned income into wealth that works for you while you sleep.
+**Why it matters**
+- Even modest, consistent contributions to a diversified portfolio have historically doubled roughly every 7 – 10 years, making time in the market the single most reliable path to long-term financial security.
 
-## Why Investing matters
+**Related life areas**
+- [Saving]({{ site.baseurl }}/saving/) – building an emergency fund and accumulating capital to invest
+- [Financial planning & tracking]({{ site.baseurl }}/financial-planning-tracking/) – budgeting, net worth tracking, and financial goal-setting
+- [Current work]({{ site.baseurl }}/current-work/) – your primary income source that funds investments
+- [Goals]({{ site.baseurl }}/goals/) – setting and tracking long-term financial targets
 
-- **Compounding is the most powerful wealth-building force available to ordinary people** -- even modest contributions, left to grow for decades, produce outsized results <span class="info-icon" onclick="showReasoning('research-participation')">i</span>
-- **Most investors systematically underperform** -- the average equity fund investor trails the S&P 500 by 3 - 5% annually due to poor timing and behavioural biases, meaning basic discipline puts you ahead of the majority <span class="info-icon" onclick="showReasoning('research-behaviour-gap')">i</span>
-- **Financial literacy is surprisingly rare** -- only 43% of adults can correctly answer three basic questions on compound interest, inflation, and diversification, so even foundational knowledge is a genuine edge <span class="info-icon" onclick="showReasoning('research-financial-literacy')">i</span>
-- **Professional management rarely adds value** -- <a href="https://www.spglobal.com/spdji/en/research-insights/spiva/" target="_blank">94.1% of domestic funds underperform their benchmark over 20 years</a>, making simple, low-cost strategies hard to beat <span class="info-icon" onclick="showReasoning('research-active-management')">i</span>
-- **Patience is the scarcest edge** -- the average NYSE holding period has fallen to roughly 8.3 months, and missing just the 10 best market days over 30 years <a href="https://www.hartfordfunds.com/practice-management/client-conversations/managing-volatility/timing-the-market.html" target="_blank">halves total returns</a> <span class="info-icon" onclick="showReasoning('research-holding-period')">i</span>
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Investing yet.</strong><br>It takes about 15 minutes and helps you understand what investing means to you.</p>
+    <a href="{{ site.baseurl }}/investing/level-1/" class="btn-cta">Start Level 1</a>
+</div>
 
-## Investing Values
+## What people value about investing
 
-Your approach to investing depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+People invest for different reasons. This site scores every investing intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-For personalised recommendations based on your unique priorities, visit [Investing Personalised]({{ site.baseurl }}/investing/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Growth</h3>
+<p>Maximising long-term wealth increase through compounding, appropriate asset allocation, and consistent contributions.</p>
+<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/Warren_Buffett" target="_blank">Warren Buffett</a> compounded Berkshire Hathaway's book value at roughly 20% annually for over 58 years, largely through disciplined value investing and a willingness to hold positions for decades.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Safety</h3>
+<p>Protecting capital from catastrophic loss through diversification, appropriate risk sizing, and resilient portfolio construction.</p>
+<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/Ray_Dalio" target="_blank">Ray Dalio</a> designed Bridgewater's All Weather strategy to perform acceptably across economic regimes – growth, recession, rising inflation, and falling inflation – rather than betting on any single outcome.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Simplicity</h3>
+<p>A low-maintenance, straightforward investment approach using evidence-based strategies you can sustain for decades without active management.</p>
+<p class="exemplar">Level 5 example: <a href="https://en.wikipedia.org/wiki/John_C._Bogle" target="_blank">John C. Bogle</a> founded Vanguard and created the first retail index fund in 1976, championing low-cost passive investing that has since become the dominant approach for individual investors.</p>
+</div>
 
-Research reveals a stark gap between investment participation and investment competence. Most investors lack basic financial literacy, trade too frequently, chase recent performance, and panic during downturns. The average investor's behaviour gap - the difference between fund returns and investor returns - <a href="https://www.dalbar.com/QAIB/Index" target="_blank">costs 3 - 5% annually</a>. Even among professionals, <a href="https://www.spglobal.com/spdji/en/research-insights/spiva/" target="_blank">94% of active funds underperform their benchmark over 20 years</a>. These patterns mean that even modest discipline and knowledge represent significantly higher capability than the norm.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/investing/level-1/" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand investing, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/investing/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Investing Personalised]({{ site.baseurl }}/investing/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-participation': {
-        title: 'Investment Participation Rates',
-        content: '62% of US adults own stock in some form, including individual stocks, stock mutual funds, or self-directed retirement accounts (Gallup, 2025). In the UK, 35% of adults hold investments beyond cash savings (FCA Financial Lives Survey). Participation rates vary significantly by income, age, and education level. <a href="https://news.gallup.com/poll/266807/percentage-americans-owns-stock.aspx" target="_blank">View Gallup data</a>'
-    },
-    'research-behaviour-gap': {
-        title: 'Investor Behaviour Gap',
-        content: 'DALBAR\'s annual Quantitative Analysis of Investor Behavior consistently shows that average equity fund investors underperform the S&P 500 by 3 - 5% annually over 20-year periods. This "behaviour gap" is driven by poor timing - buying after gains and selling after losses - rather than fund selection. The gap persists across market cycles and investor demographics. <a href="https://www.dalbar.com/QAIB/Index" target="_blank">View DALBAR research</a>'
-    },
-    'research-financial-literacy': {
-        title: 'Financial Literacy Rates',
-        content: 'Lusardi and Mitchell\'s "Big Three" financial literacy questions (compound interest, inflation, diversification) reveal that only 43% of adults worldwide answer all three correctly. Financial literacy correlates strongly with investment outcomes, retirement preparedness, and resistance to fraud. <a href="https://www.nber.org/papers/w17107" target="_blank">View study</a>'
-    },
-    'research-active-management': {
-        title: 'Active Management Underperformance',
-        content: 'The SPIVA (S&P Indices Versus Active) 2024 scorecard shows that 94.1% of domestic equity funds underperformed the S&P 1500 Composite over 20 years. Results are similar across geographies and asset classes. Survivorship bias further flatters active management - many underperforming funds close or merge, disappearing from the record. <a href="https://www.spglobal.com/spdji/en/research-insights/spiva/" target="_blank">View SPIVA scorecard</a>'
-    },
-    'research-holding-period': {
-        title: 'Holding Periods and Market Timing',
-        content: 'The average NYSE holding period has declined from roughly 8 years in the 1960s to approximately 8.3 months today, reflecting the rise of high-frequency trading, lower transaction costs, and behavioural impatience. Hartford Funds research shows that missing the 10 best market days over 30 years (1993 - 2022) would have halved an investor\'s total return, and many of those best days occurred within days of the worst days. <a href="https://www.hartfordfunds.com/practice-management/client-conversations/managing-volatility/timing-the-market.html" target="_blank">View Hartford Funds data</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var areaProgress = progress.investing || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return areaProgress[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.investing;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Investing.</strong></p>' +
+            '<a href="{{ site.baseurl }}/investing/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/investing/level-1/" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(areaProgress).length > 0) {
+        var completed = steps.filter(function(s) { return areaProgress[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/investing/level-1/" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

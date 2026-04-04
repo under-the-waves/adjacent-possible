@@ -1,58 +1,202 @@
 ---
+layout: default
+title: Friendship
 life_area_slug: friendship
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Connect with Others &gt;
+    Friends and Relationships &gt;
+    Friendship
+</div>
+
 # Friendship
 
-## Why Friendship Matters
+**What it is**
+- The relationships you build and maintain with people you choose to have in your life, including how you invest in those bonds over time.
 
-Friendships serve as one of the most powerful predictors of wellbeing and life satisfaction across the lifespan. Research consistently demonstrates that people with strong social connections live longer, experience better physical and mental health, and show greater resilience during difficult periods <span class="info-icon" onclick="showReasoning('research-health-benefits')">i</span>. Quality friendships provide emotional support that can be more beneficial for cognitive health than family relationships, particularly as we age <span class="info-icon" onclick="showReasoning('research-cognitive-benefits')">i</span>.
+**Why it matters**
+- People with strong friendships have a <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316" target="_blank">50% higher likelihood of survival</a> over a given period compared to those with weak social connections – a health effect comparable to quitting smoking.
 
-Beyond individual benefits, friendships create meaning and purpose through shared experiences, mutual support, and opportunities for personal growth. People who maintain close friendships report higher life satisfaction than those who prioritise marriage, children, or financial success <span class="info-icon" onclick="showReasoning('research-life-satisfaction')">i</span>. The absence of close friendships carries health risks equivalent to smoking or obesity, whilst strong social connections can reduce mortality risk by up to 50%.
+**Related life areas**
+- [Communication]({{ site.baseurl }}/communication/) – how you express yourself and connect in conversation
+- [Romantic relationships]({{ site.baseurl }}/romantic-relationships/) – intimate partnerships and their dynamics
+- [Community contribution]({{ site.baseurl }}/community-contribution/) – giving back to the groups you belong to
+- [Personality]({{ site.baseurl }}/personality/) – your social traits and how others experience you
 
-## Friendship Values
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Friendship yet.</strong><br>It takes about 15 minutes and helps you understand what friendship means to you.</p>
+    <a href="{{ site.baseurl }}/friendship/level-1/" class="btn-cta">Start Level 1</a>
+</div>
 
-Your approach to friendship depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+## What people value about friendship
 
-For personalised recommendations based on your unique priorities, visit [Friends Personalised]({{ site.baseurl }}/friends/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+People pursue friendship for different reasons. This site scores every friendship intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Depth</h3>
+<p>Close friendships with high trust, vulnerability, and mutual understanding. People who lean towards this value invest heavily in a smaller number of relationships where they can be fully themselves.</p>
+<p class="exemplar">Level 5 example: <a href="https://www.cs-lewis.com/biography/" target="_blank">C.S. Lewis</a> and <a href="https://www.tolkiensociety.org/author/biography/" target="_blank">J.R.R. Tolkien</a> maintained a friendship at Oxford that lasted over 30 years through the Inklings literary group. Tolkien played a central role in Lewis's conversion to Christianity, and Lewis's encouragement helped Tolkien persist with <em>The Lord of the Rings</em> during years of stalled progress.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Breadth</h3>
+<p>A diverse network of friendships across different contexts and communities. People who lean towards this value build connections with many different kinds of people and maintain relationships across varied settings.</p>
+<p class="exemplar">Level 5 example: <a href="https://keithferrazzi.com/" target="_blank">Keith Ferrazzi</a>, author of <em>Never Eat Alone</em>, is known for building and maintaining a large network of genuine relationships spanning industries, countries, and social contexts. He reportedly tracks thousands of contacts and makes a deliberate practice of connecting people who would benefit from knowing each other.</p>
+</div>
 
-Research reveals concerning trends in friendship patterns across the population. The percentage of adults reporting no close friends tripled from 3% in 1990 to 12% in 2021, whilst those claiming 10 or more close friends dropped from 33% to just 13%. Most adults (53%) now have between one and four close friends, with only 38% maintaining five or more. Additionally, emotional support exchange remains limited - only 48% of women and 30% of men share personal feelings with friends weekly. These patterns mean that even modest achievements in friendship development represent higher population percentiles than might initially be expected.
+<div class="value-card">
+<h3>Growth</h3>
+<p>Friendships that challenge you to improve, learn, and develop as a person. People who lean towards this value seek out friends who hold them accountable and push them to think differently.</p>
+<p class="exemplar">Level 5 example: <a href="https://www.fi.edu/en/benjamin-franklin" target="_blank">Benjamin Franklin</a> founded the Junto in 1727, a mutual improvement club of 12 friends from varied trades who met weekly in Philadelphia to share ideas, debate questions of morals and politics, and hold each other accountable. The group ran for over 30 years and spawned several civic institutions, including what became the University of Pennsylvania.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/friendship/level-1/" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand friendship, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/friendship/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Friends Personalised]({{ site.baseurl }}/friends/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-health-benefits': {
-        title: 'Health Benefits of Friendship',
-        content: 'Meta-analyses show that people with strong social relationships have a 50% increased likelihood of survival compared to those with weaker connections. The mortality risk associated with weak social relationships is comparable to smoking 15 cigarettes daily and exceeds risks from obesity or physical inactivity. <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316" target="_blank">View study</a>'
-    },
-    'research-cognitive-benefits': {
-        title: 'Cognitive Benefits of Friendship',
-        content: 'Longitudinal research demonstrates that frequent contact with friends is associated with better cognitive functioning and slower cognitive decline, particularly in memory and executive functioning. Friend contact shows stronger cognitive benefits than family contact, likely due to the active maintenance and shared activities that friendships require. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7483134/" target="_blank">View study</a>'
-    },
-    'research-life-satisfaction': {
-        title: 'Friendship and Life Satisfaction',
-        content: '61% of U.S. adults say having close friends is extremely or very important for living a fulfilling life - higher than marriage (23%), having children (26%), or having money (24%). 72% of Americans with close friends report satisfaction with their friendship quality, with satisfaction increasing to 81% among those with five or more close friends. <a href="https://www.pewresearch.org/short-reads/2023/10/12/what-does-friendship-look-like-in-america/" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var areaProgress = progress.friendship || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return areaProgress[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.friendship;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Friendship.</strong></p>' +
+            '<a href="{{ site.baseurl }}/friendship/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/friendship/level-1/" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(areaProgress).length > 0) {
+        var completed = steps.filter(function(s) { return areaProgress[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/friendship/level-1/" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

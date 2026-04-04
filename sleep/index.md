@@ -1,50 +1,202 @@
 ---
+layout: default
+title: Sleep
 life_area_slug: sleep
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Look After Yourself &gt;
+    Health &gt;
+    Sleep
+</div>
+
 # Sleep
 
-## Why Sleep Matters
+**What it is**
+- Your sleep quality, duration, consistency, and the habits that shape how well you rest and recover each night.
 
-Sleep is the foundation that supports virtually every aspect of human functioning. Adults who consistently sleep fewer than 7 hours face a 13% higher mortality risk, while sleep quality independently predicts cardiovascular disease, diabetes, and cognitive decline <span class="info-icon" onclick="showReasoning('research-mortality')">i</span>. Beyond long-term health, sleep directly shapes daily performance -- a single night of poor sleep impairs reaction time, working memory, and emotional regulation to a degree comparable to mild alcohol intoxication <span class="info-icon" onclick="showReasoning('research-cognition')">i</span>.
+**Why it matters**
+- Adults who consistently sleep fewer than seven hours face a <a href="https://pubmed.ncbi.nlm.nih.gov/28364328/" target="_blank">13% higher risk</a> of dying from any cause, and even one night of poor sleep impairs reaction time, memory, and mood to a degree comparable to mild alcohol intoxication.
 
-Despite this, sleep remains one of the most neglected areas of personal development. Only 28% of adults consistently wake feeling restored, and 54% report trouble sleeping on any given night <span class="info-icon" onclick="showReasoning('research-prevalence')">i</span>. The gap between sleep science and sleep practice represents one of the highest-leverage opportunities for improving quality of life.
+**Related life areas**
+- [Fitness]({{ site.baseurl }}/fitness/) – physical exercise habits and training
+- [Nutrition]({{ site.baseurl }}/nutrition/) – dietary knowledge and food choices
+- [Mental health]({{ site.baseurl }}/mental-health/) – emotional resilience and psychological wellbeing
+- [Mindfulness]({{ site.baseurl }}/mindfulness/) – present-moment awareness and meditation practice
 
-## Sleep Values
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Sleep yet.</strong><br>It takes about 15 minutes and helps you understand what sleep means to you.</p>
+    <a href="{{ site.baseurl }}/sleep/level-1/" class="btn-cta">Start Level 1</a>
+</div>
 
-Your approach to sleep depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+## What people value about sleep
 
-For personalised recommendations based on your unique priorities, visit [Sleep Personalised]({{ site.baseurl }}/sleep/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+People prioritise sleep for different reasons. This site scores every sleep intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Daily Functioning</h3>
+<p>Mental alertness, energy, focus, mood, and physical recovery. How well sleep supports what you need to do the next day.</p>
+<p class="exemplar">Level 5 example: <a href="https://ariannahuffington.com/" target="_blank">Arianna Huffington</a> collapsed from exhaustion in 2007 and subsequently rebuilt her daily routine around eight hours of sleep, later founding Thrive Global and writing The Sleep Revolution. She has said that prioritising sleep improved her decision-making and productivity more than any other single change.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Long-term Health</h3>
+<p>Disease prevention, longevity, and brain health. The cumulative effects of sleep on your body and mind over years and decades.</p>
+<p class="exemplar">Level 5 example: <a href="https://www.sleepdiplomat.com/" target="_blank">Matthew Walker</a>, a neuroscience professor at UC Berkeley, has spent over 20 years researching the long-term health consequences of sleep. His book Why We Sleep draws on his lab's findings to argue that sleep is the single most effective thing you can do to reset brain and body health each day.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="value-card">
+<h3>Comfort & Experience</h3>
+<p>The subjective quality of your sleep – how easily you fall asleep, whether you stay asleep, and how rested you feel when you wake up.</p>
+<p class="exemplar">Level 5 example: <a href="https://www.michaelbreus.com/" target="_blank">Michael Breus</a>, a clinical psychologist and fellow of the American Academy of Sleep Medicine, has built his practice around matching sleep routines to individual chronotypes. His work appears to have helped thousands of patients fall asleep more easily and wake more refreshed by tailoring the sleep experience to their biology.</p>
+</div>
 
-## Personalisation
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/sleep/level-1/" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand sleep, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/sleep/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-- [Sleep Personalised]({{ site.baseurl }}/sleep/personalised)
-
-[← Back to Life Areas]({{ site.baseurl }}/life-areas/)
+</div>
 
 <script>
-const researchData = {
-    'research-mortality': {
-        title: 'Sleep Duration and Mortality Risk',
-        content: 'A meta-analysis of 5,172,710 participants found that short sleep duration (<7 hours) was associated with a 13% higher risk of all-cause mortality. Poor sleep quality independently predicts cardiovascular disease, type 2 diabetes, and neurodegenerative conditions. <a href="https://pubmed.ncbi.nlm.nih.gov/28364328/" target="_blank">Cappuccio et al., Sleep 2010</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/28890168/" target="_blank">Itani et al., Sleep Medicine 2017</a>'
-    },
-    'research-cognition': {
-        title: 'Sleep and Cognitive Performance',
-        content: 'After 17-19 hours without sleep, cognitive and motor performance is equivalent to a blood alcohol concentration of 0.05%. After just one night of 4-hour sleep, psychomotor vigilance task (PVT) performance declines measurably, with reaction times increasing by approximately 44 ms. Cumulative sleep restriction over 14 days produces cognitive impairment equivalent to 2 nights of total sleep deprivation. <a href="https://pubmed.ncbi.nlm.nih.gov/10984335/" target="_blank">Williamson & Feyer, Occupational and Environmental Medicine 2000</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2656292/" target="_blank">Van Dongen et al., Sleep 2003</a>'
-    },
-    'research-prevalence': {
-        title: 'Sleep Quality in the General Population',
-        content: 'Only 28.1% of adults report frequently feeling restored upon waking (<a href="https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2022.935228/full" target="_blank">Frontiers in Sleep 2022</a>). 54% of US adults reported some trouble sleeping the prior night. Only 30-35% rate their sleep as "very good" or "excellent" (<a href="https://news.gallup.com/poll/390734/sleep-struggles-common-among-younger-adults-women.aspx" target="_blank">Gallup 2022</a>). 36% of the general population scores above 5 on the PSQI, indicating poor sleep quality (<a href="https://pubmed.ncbi.nlm.nih.gov/28215264/" target="_blank">Hinz et al. 2017</a>).'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var sleep = progress.sleep || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return sleep[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.sleep;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Sleep.</strong></p>' +
+            '<a href="{{ site.baseurl }}/sleep/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/sleep/level-1/" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(sleep).length > 0) {
+        var completed = steps.filter(function(s) { return sleep[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/sleep/level-1/" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
