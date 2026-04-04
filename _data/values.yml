@@ -359,3 +359,48 @@ body-image:
       6: "0.9 kg lean mass gained"
       4: "0.25 kg lean mass gained"
       2: "0.06 kg lean mass gained"
+
+housework:
+  health:
+    name: "Health & Hygiene"
+    anchor_type: "subjective"
+    anchor_description: "Living environment that eliminates health hazards and actively supports physical wellbeing"
+    scale_levels:
+      10: "Environment free of allergens, mould, pests, and toxins with optimal air quality"
+      8: "Consistently clean environment with minimal health risks"
+      6: "Generally hygienic with occasional lapses"
+      4: "Noticeable hygiene issues creating minor health risks"
+      2: "Significant health hazards from poor cleanliness"
+
+  order:
+    name: "Order"
+    anchor_type: "subjective"
+    anchor_description: "Mental calm and cognitive ease from an organised, uncluttered living space"
+    scale_levels:
+      10: "Complete calm and control; everything has a place and systems maintain themselves"
+      8: "Consistently organised with rare moments of clutter or disorientation"
+      6: "Generally orderly with occasional clutter accumulation"
+      4: "Frequently overwhelmed by mess or unable to find things"
+      2: "Constant stress from clutter and disorganisation"
+
+  aesthetics:
+    name: "Aesthetics"
+    anchor_type: "subjective"
+    anchor_description: "Visual appeal and sensory pleasure from living space"
+    scale_levels:
+      10: "Living space is a source of daily visual pleasure and pride"
+      8: "Consistently attractive space that feels inviting"
+      6: "Generally pleasant-looking with some uninspiring areas"
+      4: "Functional but visually neglected"
+      2: "Unappealing environment that feels depressing or embarrassing"
+
+  environmental:
+    name: "Environmental Impact"
+    anchor_type: "subjective"
+    anchor_description: "Ecological footprint of home management practices minimised through sustainable choices"
+    scale_levels:
+      10: "Near-zero waste home management with fully sustainable practices"
+      8: "Predominantly sustainable practices with minimal environmental harm"
+      6: "Some sustainable choices alongside conventional practices"
+      4: "Mostly conventional practices with little environmental consideration"
+      2: "High-waste, high-toxicity practices with no sustainability effort"

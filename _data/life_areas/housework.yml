@@ -5,40 +5,35 @@ pillar: Organise Your Life
 survey_description: "How you manage cleaning, maintenance, and domestic responsibilities."
 domain_representative: false
 values:
-- key: functional
-  name: Functional Efficiency
-  weight: 40
-  description:
-  - Home management that creates smooth operation and reduced friction in daily life.
-  - Logical organization systems, streamlined workflows, intuitive storage, and time-saving routines.
-  - |-
-    People who prioritize this value focus on creating systems that minimize effort while maximizing effectiveness, with particular attention to how their space functions.
 - key: health
-  name: Health & Wellbeing
+  name: Health & Hygiene
+  weight: 35
+  description:
+  - Housework that protects physical health by reducing illness, allergens, pests, mould, and toxins.
+  - Cleaning protocols, air quality management, and maintenance practices that eliminate health hazards.
+  - |-
+    Those who prioritise this value focus on evidence-based cleaning frequencies and methods that have the greatest impact on health outcomes.
+- key: order
+  name: Order
   weight: 30
   description:
-  - Housework that supports physical and psychological wellbeing.
-  - Cleanliness standards, air quality, absence of toxins, and creating spaces that reduce stress and support relaxation.
+  - The mental calm and cognitive ease that comes from an organised, uncluttered living space.
+  - Knowing where everything is, having systems that maintain themselves, and not feeling overwhelmed by mess.
   - |-
-    Those who prioritize this value focus on cleaning protocols that eliminate health hazards and maintenance practices that create a physically and mentally supportive environment.
+    Those who prioritise this value focus on organisational systems, decluttering, and routines that keep the home orderly without constant effort.
 - key: aesthetics
-  name: Aesthetics & Enjoyment
-  weight: 20
+  name: Aesthetics
+  weight: 25
   description:
   - The visual appeal and sensory pleasure derived from your living space.
+  - Design choices, visual harmony, and personalised spaces that reflect your taste and feel inviting.
   - |-
-    Design considerations, organization that creates visual calm, and the satisfaction of personalized spaces that reflect your tastes.
-  - |-
-    Those who prioritize this value focus on creating environments that are not just functional but also beautiful and emotionally nurturing.
+    Those who prioritise this value focus on creating environments that are pleasing to be in, not just tidy or functional.
 - key: environmental
   name: Environmental Impact
   weight: 10
   description:
   - The ecological footprint of home management practices.
-  - Sustainable cleaning methods, waste reduction, energy efficiency, and considerate resource use.
+  - Sustainable cleaning methods, waste reduction, and considerate resource use.
   - |-
     Those who prioritise this value focus on eco-friendly products, minimal consumption, and practices that reduce environmental harm.
-  - |-
-    Your optimal approach will also be influenced by your household size, living space, cultural background, personal preferences, health conditions, income level, and competing priorities. This guide focuses on evidence-based principles that benefit most people across five core components: cleanliness and hygiene, organisation and storage, home maintenance and systems, time and resource efficiency, and sustainability impact.
-  - |-
-    _Note: Your own priorities may differ from the weightings used in this guide. While these values often complement each other, there can be trade-offs—for example, some highly efficient systems might initially require more time to implement, or certain aesthetic choices might require more maintenance._
