@@ -476,43 +476,6 @@ body .main-content {
 
 /* ── Weight sliders (Tier 3) ── */
 
-.weight-card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-
-.weight-card h3 {
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-
-.weight-slider-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.weight-slider-row label {
-    min-width: 160px;
-    font-size: 0.9em;
-}
-
-.weight-slider-row input[type="range"] {
-    flex: 1;
-}
-
-.weight-slider-row .weight-val {
-    min-width: 40px;
-    text-align: right;
-    font-weight: 600;
-    font-size: 0.9em;
-}
-
 /* ── Responsive ── */
 
 @media (max-width: 768px) {
@@ -535,14 +498,6 @@ body .main-content {
 
     .question-card {
         padding: 20px;
-    }
-
-    .weight-slider-row {
-        flex-wrap: wrap;
-    }
-
-    .weight-slider-row label {
-        min-width: 100%;
     }
 }
 </style>
@@ -694,8 +649,6 @@ function loadTier() { return APStorage.load('ap-survey-tier') || 0; }
 function saveTier(t) { APStorage.save('ap-survey-tier', t); }
 function loadResponses() { return APStorage.load('ap-survey-responses') || {}; }
 function saveResponses(r) { APStorage.save('ap-survey-responses', r); }
-function loadWeights() { return APStorage.load('ap-survey-weights') || {}; }
-function saveWeights(w) { APStorage.save('ap-survey-weights', w); }
 
 // ── Helpers ──
 
@@ -788,15 +741,6 @@ function getQuestions(tier) {
                     if (!data) return;
                     const valuesWithBench = data.values.filter(v => v.benchmarks && v.benchmarks.level_1);
                     if (valuesWithBench.length === 0) return;
-                    // Add weight card before questions
-                    questions.push({
-                        type: 'weights',
-                        slug: area.slug,
-                        label: area.label,
-                        domain: domain.name,
-                        pillar: pillar,
-                        values: valuesWithBench
-                    });
                     valuesWithBench.forEach(v => {
                         questions.push({
                             type: 'question',
@@ -940,8 +884,8 @@ function renderQuestion() {
     }
 
     const q = surveyQuestions[surveyIndex];
-    const totalQ = surveyQuestions.filter(x => x.type === 'question' || x.type === 'weights').length;
-    const answeredQ = surveyQuestions.slice(0, surveyIndex).filter(x => x.type === 'question' || x.type === 'weights').length;
+    const totalQ = surveyQuestions.filter(x => x.type === 'question').length;
+    const answeredQ = surveyQuestions.slice(0, surveyIndex).filter(x => x.type === 'question').length;
 
     let html = '<div class="survey-container">';
 
@@ -965,28 +909,6 @@ function renderQuestion() {
         <div class="question-nav">
             <div></div>
             <button class="btn-primary" onclick="surveyIndex++; renderQuestion();">Continue</button>
-        </div>`;
-    } else if (q.type === 'weights') {
-        // Tier 3 weight adjustment card
-        const savedWeights = loadWeights();
-        html += `<div class="weight-card">
-            <h3>Adjust weights for ${q.label}</h3>
-            <p style="color:#666;font-size:0.85em;margin-bottom:16px;">How important is each value to you? Adjust the sliders or keep the defaults.</p>`;
-        q.values.forEach(v => {
-            const savedW = savedWeights[q.slug + ':' + v.key];
-            const w = savedW !== undefined ? savedW : v.weight;
-            html += `<div class="weight-slider-row">
-                <label>${v.name}</label>
-                <input type="range" min="0" max="100" value="${w}" oninput="updateWeightDisplay(this, '${q.slug}:${v.key}')">
-                <span class="weight-val" id="wv-${q.slug}-${v.key}">${w}</span>
-            </div>`;
-        });
-        html += `<div style="margin-top:12px;">
-            <button onclick="resetWeightsForArea('${q.slug}')" style="font-size:0.85em;padding:4px 12px;border:1px solid #ddd;border-radius:4px;background:#f8f9fa;cursor:pointer;">Use defaults</button>
-        </div></div>`;
-        html += `<div class="question-nav">
-            ${surveyIndex > 0 ? '<button onclick="surveyBack()">Back</button>' : '<div></div>'}
-            <button class="btn-primary" onclick="saveCurrentWeights(); surveyIndex++; renderQuestion();">Continue</button>
         </div>`;
     } else {
         // Question card
@@ -1063,34 +985,6 @@ function surveyBack() {
     renderQuestion();
 }
 
-function updateWeightDisplay(input, key) {
-    const slug = key.split(':')[0];
-    const vkey = key.split(':')[1];
-    document.getElementById('wv-' + slug + '-' + vkey).textContent = input.value;
-}
-
-function saveCurrentWeights() {
-    const q = surveyQuestions[surveyIndex];
-    if (!q || q.type !== 'weights') return;
-    const weights = loadWeights();
-    q.values.forEach(v => {
-        const el = document.querySelector(`input[type="range"][oninput*="${q.slug}:${v.key}"]`);
-        if (el) weights[q.slug + ':' + v.key] = parseInt(el.value);
-    });
-    saveWeights(weights);
-}
-
-function resetWeightsForArea(slug) {
-    const data = SURVEY_DATA[slug];
-    if (!data) return;
-    const weights = loadWeights();
-    data.values.forEach(v => {
-        weights[slug + ':' + v.key] = v.weight;
-    });
-    saveWeights(weights);
-    renderQuestion(); // re-render to update slider positions
-}
-
 // ── Finish survey ──
 
 function finishSurvey() {
@@ -1123,7 +1017,6 @@ function finishSurvey() {
     } else if (tier === 3) {
         // Weighted average per area
         const areaScores = {};  // slug -> [{level, weight}]
-        const savedWeights = loadWeights();
 
         for (const [key, level] of Object.entries(surveyAnswers)) {
             if (level === -1) continue; // "I'm not sure" -- skip
@@ -1132,14 +1025,9 @@ function finishSurvey() {
             const valueKey = parts[1];
             if (!areaScores[slug]) areaScores[slug] = [];
 
-            // Get weight
-            const savedW = savedWeights[key];
             const data = SURVEY_DATA[slug];
-            let weight = 1;
-            if (data) {
-                const v = data.values.find(x => x.key === valueKey);
-                weight = savedW !== undefined ? savedW : (v ? v.weight : 1);
-            }
+            const v = data ? data.values.find(x => x.key === valueKey) : null;
+            const weight = v ? v.weight : 1;
             areaScores[slug].push({ level, weight });
         }
 
