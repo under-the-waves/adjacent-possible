@@ -348,7 +348,7 @@ body .main-content {
     opacity: 0.9;
 }
 
-.pillar-header { background: #37474f; }
+.dashboard-container .pillar-header { background: #37474f; }
 
 .pillar-body {
     padding: 15px 20px;
