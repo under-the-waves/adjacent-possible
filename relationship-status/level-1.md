@@ -243,10 +243,13 @@ life_area_slug: relationship-status
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People approach relationship status for different reasons. This site scores every relationship-status intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People approach relationship status for different reasons. This site scores every relationship-status intervention across four core values. Later, you'll set your own weighting across these four values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
 <h3>Partner Selection</h3>
 <p>Choosing well: understanding what you genuinely need in a partner vs. what you think you want. Evaluating compatibility effectively, recognising red flags early, and avoiding common selection biases like prioritising excitement over stability. People who lean towards this value invest in self-knowledge and dating skills before committing.</p>
+
+<h3>Meeting New Partners</h3>
+<p>Actively creating opportunities to meet potential romantic partners rather than relying on chance. Expanding social circles, using dating platforms effectively, developing first-impression skills, and maintaining a steady pipeline of new connections. People who lean towards this value invest in the practical process of meeting compatible people rather than waiting for it to happen.</p>
 
 <h3>Independence</h3>
 <p>Being comfortable and fulfilled without a romantic partner. Building a rich single life, resisting social pressure to couple up, and knowing when being single is the right choice. People who lean towards this value ensure their happiness does not depend on relationship status.</p>
@@ -276,6 +279,11 @@ life_area_slug: relationship-status
 <div class="exemplar-card">
     <div class="exemplar-value">Partner Selection &ndash; Level 5</div>
     <p><a href="https://www.obamalibrary.gov/obamas/michelle-obama" target="_blank">Michelle Robinson</a> has spoken extensively about her deliberate approach to choosing a partner. When she met Barack Obama, she was his mentor at a law firm and initially resisted dating him. She assessed their compatibility across values, ambition, and family orientation over months before committing. In interviews and in her memoir <em>Becoming</em>, she describes evaluating whether he would be a genuine partner in domestic life and parenting &ndash; not just a charismatic match &ndash; and negotiating expectations before marriage. The result was a partnership that has weathered extraordinary public pressure for over 30 years.</p>
+</div>
+
+<div class="exemplar-card">
+    <div class="exemplar-value">Meeting New Partners &ndash; Level 5</div>
+    <p><a href="https://amywebb.io/" target="_blank">Amy Webb</a>, a futurist and author, describes in her book <em>Data, a Love Story</em> how she reverse-engineered online dating after years of unsuccessful approaches. She created detailed profiles of who she was looking for, analysed what made profiles successful, systematically tested different approaches, and expanded her search beyond her usual social circles. The method was unconventional but effective &ndash; she met her husband through the optimised process and has been married since 2008. Her approach demonstrates what treating partner search as a skill to be refined, rather than a matter of luck, can achieve.</p>
 </div>
 
 <div class="exemplar-card">
@@ -323,6 +331,25 @@ life_area_slug: relationship-status
 <div class="assess-item" onclick="toggleAssess(this)">
     <input type="checkbox" id="a-red-flags">
     <label for="a-red-flags">I know which red flags I have previously overlooked or rationalised in partners.<br><span class="assess-hint">Common ones include inconsistency, contempt, unwillingness to compromise, or misaligned life goals.</span></label>
+</div>
+</div>
+
+<div class="assess-group">
+<h4>Meeting New Partners</h4>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-search-proactivity">
+    <label for="a-search-proactivity">I know whether my current approach to meeting potential partners is active or passive &ndash; and whether I am relying on chance, a single channel, or multiple deliberate methods.<br><span class="assess-hint">Are you on dating apps, expanding your social circles, asking friends for introductions, or mainly hoping to meet someone organically?</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-search-effectiveness">
+    <label for="a-search-effectiveness">I can identify which of my current methods for meeting people are actually generating compatible matches and which are not.<br><span class="assess-hint">Think about where your best dates or connections have come from vs. where you spend the most time searching.</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-search-barriers">
+    <label for="a-search-barriers">I know what my main barriers to meeting new partners are &ndash; whether that is limited social exposure, lack of confidence, poor self-presentation, or something else.<br><span class="assess-hint">Is it a volume problem (not meeting enough people), a conversion problem (meeting people but not generating interest), or an avoidance problem?</span></label>
 </div>
 </div>
 
@@ -408,6 +435,7 @@ life_area_slug: relationship-status
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
         'a-past-patterns', 'a-needs-vs-wants', 'a-red-flags',
+        'a-search-proactivity', 'a-search-effectiveness', 'a-search-barriers',
         'a-single-comfort', 'a-solo-fulfilment', 'a-fear-single',
         'a-breakup-speed', 'a-recovery-time', 'a-transition-patterns'
     ];

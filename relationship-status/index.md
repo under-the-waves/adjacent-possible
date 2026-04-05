@@ -141,11 +141,16 @@ life_area_slug: relationship-status
 
 ## What people value about relationship status
 
-People approach relationship status for different reasons. This site scores every relationship-status intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
+People approach relationship status for different reasons. This site scores every relationship-status intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
 <div class="value-card">
 <h3>Partner Selection</h3>
 <p>Choosing well: understanding what you genuinely need in a partner vs. what you think you want. Evaluating compatibility effectively, recognising red flags early, and avoiding common selection biases.</p>
+</div>
+
+<div class="value-card">
+<h3>Meeting New Partners</h3>
+<p>Actively creating opportunities to meet potential romantic partners. Expanding social circles, using dating platforms effectively, developing first-impression skills, and maintaining a steady pipeline of new connections.</p>
 </div>
 
 <div class="value-card">

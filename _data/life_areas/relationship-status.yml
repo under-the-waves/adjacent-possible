@@ -7,7 +7,7 @@ domain_representative: false
 values:
 - key: partner-selection
   name: Partner Selection
-  weight: 35
+  weight: 25
   description:
   - 'Choosing well: understanding what you genuinely need in a partner vs. what you think you want.'
   - |-
@@ -39,9 +39,42 @@ values:
         Achieve near-optimal partner selection through deep self-knowledge, refined evaluation frameworks, and the discipline to decline good-enough matches in favour of genuinely excellent ones -- resulting in partnerships that are strong from the outset with minimal corrective effort required
       reasoning: |-
         Near-optimal partner selection -- choosing partners who are genuinely excellent matches requiring minimal corrective effort -- represents 99.9th percentile capability (1 in 1,000). This requires deep self-knowledge, refined evaluation frameworks, and the discipline to decline good-enough matches, a combination that virtually no one achieves consistently.
+- key: meeting-new-partners
+  name: Meeting New Partners
+  weight: 30
+  description:
+  - Actively creating opportunities to meet potential romantic partners rather than relying on chance.
+  - Expanding social circles, using dating platforms effectively, developing strong first-impression skills, and maintaining a steady pipeline of new connections.
+  - People who prioritise this value invest in the practical process of meeting compatible people.
+  benchmarks:
+    level_1:
+      text: |-
+        Honestly assess how proactive you are about meeting potential partners -- whether you rely on chance encounters, actively create opportunities, or avoid the dating process altogether -- and identify which methods you have and have not tried
+      reasoning: |-
+        Most people default to meeting partners through existing social circles or waiting for chance encounters, without examining whether their approach is effective or examining why it might not be working. Honestly cataloguing your current methods and their results is the foundation for improvement, and few people do it deliberately.
+    level_2:
+      text: |-
+        Consistently maintain multiple active channels for meeting potential partners -- a combination of social activities, dating platforms, and introductions through friends -- rather than relying on a single method or waiting passively
+      reasoning: |-
+        Research on relationship formation shows that most couples meet through a small number of channels, with online dating now the most common for new couples. Actively maintaining multiple channels and treating partner search as something requiring effort rather than luck places someone in the top 20%. Most single people either use one method passively or avoid active search altogether. <a href="https://www.pnas.org/doi/10.1073/pnas.1908630116" target="_blank">Source study</a>
+    level_3:
+      text: |-
+        Systematically optimise your approach to meeting partners -- refining dating profiles based on results, expanding social circles into new contexts, developing strong first-date skills, and adjusting strategy based on what is and is not generating compatible matches
+      reasoning: |-
+        Treating partner search as a skill to be refined rather than a matter of luck or personality is rare. Systematically optimising across multiple channels -- adjusting profiles, seeking feedback, expanding into new social contexts, and tracking what generates compatible matches -- represents top 5% effort and intentionality. Most people repeat the same approach regardless of results. <a href="https://journals.sagepub.com/doi/10.1177/02654075211072489" target="_blank">Source study</a>
+    level_4:
+      text: |-
+        Demonstrate sustained effectiveness at meeting compatible partners across different contexts and life stages -- able to generate quality romantic prospects through a range of methods, with a track record of converting initial meetings into genuine mutual interest
+      reasoning: |-
+        Sustained effectiveness at generating compatible romantic prospects across contexts represents top 1% achievement. Most people find their search effectiveness drops sharply outside familiar environments or after major life transitions (moving cities, post-divorce). Maintaining consistent results across contexts requires exceptional social skills, adaptability, and self-presentation.
+    level_5:
+      text: |-
+        Meet potential partners with exceptional consistency and quality -- combining strategic social positioning, refined communication skills, and authentic self-presentation to attract highly compatible people across any context, with minimal wasted effort on poor matches
+      reasoning: |-
+        Meeting highly compatible partners with consistency and minimal wasted effort represents 99.9th percentile capability (1 in 1,000). This requires the combination of strong social skills, strategic positioning, accurate self-knowledge, and the ability to quickly assess mutual compatibility -- a set of abilities that very few people develop to this degree.
 - key: independence
   name: Independence
-  weight: 35
+  weight: 20
   description:
   - Being comfortable and fulfilled without a romantic partner.
   - Building a rich single life, resisting social pressure to couple up, knowing when being single is the right choice.
@@ -74,7 +107,7 @@ values:
         Fully decoupling relationship status from identity and wellbeing -- moving between single and partnered life without emotional disruption -- represents 99.9th percentile capability. This level of self-sufficiency, where one can model healthy singleness to others and experience no identity threat from status changes, is achieved by fewer than 1 in 1,000 people.
 - key: transition-navigation
   name: Transition Navigation
-  weight: 30
+  weight: 25
   description:
   - |-
     Managing romantic transitions gracefully -- entering relationships deliberately, leaving when needed, processing breakups constructively.
