@@ -5,97 +5,99 @@ pillar: Look After Yourself
 survey_description: "Your emotional wellbeing, resilience, and psychological health."
 domain_representative: false
 values:
-- key: professional
-  name: Professional Treatment & Support
+- key: stability
+  name: Stability
   weight: 40
   description:
-  - Working with qualified mental health professionals and building strong support networks.
-  - Therapy, counselling, medication when appropriate, and leveraging relationships for mental health support.
-  - People who prioritise this value focus on expert guidance and community-based approaches to mental wellness.
+  - Freedom from distressing psychological symptoms such as anxiety, depression, rumination, and emotional volatility.
+  - A consistently stable emotional baseline that allows you to function well day-to-day without being derailed by internal distress.
+  - People who prioritise this value focus on reducing suffering and maintaining emotional equilibrium.
   benchmarks:
     level_1:
-      text: Recognise personal mental health patterns and know when professional support might be beneficial
+      text: Identify which psychological symptoms (anxiety, low mood, rumination, emotional volatility) most affect your daily functioning and how frequently they occur
       reasoning: |-
-        This represents basic awareness of mental health needs and available resources. Most people (approximately 80%) either are unaware of when they might benefit from professional support or don't know how to access it effectively.
+        Most people experience distressing psychological symptoms but have not systematically assessed which ones affect them most or how often. This awareness step requires honest self-inventory rather than vague acknowledgement that "stress is bad." Approximately 80% of adults have not done this structured self-assessment.
     level_2:
       text: |-
-        Have at least one trusted person to discuss mental health concerns with and know how to access professional help when needed
+        Experience distressing psychological symptoms no more than a few times per month, with episodes resolving within hours rather than days
       reasoning: |-
-        Research shows that having social support for mental health is achieved by only about 20% of the population. Many people lack trusted confidants for mental health concerns and don't know how to navigate professional mental health resources. <a href="https://www.nami.org/about-mental-illness/mental-health-by-the-numbers/" target="_blank">Source: NAMI</a>
+        Achieving this level of emotional stability places someone in the top 20% of the adult population. Approximately 20% of adults experience a mental health disorder in any given year, and many more experience subclinical symptoms that regularly disrupt functioning. Consistently resolving distress within hours rather than days requires either natural temperament or developed coping skills. <a href="https://www.nimh.nih.gov/health/statistics/mental-illness" target="_blank">Source: NIMH</a>
     level_3:
       text: |-
-        Actively work with mental health professionals when needed and maintain supportive relationships that contribute to psychological wellbeing
+        Maintain a stable emotional baseline across most situations, with distressing episodes rare and brief, and no symptoms meeting clinical thresholds
       reasoning: |-
-        Only about 30% of adults have accessed therapy since 2020, and much smaller percentages maintain ongoing professional relationships for mental health enhancement rather than crisis management. This level represents the top 5% who proactively use professional resources. <a href="https://mydenvertherapy.com/therapy-mental-health-statistics/" target="_blank">Source: Denver Therapy Statistics</a>
+        This represents the top 5% of emotional stability. Most adults experience regular anxiety, mood dips, or rumination that disrupts functioning at least weekly. Achieving near-complete freedom from clinical-threshold symptoms while maintaining stability across varied situations requires sophisticated self-management or fortunate neurobiology. <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" target="_blank">Source: WHO</a>
     level_4:
-      text: Maintain comprehensive support networks and integrate professional insights into ongoing mental health enhancement
+      text: |-
+        Sustain emotional equilibrium even during significant life stressors (job loss, relationship conflict, health scares) with minimal symptom escalation
       reasoning: |-
-        Maintaining comprehensive professional support networks for enhancement rather than crisis management represents exceptional mental health resource utilisation achieved by roughly 1% of the population. This includes ongoing relationships with mental health professionals and sophisticated peer support systems.
+        Maintaining stability during major stressors represents approximately the top 1%. Most people experience significant symptom increases during adverse life events. This level requires deep emotional regulation capacity that prevents stressors from destabilising the baseline, not merely recovering quickly afterwards.
     level_5:
       text: |-
-        Access and integrate advanced therapeutic approaches while maintaining sophisticated support systems that enhance rather than merely sustain mental health
+        Experience near-complete freedom from distressing psychological symptoms across all life circumstances, including prolonged adversity and major transitions
       reasoning: |-
-        Advanced therapeutic integration represents the pinnacle of professional mental health resource utilisation, achieved by approximately 0.1% of the population. This includes accessing cutting-edge therapeutic approaches and maintaining support systems that actively enhance rather than merely sustain mental health.
-- key: self-management
-  name: Self-Management & Independence
+        Approximately 1 in 1,000 people maintain this degree of psychological stability. Even among those with excellent mental health, sustained adversity (bereavement, chronic illness, major loss) typically produces some symptom elevation. This level represents exceptional emotional regulation that keeps distress minimal even under extreme circumstances.
+- key: resilience
+  name: Resilience
   weight: 35
   description:
-  - Developing personal skills and practices to manage your own mental health independently.
-  - |-
-    Mindfulness, journaling, exercise, and other self-directed interventions that don't require ongoing professional support.
-  - Those who prioritise this value focus on building internal capabilities and self-reliance.
+  - Capacity to maintain psychological functioning during adversity and recover quickly from setbacks.
+  - The ability to tolerate stress, adapt to changed circumstances, and emerge from difficulty without lasting impairment.
+  - People who prioritise this value focus on building stress tolerance and adaptive capacity rather than avoiding difficulty.
   benchmarks:
     level_1:
-      text: Understand which emotions and stressors most commonly affect your daily functioning
+      text: Identify your typical responses to adversity and recognise which types of stressors affect you most
       reasoning: |-
-        Basic emotional awareness is surprisingly uncommon. Many people struggle to identify specific emotions or understand their triggers, representing a fundamental gap in self-knowledge that awareness-level achievement addresses.
+        Understanding your own stress response patterns requires metacognitive awareness that most people lack. The majority react to adversity without examining their patterns, making this basic self-knowledge a meaningful first step that approximately 80% of adults have not systematically undertaken.
     level_2:
-      text: Use 2-3 reliable stress management techniques and maintain basic emotional awareness during daily challenges
+      text: |-
+        Recover from moderate setbacks (work conflict, minor financial stress, social rejection) within one to two weeks and maintain basic functioning during the recovery period
       reasoning: |-
-        Having reliable coping strategies represents significant achievement. Most adults (approximately 80%) lack structured approaches to stress management and emotional regulation, instead relying on reactive responses or avoidance. <a href="https://positivepsychology.com/emotion-regulation/" target="_blank">Source: Positive Psychology</a>
+        Recovering from moderate stressors within two weeks while maintaining functioning places someone in the top 20%. Many adults experience prolonged disruption from common setbacks, with rumination and avoidance extending recovery well beyond two weeks. <a href="https://www.apa.org/topics/resilience" target="_blank">Source: APA</a>
     level_3:
       text: |-
-        Practice regular mental health maintenance activities and effectively manage emotional responses in most stressful situations
+        Recover from major setbacks (job loss, relationship breakdown, significant health issue) within weeks rather than months, and use the experience to inform future coping
       reasoning: |-
-        Regular mental health practices like meditation are maintained by only 17% of the population, and effective emotional regulation across most situations represents even rarer capability. This achievement places individuals in the top 5% for emotional self-management. <a href="https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" target="_blank">Source: NCCIH</a>
+        Recovering from major life events within weeks and extracting useful learning represents the top 5%. Research on post-adversity adjustment shows most people take months to regain baseline functioning after major setbacks, and many do not systematically learn from the experience. <a href="https://pubmed.ncbi.nlm.nih.gov/20085608/" target="_blank">Source: Bonanno (2004)</a>
     level_4:
       text: |-
-        Demonstrate consistent emotional regulation across various life stressors and adapt mental health strategies based on changing circumstances
+        Maintain near-normal functioning during severe adversity and demonstrate post-traumatic growth, emerging from major challenges with genuinely enhanced capability
       reasoning: |-
-        Consistent emotional regulation across diverse stressors represents advanced emotional intelligence achieved by approximately 1% of adults. This includes adapting strategies based on context and maintaining stability during major life transitions and challenges.
+        Post-traumatic growth (not merely recovery but genuine improvement) following severe adversity is experienced by approximately 1% of the population in a meaningful, lasting way. This requires the capacity to process extreme stress without prolonged impairment while simultaneously extracting growth from the experience.
     level_5:
       text: |-
-        Maintain optimal psychological functioning across major life transitions and challenges, with advanced self-awareness and adaptive capacity
+        Sustain high-level functioning through prolonged, compounding adversity (multiple simultaneous major stressors) and consistently convert difficult experiences into enhanced psychological capacity
       reasoning: |-
-        Optimal psychological functioning across major life transitions represents exceptional emotional mastery achieved by roughly 1 in 1,000 people. This includes advanced self-awareness, sophisticated adaptation strategies, and the ability to maintain mental health excellence during extreme circumstances.
-- key: integration
-  name: Integration & Holistic Approach
+        Approximately 1 in 1,000 people maintain high functioning through compounding adversity. Most people who handle one major stressor well are overwhelmed when multiple stressors coincide. This level represents an extraordinary capacity to absorb, process, and grow from sustained difficulty without cumulative degradation.
+- key: flourishing
+  name: Flourishing
   weight: 25
   description:
-  - |-
-    Viewing mental health as interconnected with all other life areas and addressing it through lifestyle, relationships, purpose, and environment rather than as an isolated domain.
-  - People who prioritise this value see mental wellness as emerging from overall life balance and meaning.
+  - Experiencing deep and sustained joy, meaning, life satisfaction, and engagement across daily life.
+  - The ceiling of mental health rather than the floor -- not just the absence of suffering, but the active presence of positive psychological states.
+  - People who prioritise this value focus on cultivating purpose, positive emotions, and meaningful engagement rather than merely managing symptoms.
   benchmarks:
     level_1:
-      text: Identify how mental health connects to other life areas like relationships, work performance, and physical health
+      text: Identify which activities, relationships, and circumstances most reliably produce positive emotions, meaning, or engagement in your life
       reasoning: |-
-        Understanding the connections between mental health and other life areas requires stepping back from seeing mental health as isolated. Most people don't systematically consider how work stress affects sleep or how social relationships impact mood.
+        Most people have not systematically mapped their sources of positive experience. They may know they "feel good" after exercise or with certain friends, but have not catalogued these patterns to inform life decisions. This structured awareness is the foundation for intentional flourishing.
     level_2:
       text: |-
-        Recognise how lifestyle factors (sleep, exercise, social connection) directly impact your mental state and adjust accordingly
+        Experience genuine positive emotions (joy, gratitude, interest, amusement) on most days, with a general sense that life is satisfying and moving in a good direction
       reasoning: |-
-        Understanding and acting on lifestyle-mental health connections requires sophistication that most people haven't developed. Research shows that while many people intellectually understand these connections, translating this into consistent behaviour change represents top 20% achievement.
+        Consistent daily positive affect with an overall sense of life satisfaction places someone in the top 20%. Research on subjective wellbeing shows that while most people report being "fairly happy," regular experience of varied positive emotions combined with a sense of forward momentum is less common. <a href="https://worldhappiness.report/" target="_blank">Source: World Happiness Report</a>
     level_3:
       text: |-
-        Systematically address mental health through lifestyle choices and create environments that support psychological wellbeing
+        Experience frequent flow states, a clear sense of purpose, and deep satisfaction from multiple life domains (work, relationships, personal growth)
       reasoning: |-
-        Systematic lifestyle design for mental health represents sophisticated understanding that few people achieve. This requires coordinating multiple life areas (work, relationships, environment, habits) to support psychological wellbeing, representing top 5% integration capability.
+        Experiencing flow regularly, having a clear sense of purpose, and deriving deep satisfaction across multiple life domains represents the top 5%. Most people may flourish in one area while languishing in others, or experience occasional flow without it being a regular feature of their life. <a href="https://pubmed.ncbi.nlm.nih.gov/15982151/" target="_blank">Source: Keyes (2005)</a>
     level_4:
-      text: Create coherent lifestyle approaches where all life areas mutually support psychological flourishing
+      text: |-
+        Sustain deep meaning and engagement across all major life areas, with positive emotions as the dominant daily experience and a strong sense of living in alignment with core values
       reasoning: |-
-        Creating coherent lifestyle systems where all areas support mental health represents sophisticated life design achieved by roughly 1% of the population. This requires advanced understanding of how different life domains interact to influence psychological wellbeing.
+        Sustained flourishing across all major life domains represents approximately the top 1%. Keyes' research on "complete mental health" (high emotional, psychological, and social wellbeing combined with low mental illness) estimates this comprehensive flourishing at roughly 17% of adults, but sustained flourishing across all domains simultaneously is much rarer.
     level_5:
       text: |-
-        Achieve seamless integration where mental health enhancement emerges naturally from life design rather than requiring separate interventions
+        Experience a pervasive sense of meaning, joy, and engagement that persists even during difficult periods, with life structured around deep purpose and values
       reasoning: |-
-        Seamless life integration where mental health enhancement emerges naturally from life design represents extraordinary achievement by approximately 0.1% of the population. This involves creating living systems where psychological flourishing is the natural outcome of how life is structured rather than requiring separate interventions.
+        Approximately 1 in 1,000 people maintain this degree of flourishing. The key distinction from Level 4 is persistence through adversity -- most people's positive affect drops significantly during hard times. This level represents a depth of meaning and engagement so rooted that it sustains even when circumstances are unfavourable.

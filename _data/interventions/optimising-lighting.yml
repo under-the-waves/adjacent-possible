@@ -1,0 +1,120 @@
+name: "Optimising Home Lighting"
+description: |
+  - Strategically managing light exposure across three phases: bright, blue-enriched light in the morning (10,000 lux therapy lamp or direct sunlight within 30 minutes of waking for 20-30 minutes), normal lighting during the day, and dim, warm lighting in the evening (below 50 lux using smart bulbs set to amber/warm tones or amber filter glasses)
+  - Targets the suprachiasmatic nucleus (the brain's master clock) to strengthen circadian entrainment, advancing melatonin onset in the evening and suppressing it in the morning for sharper wake/sleep transitions
+  - [Research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3047226/) shows ordinary room light (~200 lux) suppresses melatonin onset by ~90 minutes and shortens melatonin duration; keeping evening light below 50 lux preserves natural melatonin timing
+  - [Meta-analytic evidence](https://www.sciencedirect.com/science/article/abs/pii/S1087079215001136) finds light therapy effective for sleep problems (Hedges' g = 0.39-0.47), with morning timing and higher intensity associated with stronger effects; most users notice improvements within 1-2 weeks
+  - Distinct from blue-light-blocking interventions in that it addresses the full 24-hour light cycle rather than only evening blue light reduction, combining active morning light-seeking with passive evening light-dimming
+applicable_domains: ["sleep", "fitness", "current-work", "mental-health"]
+
+values:
+  sleep.daily_functioning:
+    pbs: 7
+    pbs_reasoning: |
+      - [A systematic review and meta-analysis](https://www.sciencedirect.com/science/article/abs/pii/S1087079215001136) found light therapy effective for sleep problems with effect sizes of g = 0.39-0.47, and a [2024 meta-analysis](https://pubmed.ncbi.nlm.nih.gov/39733392/) found actigraphy-measured total sleep time increased by ~17 minutes. For successful users implementing full circadian lighting (not just one component), improvements in sleep onset latency, sleep quality, and morning alertness translate to roughly 1.5-2 additional productive hours per day.
+      - [A systematic review of alerting effects](https://pmc.ncbi.nlm.nih.gov/articles/PMC8848614/) found morning bright light exposure reliably improves daytime alertness and reduces subjective sleepiness, with [further research](https://www.nature.com/articles/s41598-023-35689-1) showing improved reaction speed in attention tasks following morning bright light pulses.
+      - On the anchor (10 = 14 productive hrs, 8 = 3.5 hrs, 6 = 50 min), a gain of ~2 productive hours maps to PBS = 10 + log2(2/14) = 7.2, rounded to 7.
+    isr: 60
+    isr_reasoning: |
+      - [Chambe et al. (2023)](https://onlinelibrary.wiley.com/doi/10.1111/jsr.13895) meta-analysis of light therapy for insomnia found non-significant pooled effects on sleep latency and total sleep time, indicating substantial non-responder rates even among adherent participants.
+      - [Phillips et al. (2019)](https://www.pnas.org/doi/10.1073/pnas.1901824116) demonstrated high interindividual variability in circadian light sensitivity, with the most sensitive individuals showing >50% melatonin suppression at just 10 lux whilst the least sensitive required 400 lux, meaning a meaningful minority will not respond adequately to standard protocols.
+      - Combining morning and evening interventions likely improves response rates over single-component approaches, but the evidence base for the combined protocol in healthy adults is thinner than for individual components. Conservatively estimated at 60%.
+    uar: 50
+    uar_reasoning: |
+      - [A systematic review of light therapy adherence](https://www.sciencedirect.com/science/article/pii/S2352721820300619) found adherence comparable to antidepressant medication, with [trial data](https://pubmed.ncbi.nlm.nih.gov/17161464/) showing 83% adherence among completers but ~20% dropout over 5-week interventions.
+      - The morning component requires a dedicated 20-30 minute session with a therapy lamp, which competes with rushed morning routines. The evening component is easier once smart bulbs are automated but requires initial setup discipline and occasional manual overrides for social situations.
+      - Automation via smart bulbs and timers reduces ongoing friction for the evening component, but the morning lamp session remains a daily active choice. Estimated 50% sustained adherence at 6+ months.
+
+  sleep.long_term_health:
+    pbs: 7
+    pbs_reasoning: |
+      - [The American Heart Association](https://www.ahajournals.org/doi/10.1161/CIR.0000000000001388) scientific statement links circadian disruption to increased cardiovascular, metabolic, and cancer risk. [Shift work meta-analyses](https://pmc.ncbi.nlm.nih.gov/articles/PMC12506678/) find 15% increased cardiovascular mortality and 23% increased myocardial infarction risk from chronic circadian misalignment.
+      - [Gould et al. (2016)](https://pmc.ncbi.nlm.nih.gov/articles/PMC3047226/) showed room light suppresses melatonin by ~90 minutes nightly; correcting this for a successful user restores melatonin-mediated immune surveillance, blood pressure dipping, and glucose regulation, plausibly yielding 0.5-1 year of additional healthy lifespan.
+      - On the anchor (10 = 8 years, 8 = 2 years, 6 = 6 months), ~0.75 years maps to PBS = 10 + log2(0.75/8) = 6.6, rounded to 7.
+    isr: 45
+    isr_reasoning: |
+      - Most evidence linking circadian disruption to disease comes from epidemiological studies of shift workers rather than RCTs of light interventions in healthy populations, making the causal chain from lighting optimisation to long-term health outcomes less certain.
+      - [Circadian misalignment studies](https://www.pnas.org/doi/10.1073/pnas.1516953113) demonstrate increased inflammatory markers (CRP, TNF-alpha, IL-6) during acute misalignment, but it remains unclear what proportion of non-shift-workers have sufficient baseline circadian disruption for lighting optimisation to meaningfully reduce these markers.
+      - The long-term health pathway requires years of sustained practice to manifest, during which confounding variables (diet, exercise, stress) may dominate. Conservatively estimated at 45%.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+
+  sleep.comfort_experience:
+    pbs: 7
+    pbs_reasoning: |
+      - Full circadian lighting optimisation creates a comprehensive environment for natural sleepiness cues: bright morning light strengthens the circadian drive for evening drowsiness, whilst dim warm evening light allows melatonin to rise on schedule, producing a noticeable "winding down" sensation.
+      - This addresses more of the comfort picture than blue-light blocking alone, as it actively promotes morning alertness (reducing sleep inertia upon waking) and creates a warm ambient evening environment that feels restful beyond just the physiological effects.
+      - On the subjective anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), successful implementation moves a user towards "consistently restful" territory – score 7 reflects that lighting is one major factor in sleep comfort but does not address noise, temperature, or mattress quality.
+    isr: 65
+    isr_reasoning: |
+      - Subjective comfort improvements are more reliably reported than objective sleep metrics. [Burkhart & Phelps (2009)](https://doi.org/10.3109/07420520903523719) found ~70% of compliant participants reported improved subjective sleep quality with evening light management alone; the addition of morning bright light likely maintains or improves this rate.
+      - The melatonin-mediated mechanism for subjective sleepiness is well-established – users who achieve even modest melatonin timing shifts typically notice easier sleep onset and a more natural wind-down experience.
+      - Some users will not notice subjective improvement due to low baseline circadian disruption or non-light-related sleep comfort issues. Estimated 65% of adherent users experience meaningful comfort gains.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+
+  fitness.health:
+    pbs: 5
+    pbs_reasoning: |
+      - [The AHA scientific statement](https://www.ahajournals.org/doi/10.1161/CIR.0000000000001388) identifies circadian health as a modifiable risk factor for cardiometabolic disease, with disruption linked to hypertension (31% increased risk in shift workers), diabetes, and obesity via inflammatory and hormonal pathways.
+      - For successful users, improved circadian alignment reduces chronic low-grade inflammation and cortisol dysregulation, but the magnitude is smaller than direct exercise or dietary interventions. Plausible benefit of ~3-5 months of additional healthy lifespan.
+      - On the fitness.health anchor (10 = 15 years, 8 = 3-4 years, 6 = 1 year), ~4 months maps to PBS = 10 + log2(0.33/15) = 4.5, rounded to 5.
+    isr: 35
+    isr_reasoning: |
+      - The causal chain from home lighting optimisation to measurable health and longevity outcomes is long and indirect, passing through circadian alignment, then hormonal regulation, then reduced disease risk. Each step introduces variability and non-responders.
+      - Most evidence comes from epidemiological associations with shift work rather than interventional studies of lighting changes in healthy adults. The proportion of the general population with sufficient baseline circadian disruption for lighting changes to meaningfully shift health outcomes is uncertain.
+      - Conservatively estimated at 35% given the indirect pathway and thin interventional evidence base.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+
+  current-work.competence:
+    pbs: 5
+    pbs_reasoning: |
+      - [A systematic review of light's alerting effects](https://pmc.ncbi.nlm.nih.gov/articles/PMC8848614/) found bright light reliably improves subjective alertness, and [research on morning bright light pulses](https://www.nature.com/articles/s41598-023-35689-1) showed improved reaction speed in attention tasks, suggesting moderate gains in cognitive performance during working hours.
+      - Better sleep quality from evening light management further supports daytime executive function, working memory, and sustained attention – the cognitive building blocks of work competence.
+      - On the subjective anchor (10 = exceptional mastery, 6 = competent and reliable, 4 = adequate), improved alertness and cognitive performance moves a user modestly up the scale – enough to notice but not transformative. Score 5 reflects a meaningful but bounded improvement in execution speed and quality.
+    isr: 45
+    isr_reasoning: |
+      - [Frontiers systematic review](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.725750/full) found that light's effects on higher cognitive functions are less consistent than its alerting effects, depending on task complexity, time of day, and individual factors.
+      - The pathway from lighting to work competence passes through sleep quality and daytime alertness, each introducing variability. Some users may sleep better without noticeable work performance gains if they were not cognitively impaired by their prior sleep.
+      - Estimated 45% of adherent users experience meaningful improvements in work-relevant cognitive performance.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 6
+    pbs_reasoning: |
+      - [A 2024 meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11447633/) of 11 RCTs (858 patients) found bright light therapy achieved remission in 40.7% vs 23.5% for controls in nonseasonal depression, with [a separate meta-analysis](https://www.sciencedirect.com/science/article/abs/pii/S1876201824002429) of 15 RCTs (883 patients) reporting SMD = 0.48 for depressive symptom reduction. [An earlier meta-analysis](https://pubmed.ncbi.nlm.nih.gov/27011361/) found larger effects for monotherapy (SMD = 0.71) and 2-5 week protocols (SMD = 0.78).
+      - [A systematic review comparing light therapy to antidepressants](https://pubmed.ncbi.nlm.nih.gov/31600678/) found no significant difference between the two, with the combination showing clear superiority over either alone, supporting light therapy as a first-line treatment for both seasonal and nonseasonal depression.
+      - On the subjective anchor (10 = complete freedom from distressing symptoms, 8 = rare and brief episodes, 6 = occasional distress resolving quickly), a successful user experiences meaningful reduction in depressive symptoms comparable to antidepressant medication, moving from frequent to occasional distress. Score 6 reflects that lighting addresses mood and circadian-mediated symptoms but does not target anxiety, rumination, or trauma-related distress, which require different interventions.
+    isr: 40
+    isr_reasoning: |
+      - [The 2024 JAMA Psychiatry meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11447633/) found remission rates of 40.7% in the bright light therapy group, meaning roughly 4 in 10 adherent participants achieved full symptom resolution. Response rates (partial improvement) were higher but not quantified separately.
+      - [Evidence for anxiety](https://pmc.ncbi.nlm.nih.gov/articles/PMC11622018/) is weaker and inconsistent, with some trials showing benefit in specific populations (epilepsy, Parkinson's) but no robust general-population evidence. This limits the proportion of people with mixed anxiety-depression who will see full stability gains.
+      - Most trial participants had clinically diagnosed depression; the intervention's success rate for subclinical mood instability in healthy adults is less well-established and likely lower. Conservatively estimated at 40%.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 70
+  upfront_cost_reasoning: "A basic 10,000 lux light therapy lamp costs $30-50 (budget models on Amazon). The evening component can start with free phone/computer night mode settings and 1-2 warm-toned smart bulbs ($10-15 each for basic Wi-Fi bulbs). Minimum viable setup: one therapy lamp (~$40) plus two warm smart bulbs (~$30)."
+  ongoing_cost: 5
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Electricity costs for the therapy lamp (30 min/day at ~24W) and smart bulbs are negligible. Occasional bulb replacement every 2-3 years. No subscriptions required if using basic smart bulbs with free apps."
+  upfront_time: 3
+  upfront_time_reasoning: "Research optimal lamp placement and timing (~1 hour), set up smart bulbs and configure evening automation schedules (~1 hour), establish morning routine integration (~1 hour). Basic setup can be done in a single session."
+  ongoing_time: 2.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Morning light therapy session: 20-30 minutes daily (2-3.5 hours/week). Evening component requires no additional time once automated – simply living in the dim warm light environment. Minimum effective commitment is ~2.5 hours/week for the morning sessions."
+
+prerequisites:
+  - "Electrical outlets near where you spend your first 30 minutes after waking (for therapy lamp placement)"
+  - "Controllable lighting in main evening living spaces (ability to dim or replace bulbs; renters may need landlord permission for fixture changes)"
+  - "No photosensitive medical conditions such as retinal disease, bipolar disorder (bright light can trigger mania), or use of photosensitising medications without medical clearance"
+
+flagged_domains: []

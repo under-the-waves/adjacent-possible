@@ -404,3 +404,37 @@ housework:
       6: "Some sustainable choices alongside conventional practices"
       4: "Mostly conventional practices with little environmental consideration"
       2: "High-waste, high-toxicity practices with no sustainability effort"
+
+mental-health:
+  stability:
+    name: "Stability"
+    anchor_type: "subjective"
+    anchor_description: "Freedom from distressing psychological symptoms with a consistently stable emotional baseline"
+    scale_levels:
+      10: "Complete freedom from distressing symptoms; consistently stable emotional baseline"
+      8: "Rare and brief episodes of distress; strong emotional stability"
+      6: "Occasional distress that resolves quickly; generally stable"
+      4: "Frequent distress or mood instability affecting daily functioning"
+      2: "Persistent distressing symptoms significantly impairing daily life"
+
+  resilience:
+    name: "Resilience"
+    anchor_type: "subjective"
+    anchor_description: "Capacity to maintain psychological functioning during adversity and recover quickly from setbacks"
+    scale_levels:
+      10: "Maintains full functioning during severe adversity; rapid recovery with post-traumatic growth"
+      8: "Handles major stressors with brief disruption; bounces back within days"
+      6: "Manages moderate stressors adequately; recovery takes weeks"
+      4: "Significant disruption from moderate stressors; slow recovery"
+      2: "Overwhelmed by minor stressors; prolonged impairment after setbacks"
+
+  flourishing:
+    name: "Flourishing"
+    anchor_type: "subjective"
+    anchor_description: "Deep and sustained experience of joy, meaning, and life satisfaction across daily life"
+    scale_levels:
+      10: "Deep, sustained joy and meaning permeating daily life; strong sense of purpose"
+      8: "Frequent positive emotions and meaningful engagement; clear sense of direction"
+      6: "Regular moments of satisfaction and meaning; generally positive outlook"
+      4: "Occasional positive experiences but lacking consistent meaning or satisfaction"
+      2: "Rare positive emotions; persistent sense of emptiness or purposelessness"

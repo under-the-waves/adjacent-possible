@@ -1,0 +1,106 @@
+name: "Creating SOPs for Recurring Tasks"
+description: |
+  - Writing step-by-step standard operating procedures (SOPs) for tasks performed regularly – packing for trips, grocery shopping, weekly reviews, onboarding new tools, hosting guests – so that each repetition follows a documented sequence rather than relying on memory and improvisation
+  - Implementation involves identifying 5-10 recurring tasks that cause friction, drafting a numbered checklist for each (typically 8-20 steps), testing it over 2-3 repetitions, refining based on what was missed or redundant, and storing all SOPs in an accessible location (digital note, shared doc, or printed binder)
+  - Draws on [checklist research in surgery](https://www.nejm.org/doi/full/10.1056/NEJMsa0810119) showing that standardised step-by-step procedures reduced mortality by 47% and complications by 36% in a global trial, and on [cognitive load theory](https://pmc.ncbi.nlm.nih.gov/articles/PMC5333210/) showing that externalising procedural memory frees working memory for higher-order judgement
+  - Distinct from eliminating micro-decisions (which removes choice points) in that SOPs preserve all the steps but offload sequencing and recall to an external document, making the task delegable to others or to a future self operating under cognitive load
+applicable_domains: ["organisation", "goals", "current-work"]
+
+values:
+  organisation.tracking:
+    pbs: 6
+    pbs_reasoning: |
+      - SOPs externalise procedural memory, eliminating the deliberation overhead of 'what comes next?' during routine tasks. [Cognitive load research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5333210/) shows checklists function as memory externalisation tools, freeing working memory capacity for higher-level processing.
+      - The [WHO surgical checklist trial](https://www.nejm.org/doi/full/10.1056/NEJMsa0810119) demonstrated that standardised step-by-step procedures dramatically reduced errors in complex multi-step processes, with the mechanism being reduced reliance on recall under cognitive load.
+      - Score 6: SOPs address one significant friction layer (procedural recall and sequencing) but the tracking anchor (zero overhead, instant intention-to-action) also requires prioritisation systems, capture tools, and context-switching management that SOPs do not touch.
+    isr: 60
+    isr_reasoning: |
+      - A [systematic review of surgical checklists](https://pmc.ncbi.nlm.nih.gov/articles/PMC11536331/) found that 10 of 13 studies reported significant improvements when standardised procedures were implemented, suggesting roughly 75% success in structured professional settings.
+      - Personal SOPs lack the institutional enforcement that drives compliance in clinical settings. [Cognitive load theory research](https://journals.sagepub.com/doi/full/10.1177/0963721420922183) supports the mechanism but most evidence comes from professional rather than personal contexts.
+      - Estimated 60% of proper adopters see meaningful tracking improvements, discounted from the clinical figure to reflect the less structured personal context and the thinner evidence base for personal-task SOPs specifically.
+    uar: 65
+    uar_reasoning: |
+      - Initial SOP creation requires meaningful upfront effort (auditing tasks, drafting procedures, testing over multiple repetitions), which creates a significant adoption barrier. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found that more complex behaviours take substantially longer to become automatic (up to 254 days).
+      - Once created, SOPs reduce rather than add friction during task execution, which supports sustained use. However, SOPs require periodic maintenance as processes change, tools update, or circumstances shift – creating an ongoing maintenance burden that pure habit-based interventions avoid.
+      - [Surgical checklist adherence research](https://journals.lww.com/journalacs/fulltext/2021/12000/impact_of_the_who_surgical_safety_checklist.20.aspx) shows that even in professional settings with institutional support, long-term checklist adherence degrades over time without active reinforcement. Estimated 60-70% sustained at 6 months for motivated personal adopters.
+
+  organisation.order:
+    pbs: 6
+    pbs_reasoning: |
+      - The inverted anchor (missed commitments/month) means this scores how much SOPs reduce missed commitments. A documented procedure for recurring commitments (weekly reviews, bill payments, maintenance tasks) directly prevents the 'I forgot a step' and 'I ran out of time because I didn't plan the sequence' failure modes.
+      - [Gollwitzer & Sheeran's meta-analysis](https://psycnet.apa.org/record/2007-19538-002) found implementation intentions (specifying when, where, and how) produced a medium-to-large effect (d = 0.65) on goal attainment across 94 studies. SOPs function as detailed implementation intentions for recurring tasks.
+      - Score 6: a successful SOP user might move from 5 missed commitments/month to fewer than 1, mapping to a shift from score 2 toward score 8 on the anchor. The PBS reflects the magnitude of benefit for someone who succeeds.
+    isr: 55
+    isr_reasoning: |
+      - [Gollwitzer & Sheeran (2006)](https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0065260106380021) found implementation intentions effective across 94 studies, but the meta-analysis primarily tested simple if-then plans rather than multi-step SOPs for complex tasks, so the transfer is inferential.
+      - The [WHO checklist meta-analysis](https://pubmed.ncbi.nlm.nih.gov/24469615/?dopt=Abstract) found an odds ratio of 0.75 for mortality reduction, but 2 of 13 studies found no significant effect, indicating that standardised procedures do not universally deliver on their promise.
+      - Estimated 55% of adherent users achieve meaningful reductions in missed commitments, reflecting the solid but not universal mechanism and the gap between clinical and personal contexts.
+    uar: 65
+    uar_reasoning: |
+      - See organisation.tracking UAR – same intervention, same adherence profile. The maintenance burden and adoption barriers are identical regardless of which organisational value is being measured.
+
+  organisation.speed:
+    pbs: 5
+    pbs_reasoning: |
+      - The speed anchor (perfectly minimal system) rewards reducing tools, steps, and rules. SOPs add a documentation layer to the system, which slightly increases structural complexity even as it reduces cognitive complexity during execution.
+      - SOPs consolidate scattered knowledge (mental notes, partial habits, ad hoc workarounds) into a single reference, which simplifies the system by replacing multiple informal processes with one documented one. [Standardisation research](https://www.checklistboards.com/article.cfm?ArticleNumber=2227) supports this consolidation benefit.
+      - Score 5: the net effect on system minimalism is positive but modest – SOPs trade cognitive complexity for documented complexity, which is a meaningful simplification but not a structural reduction in system overhead.
+    isr: 50
+    isr_reasoning: |
+      - The connection between documented procedures and system simplicity is supported by [cognitive load theory](https://journals.sagepub.com/doi/full/10.1177/0963721420922183) but not directly measured in experimental studies on personal organisational systems.
+      - Some users create overly detailed SOPs that add bureaucratic overhead rather than reducing it, which is a well-documented failure mode in [organisational process standardisation literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC4953332/).
+      - Estimated 50% achieve genuine simplification; the remainder either over-engineer their SOPs or fail to maintain them as processes evolve.
+    uar: 65
+    uar_reasoning: |
+      - See organisation.tracking UAR – same intervention, same adherence profile.
+
+  goals.follow_through:
+    pbs: 5
+    pbs_reasoning: |
+      - The anchor (100% of days with goal action) measures daily follow-through on active goals. SOPs convert vague goal intentions ('work on project X') into concrete step sequences, which [Gollwitzer & Sheeran's meta-analysis](https://psycnet.apa.org/record/2007-19538-002) found increases follow-through with a medium-to-large effect (d = 0.65) across 8,000+ participants.
+      - SOPs address the specific failure mode where someone intends to take goal action but stalls because the next step is unclear or requires planning effort. By pre-computing the sequence, the barrier to starting is reduced.
+      - Score 5 rather than higher: SOPs help with 'what to do' but not 'whether to do it'. The follow-through anchor also requires motivation, prioritisation, and time allocation, which SOPs do not directly address. The benefit is real but partial.
+    isr: 50
+    isr_reasoning: |
+      - [Implementation intention research](https://www.tandfonline.com/doi/full/10.1080/10463283.2020.1808936) shows that pre-specifying action sequences reliably improves follow-through, but effect sizes vary substantially by domain and task complexity.
+      - SOPs are most effective for procedural goals (completing a tax return, setting up a system) and less effective for creative or ambiguous goals where the steps cannot be fully pre-specified. This limits the proportion of goals where SOPs meaningfully improve follow-through.
+      - Estimated 50% of adherent users see meaningful improvement in daily goal action, reflecting the strong mechanism but limited applicability across goal types.
+    uar: 65
+    uar_reasoning: |
+      - See organisation.tracking UAR – same intervention, same adherence profile. The person creating SOPs for organisational tasks is the same person using them for goal follow-through.
+
+  current-work.competence:
+    pbs: 4
+    pbs_reasoning: |
+      - The competence anchor (exceptional mastery with elite execution) rewards speed and quality of role performance. SOPs for recurring work tasks (report generation, client onboarding, code deployment) reduce errors and speed up execution by eliminating the need to reconstruct procedures from memory each time.
+      - [Process standardisation research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3666808) shows that documented procedures improve consistency and reduce variability in task execution, which contributes to perceived and actual competence.
+      - Score 4: SOPs improve the floor of performance (fewer errors, less variability) but do not raise the ceiling. Elite competence requires judgement, creativity, and deep expertise that SOPs cannot provide. The benefit is real but modest relative to the anchor maximum.
+    isr: 45
+    isr_reasoning: |
+      - The evidence base for personal work SOPs improving competence is largely drawn from organisational process management literature rather than individual-level experimental studies. [Delegation research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3666808) shows positive effects but in team rather than individual contexts.
+      - Work competence depends heavily on role type: SOPs are highly effective for procedural roles (operations, administration) but less so for roles requiring judgement, creativity, or interpersonal skills.
+      - Estimated 45% of adherent users see meaningful competence improvements, reflecting the role-dependent nature of the benefit and the inferential evidence base.
+    uar: 65
+    uar_reasoning: |
+      - See organisation.tracking UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost required. SOPs can be written in any existing note-taking tool (paper notebook, digital notes app, word processor). No specialised software or equipment is needed."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring financial costs. SOP maintenance uses the same tools as initial creation. Optional tools like Notion, Obsidian, or Google Docs are free at the relevant usage level."
+  upfront_time: 5
+  upfront_time_reasoning: "Approximately 5 hours for initial implementation: 1 hour to identify and prioritise 5-10 recurring tasks causing the most friction, then roughly 30-45 minutes per SOP to draft, test during one execution, and refine. First batch of 5-6 SOPs takes about 4 hours of drafting and testing."
+  ongoing_time: 1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Approximately 1 hour per month to review existing SOPs for accuracy (processes change, tools update), draft new SOPs as recurring tasks are identified, and retire SOPs for tasks no longer performed. This is higher than eliminating micro-decisions because SOPs require active document maintenance."
+
+prerequisites:
+  - "A note-taking system or document storage location where SOPs can be reliably retrieved at the point of use (physical binder, phone app, shared drive)"
+  - "At least 3-5 recurring tasks performed often enough to justify documentation (monthly or more frequent)"
+  - "Sufficient familiarity with each task to identify the correct sequence of steps – SOPs codify existing knowledge rather than teaching new skills"
+
+flagged_domains:
+  - domain: "relationships"
+    rationale: "Documented SOPs enable delegation to household members or colleagues, reducing interpersonal friction around shared tasks"

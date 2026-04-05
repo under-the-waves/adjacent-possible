@@ -1,0 +1,129 @@
+name: "Systematic Gratitude Practices"
+description: |
+  - A structured daily practice (5-10 minutes) of analysing why specific experiences were meaningful, identifying the causes, people involved, and conditions that made them possible
+  - Distinct from superficial gratitude listing: requires causal analysis of each item (e.g. 'Why did this matter? Who contributed? What made it possible?') rather than simply naming things you appreciate
+  - Typically performed in the evening before bed using a journal or structured template; [research](https://doi.org/10.1016/j.jpsychores.2008.09.002) shows gratitude influences sleep through the mechanism of pre-sleep cognitions, replacing ruminative worry with positive reflection
+  - Most practitioners report subjective sleep improvements within 1-2 weeks; broader wellbeing effects typically emerge over 4-8 weeks of consistent practice
+  - The analytical depth is what differentiates this from standard 'three good things' exercises and is associated with larger effect sizes on [rumination reduction](https://www.sciencedirect.com/science/article/abs/pii/S0005796719301019) and sustained positive affect
+applicable_domains: ["sleep", "current-work", "mental-health"]
+
+values:
+  sleep.daily_functioning:
+    pbs: 6
+    pbs_reasoning: |
+      - [Wood et al. (2009)](https://doi.org/10.1016/j.jpsychores.2008.09.002) found gratitude uniquely predicted better subjective sleep quality, reduced sleep latency, and less daytime dysfunction after controlling for Big Five personality traits, in a sample where 40% had clinically impaired sleep.
+      - [Emmons & McCullough (2003)](https://doi.org/10.1037/0022-3514.84.2.377) found the gratitude condition reported longer sleep duration and feeling more refreshed upon waking compared to hassles and neutral conditions across three studies.
+      - For successful practitioners, the primary mechanism is replacement of ruminative pre-sleep cognitions with positive reflections, reducing sleep onset latency by roughly 10-20 minutes and improving sleep efficiency. This translates to approximately 30-60 additional productive minutes per day, yielding PBS = 10 + log2(0.75/14) = 5.8, rounded to 6.
+    isr: 55
+    isr_reasoning: |
+      - [Jackowska et al. (2016)](https://doi.org/10.1177/1359105315572455) RCT found a 2-week gratitude intervention improved subjective sleep quality in young women, but the sample was small (n=119) and limited to healthy participants, leaving uncertainty about generalisability.
+      - [Digdon & Koble (2011)](https://doi.org/10.1111/j.1758-0854.2011.01049.x) pilot trial (n=41) found gratitude journaling reduced pre-sleep arousal and improved sleep quality, but the gratitude condition did not significantly outperform other active interventions (constructive worry, imagery distraction).
+      - The strongest evidence (Wood 2009) is correlational rather than interventional, and [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis of 27 RCTs found only small effect sizes for gratitude interventions on psychological outcomes overall. Conservative estimate: roughly 55% of adherent practitioners achieve meaningful daily functioning gains.
+    uar: 50
+    uar_reasoning: |
+      - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis noted that gratitude interventions are low-cost and easy to understand, but structured analytical journaling (5-10 minutes of causal analysis) is more demanding than simple listing, reducing long-term retention.
+      - [Komase et al. (2021)](https://doi.org/10.1002/1348-9585.12290) systematic review of workplace gratitude interventions found high dropout rates in self-directed formats due to the absence of external accountability and the need for sustained motivation.
+      - The 'three good things' exercise shows better retention than most positive psychology interventions, but adding the analytical component increases cognitive effort. Estimated 50% maintain the practice beyond 3 months without external support structures.
+
+  sleep.long_term_health:
+    pbs: 5
+    pbs_reasoning: |
+      - The causal pathway is indirect: gratitude improves subjective sleep quality, which over years reduces cardiovascular and metabolic disease risk. [Cappuccio et al. (2010)](https://doi.org/10.1093/sleep/33.5.585) meta-analysis found improved sleep quality associated with reduced all-cause mortality, but the specific contribution of a gratitude practice (vs. other sleep interventions) is modest.
+      - [Jackowska et al. (2016)](https://doi.org/10.1177/1359105315572455) found a brief gratitude intervention reduced diastolic blood pressure, suggesting a cardiovascular pathway, but effects were small and measured over only 2 weeks.
+      - Estimating roughly 2-4 months of additional healthy lifespan through improved sleep quality over decades of practice. PBS = 10 + log2(0.25/8) = 5.0, rounded to 5.
+    isr: 45
+    isr_reasoning: |
+      - Long-term health benefits depend on sustained sleep improvements over years, and the evidence for gratitude practices maintaining sleep effects long-term is limited to short-duration trials (2-10 weeks).
+      - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) found effect sizes diminished at follow-up compared to post-test, raising questions about whether sleep benefits persist without continued active practice.
+      - The causal chain from gratitude to pre-sleep cognitions to sleep quality to long-term health outcomes involves multiple steps, each with its own attenuation. More conservative than daily functioning ISR given the longer and less direct pathway.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Long-term health benefits require sustained practice over years, but the daily behaviour is identical regardless of which outcome is being measured.
+      - The absence of immediate health feedback does not change adherence because the behaviour is the same 5-10 minute evening practice.
+
+  sleep.comfort_experience:
+    pbs: 7
+    pbs_reasoning: |
+      - This is the strongest pathway for gratitude practices. [Wood et al. (2009)](https://doi.org/10.1016/j.jpsychores.2008.09.002) demonstrated that gratitude directly influences the subjective experience of falling asleep by replacing negative pre-sleep cognitions with positive reflections, producing a calmer, more pleasant transition to sleep.
+      - [Emmons & McCullough (2003)](https://doi.org/10.1037/0022-3514.84.2.377) found participants in the gratitude condition reported feeling more refreshed upon waking and rated their sleep experience more positively than control groups.
+      - For successful practitioners, the shift from ruminative worry to structured positive reflection fundamentally changes the subjective quality of the pre-sleep period. This maps to a score between 'generally good sleep quality' (6) and 'consistently restful and comfortable sleep' (8), placing it at 7.
+    isr: 65
+    isr_reasoning: |
+      - Subjective comfort improvements are more reliably achieved than objective sleep metrics, as the gratitude practice directly targets the experiential quality of the pre-sleep period regardless of downstream sleep architecture effects.
+      - [Digdon & Koble (2011)](https://doi.org/10.1111/j.1758-0854.2011.01049.x) found participants rated the gratitude intervention as moderately helpful for sleep quality, with reductions in pre-sleep arousal observed across the majority of the gratitude group.
+      - [Jackowska et al. (2016)](https://doi.org/10.1177/1359105315572455) RCT confirmed subjective wellbeing and sleep quality improvements, though not all participants showed meaningful changes. Higher than daily functioning ISR because the experiential benefit is more direct and immediate.
+    uar: 55
+    uar_reasoning: |
+      - Slightly higher than other sleep UAR values because subjective comfort improvements are noticeable within the first week, providing positive reinforcement that supports continued practice.
+      - [Emmons & McCullough (2003)](https://doi.org/10.1037/0022-3514.84.2.377) found the gratitude condition had better retention than other journaling conditions, partly because participants noticed immediate experiential benefits.
+      - The immediate feedback loop (feeling calmer before sleep) helps sustain motivation, but the analytical depth required still limits long-term adherence compared to simpler bedtime interventions.
+
+  current-work.engagement:
+    pbs: 4
+    pbs_reasoning: |
+      - Structured gratitude reduces rumination and negative affect, freeing cognitive resources for task absorption and engagement during work hours. The mechanism is indirect but plausible: less residual worry from the previous evening creates more mental bandwidth for flow states.
+      - [Komase et al. (2021)](https://doi.org/10.1002/1348-9585.12290) systematic review found some evidence for gratitude interventions improving work engagement among employees, though effects were inconsistent and modest across studies.
+      - On the subjective engagement scale, this represents a small but meaningful shift – perhaps moving from 'partially disengaged' toward 'generally engaged' for some practitioners. Score 4 reflects this modest secondary benefit.
+    isr: 40
+    isr_reasoning: |
+      - [Komase et al. (2021)](https://doi.org/10.1002/1348-9585.12290) found that across nine RCTs of workplace gratitude interventions, effects on wellbeing and engagement were inconsistent, with some studies finding significant improvements and others finding none.
+      - The causal pathway from evening gratitude practice to next-day work engagement is indirect and mediated by multiple factors (sleep quality, morning mood, task characteristics), each attenuating the effect.
+      - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis found small overall effect sizes for gratitude interventions, and engagement is a secondary outcome rather than the primary target. Conservative estimate of 40% achieving meaningful engagement improvements.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - The engagement benefit is a secondary outcome of the same evening practice, so adherence is determined by the same factors as the primary sleep domain.
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - Structured gratitude practice reduces rumination by redirecting attention from negative repetitive thought toward causal analysis of positive events. [Research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10014497/) demonstrates that gratitude induction increases accessibility of positive memories and counters the negative cognitive biases characteristic of depression and anxiety.
+      - [A systematic review and meta-analysis of 64 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC10393216/) found gratitude interventions produced approximately 7% lower GAD-7 (anxiety) and 7% lower PHQ-9 (depression) scores compared to control groups, indicating moderate symptom reduction for successful practitioners.
+      - For adherent practitioners, the cognitive reappraisal mechanism shifts the emotional baseline from 'frequent distress affecting daily functioning' (4) toward 'occasional distress that resolves quickly' (6). Score 5 reflects the moderate but incomplete relief from distressing symptoms.
+    isr: 45
+    isr_reasoning: |
+      - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis of 27 RCTs (N = 3,675) found only small effect sizes on depression (g = -0.29) and anxiety symptoms, with effects diminishing at follow-up (g = -0.23), indicating that a substantial proportion of adherent participants do not achieve meaningful symptom reduction.
+      - Effect sizes were larger against waitlist controls than active controls, suggesting some of the apparent benefit may reflect non-specific factors (expectancy, self-monitoring) rather than gratitude-specific mechanisms.
+      - The pathway from gratitude to stability is indirect (cognitive reappraisal reducing rumination reducing symptoms), and individual variation in baseline rumination levels means many practitioners have limited room for improvement. Conservative estimate of 45%.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Stability benefits share the same 5-10 minute evening practice; adherence is determined by identical behavioural demands regardless of which outcome is measured.
+
+  mental-health.flourishing:
+    pbs: 6
+    pbs_reasoning: |
+      - Gratitude practice directly cultivates the core components of flourishing: positive affect, meaning-making, and appreciation of one's circumstances. This is the most direct mental health pathway, as the practice itself is an exercise in attending to sources of meaning and satisfaction.
+      - [Choi et al. (2025)](https://doi.org/10.1073/pnas.2425193122) meta-analysis of 145 papers (N = 24,804) found gratitude interventions were most effective when well-being was measured as positive affect, confirming that flourishing-adjacent outcomes are the strongest benefit.
+      - For successful practitioners, regular structured reflection on meaningful experiences shifts the baseline toward 'regular moments of satisfaction and meaning; generally positive outlook' (6) approaching 'frequent positive emotions and meaningful engagement' (8). Score 6 reflects a meaningful but not transformative shift, consistent with the small-to-moderate effect sizes in the literature.
+    isr: 55
+    isr_reasoning: |
+      - [Davis et al. (2016)](https://scottbarrykaufman.com/wp-content/uploads/2021/05/davis2016.pdf) meta-analysis found gratitude interventions outperformed measurement-only controls on psychological wellbeing with d = 0.31, and a [subsequent meta-analysis of 25 RCTs](https://doi.org/10.1007/s41042-023-00086-6) (N = 6,745) found Hedges' g = 0.22 for expressed gratitude interventions on psychological wellbeing.
+      - Flourishing benefits are more reliably achieved than symptom reduction because the practice directly generates positive affect rather than working indirectly through cognitive reappraisal. The mechanism is shorter and less attenuated.
+      - [Choi et al. (2025)](https://doi.org/10.1073/pnas.2425193122) confirmed positive affect showed the largest effect sizes among well-being outcomes, supporting higher reliability for flourishing than for stability. Estimate of 55% reflects this stronger but still modest pathway.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Flourishing benefits emerge from the same evening practice; adherence constraints are identical.
+
+resources:
+  upfront_cost: 5
+  upfront_cost_reasoning: "A basic notebook or journal for structured gratitude entries. Digital alternatives (phone notes app) cost nothing, but a dedicated physical journal supports the ritual element."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring expenses required. The practice uses a journal and the practitioner's own reflection – no subscriptions, apps, or consumables needed."
+  upfront_time: 1
+  upfront_time_reasoning: "Minimal setup: learning the structured format (causal analysis questions), choosing a time slot, and preparing a journal or template. Can be started within a single session."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "5-10 minutes per day, totalling approximately 35-70 minutes per week. Using the lower bound (5 min/day = 35 min/week) as the minimum effective dose, rounded to 1 hour."
+
+prerequisites:
+  - "Basic literacy and capacity for written self-reflection"
+  - "Access to a journal, notebook, or digital note-taking device"
+  - "Sufficient daily experiences to reflect upon (not suitable during periods of acute crisis or trauma without professional guidance)"
+
+flagged_domains:
+  - domain: "relationships"
+    rationale: "Structured reflection on the people who contributed to positive experiences strengthens appreciation and prosocial behaviour toward those individuals"

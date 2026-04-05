@@ -1,0 +1,167 @@
+name: "Meditation"
+description: |
+  - Daily mindfulness meditation practice of 10-20 minutes, typically seated with eyes closed, focusing attention on the breath or body sensations and non-judgementally redirecting attention when the mind wanders
+  - The core technique involves sustained attention (focused awareness on a single object) combined with open monitoring (noticing thoughts and sensations without attachment), which together train attentional control and emotional regulation
+  - [Meta-analyses of 111 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC10902202/) show significant improvements in executive attention, sustained attention, and working memory; [sleep-focused meta-analyses](https://pmc.ncbi.nlm.nih.gov/articles/PMC6557693/) find moderate effect sizes (d = 0.33-0.54) for sleep quality improvement
+  - Benefits typically emerge within 2-4 weeks of consistent daily practice, with more substantial cognitive and physiological changes developing over 8-12 weeks; distinguished from relaxation techniques by its emphasis on attentional training rather than passive rest
+  - Can be practised unguided or with app-based guidance (e.g. Headspace, Waking Up, Insight Timer); no equipment, physical fitness, or special environment required
+applicable_domains: ["sleep", "fitness", "goals", "current-work", "mental-health"]
+
+values:
+  sleep.daily_functioning:
+    pbs: 6
+    pbs_reasoning: |
+      - Successful meditators show moderate improvements in sleep quality (PSQI global score reductions of 1.5-3 points), translating to reduced sleep onset latency, fewer night wakings, and improved sleep efficiency, which collectively add roughly 30-60 minutes of effective restorative sleep per night ([Rusch et al. 2019, Ann Behav Med](https://pmc.ncbi.nlm.nih.gov/articles/PMC6557693/))
+      - The daily functioning anchor is 14 productive hours/day; gaining 30-60 minutes of higher-quality cognitive performance through better sleep corresponds to roughly 0.5-1 additional productive hour, or ~4-7% of the anchor maximum
+      - PBS = 10 + log2(1/14) = 10 - 3.81 = 6.2, rounding to 6; this reflects a meaningful but moderate improvement in daytime alertness and cognitive performance through sleep quality gains
+    isr: 65
+    isr_reasoning: |
+      - Meta-analysis of 18 RCTs found meditation improved sleep quality with effect size d = 0.33 vs nonspecific active controls, but showed no significant difference vs evidence-based sleep treatments (d = 0.03), indicating it works for many but is not universally effective ([Rusch et al. 2019, Ann Behav Med](https://pmc.ncbi.nlm.nih.gov/articles/PMC6557693/))
+      - Individual variation is substantial: people with high baseline stress or anxiety-driven insomnia respond better, while those with other sleep disorders (e.g. sleep apnoea, circadian disruption) show minimal benefit ([Ong et al. 2014, J Psychosom Res](https://pubmed.ncbi.nlm.nih.gov/27663102/))
+      - Roughly two-thirds of adherent participants in mindfulness-for-insomnia trials achieve clinically meaningful sleep quality improvements, with the remainder showing little change ([Gong et al. 2016, J Psychosom Res](https://pubmed.ncbi.nlm.nih.gov/27663102/))
+    uar: 40
+    uar_reasoning: |
+      - Population-level meditation persistence is low: roughly 46% of adults who start meditation have stopped entirely within 2 years ([Lam et al. 2023, Mindfulness](https://pmc.ncbi.nlm.nih.gov/articles/PMC9910079/))
+      - App-based meditation trials show 25-38% dropout rates within the intervention period, with self-reported practice averaging only 7-8 days out of 14 recommended ([Goldberg et al. 2021, Mindfulness](https://pmc.ncbi.nlm.nih.gov/articles/PMC8024418/); [Borghouts et al. 2024, Behav Res Ther](https://www.sciencedirect.com/science/article/pii/S0005796723001699))
+      - The practice requires deliberate daily time allocation with no immediate tangible reward, creating a high barrier compared to interventions that integrate into existing routines; overall long-term compliance across web-based programmes averages 56% ([Linardon 2020, J Med Internet Res](https://pmc.ncbi.nlm.nih.gov/articles/PMC8792770/))
+
+  sleep.long_term_health:
+    pbs: 5
+    pbs_reasoning: |
+      - Chronic sleep quality improvements reduce risk of cardiovascular disease, type 2 diabetes, and neurodegenerative conditions; poor sleep is associated with a 1.5-2x increase in all-cause mortality, and reversing this maps to roughly 0.5-1.5 years of additional healthy lifespan on the 8-year anchor
+      - PBS = 10 + log2(1/8) = 10 - 3 = 7 at 1 year; however, meditation achieves moderate rather than dramatic sleep improvements (not equivalent to treating severe insomnia), so the realistic long-term health gain for a successful meditator is closer to 0.5 years
+      - PBS = 10 + log2(0.5/8) = 10 - 4 = 6; applying a conservative adjustment for the indirect causal pathway (meditation improves sleep, which then improves health outcomes), score 5 is appropriate
+    isr: 55
+    isr_reasoning: |
+      - The causal chain is indirect: meditation must first improve sleep quality, then sustained sleep improvement must reduce disease risk over decades; each link introduces uncertainty ([Rusch et al. 2019, Ann Behav Med](https://pmc.ncbi.nlm.nih.gov/articles/PMC6557693/))
+      - Long-term epidemiological data specifically linking meditation-induced sleep improvement to mortality reduction is lacking; existing evidence extrapolates from sleep quality research and meditation cardiovascular studies separately ([Levine et al. 2017, J Am Heart Assoc](https://www.ahajournals.org/doi/10.1161/jaha.117.002218))
+      - Among adherent meditators who achieve sleep improvements, perhaps 50-60% sustain these gains long enough to plausibly affect long-term health trajectories, given that meditation's sleep benefits require ongoing practice
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+  sleep.comfort_experience:
+    pbs: 6
+    pbs_reasoning: |
+      - Meditation directly targets the subjective experience of falling asleep: reduced pre-sleep rumination, lower physiological arousal, and greater equanimity toward sleeplessness all improve the felt quality of the sleep period
+      - Practitioners commonly report feeling more rested and less anxious about sleep itself, which aligns with score 6 ('generally good sleep quality') on the subjective anchor; this is a meaningful improvement for those with anxiety-driven sleep difficulties
+      - The practice also cultivates acceptance of wakefulness, reducing the distress of night wakings even when sleep architecture does not change, which is a genuine comfort improvement distinct from sleep duration gains
+    isr: 70
+    isr_reasoning: |
+      - Subjective sleep quality improvements are among the most reliable findings in mindfulness-for-sleep research, with effect sizes consistently larger for self-reported measures than objective polysomnography ([Rusch et al. 2019, Ann Behav Med](https://pmc.ncbi.nlm.nih.gov/articles/PMC6557693/))
+      - The mechanism (reduced rumination, lower pre-sleep arousal) operates even when objective sleep metrics do not change, making the subjective benefit more broadly accessible than the physiological benefit ([Ong et al. 2014, J Psychosom Res](https://pubmed.ncbi.nlm.nih.gov/27663102/))
+      - An estimated 70% of adherent practitioners report noticeably better subjective sleep experience, as mindfulness directly trains the psychological skills (acceptance, non-reactivity) most relevant to sleep comfort
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+  fitness.health:
+    pbs: 6
+    pbs_reasoning: |
+      - Meta-analyses show meditation reduces systolic blood pressure by approximately 5 mmHg, which epidemiological data links to a 7% reduction in all-cause mortality and 9% reduction in cardiovascular mortality ([BMC Cardiovasc Disord 2024](https://bmccardiovascdisord.biomedcentral.com/articles/10.1186/s12872-024-03746-w))
+      - Meditation also reduces cortisol levels (g = 0.35 in at-risk populations), lowering chronic inflammation and stress-related disease risk ([Pascoe et al. 2017, Health Psychol Rev](https://www.tandfonline.com/doi/full/10.1080/17437199.2020.1760727))
+      - A 7% mortality reduction translates to roughly 0.5-1 year of additional healthy lifespan on the 15-year anchor; PBS = 10 + log2(0.75/15) = 10 - 4.3 = 5.7, rounding to 6
+    isr: 50
+    isr_reasoning: |
+      - Blood pressure reductions are inconsistent: one RCT of 101 adults with Stage I hypertension found MBSR did not significantly reduce ambulatory blood pressure, while other trials show 5-7 mmHg reductions ([Levine et al. 2017, J Am Heart Assoc](https://www.ahajournals.org/doi/10.1161/jaha.117.002218))
+      - The American Heart Association concluded the evidence for meditation and cardiovascular risk reduction is modest in quality and quantity, warranting further research ([Levine et al. 2017, J Am Heart Assoc](https://www.ahajournals.org/doi/10.1161/jaha.117.002218))
+      - Cortisol reduction effects are significant primarily in at-risk populations; in healthy adults, salivary cortisol changes are small and often non-significant ([Pascoe et al. 2017, Health Psychol Rev](https://www.tandfonline.com/doi/full/10.1080/17437199.2020.1760727))
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+  goals.follow_through:
+    pbs: 4
+    pbs_reasoning: |
+      - Meta-analysis of 111 RCTs found small but significant effects on executive function, inhibitory control, and sustained attention (small-to-moderate effect sizes), which are the cognitive capacities underlying daily goal-directed action ([Sumantry & Stewart 2021, Neuropsychol Rev](https://pmc.ncbi.nlm.nih.gov/articles/PMC9381612/))
+      - Improved self-regulation translates to modestly better ability to initiate planned tasks and resist distractions, plausibly increasing the percentage of days with deliberate goal action by a few percentage points
+      - On the 100% days-with-action anchor, a 2-3 percentage point improvement maps to PBS = 10 + log2(2.5/100) = 10 - 5.3 = 4.7; conservatively rounded to 4 given the indirect pathway from cognitive improvement to actual behaviour change
+    isr: 45
+    isr_reasoning: |
+      - Cognitive improvements from meditation are well-established but effect sizes are small (g = 0.2-0.3 for executive function), and the translation from laboratory attention tasks to real-world goal follow-through is uncertain ([Sumantry & Stewart 2021, Neuropsychol Rev](https://pmc.ncbi.nlm.nih.gov/articles/PMC9381612/))
+      - Not all meditators show executive function gains; the meta-analysis found significant heterogeneity across studies, suggesting individual variation in response ([Gill et al. 2020, Cogn Ther Res](https://link.springer.com/article/10.1007/s10608-020-10177-2))
+      - The causal chain from improved attentional control to measurably more days with goal action requires additional factors (goal clarity, motivation, planning systems) that meditation does not directly provide
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+  current-work.engagement:
+    pbs: 5
+    pbs_reasoning: |
+      - Meditation trains sustained attention and reduces mind-wandering, which are direct contributors to work engagement and flow states; practitioners report greater ability to maintain focus on tasks and less time lost to distraction
+      - The subjective engagement anchor ranges from 'completely disengaged' (2) to 'deeply absorbed with sustained flow' (10); improved attentional control plausibly moves a person from 'partially disengaged' (4) to 'generally engaged' (6), a meaningful but not transformative shift
+      - Score 5 reflects a moderate benefit: meditation builds the attentional foundation for engagement but does not address other engagement drivers (task-person fit, autonomy, meaning) that are equally important
+    isr: 50
+    isr_reasoning: |
+      - Meta-analyses confirm meditation improves sustained attention and reduces mind-wandering with small-to-moderate effect sizes, but workplace engagement is multiply determined and attention is only one component ([Lim & Qu 2023, J Appl Psychol](https://pmc.ncbi.nlm.nih.gov/articles/PMC10902202/))
+      - Individual variation is high: people with high baseline distractibility benefit most, while those already focused may see minimal engagement gains ([Gill et al. 2020, Cogn Ther Res](https://link.springer.com/article/10.1007/s10608-020-10177-2))
+      - Roughly half of adherent meditators report noticeably improved work focus, while others find the benefits remain confined to the meditation session itself without transferring to work tasks
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - Meditation reduces anxiety and depressive symptoms through attentional retraining and reduced rumination; the [Goyal et al. 2014 JAMA meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC4142584/) of 47 RCTs found moderate effect sizes for anxiety (d = 0.38) and depression (d = 0.30) at 8 weeks
+      - For a successful practitioner, these effect sizes correspond to moving from 'frequent distress affecting daily functioning' (4) toward 'occasional distress that resolves quickly' (6) on the subjective anchor, a meaningful but not transformative shift in symptom burden
+      - Score 5 reflects this as a secondary domain: meditation meaningfully reduces distressing symptoms but does not eliminate them, and its effect sizes are comparable to but not stronger than other active treatments including exercise and CBT ([Hofmann et al. 2010, J Consult Clin Psychol](https://pmc.ncbi.nlm.nih.gov/articles/PMC2848393/))
+    isr: 55
+    isr_reasoning: |
+      - The [Goyal et al. 2014 JAMA meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC4142584/) found no evidence that meditation outperformed active controls (drugs, exercise, CBT), indicating that while it works, it is not uniquely reliable for symptom reduction
+      - A [broader meta-analytic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC2848393/) found Hedges' g = 0.63 for anxiety improvement, but with significant heterogeneity across studies, suggesting roughly half of adherent participants achieve clinically meaningful symptom reductions while others show minimal change
+      - Baseline severity moderates response: those with elevated anxiety or depression at baseline respond better, while those with subclinical symptoms or non-mood-related distress see less benefit ([Nature Mental Health 2023](https://www.nature.com/articles/s44220-023-00081-5))
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+  mental-health.resilience:
+    pbs: 6
+    pbs_reasoning: |
+      - Meditation directly trains the core psychological skills underlying resilience: equanimity, non-reactive awareness, and acceptance of difficult experience; these are not incidental side effects but the explicit focus of open monitoring practice
+      - An [RCT on MBCT and stress reactivity](https://pmc.ncbi.nlm.nih.gov/articles/PMC3772979/) found that mindfulness training significantly reduced emotional reactivity to social stress, with particular improvements in recovery speed after stressful events, corresponding to a shift from 'significant disruption from moderate stressors' (4) toward 'handles major stressors with brief disruption' (8)
+      - Score 6 reflects this as meditation's strongest mental health pathway: acceptance and equanimity training [have been identified as necessary active ingredients](https://pmc.ncbi.nlm.nih.gov/articles/PMC6681655/) for stress resilience, but the benefit is capped by the modest daily dose (10-20 minutes) and the fact that resilience also depends on social support, life circumstances, and temperament
+    isr: 60
+    isr_reasoning: |
+      - The resilience mechanism (training non-reactivity and acceptance) operates reliably across populations because it is the direct target of mindfulness practice, not an indirect benefit; [research on psychological mechanisms](https://pmc.ncbi.nlm.nih.gov/articles/PMC6681655/) confirms acceptance skills training is a necessary active ingredient in stress resilience gains
+      - [MBCT trials](https://www.sciencedirect.com/science/article/abs/pii/S0005789411001316) show that emotional reactivity reductions partially mediate improvements in depressive relapse, suggesting the resilience pathway is mechanistically robust for those who develop the skill
+      - Approximately 60% of adherent practitioners develop meaningfully improved stress recovery, with non-responders typically being those who struggle to shift from conceptual understanding to experiential application of acceptance ([Nature Mental Health 2023](https://www.nature.com/articles/s44220-023-00081-5))
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 5
+    pbs_reasoning: |
+      - Meditation cultivates present-moment awareness, savouring, and a decentred perspective on experience, all of which contribute to positive affect and life satisfaction; practitioners commonly report greater appreciation of ordinary moments and reduced hedonic adaptation
+      - A [meta-analysis of loving-kindness and compassion meditation](https://iaap-journals.onlinelibrary.wiley.com/doi/10.1111/aphw.12367) found a small effect on life satisfaction in RCTs (g = 0.11), while standard mindfulness shows modest positive affect gains; [dose-response research](https://pmc.ncbi.nlm.nih.gov/articles/PMC12336962/) indicates meaningful wellbeing improvements require 25-41 hours of monthly practice, well above the typical 10-20 minute daily dose
+      - Score 5 reflects a genuine but moderate flourishing benefit: meditation increases present-moment satisfaction and reduces the gap between 'occasional positive experiences' (4) and 'regular moments of satisfaction and meaning' (6), but does not by itself generate the deep sense of purpose or sustained joy characteristic of higher anchor levels
+    isr: 45
+    isr_reasoning: |
+      - The [Goyal et al. 2014 JAMA meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC4142584/) found low evidence of no effect on positive mood specifically, noting that meditation's evidence base for positive affect is weaker than for symptom reduction
+      - [Dose-response research](https://pmc.ncbi.nlm.nih.gov/articles/PMC12336962/) suggests the typical 10-20 minute daily practice falls below the threshold (25-41 monthly hours) associated with meaningful wellbeing gains, reducing the proportion of practitioners who achieve flourishing benefits at standard doses
+      - An estimated 40-50% of adherent practitioners at standard doses report enhanced life satisfaction and positive affect, with the remainder finding that symptom reduction does not automatically translate into increased flourishing ([Nature Mental Health 2023](https://www.nature.com/articles/s44220-023-00081-5))
+    uar: 40
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR - same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment or purchases required to begin. A quiet place to sit is the only requirement, and any chair or floor space suffices."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Meditation can be practised entirely without paid tools. Free apps (Insight Timer) and freely available guided meditations provide sufficient support. Paid apps (Headspace, Waking Up) are optional enhancements, not prerequisites."
+  upfront_time: 2
+  upfront_time_reasoning: "Minimal setup: learning the basic technique (posture, breath focus, handling distractions) takes 1-2 hours through a free introductory course or guided sessions. No progressive skill-building is required before beginning daily practice."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective dose of 10-15 minutes daily, practised 5-7 days per week. At the conservative end (10 minutes x 7 days = 70 minutes, rounded to roughly 1.5-2 hours per week), this represents the threshold at which research shows meaningful benefits."
+
+prerequisites:
+  - "Ability to sit in a stable position (chair, cushion, or floor) for 10-20 minutes without significant pain"
+  - "A reasonably quiet space available daily for the duration of the practice session"
+  - "Basic understanding of the technique (breath focus, non-judgemental awareness of thoughts) obtainable from a free introductory resource or app"
+
+flagged_domains:
+  - domain: "relationships"
+    rationale: "Improved emotional regulation and present-moment awareness enhance interpersonal attentiveness and reduce reactive conflict behaviour"

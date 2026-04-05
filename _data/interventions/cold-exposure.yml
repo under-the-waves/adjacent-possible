@@ -1,0 +1,90 @@
+name: "Cold Exposure (Cold Showers)"
+description: |
+  - Ending a regular shower with 30–90 seconds of cold water (10–15°C), performed daily, progressively increasing duration over the first 2–4 weeks as habituation develops
+  - Triggers a sympathetic nervous system response that elevates norepinephrine and dopamine, with [research](https://pubmed.ncbi.nlm.nih.gov/10751106/) showing norepinephrine increases of up to 530% and dopamine increases of up to 250% during cold immersion
+  - Distinguished from cold water immersion (ice baths, cold plunges) by its lower barrier to entry, shorter duration, and integration into an existing daily routine, though the stimulus is milder and evidence for health outcomes is thinner
+  - A [large RCT](https://doi.org/10.1371/journal.pone.0161749) (n = 3,018) found a 29% reduction in self-reported sickness absence among cold shower participants, though illness days themselves were not reduced
+  - Benefits to alertness and mood typically appear within the first session; cardiovascular and immune adaptations require 4–8 weeks of consistent practice
+applicable_domains: ["fitness", "mental-health"]
+
+values:
+  fitness.health:
+    pbs: 5
+    pbs_reasoning: |
+      - A [large RCT](https://doi.org/10.1371/journal.pone.0161749) (n = 3,018) found 29% reduced sickness absence in cold shower groups, suggesting meaningful immune modulation in successful adherents
+      - [Systematic review](https://doi.org/10.1371/journal.pone.0317615) reports enhanced parasympathetic activity and reduced resting heart rate, systolic BP, and diastolic BP following cold exposure, indicating cardiovascular benefit
+      - The translatable longevity effect for cold showers specifically (as opposed to prolonged cold immersion) is speculative; a conservative estimate of 0.5 years additional healthy lifespan gives 10 + log2(0.5/15) = 5.1, rounded to 5
+      - Evidence for mortality reduction is absent; health benefits are inferred from surrogate markers (immune function, cardiovascular tone) with no longitudinal outcome data
+    isr: 40
+    isr_reasoning: |
+      - The Buijze RCT is the only large trial of cold showers specifically; sickness absence was self-reported, and illness days showed no significant reduction, raising questions about the robustness of the immune effect ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
+      - [Systematic review](https://doi.org/10.1371/journal.pone.0317615) found no significant effect on immune function markers immediately or 1 hour post-immersion; longer-term immune benefits rest on limited evidence
+      - Cardiovascular improvements (reduced heart rate, blood pressure) are demonstrated acutely but lack long-term outcome data; the proportion of adherents who achieve clinically meaningful cardiovascular adaptation from brief daily showers is uncertain ([Esperland et al. 2022, Int J Circumpolar Health](https://doi.org/10.1080/22423982.2022.2111789))
+    uar: 45
+    uar_reasoning: |
+      - In the Buijze RCT, 79% of participants completed the initial 30-day protocol, demonstrating feasible short-term adherence ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
+      - Quality of life improvements observed at 30 days had faded by 90 days, suggesting novelty-driven compliance that declines substantially over time ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
+      - The deliberate discomfort of cold water creates a significant psychological barrier; unlike walking or stretching, the activity is inherently aversive during execution, which limits long-term retention to those who value the post-shower aftereffect enough to tolerate the experience ([online challenge completion rates](https://www.lightwatkins.com/cold-exposure) suggest ~70% over 30 days, but long-term data beyond 90 days is sparse)
+
+  fitness.performance:
+    pbs: 4
+    pbs_reasoning: |
+      - [Meta-analysis](https://doi.org/10.1007/s40279-022-01644-9) of cold water immersion for exercise recovery shows reduced muscle soreness and faster recovery of muscular power compared to passive recovery, potentially enabling more consistent training
+      - Cold shower protocols (30–90 seconds) are substantially milder than the 10–15 minute CWI protocols studied; the recovery benefit from brief cold showers translates to perhaps 1–2 fitness percentile points through marginally improved training consistency
+      - [Systematic review](https://doi.org/10.1002/ejsc.12074) demonstrates that regular post-exercise CWI attenuates hypertrophy and strength gains, meaning cold exposure can actually harm performance if applied after resistance training
+      - Score 4 reflects minimal but non-zero benefit: improved acute recovery for those who time it correctly, limited to approximately the 2nd percentile anchor point
+    isr: 35
+    isr_reasoning: |
+      - Most recovery studies use 10–15 minute immersions at 5–15°C; brief cold showers provide a much smaller stimulus, so the proportion achieving meaningful recovery benefits is lower than CWI literature suggests ([Moore et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01800-1))
+      - The window for benefit is narrow: cold exposure helps recovery when separated from resistance training but hinders adaptation when applied immediately after; many users will apply it at suboptimal times ([Piñero et al. 2024, Eur J Sport Sci](https://doi.org/10.1002/ejsc.12074))
+      - Individual variation in cold tolerance and thermoregulatory response means some people experience negligible recovery benefit even from proper CWI protocols ([Esperland et al. 2022, Int J Circumpolar Health](https://doi.org/10.1080/22423982.2022.2111789))
+    uar: 45
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  fitness.enjoyment:
+    pbs: 4
+    pbs_reasoning: |
+      - The cold shower itself is reliably aversive during execution – most people experience discomfort, gasping, and a strong urge to exit, making the in-session experience unpleasant
+      - The post-shower dopamine and norepinephrine surge produces a well-documented feeling of alertness, energy, and mild euphoria that many practitioners describe as invigorating and rewarding
+      - The net enjoyment profile is mixed: unpleasant during, pleasant after; this maps to "neutral to mildly enjoyable" (score 4), as the rewarding aftereffect partially but not fully compensates for the aversive experience
+    isr: 50
+    isr_reasoning: |
+      - [Survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9953392/) shows participants feel more active, alert, attentive, proud, and inspired after cold immersion, but individual responses to the unpleasant stimulus vary widely
+      - Some individuals develop genuine anticipation and enjoyment of the practice over time, while others find it persistently aversive regardless of habituation – population preference data is limited but suggests roughly even split ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
+      - The novelty and "challenge completed" psychological reward fades for some practitioners, reducing enjoyment over time, as suggested by the loss of quality-of-life improvements between 30 and 90 days ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
+    uar: 45
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.resilience:
+    pbs: 4
+    pbs_reasoning: |
+      - Deliberate cold exposure functions as controlled stress inoculation: repeatedly choosing to endure an aversive stimulus and regulating the physiological response trains prefrontal top-down control over limbic reactivity, building a transferable capacity for discomfort tolerance ([Shevchuk 2008, Med Hypotheses](https://pubmed.ncbi.nlm.nih.gov/17993252/))
+      - A [cross-sectional study](https://journals.humankinetics.com/view/journals/tsp/38/4/article-p259.xml) (n = 164) found that cold-water immersion participants reported higher resilience, self-efficacy, and mental toughness than non-participants when controlling for daily stress levels, with a dose-response relationship for frequency of practice
+      - The mechanism is plausible but the magnitude is modest: cold showers provide a mild, brief stressor compared to full CWI protocols, and the resilience benefit is self-reported rather than measured via behavioural stress tests; score 4 reflects a real but small effect on the subjective scale ("significant disruption from moderate stressors" moving toward "manages moderate stressors adequately")
+    isr: 30
+    isr_reasoning: |
+      - The primary evidence ([Mullooly & Colbert 2024, The Sport Psychologist](https://journals.humankinetics.com/view/journals/tsp/38/4/article-p259.xml)) is cross-sectional, so causation is unestablished; people with higher baseline resilience may self-select into cold exposure practices
+      - [Systematic review](https://doi.org/10.1371/journal.pone.0317615) found no significant effect on mood and only transient stress reduction (significant at 12 hours post-CWI only), suggesting the psychological benefits are inconsistent across individuals
+      - Cold showers deliver a substantially weaker stimulus than the ice baths and open-water swimming studied in most resilience research; the proportion of cold-shower practitioners who develop meaningfully transferable stress tolerance is likely lower than CWI literature implies
+    uar: 45
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment or setup costs required. Cold showers use existing bathroom infrastructure. A thermometer to verify water temperature is optional but not essential."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. Cold water is available through standard household plumbing at no marginal cost beyond normal water usage."
+  upfront_time: 0.25
+  upfront_time_reasoning: "Minimal setup: reviewing a safe progression protocol (starting at 15 seconds, building to 30–90 seconds) and understanding contraindications takes approximately 15 minutes."
+  ongoing_time: 0.25
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "30–90 seconds per session added to existing daily shower routine, 7 days per week, totalling approximately 10–15 minutes per week."
+
+prerequisites:
+  - "No active cardiovascular conditions, uncontrolled hypertension, or Raynaud's disease – cold shock triggers acute sympathetic activation that can be dangerous for those with cardiac risk factors"
+  - "Access to a shower with reliably cold water (ideally below 15°C); some climates or buildings may not supply water cold enough to trigger a meaningful response"
+  - "Basic understanding of cold shock response and safe progression – awareness that hyperventilation and gasp reflex are normal initial reactions, and that gradual temperature reduction over days is safer than immediate full cold exposure"

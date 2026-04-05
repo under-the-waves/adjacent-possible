@@ -1,0 +1,145 @@
+name: "Breathing Techniques for Stress"
+description: |
+  - Structured breathing protocols (box breathing, 4-7-8 breathing, physiological sigh) practised daily for 5-10 minutes and used as needed for acute stress relief
+  - Box breathing uses equal-duration inhale, hold, exhale, hold cycles (typically 4 seconds each); 4-7-8 breathing uses a 4-second inhale, 7-second hold, 8-second exhale; the physiological sigh uses a double inhale through the nose followed by a long exhale
+  - [Research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947/) shows that cyclic sighing (emphasising prolonged exhalation) produces the greatest improvement in mood and reduction in respiratory rate compared with other techniques and mindfulness meditation
+  - Slow breathing at approximately 6 cycles per minute activates the parasympathetic nervous system, increasing vagal tone and heart rate variability, which [reduces blood pressure](https://pmc.ncbi.nlm.nih.gov/articles/PMC10765252/) and promotes calm
+  - Most people notice acute stress relief within a single session, with cumulative benefits for sleep quality and resting physiology emerging over 2-4 weeks of daily practice
+applicable_domains: ["sleep", "fitness", "current-work", "mental-health"]
+
+values:
+  sleep.daily_functioning:
+    pbs: 6
+    pbs_reasoning: |
+      - [Slow-paced breathing before bed](https://pmc.ncbi.nlm.nih.gov/articles/PMC6406675/) reduces sleep onset latency and number of awakenings whilst increasing sleep efficiency, translating to modestly improved next-day functioning.
+      - [A pilot trial](https://www.nature.com/articles/s41598-020-64218-7) found 20 minutes of presleep slow breathing at 0.1 Hz reduced sleep onset latency and improved polysomnographic sleep measures in self-reported insomniacs.
+      - On the anchor (10 = 14 productive hrs/day), the estimated gain of approximately 30-60 additional productive minutes per day maps to PBS 6 via 10 + log2(0.75/14) = 5.8, rounded to 6.
+    isr: 55
+    isr_reasoning: |
+      - [The largest blinded breathwork RCT](https://www.nature.com/articles/s41598-023-49279-8) comparing coherent breathing to placebo over four weeks found no significant difference in sleep disturbance reduction, suggesting the sleep-specific benefit may partly reflect placebo or relaxation response rather than a breathing-specific mechanism.
+      - Smaller studies show positive results, but most are unblinded and use self-reported insomniacs, inflating response rates. Conservatively, perhaps 55% of consistent practitioners see meaningful sleep improvement.
+      - Individual variation in baseline sleep quality matters: those with stress-related sleep disruption respond better than those with other causes of poor sleep.
+    uar: 50
+    uar_reasoning: |
+      - [Huberman Lab RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947/) achieved good compliance with 5-minute daily sessions over one month, but self-reported adherence in broader mindfulness literature shows participants practise only about half of recommended days.
+      - [A systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10741869/) found that long-term compliance remains a challenge, with practice frequency peaking around week 3 and declining thereafter, and dropout rates in self-guided breathing and mindfulness interventions averaging around 40%.
+      - The low time requirement (5-10 minutes daily) and absence of equipment needs support adherence, but the practice lacks external accountability and tangible feedback, making it easy to skip.
+
+  sleep.long_term_health:
+    pbs: 5
+    pbs_reasoning: |
+      - Improved sleep quality via breathing practice contributes to long-term health through better immune function and reduced chronic disease risk, though the sleep-mediated pathway alone is modest.
+      - [Cappuccio et al. (2010)](https://doi.org/10.1093/sleep/33.5.585) meta-analysis links improved sleep quality to reduced all-cause mortality, but the incremental benefit attributable to breathing exercises (versus other sleep interventions) is small.
+      - On the anchor (10 = 8 years additional healthy lifespan), a conservative estimate of ~3 months via sleep improvement alone maps to PBS 5 via 10 + log2(0.25/8) = 5.0.
+    isr: 45
+    isr_reasoning: |
+      - Long-term health benefits require sustained practice over years, and the evidence linking breathing exercises specifically (as opposed to general sleep improvement) to mortality outcomes is observational and indirect.
+      - [The coherent breathing RCT](https://www.nature.com/articles/s41598-023-49279-8) found no significant effect on sleep disturbance versus placebo at four weeks, raising questions about whether the sleep pathway reliably mediates long-term health benefits.
+      - Given the indirect causal chain (breathing → sleep quality → reduced disease risk), a conservative ISR of 45% accounts for the attenuation at each step.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Long-term health benefits require years of consistent practice, which is harder to sustain than the intervention's one-month trial periods suggest.
+      - The absence of immediate health feedback (unlike comfort or stress relief) does not change the behaviour but may reduce motivation over time.
+
+  sleep.comfort_experience:
+    pbs: 7
+    pbs_reasoning: |
+      - Breathing exercises directly target the subjective experience of falling asleep by reducing pre-sleep arousal, racing thoughts, and physiological tension – the very sensations that make sleep onset uncomfortable.
+      - Practising slow breathing triggers a parasympathetic relaxation response that most people find subjectively calming within a single session, making the transition to sleep noticeably more pleasant.
+      - On the subjective anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), successful use of breathing techniques typically moves someone from restless/anxious bedtimes to generally good or better sleep experience, aligning with score 7.
+    isr: 65
+    isr_reasoning: |
+      - [Huberman Lab RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947/) found that breathwork (especially cyclic sighing) reliably improved positive affect and reduced physiological arousal, suggesting most adherent practitioners experience subjective relaxation benefits.
+      - Subjective comfort improvements are more consistently achieved than objective sleep metrics, as the relaxation response is relatively reliable across individuals even when downstream sleep architecture effects vary.
+      - Some individuals find breath-focused attention activating or anxiety-provoking (particularly those with respiratory conditions or panic disorder), reducing the universal success rate to approximately 65%.
+    uar: 55
+    uar_reasoning: |
+      - Slightly higher than other sleep values because comfort improvements are noticeable within the first session, providing immediate positive reinforcement that supports continued practice.
+      - [The systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10741869/) noted that interventions producing faster acute effects encourage better adherence because participants feel the benefit during the practice itself.
+      - Still limited by the same long-term compliance challenges (40% dropout, declining frequency), but the immediate feedback loop provides a modest adherence advantage.
+
+  fitness.health:
+    pbs: 6
+    pbs_reasoning: |
+      - [A meta-analysis of 15 studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC10765252/) found slow breathing exercises reduce systolic blood pressure by approximately 7 mmHg and diastolic blood pressure by 3-6 mmHg, a clinically meaningful reduction.
+      - [Slow breathing improves baroreflex sensitivity](https://www.ahajournals.org/doi/10.1161/01.hyp.0000179581.68566.7d) and increases heart rate variability, both independent predictors of cardiovascular mortality reduction.
+      - A sustained 5-7 mmHg systolic BP reduction is associated with roughly 10-15% lower cardiovascular mortality risk, translating to approximately 0.5-1 year of additional healthy lifespan. On the anchor (10 = 15 years), 0.75 years maps to PBS 6 via 10 + log2(0.75/15) = 5.7, rounded to 6.
+    isr: 65
+    isr_reasoning: |
+      - [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/28502461/) across 6 studies (269 subjects) consistently shows statistically significant blood pressure and heart rate reductions in adherent participants, with relatively homogeneous effect sizes.
+      - The physiological mechanism (baroreflex stimulation, vagal tone enhancement) is well-characterised and operates reliably when breathing rate is maintained at ~6 cycles per minute.
+      - Some non-response is expected in normotensive individuals (who have less room for improvement) and those who cannot maintain the slow breathing rate consistently, reducing the overall success rate to approximately 65%.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Cardiovascular benefits require consistent daily practice; the same compliance challenges apply regardless of which outcome is being measured.
+      - Blood pressure changes are not subjectively perceptible, so this pathway provides no additional adherence motivation beyond the primary sleep and stress relief benefits.
+
+  current-work.engagement:
+    pbs: 4
+    pbs_reasoning: |
+      - Breathing techniques reduce acute workplace stress and improve focus by activating the parasympathetic nervous system, which can shift someone from a distracted, stressed state to a calmer, more present one.
+      - [A Frontiers review](https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2023.1040091/full) found that short breathing breaks at work reduce perceived stress and tiredness without negative effects on productivity, with potential for improved task engagement.
+      - The effect on engagement is modest and indirect (stress reduction → improved focus → better engagement), placing this at the lower end of the scoring range at 4 on the subjective anchor.
+    isr: 40
+    isr_reasoning: |
+      - The pathway from breathing to workplace engagement is indirect, requiring that (a) the person uses the technique during work, (b) stress was a primary barrier to engagement, and (c) the stress reduction is sufficient to shift engagement meaningfully.
+      - [Workplace mindfulness research](https://onlinelibrary.wiley.com/doi/full/10.1002/mhs2.84) shows modest improvements in engagement among workers whose disengagement is stress-driven, but limited effects for those disengaged due to boredom, poor role fit, or lack of challenge.
+      - Given the multiple conditions required for meaningful engagement improvement, a conservative ISR of 40% reflects the subset of workers who would genuinely benefit.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Workplace use requires remembering to practise during stressful moments, which is harder than a scheduled bedtime routine, but the acute relief provides immediate reinforcement.
+      - Overall adherence is the same 50% as the primary domain since it is the same daily practice.
+
+  mental-health.stability:
+    pbs: 6
+    pbs_reasoning: |
+      - [A meta-analysis of 12 RCTs](https://www.nature.com/articles/s41598-022-27247-y) found breathwork produced significant reductions in self-reported anxiety (g = -0.32, k = 20) and depressive symptoms (g = -0.40, k = 18), representing a meaningful shift in symptom burden for successful practitioners.
+      - Breathing techniques directly activate the parasympathetic nervous system, reducing physiological arousal markers (cortisol, heart rate) that underpin distressing symptoms. [The Huberman Lab RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947/) found cyclic sighing produced greater mood improvement than mindfulness meditation.
+      - On the subjective anchor (6 = occasional distress that resolves quickly, 8 = rare and brief episodes), a small-to-medium effect size on anxiety and depression maps to a shift from frequent to occasional manageable distress, aligning with score 6.
+    isr: 55
+    isr_reasoning: |
+      - [The Fincham et al. meta-analysis](https://www.nature.com/articles/s41598-022-27247-y) found significant but heterogeneous effects across studies, with most displaying moderate risk of bias, suggesting the true success rate is lower than headline results imply.
+      - [The largest placebo-controlled breathwork RCT](https://www.nature.com/articles/s41598-023-49279-8) found coherent breathing did not significantly outperform a placebo breathing exercise on several mental health measures, indicating that some of the benefit may reflect non-specific relaxation rather than a breathing-specific mechanism.
+      - Individuals whose distress is primarily anxiety-driven (with high physiological arousal) respond best; those with depression rooted in anhedonia or situational factors are less likely to benefit, reducing the overall success rate to approximately 55%.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Acute anxiety relief provides immediate reinforcement, but the practice must be sustained daily to maintain symptom stability, and [long-term dropout rates average around 40%](https://pmc.ncbi.nlm.nih.gov/articles/PMC10741869/).
+      - Mental health benefits do not change the fundamental adherence equation: same 5-10 minute daily commitment, same absence of external accountability.
+
+  mental-health.resilience:
+    pbs: 5
+    pbs_reasoning: |
+      - Slow breathing at ~6 cycles per minute [increases heart rate variability](https://www.sciencedirect.com/science/article/abs/pii/S0149763422002007), a biomarker of autonomic flexibility and stress adaptability. Higher resting HRV is [associated with better emotion regulation and faster recovery from psychological stressors](https://pmc.ncbi.nlm.nih.gov/articles/PMC5900369/).
+      - [A narrative review](https://pmc.ncbi.nlm.nih.gov/articles/PMC12341363/) concluded that breathwork enhances psychological resilience by improving vagal tone and reducing cortisol reactivity, providing a physiological buffer against acute stressors.
+      - The resilience benefit is real but more modest than the stability benefit: breathing improves the physiological substrate for stress recovery (autonomic flexibility) without directly training cognitive reappraisal or problem-solving skills. On the subjective anchor (6 = manages moderate stressors adequately, 4 = significant disruption), the improvement is partial, aligning with score 5.
+    isr: 40
+    isr_reasoning: |
+      - The causal chain from breathing practice to resilience (breathing → vagal tone → autonomic flexibility → faster stress recovery) involves multiple steps, each attenuating the overall effect. [HRV improvements from slow breathing are well-established](https://www.sciencedirect.com/science/article/abs/pii/S0149763422002007), but the translation to real-world resilience outcomes is less directly demonstrated.
+      - Most RCTs measure acute symptom reduction rather than resilience per se (i.e., recovery from adversity), so the evidence base for this specific construct is thinner than for stability.
+      - Resilience also depends heavily on cognitive and social factors that breathing does not address, meaning the physiological contribution alone produces meaningful results in a smaller subset of practitioners, conservatively estimated at 40%.
+    uar: 50
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+      - Resilience benefits are not immediately perceptible (unlike acute anxiety relief), which may reduce motivation, but the practice itself is identical.
+      - The same 50% long-term adherence rate applies regardless of which outcome is being measured.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment or purchases required. Breathing techniques can be learnt from freely available online resources, videos, and articles."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring expenses. The practice requires only the person's time and attention, with no consumables, subscriptions, or equipment."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 1 hour to learn 2-3 core techniques (box breathing, 4-7-8, physiological sigh) from online tutorials and practise enough to perform them without guidance."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "5-10 minutes per day of structured practice, totalling approximately 35-70 minutes per week. The minimum effective dose appears to be 5 minutes daily based on the Huberman Lab RCT protocol."
+
+prerequisites:
+  - "No respiratory conditions that make controlled breathing painful or dangerous (e.g., severe asthma, COPD) – consult a doctor if uncertain"
+  - "Ability to breathe through the nose for most techniques (nasal congestion or structural issues may limit effectiveness)"
+  - "Basic body awareness sufficient to monitor and control breathing rate and depth"
