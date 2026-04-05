@@ -399,7 +399,7 @@ life_area_slug: fitness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<div class="assess-privacy">Your answers are stored only on this device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
 
 <p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to look up or test.</p>
 
@@ -447,11 +447,11 @@ life_area_slug: fitness
 </div>
 
 <div class="assess-input-group" id="ig-cardio">
-    <span class="assess-label">How far can you run, cycle, or swim without stopping?</span>
-    <span class="assess-hint">A rough estimate is fine.</span>
+    <span class="assess-label">How far can you run without stopping?</span>
+    <span class="assess-hint">A rough estimate is fine. If you don't run, how far could you jog at a comfortable pace?</span>
     <select id="a-cardio" onchange="handleAssessInput('a-cardio')">
         <option value="">Select...</option>
-        <option value="0">I can't run/cycle continuously at all</option>
+        <option value="0">I can't run continuously at all</option>
         <option value="1">Less than 1 km</option>
         <option value="2">1 &ndash; 2 km</option>
         <option value="3">2 &ndash; 5 km</option>
@@ -491,7 +491,6 @@ life_area_slug: fitness
         <label><input type="checkbox" class="enjoy-opt" value="noncompetitive" onchange="handleMultiAssess('a-enjoy-types')"> Non-competitive movement</label>
         <label><input type="checkbox" class="enjoy-opt" value="none" onchange="handleMultiAssess('a-enjoy-types')"> None of these appeal to me</label>
     </div>
-    <span class="assess-percentile-hint" id="pct-enjoy-types"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-enjoy-types" onchange="handleSkip('a-enjoy-types')"><label for="skip-enjoy-types">I know but prefer not to say</label></div>
 </div>
 
@@ -505,7 +504,7 @@ life_area_slug: fitness
         <option value="2">Slight improvement</option>
         <option value="3">Clear positive effect on mood and energy</option>
         <option value="4">Major positive effect &ndash; exercise is my primary mood tool</option>
-    </select> <span class="assess-percentile-hint" id="pct-mood"></span>
+    </select>
     <div class="assess-skip"><input type="checkbox" id="skip-mood" onchange="handleSkip('a-mood')"><label for="skip-mood">I know but prefer not to say</label></div>
 </div>
 
@@ -518,7 +517,7 @@ life_area_slug: fitness
         <option value="1">Occasional &ndash; I sometimes exercise with others</option>
         <option value="2">Regular &ndash; I have a gym buddy, team, or class</option>
         <option value="3">Central &ndash; exercise community is a big part of my social life</option>
-    </select> <span class="assess-percentile-hint" id="pct-social"></span>
+    </select>
     <div class="assess-skip"><input type="checkbox" id="skip-social" onchange="handleSkip('a-social')"><label for="skip-social">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -535,12 +534,7 @@ life_area_slug: fitness
         <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-performance" style="width:0%"></div></div>
         <span class="assess-summary-value" id="val-performance">&ndash;</span>
     </div>
-    <div class="assess-summary-row" id="sum-enjoyment">
-        <span class="assess-summary-label">Enjoyment &amp; Psych. Benefits</span>
-        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-enjoyment" style="width:0%"></div></div>
-        <span class="assess-summary-value" id="val-enjoyment">&ndash;</span>
-    </div>
-    <p class="assess-summary-text">Percentiles are rough estimates based on published population data for American adults. They indicate where you might fall relative to others, not a clinical assessment.</p>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data for American adults. Enjoyment &amp; Psychological Benefits are recorded for your awareness but not scored, as the available data does not support reliable percentile estimates.</p>
 </div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
@@ -627,9 +621,11 @@ life_area_slug: fitness
 
     var VALUE_ITEMS = {
         health: ['a-exercise-mins', 'a-rhr', 'a-strength-training'],
-        performance: ['a-pushups', 'a-cardio', 'a-flexibility'],
-        enjoyment: ['a-enjoy-types', 'a-mood', 'a-social']
+        performance: ['a-pushups', 'a-cardio', 'a-flexibility']
     };
+
+    // Enjoyment items are recorded but not scored (insufficient population data)
+    var UNSCORED_ITEMS = ['a-enjoy-types', 'a-mood', 'a-social'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -812,6 +808,7 @@ life_area_slug: fitness
     }
 
     function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return; // no hints for unscored items
         var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
         if (!hintEl) return;
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
@@ -830,7 +827,7 @@ life_area_slug: fitness
 
     function updateAssessSummary() {
         var anyAnswered = false;
-        ['health', 'performance', 'enjoyment'].forEach(function(vk) {
+        ['health', 'performance'].forEach(function(vk) {
             var pct = computeValuePercentile(vk);
             var barEl = document.getElementById('bar-' + vk);
             var valEl = document.getElementById('val-' + vk);
@@ -888,7 +885,7 @@ life_area_slug: fitness
 
     function saveScores() {
         var scores = {};
-        ['health', 'performance', 'enjoyment'].forEach(function(vk) {
+        ['health', 'performance'].forEach(function(vk) {
             scores[vk] = computeValuePercentile(vk);
         });
         if (typeof APStorage !== 'undefined') {
