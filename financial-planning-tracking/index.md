@@ -4,70 +4,196 @@ title: Financial Planning and Tracking
 life_area_slug: financial-planning-tracking
 ---
 
-[← Back to Finances](../)
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Organise Your Life &gt;
+    Finances &gt;
+    Financial Planning and Tracking
+</div>
+
 # Financial Planning and Tracking
 
-## Why Planning and Tracking Matter
+**What it is**
+- Your budgeting, financial tracking, and overall money management &ndash; the systems and habits you use to understand where your money goes, plan where it should go, and measure progress toward your financial goals.
 
-Financial planning and tracking serve as the foundation for virtually all other financial decisions throughout life. Beyond simply monitoring money flows, systematic financial planning reduces stress and anxiety whilst improving decision-making quality across all domains <span class="info-icon" onclick="showReasoning('stress-reduction')">i</span>. Effective financial tracking enhances cognitive performance by providing clear information for financial decisions <span class="info-icon" onclick="showReasoning('cognitive-benefits')">i</span>, whilst comprehensive planning delivers measurable improvements in wealth accumulation and financial confidence <span class="info-icon" onclick="showReasoning('planning-benefits')">i</span>.
+**Why it matters**
+- People with a written financial plan report 37% greater financial confidence and 38% improved financial wellbeing, yet only 36% of Americans have one. Systematic tracking reduces the mental burden of constant financial uncertainty and improves decision-making across every other financial domain.
 
-The psychological benefits extend far beyond money management itself. Having a clear financial plan reduces the mental burden of constant financial uncertainty and creates a sense of control that influences overall wellbeing and life satisfaction.
+**Related life areas**
+- [Saving]({{ site.baseurl }}/saving/) &ndash; building an emergency fund and accumulating capital
+- [Investing]({{ site.baseurl }}/investing/) &ndash; putting accumulated capital to work in assets that grow over time
+- [Goals]({{ site.baseurl }}/goals/) &ndash; setting and tracking long-term targets, including financial ones
+- [Systems]({{ site.baseurl }}/systems/) &ndash; building reliable personal systems that run with minimal friction
 
-## Planning & Tracking Values
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Financial Planning and Tracking yet.</strong><br>It takes about 15 minutes and helps you understand what financial planning means to you.</p>
+    <a href="{{ site.baseurl }}/financial-planning-tracking/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Your optimal approach to financial planning and tracking depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+## What people value about financial planning and tracking
 
-For personalised recommendations based on your unique priorities, visit [Financial Planning & Tracking Personalised]({{ site.baseurl }}/finances/planning-and-tracking/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+People approach financial management for different reasons. This site scores every financial planning intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Accuracy & Control</h3>
+<p>Having precise, reliable financial information and clear oversight of money flows. Detailed tracking, categorisation, and understanding exactly where money goes.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Simplicity & Convenience</h3>
+<p>Making financial management effortless and low-friction. Automated systems, minimal time investment, and approaches that work in the background.</p>
+</div>
 
-Research reveals significant gaps in financial tracking and planning capabilities across the population. Only 45% of Americans use any form of budget to manage their income, with most defining "budgeting" as simply reviewing bank statements rather than proactive planning <span class="info-icon" onclick="showReasoning('budgeting-stats')">i</span>. Just 36% of Americans have a written financial plan <span class="info-icon" onclick="showReasoning('planning-stats')">i</span>, whilst 52% report their net worth is less than $30,000, with 25% having zero or negative net worth <span class="info-icon" onclick="showReasoning('net-worth-stats')">i</span>. These patterns mean that even basic financial awareness and tracking represent higher population achievements than might initially be expected.
+<div class="value-card">
+<h3>Insight & Optimisation</h3>
+<p>Using financial data to make better decisions and identify opportunities. Trend analysis, finding inefficiencies, and turning tracking data into actionable improvements.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/financial-planning-tracking/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand financial planning, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/financial-planning-tracking/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Financial Planning & Tracking Personalised]({{ site.baseurl }}/finances/planning-and-tracking/personalised) *(under development)*
-
-[← Back to Finances](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'stress-reduction': {
-        title: 'Financial Planning Reduces Stress',
-        content: 'Studies show that 74% of Americans feel stress over personal finances, but those with financial plans report significantly reduced anxiety and improved mental health. Financial planning helps address the psychological aspects of money management, with research indicating that planning provides clarity and organization that reduces the uncertainty driving financial stress. <a href="https://www.avaii.com/blog/how-financial-planning-can-reduce-stress" target="_blank">View research</a>'
-    },
-    'cognitive-benefits': {
-        title: 'Financial Tracking Improves Decision Making',
-        content: 'Research demonstrates that cognitive abilities directly influence financial decision-making quality, with individuals who have better information processing making substantially fewer financial mistakes. Financial tracking provides the clear, organised information needed for optimal cognitive processing, while uncertainty and incomplete information impair financial decision-making abilities. <a href="https://www.aeaweb.org/articles?id=10.1257/app.5.1.193" target="_blank">View study</a>'
-    },
-    'planning-benefits': {
-        title: 'Financial Planning Delivers Measurable Benefits',
-        content: 'International research across 15 territories shows that clients with financial plans report improved financial wellbeing and peace of mind (38%), financial confidence (37%), better understanding of financial matters (36%), and greater wealth growth (33%). Over half (51%) report that financial planning has positively impacted their mental health and family life. <a href="https://fpsb.org/about-financial-planning/the-value-of-financial-planning/" target="_blank">View research</a>'
-    },
-    'budgeting-stats': {
-        title: 'Budgeting Statistics',
-        content: 'The Penny Hoarder survey found that 55% of Americans do not use a budget to manage their income, with most who claim to budget simply reviewing bank statements rather than engaging in proactive planning. CFP Board research shows that while 43% believe they have a budget, most define budgeting as passive tracking rather than systematic planning.'
-    },
-    'planning-stats': {
-        title: 'Financial Planning Statistics', 
-        content: 'Charles Schwab Modern Wealth Survey reveals that just 36% of Americans have a written financial plan, despite widespread recognition of its benefits. Northwestern Mutual research shows that 66% of Americans believe their financial planning needs improvement, yet only 37% work with financial advisors.'
-    },
-    'net-worth-stats': {
-        title: 'Net Worth Statistics',
-        content: 'Clever Real Estate survey data shows that 52% of Americans report their net worth is less than $30,000, with about 25% having zero or negative net worth. This highlights how even basic financial tracking and goal-setting represent achievements beyond what most of the population currently maintains.'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var areaProgress = progress['financial-planning-tracking'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return areaProgress[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['financial-planning-tracking'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Financial Planning and Tracking.</strong></p>' +
+            '<a href="{{ site.baseurl }}/financial-planning-tracking/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/financial-planning-tracking/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(areaProgress).length > 0) {
+        var completed = steps.filter(function(s) { return areaProgress[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/financial-planning-tracking/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

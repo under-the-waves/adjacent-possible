@@ -1,60 +1,199 @@
 ---
+layout: default
+title: Transportation
 life_area_slug: transportation
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Organise Your Life &gt;
+    Environment &gt;
+    Transportation
+</div>
+
 # Transportation
 
-## What is Transportation?
+**What it is**
+- How you get around day to day – your commute, errands, travel, and the vehicles, modes, and habits that support your mobility.
 
-How you get from place to place in daily life -- your commute, errands, travel, and the systems, vehicles, and habits that support your mobility.
+**Why it matters**
+- Average commute times range from 40 to 80 minutes, and transportation is one of the largest household expenses after housing. Active commuters consistently report the highest wellbeing, while long car and public transit commutes generate the lowest. A single decision – moving closer to work, switching commute mode, or restructuring errand patterns – can substantially improve daily quality of life.
 
-## Why Transportation matters
+**Related life areas**
+- [Housing]({{ site.baseurl }}/housing/) – the quality, suitability, and location of where you live
+- [Housework]({{ site.baseurl }}/housework/) – managing the maintenance and upkeep of your home
+- [Possessions]({{ site.baseurl }}/possessions/) – the physical items you own and how well they serve you
+- [Physical Safety]({{ site.baseurl }}/physical-safety/) – your personal safety practices and physical risk management
 
-- **It consumes significant time** -- Average commute times range from 40 to 80 minutes, and most people accept their transportation patterns as fixed rather than optimisable <span class="info-icon" onclick="showReasoning('research-commute-times')">i</span>.
-- **Mode choice affects wellbeing** -- Active commuters (walkers and cyclists) report the highest satisfaction, while long car and public transit commutes generate the lowest. Switching to active travel shows significant positive effects on psychological wellbeing <span class="info-icon" onclick="showReasoning('research-active-transport')">i</span> <span class="info-icon" onclick="showReasoning('research-wellbeing')">i</span>.
-- **Financial weight** -- Car ownership typically costs thousands per year in depreciation, insurance, fuel, and maintenance. Transportation is one of the largest household expenses after housing.
-- **High leverage for improvement** -- Unlike many life areas, transportation can often be substantially improved through a single decision (moving closer to work, changing commute mode, or restructuring errand patterns).
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Transportation yet.</strong><br>It takes about 15 minutes and helps you understand what transportation means to you.</p>
+    <a href="{{ site.baseurl }}/transportation/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Transportation Values
+## What people value about transportation
 
-Your approach to transportation depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+People approach transportation for different reasons. This site scores every transportation intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Efficiency</h3>
+<p>Minimising the time, money, and cognitive effort spent on transportation. Optimising commute routes, reducing unnecessary trips, combining errands, and choosing modes that maximise productive or enjoyable use of travel time.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Comfort</h3>
+<p>The physical and psychological experience of your daily transportation. Vehicle quality, commute environment, protection from weather, and the overall pleasantness of your travel experience.</p>
+</div>
 
-Transportation satisfaction varies dramatically by mode and duration. Active commuters (walkers and cyclists) consistently report the highest satisfaction, while long car commutes and public transit generate the lowest. Average commute times of 40 -- 80 minutes represent a significant daily time investment, and most people accept their transportation patterns as fixed rather than optimisable. Deliberate transportation design -- choosing where to live, how to commute, and how to manage mobility based on evidence -- is genuinely uncommon.
+<div class="value-card">
+<h3>Safety</h3>
+<p>Minimising the risk of injury, accident, or incident during transportation. Vehicle safety features, route selection, defensive driving or cycling practices, and choosing modes with strong safety records.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/transportation/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand transportation, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/transportation/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-commute-times': {
-        title: 'Average Commute Times',
-        content: 'International transportation research shows average commute times range from 40 to 80 minutes, with public transit commutes typically longer than car commutes. Active travellers (walkers and cyclists) generally have commute durations closer to their ideal durations, while public transport users\' commutes are often considerably longer than desired. <a href="https://link.springer.com/article/10.1007/s11116-019-09983-9" target="_blank">View study</a>'
-    },
-    'research-active-transport': {
-        title: 'Active Transport and Satisfaction',
-        content: 'Research consistently shows that people who walk or cycle to work report the highest commute satisfaction while public transport users report the lowest. Active commuters experience greater enjoyment and feelings of physical and mental health compared to those who commute by car or public transit. <a href="https://www.sciencedirect.com/science/article/pii/S0965856420305620" target="_blank">View study</a>'
-    },
-    'research-wellbeing': {
-        title: 'Transportation Mode and Wellbeing',
-        content: 'Walking to work is associated with improved subjective wellbeing including increased leisure time satisfaction and reduced strain. Switching from car travel to active travel shows significant positive effects on psychological wellbeing. These benefits are observed in longitudinal data from the British Household Panel Survey. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4262577/" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var transportation = progress.transportation || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return transportation[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.transportation;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Transportation.</strong></p>' +
+            '<a href="{{ site.baseurl }}/transportation/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/transportation/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(transportation).length > 0) {
+        var completed = steps.filter(function(s) { return transportation[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/transportation/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
