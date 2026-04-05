@@ -133,35 +133,69 @@ life_area_slug: extended-family
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,148 @@ life_area_slug: extended-family
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think through. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to think through.</p>
 
 <div class="assess-group">
 <h4>Harmony</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-conflict-map">
-    <label for="a-conflict-map">I can identify which extended family relationships are currently strained or a source of tension.<br><span class="assess-hint">Think about unresolved disagreements, people who avoid each other, or topics that reliably cause arguments.</span></label>
+<div class="assess-input-group" id="ig-conflict-map">
+    <span class="assess-label">How many extended family relationships are currently strained or a source of tension?</span>
+    <span class="assess-hint">Think about unresolved disagreements, people who avoid each other, or topics that reliably cause arguments.</span>
+    <select id="a-conflict-map" onchange="handleAssessInput('a-conflict-map')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; there are several ongoing tensions or feuds</option>
+        <option value="a-few">A few &ndash; two or three relationships are strained</option>
+        <option value="one">One &ndash; there is one main source of tension</option>
+        <option value="none">None &ndash; my extended family relationships are largely peaceful</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-conflict-map" onchange="handleSkip('a-conflict-map')"><label for="skip-conflict-map">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-gatherings">
-    <label for="a-gatherings">I know whether family gatherings are generally pleasant or stressful for me.<br><span class="assess-hint">Consider holidays, weddings, funerals, and other family events over the past few years.</span></label>
+<div class="assess-input-group" id="ig-gatherings">
+    <span class="assess-label">How do you find extended family gatherings?</span>
+    <span class="assess-hint">Consider holidays, weddings, funerals, and other family events over the past few years.</span>
+    <select id="a-gatherings" onchange="handleAssessInput('a-gatherings')">
+        <option value="">Select...</option>
+        <option value="stressful">Stressful &ndash; I dread them or find them exhausting</option>
+        <option value="mixed">Mixed &ndash; some are fine, others are difficult</option>
+        <option value="neutral">Neutral &ndash; neither particularly enjoyable nor stressful</option>
+        <option value="pleasant">Pleasant &ndash; I generally enjoy them</option>
+        <option value="very-pleasant">Very pleasant &ndash; I look forward to them</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-gatherings" onchange="handleSkip('a-gatherings')"><label for="skip-gatherings">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-navigate">
-    <label for="a-navigate">I have a sense of how well I handle disagreements with extended family without damaging relationships.<br><span class="assess-hint">Do you tend to avoid conflict, escalate it, or navigate it constructively?</span></label>
+<div class="assess-input-group" id="ig-navigate">
+    <span class="assess-label">How well do you handle disagreements with extended family?</span>
+    <span class="assess-hint">Do you tend to avoid conflict, escalate it, or navigate it constructively?</span>
+    <select id="a-navigate" onchange="handleAssessInput('a-navigate')">
+        <option value="">Select...</option>
+        <option value="avoid">Avoid &ndash; I stay silent or withdraw rather than engage</option>
+        <option value="escalate">Escalate &ndash; disagreements tend to become arguments</option>
+        <option value="clumsy">Clumsy &ndash; I try to address things but it often goes badly</option>
+        <option value="reasonable">Reasonable &ndash; I can usually navigate disagreements without damage</option>
+        <option value="skilled">Skilled &ndash; I handle family tensions constructively and calmly</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-navigate" onchange="handleSkip('a-navigate')"><label for="skip-navigate">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Closeness</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contact-freq">
-    <label for="a-contact-freq">I know how often I have meaningful contact with extended family members.<br><span class="assess-hint">Count conversations that go beyond logistics &ndash; genuine exchanges about each other's lives, feelings, or experiences.</span></label>
+<div class="assess-input-group" id="ig-contact-freq">
+    <span class="assess-label">How often do you have meaningful contact with extended family members?</span>
+    <span class="assess-hint">Count conversations that go beyond logistics &ndash; genuine exchanges about each other's lives, feelings, or experiences.</span>
+    <select id="a-contact-freq" onchange="handleAssessInput('a-contact-freq')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; a few times a year at most</option>
+        <option value="occasionally">Occasionally &ndash; every couple of months</option>
+        <option value="monthly">Monthly &ndash; roughly once a month</option>
+        <option value="fortnightly">Fortnightly &ndash; every couple of weeks</option>
+        <option value="weekly">Weekly or more &ndash; regular meaningful contact</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contact-freq" onchange="handleSkip('a-contact-freq')"><label for="skip-contact-freq">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-depth">
-    <label for="a-depth">I can identify which extended family relationships have genuine emotional depth and which are surface-level.<br><span class="assess-hint">Who would you call in a crisis? Who really knows what's going on in your life?</span></label>
+<div class="assess-input-group" id="ig-depth">
+    <span class="assess-label">How many extended family relationships have genuine emotional depth?</span>
+    <span class="assess-hint">Who would you call in a crisis? Who really knows what is going on in your life?</span>
+    <select id="a-depth" onchange="handleAssessInput('a-depth')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; all my extended family relationships are surface-level</option>
+        <option value="one">One &ndash; there is one person I am genuinely close to</option>
+        <option value="a-few">A few &ndash; two or three relationships have real depth</option>
+        <option value="several">Several &ndash; I have meaningful connections across my extended family</option>
+        <option value="many">Many &ndash; I am emotionally close to most of my extended family</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-depth" onchange="handleSkip('a-depth')"><label for="skip-depth">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-generations">
-    <label for="a-generations">I know whether I have meaningful relationships across different generations of my extended family.<br><span class="assess-hint">Grandparents, older aunts and uncles, younger cousins, nieces and nephews &ndash; or only your own generation.</span></label>
+<div class="assess-input-group" id="ig-generations">
+    <span class="assess-label">Do you have meaningful relationships across different generations of your extended family?</span>
+    <span class="assess-hint">Grandparents, older aunts and uncles, younger cousins, nieces and nephews &ndash; or only your own generation.</span>
+    <select id="a-generations" onchange="handleAssessInput('a-generations')">
+        <option value="">Select...</option>
+        <option value="own-only">Own generation only &ndash; I mainly connect with cousins my age</option>
+        <option value="one-other">One other generation &ndash; I am close to older or younger relatives, but not both</option>
+        <option value="some-across">Some across generations &ndash; I have a few connections in different age groups</option>
+        <option value="strong-across">Strong across generations &ndash; I have meaningful relationships spanning multiple generations</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-generations" onchange="handleSkip('a-generations')"><label for="skip-generations">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Balance</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-boundaries">
-    <label for="a-boundaries">I can identify areas where extended family expectations may be constraining my choices.<br><span class="assess-hint">Where you live, how you spend holidays, career decisions, parenting approaches, or lifestyle choices.</span></label>
+<div class="assess-input-group" id="ig-boundaries">
+    <span class="assess-label">Are extended family expectations constraining your choices?</span>
+    <span class="assess-hint">Where you live, how you spend holidays, career decisions, parenting approaches, or lifestyle choices.</span>
+    <select id="a-boundaries" onchange="handleAssessInput('a-boundaries')">
+        <option value="">Select...</option>
+        <option value="heavily">Heavily &ndash; family expectations significantly limit my decisions</option>
+        <option value="somewhat">Somewhat &ndash; there are a few areas where family pressure affects my choices</option>
+        <option value="slightly">Slightly &ndash; minor influence but I mostly decide independently</option>
+        <option value="not-at-all">Not at all &ndash; I make my own choices without family pressure</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-boundaries" onchange="handleSkip('a-boundaries')"><label for="skip-boundaries">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-guilt">
-    <label for="a-guilt">I know whether I feel guilt when I decline family requests or set limits.<br><span class="assess-hint">Can you say no to a family gathering or request without anxiety? Or does guilt drive your decisions?</span></label>
+<div class="assess-input-group" id="ig-guilt">
+    <span class="assess-label">How much guilt do you feel when you decline family requests or set limits?</span>
+    <span class="assess-hint">Can you say no to a family gathering or request without anxiety? Or does guilt drive your decisions?</span>
+    <select id="a-guilt" onchange="handleAssessInput('a-guilt')">
+        <option value="">Select...</option>
+        <option value="overwhelming">Overwhelming &ndash; guilt makes it very hard to say no</option>
+        <option value="significant">Significant &ndash; I feel strong guilt that often sways my decisions</option>
+        <option value="moderate">Moderate &ndash; I feel guilt but can usually act on my own judgement</option>
+        <option value="mild">Mild &ndash; some discomfort but it does not change my decisions</option>
+        <option value="minimal">Minimal &ndash; I can set limits without significant guilt</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-guilt" onchange="handleSkip('a-guilt')"><label for="skip-guilt">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sustainable">
-    <label for="a-sustainable">I have a sense of whether my current level of family obligation feels sustainable.<br><span class="assess-hint">Are you energised by family involvement, or does it feel like a drain you can't reduce?</span></label>
+<div class="assess-input-group" id="ig-sustainable">
+    <span class="assess-label">Does your current level of family obligation feel sustainable?</span>
+    <span class="assess-hint">Are you energised by family involvement, or does it feel like a drain you cannot reduce?</span>
+    <select id="a-sustainable" onchange="handleAssessInput('a-sustainable')">
+        <option value="">Select...</option>
+        <option value="unsustainable">Unsustainable &ndash; I feel overwhelmed by family obligations</option>
+        <option value="heavy">Heavy &ndash; it is manageable but takes more than I would like</option>
+        <option value="balanced">Balanced &ndash; the level of involvement feels about right</option>
+        <option value="light">Light &ndash; I have room for more family involvement if I wanted</option>
+        <option value="energising">Energising &ndash; family involvement adds to my life rather than draining it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-sustainable" onchange="handleSkip('a-sustainable')"><label for="skip-sustainable">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +527,9 @@ life_area_slug: extended-family
         'a-contact-freq', 'a-depth', 'a-generations',
         'a-boundaries', 'a-guilt', 'a-sustainable'
     ];
+
+    // All extended-family items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,6 +605,7 @@ life_area_slug: extended-family
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +618,134 @@ life_area_slug: extended-family
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All extended-family items are unscored; save null for each value
+        var scores = {
+            harmony: null,
+            closeness: null,
+            balance: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

@@ -133,35 +133,69 @@ life_area_slug: physical-safety
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -297,47 +331,103 @@ life_area_slug: physical-safety
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to look up or test.</p>
 
 <div class="assess-group">
 <h4>Risk Reduction</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-home-security">
-    <label for="a-home-security">I know what security measures are currently in place at my home.<br><span class="assess-hint">Door locks, window locks, motion-sensor lighting, cameras, alarm systems &ndash; or the absence of any of these.</span></label>
+<div class="assess-input-group" id="ig-home-security">
+    <span class="assess-label">What security measures are currently in place at your home?</span>
+    <span class="assess-hint">Door locks, window locks, motion-sensor lighting, cameras, alarm systems &ndash; or the absence of any of these.</span>
+    <select id="a-home-security" onchange="handleAssessInput('a-home-security')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; no deliberate security measures beyond a basic door lock</option>
+        <option value="minimal">Minimal &ndash; standard locks only</option>
+        <option value="basic">Basic &ndash; good locks plus one or two additional measures (e.g. motion light)</option>
+        <option value="solid">Solid &ndash; multiple layers including cameras or an alarm</option>
+        <option value="comprehensive">Comprehensive &ndash; thorough system covering locks, lighting, cameras, and alarm</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-home-security" onchange="handleSkip('a-home-security')"><label for="skip-home-security">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-first-aid">
-    <label for="a-first-aid">I know whether I hold a current first aid or CPR certification, and when it expires.<br><span class="assess-hint">Check any cards or certificates you have. "Never had one" is a valid answer.</span></label>
+<div class="assess-input-group" id="ig-first-aid">
+    <span class="assess-label">Do you hold a current first aid or CPR certification?</span>
+    <span class="assess-hint">Check any cards or certificates you have. 'Never had one' is a valid answer.</span>
+    <select id="a-first-aid" onchange="handleAssessInput('a-first-aid')">
+        <option value="">Select...</option>
+        <option value="never">Never had one</option>
+        <option value="expired-long">Expired more than two years ago</option>
+        <option value="expired-recent">Expired within the last two years</option>
+        <option value="current-basic">Current basic first aid certificate</option>
+        <option value="current-advanced">Current advanced first aid or CPR certification</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-first-aid" onchange="handleSkip('a-first-aid')"><label for="skip-first-aid">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-hazard-audit">
-    <label for="a-hazard-audit">I've thought about the main physical risks in my daily routine.<br><span class="assess-hint">Driving or cycling habits, neighbourhood safety, workplace hazards, fire risks at home &ndash; anything that could cause injury.</span></label>
+<div class="assess-input-group" id="ig-hazard-audit">
+    <span class="assess-label">How well have you thought about the main physical risks in your daily routine?</span>
+    <span class="assess-hint">Driving or cycling habits, neighbourhood safety, workplace hazards, fire risks at home &ndash; anything that could cause injury.</span>
+    <select id="a-hazard-audit" onchange="handleAssessInput('a-hazard-audit')">
+        <option value="">Select...</option>
+        <option value="not-at-all">Not at all &ndash; have not considered my daily physical risks</option>
+        <option value="vaguely">Vaguely &ndash; aware of one or two risks but not systematically</option>
+        <option value="some-thought">Some thought &ndash; have identified a few key risks</option>
+        <option value="thorough">Thorough &ndash; have assessed most areas of daily risk</option>
+        <option value="systematic">Systematic &ndash; have done a deliberate audit and taken action on findings</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-hazard-audit" onchange="handleSkip('a-hazard-audit')"><label for="skip-hazard-audit">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Freedom and Convenience</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-avoidance">
-    <label for="a-avoidance">I can identify activities or places I currently avoid because of safety concerns.<br><span class="assess-hint">Walking alone at night, travelling to certain areas, particular sports or outdoor activities &ndash; or nothing at all.</span></label>
+<div class="assess-input-group" id="ig-avoidance">
+    <span class="assess-label">Do you avoid activities or places because of safety concerns?</span>
+    <span class="assess-hint">Walking alone at night, travelling to certain areas, particular sports or outdoor activities &ndash; or nothing at all.</span>
+    <select id="a-avoidance" onchange="handleAssessInput('a-avoidance')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; I avoid a lot of things because of safety concerns</option>
+        <option value="several">Several &ndash; a few activities or places I steer clear of</option>
+        <option value="one-or-two">One or two &ndash; a specific avoidance but mostly unrestricted</option>
+        <option value="none">None &ndash; safety concerns do not limit my activities</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-avoidance" onchange="handleSkip('a-avoidance')"><label for="skip-avoidance">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-confidence">
-    <label for="a-confidence">I have a sense of how confident I feel navigating unfamiliar environments.<br><span class="assess-hint">New cities, rural areas, foreign countries, crowded events &ndash; comfortable, cautious, or anxious?</span></label>
+<div class="assess-input-group" id="ig-confidence">
+    <span class="assess-label">How confident do you feel navigating unfamiliar environments?</span>
+    <span class="assess-hint">New cities, rural areas, foreign countries, crowded events &ndash; comfortable, cautious, or anxious?</span>
+    <select id="a-confidence" onchange="handleAssessInput('a-confidence')">
+        <option value="">Select...</option>
+        <option value="anxious">Anxious &ndash; unfamiliar environments make me very uncomfortable</option>
+        <option value="cautious">Cautious &ndash; manage but with noticeable unease</option>
+        <option value="moderate">Moderate &ndash; some caution but generally cope</option>
+        <option value="comfortable">Comfortable &ndash; at ease in most new settings</option>
+        <option value="very-confident">Very confident &ndash; thrive in unfamiliar environments</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-confidence" onchange="handleSkip('a-confidence')"><label for="skip-confidence">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-lifestyle-cost">
-    <label for="a-lifestyle-cost">I know whether my current safety practices create any inconvenience or restrict my activities.<br><span class="assess-hint">Do you spend significant time on security routines, avoid spontaneous plans, or feel limited by safety concerns?</span></label>
+<div class="assess-input-group" id="ig-lifestyle-cost">
+    <span class="assess-label">Do your current safety practices create inconvenience or restrict your activities?</span>
+    <span class="assess-hint">Do you spend significant time on security routines, avoid spontaneous plans, or feel limited by safety concerns?</span>
+    <select id="a-lifestyle-cost" onchange="handleAssessInput('a-lifestyle-cost')">
+        <option value="">Select...</option>
+        <option value="significant">Significant &ndash; safety concerns noticeably restrict my lifestyle</option>
+        <option value="some">Some &ndash; a few inconveniences but manageable</option>
+        <option value="minimal">Minimal &ndash; safety practices are well integrated and barely noticeable</option>
+        <option value="none">None &ndash; I have no safety practices that create any friction</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-lifestyle-cost" onchange="handleSkip('a-lifestyle-cost')"><label for="skip-lifestyle-cost">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -383,6 +473,9 @@ life_area_slug: physical-safety
         'a-home-security', 'a-first-aid', 'a-hazard-audit',
         'a-avoidance', 'a-confidence', 'a-lifestyle-cost'
     ];
+
+    // All physical-safety items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -432,7 +525,6 @@ life_area_slug: physical-safety
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -458,6 +550,7 @@ life_area_slug: physical-safety
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -470,65 +563,130 @@ life_area_slug: physical-safety
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = {
+            riskReduction: null,
+            freedomConvenience: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

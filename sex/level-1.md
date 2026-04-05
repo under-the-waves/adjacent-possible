@@ -133,35 +133,69 @@ life_area_slug: sex
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -308,70 +342,156 @@ life_area_slug: sex
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know straight away, others might take a few minutes of honest reflection. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know straight away, others might take a few minutes of honest reflection.</p>
 
 <div class="assess-group">
 <h4>Frequency</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-current-frequency">
-    <label for="a-current-frequency">I know roughly how often I have sex in a typical month, and whether that rate has changed over the past year.<br><span class="assess-hint">An honest estimate is fine &ndash; precision is less important than awareness.</span></label>
+<div class="assess-input-group" id="ig-current-frequency">
+    <span class="assess-label">How often do you have sex in a typical month?</span>
+    <span class="assess-hint">An honest estimate is fine &ndash; precision is less important than awareness.</span>
+    <select id="a-current-frequency" onchange="handleAssessInput('a-current-frequency')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; less than once a month</option>
+        <option value="1-2">1 &ndash; 2 times per month</option>
+        <option value="3-4">3 &ndash; 4 times per month (roughly weekly)</option>
+        <option value="5-8">5 &ndash; 8 times per month</option>
+        <option value="over-8">More than 8 times per month</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-current-frequency" onchange="handleSkip('a-current-frequency')"><label for="skip-current-frequency">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-desire-gap">
-    <label for="a-desire-gap">I have a sense of whether there is a gap between how often I want sex and how often it happens.<br><span class="assess-hint">Consider both your own desires and your partner's. Is there a discrepancy?</span></label>
+<div class="assess-input-group" id="ig-desire-gap">
+    <span class="assess-label">Is there a gap between how often you want sex and how often it happens?</span>
+    <span class="assess-hint">Consider both your own desires and your partner's. Is there a discrepancy?</span>
+    <select id="a-desire-gap" onchange="handleAssessInput('a-desire-gap')">
+        <option value="">Select...</option>
+        <option value="large-gap-want-more">Large gap &ndash; I want significantly more than happens</option>
+        <option value="some-gap-want-more">Some gap &ndash; I would like somewhat more</option>
+        <option value="well-matched">Well matched &ndash; frequency suits me</option>
+        <option value="some-gap-want-less">Some gap &ndash; I would prefer somewhat less</option>
+        <option value="large-gap-want-less">Large gap &ndash; I want significantly less than happens</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-desire-gap" onchange="handleSkip('a-desire-gap')"><label for="skip-desire-gap">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-initiation">
-    <label for="a-initiation">I know who typically initiates sex in my relationship and whether that pattern works for both of us.<br><span class="assess-hint">Is initiation roughly balanced, or does one person carry most of the responsibility?</span></label>
+<div class="assess-input-group" id="ig-initiation">
+    <span class="assess-label">Who typically initiates sex in your relationship?</span>
+    <span class="assess-hint">Is initiation roughly balanced, or does one person carry most of the responsibility?</span>
+    <select id="a-initiation" onchange="handleAssessInput('a-initiation')">
+        <option value="">Select...</option>
+        <option value="almost-always-me">Almost always me</option>
+        <option value="mostly-me">Mostly me</option>
+        <option value="roughly-equal">Roughly equal</option>
+        <option value="mostly-partner">Mostly my partner</option>
+        <option value="almost-always-partner">Almost always my partner</option>
+        <option value="neither">Neither &ndash; it rarely happens</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-initiation" onchange="handleSkip('a-initiation')"><label for="skip-initiation">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Variety</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-routine">
-    <label for="a-routine">I can describe whether my sexual experiences tend to follow a predictable pattern or include meaningful variation.<br><span class="assess-hint">Same time, same place, same sequence &ndash; or do things change?</span></label>
+<div class="assess-input-group" id="ig-routine">
+    <span class="assess-label">How much variation is there in your sexual experiences?</span>
+    <span class="assess-hint">Same time, same place, same sequence &ndash; or do things change?</span>
+    <select id="a-routine" onchange="handleAssessInput('a-routine')">
+        <option value="">Select...</option>
+        <option value="very-predictable">Very predictable &ndash; almost always the same pattern</option>
+        <option value="mostly-predictable">Mostly predictable &ndash; occasional variation but a clear routine</option>
+        <option value="some-variation">Some variation &ndash; a mix of familiar and new</option>
+        <option value="good-variation">Good variation &ndash; regularly try different things</option>
+        <option value="highly-varied">Highly varied &ndash; actively explore and change things up</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-routine" onchange="handleSkip('a-routine')"><label for="skip-routine">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-curiosities">
-    <label for="a-curiosities">I have thought about whether there are things I am curious about but have not tried or discussed with my partner.<br><span class="assess-hint">Unexpressed curiosities are common &ndash; the point is to notice them, not to act on all of them.</span></label>
+<div class="assess-input-group" id="ig-curiosities">
+    <span class="assess-label">Are there things you are curious about but have not tried or discussed with your partner?</span>
+    <span class="assess-hint">Unexpressed curiosities are common &ndash; the point is to notice them, not to act on all of them.</span>
+    <select id="a-curiosities" onchange="handleAssessInput('a-curiosities')">
+        <option value="">Select...</option>
+        <option value="many-unspoken">Many unspoken &ndash; several curiosities I have not raised</option>
+        <option value="a-few-unspoken">A few unspoken &ndash; one or two things I have not mentioned</option>
+        <option value="discussed-not-tried">Discussed but not tried &ndash; we have talked about things but not acted</option>
+        <option value="exploring">Exploring &ndash; we discuss and try new things regularly</option>
+        <option value="fully-expressed">Fully expressed &ndash; I have shared all my curiosities with my partner</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-curiosities" onchange="handleSkip('a-curiosities')"><label for="skip-curiosities">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Pleasure</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-own-body">
-    <label for="a-own-body">I know my own body well enough to identify what I find most pleasurable and what does not work for me.<br><span class="assess-hint">Consider whether you could clearly describe your preferences to a partner.</span></label>
+<div class="assess-input-group" id="ig-own-body">
+    <span class="assess-label">How well do you know what you find most pleasurable?</span>
+    <span class="assess-hint">Consider whether you could clearly describe your preferences to a partner.</span>
+    <select id="a-own-body" onchange="handleAssessInput('a-own-body')">
+        <option value="">Select...</option>
+        <option value="unsure">Unsure &ndash; have not really explored this</option>
+        <option value="vague">Vague sense &ndash; know some basics but not in detail</option>
+        <option value="reasonable">Reasonable &ndash; know my main preferences</option>
+        <option value="well">Well &ndash; could clearly describe what I enjoy and what I do not</option>
+        <option value="very-well">Very well &ndash; detailed understanding of my own responses and preferences</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-own-body" onchange="handleSkip('a-own-body')"><label for="skip-own-body">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-communication">
-    <label for="a-communication">I know whether I am comfortable communicating my sexual preferences and needs to my partner.<br><span class="assess-hint">Both giving feedback ("I like this") and asking for what you want.</span></label>
+<div class="assess-input-group" id="ig-communication">
+    <span class="assess-label">How comfortable are you communicating your sexual preferences and needs?</span>
+    <span class="assess-hint">Both giving feedback ('I like this') and asking for what you want.</span>
+    <select id="a-communication" onchange="handleAssessInput('a-communication')">
+        <option value="">Select...</option>
+        <option value="very-uncomfortable">Very uncomfortable &ndash; almost never say anything</option>
+        <option value="uncomfortable">Uncomfortable &ndash; find it difficult and usually avoid it</option>
+        <option value="somewhat">Somewhat comfortable &ndash; can manage the basics but not details</option>
+        <option value="comfortable">Comfortable &ndash; can communicate clearly about most things</option>
+        <option value="very-comfortable">Very comfortable &ndash; open, specific, and at ease discussing preferences</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-communication" onchange="handleSkip('a-communication')"><label for="skip-communication">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Contentment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-overall-satisfaction">
-    <label for="a-overall-satisfaction">I have honestly assessed whether my sexual life is a source of fulfilment, frustration, or indifference.<br><span class="assess-hint">Not how you think it should be, but how it actually feels to you right now.</span></label>
+<div class="assess-input-group" id="ig-overall-satisfaction">
+    <span class="assess-label">Overall, is your sexual life a source of fulfilment, frustration, or indifference?</span>
+    <span class="assess-hint">Not how you think it should be, but how it actually feels to you right now.</span>
+    <select id="a-overall-satisfaction" onchange="handleAssessInput('a-overall-satisfaction')">
+        <option value="">Select...</option>
+        <option value="frustration">Frustration &ndash; a consistent source of dissatisfaction</option>
+        <option value="some-frustration">Some frustration &ndash; more negative than positive</option>
+        <option value="indifferent">Indifferent &ndash; not something I think about much</option>
+        <option value="mostly-fulfilling">Mostly fulfilling &ndash; generally satisfying with room to improve</option>
+        <option value="deeply-fulfilling">Deeply fulfilling &ndash; a genuine source of joy and connection</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-overall-satisfaction" onchange="handleSkip('a-overall-satisfaction')"><label for="skip-overall-satisfaction">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-comparison">
-    <label for="a-comparison">I am aware of whether I compare my sexual life to external standards &ndash; media, peers, past relationships &ndash; and how that affects my satisfaction.<br><span class="assess-hint">Comparison can distort your sense of what is genuinely enough for you.</span></label>
+<div class="assess-input-group" id="ig-comparison">
+    <span class="assess-label">Do you compare your sexual life to external standards, and how does that affect your satisfaction?</span>
+    <span class="assess-hint">Comparison can distort your sense of what is genuinely enough for you.</span>
+    <select id="a-comparison" onchange="handleAssessInput('a-comparison')">
+        <option value="">Select...</option>
+        <option value="constant-negative">Constant &ndash; frequently compare and it lowers my satisfaction</option>
+        <option value="sometimes-negative">Sometimes &ndash; occasional comparison that makes me feel worse</option>
+        <option value="aware-not-affected">Aware but unaffected &ndash; notice comparisons but they do not bother me</option>
+        <option value="rarely">Rarely &ndash; almost never compare</option>
+        <option value="grounded">Grounded &ndash; my sense of satisfaction is based entirely on my own experience</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-comparison" onchange="handleSkip('a-comparison')"><label for="skip-comparison">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -419,6 +539,9 @@ life_area_slug: sex
         'a-own-body', 'a-communication',
         'a-overall-satisfaction', 'a-comparison'
     ];
+
+    // All sex items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -468,7 +591,6 @@ life_area_slug: sex
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -494,6 +616,7 @@ life_area_slug: sex
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -506,65 +629,132 @@ life_area_slug: sex
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = {
+            frequency: null,
+            variety: null,
+            pleasure: null,
+            contentment: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

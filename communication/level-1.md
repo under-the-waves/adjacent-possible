@@ -133,35 +133,69 @@ life_area_slug: communication
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,75 +347,164 @@ life_area_slug: communication
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Influence</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-persuade">
-    <label for="a-persuade">I can think of a recent situation where I tried to persuade someone and know whether it worked.<br><span class="assess-hint">A meeting, negotiation, request, or argument where you wanted someone to change their mind or take action.</span></label>
+<div class="assess-input-group" id="ig-persuade">
+    <span class="assess-label">How often do your attempts to persuade someone actually work?</span>
+    <span class="assess-hint">Think about meetings, negotiations, requests, or arguments where you wanted someone to change their mind or take action.</span>
+    <select id="a-persuade" onchange="handleAssessInput('a-persuade')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; most attempts fall flat</option>
+        <option value="sometimes">Sometimes &ndash; it works when conditions are right</option>
+        <option value="often">Often &ndash; I can usually bring people round</option>
+        <option value="consistently">Consistently &ndash; persuasion is a strength of mine</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-persuade" onchange="handleSkip('a-persuade')"><label for="skip-persuade">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-ideas-adopted">
-    <label for="a-ideas-adopted">I have a sense of how often my ideas get adopted in group discussions at work or in my social circle.<br><span class="assess-hint">Do people generally act on your suggestions, or do your points tend to get talked over?</span></label>
+<div class="assess-input-group" id="ig-ideas-adopted">
+    <span class="assess-label">How often are your ideas adopted in group discussions?</span>
+    <span class="assess-hint">Do people generally act on your suggestions, or do your points tend to get talked over?</span>
+    <select id="a-ideas-adopted" onchange="handleAssessInput('a-ideas-adopted')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; my points tend to get overlooked</option>
+        <option value="sometimes">Sometimes &ndash; depends on the group and the topic</option>
+        <option value="often">Often &ndash; people usually take my suggestions seriously</option>
+        <option value="consistently">Consistently &ndash; I regularly shape group decisions</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-ideas-adopted" onchange="handleSkip('a-ideas-adopted')"><label for="skip-ideas-adopted">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-audience">
-    <label for="a-audience">I know whether I adjust how I communicate depending on who I'm talking to.<br><span class="assess-hint">Do you speak differently to your manager, your friends, and a stranger? Or roughly the same way?</span></label>
+<div class="assess-input-group" id="ig-audience">
+    <span class="assess-label">How much do you adjust your communication depending on who you are talking to?</span>
+    <span class="assess-hint">Do you speak differently to your manager, your friends, and a stranger? Or roughly the same way?</span>
+    <select id="a-audience" onchange="handleAssessInput('a-audience')">
+        <option value="">Select...</option>
+        <option value="not-at-all">Not at all &ndash; I communicate the same way with everyone</option>
+        <option value="slightly">Slightly &ndash; minor adjustments in formality</option>
+        <option value="moderately">Moderately &ndash; I adapt tone and detail for different audiences</option>
+        <option value="significantly">Significantly &ndash; I consciously tailor my approach each time</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-audience" onchange="handleSkip('a-audience')"><label for="skip-audience">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Connection</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-deep-conv">
-    <label for="a-deep-conv">I know how often I have conversations that go beyond small talk in a typical week.<br><span class="assess-hint">Conversations where you discuss something personal, meaningful, or emotionally honest.</span></label>
+<div class="assess-input-group" id="ig-deep-conv">
+    <span class="assess-label">How often do you have conversations that go beyond small talk in a typical week?</span>
+    <span class="assess-hint">Conversations where you discuss something personal, meaningful, or emotionally honest.</span>
+    <select id="a-deep-conv" onchange="handleAssessInput('a-deep-conv')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; my conversations stay surface-level</option>
+        <option value="rarely">Rarely &ndash; maybe once a fortnight</option>
+        <option value="weekly">A few times a week</option>
+        <option value="daily">Most days &ndash; deep conversation is a regular part of my life</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-deep-conv" onchange="handleSkip('a-deep-conv')"><label for="skip-deep-conv">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-listening">
-    <label for="a-listening">I have a sense of whether I'm a good listener or tend to wait for my turn to speak.<br><span class="assess-hint">Do people seek you out to talk through problems? Do you remember details from past conversations?</span></label>
+<div class="assess-input-group" id="ig-listening">
+    <span class="assess-label">How would you rate your listening skills?</span>
+    <span class="assess-hint">Do people seek you out to talk through problems? Do you remember details from past conversations?</span>
+    <select id="a-listening" onchange="handleAssessInput('a-listening')">
+        <option value="">Select...</option>
+        <option value="poor">Poor &ndash; I often zone out or wait for my turn to speak</option>
+        <option value="average">Average &ndash; I listen but sometimes miss the point</option>
+        <option value="good">Good &ndash; people generally feel heard when talking to me</option>
+        <option value="excellent">Excellent &ndash; people regularly seek me out because I listen well</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-listening" onchange="handleSkip('a-listening')"><label for="skip-listening">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-vulnerable">
-    <label for="a-vulnerable">I know how comfortable I am sharing personal feelings or admitting uncertainty.<br><span class="assess-hint">Can you say "I don't know" or "I'm struggling with this" to people you trust?</span></label>
+<div class="assess-input-group" id="ig-vulnerable">
+    <span class="assess-label">How comfortable are you sharing personal feelings or admitting uncertainty?</span>
+    <span class="assess-hint">Can you say "I don't know" or "I'm struggling with this" to people you trust?</span>
+    <select id="a-vulnerable" onchange="handleAssessInput('a-vulnerable')">
+        <option value="">Select...</option>
+        <option value="very-uncomfortable">Very uncomfortable &ndash; I almost never share personal feelings</option>
+        <option value="uncomfortable">Uncomfortable &ndash; I can manage it but it feels forced</option>
+        <option value="somewhat-comfortable">Somewhat comfortable &ndash; with close friends, yes</option>
+        <option value="comfortable">Comfortable &ndash; I can be open with most people I trust</option>
+        <option value="very-comfortable">Very comfortable &ndash; vulnerability comes naturally to me</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-vulnerable" onchange="handleSkip('a-vulnerable')"><label for="skip-vulnerable">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Performance</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-public-speaking">
-    <label for="a-public-speaking">I know my comfort level with speaking in front of a group.<br><span class="assess-hint">Could you give a five-minute presentation to 10 people tomorrow? Would anxiety interfere?</span></label>
+<div class="assess-input-group" id="ig-public-speaking">
+    <span class="assess-label">How comfortable are you speaking in front of a group?</span>
+    <span class="assess-hint">Could you give a five-minute presentation to 10 people tomorrow? Would anxiety interfere?</span>
+    <select id="a-public-speaking" onchange="handleAssessInput('a-public-speaking')">
+        <option value="">Select...</option>
+        <option value="avoidant">Avoidant &ndash; I would do almost anything to get out of it</option>
+        <option value="anxious">Anxious &ndash; I could do it but would be very nervous</option>
+        <option value="manageable">Manageable &ndash; some nerves but I can get through it</option>
+        <option value="comfortable">Comfortable &ndash; I feel fairly at ease presenting</option>
+        <option value="confident">Confident &ndash; I enjoy public speaking</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-public-speaking" onchange="handleSkip('a-public-speaking')"><label for="skip-public-speaking">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-writing">
-    <label for="a-writing">I have a sense of how clearly I write when it matters – emails, reports, or messages to people I don't know well.<br><span class="assess-hint">Do people ask you to clarify what you meant, or do they usually understand first time?</span></label>
+<div class="assess-input-group" id="ig-writing">
+    <span class="assess-label">How clearly do you write when it matters?</span>
+    <span class="assess-hint">Emails, reports, or messages to people you do not know well. Do people ask you to clarify, or do they usually understand first time?</span>
+    <select id="a-writing" onchange="handleAssessInput('a-writing')">
+        <option value="">Select...</option>
+        <option value="unclear">Unclear &ndash; people regularly misunderstand or ask for clarification</option>
+        <option value="passable">Passable &ndash; gets the point across but not always cleanly</option>
+        <option value="clear">Clear &ndash; people usually understand first time</option>
+        <option value="strong">Strong &ndash; I write well and receive positive feedback</option>
+        <option value="excellent">Excellent &ndash; writing is one of my strongest communication skills</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-writing" onchange="handleSkip('a-writing')"><label for="skip-writing">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Conflict Navigation</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-conflict-pattern">
-    <label for="a-conflict-pattern">I know whether I tend to avoid difficult conversations, confront them head-on, or something in between.<br><span class="assess-hint">Think about the last time you disagreed with someone. Did you raise it, let it go, or escalate?</span></label>
+<div class="assess-input-group" id="ig-conflict-pattern">
+    <span class="assess-label">What is your default response to difficult conversations?</span>
+    <span class="assess-hint">Think about the last time you disagreed with someone. Did you raise it, let it go, or escalate?</span>
+    <select id="a-conflict-pattern" onchange="handleAssessInput('a-conflict-pattern')">
+        <option value="">Select...</option>
+        <option value="avoid">Avoid &ndash; I almost always let things go rather than raise them</option>
+        <option value="passive">Passive &ndash; I hint at the problem but rarely address it directly</option>
+        <option value="mixed">Mixed &ndash; sometimes I raise it, sometimes I let it go</option>
+        <option value="direct">Direct &ndash; I usually raise issues calmly and clearly</option>
+        <option value="aggressive">Aggressive &ndash; I tend to confront or escalate</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-conflict-pattern" onchange="handleSkip('a-conflict-pattern')"><label for="skip-conflict-pattern">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-apologise">
-    <label for="a-apologise">I know whether I find it easy or hard to apologise when I'm wrong.<br><span class="assess-hint">Can you say "I was wrong about that" without it feeling like a threat to your identity?</span></label>
+<div class="assess-input-group" id="ig-apologise">
+    <span class="assess-label">How easy do you find it to apologise when you are wrong?</span>
+    <span class="assess-hint">Can you say "I was wrong about that" without it feeling like a threat to your identity?</span>
+    <select id="a-apologise" onchange="handleAssessInput('a-apologise')">
+        <option value="">Select...</option>
+        <option value="very-hard">Very hard &ndash; I almost never apologise</option>
+        <option value="hard">Hard &ndash; I can do it but it takes a lot of effort</option>
+        <option value="moderate">Moderate &ndash; it depends on the situation</option>
+        <option value="easy">Easy &ndash; I can apologise without much difficulty</option>
+        <option value="natural">Natural &ndash; apologising when I am wrong comes easily</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-apologise" onchange="handleSkip('a-apologise')"><label for="skip-apologise">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -429,6 +552,9 @@ life_area_slug: communication
         'a-public-speaking', 'a-writing',
         'a-conflict-pattern', 'a-apologise'
     ];
+
+    // All communication items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -504,6 +630,7 @@ life_area_slug: communication
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -516,65 +643,135 @@ life_area_slug: communication
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All communication items are unscored; save null for each value
+        var scores = {
+            influence: null,
+            connection: null,
+            performance: null,
+            conflict: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

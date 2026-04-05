@@ -133,35 +133,69 @@ life_area_slug: style
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,85 +347,192 @@ life_area_slug: style
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Attractiveness</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fit">
-    <label for="a-fit">I've assessed how well my most-worn clothes actually fit my body.<br><span class="assess-hint">Check shoulders, chest, waist, and trouser length. Ill-fitting clothes are the single biggest detractor from appearance.</span></label>
+<div class="assess-input-group" id="ig-fit">
+    <span class="assess-label">How well do your most-worn clothes actually fit your body?</span>
+    <span class="assess-hint">Check shoulders, chest, waist, and trouser length. Ill-fitting clothes are the single biggest detractor from appearance.</span>
+    <select id="a-fit" onchange="handleAssessInput('a-fit')">
+        <option value="">Select...</option>
+        <option value="poor">Poor &ndash; most items are noticeably too big, too small, or the wrong shape</option>
+        <option value="mixed">Mixed &ndash; some fit well, others do not</option>
+        <option value="reasonable">Reasonable &ndash; generally fine but not tailored</option>
+        <option value="good">Good &ndash; I pay attention to fit and most items suit my body</option>
+        <option value="excellent">Excellent &ndash; nearly everything is well-fitted or tailored</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-fit" onchange="handleSkip('a-fit')"><label for="skip-fit">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-colours">
-    <label for="a-colours">I know which colours suit my skin tone and which ones don't.<br><span class="assess-hint">Hold different coloured tops near your face in natural light. Some will make you look healthier; others will wash you out.</span></label>
+<div class="assess-input-group" id="ig-colours">
+    <span class="assess-label">How well do you know which colours suit your skin tone?</span>
+    <span class="assess-hint">Hold different coloured tops near your face in natural light. Some will make you look healthier; others will wash you out.</span>
+    <select id="a-colours" onchange="handleAssessInput('a-colours')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea &ndash; I have never thought about this</option>
+        <option value="vague">Vague &ndash; I have a rough sense but have not tested it</option>
+        <option value="moderate">Moderate &ndash; I know a few colours that work and a few that do not</option>
+        <option value="confident">Confident &ndash; I consistently choose colours that suit me</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-colours" onchange="handleSkip('a-colours')"><label for="skip-colours">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-grooming">
-    <label for="a-grooming">I've honestly evaluated my grooming standards &ndash; hair, skin, nails, and overall upkeep.<br><span class="assess-hint">Grooming is often more impactful than clothing choices for overall presentation.</span></label>
+<div class="assess-input-group" id="ig-grooming">
+    <span class="assess-label">How would you rate your grooming standards?</span>
+    <span class="assess-hint">Hair, skin, nails, and overall upkeep. Grooming is often more impactful than clothing choices for overall presentation.</span>
+    <select id="a-grooming" onchange="handleAssessInput('a-grooming')">
+        <option value="">Select...</option>
+        <option value="minimal">Minimal &ndash; basic hygiene only</option>
+        <option value="inconsistent">Inconsistent &ndash; sometimes make an effort, often do not</option>
+        <option value="moderate">Moderate &ndash; reasonably consistent routine</option>
+        <option value="strong">Strong &ndash; daily routine that I maintain reliably</option>
+        <option value="meticulous">Meticulous &ndash; comprehensive routine I rarely miss</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-grooming" onchange="handleSkip('a-grooming')"><label for="skip-grooming">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Status & Professional</h4>
+<h4>Status &amp; Professional</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-dresscode">
-    <label for="a-dresscode">I understand the dress code expectations in my workplace or primary professional context.<br><span class="assess-hint">Consider what the most respected people in your environment wear, not just the minimum standard.</span></label>
+<div class="assess-input-group" id="ig-dresscode">
+    <span class="assess-label">How well do you understand the dress code expectations in your professional context?</span>
+    <span class="assess-hint">Consider what the most respected people in your environment wear, not just the minimum standard.</span>
+    <select id="a-dresscode" onchange="handleAssessInput('a-dresscode')">
+        <option value="">Select...</option>
+        <option value="unaware">Unaware &ndash; I have not thought about it</option>
+        <option value="vague">Vague &ndash; I have a rough sense but do not dress to it</option>
+        <option value="adequate">Adequate &ndash; I meet the minimum standard</option>
+        <option value="good">Good &ndash; I dress appropriately and slightly above the norm</option>
+        <option value="strategic">Strategic &ndash; I deliberately dress for professional advantage</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-dresscode" onchange="handleSkip('a-dresscode')"><label for="skip-dresscode">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-quality">
-    <label for="a-quality">I can identify the difference between well-made and poorly-made clothing in my wardrobe.<br><span class="assess-hint">Check stitching, fabric weight, button quality, and how garments hold their shape after washing.</span></label>
+<div class="assess-input-group" id="ig-quality">
+    <span class="assess-label">Can you tell the difference between well-made and poorly-made clothing?</span>
+    <span class="assess-hint">Check stitching, fabric weight, button quality, and how garments hold their shape after washing.</span>
+    <select id="a-quality" onchange="handleAssessInput('a-quality')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I cannot tell the difference</option>
+        <option value="slightly">Slightly &ndash; I notice obvious extremes</option>
+        <option value="moderately">Moderately &ndash; I can spot the main indicators</option>
+        <option value="well">Well &ndash; I reliably identify quality differences</option>
+        <option value="expert">Expert &ndash; I have a detailed understanding of fabrics, construction, and finishing</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-quality" onchange="handleSkip('a-quality')"><label for="skip-quality">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contexts">
-    <label for="a-contexts">I know whether I have appropriate outfits for different professional situations &ndash; meetings, networking events, presentations.<br><span class="assess-hint">Think beyond your daily work outfit to situations where first impressions matter most.</span></label>
+<div class="assess-input-group" id="ig-contexts">
+    <span class="assess-label">Do you have appropriate outfits for different professional situations?</span>
+    <span class="assess-hint">Think beyond your daily work outfit to meetings, networking events, and presentations where first impressions matter most.</span>
+    <select id="a-contexts" onchange="handleAssessInput('a-contexts')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I wear the same thing regardless of context</option>
+        <option value="limited">Limited &ndash; I have one or two options but gaps remain</option>
+        <option value="adequate">Adequate &ndash; I can dress appropriately for most situations</option>
+        <option value="well-covered">Well covered &ndash; I have reliable outfits for all common professional contexts</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contexts" onchange="handleSkip('a-contexts')"><label for="skip-contexts">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Self-Expression</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-aesthetic">
-    <label for="a-aesthetic">I've thought about whether my clothing reflects my personality or whether I dress on autopilot.<br><span class="assess-hint">Consider whether someone who knows you well would say your clothes "look like you".</span></label>
+<div class="assess-input-group" id="ig-aesthetic">
+    <span class="assess-label">Does your clothing reflect your personality?</span>
+    <span class="assess-hint">Consider whether someone who knows you well would say your clothes "look like you".</span>
+    <select id="a-aesthetic" onchange="handleAssessInput('a-aesthetic')">
+        <option value="">Select...</option>
+        <option value="autopilot">Autopilot &ndash; I grab whatever is available without thinking</option>
+        <option value="functional">Functional &ndash; I dress for practicality, not personality</option>
+        <option value="somewhat">Somewhat &ndash; some items reflect me, most are generic</option>
+        <option value="mostly">Mostly &ndash; my wardrobe generally reflects who I am</option>
+        <option value="strongly">Strongly &ndash; my clothing is a deliberate expression of my identity</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-aesthetic" onchange="handleSkip('a-aesthetic')"><label for="skip-aesthetic">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-inspiration">
-    <label for="a-inspiration">I can name a style or aesthetic direction I'm drawn to, even if I don't currently dress that way.<br><span class="assess-hint">This could be a subculture, a colour palette, a level of formality, or a general mood.</span></label>
+<div class="assess-input-group" id="ig-inspiration">
+    <span class="assess-label">Can you name a style or aesthetic direction you are drawn to?</span>
+    <span class="assess-hint">This could be a subculture, a colour palette, a level of formality, or a general mood.</span>
+    <select id="a-inspiration" onchange="handleAssessInput('a-inspiration')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I have no sense of a style direction</option>
+        <option value="vague">Vague &ndash; I know what I like when I see it but cannot describe it</option>
+        <option value="emerging">Emerging &ndash; I have a general direction but have not developed it</option>
+        <option value="clear">Clear &ndash; I can describe my preferred aesthetic and name influences</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-inspiration" onchange="handleSkip('a-inspiration')"><label for="skip-inspiration">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-confidence">
-    <label for="a-confidence">I know which outfits make me feel most confident and which I wear despite not liking them.<br><span class="assess-hint">Think about what you reach for when you want to feel good versus what you default to.</span></label>
+<div class="assess-input-group" id="ig-confidence">
+    <span class="assess-label">Do you know which outfits make you feel most confident?</span>
+    <span class="assess-hint">Think about what you reach for when you want to feel good versus what you default to.</span>
+    <select id="a-confidence" onchange="handleAssessInput('a-confidence')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; nothing in my wardrobe particularly boosts my confidence</option>
+        <option value="vaguely">Vaguely &ndash; I have a sense but have not thought about why</option>
+        <option value="yes-few">Yes &ndash; I have a few go-to outfits that make me feel good</option>
+        <option value="yes-many">Yes &ndash; most of my wardrobe makes me feel confident</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-confidence" onchange="handleSkip('a-confidence')"><label for="skip-confidence">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Comfort & Function</h4>
+<h4>Comfort &amp; Function</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wardrobe-use">
-    <label for="a-wardrobe-use">I have a rough sense of what percentage of my wardrobe I actually wear regularly.<br><span class="assess-hint">The average person wears about 44% of their wardrobe. Check whether you have a large number of unworn items.</span></label>
+<div class="assess-input-group" id="ig-wardrobe-use">
+    <span class="assess-label">What percentage of your wardrobe do you actually wear regularly?</span>
+    <span class="assess-hint">The average person wears about 44% of their wardrobe. Check whether you have a large number of unworn items.</span>
+    <select id="a-wardrobe-use" onchange="handleAssessInput('a-wardrobe-use')">
+        <option value="">Select...</option>
+        <option value="very-low">Very low &ndash; less than a quarter</option>
+        <option value="low">Low &ndash; roughly a quarter to a third</option>
+        <option value="average">Average &ndash; about half</option>
+        <option value="high">High &ndash; most of my wardrobe gets worn</option>
+        <option value="nearly-all">Nearly all &ndash; I wear almost everything I own</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-wardrobe-use" onchange="handleSkip('a-wardrobe-use')"><label for="skip-wardrobe-use">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-time">
-    <label for="a-decision-time">I know roughly how long I spend choosing what to wear each morning.<br><span class="assess-hint">The average is about 17 minutes. Consider whether this feels like a source of stress or friction.</span></label>
+<div class="assess-input-group" id="ig-decision-time">
+    <span class="assess-label">How long do you spend choosing what to wear each morning?</span>
+    <span class="assess-hint">The average is about 17 minutes. Consider whether this feels like a source of stress or friction.</span>
+    <select id="a-decision-time" onchange="handleAssessInput('a-decision-time')">
+        <option value="">Select...</option>
+        <option value="no-thought">No thought &ndash; I grab whatever is to hand</option>
+        <option value="under-5">Under 5 minutes &ndash; quick and easy</option>
+        <option value="5-15">5 &ndash; 15 minutes &ndash; some consideration</option>
+        <option value="15-30">15 &ndash; 30 minutes &ndash; it takes a while</option>
+        <option value="over-30">Over 30 minutes &ndash; choosing is a significant daily task</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-decision-time" onchange="handleSkip('a-decision-time')"><label for="skip-decision-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-comfort-gaps">
-    <label for="a-comfort-gaps">I've identified any recurring comfort issues with my clothing &ndash; items that pinch, ride up, or don't suit the weather.<br><span class="assess-hint">Physical discomfort from clothing affects mood and focus throughout the day.</span></label>
+<div class="assess-input-group" id="ig-comfort-gaps">
+    <span class="assess-label">Do you have recurring comfort issues with your clothing?</span>
+    <span class="assess-hint">Items that pinch, ride up, or do not suit the weather. Physical discomfort from clothing affects mood and focus throughout the day.</span>
+    <select id="a-comfort-gaps" onchange="handleAssessInput('a-comfort-gaps')">
+        <option value="">Select...</option>
+        <option value="frequent">Frequent &ndash; I am regularly uncomfortable in my clothes</option>
+        <option value="occasional">Occasional &ndash; a few items cause problems</option>
+        <option value="rare">Rare &ndash; comfort issues come up now and then</option>
+        <option value="none">None &ndash; my clothing is consistently comfortable</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-comfort-gaps" onchange="handleSkip('a-comfort-gaps')"><label for="skip-comfort-gaps">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +580,9 @@ life_area_slug: style
         'a-aesthetic', 'a-inspiration', 'a-confidence',
         'a-wardrobe-use', 'a-decision-time', 'a-comfort-gaps'
     ];
+
+    // All style items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -514,6 +658,7 @@ life_area_slug: style
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +671,135 @@ life_area_slug: style
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All style items are unscored; save null for each value
+        var scores = {
+            attractiveness: null,
+            status: null,
+            expression: null,
+            comfort: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

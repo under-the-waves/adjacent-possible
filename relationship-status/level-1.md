@@ -133,35 +133,69 @@ life_area_slug: relationship-status
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,85 +347,197 @@ life_area_slug: relationship-status
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought about it).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Partner Selection</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-past-patterns">
-    <label for="a-past-patterns">I can identify my own partner-selection patterns &ndash; what has attracted me in the past and which choices led to good or poor outcomes.<br><span class="assess-hint">Think about your last two or three relationships or significant interests. What drew you in?</span></label>
+<div class="assess-input-group" id="ig-past-patterns">
+    <span class="assess-label">How well can you identify your own partner-selection patterns?</span>
+    <span class="assess-hint">Think about your last two or three relationships or significant interests. What drew you in?</span>
+    <select id="a-past-patterns" onchange="handleAssessInput('a-past-patterns')">
+        <option value="">Select...</option>
+        <option value="no-awareness">No awareness &ndash; have not thought about my patterns</option>
+        <option value="vague">Vague sense &ndash; can see some repeating themes but not clearly</option>
+        <option value="partial">Partial &ndash; know what attracts me but unsure which choices led to good or poor outcomes</option>
+        <option value="clear">Clear &ndash; can name my patterns and which ones served me well</option>
+        <option value="detailed">Detailed &ndash; understand my patterns, their origins, and how to adjust</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-past-patterns" onchange="handleSkip('a-past-patterns')"><label for="skip-past-patterns">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-needs-vs-wants">
-    <label for="a-needs-vs-wants">I can distinguish between what I genuinely need in a partner and what I find initially exciting but unimportant long-term.<br><span class="assess-hint">For example, shared values vs. physical type, or emotional availability vs. social status.</span></label>
+<div class="assess-input-group" id="ig-needs-vs-wants">
+    <span class="assess-label">How well can you distinguish between what you need in a partner and what you find initially exciting?</span>
+    <span class="assess-hint">For example, shared values vs. physical type, or emotional availability vs. social status.</span>
+    <select id="a-needs-vs-wants" onchange="handleAssessInput('a-needs-vs-wants')">
+        <option value="">Select...</option>
+        <option value="no-distinction">No distinction &ndash; have not separated the two</option>
+        <option value="starting">Starting to &ndash; beginning to notice the difference</option>
+        <option value="moderate">Moderate &ndash; can list some genuine needs but still get pulled by excitement</option>
+        <option value="clear">Clear &ndash; know my core needs and can separate them from surface attraction</option>
+        <option value="tested">Tested &ndash; have applied this distinction in real decisions and it holds up</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-needs-vs-wants" onchange="handleSkip('a-needs-vs-wants')"><label for="skip-needs-vs-wants">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-red-flags">
-    <label for="a-red-flags">I know which red flags I have previously overlooked or rationalised in partners.<br><span class="assess-hint">Common ones include inconsistency, contempt, unwillingness to compromise, or misaligned life goals.</span></label>
+<div class="assess-input-group" id="ig-red-flags">
+    <span class="assess-label">How well do you recognise red flags you have previously overlooked in partners?</span>
+    <span class="assess-hint">Common ones include inconsistency, contempt, unwillingness to compromise, or misaligned life goals.</span>
+    <select id="a-red-flags" onchange="handleAssessInput('a-red-flags')">
+        <option value="">Select...</option>
+        <option value="blind">Blind to them &ndash; tend to see the best in people regardless</option>
+        <option value="retrospective">Retrospective only &ndash; recognise them after the fact</option>
+        <option value="sometimes">Sometimes &ndash; spot some in the moment but miss others</option>
+        <option value="usually">Usually &ndash; catch most red flags early</option>
+        <option value="reliably">Reliably &ndash; can identify and act on red flags consistently</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-red-flags" onchange="handleSkip('a-red-flags')"><label for="skip-red-flags">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Meeting New Partners</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-search-proactivity">
-    <label for="a-search-proactivity">I know whether my current approach to meeting potential partners is active or passive &ndash; and whether I am relying on chance, a single channel, or multiple deliberate methods.<br><span class="assess-hint">Are you on dating apps, expanding your social circles, asking friends for introductions, or mainly hoping to meet someone organically?</span></label>
+<div class="assess-input-group" id="ig-search-proactivity">
+    <span class="assess-label">How active is your current approach to meeting potential partners?</span>
+    <span class="assess-hint">Are you on dating apps, expanding your social circles, asking friends for introductions, or mainly hoping to meet someone organically?</span>
+    <select id="a-search-proactivity" onchange="handleAssessInput('a-search-proactivity')">
+        <option value="">Select...</option>
+        <option value="passive">Passive &ndash; entirely relying on chance</option>
+        <option value="single-channel">Single channel &ndash; one method (e.g. one dating app) without much effort</option>
+        <option value="moderate">Moderate &ndash; a couple of methods with some consistency</option>
+        <option value="active">Active &ndash; multiple deliberate methods used regularly</option>
+        <option value="systematic">Systematic &ndash; structured approach across several channels with regular review</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-search-proactivity" onchange="handleSkip('a-search-proactivity')"><label for="skip-search-proactivity">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-search-effectiveness">
-    <label for="a-search-effectiveness">I can identify which of my current methods for meeting people are actually generating compatible matches and which are not.<br><span class="assess-hint">Think about where your best dates or connections have come from vs. where you spend the most time searching.</span></label>
+<div class="assess-input-group" id="ig-search-effectiveness">
+    <span class="assess-label">Which of your methods for meeting people are actually generating compatible matches?</span>
+    <span class="assess-hint">Think about where your best dates or connections have come from vs. where you spend the most time searching.</span>
+    <select id="a-search-effectiveness" onchange="handleAssessInput('a-search-effectiveness')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea &ndash; have not tracked what works</option>
+        <option value="nothing-works">Nothing working &ndash; no method is generating compatible matches</option>
+        <option value="one-works">One works &ndash; one method produces decent results, others do not</option>
+        <option value="several-work">Several work &ndash; a few methods reliably produce compatible matches</option>
+        <option value="optimised">Optimised &ndash; know exactly which channels work and focus effort there</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-search-effectiveness" onchange="handleSkip('a-search-effectiveness')"><label for="skip-search-effectiveness">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-search-barriers">
-    <label for="a-search-barriers">I know what my main barriers to meeting new partners are &ndash; whether that is limited social exposure, lack of confidence, poor self-presentation, or something else.<br><span class="assess-hint">Is it a volume problem (not meeting enough people), a conversion problem (meeting people but not generating interest), or an avoidance problem?</span></label>
+<div class="assess-input-group" id="ig-search-barriers">
+    <span class="assess-label">What is your main barrier to meeting new partners?</span>
+    <span class="assess-hint">Is it a volume problem (not meeting enough people), a conversion problem (meeting people but not generating interest), or an avoidance problem?</span>
+    <select id="a-search-barriers" onchange="handleAssessInput('a-search-barriers')">
+        <option value="">Select...</option>
+        <option value="avoidance">Avoidance &ndash; I am not really trying</option>
+        <option value="volume">Volume &ndash; not meeting enough new people</option>
+        <option value="conversion">Conversion &ndash; meeting people but not generating mutual interest</option>
+        <option value="selectivity">Selectivity &ndash; meeting people but few meet my standards</option>
+        <option value="no-major-barrier">No major barrier &ndash; my search process is working reasonably well</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-search-barriers" onchange="handleSkip('a-search-barriers')"><label for="skip-search-barriers">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Independence</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-single-comfort">
-    <label for="a-single-comfort">I have an honest sense of how comfortable I am being single &ndash; whether it feels like a genuine choice or a problem to be solved.<br><span class="assess-hint">Consider whether you feel pressure from yourself, family, or society to be in a relationship.</span></label>
+<div class="assess-input-group" id="ig-single-comfort">
+    <span class="assess-label">How comfortable are you being single?</span>
+    <span class="assess-hint">Consider whether you feel pressure from yourself, family, or society to be in a relationship.</span>
+    <select id="a-single-comfort" onchange="handleAssessInput('a-single-comfort')">
+        <option value="">Select...</option>
+        <option value="very-uncomfortable">Very uncomfortable &ndash; being single feels like a serious problem</option>
+        <option value="uncomfortable">Uncomfortable &ndash; strong internal or external pressure to couple up</option>
+        <option value="mixed">Mixed &ndash; some discomfort but managing</option>
+        <option value="comfortable">Comfortable &ndash; genuinely fine being single</option>
+        <option value="thriving">Thriving &ndash; single life feels like a deliberate, fulfilling choice</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-single-comfort" onchange="handleSkip('a-single-comfort')"><label for="skip-single-comfort">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-solo-fulfilment">
-    <label for="a-solo-fulfilment">I know whether my daily life &ndash; friendships, hobbies, mental health &ndash; is fulfilling independently of my relationship status.<br><span class="assess-hint">Would your life feel meaningfully emptier without a partner, or roughly the same?</span></label>
+<div class="assess-input-group" id="ig-solo-fulfilment">
+    <span class="assess-label">How fulfilling is your daily life independently of your relationship status?</span>
+    <span class="assess-hint">Would your life feel meaningfully emptier without a partner, or roughly the same?</span>
+    <select id="a-solo-fulfilment" onchange="handleAssessInput('a-solo-fulfilment')">
+        <option value="">Select...</option>
+        <option value="empty">Empty &ndash; life feels hollow without a partner</option>
+        <option value="lacking">Lacking &ndash; noticeably less fulfilling when single</option>
+        <option value="adequate">Adequate &ndash; fine but could be better</option>
+        <option value="fulfilling">Fulfilling &ndash; rich friendships, hobbies, and purpose regardless of status</option>
+        <option value="deeply-fulfilling">Deeply fulfilling &ndash; a partner would add to an already complete life</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-solo-fulfilment" onchange="handleSkip('a-solo-fulfilment')"><label for="skip-solo-fulfilment">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fear-single">
-    <label for="a-fear-single">I can recognise when fear of being alone (rather than genuine desire) is driving my relationship decisions.<br><span class="assess-hint">Have you ever stayed in or entered a relationship primarily because being single felt worse?</span></label>
+<div class="assess-input-group" id="ig-fear-single">
+    <span class="assess-label">How much does fear of being alone drive your relationship decisions?</span>
+    <span class="assess-hint">Have you ever stayed in or entered a relationship primarily because being single felt worse?</span>
+    <select id="a-fear-single" onchange="handleAssessInput('a-fear-single')">
+        <option value="">Select...</option>
+        <option value="primary-driver">Primary driver &ndash; fear of being alone is my main motivation</option>
+        <option value="significant">Significant &ndash; has kept me in relationships I should have left</option>
+        <option value="some-influence">Some influence &ndash; aware it plays a role but not the main factor</option>
+        <option value="minor">Minor &ndash; rarely affects my decisions</option>
+        <option value="not-a-factor">Not a factor &ndash; my decisions are based on genuine desire and compatibility</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-fear-single" onchange="handleSkip('a-fear-single')"><label for="skip-fear-single">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Transition Navigation</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-breakup-speed">
-    <label for="a-breakup-speed">I know how long I typically stay in a relationship after recognising it is not working.<br><span class="assess-hint">Weeks, months, or years? Some people leave quickly; others stay for years past the point of knowing.</span></label>
+<div class="assess-input-group" id="ig-breakup-speed">
+    <span class="assess-label">How long do you typically stay in a relationship after recognising it is not working?</span>
+    <span class="assess-hint">Weeks, months, or years? Some people leave quickly; others stay for years past the point of knowing.</span>
+    <select id="a-breakup-speed" onchange="handleAssessInput('a-breakup-speed')">
+        <option value="">Select...</option>
+        <option value="years">Years &ndash; tend to stay long past the point of knowing</option>
+        <option value="many-months">Many months &ndash; take a long time to act on what I know</option>
+        <option value="few-months">A few months &ndash; some delay but eventually act</option>
+        <option value="weeks">Weeks &ndash; act fairly quickly once I am sure</option>
+        <option value="promptly">Promptly &ndash; address it as soon as the pattern is clear</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-breakup-speed" onchange="handleSkip('a-breakup-speed')"><label for="skip-breakup-speed">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-recovery-time">
-    <label for="a-recovery-time">I have a sense of how long it takes me to recover emotionally from a breakup.<br><span class="assess-hint">Research suggests most people return to baseline within about three months, but individual variation is large.</span></label>
+<div class="assess-input-group" id="ig-recovery-time">
+    <span class="assess-label">How long does it typically take you to recover emotionally from a breakup?</span>
+    <span class="assess-hint">Research suggests most people return to baseline within about three months, but individual variation is large.</span>
+    <select id="a-recovery-time" onchange="handleAssessInput('a-recovery-time')">
+        <option value="">Select...</option>
+        <option value="over-a-year">Over a year &ndash; takes a very long time to move on</option>
+        <option value="6-12-months">6 &ndash; 12 months &ndash; a significant recovery period</option>
+        <option value="3-6-months">3 &ndash; 6 months &ndash; roughly average</option>
+        <option value="1-3-months">1 &ndash; 3 months &ndash; recover relatively quickly</option>
+        <option value="under-a-month">Under a month &ndash; bounce back fast</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-recovery-time" onchange="handleSkip('a-recovery-time')"><label for="skip-recovery-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-transition-patterns">
-    <label for="a-transition-patterns">I can identify my post-breakup patterns &ndash; whether I tend towards rumination, rebound relationships, avoidance, or constructive processing.<br><span class="assess-hint">Think about your last significant breakup. What did you actually do in the weeks that followed?</span></label>
+<div class="assess-input-group" id="ig-transition-patterns">
+    <span class="assess-label">What is your typical post-breakup pattern?</span>
+    <span class="assess-hint">Think about your last significant breakup. What did you actually do in the weeks that followed?</span>
+    <select id="a-transition-patterns" onchange="handleAssessInput('a-transition-patterns')">
+        <option value="">Select...</option>
+        <option value="rumination">Rumination &ndash; replay events and struggle to let go</option>
+        <option value="rebound">Rebound &ndash; jump into a new relationship quickly</option>
+        <option value="avoidance">Avoidance &ndash; suppress feelings and distract myself</option>
+        <option value="mixed-processing">Mixed processing &ndash; some constructive reflection alongside difficult patches</option>
+        <option value="constructive">Constructive &ndash; process emotions, extract lessons, and move forward deliberately</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-transition-patterns" onchange="handleSkip('a-transition-patterns')"><label for="skip-transition-patterns">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +585,9 @@ life_area_slug: relationship-status
         'a-single-comfort', 'a-solo-fulfilment', 'a-fear-single',
         'a-breakup-speed', 'a-recovery-time', 'a-transition-patterns'
     ];
+
+    // All relationship-status items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -488,7 +637,6 @@ life_area_slug: relationship-status
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -514,6 +662,7 @@ life_area_slug: relationship-status
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +675,132 @@ life_area_slug: relationship-status
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = {
+            partnerSelection: null,
+            meetingPartners: null,
+            independence: null,
+            transitionNavigation: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

@@ -133,35 +133,69 @@ life_area_slug: children
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,85 +347,197 @@ life_area_slug: children
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought about it).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Wellbeing</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-emotional-climate">
-    <label for="a-emotional-climate">I've reflected on the emotional climate of my home &ndash; whether my child generally feels safe to express both positive and negative emotions.<br><span class="assess-hint">Think about how your child behaves when upset, angry, or disappointed. Do they come to you or withdraw?</span></label>
+<div class="assess-input-group" id="ig-emotional-climate">
+    <span class="assess-label">How safe does your child feel expressing negative emotions at home?</span>
+    <span class="assess-hint">Think about how your child behaves when upset, angry, or disappointed. Do they come to you or withdraw?</span>
+    <select id="a-emotional-climate" onchange="handleAssessInput('a-emotional-climate')">
+        <option value="">Select...</option>
+        <option value="withdrawn">Withdrawn &ndash; rarely expresses negative emotions at home</option>
+        <option value="cautious">Cautious &ndash; sometimes shares but often holds back</option>
+        <option value="mixed">Mixed &ndash; expresses some emotions but suppresses others</option>
+        <option value="mostly-open">Mostly open &ndash; generally comes to me when upset</option>
+        <option value="fully-open">Fully open &ndash; freely shares both positive and negative feelings</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-emotional-climate" onchange="handleSkip('a-emotional-climate')"><label for="skip-emotional-climate">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sleep-nutrition">
-    <label for="a-sleep-nutrition">I know whether my child is getting adequate sleep and nutrition for their age.<br><span class="assess-hint">Check NHS or WHO guidelines for age-appropriate sleep hours and nutritional needs.</span></label>
+<div class="assess-input-group" id="ig-sleep-nutrition">
+    <span class="assess-label">Is your child getting adequate sleep and nutrition for their age?</span>
+    <span class="assess-hint">Check NHS or WHO guidelines for age-appropriate sleep hours and nutritional needs.</span>
+    <select id="a-sleep-nutrition" onchange="handleAssessInput('a-sleep-nutrition')">
+        <option value="">Select...</option>
+        <option value="poor-both">Poor on both &ndash; inadequate sleep and nutrition</option>
+        <option value="poor-one">Poor on one &ndash; sleep or nutrition is lacking</option>
+        <option value="adequate">Adequate &ndash; meets minimum guidelines for both</option>
+        <option value="good">Good &ndash; consistently meets guidelines</option>
+        <option value="excellent">Excellent &ndash; well above guidelines on both</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-sleep-nutrition" onchange="handleSkip('a-sleep-nutrition')"><label for="skip-sleep-nutrition">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-stress-signs">
-    <label for="a-stress-signs">I can identify the signs my child shows when they are stressed or struggling.<br><span class="assess-hint">Common signs include changes in sleep, appetite, withdrawal, irritability, or regression to earlier behaviours.</span></label>
+<div class="assess-input-group" id="ig-stress-signs">
+    <span class="assess-label">How well can you identify when your child is stressed or struggling?</span>
+    <span class="assess-hint">Common signs include changes in sleep, appetite, withdrawal, irritability, or regression to earlier behaviours.</span>
+    <select id="a-stress-signs" onchange="handleAssessInput('a-stress-signs')">
+        <option value="">Select...</option>
+        <option value="rarely-notice">Rarely notice &ndash; usually surprised when something is wrong</option>
+        <option value="sometimes">Sometimes &ndash; pick up on obvious signs but miss subtler ones</option>
+        <option value="usually">Usually &ndash; notice most signs within a day or two</option>
+        <option value="quickly">Quickly &ndash; tend to spot changes early</option>
+        <option value="very-attuned">Very attuned &ndash; pick up on subtle shifts in mood or behaviour promptly</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-stress-signs" onchange="handleSkip('a-stress-signs')"><label for="skip-stress-signs">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Relationship</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-quality-time">
-    <label for="a-quality-time">I know roughly how much one-on-one time I spend with my child in a typical week that involves genuine connection rather than logistics.<br><span class="assess-hint">Count time spent talking, playing, reading together, or doing shared activities &ndash; not transport, meals in front of screens, or homework supervision.</span></label>
+<div class="assess-input-group" id="ig-quality-time">
+    <span class="assess-label">How much genuine one-on-one connection time do you spend with your child in a typical week?</span>
+    <span class="assess-hint">Count time spent talking, playing, reading together, or doing shared activities &ndash; not transport, meals in front of screens, or homework supervision.</span>
+    <select id="a-quality-time" onchange="handleAssessInput('a-quality-time')">
+        <option value="">Select...</option>
+        <option value="under-1h">Under 1 hour per week</option>
+        <option value="1-3h">1 &ndash; 3 hours per week</option>
+        <option value="3-5h">3 &ndash; 5 hours per week</option>
+        <option value="5-10h">5 &ndash; 10 hours per week</option>
+        <option value="over-10h">Over 10 hours per week</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-quality-time" onchange="handleSkip('a-quality-time')"><label for="skip-quality-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-inner-life">
-    <label for="a-inner-life">I have a sense of my child's inner life &ndash; what they worry about, what excites them, and who their close friends are.<br><span class="assess-hint">Could you name your child's current best friend, their biggest worry, and something they're looking forward to?</span></label>
+<div class="assess-input-group" id="ig-inner-life">
+    <span class="assess-label">How well do you know your child's inner life?</span>
+    <span class="assess-hint">Could you name your child's current best friend, their biggest worry, and something they are looking forward to?</span>
+    <select id="a-inner-life" onchange="handleAssessInput('a-inner-life')">
+        <option value="">Select...</option>
+        <option value="very-little">Very little &ndash; would struggle to answer any of those</option>
+        <option value="some">Some &ndash; know one or two but not all three</option>
+        <option value="reasonable">Reasonable &ndash; could answer most with some thought</option>
+        <option value="well">Well &ndash; could answer all three confidently</option>
+        <option value="deeply">Deeply &ndash; know far more than the basics about their worries, joys, and friendships</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-inner-life" onchange="handleSkip('a-inner-life')"><label for="skip-inner-life">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-seeks-comfort">
-    <label for="a-seeks-comfort">I know whether my child actively seeks me out for comfort and conversation, or tends to go elsewhere.<br><span class="assess-hint">Think about the last time your child was upset. Did they come to you first, go to another adult, or handle it alone?</span></label>
+<div class="assess-input-group" id="ig-seeks-comfort">
+    <span class="assess-label">When your child is upset, who do they go to first?</span>
+    <span class="assess-hint">Think about the last time your child was upset. Did they come to you first, go to another adult, or handle it alone?</span>
+    <select id="a-seeks-comfort" onchange="handleAssessInput('a-seeks-comfort')">
+        <option value="">Select...</option>
+        <option value="avoids-all">Avoids everyone &ndash; deals with it alone or shuts down</option>
+        <option value="others-first">Others first &ndash; goes to another adult, sibling, or friend</option>
+        <option value="depends">Depends &ndash; sometimes me, sometimes others</option>
+        <option value="usually-me">Usually me &ndash; I am their first port of call most of the time</option>
+        <option value="always-me">Always me &ndash; consistently seeks me out for comfort and conversation</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-seeks-comfort" onchange="handleSkip('a-seeks-comfort')"><label for="skip-seeks-comfort">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Achievement</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-academic-level">
-    <label for="a-academic-level">I know where my child stands relative to age expectations in their main academic or skill areas.<br><span class="assess-hint">This might come from school reports, teacher conversations, or your own observation of their reading, writing, and numeracy.</span></label>
+<div class="assess-input-group" id="ig-academic-level">
+    <span class="assess-label">Where does your child stand relative to age expectations in their main academic or skill areas?</span>
+    <span class="assess-hint">This might come from school reports, teacher conversations, or your own observation of their reading, writing, and numeracy.</span>
+    <select id="a-academic-level" onchange="handleAssessInput('a-academic-level')">
+        <option value="">Select...</option>
+        <option value="well-behind">Well behind &ndash; significantly below age expectations</option>
+        <option value="slightly-behind">Slightly behind &ndash; a little below in some areas</option>
+        <option value="at-level">At level &ndash; meeting age expectations</option>
+        <option value="above">Above &ndash; ahead in one or more areas</option>
+        <option value="well-above">Well above &ndash; significantly ahead across most areas</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-academic-level" onchange="handleSkip('a-academic-level')"><label for="skip-academic-level">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-enrichment">
-    <label for="a-enrichment">I know whether my child has regular structured enrichment beyond school &ndash; reading together, skill-building activities, or academic challenges.<br><span class="assess-hint">Count activities you do together (reading, puzzles, projects) as well as formal clubs or tutoring.</span></label>
+<div class="assess-input-group" id="ig-enrichment">
+    <span class="assess-label">Does your child have regular structured enrichment beyond school?</span>
+    <span class="assess-hint">Count activities you do together (reading, puzzles, projects) as well as formal clubs or tutoring.</span>
+    <select id="a-enrichment" onchange="handleAssessInput('a-enrichment')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; no regular enrichment activities</option>
+        <option value="occasional">Occasional &ndash; something now and then but nothing consistent</option>
+        <option value="one-regular">One regular &ndash; one consistent activity or habit</option>
+        <option value="several">Several &ndash; two or three regular enrichment activities</option>
+        <option value="extensive">Extensive &ndash; a well-rounded programme of enrichment</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-enrichment" onchange="handleSkip('a-enrichment')"><label for="skip-enrichment">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-strengths-gaps">
-    <label for="a-strengths-gaps">I can identify at least one area where my child is ahead of peers and one where they could benefit from more support.<br><span class="assess-hint">Think about academic subjects, social skills, motor skills, or practical capabilities.</span></label>
+<div class="assess-input-group" id="ig-strengths-gaps">
+    <span class="assess-label">Can you identify your child's strengths and gaps relative to peers?</span>
+    <span class="assess-hint">Think about academic subjects, social skills, motor skills, or practical capabilities.</span>
+    <select id="a-strengths-gaps" onchange="handleAssessInput('a-strengths-gaps')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea &ndash; have not thought about this</option>
+        <option value="vague">Vague sense &ndash; could guess but not confidently</option>
+        <option value="know-strengths">Know strengths &ndash; clear on what they are good at but less sure about gaps</option>
+        <option value="know-both">Know both &ndash; can name at least one strength and one area for support</option>
+        <option value="detailed">Detailed picture &ndash; clear understanding of multiple strengths and gaps</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-strengths-gaps" onchange="handleSkip('a-strengths-gaps')"><label for="skip-strengths-gaps">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Development</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-independence">
-    <label for="a-independence">I've thought about where I might be over-directing my child's choices and where they could exercise more independent decision-making.<br><span class="assess-hint">Consider how many of your child's daily decisions &ndash; what to wear, what to eat, how to spend free time &ndash; they actually make themselves.</span></label>
+<div class="assess-input-group" id="ig-independence">
+    <span class="assess-label">How much independent decision-making does your child exercise daily?</span>
+    <span class="assess-hint">Consider how many of your child's daily decisions &ndash; what to wear, what to eat, how to spend free time &ndash; they actually make themselves.</span>
+    <select id="a-independence" onchange="handleAssessInput('a-independence')">
+        <option value="">Select...</option>
+        <option value="very-little">Very little &ndash; I direct most of their choices</option>
+        <option value="some">Some &ndash; they choose a few things but I guide most</option>
+        <option value="moderate">Moderate &ndash; roughly balanced between their choices and mine</option>
+        <option value="substantial">Substantial &ndash; they make most daily decisions themselves</option>
+        <option value="high">High &ndash; they are largely self-directing with me as a safety net</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-independence" onchange="handleSkip('a-independence')"><label for="skip-independence">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-consequences">
-    <label for="a-consequences">I know whether my child experiences natural consequences for their choices, or whether I tend to step in and fix things.<br><span class="assess-hint">Think about the last time your child forgot something or made a poor choice. Did you rescue them or let them deal with it?</span></label>
+<div class="assess-input-group" id="ig-consequences">
+    <span class="assess-label">Does your child experience natural consequences for their choices?</span>
+    <span class="assess-hint">Think about the last time your child forgot something or made a poor choice. Did you rescue them or let them deal with it?</span>
+    <select id="a-consequences" onchange="handleAssessInput('a-consequences')">
+        <option value="">Select...</option>
+        <option value="always-rescue">Always rescue &ndash; I step in before consequences land</option>
+        <option value="usually-rescue">Usually rescue &ndash; tend to fix things most of the time</option>
+        <option value="mixed">Mixed &ndash; sometimes let consequences play out, sometimes intervene</option>
+        <option value="usually-allow">Usually allow &ndash; let them experience consequences with occasional support</option>
+        <option value="consistently-allow">Consistently allow &ndash; let natural consequences land unless safety is at risk</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-consequences" onchange="handleSkip('a-consequences')"><label for="skip-consequences">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-self-direction">
-    <label for="a-self-direction">I have a sense of how self-directed my child is compared to their peers &ndash; whether they initiate activities and sustain effort on their own.<br><span class="assess-hint">Does your child start projects or activities independently, or do they wait for you to organise their time?</span></label>
+<div class="assess-input-group" id="ig-self-direction">
+    <span class="assess-label">How self-directed is your child compared to their peers?</span>
+    <span class="assess-hint">Does your child start projects or activities independently, or do they wait for you to organise their time?</span>
+    <select id="a-self-direction" onchange="handleAssessInput('a-self-direction')">
+        <option value="">Select...</option>
+        <option value="very-dependent">Very dependent &ndash; waits for me to organise almost everything</option>
+        <option value="mostly-dependent">Mostly dependent &ndash; needs prompting for most activities</option>
+        <option value="average">Average &ndash; initiates some things but needs prompting for others</option>
+        <option value="mostly-independent">Mostly independent &ndash; starts most activities on their own</option>
+        <option value="highly-independent">Highly independent &ndash; consistently self-starting and self-sustaining</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-self-direction" onchange="handleSkip('a-self-direction')"><label for="skip-self-direction">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +585,9 @@ life_area_slug: children
         'a-academic-level', 'a-enrichment', 'a-strengths-gaps',
         'a-independence', 'a-consequences', 'a-self-direction'
     ];
+
+    // All children items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -514,6 +663,7 @@ life_area_slug: children
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +676,135 @@ life_area_slug: children
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All children items are unscored; save null for each value
+        var scores = {
+            wellbeing: null,
+            relationship: null,
+            achievement: null,
+            development: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

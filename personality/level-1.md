@@ -133,35 +133,69 @@ life_area_slug: personality
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -297,47 +331,100 @@ life_area_slug: personality
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to look up or reflect on.</p>
 
 <div class="assess-group">
 <h4>Personality Alignment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-big-five">
-    <label for="a-big-five">I have completed at least one Big Five personality assessment and know my approximate trait profile.<br><span class="assess-hint">Free options include the IPIP-NEO or the Big Five Inventory. Look for openness, conscientiousness, extraversion, agreeableness, and neuroticism scores.</span></label>
+<div class="assess-input-group" id="ig-big-five">
+    <span class="assess-label">Have you completed a Big Five personality assessment?</span>
+    <span class="assess-hint">Free options include the IPIP-NEO or the Big Five Inventory. Look for openness, conscientiousness, extraversion, agreeableness, and neuroticism scores.</span>
+    <select id="a-big-five" onchange="handleAssessInput('a-big-five')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I have never taken one</option>
+        <option value="vaguely">Vaguely &ndash; I took one years ago but do not remember the results</option>
+        <option value="informal">Informal &ndash; I have a rough sense from a quick online quiz</option>
+        <option value="yes">Yes &ndash; I know my approximate trait profile</option>
+        <option value="detailed">Yes &ndash; I have detailed results I can refer to</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-big-five" onchange="handleSkip('a-big-five')"><label for="skip-big-five">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-attachment">
-    <label for="a-attachment">I have a sense of my attachment style in close relationships.<br><span class="assess-hint">Secure, anxious, avoidant, or disorganised. You can take a short online questionnaire or reflect on recurring relationship patterns.</span></label>
+<div class="assess-input-group" id="ig-attachment">
+    <span class="assess-label">How well do you understand your attachment style in close relationships?</span>
+    <span class="assess-hint">Secure, anxious, avoidant, or disorganised. You can take a short online questionnaire or reflect on recurring relationship patterns.</span>
+    <select id="a-attachment" onchange="handleAssessInput('a-attachment')">
+        <option value="">Select...</option>
+        <option value="unaware">Unaware &ndash; I have not thought about this</option>
+        <option value="vague">Vague &ndash; I have heard the terms but am not sure which applies</option>
+        <option value="approximate">Approximate &ndash; I have a general sense of my pattern</option>
+        <option value="clear">Clear &ndash; I know my attachment style and can see it in my relationships</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-attachment" onchange="handleSkip('a-attachment')"><label for="skip-attachment">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fit">
-    <label for="a-fit">I can identify at least one area of my life (work, relationships, living situation) where my personality is a good or poor fit.<br><span class="assess-hint">Think about where you feel energised versus drained. Do your daily routines suit your natural tendencies?</span></label>
+<div class="assess-input-group" id="ig-fit">
+    <span class="assess-label">How well does your current life fit your personality?</span>
+    <span class="assess-hint">Think about work, relationships, and living situation. Do you feel energised or drained by your daily routines?</span>
+    <select id="a-fit" onchange="handleAssessInput('a-fit')">
+        <option value="">Select...</option>
+        <option value="poor">Poor &ndash; most of my daily life works against my natural tendencies</option>
+        <option value="mixed">Mixed &ndash; some areas suit me, others do not</option>
+        <option value="mostly-good">Mostly good &ndash; my life generally fits my personality</option>
+        <option value="excellent">Excellent &ndash; I have deliberately built my life around my traits</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-fit" onchange="handleSkip('a-fit')"><label for="skip-fit">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Personality Growth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-strength">
-    <label for="a-strength">I can name at least two personality traits that help me in daily life.<br><span class="assess-hint">These might be things like emotional resilience, curiosity, discipline, warmth, or adaptability.</span></label>
+<div class="assess-input-group" id="ig-strength">
+    <span class="assess-label">How many personality traits can you name that help you in daily life?</span>
+    <span class="assess-hint">These might be things like emotional resilience, curiosity, discipline, warmth, or adaptability.</span>
+    <select id="a-strength" onchange="handleAssessInput('a-strength')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I have not thought about my strengths in these terms</option>
+        <option value="one">One &ndash; I can name one but struggle with more</option>
+        <option value="two-three">Two or three &ndash; I have a reasonable sense of my strengths</option>
+        <option value="many">Several &ndash; I know my personality strengths well</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-strength" onchange="handleSkip('a-strength')"><label for="skip-strength">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-limitation">
-    <label for="a-limitation">I can name at least two personality traits that hinder me or create recurring problems.<br><span class="assess-hint">For example, conflict avoidance, impulsiveness, rigidity, social anxiety, or low frustration tolerance.</span></label>
+<div class="assess-input-group" id="ig-limitation">
+    <span class="assess-label">How many personality traits can you name that hinder you or create recurring problems?</span>
+    <span class="assess-hint">For example, conflict avoidance, impulsiveness, rigidity, social anxiety, or low frustration tolerance.</span>
+    <select id="a-limitation" onchange="handleAssessInput('a-limitation')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I have not thought about my limitations in these terms</option>
+        <option value="one">One &ndash; I can name one but struggle with more</option>
+        <option value="two-three">Two or three &ndash; I have a reasonable sense of my limitations</option>
+        <option value="many">Several &ndash; I know my personality limitations well</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-limitation" onchange="handleSkip('a-limitation')"><label for="skip-limitation">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-change">
-    <label for="a-change">I have thought about whether I want to work with my current traits or actively try to change them.<br><span class="assess-hint">There is no right answer. Some traits are worth adapting around; others are worth developing. The key is having considered the question.</span></label>
+<div class="assess-input-group" id="ig-change">
+    <span class="assess-label">Have you thought about whether to work with your current traits or actively try to change them?</span>
+    <span class="assess-hint">There is no right answer. Some traits are worth adapting around; others are worth developing. The key is having considered the question.</span>
+    <select id="a-change" onchange="handleAssessInput('a-change')">
+        <option value="">Select...</option>
+        <option value="not-considered">Not considered &ndash; I have not thought about this</option>
+        <option value="vaguely">Vaguely &ndash; I have thought about it in passing</option>
+        <option value="considered">Considered &ndash; I have a view on which traits to accept and which to develop</option>
+        <option value="actively-working">Actively working on it &ndash; I am deliberately trying to change specific traits</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-change" onchange="handleSkip('a-change')"><label for="skip-change">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -383,6 +470,9 @@ life_area_slug: personality
         'a-big-five', 'a-attachment', 'a-fit',
         'a-strength', 'a-limitation', 'a-change'
     ];
+
+    // All personality items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -458,6 +548,7 @@ life_area_slug: personality
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -470,65 +561,133 @@ life_area_slug: personality
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All personality items are unscored; save null for each value
+        var scores = {
+            alignment: null,
+            growth: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();
