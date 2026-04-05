@@ -1,59 +1,199 @@
 ---
+layout: default
+title: Relationship Quality
 life_area_slug: romantic-relationships
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Connect with Others &gt;
+    Friends and Relationships &gt;
+    Relationship Quality
+</div>
+
 # Relationship Quality
 
-## What is Relationship Quality?
+**What it is**
+- The quality of your romantic partnership &ndash; how well you connect, collaborate, and grow together with an intimate partner over time. For finding a partner, leaving a relationship, or building a fulfilling single life, see [Relationship Status]({{ site.baseurl }}/relationship-status/).
 
-The quality of your romantic partnership -- how well you connect, collaborate, and grow together with an intimate partner over time. For finding a partner, leaving a relationship, or building a fulfilling single life, see [Relationship Status]({{ site.baseurl }}/relationship-status/).
+**Why it matters**
+- Partnership quality is among the strongest predictors of life satisfaction. Satisfaction correlates substantially with communication quality and togetherness, and is shaped more by learnable skills than by initial compatibility alone.
 
-## Why Relationship Quality matters
+**Related life areas**
+- [Sex]({{ site.baseurl }}/sex/) &ndash; your sexual wellbeing, satisfaction, and intimacy
+- [Friendship]({{ site.baseurl }}/friendship/) &ndash; the quality and breadth of your non-romantic relationships
+- [Communication]({{ site.baseurl }}/communication/) &ndash; your ability to express yourself clearly and listen effectively
+- [Mental health]({{ site.baseurl }}/mental-health/) &ndash; your psychological wellbeing and resilience
 
-- **Partnership is among the strongest predictors of life satisfaction** -- well over 90% of people marry at some point, yet 40 -- 50% of marriages end in divorce <span class="info-icon" onclick="showReasoning('research-divorce-rates')">i</span>
-- **Satisfaction is shaped by skills, not just selection** -- satisfaction correlates at 0.34 with communication quality, 0.36 with togetherness, and -0.35 with frequency of disagreements; secure attachment predicts increasing satisfaction over time <span class="info-icon" onclick="showReasoning('research-predictors')">i</span>
-- **Parenthood is a stress test** -- for most couples, marital satisfaction remains relatively stable over time, but by the time the first child reaches 15, parents' satisfaction has declined by nearly one standard deviation <span class="info-icon" onclick="showReasoning('research-satisfaction-trends')">i</span>
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Relationship Quality yet.</strong><br>It takes about 15 minutes and helps you understand what relationship quality means to you.</p>
+    <a href="{{ site.baseurl }}/romantic-relationships/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Relationship Quality Values
+## What people value about relationship quality
 
-Your approach to relationship quality depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+People pursue relationship quality for different reasons. This site scores every relationship quality intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Connection</h3>
+<p>Emotional closeness, vulnerability, trust, and deep mutual understanding. Sharing your inner life, feeling genuinely known and accepted, and maintaining emotional and physical intimacy through life's changes.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Harmony</h3>
+<p>Low-conflict, smoothly functioning daily life together. Constructive disagreement, equitable division of responsibilities, and the ability to navigate differences without erosion of goodwill.</p>
+</div>
 
-Research reveals a paradox: most married people report being satisfied with their relationships, yet divorce rates remain high and many partnerships stagnate in comfortable mediocrity. Only about 30% of marriages maintain what researchers call "vital" or "total" quality over the long term. Communication quality, attachment security, and deliberate investment in the relationship are the strongest modifiable predictors of sustained satisfaction. Achieving consistently high relationship quality requires skills that most people never formally develop.
+<div class="value-card">
+<h3>Alignment</h3>
+<p>Shared values, compatible life goals, and a common vision for the relationship's future. Agreement on major life decisions, compatible priorities, and the sense that you are building towards the same things.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/romantic-relationships/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand relationship quality, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/romantic-relationships/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-divorce-rates': {
-        title: 'Marriage and Divorce Statistics',
-        content: 'About 40 -- 50% of marriages end in divorce, though the rate has been declining since the 1980s. Well over 90% of people marry at some point. The divorce rate varies significantly by education, age at marriage, and other demographic factors. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8186435/" target="_blank">View study</a>'
-    },
-    'research-satisfaction-trends': {
-        title: 'Marital Satisfaction Over Time',
-        content: 'Recent research has challenged conventional wisdom: for most couples, marital satisfaction does not decline over time but remains relatively stable. However, the transition to parenthood is associated with significant decline -- by the time the first child is 15, parents\' satisfaction has dropped by nearly one standard deviation. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3061469/" target="_blank">View study</a>'
-    },
-    'research-predictors': {
-        title: 'Predictors of Relationship Quality',
-        content: 'Meta-analytic research shows satisfaction correlates at 0.34 with communication, 0.36 with togetherness, and -0.35 with disagreements. Attachment security predicts increasing satisfaction over time, while insecure attachment predicts lower and declining satisfaction. Intrinsic motivation was the strongest predictor in structural models. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9136471/" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress['romantic-relationships'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['romantic-relationships'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Relationship Quality.</strong></p>' +
+            '<a href="{{ site.baseurl }}/romantic-relationships/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/romantic-relationships/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/romantic-relationships/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
