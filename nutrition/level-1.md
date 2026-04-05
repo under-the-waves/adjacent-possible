@@ -133,34 +133,115 @@ life_area_slug: nutrition
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group input[type="number"] {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
     margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
 }
 
 /* Completion */
@@ -303,66 +384,132 @@ life_area_slug: nutrition
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to look up or test.</p>
 
 <div class="assess-group">
-<h4>Health & Longevity</h4>
+<h4>Health &amp; Longevity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fruit-veg">
-    <label for="a-fruit-veg">I know roughly how many servings of fruit and vegetables I eat on a typical day.<br><span class="assess-hint">Count each distinct portion &ndash; a handful of berries, a side salad, roasted vegetables with dinner.</span></label>
+<div class="assess-input-group" id="ig-fruit-veg">
+    <span class="assess-label">How many servings of fruit and vegetables do you eat on a typical day?</span>
+    <span class="assess-hint">Count each distinct portion &ndash; a handful of berries, a side salad, roasted vegetables with dinner.</span>
+    <input type="number" id="a-fruit-veg" min="0" max="20" step="1" placeholder="e.g. 4" onchange="handleAssessInput('a-fruit-veg')"> <span class="assess-percentile-hint" id="pct-fruit-veg"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-fruit-veg" onchange="handleSkip('a-fruit-veg')"><label for="skip-fruit-veg">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-upf">
-    <label for="a-upf">I know roughly what proportion of my diet comes from ultra-processed foods.<br><span class="assess-hint">Things like crisps, ready meals, sugary cereals, packaged snacks, and soft drinks.</span></label>
+<div class="assess-input-group" id="ig-upf">
+    <span class="assess-label">What proportion of your diet comes from ultra-processed foods?</span>
+    <span class="assess-hint">Things like crisps, ready meals, sugary cereals, packaged snacks, and soft drinks.</span>
+    <select id="a-upf" onchange="handleAssessInput('a-upf')">
+        <option value="">Select...</option>
+        <option value="75">Most of it (75%+)</option>
+        <option value="55">About half (50 &ndash; 74%)</option>
+        <option value="35">A fair amount (25 &ndash; 49%)</option>
+        <option value="15">A small amount (10 &ndash; 24%)</option>
+        <option value="5">Very little (&lt;10%)</option>
+    </select> <span class="assess-percentile-hint" id="pct-upf"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-upf" onchange="handleSkip('a-upf')"><label for="skip-upf">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fibre">
-    <label for="a-fibre">I know whether I am likely meeting the recommended 30g of daily fibre.<br><span class="assess-hint">Track a typical day using a free app like MyFitnessPal, or estimate from your usual foods.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Enjoyment & Culture</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-distinct-foods">
-    <label for="a-distinct-foods">I know roughly how many distinct foods I eat in a typical week.<br><span class="assess-hint">Count individual ingredients &ndash; rice, chicken, broccoli, olive oil each count separately.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cooking">
-    <label for="a-cooking">I know how many times per week I cook a meal from scratch.<br><span class="assess-hint">From scratch means assembling raw or minimally processed ingredients, not reheating.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-social-meals">
-    <label for="a-social-meals">I know how many meals per week I share with other people.<br><span class="assess-hint">Eating together at the same table, whether at home, at a restaurant, or at someone else's house.</span></label>
+<div class="assess-input-group" id="ig-fibre">
+    <span class="assess-label">How many grams of fibre do you eat per day?</span>
+    <span class="assess-hint">Track a typical day using a free app like MyFitnessPal, or estimate from your usual foods. The UK recommendation is 30 g.</span>
+    <input type="number" id="a-fibre" min="0" max="80" step="1" placeholder="e.g. 18" onchange="handleAssessInput('a-fibre')"> <span class="assess-percentile-hint" id="pct-fibre"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-fibre" onchange="handleSkip('a-fibre')"><label for="skip-fibre">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Ethical & Environmental Impact</h4>
+<h4>Enjoyment &amp; Culture</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-meat-frequency">
-    <label for="a-meat-frequency">I know how many days per week I eat meat or fish.<br><span class="assess-hint">Count any day where you eat at least one serving of meat, poultry, or fish.</span></label>
+<div class="assess-input-group" id="ig-distinct-foods">
+    <span class="assess-label">How many distinct foods do you eat in a typical week?</span>
+    <span class="assess-hint">Count individual ingredients &ndash; rice, chicken, broccoli, olive oil each count separately.</span>
+    <input type="number" id="a-distinct-foods" min="0" max="100" step="1" placeholder="e.g. 15" onchange="handleAssessInput('a-distinct-foods')"> <span class="assess-percentile-hint" id="pct-distinct-foods"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-distinct-foods" onchange="handleSkip('a-distinct-foods')"><label for="skip-distinct-foods">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-food-waste">
-    <label for="a-food-waste">I have a rough sense of how much food I throw away each week.<br><span class="assess-hint">Check your bin over a few days. Include leftovers, expired items, and uneaten portions.</span></label>
+<div class="assess-input-group" id="ig-cooking">
+    <span class="assess-label">How many times per week do you cook a meal from scratch?</span>
+    <span class="assess-hint">From scratch means assembling raw or minimally processed ingredients, not reheating.</span>
+    <input type="number" id="a-cooking" min="0" max="21" step="1" placeholder="e.g. 4" onchange="handleAssessInput('a-cooking')"> <span class="assess-percentile-hint" id="pct-cooking"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-cooking" onchange="handleSkip('a-cooking')"><label for="skip-cooking">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sourcing">
-    <label for="a-sourcing">I know where most of my food comes from &ndash; supermarket, local shops, markets, or online.<br><span class="assess-hint">Think about your main weekly shop and any other regular food purchases.</span></label>
+<div class="assess-input-group" id="ig-social-meals">
+    <span class="assess-label">How many meals per week do you share with other people?</span>
+    <span class="assess-hint">Eating together at the same table, whether at home, at a restaurant, or at someone else's house.</span>
+    <input type="number" id="a-social-meals" min="0" max="21" step="1" placeholder="e.g. 5" onchange="handleAssessInput('a-social-meals')"> <span class="assess-percentile-hint" id="pct-social-meals"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-social-meals" onchange="handleSkip('a-social-meals')"><label for="skip-social-meals">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-group">
+<h4>Ethical &amp; Environmental Impact</h4>
+
+<div class="assess-input-group" id="ig-meat-frequency">
+    <span class="assess-label">How many days per week do you eat meat or fish?</span>
+    <span class="assess-hint">Count any day where you eat at least one serving of meat, poultry, or fish.</span>
+    <select id="a-meat-frequency" onchange="handleAssessInput('a-meat-frequency')">
+        <option value="">Select...</option>
+        <option value="7">Every day</option>
+        <option value="6">6 days</option>
+        <option value="5">5 days</option>
+        <option value="4">4 days</option>
+        <option value="3">3 days</option>
+        <option value="2">2 days</option>
+        <option value="1">1 day</option>
+        <option value="0">None &ndash; fully plant-based</option>
+    </select> <span class="assess-percentile-hint" id="pct-meat-frequency"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-meat-frequency" onchange="handleSkip('a-meat-frequency')"><label for="skip-meat-frequency">I know but prefer not to say</label></div>
+</div>
+
+<div class="assess-input-group" id="ig-food-waste">
+    <span class="assess-label">How much of the food you buy goes to waste?</span>
+    <span class="assess-hint">Check your bin over a few days. Include leftovers, expired items, and uneaten portions.</span>
+    <select id="a-food-waste" onchange="handleAssessInput('a-food-waste')">
+        <option value="">Select...</option>
+        <option value="30">A lot (30%+)</option>
+        <option value="20">A fair amount (15 &ndash; 30%)</option>
+        <option value="12">Some (10 &ndash; 15%)</option>
+        <option value="7">A little (5 &ndash; 10%)</option>
+        <option value="2">Almost none (&lt;5%)</option>
+    </select> <span class="assess-percentile-hint" id="pct-food-waste"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-food-waste" onchange="handleSkip('a-food-waste')"><label for="skip-food-waste">I know but prefer not to say</label></div>
+</div>
+
+<div class="assess-input-group" id="ig-sourcing">
+    <span class="assess-label">Where does most of your food come from?</span>
+    <span class="assess-hint">Think about your main weekly shop and any other regular food purchases.</span>
+    <select id="a-sourcing" onchange="handleAssessInput('a-sourcing')">
+        <option value="">Select...</option>
+        <option value="0">Mostly takeaway, delivery, or ready meals</option>
+        <option value="1">Mostly supermarket, little attention to sourcing</option>
+        <option value="2">Supermarket with some attention to sourcing (e.g. free-range, organic)</option>
+        <option value="3">Mix of supermarket and local shops, markets, or veg boxes</option>
+        <option value="4">Mostly local, seasonal, or direct-from-producer sources</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-sourcing" onchange="handleSkip('a-sourcing')"><label for="skip-sourcing">I know but prefer not to say</label></div>
+</div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-health">
+        <span class="assess-summary-label">Health &amp; Longevity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-health" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-health">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-ethical">
+        <span class="assess-summary-label">Ethical &amp; Environmental</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-ethical" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-ethical">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data for UK and US adults. Enjoyment &amp; Culture items are recorded for your awareness but not scored, as the available data does not support reliable percentile estimates.</p>
+</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -409,6 +556,34 @@ life_area_slug: nutrition
         'a-distinct-foods', 'a-cooking', 'a-social-meals',
         'a-meat-frequency', 'a-food-waste', 'a-sourcing'
     ];
+
+    // Scoring thresholds: [{value, percentile}, ...] sorted by value ascending
+    // For inverted scales (lower = better), thresholds are sorted by value descending
+    var THRESHOLDS = {
+        'a-fruit-veg': [
+            {v:0,p:5},{v:1,p:15},{v:2,p:30},{v:3,p:50},{v:5,p:70},{v:7,p:88},{v:10,p:97}
+        ],
+        'a-upf': [ // inverted: lower UPF is better
+            {v:'75',p:10},{v:'55',p:30},{v:'35',p:55},{v:'15',p:80},{v:'5',p:95}
+        ],
+        'a-fibre': [
+            {v:5,p:5},{v:10,p:15},{v:15,p:30},{v:19,p:50},{v:25,p:70},{v:30,p:88},{v:35,p:95},{v:40,p:99}
+        ],
+        'a-meat-frequency': [ // inverted: fewer days = higher ethical percentile
+            {v:'7',p:10},{v:'6',p:20},{v:'5',p:30},{v:'4',p:45},{v:'3',p:60},{v:'2',p:75},{v:'1',p:88},{v:'0',p:97}
+        ],
+        'a-food-waste': [ // inverted: less waste = higher percentile
+            {v:'30',p:10},{v:'20',p:30},{v:'12',p:50},{v:'7',p:75},{v:'2',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        health: ['a-fruit-veg', 'a-upf', 'a-fibre'],
+        ethical: ['a-meat-frequency', 'a-food-waste']
+    };
+
+    // Enjoyment items plus sourcing are recorded but not scored (insufficient population data for reliable percentiles)
+    var UNSCORED_ITEMS = ['a-distinct-foods', 'a-cooking', 'a-social-meals', 'a-sourcing'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -496,65 +671,225 @@ life_area_slug: nutrition
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Scoring functions ---
 
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+    function interpolatePercentile(value, thresholds) {
+        var num = parseFloat(value);
+        // Check if thresholds use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        // Check if inverted (first threshold has higher value than last)
+        var inverted = thresholds[0].v > thresholds[thresholds.length - 1].v;
+        if (inverted) {
+            if (num >= thresholds[0].v) return thresholds[0].p;
+            if (num <= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num <= thresholds[i].v && num >= thresholds[i + 1].v) {
+                    var t = (thresholds[i].v - num) / (thresholds[i].v - thresholds[i + 1].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        } else {
+            if (num <= thresholds[0].v) return thresholds[0].p;
+            if (num >= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num >= thresholds[i].v && num <= thresholds[i + 1].v) {
+                    var t = (num - thresholds[i].v) / (thresholds[i + 1].v - thresholds[i].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
         });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return; // no hints for unscored items
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['health', 'ethical'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
+    function saveScores() {
+        var scores = {};
+        ['health', 'ethical'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
         });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+            if (skipBox.checked && input.type === 'number') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    // Override completeStep to also save scores
+    var _origCompleteStep = window.completeStep;
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        _origCompleteStep(step);
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

@@ -133,34 +133,115 @@ life_area_slug: sleep
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group input[type="number"] {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
     margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
 }
 
 /* Completion */
@@ -222,7 +303,7 @@ life_area_slug: sleep
 
 <p>Adults who regularly sleep fewer than seven hours have a <a href="https://pubmed.ncbi.nlm.nih.gov/28364328/" target="_blank">13% higher risk</a> of dying from any cause. Short sleep is independently linked to heart disease, type 2 diabetes, obesity, and depression. The relationship between sleep and health runs in both directions: poor sleep worsens chronic conditions, and chronic conditions worsen sleep.</p>
 
-<p>The effects on daily performance are equally striking. After <a href="https://pubmed.ncbi.nlm.nih.gov/10984335/" target="_blank">17 – 19 hours without sleep</a>, reaction time and decision-making deteriorate to levels comparable to a blood alcohol concentration of 0.05%. Cumulative sleep restriction over two weeks – sleeping six hours a night instead of eight – produces <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2656292/" target="_blank">cognitive impairment equivalent to two nights of total sleep deprivation</a>, and people consistently underestimate how impaired they are.</p>
+<p>The effects on daily performance are equally striking. After <a href="https://pubmed.ncbi.nlm.nih.gov/10984335/" target="_blank">17 &ndash; 19 hours without sleep</a>, reaction time and decision-making deteriorate to levels comparable to a blood alcohol concentration of 0.05%. Cumulative sleep restriction over two weeks &ndash; sleeping six hours a night instead of eight &ndash; produces <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2656292/" target="_blank">cognitive impairment equivalent to two nights of total sleep deprivation</a>, and people consistently underestimate how impaired they are.</p>
 
 <p>Sleep also consolidates memory, regulates appetite hormones, supports immune function, and affects emotional resilience. Few other behaviours touch as many systems simultaneously, and unlike many health interventions, improving sleep often produces noticeable benefits within days.</p>
 
@@ -252,7 +333,7 @@ life_area_slug: sleep
 <p>Disease prevention, longevity, and brain health over years and decades. People who lean towards this value treat sleep as a long-term investment. They focus on consistent duration, sleep architecture (the balance of deep and REM sleep), and reducing the cumulative health risks that come from chronic sleep debt.</p>
 
 <h3>Comfort & Experience</h3>
-<p>The subjective quality of sleep itself – how easily you fall asleep, whether you stay asleep through the night, and how pleasant the experience feels. People who lean towards this value care about the sleep environment, bedtime routines, and waking without an alarm. They want sleep to feel good, not just be adequate.</p>
+<p>The subjective quality of sleep itself &ndash; how easily you fall asleep, whether you stay asleep through the night, and how pleasant the experience feels. People who lean towards this value care about the sleep environment, bedtime routines, and waking without an alarm. They want sleep to feel good, not just be adequate.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -305,66 +386,136 @@ life_area_slug: sleep
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few days to observe. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few days to observe or look up.</p>
 
 <div class="assess-group">
 <h4>Daily Functioning</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wake-refreshed">
-    <label for="a-wake-refreshed">I know how often I wake up feeling genuinely refreshed and alert.<br><span class="assess-hint">Think about the past two weeks. Most days? Some days? Rarely?</span></label>
+<div class="assess-input-group" id="ig-sleep-hours">
+    <span class="assess-label">How many hours do you typically sleep per night?</span>
+    <span class="assess-hint">Check a sleep tracker or estimate from when you fall asleep to when you wake up. Use your weeknight average.</span>
+    <input type="number" id="a-sleep-hours" min="3" max="12" step="0.5" placeholder="e.g. 7" onchange="handleAssessInput('a-sleep-hours')"> <span class="assess-percentile-hint" id="pct-sleep-hours"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-sleep-hours" onchange="handleSkip('a-sleep-hours')"><label for="skip-sleep-hours">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-afternoon-energy">
-    <label for="a-afternoon-energy">I know whether I typically experience an afternoon energy dip that affects my focus.<br><span class="assess-hint">A mild dip is normal. Think about whether it regularly disrupts your work or concentration.</span></label>
+<div class="assess-input-group" id="ig-wake-refreshed">
+    <span class="assess-label">How often do you wake up feeling genuinely refreshed and alert?</span>
+    <span class="assess-hint">Think about the past two weeks.</span>
+    <select id="a-wake-refreshed" onchange="handleAssessInput('a-wake-refreshed')">
+        <option value="">Select...</option>
+        <option value="0">Rarely or never</option>
+        <option value="1">Some days (1 &ndash; 3 per week)</option>
+        <option value="2">Most days (4 &ndash; 5 per week)</option>
+        <option value="3">Almost every day (6 &ndash; 7 per week)</option>
+    </select> <span class="assess-percentile-hint" id="pct-wake-refreshed"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-wake-refreshed" onchange="handleSkip('a-wake-refreshed')"><label for="skip-wake-refreshed">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-caffeine-dependence">
-    <label for="a-caffeine-dependence">I know how much caffeine I consume and how late in the day I have it.<br><span class="assess-hint">Count coffees, teas, energy drinks, and soft drinks. Note the time of your last one each day.</span></label>
+<div class="assess-input-group" id="ig-caffeine">
+    <span class="assess-label">How much do you rely on caffeine to function during the day?</span>
+    <span class="assess-hint">Consider coffee, tea, energy drinks, and soft drinks.</span>
+    <select id="a-caffeine" onchange="handleAssessInput('a-caffeine')">
+        <option value="">Select...</option>
+        <option value="0">I need caffeine to feel normal &ndash; 4+ servings per day</option>
+        <option value="1">I rely on it most days &ndash; 2 &ndash; 3 servings</option>
+        <option value="2">I drink it occasionally but don't need it</option>
+        <option value="3">I rarely or never consume caffeine</option>
+    </select> <span class="assess-percentile-hint" id="pct-caffeine"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-caffeine" onchange="handleSkip('a-caffeine')"><label for="skip-caffeine">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Long-term Health</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sleep-duration">
-    <label for="a-sleep-duration">I know how many hours I typically sleep on weeknights and weekends.<br><span class="assess-hint">Check your phone's screen time or a sleep tracker, or estimate from when you get into bed and when you get up.</span></label>
+<div class="assess-input-group" id="ig-bedtime-variability">
+    <span class="assess-label">By how many minutes does your bedtime vary across the week?</span>
+    <span class="assess-hint">Compare your earliest and latest bedtimes over a typical week, including weekends. Enter the difference in minutes.</span>
+    <input type="number" id="a-bedtime-variability" min="0" max="300" step="5" placeholder="e.g. 60" onchange="handleAssessInput('a-bedtime-variability')"> <span class="assess-percentile-hint" id="pct-bedtime-variability"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-bedtime-variability" onchange="handleSkip('a-bedtime-variability')"><label for="skip-bedtime-variability">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sleep-consistency">
-    <label for="a-sleep-consistency">I know how consistent my bedtime and wake time are across the week.<br><span class="assess-hint">A difference of more than an hour between weekday and weekend times counts as inconsistent.</span></label>
+<div class="assess-input-group" id="ig-weekday-weekend">
+    <span class="assess-label">How different is your sleep schedule on weekdays versus weekends?</span>
+    <span class="assess-hint">Think about both bedtime and wake time.</span>
+    <select id="a-weekday-weekend" onchange="handleAssessInput('a-weekday-weekend')">
+        <option value="">Select...</option>
+        <option value="0">Very different &ndash; 2+ hours shift on weekends</option>
+        <option value="1">Noticeably different &ndash; 1 &ndash; 2 hour shift</option>
+        <option value="2">Slightly different &ndash; 30 &ndash; 60 minute shift</option>
+        <option value="3">Almost identical &ndash; less than 30 minutes</option>
+    </select> <span class="assess-percentile-hint" id="pct-weekday-weekend"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-weekday-weekend" onchange="handleSkip('a-weekday-weekend')"><label for="skip-weekday-weekend">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-snoring">
-    <label for="a-snoring">I know whether I snore, gasp, or stop breathing during sleep.<br><span class="assess-hint">Ask a partner or housemate, or use a phone app that records audio overnight. This can indicate sleep apnoea.</span></label>
+<div class="assess-input-group" id="ig-snoring">
+    <span class="assess-label">Do you snore, gasp, or stop breathing during sleep?</span>
+    <span class="assess-hint">Ask a partner or housemate, or use a phone app that records audio overnight. This can indicate sleep apnoea.</span>
+    <select id="a-snoring" onchange="handleAssessInput('a-snoring')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; confirmed by a bed partner or recording</option>
+        <option value="mild">Occasional light snoring</option>
+        <option value="yes">Regular snoring, gasping, or possible apnoea</option>
+        <option value="unsure">I'm not sure &ndash; I haven't checked</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-snoring" onchange="handleSkip('a-snoring')"><label for="skip-snoring">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Comfort & Experience</h4>
+<h4>Comfort &amp; Experience</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fall-asleep-time">
-    <label for="a-fall-asleep-time">I know roughly how long it takes me to fall asleep on a typical night.<br><span class="assess-hint">Under 10 minutes may suggest you're overtired. Over 30 minutes may suggest difficulty winding down. 10 – 20 minutes is typical.</span></label>
+<div class="assess-input-group" id="ig-sleep-latency">
+    <span class="assess-label">How many minutes does it typically take you to fall asleep?</span>
+    <span class="assess-hint">Under 5 minutes may suggest sleep debt. Over 30 minutes may suggest difficulty winding down. 10 &ndash; 20 minutes is typical.</span>
+    <input type="number" id="a-sleep-latency" min="0" max="120" step="1" placeholder="e.g. 15" onchange="handleAssessInput('a-sleep-latency')"> <span class="assess-percentile-hint" id="pct-sleep-latency"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-sleep-latency" onchange="handleSkip('a-sleep-latency')"><label for="skip-sleep-latency">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-night-waking">
-    <label for="a-night-waking">I know how often I wake during the night and whether I can get back to sleep easily.<br><span class="assess-hint">Once or twice briefly is normal. Lying awake for 20+ minutes is worth noting.</span></label>
+<div class="assess-input-group" id="ig-sleep-efficiency">
+    <span class="assess-label">What is your estimated sleep efficiency?</span>
+    <span class="assess-hint">The percentage of time in bed that you spend actually sleeping. If you sleep 7 hours in an 8-hour window, that's about 88%. A sleep tracker can give you this number directly.</span>
+    <input type="number" id="a-sleep-efficiency" min="50" max="100" step="1" placeholder="e.g. 88" onchange="handleAssessInput('a-sleep-efficiency')"> <span class="assess-percentile-hint" id="pct-sleep-efficiency"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-sleep-efficiency" onchange="handleSkip('a-sleep-efficiency')"><label for="skip-sleep-efficiency">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sleep-environment">
-    <label for="a-sleep-environment">I know the temperature, light level, and noise level in my bedroom at night.<br><span class="assess-hint">Is the room dark enough? Cool enough? Quiet enough? Can you identify specific issues?</span></label>
+<div class="assess-input-group" id="ig-night-waking">
+    <span class="assess-label">How often do you wake during the night?</span>
+    <span class="assess-hint">Count awakenings you're aware of on a typical night.</span>
+    <select id="a-night-waking" onchange="handleAssessInput('a-night-waking')">
+        <option value="">Select...</option>
+        <option value="0">3+ times, often with difficulty getting back to sleep</option>
+        <option value="1">2 &ndash; 3 times, but I get back to sleep fairly quickly</option>
+        <option value="2">Once or twice briefly</option>
+        <option value="3">I rarely or never wake during the night</option>
+    </select> <span class="assess-percentile-hint" id="pct-night-waking"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-night-waking" onchange="handleSkip('a-night-waking')"><label for="skip-night-waking">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-daily">
+        <span class="assess-summary-label">Daily Functioning</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-daily" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-daily">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-long">
+        <span class="assess-summary-label">Long-term Health</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-long" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-long">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-comfort">
+        <span class="assess-summary-label">Comfort &amp; Experience</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-comfort" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-comfort">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data for adults. Snoring awareness is recorded for your information but not scored, as the available data does not support reliable percentile estimates.</p>
+</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -407,10 +558,49 @@ life_area_slug: sleep
     var AREA = 'sleep';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-wake-refreshed', 'a-afternoon-energy', 'a-caffeine-dependence',
-        'a-sleep-duration', 'a-sleep-consistency', 'a-snoring',
-        'a-fall-asleep-time', 'a-night-waking', 'a-sleep-environment'
+        'a-sleep-hours', 'a-wake-refreshed', 'a-caffeine',
+        'a-bedtime-variability', 'a-weekday-weekend', 'a-snoring',
+        'a-sleep-latency', 'a-sleep-efficiency', 'a-night-waking'
     ];
+
+    // Scoring thresholds: [{v, p}, ...] sorted by value ascending
+    // For inverted scales (lower = better), thresholds are sorted by value descending
+    var THRESHOLDS = {
+        'a-sleep-hours': [ // optimal range is 7-9; both short and long sleep score lower
+            {v:4,p:5},{v:5,p:15},{v:5.5,p:25},{v:6,p:35},{v:6.5,p:50},{v:7,p:70},{v:7.5,p:82},{v:8,p:90},{v:8.5,p:85},{v:9,p:75},{v:10,p:50}
+        ],
+        'a-wake-refreshed': [
+            {v:'0',p:15},{v:'1',p:40},{v:'2',p:65},{v:'3',p:90}
+        ],
+        'a-caffeine': [
+            {v:'0',p:10},{v:'1',p:35},{v:'2',p:65},{v:'3',p:92}
+        ],
+        'a-bedtime-variability': [ // inverted: lower is better
+            {v:240,p:5},{v:180,p:10},{v:120,p:20},{v:90,p:35},{v:60,p:55},{v:30,p:80},{v:15,p:92},{v:0,p:98}
+        ],
+        'a-weekday-weekend': [
+            {v:'0',p:10},{v:'1',p:30},{v:'2',p:60},{v:'3',p:88}
+        ],
+        'a-snoring': 'unscored',
+        'a-sleep-latency': [ // optimal is 10-20 min; both very fast and very slow score lower
+            {v:0,p:30},{v:5,p:55},{v:10,p:80},{v:15,p:90},{v:20,p:80},{v:30,p:50},{v:45,p:25},{v:60,p:10},{v:90,p:5}
+        ],
+        'a-sleep-efficiency': [ // higher is better
+            {v:60,p:5},{v:70,p:15},{v:75,p:25},{v:80,p:40},{v:85,p:55},{v:88,p:65},{v:90,p:75},{v:93,p:85},{v:95,p:92},{v:98,p:97}
+        ],
+        'a-night-waking': [
+            {v:'0',p:10},{v:'1',p:35},{v:'2',p:65},{v:'3',p:90}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        daily: ['a-sleep-hours', 'a-wake-refreshed', 'a-caffeine'],
+        long: ['a-bedtime-variability', 'a-weekday-weekend'],
+        comfort: ['a-sleep-latency', 'a-sleep-efficiency', 'a-night-waking']
+    };
+
+    // Snoring is recorded but not scored (qualitative awareness item)
+    var UNSCORED_ITEMS = ['a-snoring'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -498,65 +688,227 @@ life_area_slug: sleep
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Scoring functions ---
 
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+    function interpolatePercentile(value, thresholds) {
+        var num = parseFloat(value);
+        // Check if thresholds use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        // Check if inverted (first threshold has higher value than last)
+        var inverted = thresholds[0].v > thresholds[thresholds.length - 1].v;
+        if (inverted) {
+            if (num >= thresholds[0].v) return thresholds[0].p;
+            if (num <= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num <= thresholds[i].v && num >= thresholds[i + 1].v) {
+                    var t = (thresholds[i].v - num) / (thresholds[i].v - thresholds[i + 1].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        } else {
+            if (num <= thresholds[0].v) return thresholds[0].p;
+            if (num >= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num >= thresholds[i].v && num <= thresholds[i + 1].v) {
+                    var t = (num - thresholds[i].v) / (thresholds[i + 1].v - thresholds[i].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        if (THRESHOLDS[itemId] === 'unscored') return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
         });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return; // no hints for unscored items
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['daily', 'long', 'comfort'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
+    function saveScores() {
+        var scores = {};
+        ['daily', 'long', 'comfort'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
         });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+            if (skipBox.checked && input.type === 'number') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    // Override completeStep to also save scores
+    var _origCompleteStep = window.completeStep;
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        _origCompleteStep(step);
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();
