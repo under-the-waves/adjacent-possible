@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Life Purpose – Level 1: Awareness"
-life_area_slug: life-purpose
+title: "Participatory Leisure – Level 1: Awareness"
+life_area_slug: participatory-leisure
 ---
 
 <style>
@@ -192,9 +192,9 @@ life_area_slug: life-purpose
 
 <div class="l1-container">
 
-<h1>Life Purpose: Level 1</h1>
+<h1>Participatory Leisure: Level 1</h1>
 
-<p class="l1-subtitle">Understand what life purpose means, what's possible, and where you stand. About 15 minutes.</p>
+<p class="l1-subtitle">Understand what participatory leisure means, what's possible, and where you stand. About 15 minutes.</p>
 
 <div class="l1-progress">
     <div class="l1-progress-bar">
@@ -207,24 +207,22 @@ life_area_slug: life-purpose
     <div class="l1-progress-label" id="progressLabel">Step 1 of 5</div>
 </div>
 
-<!-- Step 1: Why Life Purpose Matters -->
+<!-- Step 1: Why Participatory Leisure Matters -->
 <div class="l1-step" id="step-why" data-step="why">
     <div class="l1-step-header" onclick="toggleStep('why')">
         <div class="l1-step-number">1</div>
-        <div class="l1-step-title">Why life purpose matters</div>
+        <div class="l1-step-title">Why participatory leisure matters</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Having a clear sense of purpose is one of the strongest predictors of psychological wellbeing across cultures and age groups. The evidence connects purpose to outcomes in health, resilience, and overall life satisfaction.</p>
+<p>Participatory leisure &ndash; activities you actively engage in for enjoyment rather than passive consumption &ndash; is one of the strongest predictors of life satisfaction. A <a href="https://www.nature.com/articles/s41591-023-02506-1" target="_blank">2023 study across 16 countries</a> found that people who engage in hobbies report higher life satisfaction, better self-rated health, and fewer depressive symptoms, with effects comparable in magnitude to being employed.</p>
 
-<p>People with a well-defined sense of purpose show <a href="https://psycnet.apa.org/record/2016-17273-001" target="_blank">roughly 40% greater resilience</a> during major life stressors, recovering more quickly from setbacks and maintaining perspective during difficulties. They also tend to score <a href="https://psycnet.apa.org/record/2009-05474-001" target="_blank">25 &ndash; 30% higher</a> on life satisfaction measures and report lower rates of depression and anxiety.</p>
+<p>The benefits extend well beyond mood. Active leisure builds skills that transfer to other areas of life, creates social bonds that outlast workplace relationships, and provides a sense of identity and accomplishment independent of career status. Research in the <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa022252" target="_blank">New England Journal of Medicine</a> found that adults who maintained diverse leisure interests showed significantly better cognitive function as they aged.</p>
 
-<p>Purpose also affects physical health. A <a href="https://journals.sagepub.com/doi/10.1177/0956797619831612" target="_blank">meta-analysis of over 136,000 participants</a> found that having a strong sense of purpose was associated with reduced all-cause mortality. The mechanism likely involves better health behaviours, lower chronic stress, and stronger social connections &ndash; all of which tend to follow from purposeful living.</p>
-
-<p>Perhaps most practically, purpose improves the quality of everyday decisions. When you know what matters to you, it becomes easier to evaluate opportunities, say no to distractions, and commit to long-term projects without constant second-guessing.</p>
+<p>Perhaps most importantly, participatory leisure provides something that consumptive leisure often cannot: the experience of <a href="https://www.researchgate.net/publication/232501960_Flow_The_Psychology_of_Optimal_Experience" target="_blank">flow</a> &ndash; deep, absorbed engagement that is intrinsically rewarding and reliably produces lasting satisfaction rather than the fleeting pleasure of passive entertainment.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
@@ -236,23 +234,23 @@ life_area_slug: life-purpose
 <div class="l1-step" id="step-values" data-step="values">
     <div class="l1-step-header" onclick="toggleStep('values')">
         <div class="l1-step-number">2</div>
-        <div class="l1-step-title">What different people value about life purpose</div>
+        <div class="l1-step-title">What different people value about participatory leisure</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People develop life purpose for different reasons. This site scores every life purpose intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People pursue active leisure for different reasons. This site scores every participatory leisure intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
-<h3>Clarity &amp; Direction</h3>
-<p>Having a clear sense of what you want to achieve and why it matters to you personally. Understanding your core motivations, having frameworks for major life decisions, and feeling confident about your chosen path. People who lean towards this value focus on reducing existential confusion, developing coherent long-term vision, and maintaining certainty about their direction even when circumstances change.</p>
+<h3>Social Connection</h3>
+<p>Building relationships and experiencing community through shared leisure activities. Developing friendships, feeling belonging to groups, and gaining emotional support through leisure pursuits. People who lean towards this value focus on activities that bring them together with others and create meaningful social bonds through shared interests.</p>
 
-<h3>Meaning &amp; Fulfilment</h3>
-<p>The degree to which your life purpose provides deep satisfaction, emotional resonance, and a sense that your existence matters. Feeling that your goals are personally meaningful rather than externally imposed, experiencing regular fulfilment from working towards your purpose, and having a sense that your life has significance. People who lean towards this value seek purposes that genuinely inspire and motivate them.</p>
+<h3>Achievement & Mastery</h3>
+<p>Developing skills, accomplishing goals, and experiencing personal growth through leisure pursuits. Both the satisfaction of improving capabilities and the confidence that comes from competence. People who lean towards this value seek activities that provide measurable progress and the deep satisfaction of developing expertise.</p>
 
-<h3>Integration &amp; Coherence</h3>
-<p>How well your life purpose connects with and organises other aspects of your life &ndash; career, relationships, daily activities, and personal growth. Having a purpose that provides a unifying framework for life decisions, reduces internal conflict between different life domains, and creates synergy between various activities. People who lean towards this value want their purpose to serve as an organising principle that makes their whole life more coherent.</p>
+<h3>Adventure & Exploration</h3>
+<p>Seeking novelty, challenge, and transformative experiences through leisure. Expanding comfort zones, discovering new activities, and pursuing memorable adventures that provide lasting personal meaning. People who lean towards this value pick activities that offer excitement and broaden their perspective on life.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -271,21 +269,21 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each life purpose value:</p>
+<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each participatory leisure value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Clarity &amp; Direction &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Greta_Thunberg" target="_blank">Greta Thunberg</a> identified climate activism as her purpose at age 15 and has maintained that direction with unusual consistency. She started by sitting alone outside the Swedish parliament in 2018 and sustained the commitment through global fame, intense criticism, and political pressure. Her clarity of purpose &ndash; and her refusal to be deflected from it &ndash; has been documented extensively in interviews, speeches, and her own writing.</p>
+    <div class="exemplar-value">Social Connection &ndash; Level 5</div>
+    <p><a href="https://www.parkrun.com/about/" target="_blank">Paul Sinton-Hewitt</a> founded parkrun in 2004 as a free, weekly 5 km community running event in a London park with 13 runners. By 2025 it had grown to over 2,500 events in 22 countries with more than 10 million registered participants. He built one of the largest leisure-based communities in the world, centred entirely on inclusive social connection through a shared activity.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &amp; Fulfilment &ndash; Level 5</div>
-    <p><a href="https://www.nobelprize.org/prizes/peace/2014/satyarthi/biographical/" target="_blank">Kailash Satyarthi</a> has worked to end child labour since the early 1980s, directly participating in the rescue of over 80,000 children from forced labour. He continued this work for decades before receiving the Nobel Peace Prize in 2014, sustaining motivation through legal battles, physical attacks, and the deaths of colleagues. His purpose appears to have been the primary organising force of his adult life.</p>
+    <div class="exemplar-value">Achievement & Mastery &ndash; Level 5</div>
+    <p><a href="https://en.wikipedia.org/wiki/Simone_Biles" target="_blank">Simone Biles</a> began gymnastics at age 6 and has won 37 World Championship and Olympic medals, making her the most decorated gymnast in history. She has four skills named after her &ndash; moves so difficult that no one else had performed them in competition. She exemplifies the outer reaches of skill mastery through a leisure pursuit that became a vocation.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Integration &amp; Coherence &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Yo-Yo_Ma" target="_blank">Yo-Yo Ma</a> has spent over 50 years as a cellist, but his career consistently reflects a broader purpose &ndash; using music to build connection across cultures. His Silk Road Ensemble brings together musicians from dozens of countries, his community concerts take place in settings from prisons to refugee camps, and his public statements frame music as a tool for empathy. His concert schedule, teaching, and advocacy all appear to serve a single coherent vision rather than separate professional tracks.</p>
+    <div class="exemplar-value">Adventure & Exploration &ndash; Level 5</div>
+    <p><a href="https://www.alastairhumphreys.com/" target="_blank">Alastair Humphreys</a> cycled around the world over four years, rowed the Atlantic, and walked across southern India. He then coined the concept of "microadventures" &ndash; overnight outdoor adventures accessible to anyone with a sleeping bag and a free evening &ndash; making adventure a regular practice rather than an occasional expedition. He was named a National Geographic Adventurer of the Year in 2012.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
@@ -305,62 +303,62 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes of reflection. Tick each one once you've considered it (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think about. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
 
 <div class="assess-group">
-<h4>Clarity &amp; Direction</h4>
+<h4>Social Connection</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-articulate-purpose">
-    <label for="a-articulate-purpose">I've tried to articulate what I want my life to be about in one or two sentences.<br><span class="assess-hint">This doesn't need to be polished &ndash; even a rough attempt counts.</span></label>
+    <input type="checkbox" id="a-leisure-friends">
+    <label for="a-leisure-friends">I can name the people I regularly do leisure activities with, if any.<br><span class="assess-hint">Think about hobbies, sports, creative pursuits, or group activities &ndash; not just socialising over food or drinks.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-framework">
-    <label for="a-decision-framework">I know whether I have a framework for making major life decisions, or whether I tend to decide based on what feels right in the moment.<br><span class="assess-hint">Think about your last major decision &ndash; moving, changing jobs, starting or ending a relationship. What guided it?</span></label>
+    <input type="checkbox" id="a-group-membership">
+    <label for="a-group-membership">I know whether I belong to any clubs, groups, or communities organised around a shared activity.<br><span class="assess-hint">Sports teams, book clubs, choirs, gaming groups, craft circles, volunteer organisations, etc.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-direction-confidence">
-    <label for="a-direction-confidence">I have a sense of how confident I feel about my current life direction &ndash; whether I feel on track, uncertain, or adrift.<br><span class="assess-hint">There's no right answer here. The point is noticing where you stand.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Meaning &amp; Fulfilment</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fulfilment-sources">
-    <label for="a-fulfilment-sources">I can identify the activities or contexts that give me the deepest sense of fulfilment.<br><span class="assess-hint">These might be professional, personal, creative, or relational. Think about when you feel most alive.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-meaning-vs-external">
-    <label for="a-meaning-vs-external">I've considered whether my current goals feel personally meaningful or mainly driven by external expectations.<br><span class="assess-hint">External expectations include family pressure, social norms, or what seems impressive to others.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-setback-motivation">
-    <label for="a-setback-motivation">I know how my motivation tends to respond during setbacks or difficult periods.<br><span class="assess-hint">Do you push through, lose interest, pivot, or go numb? All are common patterns worth noticing.</span></label>
+    <input type="checkbox" id="a-social-satisfaction">
+    <label for="a-social-satisfaction">I have a sense of whether my leisure activities provide enough social connection or whether I feel isolated in my free time.<br><span class="assess-hint">Some people prefer solo pursuits and feel fine; others want more social leisure but haven't found it.</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Integration &amp; Coherence</h4>
+<h4>Achievement & Mastery</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-values-alignment">
-    <label for="a-values-alignment">I've assessed whether my daily activities broadly align with what I say matters to me.<br><span class="assess-hint">Compare how you spend a typical week with what you'd list as your top priorities.</span></label>
+    <input type="checkbox" id="a-skill-level">
+    <label for="a-skill-level">I can identify at least one leisure activity where I have developed meaningful skill over time.<br><span class="assess-hint">Musical instruments, a sport, a craft, cooking, gardening, a game &ndash; anything where you've noticeably improved.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-domain-conflict">
-    <label for="a-domain-conflict">I know whether different areas of my life (work, relationships, personal projects) feel like they support each other or compete for time and energy.<br><span class="assess-hint">Conflict between domains is extremely common &ndash; the point is noticing the pattern.</span></label>
+    <input type="checkbox" id="a-consistency">
+    <label for="a-consistency">I know whether I tend to stick with activities long enough to develop real competence, or move on quickly.<br><span class="assess-hint">There's no wrong answer &ndash; some people are natural specialists, others natural explorers.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose-decisions">
-    <label for="a-purpose-decisions">I can recall whether I've ever made a significant life decision based on purpose or values rather than convenience, money, or default expectations.<br><span class="assess-hint">This could be a career change, a move, ending something comfortable, or starting something risky.</span></label>
+    <input type="checkbox" id="a-progress">
+    <label for="a-progress">I have a sense of whether I'm currently improving at any leisure activity, plateaued, or not tracking progress at all.<br><span class="assess-hint">Improvement might mean better scores, harder pieces, more complex projects, or feedback from others.</span></label>
+</div>
+</div>
+
+<div class="assess-group">
+<h4>Adventure & Exploration</h4>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-new-activities">
+    <label for="a-new-activities">I know roughly how many new leisure activities I've tried in the past year.<br><span class="assess-hint">Count anything genuinely new to you &ndash; a new sport, creative medium, game, or outdoor activity.</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-comfort-zone">
+    <label for="a-comfort-zone">I can identify the boundary of my leisure comfort zone &ndash; what I'd be willing to try versus what feels too far.<br><span class="assess-hint">Public performance, physical risk, unfamiliar social settings, creative vulnerability &ndash; where does discomfort start?</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-memorable">
+    <label for="a-memorable">I can recall one or two leisure experiences from the past year that I'd describe as genuinely memorable or meaningful.<br><span class="assess-hint">Experiences that stand out from routine &ndash; not just pleasant evenings, but moments that mattered.</span></label>
 </div>
 </div>
 
@@ -381,11 +379,11 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>You now understand why life purpose matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
+<p>You now understand why participatory leisure matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
 
-<p>On the interventions page, adjust the sliders to reflect how much you care about clarity and direction, meaning and fulfilment, and integration and coherence. The table will re-rank interventions to match your priorities.</p>
+<p>On the interventions page, adjust the sliders to reflect how much you care about social connection, achievement and mastery, and adventure and exploration. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/life-purpose/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Life Purpose Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/participatory-leisure/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Participatory Leisure Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -394,8 +392,8 @@ life_area_slug: life-purpose
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
-    <p>You've built your foundation in Life Purpose. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/life-purpose/personalised" class="btn-cta">View Your Interventions</a>
+    <p>You've built your foundation in Participatory Leisure. Your self-assessment and value weightings are saved.</p>
+    <a href="{{ site.baseurl }}/participatory-leisure/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -404,12 +402,12 @@ life_area_slug: life-purpose
 (function() {
     'use strict';
 
-    var AREA = 'life-purpose';
+    var AREA = 'participatory-leisure';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-articulate-purpose', 'a-decision-framework', 'a-direction-confidence',
-        'a-fulfilment-sources', 'a-meaning-vs-external', 'a-setback-motivation',
-        'a-values-alignment', 'a-domain-conflict', 'a-purpose-decisions'
+        'a-leisure-friends', 'a-group-membership', 'a-social-satisfaction',
+        'a-skill-level', 'a-consistency', 'a-progress',
+        'a-new-activities', 'a-comfort-zone', 'a-memorable'
     ];
 
     function loadProgress() {

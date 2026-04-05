@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Life Purpose – Level 1: Awareness"
-life_area_slug: life-purpose
+title: "Systems – Level 1: Awareness"
+life_area_slug: systems
 ---
 
 <style>
@@ -192,9 +192,9 @@ life_area_slug: life-purpose
 
 <div class="l1-container">
 
-<h1>Life Purpose: Level 1</h1>
+<h1>Systems: Level 1</h1>
 
-<p class="l1-subtitle">Understand what life purpose means, what's possible, and where you stand. About 15 minutes.</p>
+<p class="l1-subtitle">Understand what personal systems are, what's possible, and where you stand. About 15 minutes.</p>
 
 <div class="l1-progress">
     <div class="l1-progress-bar">
@@ -207,24 +207,24 @@ life_area_slug: life-purpose
     <div class="l1-progress-label" id="progressLabel">Step 1 of 5</div>
 </div>
 
-<!-- Step 1: Why Life Purpose Matters -->
+<!-- Step 1: Why Systems Matter -->
 <div class="l1-step" id="step-why" data-step="why">
     <div class="l1-step-header" onclick="toggleStep('why')">
         <div class="l1-step-number">1</div>
-        <div class="l1-step-title">Why life purpose matters</div>
+        <div class="l1-step-title">Why systems matter</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Having a clear sense of purpose is one of the strongest predictors of psychological wellbeing across cultures and age groups. The evidence connects purpose to outcomes in health, resilience, and overall life satisfaction.</p>
+<p>Personal systems are the tools, automations, and workflows you build to handle recurring tasks and manage information. They are the infrastructure that lets you spend your attention on decisions and creative work rather than on logistics.</p>
 
-<p>People with a well-defined sense of purpose show <a href="https://psycnet.apa.org/record/2016-17273-001" target="_blank">roughly 40% greater resilience</a> during major life stressors, recovering more quickly from setbacks and maintaining perspective during difficulties. They also tend to score <a href="https://psycnet.apa.org/record/2009-05474-001" target="_blank">25 &ndash; 30% higher</a> on life satisfaction measures and report lower rates of depression and anxiety.</p>
+<p><a href="https://www.breeze.pm/blog/task-management-statistics" target="_blank">94% of employees</a> regularly perform repetitive tasks that consume significant time, and around 54% believe automation could save them more than 5 hours per week. <a href="https://www.cflowapps.com/workflow-automation-statistics/" target="_blank">Workflow automation</a> can reduce repetitive tasks by 60 &ndash; 95%, saving up to 77% of time on routine activities.</p>
 
-<p>Purpose also affects physical health. A <a href="https://journals.sagepub.com/doi/10.1177/0956797619831612" target="_blank">meta-analysis of over 136,000 participants</a> found that having a strong sense of purpose was associated with reduced all-cause mortality. The mechanism likely involves better health behaviours, lower chronic stress, and stronger social connections &ndash; all of which tend to follow from purposeful living.</p>
+<p>Without intentional systems, <a href="https://www.breeze.pm/blog/task-management-statistics" target="_blank">approximately 70% of projects</a> fall short of their goals in timely delivery, budget, or scope. Teams that prioritise tasks effectively are 1.4 times more likely to outperform their peers.</p>
 
-<p>Perhaps most practically, purpose improves the quality of everyday decisions. When you know what matters to you, it becomes easier to evaluate opportunities, say no to distractions, and commit to long-term projects without constant second-guessing.</p>
+<p>The gap compounds over time. Systematic approaches accumulate benefits whilst ad hoc approaches accumulate costs. The best systems are invisible &ndash; they are obvious only in their absence, working quietly in the background so you can focus on what actually matters.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
@@ -236,23 +236,23 @@ life_area_slug: life-purpose
 <div class="l1-step" id="step-values" data-step="values">
     <div class="l1-step-header" onclick="toggleStep('values')">
         <div class="l1-step-number">2</div>
-        <div class="l1-step-title">What different people value about life purpose</div>
+        <div class="l1-step-title">What different people value about systems</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People develop life purpose for different reasons. This site scores every life purpose intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People pursue systems for different reasons. This site scores every systems intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
-<h3>Clarity &amp; Direction</h3>
-<p>Having a clear sense of what you want to achieve and why it matters to you personally. Understanding your core motivations, having frameworks for major life decisions, and feeling confident about your chosen path. People who lean towards this value focus on reducing existential confusion, developing coherent long-term vision, and maintaining certainty about their direction even when circumstances change.</p>
+<h3>Power</h3>
+<p>Maximising what your personal systems can do &ndash; automation depth, feature richness, customisation, and the ability to handle complex workflows and edge cases. People who prioritise this value invest significant time building systems that save large amounts of time once complete, accepting complexity as a worthwhile cost.</p>
 
-<h3>Meaning &amp; Fulfilment</h3>
-<p>The degree to which your life purpose provides deep satisfaction, emotional resonance, and a sense that your existence matters. Feeling that your goals are personally meaningful rather than externally imposed, experiencing regular fulfilment from working towards your purpose, and having a sense that your life has significance. People who lean towards this value seek purposes that genuinely inspire and motivate them.</p>
+<h3>Simplicity</h3>
+<p>Keeping personal systems as minimal, intuitive, and easy to understand as possible. Using fewer tools, avoiding over-engineering, choosing solutions that require no documentation to use, and preferring manual processes over complex automations that might break. People who prioritise this value believe the best system is one you actually use consistently, and that complexity is the enemy of sustained adoption.</p>
 
-<h3>Integration &amp; Coherence</h3>
-<p>How well your life purpose connects with and organises other aspects of your life &ndash; career, relationships, daily activities, and personal growth. Having a purpose that provides a unifying framework for life decisions, reduces internal conflict between different life domains, and creates synergy between various activities. People who lean towards this value want their purpose to serve as an organising principle that makes their whole life more coherent.</p>
+<h3>Reliability</h3>
+<p>Ensuring your systems work consistently and fail gracefully, with minimal unplanned maintenance or debugging. Choosing proven tools over cutting-edge ones, building in redundancy, testing automations before depending on them, and designing systems that degrade gracefully when something breaks. People who prioritise this value accept less capability or more manual work in exchange for systems they can trust.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -271,21 +271,21 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each life purpose value:</p>
+<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each systems value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Clarity &amp; Direction &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Greta_Thunberg" target="_blank">Greta Thunberg</a> identified climate activism as her purpose at age 15 and has maintained that direction with unusual consistency. She started by sitting alone outside the Swedish parliament in 2018 and sustained the commitment through global fame, intense criticism, and political pressure. Her clarity of purpose &ndash; and her refusal to be deflected from it &ndash; has been documented extensively in interviews, speeches, and her own writing.</p>
+    <div class="exemplar-value">Power &ndash; Level 5</div>
+    <p><a href="https://www.youtube.com/@NetworkChuck" target="_blank">Chuck Keith</a> (NetworkChuck) is a network engineer and content creator who has built comprehensive personal infrastructure including self-hosted servers, automated backups, network monitoring, smart home integrations, and custom dashboards that manage nearly every aspect of his digital life. He documents these builds publicly, demonstrating systems that handle complex conditional logic across personal and professional domains whilst remaining maintainable by a single person.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &amp; Fulfilment &ndash; Level 5</div>
-    <p><a href="https://www.nobelprize.org/prizes/peace/2014/satyarthi/biographical/" target="_blank">Kailash Satyarthi</a> has worked to end child labour since the early 1980s, directly participating in the rescue of over 80,000 children from forced labour. He continued this work for decades before receiving the Nobel Peace Prize in 2014, sustaining motivation through legal battles, physical attacks, and the deaths of colleagues. His purpose appears to have been the primary organising force of his adult life.</p>
+    <div class="exemplar-value">Simplicity &ndash; Level 5</div>
+    <p><a href="https://dereksivers.com/" target="_blank">Derek Sivers</a> is a programmer, author, and former founder of CD Baby (which he sold for $22 million). He runs his entire life from a small set of plain-text files, a custom-built personal database, and minimal tooling he wrote himself. His systems handle contacts, projects, finances, and media &ndash; all designed to be so simple that they survive moves between countries and decades of use without needing redesign.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Integration &amp; Coherence &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Yo-Yo_Ma" target="_blank">Yo-Yo Ma</a> has spent over 50 years as a cellist, but his career consistently reflects a broader purpose &ndash; using music to build connection across cultures. His Silk Road Ensemble brings together musicians from dozens of countries, his community concerts take place in settings from prisons to refugee camps, and his public statements frame music as a tool for empathy. His concert schedule, teaching, and advocacy all appear to serve a single coherent vision rather than separate professional tracks.</p>
+    <div class="exemplar-value">Reliability &ndash; Level 5</div>
+    <p><a href="https://www.hanselman.com/about" target="_blank">Scott Hanselman</a> is a software engineer, podcaster, and speaker who has maintained the same core personal productivity systems for over 20 years. He has published extensively about his setup, which prioritises proven tools, redundant backups, and graceful degradation. His systems have survived multiple job changes, technology migrations, and a Type 1 diabetes diagnosis that required integrating medical device data into his daily workflow without disrupting everything else.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
@@ -305,62 +305,62 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes of reflection. Tick each one once you've considered it (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
 
 <div class="assess-group">
-<h4>Clarity &amp; Direction</h4>
+<h4>Power</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-articulate-purpose">
-    <label for="a-articulate-purpose">I've tried to articulate what I want my life to be about in one or two sentences.<br><span class="assess-hint">This doesn't need to be polished &ndash; even a rough attempt counts.</span></label>
+    <input type="checkbox" id="a-automation-count">
+    <label for="a-automation-count">I know how many automated workflows I currently have running (if any).<br><span class="assess-hint">Email filters, scheduled backups, smart home routines, IFTTT or Zapier automations, scripts, cron jobs.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-framework">
-    <label for="a-decision-framework">I know whether I have a framework for making major life decisions, or whether I tend to decide based on what feels right in the moment.<br><span class="assess-hint">Think about your last major decision &ndash; moving, changing jobs, starting or ending a relationship. What guided it?</span></label>
+    <input type="checkbox" id="a-manual-recurring">
+    <label for="a-manual-recurring">I can identify at least three recurring tasks I currently do manually that could be automated.<br><span class="assess-hint">Think about what you do every day or week that follows the same steps each time.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-direction-confidence">
-    <label for="a-direction-confidence">I have a sense of how confident I feel about my current life direction &ndash; whether I feel on track, uncertain, or adrift.<br><span class="assess-hint">There's no right answer here. The point is noticing where you stand.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Meaning &amp; Fulfilment</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fulfilment-sources">
-    <label for="a-fulfilment-sources">I can identify the activities or contexts that give me the deepest sense of fulfilment.<br><span class="assess-hint">These might be professional, personal, creative, or relational. Think about when you feel most alive.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-meaning-vs-external">
-    <label for="a-meaning-vs-external">I've considered whether my current goals feel personally meaningful or mainly driven by external expectations.<br><span class="assess-hint">External expectations include family pressure, social norms, or what seems impressive to others.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-setback-motivation">
-    <label for="a-setback-motivation">I know how my motivation tends to respond during setbacks or difficult periods.<br><span class="assess-hint">Do you push through, lose interest, pivot, or go numb? All are common patterns worth noticing.</span></label>
+    <input type="checkbox" id="a-edge-cases">
+    <label for="a-edge-cases">I know what happens when my current systems encounter an unusual situation or edge case.<br><span class="assess-hint">Do they handle it gracefully, require manual intervention, or just break?</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Integration &amp; Coherence</h4>
+<h4>Simplicity</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-values-alignment">
-    <label for="a-values-alignment">I've assessed whether my daily activities broadly align with what I say matters to me.<br><span class="assess-hint">Compare how you spend a typical week with what you'd list as your top priorities.</span></label>
+    <input type="checkbox" id="a-tool-count">
+    <label for="a-tool-count">I can list every tool and app I use for personal organisation and productivity.<br><span class="assess-hint">Count them. Is it a small, deliberate set, or have you accumulated dozens over the years?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-domain-conflict">
-    <label for="a-domain-conflict">I know whether different areas of my life (work, relationships, personal projects) feel like they support each other or compete for time and energy.<br><span class="assess-hint">Conflict between domains is extremely common &ndash; the point is noticing the pattern.</span></label>
+    <input type="checkbox" id="a-explain-system">
+    <label for="a-explain-system">I could explain my organisational system to someone else in under five minutes.<br><span class="assess-hint">If it would take longer, or if you are not sure you could explain it at all, that is useful information.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose-decisions">
-    <label for="a-purpose-decisions">I can recall whether I've ever made a significant life decision based on purpose or values rather than convenience, money, or default expectations.<br><span class="assess-hint">This could be a career change, a move, ending something comfortable, or starting something risky.</span></label>
+    <input type="checkbox" id="a-abandoned-tools">
+    <label for="a-abandoned-tools">I know how many tools or systems I have tried and abandoned in the past two years.<br><span class="assess-hint">Apps you downloaded and stopped using, notebooks you started and forgot, systems you set up and never maintained.</span></label>
+</div>
+</div>
+
+<div class="assess-group">
+<h4>Reliability</h4>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-backup-status">
+    <label for="a-backup-status">I know whether my important files and data are backed up, and when the last backup ran.<br><span class="assess-hint">Photos, documents, passwords, financial records. Could you recover if your computer died today?</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-system-failures">
+    <label for="a-system-failures">I can recall the last time one of my systems failed or required unplanned maintenance.<br><span class="assess-hint">An automation that stopped working, a tool that updated and broke your workflow, data you could not find.</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-single-points">
+    <label for="a-single-points">I know whether any of my systems have single points of failure.<br><span class="assess-hint">If one tool, device, or account were lost, would your whole system collapse?</span></label>
 </div>
 </div>
 
@@ -381,11 +381,11 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>You now understand why life purpose matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
+<p>You now understand why systems matter, what different people get out of them, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
 
-<p>On the interventions page, adjust the sliders to reflect how much you care about clarity and direction, meaning and fulfilment, and integration and coherence. The table will re-rank interventions to match your priorities.</p>
+<p>On the interventions page, adjust the sliders to reflect how much you care about power, simplicity, and reliability. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/life-purpose/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Life Purpose Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/systems/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Systems Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -394,8 +394,8 @@ life_area_slug: life-purpose
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
-    <p>You've built your foundation in Life Purpose. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/life-purpose/personalised" class="btn-cta">View Your Interventions</a>
+    <p>You've built your foundation in Systems. Your self-assessment and value weightings are saved.</p>
+    <a href="{{ site.baseurl }}/systems/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -404,12 +404,12 @@ life_area_slug: life-purpose
 (function() {
     'use strict';
 
-    var AREA = 'life-purpose';
+    var AREA = 'systems';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-articulate-purpose', 'a-decision-framework', 'a-direction-confidence',
-        'a-fulfilment-sources', 'a-meaning-vs-external', 'a-setback-motivation',
-        'a-values-alignment', 'a-domain-conflict', 'a-purpose-decisions'
+        'a-automation-count', 'a-manual-recurring', 'a-edge-cases',
+        'a-tool-count', 'a-explain-system', 'a-abandoned-tools',
+        'a-backup-status', 'a-system-failures', 'a-single-points'
     ];
 
     function loadProgress() {

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Life Purpose – Level 1: Awareness"
-life_area_slug: life-purpose
+title: "Habits – Level 1: Awareness"
+life_area_slug: habits
 ---
 
 <style>
@@ -192,9 +192,9 @@ life_area_slug: life-purpose
 
 <div class="l1-container">
 
-<h1>Life Purpose: Level 1</h1>
+<h1>Habits: Level 1</h1>
 
-<p class="l1-subtitle">Understand what life purpose means, what's possible, and where you stand. About 15 minutes.</p>
+<p class="l1-subtitle">Understand what habit formation means, what's possible, and where you stand. About 15 minutes.</p>
 
 <div class="l1-progress">
     <div class="l1-progress-bar">
@@ -207,24 +207,24 @@ life_area_slug: life-purpose
     <div class="l1-progress-label" id="progressLabel">Step 1 of 5</div>
 </div>
 
-<!-- Step 1: Why Life Purpose Matters -->
+<!-- Step 1: Why Habits Matter -->
 <div class="l1-step" id="step-why" data-step="why">
     <div class="l1-step-header" onclick="toggleStep('why')">
         <div class="l1-step-number">1</div>
-        <div class="l1-step-title">Why life purpose matters</div>
+        <div class="l1-step-title">Why habits matter</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Having a clear sense of purpose is one of the strongest predictors of psychological wellbeing across cultures and age groups. The evidence connects purpose to outcomes in health, resilience, and overall life satisfaction.</p>
+<p>About <a href="https://dornsife.usc.edu/assets/sites/545/docs/Wendy_Wood_Research_Articles/Habits/wood.quinn.kashy.2002_habits_in_everyday_life.pdf" target="_blank">40% of your daily actions</a> are performed habitually &ndash; not through conscious decision but through automatic routines triggered by context. Understanding and shaping these routines is one of the highest-leverage investments you can make in your life.</p>
 
-<p>People with a well-defined sense of purpose show <a href="https://psycnet.apa.org/record/2016-17273-001" target="_blank">roughly 40% greater resilience</a> during major life stressors, recovering more quickly from setbacks and maintaining perspective during difficulties. They also tend to score <a href="https://psycnet.apa.org/record/2009-05474-001" target="_blank">25 &ndash; 30% higher</a> on life satisfaction measures and report lower rates of depression and anxiety.</p>
+<p>Once a habit is established, it persists even after conscious motivation fades. This is both the power and the danger of habits: good ones compound silently in the background, while bad ones drain your health, time, and relationships without requiring any deliberate choice on your part.</p>
 
-<p>Purpose also affects physical health. A <a href="https://journals.sagepub.com/doi/10.1177/0956797619831612" target="_blank">meta-analysis of over 136,000 participants</a> found that having a strong sense of purpose was associated with reduced all-cause mortality. The mechanism likely involves better health behaviours, lower chronic stress, and stronger social connections &ndash; all of which tend to follow from purposeful living.</p>
+<p>Research shows that habit formation takes <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ejsp.674" target="_blank">18 to 254 days</a>, with an average of 66 days &ndash; far longer than the popular "21 days" myth suggests. Yet <a href="https://www.weforum.org/stories/2024/04/healthy-habit-formation-public-health/" target="_blank">77% of people</a> abandon new behaviours within a single week. The gap between wanting to change and actually embedding new habits is where most people get stuck.</p>
 
-<p>Perhaps most practically, purpose improves the quality of everyday decisions. When you know what matters to you, it becomes easier to evaluate opportunities, say no to distractions, and commit to long-term projects without constant second-guessing.</p>
+<p>Well-designed habits free mental resources for higher-level thinking. Every behaviour that becomes automatic is one fewer decision you need to make, reducing decision fatigue and creating capacity for the things that require your full attention.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
@@ -236,23 +236,23 @@ life_area_slug: life-purpose
 <div class="l1-step" id="step-values" data-step="values">
     <div class="l1-step-header" onclick="toggleStep('values')">
         <div class="l1-step-number">2</div>
-        <div class="l1-step-title">What different people value about life purpose</div>
+        <div class="l1-step-title">What different people value about habits</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People develop life purpose for different reasons. This site scores every life purpose intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People approach habit formation for different reasons. This site scores every habits intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
-<h3>Clarity &amp; Direction</h3>
-<p>Having a clear sense of what you want to achieve and why it matters to you personally. Understanding your core motivations, having frameworks for major life decisions, and feeling confident about your chosen path. People who lean towards this value focus on reducing existential confusion, developing coherent long-term vision, and maintaining certainty about their direction even when circumstances change.</p>
+<h3>Impact</h3>
+<p>Choosing and designing habits that create meaningful positive change in important life areas. Focusing on keystone habits that trigger other positive behaviours, aligning habits with personal values and goals, and ensuring habit choices deliver measurable benefits. People who lean towards this value want their habit energy invested in behaviours that create the greatest life improvement.</p>
 
-<h3>Meaning &amp; Fulfilment</h3>
-<p>The degree to which your life purpose provides deep satisfaction, emotional resonance, and a sense that your existence matters. Feeling that your goals are personally meaningful rather than externally imposed, experiencing regular fulfilment from working towards your purpose, and having a sense that your life has significance. People who lean towards this value seek purposes that genuinely inspire and motivate them.</p>
+<h3>Consistency</h3>
+<p>Building habits that stick and perform reliably over time without constant conscious effort. Establishing routines that become automatic, maintaining behaviours even during difficult periods, and creating systems that work regardless of motivation levels. People who lean towards this value focus on habit durability and want behaviours that persist through life's ups and downs.</p>
 
-<h3>Integration &amp; Coherence</h3>
-<p>How well your life purpose connects with and organises other aspects of your life &ndash; career, relationships, daily activities, and personal growth. Having a purpose that provides a unifying framework for life decisions, reduces internal conflict between different life domains, and creates synergy between various activities. People who lean towards this value want their purpose to serve as an organising principle that makes their whole life more coherent.</p>
+<h3>Enjoyment</h3>
+<p>Making habit formation and maintenance as pleasant and rewarding as possible. Choosing habits that feel intrinsically satisfying, designing routines that enhance daily experience, and creating positive associations with beneficial behaviours. People who lean towards this value seek habits that improve both outcomes and quality of life.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -271,21 +271,21 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each life purpose value:</p>
+<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each habits value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Clarity &amp; Direction &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Greta_Thunberg" target="_blank">Greta Thunberg</a> identified climate activism as her purpose at age 15 and has maintained that direction with unusual consistency. She started by sitting alone outside the Swedish parliament in 2018 and sustained the commitment through global fame, intense criticism, and political pressure. Her clarity of purpose &ndash; and her refusal to be deflected from it &ndash; has been documented extensively in interviews, speeches, and her own writing.</p>
+    <div class="exemplar-value">Impact &ndash; Level 5</div>
+    <p><a href="https://jamesclear.com/about" target="_blank">James Clear</a> spent years studying and practising habit formation before writing <em>Atomic Habits</em>, which has sold over 15 million copies. His personal system centres on identifying and stacking keystone habits &ndash; small behaviours that cascade into larger life improvements. He has maintained a consistent writing, fitness, and photography practice for over a decade, each habit deliberately chosen for its compound returns across multiple life areas.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &amp; Fulfilment &ndash; Level 5</div>
-    <p><a href="https://www.nobelprize.org/prizes/peace/2014/satyarthi/biographical/" target="_blank">Kailash Satyarthi</a> has worked to end child labour since the early 1980s, directly participating in the rescue of over 80,000 children from forced labour. He continued this work for decades before receiving the Nobel Peace Prize in 2014, sustaining motivation through legal battles, physical attacks, and the deaths of colleagues. His purpose appears to have been the primary organising force of his adult life.</p>
+    <div class="exemplar-value">Consistency &ndash; Level 5</div>
+    <p><a href="https://www.jerryeinfeld.com/" target="_blank">Jerry Seinfeld</a> famously maintained a "don't break the chain" practice for joke-writing, marking a red X on a wall calendar every day he wrote new material. He sustained this daily writing habit across decades, through career changes, touring schedules, and life transitions. His consistency methodology has become one of the most widely cited examples of habit maintenance in popular psychology.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Integration &amp; Coherence &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Yo-Yo_Ma" target="_blank">Yo-Yo Ma</a> has spent over 50 years as a cellist, but his career consistently reflects a broader purpose &ndash; using music to build connection across cultures. His Silk Road Ensemble brings together musicians from dozens of countries, his community concerts take place in settings from prisons to refugee camps, and his public statements frame music as a tool for empathy. His concert schedule, teaching, and advocacy all appear to serve a single coherent vision rather than separate professional tracks.</p>
+    <div class="exemplar-value">Enjoyment &ndash; Level 5</div>
+    <p><a href="https://www.bfrb.org/storage/documents/Expert_consensus_guidelines2016w.pdf" target="_blank">BJ Fogg</a>, founder of the <a href="https://behaviordesign.stanford.edu/" target="_blank">Behavior Design Lab</a> at Stanford, developed the Tiny Habits method after two decades of research into what makes behaviours stick. His system emphasises celebration and positive emotion as the core mechanism of habit formation &ndash; deliberately engineering feelings of success and satisfaction after each repetition. He has personally maintained dozens of "tiny habits" for years, each designed to feel rewarding from the first day.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
@@ -305,62 +305,62 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes of reflection. Tick each one once you've considered it (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
 
 <div class="assess-group">
-<h4>Clarity &amp; Direction</h4>
+<h4>Impact</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-articulate-purpose">
-    <label for="a-articulate-purpose">I've tried to articulate what I want my life to be about in one or two sentences.<br><span class="assess-hint">This doesn't need to be polished &ndash; even a rough attempt counts.</span></label>
+    <input type="checkbox" id="a-current-habits">
+    <label for="a-current-habits">I can list the daily and weekly habits I currently maintain, both helpful and unhelpful.<br><span class="assess-hint">Think about your morning routine, work patterns, evening habits, and weekend routines.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-framework">
-    <label for="a-decision-framework">I know whether I have a framework for making major life decisions, or whether I tend to decide based on what feels right in the moment.<br><span class="assess-hint">Think about your last major decision &ndash; moving, changing jobs, starting or ending a relationship. What guided it?</span></label>
+    <input type="checkbox" id="a-keystone">
+    <label for="a-keystone">I've thought about which of my current habits have the biggest positive or negative ripple effects on other areas of my life.<br><span class="assess-hint">For example, does exercising in the morning make you more productive all day? Does staying up late make everything harder?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-direction-confidence">
-    <label for="a-direction-confidence">I have a sense of how confident I feel about my current life direction &ndash; whether I feel on track, uncertain, or adrift.<br><span class="assess-hint">There's no right answer here. The point is noticing where you stand.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Meaning &amp; Fulfilment</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fulfilment-sources">
-    <label for="a-fulfilment-sources">I can identify the activities or contexts that give me the deepest sense of fulfilment.<br><span class="assess-hint">These might be professional, personal, creative, or relational. Think about when you feel most alive.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-meaning-vs-external">
-    <label for="a-meaning-vs-external">I've considered whether my current goals feel personally meaningful or mainly driven by external expectations.<br><span class="assess-hint">External expectations include family pressure, social norms, or what seems impressive to others.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-setback-motivation">
-    <label for="a-setback-motivation">I know how my motivation tends to respond during setbacks or difficult periods.<br><span class="assess-hint">Do you push through, lose interest, pivot, or go numb? All are common patterns worth noticing.</span></label>
+    <input type="checkbox" id="a-habit-goals">
+    <label for="a-habit-goals">I know whether my current habits are aligned with my most important goals and values.<br><span class="assess-hint">Are your daily routines actually moving you towards the things you say matter most?</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Integration &amp; Coherence</h4>
+<h4>Consistency</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-values-alignment">
-    <label for="a-values-alignment">I've assessed whether my daily activities broadly align with what I say matters to me.<br><span class="assess-hint">Compare how you spend a typical week with what you'd list as your top priorities.</span></label>
+    <input type="checkbox" id="a-formation-time">
+    <label for="a-formation-time">I have a sense of how long it typically takes me to form a new habit.<br><span class="assess-hint">Think about the last habit you successfully built &ndash; how long before it felt automatic?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-domain-conflict">
-    <label for="a-domain-conflict">I know whether different areas of my life (work, relationships, personal projects) feel like they support each other or compete for time and energy.<br><span class="assess-hint">Conflict between domains is extremely common &ndash; the point is noticing the pattern.</span></label>
+    <input type="checkbox" id="a-disruption">
+    <label for="a-disruption">I know what tends to disrupt my habits &ndash; travel, stress, weekends, or changes in routine.<br><span class="assess-hint">Identifying your habit-breaking triggers is the first step to building more resilient routines.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose-decisions">
-    <label for="a-purpose-decisions">I can recall whether I've ever made a significant life decision based on purpose or values rather than convenience, money, or default expectations.<br><span class="assess-hint">This could be a career change, a move, ending something comfortable, or starting something risky.</span></label>
+    <input type="checkbox" id="a-bad-habits">
+    <label for="a-bad-habits">I can identify at least one habit I've tried and failed to break, and I have a sense of why it persisted.<br><span class="assess-hint">Understanding why unwanted habits stick helps you design better approaches to changing them.</span></label>
+</div>
+</div>
+
+<div class="assess-group">
+<h4>Enjoyment</h4>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-enjoy-habits">
+    <label for="a-enjoy-habits">I've thought about which of my current habits I genuinely enjoy and which feel like a chore.<br><span class="assess-hint">Habits that feel rewarding are far more likely to persist than those maintained through willpower alone.</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-cues">
+    <label for="a-cues">I know whether I use any deliberate cues or triggers to prompt my habits.<br><span class="assess-hint">Linking a new habit to an existing routine (habit stacking) is one of the most effective formation techniques.</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-rewards">
+    <label for="a-rewards">I have a sense of whether my habits have built-in rewards or whether I rely on discipline to maintain them.<br><span class="assess-hint">Intrinsic rewards (the behaviour itself feels good) are more sustainable than extrinsic ones (doing it to earn something else).</span></label>
 </div>
 </div>
 
@@ -381,11 +381,11 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>You now understand why life purpose matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
+<p>You now understand why habits matter, what different people get out of habit formation, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
 
-<p>On the interventions page, adjust the sliders to reflect how much you care about clarity and direction, meaning and fulfilment, and integration and coherence. The table will re-rank interventions to match your priorities.</p>
+<p>On the interventions page, adjust the sliders to reflect how much you care about impact, consistency, and enjoyment. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/life-purpose/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Life Purpose Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/habits/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Habits Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -394,8 +394,8 @@ life_area_slug: life-purpose
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
-    <p>You've built your foundation in Life Purpose. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/life-purpose/personalised" class="btn-cta">View Your Interventions</a>
+    <p>You've built your foundation in Habits. Your self-assessment and value weightings are saved.</p>
+    <a href="{{ site.baseurl }}/habits/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -404,12 +404,12 @@ life_area_slug: life-purpose
 (function() {
     'use strict';
 
-    var AREA = 'life-purpose';
+    var AREA = 'habits';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-articulate-purpose', 'a-decision-framework', 'a-direction-confidence',
-        'a-fulfilment-sources', 'a-meaning-vs-external', 'a-setback-motivation',
-        'a-values-alignment', 'a-domain-conflict', 'a-purpose-decisions'
+        'a-current-habits', 'a-keystone', 'a-habit-goals',
+        'a-formation-time', 'a-disruption', 'a-bad-habits',
+        'a-enjoy-habits', 'a-cues', 'a-rewards'
     ];
 
     function loadProgress() {

@@ -1,60 +1,204 @@
 ---
+layout: default
+title: Global Impact
 life_area_slug: global-impact
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas">Life Areas</a> &gt;
+    Create &amp; Contribute &gt;
+    Impact &gt;
+    Global Impact
+</div>
+
 # Global Impact
 
-## What is Global Impact?
+**What it is**
+- Your contribution to improving the world beyond your immediate community – through charitable giving, career choices, advocacy, and other channels that address global problems.
 
-Your contribution to improving the world beyond your immediate community -- through charitable giving, career choices, advocacy, and other channels that address global problems.
+**Why it matters**
+- The best charitable interventions can be over 100 times more cost-effective than average ones addressing the same problem. Strategic, evidence-based giving saves far more lives per pound than emotional or habitual giving, yet most philanthropy is not strategic. Even modest improvements in how you give can dramatically increase your impact.
 
-## Why Global Impact matters
+**Related life areas**
+- [Community contribution]({{ site.baseurl }}/community-contribution) – your involvement in and contributions to your local community
+- [Ethics]({{ site.baseurl }}/ethics) – your moral framework, ethical reasoning, and how you navigate moral questions
+- [Value system]({{ site.baseurl }}/value-system) – your core values, what you stand for, and how you prioritise what matters
+- [Life purpose]({{ site.baseurl }}/life-purpose) – your sense of meaning, direction, and long-term aims
 
-- **Where you give matters more than how much** -- The best interventions can be over 100 times more cost-effective than average ones addressing the same problem <span class="info-icon" onclick="showReasoning('research-effectiveness')">i</span>.
-- **Evidence-based giving saves lives** -- GiveWell has directed over $2.6 billion to recommended charities, contributing to an estimated 340,000 lives saved <span class="info-icon" onclick="showReasoning('research-givewell')">i</span>.
-- **Most giving is not strategic** -- Americans gave $557 billion to charity in 2023, but emotional appeal drives more giving decisions than evidence of impact <span class="info-icon" onclick="showReasoning('research-giving-scale')">i</span>.
-- **Systematic commitment compounds** -- Pledging movements like Founders Pledge (over $10 billion pledged) and Giving What We Can show that sustained, planned philanthropy creates outsized impact over a lifetime.
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Global Impact yet.</strong><br>It takes about 15 minutes and helps you understand what global impact means to you.</p>
+    <a href="{{ site.baseurl }}/global-impact/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Global Impact Values
+## What people value about global impact
 
-Your approach to global impact depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+People approach global impact for different reasons. This site scores every global impact intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Impartiality</h3>
+<p>Directing resources toward causes based on evidence of impact rather than personal connection or emotional appeal. Cost-effectiveness analysis, cause prioritisation informed by research, and willingness to support unfamiliar causes if the evidence warrants it.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Passion</h3>
+<p>Contributing to causes you genuinely care about – areas that resonate with your personal experience, interests, and values. Sustained commitment requires personal meaning.</p>
+</div>
 
-Despite widespread charitable intent, most giving is neither strategic nor evidence-based. The average American donates around 2% of income, but few evaluate the effectiveness of their chosen charities. Only a small fraction of donors use charity evaluators, and emotional appeal drives more giving decisions than evidence of impact. Deliberate, effectiveness-focused philanthropy is genuinely rare, and sustained commitment to optimised giving places individuals well above population norms.
+<div class="value-card">
+<h3>Sustainability</h3>
+<p>Maintaining your global impact practice over the long term without burnout, guilt, or financial strain. Setting sustainable giving levels and building habits that fit your life.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="value-card">
+<h3>Fulfilment</h3>
+<p>The personal satisfaction and sense of purpose derived from making a positive difference. Ensuring that your impact work is a source of joy rather than obligation.</p>
+</div>
 
-## Levels
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/global-impact/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand global impact, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/global-impact/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-giving-scale': {
-        title: 'Scale of Charitable Giving',
-        content: 'Americans gave $557 billion to charity in 2023, approximately 2% of GDP. Individual giving accounts for the majority of charitable donations. However, most giving is not strategically allocated -- emotional appeal and personal connection drive most donation decisions rather than evidence of effectiveness. <a href="https://givingusa.org/giving-usa-u-s-charitable-giving-totaled-557-16-billion-in-2023/" target="_blank">View statistics</a>'
-    },
-    'research-effectiveness': {
-        title: 'Charity Cost-Effectiveness',
-        content: 'Research consistently shows that the most effective charities can be over 100 times more cost-effective than average ones addressing the same problem. This means that choosing where to give matters far more than how much you give. Organisations like GiveWell evaluate charities on rigorous cost-effectiveness criteria. <a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness" target="_blank">View research</a>'
-    },
-    'research-givewell': {
-        title: 'Evidence-Based Giving Results',
-        content: 'GiveWell has directed over $2.6 billion to its recommended charities, contributing to an estimated 340,000 lives saved primarily through interventions like malaria prevention, vitamin A supplementation, and direct cash transfers in low-income countries. Founders Pledge members have collectively pledged over $10 billion. <a href="https://www.givewell.org/impact" target="_blank">View impact</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress['global-impact'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['global-impact'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Global Impact.</strong></p>' +
+            '<a href="{{ site.baseurl }}/global-impact/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/global-impact/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/global-impact/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Life Purpose – Level 1: Awareness"
-life_area_slug: life-purpose
+title: "Networks – Level 1: Awareness"
+life_area_slug: networks
 ---
 
 <style>
@@ -192,9 +192,9 @@ life_area_slug: life-purpose
 
 <div class="l1-container">
 
-<h1>Life Purpose: Level 1</h1>
+<h1>Networks: Level 1</h1>
 
-<p class="l1-subtitle">Understand what life purpose means, what's possible, and where you stand. About 15 minutes.</p>
+<p class="l1-subtitle">Understand what professional networks mean, what's possible, and where you stand. About 15 minutes.</p>
 
 <div class="l1-progress">
     <div class="l1-progress-bar">
@@ -207,24 +207,22 @@ life_area_slug: life-purpose
     <div class="l1-progress-label" id="progressLabel">Step 1 of 5</div>
 </div>
 
-<!-- Step 1: Why Life Purpose Matters -->
+<!-- Step 1: Why Networks Matter -->
 <div class="l1-step" id="step-why" data-step="why">
     <div class="l1-step-header" onclick="toggleStep('why')">
         <div class="l1-step-number">1</div>
-        <div class="l1-step-title">Why life purpose matters</div>
+        <div class="l1-step-title">Why networks matter</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Having a clear sense of purpose is one of the strongest predictors of psychological wellbeing across cultures and age groups. The evidence connects purpose to outcomes in health, resilience, and overall life satisfaction.</p>
+<p>Professional networks are one of the strongest predictors of career outcomes. An estimated <a href="https://www.apollotechnical.com/networking-statistics/" target="_blank">85% of jobs are filled through networking</a>, and 70% are never publicly posted. Referral candidates are <a href="https://www.zippia.com/advice/networking-statistics/" target="_blank">four times more likely</a> to receive an interview and are hired up to 70% faster.</p>
 
-<p>People with a well-defined sense of purpose show <a href="https://psycnet.apa.org/record/2016-17273-001" target="_blank">roughly 40% greater resilience</a> during major life stressors, recovering more quickly from setbacks and maintaining perspective during difficulties. They also tend to score <a href="https://psycnet.apa.org/record/2009-05474-001" target="_blank">25 &ndash; 30% higher</a> on life satisfaction measures and report lower rates of depression and anxiety.</p>
+<p>The information advantage is equally important. A landmark MIT study using LinkedIn data found that <a href="https://www.science.org/doi/10.1126/science.abl4476" target="_blank">moderately weak ties</a> – casual acquaintances rather than close contacts – had the greatest impact on job mobility, because they connect you to networks that do not overlap with your own.</p>
 
-<p>Purpose also affects physical health. A <a href="https://journals.sagepub.com/doi/10.1177/0956797619831612" target="_blank">meta-analysis of over 136,000 participants</a> found that having a strong sense of purpose was associated with reduced all-cause mortality. The mechanism likely involves better health behaviours, lower chronic stress, and stronger social connections &ndash; all of which tend to follow from purposeful living.</p>
-
-<p>Perhaps most practically, purpose improves the quality of everyday decisions. When you know what matters to you, it becomes easier to evaluate opportunities, say no to distractions, and commit to long-term projects without constant second-guessing.</p>
+<p>Despite 80% of professionals considering networking important, most people network reactively – reaching out only when they need something. Deliberate, sustained network building is uncommon and disproportionately rewarded. The difference between a passive and an active networker compounds over years into dramatically different career trajectories.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
@@ -236,23 +234,23 @@ life_area_slug: life-purpose
 <div class="l1-step" id="step-values" data-step="values">
     <div class="l1-step-header" onclick="toggleStep('values')">
         <div class="l1-step-number">2</div>
-        <div class="l1-step-title">What different people value about life purpose</div>
+        <div class="l1-step-title">What different people value about networks</div>
         <div class="l1-step-check">&#10003;</div>
         <div class="l1-step-expand">&#9660;</div>
     </div>
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>People develop life purpose for different reasons. This site scores every life purpose intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
+<p>People build professional networks for different reasons. This site scores every networks intervention across three core values. Later, you'll set your own weighting across these three values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
-<h3>Clarity &amp; Direction</h3>
-<p>Having a clear sense of what you want to achieve and why it matters to you personally. Understanding your core motivations, having frameworks for major life decisions, and feeling confident about your chosen path. People who lean towards this value focus on reducing existential confusion, developing coherent long-term vision, and maintaining certainty about their direction even when circumstances change.</p>
+<h3>Depth</h3>
+<p>The quality and strength of key professional relationships – trusted advisors, mentors, collaborators, and allies who genuinely understand your work and advocate for you. People who lean towards this value cultivate a smaller number of high-value relationships, investing time in deepening trust and providing genuine value.</p>
 
-<h3>Meaning &amp; Fulfilment</h3>
-<p>The degree to which your life purpose provides deep satisfaction, emotional resonance, and a sense that your existence matters. Feeling that your goals are personally meaningful rather than externally imposed, experiencing regular fulfilment from working towards your purpose, and having a sense that your life has significance. People who lean towards this value seek purposes that genuinely inspire and motivate them.</p>
+<h3>Breadth</h3>
+<p>The range and diversity of your professional network – connections across different industries, roles, seniority levels, and backgrounds. People who lean towards this value actively expand their circle, maintain weak ties, and ensure their network provides access to diverse information and opportunities.</p>
 
-<h3>Integration &amp; Coherence</h3>
-<p>How well your life purpose connects with and organises other aspects of your life &ndash; career, relationships, daily activities, and personal growth. Having a purpose that provides a unifying framework for life decisions, reduces internal conflict between different life domains, and creates synergy between various activities. People who lean towards this value want their purpose to serve as an organising principle that makes their whole life more coherent.</p>
+<h3>Relevance</h3>
+<p>Ensuring your network connections are aligned with your current and future professional direction. People who lean towards this value regularly evaluate whether their network serves their goals, prune connections that no longer add value, and deliberately build relationships in areas where they are heading.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -271,21 +269,21 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each life purpose value:</p>
+<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each networks value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Clarity &amp; Direction &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Greta_Thunberg" target="_blank">Greta Thunberg</a> identified climate activism as her purpose at age 15 and has maintained that direction with unusual consistency. She started by sitting alone outside the Swedish parliament in 2018 and sustained the commitment through global fame, intense criticism, and political pressure. Her clarity of purpose &ndash; and her refusal to be deflected from it &ndash; has been documented extensively in interviews, speeches, and her own writing.</p>
+    <div class="exemplar-value">Depth &ndash; Level 5</div>
+    <p><a href="https://en.wikipedia.org/wiki/Esther_Dyson" target="_blank">Esther Dyson</a> has maintained deep professional relationships with technology founders, investors, and policymakers for over 40 years. She was an early investor in Flickr, del.icio.us, and 23andMe, in each case building on years of genuine relationships with the founders. She is known for maintaining a small number of close professional ties that she invests in deeply over decades rather than collecting contacts.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &amp; Fulfilment &ndash; Level 5</div>
-    <p><a href="https://www.nobelprize.org/prizes/peace/2014/satyarthi/biographical/" target="_blank">Kailash Satyarthi</a> has worked to end child labour since the early 1980s, directly participating in the rescue of over 80,000 children from forced labour. He continued this work for decades before receiving the Nobel Peace Prize in 2014, sustaining motivation through legal battles, physical attacks, and the deaths of colleagues. His purpose appears to have been the primary organising force of his adult life.</p>
+    <div class="exemplar-value">Breadth &ndash; Level 5</div>
+    <p><a href="https://rfreedman.org/" target="_blank">Reid Hoffman</a> co-founded LinkedIn and built a professional network spanning technology, venture capital, politics, media, and academia. He is known for connecting people across industries and geographies, and his network routinely surfaces emerging opportunities, talent, and ideas before they become widely known. His book <em>The Start-up of You</em> codified his approach to network building.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Integration &amp; Coherence &ndash; Level 5</div>
-    <p><a href="https://en.wikipedia.org/wiki/Yo-Yo_Ma" target="_blank">Yo-Yo Ma</a> has spent over 50 years as a cellist, but his career consistently reflects a broader purpose &ndash; using music to build connection across cultures. His Silk Road Ensemble brings together musicians from dozens of countries, his community concerts take place in settings from prisons to refugee camps, and his public statements frame music as a tool for empathy. His concert schedule, teaching, and advocacy all appear to serve a single coherent vision rather than separate professional tracks.</p>
+    <div class="exemplar-value">Relevance &ndash; Level 5</div>
+    <p><a href="https://www.ycombinator.com/people/michael-seibel" target="_blank">Michael Seibel</a>, CEO of Y Combinator, has built a network that evolves in precise alignment with his professional direction. As he moved from founding Justin.tv (later Twitch) to leading YC, his network shifted from media and gaming to early-stage startups, ensuring that his connections anticipate where he is heading and proactively surface relevant founders and opportunities.</p>
 </div>
 
 <button class="l1-mark-done" onclick="completeStep('achievable')">I've read this &ndash; continue</button>
@@ -305,62 +303,62 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes of reflection. Tick each one once you've considered it (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
 
 <div class="assess-group">
-<h4>Clarity &amp; Direction</h4>
+<h4>Depth</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-articulate-purpose">
-    <label for="a-articulate-purpose">I've tried to articulate what I want my life to be about in one or two sentences.<br><span class="assess-hint">This doesn't need to be polished &ndash; even a rough attempt counts.</span></label>
+    <input type="checkbox" id="a-strong-ties">
+    <label for="a-strong-ties">I can name the professional contacts who would actively recommend or advocate for me if asked.<br><span class="assess-hint">Think about who would take a phone call from a hiring manager on your behalf.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-framework">
-    <label for="a-decision-framework">I know whether I have a framework for making major life decisions, or whether I tend to decide based on what feels right in the moment.<br><span class="assess-hint">Think about your last major decision &ndash; moving, changing jobs, starting or ending a relationship. What guided it?</span></label>
+    <input type="checkbox" id="a-mentor-sponsor">
+    <label for="a-mentor-sponsor">I know whether I currently have a mentor or sponsor in my professional life.<br><span class="assess-hint">A mentor gives advice; a sponsor advocates for you in rooms you're not in. Both count.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-direction-confidence">
-    <label for="a-direction-confidence">I have a sense of how confident I feel about my current life direction &ndash; whether I feel on track, uncertain, or adrift.<br><span class="assess-hint">There's no right answer here. The point is noticing where you stand.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Meaning &amp; Fulfilment</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fulfilment-sources">
-    <label for="a-fulfilment-sources">I can identify the activities or contexts that give me the deepest sense of fulfilment.<br><span class="assess-hint">These might be professional, personal, creative, or relational. Think about when you feel most alive.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-meaning-vs-external">
-    <label for="a-meaning-vs-external">I've considered whether my current goals feel personally meaningful or mainly driven by external expectations.<br><span class="assess-hint">External expectations include family pressure, social norms, or what seems impressive to others.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-setback-motivation">
-    <label for="a-setback-motivation">I know how my motivation tends to respond during setbacks or difficult periods.<br><span class="assess-hint">Do you push through, lose interest, pivot, or go numb? All are common patterns worth noticing.</span></label>
+    <input type="checkbox" id="a-reciprocity">
+    <label for="a-reciprocity">I have thought about what I offer to my strongest professional relationships, not just what I receive.<br><span class="assess-hint">Introductions, expertise, feedback, emotional support – value flows both ways.</span></label>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Integration &amp; Coherence</h4>
+<h4>Breadth</h4>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-values-alignment">
-    <label for="a-values-alignment">I've assessed whether my daily activities broadly align with what I say matters to me.<br><span class="assess-hint">Compare how you spend a typical week with what you'd list as your top priorities.</span></label>
+    <input type="checkbox" id="a-network-size">
+    <label for="a-network-size">I have a rough sense of the size of my professional network and how many contexts it spans.<br><span class="assess-hint">Count separate professional contexts: current work, previous roles, industry groups, alumni networks, conferences.</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-domain-conflict">
-    <label for="a-domain-conflict">I know whether different areas of my life (work, relationships, personal projects) feel like they support each other or compete for time and energy.<br><span class="assess-hint">Conflict between domains is extremely common &ndash; the point is noticing the pattern.</span></label>
+    <input type="checkbox" id="a-diversity">
+    <label for="a-diversity">I know whether my network is concentrated in one industry or role, or spans multiple areas.<br><span class="assess-hint">Check your LinkedIn connections by industry – are 90% in the same field?</span></label>
 </div>
 
 <div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose-decisions">
-    <label for="a-purpose-decisions">I can recall whether I've ever made a significant life decision based on purpose or values rather than convenience, money, or default expectations.<br><span class="assess-hint">This could be a career change, a move, ending something comfortable, or starting something risky.</span></label>
+    <input type="checkbox" id="a-new-connections">
+    <label for="a-new-connections">I know roughly how often I make meaningful new professional connections.<br><span class="assess-hint">Count the last 6 months – how many new people have you had a substantive conversation with?</span></label>
+</div>
+</div>
+
+<div class="assess-group">
+<h4>Relevance</h4>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-alignment">
+    <label for="a-alignment">I have assessed whether my current network connections are aligned with where my career is heading.<br><span class="assess-hint">Are most of your strong connections in areas relevant to your future, or mainly from your past?</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-gaps">
+    <label for="a-gaps">I can identify the industries, roles, or seniority levels where I lack connections but would benefit from them.<br><span class="assess-hint">Think about your career goals – who would you need to know to reach them?</span></label>
+</div>
+
+<div class="assess-item" onclick="toggleAssess(this)">
+    <input type="checkbox" id="a-maintenance">
+    <label for="a-maintenance">I have a sense of how actively I maintain my existing professional relationships.<br><span class="assess-hint">When did you last reach out to a former colleague or professional contact without needing something?</span></label>
 </div>
 </div>
 
@@ -381,11 +379,11 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>You now understand why life purpose matters, what different people get out of it, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
+<p>You now understand why networks matter, what different people get out of them, what's achievable, and where you currently stand. The final step is to set your personal value weightings and see which interventions are the best fit for you.</p>
 
-<p>On the interventions page, adjust the sliders to reflect how much you care about clarity and direction, meaning and fulfilment, and integration and coherence. The table will re-rank interventions to match your priorities.</p>
+<p>On the interventions page, adjust the sliders to reflect how much you care about depth, breadth, and relevance. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/life-purpose/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Life Purpose Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/networks/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Networks Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -394,8 +392,8 @@ life_area_slug: life-purpose
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
-    <p>You've built your foundation in Life Purpose. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/life-purpose/personalised" class="btn-cta">View Your Interventions</a>
+    <p>You've built your foundation in Networks. Your self-assessment and value weightings are saved.</p>
+    <a href="{{ site.baseurl }}/networks/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -404,12 +402,12 @@ life_area_slug: life-purpose
 (function() {
     'use strict';
 
-    var AREA = 'life-purpose';
+    var AREA = 'networks';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-articulate-purpose', 'a-decision-framework', 'a-direction-confidence',
-        'a-fulfilment-sources', 'a-meaning-vs-external', 'a-setback-motivation',
-        'a-values-alignment', 'a-domain-conflict', 'a-purpose-decisions'
+        'a-strong-ties', 'a-mentor-sponsor', 'a-reciprocity',
+        'a-network-size', 'a-diversity', 'a-new-connections',
+        'a-alignment', 'a-gaps', 'a-maintenance'
     ];
 
     function loadProgress() {
@@ -460,7 +458,6 @@ life_area_slug: life-purpose
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -501,13 +498,11 @@ life_area_slug: life-purpose
     window.toggleAssess = function(el) {
         var cb = el.querySelector('input[type="checkbox"]');
         if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
         if (document.activeElement !== cb) {
             cb.checked = !cb.checked;
         }
         el.classList.toggle('checked', cb.checked);
 
-        // Save checklist state
         var checklist = {};
         ASSESS_IDS.forEach(function(id) {
             var box = document.getElementById(id);
@@ -519,7 +514,6 @@ life_area_slug: life-purpose
             APStorage.save('ap-level1-assess', all);
         }
 
-        // Enable button when all checked
         var allChecked = ASSESS_IDS.every(function(id) {
             var box = document.getElementById(id);
             return box && box.checked;
@@ -543,7 +537,6 @@ life_area_slug: life-purpose
                 if (item) item.classList.add('checked');
             }
         });
-        // Check if all are already ticked
         var allChecked = ASSESS_IDS.every(function(id) {
             var box = document.getElementById(id);
             return box && box.checked;

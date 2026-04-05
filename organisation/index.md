@@ -1,75 +1,199 @@
 ---
+layout: default
+title: Organisation
 life_area_slug: organisation
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Organise Your Life &gt;
+    Productivity &gt;
+    Organisation
+</div>
+
 # Organisation
 
-## What is Organisation?
+**What it is**
+- How well you keep your tasks, spaces, and commitments in order. Organisation is the invisible infrastructure behind reliability and clarity &ndash; the practice of structuring your environment, tasks, and information so that things are where you need them, when you need them.
 
-Organisation is the practice of structuring your environment, tasks, and information so that things are where you need them, when you need them. It is the invisible infrastructure behind reliability and clarity.
+**Why it matters**
+- The average person spends 8.5 minutes per day searching for misplaced items, and knowledge workers lose 1.8 &ndash; 2.5 hours per day hunting for information. 41% of to-do list items are never completed. Even basic organisational competence is rare enough that modest improvements place you well above the majority.
 
-## Why Organisation matters
+**Related life areas**
+- [Systems]({{ site.baseurl }}/systems) &ndash; the tools, automations, and workflows you build to handle recurring tasks and manage information
+- [Time Management]({{ site.baseurl }}/time-management) &ndash; how you plan, schedule, and protect your time
+- [Goals]({{ site.baseurl }}/goals) &ndash; specific outcomes you commit to achieving within a defined timeframe
+- [Habits]({{ site.baseurl }}/habits) &ndash; the repeated behaviours that form the foundation of personal effectiveness
 
-- **Most people have no system at all** -- 82% of people have no formal time management system, relying instead on memory and improvisation <span class="info-icon" onclick="showReasoning('research-no-system')">i</span>
-- **Disorganisation costs significant time every day** -- the average person spends 8.5 minutes per day searching for misplaced items <span class="info-icon" onclick="showReasoning('research-searching-items')">i</span>, and knowledge workers spend 1.8 -- 2.5 hours per day searching for information <span class="info-icon" onclick="showReasoning('research-information-search')">i</span>
-- **Without external systems, things fall through the cracks** -- 41% of to-do list items are never completed <span class="info-icon" onclick="showReasoning('research-incomplete-tasks')">i</span>, and 52% of people missed a healthcare appointment in the past year <span class="info-icon" onclick="showReasoning('research-missed-appointments')">i</span>
-- **Clutter is a symptom of missing systems, not missing space** -- 54% of people feel overwhelmed by clutter, and 80% of household clutter stems from disorganisation rather than lack of storage <span class="info-icon" onclick="showReasoning('research-clutter')">i</span>
-- **Even basic organisational competence is rare** -- because the baseline is so low, modest improvements in capture, filing, and review place you well above the majority of the population
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Organisation yet.</strong><br>It takes about 15 minutes and helps you understand what organisation means to you.</p>
+    <a href="{{ site.baseurl }}/organisation/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Organisation Values
+## What people value about organisation
 
-Your approach to organisation depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+People pursue organisation for different reasons. This site scores every organisation intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-For personalised recommendations based on your unique priorities, visit [Organisation Personalised]({{ site.baseurl }}/organisation/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Tracking</h3>
+<p>Capturing and monitoring all commitments, tasks, and information so nothing falls through the cracks. Maintaining a trusted system for recording what needs doing, reviewing progress regularly, and ensuring everything important is visible and accounted for.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Order</h3>
+<p>Maintaining structured, predictable systems for physical and digital environments. Consistent filing, clear storage systems, labelled locations for everything, and routines that keep spaces and information organised.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Speed</h3>
+<p>Minimising the time spent on organisational overhead so you can move quickly from intention to action. Rapid processing of incoming tasks, fast retrieval of information, and systems designed for throughput over perfection.</p>
+</div>
 
-Research paints a stark picture of how most people manage -- or fail to manage -- their personal systems. The average person <a href="https://www.prnewswire.com/news-releases/lost-and-found-the-average-american-spends-25-days-each-year-looking-for-lost-items-collectively-costing-us-households-27-billion-annually-in-replacement-costs-300449305.html" target="_blank">loses over an hour per week to searching for misplaced items</a> alone, and knowledge workers spend <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy" target="_blank">roughly a quarter of their day hunting for information</a> rather than using it. <a href="https://blog.idonethis.com/how-to-master-the-art-of-to-do-lists/" target="_blank">Nearly half of all intended tasks go uncompleted</a>, and <a href="https://www.unitedhealthgroup.com/newsroom/2022/2022-07-20-optum-consumer-survey-better-tools-for-finding-care.html" target="_blank">over half the population misses medical appointments</a> due to poor tracking. These baselines mean that even basic organisational competence places you well above the median, and genuine mastery is vanishingly rare.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/organisation/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand organisation, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/organisation/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-no-system': {
-        title: 'Lack of Time Management Systems',
-        content: '82% of people do not have a formal time management system. They rely on a combination of memory, ad hoc lists, and reactive responses to manage their obligations, leading to significant inefficiency and dropped commitments. <a href="https://www.acuitytraining.co.uk/news-tips/time-management-statistics-research/" target="_blank">View study</a>'
-    },
-    'research-searching-items': {
-        title: 'Time Lost Searching for Items',
-        content: 'The average person spends approximately 8.5 minutes per day searching for misplaced items such as keys, wallets, phones, and documents. Over a year, this amounts to more than 50 hours lost purely to disorganisation of physical belongings. <a href="https://www.prnewswire.com/news-releases/lost-and-found-the-average-american-spends-25-days-each-year-looking-for-lost-items-collectively-costing-us-households-27-billion-annually-in-replacement-costs-300449305.html" target="_blank">View Pixie survey</a>'
-    },
-    'research-information-search': {
-        title: 'Knowledge Workers Searching for Information',
-        content: 'Studies consistently find that knowledge workers spend between 1.8 and 2.5 hours per day searching for information they need to perform their jobs. This represents roughly 25 - 30% of the working day spent not on productive work but on retrieval and re-retrieval of information. <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy" target="_blank">View McKinsey report</a>'
-    },
-    'research-incomplete-tasks': {
-        title: 'Incomplete To-Do List Items',
-        content: '41% of items placed on to-do lists are never completed. This reflects both poor prioritisation and the tendency to use lists as a dumping ground rather than as a genuine commitment-tracking system. <a href="https://blog.idonethis.com/how-to-master-the-art-of-to-do-lists/" target="_blank">View iDoneThis research</a>'
-    },
-    'research-missed-appointments': {
-        title: 'Missed Healthcare Appointments',
-        content: '52% of people missed at least one healthcare appointment in the past year. Of those, 33% cited simply forgetting as the reason -- a failure of capture and reminder systems rather than a deliberate choice. <a href="https://www.unitedhealthgroup.com/newsroom/2022/2022-07-20-optum-consumer-survey-better-tools-for-finding-care.html" target="_blank">View Optum survey</a>'
-    },
-    'research-clutter': {
-        title: 'Clutter and Disorganisation',
-        content: '54% of people report feeling overwhelmed by clutter. Critically, 80% of household clutter results from disorganisation -- not having a system for where things belong -- rather than from genuinely lacking storage space. <a href="https://www.prnewswire.com/news-releases/survey-finds-54-percent-of-americans-are-overwhelmed-with-clutter-and-dont-know-what-to-do-with-it-300019518.html" target="_blank">View survey</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var organisation = progress.organisation || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return organisation[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.organisation;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Organisation.</strong></p>' +
+            '<a href="{{ site.baseurl }}/organisation/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/organisation/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(organisation).length > 0) {
+        var completed = steps.filter(function(s) { return organisation[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/organisation/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

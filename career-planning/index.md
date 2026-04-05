@@ -1,70 +1,204 @@
 ---
+layout: default
+title: Career Planning
 life_area_slug: career-planning
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Create &amp; Contribute &gt;
+    Career &gt;
+    Career Planning
+</div>
+
 # Career Planning
 
-## What is Career Planning?
+**What it is**
+- The deliberate, ongoing process of shaping your professional trajectory – choosing directions, building capabilities, and positioning yourself for the career you want rather than the one that happens to you.
 
-The deliberate, ongoing process of shaping your professional trajectory -- choosing directions, building capabilities, and positioning yourself for the career you want rather than the one that happens to you.
+**Why it matters**
+- Half of workers view their job as 'just a job' rather than a career or calling, and only 37% have a mentor despite mentees being five times more likely to be promoted. Deliberate career planning is rare and disproportionately rewarded.
 
-## Why Career Planning matters
+**Related life areas**
+- [Current work]({{ site.baseurl }}/current-work) – your day-to-day professional activity, including satisfaction and performance
+- [Networks]({{ site.baseurl }}/networks) – your professional relationships and industry connections
+- [Life skills]({{ site.baseurl }}/life-skills) – practical capabilities that support career transitions and professional effectiveness
+- [Goals]({{ site.baseurl }}/goals) – how you set, track, and achieve personal and professional objectives
 
-- **Most people drift rather than plan** -- half of workers view their job as "just a job" rather than a career or calling <span class="info-icon" onclick="showReasoning('research-just-a-job')">i</span>, and only 37% have a mentor despite mentees being five times more likely to be promoted <span class="info-icon" onclick="showReasoning('research-mentorship')">i</span>
-- **Networking drives opportunity** -- 85% of jobs are filled through networking rather than formal applications <span class="info-icon" onclick="showReasoning('research-networking')">i</span>, making deliberate relationship-building one of the highest-return career investments
-- **Skills are expiring faster** -- 39% of core skills required for existing jobs are expected to change by 2030 <span class="info-icon" onclick="showReasoning('research-skills-change')">i</span>, making passive career management increasingly dangerous
-- **Most people lack financial runway** -- 59% of people cannot cover more than three months of expenses <span class="info-icon" onclick="showReasoning('research-financial-buffer')">i</span>, leaving them unable to take strategic risks or weather disruption
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Career Planning yet.</strong><br>It takes about 15 minutes and helps you understand what career planning means to you.</p>
+    <a href="{{ site.baseurl }}/career-planning/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Career Planning Values
+## What people value about career planning
 
-Your approach to career planning depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+People approach career planning for different reasons. This site scores every career planning intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-For personalised recommendations based on your unique priorities, visit [Career Planning Personalised]({{ site.baseurl }}/career-planning/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Clarity</h3>
+<p>A clear, informed understanding of where your career is heading and why. Articulating a career thesis, understanding industry trajectories, and regularly revisiting your direction.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Advancement</h3>
+<p>Progressing toward higher levels of responsibility, compensation, and influence. Building skills beyond your current role and ensuring your trajectory moves upward.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Security</h3>
+<p>Protecting yourself against career disruption through financial runway, transferable skills, and professional optionality.</p>
+</div>
 
-Career planning capability varies enormously across the population. Most people operate reactively, updating their CV only when job-hunting and networking only when they need something. Deliberate career strategy, maintained professional positioning, and genuine career resilience are far rarer than most assume. Even moderate planning effort places you well above the median.
+<div class="value-card">
+<h3>Meaning</h3>
+<p>Finding genuine purpose and significance in your professional life – work that aligns with your values and contributes to something you care about.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/career-planning/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand career planning, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/career-planning/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-just-a-job': {
-        title: 'Career as "Just a Job"',
-        content: 'A 2024 Pew Research Center survey found that 50% of U.S. workers view their job as "just a job" rather than a career or a calling. This suggests that half the working population lacks a meaningful career orientation, let alone a deliberate plan. <a href="https://www.pewresearch.org/social-trends/2024/07/24/how-americans-view-their-jobs/" target="_blank">View study</a>'
-    },
-    'research-mentorship': {
-        title: 'Impact of Mentorship',
-        content: 'Only 37% of professionals have a mentor, yet those who do are five times more likely to be promoted. Mentorship provides career guidance, network access, and sponsorship that dramatically accelerates career progression. <a href="https://mentorcliq.com/mentoring-resources/mentoring-statistics" target="_blank">View study</a>'
-    },
-    'research-networking': {
-        title: 'Jobs Filled Through Networking',
-        content: 'LinkedIn data indicates that 85% of jobs are filled through networking rather than formal applications. This makes professional relationship-building one of the highest-return career investments, yet most people network only when they need a job. <a href="https://www.linkedin.com/pulse/new-survey-reveals-85-all-jobs-filled-via-networking-lou-adler/" target="_blank">View study</a>'
-    },
-    'research-skills-change': {
-        title: 'Core Skills Changing by 2030',
-        content: 'The World Economic Forum\'s 2025 Future of Jobs Report projects that 39% of core skills required for existing jobs will change by 2030. This pace of skill obsolescence means that career resilience increasingly depends on continuous learning and adaptability. <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank">View study</a>'
-    },
-    'research-financial-buffer': {
-        title: 'Emergency Savings Shortfall',
-        content: 'A 2026 Bankrate survey found that 59% of Americans cannot cover more than three months of expenses from savings. Without financial runway, career decisions become reactive and constrained -- people cannot afford to leave bad situations, invest in retraining, or take strategic risks. <a href="https://www.bankrate.com/banking/savings/emergency-savings-report/" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress['career-planning'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['career-planning'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Career Planning.</strong></p>' +
+            '<a href="{{ site.baseurl }}/career-planning/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/career-planning/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/career-planning/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

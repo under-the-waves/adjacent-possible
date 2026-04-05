@@ -1,63 +1,199 @@
 ---
+layout: default
+title: Goals
 life_area_slug: goals
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Organise Your Life &gt;
+    Productivity &gt;
+    Goals
+</div>
+
 # Goals
 
-## What are Goals?
+**What it is**
+- How you set, track, and achieve meaningful goals. Goals covers the practices that turn vague aspirations into concrete targets you can plan against, monitor, and either hit or learn from missing.
 
-Goals are specific outcomes you commit to achieving within a defined timeframe. They turn vague aspirations into concrete targets you can plan against, track, and either hit or learn from missing.
+**Why it matters**
+- Specific, challenging goals improve outcomes by 10 – 25% compared to vague intentions, yet 92% of goal-setters never reach their goals. Writing goals down increases achievement by 42%, but only 35% of people do it. The gap between knowing goals work and having the practices to make them work is where most people get stuck.
 
-## Why Goals matter
+**Related life areas**
+- [Time management]({{ site.baseurl }}/time-management) – how effectively you allocate and protect your time
+- [Habits]({{ site.baseurl }}/habits) – your ability to build and maintain positive habits
+- [Systems]({{ site.baseurl }}/systems) – how you design and maintain the systems that support your daily life
+- [Organisation]({{ site.baseurl }}/organisation) – how you manage information, spaces, and commitments
 
-- **Specific goals reliably improve performance** -- Locke and Latham's research across 1,000+ studies shows that specific, challenging goals improve outcomes by 10 -- 25% compared to vague intentions <span class="info-icon" onclick="showReasoning('research-locke-latham')">i</span>
-- **Most people set goals badly** -- roughly 70% of adults set goals, but only 33% define them with any specificity and only 35% write them down <span class="info-icon" onclick="showReasoning('research-prevalence')">i</span>
-- **The failure rate is staggering** -- <a href="https://news.scranton.edu/articles/2021/01/fac-norcross-stories.shtml" target="_blank">92% of goal-setters never reach their goals</a>, and 80% of New Year's resolutions are abandoned by February
-- **Simple practices dramatically improve the odds** -- writing goals down increases achievement by 42%, and weekly progress monitoring significantly promotes attainment <span class="info-icon" onclick="showReasoning('research-effectiveness')">i</span>
-- **The problem is systems, not the concept** -- goal-setting is one of the most validated interventions in behavioural science; the gap is between knowing goals work and having the practices to make them work for you
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Goals yet.</strong><br>It takes about 15 minutes and helps you understand what goal-setting means to you.</p>
+    <a href="{{ site.baseurl }}/goals/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Goals Values
+## What people value about goals
 
-Your approach to goals depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+People pursue goal-setting for different reasons. This site scores every goals intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-For personalised recommendations based on your unique priorities, visit [Goals Personalised]({{ site.baseurl }}/goals/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Follow-through</h3>
+<p>Consistently completing what you set out to do. Maintaining momentum, tracking progress, building accountability, and developing the discipline to keep working when motivation fades.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Clarity</h3>
+<p>Defining goals with enough precision that you know exactly what success looks like and can tell whether you are on track. Specific, measurable targets with clear deadlines.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Adaptability</h3>
+<p>Maintaining the ability to change course, adjust timelines, reprioritise, or abandon goals as new information emerges. Treating goals as hypotheses and developing the skill of strategic retreat.</p>
+</div>
 
-Research reveals how rare effective goal-setting actually is. Although roughly 70% of adults set goals, <a href="https://scholar.dominican.edu/psychology-faculty-conference-presentations/3/" target="_blank">only a third do so with any specificity</a>. Writing goals down — a simple act that <a href="https://scholar.dominican.edu/psychology-faculty-conference-presentations/3/" target="_blank">increases achievement by 42%</a> — is practised by just 35% of goal-setters. The <a href="https://news.scranton.edu/articles/2021/01/fac-norcross-stories.shtml" target="_blank">92% failure rate</a> means that anyone who consistently achieves their goals across multiple domains is already well into the upper percentiles of the population. Even modest improvements in goal clarity, tracking, and review place a person ahead of the vast majority.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/goals/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand goals, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/goals/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-locke-latham': {
-        title: 'Goal-Setting Theory (Locke & Latham)',
-        content: 'Locke and Latham\'s goal-setting theory, developed over 35 years of research, demonstrates that specific, challenging goals consistently lead to 10 – 25% higher performance than easy goals, "do your best" instructions, or no goals. The effect has been replicated across over 1,000 studies and 40,000 participants in both laboratory and field settings. <a href="https://psycnet.apa.org/record/2002-15790-003" target="_blank">View study</a>'
-    },
-    'research-prevalence': {
-        title: 'Goal-Setting Prevalence',
-        content: 'Surveys indicate that roughly 70% of US adults set goals of some kind, but only about 33% define them with specificity and only 35% write them down. The act of writing goals down is associated with a 42% increase in achievement (Matthews, Dominican University, 2015). Despite these well-known findings, the majority of goal-setters rely on vague mental intentions rather than structured written plans. <a href="https://scholar.dominican.edu/psychology-faculty-conference-presentations/3/" target="_blank">View study</a>'
-    },
-    'research-effectiveness': {
-        title: 'Goal Achievement and Monitoring',
-        content: 'A meta-analysis by Harkin et al. (2016) across 138 studies found that monitoring goal progress significantly promotes attainment across a wide range of domains. The effect is stronger when monitoring is conducted frequently (weekly or more) and when progress is physically recorded or publicly reported. Combined with the 92% failure rate for unstructured goals, this evidence underscores that systematic tracking is one of the highest-leverage interventions available. <a href="https://psycnet.apa.org/record/2015-52587-001" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress.goals || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.goals;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Goals.</strong></p>' +
+            '<a href="{{ site.baseurl }}/goals/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/goals/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/goals/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

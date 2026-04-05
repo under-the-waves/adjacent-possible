@@ -1,59 +1,199 @@
 ---
+layout: default
+title: Community Contribution
 life_area_slug: community-contribution
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas">Life Areas</a> &gt;
+    Create &amp; Contribute &gt;
+    Impact &gt;
+    Community Contribution
+</div>
+
 # Community Contribution
 
-## What is Community Contribution?
+**What it is**
+- How you give back to and participate in your local community – through volunteering, neighbourhood involvement, civic participation, and the relationships that come from shared investment in where you live.
 
-How you give back to and participate in your local community -- through volunteering, neighbourhood involvement, civic participation, and the relationships that come from shared investment in where you live.
+**Why it matters**
+- Volunteers consistently report better mental health, higher life satisfaction, and greater sense of purpose. Those who volunteer 200+ hours annually show a 40% reduction in hypertension risk. Yet only 23% of adults formally volunteer, meaning even modest, regular contribution represents above-average civic behaviour.
 
-## Why Community Contribution matters
+**Related life areas**
+- [Global impact]({{ site.baseurl }}/global-impact) – your contribution to global causes and broader societal wellbeing
+- [Friendship]({{ site.baseurl }}/friendship) – the quality and depth of your friendships
+- [Value system]({{ site.baseurl }}/value-system) – your core values, what you stand for, and how you prioritise what matters
+- [Networks]({{ site.baseurl }}/networks) – the breadth and quality of your professional and personal networks
 
-- **Benefits flow both ways** -- Volunteers consistently report better mental health, higher life satisfaction, and greater sense of purpose <span class="info-icon" onclick="showReasoning('research-volunteer-wellbeing')">i</span>. Those who volunteer 200+ hours annually show a 40% reduction in hypertension risk <span class="info-icon" onclick="showReasoning('research-health-benefits')">i</span>.
-- **Participation is declining** -- Only 23.2% of adults formally volunteer, down from historical highs <span class="info-icon" onclick="showReasoning('research-volunteering-scale')">i</span>. Even modest, regular contribution now represents above-average civic behaviour.
-- **Community contribution builds social capital** -- The networks of trust and reciprocity that make communities function depend on people showing up. In an era of increasing social isolation, deliberate local involvement is both increasingly valuable and increasingly rare.
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Community Contribution yet.</strong><br>It takes about 15 minutes and helps you understand what community contribution means to you.</p>
+    <a href="{{ site.baseurl }}/community-contribution/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Community Contribution Values
+## What people value about community contribution
 
-Your approach to community contribution depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+People contribute to their communities for different reasons. This site scores every community contribution intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Impact</h3>
+<p>Making a measurable, tangible difference in your community through your contributions. Choosing high-leverage volunteer activities, leading projects that produce real outcomes, and evaluating whether your community work is actually improving things.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Belonging</h3>
+<p>Feeling genuinely connected to and part of your local community through shared participation. Knowing your neighbours, being recognised as a community member, and experiencing the sense of home that comes from mutual investment.</p>
+</div>
 
-Despite the documented benefits of community contribution, participation rates have declined significantly over recent decades. Only 23% of adults formally volunteer, down from historical highs. Civic engagement beyond voting is even rarer -- fewer than 10% of residents attend local government meetings, and neighbourhood social ties have weakened considerably. Against this backdrop, even modest, regular community contribution represents above-average civic behaviour. Sustained, multi-channel community engagement is genuinely exceptional.
+<div class="value-card">
+<h3>Fulfilment</h3>
+<p>The personal satisfaction and meaning derived from contributing to community life. Volunteering in ways that energise you, finding purpose in service, and ensuring community work is a source of joy.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/community-contribution/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand community contribution, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/community-contribution/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-volunteering-scale': {
-        title: 'Volunteering Participation',
-        content: 'In 2021, 23.2% of American adults formally volunteered through organisations, contributing 4.1 billion hours of service valued at $122.9 billion. Including informal helping (assisting neighbours, community members), 51.4% of adults contributed. Volunteering rates have declined from historical peaks. <a href="https://americorps.gov/about/our-impact/volunteering-civic-life" target="_blank">View statistics</a>'
-    },
-    'research-volunteer-wellbeing': {
-        title: 'Volunteering and Wellbeing',
-        content: 'Research consistently shows that volunteers report better mental health outcomes than non-volunteers, including lower rates of depression and anxiety, higher life satisfaction, and greater sense of purpose. These associations hold even after controlling for pre-existing health and socioeconomic status, suggesting a causal relationship. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3890753/" target="_blank">View research</a>'
-    },
-    'research-health-benefits': {
-        title: 'Health Benefits of Volunteering',
-        content: 'Volunteering approximately 100 hours per year (2 hours per week) appears to be the threshold for significant health benefits. Those volunteering 200+ hours annually show a 40% reduction in hypertension risk. Social integration through community involvement also reduces mortality risk and improves cognitive function, particularly in older adults. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3890753/" target="_blank">View research</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress['community-contribution'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['community-contribution'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Community Contribution.</strong></p>' +
+            '<a href="{{ site.baseurl }}/community-contribution/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/community-contribution/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/community-contribution/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
