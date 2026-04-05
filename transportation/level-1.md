@@ -163,6 +163,70 @@ life_area_slug: transportation
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -305,66 +369,151 @@ life_area_slug: transportation
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Efficiency</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-commute-time">
-    <label for="a-commute-time">I know how long my daily commute takes, door to door.<br><span class="assess-hint">Include walking to and from your vehicle or station, waiting time, and any transfers.</span></label>
+<div class="assess-input-group" id="ig-commute-time">
+    <span class="assess-label">How long is your daily commute, door to door?</span>
+    <span class="assess-hint">Include walking to and from your vehicle or station, waiting time, and any transfers.</span>
+    <select id="a-commute-time" onchange="handleAssessInput('a-commute-time')">
+        <option value="">Select...</option>
+        <option value="over-60">Over 60 minutes each way</option>
+        <option value="40-60">40&ndash;60 minutes each way</option>
+        <option value="20-40">20&ndash;40 minutes each way</option>
+        <option value="under-20">Under 20 minutes each way</option>
+        <option value="wfh">I work from home or within walking distance</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-commute-time" onchange="handleSkip('a-commute-time')"><label for="skip-commute-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-transport-cost">
-    <label for="a-transport-cost">I know roughly how much I spend on transportation each month.<br><span class="assess-hint">Include fuel or fares, insurance, maintenance, parking, and any vehicle payments or depreciation.</span></label>
+<div class="assess-input-group" id="ig-transport-cost">
+    <span class="assess-label">How much do you spend on transportation each month?</span>
+    <span class="assess-hint">Include fuel or fares, insurance, maintenance, parking, and any vehicle payments.</span>
+    <select id="a-transport-cost" onchange="handleAssessInput('a-transport-cost')">
+        <option value="">Select...</option>
+        <option value="over-500">Over &pound;500</option>
+        <option value="300-500">&pound;300&ndash;&pound;500</option>
+        <option value="150-300">&pound;150&ndash;&pound;300</option>
+        <option value="50-150">&pound;50&ndash;&pound;150</option>
+        <option value="under-50">Under &pound;50</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-transport-cost" onchange="handleSkip('a-transport-cost')"><label for="skip-transport-cost">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-errand-pattern">
-    <label for="a-errand-pattern">I know whether my errands are batched or spread across multiple separate trips.<br><span class="assess-hint">Think about grocery shopping, appointments, and other regular tasks that require travel.</span></label>
+<div class="assess-input-group" id="ig-errand-pattern">
+    <span class="assess-label">Are your errands batched or spread across multiple separate trips?</span>
+    <span class="assess-hint">Grocery shopping, appointments, and other regular tasks that require travel.</span>
+    <select id="a-errand-pattern" onchange="handleAssessInput('a-errand-pattern')">
+        <option value="">Select...</option>
+        <option value="many-trips">Many separate trips &ndash; one errand per outing</option>
+        <option value="mostly-separate">Mostly separate &ndash; I batch occasionally</option>
+        <option value="mixed">Mixed &ndash; I batch some but not all</option>
+        <option value="mostly-batched">Mostly batched &ndash; I combine errands when I can</option>
+        <option value="fully-batched">Fully batched &ndash; I plan routes and combine everything</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-errand-pattern" onchange="handleSkip('a-errand-pattern')"><label for="skip-errand-pattern">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Comfort</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-commute-experience">
-    <label for="a-commute-experience">I have a sense of whether my daily commute feels pleasant, neutral, or stressful.<br><span class="assess-hint">Consider noise, crowding, temperature, traffic, and how you feel when you arrive.</span></label>
+<div class="assess-input-group" id="ig-commute-experience">
+    <span class="assess-label">How does your daily commute feel?</span>
+    <span class="assess-hint">Noise, crowding, temperature, traffic, and how you feel when you arrive.</span>
+    <select id="a-commute-experience" onchange="handleAssessInput('a-commute-experience')">
+        <option value="">Select...</option>
+        <option value="stressful">Stressful &ndash; I dread it</option>
+        <option value="unpleasant">Unpleasant &ndash; tolerable but draining</option>
+        <option value="neutral">Neutral &ndash; it's fine</option>
+        <option value="pleasant">Pleasant &ndash; I don't mind it</option>
+        <option value="enjoyable">Enjoyable &ndash; I use the time well or actively enjoy it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-commute-experience" onchange="handleSkip('a-commute-experience')"><label for="skip-commute-experience">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-vehicle-condition">
-    <label for="a-vehicle-condition">I know the condition and comfort level of my primary mode of transport.<br><span class="assess-hint">Whether it's a car, bicycle, bus, or train – is it well-maintained, comfortable, and reliable?</span></label>
+<div class="assess-input-group" id="ig-vehicle-condition">
+    <span class="assess-label">What is the condition of your primary mode of transport?</span>
+    <span class="assess-hint">Car, bicycle, bus, or train &ndash; is it well-maintained, comfortable, and reliable?</span>
+    <select id="a-vehicle-condition" onchange="handleAssessInput('a-vehicle-condition')">
+        <option value="">Select...</option>
+        <option value="poor">Poor &ndash; unreliable or uncomfortable</option>
+        <option value="fair">Fair &ndash; works but has issues</option>
+        <option value="adequate">Adequate &ndash; functional and reasonably comfortable</option>
+        <option value="good">Good &ndash; well-maintained and comfortable</option>
+        <option value="excellent">Excellent &ndash; reliable, comfortable, and well-suited to my needs</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-vehicle-condition" onchange="handleSkip('a-vehicle-condition')"><label for="skip-vehicle-condition">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-weather-impact">
-    <label for="a-weather-impact">I know how weather affects my transportation experience.<br><span class="assess-hint">Do rain, cold, or heat make your commute significantly worse? Do you have adequate protection?</span></label>
+<div class="assess-input-group" id="ig-weather-impact">
+    <span class="assess-label">How much does weather affect your transportation experience?</span>
+    <span class="assess-hint">Do rain, cold, or heat make your commute significantly worse?</span>
+    <select id="a-weather-impact" onchange="handleAssessInput('a-weather-impact')">
+        <option value="">Select...</option>
+        <option value="severely">Severely &ndash; bad weather makes travel very difficult</option>
+        <option value="significantly">Significantly &ndash; it's noticeably worse</option>
+        <option value="moderately">Moderately &ndash; some impact but manageable</option>
+        <option value="slightly">Slightly &ndash; I'm mostly protected from weather</option>
+        <option value="not-at-all">Not at all &ndash; weather has no effect on my transport</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-weather-impact" onchange="handleSkip('a-weather-impact')"><label for="skip-weather-impact">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Safety</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-risk-awareness">
-    <label for="a-risk-awareness">I know the main safety risks associated with my current transportation modes.<br><span class="assess-hint">Accident rates for your mode, dangerous junctions on your route, or common hazards.</span></label>
+<div class="assess-input-group" id="ig-risk-awareness">
+    <span class="assess-label">How well do you know the main safety risks of your current transportation modes?</span>
+    <span class="assess-hint">Accident rates, dangerous junctions on your route, or common hazards.</span>
+    <select id="a-risk-awareness" onchange="handleAssessInput('a-risk-awareness')">
+        <option value="">Select...</option>
+        <option value="unaware">Unaware &ndash; I haven't thought about this</option>
+        <option value="vague">Vague &ndash; I know driving/cycling has risks but nothing specific</option>
+        <option value="basic">Basic &ndash; I know the main risks</option>
+        <option value="informed">Informed &ndash; I know specific risks for my routes and modes</option>
+        <option value="proactive">Proactive &ndash; I've adjusted my behaviour based on risk knowledge</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-risk-awareness" onchange="handleSkip('a-risk-awareness')"><label for="skip-risk-awareness">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-safety-features">
-    <label for="a-safety-features">I know what safety features my primary vehicle or mode has (and doesn't have).<br><span class="assess-hint">ABS, airbags, tyre condition, lights, reflective gear, helmet – whatever applies to your mode.</span></label>
+<div class="assess-input-group" id="ig-safety-features">
+    <span class="assess-label">Do you know what safety features your primary vehicle or mode has?</span>
+    <span class="assess-hint">ABS, airbags, tyre condition, lights, reflective gear, helmet.</span>
+    <select id="a-safety-features" onchange="handleAssessInput('a-safety-features')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I don't know</option>
+        <option value="vague">Vague &ndash; I know it has some but not the details</option>
+        <option value="basic">Basic &ndash; I know the main safety features</option>
+        <option value="detailed">Detailed &ndash; I know what I have and what I'm missing</option>
+        <option value="optimised">Optimised &ndash; I've added or upgraded safety features</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-safety-features" onchange="handleSkip('a-safety-features')"><label for="skip-safety-features">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-defensive-habits">
-    <label for="a-defensive-habits">I have a sense of whether I practise defensive habits when travelling.<br><span class="assess-hint">Consistent seat belt use, mirror checks, safe following distance, or cycling with lights and a helmet.</span></label>
+<div class="assess-input-group" id="ig-defensive-habits">
+    <span class="assess-label">Do you practise defensive habits when travelling?</span>
+    <span class="assess-hint">Consistent seat belt use, mirror checks, safe following distance, cycling with lights and a helmet.</span>
+    <select id="a-defensive-habits" onchange="handleAssessInput('a-defensive-habits')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I don't think about it</option>
+        <option value="sometimes">Sometimes &ndash; I'm inconsistent</option>
+        <option value="mostly">Mostly &ndash; I usually follow safe practices</option>
+        <option value="consistently">Consistently &ndash; defensive habits are automatic</option>
+        <option value="exemplary">Exemplary &ndash; I go beyond basics with advanced safety practices</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-defensive-habits" onchange="handleSkip('a-defensive-habits')"><label for="skip-defensive-habits">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +560,8 @@ life_area_slug: transportation
         'a-commute-experience', 'a-vehicle-condition', 'a-weather-impact',
         'a-risk-awareness', 'a-safety-features', 'a-defensive-habits'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,11 +637,11 @@ life_area_slug: transportation
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
         updateUI();
-
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -498,66 +649,86 @@ life_area_slug: transportation
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
+    }
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    }
+    function saveScores() {
+        var scores = {
+            efficiency: null,
+            comfort: null,
+            safety: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id]; if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
+            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+            updateInputGroupState(id);
+        });
+        updateAssessRecorded(); updateAssessCompletion();
+    }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

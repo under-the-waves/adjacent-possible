@@ -133,35 +133,69 @@ life_area_slug: habits
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,151 @@ life_area_slug: habits
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Impact</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-current-habits">
-    <label for="a-current-habits">I can list the daily and weekly habits I currently maintain, both helpful and unhelpful.<br><span class="assess-hint">Think about your morning routine, work patterns, evening habits, and weekend routines.</span></label>
+<div class="assess-input-group" id="ig-current-habits">
+    <span class="assess-label">How many daily or weekly habits do you currently maintain?</span>
+    <span class="assess-hint">Think about your morning routine, work patterns, evening habits, and weekend routines &ndash; both helpful and unhelpful.</span>
+    <select id="a-current-habits" onchange="handleAssessInput('a-current-habits')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know &ndash; I haven't thought about it</option>
+        <option value="few">A few &ndash; one or two I could name</option>
+        <option value="several">Several &ndash; 3 &ndash; 5 deliberate habits</option>
+        <option value="many">Many &ndash; 6 &ndash; 10 habits across different areas</option>
+        <option value="comprehensive">Comprehensive &ndash; 10+ habits forming a structured routine</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-current-habits" onchange="handleSkip('a-current-habits')"><label for="skip-current-habits">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-keystone">
-    <label for="a-keystone">I've thought about which of my current habits have the biggest positive or negative ripple effects on other areas of my life.<br><span class="assess-hint">For example, does exercising in the morning make you more productive all day? Does staying up late make everything harder?</span></label>
+<div class="assess-input-group" id="ig-keystone">
+    <span class="assess-label">Have you identified which of your habits have the biggest ripple effects on other areas of your life?</span>
+    <span class="assess-hint">For example, does exercising in the morning make you more productive all day? Does staying up late make everything harder?</span>
+    <select id="a-keystone" onchange="handleAssessInput('a-keystone')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I haven't thought about which habits affect others</option>
+        <option value="vaguely">Vaguely &ndash; I have a general sense but nothing specific</option>
+        <option value="some">Some &ndash; I've identified one or two keystone habits</option>
+        <option value="mostly">Mostly &ndash; I understand the main connections between my habits</option>
+        <option value="clearly">Clearly &ndash; I've mapped how my habits influence each other</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-keystone" onchange="handleSkip('a-keystone')"><label for="skip-keystone">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-habit-goals">
-    <label for="a-habit-goals">I know whether my current habits are aligned with my most important goals and values.<br><span class="assess-hint">Are your daily routines actually moving you towards the things you say matter most?</span></label>
+<div class="assess-input-group" id="ig-habit-goals">
+    <span class="assess-label">Are your current habits aligned with your most important goals and values?</span>
+    <span class="assess-hint">Are your daily routines actually moving you towards the things you say matter most?</span>
+    <select id="a-habit-goals" onchange="handleAssessInput('a-habit-goals')">
+        <option value="">Select...</option>
+        <option value="misaligned">Misaligned &ndash; my habits work against my goals</option>
+        <option value="mostly-unrelated">Mostly unrelated &ndash; my habits and goals don't connect</option>
+        <option value="partially">Partially &ndash; some habits support my goals, some don't</option>
+        <option value="mostly-aligned">Mostly aligned &ndash; the majority of my habits serve my goals</option>
+        <option value="fully-aligned">Fully aligned &ndash; my habits are deliberately designed around my goals</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-habit-goals" onchange="handleSkip('a-habit-goals')"><label for="skip-habit-goals">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Consistency</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-formation-time">
-    <label for="a-formation-time">I have a sense of how long it typically takes me to form a new habit.<br><span class="assess-hint">Think about the last habit you successfully built &ndash; how long before it felt automatic?</span></label>
+<div class="assess-input-group" id="ig-formation-time">
+    <span class="assess-label">How long does it typically take you to form a new habit?</span>
+    <span class="assess-hint">Think about the last habit you successfully built &ndash; how long before it felt automatic?</span>
+    <select id="a-formation-time" onchange="handleAssessInput('a-formation-time')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know &ndash; I've rarely succeeded at forming new habits</option>
+        <option value="months">Months &ndash; it takes a very long time for anything to stick</option>
+        <option value="six-to-eight-weeks">Six to eight weeks &ndash; consistent effort over several weeks</option>
+        <option value="three-to-four-weeks">Three to four weeks &ndash; relatively quick once I commit</option>
+        <option value="two-weeks-or-less">Two weeks or less &ndash; I pick up new habits quickly</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-formation-time" onchange="handleSkip('a-formation-time')"><label for="skip-formation-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-disruption">
-    <label for="a-disruption">I know what tends to disrupt my habits &ndash; travel, stress, weekends, or changes in routine.<br><span class="assess-hint">Identifying your habit-breaking triggers is the first step to building more resilient routines.</span></label>
+<div class="assess-input-group" id="ig-disruption">
+    <span class="assess-label">What tends to disrupt your habits?</span>
+    <span class="assess-hint">Identifying your habit-breaking triggers is the first step to building more resilient routines.</span>
+    <select id="a-disruption" onchange="handleAssessInput('a-disruption')">
+        <option value="">Select...</option>
+        <option value="everything">Everything &ndash; any change in routine breaks my habits</option>
+        <option value="travel-and-stress">Travel and stress &ndash; big disruptions derail me</option>
+        <option value="weekends">Weekends &ndash; I maintain habits on weekdays but lose them at weekends</option>
+        <option value="major-only">Major life changes only &ndash; day-to-day variation doesn't bother me</option>
+        <option value="almost-nothing">Almost nothing &ndash; my habits persist through most disruptions</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-disruption" onchange="handleSkip('a-disruption')"><label for="skip-disruption">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-bad-habits">
-    <label for="a-bad-habits">I can identify at least one habit I've tried and failed to break, and I have a sense of why it persisted.<br><span class="assess-hint">Understanding why unwanted habits stick helps you design better approaches to changing them.</span></label>
+<div class="assess-input-group" id="ig-bad-habits">
+    <span class="assess-label">How well do you understand why your unwanted habits persist?</span>
+    <span class="assess-hint">Understanding why unwanted habits stick helps you design better approaches to changing them.</span>
+    <select id="a-bad-habits" onchange="handleAssessInput('a-bad-habits')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea &ndash; I don't understand why I keep doing things I want to stop</option>
+        <option value="vague-sense">Vague sense &ndash; I can guess but haven't thought deeply about it</option>
+        <option value="some-understanding">Some understanding &ndash; I know the triggers for some bad habits</option>
+        <option value="good-understanding">Good understanding &ndash; I've analysed most of my unwanted habits</option>
+        <option value="thorough">Thorough &ndash; I understand the cue-routine-reward loop for each one</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-bad-habits" onchange="handleSkip('a-bad-habits')"><label for="skip-bad-habits">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Enjoyment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-enjoy-habits">
-    <label for="a-enjoy-habits">I've thought about which of my current habits I genuinely enjoy and which feel like a chore.<br><span class="assess-hint">Habits that feel rewarding are far more likely to persist than those maintained through willpower alone.</span></label>
+<div class="assess-input-group" id="ig-enjoy-habits">
+    <span class="assess-label">How many of your current habits do you genuinely enjoy?</span>
+    <span class="assess-hint">Habits that feel rewarding are far more likely to persist than those maintained through willpower alone.</span>
+    <select id="a-enjoy-habits" onchange="handleAssessInput('a-enjoy-habits')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; they all feel like obligations</option>
+        <option value="few">A few &ndash; one or two are pleasant</option>
+        <option value="about-half">About half &ndash; a mix of enjoyable and effortful</option>
+        <option value="most">Most &ndash; the majority feel rewarding</option>
+        <option value="all">All &ndash; I've designed my habits to be enjoyable</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-enjoy-habits" onchange="handleSkip('a-enjoy-habits')"><label for="skip-enjoy-habits">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cues">
-    <label for="a-cues">I know whether I use any deliberate cues or triggers to prompt my habits.<br><span class="assess-hint">Linking a new habit to an existing routine (habit stacking) is one of the most effective formation techniques.</span></label>
+<div class="assess-input-group" id="ig-cues">
+    <span class="assess-label">Do you use deliberate cues or triggers to prompt your habits?</span>
+    <span class="assess-hint">Linking a new habit to an existing routine (habit stacking) is one of the most effective formation techniques.</span>
+    <select id="a-cues" onchange="handleAssessInput('a-cues')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I rely on memory or motivation</option>
+        <option value="occasionally">Occasionally &ndash; for one or two habits</option>
+        <option value="some">Some &ndash; a few habits have deliberate triggers</option>
+        <option value="most">Most &ndash; the majority of my habits have clear cues</option>
+        <option value="all">All &ndash; every habit is linked to a specific cue or routine</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-cues" onchange="handleSkip('a-cues')"><label for="skip-cues">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-rewards">
-    <label for="a-rewards">I have a sense of whether my habits have built-in rewards or whether I rely on discipline to maintain them.<br><span class="assess-hint">Intrinsic rewards (the behaviour itself feels good) are more sustainable than extrinsic ones (doing it to earn something else).</span></label>
+<div class="assess-input-group" id="ig-rewards">
+    <span class="assess-label">Do your habits have built-in rewards, or do you rely on discipline to maintain them?</span>
+    <span class="assess-hint">Intrinsic rewards (the behaviour itself feels good) are more sustainable than extrinsic ones (doing it to earn something else).</span>
+    <select id="a-rewards" onchange="handleAssessInput('a-rewards')">
+        <option value="">Select...</option>
+        <option value="pure-discipline">Pure discipline &ndash; I force myself through willpower</option>
+        <option value="mostly-discipline">Mostly discipline &ndash; a few have natural rewards</option>
+        <option value="mixed">Mixed &ndash; about half feel rewarding, half require effort</option>
+        <option value="mostly-rewarding">Mostly rewarding &ndash; the majority feel good</option>
+        <option value="intrinsically-rewarding">Intrinsically rewarding &ndash; my habits are designed to feel satisfying</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-rewards" onchange="handleSkip('a-rewards')"><label for="skip-rewards">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +530,9 @@ life_area_slug: habits
         'a-formation-time', 'a-disruption', 'a-bad-habits',
         'a-enjoy-habits', 'a-cues', 'a-rewards'
     ];
+
+    // All habits items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -460,7 +582,6 @@ life_area_slug: habits
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -486,6 +607,7 @@ life_area_slug: habits
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +620,119 @@ life_area_slug: habits
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = { impact: null, consistency: null, enjoyment: null };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

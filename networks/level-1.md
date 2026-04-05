@@ -133,35 +133,69 @@ life_area_slug: networks
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -303,66 +337,88 @@ life_area_slug: networks
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Depth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-strong-ties">
-    <label for="a-strong-ties">I can name the professional contacts who would actively recommend or advocate for me if asked.<br><span class="assess-hint">Think about who would take a phone call from a hiring manager on your behalf.</span></label>
+<div class="assess-input-group" id="ig-strong-ties">
+    <span class="assess-label">How many professional contacts would actively recommend or advocate for you if asked?</span>
+    <span class="assess-hint">Think about who would take a phone call from a hiring manager on your behalf.</span>
+    <select id="a-strong-ties" onchange="handleAssessInput('a-strong-ties')"><option value="">Select...</option><option value="none">None &ndash; I can't think of anyone</option><option value="one-or-two">One or two people</option><option value="three-to-five">Three to five people</option><option value="six-to-ten">Six to ten people</option><option value="more-than-ten">More than ten people</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-strong-ties" onchange="handleSkip('a-strong-ties')"><label for="skip-strong-ties">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mentor-sponsor">
-    <label for="a-mentor-sponsor">I know whether I currently have a mentor or sponsor in my professional life.<br><span class="assess-hint">A mentor gives advice; a sponsor advocates for you in rooms you're not in. Both count.</span></label>
+<div class="assess-input-group" id="ig-mentor-sponsor">
+    <span class="assess-label">Do you currently have a mentor or sponsor in your professional life?</span>
+    <span class="assess-hint">A mentor gives advice; a sponsor advocates for you in rooms you're not in. Both count.</span>
+    <select id="a-mentor-sponsor" onchange="handleAssessInput('a-mentor-sponsor')"><option value="">Select...</option><option value="no">No &ndash; neither</option><option value="informal">Informal &ndash; someone I occasionally turn to</option><option value="mentor">Mentor &ndash; regular guidance from someone senior</option><option value="sponsor">Sponsor &ndash; someone who actively opens doors for me</option><option value="both">Both &ndash; I have a mentor and a sponsor</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-mentor-sponsor" onchange="handleSkip('a-mentor-sponsor')"><label for="skip-mentor-sponsor">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-reciprocity">
-    <label for="a-reciprocity">I have thought about what I offer to my strongest professional relationships, not just what I receive.<br><span class="assess-hint">Introductions, expertise, feedback, emotional support – value flows both ways.</span></label>
+<div class="assess-input-group" id="ig-reciprocity">
+    <span class="assess-label">How much value do you offer to your strongest professional relationships?</span>
+    <span class="assess-hint">Introductions, expertise, feedback, emotional support &ndash; value flows both ways.</span>
+    <select id="a-reciprocity" onchange="handleAssessInput('a-reciprocity')"><option value="">Select...</option><option value="very-little">Very little &ndash; I mostly receive without giving back</option><option value="some">Some &ndash; I help when asked but don't proactively offer</option><option value="balanced">Balanced &ndash; roughly equal give and take</option><option value="generous">Generous &ndash; I actively look for ways to help my contacts</option><option value="systematic">Systematic &ndash; I deliberately invest in my key relationships</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-reciprocity" onchange="handleSkip('a-reciprocity')"><label for="skip-reciprocity">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Breadth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-network-size">
-    <label for="a-network-size">I have a rough sense of the size of my professional network and how many contexts it spans.<br><span class="assess-hint">Count separate professional contexts: current work, previous roles, industry groups, alumni networks, conferences.</span></label>
+<div class="assess-input-group" id="ig-network-size">
+    <span class="assess-label">How large is your professional network and how many contexts does it span?</span>
+    <span class="assess-hint">Count separate professional contexts: current work, previous roles, industry groups, alumni networks, conferences.</span>
+    <select id="a-network-size" onchange="handleAssessInput('a-network-size')"><option value="">Select...</option><option value="very-small">Very small &ndash; essentially just my current colleagues</option><option value="small">Small &ndash; current and one previous workplace</option><option value="moderate">Moderate &ndash; 2 &ndash; 3 professional contexts</option><option value="broad">Broad &ndash; 4 &ndash; 5 contexts across different settings</option><option value="extensive">Extensive &ndash; 6+ contexts spanning multiple industries or sectors</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-network-size" onchange="handleSkip('a-network-size')"><label for="skip-network-size">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-diversity">
-    <label for="a-diversity">I know whether my network is concentrated in one industry or role, or spans multiple areas.<br><span class="assess-hint">Check your LinkedIn connections by industry – are 90% in the same field?</span></label>
+<div class="assess-input-group" id="ig-diversity">
+    <span class="assess-label">Is your network concentrated in one industry or does it span multiple areas?</span>
+    <span class="assess-hint">Check your LinkedIn connections by industry &ndash; are 90% in the same field?</span>
+    <select id="a-diversity" onchange="handleAssessInput('a-diversity')"><option value="">Select...</option><option value="single-industry">Single industry &ndash; almost everyone is in my current field</option><option value="mostly-one">Mostly one &ndash; a few contacts in adjacent fields</option><option value="two-to-three">Two to three industries or sectors</option><option value="diverse">Diverse &ndash; connections across several different fields</option><option value="very-diverse">Very diverse &ndash; broad network spanning many industries and backgrounds</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-diversity" onchange="handleSkip('a-diversity')"><label for="skip-diversity">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-new-connections">
-    <label for="a-new-connections">I know roughly how often I make meaningful new professional connections.<br><span class="assess-hint">Count the last 6 months – how many new people have you had a substantive conversation with?</span></label>
+<div class="assess-input-group" id="ig-new-connections">
+    <span class="assess-label">How often do you make meaningful new professional connections?</span>
+    <span class="assess-hint">Count the last 6 months &ndash; how many new people have you had a substantive conversation with?</span>
+    <select id="a-new-connections" onchange="handleAssessInput('a-new-connections')"><option value="">Select...</option><option value="never">Never &ndash; I haven't made a new professional connection in months</option><option value="rarely">Rarely &ndash; one or two in the past 6 months</option><option value="occasionally">Occasionally &ndash; roughly one per month</option><option value="regularly">Regularly &ndash; several per month</option><option value="frequently">Frequently &ndash; I actively build new connections every week</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-new-connections" onchange="handleSkip('a-new-connections')"><label for="skip-new-connections">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Relevance</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-alignment">
-    <label for="a-alignment">I have assessed whether my current network connections are aligned with where my career is heading.<br><span class="assess-hint">Are most of your strong connections in areas relevant to your future, or mainly from your past?</span></label>
+<div class="assess-input-group" id="ig-alignment">
+    <span class="assess-label">Are your current network connections aligned with where your career is heading?</span>
+    <span class="assess-hint">Are most of your strong connections in areas relevant to your future, or mainly from your past?</span>
+    <select id="a-alignment" onchange="handleAssessInput('a-alignment')"><option value="">Select...</option><option value="past-focused">Past-focused &ndash; almost all connections are from previous roles</option><option value="mostly-past">Mostly past &ndash; a few connections relevant to my future direction</option><option value="mixed">Mixed &ndash; roughly half past, half future-relevant</option><option value="mostly-aligned">Mostly aligned &ndash; the majority are in relevant areas</option><option value="strategically-aligned">Strategically aligned &ndash; I've deliberately built connections in my target direction</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-alignment" onchange="handleSkip('a-alignment')"><label for="skip-alignment">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-gaps">
-    <label for="a-gaps">I can identify the industries, roles, or seniority levels where I lack connections but would benefit from them.<br><span class="assess-hint">Think about your career goals – who would you need to know to reach them?</span></label>
+<div class="assess-input-group" id="ig-gaps">
+    <span class="assess-label">Can you identify the industries, roles, or seniority levels where you lack connections but would benefit from them?</span>
+    <span class="assess-hint">Think about your career goals &ndash; who would you need to know to reach them?</span>
+    <select id="a-gaps" onchange="handleAssessInput('a-gaps')"><option value="">Select...</option><option value="no">No &ndash; I haven't thought about network gaps</option><option value="vaguely">Vaguely &ndash; I know I need more connections but not where specifically</option><option value="some">Some &ndash; I can identify one or two gaps</option><option value="clearly">Clearly &ndash; I know exactly which areas I need to build</option><option value="mapped">Mapped &ndash; I have a specific plan for filling network gaps</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-gaps" onchange="handleSkip('a-gaps')"><label for="skip-gaps">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-maintenance">
-    <label for="a-maintenance">I have a sense of how actively I maintain my existing professional relationships.<br><span class="assess-hint">When did you last reach out to a former colleague or professional contact without needing something?</span></label>
+<div class="assess-input-group" id="ig-maintenance">
+    <span class="assess-label">How actively do you maintain your existing professional relationships?</span>
+    <span class="assess-hint">When did you last reach out to a former colleague or professional contact without needing something?</span>
+    <select id="a-maintenance" onchange="handleAssessInput('a-maintenance')"><option value="">Select...</option><option value="not-at-all">Not at all &ndash; I only reconnect when I need something</option><option value="passively">Passively &ndash; I respond when contacted but don't initiate</option><option value="occasionally">Occasionally &ndash; I reach out to a few people now and then</option><option value="regularly">Regularly &ndash; I proactively maintain key relationships</option><option value="systematically">Systematically &ndash; I have a regular cadence for staying in touch</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -409,6 +465,7 @@ life_area_slug: networks
         'a-network-size', 'a-diversity', 'a-new-connections',
         'a-alignment', 'a-gaps', 'a-maintenance'
     ];
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -483,74 +540,30 @@ life_area_slug: networks
     };
 
     window.completeStep = function(step) {
-        var progress = loadProgress();
-        progress[step] = true;
-        saveProgress(progress);
-        updateUI();
-
+        if (step === 'assess') saveScores();
+        var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI();
         var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) {
-            var next = STEPS[idx + 1];
-            setTimeout(function() { openStep(next); }, 300);
-        }
+        if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
-
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
-        });
-        if (typeof APStorage !== 'undefined') {
-            var all = APStorage.load('ap-level1-assess') || {};
-            all[AREA] = checklist;
-            APStorage.save('ap-level1-assess', all);
-        }
-
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
-        }
+    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
+    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
+    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
+    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
+    function saveAnswers() {
+        var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; });
+        var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+        var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); }
+    }
+    function saveScores() { var scores = { depth: null, breadth: null, relevance: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
+    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    function restoreAssessment() {
+        var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return;
+        ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); });
+        updateAssessRecorded(); updateAssessCompletion();
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

@@ -163,6 +163,70 @@ life_area_slug: housework
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -313,85 +377,197 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
-<h4>Health & Hygiene</h4>
+<h4>Health &amp; Hygiene</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clean-freq">
-    <label for="a-clean-freq">I know how often I clean my kitchen and bathroom surfaces.<br><span class="assess-hint">Include countertops, sinks, taps, toilet, and shower or bath.</span></label>
+<div class="assess-input-group" id="ig-clean-freq">
+    <span class="assess-label">How often do you clean your kitchen and bathroom surfaces?</span>
+    <span class="assess-hint">Countertops, sinks, taps, toilet, and shower or bath.</span>
+    <select id="a-clean-freq" onchange="handleAssessInput('a-clean-freq')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; only when visibly dirty</option>
+        <option value="monthly">Monthly or so</option>
+        <option value="fortnightly">Fortnightly</option>
+        <option value="weekly">Weekly</option>
+        <option value="multiple">Multiple times a week or daily</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-clean-freq" onchange="handleSkip('a-clean-freq')"><label for="skip-clean-freq">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fridge-temp">
-    <label for="a-fridge-temp">I know whether my fridge is at or below 5&deg;C.<br><span class="assess-hint">Check the built-in display, or place a thermometer inside for a few hours.</span></label>
+<div class="assess-input-group" id="ig-fridge-temp">
+    <span class="assess-label">Is your fridge at or below 5&deg;C?</span>
+    <span class="assess-hint">Check the built-in display, or place a thermometer inside for a few hours.</span>
+    <select id="a-fridge-temp" onchange="handleAssessInput('a-fridge-temp')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know</option>
+        <option value="probably-not">Probably not &ndash; I've never checked</option>
+        <option value="think-so">I think so but I'm not certain</option>
+        <option value="yes-checked">Yes &ndash; I've checked and it's correct</option>
+        <option value="monitored">Yes &ndash; I monitor it regularly</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-fridge-temp" onchange="handleSkip('a-fridge-temp')"><label for="skip-fridge-temp">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mould">
-    <label for="a-mould">I know whether I have any visible mould, damp, or persistent condensation in my home.<br><span class="assess-hint">Check bathroom grout, window seals, behind furniture on external walls, and under sinks.</span></label>
+<div class="assess-input-group" id="ig-mould">
+    <span class="assess-label">Do you have any visible mould, damp, or persistent condensation in your home?</span>
+    <span class="assess-hint">Check bathroom grout, window seals, behind furniture on external walls, and under sinks.</span>
+    <select id="a-mould" onchange="handleAssessInput('a-mould')">
+        <option value="">Select...</option>
+        <option value="significant">Significant &ndash; visible mould in multiple areas</option>
+        <option value="some">Some &ndash; one or two problem areas</option>
+        <option value="minor">Minor &ndash; occasional condensation but no mould</option>
+        <option value="none">None &ndash; I've checked and it's clear</option>
+        <option value="prevented">Prevented &ndash; I take active steps to manage moisture and ventilation</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-mould" onchange="handleSkip('a-mould')"><label for="skip-mould">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Order</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clutter">
-    <label for="a-clutter">I know which rooms or areas in my home have the most clutter.<br><span class="assess-hint">Walk through each room and note surfaces, floors, and storage areas with accumulated items.</span></label>
+<div class="assess-input-group" id="ig-clutter">
+    <span class="assess-label">How would you describe the clutter level in your home?</span>
+    <span class="assess-hint">Walk through each room and note surfaces, floors, and storage areas.</span>
+    <select id="a-clutter" onchange="handleAssessInput('a-clutter')">
+        <option value="">Select...</option>
+        <option value="overwhelming">Overwhelming &ndash; clutter in most rooms</option>
+        <option value="significant">Significant &ndash; several problem areas</option>
+        <option value="moderate">Moderate &ndash; a few cluttered spots but mostly manageable</option>
+        <option value="minimal">Minimal &ndash; surfaces are mostly clear</option>
+        <option value="none">None &ndash; everything has a place and is in it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-clutter" onchange="handleSkip('a-clutter')"><label for="skip-clutter">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-find-items">
-    <label for="a-find-items">I know how quickly I can find commonly needed items (keys, scissors, chargers, documents).<br><span class="assess-hint">Think about whether you regularly spend time searching for everyday objects.</span></label>
+<div class="assess-input-group" id="ig-find-items">
+    <span class="assess-label">How quickly can you find commonly needed items?</span>
+    <span class="assess-hint">Keys, scissors, chargers, documents &ndash; do you regularly spend time searching?</span>
+    <select id="a-find-items" onchange="handleAssessInput('a-find-items')">
+        <option value="">Select...</option>
+        <option value="frequent-search">Frequent searching &ndash; I lose things regularly</option>
+        <option value="sometimes">Sometimes &ndash; I search for things a few times a week</option>
+        <option value="usually-fine">Usually fine &ndash; I can find most things fairly quickly</option>
+        <option value="rarely-search">Rarely search &ndash; nearly everything has a place</option>
+        <option value="instantly">Instantly &ndash; I know exactly where everything is</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-find-items" onchange="handleSkip('a-find-items')"><label for="skip-find-items">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tidy-routine">
-    <label for="a-tidy-routine">I know whether I have any regular tidying routine or schedule, or whether I clean reactively.<br><span class="assess-hint">A routine means specific tasks on specific days. Reactive means cleaning when things get noticeably messy.</span></label>
+<div class="assess-input-group" id="ig-tidy-routine">
+    <span class="assess-label">Do you have a regular tidying routine or schedule?</span>
+    <span class="assess-hint">Specific tasks on specific days vs cleaning when things get messy.</span>
+    <select id="a-tidy-routine" onchange="handleAssessInput('a-tidy-routine')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I clean only when it gets bad</option>
+        <option value="reactive">Reactive &ndash; I clean when I notice mess</option>
+        <option value="loose">Loose routine &ndash; I have some regular habits but nothing fixed</option>
+        <option value="weekly">Weekly schedule &ndash; specific tasks on specific days</option>
+        <option value="daily">Daily routine &ndash; regular tidying is built into my day</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-tidy-routine" onchange="handleSkip('a-tidy-routine')"><label for="skip-tidy-routine">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Aesthetics</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-visual-appeal">
-    <label for="a-visual-appeal">I've thought about which rooms I find visually pleasing and which feel neglected or uninviting.<br><span class="assess-hint">Consider whether furnishings reflect your taste or are inherited defaults.</span></label>
+<div class="assess-input-group" id="ig-visual-appeal">
+    <span class="assess-label">How do you feel about the visual appearance of your living spaces?</span>
+    <span class="assess-hint">Do furnishings reflect your taste or are they inherited defaults?</span>
+    <select id="a-visual-appeal" onchange="handleAssessInput('a-visual-appeal')">
+        <option value="">Select...</option>
+        <option value="neglected">Neglected &ndash; most rooms feel uninviting</option>
+        <option value="mixed">Mixed &ndash; some rooms are fine, others I avoid</option>
+        <option value="acceptable">Acceptable &ndash; it's fine but doesn't reflect my taste</option>
+        <option value="pleasant">Pleasant &ndash; most rooms look the way I want them to</option>
+        <option value="curated">Curated &ndash; I've deliberately designed my spaces to suit me</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-visual-appeal" onchange="handleSkip('a-visual-appeal')"><label for="skip-visual-appeal">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-lighting">
-    <label for="a-lighting">I know whether the lighting in my main living spaces suits their function.<br><span class="assess-hint">Bright enough for tasks? Warm enough for relaxation? Or just whatever bulb was already there?</span></label>
+<div class="assess-input-group" id="ig-lighting">
+    <span class="assess-label">Does the lighting in your main living spaces suit their function?</span>
+    <span class="assess-hint">Bright enough for tasks? Warm enough for relaxation?</span>
+    <select id="a-lighting" onchange="handleAssessInput('a-lighting')">
+        <option value="">Select...</option>
+        <option value="poor">Poor &ndash; too bright, too dim, or wrong colour temperature</option>
+        <option value="default">Default &ndash; whatever was already there</option>
+        <option value="partly">Partly &ndash; some rooms are well-lit, others aren't</option>
+        <option value="good">Good &ndash; I've chosen lighting that works for each room</option>
+        <option value="excellent">Excellent &ndash; I have layered lighting suited to different uses</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-lighting" onchange="handleSkip('a-lighting')"><label for="skip-lighting">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sensory">
-    <label for="a-sensory">I've noticed how my home smells, sounds, and feels when I walk in.<br><span class="assess-hint">First impressions matter. Think about what a visitor would notice.</span></label>
+<div class="assess-input-group" id="ig-sensory">
+    <span class="assess-label">How does your home smell, sound, and feel when you walk in?</span>
+    <span class="assess-hint">Think about what a visitor would notice.</span>
+    <select id="a-sensory" onchange="handleAssessInput('a-sensory')">
+        <option value="">Select...</option>
+        <option value="unpleasant">Unpleasant &ndash; there are smells, noise, or discomfort I've got used to</option>
+        <option value="neutral">Neutral &ndash; nothing noticeable either way</option>
+        <option value="mostly-pleasant">Mostly pleasant &ndash; no problems, but I haven't given it thought</option>
+        <option value="inviting">Inviting &ndash; I've addressed the main sensory elements</option>
+        <option value="considered">Considered &ndash; I've deliberately shaped the sensory experience</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-sensory" onchange="handleSkip('a-sensory')"><label for="skip-sensory">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Environmental Impact</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-waste">
-    <label for="a-waste">I know roughly how much household waste I generate per week and how much I recycle.<br><span class="assess-hint">Count your bin bags or check how often your bins are full.</span></label>
+<div class="assess-input-group" id="ig-waste">
+    <span class="assess-label">How much household waste do you generate per week?</span>
+    <span class="assess-hint">Count your bin bags or check how often your bins are full.</span>
+    <select id="a-waste" onchange="handleAssessInput('a-waste')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know</option>
+        <option value="high">High &ndash; multiple full bags with minimal recycling</option>
+        <option value="average">Average &ndash; typical amount with some recycling</option>
+        <option value="low">Low &ndash; I recycle most things and generate little waste</option>
+        <option value="minimal">Minimal &ndash; I actively minimise waste and compost</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-waste" onchange="handleSkip('a-waste')"><label for="skip-waste">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-products">
-    <label for="a-products">I know what cleaning products I use and whether any are eco-friendly or plant-based.<br><span class="assess-hint">Check labels for biodegradable, plant-based, or eco-certified claims.</span></label>
+<div class="assess-input-group" id="ig-products">
+    <span class="assess-label">Are any of your cleaning products eco-friendly or plant-based?</span>
+    <span class="assess-hint">Check labels for biodegradable, plant-based, or eco-certified claims.</span>
+    <select id="a-products" onchange="handleAssessInput('a-products')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know &ndash; I've never checked</option>
+        <option value="none">None &ndash; I use conventional products</option>
+        <option value="a-few">A few &ndash; I've switched one or two</option>
+        <option value="mostly">Mostly &ndash; the majority are eco-friendly</option>
+        <option value="all">All &ndash; I use exclusively eco-friendly products</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-products" onchange="handleSkip('a-products')"><label for="skip-products">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wash-temp">
-    <label for="a-wash-temp">I know what temperature I typically wash my clothes at.<br><span class="assess-hint">90% of the energy used in washing goes to heating water.</span></label>
+<div class="assess-input-group" id="ig-wash-temp">
+    <span class="assess-label">What temperature do you typically wash your clothes at?</span>
+    <span class="assess-hint">90% of the energy used in washing goes to heating water.</span>
+    <select id="a-wash-temp" onchange="handleAssessInput('a-wash-temp')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know</option>
+        <option value="hot">Hot &ndash; 60&deg;C or above for most loads</option>
+        <option value="warm">Warm &ndash; 40&deg;C for most loads</option>
+        <option value="cool">Cool &ndash; 30&deg;C for most loads</option>
+        <option value="cold">Cold &ndash; 20&deg;C or below for most loads</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-wash-temp" onchange="handleSkip('a-wash-temp')"><label for="skip-wash-temp">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +615,8 @@ life_area_slug: housework
         'a-visual-appeal', 'a-lighting', 'a-sensory',
         'a-waste', 'a-products', 'a-wash-temp'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -514,11 +692,11 @@ life_area_slug: housework
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
         updateUI();
-
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -526,66 +704,87 @@ life_area_slug: housework
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
+    }
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    }
+    function saveScores() {
+        var scores = {
+            health: null,
+            order: null,
+            aesthetics: null,
+            environmental: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id]; if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
+            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+            updateInputGroupState(id);
+        });
+        updateAssessRecorded(); updateAssessCompletion();
+    }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

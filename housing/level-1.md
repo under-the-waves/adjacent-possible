@@ -163,6 +163,70 @@ life_area_slug: housing
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -305,66 +369,151 @@ life_area_slug: housing
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Comfort</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-space">
-    <label for="a-space">I know which rooms or areas in my home feel too small, too dark, or poorly laid out for their purpose.<br><span class="assess-hint">Consider your bedroom, workspace, kitchen, and any shared living areas.</span></label>
+<div class="assess-input-group" id="ig-space">
+    <span class="assess-label">How well do your rooms serve their intended purpose?</span>
+    <span class="assess-hint">Bedroom, workspace, kitchen, shared living areas &ndash; are any too small, too dark, or poorly laid out?</span>
+    <select id="a-space" onchange="handleAssessInput('a-space')">
+        <option value="">Select...</option>
+        <option value="poorly">Poorly &ndash; multiple rooms don't work well</option>
+        <option value="some-issues">Some issues &ndash; one or two rooms need improvement</option>
+        <option value="adequate">Adequate &ndash; they work but aren't ideal</option>
+        <option value="well">Well &ndash; most rooms suit their purpose</option>
+        <option value="excellent">Excellent &ndash; every room is well-suited to its function</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-space" onchange="handleSkip('a-space')"><label for="skip-space">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-temperature">
-    <label for="a-temperature">I know whether my home stays at a comfortable temperature year-round without excessive heating or cooling costs.<br><span class="assess-hint">Think about draughts, insulation, and whether any rooms are consistently too hot or cold.</span></label>
+<div class="assess-input-group" id="ig-temperature">
+    <span class="assess-label">Does your home stay at a comfortable temperature year-round?</span>
+    <span class="assess-hint">Draughts, insulation, rooms that are consistently too hot or cold.</span>
+    <select id="a-temperature" onchange="handleAssessInput('a-temperature')">
+        <option value="">Select...</option>
+        <option value="poor">Poor &ndash; uncomfortable in multiple seasons</option>
+        <option value="some-problems">Some problems &ndash; draughty or inconsistent</option>
+        <option value="mostly-ok">Mostly OK &ndash; comfortable most of the time</option>
+        <option value="good">Good &ndash; comfortable year-round with reasonable costs</option>
+        <option value="excellent">Excellent &ndash; well-insulated and efficiently heated/cooled</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-temperature" onchange="handleSkip('a-temperature')"><label for="skip-temperature">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-maintenance">
-    <label for="a-maintenance">I know what maintenance issues I have been putting off.<br><span class="assess-hint">Leaking taps, broken fixtures, peeling paint, appliances that don't work properly, damp patches.</span></label>
+<div class="assess-input-group" id="ig-maintenance">
+    <span class="assess-label">How many maintenance issues have you been putting off?</span>
+    <span class="assess-hint">Leaking taps, broken fixtures, peeling paint, appliances that don't work properly.</span>
+    <select id="a-maintenance" onchange="handleAssessInput('a-maintenance')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; five or more things need fixing</option>
+        <option value="several">Several &ndash; three or four issues</option>
+        <option value="a-couple">A couple &ndash; one or two minor things</option>
+        <option value="none">None &ndash; everything is in working order</option>
+        <option value="proactive">Proactive &ndash; I fix things promptly and do preventive maintenance</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Affordability</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cost-ratio">
-    <label for="a-cost-ratio">I know my total housing costs as a percentage of my gross income.<br><span class="assess-hint">Include rent or mortgage, council tax, utilities, insurance, and regular maintenance. The standard affordability threshold is 30%.</span></label>
+<div class="assess-input-group" id="ig-cost-ratio">
+    <span class="assess-label">What are your total housing costs as a percentage of your gross income?</span>
+    <span class="assess-hint">Rent or mortgage, council tax, utilities, insurance, and regular maintenance. The standard threshold is 30%.</span>
+    <select id="a-cost-ratio" onchange="handleAssessInput('a-cost-ratio')">
+        <option value="">Select...</option>
+        <option value="over-50">Over 50%</option>
+        <option value="40-50">40&ndash;50%</option>
+        <option value="30-40">30&ndash;40%</option>
+        <option value="20-30">20&ndash;30%</option>
+        <option value="under-20">Under 20%</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-cost-ratio" onchange="handleSkip('a-cost-ratio')"><label for="skip-cost-ratio">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-buffer">
-    <label for="a-buffer">I know whether I have a financial buffer for unexpected housing costs.<br><span class="assess-hint">A broken boiler, roof repair, or sudden rent increase. Could you cover a &pound;1,000 &ndash; &pound;3,000 housing emergency?</span></label>
+<div class="assess-input-group" id="ig-buffer">
+    <span class="assess-label">Could you cover an unexpected housing cost of &pound;1,000&ndash;&pound;3,000?</span>
+    <span class="assess-hint">A broken boiler, roof repair, or sudden rent increase.</span>
+    <select id="a-buffer" onchange="handleAssessInput('a-buffer')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I'd need to borrow or go without</option>
+        <option value="with-difficulty">With difficulty &ndash; it would mean cutting other essentials</option>
+        <option value="stretch">A stretch &ndash; manageable but uncomfortable</option>
+        <option value="yes">Yes &ndash; I have savings I could use</option>
+        <option value="easily">Easily &ndash; I have a dedicated emergency fund</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-buffer" onchange="handleSkip('a-buffer')"><label for="skip-buffer">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-equity">
-    <label for="a-equity">I know whether my current housing situation is building equity or long-term financial value.<br><span class="assess-hint">Homeowners: mortgage principal payments. Renters: whether the flexibility or lower commitment offsets the lack of equity.</span></label>
+<div class="assess-input-group" id="ig-equity">
+    <span class="assess-label">Is your current housing situation building long-term financial value?</span>
+    <span class="assess-hint">Homeowners: mortgage principal payments. Renters: flexibility and lower commitment.</span>
+    <select id="a-equity" onchange="handleAssessInput('a-equity')">
+        <option value="">Select...</option>
+        <option value="losing-value">Losing value &ndash; my housing costs are higher than they need to be with no return</option>
+        <option value="no-equity">No equity &ndash; renting with no plan for ownership</option>
+        <option value="neutral">Neutral &ndash; renting suits my situation for now</option>
+        <option value="building">Building &ndash; paying down a mortgage or making value-adding improvements</option>
+        <option value="strong">Strong &ndash; significant equity growth or very efficient housing costs</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-equity" onchange="handleSkip('a-equity')"><label for="skip-equity">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Location</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-commute">
-    <label for="a-commute">I know my actual door-to-door commute time on a typical day.<br><span class="assess-hint">Include walking to transport, waiting, and any transfers. If you work from home, consider how often you travel to a workplace or clients.</span></label>
+<div class="assess-input-group" id="ig-commute">
+    <span class="assess-label">What is your actual door-to-door commute time on a typical day?</span>
+    <span class="assess-hint">Include walking to transport, waiting, and any transfers. If you work from home, consider travel to a workplace or clients.</span>
+    <select id="a-commute" onchange="handleAssessInput('a-commute')">
+        <option value="">Select...</option>
+        <option value="over-60">Over 60 minutes each way</option>
+        <option value="40-60">40&ndash;60 minutes each way</option>
+        <option value="20-40">20&ndash;40 minutes each way</option>
+        <option value="under-20">Under 20 minutes each way</option>
+        <option value="wfh">I work from home or within walking distance</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-commute" onchange="handleSkip('a-commute')"><label for="skip-commute">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-amenities">
-    <label for="a-amenities">I know how far I am from the amenities I use most &ndash; grocery shops, healthcare, green space, and social venues.<br><span class="assess-hint">Walking distance? Driving distance? Do you avoid using certain services because they are inconvenient to reach?</span></label>
+<div class="assess-input-group" id="ig-amenities">
+    <span class="assess-label">How far are you from the amenities you use most?</span>
+    <span class="assess-hint">Grocery shops, healthcare, green space, and social venues.</span>
+    <select id="a-amenities" onchange="handleAssessInput('a-amenities')">
+        <option value="">Select...</option>
+        <option value="far">Far &ndash; most things require a significant drive</option>
+        <option value="moderate">Moderate &ndash; some things are nearby, others require effort</option>
+        <option value="reasonable">Reasonable &ndash; most things within 10&ndash;15 minutes</option>
+        <option value="close">Close &ndash; most amenities within walking or short cycling distance</option>
+        <option value="everything-nearby">Everything nearby &ndash; all key amenities within a few minutes</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-amenities" onchange="handleSkip('a-amenities')"><label for="skip-amenities">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-neighbourhood">
-    <label for="a-neighbourhood">I have a clear sense of whether my neighbourhood feels safe, well-connected, and suited to my lifestyle.<br><span class="assess-hint">Consider noise, safety, community character, and whether the area supports or hinders the life you want to live.</span></label>
+<div class="assess-input-group" id="ig-neighbourhood">
+    <span class="assess-label">Does your neighbourhood feel safe, well-connected, and suited to your lifestyle?</span>
+    <span class="assess-hint">Noise, safety, community character, whether the area supports the life you want.</span>
+    <select id="a-neighbourhood" onchange="handleAssessInput('a-neighbourhood')">
+        <option value="">Select...</option>
+        <option value="poor-fit">Poor fit &ndash; it doesn't suit me at all</option>
+        <option value="some-issues">Some issues &ndash; one or two significant problems</option>
+        <option value="adequate">Adequate &ndash; it's fine but not ideal</option>
+        <option value="good">Good &ndash; I like it and feel comfortable here</option>
+        <option value="excellent">Excellent &ndash; it suits my lifestyle perfectly</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-neighbourhood" onchange="handleSkip('a-neighbourhood')"><label for="skip-neighbourhood">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +560,8 @@ life_area_slug: housing
         'a-cost-ratio', 'a-buffer', 'a-equity',
         'a-commute', 'a-amenities', 'a-neighbourhood'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,11 +637,11 @@ life_area_slug: housing
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
         updateUI();
-
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -498,66 +649,86 @@ life_area_slug: housing
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
+    }
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    }
+    function saveScores() {
+        var scores = {
+            comfort: null,
+            affordability: null,
+            location: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id]; if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
+            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+            updateInputGroupState(id);
+        });
+        updateAssessRecorded(); updateAssessCompletion();
+    }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

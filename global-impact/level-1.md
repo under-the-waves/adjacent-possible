@@ -133,35 +133,69 @@ life_area_slug: global-impact
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -311,85 +345,113 @@ life_area_slug: global-impact
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Impartiality</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-giving-total">
-    <label for="a-giving-total">I know roughly how much I donated to charity last year, in total.<br><span class="assess-hint">Check your bank statements or tax records if you're unsure.</span></label>
+<div class="assess-input-group" id="ig-giving-total">
+    <span class="assess-label">How much did you donate to charity last year?</span>
+    <span class="assess-hint">Check your bank statements or tax records if you're unsure.</span>
+    <select id="a-giving-total" onchange="handleAssessInput('a-giving-total')"><option value="">Select...</option><option value="nothing">Nothing</option><option value="under-100">Under &pound;100</option><option value="100-to-500">&pound;100 &ndash; &pound;500</option><option value="500-to-2000">&pound;500 &ndash; &pound;2,000</option><option value="over-2000">Over &pound;2,000</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-giving-total" onchange="handleSkip('a-giving-total')"><label for="skip-giving-total">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-charity-evaluators">
-    <label for="a-charity-evaluators">I know whether any of my donations went to charities recommended by evaluators like GiveWell, The Life You Can Save, or Animal Charity Evaluators.<br><span class="assess-hint">If you haven't heard of these organisations, that's useful information too.</span></label>
+<div class="assess-input-group" id="ig-charity-evaluators">
+    <span class="assess-label">Did any of your donations go to charities recommended by evaluators like GiveWell or Animal Charity Evaluators?</span>
+    <span class="assess-hint">If you haven't heard of these organisations, that's useful information too.</span>
+    <select id="a-charity-evaluators" onchange="handleAssessInput('a-charity-evaluators')"><option value="">Select...</option><option value="never-heard">Never heard of charity evaluators</option><option value="aware-but-no">Aware of them but have never used their recommendations</option><option value="some">Some &ndash; a portion of my giving goes to recommended charities</option><option value="most">Most &ndash; the majority of my giving follows evaluator recommendations</option><option value="all">All &ndash; I give exclusively to evidence-backed charities</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-charity-evaluators" onchange="handleSkip('a-charity-evaluators')"><label for="skip-charity-evaluators">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cost-effectiveness">
-    <label for="a-cost-effectiveness">I understand the concept that different charities can vary by 100x or more in cost-effectiveness for the same type of problem.<br><span class="assess-hint">This is the core insight of effective giving &ndash; where you give matters more than how much.</span></label>
+<div class="assess-input-group" id="ig-cost-effectiveness">
+    <span class="assess-label">How well do you understand that different charities vary by 100x or more in cost-effectiveness?</span>
+    <span class="assess-hint">This is the core insight of effective giving &ndash; where you give matters more than how much.</span>
+    <select id="a-cost-effectiveness" onchange="handleAssessInput('a-cost-effectiveness')"><option value="">Select...</option><option value="unaware">Unaware &ndash; this is new to me</option><option value="heard-of-it">Heard of it &ndash; but haven't looked into it</option><option value="basic">Basic understanding &ndash; I know the concept</option><option value="good">Good understanding &ndash; I've read about it and it influences my giving</option><option value="deep">Deep understanding &ndash; cost-effectiveness is central to how I allocate donations</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-cost-effectiveness" onchange="handleSkip('a-cost-effectiveness')"><label for="skip-cost-effectiveness">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Passion</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-causes-care">
-    <label for="a-causes-care">I can name the causes I genuinely care about, as opposed to causes I give to out of social pressure or habit.<br><span class="assess-hint">Think about what keeps you up at night or what news stories genuinely move you.</span></label>
+<div class="assess-input-group" id="ig-causes-care">
+    <span class="assess-label">Can you name the causes you genuinely care about, as opposed to those you give to out of habit?</span>
+    <span class="assess-hint">Think about what keeps you up at night or what news stories genuinely move you.</span>
+    <select id="a-causes-care" onchange="handleAssessInput('a-causes-care')"><option value="">Select...</option><option value="no">No &ndash; I haven't thought about which causes matter most to me</option><option value="vaguely">Vaguely &ndash; I have a general sense but nothing specific</option><option value="one-or-two">One or two &ndash; I know my primary cause areas</option><option value="clearly">Clearly &ndash; I can articulate why each cause matters to me</option><option value="deeply-considered">Deeply considered &ndash; I've researched and deliberately chosen my cause areas</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-causes-care" onchange="handleSkip('a-causes-care')"><label for="skip-causes-care">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-volunteering">
-    <label for="a-volunteering">I know whether I currently volunteer or contribute non-financial resources to any cause, and if so, how many hours per month.<br><span class="assess-hint">Include pro bono work, board service, advocacy, mentoring, or other non-monetary contributions.</span></label>
+<div class="assess-input-group" id="ig-volunteering">
+    <span class="assess-label">How many hours per month do you volunteer or contribute non-financial resources to any cause?</span>
+    <span class="assess-hint">Include pro bono work, board service, advocacy, mentoring, or other non-monetary contributions.</span>
+    <select id="a-volunteering" onchange="handleAssessInput('a-volunteering')"><option value="">Select...</option><option value="none">None</option><option value="1-to-3">1 &ndash; 3 hours per month</option><option value="4-to-8">4 &ndash; 8 hours per month</option><option value="9-to-16">9 &ndash; 16 hours per month</option><option value="over-16">Over 16 hours per month</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-volunteering" onchange="handleSkip('a-volunteering')"><label for="skip-volunteering">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-motivation">
-    <label for="a-motivation">I have a sense of whether my giving feels motivated by genuine care or by guilt, obligation, or social expectation.<br><span class="assess-hint">There's no wrong answer &ndash; the question is whether you've reflected on it.</span></label>
+<div class="assess-input-group" id="ig-motivation">
+    <span class="assess-label">Is your giving motivated by genuine care, guilt, obligation, or social expectation?</span>
+    <span class="assess-hint">There's no wrong answer &ndash; the question is whether you've reflected on it.</span>
+    <select id="a-motivation" onchange="handleAssessInput('a-motivation')"><option value="">Select...</option><option value="dont-give">I don't currently give</option><option value="guilt-obligation">Primarily guilt or obligation</option><option value="social-expectation">Primarily social expectation</option><option value="mixed">Mixed &ndash; some genuine care, some obligation</option><option value="genuine-care">Primarily genuine care &ndash; I give because I want to</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-motivation" onchange="handleSkip('a-motivation')"><label for="skip-motivation">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Sustainability</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-giving-percentage">
-    <label for="a-giving-percentage">I know what percentage of my income I give to charity annually.<br><span class="assess-hint">Divide your total annual donations by your annual income. Even a rough estimate is useful.</span></label>
+<div class="assess-input-group" id="ig-giving-percentage">
+    <span class="assess-label">What percentage of your income do you give to charity annually?</span>
+    <span class="assess-hint">Divide your total annual donations by your annual income. Even a rough estimate is useful.</span>
+    <select id="a-giving-percentage" onchange="handleAssessInput('a-giving-percentage')"><option value="">Select...</option><option value="zero">0% &ndash; I don't donate</option><option value="under-1">Under 1%</option><option value="1-to-3">1 &ndash; 3%</option><option value="3-to-10">3 &ndash; 10%</option><option value="over-10">Over 10%</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-giving-percentage" onchange="handleSkip('a-giving-percentage')"><label for="skip-giving-percentage">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-giving-budget">
-    <label for="a-giving-budget">I know whether I have a giving budget or plan, or whether I give sporadically in response to appeals.<br><span class="assess-hint">Planned giving tends to result in both higher total impact and lower decision fatigue.</span></label>
+<div class="assess-input-group" id="ig-giving-budget">
+    <span class="assess-label">Do you have a giving budget or plan, or do you give sporadically?</span>
+    <span class="assess-hint">Planned giving tends to result in both higher total impact and lower decision fatigue.</span>
+    <select id="a-giving-budget" onchange="handleAssessInput('a-giving-budget')"><option value="">Select...</option><option value="no-giving">I don't give</option><option value="sporadic">Sporadic &ndash; I give in response to appeals or requests</option><option value="rough-plan">Rough plan &ndash; I have a general sense of how much I'll give</option><option value="budget">Budget &ndash; I have a set amount allocated annually</option><option value="structured">Structured &ndash; budget with planned recipients and timing</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-giving-budget" onchange="handleSkip('a-giving-budget')"><label for="skip-giving-budget">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-financial-strain">
-    <label for="a-financial-strain">I have a sense of whether my current giving level is sustainable or causes financial strain.<br><span class="assess-hint">Sustainable giving over 30 years beats generous giving that leads to burnout after 3.</span></label>
+<div class="assess-input-group" id="ig-financial-strain">
+    <span class="assess-label">Is your current giving level sustainable?</span>
+    <span class="assess-hint">Sustainable giving over 30 years beats generous giving that leads to burnout after 3.</span>
+    <select id="a-financial-strain" onchange="handleAssessInput('a-financial-strain')"><option value="">Select...</option><option value="no-giving">I don't give</option><option value="straining">Straining &ndash; it causes noticeable financial pressure</option><option value="tight">Tight &ndash; I could sustain it but it's uncomfortable</option><option value="comfortable">Comfortable &ndash; I give without financial stress</option><option value="easy">Easy &ndash; I could give more without difficulty</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-financial-strain" onchange="handleSkip('a-financial-strain')"><label for="skip-financial-strain">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Fulfilment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-satisfaction">
-    <label for="a-satisfaction">I know whether my current giving and impact activities are a source of satisfaction or a source of guilt.<br><span class="assess-hint">Many people feel guilty about not doing enough rather than good about what they do. Either is common.</span></label>
+<div class="assess-input-group" id="ig-satisfaction">
+    <span class="assess-label">Are your giving and impact activities a source of satisfaction or guilt?</span>
+    <span class="assess-hint">Many people feel guilty about not doing enough rather than good about what they do.</span>
+    <select id="a-satisfaction" onchange="handleAssessInput('a-satisfaction')"><option value="">Select...</option><option value="strong-guilt">Strong guilt &ndash; I feel bad about how little I do</option><option value="some-guilt">Some guilt &ndash; I appreciate what I do but feel I should do more</option><option value="neutral">Neutral &ndash; I don't think about it much</option><option value="mostly-satisfied">Mostly satisfied &ndash; I feel good about my contributions</option><option value="deeply-satisfied">Deeply satisfied &ndash; my giving is a consistent source of meaning</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-satisfaction" onchange="handleSkip('a-satisfaction')"><label for="skip-satisfaction">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-connection">
-    <label for="a-connection">I have a sense of how connected I feel to the impact of my contributions &ndash; whether I can see or feel the difference I make.<br><span class="assess-hint">Some people feel disconnected from the results of their giving, which can erode motivation.</span></label>
+<div class="assess-input-group" id="ig-connection">
+    <span class="assess-label">How connected do you feel to the impact of your contributions?</span>
+    <span class="assess-hint">Some people feel disconnected from the results of their giving, which can erode motivation.</span>
+    <select id="a-connection" onchange="handleAssessInput('a-connection')"><option value="">Select...</option><option value="completely-disconnected">Completely disconnected &ndash; I have no sense of impact</option><option value="mostly-disconnected">Mostly disconnected &ndash; I hope it helps but don't really know</option><option value="somewhat">Somewhat connected &ndash; I get occasional updates</option><option value="well-connected">Well connected &ndash; I can see concrete results</option><option value="deeply-connected">Deeply connected &ndash; I have a clear, personal sense of the difference I make</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-connection" onchange="handleSkip('a-connection')"><label for="skip-connection">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-identity">
-    <label for="a-identity">I know whether being someone who contributes to global causes is an important part of my identity or something I rarely think about.<br><span class="assess-hint">Neither answer is wrong &ndash; but knowing where you stand helps you decide what to build toward.</span></label>
+<div class="assess-input-group" id="ig-identity">
+    <span class="assess-label">Is contributing to global causes an important part of your identity?</span>
+    <span class="assess-hint">There's no wrong answer &ndash; the question is whether you've reflected on it.</span>
+    <select id="a-identity" onchange="handleAssessInput('a-identity')"><option value="">Select...</option><option value="not-at-all">Not at all &ndash; I rarely think about it</option><option value="peripherally">Peripherally &ndash; it's something I do but not who I am</option><option value="somewhat">Somewhat &ndash; it matters to me but isn't central</option><option value="important">Important &ndash; it's a significant part of how I see myself</option><option value="core">Core &ndash; it's fundamental to my identity and values</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-identity" onchange="handleSkip('a-identity')"><label for="skip-identity">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -437,6 +499,7 @@ life_area_slug: global-impact
         'a-giving-percentage', 'a-giving-budget', 'a-financial-strain',
         'a-satisfaction', 'a-connection', 'a-identity'
     ];
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -511,79 +574,16 @@ life_area_slug: global-impact
         if (el) el.classList.toggle('open');
     };
 
-    window.completeStep = function(step) {
-        var progress = loadProgress();
-        progress[step] = true;
-        saveProgress(progress);
-        updateUI();
-
-        var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) {
-            var next = STEPS[idx + 1];
-            setTimeout(function() { openStep(next); }, 300);
-        }
-    };
-
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
-        });
-        if (typeof APStorage !== 'undefined') {
-            var all = APStorage.load('ap-level1-assess') || {};
-            all[AREA] = checklist;
-            APStorage.save('ap-level1-assess', all);
-        }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    window.completeStep = function(step) { if (step === 'assess') saveScores(); var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI(); var idx = STEPS.indexOf(step); if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); } };
+    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
+    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
+    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
+    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
+    function saveAnswers() { var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; }); var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers)); var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); } }
+    function saveScores() { var scores = { impartiality: null, passion: null, sustainability: null, fulfilment: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
+    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    function restoreAssessment() { var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return; ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); }); updateAssessRecorded(); updateAssessCompletion(); }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

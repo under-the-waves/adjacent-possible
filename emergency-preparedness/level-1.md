@@ -163,6 +163,70 @@ life_area_slug: emergency-preparedness
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -313,85 +377,197 @@ life_area_slug: emergency-preparedness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or check. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Self-Reliance</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-supplies">
-    <label for="a-supplies">I know how many days of food and water my household currently has on hand.<br><span class="assess-hint">Count everything in your cupboards, fridge, and any stored supplies. Include water or the means to purify it.</span></label>
+<div class="assess-input-group" id="ig-supplies">
+    <span class="assess-label">How many days of food and water does your household currently have on hand?</span>
+    <span class="assess-hint">Count everything in your cupboards, fridge, and any stored supplies.</span>
+    <select id="a-supplies" onchange="handleAssessInput('a-supplies')">
+        <option value="">Select...</option>
+        <option value="under-1">Under 1 day</option>
+        <option value="1-3">1&ndash;3 days</option>
+        <option value="3-7">3&ndash;7 days</option>
+        <option value="1-2-weeks">1&ndash;2 weeks</option>
+        <option value="over-2-weeks">Over 2 weeks</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-supplies" onchange="handleSkip('a-supplies')"><label for="skip-supplies">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-first-aid">
-    <label for="a-first-aid">I know where my first aid kit is and whether it's adequately stocked.<br><span class="assess-hint">Check for basics: plasters, bandages, antiseptic, pain relief, any prescription medications. Note anything missing.</span></label>
+<div class="assess-input-group" id="ig-first-aid">
+    <span class="assess-label">Where is your first aid kit and is it adequately stocked?</span>
+    <span class="assess-hint">Plasters, bandages, antiseptic, pain relief, any prescription medications.</span>
+    <select id="a-first-aid" onchange="handleAssessInput('a-first-aid')">
+        <option value="">Select...</option>
+        <option value="no-kit">I don't have one</option>
+        <option value="have-but-unknown">I have one but don't know what's in it</option>
+        <option value="basic">Basic &ndash; I know where it is but it's probably incomplete</option>
+        <option value="stocked">Stocked &ndash; I know where it is and it covers the basics</option>
+        <option value="comprehensive">Comprehensive &ndash; well-stocked, regularly checked, and I know how to use everything</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-first-aid" onchange="handleSkip('a-first-aid')"><label for="skip-first-aid">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-skills">
-    <label for="a-skills">I know which practical emergency skills I have and which I lack.<br><span class="assess-hint">Consider: basic first aid, CPR, fire extinguisher use, water shut-off, fuse box operation, basic cooking without power.</span></label>
+<div class="assess-input-group" id="ig-skills">
+    <span class="assess-label">Which practical emergency skills do you have?</span>
+    <span class="assess-hint">Basic first aid, CPR, fire extinguisher use, water shut-off, fuse box operation, cooking without power.</span>
+    <select id="a-skills" onchange="handleAssessInput('a-skills')">
+        <option value="">Select...</option>
+        <option value="none">None of these</option>
+        <option value="one-or-two">One or two &ndash; e.g. I know where my fuse box is</option>
+        <option value="several">Several &ndash; I'm confident with three or four of these</option>
+        <option value="most">Most &ndash; I could handle most common household emergencies</option>
+        <option value="all">All of these and more</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-skills" onchange="handleSkip('a-skills')"><label for="skip-skills">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Community Resilience</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-neighbours">
-    <label for="a-neighbours">I know my immediate neighbours well enough to ask for or offer help in an emergency.<br><span class="assess-hint">Could you knock on their door at 2 a.m. during a crisis? Do you know if any are elderly, disabled, or live alone?</span></label>
+<div class="assess-input-group" id="ig-neighbours">
+    <span class="assess-label">How well do you know your immediate neighbours?</span>
+    <span class="assess-hint">Could you knock on their door at 2 a.m. during a crisis?</span>
+    <select id="a-neighbours" onchange="handleAssessInput('a-neighbours')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know any of them</option>
+        <option value="recognise">Recognise faces &ndash; but wouldn't ask for help</option>
+        <option value="greet">On greeting terms &ndash; we say hello</option>
+        <option value="friendly">Friendly &ndash; we chat and could ask small favours</option>
+        <option value="close">Close &ndash; I'd be comfortable asking for help in a crisis</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-neighbours" onchange="handleSkip('a-neighbours')"><label for="skip-neighbours">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-local-resources">
-    <label for="a-local-resources">I know what emergency resources exist in my local area.<br><span class="assess-hint">Nearest hospital, fire station, emergency shelter, community centre. Do you know the non-emergency police number?</span></label>
+<div class="assess-input-group" id="ig-local-resources">
+    <span class="assess-label">How well do you know the emergency resources in your local area?</span>
+    <span class="assess-hint">Nearest hospital, fire station, emergency shelter, community centre, non-emergency police number.</span>
+    <select id="a-local-resources" onchange="handleAssessInput('a-local-resources')">
+        <option value="">Select...</option>
+        <option value="none">I don't know any of these</option>
+        <option value="hospital-only">I know where the nearest hospital is</option>
+        <option value="a-few">A few &ndash; I know two or three key locations</option>
+        <option value="most">Most &ndash; I know the main emergency resources</option>
+        <option value="comprehensive">Comprehensive &ndash; I could direct someone to any local emergency resource</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-local-resources" onchange="handleSkip('a-local-resources')"><label for="skip-local-resources">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contact-plan">
-    <label for="a-contact-plan">I have a way to contact family members if mobile networks go down.<br><span class="assess-hint">An agreed meeting point, a landline number, an out-of-area contact person, or a backup communication method.</span></label>
+<div class="assess-input-group" id="ig-contact-plan">
+    <span class="assess-label">Do you have a way to contact family members if mobile networks go down?</span>
+    <span class="assess-hint">An agreed meeting point, a landline number, an out-of-area contact person.</span>
+    <select id="a-contact-plan" onchange="handleAssessInput('a-contact-plan')">
+        <option value="">Select...</option>
+        <option value="no-plan">No plan &ndash; I've never thought about this</option>
+        <option value="vague">Vague &ndash; I'd probably go to a family member's house</option>
+        <option value="partial">Partial &ndash; I have one backup method</option>
+        <option value="solid">Solid &ndash; I have agreed plans with key people</option>
+        <option value="comprehensive">Comprehensive &ndash; multiple backup methods and regular check-ins about the plan</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contact-plan" onchange="handleSkip('a-contact-plan')"><label for="skip-contact-plan">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Baseline Resilience</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-regional-risks">
-    <label for="a-regional-risks">I know the most likely natural disasters and infrastructure risks for my specific location.<br><span class="assess-hint">Flooding, storms, heatwaves, wildfires, earthquakes – what has actually happened in your area in the past decade?</span></label>
+<div class="assess-input-group" id="ig-regional-risks">
+    <span class="assess-label">How well do you know the most likely natural disasters and infrastructure risks for your location?</span>
+    <span class="assess-hint">Flooding, storms, heatwaves, wildfires, earthquakes &ndash; what has actually happened in your area?</span>
+    <select id="a-regional-risks" onchange="handleAssessInput('a-regional-risks')">
+        <option value="">Select...</option>
+        <option value="unaware">Unaware &ndash; I haven't looked into this</option>
+        <option value="vague">Vague &ndash; I have a general sense</option>
+        <option value="informed">Informed &ndash; I know the main risks</option>
+        <option value="detailed">Detailed &ndash; I know risks, their likelihood, and how they'd affect me</option>
+        <option value="prepared">Prepared &ndash; I've taken specific steps based on my risk assessment</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-regional-risks" onchange="handleSkip('a-regional-risks')"><label for="skip-regional-risks">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-insurance">
-    <label for="a-insurance">I know whether my insurance covers the most probable emergencies for my area.<br><span class="assess-hint">Check your home/contents insurance for flood, storm, and fire coverage. Note any exclusions or gaps.</span></label>
+<div class="assess-input-group" id="ig-insurance">
+    <span class="assess-label">Does your insurance cover the most probable emergencies for your area?</span>
+    <span class="assess-hint">Check your home/contents insurance for flood, storm, and fire coverage.</span>
+    <select id="a-insurance" onchange="handleAssessInput('a-insurance')">
+        <option value="">Select...</option>
+        <option value="no-insurance">I don't have relevant insurance</option>
+        <option value="dont-know">I don't know what my insurance covers</option>
+        <option value="probably">Probably &ndash; I have insurance but haven't checked the details</option>
+        <option value="checked">Checked &ndash; I've reviewed my cover and it's adequate</option>
+        <option value="optimised">Optimised &ndash; I've tailored my cover to my specific risks</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-insurance" onchange="handleSkip('a-insurance')"><label for="skip-insurance">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-evac-plan">
-    <label for="a-evac-plan">I know my evacuation routes and have thought about where I would go if I had to leave home quickly.<br><span class="assess-hint">Two routes out of your neighbourhood, a destination (friend, family, shelter), and what you'd grab in 10 minutes.</span></label>
+<div class="assess-input-group" id="ig-evac-plan">
+    <span class="assess-label">Do you know your evacuation routes and have you thought about where you'd go?</span>
+    <span class="assess-hint">Two routes out of your neighbourhood, a destination, and what you'd grab in 10 minutes.</span>
+    <select id="a-evac-plan" onchange="handleAssessInput('a-evac-plan')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I haven't thought about this</option>
+        <option value="one-route">One route &ndash; I know how to leave but haven't planned beyond that</option>
+        <option value="basic-plan">Basic plan &ndash; I have a route and a rough destination</option>
+        <option value="solid-plan">Solid plan &ndash; multiple routes, a destination, and a grab bag list</option>
+        <option value="practised">Practised &ndash; I've rehearsed my evacuation plan</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-evac-plan" onchange="handleSkip('a-evac-plan')"><label for="skip-evac-plan">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Catastrophic Resilience</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cash">
-    <label for="a-cash">I know how much cash I have accessible if electronic payments stop working.<br><span class="assess-hint">ATMs and card machines can go offline during power outages or cyberattacks. How many days of expenses could you cover in cash?</span></label>
+<div class="assess-input-group" id="ig-cash">
+    <span class="assess-label">How much cash do you have accessible if electronic payments stop working?</span>
+    <span class="assess-hint">ATMs and card machines can go offline during power outages or cyberattacks.</span>
+    <select id="a-cash" onchange="handleAssessInput('a-cash')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I don't carry or store cash</option>
+        <option value="a-day">Enough for a day or two</option>
+        <option value="a-week">Enough for about a week</option>
+        <option value="2-weeks">Enough for two weeks</option>
+        <option value="a-month">Enough for a month or more</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-cash" onchange="handleSkip('a-cash')"><label for="skip-cash">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-documents">
-    <label for="a-documents">I know where my critical documents are and whether I have copies stored separately.<br><span class="assess-hint">Passport, birth certificate, insurance policies, medical records. Do you have digital backups or copies at a second location?</span></label>
+<div class="assess-input-group" id="ig-documents">
+    <span class="assess-label">Where are your critical documents, and do you have copies stored separately?</span>
+    <span class="assess-hint">Passport, birth certificate, insurance policies, medical records.</span>
+    <select id="a-documents" onchange="handleAssessInput('a-documents')">
+        <option value="">Select...</option>
+        <option value="scattered">Scattered &ndash; I'm not sure where they all are</option>
+        <option value="one-place">One place &ndash; they're together but I don't have copies</option>
+        <option value="organised">Organised &ndash; together and I know where they are</option>
+        <option value="backed-up">Backed up &ndash; I have digital copies or duplicates</option>
+        <option value="redundant">Redundant &ndash; originals and copies in separate locations</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-documents" onchange="handleSkip('a-documents')"><label for="skip-documents">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-scenarios">
-    <label for="a-scenarios">I have thought about what I would do during an extended disruption lasting several weeks or more.<br><span class="assess-hint">A major pandemic, prolonged power outage, or supply chain collapse. Even a rough mental plan counts.</span></label>
+<div class="assess-input-group" id="ig-scenarios">
+    <span class="assess-label">Have you thought about what you'd do during an extended disruption lasting several weeks?</span>
+    <span class="assess-hint">A major pandemic, prolonged power outage, or supply chain collapse.</span>
+    <select id="a-scenarios" onchange="handleAssessInput('a-scenarios')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I haven't considered this</option>
+        <option value="briefly">Briefly &ndash; I've had passing thoughts</option>
+        <option value="some-thought">Some thought &ndash; I have a rough mental plan</option>
+        <option value="planned">Planned &ndash; I've thought through specific scenarios</option>
+        <option value="prepared">Prepared &ndash; I have supplies and plans for extended disruption</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-scenarios" onchange="handleSkip('a-scenarios')"><label for="skip-scenarios">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +615,8 @@ life_area_slug: emergency-preparedness
         'a-regional-risks', 'a-insurance', 'a-evac-plan',
         'a-cash', 'a-documents', 'a-scenarios'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -514,6 +692,7 @@ life_area_slug: emergency-preparedness
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +705,122 @@ life_area_slug: emergency-preparedness
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
 
-        // Save checklist state
-        var checklist = {};
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = {
+            self_reliance: null,
+            community: null,
+            baseline: null,
+            catastrophic: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

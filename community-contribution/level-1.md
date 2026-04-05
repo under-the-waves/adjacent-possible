@@ -133,35 +133,69 @@ life_area_slug: community-contribution
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -303,66 +337,88 @@ life_area_slug: community-contribution
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think about. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Impact</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-volunteer-hours">
-    <label for="a-volunteer-hours">I know roughly how many hours per month I spend on community activities or volunteering.<br><span class="assess-hint">Include formal volunteering, informal helping, neighbourhood activities, and civic participation.</span></label>
+<div class="assess-input-group" id="ig-volunteer-hours">
+    <span class="assess-label">How many hours per month do you spend on community activities or volunteering?</span>
+    <span class="assess-hint">Include formal volunteering, informal helping, neighbourhood activities, and civic participation.</span>
+    <select id="a-volunteer-hours" onchange="handleAssessInput('a-volunteer-hours')"><option value="">Select...</option><option value="none">None</option><option value="1-to-3">1 &ndash; 3 hours per month</option><option value="4-to-8">4 &ndash; 8 hours per month</option><option value="9-to-16">9 &ndash; 16 hours per month</option><option value="over-16">Over 16 hours per month</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-volunteer-hours" onchange="handleSkip('a-volunteer-hours')"><label for="skip-volunteer-hours">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-local-orgs">
-    <label for="a-local-orgs">I can name at least three community organisations or volunteer opportunities in my area.<br><span class="assess-hint">Food banks, neighbourhood associations, school boards, environmental groups, sports clubs, etc.</span></label>
+<div class="assess-input-group" id="ig-local-orgs">
+    <span class="assess-label">How many community organisations or volunteer opportunities can you name in your area?</span>
+    <span class="assess-hint">Food banks, neighbourhood associations, school boards, environmental groups, sports clubs, etc.</span>
+    <select id="a-local-orgs" onchange="handleAssessInput('a-local-orgs')"><option value="">Select...</option><option value="none">None &ndash; I'm not aware of any</option><option value="one-or-two">One or two</option><option value="three-to-five">Three to five</option><option value="six-to-ten">Six to ten</option><option value="many">Many &ndash; I'm well connected to local organisations</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-local-orgs" onchange="handleSkip('a-local-orgs')"><label for="skip-local-orgs">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-skills-match">
-    <label for="a-skills-match">I have a sense of whether my current community contributions leverage my professional skills or could be done by anyone.<br><span class="assess-hint">Skills-based volunteering &ndash; using your expertise for a cause &ndash; tends to produce significantly more impact per hour.</span></label>
+<div class="assess-input-group" id="ig-skills-match">
+    <span class="assess-label">Do your community contributions leverage your professional skills?</span>
+    <span class="assess-hint">Skills-based volunteering &ndash; using your expertise for a cause &ndash; tends to produce significantly more impact per hour.</span>
+    <select id="a-skills-match" onchange="handleAssessInput('a-skills-match')"><option value="">Select...</option><option value="no-contributions">I don't currently contribute</option><option value="generic">Generic &ndash; I do tasks anyone could do</option><option value="some-overlap">Some overlap &ndash; occasionally I use my skills</option><option value="often">Often &ndash; my skills are regularly relevant</option><option value="deliberately">Deliberately &ndash; I seek out contributions that leverage my expertise</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-skills-match" onchange="handleSkip('a-skills-match')"><label for="skip-skills-match">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Belonging</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-neighbours">
-    <label for="a-neighbours">I know my immediate neighbours by name.<br><span class="assess-hint">On both sides and across the road, if applicable. Only 26% of adults know most of their neighbours.</span></label>
+<div class="assess-input-group" id="ig-neighbours">
+    <span class="assess-label">Do you know your immediate neighbours by name?</span>
+    <span class="assess-hint">On both sides and across the road, if applicable. Only 26% of adults know most of their neighbours.</span>
+    <select id="a-neighbours" onchange="handleAssessInput('a-neighbours')"><option value="">Select...</option><option value="none">None &ndash; I don't know any neighbours</option><option value="one-or-two">One or two &ndash; a couple of names</option><option value="some">Some &ndash; I know a few by name</option><option value="most">Most &ndash; I know nearly all my immediate neighbours</option><option value="all">All &ndash; I know all my neighbours and we interact regularly</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-neighbours" onchange="handleSkip('a-neighbours')"><label for="skip-neighbours">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-local-events">
-    <label for="a-local-events">I know whether I attend any regular community events, meetings, or gatherings.<br><span class="assess-hint">Parish council meetings, community markets, neighbourhood clean-ups, local festivals, etc.</span></label>
+<div class="assess-input-group" id="ig-local-events">
+    <span class="assess-label">Do you attend any regular community events, meetings, or gatherings?</span>
+    <span class="assess-hint">Parish council meetings, community markets, neighbourhood clean-ups, local festivals, etc.</span>
+    <select id="a-local-events" onchange="handleAssessInput('a-local-events')"><option value="">Select...</option><option value="never">Never &ndash; I don't attend community events</option><option value="rarely">Rarely &ndash; once or twice a year at most</option><option value="occasionally">Occasionally &ndash; a few times a year</option><option value="regularly">Regularly &ndash; monthly or more</option><option value="frequently">Frequently &ndash; weekly involvement in community activities</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-local-events" onchange="handleSkip('a-local-events')"><label for="skip-local-events">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-rootedness">
-    <label for="a-rootedness">I have a sense of how rooted I feel in my local area &ndash; whether it feels like home or just where I happen to live.<br><span class="assess-hint">Rootedness is partly about time spent in a place, but mostly about relationships and shared investment.</span></label>
+<div class="assess-input-group" id="ig-rootedness">
+    <span class="assess-label">How rooted do you feel in your local area?</span>
+    <span class="assess-hint">Rootedness is partly about time spent in a place, but mostly about relationships and shared investment.</span>
+    <select id="a-rootedness" onchange="handleAssessInput('a-rootedness')"><option value="">Select...</option><option value="transient">Transient &ndash; this is just where I happen to live</option><option value="settling">Settling in &ndash; I'm getting to know the area</option><option value="somewhat-rooted">Somewhat rooted &ndash; I feel some connection</option><option value="rooted">Rooted &ndash; this feels like home</option><option value="deeply-rooted">Deeply rooted &ndash; strong relationships and shared history here</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-rootedness" onchange="handleSkip('a-rootedness')"><label for="skip-rootedness">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Fulfilment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-enjoy-volunteering">
-    <label for="a-enjoy-volunteering">I know whether my current community involvement energises me or drains me.<br><span class="assess-hint">Some people volunteer out of guilt or obligation. Others genuinely look forward to it. Both are common.</span></label>
+<div class="assess-input-group" id="ig-enjoy-volunteering">
+    <span class="assess-label">Does your current community involvement energise you or drain you?</span>
+    <span class="assess-hint">Some people volunteer out of guilt or obligation. Others genuinely look forward to it. Both are common.</span>
+    <select id="a-enjoy-volunteering" onchange="handleAssessInput('a-enjoy-volunteering')"><option value="">Select...</option><option value="no-involvement">No involvement &ndash; I don't currently participate</option><option value="draining">Draining &ndash; it feels like an obligation</option><option value="neutral">Neutral &ndash; neither energising nor draining</option><option value="energising">Energising &ndash; I generally look forward to it</option><option value="deeply-energising">Deeply energising &ndash; it's a highlight of my week</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-enjoy-volunteering" onchange="handleSkip('a-enjoy-volunteering')"><label for="skip-enjoy-volunteering">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose">
-    <label for="a-purpose">I have a sense of whether contributing to my community is an important part of my identity or something I rarely think about.<br><span class="assess-hint">There's no wrong answer &ndash; the question is whether you've reflected on it.</span></label>
+<div class="assess-input-group" id="ig-purpose">
+    <span class="assess-label">Is contributing to your community an important part of your identity?</span>
+    <span class="assess-hint">There's no wrong answer &ndash; the question is whether you've reflected on it.</span>
+    <select id="a-purpose" onchange="handleAssessInput('a-purpose')"><option value="">Select...</option><option value="not-at-all">Not at all &ndash; I rarely think about it</option><option value="peripherally">Peripherally &ndash; it's something I do occasionally</option><option value="somewhat">Somewhat &ndash; it matters but isn't central</option><option value="important">Important &ndash; it's a significant part of how I see myself</option><option value="core">Core &ndash; community contribution is fundamental to my identity</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-purpose" onchange="handleSkip('a-purpose')"><label for="skip-purpose">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-barriers">
-    <label for="a-barriers">I can identify the main barriers to greater community involvement in my life, if any.<br><span class="assess-hint">Time, energy, social anxiety, not knowing where to start, feeling like an outsider &ndash; all are common.</span></label>
+<div class="assess-input-group" id="ig-barriers">
+    <span class="assess-label">What is the main barrier to greater community involvement in your life?</span>
+    <span class="assess-hint">Time, energy, social anxiety, not knowing where to start, feeling like an outsider &ndash; all are common.</span>
+    <select id="a-barriers" onchange="handleAssessInput('a-barriers')"><option value="">Select...</option><option value="no-interest">No interest &ndash; I don't want more community involvement</option><option value="time">Time &ndash; too busy with work and other commitments</option><option value="social-barriers">Social barriers &ndash; anxiety, feeling like an outsider, or not knowing anyone</option><option value="logistics">Logistics &ndash; I don't know where to start or what's available</option><option value="none">None &ndash; I'm already as involved as I want to be</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-barriers" onchange="handleSkip('a-barriers')"><label for="skip-barriers">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -409,153 +465,22 @@ life_area_slug: community-contribution
         'a-neighbours', 'a-local-events', 'a-rootedness',
         'a-enjoy-volunteering', 'a-purpose', 'a-barriers'
     ];
-
-    function loadProgress() {
-        if (typeof APStorage === 'undefined') return {};
-        var all = APStorage.load('ap-level1-progress') || {};
-        return all[AREA] || {};
-    }
-
-    function saveProgress(progress) {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-progress') || {};
-        all[AREA] = progress;
-        APStorage.save('ap-level1-progress', all);
-    }
-
-    function updateUI() {
-        var progress = loadProgress();
-        var doneCount = 0;
-        var firstIncomplete = null;
-
-        STEPS.forEach(function(step, i) {
-            var el = document.getElementById('step-' + step);
-            var seg = document.getElementById('prog-' + (i + 1));
-            if (!el || !seg) return;
-
-            if (progress[step]) {
-                el.classList.add('done');
-                el.classList.remove('active');
-                seg.className = 'l1-progress-segment done';
-                doneCount++;
-            } else if (!firstIncomplete) {
-                firstIncomplete = step;
-                el.classList.add('active');
-                el.classList.remove('done');
-                seg.className = 'l1-progress-segment active';
-            } else {
-                el.classList.remove('active', 'done');
-                seg.className = 'l1-progress-segment';
-            }
-        });
-
-        var label = document.getElementById('progressLabel');
-        if (doneCount >= STEPS.length) {
-            if (label) label.textContent = 'All steps complete';
-            var banner = document.getElementById('completeBanner');
-            if (banner) banner.classList.add('visible');
-        } else {
-            if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
-        }
-
-        // Auto-open the first incomplete step
-        if (firstIncomplete) {
-            openStep(firstIncomplete);
-        }
-    }
-
-    function openStep(step) {
-        STEPS.forEach(function(s) {
-            var el = document.getElementById('step-' + s);
-            if (el) el.classList.remove('open');
-        });
-        var target = document.getElementById('step-' + step);
-        if (target) {
-            target.classList.add('open');
-            setTimeout(function() {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
-        }
-    }
-
-    window.toggleStep = function(step) {
-        var el = document.getElementById('step-' + step);
-        if (el) el.classList.toggle('open');
-    };
-
-    window.completeStep = function(step) {
-        var progress = loadProgress();
-        progress[step] = true;
-        saveProgress(progress);
-        updateUI();
-
-        var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) {
-            var next = STEPS[idx + 1];
-            setTimeout(function() { openStep(next); }, 300);
-        }
-    };
-
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
-        });
-        if (typeof APStorage !== 'undefined') {
-            var all = APStorage.load('ap-level1-assess') || {};
-            all[AREA] = checklist;
-            APStorage.save('ap-level1-assess', all);
-        }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    function loadProgress() { if (typeof APStorage === 'undefined') return {}; var all = APStorage.load('ap-level1-progress') || {}; return all[AREA] || {}; }
+    function saveProgress(progress) { if (typeof APStorage === 'undefined') return; var all = APStorage.load('ap-level1-progress') || {}; all[AREA] = progress; APStorage.save('ap-level1-progress', all); }
+    function updateUI() { var progress = loadProgress(); var doneCount = 0; var firstIncomplete = null; STEPS.forEach(function(step, i) { var el = document.getElementById('step-' + step); var seg = document.getElementById('prog-' + (i + 1)); if (!el || !seg) return; if (progress[step]) { el.classList.add('done'); el.classList.remove('active'); seg.className = 'l1-progress-segment done'; doneCount++; } else if (!firstIncomplete) { firstIncomplete = step; el.classList.add('active'); el.classList.remove('done'); seg.className = 'l1-progress-segment active'; } else { el.classList.remove('active', 'done'); seg.className = 'l1-progress-segment'; } }); var label = document.getElementById('progressLabel'); if (doneCount >= STEPS.length) { if (label) label.textContent = 'All steps complete'; var banner = document.getElementById('completeBanner'); if (banner) banner.classList.add('visible'); } else { if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length; } if (firstIncomplete) { openStep(firstIncomplete); } }
+    function openStep(step) { STEPS.forEach(function(s) { var el = document.getElementById('step-' + s); if (el) el.classList.remove('open'); }); var target = document.getElementById('step-' + step); if (target) { target.classList.add('open'); setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); } }
+    window.toggleStep = function(step) { var el = document.getElementById('step-' + step); if (el) el.classList.toggle('open'); };
+    window.completeStep = function(step) { if (step === 'assess') saveScores(); var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI(); var idx = STEPS.indexOf(step); if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); } };
+    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
+    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
+    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
+    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
+    function saveAnswers() { var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; }); var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers)); var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); } }
+    function saveScores() { var scores = { impact: null, belonging: null, fulfilment: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
+    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    function restoreAssessment() { var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return; ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); }); updateAssessRecorded(); updateAssessCompletion(); }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

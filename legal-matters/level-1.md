@@ -163,6 +163,70 @@ life_area_slug: legal-matters
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -313,80 +377,183 @@ life_area_slug: legal-matters
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or check. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Comprehensive Protection</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-will">
-    <label for="a-will">I know whether I have a valid, up-to-date will.<br><span class="assess-hint">If you have one, do you know where it is and when it was last updated?</span></label>
+<div class="assess-input-group" id="ig-will">
+    <span class="assess-label">Do you have a valid, up-to-date will?</span>
+    <span class="assess-hint">If you have one, do you know where it is and when it was last updated?</span>
+    <select id="a-will" onchange="handleAssessInput('a-will')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I don't have a will</option>
+        <option value="outdated">Outdated &ndash; I have one but it needs updating</option>
+        <option value="have-one">I have one but I'm not sure it covers everything</option>
+        <option value="current">Current &ndash; valid and reviewed within the past few years</option>
+        <option value="comprehensive">Comprehensive &ndash; recently reviewed with professional advice</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-will" onchange="handleSkip('a-will')"><label for="skip-will">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-poa">
-    <label for="a-poa">I know whether I have a power of attorney and a healthcare directive.<br><span class="assess-hint">These documents let someone act on your behalf if you're unable to make decisions.</span></label>
+<div class="assess-input-group" id="ig-poa">
+    <span class="assess-label">Do you have a power of attorney and a healthcare directive?</span>
+    <span class="assess-hint">These documents let someone act on your behalf if you're unable to make decisions.</span>
+    <select id="a-poa" onchange="handleAssessInput('a-poa')">
+        <option value="">Select...</option>
+        <option value="neither">Neither &ndash; I don't have either</option>
+        <option value="considered">Considered &ndash; I've thought about it but not acted</option>
+        <option value="one-only">One only &ndash; I have one but not the other</option>
+        <option value="both-basic">Both &ndash; basic versions in place</option>
+        <option value="both-comprehensive">Both &ndash; professionally prepared and regularly reviewed</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-poa" onchange="handleSkip('a-poa')"><label for="skip-poa">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-insurance">
-    <label for="a-insurance">I know what legal risks I'm currently exposed to that aren't covered by insurance or documentation.<br><span class="assess-hint">Think about your housing situation, employment, family circumstances, and assets.</span></label>
+<div class="assess-input-group" id="ig-insurance">
+    <span class="assess-label">What legal risks are you currently exposed to that aren't covered by insurance or documentation?</span>
+    <span class="assess-hint">Think about your housing situation, employment, family circumstances, and assets.</span>
+    <select id="a-insurance" onchange="handleAssessInput('a-insurance')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know &ndash; I've never assessed this</option>
+        <option value="probably-gaps">Probably gaps &ndash; I suspect I'm exposed but haven't checked</option>
+        <option value="some-awareness">Some awareness &ndash; I know a few areas that need attention</option>
+        <option value="mostly-covered">Mostly covered &ndash; I've addressed the main risks</option>
+        <option value="fully-assessed">Fully assessed &ndash; I've had a professional review of my exposure</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-insurance" onchange="handleSkip('a-insurance')"><label for="skip-insurance">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Simplicity & Peace of Mind</h4>
+<h4>Simplicity &amp; Peace of Mind</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-organised">
-    <label for="a-organised">I know where all my important legal documents are stored.<br><span class="assess-hint">Could a family member find your will, insurance policies, and property deeds if they needed to?</span></label>
+<div class="assess-input-group" id="ig-organised">
+    <span class="assess-label">Could a family member find your important legal documents if they needed to?</span>
+    <span class="assess-hint">Will, insurance policies, property deeds &ndash; are they accessible?</span>
+    <select id="a-organised" onchange="handleAssessInput('a-organised')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; they wouldn't know where to start</option>
+        <option value="unlikely">Unlikely &ndash; documents are scattered or unfiled</option>
+        <option value="with-effort">With effort &ndash; they're in the house somewhere</option>
+        <option value="yes">Yes &ndash; they're in a known location</option>
+        <option value="easily">Easily &ndash; there's a clear index or guide to all documents</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-organised" onchange="handleSkip('a-organised')"><label for="skip-organised">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-anxiety">
-    <label for="a-anxiety">I've identified which legal matters cause me the most anxiety or uncertainty.<br><span class="assess-hint">Is it estate planning, tax, employment rights, housing, or something else?</span></label>
+<div class="assess-input-group" id="ig-anxiety">
+    <span class="assess-label">Which legal matters cause you the most anxiety or uncertainty?</span>
+    <span class="assess-hint">Estate planning, tax, employment rights, housing, or something else?</span>
+    <select id="a-anxiety" onchange="handleAssessInput('a-anxiety')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; I feel anxious about several legal areas</option>
+        <option value="a-few">A few &ndash; two or three specific areas worry me</option>
+        <option value="one">One &ndash; there's a single area I need to address</option>
+        <option value="minor">Minor &ndash; I have small uncertainties but nothing major</option>
+        <option value="none">None &ndash; I feel confident about my legal position</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-anxiety" onchange="handleSkip('a-anxiety')"><label for="skip-anxiety">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-family-aware">
-    <label for="a-family-aware">I know whether my family or next of kin are aware of my legal arrangements.<br><span class="assess-hint">Have you discussed your wishes and document locations with the relevant people?</span></label>
+<div class="assess-input-group" id="ig-family-aware">
+    <span class="assess-label">Are your family or next of kin aware of your legal arrangements?</span>
+    <span class="assess-hint">Have you discussed your wishes and document locations with the relevant people?</span>
+    <select id="a-family-aware" onchange="handleAssessInput('a-family-aware')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; nobody knows my arrangements</option>
+        <option value="vague">Vaguely &ndash; they know I have some documents but not the details</option>
+        <option value="partial">Partially &ndash; some people know some things</option>
+        <option value="mostly">Mostly &ndash; key people know the important details</option>
+        <option value="fully">Fully &ndash; everyone relevant has been briefed and knows where to find things</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-family-aware" onchange="handleSkip('a-family-aware')"><label for="skip-family-aware">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Strategic Advantage</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tax">
-    <label for="a-tax">I know whether my current legal and financial structures are tax-efficient.<br><span class="assess-hint">Are you using ISAs, pensions, or other tax-advantaged structures effectively?</span></label>
+<div class="assess-input-group" id="ig-tax">
+    <span class="assess-label">Are your current legal and financial structures tax-efficient?</span>
+    <span class="assess-hint">ISAs, pensions, or other tax-advantaged structures.</span>
+    <select id="a-tax" onchange="handleAssessInput('a-tax')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know</option>
+        <option value="probably-not">Probably not &ndash; I haven't optimised anything</option>
+        <option value="basic">Basic &ndash; I use one or two tax-efficient structures</option>
+        <option value="good">Good &ndash; I've made deliberate choices to minimise tax</option>
+        <option value="optimised">Optimised &ndash; I've had professional advice and act on it regularly</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-tax" onchange="handleSkip('a-tax')"><label for="skip-tax">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contracts">
-    <label for="a-contracts">I know whether I've reviewed the key contracts that affect my life.<br><span class="assess-hint">Employment contract, tenancy agreement, mortgage terms, insurance policies.</span></label>
+<div class="assess-input-group" id="ig-contracts">
+    <span class="assess-label">Have you reviewed the key contracts that affect your life?</span>
+    <span class="assess-hint">Employment contract, tenancy agreement, mortgage terms, insurance policies.</span>
+    <select id="a-contracts" onchange="handleAssessInput('a-contracts')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I've never read any of them properly</option>
+        <option value="glanced">Glanced &ndash; I've skimmed one or two</option>
+        <option value="some">Some &ndash; I've read a few but not all</option>
+        <option value="most">Most &ndash; I've reviewed the main ones</option>
+        <option value="all">All &ndash; I've read and understood every key contract</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contracts" onchange="handleSkip('a-contracts')"><label for="skip-contracts">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Access & Empowerment</h4>
+<h4>Access &amp; Empowerment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-rights-police">
-    <label for="a-rights-police">I know my basic rights during a police encounter.<br><span class="assess-hint">What you're required to do, what you can decline, and when you should ask for legal representation.</span></label>
+<div class="assess-input-group" id="ig-rights-police">
+    <span class="assess-label">How well do you know your rights during a police encounter?</span>
+    <span class="assess-hint">What you're required to do, what you can decline, and when to ask for legal representation.</span>
+    <select id="a-rights-police" onchange="handleAssessInput('a-rights-police')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea</option>
+        <option value="vague">Vague &ndash; I have a rough sense but wouldn't be confident</option>
+        <option value="basic">Basic &ndash; I know the essentials</option>
+        <option value="solid">Solid &ndash; I know my rights and could assert them calmly</option>
+        <option value="thorough">Thorough &ndash; I could explain them to someone else</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-rights-police" onchange="handleSkip('a-rights-police')"><label for="skip-rights-police">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-rights-work">
-    <label for="a-rights-work">I know my core employment rights.<br><span class="assess-hint">Notice periods, unfair dismissal protections, holiday entitlement, discrimination protections.</span></label>
+<div class="assess-input-group" id="ig-rights-work">
+    <span class="assess-label">How well do you know your core employment rights?</span>
+    <span class="assess-hint">Notice periods, unfair dismissal protections, holiday entitlement, discrimination protections.</span>
+    <select id="a-rights-work" onchange="handleAssessInput('a-rights-work')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea</option>
+        <option value="vague">Vague &ndash; I know I have rights but not the specifics</option>
+        <option value="basic">Basic &ndash; I know the main protections</option>
+        <option value="solid">Solid &ndash; I know my rights and have checked my contract against them</option>
+        <option value="thorough">Thorough &ndash; I could advise someone else on basic employment rights</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-rights-work" onchange="handleSkip('a-rights-work')"><label for="skip-rights-work">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-legal-help">
-    <label for="a-legal-help">I know how to find appropriate legal help if I needed it.<br><span class="assess-hint">Do you know the difference between a solicitor and a barrister? How to access legal aid or free advice?</span></label>
+<div class="assess-input-group" id="ig-legal-help">
+    <span class="assess-label">Would you know how to find appropriate legal help if you needed it?</span>
+    <span class="assess-hint">Solicitor vs barrister, legal aid, free advice services.</span>
+    <select id="a-legal-help" onchange="handleAssessInput('a-legal-help')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I wouldn't know where to start</option>
+        <option value="search-online">I'd search online and hope for the best</option>
+        <option value="basic">Basic &ndash; I know to contact a solicitor but not much more</option>
+        <option value="informed">Informed &ndash; I know the different types of legal help and how to access them</option>
+        <option value="connected">Connected &ndash; I already have a solicitor or know exactly who to call</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-legal-help" onchange="handleSkip('a-legal-help')"><label for="skip-legal-help">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -434,6 +601,8 @@ life_area_slug: legal-matters
         'a-tax', 'a-contracts',
         'a-rights-police', 'a-rights-work', 'a-legal-help'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -509,11 +678,11 @@ life_area_slug: legal-matters
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
         updateUI();
-
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -521,66 +690,82 @@ life_area_slug: legal-matters
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
+    }
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    }
+    function saveScores() {
+        var scores = { protection: null, simplicity: null, strategic: null, access: null };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id]; if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
+            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+            updateInputGroupState(id);
+        });
+        updateAssessRecorded(); updateAssessCompletion();
+    }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

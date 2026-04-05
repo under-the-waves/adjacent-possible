@@ -133,35 +133,69 @@ life_area_slug: consumptive-leisure
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -303,66 +337,88 @@ life_area_slug: consumptive-leisure
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think about. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Restoration</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-energy-after">
-    <label for="a-energy-after">I can identify which of my regular leisure activities leave me genuinely recharged versus which leave me feeling drained or sluggish.<br><span class="assess-hint">Think about how you feel after an hour of scrolling versus an hour of reading, for example.</span></label>
+<div class="assess-input-group" id="ig-energy-after">
+    <span class="assess-label">Which of your regular leisure activities leave you genuinely recharged versus drained?</span>
+    <span class="assess-hint">Think about how you feel after an hour of scrolling versus an hour of reading, for example.</span>
+    <select id="a-energy-after" onchange="handleAssessInput('a-energy-after')"><option value="">Select...</option><option value="mostly-drained">Mostly drained &ndash; most of my leisure leaves me sluggish</option><option value="mixed-negative">Mixed &ndash; more draining activities than recharging ones</option><option value="balanced">Balanced &ndash; roughly equal recharging and draining</option><option value="mixed-positive">Mixed &ndash; more recharging activities than draining ones</option><option value="mostly-recharged">Mostly recharged &ndash; my leisure consistently restores my energy</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-energy-after" onchange="handleSkip('a-energy-after')"><label for="skip-energy-after">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-screen-time">
-    <label for="a-screen-time">I know roughly how much screen time I have per day on leisure activities.<br><span class="assess-hint">Check your phone's screen time report or estimate from your typical evening routine.</span></label>
+<div class="assess-input-group" id="ig-screen-time">
+    <span class="assess-label">How much screen time do you spend per day on leisure activities?</span>
+    <span class="assess-hint">Check your phone's screen time report or estimate from your typical evening routine.</span>
+    <select id="a-screen-time" onchange="handleAssessInput('a-screen-time')"><option value="">Select...</option><option value="over-6">Over 6 hours per day</option><option value="4-to-6">4 &ndash; 6 hours per day</option><option value="2-to-4">2 &ndash; 4 hours per day</option><option value="1-to-2">1 &ndash; 2 hours per day</option><option value="under-1">Under 1 hour per day</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-screen-time" onchange="handleSkip('a-screen-time')"><label for="skip-screen-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wind-down">
-    <label for="a-wind-down">I know whether I have a deliberate wind-down routine or whether I default to whatever is easiest when I'm tired.<br><span class="assess-hint">Defaulting is common &ndash; the question is whether you're aware of the pattern.</span></label>
+<div class="assess-input-group" id="ig-wind-down">
+    <span class="assess-label">Do you have a deliberate wind-down routine, or do you default to whatever is easiest when tired?</span>
+    <span class="assess-hint">Defaulting is common &ndash; the question is whether you're aware of the pattern.</span>
+    <select id="a-wind-down" onchange="handleAssessInput('a-wind-down')"><option value="">Select...</option><option value="always-default">Always default &ndash; I reach for my phone or TV without thinking</option><option value="mostly-default">Mostly default &ndash; I occasionally make a deliberate choice</option><option value="sometimes">Sometimes deliberate &ndash; about half the time I choose intentionally</option><option value="mostly-deliberate">Mostly deliberate &ndash; I usually choose how to wind down</option><option value="always-deliberate">Always deliberate &ndash; I have a consistent, intentional routine</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-wind-down" onchange="handleSkip('a-wind-down')"><label for="skip-wind-down">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Enrichment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-learning-proportion">
-    <label for="a-learning-proportion">I have a rough sense of what proportion of my leisure consumption teaches me something valuable versus merely occupies time.<br><span class="assess-hint">Books, podcasts, documentaries, articles &ndash; versus passive scrolling, background television, etc.</span></label>
+<div class="assess-input-group" id="ig-learning-proportion">
+    <span class="assess-label">What proportion of your leisure consumption teaches you something valuable?</span>
+    <span class="assess-hint">Books, podcasts, documentaries, articles &ndash; versus passive scrolling, background television, etc.</span>
+    <select id="a-learning-proportion" onchange="handleAssessInput('a-learning-proportion')"><option value="">Select...</option><option value="almost-none">Almost none &ndash; my leisure is purely passive</option><option value="small">Small &ndash; under 20%</option><option value="moderate">Moderate &ndash; roughly 20 &ndash; 40%</option><option value="substantial">Substantial &ndash; roughly 40 &ndash; 60%</option><option value="majority">Majority &ndash; over 60% of my leisure has a learning element</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-learning-proportion" onchange="handleSkip('a-learning-proportion')"><label for="skip-learning-proportion">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-books-per-year">
-    <label for="a-books-per-year">I know how many books I finished in the past year.<br><span class="assess-hint">Include audiobooks and e-books. A rough number is fine.</span></label>
+<div class="assess-input-group" id="ig-books-per-year">
+    <span class="assess-label">How many books did you finish in the past year?</span>
+    <span class="assess-hint">Include audiobooks and e-books. A rough number is fine.</span>
+    <select id="a-books-per-year" onchange="handleAssessInput('a-books-per-year')"><option value="">Select...</option><option value="none">None</option><option value="1-to-3">1 &ndash; 3 books</option><option value="4-to-8">4 &ndash; 8 books</option><option value="9-to-15">9 &ndash; 15 books</option><option value="over-15">Over 15 books</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-books-per-year" onchange="handleSkip('a-books-per-year')"><label for="skip-books-per-year">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-retention">
-    <label for="a-retention">I can recall and explain the main ideas from at least one book, podcast, or documentary I consumed recently.<br><span class="assess-hint">If you can't, that's useful information &ndash; it suggests consumption without retention.</span></label>
+<div class="assess-input-group" id="ig-retention">
+    <span class="assess-label">Can you recall and explain the main ideas from something you consumed recently?</span>
+    <span class="assess-hint">If you can't, that's useful information &ndash; it suggests consumption without retention.</span>
+    <select id="a-retention" onchange="handleAssessInput('a-retention')"><option value="">Select...</option><option value="no">No &ndash; I struggle to recall details from anything recent</option><option value="vaguely">Vaguely &ndash; I remember the gist but not the substance</option><option value="one-thing">One thing &ndash; I can explain one book, podcast, or documentary well</option><option value="several">Several &ndash; I retain ideas from multiple recent sources</option><option value="consistently">Consistently &ndash; I have a system for retaining what I consume</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-retention" onchange="handleSkip('a-retention')"><label for="skip-retention">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Enjoyment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-genuine-pleasure">
-    <label for="a-genuine-pleasure">I can name 3 &ndash; 5 media sources (shows, podcasts, authors, games, music) that I reliably enjoy.<br><span class="assess-hint">Sources you actively look forward to, not just whatever appears in your feed.</span></label>
+<div class="assess-input-group" id="ig-genuine-pleasure">
+    <span class="assess-label">Can you name 3 &ndash; 5 media sources you reliably enjoy?</span>
+    <span class="assess-hint">Sources you actively look forward to, not just whatever appears in your feed.</span>
+    <select id="a-genuine-pleasure" onchange="handleAssessInput('a-genuine-pleasure')"><option value="">Select...</option><option value="no">No &ndash; I mostly consume whatever the algorithm serves me</option><option value="one-or-two">One or two &ndash; a couple of favourites</option><option value="three-to-five">Three to five &ndash; a solid set of reliable sources</option><option value="many">Many &ndash; a curated collection across different media</option><option value="extensive">Extensive &ndash; a rich, diverse media diet I've built deliberately</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-genuine-pleasure" onchange="handleSkip('a-genuine-pleasure')"><label for="skip-genuine-pleasure">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-wasted-time">
-    <label for="a-wasted-time">I have a sense of how much of my leisure time I spend on things I don't actually enjoy &ndash; habitual consumption rather than genuine pleasure.<br><span class="assess-hint">Scrolling out of boredom, watching shows you've lost interest in, checking feeds reflexively.</span></label>
+<div class="assess-input-group" id="ig-wasted-time">
+    <span class="assess-label">How much of your leisure time do you spend on things you don't actually enjoy?</span>
+    <span class="assess-hint">Scrolling out of boredom, watching shows you've lost interest in, checking feeds reflexively.</span>
+    <select id="a-wasted-time" onchange="handleAssessInput('a-wasted-time')"><option value="">Select...</option><option value="most">Most of it &ndash; I spend more time on habitual consumption than genuine pleasure</option><option value="a-lot">A lot &ndash; roughly half my leisure feels wasted</option><option value="some">Some &ndash; a noticeable but manageable amount</option><option value="a-little">A little &ndash; occasional mindless browsing but mostly intentional</option><option value="almost-none">Almost none &ndash; nearly all my leisure is genuinely chosen</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-wasted-time" onchange="handleSkip('a-wasted-time')"><label for="skip-wasted-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-guilt-free">
-    <label for="a-guilt-free">I know whether I can enjoy pure entertainment without guilt, or whether I feel I should always be doing something productive.<br><span class="assess-hint">Some people struggle to watch a film without feeling they're wasting time.</span></label>
+<div class="assess-input-group" id="ig-guilt-free">
+    <span class="assess-label">Can you enjoy pure entertainment without guilt?</span>
+    <span class="assess-hint">Some people struggle to watch a film without feeling they're wasting time.</span>
+    <select id="a-guilt-free" onchange="handleAssessInput('a-guilt-free')"><option value="">Select...</option><option value="never">Never &ndash; I always feel I should be doing something productive</option><option value="rarely">Rarely &ndash; guilt creeps in most of the time</option><option value="sometimes">Sometimes &ndash; depends on how busy I am</option><option value="mostly">Mostly &ndash; I can usually relax without guilt</option><option value="always">Always &ndash; I fully embrace leisure time without guilt</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-guilt-free" onchange="handleSkip('a-guilt-free')"><label for="skip-guilt-free">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -409,153 +465,22 @@ life_area_slug: consumptive-leisure
         'a-learning-proportion', 'a-books-per-year', 'a-retention',
         'a-genuine-pleasure', 'a-wasted-time', 'a-guilt-free'
     ];
-
-    function loadProgress() {
-        if (typeof APStorage === 'undefined') return {};
-        var all = APStorage.load('ap-level1-progress') || {};
-        return all[AREA] || {};
-    }
-
-    function saveProgress(progress) {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-progress') || {};
-        all[AREA] = progress;
-        APStorage.save('ap-level1-progress', all);
-    }
-
-    function updateUI() {
-        var progress = loadProgress();
-        var doneCount = 0;
-        var firstIncomplete = null;
-
-        STEPS.forEach(function(step, i) {
-            var el = document.getElementById('step-' + step);
-            var seg = document.getElementById('prog-' + (i + 1));
-            if (!el || !seg) return;
-
-            if (progress[step]) {
-                el.classList.add('done');
-                el.classList.remove('active');
-                seg.className = 'l1-progress-segment done';
-                doneCount++;
-            } else if (!firstIncomplete) {
-                firstIncomplete = step;
-                el.classList.add('active');
-                el.classList.remove('done');
-                seg.className = 'l1-progress-segment active';
-            } else {
-                el.classList.remove('active', 'done');
-                seg.className = 'l1-progress-segment';
-            }
-        });
-
-        var label = document.getElementById('progressLabel');
-        if (doneCount >= STEPS.length) {
-            if (label) label.textContent = 'All steps complete';
-            var banner = document.getElementById('completeBanner');
-            if (banner) banner.classList.add('visible');
-        } else {
-            if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
-        }
-
-        // Auto-open the first incomplete step
-        if (firstIncomplete) {
-            openStep(firstIncomplete);
-        }
-    }
-
-    function openStep(step) {
-        STEPS.forEach(function(s) {
-            var el = document.getElementById('step-' + s);
-            if (el) el.classList.remove('open');
-        });
-        var target = document.getElementById('step-' + step);
-        if (target) {
-            target.classList.add('open');
-            setTimeout(function() {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
-        }
-    }
-
-    window.toggleStep = function(step) {
-        var el = document.getElementById('step-' + step);
-        if (el) el.classList.toggle('open');
-    };
-
-    window.completeStep = function(step) {
-        var progress = loadProgress();
-        progress[step] = true;
-        saveProgress(progress);
-        updateUI();
-
-        var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) {
-            var next = STEPS[idx + 1];
-            setTimeout(function() { openStep(next); }, 300);
-        }
-    };
-
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
-        });
-        if (typeof APStorage !== 'undefined') {
-            var all = APStorage.load('ap-level1-assess') || {};
-            all[AREA] = checklist;
-            APStorage.save('ap-level1-assess', all);
-        }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    function loadProgress() { if (typeof APStorage === 'undefined') return {}; var all = APStorage.load('ap-level1-progress') || {}; return all[AREA] || {}; }
+    function saveProgress(progress) { if (typeof APStorage === 'undefined') return; var all = APStorage.load('ap-level1-progress') || {}; all[AREA] = progress; APStorage.save('ap-level1-progress', all); }
+    function updateUI() { var progress = loadProgress(); var doneCount = 0; var firstIncomplete = null; STEPS.forEach(function(step, i) { var el = document.getElementById('step-' + step); var seg = document.getElementById('prog-' + (i + 1)); if (!el || !seg) return; if (progress[step]) { el.classList.add('done'); el.classList.remove('active'); seg.className = 'l1-progress-segment done'; doneCount++; } else if (!firstIncomplete) { firstIncomplete = step; el.classList.add('active'); el.classList.remove('done'); seg.className = 'l1-progress-segment active'; } else { el.classList.remove('active', 'done'); seg.className = 'l1-progress-segment'; } }); var label = document.getElementById('progressLabel'); if (doneCount >= STEPS.length) { if (label) label.textContent = 'All steps complete'; var banner = document.getElementById('completeBanner'); if (banner) banner.classList.add('visible'); } else { if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length; } if (firstIncomplete) { openStep(firstIncomplete); } }
+    function openStep(step) { STEPS.forEach(function(s) { var el = document.getElementById('step-' + s); if (el) el.classList.remove('open'); }); var target = document.getElementById('step-' + step); if (target) { target.classList.add('open'); setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); } }
+    window.toggleStep = function(step) { var el = document.getElementById('step-' + step); if (el) el.classList.toggle('open'); };
+    window.completeStep = function(step) { if (step === 'assess') saveScores(); var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI(); var idx = STEPS.indexOf(step); if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); } };
+    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
+    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
+    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
+    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
+    function saveAnswers() { var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; }); var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers)); var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); } }
+    function saveScores() { var scores = { restoration: null, enrichment: null, enjoyment: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
+    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    function restoreAssessment() { var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return; ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); }); updateAssessRecorded(); updateAssessCompletion(); }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

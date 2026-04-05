@@ -163,6 +163,70 @@ life_area_slug: media-diet
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -313,85 +377,197 @@ life_area_slug: media-diet
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought about it).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
-<h4>Information Quality & Depth</h4>
+<h4>Information Quality &amp; Depth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-source-types">
-    <label for="a-source-types">I know roughly what proportion of my information comes from long-form sources (books, in-depth articles, documentaries) versus short-form (social media, news headlines, notifications).<br><span class="assess-hint">Estimate the split over a typical week.</span></label>
+<div class="assess-input-group" id="ig-source-types">
+    <span class="assess-label">What proportion of your information comes from long-form sources versus short-form?</span>
+    <span class="assess-hint">Long-form: books, in-depth articles, documentaries. Short-form: social media, news headlines, notifications.</span>
+    <select id="a-source-types" onchange="handleAssessInput('a-source-types')">
+        <option value="">Select...</option>
+        <option value="almost-all-short">Almost all short-form</option>
+        <option value="mostly-short">Mostly short-form with occasional long-form</option>
+        <option value="roughly-even">Roughly even</option>
+        <option value="mostly-long">Mostly long-form with occasional short-form</option>
+        <option value="almost-all-long">Almost all long-form</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-source-types" onchange="handleSkip('a-source-types')"><label for="skip-source-types">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-books-read">
-    <label for="a-books-read">I know how many non-fiction books I read in the past year.<br><span class="assess-hint">Include audiobooks if you use them. An approximate count is fine.</span></label>
+<div class="assess-input-group" id="ig-books-read">
+    <span class="assess-label">How many non-fiction books did you read in the past year?</span>
+    <span class="assess-hint">Include audiobooks if you use them.</span>
+    <select id="a-books-read" onchange="handleAssessInput('a-books-read')">
+        <option value="">Select...</option>
+        <option value="zero">Zero</option>
+        <option value="1-3">1&ndash;3</option>
+        <option value="4-10">4&ndash;10</option>
+        <option value="11-20">11&ndash;20</option>
+        <option value="over-20">Over 20</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-books-read" onchange="handleSkip('a-books-read')"><label for="skip-books-read">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-primary-sources">
-    <label for="a-primary-sources">I can think of at least one topic where I've read a primary source rather than relying on summaries or commentary.<br><span class="assess-hint">Academic papers, original reports, legislation, company filings &ndash; anything unfiltered.</span></label>
+<div class="assess-input-group" id="ig-primary-sources">
+    <span class="assess-label">How often do you read primary sources rather than summaries or commentary?</span>
+    <span class="assess-hint">Academic papers, original reports, legislation, company filings.</span>
+    <select id="a-primary-sources" onchange="handleAssessInput('a-primary-sources')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I always rely on summaries</option>
+        <option value="rarely">Rarely &ndash; once or twice in the past year</option>
+        <option value="sometimes">Sometimes &ndash; for topics I care deeply about</option>
+        <option value="regularly">Regularly &ndash; multiple times a month</option>
+        <option value="routinely">Routinely &ndash; primary sources are my default</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-primary-sources" onchange="handleSkip('a-primary-sources')"><label for="skip-primary-sources">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Actionable Relevance</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-influence">
-    <label for="a-decision-influence">I can identify at least one decision I made in the past year that was directly influenced by something I read or listened to.<br><span class="assess-hint">Career moves, financial choices, health changes, relationship approaches &ndash; anything concrete.</span></label>
+<div class="assess-input-group" id="ig-decision-influence">
+    <span class="assess-label">How often has something you read or listened to directly influenced a decision in the past year?</span>
+    <span class="assess-hint">Career moves, financial choices, health changes, relationship approaches.</span>
+    <select id="a-decision-influence" onchange="handleAssessInput('a-decision-influence')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I can't think of an example</option>
+        <option value="once">Once &ndash; a single clear instance</option>
+        <option value="a-few">A few times</option>
+        <option value="regularly">Regularly &ndash; my consumption frequently informs decisions</option>
+        <option value="consistently">Consistently &ndash; most of what I consume is chosen for its decision relevance</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-decision-influence" onchange="handleSkip('a-decision-influence')"><label for="skip-decision-influence">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-goal-alignment">
-    <label for="a-goal-alignment">I have a sense of whether my current information sources align with my actual goals and priorities.<br><span class="assess-hint">Compare what you consume most with what you're trying to achieve.</span></label>
+<div class="assess-input-group" id="ig-goal-alignment">
+    <span class="assess-label">How well do your current information sources align with your actual goals and priorities?</span>
+    <span class="assess-hint">Compare what you consume most with what you're trying to achieve.</span>
+    <select id="a-goal-alignment" onchange="handleAssessInput('a-goal-alignment')">
+        <option value="">Select...</option>
+        <option value="no-alignment">No alignment &ndash; I haven't thought about this</option>
+        <option value="poor">Poor &ndash; most of what I consume is unrelated to my goals</option>
+        <option value="partial">Partial &ndash; some sources are relevant, many aren't</option>
+        <option value="good">Good &ndash; most of my consumption supports my priorities</option>
+        <option value="deliberate">Deliberate &ndash; I've curated my sources specifically around my goals</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-goal-alignment" onchange="handleSkip('a-goal-alignment')"><label for="skip-goal-alignment">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-noise-ratio">
-    <label for="a-noise-ratio">I can estimate how much of my weekly information consumption has no practical application to my life.<br><span class="assess-hint">Content that's interesting but doesn't inform any decision or skill.</span></label>
+<div class="assess-input-group" id="ig-noise-ratio">
+    <span class="assess-label">How much of your weekly information consumption has no practical application to your life?</span>
+    <span class="assess-hint">Content that's interesting but doesn't inform any decision or skill.</span>
+    <select id="a-noise-ratio" onchange="handleAssessInput('a-noise-ratio')">
+        <option value="">Select...</option>
+        <option value="almost-all">Almost all &ndash; very little of what I consume is useful</option>
+        <option value="most">Most &ndash; I consume a lot of noise</option>
+        <option value="about-half">About half</option>
+        <option value="some">Some &ndash; most of what I consume serves a purpose</option>
+        <option value="very-little">Very little &ndash; my consumption is tightly curated</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-noise-ratio" onchange="handleSkip('a-noise-ratio')"><label for="skip-noise-ratio">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Breadth & Discovery</h4>
+<h4>Breadth &amp; Discovery</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-echo-chamber">
-    <label for="a-echo-chamber">I know whether most of my information sources share a similar political or cultural perspective.<br><span class="assess-hint">Think about the range of viewpoints across your regular sources.</span></label>
+<div class="assess-input-group" id="ig-echo-chamber">
+    <span class="assess-label">How diverse are the perspectives across your regular information sources?</span>
+    <span class="assess-hint">Think about the range of political, cultural, and intellectual viewpoints.</span>
+    <select id="a-echo-chamber" onchange="handleAssessInput('a-echo-chamber')">
+        <option value="">Select...</option>
+        <option value="very-narrow">Very narrow &ndash; all my sources share similar views</option>
+        <option value="somewhat-narrow">Somewhat narrow &ndash; mostly one perspective with rare exceptions</option>
+        <option value="moderate">Moderate &ndash; some diversity but within a limited range</option>
+        <option value="broad">Broad &ndash; I regularly encounter different perspectives</option>
+        <option value="deliberately-diverse">Deliberately diverse &ndash; I actively seek out opposing or unfamiliar viewpoints</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-echo-chamber" onchange="handleSkip('a-echo-chamber')"><label for="skip-echo-chamber">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-unfamiliar-topics">
-    <label for="a-unfamiliar-topics">I can recall the last time I deliberately explored a topic I knew nothing about.<br><span class="assess-hint">Not something recommended by an algorithm &ndash; something you chose out of curiosity.</span></label>
+<div class="assess-input-group" id="ig-unfamiliar-topics">
+    <span class="assess-label">When did you last deliberately explore a topic you knew nothing about?</span>
+    <span class="assess-hint">Something you chose out of curiosity, not something recommended by an algorithm.</span>
+    <select id="a-unfamiliar-topics" onchange="handleAssessInput('a-unfamiliar-topics')">
+        <option value="">Select...</option>
+        <option value="cant-recall">Can't recall</option>
+        <option value="months-ago">Months ago</option>
+        <option value="weeks-ago">Weeks ago</option>
+        <option value="this-week">This week</option>
+        <option value="constantly">Constantly &ndash; I regularly explore unfamiliar topics</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-unfamiliar-topics" onchange="handleSkip('a-unfamiliar-topics')"><label for="skip-unfamiliar-topics">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-international">
-    <label for="a-international">I know whether I regularly consume information from sources based outside my own country.<br><span class="assess-hint">News outlets, commentators, or publications from other regions.</span></label>
+<div class="assess-input-group" id="ig-international">
+    <span class="assess-label">How often do you consume information from sources based outside your own country?</span>
+    <span class="assess-hint">News outlets, commentators, or publications from other regions.</span>
+    <select id="a-international" onchange="handleAssessInput('a-international')">
+        <option value="">Select...</option>
+        <option value="never">Never</option>
+        <option value="rarely">Rarely &ndash; once or twice a year</option>
+        <option value="sometimes">Sometimes &ndash; monthly</option>
+        <option value="regularly">Regularly &ndash; weekly</option>
+        <option value="daily">Daily &ndash; international sources are a core part of my diet</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-international" onchange="handleSkip('a-international')"><label for="skip-international">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Cognitive Efficiency</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-time-spent">
-    <label for="a-time-spent">I know roughly how many hours per day I spend consuming news, social media, and informational content.<br><span class="assess-hint">Screen time data on your phone can help here.</span></label>
+<div class="assess-input-group" id="ig-time-spent">
+    <span class="assess-label">How many hours per day do you spend consuming news, social media, and informational content?</span>
+    <span class="assess-hint">Screen time data on your phone can help here.</span>
+    <select id="a-time-spent" onchange="handleAssessInput('a-time-spent')">
+        <option value="">Select...</option>
+        <option value="over-6">Over 6 hours</option>
+        <option value="4-6">4&ndash;6 hours</option>
+        <option value="2-4">2&ndash;4 hours</option>
+        <option value="1-2">1&ndash;2 hours</option>
+        <option value="under-1">Under 1 hour</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-time-spent" onchange="handleSkip('a-time-spent')"><label for="skip-time-spent">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-retention">
-    <label for="a-retention">I have a sense of how much I retain from what I consume &ndash; could I summarise the most important thing I read last week?<br><span class="assess-hint">Try it now. If nothing comes to mind, that's useful information.</span></label>
+<div class="assess-input-group" id="ig-retention">
+    <span class="assess-label">Could you summarise the most important thing you read last week?</span>
+    <span class="assess-hint">Try it now. If nothing comes to mind, that's useful information.</span>
+    <select id="a-retention" onchange="handleAssessInput('a-retention')">
+        <option value="">Select...</option>
+        <option value="nothing">Nothing comes to mind</option>
+        <option value="vague">Vague topic only &ndash; I remember the subject but no detail</option>
+        <option value="general">General summary &ndash; I can describe the main point</option>
+        <option value="clear">Clear summary &ndash; I can explain the argument and key evidence</option>
+        <option value="detailed">Detailed &ndash; I could discuss it with someone knowledgeable</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-retention" onchange="handleSkip('a-retention')"><label for="skip-retention">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-overload">
-    <label for="a-overload">I know whether I regularly experience information overload or feel anxious about keeping up with the news.<br><span class="assess-hint">A sense of falling behind, compulsive checking, or fatigue from too much input.</span></label>
+<div class="assess-input-group" id="ig-overload">
+    <span class="assess-label">Do you regularly experience information overload or anxiety about keeping up?</span>
+    <span class="assess-hint">A sense of falling behind, compulsive checking, or fatigue from too much input.</span>
+    <select id="a-overload" onchange="handleAssessInput('a-overload')">
+        <option value="">Select...</option>
+        <option value="severe">Severe &ndash; I feel overwhelmed daily</option>
+        <option value="frequent">Frequent &ndash; several times a week</option>
+        <option value="occasional">Occasional &ndash; it happens but I manage it</option>
+        <option value="rare">Rare &ndash; I seldom feel overloaded</option>
+        <option value="none">None &ndash; I feel in control of my information intake</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-overload" onchange="handleSkip('a-overload')"><label for="skip-overload">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +615,8 @@ life_area_slug: media-diet
         'a-echo-chamber', 'a-unfamiliar-topics', 'a-international',
         'a-time-spent', 'a-retention', 'a-overload'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -514,6 +692,7 @@ life_area_slug: media-diet
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +705,122 @@ life_area_slug: media-diet
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
 
-        // Save checklist state
-        var checklist = {};
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = {
+            quality: null,
+            relevance: null,
+            breadth: null,
+            efficiency: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

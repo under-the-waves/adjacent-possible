@@ -133,35 +133,69 @@ life_area_slug: participatory-leisure
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -303,66 +337,88 @@ life_area_slug: participatory-leisure
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think about. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Social Connection</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-leisure-friends">
-    <label for="a-leisure-friends">I can name the people I regularly do leisure activities with, if any.<br><span class="assess-hint">Think about hobbies, sports, creative pursuits, or group activities &ndash; not just socialising over food or drinks.</span></label>
+<div class="assess-input-group" id="ig-leisure-friends">
+    <span class="assess-label">How many people do you regularly do leisure activities with?</span>
+    <span class="assess-hint">Think about hobbies, sports, creative pursuits, or group activities &ndash; not just socialising over food or drinks.</span>
+    <select id="a-leisure-friends" onchange="handleAssessInput('a-leisure-friends')"><option value="">Select...</option><option value="none">None &ndash; my leisure activities are all solo</option><option value="one">One &ndash; I have one regular activity partner</option><option value="two-to-three">Two to three people</option><option value="four-to-six">Four to six people</option><option value="many">Many &ndash; I regularly do activities with a broad group</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-leisure-friends" onchange="handleSkip('a-leisure-friends')"><label for="skip-leisure-friends">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-group-membership">
-    <label for="a-group-membership">I know whether I belong to any clubs, groups, or communities organised around a shared activity.<br><span class="assess-hint">Sports teams, book clubs, choirs, gaming groups, craft circles, volunteer organisations, etc.</span></label>
+<div class="assess-input-group" id="ig-group-membership">
+    <span class="assess-label">Do you belong to any clubs, groups, or communities organised around a shared activity?</span>
+    <span class="assess-hint">Sports teams, book clubs, choirs, gaming groups, craft circles, volunteer organisations, etc.</span>
+    <select id="a-group-membership" onchange="handleAssessInput('a-group-membership')"><option value="">Select...</option><option value="none">None &ndash; I'm not a member of any groups</option><option value="lapsed">Lapsed &ndash; I used to be but stopped attending</option><option value="one">One &ndash; I belong to one group</option><option value="two-to-three">Two to three groups</option><option value="several">Several &ndash; four or more active memberships</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-group-membership" onchange="handleSkip('a-group-membership')"><label for="skip-group-membership">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-social-satisfaction">
-    <label for="a-social-satisfaction">I have a sense of whether my leisure activities provide enough social connection or whether I feel isolated in my free time.<br><span class="assess-hint">Some people prefer solo pursuits and feel fine; others want more social leisure but haven't found it.</span></label>
-</div>
-</div>
-
-<div class="assess-group">
-<h4>Achievement & Mastery</h4>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-skill-level">
-    <label for="a-skill-level">I can identify at least one leisure activity where I have developed meaningful skill over time.<br><span class="assess-hint">Musical instruments, a sport, a craft, cooking, gardening, a game &ndash; anything where you've noticeably improved.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-consistency">
-    <label for="a-consistency">I know whether I tend to stick with activities long enough to develop real competence, or move on quickly.<br><span class="assess-hint">There's no wrong answer &ndash; some people are natural specialists, others natural explorers.</span></label>
-</div>
-
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-progress">
-    <label for="a-progress">I have a sense of whether I'm currently improving at any leisure activity, plateaued, or not tracking progress at all.<br><span class="assess-hint">Improvement might mean better scores, harder pieces, more complex projects, or feedback from others.</span></label>
+<div class="assess-input-group" id="ig-social-satisfaction">
+    <span class="assess-label">Do your leisure activities provide enough social connection?</span>
+    <span class="assess-hint">Some people prefer solo pursuits and feel fine; others want more social leisure but haven't found it.</span>
+    <select id="a-social-satisfaction" onchange="handleAssessInput('a-social-satisfaction')"><option value="">Select...</option><option value="isolated">Isolated &ndash; I want more social leisure but don't have it</option><option value="somewhat-lacking">Somewhat lacking &ndash; I'd like more social activities</option><option value="adequate">Adequate &ndash; I get enough but could benefit from more</option><option value="good">Good &ndash; my leisure provides solid social connection</option><option value="excellent">Excellent &ndash; rich social life through shared activities</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-social-satisfaction" onchange="handleSkip('a-social-satisfaction')"><label for="skip-social-satisfaction">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Adventure & Exploration</h4>
+<h4>Achievement &amp; Mastery</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-new-activities">
-    <label for="a-new-activities">I know roughly how many new leisure activities I've tried in the past year.<br><span class="assess-hint">Count anything genuinely new to you &ndash; a new sport, creative medium, game, or outdoor activity.</span></label>
+<div class="assess-input-group" id="ig-skill-level">
+    <span class="assess-label">Do you have at least one leisure activity where you've developed meaningful skill over time?</span>
+    <span class="assess-hint">Musical instruments, a sport, a craft, cooking, gardening, a game &ndash; anything where you've noticeably improved.</span>
+    <select id="a-skill-level" onchange="handleAssessInput('a-skill-level')"><option value="">Select...</option><option value="no">No &ndash; I haven't stuck with anything long enough</option><option value="beginner">Beginner &ndash; I'm learning something but still very early</option><option value="intermediate">Intermediate &ndash; noticeable improvement in one activity</option><option value="skilled">Skilled &ndash; genuine competence in one or two activities</option><option value="expert">Expert &ndash; high-level skill in at least one leisure pursuit</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-skill-level" onchange="handleSkip('a-skill-level')"><label for="skip-skill-level">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-comfort-zone">
-    <label for="a-comfort-zone">I can identify the boundary of my leisure comfort zone &ndash; what I'd be willing to try versus what feels too far.<br><span class="assess-hint">Public performance, physical risk, unfamiliar social settings, creative vulnerability &ndash; where does discomfort start?</span></label>
+<div class="assess-input-group" id="ig-consistency">
+    <span class="assess-label">Do you tend to stick with activities long enough to develop real competence?</span>
+    <span class="assess-hint">There's no wrong answer &ndash; some people are natural specialists, others natural explorers.</span>
+    <select id="a-consistency" onchange="handleAssessInput('a-consistency')"><option value="">Select...</option><option value="always-move-on">Always move on &ndash; I try things and quickly lose interest</option><option value="mostly-explore">Mostly explore &ndash; I prefer variety over depth</option><option value="mixed">Mixed &ndash; some things I've stuck with, others I've dropped</option><option value="mostly-persist">Mostly persist &ndash; I tend to commit for months or years</option><option value="deep-commitment">Deep commitment &ndash; I stay with activities for years or decades</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-consistency" onchange="handleSkip('a-consistency')"><label for="skip-consistency">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-memorable">
-    <label for="a-memorable">I can recall one or two leisure experiences from the past year that I'd describe as genuinely memorable or meaningful.<br><span class="assess-hint">Experiences that stand out from routine &ndash; not just pleasant evenings, but moments that mattered.</span></label>
+<div class="assess-input-group" id="ig-progress">
+    <span class="assess-label">Are you currently improving at any leisure activity?</span>
+    <span class="assess-hint">Improvement might mean better scores, harder pieces, more complex projects, or feedback from others.</span>
+    <select id="a-progress" onchange="handleAssessInput('a-progress')"><option value="">Select...</option><option value="not-applicable">Not applicable &ndash; I don't have skill-based leisure activities</option><option value="plateaued">Plateaued &ndash; I haven't improved in a while</option><option value="not-tracking">Not tracking &ndash; I'm not sure whether I'm improving</option><option value="slowly">Slowly &ndash; gradual improvement over time</option><option value="actively">Actively improving &ndash; noticeable progress with deliberate practice</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-progress" onchange="handleSkip('a-progress')"><label for="skip-progress">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-group">
+<h4>Adventure &amp; Exploration</h4>
+
+<div class="assess-input-group" id="ig-new-activities">
+    <span class="assess-label">How many genuinely new leisure activities have you tried in the past year?</span>
+    <span class="assess-hint">Count anything genuinely new to you &ndash; a new sport, creative medium, game, or outdoor activity.</span>
+    <select id="a-new-activities" onchange="handleAssessInput('a-new-activities')"><option value="">Select...</option><option value="none">None &ndash; I've stuck with the same activities</option><option value="one">One &ndash; I tried one new thing</option><option value="two-to-three">Two to three new activities</option><option value="four-to-five">Four to five new activities</option><option value="many">Many &ndash; six or more new activities</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-new-activities" onchange="handleSkip('a-new-activities')"><label for="skip-new-activities">I know but prefer not to say</label></div>
+</div>
+
+<div class="assess-input-group" id="ig-comfort-zone">
+    <span class="assess-label">How often do you push beyond your leisure comfort zone?</span>
+    <span class="assess-hint">Public performance, physical risk, unfamiliar social settings, creative vulnerability &ndash; where does discomfort start?</span>
+    <select id="a-comfort-zone" onchange="handleAssessInput('a-comfort-zone')"><option value="">Select...</option><option value="never">Never &ndash; I stay firmly within familiar activities</option><option value="rarely">Rarely &ndash; maybe once a year</option><option value="occasionally">Occasionally &ndash; a few times a year</option><option value="regularly">Regularly &ndash; I seek out mild discomfort monthly</option><option value="frequently">Frequently &ndash; I actively pursue new and challenging experiences</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-comfort-zone" onchange="handleSkip('a-comfort-zone')"><label for="skip-comfort-zone">I know but prefer not to say</label></div>
+</div>
+
+<div class="assess-input-group" id="ig-memorable">
+    <span class="assess-label">How many genuinely memorable leisure experiences have you had in the past year?</span>
+    <span class="assess-hint">Experiences that stand out from routine &ndash; not just pleasant evenings, but moments that mattered.</span>
+    <select id="a-memorable" onchange="handleAssessInput('a-memorable')"><option value="">Select...</option><option value="none">None &ndash; the past year blends together</option><option value="one">One &ndash; a single standout experience</option><option value="two-to-three">Two to three memorable experiences</option><option value="several">Several &ndash; regular memorable moments</option><option value="many">Many &ndash; rich with experiences I'll remember for years</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-memorable" onchange="handleSkip('a-memorable')"><label for="skip-memorable">I know but prefer not to say</label></div>
+</div>
+</div>
+
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -409,153 +465,23 @@ life_area_slug: participatory-leisure
         'a-skill-level', 'a-consistency', 'a-progress',
         'a-new-activities', 'a-comfort-zone', 'a-memorable'
     ];
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
-    function loadProgress() {
-        if (typeof APStorage === 'undefined') return {};
-        var all = APStorage.load('ap-level1-progress') || {};
-        return all[AREA] || {};
-    }
-
-    function saveProgress(progress) {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-progress') || {};
-        all[AREA] = progress;
-        APStorage.save('ap-level1-progress', all);
-    }
-
-    function updateUI() {
-        var progress = loadProgress();
-        var doneCount = 0;
-        var firstIncomplete = null;
-
-        STEPS.forEach(function(step, i) {
-            var el = document.getElementById('step-' + step);
-            var seg = document.getElementById('prog-' + (i + 1));
-            if (!el || !seg) return;
-
-            if (progress[step]) {
-                el.classList.add('done');
-                el.classList.remove('active');
-                seg.className = 'l1-progress-segment done';
-                doneCount++;
-            } else if (!firstIncomplete) {
-                firstIncomplete = step;
-                el.classList.add('active');
-                el.classList.remove('done');
-                seg.className = 'l1-progress-segment active';
-            } else {
-                el.classList.remove('active', 'done');
-                seg.className = 'l1-progress-segment';
-            }
-        });
-
-        var label = document.getElementById('progressLabel');
-        if (doneCount >= STEPS.length) {
-            if (label) label.textContent = 'All steps complete';
-            var banner = document.getElementById('completeBanner');
-            if (banner) banner.classList.add('visible');
-        } else {
-            if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
-        }
-
-        // Auto-open the first incomplete step
-        if (firstIncomplete) {
-            openStep(firstIncomplete);
-        }
-    }
-
-    function openStep(step) {
-        STEPS.forEach(function(s) {
-            var el = document.getElementById('step-' + s);
-            if (el) el.classList.remove('open');
-        });
-        var target = document.getElementById('step-' + step);
-        if (target) {
-            target.classList.add('open');
-            setTimeout(function() {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
-        }
-    }
-
-    window.toggleStep = function(step) {
-        var el = document.getElementById('step-' + step);
-        if (el) el.classList.toggle('open');
-    };
-
-    window.completeStep = function(step) {
-        var progress = loadProgress();
-        progress[step] = true;
-        saveProgress(progress);
-        updateUI();
-
-        var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) {
-            var next = STEPS[idx + 1];
-            setTimeout(function() { openStep(next); }, 300);
-        }
-    };
-
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
-        });
-        if (typeof APStorage !== 'undefined') {
-            var all = APStorage.load('ap-level1-assess') || {};
-            all[AREA] = checklist;
-            APStorage.save('ap-level1-assess', all);
-        }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    function loadProgress() { if (typeof APStorage === 'undefined') return {}; var all = APStorage.load('ap-level1-progress') || {}; return all[AREA] || {}; }
+    function saveProgress(progress) { if (typeof APStorage === 'undefined') return; var all = APStorage.load('ap-level1-progress') || {}; all[AREA] = progress; APStorage.save('ap-level1-progress', all); }
+    function updateUI() { var progress = loadProgress(); var doneCount = 0; var firstIncomplete = null; STEPS.forEach(function(step, i) { var el = document.getElementById('step-' + step); var seg = document.getElementById('prog-' + (i + 1)); if (!el || !seg) return; if (progress[step]) { el.classList.add('done'); el.classList.remove('active'); seg.className = 'l1-progress-segment done'; doneCount++; } else if (!firstIncomplete) { firstIncomplete = step; el.classList.add('active'); el.classList.remove('done'); seg.className = 'l1-progress-segment active'; } else { el.classList.remove('active', 'done'); seg.className = 'l1-progress-segment'; } }); var label = document.getElementById('progressLabel'); if (doneCount >= STEPS.length) { if (label) label.textContent = 'All steps complete'; var banner = document.getElementById('completeBanner'); if (banner) banner.classList.add('visible'); } else { if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length; } if (firstIncomplete) { openStep(firstIncomplete); } }
+    function openStep(step) { STEPS.forEach(function(s) { var el = document.getElementById('step-' + s); if (el) el.classList.remove('open'); }); var target = document.getElementById('step-' + step); if (target) { target.classList.add('open'); setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); } }
+    window.toggleStep = function(step) { var el = document.getElementById('step-' + step); if (el) el.classList.toggle('open'); };
+    window.completeStep = function(step) { if (step === 'assess') saveScores(); var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI(); var idx = STEPS.indexOf(step); if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); } };
+    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
+    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
+    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
+    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
+    function saveAnswers() { var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; }); var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers)); var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); } }
+    function saveScores() { var scores = { social: null, mastery: null, adventure: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
+    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    function restoreAssessment() { var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return; ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); }); updateAssessRecorded(); updateAssessCompletion(); }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

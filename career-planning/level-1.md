@@ -133,35 +133,69 @@ life_area_slug: career-planning
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,85 +347,113 @@ life_area_slug: career-planning
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Clarity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-direction">
-    <label for="a-direction">I can describe where I want my career to be in three years and why.<br><span class="assess-hint">If you can't, that's useful information too – it tells you clarity is a priority.</span></label>
+<div class="assess-input-group" id="ig-direction">
+    <span class="assess-label">Can you describe where you want your career to be in three years?</span>
+    <span class="assess-hint">If you can't, that's useful information &ndash; it tells you clarity is a priority.</span>
+    <select id="a-direction" onchange="handleAssessInput('a-direction')"><option value="">Select...</option><option value="no-idea">No idea &ndash; I haven't thought about it</option><option value="vague">Vague &ndash; a general sense but nothing specific</option><option value="rough-direction">Rough direction &ndash; I know the field or type of role</option><option value="clear">Clear &ndash; I can describe a specific target</option><option value="detailed">Detailed &ndash; specific role, organisation type, and timeline</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-direction" onchange="handleSkip('a-direction')"><label for="skip-direction">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-industry">
-    <label for="a-industry">I understand the major trends shaping my industry over the next five years.<br><span class="assess-hint">Consider AI, regulation, market shifts, and emerging roles in your field.</span></label>
+<div class="assess-input-group" id="ig-industry">
+    <span class="assess-label">How well do you understand the major trends shaping your industry?</span>
+    <span class="assess-hint">Consider AI, regulation, market shifts, and emerging roles in your field.</span>
+    <select id="a-industry" onchange="handleAssessInput('a-industry')"><option value="">Select...</option><option value="not-at-all">Not at all &ndash; I haven't looked into it</option><option value="surface">Surface level &ndash; I've seen headlines</option><option value="moderate">Moderate &ndash; I have a reasonable understanding</option><option value="good">Good &ndash; I actively follow industry developments</option><option value="deep">Deep &ndash; I could brief someone on the key trends and their implications</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-industry" onchange="handleSkip('a-industry')"><label for="skip-industry">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-written-plan">
-    <label for="a-written-plan">I have a written career plan or direction document, even if it's rough.<br><span class="assess-hint">This could be a document, a note on your phone, or a structured journal entry.</span></label>
+<div class="assess-input-group" id="ig-written-plan">
+    <span class="assess-label">Do you have a written career plan or direction document?</span>
+    <span class="assess-hint">This could be a document, a note on your phone, or a structured journal entry.</span>
+    <select id="a-written-plan" onchange="handleAssessInput('a-written-plan')"><option value="">Select...</option><option value="no">No &ndash; nothing written</option><option value="mental-only">Mental only &ndash; I have ideas but haven't written them down</option><option value="rough-notes">Rough notes &ndash; scattered thoughts in various places</option><option value="basic-plan">Basic plan &ndash; a simple document with key goals</option><option value="detailed-plan">Detailed plan &ndash; structured document with milestones and timelines</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-written-plan" onchange="handleSkip('a-written-plan')"><label for="skip-written-plan">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Advancement</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-skills-beyond">
-    <label for="a-skills-beyond">I am currently developing at least one skill beyond what my current role requires.<br><span class="assess-hint">Think about courses, side projects, or deliberate practice in adjacent areas.</span></label>
+<div class="assess-input-group" id="ig-skills-beyond">
+    <span class="assess-label">Are you currently developing skills beyond what your current role requires?</span>
+    <span class="assess-hint">Think about courses, side projects, or deliberate practice in adjacent areas.</span>
+    <select id="a-skills-beyond" onchange="handleAssessInput('a-skills-beyond')"><option value="">Select...</option><option value="no">No &ndash; I'm only using existing skills</option><option value="thinking-about-it">Thinking about it &ndash; I know I should but haven't started</option><option value="dabbling">Dabbling &ndash; occasional, unstructured learning</option><option value="actively">Actively &ndash; regular investment in one or two new skills</option><option value="systematically">Systematically &ndash; structured development plan with clear targets</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-skills-beyond" onchange="handleSkip('a-skills-beyond')"><label for="skip-skills-beyond">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mentor">
-    <label for="a-mentor">I have a mentor, sponsor, or professional advisor who is actively helping my career.<br><span class="assess-hint">A mentor gives advice; a sponsor advocates for you in rooms you're not in.</span></label>
+<div class="assess-input-group" id="ig-mentor">
+    <span class="assess-label">Do you have a mentor or sponsor who is actively helping your career?</span>
+    <span class="assess-hint">A mentor gives advice; a sponsor advocates for you in rooms you're not in.</span>
+    <select id="a-mentor" onchange="handleAssessInput('a-mentor')"><option value="">Select...</option><option value="no">No &ndash; neither a mentor nor a sponsor</option><option value="informal">Informal &ndash; someone I occasionally ask for advice</option><option value="mentor">Mentor &ndash; someone who regularly guides my development</option><option value="sponsor">Sponsor &ndash; someone who actively advocates for me</option><option value="both">Both &ndash; I have a mentor and a sponsor</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-mentor" onchange="handleSkip('a-mentor')"><label for="skip-mentor">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-reputation">
-    <label for="a-reputation">I know what I am known for professionally – the thing people would say is my strength.<br><span class="assess-hint">If you're unsure, ask two or three colleagues what they see as your distinctive contribution.</span></label>
+<div class="assess-input-group" id="ig-reputation">
+    <span class="assess-label">Do you know what you are known for professionally?</span>
+    <span class="assess-hint">If you're unsure, ask two or three colleagues what they see as your distinctive contribution.</span>
+    <select id="a-reputation" onchange="handleAssessInput('a-reputation')"><option value="">Select...</option><option value="no-idea">No idea &ndash; I haven't asked or thought about it</option><option value="vague">Vague &ndash; a general sense but not specific</option><option value="one-thing">One thing &ndash; I know my main strength</option><option value="clear">Clear &ndash; I can articulate my professional brand</option><option value="deliberate">Deliberate &ndash; I've consciously built a specific reputation</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-reputation" onchange="handleSkip('a-reputation')"><label for="skip-reputation">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Security</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-runway">
-    <label for="a-runway">I know how many months of expenses I could cover if I lost my income tomorrow.<br><span class="assess-hint">Check your savings and liquid assets against your monthly expenses.</span></label>
+<div class="assess-input-group" id="ig-runway">
+    <span class="assess-label">How many months of expenses could you cover if you lost your income tomorrow?</span>
+    <span class="assess-hint">Check your savings and liquid assets against your monthly expenses.</span>
+    <select id="a-runway" onchange="handleAssessInput('a-runway')"><option value="">Select...</option><option value="zero">Zero &ndash; I'd be in trouble immediately</option><option value="one-to-two">One to two months</option><option value="three-to-five">Three to five months</option><option value="six-to-twelve">Six to twelve months</option><option value="over-twelve">Over twelve months</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-runway" onchange="handleSkip('a-runway')"><label for="skip-runway">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-transferable">
-    <label for="a-transferable">I can name five skills I have that would be valuable in a different industry.<br><span class="assess-hint">Think beyond technical skills – communication, project management, analysis, writing, leadership.</span></label>
+<div class="assess-input-group" id="ig-transferable">
+    <span class="assess-label">Can you name five skills you have that would be valuable in a different industry?</span>
+    <span class="assess-hint">Think beyond technical skills &ndash; communication, project management, analysis, writing, leadership.</span>
+    <select id="a-transferable" onchange="handleAssessInput('a-transferable')"><option value="">Select...</option><option value="no">No &ndash; my skills feel very role-specific</option><option value="one-or-two">One or two &ndash; I can think of a couple</option><option value="three-or-four">Three or four &ndash; several transferable skills</option><option value="five">Five &ndash; I can name them clearly</option><option value="more-than-five">More than five &ndash; I have a broad, portable skill set</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-transferable" onchange="handleSkip('a-transferable')"><label for="skip-transferable">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cv-ready">
-    <label for="a-cv-ready">My CV is up to date and I could apply for a job this week if I needed to.<br><span class="assess-hint">Check when you last updated it. If it's more than 6 months old, it probably needs work.</span></label>
+<div class="assess-input-group" id="ig-cv-ready">
+    <span class="assess-label">Is your CV up to date and ready to use?</span>
+    <span class="assess-hint">Check when you last updated it. If it's more than 6 months old, it probably needs work.</span>
+    <select id="a-cv-ready" onchange="handleAssessInput('a-cv-ready')"><option value="">Select...</option><option value="no-cv">No CV &ndash; I don't have one</option><option value="very-outdated">Very outdated &ndash; more than a year old</option><option value="somewhat-outdated">Somewhat outdated &ndash; 6 &ndash; 12 months old</option><option value="mostly-current">Mostly current &ndash; updated in the last 6 months</option><option value="ready">Ready &ndash; I could apply for a job this week</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-cv-ready" onchange="handleSkip('a-cv-ready')"><label for="skip-cv-ready">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Meaning</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-values-align">
-    <label for="a-values-align">I can describe what makes work meaningful to me and whether my current role delivers it.<br><span class="assess-hint">Meaning can come from impact, learning, autonomy, community, or creative expression.</span></label>
+<div class="assess-input-group" id="ig-values-align">
+    <span class="assess-label">Does your current role deliver the kind of meaning that matters to you?</span>
+    <span class="assess-hint">Meaning can come from impact, learning, autonomy, community, or creative expression.</span>
+    <select id="a-values-align" onchange="handleAssessInput('a-values-align')"><option value="">Select...</option><option value="not-at-all">Not at all &ndash; I feel disconnected from any purpose</option><option value="rarely">Rarely &ndash; occasional moments of meaning</option><option value="somewhat">Somewhat &ndash; some aspects are meaningful</option><option value="mostly">Mostly &ndash; my work generally aligns with what I care about</option><option value="deeply">Deeply &ndash; this role is a strong fit for my values</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-values-align" onchange="handleSkip('a-values-align')"><label for="skip-values-align">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose">
-    <label for="a-purpose">I have thought about whether my career contributes to something I genuinely care about.<br><span class="assess-hint">This isn't about grand missions – even feeling that your work helps real people counts.</span></label>
+<div class="assess-input-group" id="ig-purpose">
+    <span class="assess-label">Does your career contribute to something you genuinely care about?</span>
+    <span class="assess-hint">This isn't about grand missions &ndash; even feeling that your work helps real people counts.</span>
+    <select id="a-purpose" onchange="handleAssessInput('a-purpose')"><option value="">Select...</option><option value="no">No &ndash; I can't connect my work to anything I care about</option><option value="indirectly">Indirectly &ndash; there's a tenuous link if I squint</option><option value="somewhat">Somewhat &ndash; parts of it contribute to something meaningful</option><option value="mostly">Mostly &ndash; I can see a clear connection</option><option value="absolutely">Absolutely &ndash; my career is a direct expression of my values</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-purpose" onchange="handleSkip('a-purpose')"><label for="skip-purpose">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tradeoffs">
-    <label for="a-tradeoffs">I know what I would change about my career if money were not a constraint.<br><span class="assess-hint">The gap between this answer and your current path reveals how much meaning you are trading away.</span></label>
+<div class="assess-input-group" id="ig-tradeoffs">
+    <span class="assess-label">What would you change about your career if money were not a constraint?</span>
+    <span class="assess-hint">The gap between this answer and your current path reveals how much meaning you are trading away.</span>
+    <select id="a-tradeoffs" onchange="handleAssessInput('a-tradeoffs')"><option value="">Select...</option><option value="everything">Everything &ndash; I'd pursue something completely different</option><option value="major-changes">Major changes &ndash; different field or role entirely</option><option value="some-changes">Some changes &ndash; same field but different focus or structure</option><option value="minor-tweaks">Minor tweaks &ndash; largely the same with small adjustments</option><option value="nothing">Nothing &ndash; I'm already doing what I'd choose to do</option></select>
+    <div class="assess-skip"><input type="checkbox" id="skip-tradeoffs" onchange="handleSkip('a-tradeoffs')"><label for="skip-tradeoffs">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +501,8 @@ life_area_slug: career-planning
         'a-runway', 'a-transferable', 'a-cv-ready',
         'a-values-align', 'a-purpose', 'a-tradeoffs'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -513,73 +577,77 @@ life_area_slug: career-planning
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
         updateUI();
-
         var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) {
-            var next = STEPS[idx + 1];
-            setTimeout(function() { openStep(next); }, 300);
-        }
+        if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
-
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; }
+    }
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked; var value = null;
+            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
         var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
-        });
-        if (typeof APStorage !== 'undefined') {
-            var all = APStorage.load('ap-level1-assess') || {};
-            all[AREA] = checklist;
-            APStorage.save('ap-level1-assess', all);
-        }
-
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
+        if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); }
+    }
+    function saveScores() {
+        var scores = { clarity: null, advancement: null, security: null, meaning: null };
+        if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); }
+    }
+    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
     };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA]; if (!answers) return;
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
+            var item = answers[id]; if (!item) return;
+            if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } }
+            else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+            updateInputGroupState(id);
         });
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
-        }
+        updateAssessRecorded(); updateAssessCompletion();
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

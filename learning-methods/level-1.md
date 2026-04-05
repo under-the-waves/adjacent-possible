@@ -163,6 +163,70 @@ life_area_slug: learning-methods
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -305,66 +369,151 @@ life_area_slug: learning-methods
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think about. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
-<h4>Efficiency & Speed</h4>
+<h4>Efficiency &amp; Speed</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-study-methods">
-    <label for="a-study-methods">I can name at least two study techniques I use regularly.<br><span class="assess-hint">E.g. rereading, highlighting, flashcards, practice problems, summarising, teaching someone else.</span></label>
+<div class="assess-input-group" id="ig-study-methods">
+    <span class="assess-label">Which study techniques do you use regularly?</span>
+    <span class="assess-hint">Rereading, highlighting, flashcards, practice problems, summarising, teaching someone else.</span>
+    <select id="a-study-methods" onchange="handleAssessInput('a-study-methods')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I don't use any deliberate techniques</option>
+        <option value="passive">Passive only &ndash; rereading or highlighting</option>
+        <option value="one-active">One active method &ndash; e.g. flashcards or practice problems</option>
+        <option value="several">Several methods &ndash; I mix techniques depending on the material</option>
+        <option value="evidence-based">Evidence-based selection &ndash; I choose techniques based on what research shows works</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-study-methods" onchange="handleSkip('a-study-methods')"><label for="skip-study-methods">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-spacing">
-    <label for="a-spacing">I know whether I typically spread learning over multiple sessions or concentrate it into one sitting.<br><span class="assess-hint">Think about the last time you needed to learn something new. Did you revisit it over days, or cover it all at once?</span></label>
+<div class="assess-input-group" id="ig-spacing">
+    <span class="assess-label">How do you typically spread your learning over time?</span>
+    <span class="assess-hint">Spread over multiple sessions or concentrated into one sitting?</span>
+    <select id="a-spacing" onchange="handleAssessInput('a-spacing')">
+        <option value="">Select...</option>
+        <option value="all-at-once">All at once &ndash; I cram or binge-learn in a single session</option>
+        <option value="mostly-crammed">Mostly crammed &ndash; occasional spacing but usually last-minute</option>
+        <option value="mixed">Mixed &ndash; I space some things but not deliberately</option>
+        <option value="mostly-spaced">Mostly spaced &ndash; I usually revisit material across days</option>
+        <option value="deliberately-spaced">Deliberately spaced &ndash; I plan review intervals in advance</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-spacing" onchange="handleSkip('a-spacing')"><label for="skip-spacing">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-time-spent">
-    <label for="a-time-spent">I have a rough sense of how many hours per week I spend intentionally learning something new.<br><span class="assess-hint">Count structured study, courses, deliberate practice &ndash; not passive consumption like scrolling or background listening.</span></label>
+<div class="assess-input-group" id="ig-time-spent">
+    <span class="assess-label">How many hours per week do you spend intentionally learning something new?</span>
+    <span class="assess-hint">Count structured study, courses, deliberate practice &ndash; not passive consumption.</span>
+    <select id="a-time-spent" onchange="handleAssessInput('a-time-spent')">
+        <option value="">Select...</option>
+        <option value="zero">Zero &ndash; I don't set aside time for learning</option>
+        <option value="under-1">Under 1 hour</option>
+        <option value="1-3">1&ndash;3 hours</option>
+        <option value="3-7">3&ndash;7 hours</option>
+        <option value="over-7">Over 7 hours</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-time-spent" onchange="handleSkip('a-time-spent')"><label for="skip-time-spent">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Depth & Mastery</h4>
+<h4>Depth &amp; Mastery</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-feedback">
-    <label for="a-feedback">I know whether I regularly seek feedback on my learning or practise.<br><span class="assess-hint">This could be a teacher, mentor, test scores, recording yourself, or any way of checking whether you actually understand.</span></label>
+<div class="assess-input-group" id="ig-feedback">
+    <span class="assess-label">How regularly do you seek feedback on your learning or practice?</span>
+    <span class="assess-hint">A teacher, mentor, test scores, recording yourself, or any way of checking understanding.</span>
+    <select id="a-feedback" onchange="handleAssessInput('a-feedback')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I don't get feedback on my learning</option>
+        <option value="rarely">Rarely &ndash; only when feedback is forced on me</option>
+        <option value="sometimes">Sometimes &ndash; I seek it out occasionally</option>
+        <option value="regularly">Regularly &ndash; I have a consistent feedback source</option>
+        <option value="systematically">Systematically &ndash; feedback is built into my learning process</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-feedback" onchange="handleSkip('a-feedback')"><label for="skip-feedback">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-connections">
-    <label for="a-connections">I have a sense of whether I connect new information to what I already know, or tend to treat new topics as isolated.<br><span class="assess-hint">When you learn something, do you naturally think about how it relates to other things you know?</span></label>
+<div class="assess-input-group" id="ig-connections">
+    <span class="assess-label">Do you connect new information to what you already know?</span>
+    <span class="assess-hint">When you learn something, do you naturally think about how it relates to other things you know?</span>
+    <select id="a-connections" onchange="handleAssessInput('a-connections')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; I treat new topics as isolated</option>
+        <option value="sometimes">Sometimes &ndash; I notice obvious connections</option>
+        <option value="often">Often &ndash; I regularly link new knowledge to existing understanding</option>
+        <option value="actively">Actively &ndash; I deliberately look for connections and analogies</option>
+        <option value="systematically">Systematically &ndash; I have a process for integrating new knowledge</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-connections" onchange="handleSkip('a-connections')"><label for="skip-connections">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-weakness">
-    <label for="a-weakness">I can identify at least one skill area where I actively work on specific weaknesses rather than just general practice.<br><span class="assess-hint">Deliberate practice means targeting what you find difficult, not repeating what you're already comfortable with.</span></label>
+<div class="assess-input-group" id="ig-weakness">
+    <span class="assess-label">Do you actively work on specific weaknesses in any skill area?</span>
+    <span class="assess-hint">Deliberate practice means targeting what you find difficult, not repeating what you're comfortable with.</span>
+    <select id="a-weakness" onchange="handleAssessInput('a-weakness')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I practise what I'm already comfortable with</option>
+        <option value="aware">Aware &ndash; I know my weaknesses but don't target them</option>
+        <option value="sometimes">Sometimes &ndash; I occasionally focus on weak areas</option>
+        <option value="regularly">Regularly &ndash; I make a point of practising difficult things</option>
+        <option value="systematically">Systematically &ndash; I identify and target weaknesses as a core part of practice</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-weakness" onchange="handleSkip('a-weakness')"><label for="skip-weakness">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Enjoyment & Motivation</h4>
+<h4>Enjoyment &amp; Motivation</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-enjoy-learning">
-    <label for="a-enjoy-learning">I've thought about which types of learning I find energising and which I find draining.<br><span class="assess-hint">Reading vs doing, solo vs group, structured vs exploratory, short bursts vs long sessions.</span></label>
+<div class="assess-input-group" id="ig-enjoy-learning">
+    <span class="assess-label">Which types of learning do you find energising versus draining?</span>
+    <span class="assess-hint">Reading vs doing, solo vs group, structured vs exploratory, short bursts vs long sessions.</span>
+    <select id="a-enjoy-learning" onchange="handleAssessInput('a-enjoy-learning')">
+        <option value="">Select...</option>
+        <option value="draining">Most learning feels draining</option>
+        <option value="mixed">Mixed &ndash; I haven't identified clear preferences</option>
+        <option value="some-preferences">Some preferences &ndash; I know a few things I enjoy</option>
+        <option value="clear-preferences">Clear preferences &ndash; I know what works for me and seek it out</option>
+        <option value="optimised">Optimised &ndash; I've structured my learning around what energises me</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-enjoy-learning" onchange="handleSkip('a-enjoy-learning')"><label for="skip-enjoy-learning">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-consistency">
-    <label for="a-consistency">I know whether I can sustain a learning routine for more than a few weeks.<br><span class="assess-hint">Think about past attempts to learn something. Did you keep going, or did motivation fade?</span></label>
+<div class="assess-input-group" id="ig-consistency">
+    <span class="assess-label">Can you sustain a learning routine for more than a few weeks?</span>
+    <span class="assess-hint">Think about past attempts to learn something. Did you keep going, or did motivation fade?</span>
+    <select id="a-consistency" onchange="handleAssessInput('a-consistency')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I always lose motivation quickly</option>
+        <option value="rarely">Rarely &ndash; I've sustained it once or twice</option>
+        <option value="sometimes">Sometimes &ndash; it depends on the subject</option>
+        <option value="usually">Usually &ndash; I can maintain routines for months</option>
+        <option value="always">Always &ndash; I have long-running learning habits</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-consistency" onchange="handleSkip('a-consistency')"><label for="skip-consistency">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-curiosity">
-    <label for="a-curiosity">I can name at least one topic I've explored recently out of pure curiosity rather than necessity.<br><span class="assess-hint">Something you learned because you wanted to, not because you had to for work or school.</span></label>
+<div class="assess-input-group" id="ig-curiosity">
+    <span class="assess-label">When did you last explore a topic out of pure curiosity?</span>
+    <span class="assess-hint">Something you learned because you wanted to, not because you had to.</span>
+    <select id="a-curiosity" onchange="handleAssessInput('a-curiosity')">
+        <option value="">Select...</option>
+        <option value="cant-recall">Can't recall &ndash; it's been a very long time</option>
+        <option value="months-ago">Months ago</option>
+        <option value="weeks-ago">Weeks ago</option>
+        <option value="this-week">This week</option>
+        <option value="today">Today or yesterday &ndash; I explore new topics constantly</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-curiosity" onchange="handleSkip('a-curiosity')"><label for="skip-curiosity">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +560,8 @@ life_area_slug: learning-methods
         'a-feedback', 'a-connections', 'a-weakness',
         'a-enjoy-learning', 'a-consistency', 'a-curiosity'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -460,7 +611,6 @@ life_area_slug: learning-methods
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -486,6 +636,7 @@ life_area_slug: learning-methods
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +649,121 @@ life_area_slug: learning-methods
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
 
-        // Save checklist state
-        var checklist = {};
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = {
+            efficiency: null,
+            depth: null,
+            enjoyment: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

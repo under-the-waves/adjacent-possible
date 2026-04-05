@@ -133,35 +133,69 @@ life_area_slug: goals
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,151 @@ life_area_slug: goals
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Follow-through</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-current-goals">
-    <label for="a-current-goals">I can list the goals I am currently working towards.<br><span class="assess-hint">Not aspirations or wishes &ndash; specific things you are actively pursuing right now.</span></label>
+<div class="assess-input-group" id="ig-current-goals">
+    <span class="assess-label">How many goals are you currently working towards?</span>
+    <span class="assess-hint">Specific things you are actively pursuing right now &ndash; not aspirations or wishes.</span>
+    <select id="a-current-goals" onchange="handleAssessInput('a-current-goals')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I don't have any defined goals right now</option>
+        <option value="vague">Vague &ndash; I have a general sense of direction but nothing specific</option>
+        <option value="one-two">One or two &ndash; a couple of goals I'm focused on</option>
+        <option value="several">Several &ndash; 3 &ndash; 5 goals across different areas</option>
+        <option value="many">Many &ndash; 6+ goals I'm actively pursuing</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-current-goals" onchange="handleSkip('a-current-goals')"><label for="skip-current-goals">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-completion-rate">
-    <label for="a-completion-rate">I have a rough sense of how many goals I've set in the past year and how many I actually completed.<br><span class="assess-hint">Even a rough estimate is useful &ndash; "most," "about half," or "almost none" all count.</span></label>
+<div class="assess-input-group" id="ig-completion-rate">
+    <span class="assess-label">Of the goals you set in the past year, how many did you actually complete?</span>
+    <span class="assess-hint">Even a rough estimate is useful &ndash; 'most,' 'about half,' or 'almost none' all count.</span>
+    <select id="a-completion-rate" onchange="handleAssessInput('a-completion-rate')">
+        <option value="">Select...</option>
+        <option value="almost-none">Almost none &ndash; I rarely finish what I start</option>
+        <option value="few">A few &ndash; maybe one or two out of several</option>
+        <option value="about-half">About half &ndash; a mixed record</option>
+        <option value="most">Most &ndash; I complete the majority of goals I set</option>
+        <option value="nearly-all">Nearly all &ndash; I consistently follow through</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-completion-rate" onchange="handleSkip('a-completion-rate')"><label for="skip-completion-rate">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tracking">
-    <label for="a-tracking">I know whether I currently track progress on my goals in any systematic way.<br><span class="assess-hint">A spreadsheet, journal, app, or regular review &ndash; or nothing at all.</span></label>
+<div class="assess-input-group" id="ig-tracking">
+    <span class="assess-label">Do you track progress on your goals in any systematic way?</span>
+    <span class="assess-hint">A spreadsheet, journal, app, or regular review &ndash; or nothing at all.</span>
+    <select id="a-tracking" onchange="handleAssessInput('a-tracking')">
+        <option value="">Select...</option>
+        <option value="no-tracking">No &ndash; I don't track progress at all</option>
+        <option value="mental">Mental only &ndash; I keep a rough sense in my head</option>
+        <option value="occasional">Occasional &ndash; I check in now and then but not regularly</option>
+        <option value="regular">Regular &ndash; I review progress weekly or monthly</option>
+        <option value="systematic">Systematic &ndash; detailed tracking with regular reviews</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-tracking" onchange="handleSkip('a-tracking')"><label for="skip-tracking">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Clarity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-written">
-    <label for="a-written">I know whether my goals are written down anywhere.<br><span class="assess-hint">Written goals are 42% more likely to be achieved than unwritten ones.</span></label>
+<div class="assess-input-group" id="ig-written">
+    <span class="assess-label">Are your goals written down anywhere?</span>
+    <span class="assess-hint">Written goals are 42% more likely to be achieved than unwritten ones.</span>
+    <select id="a-written" onchange="handleAssessInput('a-written')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; they exist only in my head</option>
+        <option value="some">Some &ndash; a few are written but most aren't</option>
+        <option value="scattered">Scattered &ndash; written in various places with no system</option>
+        <option value="mostly">Mostly &ndash; most are written in a central place</option>
+        <option value="all">All &ndash; every goal is written down and accessible</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-written" onchange="handleSkip('a-written')"><label for="skip-written">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-measurable">
-    <label for="a-measurable">I can say, for each of my current goals, exactly what "done" looks like.<br><span class="assess-hint">Could someone else look at the goal and tell you whether you've achieved it?</span></label>
+<div class="assess-input-group" id="ig-measurable">
+    <span class="assess-label">For each of your current goals, do you know exactly what 'done' looks like?</span>
+    <span class="assess-hint">Could someone else look at the goal and tell you whether you've achieved it?</span>
+    <select id="a-measurable" onchange="handleAssessInput('a-measurable')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; my goals are vague intentions</option>
+        <option value="few">For a few &ndash; one or two have clear endpoints</option>
+        <option value="some">For some &ndash; roughly half have clear success criteria</option>
+        <option value="most">For most &ndash; the majority have measurable outcomes</option>
+        <option value="all">For all &ndash; every goal has a specific, measurable definition of done</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-measurable" onchange="handleSkip('a-measurable')"><label for="skip-measurable">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-deadlines">
-    <label for="a-deadlines">I know whether my goals have deadlines attached.<br><span class="assess-hint">A specific date, not "someday" or "when I get round to it."</span></label>
+<div class="assess-input-group" id="ig-deadlines">
+    <span class="assess-label">Do your goals have deadlines attached?</span>
+    <span class="assess-hint">A specific date, not 'someday' or 'when I get round to it.'</span>
+    <select id="a-deadlines" onchange="handleAssessInput('a-deadlines')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; no deadlines on any goals</option>
+        <option value="few">A few &ndash; one or two have dates</option>
+        <option value="some">Some &ndash; roughly half have deadlines</option>
+        <option value="most">Most &ndash; the majority have target dates</option>
+        <option value="all">All &ndash; every goal has a specific deadline</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-deadlines" onchange="handleSkip('a-deadlines')"><label for="skip-deadlines">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Adaptability</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-abandoned">
-    <label for="a-abandoned">I've thought about goals I've abandoned in the past and whether I made a deliberate decision to stop or just drifted away.<br><span class="assess-hint">There is an important difference between strategic retreat and quiet abandonment.</span></label>
+<div class="assess-input-group" id="ig-abandoned">
+    <span class="assess-label">When you've stopped pursuing a goal in the past, was it a deliberate decision or did you just drift away?</span>
+    <span class="assess-hint">There is an important difference between strategic retreat and quiet abandonment.</span>
+    <select id="a-abandoned" onchange="handleAssessInput('a-abandoned')">
+        <option value="">Select...</option>
+        <option value="always-drift">Always drift &ndash; goals just fade without a conscious decision</option>
+        <option value="mostly-drift">Mostly drift &ndash; occasionally deliberate but usually not</option>
+        <option value="mixed">Mixed &ndash; about half deliberate, half drift</option>
+        <option value="mostly-deliberate">Mostly deliberate &ndash; I usually make a conscious choice to stop</option>
+        <option value="always-deliberate">Always deliberate &ndash; I formally retire goals I no longer pursue</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-abandoned" onchange="handleSkip('a-abandoned')"><label for="skip-abandoned">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-review">
-    <label for="a-review">I know whether I have any regular process for reviewing and adjusting my goals.<br><span class="assess-hint">Weekly, monthly, quarterly &ndash; or never.</span></label>
+<div class="assess-input-group" id="ig-review">
+    <span class="assess-label">Do you have any regular process for reviewing and adjusting your goals?</span>
+    <span class="assess-hint">Weekly, monthly, quarterly &ndash; or never.</span>
+    <select id="a-review" onchange="handleAssessInput('a-review')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I set goals and don't revisit them</option>
+        <option value="rarely">Rarely &ndash; only when something forces me to</option>
+        <option value="quarterly">Quarterly &ndash; a few times a year</option>
+        <option value="monthly">Monthly &ndash; regular monthly review</option>
+        <option value="weekly">Weekly &ndash; goals are reviewed every week</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-review" onchange="handleSkip('a-review')"><label for="skip-review">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sunk-cost">
-    <label for="a-sunk-cost">I've considered whether I tend to persist with goals that are no longer worth pursuing because of time already invested.<br><span class="assess-hint">Sunk-cost bias is one of the most common obstacles to intelligent goal management.</span></label>
+<div class="assess-input-group" id="ig-sunk-cost">
+    <span class="assess-label">Do you tend to persist with goals that are no longer worth pursuing because of time already invested?</span>
+    <span class="assess-hint">Sunk-cost bias is one of the most common obstacles to intelligent goal management.</span>
+    <select id="a-sunk-cost" onchange="handleAssessInput('a-sunk-cost')">
+        <option value="">Select...</option>
+        <option value="strongly">Strongly &ndash; I find it very hard to abandon goals I've invested in</option>
+        <option value="somewhat">Somewhat &ndash; I notice this tendency in myself</option>
+        <option value="occasionally">Occasionally &ndash; it happens but I can usually recognise it</option>
+        <option value="rarely">Rarely &ndash; I'm generally good at cutting losses</option>
+        <option value="never">Never &ndash; I evaluate goals purely on future value</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-sunk-cost" onchange="handleSkip('a-sunk-cost')"><label for="skip-sunk-cost">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +530,9 @@ life_area_slug: goals
         'a-written', 'a-measurable', 'a-deadlines',
         'a-abandoned', 'a-review', 'a-sunk-cost'
     ];
+
+    // All goals items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,6 +608,7 @@ life_area_slug: goals
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +621,119 @@ life_area_slug: goals
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = { follow_through: null, clarity: null, adaptability: null };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

@@ -133,35 +133,69 @@ life_area_slug: organisation
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,151 @@ life_area_slug: organisation
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Tracking</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-capture-system">
-    <label for="a-capture-system">I know whether I have a single, trusted place where I capture all incoming tasks and commitments.<br><span class="assess-hint">This could be an app, a notebook, a whiteboard &ndash; anything you consistently use to record what needs doing.</span></label>
+<div class="assess-input-group" id="ig-capture-system">
+    <span class="assess-label">Do you have a single, trusted place where you capture all incoming tasks and commitments?</span>
+    <span class="assess-hint">This could be an app, a notebook, a whiteboard &ndash; anything you consistently use to record what needs doing.</span>
+    <select id="a-capture-system" onchange="handleAssessInput('a-capture-system')">
+        <option value="">Select...</option>
+        <option value="none">No &ndash; I rely on memory</option>
+        <option value="scattered">Scattered &ndash; I capture things in multiple places with no consistency</option>
+        <option value="partial">Partial &ndash; I have a main place but often forget to use it</option>
+        <option value="consistent">Consistent &ndash; one trusted place I use most of the time</option>
+        <option value="comprehensive">Comprehensive &ndash; everything goes into one system reliably</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-capture-system" onchange="handleSkip('a-capture-system')"><label for="skip-capture-system">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-review-frequency">
-    <label for="a-review-frequency">I know how often I review my outstanding tasks and commitments.<br><span class="assess-hint">Daily? Weekly? Never? Think about whether you have a regular review habit or rely on memory.</span></label>
+<div class="assess-input-group" id="ig-review-frequency">
+    <span class="assess-label">How often do you review your outstanding tasks and commitments?</span>
+    <span class="assess-hint">Think about whether you have a regular review habit or rely on memory.</span>
+    <select id="a-review-frequency" onchange="handleAssessInput('a-review-frequency')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I rely on memory or react as things come up</option>
+        <option value="rarely">Rarely &ndash; only when I feel overwhelmed</option>
+        <option value="monthly">Monthly &ndash; rough check-in once a month or so</option>
+        <option value="weekly">Weekly &ndash; regular weekly review</option>
+        <option value="daily">Daily &ndash; I review my commitments every day</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-review-frequency" onchange="handleSkip('a-review-frequency')"><label for="skip-review-frequency">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-missed-commitments">
-    <label for="a-missed-commitments">I can estimate how many commitments I dropped or forgot in the past month.<br><span class="assess-hint">Missed appointments, forgotten promises, overdue tasks, unanswered messages you meant to reply to.</span></label>
+<div class="assess-input-group" id="ig-missed-commitments">
+    <span class="assess-label">How many commitments did you drop or forget in the past month?</span>
+    <span class="assess-hint">Missed appointments, forgotten promises, overdue tasks, unanswered messages you meant to reply to.</span>
+    <select id="a-missed-commitments" onchange="handleAssessInput('a-missed-commitments')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; I regularly forget things or miss deadlines</option>
+        <option value="several">Several &ndash; a few significant ones I can recall</option>
+        <option value="occasional">Occasional &ndash; one or two minor things</option>
+        <option value="rare">Rare &ndash; almost nothing slipped through</option>
+        <option value="none">None &ndash; I kept every commitment</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-missed-commitments" onchange="handleSkip('a-missed-commitments')"><label for="skip-missed-commitments">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Order</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-physical-spaces">
-    <label for="a-physical-spaces">I know whether my main physical spaces (desk, kitchen, bedroom) have a designated place for every item.<br><span class="assess-hint">Could you tell someone exactly where everything belongs? Or do things accumulate on surfaces?</span></label>
+<div class="assess-input-group" id="ig-physical-spaces">
+    <span class="assess-label">Do your main physical spaces (desk, kitchen, bedroom) have a designated place for every item?</span>
+    <span class="assess-hint">Could you tell someone exactly where everything belongs? Or do things accumulate on surfaces?</span>
+    <select id="a-physical-spaces" onchange="handleAssessInput('a-physical-spaces')">
+        <option value="">Select...</option>
+        <option value="chaotic">Chaotic &ndash; things end up wherever they land</option>
+        <option value="mostly-messy">Mostly messy &ndash; a few things have homes but most don't</option>
+        <option value="mixed">Mixed &ndash; some spaces are organised, others aren't</option>
+        <option value="mostly-ordered">Mostly ordered &ndash; most items have a place and I use it</option>
+        <option value="fully-ordered">Fully ordered &ndash; everything has a home and I maintain it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-physical-spaces" onchange="handleSkip('a-physical-spaces')"><label for="skip-physical-spaces">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-digital-files">
-    <label for="a-digital-files">I know whether I can find any digital file I need within 60 seconds.<br><span class="assess-hint">Think about documents, photos, receipts, passwords. Do you have a filing system or do you rely on search?</span></label>
+<div class="assess-input-group" id="ig-digital-files">
+    <span class="assess-label">Can you find any digital file you need within 60 seconds?</span>
+    <span class="assess-hint">Think about documents, photos, receipts, passwords. Do you have a filing system or do you rely on search?</span>
+    <select id="a-digital-files" onchange="handleAssessInput('a-digital-files')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I often can't find what I need</option>
+        <option value="sometimes">Sometimes &ndash; depends on the file type</option>
+        <option value="search-dependent">Search-dependent &ndash; I can usually find things but only via search</option>
+        <option value="mostly">Mostly &ndash; I have a system that works for most things</option>
+        <option value="always">Always &ndash; structured filing system with fast, reliable retrieval</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-digital-files" onchange="handleSkip('a-digital-files')"><label for="skip-digital-files">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-clutter">
-    <label for="a-clutter">I know whether I feel overwhelmed by clutter in my home or workspace.<br><span class="assess-hint">54% of people report feeling overwhelmed by clutter. Be honest about whether this applies to you.</span></label>
+<div class="assess-input-group" id="ig-clutter">
+    <span class="assess-label">How overwhelmed do you feel by clutter in your home or workspace?</span>
+    <span class="assess-hint">54% of people report feeling overwhelmed by clutter. Be honest about whether this applies to you.</span>
+    <select id="a-clutter" onchange="handleAssessInput('a-clutter')">
+        <option value="">Select...</option>
+        <option value="very">Very overwhelmed &ndash; clutter is a constant source of stress</option>
+        <option value="somewhat">Somewhat overwhelmed &ndash; it bothers me but I can function</option>
+        <option value="neutral">Neutral &ndash; I notice it occasionally but it doesn't bother me much</option>
+        <option value="low">Low &ndash; my spaces are reasonably tidy</option>
+        <option value="none">Not at all &ndash; my spaces are consistently clear and organised</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-clutter" onchange="handleSkip('a-clutter')"><label for="skip-clutter">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Speed</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-search-time">
-    <label for="a-search-time">I have a rough sense of how much time I spend each day searching for things I've misplaced.<br><span class="assess-hint">Keys, wallet, phone, documents, tools. The average is about 8.5 minutes per day.</span></label>
+<div class="assess-input-group" id="ig-search-time">
+    <span class="assess-label">How much time do you spend each day searching for things you've misplaced?</span>
+    <span class="assess-hint">Keys, wallet, phone, documents, tools. The average is about 8.5 minutes per day.</span>
+    <select id="a-search-time" onchange="handleAssessInput('a-search-time')">
+        <option value="">Select...</option>
+        <option value="a-lot">A lot &ndash; 15+ minutes daily</option>
+        <option value="above-average">Above average &ndash; around 10 &ndash; 15 minutes</option>
+        <option value="average">Average &ndash; roughly 5 &ndash; 10 minutes</option>
+        <option value="below-average">Below average &ndash; a few minutes at most</option>
+        <option value="almost-none">Almost none &ndash; I rarely misplace things</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-search-time" onchange="handleSkip('a-search-time')"><label for="skip-search-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-inbox-processing">
-    <label for="a-inbox-processing">I know how quickly I typically process new tasks and messages that come in.<br><span class="assess-hint">Same day? Same week? Do some sit unprocessed for weeks? Think about email, post, and verbal requests.</span></label>
+<div class="assess-input-group" id="ig-inbox-processing">
+    <span class="assess-label">How quickly do you typically process new tasks and messages that come in?</span>
+    <span class="assess-hint">Same day? Same week? Do some sit unprocessed for weeks? Think about email, post, and verbal requests.</span>
+    <select id="a-inbox-processing" onchange="handleAssessInput('a-inbox-processing')">
+        <option value="">Select...</option>
+        <option value="weeks">Weeks &ndash; things often sit unprocessed for a long time</option>
+        <option value="several-days">Several days &ndash; I get to most things within a week</option>
+        <option value="next-day">Next day &ndash; usually processed within 24 &ndash; 48 hours</option>
+        <option value="same-day">Same day &ndash; I process most things the day they arrive</option>
+        <option value="immediately">Immediately &ndash; I have a system that processes inputs as they arrive</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-inbox-processing" onchange="handleSkip('a-inbox-processing')"><label for="skip-inbox-processing">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-system-count">
-    <label for="a-system-count">I can list the tools and systems I currently use to stay organised.<br><span class="assess-hint">Apps, notebooks, calendars, reminders, filing systems. Count them &ndash; is it 1 &ndash; 2 core tools, or a scattered collection?</span></label>
+<div class="assess-input-group" id="ig-system-count">
+    <span class="assess-label">How many tools and systems do you currently use to stay organised?</span>
+    <span class="assess-hint">Apps, notebooks, calendars, reminders, filing systems. Is it 1 &ndash; 2 core tools, or a scattered collection?</span>
+    <select id="a-system-count" onchange="handleAssessInput('a-system-count')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I don't use any organisational tools</option>
+        <option value="scattered">Scattered &ndash; many tools but no coherent system</option>
+        <option value="several">Several &ndash; 3 &ndash; 5 tools that partially overlap</option>
+        <option value="focused">Focused &ndash; 2 &ndash; 3 tools that work well together</option>
+        <option value="integrated">Integrated &ndash; 1 &ndash; 2 core tools that cover everything I need</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-system-count" onchange="handleSkip('a-system-count')"><label for="skip-system-count">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +530,9 @@ life_area_slug: organisation
         'a-physical-spaces', 'a-digital-files', 'a-clutter',
         'a-search-time', 'a-inbox-processing', 'a-system-count'
     ];
+
+    // All organisation items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,6 +608,7 @@ life_area_slug: organisation
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +621,134 @@ life_area_slug: organisation
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All organisation items are unscored; save null for each value
+        var scores = {
+            tracking: null,
+            order: null,
+            speed: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

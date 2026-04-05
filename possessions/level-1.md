@@ -163,6 +163,70 @@ life_area_slug: possessions
     margin-top: 2px;
 }
 
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.93em;
+    line-height: 1.4;
+    transition: border-color 0.2s;
+}
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.assess-input-group .assess-hint {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
+
 /* Completion */
 .l1-complete {
     text-align: center;
@@ -311,85 +375,197 @@ life_area_slug: possessions
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or check. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Functionality</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-unused-items">
-    <label for="a-unused-items">I can identify which possessions I use regularly and which I have not used in over a year.<br><span class="assess-hint">Think room by room – kitchen gadgets, wardrobe, garage, storage areas.</span></label>
+<div class="assess-input-group" id="ig-unused-items">
+    <span class="assess-label">What proportion of your possessions have you used in the past year?</span>
+    <span class="assess-hint">Think room by room &ndash; kitchen gadgets, wardrobe, garage, storage areas.</span>
+    <select id="a-unused-items" onchange="handleAssessInput('a-unused-items')">
+        <option value="">Select...</option>
+        <option value="minority">A minority &ndash; most things sit unused</option>
+        <option value="about-half">About half</option>
+        <option value="most">Most &ndash; I use the majority of what I own</option>
+        <option value="nearly-all">Nearly all &ndash; very little goes unused</option>
+        <option value="everything">Everything &ndash; if I don't use it, I get rid of it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-unused-items" onchange="handleSkip('a-unused-items')"><label for="skip-unused-items">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-broken-items">
-    <label for="a-broken-items">I know whether I have broken or malfunctioning items that I work around rather than repair or replace.<br><span class="assess-hint">A drawer that sticks, a tool with a loose handle, a device with a cracked screen.</span></label>
+<div class="assess-input-group" id="ig-broken-items">
+    <span class="assess-label">How many broken or malfunctioning items do you work around?</span>
+    <span class="assess-hint">A drawer that sticks, a tool with a loose handle, a device with a cracked screen.</span>
+    <select id="a-broken-items" onchange="handleAssessInput('a-broken-items')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; five or more</option>
+        <option value="several">Several &ndash; three or four</option>
+        <option value="a-couple">A couple &ndash; one or two</option>
+        <option value="none">None &ndash; everything works properly</option>
+        <option value="proactive">Proactive &ndash; I fix or replace things as soon as they break</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-broken-items" onchange="handleSkip('a-broken-items')"><label for="skip-broken-items">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-finding-things">
-    <label for="a-finding-things">I know how long it typically takes me to find things when I need them.<br><span class="assess-hint">Do you know where your passport is? Your spare keys? A specific tool?</span></label>
+<div class="assess-input-group" id="ig-finding-things">
+    <span class="assess-label">How long does it typically take you to find things when you need them?</span>
+    <span class="assess-hint">Passport, spare keys, a specific tool &ndash; do you know where they are?</span>
+    <select id="a-finding-things" onchange="handleAssessInput('a-finding-things')">
+        <option value="">Select...</option>
+        <option value="long-search">Long search &ndash; I often can't find what I need</option>
+        <option value="several-minutes">Several minutes &ndash; I usually find things but it takes effort</option>
+        <option value="a-minute">About a minute &ndash; I have a rough idea where things are</option>
+        <option value="quickly">Quickly &ndash; most things are in their designated place</option>
+        <option value="instantly">Instantly &ndash; everything has a place and I know where it is</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-finding-things" onchange="handleSkip('a-finding-things')"><label for="skip-finding-things">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Simplicity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-volume">
-    <label for="a-volume">I have a rough sense of how many possessions I own in key categories (clothes, books, kitchen items, electronics).<br><span class="assess-hint">Even a rough estimate is useful – "about 40 tops" or "three drawers of cables."</span></label>
+<div class="assess-input-group" id="ig-volume">
+    <span class="assess-label">How aware are you of how many possessions you own in key categories?</span>
+    <span class="assess-hint">Clothes, books, kitchen items, electronics &ndash; even a rough estimate.</span>
+    <select id="a-volume" onchange="handleAssessInput('a-volume')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea &ndash; I couldn't begin to estimate</option>
+        <option value="vague">Vague &ndash; I have a rough sense for one or two categories</option>
+        <option value="approximate">Approximate &ndash; I could estimate most categories</option>
+        <option value="good-sense">Good sense &ndash; I know roughly what I own</option>
+        <option value="precise">Precise &ndash; I've inventoried my possessions</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-volume" onchange="handleSkip('a-volume')"><label for="skip-volume">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-acquisition">
-    <label for="a-acquisition">I understand my acquisition patterns – what I tend to buy, how often, and what triggers purchases.<br><span class="assess-hint">Impulse buys, sale items, duplicates of things you already own, online shopping habits.</span></label>
+<div class="assess-input-group" id="ig-acquisition">
+    <span class="assess-label">How well do you understand your acquisition patterns?</span>
+    <span class="assess-hint">What you tend to buy, how often, and what triggers purchases.</span>
+    <select id="a-acquisition" onchange="handleAssessInput('a-acquisition')">
+        <option value="">Select...</option>
+        <option value="unaware">Unaware &ndash; I buy without thinking about patterns</option>
+        <option value="some-awareness">Some awareness &ndash; I know I buy too much of certain things</option>
+        <option value="aware">Aware &ndash; I understand my triggers and tendencies</option>
+        <option value="controlled">Controlled &ndash; I've changed my habits based on this awareness</option>
+        <option value="intentional">Intentional &ndash; every purchase is deliberate and considered</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-acquisition" onchange="handleSkip('a-acquisition')"><label for="skip-acquisition">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-declutter">
-    <label for="a-declutter">I know when I last did a significant declutter, if ever.<br><span class="assess-hint">A whole room or category, not just tidying a single drawer.</span></label>
+<div class="assess-input-group" id="ig-declutter">
+    <span class="assess-label">When did you last do a significant declutter?</span>
+    <span class="assess-hint">A whole room or category, not just tidying a single drawer.</span>
+    <select id="a-declutter" onchange="handleAssessInput('a-declutter')">
+        <option value="">Select...</option>
+        <option value="never">Never</option>
+        <option value="years-ago">Years ago</option>
+        <option value="within-a-year">Within the past year</option>
+        <option value="within-months">Within the past few months</option>
+        <option value="regular">Regular &ndash; I declutter on a schedule</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-declutter" onchange="handleSkip('a-declutter')"><label for="skip-declutter">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Quality</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-lifetime-cost">
-    <label for="a-lifetime-cost">I can identify purchases where buying cheap has cost me more in the long run through replacements or repairs.<br><span class="assess-hint">Shoes that wore out in months, a cheap drill that broke, furniture that fell apart.</span></label>
+<div class="assess-input-group" id="ig-lifetime-cost">
+    <span class="assess-label">How often have you found that buying cheap cost more in the long run?</span>
+    <span class="assess-hint">Shoes that wore out in months, a cheap drill that broke, furniture that fell apart.</span>
+    <select id="a-lifetime-cost" onchange="handleAssessInput('a-lifetime-cost')">
+        <option value="">Select...</option>
+        <option value="frequently">Frequently &ndash; I keep replacing cheap items</option>
+        <option value="several-times">Several times &ndash; I can think of clear examples</option>
+        <option value="once-or-twice">Once or twice &ndash; I've mostly learned this lesson</option>
+        <option value="rarely">Rarely &ndash; I usually buy at a quality level that lasts</option>
+        <option value="never">Never &ndash; I research and invest in quality from the start</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-lifetime-cost" onchange="handleSkip('a-lifetime-cost')"><label for="skip-lifetime-cost">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-maintenance">
-    <label for="a-maintenance">I know which of my possessions need regular maintenance and whether I'm keeping up with it.<br><span class="assess-hint">Sharpening knives, oiling tools, conditioning leather, servicing appliances.</span></label>
+<div class="assess-input-group" id="ig-maintenance">
+    <span class="assess-label">Do you keep up with maintaining the possessions that need it?</span>
+    <span class="assess-hint">Sharpening knives, oiling tools, conditioning leather, servicing appliances.</span>
+    <select id="a-maintenance" onchange="handleAssessInput('a-maintenance')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I don't maintain anything</option>
+        <option value="rarely">Rarely &ndash; only when something stops working</option>
+        <option value="sometimes">Sometimes &ndash; I maintain some things but not consistently</option>
+        <option value="mostly">Mostly &ndash; I keep up with most maintenance</option>
+        <option value="always">Always &ndash; I have a maintenance routine for everything that needs it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-best-items">
-    <label for="a-best-items">I can identify my best-quality possessions and explain what makes them good.<br><span class="assess-hint">Materials, construction, how long you've had them, how well they still perform.</span></label>
+<div class="assess-input-group" id="ig-best-items">
+    <span class="assess-label">Can you identify your best-quality possessions and explain what makes them good?</span>
+    <span class="assess-hint">Materials, construction, how long you've had them, how well they still perform.</span>
+    <select id="a-best-items" onchange="handleAssessInput('a-best-items')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I don't think about quality</option>
+        <option value="vaguely">Vaguely &ndash; I know some things are better but can't say why</option>
+        <option value="a-few">A few &ndash; I can point to two or three well-made items</option>
+        <option value="several">Several &ndash; I deliberately own quality items and know what makes them good</option>
+        <option value="knowledgeable">Knowledgeable &ndash; I can assess quality in most product categories</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-best-items" onchange="handleSkip('a-best-items')"><label for="skip-best-items">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Meaning</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-sentimental">
-    <label for="a-sentimental">I can identify which of my possessions have genuine personal significance versus those acquired without thought.<br><span class="assess-hint">Gifts, heirlooms, travel souvenirs, handmade items, things tied to important memories.</span></label>
+<div class="assess-input-group" id="ig-sentimental">
+    <span class="assess-label">Can you distinguish which possessions have genuine personal significance?</span>
+    <span class="assess-hint">Gifts, heirlooms, travel souvenirs, handmade items, things tied to important memories.</span>
+    <select id="a-sentimental" onchange="handleAssessInput('a-sentimental')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I haven't thought about this</option>
+        <option value="vaguely">Vaguely &ndash; I know a few things matter but haven't reflected on it</option>
+        <option value="somewhat">Somewhat &ndash; I can name my most meaningful items</option>
+        <option value="clearly">Clearly &ndash; I know exactly which items matter and why</option>
+        <option value="curated">Curated &ndash; I've deliberately kept meaningful items and let go of the rest</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-sentimental" onchange="handleSkip('a-sentimental')"><label for="skip-sentimental">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-display">
-    <label for="a-display">I know whether my most meaningful possessions are stored, displayed, or used – and whether I'm satisfied with that.<br><span class="assess-hint">A meaningful photo in a box versus on the wall; an heirloom in storage versus in daily use.</span></label>
+<div class="assess-input-group" id="ig-display">
+    <span class="assess-label">Are your most meaningful possessions stored, displayed, or used?</span>
+    <span class="assess-hint">A meaningful photo in a box vs on the wall; an heirloom in storage vs in daily use.</span>
+    <select id="a-display" onchange="handleAssessInput('a-display')">
+        <option value="">Select...</option>
+        <option value="stored">Stored &ndash; mostly packed away or forgotten</option>
+        <option value="some-visible">Some visible &ndash; a few are out but most are in storage</option>
+        <option value="mixed">Mixed &ndash; some displayed, some stored</option>
+        <option value="mostly-visible">Mostly visible &ndash; I can see or use most of them daily</option>
+        <option value="intentional">Intentional &ndash; every meaningful item is displayed or used as I want it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-display" onchange="handleSkip('a-display')"><label for="skip-display">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-identity">
-    <label for="a-identity">I've considered whether my possessions as a whole reflect the person I am or want to be.<br><span class="assess-hint">Do your surroundings feel like yours, or like they belong to a previous version of you?</span></label>
+<div class="assess-input-group" id="ig-identity">
+    <span class="assess-label">Do your possessions as a whole reflect the person you are or want to be?</span>
+    <span class="assess-hint">Do your surroundings feel like yours, or like they belong to a previous version of you?</span>
+    <select id="a-identity" onchange="handleAssessInput('a-identity')">
+        <option value="">Select...</option>
+        <option value="not-at-all">Not at all &ndash; my surroundings feel disconnected from who I am</option>
+        <option value="somewhat-outdated">Somewhat outdated &ndash; they reflect a previous version of me</option>
+        <option value="partly">Partly &ndash; some things fit, others don't</option>
+        <option value="mostly">Mostly &ndash; my possessions generally reflect who I am now</option>
+        <option value="fully">Fully &ndash; my surroundings are a deliberate expression of who I am</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-identity" onchange="handleSkip('a-identity')"><label for="skip-identity">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -437,6 +613,8 @@ life_area_slug: possessions
         'a-lifetime-cost', 'a-maintenance', 'a-best-items',
         'a-sentimental', 'a-display', 'a-identity'
     ];
+
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -512,11 +690,11 @@ life_area_slug: possessions
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
         updateUI();
-
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -524,66 +702,87 @@ life_area_slug: possessions
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
-        el.classList.toggle('checked', cb.checked);
-
-        // Save checklist state
-        var checklist = {};
+    }
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
-
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    }
+    function saveScores() {
+        var scores = {
+            functionality: null,
+            simplicity: null,
+            quality: null,
+            meaning: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
-        updateUI();
-    });
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
+        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+    };
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id]; if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
+            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+            updateInputGroupState(id);
+        });
+        updateAssessRecorded(); updateAssessCompletion();
+    }
+    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
 })();
 </script>

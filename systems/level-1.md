@@ -133,35 +133,69 @@ life_area_slug: systems
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,151 @@ life_area_slug: systems
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Power</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-automation-count">
-    <label for="a-automation-count">I know how many automated workflows I currently have running (if any).<br><span class="assess-hint">Email filters, scheduled backups, smart home routines, IFTTT or Zapier automations, scripts, cron jobs.</span></label>
+<div class="assess-input-group" id="ig-automation-count">
+    <span class="assess-label">How many automated workflows do you currently have running?</span>
+    <span class="assess-hint">Email filters, scheduled backups, smart home routines, IFTTT or Zapier automations, scripts, cron jobs.</span>
+    <select id="a-automation-count" onchange="handleAssessInput('a-automation-count')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I do everything manually</option>
+        <option value="one-two">One or two &ndash; a couple of basic automations</option>
+        <option value="several">Several &ndash; 3 &ndash; 5 automations across different areas</option>
+        <option value="many">Many &ndash; 6 &ndash; 10 automations that handle significant work</option>
+        <option value="comprehensive">Comprehensive &ndash; 10+ automations covering most recurring tasks</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-automation-count" onchange="handleSkip('a-automation-count')"><label for="skip-automation-count">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-manual-recurring">
-    <label for="a-manual-recurring">I can identify at least three recurring tasks I currently do manually that could be automated.<br><span class="assess-hint">Think about what you do every day or week that follows the same steps each time.</span></label>
+<div class="assess-input-group" id="ig-manual-recurring">
+    <span class="assess-label">How many recurring tasks do you currently do manually that could be automated?</span>
+    <span class="assess-hint">Think about what you do every day or week that follows the same steps each time.</span>
+    <select id="a-manual-recurring" onchange="handleAssessInput('a-manual-recurring')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; most of my recurring tasks are manual</option>
+        <option value="several">Several &ndash; I can easily name 5+</option>
+        <option value="a-few">A few &ndash; 2 &ndash; 3 obvious candidates</option>
+        <option value="one-or-two">One or two &ndash; most things are already handled</option>
+        <option value="none">None &ndash; everything automatable is already automated</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-manual-recurring" onchange="handleSkip('a-manual-recurring')"><label for="skip-manual-recurring">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-edge-cases">
-    <label for="a-edge-cases">I know what happens when my current systems encounter an unusual situation or edge case.<br><span class="assess-hint">Do they handle it gracefully, require manual intervention, or just break?</span></label>
+<div class="assess-input-group" id="ig-edge-cases">
+    <span class="assess-label">What happens when your current systems encounter an unusual situation or edge case?</span>
+    <span class="assess-hint">Do they handle it gracefully, require manual intervention, or just break?</span>
+    <select id="a-edge-cases" onchange="handleAssessInput('a-edge-cases')">
+        <option value="">Select...</option>
+        <option value="no-systems">No systems &ndash; I don't have systems to speak of</option>
+        <option value="break">Break &ndash; unusual situations cause failures I have to fix</option>
+        <option value="manual">Manual intervention &ndash; I have to step in and handle it</option>
+        <option value="mostly-graceful">Mostly graceful &ndash; minor issues but nothing critical</option>
+        <option value="robust">Robust &ndash; my systems handle edge cases well</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-edge-cases" onchange="handleSkip('a-edge-cases')"><label for="skip-edge-cases">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Simplicity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-tool-count">
-    <label for="a-tool-count">I can list every tool and app I use for personal organisation and productivity.<br><span class="assess-hint">Count them. Is it a small, deliberate set, or have you accumulated dozens over the years?</span></label>
+<div class="assess-input-group" id="ig-tool-count">
+    <span class="assess-label">How would you describe your set of organisational tools and apps?</span>
+    <span class="assess-hint">Count them. Is it a small, deliberate set, or have you accumulated dozens over the years?</span>
+    <select id="a-tool-count" onchange="handleAssessInput('a-tool-count')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I don't use dedicated tools</option>
+        <option value="accumulated">Accumulated &ndash; many tools gathered over time with lots of overlap</option>
+        <option value="moderate">Moderate &ndash; a reasonable number but not fully deliberate</option>
+        <option value="curated">Curated &ndash; a small, intentional set that works together</option>
+        <option value="minimal">Minimal &ndash; the fewest possible tools, each chosen carefully</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-tool-count" onchange="handleSkip('a-tool-count')"><label for="skip-tool-count">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-explain-system">
-    <label for="a-explain-system">I could explain my organisational system to someone else in under five minutes.<br><span class="assess-hint">If it would take longer, or if you are not sure you could explain it at all, that is useful information.</span></label>
+<div class="assess-input-group" id="ig-explain-system">
+    <span class="assess-label">Could you explain your organisational system to someone else in under five minutes?</span>
+    <span class="assess-hint">If it would take longer, or if you're not sure you could explain it at all, that's useful information.</span>
+    <select id="a-explain-system" onchange="handleAssessInput('a-explain-system')">
+        <option value="">Select...</option>
+        <option value="no-system">No &ndash; I don't really have a system to explain</option>
+        <option value="couldnt">Probably not &ndash; it's too messy or complex to describe quickly</option>
+        <option value="with-effort">With effort &ndash; I could explain it but it would take a while</option>
+        <option value="yes-mostly">Yes, mostly &ndash; the core is simple even if details are complex</option>
+        <option value="easily">Easily &ndash; it's simple enough to explain in a few minutes</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-explain-system" onchange="handleSkip('a-explain-system')"><label for="skip-explain-system">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-abandoned-tools">
-    <label for="a-abandoned-tools">I know how many tools or systems I have tried and abandoned in the past two years.<br><span class="assess-hint">Apps you downloaded and stopped using, notebooks you started and forgot, systems you set up and never maintained.</span></label>
+<div class="assess-input-group" id="ig-abandoned-tools">
+    <span class="assess-label">How many tools or systems have you tried and abandoned in the past two years?</span>
+    <span class="assess-hint">Apps you downloaded and stopped using, notebooks you started and forgot, systems you set up and never maintained.</span>
+    <select id="a-abandoned-tools" onchange="handleAssessInput('a-abandoned-tools')">
+        <option value="">Select...</option>
+        <option value="many">Many &ndash; 6 or more abandoned tools</option>
+        <option value="several">Several &ndash; 4 &ndash; 5 abandoned tools</option>
+        <option value="a-few">A few &ndash; 2 &ndash; 3 abandoned tools</option>
+        <option value="one">One &ndash; mostly stable but one thing didn't work out</option>
+        <option value="none">None &ndash; I've stuck with everything I've adopted</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-abandoned-tools" onchange="handleSkip('a-abandoned-tools')"><label for="skip-abandoned-tools">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Reliability</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-backup-status">
-    <label for="a-backup-status">I know whether my important files and data are backed up, and when the last backup ran.<br><span class="assess-hint">Photos, documents, passwords, financial records. Could you recover if your computer died today?</span></label>
+<div class="assess-input-group" id="ig-backup-status">
+    <span class="assess-label">Are your important files and data backed up, and when did the last backup run?</span>
+    <span class="assess-hint">Photos, documents, passwords, financial records. Could you recover if your computer died today?</span>
+    <select id="a-backup-status" onchange="handleAssessInput('a-backup-status')">
+        <option value="">Select...</option>
+        <option value="no-backups">No backups &ndash; I'd lose important data if my devices failed</option>
+        <option value="partial">Partial &ndash; some things are backed up but significant gaps exist</option>
+        <option value="manual">Manual &ndash; I back up occasionally but not on a schedule</option>
+        <option value="mostly-automated">Mostly automated &ndash; regular backups with a few gaps</option>
+        <option value="fully-automated">Fully automated &ndash; everything important is backed up and I've verified recovery</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-backup-status" onchange="handleSkip('a-backup-status')"><label for="skip-backup-status">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-system-failures">
-    <label for="a-system-failures">I can recall the last time one of my systems failed or required unplanned maintenance.<br><span class="assess-hint">An automation that stopped working, a tool that updated and broke your workflow, data you could not find.</span></label>
+<div class="assess-input-group" id="ig-system-failures">
+    <span class="assess-label">When did one of your systems last fail or require unplanned maintenance?</span>
+    <span class="assess-hint">An automation that stopped working, a tool that updated and broke your workflow, data you couldn't find.</span>
+    <select id="a-system-failures" onchange="handleAssessInput('a-system-failures')">
+        <option value="">Select...</option>
+        <option value="constantly">Constantly &ndash; something breaks every week</option>
+        <option value="recently">Recently &ndash; within the past month</option>
+        <option value="a-while-ago">A while ago &ndash; a few months back</option>
+        <option value="rarely">Rarely &ndash; can't remember the last time</option>
+        <option value="never">Never &ndash; my systems have been rock-solid</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-system-failures" onchange="handleSkip('a-system-failures')"><label for="skip-system-failures">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-single-points">
-    <label for="a-single-points">I know whether any of my systems have single points of failure.<br><span class="assess-hint">If one tool, device, or account were lost, would your whole system collapse?</span></label>
+<div class="assess-input-group" id="ig-single-points">
+    <span class="assess-label">Do any of your systems have single points of failure?</span>
+    <span class="assess-hint">If one tool, device, or account were lost, would your whole system collapse?</span>
+    <select id="a-single-points" onchange="handleAssessInput('a-single-points')">
+        <option value="">Select...</option>
+        <option value="dont-know">I don't know &ndash; I haven't thought about it</option>
+        <option value="yes-many">Yes &ndash; several critical single points of failure</option>
+        <option value="yes-some">Yes &ndash; one or two areas with no redundancy</option>
+        <option value="mostly-covered">Mostly covered &ndash; I've addressed the biggest risks</option>
+        <option value="fully-redundant">Fully redundant &ndash; no single point of failure in any critical system</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-single-points" onchange="handleSkip('a-single-points')"><label for="skip-single-points">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +530,9 @@ life_area_slug: systems
         'a-tool-count', 'a-explain-system', 'a-abandoned-tools',
         'a-backup-status', 'a-system-failures', 'a-single-points'
     ];
+
+    // All systems items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,6 +608,7 @@ life_area_slug: systems
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +621,127 @@ life_area_slug: systems
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        var scores = {
+            power: null,
+            simplicity: null,
+            reliability: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();
