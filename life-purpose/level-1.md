@@ -133,35 +133,69 @@ life_area_slug: life-purpose
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,151 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes of reflection. Tick each one once you've considered it (you don't need to enter the answer here, just confirm you've thought it through).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes of reflection.</p>
 
 <div class="assess-group">
 <h4>Clarity &amp; Direction</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-articulate-purpose">
-    <label for="a-articulate-purpose">I've tried to articulate what I want my life to be about in one or two sentences.<br><span class="assess-hint">This doesn't need to be polished &ndash; even a rough attempt counts.</span></label>
+<div class="assess-input-group" id="ig-articulate-purpose">
+    <span class="assess-label">Could you articulate what you want your life to be about in one or two sentences?</span>
+    <span class="assess-hint">This doesn't need to be polished &ndash; even a rough attempt counts.</span>
+    <select id="a-articulate-purpose" onchange="handleAssessInput('a-articulate-purpose')">
+        <option value="">Select...</option>
+        <option value="no">No &ndash; I have no idea how I'd answer this</option>
+        <option value="fragments">I have fragments but couldn't form a coherent statement</option>
+        <option value="rough">I could give a rough answer but it would feel vague</option>
+        <option value="clear">I have a fairly clear answer I could state confidently</option>
+        <option value="tested">I have a well-tested statement that has guided real decisions</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-articulate-purpose" onchange="handleSkip('a-articulate-purpose')"><label for="skip-articulate-purpose">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-framework">
-    <label for="a-decision-framework">I know whether I have a framework for making major life decisions, or whether I tend to decide based on what feels right in the moment.<br><span class="assess-hint">Think about your last major decision &ndash; moving, changing jobs, starting or ending a relationship. What guided it?</span></label>
+<div class="assess-input-group" id="ig-decision-framework">
+    <span class="assess-label">How do you tend to make major life decisions?</span>
+    <span class="assess-hint">Think about your last major decision &ndash; moving, changing jobs, starting or ending a relationship.</span>
+    <select id="a-decision-framework" onchange="handleAssessInput('a-decision-framework')">
+        <option value="">Select...</option>
+        <option value="default">I mostly go with whatever happens or what others expect</option>
+        <option value="feeling">I decide based on what feels right in the moment</option>
+        <option value="informal">I weigh pros and cons informally but don't have a system</option>
+        <option value="framework">I have a framework I consciously use (values, priorities, criteria)</option>
+        <option value="integrated">I have a well-developed system that connects decisions to my broader purpose</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-decision-framework" onchange="handleSkip('a-decision-framework')"><label for="skip-decision-framework">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-direction-confidence">
-    <label for="a-direction-confidence">I have a sense of how confident I feel about my current life direction &ndash; whether I feel on track, uncertain, or adrift.<br><span class="assess-hint">There's no right answer here. The point is noticing where you stand.</span></label>
+<div class="assess-input-group" id="ig-direction-confidence">
+    <span class="assess-label">How confident do you feel about your current life direction?</span>
+    <span class="assess-hint">There's no right answer here. The point is noticing where you stand.</span>
+    <select id="a-direction-confidence" onchange="handleAssessInput('a-direction-confidence')">
+        <option value="">Select...</option>
+        <option value="adrift">Adrift &ndash; I don't feel like I'm heading anywhere in particular</option>
+        <option value="uncertain">Uncertain &ndash; I have some ideas but they don't feel solid</option>
+        <option value="mixed">Mixed &ndash; some areas feel on track, others don't</option>
+        <option value="mostly-confident">Mostly confident &ndash; I feel broadly on the right path</option>
+        <option value="very-confident">Very confident &ndash; I know where I'm going and why</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-direction-confidence" onchange="handleSkip('a-direction-confidence')"><label for="skip-direction-confidence">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Meaning &amp; Fulfilment</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-fulfilment-sources">
-    <label for="a-fulfilment-sources">I can identify the activities or contexts that give me the deepest sense of fulfilment.<br><span class="assess-hint">These might be professional, personal, creative, or relational. Think about when you feel most alive.</span></label>
+<div class="assess-input-group" id="ig-fulfilment-sources">
+    <span class="assess-label">How well can you identify the activities or contexts that give you the deepest sense of fulfilment?</span>
+    <span class="assess-hint">These might be professional, personal, creative, or relational. Think about when you feel most alive.</span>
+    <select id="a-fulfilment-sources" onchange="handleAssessInput('a-fulfilment-sources')">
+        <option value="">Select...</option>
+        <option value="unclear">I'm not sure what fulfils me</option>
+        <option value="vague">I have a vague sense but couldn't name specifics</option>
+        <option value="some">I can name a few things but I'm not sure they're the deepest ones</option>
+        <option value="clear">I know clearly what fulfils me and I seek it out</option>
+        <option value="organised">I've organised my life around my sources of fulfilment</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-fulfilment-sources" onchange="handleSkip('a-fulfilment-sources')"><label for="skip-fulfilment-sources">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-meaning-vs-external">
-    <label for="a-meaning-vs-external">I've considered whether my current goals feel personally meaningful or mainly driven by external expectations.<br><span class="assess-hint">External expectations include family pressure, social norms, or what seems impressive to others.</span></label>
+<div class="assess-input-group" id="ig-meaning-vs-external">
+    <span class="assess-label">How much of your current motivation comes from your own sense of meaning versus external expectations?</span>
+    <span class="assess-hint">External expectations include family pressure, social norms, or what seems impressive to others.</span>
+    <select id="a-meaning-vs-external" onchange="handleAssessInput('a-meaning-vs-external')">
+        <option value="">Select...</option>
+        <option value="mostly-external">Mostly external &ndash; I'm pursuing what others expect of me</option>
+        <option value="mixed-external">More external than internal &ndash; I haven't separated the two clearly</option>
+        <option value="balanced">Roughly balanced &ndash; some goals are mine, some are inherited</option>
+        <option value="mostly-internal">Mostly internal &ndash; my goals feel personally meaningful</option>
+        <option value="fully-internal">Fully internal &ndash; I've consciously chosen my goals and they feel deeply mine</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-meaning-vs-external" onchange="handleSkip('a-meaning-vs-external')"><label for="skip-meaning-vs-external">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-setback-motivation">
-    <label for="a-setback-motivation">I know how my motivation tends to respond during setbacks or difficult periods.<br><span class="assess-hint">Do you push through, lose interest, pivot, or go numb? All are common patterns worth noticing.</span></label>
+<div class="assess-input-group" id="ig-setback-motivation">
+    <span class="assess-label">How does your motivation respond during setbacks or difficult periods?</span>
+    <span class="assess-hint">Do you push through, lose interest, pivot, or go numb? All are common patterns worth noticing.</span>
+    <select id="a-setback-motivation" onchange="handleAssessInput('a-setback-motivation')">
+        <option value="">Select...</option>
+        <option value="collapse">It collapses &ndash; I lose direction and energy</option>
+        <option value="dips">It dips significantly and takes a long time to recover</option>
+        <option value="wobbles">It wobbles but I eventually get back on track</option>
+        <option value="holds">It mostly holds &ndash; setbacks slow me down but don't derail me</option>
+        <option value="strengthens">It strengthens &ndash; difficulties tend to clarify what matters</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-setback-motivation" onchange="handleSkip('a-setback-motivation')"><label for="skip-setback-motivation">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Integration &amp; Coherence</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-values-alignment">
-    <label for="a-values-alignment">I've assessed whether my daily activities broadly align with what I say matters to me.<br><span class="assess-hint">Compare how you spend a typical week with what you'd list as your top priorities.</span></label>
+<div class="assess-input-group" id="ig-values-alignment">
+    <span class="assess-label">How well do your daily activities align with what you say matters to you?</span>
+    <span class="assess-hint">Compare how you spend a typical week with what you'd list as your top priorities.</span>
+    <select id="a-values-alignment" onchange="handleAssessInput('a-values-alignment')">
+        <option value="">Select...</option>
+        <option value="poor">Poorly &ndash; my time goes to things that don't reflect my priorities</option>
+        <option value="somewhat">Somewhat &ndash; there's overlap but a lot of drift</option>
+        <option value="moderate">Moderately &ndash; my priorities show up in my schedule but not consistently</option>
+        <option value="well">Well &ndash; most of my time reflects what I care about</option>
+        <option value="very-well">Very well &ndash; I've deliberately structured my life around my priorities</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-values-alignment" onchange="handleSkip('a-values-alignment')"><label for="skip-values-alignment">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-domain-conflict">
-    <label for="a-domain-conflict">I know whether different areas of my life (work, relationships, personal projects) feel like they support each other or compete for time and energy.<br><span class="assess-hint">Conflict between domains is extremely common &ndash; the point is noticing the pattern.</span></label>
+<div class="assess-input-group" id="ig-domain-conflict">
+    <span class="assess-label">How well do different areas of your life (work, relationships, personal projects) support each other?</span>
+    <span class="assess-hint">Conflict between domains is extremely common &ndash; the point is noticing the pattern.</span>
+    <select id="a-domain-conflict" onchange="handleAssessInput('a-domain-conflict')">
+        <option value="">Select...</option>
+        <option value="competing">Actively competing &ndash; gains in one area come at the expense of others</option>
+        <option value="tension">Some tension &ndash; I feel pulled in different directions regularly</option>
+        <option value="coexisting">Coexisting &ndash; they don't conflict much but don't reinforce each other either</option>
+        <option value="supportive">Mostly supportive &ndash; progress in one area tends to help others</option>
+        <option value="integrated">Well integrated &ndash; my life areas form a coherent whole</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-domain-conflict" onchange="handleSkip('a-domain-conflict')"><label for="skip-domain-conflict">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose-decisions">
-    <label for="a-purpose-decisions">I can recall whether I've ever made a significant life decision based on purpose or values rather than convenience, money, or default expectations.<br><span class="assess-hint">This could be a career change, a move, ending something comfortable, or starting something risky.</span></label>
+<div class="assess-input-group" id="ig-purpose-decisions">
+    <span class="assess-label">Have you ever made a significant life decision based on purpose or values rather than convenience, money, or default expectations?</span>
+    <span class="assess-hint">This could be a career change, a move, ending something comfortable, or starting something risky.</span>
+    <select id="a-purpose-decisions" onchange="handleAssessInput('a-purpose-decisions')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; my major decisions have been driven by practical considerations</option>
+        <option value="once">Once &ndash; I can think of a single example</option>
+        <option value="occasionally">Occasionally &ndash; a few times in my life</option>
+        <option value="regularly">Regularly &ndash; purpose is a major factor in most big decisions</option>
+        <option value="consistently">Consistently &ndash; purpose is the primary driver of my life direction</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-purpose-decisions" onchange="handleSkip('a-purpose-decisions')"><label for="skip-purpose-decisions">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +530,9 @@ life_area_slug: life-purpose
         'a-fulfilment-sources', 'a-meaning-vs-external', 'a-setback-motivation',
         'a-values-alignment', 'a-domain-conflict', 'a-purpose-decisions'
     ];
+
+    // All life purpose items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -460,7 +582,6 @@ life_area_slug: life-purpose
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -486,6 +607,7 @@ life_area_slug: life-purpose
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +620,132 @@ life_area_slug: life-purpose
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All life purpose items are unscored; save null for each value
+        var scores = {
+            clarity: null,
+            meaning: null,
+            integration: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

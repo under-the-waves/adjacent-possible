@@ -133,35 +133,69 @@ life_area_slug: worldview
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,85 +347,197 @@ life_area_slug: worldview
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think through. Tick each one once you have an honest answer (you don't need to enter the answer here, just confirm you've considered it).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to think through.</p>
 
 <div class="assess-group">
 <h4>Breadth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-domains-map">
-    <label for="a-domains-map">I can list the major domains that shape how the world works and identify which ones I know well versus which ones I'm largely ignorant about.<br><span class="assess-hint">Consider history, economics, psychology, politics, science, technology, philosophy, and culture.</span></label>
+<div class="assess-input-group" id="ig-domains-map">
+    <span class="assess-label">How many of the major domains that shape how the world works could you discuss competently?</span>
+    <span class="assess-hint">Consider history, economics, psychology, politics, science, technology, philosophy, and culture.</span>
+    <select id="a-domains-map" onchange="handleAssessInput('a-domains-map')">
+        <option value="">Select...</option>
+        <option value="one-two">One or two &ndash; I have deep gaps in most areas</option>
+        <option value="few">A few &ndash; I'm comfortable in some but largely ignorant in others</option>
+        <option value="several">Several &ndash; I have working knowledge across most major domains</option>
+        <option value="most">Most &ndash; I could hold a substantive conversation in nearly all of them</option>
+        <option value="integrated">Most, and I actively connect insights across domains</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-domains-map" onchange="handleSkip('a-domains-map')"><label for="skip-domains-map">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cross-domain">
-    <label for="a-cross-domain">I can think of a recent situation where knowledge from one domain helped me understand something in a completely different domain.<br><span class="assess-hint">For example, understanding psychology helped you interpret a political event, or knowledge of history informed a business decision.</span></label>
+<div class="assess-input-group" id="ig-cross-domain">
+    <span class="assess-label">How often does knowledge from one domain help you understand something in a completely different domain?</span>
+    <span class="assess-hint">For example, understanding psychology helped you interpret a political event, or knowledge of history informed a business decision.</span>
+    <select id="a-cross-domain" onchange="handleAssessInput('a-cross-domain')">
+        <option value="">Select...</option>
+        <option value="never">Never &ndash; I can't think of an example</option>
+        <option value="rarely">Rarely &ndash; it's happened once or twice</option>
+        <option value="sometimes">Sometimes &ndash; I notice connections occasionally</option>
+        <option value="often">Often &ndash; I regularly draw on one field to understand another</option>
+        <option value="constantly">Constantly &ndash; cross-domain thinking is how I naturally process information</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-cross-domain" onchange="handleSkip('a-cross-domain')"><label for="skip-cross-domain">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-blind-spots">
-    <label for="a-blind-spots">I have identified at least two major domains where my understanding is superficial enough that I could easily be misled.<br><span class="assess-hint">Be honest &ndash; most people have significant gaps in economics, statistics, or geopolitics even if they follow the news.</span></label>
+<div class="assess-input-group" id="ig-blind-spots">
+    <span class="assess-label">How many major knowledge gaps have you identified in your understanding of the world?</span>
+    <span class="assess-hint">Be honest &ndash; most people have significant gaps in economics, statistics, or geopolitics even if they follow the news.</span>
+    <select id="a-blind-spots" onchange="handleAssessInput('a-blind-spots')">
+        <option value="">Select...</option>
+        <option value="unaware">I haven't really thought about my gaps</option>
+        <option value="vague">I know there are gaps but can't name specific domains</option>
+        <option value="one-two">I can name one or two specific areas where I'm weak</option>
+        <option value="several">I can name several and I know which ones matter most</option>
+        <option value="mapped">I've mapped my gaps systematically and I'm working on the most important ones</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-blind-spots" onchange="handleSkip('a-blind-spots')"><label for="skip-blind-spots">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Depth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-deep-area">
-    <label for="a-deep-area">I can identify at least one area where my knowledge goes beyond surface-level familiarity &ndash; where I understand underlying principles, not just conclusions.<br><span class="assess-hint">Could you explain why something works, not just that it does? Could you teach it to someone else?</span></label>
+<div class="assess-input-group" id="ig-deep-area">
+    <span class="assess-label">In how many areas does your knowledge go beyond surface-level familiarity to understanding underlying principles?</span>
+    <span class="assess-hint">Could you explain why something works, not just that it does? Could you teach it to someone else?</span>
+    <select id="a-deep-area" onchange="handleAssessInput('a-deep-area')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; my knowledge is mostly surface-level</option>
+        <option value="one">One area &ndash; I have genuine depth in a single subject</option>
+        <option value="two-three">Two or three &ndash; I understand principles in a few domains</option>
+        <option value="several">Several &ndash; I have deep knowledge across multiple fields</option>
+        <option value="many">Many &ndash; I could teach several subjects at an advanced level</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-deep-area" onchange="handleSkip('a-deep-area')"><label for="skip-deep-area">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-assumption-check">
-    <label for="a-assumption-check">I have tested whether my understanding in a subject I consider myself knowledgeable about holds up under scrutiny.<br><span class="assess-hint">Have you read a serious book or taken a course in your area of interest, or is your knowledge mostly from articles and conversation?</span></label>
+<div class="assess-input-group" id="ig-assumption-check">
+    <span class="assess-label">How rigorously have you tested your understanding in subjects you consider yourself knowledgeable about?</span>
+    <span class="assess-hint">Have you read serious books or taken courses, or is your knowledge mostly from articles and conversation?</span>
+    <select id="a-assumption-check" onchange="handleAssessInput('a-assumption-check')">
+        <option value="">Select...</option>
+        <option value="untested">Untested &ndash; my knowledge is mostly from casual sources</option>
+        <option value="light">Lightly tested &ndash; I've read a book or two in my main interest areas</option>
+        <option value="moderate">Moderately tested &ndash; I've studied formally or read extensively in some areas</option>
+        <option value="rigorous">Rigorously tested &ndash; I've sought out challenges to my understanding</option>
+        <option value="ongoing">Continuously tested &ndash; I regularly expose my views to informed criticism</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-assumption-check" onchange="handleSkip('a-assumption-check')"><label for="skip-assumption-check">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-nuance">
-    <label for="a-nuance">I can articulate the strongest arguments against my own views on at least one important topic.<br><span class="assess-hint">If you can't steelman the opposition, your understanding may be shallower than it feels.</span></label>
+<div class="assess-input-group" id="ig-nuance">
+    <span class="assess-label">How well can you articulate the strongest arguments against your own views?</span>
+    <span class="assess-hint">If you can't steelman the opposition, your understanding may be shallower than it feels.</span>
+    <select id="a-nuance" onchange="handleAssessInput('a-nuance')">
+        <option value="">Select...</option>
+        <option value="cant">I can't do this for any of my views</option>
+        <option value="weak">I can do it weakly &ndash; I know the other side exists but can't present it fairly</option>
+        <option value="one-topic">I can do it well for one or two topics</option>
+        <option value="several">I can do it for several important topics</option>
+        <option value="habit">It's a habit &ndash; I routinely test my views by arguing the other side</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-nuance" onchange="handleSkip('a-nuance')"><label for="skip-nuance">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Utility</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-decision-quality">
-    <label for="a-decision-quality">I can think of a significant decision I made in the past year where my understanding of how systems work led to a better outcome.<br><span class="assess-hint">A career choice, financial decision, or navigating an institutional process, for instance.</span></label>
+<div class="assess-input-group" id="ig-decision-quality">
+    <span class="assess-label">How often does your understanding of how systems work lead to better real-world decisions?</span>
+    <span class="assess-hint">A career choice, financial decision, or navigating an institutional process, for instance.</span>
+    <select id="a-decision-quality" onchange="handleAssessInput('a-decision-quality')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; I can't point to clear examples</option>
+        <option value="occasionally">Occasionally &ndash; once or twice in the past year</option>
+        <option value="sometimes">Sometimes &ndash; several times a year</option>
+        <option value="often">Often &ndash; my understanding regularly gives me an edge</option>
+        <option value="consistently">Consistently &ndash; systems thinking is central to how I make decisions</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-decision-quality" onchange="handleSkip('a-decision-quality')"><label for="skip-decision-quality">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-manipulation">
-    <label for="a-manipulation">I can identify common manipulation tactics in advertising, politics, or social situations when I encounter them.<br><span class="assess-hint">Think about dark patterns online, rhetorical tricks in news coverage, or high-pressure sales tactics.</span></label>
+<div class="assess-input-group" id="ig-manipulation">
+    <span class="assess-label">How reliably can you identify manipulation tactics in advertising, politics, or social situations?</span>
+    <span class="assess-hint">Think about dark patterns online, rhetorical tricks in news coverage, or high-pressure sales tactics.</span>
+    <select id="a-manipulation" onchange="handleAssessInput('a-manipulation')">
+        <option value="">Select...</option>
+        <option value="poorly">Poorly &ndash; I probably miss most of them</option>
+        <option value="sometimes">Sometimes &ndash; I catch the obvious ones</option>
+        <option value="usually">Usually &ndash; I spot most common tactics</option>
+        <option value="well">Well &ndash; I can name the specific technique being used</option>
+        <option value="very-well">Very well &ndash; I notice subtle manipulation and can explain the mechanism</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-manipulation" onchange="handleSkip('a-manipulation')"><label for="skip-manipulation">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-prediction">
-    <label for="a-prediction">I have a rough sense of how often my predictions about events turn out to be correct.<br><span class="assess-hint">Most people overestimate their predictive accuracy. Have you ever tracked your predictions?</span></label>
+<div class="assess-input-group" id="ig-prediction">
+    <span class="assess-label">How accurate are your predictions about events?</span>
+    <span class="assess-hint">Most people overestimate their predictive accuracy. Have you ever tracked your predictions?</span>
+    <select id="a-prediction" onchange="handleAssessInput('a-prediction')">
+        <option value="">Select...</option>
+        <option value="no-idea">No idea &ndash; I've never tracked or thought about this</option>
+        <option value="poor">Probably poor &ndash; I suspect I'm wrong more than I think</option>
+        <option value="average">Average &ndash; I'm right sometimes but not reliably</option>
+        <option value="above-average">Above average &ndash; I have some evidence my predictions are decent</option>
+        <option value="tracked">I've tracked predictions and my calibration is good</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-prediction" onchange="handleSkip('a-prediction')"><label for="skip-prediction">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Meaning</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-purpose">
-    <label for="a-purpose">I have thought about whether my worldview gives me a sense of purpose and direction, or whether I feel adrift on larger questions.<br><span class="assess-hint">Do you have a framework for deciding what matters, or do you mostly react to whatever feels urgent?</span></label>
+<div class="assess-input-group" id="ig-purpose">
+    <span class="assess-label">Does your worldview give you a sense of purpose and direction?</span>
+    <span class="assess-hint">Do you have a framework for deciding what matters, or do you mostly react to whatever feels urgent?</span>
+    <select id="a-purpose" onchange="handleAssessInput('a-purpose')">
+        <option value="">Select...</option>
+        <option value="adrift">No &ndash; I feel adrift on larger questions</option>
+        <option value="fragmented">Somewhat &ndash; I have fragments but no coherent picture</option>
+        <option value="developing">Developing &ndash; I'm working towards a framework but it's incomplete</option>
+        <option value="solid">Yes &ndash; I have a solid sense of what matters and why</option>
+        <option value="tested">Yes, and it's been tested by difficult circumstances</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-purpose" onchange="handleSkip('a-purpose')"><label for="skip-purpose">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-resilience">
-    <label for="a-resilience">I have a sense of how well my worldview holds up during difficult periods &ndash; whether my beliefs provide stability or crumble under stress.<br><span class="assess-hint">Think about the last time something went seriously wrong. Did your understanding of the world help you cope?</span></label>
+<div class="assess-input-group" id="ig-resilience">
+    <span class="assess-label">How well does your worldview hold up during difficult periods?</span>
+    <span class="assess-hint">Think about the last time something went seriously wrong. Did your understanding of the world help you cope?</span>
+    <select id="a-resilience" onchange="handleAssessInput('a-resilience')">
+        <option value="">Select...</option>
+        <option value="crumbles">It crumbles &ndash; difficulty makes me question everything</option>
+        <option value="shaken">It gets shaken &ndash; I lose confidence in my framework</option>
+        <option value="holds">It mostly holds &ndash; I wobble but return to my beliefs</option>
+        <option value="stable">It's stable &ndash; my worldview provides genuine comfort during hardship</option>
+        <option value="strengthened">It's strengthened by difficulty &ndash; hard times deepen my understanding</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-resilience" onchange="handleSkip('a-resilience')"><label for="skip-resilience">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-moral-framework">
-    <label for="a-moral-framework">I can articulate the moral principles that guide my major decisions, and I know where those principles come from.<br><span class="assess-hint">Not everyone has a formal ethical system, but most people have implicit rules. Can you name yours?</span></label>
+<div class="assess-input-group" id="ig-moral-framework">
+    <span class="assess-label">How clearly can you articulate the moral principles that guide your major decisions?</span>
+    <span class="assess-hint">Not everyone has a formal ethical system, but most people have implicit rules. Can you name yours?</span>
+    <select id="a-moral-framework" onchange="handleAssessInput('a-moral-framework')">
+        <option value="">Select...</option>
+        <option value="none">I can't articulate any guiding principles</option>
+        <option value="vague">I have a vague sense but couldn't write them down</option>
+        <option value="some">I could name a few principles but I'm not sure where they come from</option>
+        <option value="clear">I have clear principles and I know their origins</option>
+        <option value="examined">I have well-examined principles I've tested and refined over time</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-moral-framework" onchange="handleSkip('a-moral-framework')"><label for="skip-moral-framework">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +585,9 @@ life_area_slug: worldview
         'a-decision-quality', 'a-manipulation', 'a-prediction',
         'a-purpose', 'a-resilience', 'a-moral-framework'
     ];
+
+    // All worldview items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -488,7 +637,6 @@ life_area_slug: worldview
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -514,6 +662,7 @@ life_area_slug: worldview
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +675,133 @@ life_area_slug: worldview
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All worldview items are unscored; save null for each value
+        var scores = {
+            breadth: null,
+            depth: null,
+            utility: null,
+            meaning: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

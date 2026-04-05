@@ -133,35 +133,69 @@ life_area_slug: ethics
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,85 +347,192 @@ life_area_slug: ethics
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you've thought it through (you don't need to enter the answer here, just confirm you've considered it).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to reflect on.</p>
 
 <div class="assess-group">
 <h4>Philosophical Depth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-frameworks">
-    <label for="a-frameworks">I can name at least one ethical framework (e.g. utilitarianism, deontology, virtue ethics) and explain its basic idea.<br><span class="assess-hint">If none come to mind, that's useful information too &ndash; just tick to confirm you've checked.</span></label>
+<div class="assess-input-group" id="ig-frameworks">
+    <span class="assess-label">How many ethical frameworks can you name and explain?</span>
+    <span class="assess-hint">E.g. utilitarianism, deontology, virtue ethics, care ethics.</span>
+    <select id="a-frameworks" onchange="handleAssessInput('a-frameworks')">
+        <option value="">Select...</option>
+        <option value="none">None &ndash; I couldn't name one</option>
+        <option value="heard">I've heard the names but couldn't explain any</option>
+        <option value="one">I could explain one in basic terms</option>
+        <option value="several">I could explain two or three clearly</option>
+        <option value="many">I could explain four or more and compare their strengths</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-frameworks" onchange="handleSkip('a-frameworks')"><label for="skip-frameworks">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-reasoning">
-    <label for="a-reasoning">I've thought about whether I tend to judge actions by their outcomes, their intentions, or some other standard.<br><span class="assess-hint">There's no right answer here &ndash; this is about noticing your default approach.</span></label>
+<div class="assess-input-group" id="ig-reasoning">
+    <span class="assess-label">How do you tend to judge whether an action is right or wrong?</span>
+    <span class="assess-hint">There's no right answer &ndash; this is about noticing your default approach.</span>
+    <select id="a-reasoning" onchange="handleAssessInput('a-reasoning')">
+        <option value="">Select...</option>
+        <option value="unsure">I haven't really thought about it</option>
+        <option value="gut">Mostly gut feeling &ndash; I just know</option>
+        <option value="outcomes">Mainly by the outcomes &ndash; did it cause harm or good?</option>
+        <option value="intentions">Mainly by the intentions &ndash; was the person trying to do right?</option>
+        <option value="mixed">A conscious mix of several standards depending on the situation</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-reasoning" onchange="handleSkip('a-reasoning')"><label for="skip-reasoning">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-dilemma">
-    <label for="a-dilemma">I can recall a moral dilemma I've faced and describe how I reasoned through it.<br><span class="assess-hint">A time when two principles you hold pulled in different directions.</span></label>
+<div class="assess-input-group" id="ig-dilemma">
+    <span class="assess-label">How recently have you faced a genuine moral dilemma where two principles pulled in different directions?</span>
+    <span class="assess-hint">A time you had to choose between competing values, not just a hard decision.</span>
+    <select id="a-dilemma" onchange="handleAssessInput('a-dilemma')">
+        <option value="">Select...</option>
+        <option value="never">I can't recall one</option>
+        <option value="distant">Years ago, and I don't remember my reasoning well</option>
+        <option value="moderate">Within the past year or two</option>
+        <option value="recent">Within the past few months, and I can describe how I reasoned through it</option>
+        <option value="frequent">I notice these regularly and have a process for working through them</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-dilemma" onchange="handleSkip('a-dilemma')"><label for="skip-dilemma">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Practical Guidance</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-principles">
-    <label for="a-principles">I have a sense of my core moral principles &ndash; the rules or commitments I try to follow in daily life.<br><span class="assess-hint">These might be explicit or just patterns you notice in how you make decisions.</span></label>
+<div class="assess-input-group" id="ig-principles">
+    <span class="assess-label">How clearly could you state your core moral principles?</span>
+    <span class="assess-hint">The rules or commitments you try to follow in daily life.</span>
+    <select id="a-principles" onchange="handleAssessInput('a-principles')">
+        <option value="">Select...</option>
+        <option value="none">I don't think I have any explicit ones</option>
+        <option value="vague">I have a vague sense but couldn't articulate them</option>
+        <option value="some">I could name a few but haven't thought them through carefully</option>
+        <option value="clear">I have a clear set I could write down</option>
+        <option value="tested">I have explicit principles I've tested and refined over time</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-principles" onchange="handleSkip('a-principles')"><label for="skip-principles">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-consistency">
-    <label for="a-consistency">I've considered whether I apply my moral principles consistently or whether they shift depending on context.<br><span class="assess-hint">For example, whether you hold yourself to the same standards you hold others to.</span></label>
+<div class="assess-input-group" id="ig-consistency">
+    <span class="assess-label">How consistently do you apply your moral principles across different contexts?</span>
+    <span class="assess-hint">For example, whether you hold yourself to the same standards you hold others to.</span>
+    <select id="a-consistency" onchange="handleAssessInput('a-consistency')">
+        <option value="">Select...</option>
+        <option value="inconsistent">Very inconsistently &ndash; my standards shift a lot depending on who's involved</option>
+        <option value="somewhat">Somewhat &ndash; I notice double standards in myself fairly often</option>
+        <option value="mostly">Mostly consistent, with occasional exceptions I'm aware of</option>
+        <option value="very">Very consistent &ndash; I actively work to apply the same standards everywhere</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-consistency" onchange="handleSkip('a-consistency')"><label for="skip-consistency">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-blindspots">
-    <label for="a-blindspots">I can identify at least one area where my moral decision-making feels unclear or where I suspect I might have a blind spot.<br><span class="assess-hint">Common examples: spending habits, environmental impact, how you treat people you'll never see again.</span></label>
+<div class="assess-input-group" id="ig-blindspots">
+    <span class="assess-label">Can you identify areas where your moral decision-making feels unclear or where you suspect you have a blind spot?</span>
+    <span class="assess-hint">Common examples: spending habits, environmental impact, how you treat people you'll never see again.</span>
+    <select id="a-blindspots" onchange="handleAssessInput('a-blindspots')">
+        <option value="">Select...</option>
+        <option value="unaware">I haven't thought about this</option>
+        <option value="maybe">I suspect I have blind spots but can't name them</option>
+        <option value="one">I can identify one area where I'm unsure</option>
+        <option value="several">I can identify several and have thought about why</option>
+        <option value="active">I actively look for blind spots and have strategies to address them</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-blindspots" onchange="handleSkip('a-blindspots')"><label for="skip-blindspots">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Moral Integrity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-gap">
-    <label for="a-gap">I've honestly assessed the gap between what I believe is right and how I actually behave.<br><span class="assess-hint">Most people have some gap here. The point is to see it clearly.</span></label>
+<div class="assess-input-group" id="ig-gap">
+    <span class="assess-label">How large is the gap between what you believe is right and how you actually behave?</span>
+    <span class="assess-hint">Most people have some gap here. The point is to see it clearly.</span>
+    <select id="a-gap" onchange="handleAssessInput('a-gap')">
+        <option value="">Select...</option>
+        <option value="havent-looked">I haven't really looked at this honestly</option>
+        <option value="large">Large &ndash; I regularly act against what I believe is right</option>
+        <option value="moderate">Moderate &ndash; I notice the gap in some areas</option>
+        <option value="small">Small &ndash; I live according to my values most of the time</option>
+        <option value="minimal">Minimal &ndash; I've deliberately closed this gap over time</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-gap" onchange="handleSkip('a-gap')"><label for="skip-gap">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-courage">
-    <label for="a-courage">I can recall a time I acted on a moral conviction despite it costing me something &ndash; or a time I failed to.<br><span class="assess-hint">Social disapproval, financial cost, inconvenience, or awkwardness all count.</span></label>
+<div class="assess-input-group" id="ig-courage">
+    <span class="assess-label">How often do you act on moral convictions when it costs you something?</span>
+    <span class="assess-hint">Social disapproval, financial cost, inconvenience, or awkwardness all count.</span>
+    <select id="a-courage" onchange="handleAssessInput('a-courage')">
+        <option value="">Select...</option>
+        <option value="rarely">Rarely &ndash; I tend to avoid situations where it would cost me</option>
+        <option value="sometimes">Sometimes &ndash; when the cost is low</option>
+        <option value="often">Often &ndash; I'll speak up or act even when it's uncomfortable</option>
+        <option value="consistently">Consistently &ndash; I've accepted significant costs for my principles</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-courage" onchange="handleSkip('a-courage')"><label for="skip-courage">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-pressure">
-    <label for="a-pressure">I have a sense of how much social pressure affects my moral choices.<br><span class="assess-hint">Do you tend to go along with the group, or hold your ground? In which situations?</span></label>
+<div class="assess-input-group" id="ig-pressure">
+    <span class="assess-label">How much does social pressure affect your moral choices?</span>
+    <span class="assess-hint">Do you tend to go along with the group, or hold your ground?</span>
+    <select id="a-pressure" onchange="handleAssessInput('a-pressure')">
+        <option value="">Select...</option>
+        <option value="strong">Strongly &ndash; I usually go along with the group</option>
+        <option value="moderate">Moderately &ndash; I'll conform on smaller things but hold firm on big ones</option>
+        <option value="low">Low &ndash; I hold my ground on most things regardless of social cost</option>
+        <option value="very-low">Very low &ndash; I've consciously developed resistance to social pressure</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-pressure" onchange="handleSkip('a-pressure')"><label for="skip-pressure">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Community Ethics &amp; Belonging</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-obligations">
-    <label for="a-obligations">I've thought about what moral obligations I have to the communities I belong to.<br><span class="assess-hint">Family, friends, workplace, neighbourhood, religious community, or broader society.</span></label>
+<div class="assess-input-group" id="ig-obligations">
+    <span class="assess-label">How clearly have you thought about your moral obligations to the communities you belong to?</span>
+    <span class="assess-hint">Family, friends, workplace, neighbourhood, religious community, or broader society.</span>
+    <select id="a-obligations" onchange="handleAssessInput('a-obligations')">
+        <option value="">Select...</option>
+        <option value="not-considered">I haven't really thought about this</option>
+        <option value="vague">I have a vague sense but nothing specific</option>
+        <option value="some">I've thought about obligations to one or two communities</option>
+        <option value="clear">I have a clear sense of my obligations across several communities</option>
+        <option value="active">I've thought this through carefully and actively fulfil specific commitments</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-obligations" onchange="handleSkip('a-obligations')"><label for="skip-obligations">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-impact">
-    <label for="a-impact">I have a sense of how my ethical choices affect the people around me.<br><span class="assess-hint">Both the direct effects and the example you set.</span></label>
+<div class="assess-input-group" id="ig-impact">
+    <span class="assess-label">How aware are you of how your ethical choices affect the people around you?</span>
+    <span class="assess-hint">Both the direct effects and the example you set.</span>
+    <select id="a-impact" onchange="handleAssessInput('a-impact')">
+        <option value="">Select...</option>
+        <option value="unaware">I don't think about this much</option>
+        <option value="sometimes">I sometimes notice the effects after the fact</option>
+        <option value="aware">I'm generally aware of the direct effects on others</option>
+        <option value="very-aware">I consider both direct effects and the broader example I'm setting</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-impact" onchange="handleSkip('a-impact')"><label for="skip-impact">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contribute">
-    <label for="a-contribute">I've considered whether I actively contribute to the moral health of my communities or mostly follow existing norms.<br><span class="assess-hint">Do you raise ethical concerns, mediate disputes, or set standards &ndash; or leave that to others?</span></label>
+<div class="assess-input-group" id="ig-contribute">
+    <span class="assess-label">Do you actively contribute to the moral health of your communities, or mostly follow existing norms?</span>
+    <span class="assess-hint">Do you raise ethical concerns, mediate disputes, or set standards &ndash; or leave that to others?</span>
+    <select id="a-contribute" onchange="handleAssessInput('a-contribute')">
+        <option value="">Select...</option>
+        <option value="follow">Mostly follow &ndash; I go along with established norms</option>
+        <option value="occasionally">Occasionally &ndash; I'll speak up if something feels clearly wrong</option>
+        <option value="regularly">Regularly &ndash; I raise concerns and try to set a good example</option>
+        <option value="actively">Actively &ndash; I take on a visible role in shaping my communities' ethical standards</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contribute" onchange="handleSkip('a-contribute')"><label for="skip-contribute">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +580,9 @@ life_area_slug: ethics
         'a-gap', 'a-courage', 'a-pressure',
         'a-obligations', 'a-impact', 'a-contribute'
     ];
+
+    // All ethics items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -514,6 +658,7 @@ life_area_slug: ethics
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +671,135 @@ life_area_slug: ethics
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All ethics items are unscored; save null for each value
+        var scores = {
+            philosophical: null,
+            practical: null,
+            integrity: null,
+            community: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

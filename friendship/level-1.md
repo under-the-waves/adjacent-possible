@@ -133,35 +133,69 @@ life_area_slug: friendship
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,143 @@ life_area_slug: friendship
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to think about. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
 
 <div class="assess-group">
 <h4>Depth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-close-count">
-    <label for="a-close-count">I know how many friends I could call at 2 a.m. with a genuine emergency and be confident they would pick up.<br><span class="assess-hint">Think through your contacts and count the people you would actually ring in a crisis.</span></label>
+<div class="assess-input-group" id="ig-close-count">
+    <span class="assess-label">How many friends could you call at 2 a.m. with a genuine emergency and be confident they would pick up?</span>
+    <span class="assess-hint">Think through your contacts and count the people you would actually ring in a crisis.</span>
+    <select id="a-close-count" onchange="handleAssessInput('a-close-count')">
+        <option value="">Select&hellip;</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2-3">2 &ndash; 3</option>
+        <option value="4-5">4 &ndash; 5</option>
+        <option value="6+">6 or more</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-close-count" onchange="handleSkip('a-close-count')"><label for="skip-close-count">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-vulnerability">
-    <label for="a-vulnerability">I know whether I have shared something genuinely personal or difficult with a friend in the past month.<br><span class="assess-hint">Something beyond surface-level updates &ndash; a worry, a failure, an uncertainty about the future.</span></label>
+<div class="assess-input-group" id="ig-vulnerability">
+    <span class="assess-label">Have you shared something genuinely personal or difficult with a friend in the past month?</span>
+    <span class="assess-hint">Something beyond surface-level updates &ndash; a worry, a failure, an uncertainty about the future.</span>
+    <select id="a-vulnerability" onchange="handleAssessInput('a-vulnerability')">
+        <option value="">Select&hellip;</option>
+        <option value="no-never">No &ndash; I rarely or never share personal things with friends</option>
+        <option value="no-recent">No &ndash; not in the past month, but I have before</option>
+        <option value="once">Yes &ndash; once in the past month</option>
+        <option value="several">Yes &ndash; several times in the past month</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-vulnerability" onchange="handleSkip('a-vulnerability')"><label for="skip-vulnerability">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-one-on-one">
-    <label for="a-one-on-one">I know how often I spend one-on-one time with a close friend in a typical month.<br><span class="assess-hint">In person, on the phone, or on a video call &ndash; but with enough time for real conversation, not just brief messages.</span></label>
+<div class="assess-input-group" id="ig-one-on-one">
+    <span class="assess-label">How often do you spend one-on-one time with a close friend in a typical month?</span>
+    <span class="assess-hint">In person, on the phone, or on a video call &ndash; but with enough time for real conversation, not just brief messages.</span>
+    <select id="a-one-on-one" onchange="handleAssessInput('a-one-on-one')">
+        <option value="">Select&hellip;</option>
+        <option value="never">Never or almost never</option>
+        <option value="once">About once a month</option>
+        <option value="2-3">2 &ndash; 3 times a month</option>
+        <option value="weekly">About once a week</option>
+        <option value="multiple-weekly">Multiple times a week</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-one-on-one" onchange="handleSkip('a-one-on-one')"><label for="skip-one-on-one">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Breadth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contexts">
-    <label for="a-contexts">I can name the different contexts where I currently have friends (e.g. work, hobbies, neighbourhood, university, online).<br><span class="assess-hint">List each context and roughly how many friends you have in it.</span></label>
+<div class="assess-input-group" id="ig-contexts">
+    <span class="assess-label">How many distinct contexts do you currently have friends in?</span>
+    <span class="assess-hint">Work, hobbies, neighbourhood, university, online, sports, religious community, etc.</span>
+    <select id="a-contexts" onchange="handleAssessInput('a-contexts')">
+        <option value="">Select&hellip;</option>
+        <option value="0-1">0 &ndash; 1 context</option>
+        <option value="2">2 contexts</option>
+        <option value="3">3 contexts</option>
+        <option value="4+">4 or more contexts</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contexts" onchange="handleSkip('a-contexts')"><label for="skip-contexts">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-new-people">
-    <label for="a-new-people">I know when I last made a new friend &ndash; someone I now see or speak to regularly who wasn't in my life a year ago.<br><span class="assess-hint">Think about whether your social circle has grown, shrunk, or stayed the same recently.</span></label>
+<div class="assess-input-group" id="ig-new-people">
+    <span class="assess-label">When did you last make a new friend you now see or speak to regularly?</span>
+    <span class="assess-hint">Think about whether your social circle has grown, shrunk, or stayed the same recently.</span>
+    <select id="a-new-people" onchange="handleAssessInput('a-new-people')">
+        <option value="">Select&hellip;</option>
+        <option value="cant-recall">I can't recall making a new friend recently</option>
+        <option value="over-2-years">More than 2 years ago</option>
+        <option value="1-2-years">1 &ndash; 2 years ago</option>
+        <option value="past-year">Within the past year</option>
+        <option value="past-few-months">Within the past few months</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-new-people" onchange="handleSkip('a-new-people')"><label for="skip-new-people">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-diversity">
-    <label for="a-diversity">I know whether my friends are mostly similar to me in age, background, and interests, or whether there is real variety.<br><span class="assess-hint">Consider age range, professions, cultural backgrounds, and how they spend their time.</span></label>
+<div class="assess-input-group" id="ig-diversity">
+    <span class="assess-label">How diverse is your friend group in age, background, and interests?</span>
+    <span class="assess-hint">Consider age range, professions, cultural backgrounds, and how they spend their time.</span>
+    <select id="a-diversity" onchange="handleAssessInput('a-diversity')">
+        <option value="">Select&hellip;</option>
+        <option value="very-similar">Very similar &ndash; mostly people like me</option>
+        <option value="some-variety">Some variety &ndash; a mix in one or two dimensions</option>
+        <option value="diverse">Diverse &ndash; genuine variety across age, background, and interests</option>
+        <option value="very-diverse">Very diverse &ndash; friends from many different walks of life</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-diversity" onchange="handleSkip('a-diversity')"><label for="skip-diversity">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Growth</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-feedback">
-    <label for="a-feedback">I know whether any of my friends have given me honest, constructive feedback in the past six months.<br><span class="assess-hint">Feedback on your work, your behaviour, your decisions &ndash; something that helped you see a blind spot.</span></label>
+<div class="assess-input-group" id="ig-feedback">
+    <span class="assess-label">Have any of your friends given you honest, constructive feedback in the past six months?</span>
+    <span class="assess-hint">Feedback on your work, your behaviour, your decisions &ndash; something that helped you see a blind spot.</span>
+    <select id="a-feedback" onchange="handleAssessInput('a-feedback')">
+        <option value="">Select&hellip;</option>
+        <option value="never">Never &ndash; my friends don't give me critical feedback</option>
+        <option value="not-recently">Not in the past six months</option>
+        <option value="once-or-twice">Once or twice</option>
+        <option value="regularly">Regularly &ndash; it's a normal part of our dynamic</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-feedback" onchange="handleSkip('a-feedback')"><label for="skip-feedback">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-learning">
-    <label for="a-learning">I can identify a specific thing I have learned or a way I have changed because of a friend's influence.<br><span class="assess-hint">A book they recommended, a habit you picked up, a perspective they shifted.</span></label>
+<div class="assess-input-group" id="ig-learning">
+    <span class="assess-label">Can you identify something you have learned or a way you have changed because of a friend's influence?</span>
+    <span class="assess-hint">A book they recommended, a habit you picked up, a perspective they shifted.</span>
+    <select id="a-learning" onchange="handleAssessInput('a-learning')">
+        <option value="">Select&hellip;</option>
+        <option value="nothing">Nothing comes to mind</option>
+        <option value="vague">Vaguely &ndash; I'm sure they've influenced me but I can't name specifics</option>
+        <option value="one">One clear example</option>
+        <option value="several">Several examples &ndash; my friends regularly shape my thinking</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-learning" onchange="handleSkip('a-learning')"><label for="skip-learning">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-accountability">
-    <label for="a-accountability">I know whether I have any friend who holds me accountable to a goal, standard, or commitment.<br><span class="assess-hint">Someone who checks in on your progress, calls you out when you slack, or shares a goal with you.</span></label>
+<div class="assess-input-group" id="ig-accountability">
+    <span class="assess-label">Do you have a friend who holds you accountable to a goal, standard, or commitment?</span>
+    <span class="assess-hint">Someone who checks in on your progress, calls you out when you slack, or shares a goal with you.</span>
+    <select id="a-accountability" onchange="handleAssessInput('a-accountability')">
+        <option value="">Select&hellip;</option>
+        <option value="no">No &ndash; nobody holds me accountable</option>
+        <option value="informal">Informally &ndash; a friend sometimes checks in but it's not deliberate</option>
+        <option value="yes-one">Yes &ndash; one friend who actively holds me accountable</option>
+        <option value="yes-several">Yes &ndash; multiple friends or a structured accountability setup</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-accountability" onchange="handleSkip('a-accountability')"><label for="skip-accountability">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +522,9 @@ life_area_slug: friendship
         'a-contexts', 'a-new-people', 'a-diversity',
         'a-feedback', 'a-learning', 'a-accountability'
     ];
+
+    // All friendship items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,6 +600,7 @@ life_area_slug: friendship
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +613,134 @@ life_area_slug: friendship
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All friendship items are unscored; save null for each value
+        var scores = {
+            depth: null,
+            breadth: null,
+            growth: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

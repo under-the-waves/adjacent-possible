@@ -133,35 +133,69 @@ life_area_slug: mental-health
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -305,66 +339,142 @@ life_area_slug: mental-health
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to reflect on. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've worked it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
 
 <div class="assess-group">
-<h4>Professional Treatment & Support</h4>
+<h4>Professional Treatment &amp; Support</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-prof-access">
-    <label for="a-prof-access">I know how to access professional mental health support in my area, including at least one specific service I could contact.<br><span class="assess-hint">GP referral, local counselling service, employee assistance programme, or a specific therapist.</span></label>
+<div class="assess-input-group" id="ig-prof-access">
+    <span class="assess-label">How easily could you access professional mental health support if you needed it?</span>
+    <span class="assess-hint">GP referral, local counselling service, employee assistance programme, or a specific therapist.</span>
+    <select id="a-prof-access" onchange="handleAssessInput('a-prof-access')">
+        <option value="">Select&hellip;</option>
+        <option value="no-idea">No idea &ndash; I wouldn't know where to start</option>
+        <option value="vague">Vague sense &ndash; I could probably find something but haven't looked</option>
+        <option value="one-option">I know at least one specific service I could contact</option>
+        <option value="multiple">I know multiple options and have used at least one before</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-prof-access" onchange="handleSkip('a-prof-access')"><label for="skip-prof-access">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-prof-history">
-    <label for="a-prof-history">I can describe my history with professional mental health support &ndash; whether I've used it, what worked, and what didn't.<br><span class="assess-hint">"Never tried it," "saw a counsellor for six months in 2019," or "currently in therapy" all count.</span></label>
+<div class="assess-input-group" id="ig-prof-history">
+    <span class="assess-label">What is your history with professional mental health support?</span>
+    <span class="assess-hint">All honest answers are useful here &ndash; there is no right or wrong history.</span>
+    <select id="a-prof-history" onchange="handleAssessInput('a-prof-history')">
+        <option value="">Select&hellip;</option>
+        <option value="never">Never tried it</option>
+        <option value="tried-once">Tried it once but didn't continue</option>
+        <option value="past-use">Used it in the past and found it helpful</option>
+        <option value="past-mixed">Used it in the past with mixed results</option>
+        <option value="current">Currently receiving professional support</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-prof-history" onchange="handleSkip('a-prof-history')"><label for="skip-prof-history">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-prof-network">
-    <label for="a-prof-network">I know whether I have at least one person I trust enough to discuss mental health concerns with honestly.<br><span class="assess-hint">A friend, partner, family member, or colleague &ndash; someone you would actually talk to, not just theoretically could.</span></label>
+<div class="assess-input-group" id="ig-prof-network">
+    <span class="assess-label">Do you have someone you trust enough to discuss mental health concerns with honestly?</span>
+    <span class="assess-hint">A friend, partner, family member, or colleague &ndash; someone you would actually talk to, not just theoretically could.</span>
+    <select id="a-prof-network" onchange="handleAssessInput('a-prof-network')">
+        <option value="">Select&hellip;</option>
+        <option value="no-one">No &ndash; nobody I'd feel comfortable talking to</option>
+        <option value="maybe-one">Maybe &ndash; one person, but I'm not sure I'd actually do it</option>
+        <option value="one">Yes &ndash; one person I trust and would talk to</option>
+        <option value="several">Yes &ndash; several people I could turn to</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-prof-network" onchange="handleSkip('a-prof-network')"><label for="skip-prof-network">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Self-Management & Independence</h4>
+<h4>Self-Management &amp; Independence</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-self-triggers">
-    <label for="a-self-triggers">I can name my three most common stress triggers and describe how I typically respond to each.<br><span class="assess-hint">Work deadlines, conflict, financial pressure, loneliness &ndash; and whether you withdraw, ruminate, exercise, talk to someone, etc.</span></label>
+<div class="assess-input-group" id="ig-self-triggers">
+    <span class="assess-label">How many of your most common stress triggers can you name and describe your typical response to?</span>
+    <span class="assess-hint">Work deadlines, conflict, financial pressure, loneliness &ndash; and whether you withdraw, ruminate, exercise, talk to someone, etc.</span>
+    <select id="a-self-triggers" onchange="handleAssessInput('a-self-triggers')">
+        <option value="">Select&hellip;</option>
+        <option value="none">None &ndash; I haven't mapped my stress triggers</option>
+        <option value="1">One &ndash; I know my biggest trigger</option>
+        <option value="2-3">Two or three &ndash; I can describe triggers and responses</option>
+        <option value="4+">Four or more &ndash; I've mapped this in detail</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-self-triggers" onchange="handleSkip('a-self-triggers')"><label for="skip-self-triggers">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-self-techniques">
-    <label for="a-self-techniques">I know which stress management techniques I currently use and whether they actually help.<br><span class="assess-hint">Meditation, exercise, journalling, breathing exercises, talking it through &ndash; or nothing structured at all.</span></label>
+<div class="assess-input-group" id="ig-self-techniques">
+    <span class="assess-label">Do you use any deliberate stress management techniques, and do they help?</span>
+    <span class="assess-hint">Meditation, exercise, journalling, breathing exercises, talking it through &ndash; or nothing structured at all.</span>
+    <select id="a-self-techniques" onchange="handleAssessInput('a-self-techniques')">
+        <option value="">Select&hellip;</option>
+        <option value="none">None &ndash; I don't use any structured techniques</option>
+        <option value="some-unsure">Some &ndash; but I'm not sure if they help</option>
+        <option value="some-helpful">Some &ndash; and they noticeably help</option>
+        <option value="toolkit">A well-practised toolkit that I use regularly and reliably</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-self-techniques" onchange="handleSkip('a-self-techniques')"><label for="skip-self-techniques">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-self-emotions">
-    <label for="a-self-emotions">I can usually identify what I'm feeling during a difficult moment, using a more specific word than "bad" or "stressed."<br><span class="assess-hint">Anxious, frustrated, overwhelmed, lonely, ashamed, bored &ndash; the ability to name emotions accurately is a core self-management skill.</span></label>
+<div class="assess-input-group" id="ig-self-emotions">
+    <span class="assess-label">How precisely can you identify what you're feeling during a difficult moment?</span>
+    <span class="assess-hint">Anxious, frustrated, overwhelmed, lonely, ashamed, bored &ndash; the ability to name emotions accurately is a core self-management skill.</span>
+    <select id="a-self-emotions" onchange="handleAssessInput('a-self-emotions')">
+        <option value="">Select&hellip;</option>
+        <option value="generic">Generic only &ndash; "bad," "stressed," or "fine"</option>
+        <option value="broad">Broad categories &ndash; I can tell angry from sad from anxious</option>
+        <option value="specific">Specific &ndash; I can usually pinpoint the exact emotion</option>
+        <option value="nuanced">Nuanced &ndash; I can identify layered or mixed emotions in the moment</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-self-emotions" onchange="handleSkip('a-self-emotions')"><label for="skip-self-emotions">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Integration & Holistic Approach</h4>
+<h4>Integration &amp; Holistic Approach</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-int-sleep">
-    <label for="a-int-sleep">I have a sense of how my sleep quality affects my mood and mental clarity the following day.<br><span class="assess-hint">Better after good sleep, worse after poor sleep, or genuinely unsure &ndash; all count as long as you've thought about it.</span></label>
+<div class="assess-input-group" id="ig-int-sleep">
+    <span class="assess-label">How clearly do you see the link between your sleep quality and your mood the next day?</span>
+    <span class="assess-hint">Better after good sleep, worse after poor sleep, or genuinely unsure &ndash; all count as long as you've thought about it.</span>
+    <select id="a-int-sleep" onchange="handleAssessInput('a-int-sleep')">
+        <option value="">Select&hellip;</option>
+        <option value="no-link">I haven't noticed a link</option>
+        <option value="vague">Vague &ndash; I suspect sleep matters but haven't tracked it</option>
+        <option value="clear">Clear &ndash; I can reliably predict my mood based on sleep</option>
+        <option value="detailed">Detailed &ndash; I know how much sleep I need and what disrupts it</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-int-sleep" onchange="handleSkip('a-int-sleep')"><label for="skip-int-sleep">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-int-exercise">
-    <label for="a-int-exercise">I know whether regular exercise noticeably changes how I feel mentally, and roughly how much it takes to have an effect.<br><span class="assess-hint">A 20-minute walk, a gym session, a run &ndash; or you've noticed no mental health effect from exercise. Either answer is useful.</span></label>
+<div class="assess-input-group" id="ig-int-exercise">
+    <span class="assess-label">Does regular exercise noticeably change how you feel mentally?</span>
+    <span class="assess-hint">A 20-minute walk, a gym session, a run &ndash; or you've noticed no mental health effect from exercise. Either answer is useful.</span>
+    <select id="a-int-exercise" onchange="handleAssessInput('a-int-exercise')">
+        <option value="">Select&hellip;</option>
+        <option value="no-effect">No noticeable effect</option>
+        <option value="slight">Slight &ndash; I feel a bit better but it's subtle</option>
+        <option value="noticeable">Noticeable &ndash; exercise clearly improves my mood</option>
+        <option value="essential">Essential &ndash; my mental health deteriorates without it</option>
+        <option value="unsure">Unsure &ndash; I haven't exercised enough to tell</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-int-exercise" onchange="handleSkip('a-int-exercise')"><label for="skip-int-exercise">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-int-social">
-    <label for="a-int-social">I can identify which relationships or social situations consistently improve my mental state and which drain it.<br><span class="assess-hint">Specific people, group sizes, types of interaction &ndash; knowing your social energy patterns.</span></label>
+<div class="assess-input-group" id="ig-int-social">
+    <span class="assess-label">How well do you know which relationships or social situations improve your mental state and which drain it?</span>
+    <span class="assess-hint">Specific people, group sizes, types of interaction &ndash; knowing your social energy patterns.</span>
+    <select id="a-int-social" onchange="handleAssessInput('a-int-social')">
+        <option value="">Select&hellip;</option>
+        <option value="no-idea">No idea &ndash; I haven't thought about this</option>
+        <option value="vague">Vague sense &ndash; some people drain me but I couldn't list who or why</option>
+        <option value="partial">Partial &ndash; I know some specific people and situations</option>
+        <option value="clear">Clear map &ndash; I know my social energy patterns well</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-int-social" onchange="handleSkip('a-int-social')"><label for="skip-int-social">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +521,9 @@ life_area_slug: mental-health
         'a-self-triggers', 'a-self-techniques', 'a-self-emotions',
         'a-int-sleep', 'a-int-exercise', 'a-int-social'
     ];
+
+    // All mental health items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -486,6 +599,7 @@ life_area_slug: mental-health
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -498,65 +612,134 @@ life_area_slug: mental-health
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All mental health items are unscored; save null for each value
+        var scores = {
+            professional: null,
+            'self-management': null,
+            integration: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

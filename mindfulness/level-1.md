@@ -133,35 +133,69 @@ life_area_slug: mindfulness
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
-    margin-top: 2px;
+    margin-bottom: 8px;
 }
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-recorded {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1a6b2a;
+    display: none;
+}
+.assess-recorded.visible { display: block; }
 
 /* Completion */
 .l1-complete {
@@ -313,85 +347,193 @@ life_area_slug: mindfulness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes of honest reflection. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've thought about it).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
 
 <div class="assess-group">
 <h4>Mental Clarity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-focus-duration">
-    <label for="a-focus-duration">I know roughly how long I can sustain focused attention on a single task before my mind wanders.<br><span class="assess-hint">Think about reading, working, or having a conversation. Minutes? Seconds?</span></label>
+<div class="assess-input-group" id="ig-focus-duration">
+    <span class="assess-label">How long can you sustain focused attention on a single task before your mind wanders?</span>
+    <span class="assess-hint">Think about reading, working, or having a conversation.</span>
+    <select id="a-focus-duration" onchange="handleAssessInput('a-focus-duration')">
+        <option value="">Select&hellip;</option>
+        <option value="seconds">Seconds &ndash; my mind wanders almost immediately</option>
+        <option value="1-5-min">1 &ndash; 5 minutes</option>
+        <option value="5-15-min">5 &ndash; 15 minutes</option>
+        <option value="15-30-min">15 &ndash; 30 minutes</option>
+        <option value="30-plus">30 minutes or more</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-focus-duration" onchange="handleSkip('a-focus-duration')"><label for="skip-focus-duration">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mental-fog">
-    <label for="a-mental-fog">I can identify the times of day when my thinking feels clearest and when it feels most foggy.<br><span class="assess-hint">Morning, afternoon, evening &ndash; when are you sharpest?</span></label>
+<div class="assess-input-group" id="ig-mental-fog">
+    <span class="assess-label">When during the day does your thinking feel clearest?</span>
+    <span class="assess-hint">Morning, afternoon, evening &ndash; when are you sharpest?</span>
+    <select id="a-mental-fog" onchange="handleAssessInput('a-mental-fog')">
+        <option value="">Select&hellip;</option>
+        <option value="morning">Morning &ndash; I'm sharpest early in the day</option>
+        <option value="midday">Midday &ndash; I peak around lunchtime</option>
+        <option value="afternoon">Afternoon &ndash; I warm up as the day goes on</option>
+        <option value="evening">Evening &ndash; I'm at my best late in the day</option>
+        <option value="no-pattern">No clear pattern &ndash; it varies or I haven't noticed</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-mental-fog" onchange="handleSkip('a-mental-fog')"><label for="skip-mental-fog">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-distraction">
-    <label for="a-distraction">I know my main sources of distraction and how often I check my phone or switch tasks involuntarily.<br><span class="assess-hint">Notifications, social media, internal restlessness, boredom &ndash; what pulls your attention away?</span></label>
+<div class="assess-input-group" id="ig-distraction">
+    <span class="assess-label">How often do you involuntarily check your phone or switch tasks during focused work?</span>
+    <span class="assess-hint">Notifications, social media, internal restlessness, boredom &ndash; what pulls your attention away?</span>
+    <select id="a-distraction" onchange="handleAssessInput('a-distraction')">
+        <option value="">Select&hellip;</option>
+        <option value="constantly">Constantly &ndash; every few minutes</option>
+        <option value="frequently">Frequently &ndash; several times an hour</option>
+        <option value="sometimes">Sometimes &ndash; a few times a session</option>
+        <option value="rarely">Rarely &ndash; I can usually resist the urge</option>
+        <option value="almost-never">Almost never &ndash; I stay focused easily</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-distraction" onchange="handleSkip('a-distraction')"><label for="skip-distraction">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Emotional Wellbeing</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-stress-response">
-    <label for="a-stress-response">I know how my body responds to stress and can recognise the early physical signs.<br><span class="assess-hint">Tight shoulders, shallow breathing, clenched jaw, racing heart &ndash; what are your signals?</span></label>
+<div class="assess-input-group" id="ig-stress-response">
+    <span class="assess-label">How well can you recognise the early physical signs of stress in your body?</span>
+    <span class="assess-hint">Tight shoulders, shallow breathing, clenched jaw, racing heart &ndash; what are your signals?</span>
+    <select id="a-stress-response" onchange="handleAssessInput('a-stress-response')">
+        <option value="">Select&hellip;</option>
+        <option value="no-awareness">I don't notice physical stress signals</option>
+        <option value="after-fact">I notice only after the stress has built up</option>
+        <option value="sometimes">I sometimes catch the early signs</option>
+        <option value="usually">I usually notice early and can name the specific sensations</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-stress-response" onchange="handleSkip('a-stress-response')"><label for="skip-stress-response">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-recovery-time">
-    <label for="a-recovery-time">I have a rough sense of how long it takes me to recover emotionally after something upsets me.<br><span class="assess-hint">Minutes, hours, days? Do you bounce back quickly or does frustration linger?</span></label>
+<div class="assess-input-group" id="ig-recovery-time">
+    <span class="assess-label">How long does it typically take you to recover emotionally after something upsets you?</span>
+    <span class="assess-hint">Do you bounce back quickly or does frustration linger?</span>
+    <select id="a-recovery-time" onchange="handleAssessInput('a-recovery-time')">
+        <option value="">Select&hellip;</option>
+        <option value="minutes">Minutes &ndash; I reset quickly</option>
+        <option value="hours">Hours &ndash; it takes a chunk of the day</option>
+        <option value="a-day">About a day</option>
+        <option value="days">Several days or more</option>
+        <option value="unsure">I'm not sure &ndash; I haven't paid attention to this</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-recovery-time" onchange="handleSkip('a-recovery-time')"><label for="skip-recovery-time">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-coping">
-    <label for="a-coping">I can name my current go-to coping mechanisms when I feel overwhelmed.<br><span class="assess-hint">Exercise, talking to someone, distraction, avoidance, substances, sleep &ndash; what do you actually do?</span></label>
+<div class="assess-input-group" id="ig-coping">
+    <span class="assess-label">What is your go-to coping mechanism when you feel overwhelmed?</span>
+    <span class="assess-hint">Exercise, talking to someone, distraction, avoidance, substances, sleep &ndash; what do you actually do?</span>
+    <select id="a-coping" onchange="handleAssessInput('a-coping')">
+        <option value="">Select&hellip;</option>
+        <option value="avoidance">Avoidance or distraction (scrolling, TV, etc.)</option>
+        <option value="substances">Substances (alcohol, food, caffeine)</option>
+        <option value="social">Talking to someone or seeking support</option>
+        <option value="physical">Physical activity (exercise, walking)</option>
+        <option value="contemplative">Contemplative practice (meditation, journalling, breathing)</option>
+        <option value="sleep">Sleep or rest</option>
+        <option value="no-strategy">I don't have a go-to strategy</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-coping" onchange="handleSkip('a-coping')"><label for="skip-coping">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Self-Knowledge</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-thought-patterns">
-    <label for="a-thought-patterns">I can identify at least one recurring thought pattern or mental habit I fall into regularly.<br><span class="assess-hint">Rumination, worst-case thinking, self-criticism, comparison, planning &ndash; what theme keeps returning?</span></label>
+<div class="assess-input-group" id="ig-thought-patterns">
+    <span class="assess-label">Can you identify a recurring thought pattern or mental habit you fall into regularly?</span>
+    <span class="assess-hint">Rumination, worst-case thinking, self-criticism, comparison, planning &ndash; what theme keeps returning?</span>
+    <select id="a-thought-patterns" onchange="handleAssessInput('a-thought-patterns')">
+        <option value="">Select&hellip;</option>
+        <option value="no">No &ndash; I haven't noticed any recurring patterns</option>
+        <option value="vague">Vaguely &ndash; I sense a pattern but can't articulate it</option>
+        <option value="one">Yes &ndash; I can name one clear pattern</option>
+        <option value="several">Yes &ndash; I'm aware of several and how they show up</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-thought-patterns" onchange="handleSkip('a-thought-patterns')"><label for="skip-thought-patterns">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-triggers">
-    <label for="a-triggers">I know what situations or interactions tend to trigger strong emotional reactions in me.<br><span class="assess-hint">Criticism, feeling ignored, time pressure, conflict &ndash; what sets you off?</span></label>
+<div class="assess-input-group" id="ig-triggers">
+    <span class="assess-label">How well do you know what situations or interactions trigger strong emotional reactions in you?</span>
+    <span class="assess-hint">Criticism, feeling ignored, time pressure, conflict &ndash; what sets you off?</span>
+    <select id="a-triggers" onchange="handleAssessInput('a-triggers')">
+        <option value="">Select&hellip;</option>
+        <option value="no-idea">No idea &ndash; strong reactions seem to come out of nowhere</option>
+        <option value="some-sense">Some sense &ndash; I can name one or two triggers</option>
+        <option value="good-map">Good map &ndash; I know most of my triggers and the emotions they produce</option>
+        <option value="detailed">Detailed &ndash; I understand the triggers, the emotions, and the patterns behind them</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-triggers" onchange="handleSkip('a-triggers')"><label for="skip-triggers">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-autopilot">
-    <label for="a-autopilot">I have a sense of how much of my day I spend on autopilot versus consciously choosing my actions.<br><span class="assess-hint">Scrolling, snacking, commuting, routine tasks &ndash; how often are you fully present?</span></label>
+<div class="assess-input-group" id="ig-autopilot">
+    <span class="assess-label">How much of your day do you spend on autopilot versus consciously choosing your actions?</span>
+    <span class="assess-hint">Scrolling, snacking, commuting, routine tasks &ndash; how often are you fully present?</span>
+    <select id="a-autopilot" onchange="handleAssessInput('a-autopilot')">
+        <option value="">Select&hellip;</option>
+        <option value="mostly-autopilot">Mostly autopilot &ndash; I rarely notice what I'm doing</option>
+        <option value="more-auto">More autopilot than not &ndash; occasional moments of awareness</option>
+        <option value="mixed">Mixed &ndash; roughly half and half</option>
+        <option value="mostly-present">Mostly present &ndash; I'm usually aware of my choices</option>
+        <option value="highly-present">Highly present &ndash; I'm consciously engaged most of the time</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-autopilot" onchange="handleSkip('a-autopilot')"><label for="skip-autopilot">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Spiritual Development</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-meaning">
-    <label for="a-meaning">I have thought about what gives my life a sense of meaning or purpose beyond daily tasks.<br><span class="assess-hint">Relationships, creative work, service, nature, learning &ndash; what makes it feel worthwhile?</span></label>
+<div class="assess-input-group" id="ig-meaning">
+    <span class="assess-label">How clearly have you identified what gives your life meaning or purpose beyond daily tasks?</span>
+    <span class="assess-hint">Relationships, creative work, service, nature, learning &ndash; what makes it feel worthwhile?</span>
+    <select id="a-meaning" onchange="handleAssessInput('a-meaning')">
+        <option value="">Select&hellip;</option>
+        <option value="not-thought">I haven't really thought about this</option>
+        <option value="vague">I have a vague sense but nothing I could articulate</option>
+        <option value="partial">I can name one or two sources of meaning</option>
+        <option value="clear">I have a clear, considered sense of what gives my life purpose</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-meaning" onchange="handleSkip('a-meaning')"><label for="skip-meaning">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-awe">
-    <label for="a-awe">I can recall the last time I experienced a moment of awe, wonder, or deep stillness.<br><span class="assess-hint">In nature, during music, in meditation, watching a sunset &ndash; when did you last feel genuinely moved?</span></label>
+<div class="assess-input-group" id="ig-awe">
+    <span class="assess-label">When did you last experience a moment of awe, wonder, or deep stillness?</span>
+    <span class="assess-hint">In nature, during music, in meditation, watching a sunset &ndash; when did you last feel genuinely moved?</span>
+    <select id="a-awe" onchange="handleAssessInput('a-awe')">
+        <option value="">Select&hellip;</option>
+        <option value="cant-recall">I can't recall one</option>
+        <option value="months-ago">Months ago</option>
+        <option value="past-few-weeks">Within the past few weeks</option>
+        <option value="past-week">Within the past week</option>
+        <option value="today">Today or yesterday</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-awe" onchange="handleSkip('a-awe')"><label for="skip-awe">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contemplative">
-    <label for="a-contemplative">I know whether I currently have any contemplative or reflective practice, formal or informal.<br><span class="assess-hint">Meditation, prayer, journaling, walking in nature, sitting quietly &ndash; or none at all.</span></label>
+<div class="assess-input-group" id="ig-contemplative">
+    <span class="assess-label">Do you currently have any contemplative or reflective practice?</span>
+    <span class="assess-hint">Meditation, prayer, journalling, walking in nature, sitting quietly &ndash; or none at all.</span>
+    <select id="a-contemplative" onchange="handleAssessInput('a-contemplative')">
+        <option value="">Select&hellip;</option>
+        <option value="none">None at all</option>
+        <option value="informal">Informal &ndash; occasional walks, quiet time, but nothing deliberate</option>
+        <option value="sporadic">Sporadic &ndash; I do something deliberate but inconsistently</option>
+        <option value="regular">Regular &ndash; a few times a week</option>
+        <option value="daily">Daily or near-daily practice</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contemplative" onchange="handleSkip('a-contemplative')"><label for="skip-contemplative">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -439,6 +581,9 @@ life_area_slug: mindfulness
         'a-thought-patterns', 'a-triggers', 'a-autopilot',
         'a-meaning', 'a-awe', 'a-contemplative'
     ];
+
+    // All mindfulness items are qualitative and unscored (no reliable percentile data)
+    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -514,6 +659,7 @@ life_area_slug: mindfulness
     };
 
     window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
         var progress = loadProgress();
         progress[step] = true;
         saveProgress(progress);
@@ -526,65 +672,135 @@ life_area_slug: mindfulness
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Assessment helpers ---
 
-        // Save checklist state
-        var checklist = {};
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
         ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
         });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+    function saveScores() {
+        // All mindfulness items are unscored; save null for each value
+        var scores = {
+            clarity: null,
+            emotional: null,
+            knowledge: null,
+            spiritual: null
+        };
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updateInputGroupState(id);
+        });
+
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();
