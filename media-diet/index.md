@@ -1,64 +1,203 @@
 ---
+layout: default
+title: Media Diet
 life_area_slug: media-diet
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Expand Your Awareness &gt;
+    Knowledge &gt;
+    Media Diet
+</div>
+
 # Media Diet
 
-## What is a Media Diet?
+**What it is**
+- The informational content you regularly consume &ndash; news, podcasts, newsletters, non-fiction books, documentaries, and online publications. Your media diet shapes how well-informed you are about the world and provides the raw material for your [worldview]({{ site.baseurl }}/worldview/).
 
-A media diet encompasses all informational content you regularly consume – news articles, podcasts, newsletters, magazines, non-fiction books, documentaries, and online publications. This excludes entertainment media (which belongs in [consumptive leisure]({{ site.baseurl }}/consumptive-leisure/)), formal educational courses (which belongs in [learning]({{ site.baseurl }}/learning/)), and the systems you use to organise this information (which belongs in [information management]({{ site.baseurl }}/information-management/)). Your media diet shapes how well-informed you are about the world and provides the raw material for developing your [worldview]({{ site.baseurl }}/worldview/).
+**Why it matters**
+- Most people consume information reactively through algorithmic feeds and push notifications, leading to fragmented understanding and poor retention. A deliberately curated media diet improves decision-making, reduces information anxiety, and compounds over time &ndash; the sources you choose today shape the mental models you rely on for years.
 
-Unlike passive consumption driven by algorithms and notifications, a deliberate media diet involves conscious choices about what information to consume, when, and in what format to best serve your goals and cognitive wellbeing.
+**Related life areas**
+- [Consumptive Leisure]({{ site.baseurl }}/consumptive-leisure/) &ndash; entertainment media such as fiction, film, and gaming
+- [Information Management]({{ site.baseurl }}/information-management/) &ndash; the systems you use to organise, store, and retrieve information
+- [Worldview]({{ site.baseurl }}/worldview/) &ndash; the beliefs and mental models built from your information consumption
 
-## Why Media Diet Matters
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Media Diet yet.</strong><br>It takes about 15 minutes and helps you understand what a media diet means to you.</p>
+    <a href="{{ site.baseurl }}/media-diet/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Your information consumption patterns profoundly influence your understanding of reality, decision-making quality, and cognitive performance. The average person encounters 34 GB of information daily – equivalent to watching six hours of television – yet most consume information reactively through social media feeds and push notifications <span class="info-icon" onclick="showReasoning('information-overload')">i</span>. This reactive approach often leads to fragmented understanding, anxiety from negative news cycles, and poor retention of valuable insights.
+## What people value about media diet
 
-A well-curated media diet enhances decision-making across all life domains whilst reducing cognitive overhead and information anxiety <span class="info-icon" onclick="showReasoning('cognitive-benefits')">i</span>. Research demonstrates that people with intentional information consumption habits show improved focus, better long-term thinking, and more accurate understanding of complex issues <span class="info-icon" onclick="showReasoning('intentional-consumption')">i</span>. The compound effects are substantial – the information you consume today shapes the mental models you use for years to come.
+People pursue better information consumption for different reasons. This site scores every media diet intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-## Media Diet Values
+<div class="value-card">
+<h3>Information Quality & Depth</h3>
+<p>The accuracy, nuance, and intellectual rigour of consumed information. Prioritising books over articles, primary sources over summaries, and expert analysis over hot takes.</p>
+</div>
 
-Your optimal approach to information consumption depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+<div class="value-card">
+<h3>Actionable Relevance</h3>
+<p>How directly the information supports decision-making and practical outcomes in your life. Career-relevant developments, investment insights, health discoveries, and information that changes behaviour or choices.</p>
+</div>
 
-For personalised recommendations based on your unique priorities, visit [Media Diet Personalised]({{ site.baseurl }}/media-diet/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Breadth & Discovery</h3>
+<p>Exposure to diverse perspectives, unexpected insights, and information outside your existing knowledge areas. Following curiosity into unfamiliar domains and maintaining intellectual openness.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Cognitive Efficiency</h3>
+<p>Optimising the retention-to-effort ratio and minimising cognitive overhead from information consumption. Choosing formats that match your processing style and avoiding redundant coverage.</p>
+</div>
 
-## Benchmarks by Level
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/media-diet/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand media diet, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/media-diet/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-Research reveals that most people consume information passively through algorithmic feeds, with only 20-30% actively curating their sources and less than 10% regularly engaging with long-form content. Common barriers include information overload, difficulty distinguishing quality sources, and lack of systematic approaches to information management. These patterns mean that even modest intentionality in information consumption represents higher population percentiles than might initially be expected.
-
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Media Diet Personalised]({{ site.baseurl }}/media-diet/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'information-overload': {
-        title: 'Information Overload Research',
-        content: 'Martin Hilbert\'s research found that humans encounter 34 GB of information daily, with the average knowledge worker checking email every 6 minutes. Microsoft studies show attention spans have decreased from 12 seconds in 2000 to 8 seconds in 2015. <a href="https://www.apa.org/science/about/psa/2016/06/information-overload" target="_blank">View American Psychological Association study</a>'
-    },
-    'cognitive-benefits': {
-        title: 'Cognitive Benefits of Curated Information Consumption',
-        content: 'Research by Cal Newport and others demonstrates that intentional information consumption reduces anxiety, improves focus, and enhances deep thinking capabilities. Studies show that people who limit news consumption to specific times show improved mood and cognitive performance. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0747563217305216" target="_blank">View research on news consumption and wellbeing</a>'
-    },
-    'intentional-consumption': {
-        title: 'Benefits of Intentional Media Consumption',
-        content: 'Longitudinal studies show that people with structured information diets demonstrate better decision-making, improved long-term thinking, and more accurate mental models. Research from MIT and Harvard indicates that diverse, high-quality information sources correlate with better strategic thinking and reduced cognitive bias. <a href="https://www.mitpressjournals.org/doi/abs/10.1162/REST_a_00540" target="_blank">View MIT research</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var mediaDiet = progress['media-diet'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return mediaDiet[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['media-diet'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Media Diet.</strong></p>' +
+            '<a href="{{ site.baseurl }}/media-diet/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/media-diet/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(mediaDiet).length > 0) {
+        var completed = steps.filter(function(s) { return mediaDiet[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/media-diet/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
