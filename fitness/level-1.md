@@ -133,34 +133,128 @@ life_area_slug: fitness
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group input[type="number"] {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-multi-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-bottom: 4px;
+}
+.assess-multi-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
     margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
 }
 
 /* Completion */
@@ -305,66 +399,151 @@ life_area_slug: fitness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on this device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to look up or test.</p>
 
 <div class="assess-group">
-<h4>Health & Longevity</h4>
+<h4>Health &amp; Longevity</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-exercise-mins">
-    <label for="a-exercise-mins">I know roughly how many minutes of exercise I get in a typical week.<br><span class="assess-hint">Count anything that raises your heart rate &ndash; walking, cycling, sports, gym sessions.</span></label>
+<div class="assess-input-group" id="ig-exercise-mins">
+    <span class="assess-label">How many minutes of exercise do you get in a typical week?</span>
+    <span class="assess-hint">Count anything that raises your heart rate &ndash; walking, cycling, sports, gym sessions.</span>
+    <input type="number" id="a-exercise-mins" min="0" max="600" step="5" placeholder="e.g. 150" onchange="handleAssessInput('a-exercise-mins')"> <span class="assess-percentile-hint" id="pct-exercise-mins"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-exercise-mins" onchange="handleSkip('a-exercise-mins')"><label for="skip-exercise-mins">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-rhr">
-    <label for="a-rhr">I know my resting heart rate.<br><span class="assess-hint">Check with a fitness tracker, smartwatch, or take your pulse for 60 seconds first thing in the morning.</span></label>
+<div class="assess-input-group" id="ig-rhr">
+    <span class="assess-label">What is your resting heart rate (beats per minute)?</span>
+    <span class="assess-hint">Check with a fitness tracker, smartwatch, or take your pulse for 60 seconds first thing in the morning.</span>
+    <input type="number" id="a-rhr" min="30" max="120" step="1" placeholder="e.g. 68" onchange="handleAssessInput('a-rhr')"> <span class="assess-percentile-hint" id="pct-rhr"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-rhr" onchange="handleSkip('a-rhr')"><label for="skip-rhr">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-strength-training">
-    <label for="a-strength-training">I know whether I do any strength training, and if so, how often.<br><span class="assess-hint">This includes weights, resistance bands, bodyweight exercises, or manual labour.</span></label>
+<div class="assess-input-group" id="ig-strength-training">
+    <span class="assess-label">How many strength training sessions do you do per week?</span>
+    <span class="assess-hint">Weights, resistance bands, bodyweight exercises, or manual labour.</span>
+    <select id="a-strength-training" onchange="handleAssessInput('a-strength-training')">
+        <option value="">Select...</option>
+        <option value="0">None</option>
+        <option value="1">1 session per week</option>
+        <option value="2">2 sessions per week</option>
+        <option value="3">3 sessions per week</option>
+        <option value="4">4 sessions per week</option>
+        <option value="5">5+ sessions per week</option>
+    </select> <span class="assess-percentile-hint" id="pct-strength-training"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-strength-training" onchange="handleSkip('a-strength-training')"><label for="skip-strength-training">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Physical Performance</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-pushups">
-    <label for="a-pushups">I know how many push-ups I can do in one set.<br><span class="assess-hint">Do a quick test if you're not sure. Stop when your form breaks down.</span></label>
+<div class="assess-input-group" id="ig-pushups">
+    <span class="assess-label">How many push-ups can you do in one set?</span>
+    <span class="assess-hint">Do a quick test if you're not sure. Stop when your form breaks down.</span>
+    <input type="number" id="a-pushups" min="0" max="200" step="1" placeholder="e.g. 15" onchange="handleAssessInput('a-pushups')"> <span class="assess-percentile-hint" id="pct-pushups"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-pushups" onchange="handleSkip('a-pushups')"><label for="skip-pushups">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-cardio">
-    <label for="a-cardio">I know how far I can run, cycle, or swim without stopping.<br><span class="assess-hint">Even a rough estimate is fine &ndash; "I can jog about 2 km" or "I can't run at all" both count.</span></label>
+<div class="assess-input-group" id="ig-cardio">
+    <span class="assess-label">How far can you run, cycle, or swim without stopping?</span>
+    <span class="assess-hint">A rough estimate is fine.</span>
+    <select id="a-cardio" onchange="handleAssessInput('a-cardio')">
+        <option value="">Select...</option>
+        <option value="0">I can't run/cycle continuously at all</option>
+        <option value="1">Less than 1 km</option>
+        <option value="2">1 &ndash; 2 km</option>
+        <option value="3">2 &ndash; 5 km</option>
+        <option value="4">5 km (a full 5K)</option>
+        <option value="5">5 &ndash; 10 km</option>
+        <option value="6">10+ km</option>
+    </select> <span class="assess-percentile-hint" id="pct-cardio"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-cardio" onchange="handleSkip('a-cardio')"><label for="skip-cardio">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-flexibility">
-    <label for="a-flexibility">I know whether I can touch my toes with straight legs.<br><span class="assess-hint">A basic flexibility check. Try it now if you're not sure.</span></label>
+<div class="assess-input-group" id="ig-flexibility">
+    <span class="assess-label">Can you touch your toes with straight legs?</span>
+    <span class="assess-hint">A basic flexibility check. Try it now if you're not sure.</span>
+    <select id="a-flexibility" onchange="handleAssessInput('a-flexibility')">
+        <option value="">Select...</option>
+        <option value="0">No &ndash; can't reach past shins</option>
+        <option value="1">Almost &ndash; fingertips reach ankles</option>
+        <option value="2">Yes &ndash; can touch toes</option>
+        <option value="3">Yes &ndash; can place palms flat on floor</option>
+    </select> <span class="assess-percentile-hint" id="pct-flexibility"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-flexibility" onchange="handleSkip('a-flexibility')"><label for="skip-flexibility">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Enjoyment & Psychological Benefits</h4>
+<h4>Enjoyment &amp; Psychological Benefits</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-enjoy-types">
-    <label for="a-enjoy-types">I've thought about which types of physical activity I enjoy (or might enjoy) and which I find aversive.<br><span class="assess-hint">Team vs solo, indoor vs outdoor, competitive vs non-competitive, structured vs free-form.</span></label>
+<div class="assess-input-group" id="ig-enjoy-types">
+    <span class="assess-label">Which types of physical activity do you enjoy or think you might enjoy?</span>
+    <span class="assess-hint">Select all that apply.</span>
+    <div class="assess-multi-options">
+        <label><input type="checkbox" class="enjoy-opt" value="team" onchange="handleMultiAssess('a-enjoy-types')"> Team sports</label>
+        <label><input type="checkbox" class="enjoy-opt" value="solo" onchange="handleMultiAssess('a-enjoy-types')"> Solo exercise</label>
+        <label><input type="checkbox" class="enjoy-opt" value="outdoor" onchange="handleMultiAssess('a-enjoy-types')"> Outdoor activities</label>
+        <label><input type="checkbox" class="enjoy-opt" value="indoor" onchange="handleMultiAssess('a-enjoy-types')"> Indoor gym/studio</label>
+        <label><input type="checkbox" class="enjoy-opt" value="competitive" onchange="handleMultiAssess('a-enjoy-types')"> Competitive events</label>
+        <label><input type="checkbox" class="enjoy-opt" value="noncompetitive" onchange="handleMultiAssess('a-enjoy-types')"> Non-competitive movement</label>
+        <label><input type="checkbox" class="enjoy-opt" value="none" onchange="handleMultiAssess('a-enjoy-types')"> None of these appeal to me</label>
+    </div>
+    <span class="assess-percentile-hint" id="pct-enjoy-types"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-enjoy-types" onchange="handleSkip('a-enjoy-types')"><label for="skip-enjoy-types">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-mood">
-    <label for="a-mood">I have a sense of how exercise affects my mood and energy levels.<br><span class="assess-hint">Do you feel better after exercise? Worse? No difference? Unsure?</span></label>
+<div class="assess-input-group" id="ig-mood">
+    <span class="assess-label">How does exercise affect your mood and energy levels?</span>
+    <span class="assess-hint">Think about how you feel in the hours after exercising.</span>
+    <select id="a-mood" onchange="handleAssessInput('a-mood')">
+        <option value="">Select...</option>
+        <option value="0">I don't exercise enough to know</option>
+        <option value="1">No noticeable effect</option>
+        <option value="2">Slight improvement</option>
+        <option value="3">Clear positive effect on mood and energy</option>
+        <option value="4">Major positive effect &ndash; exercise is my primary mood tool</option>
+    </select> <span class="assess-percentile-hint" id="pct-mood"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-mood" onchange="handleSkip('a-mood')"><label for="skip-mood">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-social">
-    <label for="a-social">I know whether I currently have any social or community element to my exercise.<br><span class="assess-hint">A gym buddy, sports team, running group, yoga class &ndash; or none at all.</span></label>
+<div class="assess-input-group" id="ig-social">
+    <span class="assess-label">Do you have a social or community element to your exercise?</span>
+    <span class="assess-hint">A gym buddy, sports team, running group, yoga class, or similar.</span>
+    <select id="a-social" onchange="handleAssessInput('a-social')">
+        <option value="">Select...</option>
+        <option value="0">None at all</option>
+        <option value="1">Occasional &ndash; I sometimes exercise with others</option>
+        <option value="2">Regular &ndash; I have a gym buddy, team, or class</option>
+        <option value="3">Central &ndash; exercise community is a big part of my social life</option>
+    </select> <span class="assess-percentile-hint" id="pct-social"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-social" onchange="handleSkip('a-social')"><label for="skip-social">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-health">
+        <span class="assess-summary-label">Health &amp; Longevity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-health" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-health">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-performance">
+        <span class="assess-summary-label">Physical Performance</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-performance" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-performance">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-enjoyment">
+        <span class="assess-summary-label">Enjoyment &amp; Psych. Benefits</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-enjoyment" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-enjoyment">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are rough estimates based on published population data for American adults. They indicate where you might fall relative to others, not a clinical assessment.</p>
+</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -411,6 +590,46 @@ life_area_slug: fitness
         'a-pushups', 'a-cardio', 'a-flexibility',
         'a-enjoy-types', 'a-mood', 'a-social'
     ];
+
+    // Scoring thresholds: [{value, percentile}, ...] sorted by value ascending
+    // For inverted scales (lower = better), thresholds are sorted by value descending
+    var THRESHOLDS = {
+        'a-exercise-mins': [
+            {v:0,p:5},{v:30,p:20},{v:90,p:40},{v:150,p:60},{v:225,p:72},{v:300,p:85},{v:450,p:95}
+        ],
+        'a-rhr': [ // inverted: lower is better
+            {v:100,p:5},{v:90,p:10},{v:80,p:25},{v:72,p:50},{v:65,p:70},{v:58,p:85},{v:50,p:95},{v:40,p:99}
+        ],
+        'a-strength-training': [
+            {v:'0',p:30},{v:'1',p:55},{v:'2',p:74},{v:'3',p:85},{v:'4',p:92},{v:'5',p:96}
+        ],
+        'a-pushups': [
+            {v:0,p:5},{v:5,p:20},{v:10,p:40},{v:15,p:55},{v:20,p:70},{v:30,p:82},{v:40,p:90},{v:50,p:95}
+        ],
+        'a-cardio': [
+            {v:'0',p:15},{v:'1',p:30},{v:'2',p:45},{v:'3',p:60},{v:'4',p:75},{v:'5',p:85},{v:'6',p:93}
+        ],
+        'a-flexibility': [
+            {v:'0',p:25},{v:'1',p:45},{v:'2',p:65},{v:'3',p:85}
+        ],
+        'a-enjoy-types': 'multi', // handled separately
+        'a-mood': [
+            {v:'0',p:20},{v:'1',p:35},{v:'2',p:55},{v:'3',p:75},{v:'4',p:90}
+        ],
+        'a-social': [
+            {v:'0',p:30},{v:'1',p:50},{v:'2',p:75},{v:'3',p:90}
+        ]
+    };
+
+    var MULTI_THRESHOLDS = {
+        'a-enjoy-types': [{count:0,p:15},{count:1,p:35},{count:2,p:55},{count:3,p:70},{count:4,p:85}]
+    };
+
+    var VALUE_ITEMS = {
+        health: ['a-exercise-mins', 'a-rhr', 'a-strength-training'],
+        performance: ['a-pushups', 'a-cardio', 'a-flexibility'],
+        enjoyment: ['a-enjoy-types', 'a-mood', 'a-social']
+    };
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -498,65 +717,298 @@ life_area_slug: fitness
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Scoring functions ---
 
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+    function interpolatePercentile(value, thresholds) {
+        var num = parseFloat(value);
+        // Check if thresholds use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        // Check if inverted (first threshold has higher value than last)
+        var inverted = thresholds[0].v > thresholds[thresholds.length - 1].v;
+        if (inverted) {
+            if (num >= thresholds[0].v) return thresholds[0].p;
+            if (num <= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num <= thresholds[i].v && num >= thresholds[i + 1].v) {
+                    var t = (thresholds[i].v - num) / (thresholds[i].v - thresholds[i + 1].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        } else {
+            if (num <= thresholds[0].v) return thresholds[0].p;
+            if (num >= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num >= thresholds[i].v && num <= thresholds[i + 1].v) {
+                    var t = (num - thresholds[i].v) / (thresholds[i + 1].v - thresholds[i].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        }
+        return null;
+    }
+
+    function scoreMulti(itemId) {
+        var opts = document.querySelectorAll('.enjoy-opt');
+        var noneChecked = false;
+        var count = 0;
+        opts.forEach(function(cb) {
+            if (cb.value === 'none' && cb.checked) noneChecked = true;
+            else if (cb.checked) count++;
         });
+        if (noneChecked) count = 0;
+        var mt = MULTI_THRESHOLDS[itemId];
+        for (var i = mt.length - 1; i >= 0; i--) {
+            if (count >= mt[i].count) return mt[i].p;
+        }
+        return mt[0].p;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        if (THRESHOLDS[itemId] === 'multi') {
+            var opts = document.querySelectorAll('.enjoy-opt');
+            var anyChecked = false;
+            opts.forEach(function(cb) { if (cb.checked) anyChecked = true; });
+            return anyChecked ? scoreMulti(itemId) : null;
+        }
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        if (THRESHOLDS[itemId] === 'multi') {
+            var opts = document.querySelectorAll('.enjoy-opt');
+            var any = false;
+            opts.forEach(function(cb) { if (cb.checked) any = true; });
+            return any;
+        }
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updatePercentileHint(itemId) {
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['health', 'performance', 'enjoyment'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                if (THRESHOLDS[id] === 'multi') {
+                    var selected = [];
+                    document.querySelectorAll('.enjoy-opt').forEach(function(cb) {
+                        if (cb.checked) selected.push(cb.value);
+                    });
+                    value = selected;
+                } else {
+                    var el = document.getElementById(id);
+                    if (el && el.value !== '') value = el.value;
+                }
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
+    function saveScores() {
+        var scores = {};
+        ['health', 'performance', 'enjoyment'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
         });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    window.handleMultiAssess = function(itemId) {
+        // If "none" is checked, uncheck all others; if another is checked, uncheck "none"
+        var opts = document.querySelectorAll('.enjoy-opt');
+        var clickedNone = false;
+        opts.forEach(function(cb) {
+            if (cb.value === 'none' && cb.checked) clickedNone = true;
+        });
+        if (clickedNone) {
+            opts.forEach(function(cb) { if (cb.value !== 'none') cb.checked = false; });
+        } else {
+            opts.forEach(function(cb) { if (cb.value === 'none') cb.checked = false; });
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+            if (skipBox.checked && input.type === 'number') input.value = '';
+        }
+        // For multi-select, disable all checkboxes
+        if (THRESHOLDS[itemId] === 'multi') {
+            var opts = document.querySelectorAll('.enjoy-opt');
+            opts.forEach(function(cb) {
+                cb.disabled = skipBox.checked;
+                if (skipBox.checked) cb.checked = false;
+            });
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    // Override completeStep to also save scores
+    var _origCompleteStep = window.completeStep;
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        _origCompleteStep(step);
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                    if (THRESHOLDS[id] === 'multi') {
+                        document.querySelectorAll('.enjoy-opt').forEach(function(cb) { cb.disabled = true; });
+                    }
+                }
+            } else if (item.value !== null) {
+                if (THRESHOLDS[id] === 'multi' && Array.isArray(item.value)) {
+                    document.querySelectorAll('.enjoy-opt').forEach(function(cb) {
+                        cb.checked = item.value.indexOf(cb.value) !== -1;
+                    });
+                } else {
+                    var el = document.getElementById(id);
+                    if (el) el.value = item.value;
+                }
+            }
+
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

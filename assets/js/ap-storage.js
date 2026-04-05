@@ -15,7 +15,8 @@
         'ap-survey-weights': 'weights',
         'ap-slider-weights': 'sliderWeights',
         'ap-level1-progress': 'level1Progress',
-        'ap-level1-assess': 'level1Assess'
+        'ap-level1-assess': 'level1Assess',
+        'ap-level1-scores': 'level1Scores'
     };
 
     function load(key) {
