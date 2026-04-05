@@ -1,75 +1,197 @@
 ---
+layout: default
+title: Life Skills
 life_area_slug: life-skills
 ---
-# Life Skills Values and Benchmarks Framework
 
-## What are Life Skills?
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
 
-Life skills encompasses the practical capabilities needed to handle everyday challenges and maintain independence in modern life. This covers essential competencies like basic home maintenance, car care, financial tasks, cooking, first aid, and technology troubleshooting. The domain ranges from fundamental survival skills that every adult should possess to advanced craftsmanship and systematic approaches to practical problem-solving.
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
 
-## Why Life Skills Matter
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
 
-Practical competence serves as a foundation for adult independence and confidence. Research shows that people with diverse practical skills report higher levels of self-efficacy and life satisfaction, while also achieving measurable financial benefits through reduced reliance on professional services <span class="info-icon" onclick="showReasoning('financial-benefits')">i</span>. The psychological impact extends beyond immediate utility – mastering practical skills creates a sense of capability that transfers to other life domains <span class="info-icon" onclick="showReasoning('psychological-benefits')">i</span>, whilst building practical knowledge often strengthens social connections through helping others and participating in community activities <span class="info-icon" onclick="showReasoning('social-benefits')">i</span>.
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
 
-## Life Skills Values
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
 
-Your optimal approach to life skills depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
 
-For personalised recommendations based on your unique priorities, visit [Life Skills Personalised]({{ site.baseurl }}/life-skills/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="la-home" markdown="1">
 
-{% include life-area-values.html %}
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Expand Your Awareness &gt;
+    Learning &gt;
+    Life Skills
+</div>
 
-## Benchmarks by Level
+# Life Skills
 
-Research reveals that practical skill competence varies dramatically across populations. Studies indicate that only about 36% of adults feel confident in their car maintenance abilities <span class="info-icon" onclick="showReasoning('car-maintenance-stats')">i</span>, while surveys show that 38% of Americans cannot perform any basic home repairs <span class="info-icon" onclick="showReasoning('home-repair-stats')">i</span>. Regarding sewing skills, UK research found that 74% of adults could sew on a button, but only 47% could mend a hole or adjust a hem <span class="info-icon" onclick="showReasoning('sewing-stats')">i</span>. The American Red Cross reports that while millions receive first aid training, only about 40% of adults have completed or are interested in taking lifesaving courses <span class="info-icon" onclick="showReasoning('first-aid-stats')">i</span>. These patterns mean that even modest practical achievements represent higher population percentiles than might initially be expected.
+**What it is**
+- The practical competencies you use to navigate everyday life effectively. Life skills covers essential capabilities like home maintenance, car care, cooking, first aid, financial tasks, and technology troubleshooting.
 
-{% include life-area-benchmarks.html %}
+**Why it matters**
+- Practical competence underpins adult independence and confidence. People with diverse practical skills tend to report higher self-efficacy and life satisfaction, and they can often avoid significant costs by handling routine problems themselves rather than relying on professional services.
 
-## Levels
+**Related life areas**
+- [Learning Methods]({{ site.baseurl }}/learning-methods/) – how you acquire new knowledge and develop new skills
+- [Cognitive Skills]({{ site.baseurl }}/cognitive-skills/) – your thinking abilities, including critical thinking and problem-solving
 
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Life Skills Personalised]({{ site.baseurl }}/life-skills/personalised) *(under development)*
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Life Skills yet.</strong><br>It takes about 15 minutes and helps you understand what life skills means to you.</p>
+    <a href="{{ site.baseurl }}/life-skills/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-[← Back to Life Areas Home](../)
+## What people value about life skills
+
+People pursue life skills for different reasons. This site scores every life skills intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
+
+<div class="value-card">
+<h3>High-Impact Capabilities</h3>
+<p>Focusing on the handful of practical abilities that save significant money, prevent major problems, or handle important situations – skills like first aid, basic car maintenance, essential home repairs, and core cooking techniques.</p>
+</div>
+
+<div class="value-card">
+<h3>Systematic Competence</h3>
+<p>Building organised, methodical approaches to practical knowledge and maintenance – creating reference systems, following preventive schedules, maintaining proper tools, and developing frameworks for tackling unfamiliar tasks.</p>
+</div>
+
+<div class="value-card">
+<h3>Teaching & Sharing</h3>
+<p>Using practical skills as opportunities to help others, connect with family and friends, or contribute to community – teaching skills to children, helping neighbours with projects, or being the person others turn to for practical advice.</p>
+</div>
+
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/life-skills/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand life skills, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/life-skills/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
+
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'financial-benefits': {
-        title: 'Financial Benefits of Practical Skills',
-        content: 'Studies show Americans spent an average of $10,000 on home maintenance in 2018, while basic DIY skills can prevent many expensive repairs. Car maintenance surveys indicate that proper preventive care can prevent repairs that cost 3-4 times more than basic maintenance. The American Home Shield survey found that 17% of DIY attempts result in additional damage averaging $599, but overall savings from successful DIY projects average thousands annually for committed practitioners.'
-    },
-    'psychological-benefits': {
-        title: 'Psychological Benefits of Practical Competence',
-        content: 'Research on self-efficacy shows that practical skill mastery increases confidence across multiple life domains. The successful completion of hands-on tasks activates reward pathways in the brain similar to other achievement-oriented activities. Studies of maker spaces and DIY communities document increased problem-solving confidence and reduced anxiety about handling unexpected challenges among regular participants.'
-    },
-    'social-benefits': {
-        title: 'Social Connection Through Practical Skills',
-        content: 'Community resilience research shows that neighborhoods with higher concentrations of practical skills have stronger social networks and mutual aid systems. Emergency preparedness studies demonstrate that people with practical capabilities often become natural community resources during crises. Maker spaces and community workshops report high levels of knowledge sharing and social bonding among participants.'
-    },
-    'car-maintenance-stats': {
-        title: 'Car Maintenance Capability Statistics',
-        content: 'A SimpleTire survey of 1,000 U.S. car owners found that only 36% feel completely or very confident in their car maintenance knowledge and skills. A Cooper Tires study revealed that nearly half of American car owners aren\'t confident they could change their car\'s oil, a third couldn\'t pick out the correct oil, and a quarter wouldn\'t know how to jump-start a car. <a href="https://simpletire.com/press/releases/simpletire-new-survey-car-owners-steering-towards-DIY" target="_blank">View SimpleTire study</a>'
-    },
-    'home-repair-stats': {
-        title: 'Home Repair Capability Statistics',
-        content: 'A BigRentz survey found that 38% of Americans cannot perform any basic home repairs from a list of common tasks. The most commonly performed task was unclogging a drain (43% capable), while the most difficult was installing a drywall anchor (25% capable). An Esurance survey found that less than 40% of homeowners regularly maintain their homes, with 74% lacking regular maintenance plans for exterior foundations. <a href="https://www.bigrentz.com/blog/home-maintenance-survey" target="_blank">View BigRentz study</a>'
-    },
-    'sewing-stats': {
-        title: 'Sewing and Mending Capabilities',
-        content: 'WRAP surveyed 7,950 UK adults and found that 74% could sew on a button, 47% could darn or patch a hole, 47% could adjust a hem, but 18% could do none of these basic repairs. In the US, a Colorado State University study found that only 20% of participants felt confident in their mending skills, and 25% didn\'t know how to mend a rip in garments. <a href="https://threadsmonthly.com/repair-clothes-statistics/" target="_blank">View comprehensive sewing statistics</a>'
-    },
-    'first-aid-stats': {
-        title: 'First Aid Training Statistics',
-        content: 'The American Red Cross reports that 4 out of every 10 adults have completed or are interested in taking lifesaving courses. Nearly 3.8 million people train each year in Red Cross First Aid, CPR and AED classes. However, surveys show that while many people receive training, confidence in applying skills varies significantly, with emergency response capability requiring both initial training and periodic refresher courses. <a href="https://www.redcross.org/take-a-class/resources/articles/cpr-facts-and-statistics" target="_blank">View Red Cross statistics</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var lifeSkills = progress['life-skills'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return lifeSkills[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['life-skills'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Life Skills.</strong></p>' +
+            '<a href="{{ site.baseurl }}/life-skills/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/life-skills/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(lifeSkills).length > 0) {
+        var completed = steps.filter(function(s) { return lifeSkills[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/life-skills/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

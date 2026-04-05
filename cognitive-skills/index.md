@@ -1,66 +1,202 @@
 ---
+layout: default
+title: Cognitive Skills
 life_area_slug: cognitive-skills
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Expand Your Awareness &gt;
+    Learning &gt;
+    Cognitive Skills
+</div>
+
 # Cognitive Skills
 
-## What are Cognitive Skills?
+**What it is**
+- Your core mental abilities – memory, attention, reasoning, and problem-solving – and the practices you use to develop and maintain them.
 
-Cognitive Skills encompasses the development and enhancement of core mental abilities including memory, attention, reasoning, and problem-solving. This covers systematic approaches to improving how you encode and retrieve information, maintain focus and concentration, think through complex problems, and optimise your brain's performance through lifestyle choices. While some cognitive abilities have genetic components, substantial improvements are possible through evidence-based training methods, memory techniques, attention practices, and lifestyle optimisation.
+**Why it matters**
+- Cognitive abilities act as force multipliers across nearly every other area of life. Improved memory speeds up learning, better focus raises the quality of your work and decisions, and stronger reasoning helps you navigate complex problems in any domain.
 
-## Why Cognitive Skills Matter
+**Related life areas**
+- [Learning Methods]({{ site.baseurl }}/learning-methods/) – your approaches to acquiring new knowledge and skills
+- [Life Skills]({{ site.baseurl }}/life-skills/) – practical competencies for managing everyday tasks and challenges
 
-Enhanced cognitive abilities serve as force multipliers for virtually every other area of life. Improved memory enables faster learning and better recall of important information in professional and personal contexts <span class="info-icon" onclick="showReasoning('memory-benefits')">i</span>. Better focus and attention control directly impact productivity, decision-making quality, and the ability to engage deeply with complex tasks <span class="info-icon" onclick="showReasoning('attention-benefits')">i</span>.
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Cognitive Skills yet.</strong><br>It takes about 15 minutes and helps you understand what cognitive skills mean to you.</p>
+    <a href="{{ site.baseurl }}/cognitive-skills/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Systematic reasoning and problem-solving skills improve outcomes across domains from career advancement to personal relationships <span class="info-icon" onclick="showReasoning('reasoning-benefits')">i</span>, whilst lifestyle-based cognitive enhancement provides sustainable improvements in mental clarity and performance <span class="info-icon" onclick="showReasoning('lifestyle-benefits')">i</span>. These combined benefits make cognitive skills development one of the highest-leverage investments in personal capability.
+## What people value about cognitive skills
 
-## Cognitive Skills Values
+People pursue cognitive improvement for different reasons. This site scores every cognitive skills intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-Your optimal approach to cognitive skills depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+<div class="value-card">
+<h3>Memory</h3>
+<p>Developing systematic approaches to encode, store, and retrieve information efficiently. Memory techniques like method of loci, spaced repetition systems, elaborative encoding, and other evidence-based memory strategies.</p>
+</div>
 
-For personalised recommendations based on your unique priorities, visit [Cognitive Skills Personalised]({{ site.baseurl }}/cognitive-skills/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Focus</h3>
+<p>Developing sustained attention, concentration, and cognitive control through practices like mindfulness meditation and attention training. Resistance to distraction, task-switching ability, and deliberate control over mental resources.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Reasoning & Problem-Solving</h3>
+<p>Developing fluid intelligence and reasoning abilities through targeted training in working memory, abstract reasoning, and creative problem-solving. Both general reasoning capacity and domain-specific thinking skills.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Lifestyle Integration</h3>
+<p>Cognitive enhancement through sustainable daily practices. Improving cognitive function through sleep, exercise, nutrition, stress management, and other lifestyle factors that naturally support brain health and mental performance.</p>
+</div>
 
-Research reveals that most people rely on basic, unoptimised cognitive approaches. Studies show approximately 90% of adults have never learned systematic memory techniques, with only 2-3% using evidence-based methods like spaced repetition regularly. Most adults struggle with sustained attention – fewer than 10% can maintain focus on demanding cognitive work for 30+ minutes without distraction. Problem-solving training is virtually absent from most education systems, with fewer than 5% of adults having formal training in reasoning techniques. These patterns mean that even modest improvements in cognitive skills represent substantially higher population percentiles than might initially be expected.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/cognitive-skills/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand cognitive skills, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/cognitive-skills/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Cognitive Skills Personalised]({{ site.baseurl }}/cognitive-skills/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'memory-benefits': {
-        title: 'Memory Enhancement Research',
-        content: 'Meta-analyses show memory training techniques improve retention by 200-300% over baseline methods. Roediger & Pyc (2012) found that spaced repetition and testing effects significantly enhance long-term retention across diverse learning contexts. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3399982/" target="_blank">View study</a>'
-    },
-    'attention-benefits': {
-        title: 'Attention Training Research',
-        content: 'Mindfulness meditation training shows consistent improvements in sustained attention and cognitive control. Tang & Posner (2009) found just 5 days of attention training improved executive attention and reduced stress-related cortisol. <a href="https://www.pnas.org/content/104/43/17152" target="_blank">View study</a>'
-    },
-    'reasoning-benefits': {
-        title: 'Reasoning Enhancement Research',
-        content: 'Working memory training shows modest but measurable improvements in fluid intelligence. Au et al. (2015) meta-analysis found standardised effect sizes of 0.2-0.3 for reasoning improvements following cognitive training. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4441724/" target="_blank">View study</a>'
-    },
-    'lifestyle-benefits': {
-        title: 'Lifestyle Cognitive Enhancement',
-        content: 'Exercise increases BDNF by 15-30%, improving learning and memory. Sleep optimisation enhances memory consolidation by 40%. Nutrition interventions can improve cognitive performance by 10-20%. Cotman & Berchtold (2002) review comprehensive lifestyle effects on brain function. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2441149/" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var cognitiveSkills = progress['cognitive-skills'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return cognitiveSkills[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['cognitive-skills'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Cognitive Skills.</strong></p>' +
+            '<a href="{{ site.baseurl }}/cognitive-skills/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/cognitive-skills/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(cognitiveSkills).length > 0) {
+        var completed = steps.filter(function(s) { return cognitiveSkills[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/cognitive-skills/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
