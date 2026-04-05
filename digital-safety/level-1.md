@@ -133,34 +133,115 @@ life_area_slug: digital-safety
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group input[type="number"] {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
     margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
 }
 
 /* Completion */
@@ -297,47 +378,153 @@ life_area_slug: digital-safety
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to check. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to check.</p>
 
 <div class="assess-group">
 <h4>Comprehensive Security</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-password-reuse">
-    <label for="a-password-reuse">I know whether I reuse the same password across multiple accounts.<br><span class="assess-hint">Think about your email, banking, social media, and shopping accounts. Are any of them using the same or similar passwords?</span></label>
+<div class="assess-input-group" id="ig-password-reuse">
+    <span class="assess-label">Roughly how many of your online accounts share the same password?</span>
+    <span class="assess-hint">Think about your email, banking, social media, and shopping accounts. Count accounts where you use an identical or near-identical password.</span>
+    <input type="number" id="a-password-reuse" min="0" max="100" step="1" placeholder="e.g. 5" onchange="handleAssessInput('a-password-reuse')"> <span class="assess-percentile-hint" id="pct-password-reuse"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-password-reuse" onchange="handleSkip('a-password-reuse')"><label for="skip-password-reuse">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-2fa-status">
-    <label for="a-2fa-status">I know which of my important accounts have two-factor authentication enabled.<br><span class="assess-hint">Check your email, banking, and social media accounts. Look for settings labelled "two-step verification", "2FA", or "login verification".</span></label>
+<div class="assess-input-group" id="ig-2fa-adoption">
+    <span class="assess-label">How many of your important accounts have two-factor authentication enabled?</span>
+    <span class="assess-hint">Check your email, banking, and social media accounts. Look for settings labelled "two-step verification", "2FA", or "login verification".</span>
+    <select id="a-2fa-adoption" onchange="handleAssessInput('a-2fa-adoption')">
+        <option value="">Select...</option>
+        <option value="0">None</option>
+        <option value="1">One or two accounts</option>
+        <option value="2">About half of my important accounts</option>
+        <option value="3">Most of my important accounts</option>
+        <option value="4">All of my important accounts</option>
+    </select> <span class="assess-percentile-hint" id="pct-2fa-adoption"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-2fa-adoption" onchange="handleSkip('a-2fa-adoption')"><label for="skip-2fa-adoption">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-phishing-awareness">
-    <label for="a-phishing-awareness">I can describe at least two signs that an email or message might be a phishing attempt.<br><span class="assess-hint">Think about sender addresses, urgency, links, and requests for personal information.</span></label>
+<div class="assess-input-group" id="ig-phishing-awareness">
+    <span class="assess-label">How confident are you at spotting phishing emails or messages?</span>
+    <span class="assess-hint">Think about sender addresses, urgency cues, suspicious links, and requests for personal information.</span>
+    <select id="a-phishing-awareness" onchange="handleAssessInput('a-phishing-awareness')">
+        <option value="">Select...</option>
+        <option value="0">I'm not sure what phishing is</option>
+        <option value="1">I've heard of it but wouldn't feel confident spotting it</option>
+        <option value="2">I can spot obvious phishing but might miss sophisticated attempts</option>
+        <option value="3">I reliably spot phishing and check sender details, links, and context</option>
+        <option value="4">I can identify advanced social engineering and spear-phishing attempts</option>
+    </select> <span class="assess-percentile-hint" id="pct-phishing-awareness"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-phishing-awareness" onchange="handleSkip('a-phishing-awareness')"><label for="skip-phishing-awareness">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
 <h4>Usability and Convenience</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-password-method">
-    <label for="a-password-method">I know how I currently manage my passwords &ndash; whether I memorise them, write them down, use a browser, or use a dedicated password manager.<br><span class="assess-hint">There's no wrong answer here. The point is knowing your current method.</span></label>
+<div class="assess-input-group" id="ig-password-method">
+    <span class="assess-label">How do you currently manage your passwords?</span>
+    <span class="assess-hint">There's no wrong answer here. The point is knowing your current method.</span>
+    <select id="a-password-method" onchange="handleAssessInput('a-password-method')">
+        <option value="">Select...</option>
+        <option value="0">I memorise them or use the same one everywhere</option>
+        <option value="1">I write them down on paper or in a note</option>
+        <option value="2">I let my browser save them</option>
+        <option value="3">I use a dedicated password manager for some accounts</option>
+        <option value="4">I use a dedicated password manager for all accounts</option>
+    </select> <span class="assess-percentile-hint" id="pct-password-method"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-password-method" onchange="handleSkip('a-password-method')"><label for="skip-password-method">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-update-habits">
-    <label for="a-update-habits">I know whether my devices (phone, computer) are set to install software updates automatically.<br><span class="assess-hint">Check your device settings. On most phones and computers, look for "Software Update" or "Windows Update" settings.</span></label>
+<div class="assess-input-group" id="ig-update-habits">
+    <span class="assess-label">Are your devices set to install software updates automatically?</span>
+    <span class="assess-hint">Check your phone and computer settings. On most devices, look for "Software Update" or "Windows Update" settings.</span>
+    <select id="a-update-habits" onchange="handleAssessInput('a-update-habits')">
+        <option value="">Select...</option>
+        <option value="0">I don't know or I usually dismiss update prompts</option>
+        <option value="1">I install updates occasionally when reminded</option>
+        <option value="2">I install updates within a week of them appearing</option>
+        <option value="3">Automatic updates are on for all my devices</option>
+    </select> <span class="assess-percentile-hint" id="pct-update-habits"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-update-habits" onchange="handleSkip('a-update-habits')"><label for="skip-update-habits">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-privacy-settings">
-    <label for="a-privacy-settings">I have a sense of what privacy settings I've configured on my most-used social media platforms.<br><span class="assess-hint">Check who can see your posts, whether your profile appears in search engines, and what data the platform collects about you.</span></label>
+<div class="assess-input-group" id="ig-backup-frequency">
+    <span class="assess-label">How often do you back up your important files?</span>
+    <span class="assess-hint">Consider cloud sync, external hard drives, or any other backup method for documents, photos, and other files you'd hate to lose.</span>
+    <select id="a-backup-frequency" onchange="handleAssessInput('a-backup-frequency')">
+        <option value="">Select...</option>
+        <option value="0">I don't back up my files</option>
+        <option value="1">Rarely &ndash; less than once a year</option>
+        <option value="2">Occasionally &ndash; a few times a year</option>
+        <option value="3">Regularly &ndash; monthly or when I remember</option>
+        <option value="4">Continuously &ndash; automatic cloud or scheduled backups</option>
+    </select> <span class="assess-percentile-hint" id="pct-backup-frequency"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-backup-frequency" onchange="handleSkip('a-backup-frequency')"><label for="skip-backup-frequency">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-group">
+<h4>General Awareness</h4>
+
+<div class="assess-input-group" id="ig-privacy-settings">
+    <span class="assess-label">How well do you know the privacy settings on your most-used platforms?</span>
+    <span class="assess-hint">Check who can see your posts, whether your profile appears in search engines, and what data the platform collects about you.</span>
+    <select id="a-privacy-settings" onchange="handleAssessInput('a-privacy-settings')">
+        <option value="">Select...</option>
+        <option value="0">I've never looked at them</option>
+        <option value="1">I've glanced at them but not changed much</option>
+        <option value="2">I've reviewed and adjusted settings on my main platforms</option>
+        <option value="3">I regularly review privacy settings across all platforms I use</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-privacy-settings" onchange="handleSkip('a-privacy-settings')"><label for="skip-privacy-settings">I know but prefer not to say</label></div>
+</div>
+
+<div class="assess-input-group" id="ig-breach-history">
+    <span class="assess-label">Have you ever checked whether your accounts have been involved in a data breach?</span>
+    <span class="assess-hint">You can check at <a href="https://haveibeenpwned.com/" target="_blank">haveibeenpwned.com</a>.</span>
+    <select id="a-breach-history" onchange="handleAssessInput('a-breach-history')">
+        <option value="">Select...</option>
+        <option value="0">No, I've never checked</option>
+        <option value="1">I've checked once but didn't act on the results</option>
+        <option value="2">I've checked and changed passwords for affected accounts</option>
+        <option value="3">I check periodically and act on any new breaches</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-breach-history" onchange="handleSkip('a-breach-history')"><label for="skip-breach-history">I know but prefer not to say</label></div>
+</div>
+
+<div class="assess-input-group" id="ig-security-confidence">
+    <span class="assess-label">Overall, how confident do you feel about your digital security?</span>
+    <span class="assess-hint">A gut check &ndash; do you feel your accounts, devices, and data are reasonably well protected?</span>
+    <select id="a-security-confidence" onchange="handleAssessInput('a-security-confidence')">
+        <option value="">Select...</option>
+        <option value="0">Not confident at all &ndash; I know I'm exposed</option>
+        <option value="1">Slightly uneasy &ndash; I've done the basics but suspect gaps</option>
+        <option value="2">Fairly confident &ndash; I've taken deliberate steps</option>
+        <option value="3">Very confident &ndash; I have a systematic approach</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-security-confidence" onchange="handleSkip('a-security-confidence')"><label for="skip-security-confidence">I know but prefer not to say</label></div>
+</div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-security">
+        <span class="assess-summary-label">Comprehensive Security</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-security" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-security">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-convenience">
+        <span class="assess-summary-label">Usability &amp; Convenience</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-convenience" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-convenience">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published cybersecurity survey data for the general population. General Awareness items are recorded for your awareness but not scored, as the available data does not support reliable percentile estimates.</p>
+</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -380,9 +567,41 @@ life_area_slug: digital-safety
     var AREA = 'digital-safety';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-password-reuse', 'a-2fa-status', 'a-phishing-awareness',
-        'a-password-method', 'a-update-habits', 'a-privacy-settings'
+        'a-password-reuse', 'a-2fa-adoption', 'a-phishing-awareness',
+        'a-password-method', 'a-update-habits', 'a-backup-frequency',
+        'a-privacy-settings', 'a-breach-history', 'a-security-confidence'
     ];
+
+    // Scoring thresholds: [{v, p}, ...] sorted by value
+    // password-reuse is inverted: fewer reused passwords = better
+    var THRESHOLDS = {
+        'a-password-reuse': [ // inverted: lower is better
+            {v:20,p:5},{v:15,p:15},{v:10,p:30},{v:5,p:50},{v:2,p:70},{v:1,p:85},{v:0,p:95}
+        ],
+        'a-2fa-adoption': [
+            {v:'0',p:20},{v:'1',p:40},{v:'2',p:55},{v:'3',p:75},{v:'4',p:92}
+        ],
+        'a-phishing-awareness': [
+            {v:'0',p:10},{v:'1',p:30},{v:'2',p:55},{v:'3',p:78},{v:'4',p:93}
+        ],
+        'a-password-method': [
+            {v:'0',p:15},{v:'1',p:30},{v:'2',p:50},{v:'3',p:72},{v:'4',p:90}
+        ],
+        'a-update-habits': [
+            {v:'0',p:15},{v:'1',p:35},{v:'2',p:60},{v:'3',p:82}
+        ],
+        'a-backup-frequency': [
+            {v:'0',p:10},{v:'1',p:25},{v:'2',p:45},{v:'3',p:65},{v:'4',p:85}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        security: ['a-password-reuse', 'a-2fa-adoption', 'a-phishing-awareness'],
+        convenience: ['a-password-method', 'a-update-habits', 'a-backup-frequency']
+    };
+
+    // General Awareness items are recorded but not scored (insufficient population data)
+    var UNSCORED_ITEMS = ['a-privacy-settings', 'a-breach-history', 'a-security-confidence'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -470,65 +689,226 @@ life_area_slug: digital-safety
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Scoring functions ---
 
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+    function interpolatePercentile(value, thresholds) {
+        var num = parseFloat(value);
+        // Check if thresholds use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        // Check if inverted (first threshold has higher value than last)
+        var inverted = thresholds[0].v > thresholds[thresholds.length - 1].v;
+        if (inverted) {
+            if (num >= thresholds[0].v) return thresholds[0].p;
+            if (num <= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num <= thresholds[i].v && num >= thresholds[i + 1].v) {
+                    var t = (thresholds[i].v - num) / (thresholds[i].v - thresholds[i + 1].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        } else {
+            if (num <= thresholds[0].v) return thresholds[0].p;
+            if (num >= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+            for (var i = 0; i < thresholds.length - 1; i++) {
+                if (num >= thresholds[i].v && num <= thresholds[i + 1].v) {
+                    var t = (num - thresholds[i].v) / (thresholds[i + 1].v - thresholds[i].v);
+                    return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+                }
+            }
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
         });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return; // no hints for unscored items
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['security', 'convenience'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
+    function saveScores() {
+        var scores = {};
+        ['security', 'convenience'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
         });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+            if (skipBox.checked && input.type === 'number') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    // Override completeStep to also save scores
+    var _origCompleteStep = window.completeStep;
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        _origCompleteStep(step);
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();

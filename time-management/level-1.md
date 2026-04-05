@@ -133,34 +133,115 @@ life_area_slug: time-management
 .exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
-/* Assessment checklist */
-.assess-group { margin-bottom: 20px; }
-.assess-group h4 { margin: 0 0 10px 0; }
-.assess-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
-    margin-bottom: 6px;
+/* Assessment inputs */
+.assess-privacy {
+    background: #f0f4ff;
+    border-left: 4px solid #155799;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+.assess-group { margin-bottom: 24px; }
+.assess-group h4 { margin: 0 0 12px 0; }
+.assess-input-group {
+    padding: 14px 18px;
+    margin-bottom: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
     font-size: 0.93em;
     line-height: 1.4;
+    transition: border-color 0.2s;
 }
-.assess-item:hover { border-color: #155799; background: #f0f4ff; }
-.assess-item.checked { border-color: #28a745; background: #f0f7f0; }
-.assess-item input[type="checkbox"] {
-    margin-top: 2px;
-    flex-shrink: 0;
-    accent-color: #28a745;
+.assess-input-group.answered { border-color: #28a745; background: #f9fdf9; }
+.assess-input-group .assess-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
-.assess-item label { cursor: pointer; flex: 1; }
-.assess-hint {
+.assess-input-group .assess-hint {
     font-size: 0.85em;
     color: #888;
+    margin-bottom: 8px;
+}
+.assess-input-group input[type="number"] {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+.assess-input-group select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.assess-skip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #888;
+}
+.assess-skip input[type="checkbox"] {
+    accent-color: #888;
+}
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
     margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
 }
 
 /* Completion */
@@ -305,66 +386,153 @@ life_area_slug: time-management
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Awareness means knowing your starting point. Work through the checklist below &ndash; some items you might know off the top of your head, others might take a few minutes to look up or test. Tick each one once you know the answer (you don't need to enter the answer here, just confirm you've found it out).</p>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+
+<p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to think through.</p>
 
 <div class="assess-group">
-<h4>Productivity & Achievement</h4>
+<h4>Productivity &amp; Achievement</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-system">
-    <label for="a-system">I can describe my current system for capturing and organising tasks.<br><span class="assess-hint">Do you use a to-do list, calendar, app, notebook, or nothing at all?</span></label>
+<div class="assess-input-group" id="ig-focused-hours">
+    <span class="assess-label">How many hours of focused, productive work do you complete on a typical work day?</span>
+    <span class="assess-hint">Count only time spent on meaningful tasks with genuine concentration &ndash; not meetings, email, or distracted browsing.</span>
+    <input type="number" id="a-focused-hours" min="0" max="16" step="0.5" placeholder="e.g. 4" onchange="handleAssessInput('a-focused-hours')"> <span class="assess-percentile-hint" id="pct-focused-hours"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-focused-hours" onchange="handleSkip('a-focused-hours')"><label for="skip-focused-hours">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-completion">
-    <label for="a-completion">I have a rough sense of what percentage of my planned tasks I actually complete in a typical week.<br><span class="assess-hint">Think about last week &ndash; how much of what you intended to do actually got done?</span></label>
+<div class="assess-input-group" id="ig-task-completion">
+    <span class="assess-label">What percentage of your planned tasks do you actually complete in a typical week?</span>
+    <span class="assess-hint">Think about last week &ndash; how much of what you intended to do actually got done?</span>
+    <select id="a-task-completion" onchange="handleAssessInput('a-task-completion')">
+        <option value="">Select...</option>
+        <option value="0">Less than 30%</option>
+        <option value="1">30 &ndash; 50%</option>
+        <option value="2">50 &ndash; 70%</option>
+        <option value="3">70 &ndash; 85%</option>
+        <option value="4">85 &ndash; 95%</option>
+        <option value="5">95%+</option>
+    </select> <span class="assess-percentile-hint" id="pct-task-completion"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-task-completion" onchange="handleSkip('a-task-completion')"><label for="skip-task-completion">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-peak">
-    <label for="a-peak">I know when my peak performance hours are during the day.<br><span class="assess-hint">Morning, afternoon, or evening? When do you do your best focused work?</span></label>
+<div class="assess-input-group" id="ig-task-system">
+    <span class="assess-label">What kind of system do you use to capture and organise tasks?</span>
+    <span class="assess-hint">To-do list, calendar, app, notebook, or nothing at all?</span>
+    <select id="a-task-system" onchange="handleAssessInput('a-task-system')">
+        <option value="">Select...</option>
+        <option value="0">No system &ndash; I keep things in my head</option>
+        <option value="1">Informal &ndash; occasional notes or lists, not consistent</option>
+        <option value="2">Basic &ndash; a consistent to-do list or notebook</option>
+        <option value="3">Structured &ndash; a dedicated app or planner with regular reviews</option>
+        <option value="4">Advanced &ndash; an integrated system (e.g. time blocking, weekly reviews, task prioritisation)</option>
+    </select> <span class="assess-percentile-hint" id="pct-task-system"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-task-system" onchange="handleSkip('a-task-system')"><label for="skip-task-system">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Balance & Wellbeing</h4>
+<h4>Balance &amp; Wellbeing</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-boundaries">
-    <label for="a-boundaries">I know whether I have clear boundaries between work time and personal time.<br><span class="assess-hint">Do you have a defined end to your work day, or does work bleed into evenings and weekends?</span></label>
+<div class="assess-input-group" id="ig-boundaries">
+    <span class="assess-label">How clear are the boundaries between your work time and personal time?</span>
+    <span class="assess-hint">Do you have a defined end to your work day, or does work bleed into evenings and weekends?</span>
+    <select id="a-boundaries" onchange="handleAssessInput('a-boundaries')">
+        <option value="">Select...</option>
+        <option value="0">No boundaries &ndash; work and personal time blur together completely</option>
+        <option value="1">Weak &ndash; I have a rough idea when to stop but regularly work beyond it</option>
+        <option value="2">Moderate &ndash; I usually stop on time but make exceptions several times a week</option>
+        <option value="3">Clear &ndash; I have defined hours and stick to them most days</option>
+        <option value="4">Strong &ndash; firm boundaries that I protect consistently, with rare exceptions</option>
+    </select> <span class="assess-percentile-hint" id="pct-boundaries"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-boundaries" onchange="handleSkip('a-boundaries')"><label for="skip-boundaries">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-breaks">
-    <label for="a-breaks">I know how often I take breaks during focused work and whether I schedule them deliberately.<br><span class="assess-hint">Do you take regular breaks, or do you work until you're exhausted?</span></label>
+<div class="assess-input-group" id="ig-breaks">
+    <span class="assess-label">How do you manage breaks during focused work?</span>
+    <span class="assess-hint">Do you take regular breaks, or do you work until you are exhausted?</span>
+    <select id="a-breaks" onchange="handleAssessInput('a-breaks')">
+        <option value="">Select...</option>
+        <option value="0">No breaks &ndash; I work until I run out of energy or get distracted</option>
+        <option value="1">Occasional &ndash; I take breaks when I remember or feel tired</option>
+        <option value="2">Fairly regular &ndash; I usually take a break every couple of hours</option>
+        <option value="3">Deliberate &ndash; I schedule breaks at set intervals (e.g. Pomodoro, 90-minute blocks)</option>
+    </select> <span class="assess-percentile-hint" id="pct-breaks"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-breaks" onchange="handleSkip('a-breaks')"><label for="skip-breaks">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-protected">
-    <label for="a-protected">I know whether I have protected time for relationships, health, and personal interests.<br><span class="assess-hint">Is time for these things scheduled, or do they only happen when work permits?</span></label>
+<div class="assess-input-group" id="ig-protected">
+    <span class="assess-label">Do you have protected time for relationships, health, and personal interests?</span>
+    <span class="assess-hint">Is time for these things scheduled, or do they only happen when work permits?</span>
+    <select id="a-protected" onchange="handleAssessInput('a-protected')">
+        <option value="">Select...</option>
+        <option value="0">No &ndash; personal time only happens if work allows it</option>
+        <option value="1">Sometimes &ndash; I try to make time but it is often squeezed out</option>
+        <option value="2">Usually &ndash; I have regular personal time most weeks</option>
+        <option value="3">Always &ndash; I have scheduled, protected blocks for personal priorities</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-protected" onchange="handleSkip('a-protected')"><label for="skip-protected">I know but prefer not to say</label></div>
 </div>
 </div>
 
 <div class="assess-group">
-<h4>Flexibility & Responsiveness</h4>
+<h4>Flexibility &amp; Responsiveness</h4>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-interruptions">
-    <label for="a-interruptions">I have a sense of how well I handle interruptions and unexpected tasks during the day.<br><span class="assess-hint">Do you recover quickly, or does an interruption derail your whole afternoon?</span></label>
+<div class="assess-input-group" id="ig-interruptions">
+    <span class="assess-label">How well do you handle interruptions during focused work?</span>
+    <span class="assess-hint">Think about what happens when someone messages you or an urgent request arrives mid-task.</span>
+    <select id="a-interruptions" onchange="handleAssessInput('a-interruptions')">
+        <option value="">Select...</option>
+        <option value="0">Poorly &ndash; an interruption derails my whole session</option>
+        <option value="1">Inconsistently &ndash; sometimes I recover quickly, sometimes I lose the thread</option>
+        <option value="2">Fairly well &ndash; I can note the interruption and return to my task within a few minutes</option>
+        <option value="3">Well &ndash; I have a system for capturing interruptions and resuming without losing focus</option>
+    </select> <span class="assess-percentile-hint" id="pct-interruptions"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-interruptions" onchange="handleSkip('a-interruptions')"><label for="skip-interruptions">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-reprioritise">
-    <label for="a-reprioritise">I know how I currently respond when priorities shift mid-week.<br><span class="assess-hint">Do you adjust your plan, or do you try to do everything and end up overwhelmed?</span></label>
+<div class="assess-input-group" id="ig-reprioritise">
+    <span class="assess-label">How do you respond when priorities shift mid-week?</span>
+    <span class="assess-hint">Do you adjust your plan, or do you try to do everything and end up overwhelmed?</span>
+    <select id="a-reprioritise" onchange="handleAssessInput('a-reprioritise')">
+        <option value="">Select...</option>
+        <option value="0">I try to do everything and usually feel overwhelmed</option>
+        <option value="1">I drop things reactively, without a clear process for deciding what gives</option>
+        <option value="2">I reprioritise deliberately, though it takes effort</option>
+        <option value="3">I reprioritise smoothly &ndash; I have a clear process for adjusting plans</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-reprioritise" onchange="handleSkip('a-reprioritise')"><label for="skip-reprioritise">I know but prefer not to say</label></div>
 </div>
 
-<div class="assess-item" onclick="toggleAssess(this)">
-    <input type="checkbox" id="a-contexts">
-    <label for="a-contexts">I've thought about whether my time management approach works across different contexts (work, home, travel).<br><span class="assess-hint">Does your system travel with you, or does it only work at your desk?</span></label>
+<div class="assess-input-group" id="ig-contexts">
+    <span class="assess-label">Does your time management approach work across different contexts?</span>
+    <span class="assess-hint">Does your system travel with you (work, home, travel), or does it only work at your desk?</span>
+    <select id="a-contexts" onchange="handleAssessInput('a-contexts')">
+        <option value="">Select...</option>
+        <option value="0">It only works in one context &ndash; I have no system outside that setting</option>
+        <option value="1">It mostly works in one context but partially transfers to others</option>
+        <option value="2">It works across most contexts with some adaptation</option>
+        <option value="3">It works reliably in any context I find myself in</option>
+    </select>
+    <div class="assess-skip"><input type="checkbox" id="skip-contexts" onchange="handleSkip('a-contexts')"><label for="skip-contexts">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Tick all items to continue</button>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-productivity">
+        <span class="assess-summary-label">Productivity &amp; Achievement</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-productivity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-productivity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-balance">
+        <span class="assess-summary-label">Balance &amp; Wellbeing</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-balance" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-balance">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on time management practices among working adults. Flexibility &amp; Responsiveness items are recorded for your awareness but not scored, as the available data does not support reliable percentile estimates.</p>
+</div>
+
+<button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
         </div>
     </div>
@@ -407,10 +575,42 @@ life_area_slug: time-management
     var AREA = 'time-management';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-system', 'a-completion', 'a-peak',
+        'a-focused-hours', 'a-task-completion', 'a-task-system',
         'a-boundaries', 'a-breaks', 'a-protected',
         'a-interruptions', 'a-reprioritise', 'a-contexts'
     ];
+
+    // Scoring thresholds: [{value, percentile}, ...] sorted by value ascending
+    // Sources: time management research, productivity studies, workplace surveys
+    var THRESHOLDS = {
+        'a-focused-hours': [
+            {v:0,p:5},{v:1,p:15},{v:2,p:30},{v:3,p:50},{v:4,p:70},{v:5,p:82},{v:6,p:90},{v:8,p:96}
+        ],
+        'a-task-completion': [
+            {v:'0',p:10},{v:'1',p:25},{v:'2',p:45},{v:'3',p:65},{v:'4',p:82},{v:'5',p:95}
+        ],
+        'a-task-system': [
+            {v:'0',p:15},{v:'1',p:35},{v:'2',p:55},{v:'3',p:78},{v:'4',p:93}
+        ],
+        'a-boundaries': [
+            {v:'0',p:15},{v:'1',p:35},{v:'2',p:55},{v:'3',p:75},{v:'4',p:92}
+        ],
+        'a-breaks': [
+            {v:'0',p:20},{v:'1',p:40},{v:'2',p:65},{v:'3',p:88}
+        ],
+        'a-interruptions': [
+            {v:'0',p:15},{v:'1',p:40},{v:'2',p:65},{v:'3',p:88}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        productivity: ['a-focused-hours', 'a-task-completion', 'a-task-system'],
+        balance: ['a-boundaries', 'a-breaks']
+    };
+
+    // Flexibility items and some balance items are recorded but not scored
+    // (insufficient population data for reliable percentile estimates)
+    var UNSCORED_ITEMS = ['a-protected', 'a-reprioritise', 'a-contexts'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -498,65 +698,215 @@ life_area_slug: time-management
         }
     };
 
-    window.toggleAssess = function(el) {
-        var cb = el.querySelector('input[type="checkbox"]');
-        if (!cb) return;
-        // Toggle if the click wasn't directly on the checkbox
-        if (document.activeElement !== cb) {
-            cb.checked = !cb.checked;
-        }
-        el.classList.toggle('checked', cb.checked);
+    // --- Scoring functions ---
 
-        // Save checklist state
-        var checklist = {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box) checklist[id] = box.checked;
+    function interpolatePercentile(value, thresholds) {
+        var num = parseFloat(value);
+        // Check if thresholds use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        // Numeric interpolation
+        if (num <= thresholds[0].v) return thresholds[0].p;
+        if (num >= thresholds[thresholds.length - 1].v) return thresholds[thresholds.length - 1].p;
+        for (var i = 0; i < thresholds.length - 1; i++) {
+            if (num >= thresholds[i].v && num <= thresholds[i + 1].v) {
+                var t = (num - thresholds[i].v) / (thresholds[i + 1].v - thresholds[i].v);
+                return Math.round(thresholds[i].p + t * (thresholds[i + 1].p - thresholds[i].p));
+            }
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+        if (!THRESHOLDS[itemId]) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
         });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return; // no hints for unscored items
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['productivity', 'balance'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        // Save raw answers directly to localStorage (NOT via APStorage)
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-assess') || {};
             all[AREA] = checklist;
             APStorage.save('ap-level1-assess', all);
         }
+    }
 
-        // Enable button when all checked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
+    function saveScores() {
+        var scores = {};
+        ['productivity', 'balance'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
         });
-        var btn = document.getElementById('assessBtn');
-        if (btn) {
-            btn.disabled = !allChecked;
-            btn.textContent = allChecked ? 'All done \u2013 continue' : 'Tick all items to continue';
-        }
-    };
-
-    function restoreChecklist() {
-        if (typeof APStorage === 'undefined') return;
-        var all = APStorage.load('ap-level1-assess') || {};
-        var checklist = all[AREA] || {};
-        ASSESS_IDS.forEach(function(id) {
-            var box = document.getElementById(id);
-            if (box && checklist[id]) {
-                box.checked = true;
-                var item = box.closest('.assess-item');
-                if (item) item.classList.add('checked');
-            }
-        });
-        // Check if all are already ticked
-        var allChecked = ASSESS_IDS.every(function(id) {
-            var box = document.getElementById(id);
-            return box && box.checked;
-        });
-        var btn = document.getElementById('assessBtn');
-        if (btn && allChecked) {
-            btn.disabled = false;
-            btn.textContent = 'All done \u2013 continue';
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
         }
     }
 
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    // --- Event handlers ---
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+            if (skipBox.checked && input.type === 'number') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    // Override completeStep to also save scores
+    var _origCompleteStep = window.completeStep;
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        _origCompleteStep(step);
+    };
+
+    // --- Restore saved answers ---
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessCompletion();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        restoreChecklist();
+        restoreAssessment();
         updateUI();
     });
 })();
