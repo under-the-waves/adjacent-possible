@@ -4,7 +4,7 @@ description: |
   - Sessions typically last 45-75 minutes, 3-4 times per week, combining compound movements (squats, deadlifts, bench press) with isolation exercises and applying progressive overload weekly or bi-weekly
   - Distinct from other resistance modalities in its systematic load progression, which provides a clear, measurable feedback loop and underpins long-term strength development
   - [Meta-analytic evidence](https://doi.org/10.1136/bjsports-2021-105099) links resistance training to a 15-21% reduction in all-cause mortality, with strength gains noticeable within 4-6 weeks and significant physique changes after 12-16 weeks of consistent training
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -76,6 +76,51 @@ values:
       - Gym-based adherence is challenging, with approximately 50% dropout within 6 months and only 30 – 40% maintaining consistent training beyond one year ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
       - Weight-focused trainees may become discouraged when scale weight does not change despite genuine body composition improvements, reducing motivation to continue ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
       - Those who persist and add dietary modification show substantially better long-term weight outcomes, but the dual-adherence requirement (training + nutrition) reduces the effective uptake rate ([Wing & Phelan 2005, Am J Clin Nutr](https://doi.org/10.1093/ajcn/82.1.222S))
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - [Meta-analysis of 33 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) (n = 1,877) found resistance exercise training significantly reduced depressive symptoms with a moderate effect size (ES = 0.66), regardless of health status or training volume; a [2025 meta-analysis of 29 RCTs](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1655855/full) reported a large pooled SMD of -0.94 for depression
+      - [Resistance exercise also produces anxiolytic effects](https://pmc.ncbi.nlm.nih.gov/articles/PMC4090891/) across diverse populations, with meta-analytic effect sizes of d = 0.31 for anxiety reduction, contributing to a more stable emotional baseline
+      - Score 5 reflects a genuine but secondary benefit: successful strength trainees move from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6), but the effect is moderate compared to dedicated psychological interventions
+    isr: 60
+    isr_reasoning: |
+      - The [Gordon et al. 2018 JAMA Psychiatry meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) found significant heterogeneity across trials and noted that blinding quality moderated effect sizes, suggesting not all adherent trainees achieve meaningful mood improvements
+      - Baseline severity moderates response: those with elevated depressive or anxiety symptoms at baseline show larger improvements, while those with subclinical symptoms see smaller effects ([Frontiers 2025 meta-analysis](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1655855/full))
+      - An estimated 55-65% of adherent strength trainees experience clinically meaningful mood stabilisation, with the remainder showing minimal change due to low baseline symptom levels or non-mood-related sources of instability
+    uar: 35
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.resilience:
+    pbs: 5
+    pbs_reasoning: |
+      - Progressive strength training builds resilience through repeated mastery experiences: systematically overcoming progressively heavier loads develops self-efficacy and tolerance for discomfort; [research on barbell training](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1439431/full) found both mastery and resilience self-efficacy subscales increased significantly over a 16-week programme
+      - [Physical fitness is positively associated with stress resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC9095527/), with the relationship partly mediated by general self-efficacy; higher self-efficacy predicted lower reactivity to life events and daily stressors
+      - Score 5 reflects a meaningful but moderate shift from 'significant disruption from moderate stressors' (4) toward 'manages moderate stressors adequately' (6); the mechanism is genuine but indirect – strength training builds general self-efficacy rather than directly training stress coping skills
+    isr: 55
+    isr_reasoning: |
+      - Self-efficacy gains from resistance training are well-documented but vary with individual response to mastery experiences; not all trainees internalise physical progress as broader psychological resilience ([Frontiers 2024](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1439431/full))
+      - The causal pathway from lifting heavier weights to handling life stressors better is plausible but requires psychological transfer that does not occur automatically; roughly half to two-thirds of adherent trainees report subjectively improved stress tolerance
+      - Evidence for the resilience pathway specifically is thinner than for mood stabilisation, warranting a more conservative ISR than the stability value
+    uar: 35
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 4
+    pbs_reasoning: |
+      - Progressive strength training provides a clear mastery pathway (measurable PRs, visible physique changes) that supports agency and self-determination; [systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC7504332/) links exercise self-efficacy to improved life satisfaction and quality of life across physical and mental domains
+      - The discipline and goal-directed structure of progressive overload can foster a sense of purpose and personal growth, which are components of eudaimonic wellbeing, but these benefits are indirect and depend on the individual's psychological orientation to training
+      - Score 4 represents the minimum scoreable threshold: strength training contributes modestly to flourishing through mastery and agency but lacks the social connection, variety, or contemplative elements that more directly cultivate sustained positive affect and meaning
+    isr: 45
+    isr_reasoning: |
+      - The pathway from strength gains to life satisfaction is mediated by self-efficacy and body image, introducing multiple links where the benefit can attenuate; not all trainees experience physical progress as psychologically meaningful ([PMC 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7504332/))
+      - Flourishing benefits are more reliably reported by those who find intrinsic satisfaction in the training process itself, which is a subset of all adherent trainees (see fitness.enjoyment ISR)
+      - An estimated 40-50% of consistent trainees report enhanced life satisfaction attributable to their training practice, with the remainder viewing it instrumentally without broader wellbeing spillover
+    uar: 35
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 100

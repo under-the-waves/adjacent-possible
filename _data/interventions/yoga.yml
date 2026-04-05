@@ -4,7 +4,7 @@ description: |
   - Develops flexibility, balance, core stability, body awareness, and stress resilience, with noticeable improvements emerging within 2-4 weeks and significant benefits over 2-3 months of consistent practice
   - [Meta-analytic evidence](https://doi.org/10.1177/2047487314523132) shows yoga significantly reduces cardiovascular risk factors including blood pressure, blood lipids, and blood glucose, while [comparative research](https://doi.org/10.1089/acm.2009.0044) finds stress reduction effects that lower cortisol and inflammatory markers
   - Can be practised at home with minimal equipment (a mat and comfortable clothing) or in studio classes with instruction, contributing to [exceptionally low dropout rates](https://doi.org/10.1371/journal.pone.0159665) of around 11% across 168 trials
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -76,6 +76,51 @@ values:
       - Yoga has exceptionally low dropout rates (11.4% across 168 RCTs), suggesting strong general adherence, but weight loss-specific motivation may wane when results are modest ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
       - Practitioners who begin yoga primarily for weight loss may shift to other modalities offering faster results, though those who stay often find broader wellbeing benefits that sustain practice ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
       - The accessibility of home practice and low injury risk support continued engagement, but the slow pace of weight change limits reinforcement for weight-focused practitioners ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
+
+  mental-health.stability:
+    pbs: 6
+    pbs_reasoning: |
+      - [Meta-analyses of yoga for anxiety](https://pubmed.ncbi.nlm.nih.gov/29697885/) find small-to-moderate effect sizes (SMD = -0.43 vs no treatment; SMD = -0.86 vs active comparators), while [depression meta-analyses](https://pmc.ncbi.nlm.nih.gov/articles/PMC10077871/) report SMD = -0.43 to -0.69, indicating meaningful symptom reduction for successful practitioners
+      - Yoga's integration of breathwork (pranayama) and physical postures activates the parasympathetic nervous system, reducing cortisol and improving heart rate variability, providing a direct physiological pathway to emotional stability distinct from exercise alone ([Zaccaro et al. 2018 meta-analysis on slow breathing](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137615/))
+      - Score 6 corresponds to moving from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6) on the subjective anchor; yoga's combined somatic and attentional mechanisms make it slightly stronger for stability than pure meditation (PBS 5), justified by the addition of active breathwork and physical stress inoculation
+    isr: 65
+    isr_reasoning: |
+      - The [Cramer et al. 2014 meta-analysis](https://doi.org/10.1177/2047487314523132) and [anxiety meta-analyses](https://pubmed.ncbi.nlm.nih.gov/29697885/) show consistent moderate effects, but no significant effects were found for patients with DSM-diagnosed anxiety disorders specifically, indicating the benefit is more reliable for subclinical and elevated symptoms than for clinical populations
+      - Individual response varies with yoga style: vigorous styles (vinyasa, ashtanga) provide stronger anxiolytic effects through cardiovascular pathways, while gentle styles (yin, restorative) work primarily through parasympathetic activation; style mismatch reduces response rates ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+      - Approximately 60-70% of adherent practitioners achieve meaningful stability improvements, with non-responders typically being those whose distress stems from sources not amenable to somatic-attentional intervention (e.g. situational stressors, personality factors)
+    uar: 70
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile; yoga's exceptionally low dropout rate (11.4% across 168 RCTs) applies across all benefit domains ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
+
+  mental-health.resilience:
+    pbs: 5
+    pbs_reasoning: |
+      - Yoga trains equanimity through sustained physical discomfort (holding poses), controlled breathing under exertion, and mindfulness of bodily sensations, building tolerance for distress and faster recovery from stress responses
+      - A [2025 study of IT professionals](https://www.ijcrt.org/papers/IJCRT2509475.pdf) found all dimensions of resilience (including equanimity) were positively and significantly correlated with regular yoga practice, while [research on stress reactivity](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137615/) shows yoga-trained breathing improves HRV-mediated stress recovery
+      - Score 5 rather than 6: yoga builds resilience through somatic stress inoculation and equanimity training, moving practitioners from 'significant disruption from moderate stressors' (4) toward 'manages moderate stressors adequately' (6), but the typical class setting provides less intense adversity exposure than dedicated resilience-building activities
+    isr: 55
+    isr_reasoning: |
+      - The resilience pathway is indirect: yoga must first develop parasympathetic tone and equanimity skills, which then must transfer to real-world stressor recovery; each link introduces variability ([Pascoe et al. 2017, Health Psychol Rev](https://www.tandfonline.com/doi/full/10.1080/17437199.2020.1760727))
+      - Not all yoga styles emphasise the discomfort-tolerance and breath-control elements most relevant to resilience; restorative styles may improve stability without meaningfully building stress recovery capacity
+      - Approximately 50-60% of regular practitioners develop noticeably improved stress recovery, with the remainder finding benefits confined to in-session relaxation without transfer to real-world adversity
+    uar: 70
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 5
+    pbs_reasoning: |
+      - Yoga cultivates present-moment awareness, body-mind integration, and a contemplative quality that practitioners report as intrinsically meaningful; [research](https://www.sciencedirect.com/science/article/abs/pii/S1360859213001873) finds more frequent practice is associated with increased positive affect, life satisfaction, and both hedonic and eudaimonic wellbeing
+      - The flow-state potential of physically demanding yoga styles (vinyasa, ashtanga) adds a flourishing pathway: Csikszentmihalyi identified Hatha Yoga as one of the best models for psychic energy flowing along a single channel of consciousness
+      - Score 5 reflects movement from 'occasional positive experiences' (4) toward 'regular moments of satisfaction and meaning' (6); yoga genuinely enhances daily satisfaction through embodied awareness but does not by itself generate the deep sustained purpose characteristic of higher anchor levels
+    isr: 55
+    isr_reasoning: |
+      - [Studies on yoga and comprehensive wellbeing](https://pmc.ncbi.nlm.nih.gov/articles/PMC11260728/) show significant improvements in subjective and psychological wellbeing dimensions, but effect sizes for positive affect are smaller and less consistent than for symptom reduction
+      - Flow states require adequate challenge-skill balance; gentle styles and repetitive home practice may not reliably induce flow, reducing the proportion who experience the flourishing benefit ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - Approximately 50-60% of regular practitioners report enhanced life satisfaction and positive affect, with the remainder finding yoga primarily functional (stress relief, flexibility) without meaningful flourishing gains
+    uar: 70
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 50

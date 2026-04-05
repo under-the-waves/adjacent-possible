@@ -5,7 +5,7 @@ description: |
   - Distinguished from conventional strength training by its emphasis on relative strength, movement problem-solving, and skill progression rather than absolute load; [flow-state research](https://doi.org/10.1348/000712607X183614) identifies climbing as one of the activities most reliably inducing flow
   - [Meta-analytic evidence](https://doi.org/10.1080/02640414.2016.1151924) shows significant improvements in grip strength (d=0.81), upper body pulling, and core stability, though cardiovascular benefits are limited by the intermittent climb-rest pattern
   - Noticeable strength and technique improvements emerge within 4-6 weeks, with significant performance gains developing over 6-12 months
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -77,6 +77,51 @@ values:
       - Climbing has significant access barriers (gym membership costs of $60–100/month, geographic availability, need for partners or belay certification) that reduce the population who can sustain regular practice for weight management ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
       - Weight loss-motivated individuals may find climbing's indirect and slow body composition effects frustrating compared to more predictable modalities like running or cycling ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
       - Finger and upper extremity injuries are common at intermediate levels and can force extended breaks that disrupt any weight management trajectory ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+
+  mental-health.stability:
+    pbs: 4
+    pbs_reasoning: |
+      - A [systematic review of bouldering as depression treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC12459035/) found bouldering psychotherapy (BPT) produced comparable results to CBT for depressive symptoms, and was more effective than physical exercise alone; a [prospective survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) found 73.1% of climbers felt climbing positively impacted their mental health
+      - Climbing provides moderate aerobic and anaerobic exercise, releasing endorphins and reducing cortisol, but the intermittent climb-rest pattern limits sustained cardiovascular stimulus compared to continuous aerobic activities like running or swimming
+      - Score 4 is the minimum threshold: climbing meaningfully reduces depressive and anxious symptoms for successful practitioners, but its stability pathway is less direct than yoga's targeted breathwork or swimming's sustained aerobic stimulus; the benefit corresponds to the lower end of 'occasional distress that resolves quickly' (6) from a baseline of 'frequent distress' (4)
+    isr: 55
+    isr_reasoning: |
+      - [RCTs comparing bouldering psychotherapy to CBT](https://pmc.ncbi.nlm.nih.gov/articles/PMC4548691/) show comparable depression outcomes, but these trials combine climbing with explicit psychotherapeutic elements; the effect of climbing alone on symptom stability is less well-isolated
+      - The [adolescent mental health study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11581854/) found significant reductions in cognitive and somatic anxiety, but the evidence base for climbing-specific mood stabilisation is still small (fewer than 10 RCTs)
+      - Approximately 50-60% of regular climbers experience meaningful mood stability improvements, with the remainder finding that the intermittent, high-intensity nature of climbing sessions provides excitement without sustained mood-stabilising effects
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile; climbing's moderate long-term adherence is limited by facility access, injury risk, and cost ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+
+  mental-health.resilience:
+    pbs: 6
+    pbs_reasoning: |
+      - Climbing uniquely combines physical challenge with explicit fear management: every route requires assessing risk, committing to moves despite uncertainty, and recovering from falls, providing systematic exposure to manageable adversity that directly builds psychological resilience
+      - [Research on climbing's psychological mechanisms](https://pmc.ncbi.nlm.nih.gov/articles/PMC11581854/) identifies improved self-efficacy, fear management, and boundary awareness as key outcomes; the graded difficulty system (V-scale, YDS) creates a natural progressive exposure framework analogous to therapeutic exposure hierarchies
+      - Score 6 corresponds to movement from 'significant disruption from moderate stressors' (4) toward 'handles major stressors with brief disruption' (8); climbing's unique contribution is training the capacity to act effectively under acute fear and uncertainty, a resilience skill that transfers beyond the climbing context
+    isr: 60
+    isr_reasoning: |
+      - The fear-management and self-efficacy pathway is mechanistically robust: climbing inherently requires confronting fear and pushing through discomfort, making the resilience benefit a direct consequence of participation rather than an incidental side effect ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - [Prospective survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows climbers consistently report improved confidence and stress management, with 73.1% reporting positive mental health impacts; the self-selection caveat applies but the mechanism is plausible for most participants
+      - Approximately 55-65% of regular climbers develop meaningfully improved stress recovery and adversity tolerance, with non-responders typically being those who avoid challenging routes or disengage from the fear-management aspect of the activity
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 7
+    pbs_reasoning: |
+      - Climbing is [identified as one of the activities most reliably inducing flow states](https://doi.org/10.1348/000712607X183614) due to its optimal balance of challenge, skill demand, and immediate feedback; the problem-solving element (route-reading), physical intensity, and clear success criteria create multi-dimensional engagement that generates deep satisfaction
+      - The graded mastery system provides a continuous stream of achievement experiences: sending a new grade delivers a potent sense of accomplishment, while the social structure (belaying partnerships, gym community, outdoor trips) adds belonging and shared meaning
+      - Score 7 corresponds to movement well into 'frequent positive emotions and meaningful engagement' (8) territory; climbing's combination of flow, mastery, community, and adventure generates flourishing benefits that exceed most exercise modalities, capped only by the fact that it remains a leisure activity rather than a life purpose
+    isr: 70
+    isr_reasoning: |
+      - Flow-state research specifically identifies climbing as one of the highest-flow activities, with the challenge-skill balance and immediate feedback reliably inducing optimal experience among competent practitioners ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - The strong community dimension adds a social flourishing pathway that is less dependent on individual variation; [survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows camaraderie and mutual support are consistently cited as contributors to wellbeing among climbers
+      - Approximately 65-75% of regular climbers report climbing as a primary source of positive affect and life satisfaction, with non-responders mainly being those who plateau and disengage before developing competence
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 250

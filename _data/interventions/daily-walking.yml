@@ -5,7 +5,7 @@ description: |
   - Distinguished from other cardio modalities by its exceptionally high adherence rate and negligible injury risk, though its low intensity limits performance and body composition outcomes
   - [Large-scale meta-analyses](https://doi.org/10.1136/bjsports-2014-094157) show walking reduces all-cause mortality by 20-30%, with [step-count research](https://doi.org/10.1016/S2468-2667(21)00302-9) indicating diminishing returns above 7,000-8,000 steps per day
   - Health benefits become noticeable within 2-4 weeks, with significant cardiovascular and metabolic improvements developing over 8-12 weeks
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -77,6 +77,51 @@ values:
       - Walking has the highest long-term adherence of any exercise modality, with 70 – 85% maintaining programmes beyond 6 months, directly supporting sustained weight management ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
       - Individuals maintaining 250+ minutes per week of moderate activity are significantly more likely to sustain weight loss at 12 months ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
       - Walking integrates into daily routines with minimal scheduling friction, but weight maintenance still requires dietary consistency that not all walkers adopt ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - A [meta-analysis of 75 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC11287235/) found walking significantly reduces depressive symptoms (SMD -0.59) and anxiety symptoms (SMD -0.45) compared with inactive controls, corresponding to a moderate shift from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6)
+      - The [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) of 218 RCTs found light physical activity including walking produced clinically meaningful effects on depression (g = -0.58), confirming walking as an effective standalone mood intervention
+      - Score 5 reflects a genuine but moderate stability benefit: walking reliably lifts baseline mood and reduces symptom burden, but effect sizes are smaller than vigorous exercise (g = -0.74) and the benefit is a secondary domain effect rather than a primary therapeutic intervention
+    isr: 70
+    isr_reasoning: |
+      - Walking's mood benefits are among the most consistently replicated findings in exercise psychology, with significant effects across subgroups including different frequencies, durations, indoor/outdoor settings, and group/individual formats ([JMIR Public Health 2024](https://publichealth.jmir.org/2024/1/e48355))
+      - When compared to active controls, walking showed no significant difference from other active interventions (SMD -0.13 for depression, -0.05 for anxiety), indicating it works but is not uniquely effective ([JMIR Public Health 2024](https://publichealth.jmir.org/2024/1/e48355))
+      - The low intensity ensures almost universally positive affective responses during the activity itself, meaning the mood benefit operates both during and after sessions, raising the proportion who experience meaningful stability gains ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+    uar: 85
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile; walking has the highest long-term adherence of any exercise modality
+
+  mental-health.resilience:
+    pbs: 4
+    pbs_reasoning: |
+      - [Nature walk research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6466337/) shows group walks in nature buffer the effects of stressful life events on mental health, providing a modest stress-recovery pathway through environmental restoration and cortisol reduction
+      - Walking's low intensity limits the physiological stress-adaptation mechanism that builds resilience; [meta-analytic evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) shows resilience increases significantly with vigorous physical activity intensity, an effect not observed with moderate-intensity exercise or walking
+      - Score 4 reflects a threshold-level benefit: outdoor walking provides environmental restoration and mild stress inoculation, moving a person from 'significant disruption from moderate stressors' (4) partway toward 'manages moderate stressors adequately' (6), but the effect is limited by the absence of vigorous challenge
+    isr: 60
+    isr_reasoning: |
+      - The stress-buffering effect of nature walks is supported by [Stress Reduction Theory](https://pmc.ncbi.nlm.nih.gov/articles/PMC8125471/) research, but the magnitude is modest and depends on the walking environment being natural rather than urban
+      - Individual variation is substantial: those with high baseline stress benefit more, while those already well-regulated see minimal resilience gains from low-intensity activity ([Olafsdottir et al. 2020, Environ Behav](https://journals.sagepub.com/doi/abs/10.1177/0013916518800798))
+      - Approximately 60% of regular outdoor walkers report improved stress management, though the causal pathway from walking to resilience is indirect and multiply determined
+    uar: 85
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 5
+    pbs_reasoning: |
+      - Walking is uniquely stackable with enjoyable activities (podcasts, conversation, dog walking) and provides nature exposure, sunlight, and changing scenery that [green exercise research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) links to improved positive affect (d = 0.54) and self-esteem (d = 0.46)
+      - The activity generates consistent low-level positive affect through sensory variety, social connection, and environmental enrichment, moving a person from 'occasional positive experiences' (4) toward 'regular moments of satisfaction and meaning' (6) on the flourishing anchor
+      - Score 5 reflects a meaningful but moderate flourishing benefit: walking reliably improves daily mood and life satisfaction through pleasant sensory experience and nature contact, but lacks the flow states, mastery progression, or peak experiences that drive higher flourishing scores
+    isr: 75
+    isr_reasoning: |
+      - [Green exercise meta-analyses](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) consistently find improved self-esteem, mood, and revitalisation from outdoor physical activity, with walking being the most commonly studied modality
+      - Positive affective responses to walking are near-universal at self-selected paces below ventilatory threshold, meaning the flourishing pathway operates reliably across populations ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - The proportion experiencing meaningful flourishing gains is slightly lower than stability gains because flourishing requires sustained positive affect rather than mere symptom reduction, and walking's sensory rewards, while reliable, are modest in magnitude
+    uar: 85
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 80

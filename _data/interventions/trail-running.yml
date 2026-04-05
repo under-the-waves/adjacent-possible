@@ -5,7 +5,7 @@ description: |
   - Distinguished from road running by the terrain variety, nature immersion, and balance demands, which [green exercise research](https://doi.org/10.1021/es903183r) links to significantly greater positive affect and enjoyment
   - [Meta-analyses](https://doi.org/10.1016/j.jacc.2014.04.058) show running reduces all-cause mortality by 25-30%, though trail-specific injury rates and travel time to trailheads are meaningful adherence barriers
   - Cardiovascular improvements become noticeable within 3-4 weeks, with significant VO2max and endurance gains developing over 8-16 weeks
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -77,6 +77,51 @@ values:
       - Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92)); trail running adds travel-to-trailhead barriers that further constrain session frequency
       - Overuse injuries (knee, ankle, lower leg) are a significant adherence barrier, with running injury incidence of 19 – 79% per year depending on volume and terrain ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299)); injuries interrupt the consistency needed for sustained weight loss
       - Weight-loss-motivated runners who experience slow visible progress may shift to dietary interventions or abandon the approach; those who persist tend to be motivated by performance or enjoyment rather than weight loss alone ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - The [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) of 218 RCTs found vigorous exercise (including running) produced large reductions in depressive symptoms (g = -0.74), stronger than light activity (g = -0.58), corresponding to a meaningful shift from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6)
+      - A [scoping review of running and mental health](https://pmc.ncbi.nlm.nih.gov/articles/PMC7663387/) found consistent reductions in symptoms of anxiety, depression, anger, confusion, and fatigue among runners, with trail running adding nature-exposure benefits that independently reduce cortisol and blood pressure
+      - Score 5 reflects a moderate stability benefit as a secondary domain: running reliably reduces symptom burden through both neurochemical pathways (endorphins, endocannabinoids, serotonin) and environmental restoration from trail settings, but the benefit is capped by the fact that clinical-level treatment requires higher doses or combined approaches
+    isr: 65
+    isr_reasoning: |
+      - Running's antidepressant effects are well-established, with one [study finding](https://pmc.ncbi.nlm.nih.gov/articles/PMC7663387/) running therapy had similar effects on mental health symptoms to antidepressant medication, indicating reliable efficacy for those who maintain the practice
+      - Trail-specific evidence adds nature-exposure benefits, but the evidence base is thinner than for general running; the [green exercise literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) shows additional positive affect from natural settings though the incremental mental health benefit over indoor exercise remains uncertain
+      - Approximately 65% of adherent runners experience meaningful stability improvements, with non-responders typically being those whose symptoms stem from factors less responsive to exercise (e.g. trauma, personality disorders, situational stressors)
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile; trail running's moderate adherence rate constrains the stability benefit
+
+  mental-health.resilience:
+    pbs: 6
+    pbs_reasoning: |
+      - Trail running provides direct resilience training through repeated voluntary exposure to physical discomfort, uncertainty (terrain, weather), and the practice of continuing through difficulty; [research on vigorous exercise and resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/) shows regular activation of stress systems produces beneficial adaptations including reduced stress reactivity and faster recovery
+      - A [systematic review and meta-analysis](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) found resilience increases significantly with vigorous physical activity intensity, an effect not observed with moderate-intensity exercise, placing trail running in the optimal intensity range for resilience building
+      - The inherent challenges of trail running (navigation, elevation, uneven footing, self-sufficiency on remote trails) build transferable self-efficacy and mastery experiences, corresponding to a shift from 'significant disruption from moderate stressors' (4) toward 'handles major stressors with brief disruption' (8); score 6 reflects the midpoint, accounting for the fact that resilience also depends on social support, coping strategies, and temperament
+    isr: 60
+    isr_reasoning: |
+      - The stress-inoculation pathway is mechanistically robust: [exercise physiology research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4013452/) confirms regular vigorous exercise is associated with emotional resilience to acute stress, with exercisers showing lower cortisol reactivity and faster recovery from laboratory stressors
+      - BDNF increases from vigorous exercise [protect hippocampal neurons under stress](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/), providing a biological substrate for improved stress tolerance, though the translation from neurobiological markers to real-world resilience is not one-to-one
+      - Approximately 60% of consistent trail runners develop meaningfully improved stress management, with the mastery-experience pathway being particularly reliable for those who progressively tackle more challenging terrain and distances
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 6
+    pbs_reasoning: |
+      - Trail running offers multi-layered flourishing through flow states (sustained focus on footing and terrain), nature immersion, skill progression, and community belonging; [green exercise research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) found a large effect size for improved wellbeing (g = 0.81) from nature-based physical activity
+      - The combination of physical challenge, natural beauty, route exploration, and measurable progress (distance, elevation, race performance) generates peak experiences and a sense of mastery that goes beyond mere mood improvement, corresponding to a shift toward 'frequent positive emotions and meaningful engagement' (8) on the flourishing anchor
+      - Score 6 reflects a strong flourishing benefit tempered by its secondary-domain status: trail running generates genuine flow, awe, and accomplishment, but the flourishing effect is contingent on environmental access and is less reliable in adverse conditions (bad weather, injury periods, limited trail access)
+    isr: 70
+    isr_reasoning: |
+      - [Green exercise systematic reviews](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) consistently find improved positive affect, self-esteem, and revitalisation from outdoor physical activity, with nature-based running environments producing the strongest affective responses
+      - Flow-state research on trail running specifically highlights the sustained attentional demands of uneven terrain as a reliable trigger for autotelic experience, though flow is not guaranteed on every session ([Springer Nature 2026, Mindfulness](https://link.springer.com/article/10.1007/s12671-026-02767-0))
+      - Among regular trail runners (6+ months), the majority report trail running as a significant source of life satisfaction and positive identity, though a minority find the physical demands override the enjoyment during challenging sessions
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 150

@@ -5,7 +5,7 @@ description: |
   - Preferentially develops mitochondrial oxidative capacity, fat oxidation, and aerobic base fitness, though [recent reviews](https://doi.org/10.1113/JP279564) note current evidence does not conclusively show Zone 2 is superior to higher intensities for mitochondrial adaptations
   - Distinguished from HIIT by its low perceived exertion and minimal recovery cost, allowing high training frequency; serves as the foundation of [polarised training models](https://doi.org/10.1123/ijspp.5.3.275) used by elite endurance athletes
   - Meaningful cardiovascular and metabolic adaptations develop over 6-12 weeks of consistent training
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -77,6 +77,51 @@ values:
       - Zone 2's low perceived exertion, minimal recovery cost, and compatibility with daily routines support higher long-term adherence than vigorous exercise ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000)), but weight-loss-specific adherence requires sustained commitment over 6 – 12+ months
       - [General exercise adherence data](https://doi.org/10.1136/bjsports-2015-095948) (Rhodes et al. 2017) shows approximately 50 – 60% of adults maintain moderate exercise programmes beyond 6 months; Zone 2's tolerability places it at the higher end of this range
       - The slow rate of visible change (1 – 2 kg over 3 months without dietary change) can be demotivating for weight-loss-focused individuals, leading some to abandon the approach for more aggressive strategies ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - The [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) found light-to-moderate physical activity produces clinically meaningful reductions in depressive symptoms (g = -0.58), with Zone 2 intensity falling squarely in the moderate range that drives reliable mood improvement
+      - Zone 2's sustainable, non-punishing intensity creates a reliable mood floor: the low perceived exertion ensures consistently positive affective responses during sessions, and [dual-mode theory](https://doi.org/10.2165/11590680-000000000-00000) predicts near-universal pleasure at intensities below ventilatory threshold
+      - Score 5 reflects a moderate stability benefit: Zone 2 cardio reliably reduces baseline anxiety and depressive symptoms through serotonergic and anti-inflammatory pathways, but the effect size is smaller than vigorous exercise (g = -0.74) and the benefit is a secondary domain effect
+    isr: 70
+    isr_reasoning: |
+      - Moderate-intensity aerobic exercise is one of the most consistently supported interventions for mood improvement, with [meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/36796860/) showing significant effects across diverse populations and clinical presentations
+      - The comfortable intensity means affective responses are almost universally positive during sessions, creating a reliable acute mood boost that accumulates over time ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Approximately 70% of adherent practitioners experience meaningful stability improvements, with the regularity and sustainability of Zone 2 training supporting consistent neurochemical benefits
+    uar: 70
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile; Zone 2's low perceived exertion supports strong long-term adherence
+
+  mental-health.resilience:
+    pbs: 4
+    pbs_reasoning: |
+      - [Research on exercise and stress resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC4013452/) shows regular exercise is associated with emotional resilience to acute stress, including lower cortisol reactivity and faster recovery, though the effect is intensity-dependent and [meta-analytic evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) shows resilience gains are significantly stronger with vigorous than moderate-intensity activity
+      - Zone 2 provides mild stress-system activation through sustained aerobic effort, supporting some physiological adaptation, but the deliberately comfortable intensity limits the stress-inoculation pathway that builds psychological hardiness
+      - Score 4 reflects a threshold-level resilience benefit: Zone 2 cardio provides a modest mood buffer and stress-recovery improvement through regular autonomic nervous system training, but falls short of the mastery experiences and discomfort tolerance built by higher-intensity activities
+    isr: 55
+    isr_reasoning: |
+      - The stress-adaptation pathway at moderate intensity is weaker and less consistently observed than at vigorous intensity; [biological research](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/) shows BDNF increases are dose-dependent with exercise intensity
+      - Zone 2's low recovery cost means the physiological stress exposure per session is modest, limiting the magnitude of stress-system adaptation for most practitioners
+      - Approximately 55% of adherent Zone 2 practitioners develop meaningfully improved stress tolerance, with the benefit being more reliable for mood buffering than for resilience to acute stressors
+    uar: 70
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 4
+    pbs_reasoning: |
+      - Zone 2 cardio is pleasant and non-punishing, permitting stacking with podcasts, music, or conversation, which provides consistent low-level positive affect; however, the enforced low intensity and monotonous pacing limit intrinsic engagement, flow potential, and the sense of accomplishment that drive higher flourishing scores
+      - Outdoor Zone 2 modalities (cycling, jogging) provide some nature-exposure benefits linked to [improved positive affect and self-esteem](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) (d = 0.46-0.54), but the protocol is modality-agnostic and many practitioners use indoor equipment, reducing this pathway
+      - Score 4 reflects a threshold-level flourishing benefit: Zone 2 cardio provides a reliable baseline of positive affect during and after sessions, corresponding to 'occasional positive experiences' (4), but lacks the skill progression, flow states, or peak experiences needed to move into 'regular moments of satisfaction and meaning' (6)
+    isr: 60
+    isr_reasoning: |
+      - Positive affective responses at Zone 2 intensity are reliably predicted by dual-mode theory, but the enjoyment ceiling is lower than for activities with greater variety, challenge, or nature exposure ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Modality strongly moderates the flourishing benefit: outdoor cycling through scenic routes produces substantially better affective responses than 45 minutes on an indoor trainer, creating high individual variation ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Approximately 60% of adherent practitioners report improved daily mood and life satisfaction from regular Zone 2 sessions, with the remainder finding the monotony limits the positive psychological impact
+    uar: 70
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 100

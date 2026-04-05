@@ -4,7 +4,7 @@ description: |
   - Work intervals range from 30 seconds to 4 minutes, recruiting maximal muscle fibre activation and stressing cardiovascular systems before partial recovery
   - Distinct from steady-state cardio in its time efficiency and superior VO2max stimulus per minute; distinct from strength training in its metabolic rather than mechanical emphasis
   - [Umbrella review evidence](https://doi.org/10.1007/s40279-021-01505-1) across 429 primary studies shows significant improvements in 14 cardiometabolic health parameters, with results emerging within 2-4 weeks and substantial gains by 8-12 weeks
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -76,6 +76,36 @@ values:
       - Real-world unsupervised HIIT adherence drops to 19.6% at 12 months, compared with 89% in supervised settings – a large gap that severely limits sustained weight loss outcomes ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
       - The intensity barrier is the primary adherence limiter: many people find sustained high-intensity effort aversive, and weight-motivated exercisers may lack the intrinsic drive to tolerate discomfort long-term ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Time efficiency partially offsets the intensity barrier for time-constrained individuals, but weight maintenance requires ongoing consistency that few achieve without external accountability ([Gibala et al. 2012, J Physiol](https://doi.org/10.1113/jphysiol.2011.224725))
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - [Systematic review and meta-analysis](https://pubmed.ncbi.nlm.nih.gov/34531186/) found HIIT produced moderate improvements in depression severity and perceived stress compared to non-active controls, with small improvements in mental wellbeing compared to active controls
+      - [RCT during COVID-19 confinement](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full) found HIIT significantly reduced stress, anxiety, and depression, with HIIT appearing more beneficial for depression reduction than moderate-intensity training
+      - Score 5 reflects a meaningful acute mood stabilisation effect: post-session endorphin release and catecholamine regulation shift the emotional baseline from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6), but the benefit is transient and requires repeated sessions to maintain
+    isr: 55
+    isr_reasoning: |
+      - [Meta-analysis of healthy individuals](https://pubmed.ncbi.nlm.nih.gov/38566446/) found HIIT did not significantly improve depression or anxiety symptoms in already-healthy populations, suggesting the mood stabilisation benefit is primarily for those with elevated baseline symptoms
+      - In clinical and at-risk populations, the evidence is stronger: [meta-analysis of cardiovascular patients](https://pmc.ncbi.nlm.nih.gov/articles/PMC9560824/) found statistically significant depression reductions following HIIT compared to usual care
+      - An estimated 50-60% of adherent HIIT practitioners with some baseline mood instability experience meaningful stabilisation, but the proportion drops for those starting from a healthy emotional baseline
+    uar: 55
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.resilience:
+    pbs: 4
+    pbs_reasoning: |
+      - HIIT systematically exposes practitioners to controlled acute discomfort (breathlessness, muscular burn, cardiovascular strain) and requires tolerating it repeatedly, which builds distress tolerance – a core component of psychological resilience
+      - [RCT evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full) found HIIT increased self-reported resilience scores in healthy adults, suggesting the repeated experience of pushing through high-intensity effort transfers to broader stress coping
+      - Score 4 represents the minimum scoreable threshold: the discomfort tolerance mechanism is genuine but narrow – HIIT builds tolerance for physical distress specifically, and transfer to psychological or social stressors requires generalisation that does not reliably occur
+    isr: 50
+    isr_reasoning: |
+      - The discomfort tolerance pathway is mechanistically plausible but the evidence base for HIIT specifically improving psychological resilience (as distinct from mood) is thin, with only a small number of studies measuring resilience as an outcome ([Frontiers 2021](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full))
+      - Transfer from physical to psychological distress tolerance is not automatic; approximately half of adherent practitioners may experience the broader resilience benefit while others compartmentalise exercise tolerance separately from life stress coping
+      - The short session duration (15-30 minutes) limits the sustained exposure to discomfort compared to longer endurance activities, further reducing the proportion who develop generalisable resilience
+    uar: 55
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 0

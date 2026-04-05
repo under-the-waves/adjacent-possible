@@ -4,7 +4,7 @@ description: |
   - Typical activities include dimming lights, avoiding screens, warm bath or shower, reading, gentle stretching, or meditation
   - The fixed sequence signals wind-down through predictable, calming behaviours performed in the same order nightly
   - Most people see improvements in sleep onset within 1-2 weeks, with full benefits typically achieved within 4-6 weeks
-applicable_domains: ["sleep"]
+applicable_domains: ["sleep", "mental-health"]
 
 values:
   sleep.daily_functioning:
@@ -57,6 +57,21 @@ values:
       - Slightly higher adherence than other sleep outcomes because comfort improvements are immediately noticeable within the first week, providing positive reinforcement. [Buysse et al. (2011)](https://doi.org/10.1001/archinternmed.2011.476) found that perceived sleep quality gains predicted continued adherence.
       - [Harvey et al. (2014)](https://doi.org/10.1016/j.brat.2014.04.003) noted that participants who experienced subjective improvements in the first 2 weeks were significantly more likely to maintain routines at 6-month follow-up.
       - Approximately 25% still struggle with long-term consistency due to lifestyle demands, travel, and competing evening activities, though the immediate feedback loop supports better retention than health-focused outcomes.
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) meta-analysis of 154 studies (n = 5,717) found sleep loss reduces positive affect (SMD = -0.27 to -1.14) and impairs emotion regulation, with [Goldstein & Walker (2014)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7181893/) establishing that sleep quality modulates prefrontal-amygdala connectivity essential for emotional regulation.
+      - [Kahn et al. (2013)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8193556/) meta-analysis found sleep restriction produces medium effect sizes on negative mood (g = 0.45), indicating that improving sleep quality via a bedtime routine raises the emotional baseline and reduces mood instability.
+      - On the subjective anchor (10 = complete freedom from distressing symptoms, 6 = occasional distress resolving quickly, 4 = frequent distress affecting daily functioning), a bedtime routine improves sleep quality which supports emotional regulation, moving someone modestly up the scale. Score 5 reflects a meaningful but secondary benefit – sleep quality is one contributor to mood stability but does not address cognitive or social drivers of distress.
+    isr: 55
+    isr_reasoning: |
+      - The causal pathway from bedtime routine to mood stability passes through sleep quality improvement, then emotional regulation, each step introducing variability. Not all sleep quality gains translate to noticeable mood changes, particularly for individuals without baseline sleep-related mood disruption.
+      - [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) found mixed results for depressive symptoms depending on sleep loss type, suggesting the sleep-mood pathway is less reliable than the sleep-functioning pathway.
+      - Conservatively estimated at 55% – higher than the optimising-lighting ISR for mental health (40%) because bedtime routines have more consistent effects on subjective sleep quality, but lower than the primary sleep ISR (85%) due to the indirect pathway.
+    uar: 70
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
 resources:
   upfront_cost: 25

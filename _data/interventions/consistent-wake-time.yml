@@ -3,7 +3,7 @@ description: |
   - Waking up at the same time every day (within 15-30 minutes) including weekends and days off, regardless of when you went to bed
   - Stabilises the body's internal clock by maintaining a fixed anchor point for the sleep-wake cycle, naturally regulating bedtime through homeostatic sleep pressure
   - Most people see improved sleep quality and daytime alertness within 2-3 weeks, with full circadian adaptation within 4-6 weeks
-applicable_domains: ["sleep"]
+applicable_domains: ["sleep", "mental-health"]
 
 values:
   sleep.daily_functioning:
@@ -56,6 +56,21 @@ values:
       - Slightly better adherence for comfort benefits because users notice improvements in morning alertness and sleep quality relatively quickly (2-3 weeks), providing positive reinforcement. [Buysse et al. (2011)](https://doi.org/10.1001/archinternmed.2011.476) found perceived sleep quality gains predicted continued adherence.
       - The experiential feedback of waking feeling genuinely rested (rather than groggy from oversleeping) helps some users maintain consistency through social pressure to sleep in.
       - Still limited by weekend and holiday disruptions, with approximately 40% gradually allowing wake time drift as initial motivation fades.
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - [A large prospective cohort study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12404321/) using accelerometer data from the UK Biobank found regular sleepers had 38% lower depression risk (HR = 0.62, 95% CI 0.52–0.73) compared to irregular sleepers, with this association holding even after controlling for sleep duration.
+      - [Walker et al. (2020)](https://www.nature.com/articles/s41398-020-0694-0) systematic review found circadian disruption independently predicts depression onset, with the severity of depressive symptoms correlating with the degree of circadian misalignment. Consistent wake time is the primary anchor point for circadian entrainment.
+      - On the subjective anchor (10 = complete freedom from distressing symptoms, 6 = occasional distress resolving quickly, 4 = frequent distress affecting daily functioning), circadian stabilisation via consistent wake time provides a moderate protective effect against mood instability. Score 5 reflects a meaningful but secondary benefit – circadian alignment supports serotonergic and cortisol regulation but does not address psychological or social drivers of distress.
+    isr: 50
+    isr_reasoning: |
+      - The pathway from consistent wake time to mood stability operates via circadian alignment, then cortisol rhythm normalisation, then serotonergic regulation – each step introducing variability. [Fang et al. (2021)](https://www.nature.com/articles/s41746-021-00400-z) found that wake time variability predicted depressive symptoms in a prospective cohort, but effect sizes were modest and not all participants with irregular wake times developed mood problems.
+      - Most evidence linking circadian regularity to depression risk is observational rather than interventional, making the causal contribution of wake time consistency alone (vs. overall sleep hygiene) uncertain.
+      - Conservatively estimated at 50% – the circadian mechanism is well-established but the proportion of the general population with sufficient baseline circadian disruption for wake time consistency alone to meaningfully shift mood stability is unclear.
+    uar: 55
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
 resources:
   upfront_cost: 15

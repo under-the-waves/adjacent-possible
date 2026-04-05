@@ -5,7 +5,7 @@ description: |
   - Distinguished from conventional strength training by its emphasis on movement quality and real-world transfer rather than maximal load, and from HIIT by its lower metabolic intensity and greater focus on controlled technique
   - [Community-based formats](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/) such as CrossFit affiliates improve retention through social accountability, though [long-term adherence data](https://doi.org/10.1007/s40279-022-01756-0) shows only ~13% remain beyond twelve months
   - Meaningful strength and body composition changes become apparent within 6-8 weeks, with substantial functional improvements developing over 3-6 months
-applicable_domains: ["fitness", "body-image"]
+applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
@@ -77,6 +77,51 @@ values:
       - Long-term adherence to functional training is poor: only 12.8% remain in HIFT programmes beyond twelve months, and general gym dropout ranges from 47–96% within 12 months ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - Weight loss-motivated exercisers face additional attrition because the scale may not move substantially even when body composition improves, creating a perceived lack of progress ([Dalle Grave et al. 2011, Behav Res Ther](https://doi.org/10.1016/j.brat.2011.09.004))
       - Community-based formats (CrossFit affiliates, group classes) improve retention through social accountability, but the physical intensity and technical demands still drive early dropout among weight loss-focused participants ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - Functional training shares the general exercise-depression mechanism: [meta-analytic evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) shows resistance exercise reduces depressive symptoms with moderate effect sizes (ES = 0.66), and the compound movement patterns in functional training provide comparable neurochemical benefits (endorphin release, cortisol regulation)
+      - The community element in group functional training formats (CrossFit affiliates, group classes) adds social support, which independently buffers against mood instability; [systematic review of CrossFit psychological variables](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/) found increased satisfaction and social improvement among participants
+      - Score 5 reflects a meaningful but secondary mood stabilisation benefit, moving practitioners from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6), with the social component providing a modest advantage over solo training modalities
+    isr: 55
+    isr_reasoning: |
+      - The exercise-mood mechanism is well-established for resistance training generally, but functional training specifically has a thinner evidence base for mental health outcomes; most meta-analyses aggregate all resistance modalities ([Gordon et al. 2018, JAMA Psychiatry](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/))
+      - Group-based formats may improve reliability of mood benefits through social accountability and belonging, but self-selection into community fitness creates confounding – those who join group programmes may already be more socially connected ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
+      - An estimated 50-60% of adherent functional trainees experience meaningful mood stabilisation, with the community element modestly increasing reliability compared to solo resistance training
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.resilience:
+    pbs: 4
+    pbs_reasoning: |
+      - Functional training builds distress tolerance through exposure to physically demanding compound movements and high-intensity conditioning, while the community setting provides social support during difficulty – both contribute to psychological resilience
+      - [Research on physical fitness and resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC9095527/) shows muscular fitness is positively associated with stress resilience, partly mediated by self-efficacy; functional training's emphasis on movement mastery across varied patterns provides broader self-efficacy opportunities than single-modality training
+      - Score 4 represents the minimum scoreable threshold: the resilience pathway through discomfort tolerance and community support is genuine but indirect, and the high dropout rate (only 12.8% remain beyond twelve months) limits the proportion who train long enough to develop meaningful resilience gains
+    isr: 50
+    isr_reasoning: |
+      - The dual pathway (physical discomfort tolerance + social support) is plausible but neither component is strongly evidenced for functional training specifically; resilience outcomes are inferred from general exercise and community belonging research
+      - High early dropout (~60% within three months) means many participants never reach the training duration needed to develop resilience benefits, though those who persist in community formats may benefit disproportionately ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
+      - Approximately half of those who maintain consistent practice experience broader stress coping improvements, with community-embedded trainees showing somewhat higher rates than solo practitioners
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 5
+    pbs_reasoning: |
+      - Functional training's strongest flourishing pathway is community belonging: [CrossFit research](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/) consistently finds high levels of sense of community, social improvement, and intrinsic motivation for participation driven by enjoyment, challenge, and affiliation – all components of eudaimonic wellbeing
+      - Movement variety (kettlebells, Olympic lifts, gymnastics, conditioning) provides ongoing novelty and skill mastery opportunities that sustain engagement and personal growth, moving practitioners from 'occasional positive experiences' (4) toward 'regular moments of satisfaction and meaning' (6)
+      - Score 5 reflects a genuine flourishing benefit driven primarily by community and variety: functional training in group formats cultivates belonging and purpose that most solo exercise modalities cannot match, but the benefit depends heavily on the group context and is weaker for solo practitioners
+    isr: 50
+    isr_reasoning: |
+      - Flourishing benefits are highly context-dependent: group-based functional training (CrossFit affiliates, coached classes) produces substantially stronger community and belonging effects than solo functional training, creating large variability in outcomes ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
+      - Self-selection bias is a concern: people drawn to community fitness may already have stronger social needs and networks, inflating observed flourishing benefits in CrossFit studies ([PMC 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/))
+      - An estimated 45-55% of adherent functional trainees in group settings experience meaningful flourishing gains, with the rate substantially lower for those training independently
+    uar: 50
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 200
