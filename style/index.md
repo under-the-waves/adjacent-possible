@@ -1,60 +1,203 @@
 ---
+layout: default
+title: Style
 life_area_slug: style
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Connect with Others &gt;
+    Expression &gt;
+    Style
+</div>
+
 # Style
 
-## Why Style Matters
+**What it is**
+- Your personal style, grooming, and how you present yourself visually. Style is about the clothing, accessories, and overall aesthetic choices you make and what they communicate to the world.
 
-Style serves as a powerful tool for personal and professional success, extending far beyond surface-level appearances. Your clothing choices directly influence your confidence and performance, with research showing that dressing well improves self-esteem and task completion <span class="info-icon" onclick="showReasoning('research-confidence')">i</span>. The workplace impact is particularly significant, with employers reporting that professional dress increases promotion likelihood by up to 55% in some industries <span class="info-icon" onclick="showReasoning('research-workplace')">i</span>.
+**Why it matters**
+- Research shows that dressing well improves self-esteem and task performance, and that professional dress increases promotion likelihood by up to 55% in some industries. Clothing also serves as a communication system, conveying messages about competence, status, and identity before you ever speak.
 
-Style also functions as a sophisticated communication system, conveying messages about competence, social status, and personal identity before you ever speak <span class="info-icon" onclick="showReasoning('research-communication')">i</span>. Understanding and leveraging this visual language enables more effective social navigation whilst building authentic self-expression through deliberate choices that reflect your values and aspirations.
+**Related life areas**
+- [Body image]({{ site.baseurl }}/body-image/) – how your body looks and feels, including body composition, skin health, posture, and grooming
+- [Communication]({{ site.baseurl }}/communication/) – how you convey ideas and connect with others verbally and non-verbally
+- [Personality]({{ site.baseurl }}/personality/) – your character traits, behavioural tendencies, and how others experience you
 
-## Style Values
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Style yet.</strong><br>It takes about 15 minutes and helps you understand what style means to you.</p>
+    <a href="{{ site.baseurl }}/style/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Your optimal approach to style depends on what you want your clothing to do for you. This guide balances four core values -- attractiveness, status and professional signalling, self-expression, and comfort -- with percentages indicating the relative weight given to each in our recommendations.
+## What people value about style
 
-This guide focuses on clothing choices, accessories, and overall aesthetic presentation – how you choose to dress and present yourself to the world.
+People pursue style for different reasons. This site scores every style intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-For personalised recommendations based on your unique priorities, visit [Style Personalised]({{ site.baseurl }}/style/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Attractiveness</h3>
+<p>Looking appealing to others across romantic and social contexts through deliberate clothing, grooming, and presentation choices. Flattering fit, body-appropriate silhouettes, and overall physical presentation.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Status & Professional</h3>
+<p>Signalling competence, authority, and taste through clothing in career and social settings. Understanding dress codes, projecting professional credibility, and making strategic wardrobe investments for advancement.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Self-Expression</h3>
+<p>Communicating identity, values, and affiliations through distinctive clothing choices. Personal aesthetic development, subcultural belonging, and visual storytelling about who you are.</p>
+</div>
 
-Research reveals that most people struggle with basic style functionality, with individuals spending 17 minutes daily choosing outfits and only wearing 44% of their wardrobes regularly. Many experience "wardrobe rage" and clothing-related stress that affects punctuality and mood. These patterns mean that even modest achievements in style represent higher population percentiles than might initially be expected.
+<div class="value-card">
+<h3>Comfort & Function</h3>
+<p>Clothing that supports daily activities, physical comfort, and practical needs. Weather appropriateness, ease of movement, durable fabrics, and minimal decision fatigue.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/style/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand style, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/style/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Style Personalised]({{ site.baseurl }}/style/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-confidence': {
-        title: 'Style and Confidence Research',
-        content: 'A Temple University study tracking 808 employee days found that those who dressed better than usual had stronger self-esteem and performed better on tasks. Research from Northwestern University showed participants wearing lab coats made significantly fewer mistakes on attention tasks compared to those in regular clothing. <a href="https://news.temple.edu/news/2023-06-01/when-you-look-good-you-feel-good-research-shows-you-might-even-be-more-productive" target="_blank">View Temple study</a>'
-    },
-    'research-workplace': {
-        title: 'Professional Dress and Career Impact',
-        content: 'Research shows 41% of employers state that employees who dress professionally are more likely to be promoted, rising to 55% in financial services. Studies demonstrate that formal business attire increases perceptions of competence, authority, and trustworthiness in workplace settings. <a href="https://www.academia.edu/34496959/ASSESSING_THE_RELATIONSHIP_AND_EFFECT_OF_WORKPLACE_DRESS_CODE_ON_EMPLOYEE_PRODUCTIVITY" target="_blank">View workplace study</a>'
-    },
-    'research-communication': {
-        title: 'Clothing as Communication',
-        content: 'Research in social psychology demonstrates that clothing serves as a powerful communication tool, conveying information about competence, status, and identity before verbal interaction occurs. Studies show that well-fitted formal attire enhances perceptions of authority and professional capability. <a href="https://fashionandtextiles.springeropen.com/articles/10.1186/s40691-014-0020-7" target="_blank">View communication research</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var style = progress.style || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return style[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.style;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Style.</strong></p>' +
+            '<a href="{{ site.baseurl }}/style/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/style/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(style).length > 0) {
+        var completed = steps.filter(function(s) { return style[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/style/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

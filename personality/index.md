@@ -1,178 +1,192 @@
 ---
+layout: default
+title: Personality
 life_area_slug: personality
 ---
-[← Back to Home](../)
-# Personality
-
-## What is Personality?
-
-Personality encompasses understanding your specific psychological traits (Big Five profile, attachment style, cognitive preferences, motivational patterns) and deciding how to work with or develop these characteristics. This includes recognizing your natural tendencies in areas like emotional reactivity, social energy, openness to experience, conscientiousness, and agreeableness, then determining whether to optimize around these patterns or actively work to modify them. While actual skill development happens in specific domains – [Communication]({{ site.baseurl }}/communication/) for social skills, [Behaviours]({{ site.baseurl }}/behaviours/) for emotional regulation, [Productivity]({{ site.baseurl }}/productivity/) for conscientiousness building – personality provides the psychological foundation that guides these choices based on your inherent traits and development goals.
-
-## Why Personality Matters
-
-Personality development serves as a foundation for optimizing how you navigate relationships, work environments, and life challenges. Understanding your personality patterns enables better decision-making about career paths, relationship styles, and daily approaches that align with your natural strengths <span class="info-icon" onclick="showReasoning('research-key-1')">i</span>. Additionally, conscious personality development can lead to meaningful improvements in life satisfaction and effectiveness across multiple domains <span class="info-icon" onclick="showReasoning('research-key-2')">i</span>, while providing tools for managing areas where your natural tendencies might create challenges <span class="info-icon" onclick="showReasoning('research-key-3')">i</span>. These combined benefits make personality work one of the most foundational investments in understanding and optimizing how you engage with the world.
-
-## Personality Values
-
-Your approach to personality development depends on what aspects you value most. This guide balances two core values, with percentages indicating the relative weight given to each in our recommendations.
-
-For personalised recommendations based on your unique priorities, visit [Personality Personalised]({{ site.baseurl }}/personality/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
-
-{% include life-area-values.html %}
-
-## Benchmarks by Level
-
-Research reveals that most people develop their personality unconsciously through life experiences, with limited systematic awareness or intentional development. Studies show that while personality tests are widely available online, deliberate application of personality insights to major life decisions is uncommon. The vast majority of people choose careers, relationships, and living situations based on immediate factors (availability, pay, social pressure) rather than personality fit. Even basic personality awareness applied to decision-making represents higher population percentiles than might initially be expected, while sustained personality development efforts are genuinely rare achievements.
-
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Personality Personalised]({{ site.baseurl }}/personality/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
 
 <style>
-.info-icon {
-    background-color: #155799;
-    color: white;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    user-select: none;
-    margin-left: 3px;
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
 }
 
-.info-icon:hover {
-    background-color: #0d47a1;
-}
-
-.reasoning-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 1px solid #ddd;
+.la-banner {
     border-radius: 8px;
-    padding: 20px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    z-index: 1000;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
 }
 
-.reasoning-popup.visible {
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
     display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
 }
-
-.popup-header {
-    font-weight: bold;
-    margin-bottom: 10px;
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
     color: #155799;
 }
-
-.popup-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
     color: #666;
+    margin-top: 4px;
 }
 
-.popup-close:hover {
-    color: #333;
-}
-
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 999;
-}
-
-.popup-overlay.visible {
-    display: block;
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
 }
 </style>
 
-<!-- Popup overlay -->
-<div class="popup-overlay" id="popupOverlay" onclick="hideReasoning()"></div>
+<div class="la-home" markdown="1">
 
-<!-- Reasoning popup -->
-<div class="reasoning-popup" id="reasoningPopup">
-    <button class="popup-close" onclick="hideReasoning()">×</button>
-    <div class="popup-header" id="popupHeader"></div>
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Connect with Others &gt;
+    Expression &gt;
+    Personality
+</div>
+
+# Personality
+
+**What it is**
+- Your understanding of your psychological traits – Big Five profile, attachment style, cognitive preferences, motivational patterns – and how you choose to work with or develop those characteristics.
+
+**Why it matters**
+- People who make major life choices aligned with their personality traits report higher wellbeing and effectiveness across multiple domains. Conscious personality development can produce meaningful, measurable improvements in life satisfaction.
+
+**Related life areas**
+- [Communication]({{ site.baseurl }}/communication/) – how you express yourself and interact with others
+- [Behaviours]({{ site.baseurl }}/behaviours/) – your habits, emotional regulation, and day-to-day conduct
+
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Personality yet.</strong><br>It takes about 15 minutes and helps you understand what personality means to you.</p>
+    <a href="{{ site.baseurl }}/personality/level-1" class="btn-cta">Start Level 1</a>
+</div>
+
+## What people value about personality
+
+People pursue personality development for different reasons. This site scores every personality intervention across two core values, and ranks them by how well they deliver on the things you actually care about.
+
+<div class="value-card">
+<h3>Personality Alignment</h3>
+<p>Working with your natural personality patterns. Understanding your traits and designing your life, environment, and career choices to leverage your psychological makeup.</p>
+</div>
+
+<div class="value-card">
+<h3>Personality Growth</h3>
+<p>Actively developing and modifying your personality characteristics beyond your baseline tendencies. Building confidence, emotional stability, social effectiveness, or other traits through targeted interventions and sustained practice.</p>
+</div>
+
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/personality/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand personality, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/personality/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
+
+</div>
+
 <script>
-// Research data for info buttons
-const researchData = {
-    'research-key-1': {
-        title: 'Personality and Decision-Making Research',
-        content: 'Studies show that personality-environment fit significantly predicts life satisfaction, job performance, and relationship success. Research indicates that people who make choices aligned with their personality traits report higher levels of wellbeing and effectiveness across multiple life domains. <a href="https://psycnet.apa.org/record/2005-07426-005" target="_blank">Source: Holland Code research</a>'
-    },
-    'research-key-2': {
-        title: 'Personality Development Effectiveness',
-        content: 'Meta-analyses of personality intervention research demonstrate that targeted personality development can produce meaningful changes with effect sizes of 0.34-0.73 across different domains. Digital personality coaching interventions show 60-85% success rates for motivated participants over 3-month periods. <a href="https://www.pnas.org/doi/10.1073/pnas.2017548118" target="_blank">Source: PNAS personality intervention study</a>'
-    },
-    'research-key-3': {
-        title: 'Personality Pattern Management',
-        content: 'Research shows that understanding personality patterns helps individuals develop effective coping strategies for challenging traits. Studies indicate that personality awareness enables better stress management, relationship navigation, and career decision-making by providing frameworks for understanding natural tendencies and limitations.'
-    },
-    'level1-alignment': {
-        title: 'Level 1 Personality Alignment Reasoning',
-        content: 'While personality tests are widely available online and millions have been taken, having basic understanding of personality patterns represents intentional self-awareness that distinguishes this level from purely unconscious personality development through life experience.'
-    },
-    'level1-growth': {
-        title: 'Level 1 Personality Growth Reasoning', 
-        content: 'Most people experience personality patterns unconsciously. Simply recognizing specific patterns and their effects represents a foundational level of self-awareness that enables future development efforts.'
-    },
-    'level2-alignment': {
-        title: 'Level 2 Personality Alignment Reasoning',
-        content: 'Research suggests most people make major decisions based on immediate factors (availability, pay, social pressure) without personality consideration. Even informal awareness of personality in decision-making represents above-average self-awareness, achieved by roughly 20% of the population.'
-    },
-    'level2-growth': {
-        title: 'Level 2 Personality Growth Reasoning',
-        content: 'Making conscious effort to work on personality-related behaviors while achieving measurable improvement represents intentional self-development that most people never attempt. Research shows that while many people recognize personality patterns, far fewer actively work to change them with observable results.'
-    },
-    'level3-alignment': {
-        title: 'Level 3 Personality Alignment Reasoning',
-        content: 'Research indicates that systematic consideration of personality fit in major life decisions occurs among fewer than 5% of the population. Most career, relationship, and living choices are made without formal personality consideration, making deliberate personality-based decision-making a 95th percentile achievement.'
-    },
-    'level3-growth': {
-        title: 'Level 3 Personality Growth Reasoning',
-        content: 'Studies of digital personality interventions show that while 60-75% of motivated participants achieve some progress, sustained effort over 2-3 months with top 5% trait development represents genuine commitment that fewer than 5% of the general population maintains.'
-    },
-    'level4-alignment': {
-        title: 'Level 4 Personality Alignment Reasoning',
-        content: 'Consistent personality consideration across multiple life domains requires sophisticated self-awareness and systematic application. Research suggests fewer than 1% of people maintain this level of personality-conscious decision-making across career, relationships, and lifestyle choices.'
-    },
-    'level4-growth': {
-        title: 'Level 4 Personality Growth Reasoning',
-        content: 'Sustained personality development across multiple areas over 6+ months while achieving top 1% capability requires exceptional commitment and often professional support. Research indicates this level of systematic personality change is achieved by fewer than 1% of the population.'
-    },
-    'level5-alignment': {
-        title: 'Level 5 Personality Alignment Reasoning',
-        content: 'Systematic optimization of life choices around personality patterns while building compensatory systems represents exceptional self-knowledge and life design. This level of personality-based life optimization is achieved by approximately 1 in 1000 people.'
-    },
-    'level5-growth': {
-        title: 'Level 5 Personality Growth Reasoning',
-        content: 'Fundamental personality transformation sustained over multiple years while reaching top 0.1% development represents the upper limits of intentional
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
+
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var personality = progress.personality || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return personality[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights.personality;
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Personality.</strong></p>' +
+            '<a href="{{ site.baseurl }}/personality/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/personality/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(personality).length > 0) {
+        var completed = steps.filter(function(s) { return personality[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/personality/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
+</script>

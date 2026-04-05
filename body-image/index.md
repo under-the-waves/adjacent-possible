@@ -4,60 +4,200 @@ title: Body Image
 life_area_slug: body-image
 ---
 
-[← Back to Home](../)
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Connect with Others &gt;
+    Expression &gt;
+    Body Image
+</div>
+
 # Body Image
 
-## Why Body Image Matters
+**What it is**
+- Your physical appearance, including body composition, grooming, and vitality.
 
-Body image profoundly influences psychological wellbeing, with research showing that one-quarter of our self-esteem is determined by how positively we view our bodies <span class="info-icon" onclick="showReasoning('self-esteem-research')">i</span>. Body image satisfaction affects daily functioning, romantic relationships, and overall life satisfaction, whilst body dissatisfaction is strongly linked to depression, anxiety, and eating disorders <span class="info-icon" onclick="showReasoning('mental-health-link')">i</span>. 
+**Why it matters**
+- Research shows that roughly a quarter of our self-esteem is determined by how positively we view our bodies. Body image satisfaction affects daily functioning, romantic relationships, and overall life satisfaction, whilst body dissatisfaction is strongly linked to depression, anxiety, and eating disorders.
 
-The way we perceive and feel about our physical selves extends beyond superficial concerns to impact confidence, social interactions, and willingness to engage in life activities <span class="info-icon" onclick="showReasoning('social-impact')">i</span>. Developing a positive relationship with your body creates a foundation for physical and mental wellbeing that supports achievement across all life domains.
+**Related life areas**
+- [Fitness]({{ site.baseurl }}/fitness/) &ndash; your physical exercise habits, training approach, and overall activity level
+- [Nutrition]({{ site.baseurl }}/nutrition/) &ndash; your dietary knowledge, food choices, and the nutritional quality of what you eat
+- [Style]({{ site.baseurl }}/style/) &ndash; your personal style, grooming, and how you present yourself visually
 
-## Body Image Values
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Body Image yet.</strong><br>It takes about 15 minutes and helps you understand what body image means to you.</p>
+    <a href="{{ site.baseurl }}/body-image/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-Your optimal approach to body image depends on what aspects you value most. This guide balances four core values, with percentages indicating the relative weight given to each in our recommendations.
+## What people value about body image
 
-This guide focuses on how your body looks and feels without clothing considerations – including body composition, skin health, hair, posture, grooming, and body language.
+People care about body image for different reasons. This site scores every body image intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
 
-For personalised recommendations based on your unique priorities, visit [Body Image Personalised]({{ site.baseurl }}/body-image/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Youthfulness & Vitality</h3>
+<p>Maintaining or enhancing a youthful, energetic appearance through body condition and grooming. Skin health, hair quality, posture, energy levels, and overall vitality.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Romantic Appeal</h3>
+<p>Developing physical attractiveness and body language that appeals to potential or current romantic partners. Body composition, grooming standards, confident movement, and physical presence.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Weight Management</h3>
+<p>Achieving desired changes in body composition, whether gaining muscle mass, losing body fat, or maintaining current weight. Both aesthetic and functional aspects of body size and shape.</p>
+</div>
 
-Research reveals significant body image challenges across populations. Studies show that 75% of adults report body dissatisfaction, with higher rates in women (81%) compared to men (67%). Among teenagers, 37% feel upset and 31% feel ashamed about their body image, while one-third of adults have felt anxious or depressed because of body image concerns. Body image appears to have a more limited range of variation compared to domains like fitness or wealth - once someone achieves excellent body confidence and presentation, further distinctions become subtle, which may explain why Levels 4 and 5 represent very similar capabilities in this area.
+<div class="value-card">
+<h3>Body Confidence</h3>
+<p>Feeling comfortable, at home, and confident in your own body. Body acceptance, improved posture, confident movement, and reduced body-related anxiety.</p>
+</div>
 
-{% include life-area-benchmarks.html %}
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/body-image/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand body image, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/body-image/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Body Image Personalised]({{ site.baseurl }}/body-image/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'self-esteem-research': {
-        title: 'Body Image and Self-Esteem Connection',
-        content: 'Research by Cash (1995) found that approximately 25% of self-esteem is determined by body image satisfaction. This substantial connection explains why body image interventions often have broader psychological benefits beyond physical appearance.'
-    },
-    'mental-health-link': {
-        title: 'Body Image and Mental Health Research',
-        content: 'Multiple studies demonstrate strong links between body dissatisfaction and mental health issues. Body dissatisfaction is a significant risk factor for eating disorders (Stice, 2002) and is associated with higher levels of depression, anxiety, and reduced quality of life across populations.'
-    },
-    'social-impact': {
-        title: 'Body Image and Social Functioning',
-        content: 'Research shows that negative body image leads to social withdrawal, with studies finding that people with poor body image avoid social situations, physical activities, and intimate relationships. Conversely, positive body image enhances social confidence and life engagement.'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress['body-image'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['body-image'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Body Image.</strong></p>' +
+            '<a href="{{ site.baseurl }}/body-image/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/body-image/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/body-image/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}

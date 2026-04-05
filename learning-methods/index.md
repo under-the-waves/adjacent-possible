@@ -1,64 +1,197 @@
 ---
+layout: default
+title: Learning Methods
 life_area_slug: learning-methods
 ---
-[← Back to Home](../)
+
+<style>
+.la-home { max-width: 800px; margin: 0 auto; }
+
+.breadcrumb-nav {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+.breadcrumb-nav a {
+    color: #155799;
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.la-banner {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+.la-banner--start {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+}
+.la-banner--complete {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+}
+.la-banner p { margin: 0 0 12px 0; }
+.la-banner .btn-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #28a745;
+    transition: background 0.2s;
+}
+.la-banner .btn-cta:hover { background: #218838; }
+.la-banner .btn-secondary {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #155799;
+    background: white;
+    border: 1px solid #155799;
+    margin-left: 12px;
+    transition: background 0.2s;
+}
+.la-banner .btn-secondary:hover { background: #e8eef5; }
+
+.value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.value-card h3 { margin: 0 0 6px 0; font-size: 1.05em; }
+.value-card p { margin: 0; font-size: 0.95em; color: #444; }
+.value-card .exemplar {
+    margin-top: 8px;
+}
+
+.la-paths {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+}
+.la-paths a {
+    flex: 1;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.la-paths .path-level1 {
+    background: #f0f7f0;
+    border: 2px solid #28a745;
+    color: #1a6b2a;
+}
+.la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
+.la-paths .path-interventions {
+    background: #f0f4ff;
+    border: 2px solid #155799;
+    color: #155799;
+}
+.la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
+.la-paths .path-desc {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .la-paths { flex-direction: column; }
+}
+</style>
+
+<div class="la-home" markdown="1">
+
+<div class="breadcrumb-nav">
+    <a href="{{ site.baseurl }}/">Home</a> &gt;
+    <a href="{{ site.baseurl }}/life-areas/">Life Areas</a> &gt;
+    Expand Your Awareness &gt;
+    Learning &gt;
+    Learning Methods
+</div>
+
 # Learning Methods
 
-## What are Learning Methods?
+**What it is**
+- How you acquire new knowledge and develop new skills. Learning methods covers the techniques, strategies, and systems you use to study, practise, and retain information effectively.
 
-Learning methods encompasses the techniques, strategies, and systems people use to acquire new knowledge and skills effectively. This covers everything from basic study habits and memory techniques to sophisticated approaches like deliberate practice and spaced repetition. While most people learn through trial and error or whatever methods they picked up in school, this area focuses on evidence-based techniques that can dramatically improve learning efficiency and retention.
+**Why it matters**
+- Improving how you learn acts as a force multiplier for virtually every other area of personal development. Simple changes to learning approach can double or triple retention rates, yet most people rely on methods they picked up in school without ever questioning whether they work.
 
-## Why Learning Methods Matter
+**Related life areas**
+- [Cognitive Skills]({{ site.baseurl }}/cognitive-skills/) – your core mental abilities, including memory, attention, reasoning, and problem-solving
+- [Life Skills]({{ site.baseurl }}/life-skills/) – practical competencies for managing everyday tasks and challenges
 
-Learning methods serve as a force multiplier for virtually every other area of personal development. Improving how you learn accelerates progress in fitness, career skills, relationships, and every other domain <span class="info-icon" onclick="showReasoning('learning-transfer')">i</span>. Most people unknowingly use ineffective techniques that waste enormous amounts of time and effort, while simple changes to learning approach can double or triple retention rates <span class="info-icon" onclick="showReasoning('efficiency-gains')">i</span>. In an economy where continuous skill development is essential, the ability to learn efficiently becomes a core life skill that compounds over decades <span class="info-icon" onclick="showReasoning('economic-importance')">i</span>.
+<div class="la-banner la-banner--start" id="level1Banner">
+    <p><strong>You haven't completed Level 1 for Learning Methods yet.</strong><br>It takes about 15 minutes and helps you understand what learning methods means to you.</p>
+    <a href="{{ site.baseurl }}/learning-methods/level-1" class="btn-cta">Start Level 1</a>
+</div>
 
-## Learning Methods Values
+## What people value about learning methods
 
-Your optimal approach to learning methods depends on what aspects you value most. This guide balances three core values, with percentages indicating the relative weight given to each in our recommendations.
+People pursue better learning methods for different reasons. This site scores every learning methods intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
-For personalised recommendations based on your unique priorities, visit [Learning Methods Personalised]({{ site.baseurl }}/learning-methods/personalised), where you can adjust these value weightings to see which interventions work best for your specific goals and preferences.
+<div class="value-card">
+<h3>Efficiency & Speed</h3>
+<p>Maximising learning outcomes per unit of time invested. Techniques that accelerate comprehension, improve retention rates, and enable faster skill acquisition.</p>
+</div>
 
-{% include life-area-values.html %}
+<div class="value-card">
+<h3>Depth & Mastery</h3>
+<p>Achieving deep, transferable understanding rather than surface-level knowledge. Techniques that build robust mental models, support long-term retention, and enable creative application across contexts.</p>
+</div>
 
-## Benchmarks by Level
+<div class="value-card">
+<h3>Enjoyment & Motivation</h3>
+<p>Learning approaches that maintain engagement and intrinsic motivation over time. Methods that feel rewarding, align with personal preferences, and sustain curiosity.</p>
+</div>
 
-Research reveals that most people have minimal understanding of effective learning principles. Averaged across studies, more than 80% of participants rated cramming as equally or more effective than spaced practice, despite cramming being demonstrably inferior. Even among college students, few use active learning strategies, with most relying on passive techniques like rereading <span class="info-icon" onclick="showReasoning('population-patterns')">i</span>. This means that even basic awareness of effective learning methods represents a significant achievement relative to the general population.
+<div class="la-paths">
+    <a href="{{ site.baseurl }}/learning-methods/level-1" class="path-level1">
+        Complete Level 1
+        <div class="path-desc">Understand learning methods, set your values, assess where you are</div>
+    </a>
+    <a href="{{ site.baseurl }}/learning-methods/personalised" class="path-interventions">
+        Browse Interventions
+        <div class="path-desc">See personalised recommendations based on your priorities</div>
+    </a>
+</div>
 
-{% include life-area-benchmarks.html %}
-
-## Levels
-
-- [Level 1: Awareness](level-1) *(under development)*
-- [Level 2: Foundation](level-2) *(under development)*
-- [Level 3: Proficiency](level-3) *(under development)*
-- [Level 4: Excellence](level-4) *(under development)*
-- [Level 5: Mastery](level-5) *(under development)*
-- [Learning Methods Personalised]({{ site.baseurl }}/learning-methods/personalised) *(under development)*
-
-[← Back to Life Levels Home](../)
+</div>
 
 <script>
-// Research data for info buttons
-const researchData = {
-    'learning-transfer': {
-        title: 'Learning Methods as Force Multiplier',
-        content: 'Effective learning techniques transfer across domains. Meta-analyses show that learning strategies training improves academic performance across multiple subjects by 15-25%. Students who learn evidence-based study methods show improved outcomes in subsequent courses, suggesting these skills compound over time.'
-    },
-    'efficiency-gains': {
-        title: 'Learning Efficiency Research',
-        content: 'Studies consistently show spaced practice can be up to twice as effective as massed practice (cramming) for long-term retention. Research by Rohrer and Pashler demonstrates that spacing study sessions produces 2x better performance on delayed tests compared to intensive studying in single sessions. <a href="https://link.springer.com/article/10.3758/s13421-010-0035-2" target="_blank">View study</a>'
-    },
-    'economic-importance': {
-        title: 'Economic Value of Learning Skills',
-        content: 'The World Economic Forum identifies learning agility as one of the top skills for future employment. Workers who can efficiently acquire new skills command salary premiums and show greater career resilience. Studies of professional development show that individuals with systematic learning approaches advance faster in their careers.'
-    },
-    'population-patterns': {
-        title: 'Population Learning Patterns Research',
-        content: 'Kornell and Bjork found that over 80% of participants incorrectly rated cramming as equally or more effective than spaced practice. Research by Karpicke et al. showed college students listed an average of only 2.9 study strategies, with most being passive techniques like rereading rather than active methods like self-testing. <a href="https://link.springer.com/article/10.3758/s13421-010-0035-2" target="_blank">View study</a>'
-    },
-    {% include benchmark-reasoning.html %}
-};
+document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.getElementById('level1Banner');
+    if (!banner || typeof APStorage === 'undefined') return;
 
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress['learning-methods'] || {};
+    var steps = ['why', 'values', 'achievable', 'assess'];
+    var done = steps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights['learning-methods'];
+
+    if (done && hasSliders) {
+        banner.className = 'la-banner la-banner--complete';
+        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Learning Methods.</strong></p>' +
+            '<a href="{{ site.baseurl }}/learning-methods/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/learning-methods/level-1" class="btn-secondary">Redo Level 1</a>';
+    } else if (Object.keys(area).length > 0) {
+        var completed = steps.filter(function(s) { return area[s]; }).length;
+        if (hasSliders) completed++;
+        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/learning-methods/level-1" class="btn-cta">Continue Level 1</a>';
+    }
+});
 </script>
-
-{% include popup-boilerplate.html %}
