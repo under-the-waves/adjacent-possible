@@ -196,6 +196,58 @@ life_area_slug: friendship
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -354,7 +406,7 @@ life_area_slug: friendship
         <option value="2-3">2 &ndash; 3</option>
         <option value="4-5">4 &ndash; 5</option>
         <option value="6+">6 or more</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-close-count"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-close-count" onchange="handleSkip('a-close-count')"><label for="skip-close-count">I know but prefer not to say</label></div>
 </div>
 
@@ -381,7 +433,7 @@ life_area_slug: friendship
         <option value="2-3">2 &ndash; 3 times a month</option>
         <option value="weekly">About once a week</option>
         <option value="multiple-weekly">Multiple times a week</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-one-on-one"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-one-on-one" onchange="handleSkip('a-one-on-one')"><label for="skip-one-on-one">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -398,7 +450,7 @@ life_area_slug: friendship
         <option value="2">2 contexts</option>
         <option value="3">3 contexts</option>
         <option value="4+">4 or more contexts</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-contexts"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-contexts" onchange="handleSkip('a-contexts')"><label for="skip-contexts">I know but prefer not to say</label></div>
 </div>
 
@@ -473,6 +525,26 @@ life_area_slug: friendship
 </div>
 </div>
 
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-depth">
+        <span class="assess-summary-label">Depth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-depth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-depth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-breadth">
+        <span class="assess-summary-label">Breadth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-breadth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-breadth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-growth">
+        <span class="assess-summary-label">Growth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-growth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-growth">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on friendship behaviour among adults. Items without reliable population benchmarks are not scored.</p>
+</div>
+
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
@@ -523,8 +595,36 @@ life_area_slug: friendship
         'a-feedback', 'a-learning', 'a-accountability'
     ];
 
-    // All friendship items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: 12% of US adults report zero close friends (2021);
+    // median close-friend count is 3 – 5; weekly one-on-one contact is uncommon;
+    // most adults draw friends from 1 – 2 contexts.
+    var THRESHOLDS = {
+        'a-close-count': [
+            // 12% have zero close friends; 6+ is top decile
+            {v:'0',p:8},{v:'1',p:25},{v:'2-3',p:50},{v:'4-5',p:75},{v:'6+',p:92}
+        ],
+        'a-one-on-one': [
+            // Most adults see close friends less than once a month; weekly is uncommon
+            {v:'never',p:12},{v:'once',p:35},{v:'2-3',p:58},{v:'weekly',p:80},{v:'multiple-weekly',p:95}
+        ],
+        'a-contexts': [
+            // Most people draw friends from 1 – 2 settings; 4+ is rare
+            {v:'0-1',p:15},{v:'2',p:40},{v:'3',p:65},{v:'4+',p:88}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        depth: ['a-close-count', 'a-one-on-one'],
+        breadth: ['a-contexts'],
+        growth: []
+    };
+
+    // Items without reliable population benchmarks
+    var UNSCORED_ITEMS = [
+        'a-vulnerability', 'a-new-people', 'a-diversity',
+        'a-feedback', 'a-learning', 'a-accountability'
+    ];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -574,7 +674,6 @@ life_area_slug: friendship
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -613,12 +712,80 @@ life_area_slug: friendship
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        if (!items || items.length === 0) return null;
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['depth', 'breadth', 'growth'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
-
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
@@ -626,12 +793,6 @@ life_area_slug: friendship
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -649,20 +810,17 @@ life_area_slug: friendship
             var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
             var skipped = skipBox && skipBox.checked;
             var value = null;
-
             if (!skipped) {
                 var el = document.getElementById(id);
                 if (el && el.value !== '') value = el.value;
             }
             answers[id] = { value: value, skipped: skipped };
         });
-        // Save raw answers directly to localStorage (NOT via APStorage)
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
 
-        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -673,12 +831,10 @@ life_area_slug: friendship
     }
 
     function saveScores() {
-        // All friendship items are unscored; save null for each value
-        var scores = {
-            depth: null,
-            breadth: null,
-            growth: null
-        };
+        var scores = {};
+        ['depth', 'breadth', 'growth'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -686,12 +842,11 @@ life_area_slug: friendship
         }
     }
 
-    // --- Event handlers ---
-
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -702,13 +857,12 @@ life_area_slug: friendship
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
-
-    // --- Restore saved answers ---
 
     function restoreAssessment() {
         var allAnswers = {};
@@ -719,7 +873,6 @@ life_area_slug: friendship
         ASSESS_IDS.forEach(function(id) {
             var item = answers[id];
             if (!item) return;
-
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
                 if (skipBox) {
@@ -732,10 +885,11 @@ life_area_slug: friendship
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

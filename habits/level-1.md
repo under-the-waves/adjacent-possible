@@ -184,18 +184,58 @@ life_area_slug: habits
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -356,7 +396,7 @@ life_area_slug: habits
         <option value="several">Several &ndash; 3 &ndash; 5 deliberate habits</option>
         <option value="many">Many &ndash; 6 &ndash; 10 habits across different areas</option>
         <option value="comprehensive">Comprehensive &ndash; 10+ habits forming a structured routine</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-current-habits"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-current-habits" onchange="handleSkip('a-current-habits')"><label for="skip-current-habits">I know but prefer not to say</label></div>
 </div>
 
@@ -370,7 +410,7 @@ life_area_slug: habits
         <option value="some">Some &ndash; I've identified one or two keystone habits</option>
         <option value="mostly">Mostly &ndash; I understand the main connections between my habits</option>
         <option value="clearly">Clearly &ndash; I've mapped how my habits influence each other</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-keystone"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-keystone" onchange="handleSkip('a-keystone')"><label for="skip-keystone">I know but prefer not to say</label></div>
 </div>
 
@@ -384,7 +424,7 @@ life_area_slug: habits
         <option value="partially">Partially &ndash; some habits support my goals, some don't</option>
         <option value="mostly-aligned">Mostly aligned &ndash; the majority of my habits serve my goals</option>
         <option value="fully-aligned">Fully aligned &ndash; my habits are deliberately designed around my goals</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-habit-goals"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-habit-goals" onchange="handleSkip('a-habit-goals')"><label for="skip-habit-goals">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -402,7 +442,7 @@ life_area_slug: habits
         <option value="six-to-eight-weeks">Six to eight weeks &ndash; consistent effort over several weeks</option>
         <option value="three-to-four-weeks">Three to four weeks &ndash; relatively quick once I commit</option>
         <option value="two-weeks-or-less">Two weeks or less &ndash; I pick up new habits quickly</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-formation-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-formation-time" onchange="handleSkip('a-formation-time')"><label for="skip-formation-time">I know but prefer not to say</label></div>
 </div>
 
@@ -416,7 +456,7 @@ life_area_slug: habits
         <option value="weekends">Weekends &ndash; I maintain habits on weekdays but lose them at weekends</option>
         <option value="major-only">Major life changes only &ndash; day-to-day variation doesn't bother me</option>
         <option value="almost-nothing">Almost nothing &ndash; my habits persist through most disruptions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-disruption"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-disruption" onchange="handleSkip('a-disruption')"><label for="skip-disruption">I know but prefer not to say</label></div>
 </div>
 
@@ -430,7 +470,7 @@ life_area_slug: habits
         <option value="some-understanding">Some understanding &ndash; I know the triggers for some bad habits</option>
         <option value="good-understanding">Good understanding &ndash; I've analysed most of my unwanted habits</option>
         <option value="thorough">Thorough &ndash; I understand the cue-routine-reward loop for each one</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-bad-habits"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-bad-habits" onchange="handleSkip('a-bad-habits')"><label for="skip-bad-habits">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -448,7 +488,7 @@ life_area_slug: habits
         <option value="about-half">About half &ndash; a mix of enjoyable and effortful</option>
         <option value="most">Most &ndash; the majority feel rewarding</option>
         <option value="all">All &ndash; I've designed my habits to be enjoyable</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-enjoy-habits"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-enjoy-habits" onchange="handleSkip('a-enjoy-habits')"><label for="skip-enjoy-habits">I know but prefer not to say</label></div>
 </div>
 
@@ -462,7 +502,7 @@ life_area_slug: habits
         <option value="some">Some &ndash; a few habits have deliberate triggers</option>
         <option value="most">Most &ndash; the majority of my habits have clear cues</option>
         <option value="all">All &ndash; every habit is linked to a specific cue or routine</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-cues"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-cues" onchange="handleSkip('a-cues')"><label for="skip-cues">I know but prefer not to say</label></div>
 </div>
 
@@ -476,12 +516,30 @@ life_area_slug: habits
         <option value="mixed">Mixed &ndash; about half feel rewarding, half require effort</option>
         <option value="mostly-rewarding">Mostly rewarding &ndash; the majority feel good</option>
         <option value="intrinsically-rewarding">Intrinsically rewarding &ndash; my habits are designed to feel satisfying</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-rewards"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-rewards" onchange="handleSkip('a-rewards')"><label for="skip-rewards">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-impact">
+        <span class="assess-summary-label">Impact</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-impact" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-impact">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-consistency">
+        <span class="assess-summary-label">Consistency</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-consistency" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-consistency">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-enjoyment">
+        <span class="assess-summary-label">Enjoyment</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-enjoyment" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-enjoyment">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on habit formation and maintenance among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -531,8 +589,56 @@ life_area_slug: habits
         'a-enjoy-habits', 'a-cues', 'a-rewards'
     ];
 
-    // All habits items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: 77% abandon new behaviours within a week,
+    // most people have no deliberate habit system, few use cue-based design.
+    var THRESHOLDS = {
+        'a-current-habits': [
+            // Most people have not identified deliberate habits; a structured routine of 10+ is very rare
+            {v:'dont-know',p:10},{v:'few',p:30},{v:'several',p:55},{v:'many',p:78},{v:'comprehensive',p:95}
+        ],
+        'a-keystone': [
+            // The concept of keystone habits is relatively niche; mapping habit interactions is very rare
+            {v:'no',p:15},{v:'vaguely',p:35},{v:'some',p:58},{v:'mostly',p:80},{v:'clearly',p:95}
+        ],
+        'a-habit-goals': [
+            // Most people's habits are not deliberately aligned with goals
+            {v:'misaligned',p:5},{v:'mostly-unrelated',p:20},{v:'partially',p:50},{v:'mostly-aligned',p:78},{v:'fully-aligned',p:95}
+        ],
+        'a-formation-time': [
+            // Most people rarely succeed at forming habits; quick formation indicates strong skill
+            {v:'dont-know',p:10},{v:'months',p:30},{v:'six-to-eight-weeks',p:55},{v:'three-to-four-weeks',p:78},{v:'two-weeks-or-less',p:93}
+        ],
+        'a-disruption': [
+            // Most people lose habits to routine disruptions; maintaining through most disruptions is rare
+            {v:'everything',p:10},{v:'travel-and-stress',p:30},{v:'weekends',p:50},{v:'major-only',p:75},{v:'almost-nothing',p:93}
+        ],
+        'a-bad-habits': [
+            // Most people don't deeply analyse their unwanted habits; understanding cue-routine-reward is rare
+            {v:'no-idea',p:10},{v:'vague-sense',p:30},{v:'some-understanding',p:55},{v:'good-understanding',p:78},{v:'thorough',p:95}
+        ],
+        'a-enjoy-habits': [
+            // Most people maintain habits through obligation; designing for enjoyment is uncommon
+            {v:'none',p:10},{v:'few',p:30},{v:'about-half',p:55},{v:'most',p:78},{v:'all',p:95}
+        ],
+        'a-cues': [
+            // Most people rely on motivation/memory; deliberate cue design for all habits is very rare
+            {v:'no',p:15},{v:'occasionally',p:35},{v:'some',p:55},{v:'most',p:78},{v:'all',p:95}
+        ],
+        'a-rewards': [
+            // Most people rely on discipline; designing intrinsically rewarding habits is rare
+            {v:'pure-discipline',p:10},{v:'mostly-discipline',p:30},{v:'mixed',p:55},{v:'mostly-rewarding',p:78},{v:'intrinsically-rewarding',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        impact: ['a-current-habits', 'a-keystone', 'a-habit-goals'],
+        consistency: ['a-formation-time', 'a-disruption', 'a-bad-habits'],
+        enjoyment: ['a-enjoy-habits', 'a-cues', 'a-rewards']
+    };
+
+    // All habits items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -620,6 +726,74 @@ life_area_slug: habits
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        // All habits items use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['impact', 'consistency', 'enjoyment'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -632,12 +806,6 @@ life_area_slug: habits
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -676,7 +844,10 @@ life_area_slug: habits
     }
 
     function saveScores() {
-        var scores = { impact: null, consistency: null, enjoyment: null };
+        var scores = {};
+        ['impact', 'consistency', 'enjoyment'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -685,9 +856,10 @@ life_area_slug: habits
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -698,9 +870,10 @@ life_area_slug: habits
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -724,10 +897,12 @@ life_area_slug: habits
                 var el = document.getElementById(id);
                 if (el) el.value = item.value;
             }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

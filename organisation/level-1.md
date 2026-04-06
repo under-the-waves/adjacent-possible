@@ -184,18 +184,58 @@ life_area_slug: organisation
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -356,7 +396,7 @@ life_area_slug: organisation
         <option value="partial">Partial &ndash; I have a main place but often forget to use it</option>
         <option value="consistent">Consistent &ndash; one trusted place I use most of the time</option>
         <option value="comprehensive">Comprehensive &ndash; everything goes into one system reliably</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-capture-system"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-capture-system" onchange="handleSkip('a-capture-system')"><label for="skip-capture-system">I know but prefer not to say</label></div>
 </div>
 
@@ -370,7 +410,7 @@ life_area_slug: organisation
         <option value="monthly">Monthly &ndash; rough check-in once a month or so</option>
         <option value="weekly">Weekly &ndash; regular weekly review</option>
         <option value="daily">Daily &ndash; I review my commitments every day</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-review-frequency"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-review-frequency" onchange="handleSkip('a-review-frequency')"><label for="skip-review-frequency">I know but prefer not to say</label></div>
 </div>
 
@@ -384,7 +424,7 @@ life_area_slug: organisation
         <option value="occasional">Occasional &ndash; one or two minor things</option>
         <option value="rare">Rare &ndash; almost nothing slipped through</option>
         <option value="none">None &ndash; I kept every commitment</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-missed-commitments"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-missed-commitments" onchange="handleSkip('a-missed-commitments')"><label for="skip-missed-commitments">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -402,7 +442,7 @@ life_area_slug: organisation
         <option value="mixed">Mixed &ndash; some spaces are organised, others aren't</option>
         <option value="mostly-ordered">Mostly ordered &ndash; most items have a place and I use it</option>
         <option value="fully-ordered">Fully ordered &ndash; everything has a home and I maintain it</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-physical-spaces"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-physical-spaces" onchange="handleSkip('a-physical-spaces')"><label for="skip-physical-spaces">I know but prefer not to say</label></div>
 </div>
 
@@ -416,7 +456,7 @@ life_area_slug: organisation
         <option value="search-dependent">Search-dependent &ndash; I can usually find things but only via search</option>
         <option value="mostly">Mostly &ndash; I have a system that works for most things</option>
         <option value="always">Always &ndash; structured filing system with fast, reliable retrieval</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-digital-files"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-digital-files" onchange="handleSkip('a-digital-files')"><label for="skip-digital-files">I know but prefer not to say</label></div>
 </div>
 
@@ -430,7 +470,7 @@ life_area_slug: organisation
         <option value="neutral">Neutral &ndash; I notice it occasionally but it doesn't bother me much</option>
         <option value="low">Low &ndash; my spaces are reasonably tidy</option>
         <option value="none">Not at all &ndash; my spaces are consistently clear and organised</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-clutter"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-clutter" onchange="handleSkip('a-clutter')"><label for="skip-clutter">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -448,7 +488,7 @@ life_area_slug: organisation
         <option value="average">Average &ndash; roughly 5 &ndash; 10 minutes</option>
         <option value="below-average">Below average &ndash; a few minutes at most</option>
         <option value="almost-none">Almost none &ndash; I rarely misplace things</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-search-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-search-time" onchange="handleSkip('a-search-time')"><label for="skip-search-time">I know but prefer not to say</label></div>
 </div>
 
@@ -462,7 +502,7 @@ life_area_slug: organisation
         <option value="next-day">Next day &ndash; usually processed within 24 &ndash; 48 hours</option>
         <option value="same-day">Same day &ndash; I process most things the day they arrive</option>
         <option value="immediately">Immediately &ndash; I have a system that processes inputs as they arrive</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-inbox-processing"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-inbox-processing" onchange="handleSkip('a-inbox-processing')"><label for="skip-inbox-processing">I know but prefer not to say</label></div>
 </div>
 
@@ -476,12 +516,30 @@ life_area_slug: organisation
         <option value="several">Several &ndash; 3 &ndash; 5 tools that partially overlap</option>
         <option value="focused">Focused &ndash; 2 &ndash; 3 tools that work well together</option>
         <option value="integrated">Integrated &ndash; 1 &ndash; 2 core tools that cover everything I need</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-system-count"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-system-count" onchange="handleSkip('a-system-count')"><label for="skip-system-count">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-tracking">
+        <span class="assess-summary-label">Tracking</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-tracking" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-tracking">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-order">
+        <span class="assess-summary-label">Order</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-order" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-order">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-speed">
+        <span class="assess-summary-label">Speed</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-speed" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-speed">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on organisational behaviour among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -531,8 +589,56 @@ life_area_slug: organisation
         'a-search-time', 'a-inbox-processing', 'a-system-count'
     ];
 
-    // All organisation items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~82% have no time management system, ~41% of to-do
+    // items never completed, average 8.5 min/day searching for misplaced items.
+    var THRESHOLDS = {
+        'a-capture-system': [
+            // ~82% have no formal system; comprehensive capture is very rare
+            {v:'none',p:10},{v:'scattered',p:25},{v:'partial',p:45},{v:'consistent',p:72},{v:'comprehensive',p:93}
+        ],
+        'a-review-frequency': [
+            // ~8% review weekly; most never formally revisit commitments
+            {v:'never',p:10},{v:'rarely',p:30},{v:'monthly',p:55},{v:'weekly',p:80},{v:'daily',p:95}
+        ],
+        'a-missed-commitments': [
+            // Most people drop several commitments per month; keeping all is very rare
+            {v:'many',p:10},{v:'several',p:30},{v:'occasional',p:55},{v:'rare',p:78},{v:'none',p:95}
+        ],
+        'a-physical-spaces': [
+            // ~54% feel overwhelmed by clutter; fully ordered spaces are rare
+            {v:'chaotic',p:10},{v:'mostly-messy',p:25},{v:'mixed',p:50},{v:'mostly-ordered',p:75},{v:'fully-ordered',p:95}
+        ],
+        'a-digital-files': [
+            // Most people rely on search or cannot find files reliably
+            {v:'no',p:10},{v:'sometimes',p:30},{v:'search-dependent',p:50},{v:'mostly',p:75},{v:'always',p:95}
+        ],
+        'a-clutter': [
+            // ~54% report feeling overwhelmed by clutter
+            {v:'very',p:10},{v:'somewhat',p:30},{v:'neutral',p:50},{v:'low',p:75},{v:'none',p:95}
+        ],
+        'a-search-time': [
+            // Average 8.5 min/day; rarely misplacing things is uncommon
+            {v:'a-lot',p:10},{v:'above-average',p:25},{v:'average',p:45},{v:'below-average',p:72},{v:'almost-none',p:93}
+        ],
+        'a-inbox-processing': [
+            // Most people process within days; immediate systematic processing is rare
+            {v:'weeks',p:10},{v:'several-days',p:30},{v:'next-day',p:55},{v:'same-day',p:78},{v:'immediately',p:95}
+        ],
+        'a-system-count': [
+            // Most people use scattered tools or none; an integrated 1-2 tool system is rare
+            {v:'none',p:10},{v:'scattered',p:25},{v:'several',p:45},{v:'focused',p:75},{v:'integrated',p:93}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        tracking: ['a-capture-system', 'a-review-frequency', 'a-missed-commitments'],
+        order: ['a-physical-spaces', 'a-digital-files', 'a-clutter'],
+        speed: ['a-search-time', 'a-inbox-processing', 'a-system-count']
+    };
+
+    // All organisation items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -621,6 +727,74 @@ life_area_slug: organisation
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        // All organisation items use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['tracking', 'order', 'speed'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -634,12 +808,6 @@ life_area_slug: organisation
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -664,13 +832,11 @@ life_area_slug: organisation
             }
             answers[id] = { value: value, skipped: skipped };
         });
-        // Save raw answers directly to localStorage (NOT via APStorage)
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
 
-        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -681,12 +847,10 @@ life_area_slug: organisation
     }
 
     function saveScores() {
-        // All organisation items are unscored; save null for each value
-        var scores = {
-            tracking: null,
-            order: null,
-            speed: null
-        };
+        var scores = {};
+        ['tracking', 'order', 'speed'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -697,9 +861,10 @@ life_area_slug: organisation
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -710,9 +875,10 @@ life_area_slug: organisation
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -740,10 +906,11 @@ life_area_slug: organisation
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

@@ -196,6 +196,58 @@ life_area_slug: networks
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -347,7 +399,7 @@ life_area_slug: networks
 <div class="assess-input-group" id="ig-strong-ties">
     <span class="assess-label">How many professional contacts would actively recommend or advocate for you if asked?</span>
     <span class="assess-hint">Think about who would take a phone call from a hiring manager on your behalf.</span>
-    <select id="a-strong-ties" onchange="handleAssessInput('a-strong-ties')"><option value="">Select...</option><option value="none">None &ndash; I can't think of anyone</option><option value="one-or-two">One or two people</option><option value="three-to-five">Three to five people</option><option value="six-to-ten">Six to ten people</option><option value="more-than-ten">More than ten people</option></select>
+    <select id="a-strong-ties" onchange="handleAssessInput('a-strong-ties')"><option value="">Select...</option><option value="none">None &ndash; I can't think of anyone</option><option value="one-or-two">One or two people</option><option value="three-to-five">Three to five people</option><option value="six-to-ten">Six to ten people</option><option value="more-than-ten">More than ten people</option></select> <span class="assess-percentile-hint" id="pct-strong-ties"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-strong-ties" onchange="handleSkip('a-strong-ties')"><label for="skip-strong-ties">I know but prefer not to say</label></div>
 </div>
 
@@ -372,7 +424,7 @@ life_area_slug: networks
 <div class="assess-input-group" id="ig-network-size">
     <span class="assess-label">How large is your professional network and how many contexts does it span?</span>
     <span class="assess-hint">Count separate professional contexts: current work, previous roles, industry groups, alumni networks, conferences.</span>
-    <select id="a-network-size" onchange="handleAssessInput('a-network-size')"><option value="">Select...</option><option value="very-small">Very small &ndash; essentially just my current colleagues</option><option value="small">Small &ndash; current and one previous workplace</option><option value="moderate">Moderate &ndash; 2 &ndash; 3 professional contexts</option><option value="broad">Broad &ndash; 4 &ndash; 5 contexts across different settings</option><option value="extensive">Extensive &ndash; 6+ contexts spanning multiple industries or sectors</option></select>
+    <select id="a-network-size" onchange="handleAssessInput('a-network-size')"><option value="">Select...</option><option value="very-small">Very small &ndash; essentially just my current colleagues</option><option value="small">Small &ndash; current and one previous workplace</option><option value="moderate">Moderate &ndash; 2 &ndash; 3 professional contexts</option><option value="broad">Broad &ndash; 4 &ndash; 5 contexts across different settings</option><option value="extensive">Extensive &ndash; 6+ contexts spanning multiple industries or sectors</option></select> <span class="assess-percentile-hint" id="pct-network-size"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-network-size" onchange="handleSkip('a-network-size')"><label for="skip-network-size">I know but prefer not to say</label></div>
 </div>
 
@@ -386,7 +438,7 @@ life_area_slug: networks
 <div class="assess-input-group" id="ig-new-connections">
     <span class="assess-label">How often do you make meaningful new professional connections?</span>
     <span class="assess-hint">Count the last 6 months &ndash; how many new people have you had a substantive conversation with?</span>
-    <select id="a-new-connections" onchange="handleAssessInput('a-new-connections')"><option value="">Select...</option><option value="never">Never &ndash; I haven't made a new professional connection in months</option><option value="rarely">Rarely &ndash; one or two in the past 6 months</option><option value="occasionally">Occasionally &ndash; roughly one per month</option><option value="regularly">Regularly &ndash; several per month</option><option value="frequently">Frequently &ndash; I actively build new connections every week</option></select>
+    <select id="a-new-connections" onchange="handleAssessInput('a-new-connections')"><option value="">Select...</option><option value="never">Never &ndash; I haven't made a new professional connection in months</option><option value="rarely">Rarely &ndash; one or two in the past 6 months</option><option value="occasionally">Occasionally &ndash; roughly one per month</option><option value="regularly">Regularly &ndash; several per month</option><option value="frequently">Frequently &ndash; I actively build new connections every week</option></select> <span class="assess-percentile-hint" id="pct-new-connections"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-new-connections" onchange="handleSkip('a-new-connections')"><label for="skip-new-connections">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -414,6 +466,26 @@ life_area_slug: networks
     <select id="a-maintenance" onchange="handleAssessInput('a-maintenance')"><option value="">Select...</option><option value="not-at-all">Not at all &ndash; I only reconnect when I need something</option><option value="passively">Passively &ndash; I respond when contacted but don't initiate</option><option value="occasionally">Occasionally &ndash; I reach out to a few people now and then</option><option value="regularly">Regularly &ndash; I proactively maintain key relationships</option><option value="systematically">Systematically &ndash; I have a regular cadence for staying in touch</option></select>
     <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-depth">
+        <span class="assess-summary-label">Depth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-depth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-depth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-breadth">
+        <span class="assess-summary-label">Breadth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-breadth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-breadth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-relevance">
+        <span class="assess-summary-label">Relevance</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-relevance" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-relevance">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on professional networking behaviour among adults. Items without reliable population benchmarks are not scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -465,7 +537,37 @@ life_area_slug: networks
         'a-network-size', 'a-diversity', 'a-new-connections',
         'a-alignment', 'a-gaps', 'a-maintenance'
     ];
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: most professionals have 1 – 2 advocates at most;
+    // median LinkedIn network spans 2 – 3 contexts; deliberate new-connection
+    // building is rare (~80% network reactively).
+    var THRESHOLDS = {
+        'a-strong-ties': [
+            // Most professionals lack active advocates; 10+ is exceptional
+            {v:'none',p:10},{v:'one-or-two',p:30},{v:'three-to-five',p:55},{v:'six-to-ten',p:78},{v:'more-than-ten',p:95}
+        ],
+        'a-network-size': [
+            // Most people draw professional contacts from 1 – 2 settings; 6+ is rare
+            {v:'very-small',p:12},{v:'small',p:30},{v:'moderate',p:52},{v:'broad',p:75},{v:'extensive',p:93}
+        ],
+        'a-new-connections': [
+            // ~80% network reactively; weekly deliberate connection-building is very uncommon
+            {v:'never',p:10},{v:'rarely',p:30},{v:'occasionally',p:55},{v:'regularly',p:78},{v:'frequently',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        depth: ['a-strong-ties'],
+        breadth: ['a-network-size', 'a-new-connections'],
+        relevance: []
+    };
+
+    // Items without reliable population benchmarks
+    var UNSCORED_ITEMS = [
+        'a-mentor-sponsor', 'a-reciprocity', 'a-diversity',
+        'a-alignment', 'a-gaps', 'a-maintenance'
+    ];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -541,29 +643,200 @@ life_area_slug: networks
 
     window.completeStep = function(step) {
         if (step === 'assess') saveScores();
-        var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI();
+        var progress = loadProgress();
+        progress[step] = true;
+        saveProgress(progress);
+        updateUI();
         var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); }
+        if (idx >= 0 && idx < STEPS.length - 1) {
+            setTimeout(function() { openStep(STEPS[idx + 1]); }, 300);
+        }
     };
 
-    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
-    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
-    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
-    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
-    function saveAnswers() {
-        var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; });
-        var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
-        var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); }
-    }
-    function saveScores() { var scores = { depth: null, breadth: null, relevance: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
-    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    function restoreAssessment() {
-        var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return;
-        ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); });
-        updateAssessRecorded(); updateAssessCompletion();
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
     }
 
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        if (!items || items.length === 0) return null;
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['depth', 'breadth', 'relevance'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-assess') || {};
+            all[AREA] = checklist;
+            APStorage.save('ap-level1-assess', all);
+        }
+    }
+
+    function saveScores() {
+        var scores = {};
+        ['depth', 'breadth', 'relevance'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
+        }
+    }
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessCompletion();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>

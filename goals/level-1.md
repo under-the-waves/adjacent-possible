@@ -184,18 +184,58 @@ life_area_slug: goals
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -356,7 +396,7 @@ life_area_slug: goals
         <option value="one-two">One or two &ndash; a couple of goals I'm focused on</option>
         <option value="several">Several &ndash; 3 &ndash; 5 goals across different areas</option>
         <option value="many">Many &ndash; 6+ goals I'm actively pursuing</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-current-goals"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-current-goals" onchange="handleSkip('a-current-goals')"><label for="skip-current-goals">I know but prefer not to say</label></div>
 </div>
 
@@ -370,7 +410,7 @@ life_area_slug: goals
         <option value="about-half">About half &ndash; a mixed record</option>
         <option value="most">Most &ndash; I complete the majority of goals I set</option>
         <option value="nearly-all">Nearly all &ndash; I consistently follow through</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-completion-rate"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-completion-rate" onchange="handleSkip('a-completion-rate')"><label for="skip-completion-rate">I know but prefer not to say</label></div>
 </div>
 
@@ -384,7 +424,7 @@ life_area_slug: goals
         <option value="occasional">Occasional &ndash; I check in now and then but not regularly</option>
         <option value="regular">Regular &ndash; I review progress weekly or monthly</option>
         <option value="systematic">Systematic &ndash; detailed tracking with regular reviews</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-tracking"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-tracking" onchange="handleSkip('a-tracking')"><label for="skip-tracking">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -402,7 +442,7 @@ life_area_slug: goals
         <option value="scattered">Scattered &ndash; written in various places with no system</option>
         <option value="mostly">Mostly &ndash; most are written in a central place</option>
         <option value="all">All &ndash; every goal is written down and accessible</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-written"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-written" onchange="handleSkip('a-written')"><label for="skip-written">I know but prefer not to say</label></div>
 </div>
 
@@ -416,7 +456,7 @@ life_area_slug: goals
         <option value="some">For some &ndash; roughly half have clear success criteria</option>
         <option value="most">For most &ndash; the majority have measurable outcomes</option>
         <option value="all">For all &ndash; every goal has a specific, measurable definition of done</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-measurable"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-measurable" onchange="handleSkip('a-measurable')"><label for="skip-measurable">I know but prefer not to say</label></div>
 </div>
 
@@ -430,7 +470,7 @@ life_area_slug: goals
         <option value="some">Some &ndash; roughly half have deadlines</option>
         <option value="most">Most &ndash; the majority have target dates</option>
         <option value="all">All &ndash; every goal has a specific deadline</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-deadlines"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-deadlines" onchange="handleSkip('a-deadlines')"><label for="skip-deadlines">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -448,7 +488,7 @@ life_area_slug: goals
         <option value="mixed">Mixed &ndash; about half deliberate, half drift</option>
         <option value="mostly-deliberate">Mostly deliberate &ndash; I usually make a conscious choice to stop</option>
         <option value="always-deliberate">Always deliberate &ndash; I formally retire goals I no longer pursue</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-abandoned"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-abandoned" onchange="handleSkip('a-abandoned')"><label for="skip-abandoned">I know but prefer not to say</label></div>
 </div>
 
@@ -462,7 +502,7 @@ life_area_slug: goals
         <option value="quarterly">Quarterly &ndash; a few times a year</option>
         <option value="monthly">Monthly &ndash; regular monthly review</option>
         <option value="weekly">Weekly &ndash; goals are reviewed every week</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-review"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-review" onchange="handleSkip('a-review')"><label for="skip-review">I know but prefer not to say</label></div>
 </div>
 
@@ -476,12 +516,30 @@ life_area_slug: goals
         <option value="occasionally">Occasionally &ndash; it happens but I can usually recognise it</option>
         <option value="rarely">Rarely &ndash; I'm generally good at cutting losses</option>
         <option value="never">Never &ndash; I evaluate goals purely on future value</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-sunk-cost"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-sunk-cost" onchange="handleSkip('a-sunk-cost')"><label for="skip-sunk-cost">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-follow_through">
+        <span class="assess-summary-label">Follow-through</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-follow_through" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-follow_through">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-clarity">
+        <span class="assess-summary-label">Clarity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-clarity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-clarity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-adaptability">
+        <span class="assess-summary-label">Adaptability</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-adaptability" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-adaptability">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on goal-setting behaviour among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -531,8 +589,56 @@ life_area_slug: goals
         'a-abandoned', 'a-review', 'a-sunk-cost'
     ];
 
-    // All goals items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~92% of goal-setters fail, ~33% write goals down,
+    // ~15% track progress regularly, ~8% do weekly reviews.
+    var THRESHOLDS = {
+        'a-current-goals': [
+            // ~50% of adults have no defined goals; having several specific goals is uncommon
+            {v:'none',p:15},{v:'vague',p:35},{v:'one-two',p:55},{v:'several',p:75},{v:'many',p:90}
+        ],
+        'a-completion-rate': [
+            // 92% never reach their goals; completing most is rare
+            {v:'almost-none',p:10},{v:'few',p:30},{v:'about-half',p:55},{v:'most',p:80},{v:'nearly-all',p:95}
+        ],
+        'a-tracking': [
+            // ~15% of people track progress systematically; ~70% do nothing
+            {v:'no-tracking',p:15},{v:'mental',p:35},{v:'occasional',p:55},{v:'regular',p:78},{v:'systematic',p:95}
+        ],
+        'a-written': [
+            // ~33% write goals down; writing all goals in a system is very rare
+            {v:'no',p:20},{v:'some',p:40},{v:'scattered',p:55},{v:'mostly',p:75},{v:'all',p:92}
+        ],
+        'a-measurable': [
+            // Most people set vague goals; having specific success criteria for all is rare
+            {v:'no',p:15},{v:'few',p:35},{v:'some',p:55},{v:'most',p:78},{v:'all',p:95}
+        ],
+        'a-deadlines': [
+            // Few people attach deadlines to all goals; most have none or vague timelines
+            {v:'none',p:15},{v:'few',p:35},{v:'some',p:55},{v:'most',p:78},{v:'all',p:93}
+        ],
+        'a-abandoned': [
+            // Most people drift away from goals unconsciously; deliberate retirement is rare
+            {v:'always-drift',p:10},{v:'mostly-drift',p:30},{v:'mixed',p:55},{v:'mostly-deliberate',p:78},{v:'always-deliberate',p:95}
+        ],
+        'a-review': [
+            // ~8% review goals weekly; most never formally revisit
+            {v:'never',p:15},{v:'rarely',p:35},{v:'quarterly',p:60},{v:'monthly',p:80},{v:'weekly',p:95}
+        ],
+        'a-sunk-cost': [
+            // Sunk-cost bias affects most people; evaluating purely on future value is very uncommon
+            {v:'strongly',p:10},{v:'somewhat',p:30},{v:'occasionally',p:55},{v:'rarely',p:78},{v:'never',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        follow_through: ['a-current-goals', 'a-completion-rate', 'a-tracking'],
+        clarity: ['a-written', 'a-measurable', 'a-deadlines'],
+        adaptability: ['a-abandoned', 'a-review', 'a-sunk-cost']
+    };
+
+    // All goals items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -621,6 +727,74 @@ life_area_slug: goals
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        // All goals items use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['follow_through', 'clarity', 'adaptability'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -633,12 +807,6 @@ life_area_slug: goals
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -677,7 +845,10 @@ life_area_slug: goals
     }
 
     function saveScores() {
-        var scores = { follow_through: null, clarity: null, adaptability: null };
+        var scores = {};
+        ['follow_through', 'clarity', 'adaptability'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -686,9 +857,10 @@ life_area_slug: goals
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -699,9 +871,10 @@ life_area_slug: goals
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -725,10 +898,12 @@ life_area_slug: goals
                 var el = document.getElementById(id);
                 if (el) el.value = item.value;
             }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

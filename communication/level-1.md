@@ -184,18 +184,58 @@ life_area_slug: communication
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -363,7 +403,7 @@ life_area_slug: communication
         <option value="sometimes">Sometimes &ndash; it works when conditions are right</option>
         <option value="often">Often &ndash; I can usually bring people round</option>
         <option value="consistently">Consistently &ndash; persuasion is a strength of mine</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-persuade"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-persuade" onchange="handleSkip('a-persuade')"><label for="skip-persuade">I know but prefer not to say</label></div>
 </div>
 
@@ -376,7 +416,7 @@ life_area_slug: communication
         <option value="sometimes">Sometimes &ndash; depends on the group and the topic</option>
         <option value="often">Often &ndash; people usually take my suggestions seriously</option>
         <option value="consistently">Consistently &ndash; I regularly shape group decisions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-ideas-adopted"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-ideas-adopted" onchange="handleSkip('a-ideas-adopted')"><label for="skip-ideas-adopted">I know but prefer not to say</label></div>
 </div>
 
@@ -389,7 +429,7 @@ life_area_slug: communication
         <option value="slightly">Slightly &ndash; minor adjustments in formality</option>
         <option value="moderately">Moderately &ndash; I adapt tone and detail for different audiences</option>
         <option value="significantly">Significantly &ndash; I consciously tailor my approach each time</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-audience"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-audience" onchange="handleSkip('a-audience')"><label for="skip-audience">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -406,7 +446,7 @@ life_area_slug: communication
         <option value="rarely">Rarely &ndash; maybe once a fortnight</option>
         <option value="weekly">A few times a week</option>
         <option value="daily">Most days &ndash; deep conversation is a regular part of my life</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-deep-conv"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-deep-conv" onchange="handleSkip('a-deep-conv')"><label for="skip-deep-conv">I know but prefer not to say</label></div>
 </div>
 
@@ -419,7 +459,7 @@ life_area_slug: communication
         <option value="average">Average &ndash; I listen but sometimes miss the point</option>
         <option value="good">Good &ndash; people generally feel heard when talking to me</option>
         <option value="excellent">Excellent &ndash; people regularly seek me out because I listen well</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-listening"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-listening" onchange="handleSkip('a-listening')"><label for="skip-listening">I know but prefer not to say</label></div>
 </div>
 
@@ -433,7 +473,7 @@ life_area_slug: communication
         <option value="somewhat-comfortable">Somewhat comfortable &ndash; with close friends, yes</option>
         <option value="comfortable">Comfortable &ndash; I can be open with most people I trust</option>
         <option value="very-comfortable">Very comfortable &ndash; vulnerability comes naturally to me</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-vulnerable"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-vulnerable" onchange="handleSkip('a-vulnerable')"><label for="skip-vulnerable">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -451,7 +491,7 @@ life_area_slug: communication
         <option value="manageable">Manageable &ndash; some nerves but I can get through it</option>
         <option value="comfortable">Comfortable &ndash; I feel fairly at ease presenting</option>
         <option value="confident">Confident &ndash; I enjoy public speaking</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-public-speaking"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-public-speaking" onchange="handleSkip('a-public-speaking')"><label for="skip-public-speaking">I know but prefer not to say</label></div>
 </div>
 
@@ -465,7 +505,7 @@ life_area_slug: communication
         <option value="clear">Clear &ndash; people usually understand first time</option>
         <option value="strong">Strong &ndash; I write well and receive positive feedback</option>
         <option value="excellent">Excellent &ndash; writing is one of my strongest communication skills</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-writing"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-writing" onchange="handleSkip('a-writing')"><label for="skip-writing">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -483,7 +523,7 @@ life_area_slug: communication
         <option value="mixed">Mixed &ndash; sometimes I raise it, sometimes I let it go</option>
         <option value="direct">Direct &ndash; I usually raise issues calmly and clearly</option>
         <option value="aggressive">Aggressive &ndash; I tend to confront or escalate</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-conflict-pattern"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-conflict-pattern" onchange="handleSkip('a-conflict-pattern')"><label for="skip-conflict-pattern">I know but prefer not to say</label></div>
 </div>
 
@@ -497,12 +537,35 @@ life_area_slug: communication
         <option value="moderate">Moderate &ndash; it depends on the situation</option>
         <option value="easy">Easy &ndash; I can apologise without much difficulty</option>
         <option value="natural">Natural &ndash; apologising when I am wrong comes easily</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-apologise"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-apologise" onchange="handleSkip('a-apologise')"><label for="skip-apologise">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-influence">
+        <span class="assess-summary-label">Influence</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-influence" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-influence">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-connection">
+        <span class="assess-summary-label">Connection</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-connection" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-connection">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-performance">
+        <span class="assess-summary-label">Performance</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-performance" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-performance">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-conflict">
+        <span class="assess-summary-label">Conflict Navigation</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-conflict" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-conflict">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on communication behaviours among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -553,8 +616,62 @@ life_area_slug: communication
         'a-conflict-pattern', 'a-apologise'
     ];
 
-    // All communication items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~75% have public speaking anxiety, <5% communicate
+    // assertively, most people rarely adjust communication style for audience.
+    var THRESHOLDS = {
+        'a-persuade': [
+            // Most people are ineffective persuaders; consistent success is rare
+            {v:'rarely',p:15},{v:'sometimes',p:40},{v:'often',p:70},{v:'consistently',p:92}
+        ],
+        'a-ideas-adopted': [
+            // Most people's ideas get overlooked in groups; consistently shaping decisions is rare
+            {v:'rarely',p:15},{v:'sometimes',p:40},{v:'often',p:70},{v:'consistently',p:92}
+        ],
+        'a-audience': [
+            // Most people communicate roughly the same way regardless of audience
+            {v:'not-at-all',p:10},{v:'slightly',p:35},{v:'moderately',p:62},{v:'significantly',p:90}
+        ],
+        'a-deep-conv': [
+            // Most conversations stay surface-level; daily deep conversation is rare
+            {v:'never',p:10},{v:'rarely',p:30},{v:'weekly',p:62},{v:'daily',p:90}
+        ],
+        'a-listening': [
+            // Most people self-rate as average listeners; being sought out for listening is uncommon
+            {v:'poor',p:10},{v:'average',p:35},{v:'good',p:65},{v:'excellent',p:92}
+        ],
+        'a-vulnerable': [
+            // Most people are uncomfortable with vulnerability; it coming naturally is rare
+            {v:'very-uncomfortable',p:10},{v:'uncomfortable',p:25},{v:'somewhat-comfortable',p:50},{v:'comfortable',p:75},{v:'very-comfortable',p:93}
+        ],
+        'a-public-speaking': [
+            // ~75% have public speaking anxiety; enjoying it is uncommon
+            {v:'avoidant',p:10},{v:'anxious',p:30},{v:'manageable',p:55},{v:'comfortable',p:78},{v:'confident',p:95}
+        ],
+        'a-writing': [
+            // Most people's writing is passable; strong or excellent is uncommon
+            {v:'unclear',p:10},{v:'passable',p:30},{v:'clear',p:55},{v:'strong',p:78},{v:'excellent',p:95}
+        ],
+        'a-conflict-pattern': [
+            // Most people avoid or are passive; direct calm addressing is uncommon
+            // Note: 'aggressive' is not better than 'direct' -- it maps lower
+            {v:'avoid',p:10},{v:'passive',p:25},{v:'mixed',p:45},{v:'direct',p:85},{v:'aggressive',p:20}
+        ],
+        'a-apologise': [
+            // Most people find apologising hard; it coming naturally is rare
+            {v:'very-hard',p:10},{v:'hard',p:25},{v:'moderate',p:50},{v:'easy',p:75},{v:'natural',p:93}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        influence: ['a-persuade', 'a-ideas-adopted', 'a-audience'],
+        connection: ['a-deep-conv', 'a-listening', 'a-vulnerable'],
+        performance: ['a-public-speaking', 'a-writing'],
+        conflict: ['a-conflict-pattern', 'a-apologise']
+    };
+
+    // All communication items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -643,6 +760,74 @@ life_area_slug: communication
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        // All communication items use string keys (dropdowns)
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['influence', 'connection', 'performance', 'conflict'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -656,12 +841,6 @@ life_area_slug: communication
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -686,13 +865,11 @@ life_area_slug: communication
             }
             answers[id] = { value: value, skipped: skipped };
         });
-        // Save raw answers directly to localStorage (NOT via APStorage)
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
 
-        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -703,13 +880,10 @@ life_area_slug: communication
     }
 
     function saveScores() {
-        // All communication items are unscored; save null for each value
-        var scores = {
-            influence: null,
-            connection: null,
-            performance: null,
-            conflict: null
-        };
+        var scores = {};
+        ['influence', 'connection', 'performance', 'conflict'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -720,9 +894,10 @@ life_area_slug: communication
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -733,9 +908,10 @@ life_area_slug: communication
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -763,10 +939,11 @@ life_area_slug: communication
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

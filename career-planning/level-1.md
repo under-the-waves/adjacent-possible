@@ -196,6 +196,58 @@ life_area_slug: career-planning
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -357,7 +409,7 @@ life_area_slug: career-planning
 <div class="assess-input-group" id="ig-direction">
     <span class="assess-label">Can you describe where you want your career to be in three years?</span>
     <span class="assess-hint">If you can't, that's useful information &ndash; it tells you clarity is a priority.</span>
-    <select id="a-direction" onchange="handleAssessInput('a-direction')"><option value="">Select...</option><option value="no-idea">No idea &ndash; I haven't thought about it</option><option value="vague">Vague &ndash; a general sense but nothing specific</option><option value="rough-direction">Rough direction &ndash; I know the field or type of role</option><option value="clear">Clear &ndash; I can describe a specific target</option><option value="detailed">Detailed &ndash; specific role, organisation type, and timeline</option></select>
+    <select id="a-direction" onchange="handleAssessInput('a-direction')"><option value="">Select...</option><option value="no-idea">No idea &ndash; I haven't thought about it</option><option value="vague">Vague &ndash; a general sense but nothing specific</option><option value="rough-direction">Rough direction &ndash; I know the field or type of role</option><option value="clear">Clear &ndash; I can describe a specific target</option><option value="detailed">Detailed &ndash; specific role, organisation type, and timeline</option></select> <span class="assess-percentile-hint" id="pct-direction"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-direction" onchange="handleSkip('a-direction')"><label for="skip-direction">I know but prefer not to say</label></div>
 </div>
 
@@ -371,7 +423,7 @@ life_area_slug: career-planning
 <div class="assess-input-group" id="ig-written-plan">
     <span class="assess-label">Do you have a written career plan or direction document?</span>
     <span class="assess-hint">This could be a document, a note on your phone, or a structured journal entry.</span>
-    <select id="a-written-plan" onchange="handleAssessInput('a-written-plan')"><option value="">Select...</option><option value="no">No &ndash; nothing written</option><option value="mental-only">Mental only &ndash; I have ideas but haven't written them down</option><option value="rough-notes">Rough notes &ndash; scattered thoughts in various places</option><option value="basic-plan">Basic plan &ndash; a simple document with key goals</option><option value="detailed-plan">Detailed plan &ndash; structured document with milestones and timelines</option></select>
+    <select id="a-written-plan" onchange="handleAssessInput('a-written-plan')"><option value="">Select...</option><option value="no">No &ndash; nothing written</option><option value="mental-only">Mental only &ndash; I have ideas but haven't written them down</option><option value="rough-notes">Rough notes &ndash; scattered thoughts in various places</option><option value="basic-plan">Basic plan &ndash; a simple document with key goals</option><option value="detailed-plan">Detailed plan &ndash; structured document with milestones and timelines</option></select> <span class="assess-percentile-hint" id="pct-written-plan"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-written-plan" onchange="handleSkip('a-written-plan')"><label for="skip-written-plan">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -382,7 +434,7 @@ life_area_slug: career-planning
 <div class="assess-input-group" id="ig-skills-beyond">
     <span class="assess-label">Are you currently developing skills beyond what your current role requires?</span>
     <span class="assess-hint">Think about courses, side projects, or deliberate practice in adjacent areas.</span>
-    <select id="a-skills-beyond" onchange="handleAssessInput('a-skills-beyond')"><option value="">Select...</option><option value="no">No &ndash; I'm only using existing skills</option><option value="thinking-about-it">Thinking about it &ndash; I know I should but haven't started</option><option value="dabbling">Dabbling &ndash; occasional, unstructured learning</option><option value="actively">Actively &ndash; regular investment in one or two new skills</option><option value="systematically">Systematically &ndash; structured development plan with clear targets</option></select>
+    <select id="a-skills-beyond" onchange="handleAssessInput('a-skills-beyond')"><option value="">Select...</option><option value="no">No &ndash; I'm only using existing skills</option><option value="thinking-about-it">Thinking about it &ndash; I know I should but haven't started</option><option value="dabbling">Dabbling &ndash; occasional, unstructured learning</option><option value="actively">Actively &ndash; regular investment in one or two new skills</option><option value="systematically">Systematically &ndash; structured development plan with clear targets</option></select> <span class="assess-percentile-hint" id="pct-skills-beyond"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-skills-beyond" onchange="handleSkip('a-skills-beyond')"><label for="skip-skills-beyond">I know but prefer not to say</label></div>
 </div>
 
@@ -451,6 +503,31 @@ life_area_slug: career-planning
 </div>
 </div>
 
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-clarity">
+        <span class="assess-summary-label">Clarity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-clarity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-clarity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-advancement">
+        <span class="assess-summary-label">Advancement</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-advancement" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-advancement">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-security">
+        <span class="assess-summary-label">Security</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-security" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-security">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-meaning">
+        <span class="assess-summary-label">Meaning</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-meaning" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-meaning">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on career planning behaviour among adults. Items without reliable population benchmarks are not scored.</p>
+</div>
+
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
@@ -502,7 +579,38 @@ life_area_slug: career-planning
         'a-values-align', 'a-purpose', 'a-tradeoffs'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~50% of workers view their job as "just a job";
+    // only ~20% have a written career plan; ~37% have a mentor;
+    // systematic skill development beyond current role is uncommon.
+    var THRESHOLDS = {
+        'a-direction': [
+            // Most people lack a specific career direction; detailed 3-year plans are rare
+            {v:'no-idea',p:10},{v:'vague',p:30},{v:'rough-direction',p:52},{v:'clear',p:75},{v:'detailed',p:93}
+        ],
+        'a-written-plan': [
+            // ~80% have no written career plan; detailed structured plans are very rare
+            {v:'no',p:15},{v:'mental-only',p:35},{v:'rough-notes',p:55},{v:'basic-plan',p:78},{v:'detailed-plan',p:95}
+        ],
+        'a-skills-beyond': [
+            // Most professionals do not invest in skills beyond their current role
+            {v:'no',p:12},{v:'thinking-about-it',p:30},{v:'dabbling',p:52},{v:'actively',p:75},{v:'systematically',p:93}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        clarity: ['a-direction', 'a-written-plan'],
+        advancement: ['a-skills-beyond'],
+        security: [],
+        meaning: []
+    };
+
+    // Items without reliable population benchmarks
+    var UNSCORED_ITEMS = [
+        'a-industry', 'a-mentor', 'a-reputation',
+        'a-runway', 'a-transferable', 'a-cv-ready',
+        'a-values-align', 'a-purpose', 'a-tradeoffs'
+    ];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -583,8 +691,81 @@ life_area_slug: career-planning
         saveProgress(progress);
         updateUI();
         var idx = STEPS.indexOf(step);
-        if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); }
+        if (idx >= 0 && idx < STEPS.length - 1) {
+            setTimeout(function() { openStep(STEPS[idx + 1]); }, 300);
+        }
     };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        if (!items || items.length === 0) return null;
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['clarity', 'advancement', 'security', 'meaning'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
@@ -592,58 +773,108 @@ life_area_slug: career-planning
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
+
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
-    }
+
     function updateAssessCompletion() {
         var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
         var btn = document.getElementById('assessBtn');
-        if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; }
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
     }
+
     function saveAnswers() {
         var answers = {};
         ASSESS_IDS.forEach(function(id) {
             var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
-            var skipped = skipBox && skipBox.checked; var value = null;
-            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
             answers[id] = { value: value, skipped: skipped };
         });
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
-        if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); }
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-assess') || {};
+            all[AREA] = checklist;
+            APStorage.save('ap-level1-assess', all);
+        }
     }
+
     function saveScores() {
-        var scores = { clarity: null, advancement: null, security: null, meaning: null };
-        if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); }
+        var scores = {};
+        ['clarity', 'advancement', 'security', 'meaning'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
+        }
     }
-    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
+    };
+
     window.handleSkip = function(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         var input = document.getElementById(itemId);
-        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     function restoreAssessment() {
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
-        var answers = allAnswers[AREA]; if (!answers) return;
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
         ASSESS_IDS.forEach(function(id) {
-            var item = answers[id]; if (!item) return;
-            if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } }
-            else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
-        updateAssessRecorded(); updateAssessCompletion();
+
+        updateAssessSummary();
+        updateAssessCompletion();
     }
 
     document.addEventListener('DOMContentLoaded', function() {
