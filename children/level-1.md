@@ -184,6 +184,59 @@ life_area_slug: children
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
+
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -364,7 +417,7 @@ life_area_slug: children
         <option value="mixed">Mixed &ndash; expresses some emotions but suppresses others</option>
         <option value="mostly-open">Mostly open &ndash; generally comes to me when upset</option>
         <option value="fully-open">Fully open &ndash; freely shares both positive and negative feelings</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-emotional-climate"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-emotional-climate" onchange="handleSkip('a-emotional-climate')"><label for="skip-emotional-climate">I know but prefer not to say</label></div>
 </div>
 
@@ -378,7 +431,7 @@ life_area_slug: children
         <option value="adequate">Adequate &ndash; meets minimum guidelines for both</option>
         <option value="good">Good &ndash; consistently meets guidelines</option>
         <option value="excellent">Excellent &ndash; well above guidelines on both</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-sleep-nutrition"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-sleep-nutrition" onchange="handleSkip('a-sleep-nutrition')"><label for="skip-sleep-nutrition">I know but prefer not to say</label></div>
 </div>
 
@@ -392,7 +445,7 @@ life_area_slug: children
         <option value="usually">Usually &ndash; notice most signs within a day or two</option>
         <option value="quickly">Quickly &ndash; tend to spot changes early</option>
         <option value="very-attuned">Very attuned &ndash; pick up on subtle shifts in mood or behaviour promptly</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-stress-signs"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-stress-signs" onchange="handleSkip('a-stress-signs')"><label for="skip-stress-signs">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -410,7 +463,7 @@ life_area_slug: children
         <option value="3-5h">3 &ndash; 5 hours per week</option>
         <option value="5-10h">5 &ndash; 10 hours per week</option>
         <option value="over-10h">Over 10 hours per week</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-quality-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-quality-time" onchange="handleSkip('a-quality-time')"><label for="skip-quality-time">I know but prefer not to say</label></div>
 </div>
 
@@ -424,7 +477,7 @@ life_area_slug: children
         <option value="reasonable">Reasonable &ndash; could answer most with some thought</option>
         <option value="well">Well &ndash; could answer all three confidently</option>
         <option value="deeply">Deeply &ndash; know far more than the basics about their worries, joys, and friendships</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-inner-life"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-inner-life" onchange="handleSkip('a-inner-life')"><label for="skip-inner-life">I know but prefer not to say</label></div>
 </div>
 
@@ -438,7 +491,7 @@ life_area_slug: children
         <option value="depends">Depends &ndash; sometimes me, sometimes others</option>
         <option value="usually-me">Usually me &ndash; I am their first port of call most of the time</option>
         <option value="always-me">Always me &ndash; consistently seeks me out for comfort and conversation</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-seeks-comfort"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-seeks-comfort" onchange="handleSkip('a-seeks-comfort')"><label for="skip-seeks-comfort">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -456,7 +509,7 @@ life_area_slug: children
         <option value="at-level">At level &ndash; meeting age expectations</option>
         <option value="above">Above &ndash; ahead in one or more areas</option>
         <option value="well-above">Well above &ndash; significantly ahead across most areas</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-academic-level"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-academic-level" onchange="handleSkip('a-academic-level')"><label for="skip-academic-level">I know but prefer not to say</label></div>
 </div>
 
@@ -470,7 +523,7 @@ life_area_slug: children
         <option value="one-regular">One regular &ndash; one consistent activity or habit</option>
         <option value="several">Several &ndash; two or three regular enrichment activities</option>
         <option value="extensive">Extensive &ndash; a well-rounded programme of enrichment</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-enrichment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-enrichment" onchange="handleSkip('a-enrichment')"><label for="skip-enrichment">I know but prefer not to say</label></div>
 </div>
 
@@ -484,7 +537,7 @@ life_area_slug: children
         <option value="know-strengths">Know strengths &ndash; clear on what they are good at but less sure about gaps</option>
         <option value="know-both">Know both &ndash; can name at least one strength and one area for support</option>
         <option value="detailed">Detailed picture &ndash; clear understanding of multiple strengths and gaps</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-strengths-gaps"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-strengths-gaps" onchange="handleSkip('a-strengths-gaps')"><label for="skip-strengths-gaps">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -502,7 +555,7 @@ life_area_slug: children
         <option value="moderate">Moderate &ndash; roughly balanced between their choices and mine</option>
         <option value="substantial">Substantial &ndash; they make most daily decisions themselves</option>
         <option value="high">High &ndash; they are largely self-directing with me as a safety net</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-independence"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-independence" onchange="handleSkip('a-independence')"><label for="skip-independence">I know but prefer not to say</label></div>
 </div>
 
@@ -516,7 +569,7 @@ life_area_slug: children
         <option value="mixed">Mixed &ndash; sometimes let consequences play out, sometimes intervene</option>
         <option value="usually-allow">Usually allow &ndash; let them experience consequences with occasional support</option>
         <option value="consistently-allow">Consistently allow &ndash; let natural consequences land unless safety is at risk</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-consequences"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-consequences" onchange="handleSkip('a-consequences')"><label for="skip-consequences">I know but prefer not to say</label></div>
 </div>
 
@@ -530,9 +583,34 @@ life_area_slug: children
         <option value="average">Average &ndash; initiates some things but needs prompting for others</option>
         <option value="mostly-independent">Mostly independent &ndash; starts most activities on their own</option>
         <option value="highly-independent">Highly independent &ndash; consistently self-starting and self-sustaining</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-self-direction"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-self-direction" onchange="handleSkip('a-self-direction')"><label for="skip-self-direction">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-wellbeing">
+        <span class="assess-summary-label">Wellbeing</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-wellbeing" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-wellbeing">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-relationship">
+        <span class="assess-summary-label">Relationship</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-relationship" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-relationship">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-achievement">
+        <span class="assess-summary-label">Achievement</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-achievement" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-achievement">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-development">
+        <span class="assess-summary-label">Development</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-development" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-development">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on parenting behaviours and child development. All items in this area are scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -586,8 +664,119 @@ life_area_slug: children
         'a-independence', 'a-consequences', 'a-self-direction'
     ];
 
-    // All children items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var UNSCORED_ITEMS = [];
+
+    var THRESHOLDS = {
+        'a-emotional-climate': [
+            {v:'withdrawn',p:10},{v:'cautious',p:25},{v:'mixed',p:50},{v:'mostly-open',p:72},{v:'fully-open',p:92}
+        ],
+        'a-sleep-nutrition': [
+            {v:'poor-both',p:8},{v:'poor-one',p:25},{v:'adequate',p:50},{v:'good',p:75},{v:'excellent',p:93}
+        ],
+        'a-stress-signs': [
+            {v:'rarely-notice',p:12},{v:'sometimes',p:35},{v:'usually',p:58},{v:'quickly',p:78},{v:'very-attuned',p:94}
+        ],
+        'a-quality-time': [
+            {v:'under-1h',p:8},{v:'1-3h',p:25},{v:'3-5h',p:50},{v:'5-10h',p:75},{v:'over-10h',p:93}
+        ],
+        'a-inner-life': [
+            {v:'very-little',p:8},{v:'some',p:25},{v:'reasonable',p:50},{v:'well',p:75},{v:'deeply',p:93}
+        ],
+        'a-seeks-comfort': [
+            {v:'avoids-all',p:8},{v:'others-first',p:22},{v:'depends',p:45},{v:'usually-me',p:72},{v:'always-me',p:92}
+        ],
+        'a-academic-level': [
+            {v:'well-behind',p:8},{v:'slightly-behind',p:25},{v:'at-level',p:50},{v:'above',p:75},{v:'well-above',p:93}
+        ],
+        'a-enrichment': [
+            {v:'none',p:12},{v:'occasional',p:30},{v:'one-regular',p:50},{v:'several',p:75},{v:'extensive',p:93}
+        ],
+        'a-strengths-gaps': [
+            {v:'no-idea',p:8},{v:'vague',p:25},{v:'know-strengths',p:50},{v:'know-both',p:75},{v:'detailed',p:93}
+        ],
+        'a-independence': [
+            {v:'very-little',p:10},{v:'some',p:30},{v:'moderate',p:50},{v:'substantial',p:75},{v:'high',p:93}
+        ],
+        'a-consequences': [
+            {v:'always-rescue',p:8},{v:'usually-rescue',p:25},{v:'mixed',p:50},{v:'usually-allow',p:78},{v:'consistently-allow',p:94}
+        ],
+        'a-self-direction': [
+            {v:'very-dependent',p:8},{v:'mostly-dependent',p:25},{v:'average',p:50},{v:'mostly-independent',p:75},{v:'highly-independent',p:93}
+        ],
+    };
+
+    var VALUE_ITEMS = {
+        wellbeing: ['a-emotional-climate', 'a-sleep-nutrition', 'a-stress-signs'],
+        relationship: ['a-quality-time', 'a-inner-life', 'a-seeks-comfort'],
+        achievement: ['a-academic-level', 'a-enrichment', 'a-strengths-gaps'],
+        development: ['a-independence', 'a-consequences', 'a-self-direction'],
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['wellbeing', 'relationship', 'achievement', 'development'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -736,13 +925,10 @@ life_area_slug: children
     }
 
     function saveScores() {
-        // All children items are unscored; save null for each value
-        var scores = {
-            wellbeing: null,
-            relationship: null,
-            achievement: null,
-            development: null
-        };
+        var scores = {};
+        ['wellbeing', 'relationship', 'achievement', 'development'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -753,9 +939,10 @@ life_area_slug: children
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -766,9 +953,10 @@ life_area_slug: children
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -796,10 +984,11 @@ life_area_slug: children
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

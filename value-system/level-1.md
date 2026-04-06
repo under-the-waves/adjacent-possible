@@ -184,6 +184,59 @@ life_area_slug: value-system
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
+
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -364,7 +417,7 @@ life_area_slug: value-system
         <option value="one-two">I could name one or two</option>
         <option value="three-five">I could name three to five with confidence</option>
         <option value="ranked">I could name and rank them in order of importance</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-core-values"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-core-values" onchange="handleSkip('a-core-values')"><label for="skip-core-values">I know but prefer not to say</label></div>
 </div>
 
@@ -378,7 +431,7 @@ life_area_slug: value-system
         <option value="past-year">Within the past year</option>
         <option value="recent">Within the past few months</option>
         <option value="routine">I do this routinely for important decisions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-recent-decision"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-recent-decision" onchange="handleSkip('a-recent-decision')"><label for="skip-recent-decision">I know but prefer not to say</label></div>
 </div>
 
@@ -392,7 +445,7 @@ life_area_slug: value-system
         <option value="uncertain">Uncertain &ndash; I second-guess myself but it fades</option>
         <option value="mostly-confident">Mostly confident &ndash; I generally feel good about my choices</option>
         <option value="very-confident">Very confident &ndash; my decisions feel aligned with what matters to me</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-decision-regret"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-decision-regret" onchange="handleSkip('a-decision-regret')"><label for="skip-decision-regret">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -410,7 +463,7 @@ life_area_slug: value-system
         <option value="partially">I've examined some areas (e.g. religion or politics) but not others</option>
         <option value="thorough">I've done a thorough review and can distinguish inherited from chosen</option>
         <option value="ongoing">I revisit this regularly as part of ongoing self-examination</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-inherited"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-inherited" onchange="handleSkip('a-inherited')"><label for="skip-inherited">I know but prefer not to say</label></div>
 </div>
 
@@ -424,7 +477,7 @@ life_area_slug: value-system
         <option value="one">I can identify one clear conflict</option>
         <option value="several">I can identify several and I've thought about how to manage them</option>
         <option value="resolved">I've developed explicit rules for how to handle my recurring value conflicts</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-conflict"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-conflict" onchange="handleSkip('a-conflict')"><label for="skip-conflict">I know but prefer not to say</label></div>
 </div>
 
@@ -437,7 +490,7 @@ life_area_slug: value-system
         <option value="vague">I have a vague sense for one or two values but nothing specific</option>
         <option value="one">I have a clear "enough" point for at least one value</option>
         <option value="several">I have clear limits for several values and they guide my decisions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-enough"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-enough" onchange="handleSkip('a-enough')"><label for="skip-enough">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -454,7 +507,7 @@ life_area_slug: value-system
         <option value="sometimes">Sometimes &ndash; I notice it happening in certain contexts</option>
         <option value="rarely">Rarely &ndash; I mostly hold my ground but occasionally bend</option>
         <option value="almost-never">Almost never &ndash; I've consciously developed the habit of living by my values</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-social-pressure"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-social-pressure" onchange="handleSkip('a-social-pressure')"><label for="skip-social-pressure">I know but prefer not to say</label></div>
 </div>
 
@@ -467,7 +520,7 @@ life_area_slug: value-system
         <option value="somewhat">Somewhat &ndash; some areas align, others clearly don't</option>
         <option value="mostly">Mostly &ndash; my life broadly reflects my values with some exceptions</option>
         <option value="well">Well &ndash; I've deliberately structured my life around my values</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-alignment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-alignment" onchange="handleSkip('a-alignment')"><label for="skip-alignment">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -485,9 +538,34 @@ life_area_slug: value-system
         <option value="yes-one">Yes &ndash; I can identify one clear change</option>
         <option value="yes-several">Yes &ndash; several values have changed and I understand why</option>
         <option value="intentional">Yes &ndash; I've intentionally revised my values based on experience and reflection</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-changed"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-changed" onchange="handleSkip('a-changed')"><label for="skip-changed">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-practical">
+        <span class="assess-summary-label">Practical Decision-Making</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-practical" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-practical">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-insight">
+        <span class="assess-summary-label">Comprehensive Insight</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-insight" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-insight">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-authentic">
+        <span class="assess-summary-label">Authentic Expression</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-authentic" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-authentic">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-evolution">
+        <span class="assess-summary-label">Values Evolution</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-evolution" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-evolution">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on values articulation, moral development, and self-examination among adults. All items in this area are scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -541,8 +619,110 @@ life_area_slug: value-system
         'a-changed'
     ];
 
-    // All value system items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var UNSCORED_ITEMS = [];
+
+    var THRESHOLDS = {
+        'a-core-values': [
+            {v:'none',p:8},{v:'vague',p:25},{v:'one-two',p:48},{v:'three-five',p:78},{v:'ranked',p:95}
+        ],
+        'a-recent-decision': [
+            {v:'never',p:10},{v:'years',p:28},{v:'past-year',p:50},{v:'recent',p:75},{v:'routine',p:95}
+        ],
+        'a-decision-regret': [
+            {v:'frequent-regret',p:8},{v:'some-regret',p:25},{v:'uncertain',p:48},{v:'mostly-confident',p:75},{v:'very-confident',p:95}
+        ],
+        'a-inherited': [
+            {v:'not-considered',p:8},{v:'aware',p:25},{v:'partially',p:50},{v:'thorough',p:80},{v:'ongoing',p:95}
+        ],
+        'a-conflict': [
+            {v:'no',p:10},{v:'maybe',p:28},{v:'one',p:50},{v:'several',p:78},{v:'resolved',p:95}
+        ],
+        'a-enough': [
+            {v:'no',p:10},{v:'vague',p:32},{v:'one',p:58},{v:'several',p:92}
+        ],
+        'a-social-pressure': [
+            {v:'often',p:10},{v:'sometimes',p:32},{v:'rarely',p:62},{v:'almost-never',p:92}
+        ],
+        'a-alignment': [
+            {v:'poor',p:8},{v:'somewhat',p:30},{v:'mostly',p:58},{v:'well',p:92}
+        ],
+        'a-changed': [
+            {v:'no',p:10},{v:'maybe',p:28},{v:'yes-one',p:48},{v:'yes-several',p:75},{v:'intentional',p:95}
+        ],
+    };
+
+    var VALUE_ITEMS = {
+        practical: ['a-core-values', 'a-recent-decision', 'a-decision-regret'],
+        insight: ['a-inherited', 'a-conflict', 'a-enough'],
+        authentic: ['a-social-pressure', 'a-alignment'],
+        evolution: ['a-changed'],
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['practical', 'insight', 'authentic', 'evolution'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -688,13 +868,10 @@ life_area_slug: value-system
     }
 
     function saveScores() {
-        // All value system items are unscored; save null for each value
-        var scores = {
-            practical: null,
-            insight: null,
-            authentic: null,
-            evolution: null
-        };
+        var scores = {};
+        ['practical', 'insight', 'authentic', 'evolution'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -705,9 +882,10 @@ life_area_slug: value-system
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -718,9 +896,10 @@ life_area_slug: value-system
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -748,10 +927,11 @@ life_area_slug: value-system
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

@@ -184,6 +184,59 @@ life_area_slug: romantic-relationships
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
+
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -356,7 +409,7 @@ life_area_slug: romantic-relationships
         <option value="know-style">Know my style &ndash; can identify it but not sure how it shows up day to day</option>
         <option value="understand-impact">Understand impact &ndash; know my style and how it affects my relationship</option>
         <option value="actively-working">Actively working on it &ndash; aware of my patterns and adjusting them</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-attachment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-attachment" onchange="handleSkip('a-attachment')"><label for="skip-attachment">I know but prefer not to say</label></div>
 </div>
 
@@ -370,7 +423,7 @@ life_area_slug: romantic-relationships
         <option value="not-recently">Not recently &ndash; not in the past fortnight</option>
         <option value="yes-once">Yes &ndash; at least once in the past fortnight</option>
         <option value="yes-regularly">Yes, regularly &ndash; this is a normal part of how we communicate</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-vulnerability"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-vulnerability" onchange="handleSkip('a-vulnerability')"><label for="skip-vulnerability">I know but prefer not to say</label></div>
 </div>
 
@@ -384,7 +437,7 @@ life_area_slug: romantic-relationships
         <option value="some">Some &ndash; 1 to 3 hours per week</option>
         <option value="regular">Regular &ndash; 3 to 5 hours per week</option>
         <option value="substantial">Substantial &ndash; over 5 hours per week</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-quality-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-quality-time" onchange="handleSkip('a-quality-time')"><label for="skip-quality-time">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -402,7 +455,7 @@ life_area_slug: romantic-relationships
         <option value="pursue-withdraw">Pursue-withdraw &ndash; one pushes, the other retreats</option>
         <option value="avoidance">Avoidance &ndash; issues get swept under the carpet</option>
         <option value="constructive">Constructive &ndash; we disagree but resolve things without lasting damage</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-conflict-patterns"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-conflict-patterns" onchange="handleSkip('a-conflict-patterns')"><label for="skip-conflict-patterns">I know but prefer not to say</label></div>
 </div>
 
@@ -416,7 +469,7 @@ life_area_slug: romantic-relationships
         <option value="mostly-fair">Mostly fair &ndash; some imbalances but broadly acceptable</option>
         <option value="fair">Fair &ndash; both feel it is equitable</option>
         <option value="not-sure">Not sure &ndash; have not discussed this recently</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-responsibilities"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-responsibilities" onchange="handleSkip('a-responsibilities')"><label for="skip-responsibilities">I know but prefer not to say</label></div>
 </div>
 
@@ -430,7 +483,7 @@ life_area_slug: romantic-relationships
         <option value="hours">Hours &ndash; we cool down and reconnect within the same day</option>
         <option value="quickly">Quickly &ndash; we repair within an hour or so</option>
         <option value="immediately">Immediately &ndash; we can disagree and reconnect almost straight away</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-repair"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-repair" onchange="handleSkip('a-repair')"><label for="skip-repair">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -448,7 +501,7 @@ life_area_slug: romantic-relationships
         <option value="some-discussion">Some discussion &ndash; we have talked about a few areas</option>
         <option value="clear-picture">Clear picture &ndash; we know where we align and where we diverge</option>
         <option value="actively-managed">Actively managed &ndash; we revisit and negotiate differences regularly</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-values-match"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-values-match" onchange="handleSkip('a-values-match')"><label for="skip-values-match">I know but prefer not to say</label></div>
 </div>
 
@@ -462,7 +515,7 @@ life_area_slug: romantic-relationships
         <option value="some-areas">Some areas &ndash; agreed on a few things but not others</option>
         <option value="mostly-aligned">Mostly aligned &ndash; shared picture with a few open questions</option>
         <option value="fully-aligned">Fully aligned &ndash; clear, shared vision we both feel good about</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-future-vision"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-future-vision" onchange="handleSkip('a-future-vision')"><label for="skip-future-vision">I know but prefer not to say</label></div>
 </div>
 
@@ -479,6 +532,26 @@ life_area_slug: romantic-relationships
     </select>
     <div class="assess-skip"><input type="checkbox" id="skip-decisions" onchange="handleSkip('a-decisions')"><label for="skip-decisions">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-connection">
+        <span class="assess-summary-label">Connection</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-connection" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-connection">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-harmony">
+        <span class="assess-summary-label">Harmony</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-harmony" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-harmony">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-alignment">
+        <span class="assess-summary-label">Alignment</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-alignment" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-alignment">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on relationship quality, communication, and conflict resolution among couples. The 'decisions' item is not scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -531,8 +604,106 @@ life_area_slug: romantic-relationships
         'a-values-match', 'a-future-vision', 'a-decisions'
     ];
 
-    // All romantic-relationships items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var UNSCORED_ITEMS = ['a-decisions'];
+
+    var THRESHOLDS = {
+        'a-attachment': [
+            {v:'no-idea',p:8},{v:'vague',p:25},{v:'know-style',p:48},{v:'understand-impact',p:75},{v:'actively-working',p:93}
+        ],
+        'a-vulnerability': [
+            {v:'never',p:5},{v:'rarely',p:18},{v:'not-recently',p:38},{v:'yes-once',p:65},{v:'yes-regularly',p:92}
+        ],
+        'a-quality-time': [
+            {v:'almost-none',p:8},{v:'minimal',p:22},{v:'some',p:48},{v:'regular',p:75},{v:'substantial',p:93}
+        ],
+        'a-conflict-patterns': [
+            {v:'no-idea',p:15},{v:'escalation',p:12},{v:'pursue-withdraw',p:25},{v:'avoidance',p:30},{v:'constructive',p:85}
+        ],
+        'a-responsibilities': [
+            {v:'very-unequal',p:8},{v:'somewhat-unequal',p:28},{v:'mostly-fair',p:55},{v:'fair',p:85},{v:'not-sure',p:20}
+        ],
+        'a-repair': [
+            {v:'days-or-longer',p:8},{v:'overnight',p:28},{v:'hours',p:52},{v:'quickly',p:78},{v:'immediately',p:95}
+        ],
+        'a-values-match': [
+            {v:'not-discussed',p:8},{v:'assumed',p:25},{v:'some-discussion',p:48},{v:'clear-picture',p:78},{v:'actively-managed',p:95}
+        ],
+        'a-future-vision': [
+            {v:'never-discussed',p:8},{v:'vague',p:25},{v:'some-areas',p:48},{v:'mostly-aligned',p:75},{v:'fully-aligned',p:95}
+        ],
+    };
+
+    var VALUE_ITEMS = {
+        connection: ['a-attachment', 'a-vulnerability', 'a-quality-time'],
+        harmony: ['a-conflict-patterns', 'a-responsibilities', 'a-repair'],
+        alignment: ['a-values-match', 'a-future-vision'],
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['connection', 'harmony', 'alignment'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -678,11 +849,10 @@ life_area_slug: romantic-relationships
     }
 
     function saveScores() {
-        var scores = {
-            connection: null,
-            harmony: null,
-            alignment: null
-        };
+        var scores = {};
+        ['connection', 'harmony', 'alignment'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -693,9 +863,10 @@ life_area_slug: romantic-relationships
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -706,9 +877,10 @@ life_area_slug: romantic-relationships
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -736,10 +908,11 @@ life_area_slug: romantic-relationships
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

@@ -184,6 +184,59 @@ life_area_slug: family-of-origin
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
+
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -363,7 +416,7 @@ life_area_slug: family-of-origin
         <option value="sometimes">Sometimes &ndash; in certain areas I defer to family even when I disagree</option>
         <option value="rarely">Rarely &ndash; I mostly make my own choices but avoid a few topics</option>
         <option value="almost-never">Almost never &ndash; I make decisions based on my own values</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-boundary-awareness"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-boundary-awareness" onchange="handleSkip('a-boundary-awareness')"><label for="skip-boundary-awareness">I know but prefer not to say</label></div>
 </div>
 
@@ -377,7 +430,7 @@ life_area_slug: family-of-origin
         <option value="moderate">Moderate &ndash; I feel guilt but can usually act on my own judgement</option>
         <option value="mild">Mild &ndash; some discomfort but it does not change my decisions</option>
         <option value="minimal">Minimal &ndash; I can make independent choices without significant guilt</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-guilt-patterns"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-guilt-patterns" onchange="handleSkip('a-guilt-patterns')"><label for="skip-guilt-patterns">I know but prefer not to say</label></div>
 </div>
 
@@ -391,7 +444,7 @@ life_area_slug: family-of-origin
         <option value="partial">Partial &ndash; I can name some expectations but not all</option>
         <option value="clear">Clear &ndash; I can name the main areas of divergence</option>
         <option value="none">Not applicable &ndash; my family's expectations align with my own</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-family-expectations"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-family-expectations" onchange="handleSkip('a-family-expectations')"><label for="skip-family-expectations">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -409,7 +462,7 @@ life_area_slug: family-of-origin
         <option value="fortnightly">Fortnightly &ndash; every couple of weeks with key family members</option>
         <option value="weekly">Weekly &ndash; regular meaningful contact with most family members</option>
         <option value="daily">Daily &ndash; frequent meaningful contact with close family</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-contact-frequency"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-contact-frequency" onchange="handleSkip('a-contact-frequency')"><label for="skip-contact-frequency">I know but prefer not to say</label></div>
 </div>
 
@@ -423,7 +476,7 @@ life_area_slug: family-of-origin
         <option value="a-few">A few &ndash; I have two or three family members I trust emotionally</option>
         <option value="most">Most &ndash; I feel safe with the majority of my family</option>
         <option value="all">All &ndash; I feel emotionally safe with everyone in my family</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-emotional-safety"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-emotional-safety" onchange="handleSkip('a-emotional-safety')"><label for="skip-emotional-safety">I know but prefer not to say</label></div>
 </div>
 
@@ -437,7 +490,7 @@ life_area_slug: family-of-origin
         <option value="neutral">Neutral &ndash; neither positive nor negative</option>
         <option value="mostly-positive">Mostly positive &ndash; I generally enjoy them with some reservations</option>
         <option value="look-forward">Look forward &ndash; I genuinely enjoy family gatherings</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-family-gatherings"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-family-gatherings" onchange="handleSkip('a-family-gatherings')"><label for="skip-family-gatherings">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -455,7 +508,7 @@ life_area_slug: family-of-origin
         <option value="partial">Partial &ndash; I can name some but suspect there are others</option>
         <option value="clear">Clear &ndash; I have a good understanding of the unresolved dynamics</option>
         <option value="none">Not applicable &ndash; there are no significant unresolved issues</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-unresolved-issues"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-unresolved-issues" onchange="handleSkip('a-unresolved-issues')"><label for="skip-unresolved-issues">I know but prefer not to say</label></div>
 </div>
 
@@ -469,7 +522,7 @@ life_area_slug: family-of-origin
         <option value="yes-some">Yes &ndash; I can identify some patterns I am repeating</option>
         <option value="yes-working">Yes &ndash; I know the patterns and am actively working on them</option>
         <option value="resolved">Resolved &ndash; I have identified and addressed the main patterns</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-generational-patterns"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-generational-patterns" onchange="handleSkip('a-generational-patterns')"><label for="skip-generational-patterns">I know but prefer not to say</label></div>
 </div>
 
@@ -483,7 +536,7 @@ life_area_slug: family-of-origin
         <option value="considered">Considered &ndash; I have thought about it but not acted</option>
         <option value="tried">Yes &ndash; I have tried it in the past</option>
         <option value="ongoing">Yes &ndash; I am currently working with a professional</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-professional-help"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-professional-help" onchange="handleSkip('a-professional-help')"><label for="skip-professional-help">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -500,7 +553,7 @@ life_area_slug: family-of-origin
         <option value="vague">Vague &ndash; I have a rough sense but no clear picture</option>
         <option value="partial">Partial &ndash; I know the main flows but may be missing some</option>
         <option value="clear">Clear &ndash; I have a detailed understanding of support in both directions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-current-support"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-current-support" onchange="handleSkip('a-current-support')"><label for="skip-current-support">I know but prefer not to say</label></div>
 </div>
 
@@ -514,7 +567,7 @@ life_area_slug: family-of-origin
         <option value="somewhat">Somewhat &ndash; I have a general sense of what may be needed</option>
         <option value="seriously">Seriously &ndash; I have thought through specific scenarios</option>
         <option value="planned">Planned &ndash; I have discussed and planned with family members</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-future-obligations"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-future-obligations" onchange="handleSkip('a-future-obligations')"><label for="skip-future-obligations">I know but prefer not to say</label></div>
 </div>
 
@@ -527,9 +580,34 @@ life_area_slug: family-of-origin
         <option value="vague">Vague &ndash; I have a general sense but have not examined it closely</option>
         <option value="mostly-clear">Mostly clear &ndash; I know for most traditions whether I value them or not</option>
         <option value="clear">Clear &ndash; I have a deliberate view on which traditions serve me</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-traditions"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-traditions" onchange="handleSkip('a-traditions')"><label for="skip-traditions">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-autonomy">
+        <span class="assess-summary-label">Autonomy</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-autonomy" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-autonomy">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-connection">
+        <span class="assess-summary-label">Connection</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-connection" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-connection">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-healing">
+        <span class="assess-summary-label">Healing</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-healing" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-healing">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-duty">
+        <span class="assess-summary-label">Duty</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-duty" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-duty">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on family relationships, boundary-setting, and intergenerational dynamics among adults. All items in this area are scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -583,8 +661,119 @@ life_area_slug: family-of-origin
         'a-current-support', 'a-future-obligations', 'a-traditions'
     ];
 
-    // All family-of-origin items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var UNSCORED_ITEMS = [];
+
+    var THRESHOLDS = {
+        'a-boundary-awareness': [
+            {v:'frequently',p:10},{v:'sometimes',p:35},{v:'rarely',p:65},{v:'almost-never',p:90}
+        ],
+        'a-guilt-patterns': [
+            {v:'dominant',p:8},{v:'significant',p:25},{v:'moderate',p:48},{v:'mild',p:72},{v:'minimal',p:92}
+        ],
+        'a-family-expectations': [
+            {v:'unclear',p:10},{v:'vague',p:30},{v:'partial',p:55},{v:'clear',p:80},{v:'none',p:90}
+        ],
+        'a-contact-frequency': [
+            {v:'rarely',p:10},{v:'monthly',p:30},{v:'fortnightly',p:55},{v:'weekly',p:78},{v:'daily',p:95}
+        ],
+        'a-emotional-safety': [
+            {v:'none',p:8},{v:'one',p:25},{v:'a-few',p:50},{v:'most',p:78},{v:'all',p:95}
+        ],
+        'a-family-gatherings': [
+            {v:'dread',p:8},{v:'reluctant',p:25},{v:'neutral',p:48},{v:'mostly-positive',p:72},{v:'look-forward',p:92}
+        ],
+        'a-unresolved-issues': [
+            {v:'unaware',p:10},{v:'vague',p:28},{v:'partial',p:50},{v:'clear',p:78},{v:'none',p:92}
+        ],
+        'a-generational-patterns': [
+            {v:'unaware',p:8},{v:'possibly',p:25},{v:'yes-some',p:48},{v:'yes-working',p:78},{v:'resolved',p:95}
+        ],
+        'a-professional-help': [
+            {v:'no-not-needed',p:30},{v:'no-might-help',p:20},{v:'considered',p:40},{v:'tried',p:65},{v:'ongoing',p:85}
+        ],
+        'a-current-support': [
+            {v:'unclear',p:12},{v:'vague',p:35},{v:'partial',p:60},{v:'clear',p:90}
+        ],
+        'a-future-obligations': [
+            {v:'not-at-all',p:10},{v:'briefly',p:30},{v:'somewhat',p:52},{v:'seriously',p:78},{v:'planned',p:95}
+        ],
+        'a-traditions': [
+            {v:'unclear',p:12},{v:'vague',p:35},{v:'mostly-clear',p:68},{v:'clear',p:92}
+        ],
+    };
+
+    var VALUE_ITEMS = {
+        autonomy: ['a-boundary-awareness', 'a-guilt-patterns', 'a-family-expectations'],
+        connection: ['a-contact-frequency', 'a-emotional-safety', 'a-family-gatherings'],
+        healing: ['a-unresolved-issues', 'a-generational-patterns', 'a-professional-help'],
+        duty: ['a-current-support', 'a-future-obligations', 'a-traditions'],
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['autonomy', 'connection', 'healing', 'duty'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -733,13 +922,10 @@ life_area_slug: family-of-origin
     }
 
     function saveScores() {
-        // All family-of-origin items are unscored; save null for each value
-        var scores = {
-            autonomy: null,
-            connection: null,
-            healing: null,
-            duty: null
-        };
+        var scores = {};
+        ['autonomy', 'connection', 'healing', 'duty'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -750,9 +936,10 @@ life_area_slug: family-of-origin
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -763,9 +950,10 @@ life_area_slug: family-of-origin
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -793,10 +981,11 @@ life_area_slug: family-of-origin
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

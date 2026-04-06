@@ -184,6 +184,59 @@ life_area_slug: sex
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
+
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -359,7 +412,7 @@ life_area_slug: sex
         <option value="3-4">3 &ndash; 4 times per month (roughly weekly)</option>
         <option value="5-8">5 &ndash; 8 times per month</option>
         <option value="over-8">More than 8 times per month</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-current-frequency"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-current-frequency" onchange="handleSkip('a-current-frequency')"><label for="skip-current-frequency">I know but prefer not to say</label></div>
 </div>
 
@@ -373,7 +426,7 @@ life_area_slug: sex
         <option value="well-matched">Well matched &ndash; frequency suits me</option>
         <option value="some-gap-want-less">Some gap &ndash; I would prefer somewhat less</option>
         <option value="large-gap-want-less">Large gap &ndash; I want significantly less than happens</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-desire-gap"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-desire-gap" onchange="handleSkip('a-desire-gap')"><label for="skip-desire-gap">I know but prefer not to say</label></div>
 </div>
 
@@ -388,7 +441,7 @@ life_area_slug: sex
         <option value="mostly-partner">Mostly my partner</option>
         <option value="almost-always-partner">Almost always my partner</option>
         <option value="neither">Neither &ndash; it rarely happens</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-initiation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-initiation" onchange="handleSkip('a-initiation')"><label for="skip-initiation">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -406,7 +459,7 @@ life_area_slug: sex
         <option value="some-variation">Some variation &ndash; a mix of familiar and new</option>
         <option value="good-variation">Good variation &ndash; regularly try different things</option>
         <option value="highly-varied">Highly varied &ndash; actively explore and change things up</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-routine"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-routine" onchange="handleSkip('a-routine')"><label for="skip-routine">I know but prefer not to say</label></div>
 </div>
 
@@ -420,7 +473,7 @@ life_area_slug: sex
         <option value="discussed-not-tried">Discussed but not tried &ndash; we have talked about things but not acted</option>
         <option value="exploring">Exploring &ndash; we discuss and try new things regularly</option>
         <option value="fully-expressed">Fully expressed &ndash; I have shared all my curiosities with my partner</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-curiosities"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-curiosities" onchange="handleSkip('a-curiosities')"><label for="skip-curiosities">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -438,7 +491,7 @@ life_area_slug: sex
         <option value="reasonable">Reasonable &ndash; know my main preferences</option>
         <option value="well">Well &ndash; could clearly describe what I enjoy and what I do not</option>
         <option value="very-well">Very well &ndash; detailed understanding of my own responses and preferences</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-own-body"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-own-body" onchange="handleSkip('a-own-body')"><label for="skip-own-body">I know but prefer not to say</label></div>
 </div>
 
@@ -452,7 +505,7 @@ life_area_slug: sex
         <option value="somewhat">Somewhat comfortable &ndash; can manage the basics but not details</option>
         <option value="comfortable">Comfortable &ndash; can communicate clearly about most things</option>
         <option value="very-comfortable">Very comfortable &ndash; open, specific, and at ease discussing preferences</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-communication"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-communication" onchange="handleSkip('a-communication')"><label for="skip-communication">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -470,7 +523,7 @@ life_area_slug: sex
         <option value="indifferent">Indifferent &ndash; not something I think about much</option>
         <option value="mostly-fulfilling">Mostly fulfilling &ndash; generally satisfying with room to improve</option>
         <option value="deeply-fulfilling">Deeply fulfilling &ndash; a genuine source of joy and connection</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-overall-satisfaction"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-overall-satisfaction" onchange="handleSkip('a-overall-satisfaction')"><label for="skip-overall-satisfaction">I know but prefer not to say</label></div>
 </div>
 
@@ -484,9 +537,34 @@ life_area_slug: sex
         <option value="aware-not-affected">Aware but unaffected &ndash; notice comparisons but they do not bother me</option>
         <option value="rarely">Rarely &ndash; almost never compare</option>
         <option value="grounded">Grounded &ndash; my sense of satisfaction is based entirely on my own experience</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-comparison"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-comparison" onchange="handleSkip('a-comparison')"><label for="skip-comparison">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-frequency">
+        <span class="assess-summary-label">Frequency</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-frequency" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-frequency">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-variety">
+        <span class="assess-summary-label">Variety</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-variety" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-variety">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-pleasure">
+        <span class="assess-summary-label">Pleasure</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-pleasure" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-pleasure">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-contentment">
+        <span class="assess-summary-label">Contentment</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-contentment" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-contentment">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on sexual frequency, satisfaction, and communication among adults. All items in this area are scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -540,8 +618,110 @@ life_area_slug: sex
         'a-overall-satisfaction', 'a-comparison'
     ];
 
-    // All sex items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var UNSCORED_ITEMS = [];
+
+    var THRESHOLDS = {
+        'a-current-frequency': [
+            {v:'rarely',p:10},{v:'1-2',p:28},{v:'3-4',p:50},{v:'5-8',p:75},{v:'over-8',p:93}
+        ],
+        'a-desire-gap': [
+            {v:'large-gap-want-more',p:10},{v:'some-gap-want-more',p:30},{v:'well-matched',p:80},{v:'some-gap-want-less',p:40},{v:'large-gap-want-less',p:15}
+        ],
+        'a-initiation': [
+            {v:'almost-always-me',p:25},{v:'mostly-me',p:40},{v:'roughly-equal',p:85},{v:'mostly-partner',p:40},{v:'almost-always-partner',p:25},{v:'neither',p:5}
+        ],
+        'a-routine': [
+            {v:'very-predictable',p:10},{v:'mostly-predictable',p:28},{v:'some-variation',p:50},{v:'good-variation',p:78},{v:'highly-varied',p:95}
+        ],
+        'a-curiosities': [
+            {v:'many-unspoken',p:10},{v:'a-few-unspoken',p:30},{v:'discussed-not-tried',p:52},{v:'exploring',p:78},{v:'fully-expressed',p:95}
+        ],
+        'a-own-body': [
+            {v:'unsure',p:8},{v:'vague',p:25},{v:'reasonable',p:50},{v:'well',p:78},{v:'very-well',p:95}
+        ],
+        'a-communication': [
+            {v:'very-uncomfortable',p:5},{v:'uncomfortable',p:20},{v:'somewhat',p:45},{v:'comfortable',p:75},{v:'very-comfortable',p:95}
+        ],
+        'a-overall-satisfaction': [
+            {v:'frustration',p:8},{v:'some-frustration',p:22},{v:'indifferent',p:42},{v:'mostly-fulfilling',p:72},{v:'deeply-fulfilling',p:95}
+        ],
+        'a-comparison': [
+            {v:'constant-negative',p:8},{v:'sometimes-negative',p:28},{v:'aware-not-affected',p:52},{v:'rarely',p:75},{v:'grounded',p:95}
+        ],
+    };
+
+    var VALUE_ITEMS = {
+        frequency: ['a-current-frequency', 'a-desire-gap', 'a-initiation'],
+        variety: ['a-routine', 'a-curiosities'],
+        pleasure: ['a-own-body', 'a-communication'],
+        contentment: ['a-overall-satisfaction', 'a-comparison'],
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['frequency', 'variety', 'pleasure', 'contentment'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -687,12 +867,10 @@ life_area_slug: sex
     }
 
     function saveScores() {
-        var scores = {
-            frequency: null,
-            variety: null,
-            pleasure: null,
-            contentment: null
-        };
+        var scores = {};
+        ['frequency', 'variety', 'pleasure', 'contentment'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -703,9 +881,10 @@ life_area_slug: sex
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -716,9 +895,10 @@ life_area_slug: sex
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -746,10 +926,11 @@ life_area_slug: sex
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

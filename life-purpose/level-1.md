@@ -184,6 +184,59 @@ life_area_slug: life-purpose
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
+
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -356,7 +409,7 @@ life_area_slug: life-purpose
         <option value="rough">I could give a rough answer but it would feel vague</option>
         <option value="clear">I have a fairly clear answer I could state confidently</option>
         <option value="tested">I have a well-tested statement that has guided real decisions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-articulate-purpose"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-articulate-purpose" onchange="handleSkip('a-articulate-purpose')"><label for="skip-articulate-purpose">I know but prefer not to say</label></div>
 </div>
 
@@ -370,7 +423,7 @@ life_area_slug: life-purpose
         <option value="informal">I weigh pros and cons informally but don't have a system</option>
         <option value="framework">I have a framework I consciously use (values, priorities, criteria)</option>
         <option value="integrated">I have a well-developed system that connects decisions to my broader purpose</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-decision-framework"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-decision-framework" onchange="handleSkip('a-decision-framework')"><label for="skip-decision-framework">I know but prefer not to say</label></div>
 </div>
 
@@ -384,7 +437,7 @@ life_area_slug: life-purpose
         <option value="mixed">Mixed &ndash; some areas feel on track, others don't</option>
         <option value="mostly-confident">Mostly confident &ndash; I feel broadly on the right path</option>
         <option value="very-confident">Very confident &ndash; I know where I'm going and why</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-direction-confidence"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-direction-confidence" onchange="handleSkip('a-direction-confidence')"><label for="skip-direction-confidence">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -402,7 +455,7 @@ life_area_slug: life-purpose
         <option value="some">I can name a few things but I'm not sure they're the deepest ones</option>
         <option value="clear">I know clearly what fulfils me and I seek it out</option>
         <option value="organised">I've organised my life around my sources of fulfilment</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-fulfilment-sources"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-fulfilment-sources" onchange="handleSkip('a-fulfilment-sources')"><label for="skip-fulfilment-sources">I know but prefer not to say</label></div>
 </div>
 
@@ -416,7 +469,7 @@ life_area_slug: life-purpose
         <option value="balanced">Roughly balanced &ndash; some goals are mine, some are inherited</option>
         <option value="mostly-internal">Mostly internal &ndash; my goals feel personally meaningful</option>
         <option value="fully-internal">Fully internal &ndash; I've consciously chosen my goals and they feel deeply mine</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-meaning-vs-external"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-meaning-vs-external" onchange="handleSkip('a-meaning-vs-external')"><label for="skip-meaning-vs-external">I know but prefer not to say</label></div>
 </div>
 
@@ -430,7 +483,7 @@ life_area_slug: life-purpose
         <option value="wobbles">It wobbles but I eventually get back on track</option>
         <option value="holds">It mostly holds &ndash; setbacks slow me down but don't derail me</option>
         <option value="strengthens">It strengthens &ndash; difficulties tend to clarify what matters</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-setback-motivation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-setback-motivation" onchange="handleSkip('a-setback-motivation')"><label for="skip-setback-motivation">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -448,7 +501,7 @@ life_area_slug: life-purpose
         <option value="moderate">Moderately &ndash; my priorities show up in my schedule but not consistently</option>
         <option value="well">Well &ndash; most of my time reflects what I care about</option>
         <option value="very-well">Very well &ndash; I've deliberately structured my life around my priorities</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-values-alignment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-values-alignment" onchange="handleSkip('a-values-alignment')"><label for="skip-values-alignment">I know but prefer not to say</label></div>
 </div>
 
@@ -462,7 +515,7 @@ life_area_slug: life-purpose
         <option value="coexisting">Coexisting &ndash; they don't conflict much but don't reinforce each other either</option>
         <option value="supportive">Mostly supportive &ndash; progress in one area tends to help others</option>
         <option value="integrated">Well integrated &ndash; my life areas form a coherent whole</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-domain-conflict"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-domain-conflict" onchange="handleSkip('a-domain-conflict')"><label for="skip-domain-conflict">I know but prefer not to say</label></div>
 </div>
 
@@ -476,9 +529,29 @@ life_area_slug: life-purpose
         <option value="occasionally">Occasionally &ndash; a few times in my life</option>
         <option value="regularly">Regularly &ndash; purpose is a major factor in most big decisions</option>
         <option value="consistently">Consistently &ndash; purpose is the primary driver of my life direction</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-purpose-decisions"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-purpose-decisions" onchange="handleSkip('a-purpose-decisions')"><label for="skip-purpose-decisions">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-clarity">
+        <span class="assess-summary-label">Clarity &amp; Direction</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-clarity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-clarity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-meaning">
+        <span class="assess-summary-label">Meaning &amp; Fulfilment</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-meaning" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-meaning">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-integration">
+        <span class="assess-summary-label">Integration &amp; Coherence</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-integration" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-integration">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on purpose, meaning, and life direction among adults. All items in this area are scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -531,8 +604,109 @@ life_area_slug: life-purpose
         'a-values-alignment', 'a-domain-conflict', 'a-purpose-decisions'
     ];
 
-    // All life purpose items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var UNSCORED_ITEMS = [];
+
+    var THRESHOLDS = {
+        'a-articulate-purpose': [
+            {v:'no',p:10},{v:'fragments',p:30},{v:'rough',p:52},{v:'clear',p:78},{v:'tested',p:95}
+        ],
+        'a-decision-framework': [
+            {v:'default',p:10},{v:'feeling',p:28},{v:'informal',p:52},{v:'framework',p:80},{v:'integrated',p:95}
+        ],
+        'a-direction-confidence': [
+            {v:'adrift',p:8},{v:'uncertain',p:25},{v:'mixed',p:50},{v:'mostly-confident',p:75},{v:'very-confident',p:93}
+        ],
+        'a-fulfilment-sources': [
+            {v:'unclear',p:8},{v:'vague',p:25},{v:'some',p:50},{v:'clear',p:78},{v:'organised',p:95}
+        ],
+        'a-meaning-vs-external': [
+            {v:'mostly-external',p:8},{v:'mixed-external',p:25},{v:'balanced',p:48},{v:'mostly-internal',p:72},{v:'fully-internal',p:93}
+        ],
+        'a-setback-motivation': [
+            {v:'collapse',p:8},{v:'dips',p:25},{v:'wobbles',p:50},{v:'holds',p:75},{v:'strengthens',p:94}
+        ],
+        'a-values-alignment': [
+            {v:'poor',p:8},{v:'somewhat',p:28},{v:'moderate',p:50},{v:'well',p:78},{v:'very-well',p:95}
+        ],
+        'a-domain-conflict': [
+            {v:'competing',p:8},{v:'tension',p:28},{v:'coexisting',p:50},{v:'supportive',p:75},{v:'integrated',p:95}
+        ],
+        'a-purpose-decisions': [
+            {v:'never',p:10},{v:'once',p:28},{v:'occasionally',p:50},{v:'regularly',p:78},{v:'consistently',p:95}
+        ],
+    };
+
+    var VALUE_ITEMS = {
+        clarity: ['a-articulate-purpose', 'a-decision-framework', 'a-direction-confidence'],
+        meaning: ['a-fulfilment-sources', 'a-meaning-vs-external', 'a-setback-motivation'],
+        integration: ['a-values-alignment', 'a-domain-conflict', 'a-purpose-decisions'],
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['clarity', 'meaning', 'integration'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -678,12 +852,10 @@ life_area_slug: life-purpose
     }
 
     function saveScores() {
-        // All life purpose items are unscored; save null for each value
-        var scores = {
-            clarity: null,
-            meaning: null,
-            integration: null
-        };
+        var scores = {};
+        ['clarity', 'meaning', 'integration'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -694,9 +866,10 @@ life_area_slug: life-purpose
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -707,9 +880,10 @@ life_area_slug: life-purpose
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -737,10 +911,11 @@ life_area_slug: life-purpose
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

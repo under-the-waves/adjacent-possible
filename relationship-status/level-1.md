@@ -184,6 +184,59 @@ life_area_slug: relationship-status
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
+
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -364,7 +417,7 @@ life_area_slug: relationship-status
         <option value="partial">Partial &ndash; know what attracts me but unsure which choices led to good or poor outcomes</option>
         <option value="clear">Clear &ndash; can name my patterns and which ones served me well</option>
         <option value="detailed">Detailed &ndash; understand my patterns, their origins, and how to adjust</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-past-patterns"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-past-patterns" onchange="handleSkip('a-past-patterns')"><label for="skip-past-patterns">I know but prefer not to say</label></div>
 </div>
 
@@ -378,7 +431,7 @@ life_area_slug: relationship-status
         <option value="moderate">Moderate &ndash; can list some genuine needs but still get pulled by excitement</option>
         <option value="clear">Clear &ndash; know my core needs and can separate them from surface attraction</option>
         <option value="tested">Tested &ndash; have applied this distinction in real decisions and it holds up</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-needs-vs-wants"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-needs-vs-wants" onchange="handleSkip('a-needs-vs-wants')"><label for="skip-needs-vs-wants">I know but prefer not to say</label></div>
 </div>
 
@@ -392,7 +445,7 @@ life_area_slug: relationship-status
         <option value="sometimes">Sometimes &ndash; spot some in the moment but miss others</option>
         <option value="usually">Usually &ndash; catch most red flags early</option>
         <option value="reliably">Reliably &ndash; can identify and act on red flags consistently</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-red-flags"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-red-flags" onchange="handleSkip('a-red-flags')"><label for="skip-red-flags">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -410,7 +463,7 @@ life_area_slug: relationship-status
         <option value="moderate">Moderate &ndash; a couple of methods with some consistency</option>
         <option value="active">Active &ndash; multiple deliberate methods used regularly</option>
         <option value="systematic">Systematic &ndash; structured approach across several channels with regular review</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-search-proactivity"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-search-proactivity" onchange="handleSkip('a-search-proactivity')"><label for="skip-search-proactivity">I know but prefer not to say</label></div>
 </div>
 
@@ -424,7 +477,7 @@ life_area_slug: relationship-status
         <option value="one-works">One works &ndash; one method produces decent results, others do not</option>
         <option value="several-work">Several work &ndash; a few methods reliably produce compatible matches</option>
         <option value="optimised">Optimised &ndash; know exactly which channels work and focus effort there</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-search-effectiveness"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-search-effectiveness" onchange="handleSkip('a-search-effectiveness')"><label for="skip-search-effectiveness">I know but prefer not to say</label></div>
 </div>
 
@@ -438,7 +491,7 @@ life_area_slug: relationship-status
         <option value="conversion">Conversion &ndash; meeting people but not generating mutual interest</option>
         <option value="selectivity">Selectivity &ndash; meeting people but few meet my standards</option>
         <option value="no-major-barrier">No major barrier &ndash; my search process is working reasonably well</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-search-barriers"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-search-barriers" onchange="handleSkip('a-search-barriers')"><label for="skip-search-barriers">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -456,7 +509,7 @@ life_area_slug: relationship-status
         <option value="mixed">Mixed &ndash; some discomfort but managing</option>
         <option value="comfortable">Comfortable &ndash; genuinely fine being single</option>
         <option value="thriving">Thriving &ndash; single life feels like a deliberate, fulfilling choice</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-single-comfort"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-single-comfort" onchange="handleSkip('a-single-comfort')"><label for="skip-single-comfort">I know but prefer not to say</label></div>
 </div>
 
@@ -470,7 +523,7 @@ life_area_slug: relationship-status
         <option value="adequate">Adequate &ndash; fine but could be better</option>
         <option value="fulfilling">Fulfilling &ndash; rich friendships, hobbies, and purpose regardless of status</option>
         <option value="deeply-fulfilling">Deeply fulfilling &ndash; a partner would add to an already complete life</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-solo-fulfilment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-solo-fulfilment" onchange="handleSkip('a-solo-fulfilment')"><label for="skip-solo-fulfilment">I know but prefer not to say</label></div>
 </div>
 
@@ -484,7 +537,7 @@ life_area_slug: relationship-status
         <option value="some-influence">Some influence &ndash; aware it plays a role but not the main factor</option>
         <option value="minor">Minor &ndash; rarely affects my decisions</option>
         <option value="not-a-factor">Not a factor &ndash; my decisions are based on genuine desire and compatibility</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-fear-single"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-fear-single" onchange="handleSkip('a-fear-single')"><label for="skip-fear-single">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -502,7 +555,7 @@ life_area_slug: relationship-status
         <option value="few-months">A few months &ndash; some delay but eventually act</option>
         <option value="weeks">Weeks &ndash; act fairly quickly once I am sure</option>
         <option value="promptly">Promptly &ndash; address it as soon as the pattern is clear</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-breakup-speed"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-breakup-speed" onchange="handleSkip('a-breakup-speed')"><label for="skip-breakup-speed">I know but prefer not to say</label></div>
 </div>
 
@@ -516,7 +569,7 @@ life_area_slug: relationship-status
         <option value="3-6-months">3 &ndash; 6 months &ndash; roughly average</option>
         <option value="1-3-months">1 &ndash; 3 months &ndash; recover relatively quickly</option>
         <option value="under-a-month">Under a month &ndash; bounce back fast</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-recovery-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-recovery-time" onchange="handleSkip('a-recovery-time')"><label for="skip-recovery-time">I know but prefer not to say</label></div>
 </div>
 
@@ -530,9 +583,34 @@ life_area_slug: relationship-status
         <option value="avoidance">Avoidance &ndash; suppress feelings and distract myself</option>
         <option value="mixed-processing">Mixed processing &ndash; some constructive reflection alongside difficult patches</option>
         <option value="constructive">Constructive &ndash; process emotions, extract lessons, and move forward deliberately</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-transition-patterns"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-transition-patterns" onchange="handleSkip('a-transition-patterns')"><label for="skip-transition-patterns">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-partnerSelection">
+        <span class="assess-summary-label">Partner Selection</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-partnerSelection" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-partnerSelection">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-meetingPartners">
+        <span class="assess-summary-label">Meeting Partners</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-meetingPartners" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-meetingPartners">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-independence">
+        <span class="assess-summary-label">Independence</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-independence" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-independence">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-transitionNavigation">
+        <span class="assess-summary-label">Transition Navigation</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-transitionNavigation" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-transitionNavigation">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published research on dating behaviour, relationship transitions, and single-life satisfaction among adults. All items in this area are scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -586,8 +664,119 @@ life_area_slug: relationship-status
         'a-breakup-speed', 'a-recovery-time', 'a-transition-patterns'
     ];
 
-    // All relationship-status items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var UNSCORED_ITEMS = [];
+
+    var THRESHOLDS = {
+        'a-past-patterns': [
+            {v:'no-awareness',p:8},{v:'vague',p:25},{v:'partial',p:50},{v:'clear',p:78},{v:'detailed',p:95}
+        ],
+        'a-needs-vs-wants': [
+            {v:'no-distinction',p:8},{v:'starting',p:28},{v:'moderate',p:50},{v:'clear',p:78},{v:'tested',p:95}
+        ],
+        'a-red-flags': [
+            {v:'blind',p:8},{v:'retrospective',p:28},{v:'sometimes',p:50},{v:'usually',p:78},{v:'reliably',p:95}
+        ],
+        'a-search-proactivity': [
+            {v:'passive',p:10},{v:'single-channel',p:30},{v:'moderate',p:52},{v:'active',p:78},{v:'systematic',p:95}
+        ],
+        'a-search-effectiveness': [
+            {v:'no-idea',p:10},{v:'nothing-works',p:20},{v:'one-works',p:45},{v:'several-work',p:75},{v:'optimised',p:95}
+        ],
+        'a-search-barriers': [
+            {v:'avoidance',p:8},{v:'volume',p:28},{v:'conversion',p:48},{v:'selectivity',p:68},{v:'no-major-barrier',p:90}
+        ],
+        'a-single-comfort': [
+            {v:'very-uncomfortable',p:8},{v:'uncomfortable',p:25},{v:'mixed',p:48},{v:'comfortable',p:72},{v:'thriving',p:93}
+        ],
+        'a-solo-fulfilment': [
+            {v:'empty',p:8},{v:'lacking',p:25},{v:'adequate',p:48},{v:'fulfilling',p:75},{v:'deeply-fulfilling',p:95}
+        ],
+        'a-fear-single': [
+            {v:'primary-driver',p:8},{v:'significant',p:25},{v:'some-influence',p:48},{v:'minor',p:72},{v:'not-a-factor',p:93}
+        ],
+        'a-breakup-speed': [
+            {v:'years',p:8},{v:'many-months',p:25},{v:'few-months',p:50},{v:'weeks',p:78},{v:'promptly',p:95}
+        ],
+        'a-recovery-time': [
+            {v:'over-a-year',p:10},{v:'6-12-months',p:30},{v:'3-6-months',p:50},{v:'1-3-months',p:75},{v:'under-a-month',p:93}
+        ],
+        'a-transition-patterns': [
+            {v:'rumination',p:10},{v:'rebound',p:20},{v:'avoidance',p:30},{v:'mixed-processing',p:55},{v:'constructive',p:90}
+        ],
+    };
+
+    var VALUE_ITEMS = {
+        partnerSelection: ['a-past-patterns', 'a-needs-vs-wants', 'a-red-flags'],
+        meetingPartners: ['a-search-proactivity', 'a-search-effectiveness', 'a-search-barriers'],
+        independence: ['a-single-comfort', 'a-solo-fulfilment', 'a-fear-single'],
+        transitionNavigation: ['a-breakup-speed', 'a-recovery-time', 'a-transition-patterns'],
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['partnerSelection', 'meetingPartners', 'independence', 'transitionNavigation'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -733,12 +922,10 @@ life_area_slug: relationship-status
     }
 
     function saveScores() {
-        var scores = {
-            partnerSelection: null,
-            meetingPartners: null,
-            independence: null,
-            transitionNavigation: null
-        };
+        var scores = {};
+        ['partnerSelection', 'meetingPartners', 'independence', 'transitionNavigation'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -749,9 +936,10 @@ life_area_slug: relationship-status
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -762,9 +950,10 @@ life_area_slug: relationship-status
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -792,10 +981,11 @@ life_area_slug: relationship-status
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 
