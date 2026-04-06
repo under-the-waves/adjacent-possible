@@ -341,6 +341,52 @@ layout: default
 .popup-overlay.visible {
     display: block;
 }
+
+.detailed-scoring {
+    margin-top: 30px;
+}
+
+.detailed-scoring > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.detailed-scoring > summary::-webkit-details-marker {
+    display: none;
+}
+
+.detailed-scoring > summary::before {
+    content: '▶ ';
+    font-size: 0.8em;
+    color: #666;
+}
+
+.detailed-scoring[open] > summary::before {
+    content: '▼ ';
+}
+
+.detailed-scoring > summary h2 {
+    margin: 0;
+}
+
+.value-section h3 a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.value-section h3 a:hover {
+    text-decoration: underline;
+}
+
+.summary-label a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.summary-label a:hover {
+    text-decoration: underline;
+}
 </style>
 
 <div class="breadcrumb">
@@ -359,7 +405,6 @@ layout: default
 <h2>Score Summary</h2>
 <div class="score-summary">
     <div id="plain-summary" class="plain-summary"></div>
-    {% assign previous_domain = "" %}
     {% for value_pair in intervention.values %}
         {% assign value_key = value_pair[0] %}
         {% assign value_parts = value_key | split: '.' %}
@@ -367,12 +412,11 @@ layout: default
         {% assign vkey = value_parts[1] %}
         {% assign value_def = site.data.values[current_domain][vkey] %}
         {% assign value_name = value_def.name | default: value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
-        {% if current_domain != previous_domain and intervention.applicable_domains.size > 1 %}
-            <h3 class="domain-group-header">{{ current_domain | replace: '-', ' ' | capitalize }}</h3>
-            {% assign previous_domain = current_domain %}
-        {% endif %}
+        {% assign domain_url = current_domain | prepend: '/' | append: '/' %}
+        {% assign domain_page = site.pages | where: "url", domain_url | first %}
+        {% assign domain_display = domain_page.title | default: current_domain | replace: '-', ' ' | capitalize %}
         <div class="summary-item">
-            <span class="summary-label">{{ value_name }}:</span>
+            <span class="summary-label"><a href="{{ site.baseurl }}/{{ current_domain }}/">{{ domain_display }}</a> – {{ value_name }}:</span>
             <span class="summary-score" id="summary-{{ value_key }}">Loading...</span>
         </div>
     {% endfor %}
@@ -401,13 +445,13 @@ layout: default
     {% endif %}
 </div>
 
-<h2>Detailed Scoring</h2>
+<details class="detailed-scoring">
+<summary><h2 style="display:inline;">Detailed Scoring</h2></summary>
 
 <div class="scoring-intro">
     <p><strong>Scoring uses a logarithmic scale from 0 to 10</strong>, where each unit increase represents roughly double the impact. <a href="{{ site.baseurl }}/resources/roi-calculation-explainer">Learn more about ROI calculations</a>.</p>
 </div>
 
-{% assign previous_detail_domain = "" %}
 {% for value_pair in intervention.values %}
     {% assign value_key = value_pair[0] %}
     {% assign value_data = value_pair[1] %}
@@ -416,13 +460,12 @@ layout: default
     {% assign vkey_detail = value_parts[1] %}
     {% assign value_def_detail = site.data.values[current_detail_domain][vkey_detail] %}
     {% assign value_name = value_def_detail.name | default: value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
-    {% if current_detail_domain != previous_detail_domain and intervention.applicable_domains.size > 1 %}
-        <h3 class="domain-group-header">{{ current_detail_domain | replace: '-', ' ' | capitalize }}</h3>
-        {% assign previous_detail_domain = current_detail_domain %}
-    {% endif %}
+    {% assign detail_domain_url = current_detail_domain | prepend: '/' | append: '/' %}
+    {% assign detail_domain_page = site.pages | where: "url", detail_domain_url | first %}
+    {% assign domain_display = detail_domain_page.title | default: current_detail_domain | replace: '-', ' ' | capitalize %}
 
     <div class="value-section">
-        <h3>{{ value_name }}</h3>
+        <h3><a href="{{ site.baseurl }}/{{ current_detail_domain }}/">{{ domain_display }}</a> – {{ value_name }}</h3>
         
         <div class="value-anchor">
             {% assign value_parts = value_key | split: '.' %}
@@ -474,6 +517,8 @@ layout: default
         </div>
     </div>
 {% endfor %}
+
+</details>
 
 <!-- Popup overlay -->
 <div class="popup-overlay" id="popupOverlay" onclick="hideReasoning()"></div>
@@ -616,7 +661,10 @@ function calculateEBS() {
             var def = valueDefinitions[vkey];
             var ebs = d.pbs + Math.log2(d.isr / 100) + Math.log2(d.uar / 100);
             var parts = vkey.split('.');
+            var domainKey = parts[0];
+            var domainDisplay = domainKey.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
             var valueName = (def && def.name) || parts[1].replace(/_/g, ' ');
+            var domainLink = '<a href="{{ site.baseurl }}/' + domainKey + '/">' + domainDisplay + '</a>';
 
             function toRealUnits(score, vdef) {
                 if (!vdef) return 'score ' + score.toFixed(1);
@@ -640,7 +688,7 @@ function calculateEBS() {
             var ebsReal = toRealUnits(ebs, def);
 
             paragraphs.push(
-                '<p><strong>' + valueName + ':</strong> ' +
+                '<p><strong>' + domainLink + ' – ' + valueName + ':</strong> ' +
                 'If this works for you, the effect is ' + pbsReal + '. ' +
                 'We estimate ' + d.isr + '% of people who follow it properly see meaningful results, ' +
                 'and ' + d.uar + '% stick with it long-term. ' +
