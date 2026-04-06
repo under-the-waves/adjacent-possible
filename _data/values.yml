@@ -438,3 +438,1679 @@ mental-health:
       6: "Regular moments of satisfaction and meaning; generally positive outlook"
       4: "Occasional positive experiences but lacking consistent meaning or satisfaction"
       2: "Rare positive emotions; persistent sense of emptiness or purposelessness"
+
+# _data/anchors-awareness.yml
+# Scoring anchors for Expand Your Awareness pillar life areas
+
+cognitive-skills:
+  memory:
+    name: "Memory"
+    anchor_type: "linear"
+    anchor_max: 52
+    anchor_unit: "playing cards memorised in 15 minutes"
+    anchor_description: "Number of playing cards memorised in correct sequence within 15 minutes"
+    scale_levels:
+      10: "52 cards memorised in 15 minutes (full deck)"
+      8: "13 cards memorised in 15 minutes"
+      6: "3 cards memorised in 15 minutes"
+      4: "1 card memorised in 15 minutes"
+      2: "Unable to reliably memorise a single card in sequence"
+
+  focus:
+    name: "Focus"
+    anchor_type: "linear"
+    anchor_max: 120
+    anchor_unit: "minutes of sustained deep focus"
+    anchor_description: "Longest continuous period of focused cognitive work without distraction"
+    scale_levels:
+      10: "120 minutes of sustained deep focus"
+      8: "30 minutes of sustained deep focus"
+      6: "8 minutes of sustained deep focus"
+      4: "2 minutes of sustained deep focus"
+      2: "Less than 1 minute before distraction"
+
+  reasoning:
+    name: "Reasoning & Problem-Solving"
+    anchor_type: "subjective"
+    anchor_description: "Ability to generate novel solutions to complex, multi-step problems through systematic analysis"
+    scale_levels:
+      10: "Consistently generates novel approaches that create new insights in chosen domain"
+      8: "Solves complex problems and produces creative solutions to challenging situations"
+      6: "Breaks problems into components and works through logical steps systematically"
+      4: "Considers different approaches before jumping to solutions"
+      2: "Relies entirely on intuition with no systematic problem-solving"
+
+  lifestyle:
+    name: "Lifestyle Integration"
+    anchor_type: "linear"
+    anchor_max: 5
+    anchor_unit: "cognitive-support practices maintained daily"
+    anchor_description: "Number of evidence-based lifestyle practices maintained daily for cognitive benefit (sleep, exercise, nutrition, stress management, social engagement)"
+    scale_levels:
+      10: "5 practices maintained daily with optimised protocols"
+      8: "3 practices maintained daily with understanding of cognitive effects"
+      6: "1-2 practices maintained specifically for cognitive benefit"
+      4: "Basic sleep hygiene with some awareness of lifestyle effects"
+      2: "No deliberate lifestyle practices for cognitive support"
+
+ethics:
+  philosophical:
+    name: "Philosophical Depth"
+    anchor_type: "subjective"
+    anchor_description: "Sophistication of understanding across ethical theories and ability to reason about complex moral questions"
+    scale_levels:
+      10: "Contributes original insights to moral reasoning drawing on multiple ethical traditions"
+      8: "Synthesises insights from different moral frameworks into coherent approaches"
+      6: "Engages with complex ethical theories and understands strengths and limitations of each"
+      4: "Understands basic differences between rules-based, outcome-based, and character-based ethics"
+      2: "No awareness of systematic approaches to ethics beyond personal opinion"
+
+  practical:
+    name: "Practical Guidance"
+    anchor_type: "subjective"
+    anchor_description: "Reliability and consistency of ethical decision-making frameworks across real-world situations"
+    scale_levels:
+      10: "Ethical frameworks prove consistently wise across decades; others study and adapt them"
+      8: "Applies ethical reasoning effectively to novel professional, family, and societal dilemmas"
+      6: "Well-developed decision processes for complex moral situations producing defensible choices"
+      4: "Reliable principles for everyday ethical decisions applied consistently across contexts"
+      2: "Moral decision-making feels unclear and inconsistent across situations"
+
+  integrity:
+    name: "Moral Integrity"
+    anchor_type: "subjective"
+    anchor_description: "Consistency between moral beliefs and actions, especially under personal cost or social pressure"
+    scale_levels:
+      10: "Integrity uncompromised across a lifetime of challenges; serves as inspiring example to others"
+      8: "Exceptional consistency between beliefs and actions even in extreme circumstances"
+      6: "Acts on ethical convictions despite significant personal costs or social pressure"
+      4: "Acts on moral beliefs in most situations despite minor costs or mild disapproval"
+      2: "Large gaps between stated beliefs and actual behaviour in challenging situations"
+
+  community:
+    name: "Community Ethics & Belonging"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which ethical choices strengthen communities and honour responsibilities to others"
+    scale_levels:
+      10: "Creates lasting positive change in the moral culture of communities"
+      8: "Serves as trusted moral guide helping establish community ethical standards"
+      6: "Actively contributes to community moral health beyond personal virtue"
+      4: "Fulfils basic moral obligations within family, friendships, and community roles"
+      2: "Little awareness of moral obligations within relationships and communities"
+
+information-management:
+  retention:
+    name: "Information Retention"
+    anchor_type: "subjective"
+    anchor_description: "Breadth and reliability of information capture across sources, contexts, and time"
+    scale_levels:
+      10: "Exceptional breadth spanning multiple domains with near-complete preservation of valuable insights"
+      8: "Comprehensive knowledge bases accumulating value over multiple years across diverse domains"
+      6: "Systematic capture across multiple sources sustained consistently for over a year"
+      4: "Consistent method for capturing important information from multiple sources"
+      2: "No systematic capture; valuable insights routinely lost"
+
+  retrieval:
+    name: "Retrieval Efficiency"
+    anchor_type: "linear"
+    anchor_max: 10
+    anchor_unit: "minutes to locate any previously captured item"
+    anchor_inverted: true
+    anchor_description: "Time to locate any previously captured piece of information (lower is better)"
+    scale_levels:
+      10: "Near-instantaneous access to any previously captured information"
+      8: "Most information found within 1-2 minutes across all life contexts"
+      6: "Most information found within a few minutes"
+      4: "Important items usually found within 5-10 minutes"
+      2: "Frequently unable to locate previously captured information"
+
+  insight:
+    name: "Insight Generation"
+    anchor_type: "subjective"
+    anchor_description: "Frequency and quality of novel understanding generated by connecting ideas across sources"
+    scale_levels:
+      10: "Generates breakthrough insights through masterful synthesis; sees patterns others miss"
+      8: "Consistently produces novel insights through sophisticated knowledge synthesis"
+      6: "Regularly develops original thinking by connecting information from multiple sources"
+      4: "Occasionally generates new understanding by connecting ideas from different sources"
+      2: "Rarely connects information across sources; ideas remain isolated"
+
+  simplicity:
+    name: "System Simplicity"
+    anchor_type: "subjective"
+    anchor_description: "Ratio of benefit to maintenance burden in information management approach"
+    scale_levels:
+      10: "Maximum benefit with minimal visible system complexity; mastery through apparent effortlessness"
+      8: "Sophisticated results through elegantly simple approaches with minimal intervention"
+      6: "Effective systems sustained for multiple years with manageable maintenance"
+      4: "Information approach maintained for several months with minimal daily overhead"
+      2: "Systems abandoned repeatedly or creating more overhead than they resolve"
+
+learning-methods:
+  efficiency:
+    name: "Efficiency & Speed"
+    anchor_type: "subjective"
+    anchor_description: "Systematic use of evidence-based learning techniques that accelerate comprehension and retention"
+    scale_levels:
+      10: "Sophisticated methods applied systematically across multiple domains with consistently superior learning rates"
+      8: "Multiple evidence-based techniques applied across different domains with measurably superior retention"
+      6: "Systematic spaced repetition and self-testing used as primary study methods"
+      4: "Occasionally spaces out studying and uses active recall instead of rereading"
+      2: "Relies on cramming and rereading with no awareness of evidence-based methods"
+
+  depth:
+    name: "Depth & Mastery"
+    anchor_type: "subjective"
+    anchor_description: "Quality of understanding achieved through deliberate practice and feedback-driven skill development"
+    scale_levels:
+      10: "Sustained deliberate practice across several skill areas over many years achieving genuine expertise"
+      8: "High-quality deliberate practice across multiple skill areas with accelerated development"
+      6: "Deliberate practice in at least one skill area targeting specific weaknesses with feedback"
+      4: "Sometimes seeks feedback and connects new information to existing knowledge"
+      2: "Treats learning as temporary memorisation with no effort toward lasting understanding"
+
+  enjoyment:
+    name: "Enjoyment & Motivation"
+    anchor_type: "linear"
+    anchor_max: 10
+    anchor_unit: "years of sustained learning habit"
+    anchor_description: "Longest period of maintaining an effective learning routine without abandoning it"
+    scale_levels:
+      10: "10+ years of sustained effective learning habits"
+      8: "3-5 years of sustained challenging learning projects"
+      6: "6-12 months of effective learning routines maintained"
+      4: "2-4 weeks of study routine maintained during intensive periods"
+      2: "Unable to sustain any learning routine beyond a few days"
+
+life-purpose:
+  clarity:
+    name: "Clarity & Direction"
+    anchor_type: "subjective"
+    anchor_description: "Confidence and stability of life direction through changing circumstances and major transitions"
+    scale_levels:
+      10: "Unwavering clarity about purpose even through major upheavals, career changes, or personal crises"
+      8: "Consistent purpose-aligned decision-making across multiple life transitions and challenges"
+      6: "Clear, written life purpose maintained and providing guidance for 12+ months"
+      4: "Can articulate 2-3 potential life directions and explain why each appeals"
+      2: "No clarity on life direction; feels completely lost about purpose"
+
+  meaning:
+    name: "Meaning & Fulfilment"
+    anchor_type: "subjective"
+    anchor_description: "Depth and stability of fulfilment experienced from working toward life purpose"
+    scale_levels:
+      10: "Profound fulfilment stable across major life changes regardless of external circumstances"
+      8: "Maintains sense of meaning even during extended setbacks or external pressure"
+      6: "Regular fulfilment from working toward purpose, maintaining motivation during difficult periods"
+      4: "Identifies activities that consistently provide deep satisfaction and actively seeks them"
+      2: "Rarely experiences fulfilment; persistent sense of emptiness or purposelessness"
+
+  integration:
+    name: "Integration & Coherence"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which life purpose organises and creates synergy across all life domains"
+    scale_levels:
+      10: "Seamless integration where pursuing purpose enhances all other life priorities"
+      8: "Lifestyle and commitments actively reinforce purpose with synergy across domains"
+      6: "Major life domains aligned with stated purpose creating mutual reinforcement"
+      4: "At least one significant life decision made based on purpose rather than default paths"
+      2: "No alignment between stated values and actual activities across life domains"
+
+life-skills:
+  high:
+    name: "High-Impact Capabilities"
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "practical skills at competent level"
+    anchor_description: "Number of high-impact practical skills performed at competent level (first aid, cooking, repairs, maintenance, financial tasks)"
+    scale_levels:
+      10: "15+ practical skills at competent level including major renovation and specialist domains"
+      8: "8-10 skills including plumbing, electrical, intermediate cooking, and tech troubleshooting"
+      6: "4-5 essential skills such as first aid, cooking from scratch, basic repairs, and own tax returns"
+      4: "2-3 basic skills performed with some confidence"
+      2: "Cannot perform basic practical tasks without professional assistance"
+
+  systematic:
+    name: "Systematic Competence"
+    anchor_type: "subjective"
+    anchor_description: "Degree of organisation and proactive maintenance in practical life management"
+    scale_levels:
+      10: "Comprehensive systems that others adopt; professional-level organisation across all practical domains"
+      8: "Sophisticated preventive approaches that stop most problems before they occur"
+      6: "Comprehensive maintenance schedules with systematic approaches to new challenges"
+      4: "Organised toolbox, basic maintenance schedule, and systematic approach to common tasks"
+      2: "Purely reactive approach to practical problems with no systematic methods"
+
+  teaching:
+    name: "Teaching & Sharing"
+    anchor_type: "subjective"
+    anchor_description: "Extent of practical skill transfer to others and contribution to community capability"
+    scale_levels:
+      10: "Systematic knowledge transfer creating lasting improvements; develops others who become skilled themselves"
+      8: "Mentors others systematically and contributes meaningfully to community resilience"
+      6: "Regularly helps others develop skills; go-to resource in social network"
+      4: "Successfully helps family and friends with practical tasks in areas of competence"
+      2: "Does not share practical skills or help others with tasks"
+
+media-diet:
+  quality:
+    name: "Information Quality & Depth"
+    anchor_type: "linear"
+    anchor_max: 40
+    anchor_unit: "non-fiction books read annually"
+    anchor_description: "Non-fiction books read per year as proxy for depth of information consumption"
+    scale_levels:
+      10: "40+ books annually with high retention; contributes to expert networks"
+      8: "25+ books annually across diverse domains; engages with academic papers"
+      6: "12+ books annually; regularly consumes in-depth analysis; traces to primary sources"
+      4: "1+ quality source monthly; distinguishes opinion from reporting"
+      2: "No regular consumption of high-quality, in-depth information sources"
+
+  relevance:
+    name: "Actionable Relevance"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which information consumption directly drives decisions and practical outcomes"
+    scale_levels:
+      10: "Information diet provides substantial competitive advantages; others seek your perspective"
+      8: "Information directly drives major life decisions with systematic signal-from-noise filtering"
+      6: "Curated sources for each major life domain; regularly implements insights consumed"
+      4: "2-3 sources directly relevant to career or major life areas; occasionally changes behaviour"
+      2: "No connection between information consumed and decisions made"
+
+  breadth:
+    name: "Breadth & Discovery"
+    anchor_type: "subjective"
+    anchor_description: "Deliberate exposure to diverse perspectives, unfamiliar domains, and assumption-challenging ideas"
+    scale_levels:
+      10: "Consumption leads to novel connections others miss; includes specialist and untranslated sources"
+      8: "Actively seeks contrarian viewpoints spanning multiple cultural contexts"
+      6: "Systematically explores new domains quarterly; sources from multiple countries"
+      4: "Deliberately explores at least one unfamiliar topic or perspective monthly"
+      2: "Consumption confined to echo chamber with no diversity of perspective"
+
+  efficiency:
+    name: "Cognitive Efficiency"
+    anchor_type: "linear"
+    anchor_max: 2
+    anchor_unit: "hours daily on news and information"
+    anchor_inverted: true
+    anchor_description: "Daily hours spent on news and information consumption (lower is better for given output)"
+    scale_levels:
+      10: "Information consumption seamlessly integrated with productive work; optimal cognitive load"
+      8: "Sophisticated processing systems with optimal timing and format selection"
+      6: "Optimised consumption schedule maximising retention; rarely overloaded"
+      4: "Under 2 hours daily on news; basic systems to avoid duplicate coverage"
+      2: "3+ hours daily on news with frequent information overload and poor retention"
+
+rationality:
+  accurate-beliefs:
+    name: "Accurate Beliefs"
+    anchor_type: "subjective"
+    anchor_description: "Calibration accuracy and predictive performance across familiar and unfamiliar domains"
+    scale_levels:
+      10: "Exceptional calibration across diverse domains; consistently outperforms expert consensus"
+      8: "Strong calibration in unfamiliar domains; outperforms most experts in areas of focus"
+      6: "Good calibration across multiple domains; reasonably accurate predictions about future events"
+      4: "Basic calibration in familiar expertise areas; updates beliefs given clear contradictory evidence"
+      2: "Poorly calibrated beliefs with no awareness of own reasoning limitations"
+
+  decision-making:
+    name: "Effective Decision-Making"
+    anchor_type: "subjective"
+    anchor_description: "Consistency and sophistication of structured approaches to complex choices under uncertainty"
+    scale_levels:
+      10: "Navigates extremely complex decisions with conflicting values whilst maintaining strategic judgement"
+      8: "Applies sophisticated frameworks to multi-stakeholder situations; excellent judgement under pressure"
+      6: "Consistently uses structured approaches; avoids most systematic reasoning errors"
+      4: "Uses simple decision-making frameworks for important choices; avoids the costliest biases"
+      2: "Relies entirely on gut feeling with no awareness of cognitive biases"
+
+  intellectual-honesty:
+    name: "Intellectual Honesty"
+    anchor_type: "subjective"
+    anchor_description: "Willingness to update beliefs, acknowledge uncertainty, and follow evidence over comfort"
+    scale_levels:
+      10: "Maintains rigorous standards even when conclusions threaten core identity or worldview"
+      8: "Changes deeply held beliefs when evidence strongly contradicts them"
+      6: "Willingly changes mind on significant issues; actively seeks disconfirming information"
+      4: "Regularly changes mind on minor issues; acknowledges uncertainty outside expertise"
+      2: "Avoids uncomfortable questions; never changes mind regardless of evidence"
+
+self-awareness:
+  psychological:
+    name: "Psychological"
+    anchor_type: "subjective"
+    anchor_description: "Depth and accuracy of understanding of own mental patterns, triggers, and emotional dynamics"
+    scale_levels:
+      10: "Traces emotional patterns to developmental origins with longitudinal corroboration over 2+ years"
+      8: "Self-assessment substantially confirmed by three independent informants who know you well"
+      6: "Accurately predicts own emotional reactions and intensity in novel situations"
+      4: "Identifies 3+ recurring triggers distinguishing surface emotion from underlying need"
+      2: "Assumes own self-perception is accurate with no recognition of psychological blind spots"
+
+  contemplative:
+    name: "Contemplative/Somatic"
+    anchor_type: "subjective"
+    anchor_description: "Awareness of internal states through mindfulness, body sensations, and present-moment attention"
+    scale_levels:
+      10: "Recognises even minute changes in the interplay between thoughts, emotions, and physical sensations"
+      8: "Detects subtle internal shifts before they influence behaviour"
+      6: "Recognises emotional states and physical tension patterns as they arise throughout the day"
+      4: "Maintains regular mindfulness or meditation practice"
+      2: "Rarely notices physical sensations, breathing, or present-moment experience"
+
+  relational:
+    name: "Relational"
+    anchor_type: "subjective"
+    anchor_description: "Accuracy of understanding of own interpersonal patterns and impact on others across social contexts"
+    scale_levels:
+      10: "Predicts and explains interpersonal dynamics across any social context or relationship type"
+      8: "Understands precisely how different people bring out different aspects of personality"
+      6: "Knows consistent behavioural patterns across different relationship types"
+      4: "Actively seeks feedback from multiple sources about interpersonal patterns"
+      2: "No awareness of how others experience you or your effect on relationships"
+
+  experiential:
+    name: "Experiential"
+    anchor_type: "subjective"
+    anchor_description: "Self-knowledge gained through diverse experiences about own responses under varied conditions"
+    scale_levels:
+      10: "Knows authentic nature so completely that responses to any type of experience are understood"
+      8: "Knows how you will respond to new challenges; understands deeper character under pressure"
+      6: "Understands how different experiences reveal various personality aspects and pressure responses"
+      4: "Deliberately seeks new experiences specifically to learn about own responses and capabilities"
+      2: "Avoids unfamiliar situations; no self-knowledge from varied experience"
+
+value-system:
+  practical:
+    name: "Practical Decision-Making"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which values actively guide daily choices and major life decisions"
+    scale_levels:
+      10: "Values naturally guide behaviour without deliberate effort; handles complex dilemmas with clear reasoning"
+      8: "Values-aligned decisions made instinctively with sophisticated frameworks for uncertainty"
+      6: "Navigates competing values systematically across all life domains"
+      4: "Consistently uses 3-5 core values to guide major life decisions"
+      2: "Many choices made on autopilot with no reference to personal values"
+
+  insight:
+    name: "Comprehensive Insight"
+    anchor_type: "subjective"
+    anchor_description: "Depth of understanding of own authentic values, their origins, hierarchies, and trade-offs"
+    scale_levels:
+      10: "Deep understanding of ethical frameworks with sophisticated values-based reasoning"
+      8: "Understands psychological and cultural origins of values; distinguishes authentic from conditioned"
+      6: "Understands values hierarchy including which dominate in conflicts and 'enough' thresholds"
+      4: "Distinguishes intrinsic from instrumental values; clear on top 3 intrinsic values"
+      2: "No distinction between inherited and consciously chosen values"
+
+  authentic:
+    name: "Authentic Expression"
+    anchor_type: "subjective"
+    anchor_description: "Consistency between inner values and outer behaviour under social pressure and personal cost"
+    scale_levels:
+      10: "Natural congruence between inner values and outer behaviour across all life contexts"
+      8: "Values alignment maintained through major life transitions, crises, and extreme pressure"
+      6: "Values-based behaviour maintained despite significant social pressure or financial costs"
+      4: "Acts on values in most situations despite mild social pressure or minor discomfort"
+      2: "Frequently acts against stated values due to social pressure or fear"
+
+  evolution:
+    name: "Values Evolution"
+    anchor_type: "subjective"
+    anchor_description: "Capacity for intentional values development balanced with appropriate stability"
+    scale_levels:
+      10: "Mastery of balance between values stability and adaptive change across lifespan"
+      8: "Intentionally cultivates specific values through targeted practices; wise about when to change"
+      6: "Deliberately seeks experiences that challenge existing values; regularly reassesses"
+      4: "Consciously updates values based on major life experiences rather than drifting"
+      2: "Views values as fixed; no openness to intentional development or reassessment"
+
+worldview:
+  breadth:
+    name: "Breadth"
+    anchor_type: "linear"
+    anchor_max: 8
+    anchor_unit: "domains at secondary school level or above"
+    anchor_description: "Number of knowledge domains (history, economics, psychology, politics, philosophy, culture, technology, science) understood at secondary school level or above"
+    scale_levels:
+      10: "4-5 domains at undergraduate level plus 3-4 additional at secondary level"
+      8: "6-7 domains at secondary to early undergraduate level"
+      6: "5-6 domains at secondary school level"
+      4: "3-4 domains at primary to early secondary level"
+      2: "Significant knowledge gaps across most major domains"
+
+  depth:
+    name: "Depth"
+    anchor_type: "subjective"
+    anchor_description: "Level of sophisticated, nuanced understanding within chosen knowledge domains"
+    scale_levels:
+      10: "Graduate-level expertise in 1-2 domains plus undergraduate competency in 3-4 others"
+      8: "Undergraduate-level expertise in 2 domains with solid secondary knowledge across most others"
+      6: "Early undergraduate knowledge in 1-2 areas with ability to see cross-domain connections"
+      4: "Secondary school depth in 1-2 areas of particular interest beyond surface familiarity"
+      2: "Surface familiarity only; confuses recognition with genuine understanding"
+
+  utility:
+    name: "Utility"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which worldview enhances real-world decision-making, prediction, and navigation of complex situations"
+    scale_levels:
+      10: "Comprehensive understanding yielding exceptional results across multiple complex domains"
+      8: "Consistently wise decisions from understanding subtle patterns and long-term consequences"
+      6: "Spots misinformation; makes strategic decisions based on systems understanding"
+      4: "Recognises manipulation tactics; makes basic economic decisions understanding incentives"
+      2: "Worldview provides little practical help navigating real-world situations"
+
+  meaning:
+    name: "Meaning"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which worldview provides psychological grounding, moral framework, and sense of purpose"
+    scale_levels:
+      10: "Profound connection to larger purpose infusing daily life; unshakeable psychological foundation"
+      8: "Deep purpose and stability maintained even during major life crises"
+      6: "Reliable psychological grounding during difficult periods with clear moral framework"
+      4: "Basic sense of purpose and moral direction guiding everyday decisions"
+      2: "Worldview provides no psychological grounding or sense of purpose"
+
+# _data/anchors-look-after-yourself.yml
+# Scoring anchors for Look After Yourself pillar life areas
+
+behaviours:
+  freedom:
+    name: "Freedom & Control"
+    anchor_type: "subjective"
+    anchor_description: "Liberation from compulsive patterns with genuine choice restored across all life domains"
+    scale_levels:
+      10: "Complete freedom from compulsive patterns even during extreme stress or crisis"
+      8: "Consistent intentionality across all life domains; problematic patterns are rare exceptions"
+      6: "Interrupts problematic patterns 85-90% of the time; lapses are brief and quickly corrected"
+      4: "Interrupts compulsive behaviours 60-70% of the time with basic environmental modifications"
+      2: "Recognises 2-3 triggers but rarely interrupts automatic responses"
+
+  emotional:
+    name: "Emotional Regulation"
+    anchor_type: "linear"
+    anchor_max: 7
+    anchor_unit: "stress-driven reactive episodes per week"
+    anchor_inverted: true
+    anchor_description: "Frequency of stress-driven reactive behaviours per week (lower is better)"
+    scale_levels:
+      10: "Near-zero reactive episodes; equanimity maintained even during trauma or major loss"
+      8: "Fewer than 1 reactive episode per week even during high-stress periods"
+      6: "1-2 reactive episodes per week with sophisticated regulation techniques"
+      4: "2-3 reactive episodes per week with basic coping strategies"
+      2: "Daily reactive episodes with no healthy coping strategies"
+
+  social:
+    name: "Social & Relational Patterns"
+    anchor_type: "subjective"
+    anchor_description: "Consistency of authentic, boundaried responses across interpersonal situations including conflict and social pressure"
+    scale_levels:
+      10: "Consistent authenticity even when others are highly manipulative or reactive"
+      8: "Navigates highly challenging social situations with healthy boundaries and equilibrium"
+      6: "Assertive and emotionally regulated in most conflict and social pressure situations"
+      4: "Expresses basic needs and boundaries in most relationships without excessive anxiety"
+      2: "Unaware of automatic interpersonal patterns like people-pleasing or withdrawal"
+
+  resilience:
+    name: "Resilience & Adaptability"
+    anchor_type: "linear"
+    anchor_max: 24
+    anchor_unit: "months of sustained behavioural change"
+    anchor_description: "Longest period of sustained behavioural improvement maintained through life disruptions"
+    scale_levels:
+      10: "24+ months sustained through any life circumstance with seamless adaptation"
+      8: "12-18 months sustained through major life transitions with only brief disruptions"
+      6: "6-12 months sustained through minor life stressors"
+      4: "3-6 months sustained in stable conditions"
+      2: "Less than 1 month before reverting to old patterns"
+
+digital-safety:
+  security:
+    name: "Comprehensive Security"
+    anchor_type: "subjective"
+    anchor_description: "Breadth and sophistication of digital security practices across devices, accounts, and platforms"
+    scale_levels:
+      10: "Systematic personal security planning with comprehensive threat management; advises family and friends"
+      8: "Personal threat assessment, hardware security keys, regular VPN usage, and proactive security monitoring"
+      6: "Comprehensive password management, 2FA on all critical services, quarterly security reviews"
+      4: "Unique passwords via password manager for important accounts, 2FA on financial and email accounts"
+      2: "No systematic security practices; reuses passwords and ignores updates"
+
+  convenience:
+    name: "Usability and Convenience"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which security measures integrate seamlessly into daily digital workflows"
+    scale_levels:
+      10: "Sophisticated security infrastructure that is transparent to daily use with zero friction"
+      8: "Highly efficient security systems that enhance rather than hinder productivity"
+      6: "Streamlined security workflows using premium tools with minimal disruption to habits"
+      4: "Automated tools like browser-integrated password managers and automatic updates"
+      2: "Security measures avoided because they feel too disruptive or complex"
+
+emergency-preparedness:
+  self-reliance:
+    name: "Self-Reliance"
+    anchor_type: "linear"
+    anchor_max: 365
+    anchor_unit: "days of household supply autonomy"
+    anchor_description: "Days your household can sustain itself without external assistance"
+    scale_levels:
+      10: "365+ days with renewable resource systems and extensive skill development"
+      8: "90-180 days with backup power and comprehensive medical supplies"
+      6: "14-28 days with comprehensive supplies including food, water, and first aid"
+      4: "3-7 days of food, water, and essential supplies"
+      2: "Less than 1 day of emergency supplies on hand"
+
+  community:
+    name: "Community Resilience"
+    anchor_type: "linear"
+    anchor_max: 20
+    anchor_unit: "households in active mutual aid network"
+    anchor_description: "Number of households you have active mutual aid relationships with for emergencies"
+    scale_levels:
+      10: "20+ households across multiple communities with extensive mutual aid networks"
+      8: "8-12 households with active coordination of neighbourhood preparedness efforts"
+      6: "3-5 households with mutual aid relationships and neighbourhood preparedness participation"
+      4: "Basic contact information for immediate neighbours and local emergency resources"
+      2: "No knowledge of neighbours or local emergency response resources"
+
+  baseline:
+    name: "Baseline Resilience"
+    anchor_type: "subjective"
+    anchor_description: "Preparedness for probable regional disruptions such as natural disasters, power outages, and supply chain interruptions"
+    scale_levels:
+      10: "Institutional-level preparedness with professional monitoring and response systems"
+      8: "Robust protective infrastructure with tested response procedures exceeding standard recommendations"
+      6: "Specific protective measures for regional risks with documented evacuation and shelter-in-place plans"
+      4: "Household emergency plan and basic supplies for most likely regional emergencies"
+      2: "No awareness of regional risks or seasonal hazards affecting your location"
+
+  catastrophic:
+    name: "Catastrophic Resilience"
+    anchor_type: "subjective"
+    anchor_description: "Preparedness for rare but severe scenarios that could fundamentally disrupt society"
+    scale_levels:
+      10: "Comprehensive adaptability to civilisation-ending scenarios with maximum mobility and security"
+      8: "Multiple location options and advanced security for economic collapse or widespread civil unrest"
+      6: "Rapid relocation capability with mobile supplies and plans for supply chain breakdown"
+      4: "Emergency cash reserves, alternative communication methods, and basic threat awareness"
+      2: "No awareness of or preparation for catastrophic disruption scenarios"
+
+food-management:
+  competence:
+    name: "Competence"
+    anchor_type: "linear"
+    anchor_max: 21
+    anchor_unit: "adequate meals provided per week"
+    anchor_description: "Number of meals per week that reliably meet nutritional and taste standards through any method"
+    scale_levels:
+      10: "21 meals per week reliably provided with consistent quality and nutritional adequacy"
+      8: "17-18 meals per week meeting standards; occasional gaps filled by convenience options"
+      6: "14 meals per week meeting standards; roughly one meal per day falls short"
+      4: "10-11 meals per week meeting standards; frequent reliance on unplanned convenience food"
+      2: "Fewer than 7 adequate meals per week; food provision is unreliable"
+
+  craft:
+    name: "Craft"
+    anchor_type: "subjective"
+    anchor_description: "Satisfaction, creative expression, and skill development derived from food preparation"
+    scale_levels:
+      10: "Food preparation is a primary source of creative fulfilment with advanced technique mastery"
+      8: "Genuine pleasure from cooking with confident execution of varied cuisines and techniques"
+      6: "Regular enjoyment from cooking; competent with a solid repertoire of recipes"
+      4: "Occasional satisfaction from cooking; can follow recipes with reasonable results"
+      2: "No interest in or enjoyment from food preparation"
+
+  waste_reduction:
+    name: "Waste Reduction"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent of purchased food consumed"
+    anchor_description: "Percentage of purchased food that is actually consumed rather than discarded"
+    scale_levels:
+      10: "98-100% of purchased food consumed through systematic stock management"
+      8: "90-95% of purchased food consumed with good use-up routines and storage practices"
+      6: "80-85% of purchased food consumed; occasional waste from poor planning or storage"
+      4: "65-75% of purchased food consumed; regular waste from forgotten items or over-purchasing"
+      2: "Less than 50% of purchased food consumed; significant waste from poor management"
+
+health-management:
+  longterm:
+    name: "Long-term Health"
+    anchor_type: "subjective"
+    anchor_description: "Comprehensiveness of preventive care strategy for disease prevention and healthy ageing"
+    scale_levels:
+      10: "Optimal health markers across multiple systems with advanced biomarkers and cutting-edge interventions"
+      8: "Comprehensive preventive strategy with advanced screenings, metric tracking, and evidence-based optimisation"
+      6: "Consistent age-appropriate screenings, healthy weight and blood pressure, proactive steps for risk factors"
+      4: "Regular checkups with primary care provider, basic recommended screenings, avoids major health risks"
+      2: "No engagement with preventive care; major gaps in basic health management"
+
+  vitality:
+    name: "Present Vitality"
+    anchor_type: "linear"
+    anchor_max: 14
+    anchor_unit: "high-energy hours per day"
+    anchor_description: "Hours per day of sustained high energy and cognitive function"
+    scale_levels:
+      10: "14 hours of sustained high energy and cognitive function through personalised interventions"
+      8: "10-12 hours of consistently high energy through optimised sleep, nutrition, and exercise"
+      6: "8-9 hours of generally good energy with systems for early health issue detection"
+      4: "6-7 hours of adequate energy; health issues sometimes affect daily function"
+      2: "Fewer than 4 hours of adequate energy; persistent fatigue or health complaints"
+
+  control:
+    name: "Personal Control"
+    anchor_type: "subjective"
+    anchor_description: "Knowledge, skill, and confidence in making informed health decisions and advocating within healthcare systems"
+    scale_levels:
+      10: "Collaborative partner with providers in developing treatment approaches; deep understanding of personal health patterns"
+      8: "Navigates complex medical decisions confidently; coordinates care across multiple specialists"
+      6: "Researches conditions, seeks second opinions, communicates effectively with providers"
+      4: "Asks questions in appointments, understands medications and conditions, advocates for own needs"
+      2: "Passive recipient of healthcare with no engagement in medical decision-making"
+
+  simplicity:
+    name: "Simplicity"
+    anchor_type: "subjective"
+    anchor_description: "Efficiency and low maintenance of health management systems relative to outcomes achieved"
+    scale_levels:
+      10: "Sophisticated health systems that appear effortless with automated monitoring and prevention"
+      8: "Efficient systems requiring minimal daily attention whilst maintaining high standards"
+      6: "Digital tools and patient portals used effectively; organised records; coordinated care"
+      4: "Knows primary care provider, basic health information organised, understands insurance coverage"
+      2: "No organised approach to health management; chaotic interactions with healthcare system"
+
+legal-matters:
+  protection:
+    name: "Comprehensive Protection"
+    anchor_type: "linear"
+    anchor_max: 5
+    anchor_unit: "essential legal documents in place"
+    anchor_description: "Number of essential legal documents completed and current (will, healthcare directive, power of attorney, insurance review, beneficiary designations)"
+    scale_levels:
+      10: "5 essential documents plus sophisticated planning addressing complex scenarios with regular professional review"
+      8: "5 essential documents with comprehensive professional estate planning and proactive risk assessment"
+      6: "3-4 documents (will, power of attorney, healthcare directive) with awareness of main legal risks"
+      4: "1-2 documents (basic will and healthcare directive) with understanding of major legal risks"
+      2: "No legal documents in place; unaware of essential legal protections needed"
+
+  simplicity:
+    name: "Simplicity & Peace of Mind"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which legal affairs are streamlined, accessible, and low-anxiety"
+    scale_levels:
+      10: "Elegant legal arrangements providing comprehensive protection whilst remaining straightforward to manage"
+      8: "Professional consultation has created clear, maintainable systems requiring minimal ongoing attention"
+      6: "Well-organised documents with clear instructions; arrangements discussed with family"
+      4: "Legal documents organised and accessible; family knows their location"
+      2: "Legal matters cause significant anxiety; documents disorganised or inaccessible"
+
+  strategic:
+    name: "Strategic Advantage"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which legal knowledge and structures are leveraged to optimise outcomes in business, taxes, and estate planning"
+    scale_levels:
+      10: "Advanced legal strategies creating meaningful advantages in business, taxes, and wealth management"
+      8: "Effective use of legal structures for business, tax, or estate planning with professional guidance"
+      6: "Understands legal implications of major life decisions; knows when professional consultation is worthwhile"
+      4: "Understands rights as employee, tenant, or consumer; researches legal requirements before major decisions"
+      2: "No awareness that legal planning could benefit financial or personal goals"
+
+  access:
+    name: "Access & Empowerment"
+    anchor_type: "subjective"
+    anchor_description: "Confidence and capability in navigating legal situations and advocating for own rights"
+    scale_levels:
+      10: "Comprehensive legal literacy enabling confident navigation of complex situations and effective self-advocacy"
+      8: "Strong understanding of legal processes; handles moderately complex matters and advocates confidently"
+      6: "Comfortable handling routine legal interactions; can research and understand rights in unfamiliar situations"
+      4: "Knows rights during police encounters and in housing/employment; can find appropriate legal resources"
+      2: "No knowledge of basic rights; unable to identify when legal help is needed"
+
+mindfulness:
+  clarity:
+    name: "Mental Clarity"
+    anchor_type: "linear"
+    anchor_max: 45
+    anchor_unit: "minutes of daily mindfulness practice"
+    anchor_description: "Duration of daily mindfulness practice sustained consistently over time"
+    scale_levels:
+      10: "45+ minutes daily for many years with multiple retreats; exceptional mental clarity"
+      8: "20-30 minutes daily sustained consistently; improved focus and attention regulation"
+      6: "10-15 minutes most days; some present-moment awareness during routine activities"
+      4: "Irregular practice but knows how to return attention to the present moment"
+      2: "No mindfulness practice; unaware of own attention patterns"
+
+  emotional:
+    name: "Emotional Wellbeing"
+    anchor_type: "subjective"
+    anchor_description: "Emotional resilience, reduced reactivity, and equanimity cultivated through mindfulness practice"
+    scale_levels:
+      10: "Equanimity during major life crises; serves as emotional stability for loved ones"
+      8: "Calm during significant challenges; emotional stability apparent to close family and friends"
+      6: "Handles everyday stress with noticeably greater calm; recovers from upsets more quickly"
+      4: "Uses basic mindfulness techniques occasionally for stress with some reduction in reactivity"
+      2: "No awareness of stress responses or emotional triggers"
+
+  knowledge:
+    name: "Self-Knowledge"
+    anchor_type: "subjective"
+    anchor_description: "Depth of insight into own thought patterns, emotional triggers, and habitual behaviours gained through contemplative practice"
+    scale_levels:
+      10: "Deep insights into consciousness and identity; freedom from limiting psychological patterns"
+      8: "Deep insight into personal conditioning and mental habits; sees through many assumptions"
+      6: "Understands many psychological patterns and what triggers strong reactions"
+      4: "Recognises most obvious thought patterns and emotional habits"
+      2: "No awareness of habitual thought patterns or mental processes"
+
+  spiritual:
+    name: "Spiritual Development"
+    anchor_type: "subjective"
+    anchor_description: "Connection to meaning, transcendence, and broader existential questions through contemplative practice"
+    scale_levels:
+      10: "Sustained transcendent states; embodies wisdom and compassion in daily life"
+      8: "Profound states during intensive practice; lives with strong sense of meaning and purpose"
+      6: "Regular moments of deeper meaning during practice; connection beyond immediate personal concerns"
+      4: "Occasional moments of calm or peace during informal mindfulness"
+      2: "No engagement with contemplative or spiritual dimensions of experience"
+
+physical-safety:
+  risk:
+    name: "Risk Reduction"
+    anchor_type: "linear"
+    anchor_max: 70
+    anchor_unit: "percent reduction in preventable incident mortality risk"
+    anchor_description: "Estimated percentage reduction in preventable incident mortality risk below population average"
+    scale_levels:
+      10: "50-70% reduction through advanced competency in 2-3 safety domains with systematic threat assessment"
+      8: "30-50% reduction through self-defence capabilities, advanced certifications, and comprehensive risk management"
+      6: "Current CPR/first aid certification, professionally monitored home security, and consistent threat recognition"
+      4: "Basic protective measures reducing common risks by 50-70% (seat belts, home security, situational awareness)"
+      2: "No systematic safety practices; unaware of personal vulnerability patterns"
+
+  freedom:
+    name: "Freedom and Convenience"
+    anchor_type: "subjective"
+    anchor_description: "Lifestyle flexibility and spontaneity maintained whilst achieving reasonable personal safety"
+    scale_levels:
+      10: "Complete lifestyle freedom through advanced protective capabilities; no safety-based restrictions"
+      8: "Confident in challenging environments with efficient safety protocols and minimal lifestyle impact"
+      6: "Travels confidently to unfamiliar areas; engages in desired activities without safety-related anxiety"
+      4: "Navigates most environments confidently using simple protocols without restricting normal activities"
+      2: "Safety concerns significantly limit activities, travel, and lifestyle choices"
+
+# _data/anchors-connect.yml
+# Scoring anchors for the "Connect with Others" pillar
+
+children:
+  wellbeing:
+    name: "Wellbeing"
+    anchor_type: "subjective"
+    anchor_description: "Child thrives physically, emotionally, and psychologically with a secure emotional base"
+    scale_levels:
+      10: "Child maintains wellbeing through significant adversity with deep unconditional security"
+      8: "Child thrives emotionally across contexts including peer conflict and academic pressure"
+      6: "Child shares inner life openly, recovers quickly from setbacks, and explores confidently"
+      4: "Consistent routines and emotional availability; child feels safe expressing all emotions"
+      2: "Basic physical needs met but emotional environment is unpredictable or pressured"
+
+  relationship:
+    name: "Relationship"
+    anchor_type: "subjective"
+    anchor_description: "Depth of the parent-child bond measured by warmth, trust, and genuine connection"
+    scale_levels:
+      10: "Extraordinary bond both parties describe as one of the most important in their lives"
+      8: "Deep mutual respect and trust; child brings difficult topics without fear"
+      6: "Genuine mutual enjoyment; child shares feelings, fears, and aspirations openly"
+      4: "Regular one-on-one time with warmth; child readily shares and seeks comfort"
+      2: "Interactions dominated by logistics and instruction with little genuine connection"
+
+  achievement:
+    name: "Achievement"
+    anchor_type: "subjective"
+    anchor_description: "Effectiveness of structured support for cognitive, academic, and skill development"
+    scale_levels:
+      10: "Child demonstrates exceptional capability and self-sustaining love of learning"
+      8: "Above-age competence across domains via evidence-based strategies adapted to the child"
+      6: "Deliberately scaffolded development plan with measurable progress in targeted areas"
+      4: "Daily reading and structured enrichment with clear expectations communicated warmly"
+      2: "No structured enrichment; child's development left entirely to school and chance"
+
+  development:
+    name: "Development"
+    anchor_type: "subjective"
+    anchor_description: "Fostering independence, resilience, and self-direction through progressively expanded autonomy"
+    scale_levels:
+      10: "Remarkable self-direction and confidence to diverge from peers and authority when warranted"
+      8: "Sophisticated self-direction with self-set goals, self-managed time, and intrinsic motivation"
+      6: "Child initiates projects and pursues self-chosen interests with sustained effort"
+      4: "Child makes genuine daily choices and experiences natural consequences with support"
+      2: "Parent over-directs most choices; child has little genuine decision-making practice"
+
+communication:
+  influence:
+    name: "Influence"
+    anchor_type: "subjective"
+    anchor_description: "Ability to persuade others, drive decisions, and create change through communication"
+    scale_levels:
+      10: "Regularly changes minds where others have failed; sought out for important decisions"
+      8: "Persuades in challenging situations and gains sustained multi-stakeholder buy-in"
+      6: "Consistently gets ideas adopted by adapting approach to different personality types"
+      4: "Expresses opinions clearly in groups and occasionally persuades others"
+      2: "Struggles to make voice heard in group settings"
+
+  connection:
+    name: "Connection"
+    anchor_type: "subjective"
+    anchor_description: "Building genuine relationships and mutual understanding through communication"
+    scale_levels:
+      10: "Creates unusually deep bonds across diverse backgrounds with exceptional empathy"
+      8: "Builds strong relationships across different personality types and backgrounds"
+      6: "Builds friendships easily; others often come to you for advice on personal matters"
+      4: "Maintains several meaningful friendships with conversations beyond small talk"
+      2: "Primarily surface-level relationships with limited emotional awareness of others"
+
+  performance:
+    name: "Performance"
+    anchor_type: "linear"
+    anchor_max: 50
+    anchor_unit: "audience size handled confidently"
+    anchor_description: "Largest audience size you can address confidently without anxiety interfering"
+    scale_levels:
+      10: "Handles very challenging communication situations with remarkable skill others admire"
+      8: "Speaks confidently to audiences of 30 -- 50 and handles unexpected challenges"
+      6: "Presents to teams of 10 -- 25 with confidence and handles difficult conversations"
+      4: "Presents to small groups of 5 -- 10 without anxiety interfering"
+      2: "Significant anxiety in most formal communication situations"
+
+  conflict:
+    name: "Conflict Navigation"
+    anchor_type: "subjective"
+    anchor_description: "Handling disagreements and interpersonal tensions constructively while maintaining relationships"
+    scale_levels:
+      10: "Resolves conflicts others consider impossible, finding creative solutions amid strong emotions"
+      8: "Resolves disputes that have persisted for weeks or months when others have failed"
+      6: "Resolves most disagreements before escalation and helps colleagues through differences"
+      4: "Addresses minor disagreements directly; apologises effectively; discusses problems calmly"
+      2: "Avoids or escalates conflicts without conscious awareness of the pattern"
+
+extended-family:
+  harmony:
+    name: "Harmony"
+    anchor_type: "subjective"
+    anchor_description: "Peaceful, low-conflict relationships maintained across the extended family"
+    scale_levels:
+      10: "Extended family operates as a harmonious community where differences are valued across generations"
+      8: "You function as a peacekeeper and unifier; family culture of respectful disagreement is partly your creation"
+      6: "You actively mediate tensions and prevent conflicts from escalating at gatherings"
+      4: "Family gatherings are generally pleasant; major tensions identified and managed"
+      2: "Unaddressed conflicts make most family gatherings stressful"
+
+  closeness:
+    name: "Closeness"
+    anchor_type: "linear"
+    anchor_max: 20
+    anchor_unit: "extended family members in regular meaningful contact"
+    anchor_description: "Number of extended family members with whom you maintain emotionally meaningful contact"
+    scale_levels:
+      10: "20+ relatives across 3+ generations in regular deep contact; distant branches unified"
+      8: "10+ extended family members in sustained emotionally intimate relationships"
+      6: "Weekly contact with multiple relatives across at least 2 generations beyond your own"
+      4: "Monthly meaningful contact with 3 -- 5 extended family members beyond logistics"
+      2: "Surface-level contact limited to holidays and emergencies"
+
+  balance:
+    name: "Balance"
+    anchor_type: "subjective"
+    anchor_description: "Healthy boundaries ensuring extended family enhances rather than constrains your life"
+    scale_levels:
+      10: "Family relationships entirely free of coercion or guilt; autonomy valued as family culture"
+      8: "Complete life autonomy while maintaining warm family relationships"
+      6: "Boundaries understood and respected; family relationships feel chosen rather than obligatory"
+      4: "Clear boundaries maintained without damaging relationships; able to decline requests"
+      2: "Family pressure constrains major life choices with little awareness of the pattern"
+
+family-of-origin:
+  autonomy:
+    name: "Personal Autonomy"
+    anchor_type: "subjective"
+    anchor_description: "Freedom to live according to your own values regardless of family expectations"
+    scale_levels:
+      10: "Complete internal freedom from family conditioning; no emotional reactivity under extreme pressure"
+      8: "Genuine freedom from family guilt and manipulation; fully comfortable with authentic self"
+      6: "Lives authentically without significant guilt about family disapproval"
+      4: "Makes major life decisions based on own values rather than family pressure"
+      2: "Frequently compromises wellbeing to avoid family conflict or guilt"
+
+  connection:
+    name: "Emotional Connection"
+    anchor_type: "subjective"
+    anchor_description: "Quality of emotional bonds with parents and siblings"
+    scale_levels:
+      10: "Transcendent connections beyond typical family dynamics; unconditional love without attachment to outcomes"
+      8: "Exceptionally close relationships serving as a primary source of emotional strength and joy"
+      6: "Deep adult relationships based on mutual respect with effective emotional support exchange"
+      4: "Regular pleasant contact; can navigate gatherings without major conflict"
+      2: "Infrequent or strained contact with most family members"
+
+  healing:
+    name: "Active Healing"
+    anchor_type: "subjective"
+    anchor_description: "Working through family dysfunction and breaking harmful generational patterns"
+    scale_levels:
+      10: "Complete mastery of emotional responses to family dysfunction; centred and helpful during extreme crises"
+      8: "Transformed significant dysfunction in own patterns; facilitates healing conversations"
+      6: "Works through moderate family trauma with professional help; broken harmful generational patterns"
+      4: "Addresses obvious dysfunctional patterns rather than avoiding them; has difficult conversations"
+      2: "Avoids confronting known family dysfunction; repeats harmful patterns"
+
+  duty:
+    name: "Family Duty"
+    anchor_type: "subjective"
+    anchor_description: "Fulfilling obligations and providing concrete support to family members"
+    scale_levels:
+      10: "Substantial resources dedicated to multi-generational family welfare; elevates family standing"
+      8: "Central pillar of family stability coordinating care and managing family resources"
+      6: "Significant responsibility for family welfare; actively preserves and creates family traditions"
+      4: "Regular financial or practical support when needed; contributes to family traditions"
+      2: "Minimal engagement with family obligations or support needs"
+
+friendship:
+  depth:
+    name: "Depth"
+    anchor_type: "linear"
+    anchor_max: 5
+    anchor_unit: "intimate friendships"
+    anchor_description: "Number of intimate friendships involving high trust, vulnerability, and mutual understanding"
+    scale_levels:
+      10: "5+ intimate friendships with daily meaningful contact and complete emotional transparency"
+      8: "3 -- 4 friendships of extraordinary depth that influence major life decisions"
+      6: "3 -- 5 intimate friendships with weekly meaningful conversations"
+      4: "2 -- 3 close friends with at least monthly sharing of personal feelings"
+      2: "No friendships involving regular emotional sharing"
+
+  breadth:
+    name: "Breadth"
+    anchor_type: "linear"
+    anchor_max: 30
+    anchor_unit: "active friendships"
+    anchor_description: "Number of active friendships maintained across different life contexts"
+    scale_levels:
+      10: "30+ active friendships across multiple life domains with quality connections maintained"
+      8: "20+ meaningful friendships with balanced emotional investment across all"
+      6: "12 -- 20 friends across multiple contexts with regular contact and shared activities"
+      4: "8 -- 12 friends across 3 -- 4 different contexts"
+      2: "Fewer than 4 friends concentrated in a single context"
+
+  growth:
+    name: "Growth"
+    anchor_type: "subjective"
+    anchor_description: "Friendships that challenge you to improve, learn, and develop as a person"
+    scale_levels:
+      10: "Friendships that consistently transform perspectives and capabilities with continuous personal evolution"
+      8: "Actively seeks friendships that challenge comfort zones with measurable personal growth from the influence"
+      6: "Consistently seeks and provides honest feedback; adapts behaviour based on friendship insights"
+      4: "Conversations that challenge perspectives or introduce new ideas several times per year"
+      2: "Friendships focused on comfortable agreement with no growth-oriented challenge"
+
+personality:
+  alignment:
+    name: "Personality Alignment"
+    anchor_type: "subjective"
+    anchor_description: "Designing your life to work with your natural personality patterns"
+    scale_levels:
+      10: "Major life choices systematically optimised around personality strengths with effective compensating systems"
+      8: "Consistently considers personality patterns across multiple life domains with systematic awareness"
+      6: "At least one major life choice made with deliberate consideration of personality patterns"
+      4: "Occasionally considers personality traits informally when making decisions"
+      2: "No awareness of personality patterns or how they affect life choices"
+
+  growth:
+    name: "Personality Growth"
+    anchor_type: "subjective"
+    anchor_description: "Actively developing and modifying personality characteristics beyond baseline tendencies"
+    scale_levels:
+      10: "Fundamental personality transformation through sustained intervention; targeted traits at 99.9th percentile"
+      8: "Sustained development across multiple areas over 6+ months; targeted traits at 99th percentile"
+      6: "Specific personality-related behaviours improved over 2 -- 3 months; targeted traits at 95th percentile"
+      4: "Conscious effort on one personality-related habit with measurable improvement to 80th percentile"
+      2: "Recognises helpful and hindering patterns but takes no deliberate action"
+
+relationship-status:
+  partner-selection:
+    name: "Partner Selection"
+    anchor_type: "subjective"
+    anchor_description: "Choosing partners based on genuine compatibility rather than surface attraction"
+    scale_levels:
+      10: "Near-optimal selection through deep self-knowledge; partnerships strong from outset with minimal correction needed"
+      8: "Track record of strong selections integrating self-knowledge, external feedback, and deliberate evaluation"
+      6: "Systematically evaluates compatibility across values, goals, conflict style, and attachment patterns"
+      4: "Clear evidence-based criteria for partner needs applied consistently over initial chemistry"
+      2: "Selection driven primarily by physical attraction and excitement without examining compatibility"
+
+  meeting-new-partners:
+    name: "Meeting New Partners"
+    anchor_type: "linear"
+    anchor_max: 5
+    anchor_unit: "active channels for meeting partners"
+    anchor_description: "Number of active, distinct channels maintained for meeting potential romantic partners"
+    scale_levels:
+      10: "Exceptional consistency meeting highly compatible people across any context with minimal wasted effort"
+      8: "Sustained effectiveness at generating quality prospects across different contexts and life stages"
+      6: "Systematically optimises approach; refines profiles, expands social circles, adjusts strategy based on results"
+      4: "Multiple active channels maintained -- social activities, dating platforms, and introductions"
+      2: "Relies on chance encounters or a single passive method"
+
+  independence:
+    name: "Independence"
+    anchor_type: "subjective"
+    anchor_description: "Being comfortable and fulfilled without a romantic partner"
+    scale_levels:
+      10: "Relationship status fully decoupled from identity and wellbeing; models healthy singleness to others"
+      8: "Single life so rich that partnering is purely additive; no gap a relationship is expected to fill"
+      6: "Thrives while single with life satisfaction comparable to happily partnered peers"
+      4: "Fulfilling daily life while single with active friendships and stable mental health"
+      2: "Decisions driven by fear of being alone; singleness experienced as a problem to be solved"
+
+  transition-navigation:
+    name: "Transition Navigation"
+    anchor_type: "subjective"
+    anchor_description: "Managing romantic transitions gracefully with emotional clarity and minimal collateral damage"
+    scale_levels:
+      10: "All romantic transitions handled with exceptional clarity, rapid recovery, and respectful post-relationship dynamics"
+      8: "Major endings navigated with minimal disruption to overall functioning; grief processed efficiently"
+      6: "Stay-or-leave decisions based on clear criteria; breakups processed constructively without prolonged rumination"
+      4: "Ends relationships within months of recognising they are not working; recovers within three months"
+      2: "Stays in relationships years past recognising dissatisfaction; prolonged recovery from breakups"
+
+romantic-relationships:
+  connection:
+    name: "Connection"
+    anchor_type: "subjective"
+    anchor_description: "Emotional closeness, vulnerability, trust, and deep mutual understanding in a romantic partnership"
+    scale_levels:
+      10: "Sustained intimacy across decades that deepens rather than plateaus; primary source of meaning for both"
+      8: "Profound trust and complete emotional safety from years of attentive, responsive connection"
+      6: "Deep emotional attunement; both partners feel genuinely understood with highly satisfying intimacy"
+      4: "Regular emotional check-ins, needs expressed without escalation, and weekly dedicated quality time"
+      2: "Limited emotional sharing; partners feel unknown or misunderstood"
+
+  harmony:
+    name: "Harmony"
+    anchor_type: "subjective"
+    anchor_description: "Low-conflict, smoothly functioning daily partnership with constructive disagreement"
+    scale_levels:
+      10: "Partnership others model their own on; graceful conflict resolution and unified navigation of any challenge"
+      8: "Exceptional teamwork maintained through major life transitions without sustained deterioration"
+      6: "Seamless collaboration on logistics, finances, and parenting with effective post-conflict repair"
+      4: "Clear division of responsibilities; constructive conflict resolution without contempt or stonewalling"
+      2: "Frequent unresolved conflict or chronic avoidance eroding goodwill"
+
+  alignment:
+    name: "Alignment"
+    anchor_type: "subjective"
+    anchor_description: "Shared values, compatible life goals, and a common vision for the future"
+    scale_levels:
+      10: "Alignment so deep it has been strengthened by significant adversity; both partners shaped for the better"
+      8: "Shared life vision tested by adversity and refined over years; both can articulate what and why"
+      6: "Deeply compatible values and goals tested through major decisions; willing to adjust for shared direction"
+      4: "Explicit agreement on major life priorities with a shared sense of direction both can articulate"
+      2: "Assumed alignment never tested; fundamental divergence likely undiscovered"
+
+sex:
+  frequency:
+    name: "Frequency"
+    anchor_type: "linear"
+    anchor_max: 4
+    anchor_unit: "times per week"
+    anchor_description: "Weekly frequency of sexual intimacy at a level both partners find satisfying"
+    scale_levels:
+      10: "Sustained mutual desire and initiation across the lifespan, adapting gracefully to ageing"
+      8: "Mutually satisfying frequency maintained across years, adapting fluidly to life changes"
+      6: "Sustained satisfying frequency with proactive management of desire discrepancies"
+      4: "Regular intimacy at a frequency both partners find satisfying with open communication"
+      2: "Significant unaddressed gap between desired and actual frequency"
+
+  variety:
+    name: "Variety"
+    anchor_type: "subjective"
+    anchor_description: "Diversity and novelty in sexual experiences through ongoing exploration"
+    scale_levels:
+      10: "Sustained evolving exploration across decades with complete trust and continued discovery"
+      8: "Rich evolving sexual repertoire sustained over years with full mutual comfort proposing new experiences"
+      6: "Active exploration with comfort and trust; novelty maintained without pressure"
+      4: "Comfort discussing preferences with occasional introduction of novelty"
+      2: "Fixed patterns established early with no exploration or discussion of preferences"
+
+  pleasure:
+    name: "Pleasure"
+    anchor_type: "subjective"
+    anchor_description: "Physical and psychological enjoyment from sexual activity for both partners"
+    scale_levels:
+      10: "Sustained evolving fulfilment across the lifespan with full adaptability to changes in desire or function"
+      8: "Consistently exceptional mutual satisfaction across years with comfort communicating evolving needs"
+      6: "High mutual satisfaction sustained over time with comfort exploring new experiences"
+      4: "Both partners regularly experience satisfying encounters with ability to communicate and adjust"
+      2: "Limited communication about preferences; significant satisfaction gap between partners"
+
+  contentment:
+    name: "Contentment"
+    anchor_type: "subjective"
+    anchor_description: "Overall peace and satisfaction with the role sex plays in your life"
+    scale_levels:
+      10: "Profound contentment sustained across decades; sex experienced as a source of renewal and gratitude"
+      8: "Genuine peace with sexual life; both partners grateful and fulfilled with no chronic dissatisfaction"
+      6: "Deep satisfaction; sex experienced as genuinely fulfilling rather than requiring constant improvement"
+      4: "Generally satisfied; sexual life is a positive aspect rather than a source of tension"
+      2: "Chronic dissatisfaction, tension, or indifference about sexual life"
+
+style:
+  attractiveness:
+    name: "Attractiveness"
+    anchor_type: "subjective"
+    anchor_description: "Looking appealing through deliberate clothing, grooming, and presentation choices"
+    scale_levels:
+      10: "Consistently among the best-dressed in any room; others regularly seek your style advice"
+      8: "Polished appealing image in every context with minimal effort; advanced fit and colour mastery"
+      6: "Consistently presents well across work, social, and dating contexts with coordinated outfits"
+      4: "Clothes fit properly in suitable colours and silhouettes; basic grooming maintained"
+      2: "Ill-fitting or dated clothing with little awareness of the effect"
+
+  status-professional:
+    name: "Status & Professional"
+    anchor_type: "subjective"
+    anchor_description: "Signalling competence, authority, and credibility through clothing in professional settings"
+    scale_levels:
+      10: "Style sophistication supporting senior leadership; serves as a style reference in professional context"
+      8: "Executive-level standards that command respect; understands clothing's impact on leadership presence"
+      6: "Consistently enhances professional presence through strategic wardrobe investments"
+      4: "Appropriate workplace dress without obvious missteps; basic quality indicators understood"
+      2: "Frequent professional dress missteps undermining credibility"
+
+  expression:
+    name: "Self-Expression"
+    anchor_type: "subjective"
+    anchor_description: "Communicating identity, values, and personality through distinctive clothing choices"
+    scale_levels:
+      10: "Influential personal style others recognise and draw inspiration from across cultural contexts"
+      8: "Signature style elements creating a memorable aesthetic while maintaining versatility"
+      6: "Distinctive personal style authentically representing values while adapting to different contexts"
+      4: "Consistent personal aesthetic that feels authentic and fits comfortably within social contexts"
+      2: "Clothing choices bear no intentional relationship to personal identity"
+
+  comfort:
+    name: "Comfort & Function"
+    anchor_type: "subjective"
+    anchor_description: "Clothing that supports daily activities, physical comfort, and practical needs"
+    scale_levels:
+      10: "Effortless style mastery with fully automated systems achieving consistent excellence"
+      8: "Comprehensive wardrobe systems seamlessly supporting all lifestyle demands with minimal effort"
+      6: "Efficient wardrobe systems eliminating daily clothing stress while maintaining appropriate appearance"
+      4: "Wardrobe supports daily activities without discomfort; morning routines streamlined"
+      2: "Frequent discomfort or impracticality from clothing; significant daily decision fatigue"
+
+# _data/anchors-organise.yml
+# Scoring anchors for Organise Your Life pillar life areas
+
+financial-planning-tracking:
+  accuracy:
+    name: "Accuracy & Control"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent of spending tracked"
+    anchor_description: "Percentage of total spending accurately tracked and categorised"
+    scale_levels:
+      10: "100% of spending tracked with real-time multi-account accuracy"
+      8: "25% of spending tracked with consistent categorisation"
+      6: "6% of spending tracked in any systematic way"
+      4: "1-2% of spending tracked beyond rough mental estimates"
+      2: "Less than 1% of spending tracked; no idea where money goes"
+
+  simplicity:
+    name: "Simplicity & Convenience"
+    anchor_type: "linear"
+    anchor_max: 30
+    anchor_unit: "minutes per week on financial admin"
+    anchor_inverted: true
+    anchor_description: "Minutes per week spent on financial tracking and admin (lower is better for given accuracy)"
+    scale_levels:
+      10: "Near-zero manual effort; fully automated systems handle everything"
+      8: "Under 5 minutes per week of manual financial admin"
+      6: "15-20 minutes per week of manual financial admin"
+      4: "1-2 hours per week of manual financial admin"
+      2: "3+ hours per week yet still disorganised"
+
+  insight:
+    name: "Insight & Optimisation"
+    anchor_type: "subjective"
+    anchor_description: "Quality and frequency of actionable financial insights generated from tracking data"
+    scale_levels:
+      10: "Dynamic planning integrating tax, legal, and investment considerations across time horizons"
+      8: "Regular reviews producing measurable spending improvements and accurate financial forecasts"
+      6: "Quarterly reviews identifying trends and informing specific financial decisions"
+      4: "Occasional useful observations from financial data but no systematic analysis"
+      2: "No actionable insights from financial information; data sits unused"
+
+habits:
+  impact:
+    name: "Impact"
+    anchor_type: "linear"
+    anchor_max: 10
+    anchor_unit: "life areas measurably improved by habits"
+    anchor_description: "Number of distinct life areas where habits produce measurable positive change"
+    scale_levels:
+      10: "10+ life areas measurably improved through keystone habits and cascading effects"
+      8: "5-6 life areas measurably improved through well-designed habits"
+      6: "2-3 life areas measurably improved through deliberate habits"
+      4: "1 life area with some improvement from a maintained habit"
+      2: "No measurable positive change from any deliberate habit"
+
+  consistency:
+    name: "Consistency"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent daily adherence over 6 months"
+    anchor_description: "Percentage of days habits performed as intended over a rolling 6-month period"
+    scale_levels:
+      10: "95%+ daily adherence over 6+ months across all active habits"
+      8: "80% daily adherence over 6+ months"
+      6: "60% daily adherence over 3+ months"
+      4: "40% daily adherence over 1 month before lapsing"
+      2: "Under 20% adherence; habits abandoned within days"
+
+  enjoyment:
+    name: "Enjoyment"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which habit routines feel intrinsically rewarding and enhance daily experience"
+    scale_levels:
+      10: "Habits are a primary source of daily satisfaction; missed days feel like a genuine loss"
+      8: "Most habits actively anticipated and enjoyed; routines enhance mood"
+      6: "Habits generally pleasant; mild positive feeling during and after"
+      4: "Habits feel neutral; performed out of discipline rather than desire"
+      2: "Habits feel burdensome; constant willpower drain to maintain"
+
+housing:
+  comfort:
+    name: "Comfort"
+    anchor_type: "subjective"
+    anchor_description: "Physical quality and pleasantness of living environment across space, light, temperature, noise, and maintenance"
+    scale_levels:
+      10: "Architecturally thoughtful home designed around daily rhythms with no quality compromise"
+      8: "Purpose-designed spaces for work, rest, and socialising with excellent efficiency"
+      6: "All basic needs met well with good natural light, adequate space, and no deferred maintenance"
+      4: "Functional but with noticeable comfort issues in temperature, noise, or space"
+      2: "Significant daily friction from maintenance failures, inadequate space, or poor conditions"
+
+  affordability:
+    name: "Affordability"
+    anchor_type: "linear"
+    anchor_max: 30
+    anchor_unit: "percent of gross income on housing"
+    anchor_inverted: true
+    anchor_description: "Total housing costs as percentage of gross income (lower is better)"
+    scale_levels:
+      10: "Housing costs negligible relative to income; complete financial freedom on housing"
+      8: "Under 20% of income on housing with substantial equity and relocation flexibility"
+      6: "Under 25% of income on housing with equity building or savings accumulation"
+      4: "Under 30% of income on housing with a buffer for unexpected costs"
+      2: "Over 35% of income on housing with no financial buffer"
+
+  location:
+    name: "Location"
+    anchor_type: "linear"
+    anchor_max: 30
+    anchor_unit: "minutes average commute"
+    anchor_inverted: true
+    anchor_description: "Average one-way commute time in minutes (lower is better, with access to amenities held constant)"
+    scale_levels:
+      10: "Optimal location with walkable daily needs, strong community, and zero meaningful compromise"
+      8: "Under 15-minute commute with walkable amenities and good community connections"
+      6: "Under 25-minute commute with convenient access to essentials and safe neighbourhood"
+      4: "Under 40-minute commute with basic amenity access"
+      2: "Over 60-minute commute with poor amenity access and weak neighbourhood fit"
+
+possessions:
+  functionality:
+    name: "Functionality"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent of possessions in working order and regularly used"
+    anchor_description: "Percentage of owned items that are in working order and serve a clear, regular purpose"
+    scale_levels:
+      10: "100% of possessions functional, maintained, and regularly used; zero friction from belongings"
+      8: "90%+ of possessions in working order with designated places and maintenance schedules"
+      6: "75% of possessions in good working order with a system for finding what you need"
+      4: "50-60% of possessions regularly used; several broken items and no organisation system"
+      2: "Most possessions unused, broken, or impossible to locate when needed"
+
+  simplicity:
+    name: "Simplicity"
+    anchor_type: "subjective"
+    anchor_description: "Degree of curation and freedom from excess possessions and cognitive clutter"
+    scale_levels:
+      10: "Possessions few enough to inventory from memory; each deeply valued and deliberately chosen"
+      8: "Genuinely minimal possessions maintained effortlessly through ingrained one-in-one-out discipline"
+      6: "Regular decluttering cycles with spacious, uncluttered home environment"
+      4: "At least one major declutter completed; some awareness of acquisition patterns"
+      2: "Continuous accumulation with no decluttering; overwhelming clutter"
+
+  quality:
+    name: "Quality"
+    anchor_type: "subjective"
+    anchor_description: "Durability, craftsmanship, and fitness for purpose of owned items relative to their cost over time"
+    scale_levels:
+      10: "Small collection of exceptional items providing compounding satisfaction over years"
+      8: "Every significant possession is the optimal choice with a clear acquisition philosophy"
+      6: "Most items are the best practical option for their purpose, properly maintained"
+      4: "Key items selected for durability rather than lowest price"
+      2: "Most items chosen on price alone; frequent breakage and replacement"
+
+  meaning:
+    name: "Meaning"
+    anchor_type: "subjective"
+    anchor_description: "Personal, sentimental, or aesthetic significance of possessions beyond mere function"
+    scale_levels:
+      10: "Every object imbued with significance; material environment curated like a personal museum"
+      8: "Material environment expresses identity, relationships, and personal history"
+      6: "Heirlooms preserved, meaningful gifts treasured, and sentimental items given pride of place"
+      4: "Key possessions chosen partly for personal meaning; can articulate why they matter"
+      2: "No awareness of which possessions carry personal significance"
+
+systems:
+  power:
+    name: "Power"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent of recurring processes automated"
+    anchor_description: "Percentage of recurring life-admin processes handled by automated or semi-automated systems"
+    scale_levels:
+      10: "Near-complete life-admin coverage with intelligent exception handling and pattern learning"
+      8: "80%+ of recurring processes automated with sophisticated conditional logic"
+      6: "50% of recurring processes covered including finances, backups, and scheduling"
+      4: "Core workflows covered with at least one multi-step automation"
+      2: "No automation; all processes handled manually and ad hoc"
+
+  simplicity:
+    name: "Simplicity"
+    anchor_type: "subjective"
+    anchor_description: "Ratio of system capability to user-facing complexity and maintenance burden"
+    scale_levels:
+      10: "Extraordinary capability that feels effortless; system adapts to you, not you to it"
+      8: "High capability with complexity hidden behind clean, replaceable interfaces"
+      6: "Minimal coherent toolkit where every tool earns its place and workflows are instantly explainable"
+      4: "Small number of well-chosen tools used consistently with straightforward workflows"
+      2: "Chaotic tool sprawl creating more overhead than it resolves"
+
+  reliability:
+    name: "Reliability"
+    anchor_type: "linear"
+    anchor_max: 365
+    anchor_unit: "days between unplanned system failures"
+    anchor_description: "Average number of days between unplanned failures requiring manual intervention"
+    scale_levels:
+      10: "Self-monitoring systems with essentially zero unplanned downtime across years"
+      8: "Graceful degradation design with proactive maintenance; failures extremely rare"
+      6: "All critical systems tested with documented fallbacks; failures caught quickly"
+      4: "Systems work for weeks without intervention; key processes backed up"
+      2: "Frequent failures requiring constant manual intervention"
+
+time-management:
+  productivity:
+    name: "Productivity & Achievement"
+    anchor_type: "linear"
+    anchor_max: 100
+    anchor_unit: "percent of planned tasks completed on time"
+    anchor_description: "Percentage of planned important tasks completed within intended timeframes"
+    scale_levels:
+      10: "95%+ of planned tasks completed on time across multiple complex domains"
+      8: "85-90% of planned tasks completed on time with structured planning methods"
+      6: "70-80% of planned tasks completed with consistent capture and organisation"
+      4: "50% of planned tasks completed; frequent missed deadlines"
+      2: "Under 30% of planned tasks completed; no system for tracking commitments"
+
+  balance:
+    name: "Balance & Wellbeing"
+    anchor_type: "subjective"
+    anchor_description: "Sustainability of work rhythms with protected time for health, relationships, and rest"
+    scale_levels:
+      10: "Optimal productivity and life satisfaction sustained across decades without burnout"
+      8: "Peak performance maintained alongside rich relationships and excellent health"
+      6: "Sustainable rhythms with protected time for relationships, health, and personal interests"
+      4: "Basic work-life boundaries established with regular breaks and limited overtime"
+      2: "No boundaries between work and rest; chronic stress and burnout risk"
+
+  flexibility:
+    name: "Flexibility & Responsiveness"
+    anchor_type: "subjective"
+    anchor_description: "Ability to adapt to changing priorities and unexpected demands whilst maintaining effectiveness"
+    scale_levels:
+      10: "Time management mastery that works across any context, life change, or crisis"
+      8: "High effectiveness maintained through major life transitions and crises"
+      6: "Smooth adjustment when priorities shift; effective across different contexts"
+      4: "Routine interruptions handled without losing track of priorities"
+      2: "Any disruption derails the entire day; unable to recover from interruptions"
+
+transportation:
+  efficiency:
+    name: "Efficiency"
+    anchor_type: "linear"
+    anchor_max: 15
+    anchor_unit: "percent of income on transportation"
+    anchor_inverted: true
+    anchor_description: "Total transportation costs as percentage of income (lower is better)"
+    scale_levels:
+      10: "Near-zero wasted time and minimal cost through lifestyle and location optimisation"
+      8: "Commute negligible or genuinely enjoyable; transportation costs minimal"
+      6: "Sub-20-minute commute or productively used; costs below 10% of income"
+      4: "Sub-30-minute commute with batched errands; costs below 15% of income"
+      2: "Over 60-minute commute with costs above 20% of income"
+
+  comfort:
+    name: "Comfort"
+    anchor_type: "subjective"
+    anchor_description: "Physical and psychological pleasantness of daily transportation experience"
+    scale_levels:
+      10: "Every aspect of transportation is a genuine source of enjoyment across all modes"
+      8: "Consistently pleasant experience with no aspect causing discomfort or frustration"
+      6: "Genuinely enjoyable commute; travel looked forward to rather than endured"
+      4: "Reliably comfortable transportation with weather protection and minimal stress"
+      2: "Daily transportation is a source of stress, discomfort, or frustration"
+
+  safety:
+    name: "Safety"
+    anchor_type: "subjective"
+    anchor_description: "Degree to which transportation risk is minimised through vehicle choice, skill, and route design"
+    scale_levels:
+      10: "Negligible accident risk through optimal vehicle choice, defensive expertise, and lifestyle design"
+      8: "Near-zero risk exposure through advanced safety features and risk-minimising life structure"
+      6: "Proactive safety measures with advanced features and well-practised defensive habits"
+      4: "Vehicle in good safety condition with basic defensive practices and safe routes"
+      2: "Poorly maintained vehicle or mode with no awareness of transportation risk profile"
+
+community-contribution:
+  impact:
+    name: "Impact"
+    anchor_type: "subjective"
+    anchor_description: "Measurable, tangible difference made in your community through sustained contribution"
+    scale_levels:
+      10: "Transformative community improvement through years of strategic, dedicated service"
+      8: "Leadership driving measurable improvements in community outcomes"
+      6: "Regular skills-based volunteering producing visible positive results"
+      4: "Occasional volunteering with some useful but limited contribution"
+      2: "Minimal or no tangible community contribution"
+
+  belonging:
+    name: "Belonging"
+    anchor_type: "subjective"
+    anchor_description: "Genuine connection to and rootedness in your local community through shared participation"
+    scale_levels:
+      10: "Community measurably more connected because of social infrastructure you helped build"
+      8: "Central, trusted node across diverse community groups able to mobilise collective action"
+      6: "Broad local network with a reputation as someone who connects people"
+      4: "Active relationships with neighbours and participation in one community group"
+      2: "Little or no connection to local community beyond immediate household"
+
+  fulfilment:
+    name: "Fulfilment"
+    anchor_type: "subjective"
+    anchor_description: "Personal satisfaction and meaning derived from contributing to community life"
+    scale_levels:
+      10: "Community work inseparable from your sense of purpose and identity"
+      8: "Community contribution among the most fulfilling dimensions of your life"
+      6: "Genuine purpose and energy derived from local contributions"
+      4: "Community involvement enjoyed but not a major source of meaning"
+      2: "Community involvement feels like obligation or is absent entirely"
+
+consumptive-leisure:
+  restoration:
+    name: "Restoration"
+    anchor_type: "subjective"
+    anchor_description: "Genuine recovery from work and stress through deliberate leisure consumption"
+    scale_levels:
+      10: "Complete mastery of restorative leisure; never drained by consumption choices"
+      8: "Reliable recovery from significant fatigue through deliberate leisure choices"
+      6: "Leisure selected based on current energy state with reliable deep rest methods"
+      4: "Some restorative leisure but frequent default to depleting screen habits"
+      2: "Leisure consumption regularly leaves you more drained than before"
+
+  enrichment:
+    name: "Enrichment"
+    anchor_type: "subjective"
+    anchor_description: "Knowledge, perspectives, and capabilities expanded through media and content consumption"
+    scale_levels:
+      10: "Transformative learning through leisure that substantively shapes worldview and career"
+      8: "Insights from reading and media regularly integrated into thinking and decisions"
+      6: "Systematic learning across multiple domains with retention and application"
+      4: "Some educational content consumed but little retained or applied"
+      2: "Leisure consumption teaches nothing of lasting value"
+
+  enjoyment:
+    name: "Enjoyment"
+    anchor_type: "subjective"
+    anchor_description: "Direct pleasure and satisfaction derived from leisure activities"
+    scale_levels:
+      10: "Leisure a consistent source of deep joy, aesthetic appreciation, and meaning"
+      8: "Rich, diverse media diet providing deep, sustained satisfaction"
+      6: "Deep appreciation of a well-curated media diet with sustained pleasure"
+      4: "Some enjoyable consumption mixed with habitual time-filling"
+      2: "Most leisure consumed out of habit with little genuine pleasure"
+
+global-impact:
+  impartiality:
+    name: "Impartiality"
+    anchor_type: "subjective"
+    anchor_description: "Resources directed toward causes based on evidence of impact rather than emotional appeal"
+    scale_levels:
+      10: "Giving approach rivalling professional grant-makers in rigour and impact per pound"
+      8: "Sophisticated counterfactual reasoning and impact measurement informing giving strategy"
+      6: "Researched portfolio of high-impact interventions with regular evidence review"
+      4: "Donations directed to some evidence-backed charities but with limited analysis"
+      2: "Giving driven entirely by emotional response or social pressure"
+
+  passion:
+    name: "Passion"
+    anchor_type: "subjective"
+    anchor_description: "Sustained, personally meaningful commitment to causes you genuinely care about"
+    scale_levels:
+      10: "Lifetime of passionate commitment that has meaningfully advanced your chosen causes"
+      8: "Signature cause where you are deeply invested, knowledgeable, and recognised"
+      6: "Deep, sustained engagement leveraging personal strengths and interests"
+      4: "Regular contributions to a cause you care about with some personal engagement"
+      2: "No personal connection to any cause; giving is purely transactional or absent"
+
+  sustainability:
+    name: "Sustainability"
+    anchor_type: "linear"
+    anchor_max: 10
+    anchor_unit: "percent of income given annually"
+    anchor_description: "Percentage of income donated annually to charitable causes, sustained over time"
+    scale_levels:
+      10: "10%+ of income given annually with lifetime giving plan"
+      8: "2.5% of income given annually with formal commitment"
+      6: "0.6% of income given annually as a regular practice"
+      4: "0.15% of income given sporadically"
+      2: "0.04% of income given or less"
+
+  fulfilment:
+    name: "Fulfilment"
+    anchor_type: "subjective"
+    anchor_description: "Personal satisfaction and sense of purpose derived from making a positive difference"
+    scale_levels:
+      10: "Impact work inseparable from your sense of purpose and identity"
+      8: "Global impact among the most fulfilling dimensions of your life"
+      6: "Genuine joy and identity derived from contributions"
+      4: "Some satisfaction from giving but mixed with guilt or obligation"
+      2: "Giving feels like obligation or produces guilt rather than satisfaction"
+
+networks:
+  depth:
+    name: "Depth"
+    anchor_type: "linear"
+    anchor_max: 50
+    anchor_unit: "professional advocates"
+    anchor_description: "Number of professionals who genuinely understand your work and would actively advocate for you"
+    scale_levels:
+      10: "50+ professional advocates across multiple fields built over decades"
+      8: "12-13 strong professional advocates including mentors and collaborators"
+      6: "3 trusted professionals who would actively recommend you"
+      4: "1 professional who would genuinely advocate for you"
+      2: "No one who would actively advocate for your professional work"
+
+  breadth:
+    name: "Breadth"
+    anchor_type: "subjective"
+    anchor_description: "Range and diversity of professional connections across industries, roles, and backgrounds"
+    scale_levels:
+      10: "Network so broad you are regularly connected to opportunities before they are widely known"
+      8: "Extensive network across industries and geographies; anyone reachable in 1-2 introductions"
+      6: "Broad network spanning multiple industries with systematic approach to new connections"
+      4: "Active connections across a few professional contexts with occasional new additions"
+      2: "Connections limited to current workplace with no broader professional network"
+
+  relevance:
+    name: "Relevance"
+    anchor_type: "subjective"
+    anchor_description: "Alignment of network connections with your current and future professional direction"
+    scale_levels:
+      10: "Network evolves in perfect alignment with your direction; contacts anticipate where you are heading"
+      8: "Strategically curated network with minimal legacy connections that no longer add value"
+      6: "Network deliberately shaped around professional trajectory with regular review"
+      4: "Some connections reflect current direction but many are legacy from past roles"
+      2: "Network entirely reflects past roles with no relevance to current or future direction"
+
+participatory-leisure:
+  social:
+    name: "Social Connection"
+    anchor_type: "subjective"
+    anchor_description: "Relationships and community built through shared leisure activities"
+    scale_levels:
+      10: "Profound community and belonging through leisure central to personal identity"
+      8: "Extensive leisure-based friendships providing deep emotional support across life areas"
+      6: "3-4 close leisure-based friendships across different interest areas with regular interaction"
+      4: "1-2 leisure-based friendships with occasional group participation"
+      2: "No meaningful social connections through leisure activities"
+
+  achievement:
+    name: "Achievement & Mastery"
+    anchor_type: "subjective"
+    anchor_description: "Skill development, accomplishment, and personal growth through leisure pursuits"
+    scale_levels:
+      10: "Near-professional mastery providing deep life purpose and exceptional achievements"
+      8: "Highly advanced skills enabling original creative expression or competitive success"
+      6: "Intermediate-to-advanced skills in 1-2 activities sufficient for informal teaching"
+      4: "Consistent engagement in one skill-based activity with noticeable improvement"
+      2: "No sustained skill development through leisure; activities remain superficial"
+
+  adventure:
+    name: "Adventure & Exploration"
+    anchor_type: "subjective"
+    anchor_description: "Novelty, challenge, and transformative experiences sought through leisure"
+    scale_levels:
+      10: "Life-defining adventures pushing personal boundaries and contributing to knowledge"
+      8: "Extraordinary experiences requiring exceptional commitment, skill, or courage"
+      6: "Regular transformative experiences with willingness to tackle significant challenges"
+      4: "2-3 new activities per year with occasional steps outside comfort zone"
+      2: "No novelty-seeking; leisure limited to familiar, routine activities"
