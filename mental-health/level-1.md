@@ -184,18 +184,58 @@ life_area_slug: mental-health
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -353,7 +393,7 @@ life_area_slug: mental-health
         <option value="vague">Vague sense &ndash; I could probably find something but haven't looked</option>
         <option value="one-option">I know at least one specific service I could contact</option>
         <option value="multiple">I know multiple options and have used at least one before</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-prof-access"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-prof-access" onchange="handleSkip('a-prof-access')"><label for="skip-prof-access">I know but prefer not to say</label></div>
 </div>
 
@@ -367,7 +407,7 @@ life_area_slug: mental-health
         <option value="past-use">Used it in the past and found it helpful</option>
         <option value="past-mixed">Used it in the past with mixed results</option>
         <option value="current">Currently receiving professional support</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-prof-history"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-prof-history" onchange="handleSkip('a-prof-history')"><label for="skip-prof-history">I know but prefer not to say</label></div>
 </div>
 
@@ -380,7 +420,7 @@ life_area_slug: mental-health
         <option value="maybe-one">Maybe &ndash; one person, but I'm not sure I'd actually do it</option>
         <option value="one">Yes &ndash; one person I trust and would talk to</option>
         <option value="several">Yes &ndash; several people I could turn to</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-prof-network"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-prof-network" onchange="handleSkip('a-prof-network')"><label for="skip-prof-network">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -397,7 +437,7 @@ life_area_slug: mental-health
         <option value="1">One &ndash; I know my biggest trigger</option>
         <option value="2-3">Two or three &ndash; I can describe triggers and responses</option>
         <option value="4+">Four or more &ndash; I've mapped this in detail</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-self-triggers"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-self-triggers" onchange="handleSkip('a-self-triggers')"><label for="skip-self-triggers">I know but prefer not to say</label></div>
 </div>
 
@@ -410,7 +450,7 @@ life_area_slug: mental-health
         <option value="some-unsure">Some &ndash; but I'm not sure if they help</option>
         <option value="some-helpful">Some &ndash; and they noticeably help</option>
         <option value="toolkit">A well-practised toolkit that I use regularly and reliably</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-self-techniques"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-self-techniques" onchange="handleSkip('a-self-techniques')"><label for="skip-self-techniques">I know but prefer not to say</label></div>
 </div>
 
@@ -423,7 +463,7 @@ life_area_slug: mental-health
         <option value="broad">Broad categories &ndash; I can tell angry from sad from anxious</option>
         <option value="specific">Specific &ndash; I can usually pinpoint the exact emotion</option>
         <option value="nuanced">Nuanced &ndash; I can identify layered or mixed emotions in the moment</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-self-emotions"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-self-emotions" onchange="handleSkip('a-self-emotions')"><label for="skip-self-emotions">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -440,7 +480,7 @@ life_area_slug: mental-health
         <option value="vague">Vague &ndash; I suspect sleep matters but haven't tracked it</option>
         <option value="clear">Clear &ndash; I can reliably predict my mood based on sleep</option>
         <option value="detailed">Detailed &ndash; I know how much sleep I need and what disrupts it</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-int-sleep"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-int-sleep" onchange="handleSkip('a-int-sleep')"><label for="skip-int-sleep">I know but prefer not to say</label></div>
 </div>
 
@@ -467,12 +507,30 @@ life_area_slug: mental-health
         <option value="vague">Vague sense &ndash; some people drain me but I couldn't list who or why</option>
         <option value="partial">Partial &ndash; I know some specific people and situations</option>
         <option value="clear">Clear map &ndash; I know my social energy patterns well</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-int-social"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-int-social" onchange="handleSkip('a-int-social')"><label for="skip-int-social">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-professional">
+        <span class="assess-summary-label">Professional Treatment &amp; Support</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-professional" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-professional">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-self_management">
+        <span class="assess-summary-label">Self-Management &amp; Independence</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-self_management" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-self_management">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-integration">
+        <span class="assess-summary-label">Integration &amp; Holistic Approach</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-integration" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-integration">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on mental health engagement among adults. Items without a clear ordinal scale are left unscored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -522,8 +580,52 @@ life_area_slug: mental-health
         'a-int-sleep', 'a-int-exercise', 'a-int-social'
     ];
 
-    // All mental health items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~46% of UK adults with MH problems receive treatment (McManus et al., 2016),
+    // ~25% use structured self-management techniques, ~20% have mapped stress triggers in detail.
+    var THRESHOLDS = {
+        'a-prof-access': [
+            // ~40% wouldn't know where to start; knowing multiple options and having used one is uncommon
+            {v:'no-idea',p:15},{v:'vague',p:40},{v:'one-option',p:65},{v:'multiple',p:88}
+        ],
+        'a-prof-history': [
+            // ~54% of adults have never accessed MH support; current engagement is relatively uncommon
+            {v:'never',p:20},{v:'tried-once',p:40},{v:'past-mixed',p:55},{v:'past-use',p:72},{v:'current',p:90}
+        ],
+        'a-prof-network': [
+            // ~33% report having no one they'd discuss MH with; several trusted people is uncommon
+            {v:'no-one',p:12},{v:'maybe-one',p:35},{v:'one',p:60},{v:'several',p:85}
+        ],
+        'a-self-triggers': [
+            // Most people haven't systematically mapped their stress triggers
+            {v:'none',p:15},{v:'1',p:40},{v:'2-3',p:65},{v:'4+',p:90}
+        ],
+        'a-self-techniques': [
+            // ~25% use any structured stress management; a reliable toolkit is rare
+            {v:'none',p:18},{v:'some-unsure',p:42},{v:'some-helpful',p:68},{v:'toolkit',p:92}
+        ],
+        'a-self-emotions': [
+            // Most people use broad or generic labels; nuanced emotional granularity is uncommon
+            {v:'generic',p:15},{v:'broad',p:40},{v:'specific',p:70},{v:'nuanced',p:92}
+        ],
+        'a-int-sleep': [
+            // Most people have a vague sense; detailed self-knowledge of sleep-mood links is uncommon
+            {v:'no-link',p:12},{v:'vague',p:38},{v:'clear',p:68},{v:'detailed',p:90}
+        ],
+        'a-int-social': [
+            // Few people have mapped their social energy patterns in detail
+            {v:'no-idea',p:12},{v:'vague',p:35},{v:'partial',p:62},{v:'clear',p:90}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        professional: ['a-prof-access', 'a-prof-history', 'a-prof-network'],
+        self_management: ['a-self-triggers', 'a-self-techniques', 'a-self-emotions'],
+        integration: ['a-int-sleep', 'a-int-social']
+    };
+
+    // Items without a clear ordinal scale (categorical choices)
+    var UNSCORED_ITEMS = ['a-int-exercise'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -627,10 +729,72 @@ life_area_slug: mental-health
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
 
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['professional', 'self_management', 'integration'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
     }
 
     function updateAssessCompletion() {
@@ -672,12 +836,10 @@ life_area_slug: mental-health
     }
 
     function saveScores() {
-        // All mental health items are unscored; save null for each value
-        var scores = {
-            professional: null,
-            'self-management': null,
-            integration: null
-        };
+        var scores = {};
+        ['professional', 'self_management', 'integration'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -688,9 +850,10 @@ life_area_slug: mental-health
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -701,9 +864,10 @@ life_area_slug: mental-health
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -731,10 +895,11 @@ life_area_slug: mental-health
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

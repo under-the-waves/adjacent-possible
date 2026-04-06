@@ -226,6 +226,58 @@ life_area_slug: media-diet
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -408,7 +460,7 @@ life_area_slug: media-diet
         <option value="4-10">4&ndash;10</option>
         <option value="11-20">11&ndash;20</option>
         <option value="over-20">Over 20</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-books-read"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-books-read" onchange="handleSkip('a-books-read')"><label for="skip-books-read">I know but prefer not to say</label></div>
 </div>
 
@@ -486,7 +538,7 @@ life_area_slug: media-diet
         <option value="moderate">Moderate &ndash; some diversity but within a limited range</option>
         <option value="broad">Broad &ndash; I regularly encounter different perspectives</option>
         <option value="deliberately-diverse">Deliberately diverse &ndash; I actively seek out opposing or unfamiliar viewpoints</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-echo-chamber"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-echo-chamber" onchange="handleSkip('a-echo-chamber')"><label for="skip-echo-chamber">I know but prefer not to say</label></div>
 </div>
 
@@ -532,7 +584,7 @@ life_area_slug: media-diet
         <option value="2-4">2&ndash;4 hours</option>
         <option value="1-2">1&ndash;2 hours</option>
         <option value="under-1">Under 1 hour</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-time-spent"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-time-spent" onchange="handleSkip('a-time-spent')"><label for="skip-time-spent">I know but prefer not to say</label></div>
 </div>
 
@@ -563,6 +615,26 @@ life_area_slug: media-diet
     </select>
     <div class="assess-skip"><input type="checkbox" id="skip-overload" onchange="handleSkip('a-overload')"><label for="skip-overload">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-quality">
+        <span class="assess-summary-label">Information Quality &amp; Depth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-quality" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-quality">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-breadth">
+        <span class="assess-summary-label">Breadth &amp; Discovery</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-breadth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-breadth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-efficiency">
+        <span class="assess-summary-label">Cognitive Efficiency</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-efficiency" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-efficiency">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on reading habits, source diversity, and media consumption among adults. Items without reliable population data are not scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -616,7 +688,37 @@ life_area_slug: media-diet
         'a-time-spent', 'a-retention', 'a-overload'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~24% of US adults read zero books per year,
+    // median is 4; average daily screen time for news/social is ~3-4 hrs.
+    var THRESHOLDS = {
+        'a-books-read': [
+            // ~24% read zero books; median is ~4; over 20 is top few percent
+            {v:'zero',p:12},{v:'1-3',p:35},{v:'4-10',p:60},{v:'11-20',p:82},{v:'over-20',p:96}
+        ],
+        'a-echo-chamber': [
+            // Most people consume from a narrow ideological range; deliberate diversity is rare
+            {v:'very-narrow',p:10},{v:'somewhat-narrow',p:30},{v:'moderate',p:55},{v:'broad',p:78},{v:'deliberately-diverse',p:95}
+        ],
+        'a-time-spent': [
+            // Lower informational screen time is better; under 1 hr is very unusual
+            {v:'over-6',p:5},{v:'4-6',p:20},{v:'2-4',p:45},{v:'1-2',p:75},{v:'under-1',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        quality: ['a-books-read'],
+        breadth: ['a-echo-chamber'],
+        efficiency: ['a-time-spent']
+    };
+
+    // Items without reliable population data for percentile scoring
+    var UNSCORED_ITEMS = [
+        'a-source-types', 'a-primary-sources',
+        'a-decision-influence', 'a-goal-alignment', 'a-noise-ratio',
+        'a-unfamiliar-topics', 'a-international',
+        'a-retention', 'a-overload'
+    ];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -666,7 +768,6 @@ life_area_slug: media-diet
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -704,6 +805,73 @@ life_area_slug: media-diet
             setTimeout(function() { openStep(next); }, 300);
         }
     };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['quality', 'breadth', 'efficiency'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
@@ -759,12 +927,11 @@ life_area_slug: media-diet
     }
 
     function saveScores() {
-        var scores = {
-            quality: null,
-            relevance: null,
-            breadth: null,
-            efficiency: null
-        };
+        var scores = {};
+        ['quality', 'breadth', 'efficiency'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
+        scores.relevance = null;
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -773,8 +940,10 @@ life_area_slug: media-diet
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
+        updateAssessSummary();
         updateAssessRecorded();
         updateAssessCompletion();
     };
@@ -786,8 +955,10 @@ life_area_slug: media-diet
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
+        updateAssessSummary();
         updateAssessRecorded();
         updateAssessCompletion();
     };
@@ -812,9 +983,11 @@ life_area_slug: media-diet
                 var el = document.getElementById(id);
                 if (el) el.value = item.value;
             }
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
+        updateAssessSummary();
         updateAssessRecorded();
         updateAssessCompletion();
     }

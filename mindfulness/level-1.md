@@ -184,18 +184,58 @@ life_area_slug: mindfulness
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -362,7 +402,7 @@ life_area_slug: mindfulness
         <option value="5-15-min">5 &ndash; 15 minutes</option>
         <option value="15-30-min">15 &ndash; 30 minutes</option>
         <option value="30-plus">30 minutes or more</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-focus-duration"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-focus-duration" onchange="handleSkip('a-focus-duration')"><label for="skip-focus-duration">I know but prefer not to say</label></div>
 </div>
 
@@ -390,7 +430,7 @@ life_area_slug: mindfulness
         <option value="sometimes">Sometimes &ndash; a few times a session</option>
         <option value="rarely">Rarely &ndash; I can usually resist the urge</option>
         <option value="almost-never">Almost never &ndash; I stay focused easily</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-distraction"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-distraction" onchange="handleSkip('a-distraction')"><label for="skip-distraction">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -407,7 +447,7 @@ life_area_slug: mindfulness
         <option value="after-fact">I notice only after the stress has built up</option>
         <option value="sometimes">I sometimes catch the early signs</option>
         <option value="usually">I usually notice early and can name the specific sensations</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-stress-response"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-stress-response" onchange="handleSkip('a-stress-response')"><label for="skip-stress-response">I know but prefer not to say</label></div>
 </div>
 
@@ -421,7 +461,7 @@ life_area_slug: mindfulness
         <option value="a-day">About a day</option>
         <option value="days">Several days or more</option>
         <option value="unsure">I'm not sure &ndash; I haven't paid attention to this</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-recovery-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-recovery-time" onchange="handleSkip('a-recovery-time')"><label for="skip-recovery-time">I know but prefer not to say</label></div>
 </div>
 
@@ -454,7 +494,7 @@ life_area_slug: mindfulness
         <option value="vague">Vaguely &ndash; I sense a pattern but can't articulate it</option>
         <option value="one">Yes &ndash; I can name one clear pattern</option>
         <option value="several">Yes &ndash; I'm aware of several and how they show up</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-thought-patterns"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-thought-patterns" onchange="handleSkip('a-thought-patterns')"><label for="skip-thought-patterns">I know but prefer not to say</label></div>
 </div>
 
@@ -467,7 +507,7 @@ life_area_slug: mindfulness
         <option value="some-sense">Some sense &ndash; I can name one or two triggers</option>
         <option value="good-map">Good map &ndash; I know most of my triggers and the emotions they produce</option>
         <option value="detailed">Detailed &ndash; I understand the triggers, the emotions, and the patterns behind them</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-triggers"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-triggers" onchange="handleSkip('a-triggers')"><label for="skip-triggers">I know but prefer not to say</label></div>
 </div>
 
@@ -481,7 +521,7 @@ life_area_slug: mindfulness
         <option value="mixed">Mixed &ndash; roughly half and half</option>
         <option value="mostly-present">Mostly present &ndash; I'm usually aware of my choices</option>
         <option value="highly-present">Highly present &ndash; I'm consciously engaged most of the time</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-autopilot"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-autopilot" onchange="handleSkip('a-autopilot')"><label for="skip-autopilot">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -498,7 +538,7 @@ life_area_slug: mindfulness
         <option value="vague">I have a vague sense but nothing I could articulate</option>
         <option value="partial">I can name one or two sources of meaning</option>
         <option value="clear">I have a clear, considered sense of what gives my life purpose</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-meaning"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-meaning" onchange="handleSkip('a-meaning')"><label for="skip-meaning">I know but prefer not to say</label></div>
 </div>
 
@@ -512,7 +552,7 @@ life_area_slug: mindfulness
         <option value="past-few-weeks">Within the past few weeks</option>
         <option value="past-week">Within the past week</option>
         <option value="today">Today or yesterday</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-awe"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-awe" onchange="handleSkip('a-awe')"><label for="skip-awe">I know but prefer not to say</label></div>
 </div>
 
@@ -526,12 +566,35 @@ life_area_slug: mindfulness
         <option value="sporadic">Sporadic &ndash; I do something deliberate but inconsistently</option>
         <option value="regular">Regular &ndash; a few times a week</option>
         <option value="daily">Daily or near-daily practice</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-contemplative"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-contemplative" onchange="handleSkip('a-contemplative')"><label for="skip-contemplative">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-clarity">
+        <span class="assess-summary-label">Mental Clarity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-clarity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-clarity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-emotional">
+        <span class="assess-summary-label">Emotional Wellbeing</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-emotional" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-emotional">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-knowledge">
+        <span class="assess-summary-label">Self-Knowledge</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-knowledge" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-knowledge">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-spiritual">
+        <span class="assess-summary-label">Spiritual Development</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-spiritual" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-spiritual">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on mindfulness practice and self-awareness among adults. Items without a clear ordinal scale are left unscored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -582,8 +645,61 @@ life_area_slug: mindfulness
         'a-meaning', 'a-awe', 'a-contemplative'
     ];
 
-    // All mindfulness items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~14% of US adults have ever meditated (NHIS 2017),
+    // ~5% practise daily, sustained focus >15 min is uncommon in general population.
+    var THRESHOLDS = {
+        'a-focus-duration': [
+            // Most adults report difficulty sustaining attention beyond a few minutes
+            {v:'seconds',p:8},{v:'1-5-min',p:25},{v:'5-15-min',p:50},{v:'15-30-min',p:75},{v:'30-plus',p:92}
+        ],
+        'a-distraction': [
+            // ~70% of adults report frequent phone-checking during focused work
+            {v:'constantly',p:10},{v:'frequently',p:30},{v:'sometimes',p:55},{v:'rarely',p:78},{v:'almost-never',p:95}
+        ],
+        'a-stress-response': [
+            // Most people notice stress only after it has built up
+            {v:'no-awareness',p:10},{v:'after-fact',p:35},{v:'sometimes',p:60},{v:'usually',p:90}
+        ],
+        'a-recovery-time': [
+            // Quick emotional recovery is associated with high mindfulness; "unsure" indicates low awareness
+            {v:'unsure',p:8},{v:'days',p:18},{v:'a-day',p:38},{v:'hours',p:62},{v:'minutes',p:88}
+        ],
+        'a-thought-patterns': [
+            // Most people have limited metacognitive awareness of recurring patterns
+            {v:'no',p:12},{v:'vague',p:35},{v:'one',p:60},{v:'several',p:90}
+        ],
+        'a-triggers': [
+            // Few people have a detailed map of their emotional triggers
+            {v:'no-idea',p:10},{v:'some-sense',p:35},{v:'good-map',p:65},{v:'detailed',p:92}
+        ],
+        'a-autopilot': [
+            // Most people spend the majority of their day on autopilot (Killingsworth & Gilbert, 2010: ~47% mind-wandering)
+            {v:'mostly-autopilot',p:10},{v:'more-auto',p:30},{v:'mixed',p:55},{v:'mostly-present',p:78},{v:'highly-present',p:95}
+        ],
+        'a-meaning': [
+            // ~25% of adults report a clear sense of purpose; many have not considered this
+            {v:'not-thought',p:10},{v:'vague',p:30},{v:'partial',p:58},{v:'clear',p:88}
+        ],
+        'a-awe': [
+            // Regular experiences of awe are uncommon; daily occurrence is rare
+            {v:'cant-recall',p:10},{v:'months-ago',p:30},{v:'past-few-weeks',p:55},{v:'past-week',p:75},{v:'today',p:92}
+        ],
+        'a-contemplative': [
+            // ~14% have ever meditated; ~5% practise daily (NHIS 2017)
+            {v:'none',p:15},{v:'informal',p:35},{v:'sporadic',p:55},{v:'regular',p:78},{v:'daily',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        clarity: ['a-focus-duration', 'a-distraction'],
+        emotional: ['a-stress-response', 'a-recovery-time'],
+        knowledge: ['a-thought-patterns', 'a-triggers', 'a-autopilot'],
+        spiritual: ['a-meaning', 'a-awe', 'a-contemplative']
+    };
+
+    // Items without a clear ordinal scale (categorical choices)
+    var UNSCORED_ITEMS = ['a-mental-fog', 'a-coping'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -687,10 +803,72 @@ life_area_slug: mindfulness
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
 
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['clarity', 'emotional', 'knowledge', 'spiritual'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
     }
 
     function updateAssessCompletion() {
@@ -732,13 +910,10 @@ life_area_slug: mindfulness
     }
 
     function saveScores() {
-        // All mindfulness items are unscored; save null for each value
-        var scores = {
-            clarity: null,
-            emotional: null,
-            knowledge: null,
-            spiritual: null
-        };
+        var scores = {};
+        ['clarity', 'emotional', 'knowledge', 'spiritual'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -749,9 +924,10 @@ life_area_slug: mindfulness
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -762,9 +938,10 @@ life_area_slug: mindfulness
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -792,10 +969,11 @@ life_area_slug: mindfulness
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

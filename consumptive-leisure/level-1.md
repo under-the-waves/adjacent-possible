@@ -196,6 +196,58 @@ life_area_slug: consumptive-leisure
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -354,7 +406,7 @@ life_area_slug: consumptive-leisure
 <div class="assess-input-group" id="ig-screen-time">
     <span class="assess-label">How much screen time do you spend per day on leisure activities?</span>
     <span class="assess-hint">Check your phone's screen time report or estimate from your typical evening routine.</span>
-    <select id="a-screen-time" onchange="handleAssessInput('a-screen-time')"><option value="">Select...</option><option value="over-6">Over 6 hours per day</option><option value="4-to-6">4 &ndash; 6 hours per day</option><option value="2-to-4">2 &ndash; 4 hours per day</option><option value="1-to-2">1 &ndash; 2 hours per day</option><option value="under-1">Under 1 hour per day</option></select>
+    <select id="a-screen-time" onchange="handleAssessInput('a-screen-time')"><option value="">Select...</option><option value="over-6">Over 6 hours per day</option><option value="4-to-6">4 &ndash; 6 hours per day</option><option value="2-to-4">2 &ndash; 4 hours per day</option><option value="1-to-2">1 &ndash; 2 hours per day</option><option value="under-1">Under 1 hour per day</option></select> <span class="assess-percentile-hint" id="pct-screen-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-screen-time" onchange="handleSkip('a-screen-time')"><label for="skip-screen-time">I know but prefer not to say</label></div>
 </div>
 
@@ -372,14 +424,14 @@ life_area_slug: consumptive-leisure
 <div class="assess-input-group" id="ig-learning-proportion">
     <span class="assess-label">What proportion of your leisure consumption teaches you something valuable?</span>
     <span class="assess-hint">Books, podcasts, documentaries, articles &ndash; versus passive scrolling, background television, etc.</span>
-    <select id="a-learning-proportion" onchange="handleAssessInput('a-learning-proportion')"><option value="">Select...</option><option value="almost-none">Almost none &ndash; my leisure is purely passive</option><option value="small">Small &ndash; under 20%</option><option value="moderate">Moderate &ndash; roughly 20 &ndash; 40%</option><option value="substantial">Substantial &ndash; roughly 40 &ndash; 60%</option><option value="majority">Majority &ndash; over 60% of my leisure has a learning element</option></select>
+    <select id="a-learning-proportion" onchange="handleAssessInput('a-learning-proportion')"><option value="">Select...</option><option value="almost-none">Almost none &ndash; my leisure is purely passive</option><option value="small">Small &ndash; under 20%</option><option value="moderate">Moderate &ndash; roughly 20 &ndash; 40%</option><option value="substantial">Substantial &ndash; roughly 40 &ndash; 60%</option><option value="majority">Majority &ndash; over 60% of my leisure has a learning element</option></select> <span class="assess-percentile-hint" id="pct-learning-proportion"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-learning-proportion" onchange="handleSkip('a-learning-proportion')"><label for="skip-learning-proportion">I know but prefer not to say</label></div>
 </div>
 
 <div class="assess-input-group" id="ig-books-per-year">
     <span class="assess-label">How many books did you finish in the past year?</span>
     <span class="assess-hint">Include audiobooks and e-books. A rough number is fine.</span>
-    <select id="a-books-per-year" onchange="handleAssessInput('a-books-per-year')"><option value="">Select...</option><option value="none">None</option><option value="1-to-3">1 &ndash; 3 books</option><option value="4-to-8">4 &ndash; 8 books</option><option value="9-to-15">9 &ndash; 15 books</option><option value="over-15">Over 15 books</option></select>
+    <select id="a-books-per-year" onchange="handleAssessInput('a-books-per-year')"><option value="">Select...</option><option value="none">None</option><option value="1-to-3">1 &ndash; 3 books</option><option value="4-to-8">4 &ndash; 8 books</option><option value="9-to-15">9 &ndash; 15 books</option><option value="over-15">Over 15 books</option></select> <span class="assess-percentile-hint" id="pct-books-per-year"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-books-per-year" onchange="handleSkip('a-books-per-year')"><label for="skip-books-per-year">I know but prefer not to say</label></div>
 </div>
 
@@ -414,6 +466,21 @@ life_area_slug: consumptive-leisure
     <select id="a-guilt-free" onchange="handleAssessInput('a-guilt-free')"><option value="">Select...</option><option value="never">Never &ndash; I always feel I should be doing something productive</option><option value="rarely">Rarely &ndash; guilt creeps in most of the time</option><option value="sometimes">Sometimes &ndash; depends on how busy I am</option><option value="mostly">Mostly &ndash; I can usually relax without guilt</option><option value="always">Always &ndash; I fully embrace leisure time without guilt</option></select>
     <div class="assess-skip"><input type="checkbox" id="skip-guilt-free" onchange="handleSkip('a-guilt-free')"><label for="skip-guilt-free">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-restoration">
+        <span class="assess-summary-label">Restoration</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-restoration" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-restoration">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-enrichment">
+        <span class="assess-summary-label">Enrichment</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-enrichment" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-enrichment">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on leisure screen time, reading habits, and learning behaviour among adults. Items without reliable population data are not scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -465,22 +532,312 @@ life_area_slug: consumptive-leisure
         'a-learning-proportion', 'a-books-per-year', 'a-retention',
         'a-genuine-pleasure', 'a-wasted-time', 'a-guilt-free'
     ];
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
-    function loadProgress() { if (typeof APStorage === 'undefined') return {}; var all = APStorage.load('ap-level1-progress') || {}; return all[AREA] || {}; }
-    function saveProgress(progress) { if (typeof APStorage === 'undefined') return; var all = APStorage.load('ap-level1-progress') || {}; all[AREA] = progress; APStorage.save('ap-level1-progress', all); }
-    function updateUI() { var progress = loadProgress(); var doneCount = 0; var firstIncomplete = null; STEPS.forEach(function(step, i) { var el = document.getElementById('step-' + step); var seg = document.getElementById('prog-' + (i + 1)); if (!el || !seg) return; if (progress[step]) { el.classList.add('done'); el.classList.remove('active'); seg.className = 'l1-progress-segment done'; doneCount++; } else if (!firstIncomplete) { firstIncomplete = step; el.classList.add('active'); el.classList.remove('done'); seg.className = 'l1-progress-segment active'; } else { el.classList.remove('active', 'done'); seg.className = 'l1-progress-segment'; } }); var label = document.getElementById('progressLabel'); if (doneCount >= STEPS.length) { if (label) label.textContent = 'All steps complete'; var banner = document.getElementById('completeBanner'); if (banner) banner.classList.add('visible'); } else { if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length; } if (firstIncomplete) { openStep(firstIncomplete); } }
-    function openStep(step) { STEPS.forEach(function(s) { var el = document.getElementById('step-' + s); if (el) el.classList.remove('open'); }); var target = document.getElementById('step-' + step); if (target) { target.classList.add('open'); setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); } }
-    window.toggleStep = function(step) { var el = document.getElementById('step-' + step); if (el) el.classList.toggle('open'); };
-    window.completeStep = function(step) { if (step === 'assess') saveScores(); var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI(); var idx = STEPS.indexOf(step); if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); } };
-    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
-    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
-    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
-    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
-    function saveAnswers() { var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; }); var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers)); var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); } }
-    function saveScores() { var scores = { restoration: null, enrichment: null, enjoyment: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
-    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    function restoreAssessment() { var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return; ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); }); updateAssessRecorded(); updateAssessCompletion(); }
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: average leisure screen time is ~5 hrs/day,
+    // ~24% of adults read zero books, most leisure consumption is passive.
+    var THRESHOLDS = {
+        'a-screen-time': [
+            // Average leisure screen time is ~5 hrs/day; under 1 hr is very unusual
+            {v:'over-6',p:5},{v:'4-to-6',p:20},{v:'2-to-4',p:50},{v:'1-to-2',p:78},{v:'under-1',p:95}
+        ],
+        'a-learning-proportion': [
+            // Most people's leisure is purely passive; over 60% learning-oriented is very rare
+            {v:'almost-none',p:10},{v:'small',p:30},{v:'moderate',p:55},{v:'substantial',p:78},{v:'majority',p:95}
+        ],
+        'a-books-per-year': [
+            // ~24% read zero books; median is ~4; over 15 is top few percent
+            {v:'none',p:12},{v:'1-to-3',p:35},{v:'4-to-8',p:58},{v:'9-to-15',p:80},{v:'over-15',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        restoration: ['a-screen-time'],
+        enrichment: ['a-learning-proportion', 'a-books-per-year']
+    };
+
+    // Items without reliable population data for percentile scoring
+    var UNSCORED_ITEMS = [
+        'a-energy-after', 'a-wind-down',
+        'a-retention',
+        'a-genuine-pleasure', 'a-wasted-time', 'a-guilt-free'
+    ];
+
+    function loadProgress() {
+        if (typeof APStorage === 'undefined') return {};
+        var all = APStorage.load('ap-level1-progress') || {};
+        return all[AREA] || {};
+    }
+
+    function saveProgress(progress) {
+        if (typeof APStorage === 'undefined') return;
+        var all = APStorage.load('ap-level1-progress') || {};
+        all[AREA] = progress;
+        APStorage.save('ap-level1-progress', all);
+    }
+
+    function updateUI() {
+        var progress = loadProgress();
+        var doneCount = 0;
+        var firstIncomplete = null;
+
+        STEPS.forEach(function(step, i) {
+            var el = document.getElementById('step-' + step);
+            var seg = document.getElementById('prog-' + (i + 1));
+            if (!el || !seg) return;
+
+            if (progress[step]) {
+                el.classList.add('done');
+                el.classList.remove('active');
+                seg.className = 'l1-progress-segment done';
+                doneCount++;
+            } else if (!firstIncomplete) {
+                firstIncomplete = step;
+                el.classList.add('active');
+                el.classList.remove('done');
+                seg.className = 'l1-progress-segment active';
+            } else {
+                el.classList.remove('active', 'done');
+                seg.className = 'l1-progress-segment';
+            }
+        });
+
+        var label = document.getElementById('progressLabel');
+        if (doneCount >= STEPS.length) {
+            if (label) label.textContent = 'All steps complete';
+            var banner = document.getElementById('completeBanner');
+            if (banner) banner.classList.add('visible');
+        } else {
+            if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
+        }
+
+        if (firstIncomplete) {
+            openStep(firstIncomplete);
+        }
+    }
+
+    function openStep(step) {
+        STEPS.forEach(function(s) {
+            var el = document.getElementById('step-' + s);
+            if (el) el.classList.remove('open');
+        });
+        var target = document.getElementById('step-' + step);
+        if (target) {
+            target.classList.add('open');
+            setTimeout(function() {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    }
+
+    window.toggleStep = function(step) {
+        var el = document.getElementById('step-' + step);
+        if (el) el.classList.toggle('open');
+    };
+
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        var progress = loadProgress();
+        progress[step] = true;
+        saveProgress(progress);
+        updateUI();
+
+        var idx = STEPS.indexOf(step);
+        if (idx >= 0 && idx < STEPS.length - 1) {
+            var next = STEPS[idx + 1];
+            setTimeout(function() { openStep(next); }, 300);
+        }
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['restoration', 'enrichment'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-assess') || {};
+            all[AREA] = checklist;
+            APStorage.save('ap-level1-assess', all);
+        }
+    }
+
+    function saveScores() {
+        var scores = {};
+        ['restoration', 'enrichment'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
+        scores.enjoyment = null;
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
+        }
+    }
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>

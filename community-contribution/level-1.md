@@ -196,6 +196,58 @@ life_area_slug: community-contribution
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -347,14 +399,14 @@ life_area_slug: community-contribution
 <div class="assess-input-group" id="ig-volunteer-hours">
     <span class="assess-label">How many hours per month do you spend on community activities or volunteering?</span>
     <span class="assess-hint">Include formal volunteering, informal helping, neighbourhood activities, and civic participation.</span>
-    <select id="a-volunteer-hours" onchange="handleAssessInput('a-volunteer-hours')"><option value="">Select...</option><option value="none">None</option><option value="1-to-3">1 &ndash; 3 hours per month</option><option value="4-to-8">4 &ndash; 8 hours per month</option><option value="9-to-16">9 &ndash; 16 hours per month</option><option value="over-16">Over 16 hours per month</option></select>
+    <select id="a-volunteer-hours" onchange="handleAssessInput('a-volunteer-hours')"><option value="">Select...</option><option value="none">None</option><option value="1-to-3">1 &ndash; 3 hours per month</option><option value="4-to-8">4 &ndash; 8 hours per month</option><option value="9-to-16">9 &ndash; 16 hours per month</option><option value="over-16">Over 16 hours per month</option></select> <span class="assess-percentile-hint" id="pct-volunteer-hours"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-volunteer-hours" onchange="handleSkip('a-volunteer-hours')"><label for="skip-volunteer-hours">I know but prefer not to say</label></div>
 </div>
 
 <div class="assess-input-group" id="ig-local-orgs">
     <span class="assess-label">How many community organisations or volunteer opportunities can you name in your area?</span>
     <span class="assess-hint">Food banks, neighbourhood associations, school boards, environmental groups, sports clubs, etc.</span>
-    <select id="a-local-orgs" onchange="handleAssessInput('a-local-orgs')"><option value="">Select...</option><option value="none">None &ndash; I'm not aware of any</option><option value="one-or-two">One or two</option><option value="three-to-five">Three to five</option><option value="six-to-ten">Six to ten</option><option value="many">Many &ndash; I'm well connected to local organisations</option></select>
+    <select id="a-local-orgs" onchange="handleAssessInput('a-local-orgs')"><option value="">Select...</option><option value="none">None &ndash; I'm not aware of any</option><option value="one-or-two">One or two</option><option value="three-to-five">Three to five</option><option value="six-to-ten">Six to ten</option><option value="many">Many &ndash; I'm well connected to local organisations</option></select> <span class="assess-percentile-hint" id="pct-local-orgs"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-local-orgs" onchange="handleSkip('a-local-orgs')"><label for="skip-local-orgs">I know but prefer not to say</label></div>
 </div>
 
@@ -379,7 +431,7 @@ life_area_slug: community-contribution
 <div class="assess-input-group" id="ig-local-events">
     <span class="assess-label">Do you attend any regular community events, meetings, or gatherings?</span>
     <span class="assess-hint">Parish council meetings, community markets, neighbourhood clean-ups, local festivals, etc.</span>
-    <select id="a-local-events" onchange="handleAssessInput('a-local-events')"><option value="">Select...</option><option value="never">Never &ndash; I don't attend community events</option><option value="rarely">Rarely &ndash; once or twice a year at most</option><option value="occasionally">Occasionally &ndash; a few times a year</option><option value="regularly">Regularly &ndash; monthly or more</option><option value="frequently">Frequently &ndash; weekly involvement in community activities</option></select>
+    <select id="a-local-events" onchange="handleAssessInput('a-local-events')"><option value="">Select...</option><option value="never">Never &ndash; I don't attend community events</option><option value="rarely">Rarely &ndash; once or twice a year at most</option><option value="occasionally">Occasionally &ndash; a few times a year</option><option value="regularly">Regularly &ndash; monthly or more</option><option value="frequently">Frequently &ndash; weekly involvement in community activities</option></select> <span class="assess-percentile-hint" id="pct-local-events"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-local-events" onchange="handleSkip('a-local-events')"><label for="skip-local-events">I know but prefer not to say</label></div>
 </div>
 
@@ -414,6 +466,21 @@ life_area_slug: community-contribution
     <select id="a-barriers" onchange="handleAssessInput('a-barriers')"><option value="">Select...</option><option value="no-interest">No interest &ndash; I don't want more community involvement</option><option value="time">Time &ndash; too busy with work and other commitments</option><option value="social-barriers">Social barriers &ndash; anxiety, feeling like an outsider, or not knowing anyone</option><option value="logistics">Logistics &ndash; I don't know where to start or what's available</option><option value="none">None &ndash; I'm already as involved as I want to be</option></select>
     <div class="assess-skip"><input type="checkbox" id="skip-barriers" onchange="handleSkip('a-barriers')"><label for="skip-barriers">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-impact">
+        <span class="assess-summary-label">Impact</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-impact" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-impact">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-belonging">
+        <span class="assess-summary-label">Belonging</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-belonging" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-belonging">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on volunteering rates, community engagement, and civic participation among adults. Items without reliable population data are not scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -465,22 +532,312 @@ life_area_slug: community-contribution
         'a-neighbours', 'a-local-events', 'a-rootedness',
         'a-enjoy-volunteering', 'a-purpose', 'a-barriers'
     ];
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
-    function loadProgress() { if (typeof APStorage === 'undefined') return {}; var all = APStorage.load('ap-level1-progress') || {}; return all[AREA] || {}; }
-    function saveProgress(progress) { if (typeof APStorage === 'undefined') return; var all = APStorage.load('ap-level1-progress') || {}; all[AREA] = progress; APStorage.save('ap-level1-progress', all); }
-    function updateUI() { var progress = loadProgress(); var doneCount = 0; var firstIncomplete = null; STEPS.forEach(function(step, i) { var el = document.getElementById('step-' + step); var seg = document.getElementById('prog-' + (i + 1)); if (!el || !seg) return; if (progress[step]) { el.classList.add('done'); el.classList.remove('active'); seg.className = 'l1-progress-segment done'; doneCount++; } else if (!firstIncomplete) { firstIncomplete = step; el.classList.add('active'); el.classList.remove('done'); seg.className = 'l1-progress-segment active'; } else { el.classList.remove('active', 'done'); seg.className = 'l1-progress-segment'; } }); var label = document.getElementById('progressLabel'); if (doneCount >= STEPS.length) { if (label) label.textContent = 'All steps complete'; var banner = document.getElementById('completeBanner'); if (banner) banner.classList.add('visible'); } else { if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length; } if (firstIncomplete) { openStep(firstIncomplete); } }
-    function openStep(step) { STEPS.forEach(function(s) { var el = document.getElementById('step-' + s); if (el) el.classList.remove('open'); }); var target = document.getElementById('step-' + step); if (target) { target.classList.add('open'); setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); } }
-    window.toggleStep = function(step) { var el = document.getElementById('step-' + step); if (el) el.classList.toggle('open'); };
-    window.completeStep = function(step) { if (step === 'assess') saveScores(); var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI(); var idx = STEPS.indexOf(step); if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); } };
-    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
-    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
-    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
-    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
-    function saveAnswers() { var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; }); var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers)); var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); } }
-    function saveScores() { var scores = { impact: null, belonging: null, fulfilment: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
-    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    function restoreAssessment() { var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return; ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); }); updateAssessRecorded(); updateAssessCompletion(); }
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: only ~23% of adults formally volunteer,
+    // median volunteer commits ~50 hrs/year; weekly community event attendance is rare.
+    var THRESHOLDS = {
+        'a-volunteer-hours': [
+            // ~77% do zero volunteer hours; over 16 hrs/month (~200/yr) is top few percent
+            {v:'none',p:12},{v:'1-to-3',p:40},{v:'4-to-8',p:65},{v:'9-to-16',p:82},{v:'over-16',p:96}
+        ],
+        'a-local-orgs': [
+            // Most people cannot name community organisations; being well connected is rare
+            {v:'none',p:10},{v:'one-or-two',p:30},{v:'three-to-five',p:55},{v:'six-to-ten',p:78},{v:'many',p:95}
+        ],
+        'a-local-events': [
+            // Most adults never attend community events; weekly involvement is very unusual
+            {v:'never',p:10},{v:'rarely',p:30},{v:'occasionally',p:55},{v:'regularly',p:78},{v:'frequently',p:96}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        impact: ['a-volunteer-hours', 'a-local-orgs'],
+        belonging: ['a-local-events']
+    };
+
+    // Items without reliable population data for percentile scoring
+    var UNSCORED_ITEMS = [
+        'a-skills-match',
+        'a-neighbours', 'a-rootedness',
+        'a-enjoy-volunteering', 'a-purpose', 'a-barriers'
+    ];
+
+    function loadProgress() {
+        if (typeof APStorage === 'undefined') return {};
+        var all = APStorage.load('ap-level1-progress') || {};
+        return all[AREA] || {};
+    }
+
+    function saveProgress(progress) {
+        if (typeof APStorage === 'undefined') return;
+        var all = APStorage.load('ap-level1-progress') || {};
+        all[AREA] = progress;
+        APStorage.save('ap-level1-progress', all);
+    }
+
+    function updateUI() {
+        var progress = loadProgress();
+        var doneCount = 0;
+        var firstIncomplete = null;
+
+        STEPS.forEach(function(step, i) {
+            var el = document.getElementById('step-' + step);
+            var seg = document.getElementById('prog-' + (i + 1));
+            if (!el || !seg) return;
+
+            if (progress[step]) {
+                el.classList.add('done');
+                el.classList.remove('active');
+                seg.className = 'l1-progress-segment done';
+                doneCount++;
+            } else if (!firstIncomplete) {
+                firstIncomplete = step;
+                el.classList.add('active');
+                el.classList.remove('done');
+                seg.className = 'l1-progress-segment active';
+            } else {
+                el.classList.remove('active', 'done');
+                seg.className = 'l1-progress-segment';
+            }
+        });
+
+        var label = document.getElementById('progressLabel');
+        if (doneCount >= STEPS.length) {
+            if (label) label.textContent = 'All steps complete';
+            var banner = document.getElementById('completeBanner');
+            if (banner) banner.classList.add('visible');
+        } else {
+            if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
+        }
+
+        if (firstIncomplete) {
+            openStep(firstIncomplete);
+        }
+    }
+
+    function openStep(step) {
+        STEPS.forEach(function(s) {
+            var el = document.getElementById('step-' + s);
+            if (el) el.classList.remove('open');
+        });
+        var target = document.getElementById('step-' + step);
+        if (target) {
+            target.classList.add('open');
+            setTimeout(function() {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    }
+
+    window.toggleStep = function(step) {
+        var el = document.getElementById('step-' + step);
+        if (el) el.classList.toggle('open');
+    };
+
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        var progress = loadProgress();
+        progress[step] = true;
+        saveProgress(progress);
+        updateUI();
+
+        var idx = STEPS.indexOf(step);
+        if (idx >= 0 && idx < STEPS.length - 1) {
+            var next = STEPS[idx + 1];
+            setTimeout(function() { openStep(next); }, 300);
+        }
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['impact', 'belonging'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-assess') || {};
+            all[AREA] = checklist;
+            APStorage.save('ap-level1-assess', all);
+        }
+    }
+
+    function saveScores() {
+        var scores = {};
+        ['impact', 'belonging'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
+        scores.fulfilment = null;
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
+        }
+    }
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>

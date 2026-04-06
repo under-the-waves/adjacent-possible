@@ -226,6 +226,58 @@ life_area_slug: cognitive-skills
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -408,7 +460,7 @@ life_area_slug: cognitive-skills
         <option value="one-method">One method &ndash; I have a single technique I use fairly consistently</option>
         <option value="several">Several &ndash; I use multiple techniques depending on the material</option>
         <option value="systematic">Systematic &ndash; I have a structured retention system I rely on daily</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-memory-techniques"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-memory-techniques" onchange="handleSkip('a-memory-techniques')"><label for="skip-memory-techniques">I know but prefer not to say</label></div>
 </div>
 
@@ -440,7 +492,7 @@ life_area_slug: cognitive-skills
         <option value="25-50">25&ndash;50 minutes</option>
         <option value="50-90">50&ndash;90 minutes</option>
         <option value="over-90">Over 90 minutes</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-focus-duration"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-focus-duration" onchange="handleSkip('a-focus-duration')"><label for="skip-focus-duration">I know but prefer not to say</label></div>
 </div>
 
@@ -486,7 +538,7 @@ life_area_slug: cognitive-skills
         <option value="basic">Basic structure &ndash; I break them down but don't use formal methods</option>
         <option value="methodical">Methodical &ndash; I have a consistent approach I follow</option>
         <option value="systematic">Systematic &ndash; I select and apply appropriate frameworks depending on the problem</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-problem-approach"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-problem-approach" onchange="handleSkip('a-problem-approach')"><label for="skip-problem-approach">I know but prefer not to say</label></div>
 </div>
 
@@ -565,6 +617,26 @@ life_area_slug: cognitive-skills
 </div>
 </div>
 
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-memory">
+        <span class="assess-summary-label">Memory</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-memory" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-memory">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-focus">
+        <span class="assess-summary-label">Focus</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-focus" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-focus">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-reasoning">
+        <span class="assess-summary-label">Reasoning &amp; Problem-Solving</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-reasoning" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-reasoning">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on cognitive practices among adults. Items without reliable population data are not scored.</p>
+</div>
+
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
@@ -616,8 +688,37 @@ life_area_slug: cognitive-skills
         'a-sleep-cognition', 'a-exercise-cognition', 'a-lifestyle-deliberate'
     ];
 
-    // All cognitive-skills items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: fewer than 3% use evidence-based memory techniques,
+    // fewer than 10% sustain focus 30+ min without distraction, most use no formal reasoning methods.
+    var THRESHOLDS = {
+        'a-memory-techniques': [
+            // ~97% use no deliberate memory techniques; systematic daily use is extremely rare
+            {v:'none',p:15},{v:'occasional',p:40},{v:'one-method',p:65},{v:'several',p:85},{v:'systematic',p:97}
+        ],
+        'a-focus-duration': [
+            // ~90% cannot sustain focus for 30 min; over 90 min is exceptional
+            {v:'under-10',p:10},{v:'10-25',p:30},{v:'25-50',p:55},{v:'50-90',p:80},{v:'over-90',p:95}
+        ],
+        'a-problem-approach': [
+            // Most people use no structured problem-solving approach; systematic framework use is rare
+            {v:'avoid',p:10},{v:'reactive',p:30},{v:'basic',p:55},{v:'methodical',p:78},{v:'systematic',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        memory: ['a-memory-techniques'],
+        focus: ['a-focus-duration'],
+        reasoning: ['a-problem-approach']
+    };
+
+    // Items without reliable population data for percentile scoring
+    var UNSCORED_ITEMS = [
+        'a-recall-names', 'a-retention',
+        'a-distraction-triggers', 'a-attention-practices',
+        'a-reasoning-biases', 'a-reasoning-training',
+        'a-sleep-cognition', 'a-exercise-cognition', 'a-lifestyle-deliberate'
+    ];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -667,7 +768,6 @@ life_area_slug: cognitive-skills
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -705,6 +805,71 @@ life_area_slug: cognitive-skills
             setTimeout(function() { openStep(next); }, 300);
         }
     };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['memory', 'focus', 'reasoning'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
 
     // --- Assessment helpers ---
 
@@ -749,13 +914,11 @@ life_area_slug: cognitive-skills
             }
             answers[id] = { value: value, skipped: skipped };
         });
-        // Save raw answers directly to localStorage (NOT via APStorage)
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
 
-        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -766,13 +929,11 @@ life_area_slug: cognitive-skills
     }
 
     function saveScores() {
-        // All cognitive-skills items are unscored; save null for each value
-        var scores = {
-            memory: null,
-            focus: null,
-            reasoning: null,
-            lifestyle: null
-        };
+        var scores = {};
+        ['memory', 'focus', 'reasoning'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
+        scores.lifestyle = null;
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -780,11 +941,11 @@ life_area_slug: cognitive-skills
         }
     }
 
-    // --- Event handlers ---
-
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
+        updateAssessSummary();
         updateAssessRecorded();
         updateAssessCompletion();
     };
@@ -796,13 +957,13 @@ life_area_slug: cognitive-skills
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
+        updateAssessSummary();
         updateAssessRecorded();
         updateAssessCompletion();
     };
-
-    // --- Restore saved answers ---
 
     function restoreAssessment() {
         var allAnswers = {};
@@ -826,9 +987,11 @@ life_area_slug: cognitive-skills
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
+        updateAssessSummary();
         updateAssessRecorded();
         updateAssessCompletion();
     }

@@ -184,18 +184,58 @@ life_area_slug: behaviours
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -372,7 +412,7 @@ life_area_slug: behaviours
         <option value="vague">Vague sense &ndash; I know some triggers but not the full picture</option>
         <option value="good-map">Good map &ndash; I can name the main triggers for each behaviour</option>
         <option value="detailed">Detailed &ndash; I know triggers, context, and early warning signs</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-triggers"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-triggers" onchange="handleSkip('a-triggers')"><label for="skip-triggers">I know but prefer not to say</label></div>
 </div>
 
@@ -385,7 +425,7 @@ life_area_slug: behaviours
         <option value="sometimes">Sometimes &ndash; I can occasionally catch myself</option>
         <option value="usually">Usually &ndash; I notice the urge but sometimes act on it anyway</option>
         <option value="reliable">Reliably &ndash; I can pause and choose a different response</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-pause"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-pause" onchange="handleSkip('a-pause')"><label for="skip-pause">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -417,7 +457,7 @@ life_area_slug: behaviours
         <option value="mixed">Mixed &ndash; some help, some make things worse</option>
         <option value="mostly-help">Mostly help &ndash; my strategies generally work</option>
         <option value="no-strategies">I don't have deliberate coping strategies</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-coping"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-coping" onchange="handleSkip('a-coping')"><label for="skip-coping">I know but prefer not to say</label></div>
 </div>
 
@@ -431,7 +471,7 @@ life_area_slug: behaviours
         <option value="weekly">About once a week</option>
         <option value="occasionally">Occasionally &ndash; a few times a month</option>
         <option value="rarely">Rarely or never</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-emotional-frequency"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-emotional-frequency" onchange="handleSkip('a-emotional-frequency')"><label for="skip-emotional-frequency">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -464,7 +504,7 @@ life_area_slug: behaviours
         <option value="depends">Depends on the relationship &ndash; easy with some, hard with others</option>
         <option value="mostly-easy">Mostly easy &ndash; I can usually express my needs clearly</option>
         <option value="comfortable">Comfortable &ndash; boundary-setting is a natural part of my relationships</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-boundaries"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-boundaries" onchange="handleSkip('a-boundaries')"><label for="skip-boundaries">I know but prefer not to say</label></div>
 </div>
 
@@ -478,7 +518,7 @@ life_area_slug: behaviours
         <option value="subtly">Subtly &ndash; I attend but disengage (go quiet, leave early)</option>
         <option value="rarely">Rarely &ndash; I generally face social situations even when uncomfortable</option>
         <option value="never">Never &ndash; social situations don't cause me avoidance</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-social-avoidance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-social-avoidance" onchange="handleSkip('a-social-avoidance')"><label for="skip-social-avoidance">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -495,7 +535,7 @@ life_area_slug: behaviours
         <option value="always-failed">Always failed &ndash; nothing has stuck</option>
         <option value="mixed">Mixed &ndash; some changes stuck, others didn't</option>
         <option value="mostly-succeeded">Mostly succeeded &ndash; I can change when I commit</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-past-attempts"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-past-attempts" onchange="handleSkip('a-past-attempts')"><label for="skip-past-attempts">I know but prefer not to say</label></div>
 </div>
 
@@ -509,7 +549,7 @@ life_area_slug: behaviours
         <option value="some">Some &ndash; a mix of resilient and fragile habits</option>
         <option value="few">Few &ndash; most of my routines hold up</option>
         <option value="none">None &ndash; my routines are robust through disruption</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-disruption"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-disruption" onchange="handleSkip('a-disruption')"><label for="skip-disruption">I know but prefer not to say</label></div>
 </div>
 
@@ -522,12 +562,35 @@ life_area_slug: behaviours
         <option value="one">One backup &ndash; but I rarely use it</option>
         <option value="several">Several alternatives &ndash; I can switch between them</option>
         <option value="flexible">Flexible toolkit &ndash; I adapt my approach to the situation</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-backup-strategies"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-backup-strategies" onchange="handleSkip('a-backup-strategies')"><label for="skip-backup-strategies">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-freedom">
+        <span class="assess-summary-label">Freedom &amp; Control</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-freedom" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-freedom">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-emotional">
+        <span class="assess-summary-label">Emotional Regulation</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-emotional" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-emotional">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-social">
+        <span class="assess-summary-label">Social &amp; Relational Patterns</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-social" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-social">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-resilience">
+        <span class="assess-summary-label">Resilience &amp; Adaptability</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-resilience" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-resilience">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on behavioural self-regulation among adults. Items without a clear ordinal scale are left unscored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -578,8 +641,57 @@ life_area_slug: behaviours
         'a-past-attempts', 'a-disruption', 'a-backup-strategies'
     ];
 
-    // All behaviours items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~24% who would benefit from behavioural change actually address it,
+    // relapse rates for substance/habit change are 40-60% (NIDA), most people lack structured coping.
+    var THRESHOLDS = {
+        'a-triggers': [
+            // Most people have only a vague sense of their behavioural triggers
+            {v:'no-idea',p:10},{v:'vague',p:35},{v:'good-map',p:65},{v:'detailed',p:92}
+        ],
+        'a-pause': [
+            // Reliably pausing between trigger and response requires significant practice
+            {v:'no-pause',p:12},{v:'sometimes',p:38},{v:'usually',p:68},{v:'reliable',p:92}
+        ],
+        'a-coping': [
+            // Most people have mixed or counterproductive coping; effective strategies are uncommon
+            {v:'mostly-worse',p:10},{v:'no-strategies',p:25},{v:'mixed',p:55},{v:'mostly-help',p:85}
+        ],
+        'a-emotional-frequency': [
+            // Daily regrettable actions are common; rarely or never is uncommon
+            {v:'daily',p:8},{v:'several-weekly',p:22},{v:'weekly',p:45},{v:'occasionally',p:70},{v:'rarely',p:92}
+        ],
+        'a-boundaries': [
+            // Most people find boundary-setting difficult; comfortable boundary-setting is uncommon
+            {v:'very-difficult',p:8},{v:'difficult',p:25},{v:'depends',p:50},{v:'mostly-easy',p:75},{v:'comfortable',p:92}
+        ],
+        'a-social-avoidance': [
+            // Social avoidance is common; facing situations consistently despite discomfort is uncommon
+            {v:'frequently',p:10},{v:'sometimes',p:30},{v:'subtly',p:50},{v:'rarely',p:75},{v:'never',p:92}
+        ],
+        'a-past-attempts': [
+            // Most behaviour change attempts fail; consistent success is uncommon
+            {v:'never-tried',p:12},{v:'always-failed',p:25},{v:'mixed',p:55},{v:'mostly-succeeded',p:88}
+        ],
+        'a-disruption': [
+            // Most people's routines collapse under stress; robustness is rare
+            {v:'all',p:8},{v:'most',p:25},{v:'some',p:50},{v:'few',p:75},{v:'none',p:95}
+        ],
+        'a-backup-strategies': [
+            // Most people rely on one strategy or default to something unhelpful
+            {v:'none',p:12},{v:'one',p:35},{v:'several',p:65},{v:'flexible',p:92}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        freedom: ['a-triggers', 'a-pause'],
+        emotional: ['a-coping', 'a-emotional-frequency'],
+        social: ['a-boundaries', 'a-social-avoidance'],
+        resilience: ['a-past-attempts', 'a-disruption', 'a-backup-strategies']
+    };
+
+    // Items without a clear ordinal scale (categorical choices)
+    var UNSCORED_ITEMS = ['a-compulsive-patterns', 'a-emotional-triggers', 'a-interpersonal-defaults'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -683,10 +795,72 @@ life_area_slug: behaviours
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
 
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['freedom', 'emotional', 'social', 'resilience'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
     }
 
     function updateAssessCompletion() {
@@ -728,13 +902,10 @@ life_area_slug: behaviours
     }
 
     function saveScores() {
-        // All behaviours items are unscored; save null for each value
-        var scores = {
-            freedom: null,
-            emotional: null,
-            social: null,
-            resilience: null
-        };
+        var scores = {};
+        ['freedom', 'emotional', 'social', 'resilience'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -745,9 +916,10 @@ life_area_slug: behaviours
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -758,9 +930,10 @@ life_area_slug: behaviours
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -788,10 +961,11 @@ life_area_slug: behaviours
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

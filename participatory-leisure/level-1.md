@@ -196,6 +196,58 @@ life_area_slug: participatory-leisure
     display: none;
 }
 .assess-recorded.visible { display: block; }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -354,7 +406,7 @@ life_area_slug: participatory-leisure
 <div class="assess-input-group" id="ig-group-membership">
     <span class="assess-label">Do you belong to any clubs, groups, or communities organised around a shared activity?</span>
     <span class="assess-hint">Sports teams, book clubs, choirs, gaming groups, craft circles, volunteer organisations, etc.</span>
-    <select id="a-group-membership" onchange="handleAssessInput('a-group-membership')"><option value="">Select...</option><option value="none">None &ndash; I'm not a member of any groups</option><option value="lapsed">Lapsed &ndash; I used to be but stopped attending</option><option value="one">One &ndash; I belong to one group</option><option value="two-to-three">Two to three groups</option><option value="several">Several &ndash; four or more active memberships</option></select>
+    <select id="a-group-membership" onchange="handleAssessInput('a-group-membership')"><option value="">Select...</option><option value="none">None &ndash; I'm not a member of any groups</option><option value="lapsed">Lapsed &ndash; I used to be but stopped attending</option><option value="one">One &ndash; I belong to one group</option><option value="two-to-three">Two to three groups</option><option value="several">Several &ndash; four or more active memberships</option></select> <span class="assess-percentile-hint" id="pct-group-membership"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-group-membership" onchange="handleSkip('a-group-membership')"><label for="skip-group-membership">I know but prefer not to say</label></div>
 </div>
 
@@ -372,7 +424,7 @@ life_area_slug: participatory-leisure
 <div class="assess-input-group" id="ig-skill-level">
     <span class="assess-label">Do you have at least one leisure activity where you've developed meaningful skill over time?</span>
     <span class="assess-hint">Musical instruments, a sport, a craft, cooking, gardening, a game &ndash; anything where you've noticeably improved.</span>
-    <select id="a-skill-level" onchange="handleAssessInput('a-skill-level')"><option value="">Select...</option><option value="no">No &ndash; I haven't stuck with anything long enough</option><option value="beginner">Beginner &ndash; I'm learning something but still very early</option><option value="intermediate">Intermediate &ndash; noticeable improvement in one activity</option><option value="skilled">Skilled &ndash; genuine competence in one or two activities</option><option value="expert">Expert &ndash; high-level skill in at least one leisure pursuit</option></select>
+    <select id="a-skill-level" onchange="handleAssessInput('a-skill-level')"><option value="">Select...</option><option value="no">No &ndash; I haven't stuck with anything long enough</option><option value="beginner">Beginner &ndash; I'm learning something but still very early</option><option value="intermediate">Intermediate &ndash; noticeable improvement in one activity</option><option value="skilled">Skilled &ndash; genuine competence in one or two activities</option><option value="expert">Expert &ndash; high-level skill in at least one leisure pursuit</option></select> <span class="assess-percentile-hint" id="pct-skill-level"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-skill-level" onchange="handleSkip('a-skill-level')"><label for="skip-skill-level">I know but prefer not to say</label></div>
 </div>
 
@@ -397,7 +449,7 @@ life_area_slug: participatory-leisure
 <div class="assess-input-group" id="ig-new-activities">
     <span class="assess-label">How many genuinely new leisure activities have you tried in the past year?</span>
     <span class="assess-hint">Count anything genuinely new to you &ndash; a new sport, creative medium, game, or outdoor activity.</span>
-    <select id="a-new-activities" onchange="handleAssessInput('a-new-activities')"><option value="">Select...</option><option value="none">None &ndash; I've stuck with the same activities</option><option value="one">One &ndash; I tried one new thing</option><option value="two-to-three">Two to three new activities</option><option value="four-to-five">Four to five new activities</option><option value="many">Many &ndash; six or more new activities</option></select>
+    <select id="a-new-activities" onchange="handleAssessInput('a-new-activities')"><option value="">Select...</option><option value="none">None &ndash; I've stuck with the same activities</option><option value="one">One &ndash; I tried one new thing</option><option value="two-to-three">Two to three new activities</option><option value="four-to-five">Four to five new activities</option><option value="many">Many &ndash; six or more new activities</option></select> <span class="assess-percentile-hint" id="pct-new-activities"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-new-activities" onchange="handleSkip('a-new-activities')"><label for="skip-new-activities">I know but prefer not to say</label></div>
 </div>
 
@@ -414,6 +466,26 @@ life_area_slug: participatory-leisure
     <select id="a-memorable" onchange="handleAssessInput('a-memorable')"><option value="">Select...</option><option value="none">None &ndash; the past year blends together</option><option value="one">One &ndash; a single standout experience</option><option value="two-to-three">Two to three memorable experiences</option><option value="several">Several &ndash; regular memorable moments</option><option value="many">Many &ndash; rich with experiences I'll remember for years</option></select>
     <div class="assess-skip"><input type="checkbox" id="skip-memorable" onchange="handleSkip('a-memorable')"><label for="skip-memorable">I know but prefer not to say</label></div>
 </div>
+</div>
+
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-social">
+        <span class="assess-summary-label">Social Connection</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-social" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-social">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-mastery">
+        <span class="assess-summary-label">Achievement &amp; Mastery</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-mastery" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-mastery">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-adventure">
+        <span class="assess-summary-label">Adventure &amp; Exploration</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-adventure" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-adventure">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on leisure participation, group membership, and activity variety among adults. Items without reliable population data are not scored.</p>
 </div>
 
 <div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
@@ -465,23 +537,312 @@ life_area_slug: participatory-leisure
         'a-skill-level', 'a-consistency', 'a-progress',
         'a-new-activities', 'a-comfort-zone', 'a-memorable'
     ];
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
 
-    function loadProgress() { if (typeof APStorage === 'undefined') return {}; var all = APStorage.load('ap-level1-progress') || {}; return all[AREA] || {}; }
-    function saveProgress(progress) { if (typeof APStorage === 'undefined') return; var all = APStorage.load('ap-level1-progress') || {}; all[AREA] = progress; APStorage.save('ap-level1-progress', all); }
-    function updateUI() { var progress = loadProgress(); var doneCount = 0; var firstIncomplete = null; STEPS.forEach(function(step, i) { var el = document.getElementById('step-' + step); var seg = document.getElementById('prog-' + (i + 1)); if (!el || !seg) return; if (progress[step]) { el.classList.add('done'); el.classList.remove('active'); seg.className = 'l1-progress-segment done'; doneCount++; } else if (!firstIncomplete) { firstIncomplete = step; el.classList.add('active'); el.classList.remove('done'); seg.className = 'l1-progress-segment active'; } else { el.classList.remove('active', 'done'); seg.className = 'l1-progress-segment'; } }); var label = document.getElementById('progressLabel'); if (doneCount >= STEPS.length) { if (label) label.textContent = 'All steps complete'; var banner = document.getElementById('completeBanner'); if (banner) banner.classList.add('visible'); } else { if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length; } if (firstIncomplete) { openStep(firstIncomplete); } }
-    function openStep(step) { STEPS.forEach(function(s) { var el = document.getElementById('step-' + s); if (el) el.classList.remove('open'); }); var target = document.getElementById('step-' + step); if (target) { target.classList.add('open'); setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); } }
-    window.toggleStep = function(step) { var el = document.getElementById('step-' + step); if (el) el.classList.toggle('open'); };
-    window.completeStep = function(step) { if (step === 'assess') saveScores(); var progress = loadProgress(); progress[step] = true; saveProgress(progress); updateUI(); var idx = STEPS.indexOf(step); if (idx >= 0 && idx < STEPS.length - 1) { setTimeout(function() { openStep(STEPS[idx + 1]); }, 300); } };
-    function isItemAnswered(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); if (skipBox && skipBox.checked) return true; var el = document.getElementById(itemId); return el && el.value !== '' && el.value !== null; }
-    function updateInputGroupState(itemId) { var group = document.getElementById('ig-' + itemId.replace('a-', '')); if (group) group.classList.toggle('answered', isItemAnswered(itemId)); }
-    function updateAssessRecorded() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var recorded = document.getElementById('assessRecorded'); if (recorded) recorded.classList.toggle('visible', allAnswered); }
-    function updateAssessCompletion() { var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); }); var btn = document.getElementById('assessBtn'); if (btn) { btn.disabled = !allAnswered; btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue'; } }
-    function saveAnswers() { var answers = {}; ASSESS_IDS.forEach(function(id) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); var skipped = skipBox && skipBox.checked; var value = null; if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; } answers[id] = { value: value, skipped: skipped }; }); var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} allAnswers[AREA] = answers; localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers)); var checklist = {}; ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); }); if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-assess') || {}; all[AREA] = checklist; APStorage.save('ap-level1-assess', all); } }
-    function saveScores() { var scores = { social: null, mastery: null, adventure: null }; if (typeof APStorage !== 'undefined') { var all = APStorage.load('ap-level1-scores') || {}; all[AREA] = scores; APStorage.save('ap-level1-scores', all); } }
-    window.handleAssessInput = function(itemId) { updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    window.handleSkip = function(itemId) { var skipBox = document.getElementById('skip-' + itemId.replace('a-', '')); var input = document.getElementById(itemId); if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; } updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion(); };
-    function restoreAssessment() { var allAnswers = {}; try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {} var answers = allAnswers[AREA]; if (!answers) return; ASSESS_IDS.forEach(function(id) { var item = answers[id]; if (!item) return; if (item.skipped) { var skipBox = document.getElementById('skip-' + id.replace('a-', '')); if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; } } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; } updateInputGroupState(id); }); updateAssessRecorded(); updateAssessCompletion(); }
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~40% of adults belong to no leisure group,
+    // most adults try 0-1 new activities per year, few develop expert-level leisure skills.
+    var THRESHOLDS = {
+        'a-group-membership': [
+            // ~40% belong to no clubs; having 4+ active memberships is very unusual
+            {v:'none',p:15},{v:'lapsed',p:30},{v:'one',p:50},{v:'two-to-three',p:75},{v:'several',p:95}
+        ],
+        'a-skill-level': [
+            // Most adults haven't developed meaningful skill in any leisure pursuit
+            {v:'no',p:15},{v:'beginner',p:35},{v:'intermediate',p:55},{v:'skilled',p:78},{v:'expert',p:95}
+        ],
+        'a-new-activities': [
+            // Most adults try zero new leisure activities per year; 6+ is very unusual
+            {v:'none',p:15},{v:'one',p:35},{v:'two-to-three',p:60},{v:'four-to-five',p:82},{v:'many',p:96}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        social: ['a-group-membership'],
+        mastery: ['a-skill-level'],
+        adventure: ['a-new-activities']
+    };
+
+    // Items without reliable population data for percentile scoring
+    var UNSCORED_ITEMS = [
+        'a-leisure-friends', 'a-social-satisfaction',
+        'a-consistency', 'a-progress',
+        'a-comfort-zone', 'a-memorable'
+    ];
+
+    function loadProgress() {
+        if (typeof APStorage === 'undefined') return {};
+        var all = APStorage.load('ap-level1-progress') || {};
+        return all[AREA] || {};
+    }
+
+    function saveProgress(progress) {
+        if (typeof APStorage === 'undefined') return;
+        var all = APStorage.load('ap-level1-progress') || {};
+        all[AREA] = progress;
+        APStorage.save('ap-level1-progress', all);
+    }
+
+    function updateUI() {
+        var progress = loadProgress();
+        var doneCount = 0;
+        var firstIncomplete = null;
+
+        STEPS.forEach(function(step, i) {
+            var el = document.getElementById('step-' + step);
+            var seg = document.getElementById('prog-' + (i + 1));
+            if (!el || !seg) return;
+
+            if (progress[step]) {
+                el.classList.add('done');
+                el.classList.remove('active');
+                seg.className = 'l1-progress-segment done';
+                doneCount++;
+            } else if (!firstIncomplete) {
+                firstIncomplete = step;
+                el.classList.add('active');
+                el.classList.remove('done');
+                seg.className = 'l1-progress-segment active';
+            } else {
+                el.classList.remove('active', 'done');
+                seg.className = 'l1-progress-segment';
+            }
+        });
+
+        var label = document.getElementById('progressLabel');
+        if (doneCount >= STEPS.length) {
+            if (label) label.textContent = 'All steps complete';
+            var banner = document.getElementById('completeBanner');
+            if (banner) banner.classList.add('visible');
+        } else {
+            if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
+        }
+
+        if (firstIncomplete) {
+            openStep(firstIncomplete);
+        }
+    }
+
+    function openStep(step) {
+        STEPS.forEach(function(s) {
+            var el = document.getElementById('step-' + s);
+            if (el) el.classList.remove('open');
+        });
+        var target = document.getElementById('step-' + step);
+        if (target) {
+            target.classList.add('open');
+            setTimeout(function() {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    }
+
+    window.toggleStep = function(step) {
+        var el = document.getElementById('step-' + step);
+        if (el) el.classList.toggle('open');
+    };
+
+    window.completeStep = function(step) {
+        if (step === 'assess') saveScores();
+        var progress = loadProgress();
+        progress[step] = true;
+        saveProgress(progress);
+        updateUI();
+
+        var idx = STEPS.indexOf(step);
+        if (idx >= 0 && idx < STEPS.length - 1) {
+            var next = STEPS[idx + 1];
+            setTimeout(function() { openStep(next); }, 300);
+        }
+    };
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        for (var i = 0; i < thresholds.length; i++) {
+            if (thresholds[i].v === String(value)) return thresholds[i].p;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (!THRESHOLDS[itemId]) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['social', 'mastery', 'adventure'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
+    function isItemAnswered(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return true;
+        var el = document.getElementById(itemId);
+        return el && el.value !== '' && el.value !== null;
+    }
+
+    function updateInputGroupState(itemId) {
+        var group = document.getElementById('ig-' + itemId.replace('a-', ''));
+        if (group) group.classList.toggle('answered', isItemAnswered(itemId));
+    }
+
+    function updateAssessRecorded() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var recorded = document.getElementById('assessRecorded');
+        if (recorded) recorded.classList.toggle('visible', allAnswered);
+    }
+
+    function updateAssessCompletion() {
+        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
+        var btn = document.getElementById('assessBtn');
+        if (btn) {
+            btn.disabled = !allAnswered;
+            btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
+        }
+    }
+
+    function saveAnswers() {
+        var answers = {};
+        ASSESS_IDS.forEach(function(id) {
+            var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+            var skipped = skipBox && skipBox.checked;
+            var value = null;
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
+            answers[id] = { value: value, skipped: skipped };
+        });
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        allAnswers[AREA] = answers;
+        localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
+        var checklist = {};
+        ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-assess') || {};
+            all[AREA] = checklist;
+            APStorage.save('ap-level1-assess', all);
+        }
+    }
+
+    function saveScores() {
+        var scores = {};
+        ['social', 'mastery', 'adventure'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
+        if (typeof APStorage !== 'undefined') {
+            var all = APStorage.load('ap-level1-scores') || {};
+            all[AREA] = scores;
+            APStorage.save('ap-level1-scores', all);
+        }
+    }
+
+    window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    window.handleSkip = function(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        var input = document.getElementById(itemId);
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    };
+
+    function restoreAssessment() {
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var answers = allAnswers[AREA];
+        if (!answers) return;
+
+        ASSESS_IDS.forEach(function(id) {
+            var item = answers[id];
+            if (!item) return;
+            if (item.skipped) {
+                var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+            updatePercentileHint(id);
+            updateInputGroupState(id);
+        });
+
+        updateAssessSummary();
+        updateAssessRecorded();
+        updateAssessCompletion();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>
