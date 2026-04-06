@@ -214,6 +214,58 @@ life_area_slug: housing
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -386,7 +438,7 @@ life_area_slug: housing
         <option value="adequate">Adequate &ndash; they work but aren't ideal</option>
         <option value="well">Well &ndash; most rooms suit their purpose</option>
         <option value="excellent">Excellent &ndash; every room is well-suited to its function</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-space"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-space" onchange="handleSkip('a-space')"><label for="skip-space">I know but prefer not to say</label></div>
 </div>
 
@@ -400,7 +452,7 @@ life_area_slug: housing
         <option value="mostly-ok">Mostly OK &ndash; comfortable most of the time</option>
         <option value="good">Good &ndash; comfortable year-round with reasonable costs</option>
         <option value="excellent">Excellent &ndash; well-insulated and efficiently heated/cooled</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-temperature"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-temperature" onchange="handleSkip('a-temperature')"><label for="skip-temperature">I know but prefer not to say</label></div>
 </div>
 
@@ -414,7 +466,7 @@ life_area_slug: housing
         <option value="a-couple">A couple &ndash; one or two minor things</option>
         <option value="none">None &ndash; everything is in working order</option>
         <option value="proactive">Proactive &ndash; I fix things promptly and do preventive maintenance</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-maintenance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -432,7 +484,7 @@ life_area_slug: housing
         <option value="30-40">30&ndash;40%</option>
         <option value="20-30">20&ndash;30%</option>
         <option value="under-20">Under 20%</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-cost-ratio"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-cost-ratio" onchange="handleSkip('a-cost-ratio')"><label for="skip-cost-ratio">I know but prefer not to say</label></div>
 </div>
 
@@ -446,7 +498,7 @@ life_area_slug: housing
         <option value="stretch">A stretch &ndash; manageable but uncomfortable</option>
         <option value="yes">Yes &ndash; I have savings I could use</option>
         <option value="easily">Easily &ndash; I have a dedicated emergency fund</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-buffer"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-buffer" onchange="handleSkip('a-buffer')"><label for="skip-buffer">I know but prefer not to say</label></div>
 </div>
 
@@ -460,7 +512,7 @@ life_area_slug: housing
         <option value="neutral">Neutral &ndash; renting suits my situation for now</option>
         <option value="building">Building &ndash; paying down a mortgage or making value-adding improvements</option>
         <option value="strong">Strong &ndash; significant equity growth or very efficient housing costs</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-equity"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-equity" onchange="handleSkip('a-equity')"><label for="skip-equity">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -478,7 +530,7 @@ life_area_slug: housing
         <option value="20-40">20&ndash;40 minutes each way</option>
         <option value="under-20">Under 20 minutes each way</option>
         <option value="wfh">I work from home or within walking distance</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-commute"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-commute" onchange="handleSkip('a-commute')"><label for="skip-commute">I know but prefer not to say</label></div>
 </div>
 
@@ -492,7 +544,7 @@ life_area_slug: housing
         <option value="reasonable">Reasonable &ndash; most things within 10&ndash;15 minutes</option>
         <option value="close">Close &ndash; most amenities within walking or short cycling distance</option>
         <option value="everything-nearby">Everything nearby &ndash; all key amenities within a few minutes</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-amenities"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-amenities" onchange="handleSkip('a-amenities')"><label for="skip-amenities">I know but prefer not to say</label></div>
 </div>
 
@@ -506,12 +558,30 @@ life_area_slug: housing
         <option value="adequate">Adequate &ndash; it's fine but not ideal</option>
         <option value="good">Good &ndash; I like it and feel comfortable here</option>
         <option value="excellent">Excellent &ndash; it suits my lifestyle perfectly</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-neighbourhood"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-neighbourhood" onchange="handleSkip('a-neighbourhood')"><label for="skip-neighbourhood">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-comfort">
+        <span class="assess-summary-label">Comfort</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-comfort" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-comfort">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-affordability">
+        <span class="assess-summary-label">Affordability</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-affordability" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-affordability">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-location">
+        <span class="assess-summary-label">Location</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-location" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-location">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on housing affordability, quality, and location satisfaction among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -561,7 +631,56 @@ life_area_slug: housing
         'a-commute', 'a-amenities', 'a-neighbourhood'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~50% of renters spend >30% on housing (Census),
+    // ~24% of homeowners are cost-burdened, median commute ~27 minutes.
+    var THRESHOLDS = {
+        'a-space': [
+            // Most people report at least adequate space; excellent is uncommon
+            {v:'poorly',p:10},{v:'some-issues',p:30},{v:'adequate',p:50},{v:'well',p:75},{v:'excellent',p:93}
+        ],
+        'a-temperature': [
+            // ~25% of homes have significant temperature issues; excellent insulation is rare
+            {v:'poor',p:10},{v:'some-problems',p:30},{v:'mostly-ok',p:55},{v:'good',p:78},{v:'excellent',p:95}
+        ],
+        'a-maintenance': [
+            // Most homes have 1-2 deferred issues; proactive maintenance is uncommon
+            {v:'many',p:10},{v:'several',p:28},{v:'a-couple',p:55},{v:'none',p:78},{v:'proactive',p:95}
+        ],
+        'a-cost-ratio': [
+            // ~50% of renters and ~24% of owners spend >30%; under 20% is uncommon
+            {v:'over-50',p:8},{v:'40-50',p:20},{v:'30-40',p:42},{v:'20-30',p:70},{v:'under-20',p:92}
+        ],
+        'a-buffer': [
+            // ~40% couldn't cover a $400 emergency (US Fed); dedicated fund is uncommon
+            {v:'no',p:10},{v:'with-difficulty',p:28},{v:'stretch',p:48},{v:'yes',p:72},{v:'easily',p:92}
+        ],
+        'a-equity': [
+            // ~36% of households own outright or have significant equity; strong growth is top quartile
+            {v:'losing-value',p:8},{v:'no-equity',p:25},{v:'neutral',p:45},{v:'building',p:72},{v:'strong',p:92}
+        ],
+        'a-commute': [
+            // Median commute ~27 min; WFH/walking distance is increasingly common but still minority
+            {v:'over-60',p:8},{v:'40-60',p:25},{v:'20-40',p:50},{v:'under-20',p:75},{v:'wfh',p:92}
+        ],
+        'a-amenities': [
+            // Varies hugely by urban/rural; everything walkable is urban privilege
+            {v:'far',p:10},{v:'moderate',p:30},{v:'reasonable',p:55},{v:'close',p:78},{v:'everything-nearby',p:95}
+        ],
+        'a-neighbourhood': [
+            // Most people rate their neighbourhood as adequate or better; excellent fit is uncommon
+            {v:'poor-fit',p:8},{v:'some-issues',p:25},{v:'adequate',p:48},{v:'good',p:75},{v:'excellent',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        comfort: ['a-space', 'a-temperature', 'a-maintenance'],
+        affordability: ['a-cost-ratio', 'a-buffer', 'a-equity'],
+        location: ['a-commute', 'a-amenities', 'a-neighbourhood']
+    };
+
+    // All housing items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -611,7 +730,6 @@ life_area_slug: housing
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -649,21 +767,86 @@ life_area_slug: housing
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['comfort', 'affordability', 'location'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
+
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
-    }
+
     function updateAssessCompletion() {
         var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
         var btn = document.getElementById('assessBtn');
@@ -672,6 +855,7 @@ life_area_slug: housing
             btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
     }
+
     function saveAnswers() {
         var answers = {};
         ASSESS_IDS.forEach(function(id) {
@@ -693,42 +877,73 @@ life_area_slug: housing
             APStorage.save('ap-level1-assess', all);
         }
     }
+
     function saveScores() {
-        var scores = {
-            comfort: null,
-            affordability: null,
-            location: null
-        };
+        var scores = {};
+        ['comfort', 'affordability', 'location'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
             APStorage.save('ap-level1-scores', all);
         }
     }
+
     window.handleAssessInput = function(itemId) {
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     window.handleSkip = function(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         var input = document.getElementById(itemId);
-        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     function restoreAssessment() {
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         var answers = allAnswers[AREA];
         if (!answers) return;
+
         ASSESS_IDS.forEach(function(id) {
-            var item = answers[id]; if (!item) return;
+            var item = answers[id];
+            if (!item) return;
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
-                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
-            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
-        updateAssessRecorded(); updateAssessCompletion();
+
+        updateAssessSummary();
+        updateAssessCompletion();
     }
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>

@@ -214,6 +214,58 @@ life_area_slug: emergency-preparedness
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -394,7 +446,7 @@ life_area_slug: emergency-preparedness
         <option value="3-7">3&ndash;7 days</option>
         <option value="1-2-weeks">1&ndash;2 weeks</option>
         <option value="over-2-weeks">Over 2 weeks</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-supplies"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-supplies" onchange="handleSkip('a-supplies')"><label for="skip-supplies">I know but prefer not to say</label></div>
 </div>
 
@@ -408,7 +460,7 @@ life_area_slug: emergency-preparedness
         <option value="basic">Basic &ndash; I know where it is but it's probably incomplete</option>
         <option value="stocked">Stocked &ndash; I know where it is and it covers the basics</option>
         <option value="comprehensive">Comprehensive &ndash; well-stocked, regularly checked, and I know how to use everything</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-first-aid"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-first-aid" onchange="handleSkip('a-first-aid')"><label for="skip-first-aid">I know but prefer not to say</label></div>
 </div>
 
@@ -422,7 +474,7 @@ life_area_slug: emergency-preparedness
         <option value="several">Several &ndash; I'm confident with three or four of these</option>
         <option value="most">Most &ndash; I could handle most common household emergencies</option>
         <option value="all">All of these and more</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-skills"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-skills" onchange="handleSkip('a-skills')"><label for="skip-skills">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -440,7 +492,7 @@ life_area_slug: emergency-preparedness
         <option value="greet">On greeting terms &ndash; we say hello</option>
         <option value="friendly">Friendly &ndash; we chat and could ask small favours</option>
         <option value="close">Close &ndash; I'd be comfortable asking for help in a crisis</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-neighbours"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-neighbours" onchange="handleSkip('a-neighbours')"><label for="skip-neighbours">I know but prefer not to say</label></div>
 </div>
 
@@ -454,7 +506,7 @@ life_area_slug: emergency-preparedness
         <option value="a-few">A few &ndash; I know two or three key locations</option>
         <option value="most">Most &ndash; I know the main emergency resources</option>
         <option value="comprehensive">Comprehensive &ndash; I could direct someone to any local emergency resource</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-local-resources"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-local-resources" onchange="handleSkip('a-local-resources')"><label for="skip-local-resources">I know but prefer not to say</label></div>
 </div>
 
@@ -468,7 +520,7 @@ life_area_slug: emergency-preparedness
         <option value="partial">Partial &ndash; I have one backup method</option>
         <option value="solid">Solid &ndash; I have agreed plans with key people</option>
         <option value="comprehensive">Comprehensive &ndash; multiple backup methods and regular check-ins about the plan</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-contact-plan"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-contact-plan" onchange="handleSkip('a-contact-plan')"><label for="skip-contact-plan">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -486,7 +538,7 @@ life_area_slug: emergency-preparedness
         <option value="informed">Informed &ndash; I know the main risks</option>
         <option value="detailed">Detailed &ndash; I know risks, their likelihood, and how they'd affect me</option>
         <option value="prepared">Prepared &ndash; I've taken specific steps based on my risk assessment</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-regional-risks"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-regional-risks" onchange="handleSkip('a-regional-risks')"><label for="skip-regional-risks">I know but prefer not to say</label></div>
 </div>
 
@@ -500,7 +552,7 @@ life_area_slug: emergency-preparedness
         <option value="probably">Probably &ndash; I have insurance but haven't checked the details</option>
         <option value="checked">Checked &ndash; I've reviewed my cover and it's adequate</option>
         <option value="optimised">Optimised &ndash; I've tailored my cover to my specific risks</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-insurance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-insurance" onchange="handleSkip('a-insurance')"><label for="skip-insurance">I know but prefer not to say</label></div>
 </div>
 
@@ -514,7 +566,7 @@ life_area_slug: emergency-preparedness
         <option value="basic-plan">Basic plan &ndash; I have a route and a rough destination</option>
         <option value="solid-plan">Solid plan &ndash; multiple routes, a destination, and a grab bag list</option>
         <option value="practised">Practised &ndash; I've rehearsed my evacuation plan</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-evac-plan"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-evac-plan" onchange="handleSkip('a-evac-plan')"><label for="skip-evac-plan">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -532,7 +584,7 @@ life_area_slug: emergency-preparedness
         <option value="a-week">Enough for about a week</option>
         <option value="2-weeks">Enough for two weeks</option>
         <option value="a-month">Enough for a month or more</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-cash"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-cash" onchange="handleSkip('a-cash')"><label for="skip-cash">I know but prefer not to say</label></div>
 </div>
 
@@ -546,7 +598,7 @@ life_area_slug: emergency-preparedness
         <option value="organised">Organised &ndash; together and I know where they are</option>
         <option value="backed-up">Backed up &ndash; I have digital copies or duplicates</option>
         <option value="redundant">Redundant &ndash; originals and copies in separate locations</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-documents"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-documents" onchange="handleSkip('a-documents')"><label for="skip-documents">I know but prefer not to say</label></div>
 </div>
 
@@ -560,12 +612,35 @@ life_area_slug: emergency-preparedness
         <option value="some-thought">Some thought &ndash; I have a rough mental plan</option>
         <option value="planned">Planned &ndash; I've thought through specific scenarios</option>
         <option value="prepared">Prepared &ndash; I have supplies and plans for extended disruption</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-scenarios"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-scenarios" onchange="handleSkip('a-scenarios')"><label for="skip-scenarios">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-self_reliance">
+        <span class="assess-summary-label">Self-Reliance</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-self_reliance" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-self_reliance">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-community">
+        <span class="assess-summary-label">Community Resilience</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-community" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-community">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-baseline">
+        <span class="assess-summary-label">Baseline Resilience</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-baseline" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-baseline">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-catastrophic">
+        <span class="assess-summary-label">Catastrophic Resilience</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-catastrophic" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-catastrophic">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on household preparedness among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -616,7 +691,69 @@ life_area_slug: emergency-preparedness
         'a-cash', 'a-documents', 'a-scenarios'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~50% of Americans lack a basic emergency plan (FEMA),
+    // ~40% couldn't cover a $400 emergency, ~30% have 3+ days of supplies.
+    var THRESHOLDS = {
+        'a-supplies': [
+            // ~50% have less than 3 days; 2+ weeks is very uncommon
+            {v:'under-1',p:10},{v:'1-3',p:35},{v:'3-7',p:60},{v:'1-2-weeks',p:82},{v:'over-2-weeks',p:95}
+        ],
+        'a-first-aid': [
+            // ~40% don't have a first aid kit; comprehensive is rare
+            {v:'no-kit',p:12},{v:'have-but-unknown',p:30},{v:'basic',p:50},{v:'stocked',p:75},{v:'comprehensive',p:95}
+        ],
+        'a-skills': [
+            // ~30% have taken first aid training; having all skills is very rare
+            {v:'none',p:10},{v:'one-or-two',p:35},{v:'several',p:58},{v:'most',p:80},{v:'all',p:95}
+        ],
+        'a-neighbours': [
+            // Urban areas: ~35% don't know neighbours; close relationships are uncommon
+            {v:'dont-know',p:12},{v:'recognise',p:30},{v:'greet',p:50},{v:'friendly',p:72},{v:'close',p:92}
+        ],
+        'a-local-resources': [
+            // Most people know the nearest hospital; comprehensive knowledge is rare
+            {v:'none',p:8},{v:'hospital-only',p:30},{v:'a-few',p:55},{v:'most',p:78},{v:'comprehensive',p:95}
+        ],
+        'a-contact-plan': [
+            // ~60% have no communication plan for network outages
+            {v:'no-plan',p:15},{v:'vague',p:35},{v:'partial',p:55},{v:'solid',p:78},{v:'comprehensive',p:95}
+        ],
+        'a-regional-risks': [
+            // ~45% are unaware of specific local risks; having taken action is rare
+            {v:'unaware',p:12},{v:'vague',p:32},{v:'informed',p:55},{v:'detailed',p:78},{v:'prepared',p:95}
+        ],
+        'a-insurance': [
+            // ~30% are underinsured; optimised coverage is uncommon
+            {v:'no-insurance',p:8},{v:'dont-know',p:25},{v:'probably',p:45},{v:'checked',p:75},{v:'optimised',p:95}
+        ],
+        'a-evac-plan': [
+            // ~65% have no evacuation plan; having practised is very rare
+            {v:'no',p:15},{v:'one-route',p:35},{v:'basic-plan',p:55},{v:'solid-plan',p:80},{v:'practised',p:95}
+        ],
+        'a-cash': [
+            // ~30% carry no cash at all; a month of cash reserves is very uncommon
+            {v:'none',p:12},{v:'a-day',p:35},{v:'a-week',p:60},{v:'2-weeks',p:82},{v:'a-month',p:95}
+        ],
+        'a-documents': [
+            // Most people don't have organised document storage; redundant copies are rare
+            {v:'scattered',p:12},{v:'one-place',p:35},{v:'organised',p:55},{v:'backed-up',p:78},{v:'redundant',p:95}
+        ],
+        'a-scenarios': [
+            // Most people haven't thought about extended disruption; being prepared is rare
+            {v:'never',p:15},{v:'briefly',p:35},{v:'some-thought',p:55},{v:'planned',p:78},{v:'prepared',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        self_reliance: ['a-supplies', 'a-first-aid', 'a-skills'],
+        community: ['a-neighbours', 'a-local-resources', 'a-contact-plan'],
+        baseline: ['a-regional-risks', 'a-insurance', 'a-evac-plan'],
+        catastrophic: ['a-cash', 'a-documents', 'a-scenarios']
+    };
+
+    // All emergency-preparedness items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -666,7 +803,6 @@ life_area_slug: emergency-preparedness
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -705,6 +841,74 @@ life_area_slug: emergency-preparedness
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['self_reliance', 'community', 'baseline', 'catastrophic'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
@@ -715,12 +919,6 @@ life_area_slug: emergency-preparedness
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -759,12 +957,10 @@ life_area_slug: emergency-preparedness
     }
 
     function saveScores() {
-        var scores = {
-            self_reliance: null,
-            community: null,
-            baseline: null,
-            catastrophic: null
-        };
+        var scores = {};
+        ['self_reliance', 'community', 'baseline', 'catastrophic'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -773,9 +969,10 @@ life_area_slug: emergency-preparedness
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -786,9 +983,10 @@ life_area_slug: emergency-preparedness
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -812,10 +1010,12 @@ life_area_slug: emergency-preparedness
                 var el = document.getElementById(id);
                 if (el) el.value = item.value;
             }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

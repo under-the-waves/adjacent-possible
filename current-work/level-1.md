@@ -184,6 +184,58 @@ life_area_slug: current-work
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: none;
+}
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 .assess-recorded {
     background: #f0f7f0;
     border: 2px solid #28a745;
@@ -364,7 +416,7 @@ life_area_slug: current-work
         <option value="somewhat-below">Somewhat below &ndash; noticeable gap</option>
         <option value="at-market">At market &ndash; roughly what I'd expect</option>
         <option value="above-market">Above market &ndash; paid more than the typical rate</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-comp-market"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-comp-market" onchange="handleSkip('a-comp-market')"><label for="skip-comp-market">I know but prefer not to say</label></div>
 </div>
 
@@ -378,7 +430,7 @@ life_area_slug: current-work
         <option value="one-to-two-years">One to two years ago</option>
         <option value="within-a-year">Within the past year</option>
         <option value="recently">Recently &ndash; within the past six months</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-last-raise"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-last-raise" onchange="handleSkip('a-last-raise')"><label for="skip-last-raise">I know but prefer not to say</label></div>
 </div>
 
@@ -392,7 +444,7 @@ life_area_slug: current-work
         <option value="occasionally">Occasionally &ndash; every few months</option>
         <option value="regularly">Regularly &ndash; monthly or more</option>
         <option value="frequently">Frequently &ndash; consistent, specific recognition</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-recognition"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-recognition" onchange="handleSkip('a-recognition')"><label for="skip-recognition">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -410,7 +462,7 @@ life_area_slug: current-work
         <option value="meeting">Meeting expectations &ndash; solid, reliable performance</option>
         <option value="exceeding">Exceeding expectations &ndash; consistently strong</option>
         <option value="exceptional">Exceptional &ndash; top performer in my team or organisation</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-performance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-performance" onchange="handleSkip('a-performance')"><label for="skip-performance">I know but prefer not to say</label></div>
 </div>
 
@@ -424,7 +476,7 @@ life_area_slug: current-work
         <option value="one-or-two">One or two &ndash; I know my biggest gap</option>
         <option value="clearly">Clearly &ndash; I can name 2 &ndash; 3 specific skills</option>
         <option value="detailed">Detailed &ndash; I have a prioritised development plan</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-skills-gap"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-skills-gap" onchange="handleSkip('a-skills-gap')"><label for="skip-skills-gap">I know but prefer not to say</label></div>
 </div>
 
@@ -438,7 +490,7 @@ life_area_slug: current-work
         <option value="average">Average &ndash; roughly comparable to peers</option>
         <option value="above">Above average &ndash; I produce more or better work</option>
         <option value="top">Top of peer group &ndash; consistently outperforming</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-output"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-output" onchange="handleSkip('a-output')"><label for="skip-output">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -456,7 +508,7 @@ life_area_slug: current-work
         <option value="moderate">Moderate &ndash; around 25 &ndash; 50%</option>
         <option value="substantial">Substantial &ndash; around 50 &ndash; 75%</option>
         <option value="most">Most of my day &ndash; 75%+</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-flow"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-flow" onchange="handleSkip('a-flow')"><label for="skip-flow">I know but prefer not to say</label></div>
 </div>
 
@@ -470,7 +522,7 @@ life_area_slug: current-work
         <option value="mostly-external">Mostly external &ndash; but some aspects are interesting</option>
         <option value="mostly-intrinsic">Mostly intrinsic &ndash; I enjoy the work itself</option>
         <option value="deeply-intrinsic">Deeply intrinsic &ndash; I'd do this work even without external rewards</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-motivation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-motivation" onchange="handleSkip('a-motivation')"><label for="skip-motivation">I know but prefer not to say</label></div>
 </div>
 
@@ -484,7 +536,7 @@ life_area_slug: current-work
         <option value="somewhat">Somewhat &ndash; parts of it feel meaningful</option>
         <option value="mostly-yes">Mostly yes &ndash; I can see how my work matters</option>
         <option value="deeply">Deeply meaningful &ndash; my work is a core source of purpose</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-meaning"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-meaning" onchange="handleSkip('a-meaning')"><label for="skip-meaning">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -502,7 +554,7 @@ life_area_slug: current-work
         <option value="40-to-45">40 &ndash; 45 hours</option>
         <option value="45-to-55">45 &ndash; 55 hours</option>
         <option value="over-55">Over 55 hours</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-hours"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-hours" onchange="handleSkip('a-hours')"><label for="skip-hours">I know but prefer not to say</label></div>
 </div>
 
@@ -516,7 +568,7 @@ life_area_slug: current-work
         <option value="sometimes">Sometimes &ndash; depends on the week</option>
         <option value="mostly">Mostly &ndash; I disconnect most evenings and weekends</option>
         <option value="fully">Fully &ndash; I have clear boundaries and maintain them</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-disconnect"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-disconnect" onchange="handleSkip('a-disconnect')"><label for="skip-disconnect">I know but prefer not to say</label></div>
 </div>
 
@@ -530,12 +582,35 @@ life_area_slug: current-work
         <option value="somewhat">Somewhat &ndash; one or two areas are affected</option>
         <option value="minimally">Minimally &ndash; I maintain most non-work activities</option>
         <option value="not-at-all">Not at all &ndash; work fits comfortably alongside everything else</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-crowding"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-crowding" onchange="handleSkip('a-crowding')"><label for="skip-crowding">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-rewards">
+        <span class="assess-summary-label">Rewards</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-rewards" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-rewards">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-competence">
+        <span class="assess-summary-label">Competence</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-competence" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-competence">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-engagement">
+        <span class="assess-summary-label">Engagement</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-engagement" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-engagement">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-balance">
+        <span class="assess-summary-label">Balance</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-balance" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-balance">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on work engagement, compensation, and work-life balance among adults. Some items in this area are not scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -586,7 +661,69 @@ life_area_slug: current-work
         'a-hours', 'a-disconnect', 'a-crowding'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~21% of employees globally are engaged (Gallup),
+    // average productive hours ~2h53m/day, ~45% work primarily for pay.
+    var THRESHOLDS = {
+        'a-comp-market': [
+            // ~40% don't know their market rate; being above market is uncommon
+            {v:'dont-know',p:20},{v:'well-below',p:15},{v:'somewhat-below',p:35},{v:'at-market',p:60},{v:'above-market',p:85}
+        ],
+        'a-last-raise': [
+            // Median time between raises ~18 months; recent raise within 6 months is top quartile
+            {v:'never',p:10},{v:'over-two-years',p:25},{v:'one-to-two-years',p:50},{v:'within-a-year',p:72},{v:'recently',p:90}
+        ],
+        'a-recognition': [
+            // ~65% of employees say they don't receive enough recognition (Gallup)
+            {v:'never',p:10},{v:'rarely',p:30},{v:'occasionally',p:55},{v:'regularly',p:78},{v:'frequently',p:93}
+        ],
+        'a-performance': [
+            // Self-reported; most rate themselves as meeting expectations
+            {v:'struggling',p:8},{v:'developing',p:25},{v:'meeting',p:50},{v:'exceeding',p:78},{v:'exceptional',p:95}
+        ],
+        'a-skills-gap': [
+            // Most people have not done deliberate skills gap analysis
+            {v:'no',p:15},{v:'vaguely',p:35},{v:'one-or-two',p:55},{v:'clearly',p:78},{v:'detailed',p:95}
+        ],
+        'a-output': [
+            // Many people have no basis for comparison; top of peer group is rare
+            {v:'dont-know',p:20},{v:'below',p:15},{v:'average',p:50},{v:'above',p:78},{v:'top',p:95}
+        ],
+        'a-flow': [
+            // Average worker is genuinely productive ~36% of the day; 75%+ is very rare
+            {v:'almost-none',p:10},{v:'little',p:30},{v:'moderate',p:55},{v:'substantial',p:80},{v:'most',p:95}
+        ],
+        'a-motivation': [
+            // ~45% work primarily for pay; deeply intrinsic motivation is uncommon
+            {v:'neither',p:5},{v:'external-only',p:20},{v:'mostly-external',p:45},{v:'mostly-intrinsic',p:75},{v:'deeply-intrinsic',p:95}
+        ],
+        'a-meaning': [
+            // ~40% of workers find their work meaningful; deeply meaningful is rare
+            {v:'meaningless',p:8},{v:'mostly-not',p:25},{v:'somewhat',p:50},{v:'mostly-yes',p:75},{v:'deeply',p:95}
+        ],
+        'a-hours': [
+            // Balance is inverse: fewer hours = better balance. ~40h is median for full-time.
+            {v:'over-55',p:8},{v:'45-to-55',p:25},{v:'40-to-45',p:50},{v:'35-to-40',p:75},{v:'under-35',p:92}
+        ],
+        'a-disconnect': [
+            // ~60% check work email outside hours; fully disconnecting is uncommon
+            {v:'never',p:8},{v:'rarely',p:25},{v:'sometimes',p:50},{v:'mostly',p:75},{v:'fully',p:93}
+        ],
+        'a-crowding': [
+            // Work-life conflict is widespread; no crowding at all is uncommon
+            {v:'severely',p:8},{v:'significantly',p:25},{v:'somewhat',p:50},{v:'minimally',p:75},{v:'not-at-all',p:93}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        rewards: ['a-comp-market', 'a-last-raise', 'a-recognition'],
+        competence: ['a-performance', 'a-skills-gap', 'a-output'],
+        engagement: ['a-flow', 'a-motivation', 'a-meaning'],
+        balance: ['a-hours', 'a-disconnect', 'a-crowding']
+    };
+
+    // All current-work items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -669,6 +806,74 @@ life_area_slug: current-work
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['rewards', 'competence', 'engagement', 'balance'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
@@ -679,12 +884,6 @@ life_area_slug: current-work
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -720,7 +919,10 @@ life_area_slug: current-work
     }
 
     function saveScores() {
-        var scores = { rewards: null, competence: null, engagement: null, balance: null };
+        var scores = {};
+        ['rewards', 'competence', 'engagement', 'balance'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -729,14 +931,25 @@ life_area_slug: current-work
     }
 
     window.handleAssessInput = function(itemId) {
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
 
     window.handleSkip = function(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         var input = document.getElementById(itemId);
-        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
 
     function restoreAssessment() {
@@ -744,15 +957,28 @@ life_area_slug: current-work
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         var answers = allAnswers[AREA];
         if (!answers) return;
+
         ASSESS_IDS.forEach(function(id) {
-            var item = answers[id]; if (!item) return;
+            var item = answers[id];
+            if (!item) return;
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
-                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
-            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
-        updateAssessRecorded(); updateAssessCompletion();
+
+        updateAssessSummary();
+        updateAssessCompletion();
     }
 
     document.addEventListener('DOMContentLoaded', function() {
