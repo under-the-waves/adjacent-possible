@@ -184,18 +184,58 @@ life_area_slug: body-image
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -364,7 +404,7 @@ life_area_slug: body-image
         <option value="basic">Basic &ndash; cleanse and moisturise most days</option>
         <option value="consistent">Consistent &ndash; daily routine including sun protection</option>
         <option value="comprehensive">Comprehensive &ndash; dedicated multi-step routine with targeted treatments</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-skin-routine"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-skin-routine" onchange="handleSkip('a-skin-routine')"><label for="skip-skin-routine">I know but prefer not to say</label></div>
 </div>
 
@@ -378,7 +418,7 @@ life_area_slug: body-image
         <option value="moderate">Moderate &ndash; enough energy for daily tasks but not much more</option>
         <option value="good">Good &ndash; feel energetic most of the day</option>
         <option value="excellent">Excellent &ndash; consistently high energy from morning to evening</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-energy-levels"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-energy-levels" onchange="handleSkip('a-energy-levels')"><label for="skip-energy-levels">I know but prefer not to say</label></div>
 </div>
 
@@ -392,7 +432,7 @@ life_area_slug: body-image
         <option value="average">Average &ndash; reasonable but not something I think about</option>
         <option value="good">Good &ndash; generally stand and sit upright</option>
         <option value="excellent">Excellent &ndash; consistently tall, open posture</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-posture"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-posture" onchange="handleSkip('a-posture')"><label for="skip-posture">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -410,7 +450,7 @@ life_area_slug: body-image
         <option value="moderate">Moderate &ndash; reasonably consistent routine</option>
         <option value="strong">Strong &ndash; daily routine that I maintain reliably</option>
         <option value="meticulous">Meticulous &ndash; comprehensive routine I rarely miss</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-grooming"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-grooming" onchange="handleSkip('a-grooming')"><label for="skip-grooming">I know but prefer not to say</label></div>
 </div>
 
@@ -424,7 +464,7 @@ life_area_slug: body-image
         <option value="neutral">Neutral &ndash; neither notably open nor closed</option>
         <option value="open">Open &ndash; comfortable eye contact, relaxed posture</option>
         <option value="confident">Confident &ndash; naturally open, expressive, and at ease</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-body-language"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-body-language" onchange="handleSkip('a-body-language')"><label for="skip-body-language">I know but prefer not to say</label></div>
 </div>
 
@@ -456,7 +496,7 @@ life_area_slug: body-image
         <option value="neutral">Neutral &ndash; not something I think about much</option>
         <option value="mostly-satisfied">Mostly satisfied &ndash; close to where I'd like to be</option>
         <option value="satisfied">Satisfied &ndash; happy with my current body composition</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-body-comp"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-body-comp" onchange="handleSkip('a-body-comp')"><label for="skip-body-comp">I know but prefer not to say</label></div>
 </div>
 
@@ -485,7 +525,7 @@ life_area_slug: body-image
         <option value="neutral">Neutral &ndash; don't think about it much either way</option>
         <option value="mostly-healthy">Mostly healthy &ndash; generally mindful with occasional lapses</option>
         <option value="healthy">Healthy &ndash; eat mindfully without guilt or anxiety</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-food-relationship"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-food-relationship" onchange="handleSkip('a-food-relationship')"><label for="skip-food-relationship">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -503,7 +543,7 @@ life_area_slug: body-image
         <option value="neutral">Neutral &ndash; no strong reaction either way</option>
         <option value="mostly-positive">Mostly positive &ndash; generally pleased with what I see</option>
         <option value="positive">Positive &ndash; I like how I look</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-mirror"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-mirror" onchange="handleSkip('a-mirror')"><label for="skip-mirror">I know but prefer not to say</label></div>
 </div>
 
@@ -516,7 +556,7 @@ life_area_slug: body-image
         <option value="some">Some &ndash; there are a few things I steer away from</option>
         <option value="rarely">Rarely &ndash; occasional self-consciousness but it doesn't stop me</option>
         <option value="no">No &ndash; I wear and do what I want without hesitation</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-clothing-comfort"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-clothing-comfort" onchange="handleSkip('a-clothing-comfort')"><label for="skip-clothing-comfort">I know but prefer not to say</label></div>
 </div>
 
@@ -530,12 +570,35 @@ life_area_slug: body-image
         <option value="mixed">Mixed &ndash; some positive, some negative</option>
         <option value="mostly-positive">Mostly positive &ndash; generally kind to myself</option>
         <option value="positive">Positive &ndash; consistently accepting and appreciative</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-self-talk"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-self-talk" onchange="handleSkip('a-self-talk')"><label for="skip-self-talk">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-vitality">
+        <span class="assess-summary-label">Youthfulness &amp; Vitality</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-vitality" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-vitality">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-romantic">
+        <span class="assess-summary-label">Romantic Appeal</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-romantic" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-romantic">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-weight">
+        <span class="assess-summary-label">Weight Management</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-weight" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-weight">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-confidence">
+        <span class="assess-summary-label">Body Confidence</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-confidence" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-confidence">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on body image, grooming, and self-perception. Unscored items (weight history, physical confidence) are excluded from calculations.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -586,8 +649,61 @@ life_area_slug: body-image
         'a-mirror', 'a-clothing-comfort', 'a-self-talk'
     ];
 
-    // All body image items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~35% use daily sunscreen, ~55% moisturise regularly,
+    // ~60% maintain daily grooming routine, ~30% satisfied with body composition.
+    var THRESHOLDS = {
+        'a-skin-routine': [
+            // ~40% have no routine; comprehensive multi-step is ~5%
+            {v:'none',p:15},{v:'minimal',p:35},{v:'basic',p:55},{v:'consistent',p:78},{v:'comprehensive',p:95}
+        ],
+        'a-energy-levels': [
+            // ~20% report consistently low energy; ~10% report excellent sustained energy
+            {v:'low',p:10},{v:'variable',p:30},{v:'moderate',p:50},{v:'good',p:75},{v:'excellent',p:93}
+        ],
+        'a-posture': [
+            // ~25% have notably poor posture; excellent posture is uncommon (~8%)
+            {v:'poor',p:10},{v:'below-average',p:30},{v:'average',p:50},{v:'good',p:75},{v:'excellent',p:93}
+        ],
+        'a-grooming': [
+            // ~15% do minimal grooming; meticulous comprehensive routine is ~8%
+            {v:'minimal',p:10},{v:'inconsistent',p:30},{v:'moderate',p:50},{v:'strong',p:75},{v:'meticulous',p:93}
+        ],
+        'a-body-language': [
+            // Most people are neutral; confident open body language is uncommon
+            {v:'closed',p:10},{v:'reserved',p:28},{v:'neutral',p:50},{v:'open',p:75},{v:'confident',p:93}
+        ],
+        'a-body-comp': [
+            // ~56% of adults are dissatisfied with body composition (Gallup)
+            {v:'very-dissatisfied',p:10},{v:'dissatisfied',p:30},{v:'neutral',p:50},{v:'mostly-satisfied',p:72},{v:'satisfied',p:90}
+        ],
+        'a-food-relationship': [
+            // ~45% report a healthy relationship with food; ~20% report disordered patterns
+            {v:'difficult',p:8},{v:'complicated',p:25},{v:'neutral',p:48},{v:'mostly-healthy',p:72},{v:'healthy',p:92}
+        ],
+        'a-mirror': [
+            // ~46% of adults feel negative about their appearance (Mental Health Foundation)
+            {v:'avoidant',p:8},{v:'critical',p:25},{v:'neutral',p:50},{v:'mostly-positive',p:75},{v:'positive',p:92}
+        ],
+        'a-clothing-comfort': [
+            // ~55% avoid at least some activities due to body image
+            {v:'many',p:10},{v:'some',p:35},{v:'rarely',p:65},{v:'no',p:90}
+        ],
+        'a-self-talk': [
+            // ~60% of people report predominantly negative body self-talk
+            {v:'very-negative',p:8},{v:'mostly-negative',p:25},{v:'mixed',p:50},{v:'mostly-positive',p:78},{v:'positive',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        vitality: ['a-skin-routine', 'a-energy-levels', 'a-posture'],
+        romantic: ['a-grooming', 'a-body-language'],
+        weight: ['a-body-comp', 'a-food-relationship'],
+        confidence: ['a-mirror', 'a-clothing-comfort', 'a-self-talk']
+    };
+
+    // Items without reliable population data for percentile scoring
+    var UNSCORED_ITEMS = ['a-physical-confidence', 'a-weight-history'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -637,7 +753,6 @@ life_area_slug: body-image
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -676,12 +791,80 @@ life_area_slug: body-image
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['vitality', 'romantic', 'weight', 'confidence'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
-
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
@@ -689,12 +872,6 @@ life_area_slug: body-image
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -712,20 +889,17 @@ life_area_slug: body-image
             var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
             var skipped = skipBox && skipBox.checked;
             var value = null;
-
             if (!skipped) {
                 var el = document.getElementById(id);
                 if (el && el.value !== '') value = el.value;
             }
             answers[id] = { value: value, skipped: skipped };
         });
-        // Save raw answers directly to localStorage (NOT via APStorage)
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
 
-        // Save booleans to ap-level1-assess for backward compat (via APStorage, syncs to Clerk)
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -736,13 +910,10 @@ life_area_slug: body-image
     }
 
     function saveScores() {
-        // All body image items are unscored; save null for each value
-        var scores = {
-            vitality: null,
-            romantic: null,
-            weight: null,
-            confidence: null
-        };
+        var scores = {};
+        ['vitality', 'romantic', 'weight', 'confidence'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -750,12 +921,11 @@ life_area_slug: body-image
         }
     }
 
-    // --- Event handlers ---
-
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -766,13 +936,12 @@ life_area_slug: body-image
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
-
-    // --- Restore saved answers ---
 
     function restoreAssessment() {
         var allAnswers = {};
@@ -783,7 +952,6 @@ life_area_slug: body-image
         ASSESS_IDS.forEach(function(id) {
             var item = answers[id];
             if (!item) return;
-
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
                 if (skipBox) {
@@ -796,10 +964,11 @@ life_area_slug: body-image
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

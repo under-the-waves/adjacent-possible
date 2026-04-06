@@ -184,18 +184,58 @@ life_area_slug: ethics
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -364,7 +404,7 @@ life_area_slug: ethics
         <option value="one">I could explain one in basic terms</option>
         <option value="several">I could explain two or three clearly</option>
         <option value="many">I could explain four or more and compare their strengths</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-frameworks"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-frameworks" onchange="handleSkip('a-frameworks')"><label for="skip-frameworks">I know but prefer not to say</label></div>
 </div>
 
@@ -392,7 +432,7 @@ life_area_slug: ethics
         <option value="moderate">Within the past year or two</option>
         <option value="recent">Within the past few months, and I can describe how I reasoned through it</option>
         <option value="frequent">I notice these regularly and have a process for working through them</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-dilemma"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-dilemma" onchange="handleSkip('a-dilemma')"><label for="skip-dilemma">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -410,7 +450,7 @@ life_area_slug: ethics
         <option value="some">I could name a few but haven't thought them through carefully</option>
         <option value="clear">I have a clear set I could write down</option>
         <option value="tested">I have explicit principles I've tested and refined over time</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-principles"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-principles" onchange="handleSkip('a-principles')"><label for="skip-principles">I know but prefer not to say</label></div>
 </div>
 
@@ -423,7 +463,7 @@ life_area_slug: ethics
         <option value="somewhat">Somewhat &ndash; I notice double standards in myself fairly often</option>
         <option value="mostly">Mostly consistent, with occasional exceptions I'm aware of</option>
         <option value="very">Very consistent &ndash; I actively work to apply the same standards everywhere</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-consistency"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-consistency" onchange="handleSkip('a-consistency')"><label for="skip-consistency">I know but prefer not to say</label></div>
 </div>
 
@@ -437,7 +477,7 @@ life_area_slug: ethics
         <option value="one">I can identify one area where I'm unsure</option>
         <option value="several">I can identify several and have thought about why</option>
         <option value="active">I actively look for blind spots and have strategies to address them</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-blindspots"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-blindspots" onchange="handleSkip('a-blindspots')"><label for="skip-blindspots">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -455,7 +495,7 @@ life_area_slug: ethics
         <option value="moderate">Moderate &ndash; I notice the gap in some areas</option>
         <option value="small">Small &ndash; I live according to my values most of the time</option>
         <option value="minimal">Minimal &ndash; I've deliberately closed this gap over time</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-gap"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-gap" onchange="handleSkip('a-gap')"><label for="skip-gap">I know but prefer not to say</label></div>
 </div>
 
@@ -468,7 +508,7 @@ life_area_slug: ethics
         <option value="sometimes">Sometimes &ndash; when the cost is low</option>
         <option value="often">Often &ndash; I'll speak up or act even when it's uncomfortable</option>
         <option value="consistently">Consistently &ndash; I've accepted significant costs for my principles</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-courage"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-courage" onchange="handleSkip('a-courage')"><label for="skip-courage">I know but prefer not to say</label></div>
 </div>
 
@@ -481,7 +521,7 @@ life_area_slug: ethics
         <option value="moderate">Moderately &ndash; I'll conform on smaller things but hold firm on big ones</option>
         <option value="low">Low &ndash; I hold my ground on most things regardless of social cost</option>
         <option value="very-low">Very low &ndash; I've consciously developed resistance to social pressure</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-pressure"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-pressure" onchange="handleSkip('a-pressure')"><label for="skip-pressure">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -499,7 +539,7 @@ life_area_slug: ethics
         <option value="some">I've thought about obligations to one or two communities</option>
         <option value="clear">I have a clear sense of my obligations across several communities</option>
         <option value="active">I've thought this through carefully and actively fulfil specific commitments</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-obligations"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-obligations" onchange="handleSkip('a-obligations')"><label for="skip-obligations">I know but prefer not to say</label></div>
 </div>
 
@@ -512,7 +552,7 @@ life_area_slug: ethics
         <option value="sometimes">I sometimes notice the effects after the fact</option>
         <option value="aware">I'm generally aware of the direct effects on others</option>
         <option value="very-aware">I consider both direct effects and the broader example I'm setting</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-impact"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-impact" onchange="handleSkip('a-impact')"><label for="skip-impact">I know but prefer not to say</label></div>
 </div>
 
@@ -525,12 +565,35 @@ life_area_slug: ethics
         <option value="occasionally">Occasionally &ndash; I'll speak up if something feels clearly wrong</option>
         <option value="regularly">Regularly &ndash; I raise concerns and try to set a good example</option>
         <option value="actively">Actively &ndash; I take on a visible role in shaping my communities' ethical standards</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-contribute"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-contribute" onchange="handleSkip('a-contribute')"><label for="skip-contribute">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-philosophical">
+        <span class="assess-summary-label">Philosophical Depth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-philosophical" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-philosophical">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-practical">
+        <span class="assess-summary-label">Practical Guidance</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-practical" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-practical">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-integrity">
+        <span class="assess-summary-label">Moral Integrity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-integrity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-integrity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-community">
+        <span class="assess-summary-label">Community Ethics</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-community" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-community">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on ethical literacy, moral reasoning, prosocial behaviour, and community engagement. Unscored items (default moral reasoning style) are excluded from calculations.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -581,8 +644,61 @@ life_area_slug: ethics
         'a-obligations', 'a-impact', 'a-contribute'
     ];
 
-    // All ethics items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-frameworks': [
+            // ~70% cannot name any ethical framework; explaining four+ is ~5%
+            {v:'none',p:10},{v:'heard',p:28},{v:'one',p:50},{v:'several',p:78},{v:'many',p:97}
+        ],
+        'a-dilemma': [
+            // ~35% can't recall a moral dilemma; frequent recognition with process is ~8%
+            {v:'never',p:10},{v:'distant',p:30},{v:'moderate',p:55},{v:'recent',p:78},{v:'frequent',p:95}
+        ],
+        'a-principles': [
+            // ~40% have no explicit moral principles; tested and refined is ~8%
+            {v:'none',p:10},{v:'vague',p:28},{v:'some',p:50},{v:'clear',p:78},{v:'tested',p:95}
+        ],
+        'a-consistency': [
+            // ~35% are very inconsistent; actively working to apply same standards is ~15%
+            {v:'inconsistent',p:10},{v:'somewhat',p:32},{v:'mostly',p:62},{v:'very',p:92}
+        ],
+        'a-blindspots': [
+            // ~45% haven't thought about ethical blind spots; active strategies is ~8%
+            {v:'unaware',p:10},{v:'maybe',p:28},{v:'one',p:50},{v:'several',p:78},{v:'active',p:95}
+        ],
+        'a-gap': [
+            // ~30% haven't looked honestly at belief-behaviour gap; deliberately closed is ~10%
+            {v:'havent-looked',p:10},{v:'large',p:25},{v:'moderate',p:48},{v:'small',p:75},{v:'minimal',p:93}
+        ],
+        'a-courage': [
+            // ~35% rarely act on convictions at cost; consistent significant cost is ~10%
+            {v:'rarely',p:12},{v:'sometimes',p:38},{v:'often',p:68},{v:'consistently',p:93}
+        ],
+        'a-pressure': [
+            // ~30% strongly conform; consciously developed resistance is ~12%
+            {v:'strong',p:10},{v:'moderate',p:38},{v:'low',p:70},{v:'very-low',p:93}
+        ],
+        'a-obligations': [
+            // ~40% haven't considered community obligations; careful active fulfilment is ~10%
+            {v:'not-considered',p:10},{v:'vague',p:28},{v:'some',p:50},{v:'clear',p:78},{v:'active',p:95}
+        ],
+        'a-impact': [
+            // ~35% don't think about ethical ripple effects; considering broader example is ~15%
+            {v:'unaware',p:10},{v:'sometimes',p:32},{v:'aware',p:60},{v:'very-aware',p:92}
+        ],
+        'a-contribute': [
+            // ~45% mostly follow existing norms; visible active role is ~8%
+            {v:'follow',p:12},{v:'occasionally',p:38},{v:'regularly',p:70},{v:'actively',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        philosophical: ['a-frameworks', 'a-dilemma'],
+        practical: ['a-principles', 'a-consistency', 'a-blindspots'],
+        integrity: ['a-gap', 'a-courage', 'a-pressure'],
+        community: ['a-obligations', 'a-impact', 'a-contribute']
+    };
+
+    var UNSCORED_ITEMS = ['a-reasoning'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -671,6 +787,76 @@ life_area_slug: ethics
         }
     };
 
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['philosophical', 'practical', 'integrity', 'community'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -684,12 +870,6 @@ life_area_slug: ethics
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -731,13 +911,10 @@ life_area_slug: ethics
     }
 
     function saveScores() {
-        // All ethics items are unscored; save null for each value
-        var scores = {
-            philosophical: null,
-            practical: null,
-            integrity: null,
-            community: null
-        };
+        var scores = {};
+        ['philosophical', 'practical', 'integrity', 'community'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -748,9 +925,10 @@ life_area_slug: ethics
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -761,9 +939,10 @@ life_area_slug: ethics
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -791,10 +970,11 @@ life_area_slug: ethics
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

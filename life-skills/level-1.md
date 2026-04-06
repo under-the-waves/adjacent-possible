@@ -214,18 +214,58 @@ life_area_slug: life-skills
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -386,7 +426,7 @@ life_area_slug: life-skills
         <option value="several">Several &ndash; I can do a range of basic repairs</option>
         <option value="most">Most &ndash; I'm confident with most common household repairs</option>
         <option value="extensive">Extensive &ndash; I can handle complex repairs and minor renovations</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-home-repair"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-home-repair" onchange="handleSkip('a-home-repair')"><label for="skip-home-repair">I know but prefer not to say</label></div>
 </div>
 
@@ -400,7 +440,7 @@ life_area_slug: life-skills
         <option value="some">Some &ndash; I could handle minor injuries</option>
         <option value="trained">Trained &ndash; I've done a first aid course</option>
         <option value="current">Current &ndash; I have up-to-date first aid training</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-first-aid"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-first-aid" onchange="handleSkip('a-first-aid')"><label for="skip-first-aid">I know but prefer not to say</label></div>
 </div>
 
@@ -414,7 +454,7 @@ life_area_slug: life-skills
         <option value="4-10">4&ndash;10 meals</option>
         <option value="10-20">10&ndash;20 meals</option>
         <option value="over-20">Over 20 meals</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-cooking"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-cooking" onchange="handleSkip('a-cooking')"><label for="skip-cooking">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -432,7 +472,7 @@ life_area_slug: life-skills
         <option value="basics">Basics &ndash; I have the essentials and can find them</option>
         <option value="well-equipped">Well equipped &ndash; a solid toolkit, well organised</option>
         <option value="comprehensive">Comprehensive &ndash; I have specialist tools for most jobs</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-tools"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-tools" onchange="handleSkip('a-tools')"><label for="skip-tools">I know but prefer not to say</label></div>
 </div>
 
@@ -446,7 +486,7 @@ life_area_slug: life-skills
         <option value="some">Some &ndash; I do a few regular checks</option>
         <option value="consistent">Consistent &ndash; I follow a maintenance schedule</option>
         <option value="thorough">Thorough &ndash; I track and plan all maintenance proactively</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-maintenance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
 
@@ -460,7 +500,7 @@ life_area_slug: life-skills
         <option value="search">Search &ndash; I look up a tutorial and follow it</option>
         <option value="try-then-search">Try then search &ndash; I have a go first and look things up if stuck</option>
         <option value="confident">Confident &ndash; I assess the problem and work through it methodically</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-approach"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-approach" onchange="handleSkip('a-approach')"><label for="skip-approach">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -478,7 +518,7 @@ life_area_slug: life-skills
         <option value="occasionally">Occasionally &ndash; every month or two</option>
         <option value="regularly">Regularly &ndash; multiple times a month</option>
         <option value="frequently">Frequently &ndash; I'm a go-to person for practical help</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-help-others"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-help-others" onchange="handleSkip('a-help-others')"><label for="skip-help-others">I know but prefer not to say</label></div>
 </div>
 
@@ -492,7 +532,7 @@ life_area_slug: life-skills
         <option value="sometimes">Sometimes &ndash; for one or two specific things</option>
         <option value="often">Often &ndash; people know I'm handy and ask regularly</option>
         <option value="go-to">Go-to person &ndash; I'm the first call for multiple types of problem</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-teach"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-teach" onchange="handleSkip('a-teach')"><label for="skip-teach">I know but prefer not to say</label></div>
 </div>
 
@@ -506,12 +546,30 @@ life_area_slug: life-skills
         <option value="tried-once">Tried once &ndash; attended an event or two</option>
         <option value="occasional">Occasional &ndash; I participate a few times a year</option>
         <option value="regular">Regular &ndash; I'm an active member of a skill-sharing community</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-community"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-community" onchange="handleSkip('a-community')"><label for="skip-community">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-capabilities">
+        <span class="assess-summary-label">High-Impact Capabilities</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-capabilities" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-capabilities">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-competence">
+        <span class="assess-summary-label">Systematic Competence</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-competence" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-competence">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-sharing">
+        <span class="assess-summary-label">Teaching &amp; Sharing</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-sharing" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-sharing">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on practical skill levels, tool ownership, home maintenance habits, and community participation. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -561,7 +619,52 @@ life_area_slug: life-skills
         'a-help-others', 'a-teach', 'a-community'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-home-repair': [
+            // ~35% can't handle any basic repairs; extensive capability is ~10%
+            {v:'none',p:10},{v:'one-or-two',p:30},{v:'several',p:55},{v:'most',p:78},{v:'extensive',p:95}
+        ],
+        'a-first-aid': [
+            // ~60% wouldn't know what to do beyond calling emergency services; current training is ~15%
+            {v:'no',p:10},{v:'very-basic',p:30},{v:'some',p:50},{v:'trained',p:75},{v:'current',p:93}
+        ],
+        'a-cooking': [
+            // ~10% can't cook at all; 20+ meals from scratch is ~15%
+            {v:'zero',p:5},{v:'1-3',p:22},{v:'4-10',p:48},{v:'10-20',p:75},{v:'over-20',p:93}
+        ],
+        'a-tools': [
+            // ~20% have no tools; comprehensive specialist toolkit is ~10%
+            {v:'none',p:8},{v:'minimal',p:25},{v:'basics',p:52},{v:'well-equipped',p:78},{v:'comprehensive',p:95}
+        ],
+        'a-maintenance': [
+            // ~40% do nothing until things break; thorough proactive tracking is ~8%
+            {v:'nothing',p:10},{v:'reactive',p:30},{v:'some',p:55},{v:'consistent',p:78},{v:'thorough',p:95}
+        ],
+        'a-approach': [
+            // ~20% avoid unfamiliar problems; confident methodical approach is ~12%
+            {v:'avoid',p:8},{v:'ask',p:25},{v:'search',p:50},{v:'try-then-search',p:75},{v:'confident',p:93}
+        ],
+        'a-help-others': [
+            // ~25% never help with practical tasks; being a go-to person is ~12%
+            {v:'never',p:8},{v:'rarely',p:25},{v:'occasionally',p:50},{v:'regularly',p:78},{v:'frequently',p:95}
+        ],
+        'a-teach': [
+            // ~30% are always the one asking; being the go-to is ~10%
+            {v:'never',p:8},{v:'rarely',p:25},{v:'sometimes',p:50},{v:'often',p:78},{v:'go-to',p:95}
+        ],
+        'a-community': [
+            // ~75% have never participated in skill-sharing; regular active member is ~5%
+            {v:'no',p:12},{v:'interested',p:30},{v:'tried-once',p:52},{v:'occasional',p:75},{v:'regular',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        capabilities: ['a-home-repair', 'a-first-aid', 'a-cooking'],
+        competence: ['a-tools', 'a-maintenance', 'a-approach'],
+        sharing: ['a-help-others', 'a-teach', 'a-community']
+    };
+
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -662,12 +765,6 @@ life_area_slug: life-skills
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
 
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
-    }
-
     function updateAssessCompletion() {
         var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
         var btn = document.getElementById('assessBtn');
@@ -704,11 +801,10 @@ life_area_slug: life-skills
     }
 
     function saveScores() {
-        var scores = {
-            capabilities: null,
-            competence: null,
-            sharing: null
-        };
+        var scores = {};
+        ['capabilities', 'competence', 'sharing'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -717,9 +813,10 @@ life_area_slug: life-skills
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -730,9 +827,10 @@ life_area_slug: life-skills
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -756,10 +854,11 @@ life_area_slug: life-skills
                 var el = document.getElementById(id);
                 if (el) el.value = item.value;
             }
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

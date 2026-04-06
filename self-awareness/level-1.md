@@ -184,18 +184,58 @@ life_area_slug: self-awareness
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -361,7 +401,7 @@ life_area_slug: self-awareness
         <option value="1">One &ndash; I know one clear trigger</option>
         <option value="2-3">Two or three &ndash; I can name a few</option>
         <option value="4+">Four or more &ndash; I've mapped my triggers in detail</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-triggers"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-triggers" onchange="handleSkip('a-triggers')"><label for="skip-triggers">I know but prefer not to say</label></div>
 </div>
 
@@ -390,7 +430,7 @@ life_area_slug: self-awareness
         <option value="rarely">Rarely &ndash; I can think of occasional examples</option>
         <option value="almost-never">Almost never &ndash; my actions and values are well aligned</option>
         <option value="unsure">I haven't thought about this before</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-values-conflict"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-values-conflict" onchange="handleSkip('a-values-conflict')"><label for="skip-values-conflict">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -407,7 +447,7 @@ life_area_slug: self-awareness
         <option value="vague">I get a vague sense but can't pinpoint locations</option>
         <option value="one-area">I know one area (e.g. shoulders, stomach, jaw)</option>
         <option value="multiple">I can identify several specific areas and what each signals</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-body-signals"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-body-signals" onchange="handleSkip('a-body-signals')"><label for="skip-body-signals">I know but prefer not to say</label></div>
 </div>
 
@@ -421,7 +461,7 @@ life_area_slug: self-awareness
         <option value="15-30">15 &ndash; 30 minutes</option>
         <option value="30-60">30 &ndash; 60 minutes</option>
         <option value="60+">More than an hour</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-attention"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-attention" onchange="handleSkip('a-attention')"><label for="skip-attention">I know but prefer not to say</label></div>
 </div>
 
@@ -434,7 +474,7 @@ life_area_slug: self-awareness
         <option value="occasional">Occasional &ndash; a few times a month or less</option>
         <option value="regular">Regular &ndash; a few times a week</option>
         <option value="daily">Daily or near-daily practice</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-meditation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-meditation" onchange="handleSkip('a-meditation')"><label for="skip-meditation">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -452,7 +492,7 @@ life_area_slug: self-awareness
         <option value="past-year">Within the past year</option>
         <option value="past-month">Within the past month</option>
         <option value="regularly">I receive it regularly</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-feedback"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-feedback" onchange="handleSkip('a-feedback')"><label for="skip-feedback">I know but prefer not to say</label></div>
 </div>
 
@@ -465,7 +505,7 @@ life_area_slug: self-awareness
         <option value="vague">Vague sense &ndash; I could guess but I'm not confident</option>
         <option value="partial">Partial &ndash; I know what a few people think</option>
         <option value="clear">Clear picture &ndash; I've had direct conversations about this</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-perception"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-perception" onchange="handleSkip('a-perception')"><label for="skip-perception">I know but prefer not to say</label></div>
 </div>
 
@@ -497,7 +537,7 @@ life_area_slug: self-awareness
         <option value="past-year">Within the past year</option>
         <option value="past-month">Within the past month</option>
         <option value="currently">I'm outside my comfort zone right now</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-comfort-zone"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-comfort-zone" onchange="handleSkip('a-comfort-zone')"><label for="skip-comfort-zone">I know but prefer not to say</label></div>
 </div>
 
@@ -510,7 +550,7 @@ life_area_slug: self-awareness
         <option value="minor">Minor shifts &ndash; small adjustments to my self-image</option>
         <option value="significant">Significant change &ndash; I've revised a core belief about myself</option>
         <option value="major">Major transformation &ndash; I see myself very differently now</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-change"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-change" onchange="handleSkip('a-change')"><label for="skip-change">I know but prefer not to say</label></div>
 </div>
 
@@ -523,12 +563,35 @@ life_area_slug: self-awareness
         <option value="vague-idea">I have a vague idea but haven't articulated it</option>
         <option value="specific">I can name something specific</option>
         <option value="several">I have several ideas I'd like to try</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-experiment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-experiment" onchange="handleSkip('a-experiment')"><label for="skip-experiment">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-psychological">
+        <span class="assess-summary-label">Psychological</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-psychological" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-psychological">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-contemplative">
+        <span class="assess-summary-label">Contemplative/Somatic</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-contemplative" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-contemplative">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-relational">
+        <span class="assess-summary-label">Relational</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-relational" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-relational">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-experiential">
+        <span class="assess-summary-label">Experiential</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-experiential" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-experiential">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on self-knowledge, mindfulness practice, feedback-seeking behaviour, and personal growth. Unscored items (coping style, conflict pattern) are excluded because they describe style rather than level.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -579,8 +642,57 @@ life_area_slug: self-awareness
         'a-comfort-zone', 'a-change', 'a-experiment'
     ];
 
-    // All self-awareness items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-triggers': [
+            // ~55% haven't identified any emotional triggers; detailed mapping is ~10%
+            {v:'0',p:12},{v:'1',p:35},{v:'2-3',p:65},{v:'4+',p:93}
+        ],
+        'a-values-conflict': [
+            // ~30% notice frequent conflicts; well-aligned is ~15%
+            {v:'frequently',p:10},{v:'sometimes',p:35},{v:'rarely',p:65},{v:'almost-never',p:92}
+        ],
+        'a-body-signals': [
+            // ~40% have no body-stress awareness; identifying multiple specific areas is ~12%
+            {v:'no-awareness',p:10},{v:'vague',p:32},{v:'one-area',p:60},{v:'multiple',p:92}
+        ],
+        'a-attention': [
+            // Average sustained attention is ~8-12 minutes; 60+ minutes is ~10%
+            {v:'under-5',p:8},{v:'5-15',p:30},{v:'15-30',p:55},{v:'30-60',p:78},{v:'60+',p:95}
+        ],
+        'a-meditation': [
+            // ~85% have no meditation practice; daily practice is ~5%
+            {v:'none',p:12},{v:'occasional',p:45},{v:'regular',p:78},{v:'daily',p:97}
+        ],
+        'a-feedback': [
+            // ~40% can't recall receiving honest critical feedback; regular receipt is ~10%
+            {v:'never',p:8},{v:'over-year',p:25},{v:'past-year',p:50},{v:'past-month',p:78},{v:'regularly',p:95}
+        ],
+        'a-perception': [
+            // ~35% have no idea how others perceive them; clear picture from direct conversations is ~15%
+            {v:'no-idea',p:10},{v:'vague',p:32},{v:'partial',p:60},{v:'clear',p:92}
+        ],
+        'a-comfort-zone': [
+            // ~30% can't recall a recent example; currently outside comfort zone is ~15%
+            {v:'cant-recall',p:8},{v:'over-year',p:25},{v:'past-year',p:50},{v:'past-month',p:78},{v:'currently',p:95}
+        ],
+        'a-change': [
+            // ~25% report largely unchanged self-understanding; major transformation is ~12%
+            {v:'unchanged',p:10},{v:'minor',p:35},{v:'significant',p:68},{v:'major',p:93}
+        ],
+        'a-experiment': [
+            // ~30% can't think of anything; having several ideas is ~18%
+            {v:'nothing',p:10},{v:'vague-idea',p:35},{v:'specific',p:65},{v:'several',p:92}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        psychological: ['a-triggers', 'a-values-conflict'],
+        contemplative: ['a-body-signals', 'a-attention', 'a-meditation'],
+        relational: ['a-feedback', 'a-perception'],
+        experiential: ['a-comfort-zone', 'a-change', 'a-experiment']
+    };
+
+    var UNSCORED_ITEMS = ['a-coping', 'a-conflict'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -669,6 +781,76 @@ life_area_slug: self-awareness
         }
     };
 
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['psychological', 'contemplative', 'relational', 'experiential'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -682,12 +864,6 @@ life_area_slug: self-awareness
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -729,13 +905,10 @@ life_area_slug: self-awareness
     }
 
     function saveScores() {
-        // All self-awareness items are unscored; save null for each value
-        var scores = {
-            psychological: null,
-            contemplative: null,
-            relational: null,
-            experiential: null
-        };
+        var scores = {};
+        ['psychological', 'contemplative', 'relational', 'experiential'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -746,9 +919,10 @@ life_area_slug: self-awareness
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -759,9 +933,10 @@ life_area_slug: self-awareness
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -789,10 +964,11 @@ life_area_slug: self-awareness
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

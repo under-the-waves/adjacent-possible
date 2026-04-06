@@ -184,18 +184,58 @@ life_area_slug: worldview
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -364,7 +404,7 @@ life_area_slug: worldview
         <option value="several">Several &ndash; I have working knowledge across most major domains</option>
         <option value="most">Most &ndash; I could hold a substantive conversation in nearly all of them</option>
         <option value="integrated">Most, and I actively connect insights across domains</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-domains-map"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-domains-map" onchange="handleSkip('a-domains-map')"><label for="skip-domains-map">I know but prefer not to say</label></div>
 </div>
 
@@ -378,7 +418,7 @@ life_area_slug: worldview
         <option value="sometimes">Sometimes &ndash; I notice connections occasionally</option>
         <option value="often">Often &ndash; I regularly draw on one field to understand another</option>
         <option value="constantly">Constantly &ndash; cross-domain thinking is how I naturally process information</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-cross-domain"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-cross-domain" onchange="handleSkip('a-cross-domain')"><label for="skip-cross-domain">I know but prefer not to say</label></div>
 </div>
 
@@ -392,7 +432,7 @@ life_area_slug: worldview
         <option value="one-two">I can name one or two specific areas where I'm weak</option>
         <option value="several">I can name several and I know which ones matter most</option>
         <option value="mapped">I've mapped my gaps systematically and I'm working on the most important ones</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-blind-spots"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-blind-spots" onchange="handleSkip('a-blind-spots')"><label for="skip-blind-spots">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -410,7 +450,7 @@ life_area_slug: worldview
         <option value="two-three">Two or three &ndash; I understand principles in a few domains</option>
         <option value="several">Several &ndash; I have deep knowledge across multiple fields</option>
         <option value="many">Many &ndash; I could teach several subjects at an advanced level</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-deep-area"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-deep-area" onchange="handleSkip('a-deep-area')"><label for="skip-deep-area">I know but prefer not to say</label></div>
 </div>
 
@@ -424,7 +464,7 @@ life_area_slug: worldview
         <option value="moderate">Moderately tested &ndash; I've studied formally or read extensively in some areas</option>
         <option value="rigorous">Rigorously tested &ndash; I've sought out challenges to my understanding</option>
         <option value="ongoing">Continuously tested &ndash; I regularly expose my views to informed criticism</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-assumption-check"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-assumption-check" onchange="handleSkip('a-assumption-check')"><label for="skip-assumption-check">I know but prefer not to say</label></div>
 </div>
 
@@ -438,7 +478,7 @@ life_area_slug: worldview
         <option value="one-topic">I can do it well for one or two topics</option>
         <option value="several">I can do it for several important topics</option>
         <option value="habit">It's a habit &ndash; I routinely test my views by arguing the other side</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-nuance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-nuance" onchange="handleSkip('a-nuance')"><label for="skip-nuance">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -456,7 +496,7 @@ life_area_slug: worldview
         <option value="sometimes">Sometimes &ndash; several times a year</option>
         <option value="often">Often &ndash; my understanding regularly gives me an edge</option>
         <option value="consistently">Consistently &ndash; systems thinking is central to how I make decisions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-decision-quality"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-decision-quality" onchange="handleSkip('a-decision-quality')"><label for="skip-decision-quality">I know but prefer not to say</label></div>
 </div>
 
@@ -470,7 +510,7 @@ life_area_slug: worldview
         <option value="usually">Usually &ndash; I spot most common tactics</option>
         <option value="well">Well &ndash; I can name the specific technique being used</option>
         <option value="very-well">Very well &ndash; I notice subtle manipulation and can explain the mechanism</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-manipulation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-manipulation" onchange="handleSkip('a-manipulation')"><label for="skip-manipulation">I know but prefer not to say</label></div>
 </div>
 
@@ -484,7 +524,7 @@ life_area_slug: worldview
         <option value="average">Average &ndash; I'm right sometimes but not reliably</option>
         <option value="above-average">Above average &ndash; I have some evidence my predictions are decent</option>
         <option value="tracked">I've tracked predictions and my calibration is good</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-prediction"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-prediction" onchange="handleSkip('a-prediction')"><label for="skip-prediction">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -502,7 +542,7 @@ life_area_slug: worldview
         <option value="developing">Developing &ndash; I'm working towards a framework but it's incomplete</option>
         <option value="solid">Yes &ndash; I have a solid sense of what matters and why</option>
         <option value="tested">Yes, and it's been tested by difficult circumstances</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-purpose"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-purpose" onchange="handleSkip('a-purpose')"><label for="skip-purpose">I know but prefer not to say</label></div>
 </div>
 
@@ -516,7 +556,7 @@ life_area_slug: worldview
         <option value="holds">It mostly holds &ndash; I wobble but return to my beliefs</option>
         <option value="stable">It's stable &ndash; my worldview provides genuine comfort during hardship</option>
         <option value="strengthened">It's strengthened by difficulty &ndash; hard times deepen my understanding</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-resilience"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-resilience" onchange="handleSkip('a-resilience')"><label for="skip-resilience">I know but prefer not to say</label></div>
 </div>
 
@@ -530,12 +570,35 @@ life_area_slug: worldview
         <option value="some">I could name a few principles but I'm not sure where they come from</option>
         <option value="clear">I have clear principles and I know their origins</option>
         <option value="examined">I have well-examined principles I've tested and refined over time</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-moral-framework"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-moral-framework" onchange="handleSkip('a-moral-framework')"><label for="skip-moral-framework">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-breadth">
+        <span class="assess-summary-label">Breadth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-breadth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-breadth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-depth">
+        <span class="assess-summary-label">Depth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-depth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-depth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-utility">
+        <span class="assess-summary-label">Utility</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-utility" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-utility">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-meaning">
+        <span class="assess-summary-label">Meaning</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-meaning" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-meaning">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on knowledge breadth, critical thinking, prediction accuracy, and meaning-making. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -586,8 +649,65 @@ life_area_slug: worldview
         'a-purpose', 'a-resilience', 'a-moral-framework'
     ];
 
-    // All worldview items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-domains-map': [
+            // ~50% have deep gaps in most domains; integrated cross-domain knowledge is ~5%
+            {v:'one-two',p:10},{v:'few',p:30},{v:'several',p:55},{v:'most',p:80},{v:'integrated',p:97}
+        ],
+        'a-cross-domain': [
+            // ~30% never notice cross-domain connections; constant cross-domain thinking is ~8%
+            {v:'never',p:8},{v:'rarely',p:25},{v:'sometimes',p:50},{v:'often',p:78},{v:'constantly',p:95}
+        ],
+        'a-blind-spots': [
+            // ~40% haven't thought about knowledge gaps; systematic mapping is ~5%
+            {v:'unaware',p:10},{v:'vague',p:28},{v:'one-two',p:52},{v:'several',p:78},{v:'mapped',p:97}
+        ],
+        'a-deep-area': [
+            // ~30% have only surface-level knowledge; teaching many subjects at advanced level is ~5%
+            {v:'none',p:10},{v:'one',p:30},{v:'two-three',p:55},{v:'several',p:80},{v:'many',p:97}
+        ],
+        'a-assumption-check': [
+            // ~40% have untested knowledge; continuously exposing views to criticism is ~5%
+            {v:'untested',p:10},{v:'light',p:30},{v:'moderate',p:55},{v:'rigorous',p:80},{v:'ongoing',p:97}
+        ],
+        'a-nuance': [
+            // ~35% can't steelman any of their views; habitual steelmanning is ~5%
+            {v:'cant',p:8},{v:'weak',p:25},{v:'one-topic',p:50},{v:'several',p:78},{v:'habit',p:97}
+        ],
+        'a-decision-quality': [
+            // ~30% rarely see worldview improving decisions; consistent systems thinking is ~8%
+            {v:'rarely',p:10},{v:'occasionally',p:30},{v:'sometimes',p:55},{v:'often',p:78},{v:'consistently',p:95}
+        ],
+        'a-manipulation': [
+            // ~25% miss most manipulation tactics; noticing subtle mechanisms is ~10%
+            {v:'poorly',p:8},{v:'sometimes',p:28},{v:'usually',p:52},{v:'well',p:78},{v:'very-well',p:95}
+        ],
+        'a-prediction': [
+            // ~55% have never tracked predictions; tracked with good calibration is ~3%
+            {v:'no-idea',p:10},{v:'poor',p:30},{v:'average',p:52},{v:'above-average',p:78},{v:'tracked',p:97}
+        ],
+        'a-purpose': [
+            // ~25% feel adrift; tested framework surviving difficulty is ~12%
+            {v:'adrift',p:8},{v:'fragmented',p:25},{v:'developing',p:50},{v:'solid',p:78},{v:'tested',p:95}
+        ],
+        'a-resilience': [
+            // ~20% find worldview crumbles under stress; strengthened by difficulty is ~12%
+            {v:'crumbles',p:8},{v:'shaken',p:25},{v:'holds',p:50},{v:'stable',p:78},{v:'strengthened',p:95}
+        ],
+        'a-moral-framework': [
+            // ~30% can't articulate any guiding principles; well-examined and refined is ~8%
+            {v:'none',p:8},{v:'vague',p:25},{v:'some',p:50},{v:'clear',p:78},{v:'examined',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        breadth: ['a-domains-map', 'a-cross-domain', 'a-blind-spots'],
+        depth: ['a-deep-area', 'a-assumption-check', 'a-nuance'],
+        utility: ['a-decision-quality', 'a-manipulation', 'a-prediction'],
+        meaning: ['a-purpose', 'a-resilience', 'a-moral-framework']
+    };
+
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -675,6 +795,76 @@ life_area_slug: worldview
         }
     };
 
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['breadth', 'depth', 'utility', 'meaning'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -688,12 +878,6 @@ life_area_slug: worldview
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -733,13 +917,10 @@ life_area_slug: worldview
     }
 
     function saveScores() {
-        // All worldview items are unscored; save null for each value
-        var scores = {
-            breadth: null,
-            depth: null,
-            utility: null,
-            meaning: null
-        };
+        var scores = {};
+        ['breadth', 'depth', 'utility', 'meaning'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -750,9 +931,10 @@ life_area_slug: worldview
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -763,9 +945,10 @@ life_area_slug: worldview
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -793,10 +976,11 @@ life_area_slug: worldview
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

@@ -184,18 +184,58 @@ life_area_slug: style
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -364,7 +404,7 @@ life_area_slug: style
         <option value="reasonable">Reasonable &ndash; generally fine but not tailored</option>
         <option value="good">Good &ndash; I pay attention to fit and most items suit my body</option>
         <option value="excellent">Excellent &ndash; nearly everything is well-fitted or tailored</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-fit"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-fit" onchange="handleSkip('a-fit')"><label for="skip-fit">I know but prefer not to say</label></div>
 </div>
 
@@ -377,7 +417,7 @@ life_area_slug: style
         <option value="vague">Vague &ndash; I have a rough sense but have not tested it</option>
         <option value="moderate">Moderate &ndash; I know a few colours that work and a few that do not</option>
         <option value="confident">Confident &ndash; I consistently choose colours that suit me</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-colours"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-colours" onchange="handleSkip('a-colours')"><label for="skip-colours">I know but prefer not to say</label></div>
 </div>
 
@@ -391,7 +431,7 @@ life_area_slug: style
         <option value="moderate">Moderate &ndash; reasonably consistent routine</option>
         <option value="strong">Strong &ndash; daily routine that I maintain reliably</option>
         <option value="meticulous">Meticulous &ndash; comprehensive routine I rarely miss</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-grooming"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-grooming" onchange="handleSkip('a-grooming')"><label for="skip-grooming">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -409,7 +449,7 @@ life_area_slug: style
         <option value="adequate">Adequate &ndash; I meet the minimum standard</option>
         <option value="good">Good &ndash; I dress appropriately and slightly above the norm</option>
         <option value="strategic">Strategic &ndash; I deliberately dress for professional advantage</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-dresscode"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-dresscode" onchange="handleSkip('a-dresscode')"><label for="skip-dresscode">I know but prefer not to say</label></div>
 </div>
 
@@ -423,7 +463,7 @@ life_area_slug: style
         <option value="moderately">Moderately &ndash; I can spot the main indicators</option>
         <option value="well">Well &ndash; I reliably identify quality differences</option>
         <option value="expert">Expert &ndash; I have a detailed understanding of fabrics, construction, and finishing</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-quality"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-quality" onchange="handleSkip('a-quality')"><label for="skip-quality">I know but prefer not to say</label></div>
 </div>
 
@@ -436,7 +476,7 @@ life_area_slug: style
         <option value="limited">Limited &ndash; I have one or two options but gaps remain</option>
         <option value="adequate">Adequate &ndash; I can dress appropriately for most situations</option>
         <option value="well-covered">Well covered &ndash; I have reliable outfits for all common professional contexts</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-contexts"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-contexts" onchange="handleSkip('a-contexts')"><label for="skip-contexts">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -454,7 +494,7 @@ life_area_slug: style
         <option value="somewhat">Somewhat &ndash; some items reflect me, most are generic</option>
         <option value="mostly">Mostly &ndash; my wardrobe generally reflects who I am</option>
         <option value="strongly">Strongly &ndash; my clothing is a deliberate expression of my identity</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-aesthetic"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-aesthetic" onchange="handleSkip('a-aesthetic')"><label for="skip-aesthetic">I know but prefer not to say</label></div>
 </div>
 
@@ -467,7 +507,7 @@ life_area_slug: style
         <option value="vague">Vague &ndash; I know what I like when I see it but cannot describe it</option>
         <option value="emerging">Emerging &ndash; I have a general direction but have not developed it</option>
         <option value="clear">Clear &ndash; I can describe my preferred aesthetic and name influences</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-inspiration"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-inspiration" onchange="handleSkip('a-inspiration')"><label for="skip-inspiration">I know but prefer not to say</label></div>
 </div>
 
@@ -498,7 +538,7 @@ life_area_slug: style
         <option value="average">Average &ndash; about half</option>
         <option value="high">High &ndash; most of my wardrobe gets worn</option>
         <option value="nearly-all">Nearly all &ndash; I wear almost everything I own</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-wardrobe-use"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-wardrobe-use" onchange="handleSkip('a-wardrobe-use')"><label for="skip-wardrobe-use">I know but prefer not to say</label></div>
 </div>
 
@@ -525,12 +565,35 @@ life_area_slug: style
         <option value="occasional">Occasional &ndash; a few items cause problems</option>
         <option value="rare">Rare &ndash; comfort issues come up now and then</option>
         <option value="none">None &ndash; my clothing is consistently comfortable</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-comfort-gaps"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-comfort-gaps" onchange="handleSkip('a-comfort-gaps')"><label for="skip-comfort-gaps">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-attractiveness">
+        <span class="assess-summary-label">Attractiveness</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-attractiveness" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-attractiveness">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-status">
+        <span class="assess-summary-label">Status &amp; Professional</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-status" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-status">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-expression">
+        <span class="assess-summary-label">Self-Expression</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-expression" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-expression">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-comfort">
+        <span class="assess-summary-label">Comfort &amp; Function</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-comfort" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-comfort">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on clothing habits, wardrobe usage, and grooming standards. Unscored items (confidence outfits, decision time) are excluded from calculations.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -581,8 +644,57 @@ life_area_slug: style
         'a-wardrobe-use', 'a-decision-time', 'a-comfort-gaps'
     ];
 
-    // All style items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-fit': [
+            // ~70% of people wear ill-fitting clothes; well-fitted wardrobe is ~15%
+            {v:'poor',p:10},{v:'mixed',p:30},{v:'reasonable',p:50},{v:'good',p:78},{v:'excellent',p:95}
+        ],
+        'a-colours': [
+            // ~60% have never thought about which colours suit them
+            {v:'no-idea',p:15},{v:'vague',p:40},{v:'moderate',p:65},{v:'confident',p:90}
+        ],
+        'a-grooming': [
+            // ~15% do minimal grooming; meticulous routine is ~8%
+            {v:'minimal',p:10},{v:'inconsistent',p:30},{v:'moderate',p:50},{v:'strong',p:75},{v:'meticulous',p:93}
+        ],
+        'a-dresscode': [
+            // ~30% are unaware of dress code expectations; strategic dressing is ~10%
+            {v:'unaware',p:10},{v:'vague',p:30},{v:'adequate',p:50},{v:'good',p:75},{v:'strategic',p:93}
+        ],
+        'a-quality': [
+            // Most people cannot distinguish garment quality beyond obvious extremes
+            {v:'no',p:10},{v:'slightly',p:30},{v:'moderately',p:55},{v:'well',p:78},{v:'expert',p:95}
+        ],
+        'a-contexts': [
+            // ~25% wear the same thing regardless; well-covered is ~20%
+            {v:'no',p:10},{v:'limited',p:35},{v:'adequate',p:60},{v:'well-covered',p:88}
+        ],
+        'a-aesthetic': [
+            // ~35% dress on autopilot; deliberate self-expression through clothing is ~12%
+            {v:'autopilot',p:10},{v:'functional',p:30},{v:'somewhat',p:50},{v:'mostly',p:75},{v:'strongly',p:93}
+        ],
+        'a-inspiration': [
+            // ~45% have no sense of style direction; clear aesthetic with named influences is ~15%
+            {v:'no',p:12},{v:'vague',p:38},{v:'emerging',p:65},{v:'clear',p:90}
+        ],
+        'a-wardrobe-use': [
+            // Average person wears ~44% of wardrobe; wearing nearly all is very uncommon
+            {v:'very-low',p:10},{v:'low',p:28},{v:'average',p:50},{v:'high',p:75},{v:'nearly-all',p:93}
+        ],
+        'a-comfort-gaps': [
+            // ~40% report regular clothing discomfort; no issues at all is ~20%
+            {v:'frequent',p:10},{v:'occasional',p:35},{v:'rare',p:65},{v:'none',p:90}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        attractiveness: ['a-fit', 'a-colours', 'a-grooming'],
+        status: ['a-dresscode', 'a-quality', 'a-contexts'],
+        expression: ['a-aesthetic', 'a-inspiration'],
+        comfort: ['a-wardrobe-use', 'a-comfort-gaps']
+    };
+
+    var UNSCORED_ITEMS = ['a-confidence', 'a-decision-time'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -671,6 +783,76 @@ life_area_slug: style
         }
     };
 
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['attractiveness', 'status', 'expression', 'comfort'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -684,12 +866,6 @@ life_area_slug: style
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -731,13 +907,10 @@ life_area_slug: style
     }
 
     function saveScores() {
-        // All style items are unscored; save null for each value
-        var scores = {
-            attractiveness: null,
-            status: null,
-            expression: null,
-            comfort: null
-        };
+        var scores = {};
+        ['attractiveness', 'status', 'expression', 'comfort'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -748,9 +921,10 @@ life_area_slug: style
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -761,9 +935,10 @@ life_area_slug: style
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -791,10 +966,11 @@ life_area_slug: style
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

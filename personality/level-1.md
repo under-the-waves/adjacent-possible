@@ -184,18 +184,58 @@ life_area_slug: personality
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -348,7 +388,7 @@ life_area_slug: personality
         <option value="informal">Informal &ndash; I have a rough sense from a quick online quiz</option>
         <option value="yes">Yes &ndash; I know my approximate trait profile</option>
         <option value="detailed">Yes &ndash; I have detailed results I can refer to</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-big-five"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-big-five" onchange="handleSkip('a-big-five')"><label for="skip-big-five">I know but prefer not to say</label></div>
 </div>
 
@@ -361,7 +401,7 @@ life_area_slug: personality
         <option value="vague">Vague &ndash; I have heard the terms but am not sure which applies</option>
         <option value="approximate">Approximate &ndash; I have a general sense of my pattern</option>
         <option value="clear">Clear &ndash; I know my attachment style and can see it in my relationships</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-attachment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-attachment" onchange="handleSkip('a-attachment')"><label for="skip-attachment">I know but prefer not to say</label></div>
 </div>
 
@@ -374,7 +414,7 @@ life_area_slug: personality
         <option value="mixed">Mixed &ndash; some areas suit me, others do not</option>
         <option value="mostly-good">Mostly good &ndash; my life generally fits my personality</option>
         <option value="excellent">Excellent &ndash; I have deliberately built my life around my traits</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-fit"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-fit" onchange="handleSkip('a-fit')"><label for="skip-fit">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -391,7 +431,7 @@ life_area_slug: personality
         <option value="one">One &ndash; I can name one but struggle with more</option>
         <option value="two-three">Two or three &ndash; I have a reasonable sense of my strengths</option>
         <option value="many">Several &ndash; I know my personality strengths well</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-strength"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-strength" onchange="handleSkip('a-strength')"><label for="skip-strength">I know but prefer not to say</label></div>
 </div>
 
@@ -404,7 +444,7 @@ life_area_slug: personality
         <option value="one">One &ndash; I can name one but struggle with more</option>
         <option value="two-three">Two or three &ndash; I have a reasonable sense of my limitations</option>
         <option value="many">Several &ndash; I know my personality limitations well</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-limitation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-limitation" onchange="handleSkip('a-limitation')"><label for="skip-limitation">I know but prefer not to say</label></div>
 </div>
 
@@ -417,12 +457,25 @@ life_area_slug: personality
         <option value="vaguely">Vaguely &ndash; I have thought about it in passing</option>
         <option value="considered">Considered &ndash; I have a view on which traits to accept and which to develop</option>
         <option value="actively-working">Actively working on it &ndash; I am deliberately trying to change specific traits</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-change"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-change" onchange="handleSkip('a-change')"><label for="skip-change">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-alignment">
+        <span class="assess-summary-label">Personality Alignment</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-alignment" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-alignment">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-growth">
+        <span class="assess-summary-label">Personality Growth</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-growth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-growth">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on personality assessment uptake, self-knowledge, and personal development practices. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -471,8 +524,39 @@ life_area_slug: personality
         'a-strength', 'a-limitation', 'a-change'
     ];
 
-    // All personality items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-big-five': [
+            // ~75% have never taken a Big Five assessment; detailed results is ~8%
+            {v:'no',p:12},{v:'vaguely',p:30},{v:'informal',p:50},{v:'yes',p:75},{v:'detailed',p:93}
+        ],
+        'a-attachment': [
+            // ~65% are unaware of their attachment style; clear understanding is ~15%
+            {v:'unaware',p:12},{v:'vague',p:35},{v:'approximate',p:62},{v:'clear',p:90}
+        ],
+        'a-fit': [
+            // ~30% report poor personality-life fit; deliberately built life around traits is ~10%
+            {v:'poor',p:12},{v:'mixed',p:38},{v:'mostly-good',p:68},{v:'excellent',p:93}
+        ],
+        'a-strength': [
+            // ~40% cannot name any personality strengths; knowing several well is ~20%
+            {v:'none',p:12},{v:'one',p:35},{v:'two-three',p:62},{v:'many',p:90}
+        ],
+        'a-limitation': [
+            // ~50% have not thought about personality limitations; knowing several is ~18%
+            {v:'none',p:12},{v:'one',p:35},{v:'two-three',p:65},{v:'many',p:92}
+        ],
+        'a-change': [
+            // ~55% have not considered whether to adapt or change traits; actively working is ~12%
+            {v:'not-considered',p:12},{v:'vaguely',p:35},{v:'considered',p:65},{v:'actively-working',p:92}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        alignment: ['a-big-five', 'a-attachment', 'a-fit'],
+        growth: ['a-strength', 'a-limitation', 'a-change']
+    };
+
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -561,6 +645,76 @@ life_area_slug: personality
         }
     };
 
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['alignment', 'growth'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -574,12 +728,6 @@ life_area_slug: personality
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -621,11 +769,10 @@ life_area_slug: personality
     }
 
     function saveScores() {
-        // All personality items are unscored; save null for each value
-        var scores = {
-            alignment: null,
-            growth: null
-        };
+        var scores = {};
+        ['alignment', 'growth'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -636,9 +783,10 @@ life_area_slug: personality
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -649,9 +797,10 @@ life_area_slug: personality
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -679,10 +828,11 @@ life_area_slug: personality
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

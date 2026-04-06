@@ -184,18 +184,58 @@ life_area_slug: physical-safety
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -348,7 +388,7 @@ life_area_slug: physical-safety
         <option value="basic">Basic &ndash; good locks plus one or two additional measures (e.g. motion light)</option>
         <option value="solid">Solid &ndash; multiple layers including cameras or an alarm</option>
         <option value="comprehensive">Comprehensive &ndash; thorough system covering locks, lighting, cameras, and alarm</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-home-security"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-home-security" onchange="handleSkip('a-home-security')"><label for="skip-home-security">I know but prefer not to say</label></div>
 </div>
 
@@ -362,7 +402,7 @@ life_area_slug: physical-safety
         <option value="expired-recent">Expired within the last two years</option>
         <option value="current-basic">Current basic first aid certificate</option>
         <option value="current-advanced">Current advanced first aid or CPR certification</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-first-aid"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-first-aid" onchange="handleSkip('a-first-aid')"><label for="skip-first-aid">I know but prefer not to say</label></div>
 </div>
 
@@ -376,7 +416,7 @@ life_area_slug: physical-safety
         <option value="some-thought">Some thought &ndash; have identified a few key risks</option>
         <option value="thorough">Thorough &ndash; have assessed most areas of daily risk</option>
         <option value="systematic">Systematic &ndash; have done a deliberate audit and taken action on findings</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-hazard-audit"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-hazard-audit" onchange="handleSkip('a-hazard-audit')"><label for="skip-hazard-audit">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -393,7 +433,7 @@ life_area_slug: physical-safety
         <option value="several">Several &ndash; a few activities or places I steer clear of</option>
         <option value="one-or-two">One or two &ndash; a specific avoidance but mostly unrestricted</option>
         <option value="none">None &ndash; safety concerns do not limit my activities</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-avoidance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-avoidance" onchange="handleSkip('a-avoidance')"><label for="skip-avoidance">I know but prefer not to say</label></div>
 </div>
 
@@ -407,7 +447,7 @@ life_area_slug: physical-safety
         <option value="moderate">Moderate &ndash; some caution but generally cope</option>
         <option value="comfortable">Comfortable &ndash; at ease in most new settings</option>
         <option value="very-confident">Very confident &ndash; thrive in unfamiliar environments</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-confidence"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-confidence" onchange="handleSkip('a-confidence')"><label for="skip-confidence">I know but prefer not to say</label></div>
 </div>
 
@@ -425,7 +465,20 @@ life_area_slug: physical-safety
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-riskReduction">
+        <span class="assess-summary-label">Risk Reduction</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-riskReduction" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-riskReduction">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-freedomConvenience">
+        <span class="assess-summary-label">Freedom &amp; Convenience</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-freedomConvenience" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-freedomConvenience">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on home security adoption, first aid certification rates, and safety behaviour. Unscored items (lifestyle cost of safety practices) are excluded from calculations.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -474,8 +527,35 @@ life_area_slug: physical-safety
         'a-avoidance', 'a-confidence', 'a-lifestyle-cost'
     ];
 
-    // All physical-safety items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-home-security': [
+            // ~30% have no security beyond a basic lock; comprehensive systems ~10%
+            {v:'none',p:10},{v:'minimal',p:30},{v:'basic',p:55},{v:'solid',p:78},{v:'comprehensive',p:95}
+        ],
+        'a-first-aid': [
+            // ~70% have never held a first aid certificate; current advanced is ~5%
+            {v:'never',p:12},{v:'expired-long',p:35},{v:'expired-recent',p:55},{v:'current-basic',p:78},{v:'current-advanced',p:95}
+        ],
+        'a-hazard-audit': [
+            // ~50% have not considered daily physical risks; systematic audit is ~5%
+            {v:'not-at-all',p:10},{v:'vaguely',p:30},{v:'some-thought',p:55},{v:'thorough',p:78},{v:'systematic',p:95}
+        ],
+        'a-avoidance': [
+            // ~40% avoid many activities due to safety; no limitations is ~25%
+            {v:'many',p:10},{v:'several',p:35},{v:'one-or-two',p:62},{v:'none',p:88}
+        ],
+        'a-confidence': [
+            // ~20% are anxious in unfamiliar environments; very confident is ~15%
+            {v:'anxious',p:8},{v:'cautious',p:25},{v:'moderate',p:50},{v:'comfortable',p:75},{v:'very-confident',p:93}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        riskReduction: ['a-home-security', 'a-first-aid', 'a-hazard-audit'],
+        freedomConvenience: ['a-avoidance', 'a-confidence']
+    };
+
+    var UNSCORED_ITEMS = ['a-lifestyle-cost'];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -563,6 +643,76 @@ life_area_slug: physical-safety
         }
     };
 
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['riskReduction', 'freedomConvenience'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -576,12 +726,6 @@ life_area_slug: physical-safety
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -621,10 +765,10 @@ life_area_slug: physical-safety
     }
 
     function saveScores() {
-        var scores = {
-            riskReduction: null,
-            freedomConvenience: null
-        };
+        var scores = {};
+        ['riskReduction', 'freedomConvenience'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -635,9 +779,10 @@ life_area_slug: physical-safety
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -648,9 +793,10 @@ life_area_slug: physical-safety
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -678,10 +824,11 @@ life_area_slug: physical-safety
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

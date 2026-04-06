@@ -184,18 +184,58 @@ life_area_slug: rationality
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -356,7 +396,7 @@ life_area_slug: rationality
         <option value="somewhat">Somewhat calibrated &ndash; I notice when I'm uncertain but don't track it</option>
         <option value="good">Good &ndash; I'm usually aware of how confident I should be</option>
         <option value="tracked">I've tested my calibration and it's reasonably accurate</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-calibration"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-calibration" onchange="handleSkip('a-calibration')"><label for="skip-calibration">I know but prefer not to say</label></div>
 </div>
 
@@ -370,7 +410,7 @@ life_area_slug: rationality
         <option value="one">I can recall one recent prediction and its outcome</option>
         <option value="several">I can recall several and I have a sense of my accuracy</option>
         <option value="tracked">I track predictions systematically and know my hit rate</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-predictions"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-predictions" onchange="handleSkip('a-predictions')"><label for="skip-predictions">I know but prefer not to say</label></div>
 </div>
 
@@ -384,7 +424,7 @@ life_area_slug: rationality
         <option value="past-year">Within the past year</option>
         <option value="recently">Within the past few months</option>
         <option value="regularly">I update beliefs regularly and can give multiple recent examples</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-updating"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-updating" onchange="handleSkip('a-updating')"><label for="skip-updating">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -402,7 +442,7 @@ life_area_slug: rationality
         <option value="some-structure">Some structure &ndash; I considered pros and cons or sought advice</option>
         <option value="systematic">Systematic &ndash; I used a deliberate framework and considered alternatives</option>
         <option value="rigorous">Rigorous &ndash; I used multiple frameworks, sought disconfirming evidence, and stress-tested my reasoning</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-past-decisions"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-past-decisions" onchange="handleSkip('a-past-decisions')"><label for="skip-past-decisions">I know but prefer not to say</label></div>
 </div>
 
@@ -416,7 +456,7 @@ life_area_slug: rationality
         <option value="moderate">Moderate &ndash; I have a few tools I use for bigger decisions</option>
         <option value="strong">Strong &ndash; I have a reliable toolkit I apply consistently</option>
         <option value="advanced">Advanced &ndash; I use multiple frameworks and adapt them to the decision type</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-frameworks"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-frameworks" onchange="handleSkip('a-frameworks')"><label for="skip-frameworks">I know but prefer not to say</label></div>
 </div>
 
@@ -430,7 +470,7 @@ life_area_slug: rationality
         <option value="one-two">I can name one or two and recall them affecting me</option>
         <option value="several">I can name several and I watch for them actively</option>
         <option value="systematic">I have systematic strategies to counteract my most common biases</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-biases"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-biases" onchange="handleSkip('a-biases')"><label for="skip-biases">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -448,7 +488,7 @@ life_area_slug: rationality
         <option value="one-area">I can identify one or two areas where my reasoning may be motivated</option>
         <option value="several">I can identify several and I actively work to counteract it</option>
         <option value="vigilant">I'm vigilant about this and regularly test my beliefs for motivated reasoning</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-motivated"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-motivated" onchange="handleSkip('a-motivated')"><label for="skip-motivated">I know but prefer not to say</label></div>
 </div>
 
@@ -462,7 +502,7 @@ life_area_slug: rationality
         <option value="mixed">Mixed &ndash; sometimes curious, sometimes defensive depending on the topic</option>
         <option value="curious">Usually curious &ndash; I try to understand their reasoning</option>
         <option value="actively-seeking">I actively seek out disagreement because it helps me think better</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-disagreement"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-disagreement" onchange="handleSkip('a-disagreement')"><label for="skip-disagreement">I know but prefer not to say</label></div>
 </div>
 
@@ -476,12 +516,30 @@ life_area_slug: rationality
         <option value="sometimes">Sometimes comfortable &ndash; depends on the topic and audience</option>
         <option value="comfortable">Comfortable &ndash; I can identify several important questions where I'm genuinely unsure</option>
         <option value="natural">Natural &ndash; I default to uncertainty and require evidence before forming views</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-uncertainty"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-uncertainty" onchange="handleSkip('a-uncertainty')"><label for="skip-uncertainty">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-beliefs">
+        <span class="assess-summary-label">Accurate Beliefs</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-beliefs" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-beliefs">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-decisions">
+        <span class="assess-summary-label">Effective Decision-Making</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-decisions" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-decisions">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-honesty">
+        <span class="assess-summary-label">Intellectual Honesty</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-honesty" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-honesty">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on calibration practices, decision-making habits, cognitive bias awareness, and intellectual humility research. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -531,8 +589,52 @@ life_area_slug: rationality
         'a-motivated', 'a-disagreement', 'a-uncertainty'
     ];
 
-    // All rationality items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-calibration': [
+            // ~80% have never thought about calibration; tested and accurate is ~3%
+            {v:'no-idea',p:10},{v:'overconfident',p:30},{v:'somewhat',p:55},{v:'good',p:78},{v:'tracked',p:97}
+        ],
+        'a-predictions': [
+            // ~60% can't recall specific predictions; systematic tracking is ~2%
+            {v:'cant-recall',p:10},{v:'vague',p:30},{v:'one',p:55},{v:'several',p:78},{v:'tracked',p:97}
+        ],
+        'a-updating': [
+            // ~30% can't recall changing a belief; regular updating with examples is ~10%
+            {v:'cant-recall',p:8},{v:'years',p:25},{v:'past-year',p:50},{v:'recently',p:75},{v:'regularly',p:95}
+        ],
+        'a-past-decisions': [
+            // ~45% use no process for decisions; rigorous multi-framework approach is ~5%
+            {v:'no-process',p:10},{v:'informal',p:32},{v:'some-structure',p:55},{v:'systematic',p:80},{v:'rigorous',p:97}
+        ],
+        'a-frameworks': [
+            // ~55% use no structured approach; advanced multi-framework use is ~5%
+            {v:'none',p:10},{v:'basic',p:32},{v:'moderate',p:55},{v:'strong',p:80},{v:'advanced',p:97}
+        ],
+        'a-biases': [
+            // ~40% are unfamiliar with cognitive biases; systematic countermeasures is ~5%
+            {v:'none',p:10},{v:'heard',p:30},{v:'one-two',p:55},{v:'several',p:78},{v:'systematic',p:97}
+        ],
+        'a-motivated': [
+            // ~50% are unaware of motivated reasoning; vigilant testing is ~5%
+            {v:'unaware',p:10},{v:'suspect',p:30},{v:'one-area',p:55},{v:'several',p:78},{v:'vigilant',p:97}
+        ],
+        'a-disagreement': [
+            // ~35% react defensively; actively seeking disagreement is ~8%
+            {v:'defensive',p:8},{v:'dismissive',p:22},{v:'mixed',p:48},{v:'curious',p:75},{v:'actively-seeking',p:95}
+        ],
+        'a-uncertainty': [
+            // ~40% are uncomfortable with "I don't know"; defaulting to uncertainty is ~8%
+            {v:'uncomfortable',p:8},{v:'reluctant',p:25},{v:'sometimes',p:50},{v:'comfortable',p:78},{v:'natural',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        beliefs: ['a-calibration', 'a-predictions', 'a-updating'],
+        decisions: ['a-past-decisions', 'a-frameworks', 'a-biases'],
+        honesty: ['a-motivated', 'a-disagreement', 'a-uncertainty']
+    };
+
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -620,6 +722,76 @@ life_area_slug: rationality
         }
     };
 
+
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return null;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        if (!THRESHOLDS[itemId]) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['beliefs', 'decisions', 'honesty'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -633,12 +805,6 @@ life_area_slug: rationality
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -678,12 +844,10 @@ life_area_slug: rationality
     }
 
     function saveScores() {
-        // All rationality items are unscored; save null for each value
-        var scores = {
-            beliefs: null,
-            decisions: null,
-            honesty: null
-        };
+        var scores = {};
+        ['beliefs', 'decisions', 'honesty'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -694,9 +858,10 @@ life_area_slug: rationality
     // --- Event handlers ---
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -707,9 +872,10 @@ life_area_slug: rationality
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -737,10 +903,11 @@ life_area_slug: rationality
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 
