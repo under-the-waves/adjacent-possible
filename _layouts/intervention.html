@@ -412,8 +412,8 @@ layout: default
         {% assign vkey = value_parts[1] %}
         {% assign value_def = site.data.values[current_domain][vkey] %}
         {% assign value_name = value_def.name | default: value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
-        {% assign domain_page = site.pages | where: "life_area_slug", current_domain | first %}
-        {% assign domain_display = domain_page.title | default: current_domain | replace: '-', ' ' | capitalize %}
+        {% assign domain_words = current_domain | split: '-' %}
+        {% capture domain_display %}{% for word in domain_words %}{{ word | capitalize }}{% unless forloop.last %} {% endunless %}{% endfor %}{% endcapture %}
         <div class="summary-item">
             <span class="summary-label"><a href="{{ site.baseurl }}/{{ current_domain }}/">{{ domain_display }}</a> – {{ value_name }}:</span>
             <span class="summary-score" id="summary-{{ value_key }}">Loading...</span>
@@ -459,8 +459,8 @@ layout: default
     {% assign vkey_detail = value_parts[1] %}
     {% assign value_def_detail = site.data.values[current_detail_domain][vkey_detail] %}
     {% assign value_name = value_def_detail.name | default: value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
-    {% assign detail_domain_page = site.pages | where: "life_area_slug", current_detail_domain | first %}
-    {% assign domain_display = detail_domain_page.title | default: current_detail_domain | replace: '-', ' ' | capitalize %}
+    {% assign detail_domain_words = current_detail_domain | split: '-' %}
+    {% capture domain_display %}{% for word in detail_domain_words %}{{ word | capitalize }}{% unless forloop.last %} {% endunless %}{% endfor %}{% endcapture %}
 
     <div class="value-section">
         <h3><a href="{{ site.baseurl }}/{{ current_detail_domain }}/">{{ domain_display }}</a> – {{ value_name }}</h3>
