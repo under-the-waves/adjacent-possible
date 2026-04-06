@@ -214,18 +214,58 @@ life_area_slug: learning-methods
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -386,7 +426,7 @@ life_area_slug: learning-methods
         <option value="one-active">One active method &ndash; e.g. flashcards or practice problems</option>
         <option value="several">Several methods &ndash; I mix techniques depending on the material</option>
         <option value="evidence-based">Evidence-based selection &ndash; I choose techniques based on what research shows works</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-study-methods"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-study-methods" onchange="handleSkip('a-study-methods')"><label for="skip-study-methods">I know but prefer not to say</label></div>
 </div>
 
@@ -400,7 +440,7 @@ life_area_slug: learning-methods
         <option value="mixed">Mixed &ndash; I space some things but not deliberately</option>
         <option value="mostly-spaced">Mostly spaced &ndash; I usually revisit material across days</option>
         <option value="deliberately-spaced">Deliberately spaced &ndash; I plan review intervals in advance</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-spacing"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-spacing" onchange="handleSkip('a-spacing')"><label for="skip-spacing">I know but prefer not to say</label></div>
 </div>
 
@@ -414,7 +454,7 @@ life_area_slug: learning-methods
         <option value="1-3">1&ndash;3 hours</option>
         <option value="3-7">3&ndash;7 hours</option>
         <option value="over-7">Over 7 hours</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-time-spent"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-time-spent" onchange="handleSkip('a-time-spent')"><label for="skip-time-spent">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -432,7 +472,7 @@ life_area_slug: learning-methods
         <option value="sometimes">Sometimes &ndash; I seek it out occasionally</option>
         <option value="regularly">Regularly &ndash; I have a consistent feedback source</option>
         <option value="systematically">Systematically &ndash; feedback is built into my learning process</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-feedback"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-feedback" onchange="handleSkip('a-feedback')"><label for="skip-feedback">I know but prefer not to say</label></div>
 </div>
 
@@ -446,7 +486,7 @@ life_area_slug: learning-methods
         <option value="often">Often &ndash; I regularly link new knowledge to existing understanding</option>
         <option value="actively">Actively &ndash; I deliberately look for connections and analogies</option>
         <option value="systematically">Systematically &ndash; I have a process for integrating new knowledge</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-connections"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-connections" onchange="handleSkip('a-connections')"><label for="skip-connections">I know but prefer not to say</label></div>
 </div>
 
@@ -460,7 +500,7 @@ life_area_slug: learning-methods
         <option value="sometimes">Sometimes &ndash; I occasionally focus on weak areas</option>
         <option value="regularly">Regularly &ndash; I make a point of practising difficult things</option>
         <option value="systematically">Systematically &ndash; I identify and target weaknesses as a core part of practice</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-weakness"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-weakness" onchange="handleSkip('a-weakness')"><label for="skip-weakness">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -478,7 +518,7 @@ life_area_slug: learning-methods
         <option value="some-preferences">Some preferences &ndash; I know a few things I enjoy</option>
         <option value="clear-preferences">Clear preferences &ndash; I know what works for me and seek it out</option>
         <option value="optimised">Optimised &ndash; I've structured my learning around what energises me</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-enjoy-learning"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-enjoy-learning" onchange="handleSkip('a-enjoy-learning')"><label for="skip-enjoy-learning">I know but prefer not to say</label></div>
 </div>
 
@@ -492,7 +532,7 @@ life_area_slug: learning-methods
         <option value="sometimes">Sometimes &ndash; it depends on the subject</option>
         <option value="usually">Usually &ndash; I can maintain routines for months</option>
         <option value="always">Always &ndash; I have long-running learning habits</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-consistency"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-consistency" onchange="handleSkip('a-consistency')"><label for="skip-consistency">I know but prefer not to say</label></div>
 </div>
 
@@ -506,12 +546,30 @@ life_area_slug: learning-methods
         <option value="weeks-ago">Weeks ago</option>
         <option value="this-week">This week</option>
         <option value="today">Today or yesterday &ndash; I explore new topics constantly</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-curiosity"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-curiosity" onchange="handleSkip('a-curiosity')"><label for="skip-curiosity">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-efficiency">
+        <span class="assess-summary-label">Efficiency &amp; Speed</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-efficiency" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-efficiency">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-depth">
+        <span class="assess-summary-label">Depth &amp; Mastery</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-depth" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-depth">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-enjoyment">
+        <span class="assess-summary-label">Enjoyment &amp; Motivation</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-enjoyment" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-enjoyment">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on learning behaviour and study techniques among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -556,12 +614,64 @@ life_area_slug: learning-methods
     var AREA = 'learning-methods';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-study-methods', 'a-spacing', 'a-time-spent',
-        'a-feedback', 'a-connections', 'a-weakness',
-        'a-enjoy-learning', 'a-consistency', 'a-curiosity'
+        'a-study-methods',
+        'a-spacing',
+        'a-time-spent',
+        'a-feedback',
+        'a-connections',
+        'a-weakness',
+        'a-enjoy-learning',
+        'a-consistency',
+        'a-curiosity'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-study-methods': [
+            // Over 80% of learners use passive methods; evidence-based selection is very rare
+            {v:'none',p:10},{v:'passive',p:25},{v:'one-active',p:55},{v:'several',p:78},{v:'evidence-based',p:95}
+        ],
+        'a-spacing': [
+            // Over 80% of people cram; deliberately spaced review is very rare
+            {v:'all-at-once',p:10},{v:'mostly-crammed',p:25},{v:'mixed',p:50},{v:'mostly-spaced',p:78},{v:'deliberately-spaced',p:95}
+        ],
+        'a-time-spent': [
+            // Most adults spend zero intentional learning hours; over 7 is very rare
+            {v:'zero',p:15},{v:'under-1',p:35},{v:'1-3',p:55},{v:'3-7',p:78},{v:'over-7',p:95}
+        ],
+        'a-feedback': [
+            // Most people rarely seek learning feedback; systematic feedback is very rare
+            {v:'never',p:10},{v:'rarely',p:30},{v:'sometimes',p:55},{v:'regularly',p:78},{v:'systematically',p:95}
+        ],
+        'a-connections': [
+            // Most people treat topics as isolated; systematic integration is very rare
+            {v:'rarely',p:10},{v:'sometimes',p:30},{v:'often',p:55},{v:'actively',p:78},{v:'systematically',p:95}
+        ],
+        'a-weakness': [
+            // Most people practise what they're comfortable with; systematic weakness targeting is rare
+            {v:'no',p:10},{v:'aware',p:25},{v:'sometimes',p:50},{v:'regularly',p:78},{v:'systematically',p:95}
+        ],
+        'a-enjoy-learning': [
+            // Many people find learning draining; optimised learning around preferences is rare
+            {v:'draining',p:10},{v:'mixed',p:25},{v:'some-preferences',p:50},{v:'clear-preferences',p:78},{v:'optimised',p:95}
+        ],
+        'a-consistency': [
+            // Most people struggle to sustain learning routines; long-running habits are uncommon
+            {v:'never',p:10},{v:'rarely',p:25},{v:'sometimes',p:50},{v:'usually',p:78},{v:'always',p:95}
+        ],
+        'a-curiosity': [
+            // Curiosity-driven exploration varies widely; daily exploration is uncommon
+            {v:'cant-recall',p:10},{v:'months-ago',p:25},{v:'weeks-ago',p:50},{v:'this-week',p:78},{v:'today',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        efficiency: ['a-study-methods', 'a-spacing', 'a-time-spent'],
+        depth: ['a-feedback', 'a-connections', 'a-weakness'],
+        enjoyment: ['a-enjoy-learning', 'a-consistency', 'a-curiosity']
+    };
+
+    // All learning-methods items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -649,6 +759,75 @@ life_area_slug: learning-methods
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['efficiency', 'depth', 'enjoyment'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
@@ -659,12 +838,6 @@ life_area_slug: learning-methods
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -703,11 +876,10 @@ life_area_slug: learning-methods
     }
 
     function saveScores() {
-        var scores = {
-            efficiency: null,
-            depth: null,
-            enjoyment: null
-        };
+        var scores = {};
+        ['efficiency', 'depth', 'enjoyment'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -716,9 +888,10 @@ life_area_slug: learning-methods
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -729,9 +902,10 @@ life_area_slug: learning-methods
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -755,10 +929,12 @@ life_area_slug: learning-methods
                 var el = document.getElementById(id);
                 if (el) el.value = item.value;
             }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

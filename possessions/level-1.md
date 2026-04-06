@@ -214,18 +214,58 @@ life_area_slug: possessions
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -392,7 +432,7 @@ life_area_slug: possessions
         <option value="most">Most &ndash; I use the majority of what I own</option>
         <option value="nearly-all">Nearly all &ndash; very little goes unused</option>
         <option value="everything">Everything &ndash; if I don't use it, I get rid of it</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-unused-items"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-unused-items" onchange="handleSkip('a-unused-items')"><label for="skip-unused-items">I know but prefer not to say</label></div>
 </div>
 
@@ -406,7 +446,7 @@ life_area_slug: possessions
         <option value="a-couple">A couple &ndash; one or two</option>
         <option value="none">None &ndash; everything works properly</option>
         <option value="proactive">Proactive &ndash; I fix or replace things as soon as they break</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-broken-items"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-broken-items" onchange="handleSkip('a-broken-items')"><label for="skip-broken-items">I know but prefer not to say</label></div>
 </div>
 
@@ -420,7 +460,7 @@ life_area_slug: possessions
         <option value="a-minute">About a minute &ndash; I have a rough idea where things are</option>
         <option value="quickly">Quickly &ndash; most things are in their designated place</option>
         <option value="instantly">Instantly &ndash; everything has a place and I know where it is</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-finding-things"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-finding-things" onchange="handleSkip('a-finding-things')"><label for="skip-finding-things">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -438,7 +478,7 @@ life_area_slug: possessions
         <option value="approximate">Approximate &ndash; I could estimate most categories</option>
         <option value="good-sense">Good sense &ndash; I know roughly what I own</option>
         <option value="precise">Precise &ndash; I've inventoried my possessions</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-volume"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-volume" onchange="handleSkip('a-volume')"><label for="skip-volume">I know but prefer not to say</label></div>
 </div>
 
@@ -452,7 +492,7 @@ life_area_slug: possessions
         <option value="aware">Aware &ndash; I understand my triggers and tendencies</option>
         <option value="controlled">Controlled &ndash; I've changed my habits based on this awareness</option>
         <option value="intentional">Intentional &ndash; every purchase is deliberate and considered</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-acquisition"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-acquisition" onchange="handleSkip('a-acquisition')"><label for="skip-acquisition">I know but prefer not to say</label></div>
 </div>
 
@@ -466,7 +506,7 @@ life_area_slug: possessions
         <option value="within-a-year">Within the past year</option>
         <option value="within-months">Within the past few months</option>
         <option value="regular">Regular &ndash; I declutter on a schedule</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-declutter"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-declutter" onchange="handleSkip('a-declutter')"><label for="skip-declutter">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -484,7 +524,7 @@ life_area_slug: possessions
         <option value="once-or-twice">Once or twice &ndash; I've mostly learned this lesson</option>
         <option value="rarely">Rarely &ndash; I usually buy at a quality level that lasts</option>
         <option value="never">Never &ndash; I research and invest in quality from the start</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-lifetime-cost"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-lifetime-cost" onchange="handleSkip('a-lifetime-cost')"><label for="skip-lifetime-cost">I know but prefer not to say</label></div>
 </div>
 
@@ -498,7 +538,7 @@ life_area_slug: possessions
         <option value="sometimes">Sometimes &ndash; I maintain some things but not consistently</option>
         <option value="mostly">Mostly &ndash; I keep up with most maintenance</option>
         <option value="always">Always &ndash; I have a maintenance routine for everything that needs it</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-maintenance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
 
@@ -512,7 +552,7 @@ life_area_slug: possessions
         <option value="a-few">A few &ndash; I can point to two or three well-made items</option>
         <option value="several">Several &ndash; I deliberately own quality items and know what makes them good</option>
         <option value="knowledgeable">Knowledgeable &ndash; I can assess quality in most product categories</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-best-items"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-best-items" onchange="handleSkip('a-best-items')"><label for="skip-best-items">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -530,7 +570,7 @@ life_area_slug: possessions
         <option value="somewhat">Somewhat &ndash; I can name my most meaningful items</option>
         <option value="clearly">Clearly &ndash; I know exactly which items matter and why</option>
         <option value="curated">Curated &ndash; I've deliberately kept meaningful items and let go of the rest</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-sentimental"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-sentimental" onchange="handleSkip('a-sentimental')"><label for="skip-sentimental">I know but prefer not to say</label></div>
 </div>
 
@@ -544,7 +584,7 @@ life_area_slug: possessions
         <option value="mixed">Mixed &ndash; some displayed, some stored</option>
         <option value="mostly-visible">Mostly visible &ndash; I can see or use most of them daily</option>
         <option value="intentional">Intentional &ndash; every meaningful item is displayed or used as I want it</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-display"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-display" onchange="handleSkip('a-display')"><label for="skip-display">I know but prefer not to say</label></div>
 </div>
 
@@ -558,12 +598,35 @@ life_area_slug: possessions
         <option value="partly">Partly &ndash; some things fit, others don't</option>
         <option value="mostly">Mostly &ndash; my possessions generally reflect who I am now</option>
         <option value="fully">Fully &ndash; my surroundings are a deliberate expression of who I am</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-identity"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-identity" onchange="handleSkip('a-identity')"><label for="skip-identity">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-functionality">
+        <span class="assess-summary-label">Functionality</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-functionality" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-functionality">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-simplicity">
+        <span class="assess-summary-label">Simplicity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-simplicity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-simplicity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-quality">
+        <span class="assess-summary-label">Quality</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-quality" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-quality">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-meaning">
+        <span class="assess-summary-label">Meaning</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-meaning" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-meaning">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on possession management behaviour among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -608,13 +671,80 @@ life_area_slug: possessions
     var AREA = 'possessions';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-unused-items', 'a-broken-items', 'a-finding-things',
-        'a-volume', 'a-acquisition', 'a-declutter',
-        'a-lifetime-cost', 'a-maintenance', 'a-best-items',
-        'a-sentimental', 'a-display', 'a-identity'
+        'a-unused-items',
+        'a-broken-items',
+        'a-finding-things',
+        'a-volume',
+        'a-acquisition',
+        'a-declutter',
+        'a-lifetime-cost',
+        'a-maintenance',
+        'a-best-items',
+        'a-sentimental',
+        'a-display',
+        'a-identity'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-unused-items': [
+            // Most people have significant unused possessions; using everything is very rare
+            {v:'minority',p:15},{v:'about-half',p:35},{v:'most',p:55},{v:'nearly-all',p:78},{v:'everything',p:95}
+        ],
+        'a-broken-items': [
+            // Most households have several broken items; proactive repair is uncommon
+            {v:'many',p:10},{v:'several',p:30},{v:'a-couple',p:55},{v:'none',p:78},{v:'proactive',p:95}
+        ],
+        'a-finding-things': [
+            // Average person spends significant time searching; instant retrieval is rare
+            {v:'long-search',p:10},{v:'several-minutes',p:30},{v:'a-minute',p:55},{v:'quickly',p:78},{v:'instantly',p:95}
+        ],
+        'a-volume': [
+            // Very few people have inventoried their possessions; most have no idea
+            {v:'no-idea',p:15},{v:'vague',p:35},{v:'approximate',p:55},{v:'good-sense',p:78},{v:'precise',p:95}
+        ],
+        'a-acquisition': [
+            // Most people buy without reflecting on patterns; intentional purchasing is rare
+            {v:'unaware',p:10},{v:'some-awareness',p:30},{v:'aware',p:55},{v:'controlled',p:78},{v:'intentional',p:95}
+        ],
+        'a-declutter': [
+            // Regular scheduled decluttering is very uncommon; most people never do a major declutter
+            {v:'never',p:10},{v:'years-ago',p:30},{v:'within-a-year',p:55},{v:'within-months',p:78},{v:'regular',p:95}
+        ],
+        'a-lifetime-cost': [
+            // Most people frequently replace cheap items; researching quality from the start is rare
+            {v:'frequently',p:10},{v:'several-times',p:30},{v:'once-or-twice',p:55},{v:'rarely',p:78},{v:'never',p:95}
+        ],
+        'a-maintenance': [
+            // Most people rarely maintain possessions; a full maintenance routine is very uncommon
+            {v:'never',p:10},{v:'rarely',p:30},{v:'sometimes',p:50},{v:'mostly',p:75},{v:'always',p:95}
+        ],
+        'a-best-items': [
+            // Few people can articulate what makes their possessions high-quality
+            {v:'no',p:10},{v:'vaguely',p:30},{v:'a-few',p:55},{v:'several',p:78},{v:'knowledgeable',p:95}
+        ],
+        'a-sentimental': [
+            // Most people haven't reflected on which possessions carry genuine significance
+            {v:'no',p:10},{v:'vaguely',p:30},{v:'somewhat',p:55},{v:'clearly',p:78},{v:'curated',p:95}
+        ],
+        'a-display': [
+            // Most meaningful items end up in storage; intentional display is uncommon
+            {v:'stored',p:10},{v:'some-visible',p:30},{v:'mixed',p:50},{v:'mostly-visible',p:75},{v:'intentional',p:95}
+        ],
+        'a-identity': [
+            // Most people's surroundings don't fully reflect who they are now
+            {v:'not-at-all',p:10},{v:'somewhat-outdated',p:30},{v:'partly',p:50},{v:'mostly',p:75},{v:'fully',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        functionality: ['a-unused-items', 'a-broken-items', 'a-finding-things'],
+        simplicity: ['a-volume', 'a-acquisition', 'a-declutter'],
+        quality: ['a-lifetime-cost', 'a-maintenance', 'a-best-items'],
+        meaning: ['a-sentimental', 'a-display', 'a-identity']
+    };
+
+    // All possessions items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -664,7 +794,6 @@ life_area_slug: possessions
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -695,6 +824,7 @@ life_area_slug: possessions
         progress[step] = true;
         saveProgress(progress);
         updateUI();
+
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -702,21 +832,87 @@ life_area_slug: possessions
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['functionality', 'simplicity', 'quality', 'meaning'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
+
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
-    }
+
     function updateAssessCompletion() {
         var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
         var btn = document.getElementById('assessBtn');
@@ -725,19 +921,24 @@ life_area_slug: possessions
             btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
     }
+
     function saveAnswers() {
         var answers = {};
         ASSESS_IDS.forEach(function(id) {
             var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
             var skipped = skipBox && skipBox.checked;
             var value = null;
-            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
             answers[id] = { value: value, skipped: skipped };
         });
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -746,43 +947,73 @@ life_area_slug: possessions
             APStorage.save('ap-level1-assess', all);
         }
     }
+
     function saveScores() {
-        var scores = {
-            functionality: null,
-            simplicity: null,
-            quality: null,
-            meaning: null
-        };
+        var scores = {};
+        ['functionality', 'simplicity', 'quality', 'meaning'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
             APStorage.save('ap-level1-scores', all);
         }
     }
+
     window.handleAssessInput = function(itemId) {
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     window.handleSkip = function(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         var input = document.getElementById(itemId);
-        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     function restoreAssessment() {
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         var answers = allAnswers[AREA];
         if (!answers) return;
+
         ASSESS_IDS.forEach(function(id) {
-            var item = answers[id]; if (!item) return;
+            var item = answers[id];
+            if (!item) return;
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
-                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
-            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
-        updateAssessRecorded(); updateAssessCompletion();
+
+        updateAssessSummary();
+        updateAssessCompletion();
     }
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>

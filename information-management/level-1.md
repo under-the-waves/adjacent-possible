@@ -214,18 +214,58 @@ life_area_slug: information-management
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -394,7 +434,7 @@ life_area_slug: information-management
         <option value="one-method">One method &ndash; I have a go-to tool I use fairly often</option>
         <option value="consistent">Consistent &ndash; I reliably capture from most sources</option>
         <option value="systematic">Systematic &ndash; I have a structured capture process I follow for everything</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-capture-method"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-capture-method" onchange="handleSkip('a-capture-method')"><label for="skip-capture-method">I know but prefer not to say</label></div>
 </div>
 
@@ -408,7 +448,7 @@ life_area_slug: information-management
         <option value="main-points">Main points &ndash; I remember the core argument</option>
         <option value="good-detail">Good detail &ndash; I can summarise and recall key evidence</option>
         <option value="thorough">Thorough &ndash; I can discuss it in depth weeks later</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-retention-rate"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-retention-rate" onchange="handleSkip('a-retention-rate')"><label for="skip-retention-rate">I know but prefer not to say</label></div>
 </div>
 
@@ -422,7 +462,7 @@ life_area_slug: information-management
         <option value="a-few">A few types &ndash; I capture from two or three source types</option>
         <option value="most">Most &ndash; I capture from most sources I encounter</option>
         <option value="comprehensive">Comprehensive &ndash; I have a capture habit for every source type</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-capture-sources"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-capture-sources" onchange="handleSkip('a-capture-sources')"><label for="skip-capture-sources">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -440,7 +480,7 @@ life_area_slug: information-management
         <option value="moderate">Moderate &ndash; a few minutes of searching</option>
         <option value="quick">Quick &ndash; under a minute</option>
         <option value="instant">Instant &ndash; I know exactly where everything is</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-find-speed"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-find-speed" onchange="handleSkip('a-find-speed')"><label for="skip-find-speed">I know but prefer not to say</label></div>
 </div>
 
@@ -454,7 +494,7 @@ life_area_slug: information-management
         <option value="basic">Basic &ndash; a folder structure I mostly follow</option>
         <option value="structured">Structured &ndash; consistent organisation with folders and/or tags</option>
         <option value="optimised">Optimised &ndash; a well-maintained system I can navigate confidently</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-organisation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-organisation" onchange="handleSkip('a-organisation')"><label for="skip-organisation">I know but prefer not to say</label></div>
 </div>
 
@@ -468,7 +508,7 @@ life_area_slug: information-management
         <option value="sometimes">Sometimes &ndash; a few times a month</option>
         <option value="rarely">Rarely &ndash; once a month or less</option>
         <option value="almost-never">Almost never &ndash; I can usually find my previous research</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-reresearch"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-reresearch" onchange="handleSkip('a-reresearch')"><label for="skip-reresearch">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -486,7 +526,7 @@ life_area_slug: information-management
         <option value="sometimes">Sometimes &ndash; I notice connections a few times a month</option>
         <option value="regularly">Regularly &ndash; I actively look for connections</option>
         <option value="systematically">Systematically &ndash; my system is designed to surface connections</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-connections"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-connections" onchange="handleSkip('a-connections')"><label for="skip-connections">I know but prefer not to say</label></div>
 </div>
 
@@ -500,7 +540,7 @@ life_area_slug: information-management
         <option value="occasionally">Occasionally &ndash; every few months</option>
         <option value="regularly">Regularly &ndash; weekly or fortnightly</option>
         <option value="daily">Daily &ndash; review is part of my routine</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-review-habit"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-review-habit" onchange="handleSkip('a-review-habit')"><label for="skip-review-habit">I know but prefer not to say</label></div>
 </div>
 
@@ -514,7 +554,7 @@ life_area_slug: information-management
         <option value="occasional">Occasionally helps &ndash; I sometimes find useful things while browsing</option>
         <option value="supports-thinking">Supports thinking &ndash; it regularly surfaces relevant material</option>
         <option value="thinking-tool">Thinking tool &ndash; it actively generates new ideas and connections</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-synthesis"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-synthesis" onchange="handleSkip('a-synthesis')"><label for="skip-synthesis">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -532,7 +572,7 @@ life_area_slug: information-management
         <option value="moderate">Moderate &ndash; 1&ndash;2 hours per week</option>
         <option value="light">Light &ndash; under 30 minutes per week</option>
         <option value="minimal">Minimal &ndash; the system mostly maintains itself</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-maintenance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-maintenance" onchange="handleSkip('a-maintenance')"><label for="skip-maintenance">I know but prefer not to say</label></div>
 </div>
 
@@ -546,7 +586,7 @@ life_area_slug: information-management
         <option value="a-couple">A couple &ndash; one or two</option>
         <option value="one-stable">One stable system &ndash; I've stuck with my current approach</option>
         <option value="never-tried">I've never tried to set one up</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-abandoned"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-abandoned" onchange="handleSkip('a-abandoned')"><label for="skip-abandoned">I know but prefer not to say</label></div>
 </div>
 
@@ -560,12 +600,35 @@ life_area_slug: information-management
         <option value="neutral">Neutral &ndash; it's fine but not seamless</option>
         <option value="low-friction">Low friction &ndash; it's easy enough that I use it consistently</option>
         <option value="effortless">Effortless &ndash; capturing and organising feels natural</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-friction"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-friction" onchange="handleSkip('a-friction')"><label for="skip-friction">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-retention">
+        <span class="assess-summary-label">Information Retention</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-retention" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-retention">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-retrieval">
+        <span class="assess-summary-label">Retrieval Efficiency</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-retrieval" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-retrieval">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-insight">
+        <span class="assess-summary-label">Insight Generation</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-insight" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-insight">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-simplicity">
+        <span class="assess-summary-label">System Simplicity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-simplicity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-simplicity">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on personal knowledge management practices among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -610,14 +673,80 @@ life_area_slug: information-management
     var AREA = 'information-management';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-capture-method', 'a-retention-rate', 'a-capture-sources',
-        'a-find-speed', 'a-organisation', 'a-reresearch',
-        'a-connections', 'a-review-habit', 'a-synthesis',
-        'a-maintenance', 'a-abandoned', 'a-friction'
+        'a-capture-method',
+        'a-retention-rate',
+        'a-capture-sources',
+        'a-find-speed',
+        'a-organisation',
+        'a-reresearch',
+        'a-connections',
+        'a-review-habit',
+        'a-synthesis',
+        'a-maintenance',
+        'a-abandoned',
+        'a-friction'
     ];
 
-    // All information-management items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-capture-method': [
+            // Most people don't capture information systematically; a structured process is very rare
+            {v:'nothing',p:15},{v:'occasional',p:35},{v:'one-method',p:55},{v:'consistent',p:78},{v:'systematic',p:95}
+        ],
+        'a-retention-rate': [
+            // Most people retain very little from what they read; thorough recall is rare
+            {v:'almost-nothing',p:10},{v:'title-only',p:30},{v:'main-points',p:55},{v:'good-detail',p:78},{v:'thorough',p:95}
+        ],
+        'a-capture-sources': [
+            // Most people capture from zero or one source type; comprehensive capture is very rare
+            {v:'none',p:10},{v:'one-type',p:30},{v:'a-few',p:55},{v:'most',p:78},{v:'comprehensive',p:95}
+        ],
+        'a-find-speed': [
+            // Most people struggle to find saved information; instant retrieval is rare
+            {v:'cant-find',p:10},{v:'long-search',p:25},{v:'moderate',p:50},{v:'quick',p:78},{v:'instant',p:95}
+        ],
+        'a-organisation': [
+            // Most people's files are minimally organised; an optimised system is rare
+            {v:'chaotic',p:10},{v:'minimal',p:25},{v:'basic',p:50},{v:'structured',p:78},{v:'optimised',p:95}
+        ],
+        'a-reresearch': [
+            // Most people frequently re-research things; almost never doing so is uncommon
+            {v:'constantly',p:10},{v:'often',p:25},{v:'sometimes',p:50},{v:'rarely',p:78},{v:'almost-never',p:95}
+        ],
+        'a-connections': [
+            // Most people consume information without connecting it; systematic connection is rare
+            {v:'never',p:10},{v:'rarely',p:25},{v:'sometimes',p:50},{v:'regularly',p:78},{v:'systematically',p:95}
+        ],
+        'a-review-habit': [
+            // Most people never revisit their notes; daily review is very rare
+            {v:'never',p:10},{v:'rarely',p:30},{v:'occasionally',p:50},{v:'regularly',p:78},{v:'daily',p:95}
+        ],
+        'a-synthesis': [
+            // Most people's systems are storage-only; a thinking tool is very rare
+            {v:'no-system',p:10},{v:'storage-only',p:25},{v:'occasional',p:50},{v:'supports-thinking',p:78},{v:'thinking-tool',p:95}
+        ],
+        'a-maintenance': [
+            // Having no system or excessive maintenance are both common; minimal self-maintaining is rare
+            {v:'no-system',p:15},{v:'excessive',p:25},{v:'moderate',p:50},{v:'light',p:78},{v:'minimal',p:95}
+        ],
+        'a-abandoned': [
+            // Most people have tried and abandoned several tools; one stable system is uncommon
+            {v:'many',p:10},{v:'several',p:25},{v:'a-couple',p:50},{v:'one-stable',p:80},{v:'never-tried',p:20}
+        ],
+        'a-friction': [
+            // Most people find information capture effortful; effortless flow is rare
+            {v:'high-friction',p:10},{v:'some-friction',p:25},{v:'neutral',p:50},{v:'low-friction',p:78},{v:'effortless',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        retention: ['a-capture-method', 'a-retention-rate', 'a-capture-sources'],
+        retrieval: ['a-find-speed', 'a-organisation', 'a-reresearch'],
+        insight: ['a-connections', 'a-review-habit', 'a-synthesis'],
+        simplicity: ['a-maintenance', 'a-abandoned', 'a-friction']
+    };
+
+    // All information-management items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -705,6 +834,73 @@ life_area_slug: information-management
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['retention', 'retrieval', 'insight', 'simplicity'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
@@ -717,12 +913,6 @@ life_area_slug: information-management
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -761,12 +951,10 @@ life_area_slug: information-management
     }
 
     function saveScores() {
-        var scores = {
-            retention: null,
-            retrieval: null,
-            insight: null,
-            simplicity: null
-        };
+        var scores = {};
+        ['retention', 'retrieval', 'insight', 'simplicity'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -775,9 +963,10 @@ life_area_slug: information-management
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -788,9 +977,10 @@ life_area_slug: information-management
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -814,10 +1004,12 @@ life_area_slug: information-management
                 var el = document.getElementById(id);
                 if (el) el.value = item.value;
             }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

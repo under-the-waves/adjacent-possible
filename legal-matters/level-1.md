@@ -214,18 +214,58 @@ life_area_slug: legal-matters
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -394,7 +434,7 @@ life_area_slug: legal-matters
         <option value="have-one">I have one but I'm not sure it covers everything</option>
         <option value="current">Current &ndash; valid and reviewed within the past few years</option>
         <option value="comprehensive">Comprehensive &ndash; recently reviewed with professional advice</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-will"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-will" onchange="handleSkip('a-will')"><label for="skip-will">I know but prefer not to say</label></div>
 </div>
 
@@ -408,7 +448,7 @@ life_area_slug: legal-matters
         <option value="one-only">One only &ndash; I have one but not the other</option>
         <option value="both-basic">Both &ndash; basic versions in place</option>
         <option value="both-comprehensive">Both &ndash; professionally prepared and regularly reviewed</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-poa"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-poa" onchange="handleSkip('a-poa')"><label for="skip-poa">I know but prefer not to say</label></div>
 </div>
 
@@ -422,7 +462,7 @@ life_area_slug: legal-matters
         <option value="some-awareness">Some awareness &ndash; I know a few areas that need attention</option>
         <option value="mostly-covered">Mostly covered &ndash; I've addressed the main risks</option>
         <option value="fully-assessed">Fully assessed &ndash; I've had a professional review of my exposure</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-insurance"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-insurance" onchange="handleSkip('a-insurance')"><label for="skip-insurance">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -440,7 +480,7 @@ life_area_slug: legal-matters
         <option value="with-effort">With effort &ndash; they're in the house somewhere</option>
         <option value="yes">Yes &ndash; they're in a known location</option>
         <option value="easily">Easily &ndash; there's a clear index or guide to all documents</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-organised"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-organised" onchange="handleSkip('a-organised')"><label for="skip-organised">I know but prefer not to say</label></div>
 </div>
 
@@ -454,7 +494,7 @@ life_area_slug: legal-matters
         <option value="one">One &ndash; there's a single area I need to address</option>
         <option value="minor">Minor &ndash; I have small uncertainties but nothing major</option>
         <option value="none">None &ndash; I feel confident about my legal position</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-anxiety"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-anxiety" onchange="handleSkip('a-anxiety')"><label for="skip-anxiety">I know but prefer not to say</label></div>
 </div>
 
@@ -468,7 +508,7 @@ life_area_slug: legal-matters
         <option value="partial">Partially &ndash; some people know some things</option>
         <option value="mostly">Mostly &ndash; key people know the important details</option>
         <option value="fully">Fully &ndash; everyone relevant has been briefed and knows where to find things</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-family-aware"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-family-aware" onchange="handleSkip('a-family-aware')"><label for="skip-family-aware">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -486,7 +526,7 @@ life_area_slug: legal-matters
         <option value="basic">Basic &ndash; I use one or two tax-efficient structures</option>
         <option value="good">Good &ndash; I've made deliberate choices to minimise tax</option>
         <option value="optimised">Optimised &ndash; I've had professional advice and act on it regularly</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-tax"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-tax" onchange="handleSkip('a-tax')"><label for="skip-tax">I know but prefer not to say</label></div>
 </div>
 
@@ -500,7 +540,7 @@ life_area_slug: legal-matters
         <option value="some">Some &ndash; I've read a few but not all</option>
         <option value="most">Most &ndash; I've reviewed the main ones</option>
         <option value="all">All &ndash; I've read and understood every key contract</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-contracts"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-contracts" onchange="handleSkip('a-contracts')"><label for="skip-contracts">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -518,7 +558,7 @@ life_area_slug: legal-matters
         <option value="basic">Basic &ndash; I know the essentials</option>
         <option value="solid">Solid &ndash; I know my rights and could assert them calmly</option>
         <option value="thorough">Thorough &ndash; I could explain them to someone else</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-rights-police"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-rights-police" onchange="handleSkip('a-rights-police')"><label for="skip-rights-police">I know but prefer not to say</label></div>
 </div>
 
@@ -532,7 +572,7 @@ life_area_slug: legal-matters
         <option value="basic">Basic &ndash; I know the main protections</option>
         <option value="solid">Solid &ndash; I know my rights and have checked my contract against them</option>
         <option value="thorough">Thorough &ndash; I could advise someone else on basic employment rights</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-rights-work"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-rights-work" onchange="handleSkip('a-rights-work')"><label for="skip-rights-work">I know but prefer not to say</label></div>
 </div>
 
@@ -546,12 +586,35 @@ life_area_slug: legal-matters
         <option value="basic">Basic &ndash; I know to contact a solicitor but not much more</option>
         <option value="informed">Informed &ndash; I know the different types of legal help and how to access them</option>
         <option value="connected">Connected &ndash; I already have a solicitor or know exactly who to call</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-legal-help"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-legal-help" onchange="handleSkip('a-legal-help')"><label for="skip-legal-help">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-protection">
+        <span class="assess-summary-label">Comprehensive Protection</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-protection" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-protection">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-simplicity">
+        <span class="assess-summary-label">Simplicity &amp; Peace of Mind</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-simplicity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-simplicity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-strategic">
+        <span class="assess-summary-label">Strategic Advantage</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-strategic" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-strategic">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-access">
+        <span class="assess-summary-label">Access &amp; Empowerment</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-access" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-access">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on legal preparedness among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -602,7 +665,65 @@ life_area_slug: legal-matters
         'a-rights-police', 'a-rights-work', 'a-legal-help'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    // Scoring thresholds: [{v, p}, ...] mapping dropdown values to percentiles.
+    // Based on population data: ~33% of adults have a will, ~20% have POA/healthcare directives,
+    // ~80% have never assessed legal exposure, ~70% couldn't locate key documents quickly.
+    var THRESHOLDS = {
+        'a-will': [
+            // ~33% of UK adults have a valid will; comprehensive professional review is very rare
+            {v:'no',p:20},{v:'outdated',p:40},{v:'have-one',p:55},{v:'current',p:75},{v:'comprehensive',p:95}
+        ],
+        'a-poa': [
+            // ~20% have any form of POA or healthcare directive; both professionally prepared is very rare
+            {v:'neither',p:15},{v:'considered',p:30},{v:'one-only',p:55},{v:'both-basic',p:78},{v:'both-comprehensive',p:95}
+        ],
+        'a-insurance': [
+            // ~80% have never formally assessed their legal exposure
+            {v:'dont-know',p:10},{v:'probably-gaps',p:30},{v:'some-awareness',p:55},{v:'mostly-covered',p:78},{v:'fully-assessed',p:95}
+        ],
+        'a-organised': [
+            // ~70% of families would struggle to locate key documents in an emergency
+            {v:'no',p:10},{v:'unlikely',p:25},{v:'with-effort',p:50},{v:'yes',p:75},{v:'easily',p:95}
+        ],
+        'a-anxiety': [
+            // Most people have at least some legal anxiety; full confidence is uncommon
+            {v:'many',p:10},{v:'a-few',p:30},{v:'one',p:55},{v:'minor',p:78},{v:'none',p:95}
+        ],
+        'a-family-aware': [
+            // Most people haven't discussed legal arrangements with family
+            {v:'no',p:10},{v:'vague',p:30},{v:'partial',p:50},{v:'mostly',p:75},{v:'fully',p:95}
+        ],
+        'a-tax': [
+            // Most people use basic tax-efficient structures at best; professional optimisation is rare
+            {v:'dont-know',p:10},{v:'probably-not',p:25},{v:'basic',p:50},{v:'good',p:78},{v:'optimised',p:95}
+        ],
+        'a-contracts': [
+            // Most people never read their key contracts properly
+            {v:'none',p:10},{v:'glanced',p:30},{v:'some',p:55},{v:'most',p:78},{v:'all',p:95}
+        ],
+        'a-rights-police': [
+            // Most people have only a vague idea of their rights during police encounters
+            {v:'no-idea',p:10},{v:'vague',p:30},{v:'basic',p:55},{v:'solid',p:78},{v:'thorough',p:95}
+        ],
+        'a-rights-work': [
+            // Many people know they have employment rights but not the specifics
+            {v:'no-idea',p:10},{v:'vague',p:30},{v:'basic',p:55},{v:'solid',p:78},{v:'thorough',p:95}
+        ],
+        'a-legal-help': [
+            // Most people would search online; having a solicitor on call is rare
+            {v:'no',p:10},{v:'search-online',p:30},{v:'basic',p:55},{v:'informed',p:78},{v:'connected',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        protection: ['a-will', 'a-poa', 'a-insurance'],
+        simplicity: ['a-organised', 'a-anxiety', 'a-family-aware'],
+        strategic: ['a-tax', 'a-contracts'],
+        access: ['a-rights-police', 'a-rights-work', 'a-legal-help']
+    };
+
+    // All legal-matters items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -652,7 +773,6 @@ life_area_slug: legal-matters
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -683,6 +803,7 @@ life_area_slug: legal-matters
         progress[step] = true;
         saveProgress(progress);
         updateUI();
+
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -690,21 +811,87 @@ life_area_slug: legal-matters
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['protection', 'simplicity', 'strategic', 'access'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
+
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
-    }
+
     function updateAssessCompletion() {
         var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
         var btn = document.getElementById('assessBtn');
@@ -713,19 +900,24 @@ life_area_slug: legal-matters
             btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
     }
+
     function saveAnswers() {
         var answers = {};
         ASSESS_IDS.forEach(function(id) {
             var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
             var skipped = skipBox && skipBox.checked;
             var value = null;
-            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
             answers[id] = { value: value, skipped: skipped };
         });
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -734,38 +926,73 @@ life_area_slug: legal-matters
             APStorage.save('ap-level1-assess', all);
         }
     }
+
     function saveScores() {
-        var scores = { protection: null, simplicity: null, strategic: null, access: null };
+        var scores = {};
+        ['protection', 'simplicity', 'strategic', 'access'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
             APStorage.save('ap-level1-scores', all);
         }
     }
+
     window.handleAssessInput = function(itemId) {
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     window.handleSkip = function(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         var input = document.getElementById(itemId);
-        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     function restoreAssessment() {
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         var answers = allAnswers[AREA];
         if (!answers) return;
+
         ASSESS_IDS.forEach(function(id) {
-            var item = answers[id]; if (!item) return;
+            var item = answers[id];
+            if (!item) return;
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
-                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
-            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
-        updateAssessRecorded(); updateAssessCompletion();
+
+        updateAssessSummary();
+        updateAssessCompletion();
     }
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>

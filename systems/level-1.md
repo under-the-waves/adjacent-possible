@@ -184,18 +184,58 @@ life_area_slug: systems
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -356,7 +396,7 @@ life_area_slug: systems
         <option value="several">Several &ndash; 3 &ndash; 5 automations across different areas</option>
         <option value="many">Many &ndash; 6 &ndash; 10 automations that handle significant work</option>
         <option value="comprehensive">Comprehensive &ndash; 10+ automations covering most recurring tasks</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-automation-count"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-automation-count" onchange="handleSkip('a-automation-count')"><label for="skip-automation-count">I know but prefer not to say</label></div>
 </div>
 
@@ -370,7 +410,7 @@ life_area_slug: systems
         <option value="a-few">A few &ndash; 2 &ndash; 3 obvious candidates</option>
         <option value="one-or-two">One or two &ndash; most things are already handled</option>
         <option value="none">None &ndash; everything automatable is already automated</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-manual-recurring"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-manual-recurring" onchange="handleSkip('a-manual-recurring')"><label for="skip-manual-recurring">I know but prefer not to say</label></div>
 </div>
 
@@ -384,7 +424,7 @@ life_area_slug: systems
         <option value="manual">Manual intervention &ndash; I have to step in and handle it</option>
         <option value="mostly-graceful">Mostly graceful &ndash; minor issues but nothing critical</option>
         <option value="robust">Robust &ndash; my systems handle edge cases well</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-edge-cases"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-edge-cases" onchange="handleSkip('a-edge-cases')"><label for="skip-edge-cases">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -402,7 +442,7 @@ life_area_slug: systems
         <option value="moderate">Moderate &ndash; a reasonable number but not fully deliberate</option>
         <option value="curated">Curated &ndash; a small, intentional set that works together</option>
         <option value="minimal">Minimal &ndash; the fewest possible tools, each chosen carefully</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-tool-count"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-tool-count" onchange="handleSkip('a-tool-count')"><label for="skip-tool-count">I know but prefer not to say</label></div>
 </div>
 
@@ -416,7 +456,7 @@ life_area_slug: systems
         <option value="with-effort">With effort &ndash; I could explain it but it would take a while</option>
         <option value="yes-mostly">Yes, mostly &ndash; the core is simple even if details are complex</option>
         <option value="easily">Easily &ndash; it's simple enough to explain in a few minutes</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-explain-system"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-explain-system" onchange="handleSkip('a-explain-system')"><label for="skip-explain-system">I know but prefer not to say</label></div>
 </div>
 
@@ -430,7 +470,7 @@ life_area_slug: systems
         <option value="a-few">A few &ndash; 2 &ndash; 3 abandoned tools</option>
         <option value="one">One &ndash; mostly stable but one thing didn't work out</option>
         <option value="none">None &ndash; I've stuck with everything I've adopted</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-abandoned-tools"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-abandoned-tools" onchange="handleSkip('a-abandoned-tools')"><label for="skip-abandoned-tools">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -448,7 +488,7 @@ life_area_slug: systems
         <option value="manual">Manual &ndash; I back up occasionally but not on a schedule</option>
         <option value="mostly-automated">Mostly automated &ndash; regular backups with a few gaps</option>
         <option value="fully-automated">Fully automated &ndash; everything important is backed up and I've verified recovery</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-backup-status"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-backup-status" onchange="handleSkip('a-backup-status')"><label for="skip-backup-status">I know but prefer not to say</label></div>
 </div>
 
@@ -462,7 +502,7 @@ life_area_slug: systems
         <option value="a-while-ago">A while ago &ndash; a few months back</option>
         <option value="rarely">Rarely &ndash; can't remember the last time</option>
         <option value="never">Never &ndash; my systems have been rock-solid</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-system-failures"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-system-failures" onchange="handleSkip('a-system-failures')"><label for="skip-system-failures">I know but prefer not to say</label></div>
 </div>
 
@@ -476,12 +516,30 @@ life_area_slug: systems
         <option value="yes-some">Yes &ndash; one or two areas with no redundancy</option>
         <option value="mostly-covered">Mostly covered &ndash; I've addressed the biggest risks</option>
         <option value="fully-redundant">Fully redundant &ndash; no single point of failure in any critical system</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-single-points"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-single-points" onchange="handleSkip('a-single-points')"><label for="skip-single-points">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-power">
+        <span class="assess-summary-label">Power</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-power" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-power">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-simplicity">
+        <span class="assess-summary-label">Simplicity</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-simplicity" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-simplicity">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-reliability">
+        <span class="assess-summary-label">Reliability</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-reliability" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-reliability">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published data on personal systems and automation adoption among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -526,13 +584,64 @@ life_area_slug: systems
     var AREA = 'systems';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-automation-count', 'a-manual-recurring', 'a-edge-cases',
-        'a-tool-count', 'a-explain-system', 'a-abandoned-tools',
-        'a-backup-status', 'a-system-failures', 'a-single-points'
+        'a-automation-count',
+        'a-manual-recurring',
+        'a-edge-cases',
+        'a-tool-count',
+        'a-explain-system',
+        'a-abandoned-tools',
+        'a-backup-status',
+        'a-system-failures',
+        'a-single-points'
     ];
 
-    // All systems items are qualitative and unscored (no reliable percentile data)
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-automation-count': [
+            // Most people have no personal automations; 10+ is very rare
+            {v:'none',p:15},{v:'one-two',p:35},{v:'several',p:60},{v:'many',p:80},{v:'comprehensive',p:95}
+        ],
+        'a-manual-recurring': [
+            // Most people do many recurring tasks manually; fully automated is very rare
+            {v:'many',p:10},{v:'several',p:30},{v:'a-few',p:55},{v:'one-or-two',p:78},{v:'none',p:95}
+        ],
+        'a-edge-cases': [
+            // Most people have no systems or fragile ones; robust edge-case handling is rare
+            {v:'no-systems',p:10},{v:'break',p:25},{v:'manual',p:50},{v:'mostly-graceful',p:78},{v:'robust',p:95}
+        ],
+        'a-tool-count': [
+            // Most people accumulate tools; a minimal, curated set is uncommon
+            {v:'none',p:15},{v:'accumulated',p:25},{v:'moderate',p:50},{v:'curated',p:78},{v:'minimal',p:95}
+        ],
+        'a-explain-system': [
+            // Most people can't explain their organisational approach quickly
+            {v:'no-system',p:10},{v:'couldnt',p:25},{v:'with-effort',p:50},{v:'yes-mostly',p:75},{v:'easily',p:95}
+        ],
+        'a-abandoned-tools': [
+            // Most people have tried and abandoned several tools; sticking with everything is rare
+            {v:'many',p:10},{v:'several',p:25},{v:'a-few',p:50},{v:'one',p:78},{v:'none',p:95}
+        ],
+        'a-backup-status': [
+            // ~30% of people have never backed up; fully automated with verified recovery is very rare
+            {v:'no-backups',p:10},{v:'partial',p:30},{v:'manual',p:50},{v:'mostly-automated',p:78},{v:'fully-automated',p:95}
+        ],
+        'a-system-failures': [
+            // Most people experience regular system issues; rock-solid reliability is uncommon
+            {v:'constantly',p:10},{v:'recently',p:30},{v:'a-while-ago',p:55},{v:'rarely',p:78},{v:'never',p:95}
+        ],
+        'a-single-points': [
+            // Most people haven't thought about single points of failure; full redundancy is rare
+            {v:'dont-know',p:10},{v:'yes-many',p:20},{v:'yes-some',p:45},{v:'mostly-covered',p:75},{v:'fully-redundant',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        power: ['a-automation-count', 'a-manual-recurring', 'a-edge-cases'],
+        simplicity: ['a-tool-count', 'a-explain-system', 'a-abandoned-tools'],
+        reliability: ['a-backup-status', 'a-system-failures', 'a-single-points']
+    };
+
+    // All systems items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -582,7 +691,6 @@ life_area_slug: systems
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -621,12 +729,78 @@ life_area_slug: systems
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['power', 'simplicity', 'reliability'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
     // --- Assessment helpers ---
 
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
-
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
@@ -634,12 +808,6 @@ life_area_slug: systems
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
-    }
-
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
     }
 
     function updateAssessCompletion() {
@@ -657,7 +825,6 @@ life_area_slug: systems
             var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
             var skipped = skipBox && skipBox.checked;
             var value = null;
-
             if (!skipped) {
                 var el = document.getElementById(id);
                 if (el && el.value !== '') value = el.value;
@@ -679,11 +846,10 @@ life_area_slug: systems
     }
 
     function saveScores() {
-        var scores = {
-            power: null,
-            simplicity: null,
-            reliability: null
-        };
+        var scores = {};
+        ['power', 'simplicity', 'reliability'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
@@ -692,9 +858,10 @@ life_area_slug: systems
     }
 
     window.handleAssessInput = function(itemId) {
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -705,9 +872,10 @@ life_area_slug: systems
             input.disabled = skipBox.checked;
             if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
         }
+        updatePercentileHint(itemId);
         updateInputGroupState(itemId);
         saveAnswers();
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     };
 
@@ -720,7 +888,6 @@ life_area_slug: systems
         ASSESS_IDS.forEach(function(id) {
             var item = answers[id];
             if (!item) return;
-
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
                 if (skipBox) {
@@ -733,10 +900,11 @@ life_area_slug: systems
                 if (el) el.value = item.value;
             }
 
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
 
-        updateAssessRecorded();
+        updateAssessSummary();
         updateAssessCompletion();
     }
 

@@ -214,18 +214,58 @@ life_area_slug: transportation
 .assess-skip input[type="checkbox"] {
     accent-color: #888;
 }
-.assess-recorded {
-    background: #f0f7f0;
-    border: 2px solid #28a745;
+.assess-percentile-hint {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+}
+.assess-summary {
+    background: #f8f9fa;
+    border: 2px solid #155799;
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     margin-top: 24px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #1a6b2a;
     display: none;
 }
-.assess-recorded.visible { display: block; }
+.assess-summary.visible { display: block; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+}
+.assess-summary-label { flex: 0 0 200px; font-weight: 500; }
+.assess-summary-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.assess-summary-fill {
+    height: 100%;
+    background: #28a745;
+    border-radius: 4px;
+    transition: width 0.4s;
+}
+.assess-summary-value {
+    flex: 0 0 60px;
+    text-align: right;
+    font-weight: 600;
+    color: #155799;
+}
+.assess-summary-text {
+    font-size: 0.88em;
+    color: #555;
+    margin-top: 2px;
+}
+@media (max-width: 600px) {
+    .assess-summary-label { flex: 0 0 120px; }
+}
 
 /* Completion */
 .l1-complete {
@@ -386,7 +426,7 @@ life_area_slug: transportation
         <option value="20-40">20&ndash;40 minutes each way</option>
         <option value="under-20">Under 20 minutes each way</option>
         <option value="wfh">I work from home or within walking distance</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-commute-time"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-commute-time" onchange="handleSkip('a-commute-time')"><label for="skip-commute-time">I know but prefer not to say</label></div>
 </div>
 
@@ -400,7 +440,7 @@ life_area_slug: transportation
         <option value="150-300">&pound;150&ndash;&pound;300</option>
         <option value="50-150">&pound;50&ndash;&pound;150</option>
         <option value="under-50">Under &pound;50</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-transport-cost"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-transport-cost" onchange="handleSkip('a-transport-cost')"><label for="skip-transport-cost">I know but prefer not to say</label></div>
 </div>
 
@@ -414,7 +454,7 @@ life_area_slug: transportation
         <option value="mixed">Mixed &ndash; I batch some but not all</option>
         <option value="mostly-batched">Mostly batched &ndash; I combine errands when I can</option>
         <option value="fully-batched">Fully batched &ndash; I plan routes and combine everything</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-errand-pattern"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-errand-pattern" onchange="handleSkip('a-errand-pattern')"><label for="skip-errand-pattern">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -432,7 +472,7 @@ life_area_slug: transportation
         <option value="neutral">Neutral &ndash; it's fine</option>
         <option value="pleasant">Pleasant &ndash; I don't mind it</option>
         <option value="enjoyable">Enjoyable &ndash; I use the time well or actively enjoy it</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-commute-experience"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-commute-experience" onchange="handleSkip('a-commute-experience')"><label for="skip-commute-experience">I know but prefer not to say</label></div>
 </div>
 
@@ -446,7 +486,7 @@ life_area_slug: transportation
         <option value="adequate">Adequate &ndash; functional and reasonably comfortable</option>
         <option value="good">Good &ndash; well-maintained and comfortable</option>
         <option value="excellent">Excellent &ndash; reliable, comfortable, and well-suited to my needs</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-vehicle-condition"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-vehicle-condition" onchange="handleSkip('a-vehicle-condition')"><label for="skip-vehicle-condition">I know but prefer not to say</label></div>
 </div>
 
@@ -460,7 +500,7 @@ life_area_slug: transportation
         <option value="moderately">Moderately &ndash; some impact but manageable</option>
         <option value="slightly">Slightly &ndash; I'm mostly protected from weather</option>
         <option value="not-at-all">Not at all &ndash; weather has no effect on my transport</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-weather-impact"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-weather-impact" onchange="handleSkip('a-weather-impact')"><label for="skip-weather-impact">I know but prefer not to say</label></div>
 </div>
 </div>
@@ -478,7 +518,7 @@ life_area_slug: transportation
         <option value="basic">Basic &ndash; I know the main risks</option>
         <option value="informed">Informed &ndash; I know specific risks for my routes and modes</option>
         <option value="proactive">Proactive &ndash; I've adjusted my behaviour based on risk knowledge</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-risk-awareness"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-risk-awareness" onchange="handleSkip('a-risk-awareness')"><label for="skip-risk-awareness">I know but prefer not to say</label></div>
 </div>
 
@@ -492,7 +532,7 @@ life_area_slug: transportation
         <option value="basic">Basic &ndash; I know the main safety features</option>
         <option value="detailed">Detailed &ndash; I know what I have and what I'm missing</option>
         <option value="optimised">Optimised &ndash; I've added or upgraded safety features</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-safety-features"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-safety-features" onchange="handleSkip('a-safety-features')"><label for="skip-safety-features">I know but prefer not to say</label></div>
 </div>
 
@@ -506,12 +546,30 @@ life_area_slug: transportation
         <option value="mostly">Mostly &ndash; I usually follow safe practices</option>
         <option value="consistently">Consistently &ndash; defensive habits are automatic</option>
         <option value="exemplary">Exemplary &ndash; I go beyond basics with advanced safety practices</option>
-    </select>
+    </select> <span class="assess-percentile-hint" id="pct-defensive-habits"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-defensive-habits" onchange="handleSkip('a-defensive-habits')"><label for="skip-defensive-habits">I know but prefer not to say</label></div>
 </div>
 </div>
 
-<div class="assess-recorded" id="assessRecorded">Your answers have been recorded.</div>
+<div class="assess-summary" id="assessSummary">
+    <h4>Your estimated position</h4>
+    <div class="assess-summary-row" id="sum-efficiency">
+        <span class="assess-summary-label">Efficiency</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-efficiency" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-efficiency">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-comfort">
+        <span class="assess-summary-label">Comfort</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-comfort" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-comfort">&ndash;</span>
+    </div>
+    <div class="assess-summary-row" id="sum-safety">
+        <span class="assess-summary-label">Safety</span>
+        <div class="assess-summary-bar"><div class="assess-summary-fill" id="bar-safety" style="width:0%"></div></div>
+        <span class="assess-summary-value" id="val-safety">&ndash;</span>
+    </div>
+    <p class="assess-summary-text">Percentiles are estimates based on published population data on transportation behaviour among adults. All items in this area are scored.</p>
+</div>
 
 <button class="l1-mark-done" id="assessBtn" onclick="completeStep('assess')" disabled>Answer all items to continue</button>
 
@@ -556,12 +614,64 @@ life_area_slug: transportation
     var AREA = 'transportation';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
-        'a-commute-time', 'a-transport-cost', 'a-errand-pattern',
-        'a-commute-experience', 'a-vehicle-condition', 'a-weather-impact',
-        'a-risk-awareness', 'a-safety-features', 'a-defensive-habits'
+        'a-commute-time',
+        'a-transport-cost',
+        'a-errand-pattern',
+        'a-commute-experience',
+        'a-vehicle-condition',
+        'a-weather-impact',
+        'a-risk-awareness',
+        'a-safety-features',
+        'a-defensive-habits'
     ];
 
-    var UNSCORED_ITEMS = ASSESS_IDS.slice();
+    var THRESHOLDS = {
+        'a-commute-time': [
+            // Median UK commute is ~30 min each way; WFH or under 20 min is top quartile
+            {v:'over-60',p:10},{v:'40-60',p:30},{v:'20-40',p:55},{v:'under-20',p:78},{v:'wfh',p:95}
+        ],
+        'a-transport-cost': [
+            // Median UK transport spend is ~\u00a3200-300/month; under \u00a350 is very low
+            {v:'over-500',p:10},{v:'300-500',p:30},{v:'150-300',p:50},{v:'50-150',p:75},{v:'under-50',p:95}
+        ],
+        'a-errand-pattern': [
+            // Most people make many separate trips; fully batched route planning is rare
+            {v:'many-trips',p:10},{v:'mostly-separate',p:30},{v:'mixed',p:50},{v:'mostly-batched',p:75},{v:'fully-batched',p:95}
+        ],
+        'a-commute-experience': [
+            // Most commuters report neutral to negative experiences; genuinely enjoyable is uncommon
+            {v:'stressful',p:10},{v:'unpleasant',p:25},{v:'neutral',p:50},{v:'pleasant',p:75},{v:'enjoyable',p:95}
+        ],
+        'a-vehicle-condition': [
+            // Most vehicles are adequate; excellent condition and fit is uncommon
+            {v:'poor',p:10},{v:'fair',p:25},{v:'adequate',p:50},{v:'good',p:75},{v:'excellent',p:95}
+        ],
+        'a-weather-impact': [
+            // Weather significantly affects most commuters; full protection is relatively uncommon
+            {v:'severely',p:10},{v:'significantly',p:30},{v:'moderately',p:50},{v:'slightly',p:75},{v:'not-at-all',p:95}
+        ],
+        'a-risk-awareness': [
+            // Most people have only vague awareness of transport safety risks
+            {v:'unaware',p:10},{v:'vague',p:30},{v:'basic',p:55},{v:'informed',p:78},{v:'proactive',p:95}
+        ],
+        'a-safety-features': [
+            // Most people know their vehicle has safety features but not the details
+            {v:'no',p:10},{v:'vague',p:30},{v:'basic',p:55},{v:'detailed',p:78},{v:'optimised',p:95}
+        ],
+        'a-defensive-habits': [
+            // Most people follow basic safety practices; exemplary defensive habits are rare
+            {v:'no',p:10},{v:'sometimes',p:25},{v:'mostly',p:50},{v:'consistently',p:78},{v:'exemplary',p:95}
+        ]
+    };
+
+    var VALUE_ITEMS = {
+        efficiency: ['a-commute-time', 'a-transport-cost', 'a-errand-pattern'],
+        comfort: ['a-commute-experience', 'a-vehicle-condition', 'a-weather-impact'],
+        safety: ['a-risk-awareness', 'a-safety-features', 'a-defensive-habits']
+    };
+
+    // All transportation items are scorable
+    var UNSCORED_ITEMS = [];
 
     function loadProgress() {
         if (typeof APStorage === 'undefined') return {};
@@ -611,7 +721,6 @@ life_area_slug: transportation
             if (label) label.textContent = 'Step ' + (doneCount + 1) + ' of ' + STEPS.length;
         }
 
-        // Auto-open the first incomplete step
         if (firstIncomplete) {
             openStep(firstIncomplete);
         }
@@ -642,6 +751,7 @@ life_area_slug: transportation
         progress[step] = true;
         saveProgress(progress);
         updateUI();
+
         var idx = STEPS.indexOf(step);
         if (idx >= 0 && idx < STEPS.length - 1) {
             var next = STEPS[idx + 1];
@@ -649,21 +759,87 @@ life_area_slug: transportation
         }
     };
 
+    // --- Scoring functions ---
+
+    function interpolatePercentile(value, thresholds) {
+        if (typeof thresholds[0].v === 'string') {
+            for (var i = 0; i < thresholds.length; i++) {
+                if (thresholds[i].v === String(value)) return thresholds[i].p;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    function getItemPercentile(itemId) {
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) return null;
+
+        var el = document.getElementById(itemId);
+        if (!el) return null;
+        var val = el.value;
+        if (val === '' || val === null) return null;
+        return interpolatePercentile(val, THRESHOLDS[itemId]);
+    }
+
+    function computeValuePercentile(valueKey) {
+        var items = VALUE_ITEMS[valueKey];
+        var total = 0, count = 0;
+        items.forEach(function(id) {
+            var pct = getItemPercentile(id);
+            if (pct !== null) { total += pct; count++; }
+        });
+        return count > 0 ? Math.round(total / count) : null;
+    }
+
+    function updatePercentileHint(itemId) {
+        if (UNSCORED_ITEMS.indexOf(itemId) !== -1) return;
+        var hintEl = document.getElementById('pct-' + itemId.replace('a-', ''));
+        if (!hintEl) return;
+        var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
+        if (skipBox && skipBox.checked) {
+            hintEl.textContent = 'Skipped';
+            return;
+        }
+        var pct = getItemPercentile(itemId);
+        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+    }
+
+    function updateAssessSummary() {
+        var anyAnswered = false;
+        ['efficiency', 'comfort', 'safety'].forEach(function(vk) {
+            var pct = computeValuePercentile(vk);
+            var barEl = document.getElementById('bar-' + vk);
+            var valEl = document.getElementById('val-' + vk);
+            if (barEl && valEl) {
+                if (pct !== null) {
+                    barEl.style.width = pct + '%';
+                    valEl.textContent = pct + 'th';
+                    anyAnswered = true;
+                } else {
+                    barEl.style.width = '0%';
+                    valEl.innerHTML = '&ndash;';
+                }
+            }
+        });
+        var summary = document.getElementById('assessSummary');
+        if (summary) summary.classList.toggle('visible', anyAnswered);
+    }
+
+    // --- Assessment helpers ---
+
     function isItemAnswered(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         if (skipBox && skipBox.checked) return true;
         var el = document.getElementById(itemId);
         return el && el.value !== '' && el.value !== null;
     }
+
     function updateInputGroupState(itemId) {
         var group = document.getElementById('ig-' + itemId.replace('a-', ''));
         if (group) group.classList.toggle('answered', isItemAnswered(itemId));
     }
-    function updateAssessRecorded() {
-        var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
-        var recorded = document.getElementById('assessRecorded');
-        if (recorded) recorded.classList.toggle('visible', allAnswered);
-    }
+
     function updateAssessCompletion() {
         var allAnswered = ASSESS_IDS.every(function(id) { return isItemAnswered(id); });
         var btn = document.getElementById('assessBtn');
@@ -672,19 +848,24 @@ life_area_slug: transportation
             btn.textContent = allAnswered ? 'All done \u2013 continue' : 'Answer all items to continue';
         }
     }
+
     function saveAnswers() {
         var answers = {};
         ASSESS_IDS.forEach(function(id) {
             var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
             var skipped = skipBox && skipBox.checked;
             var value = null;
-            if (!skipped) { var el = document.getElementById(id); if (el && el.value !== '') value = el.value; }
+            if (!skipped) {
+                var el = document.getElementById(id);
+                if (el && el.value !== '') value = el.value;
+            }
             answers[id] = { value: value, skipped: skipped };
         });
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         allAnswers[AREA] = answers;
         localStorage.setItem('ap-level1-answers', JSON.stringify(allAnswers));
+
         var checklist = {};
         ASSESS_IDS.forEach(function(id) { checklist[id] = isItemAnswered(id); });
         if (typeof APStorage !== 'undefined') {
@@ -693,42 +874,73 @@ life_area_slug: transportation
             APStorage.save('ap-level1-assess', all);
         }
     }
+
     function saveScores() {
-        var scores = {
-            efficiency: null,
-            comfort: null,
-            safety: null
-        };
+        var scores = {};
+        ['efficiency', 'comfort', 'safety'].forEach(function(vk) {
+            scores[vk] = computeValuePercentile(vk);
+        });
         if (typeof APStorage !== 'undefined') {
             var all = APStorage.load('ap-level1-scores') || {};
             all[AREA] = scores;
             APStorage.save('ap-level1-scores', all);
         }
     }
+
     window.handleAssessInput = function(itemId) {
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     window.handleSkip = function(itemId) {
         var skipBox = document.getElementById('skip-' + itemId.replace('a-', ''));
         var input = document.getElementById(itemId);
-        if (skipBox && input) { input.disabled = skipBox.checked; if (skipBox.checked && input.tagName === 'SELECT') input.value = ''; }
-        updateInputGroupState(itemId); saveAnswers(); updateAssessRecorded(); updateAssessCompletion();
+        if (skipBox && input) {
+            input.disabled = skipBox.checked;
+            if (skipBox.checked && input.tagName === 'SELECT') input.value = '';
+        }
+        updatePercentileHint(itemId);
+        updateInputGroupState(itemId);
+        saveAnswers();
+        updateAssessSummary();
+        updateAssessCompletion();
     };
+
     function restoreAssessment() {
         var allAnswers = {};
         try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
         var answers = allAnswers[AREA];
         if (!answers) return;
+
         ASSESS_IDS.forEach(function(id) {
-            var item = answers[id]; if (!item) return;
+            var item = answers[id];
+            if (!item) return;
             if (item.skipped) {
                 var skipBox = document.getElementById('skip-' + id.replace('a-', ''));
-                if (skipBox) { skipBox.checked = true; var input = document.getElementById(id); if (input) input.disabled = true; }
-            } else if (item.value !== null) { var el = document.getElementById(id); if (el) el.value = item.value; }
+                if (skipBox) {
+                    skipBox.checked = true;
+                    var input = document.getElementById(id);
+                    if (input) input.disabled = true;
+                }
+            } else if (item.value !== null) {
+                var el = document.getElementById(id);
+                if (el) el.value = item.value;
+            }
+
+            updatePercentileHint(id);
             updateInputGroupState(id);
         });
-        updateAssessRecorded(); updateAssessCompletion();
+
+        updateAssessSummary();
+        updateAssessCompletion();
     }
-    document.addEventListener('DOMContentLoaded', function() { restoreAssessment(); updateUI(); });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        restoreAssessment();
+        updateUI();
+    });
 })();
 </script>
