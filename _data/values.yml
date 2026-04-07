@@ -15,6 +15,11 @@ fitness:
       4: "3-6 months additional healthy lifespan"
       2: "1-2 months additional healthy lifespan"
 
+      -2: "1-2 months of healthy lifespan lost"
+      -4: "3-6 months of healthy lifespan lost"
+      -6: "1 year of healthy lifespan lost"
+      -8: "3-4 years of healthy lifespan lost"
+      -10: "15+ years of healthy lifespan lost"
   performance:
     name: "Performance"
     anchor_type: "linear"
@@ -28,6 +33,11 @@ fitness:
       4: "2nd fitness test percentile"
       2: "Below 1st fitness test percentile"
 
+      -2: "Below 1st percentile drop in fitness test ranking"
+      -4: "~2 percentile point drop in fitness test ranking"
+      -6: "~6 percentile point drop in fitness test ranking"
+      -8: "~25 percentile point drop in fitness test ranking"
+      -10: "Near-total loss of fitness test ranking"
   enjoyment:
     name: "Enjoyment"
     anchor_type: "subjective"
@@ -57,6 +67,11 @@ nutrition:
       4: "2-3 months additional healthy lifespan"
       2: "Few weeks additional healthy lifespan"
 
+      -2: "Few weeks of healthy lifespan lost"
+      -4: "2-3 months of healthy lifespan lost"
+      -6: "9 months of healthy lifespan lost"
+      -8: "3 years of healthy lifespan lost"
+      -10: "12+ years of healthy lifespan lost"
   pleasure_connection:
     name: "Pleasure & Connection"
     anchor_type: "subjective"
@@ -101,6 +116,11 @@ sleep:
       4: "13 productive minutes per day"
       2: "3 productive minutes per day"
 
+      -2: "~3 productive minutes per day lost"
+      -4: "~13 productive minutes per day lost"
+      -6: "~50 productive minutes per day lost"
+      -8: "~3.5 productive hours per day lost"
+      -10: "14 productive hours per day lost"
   long_term_health:
     name: "Long-term Health"
     anchor_type: "linear"
@@ -114,6 +134,11 @@ sleep:
       4: "2 months additional healthy lifespan"
       2: "Few weeks additional healthy lifespan"
 
+      -2: "Few weeks of healthy lifespan lost"
+      -4: "2 months of healthy lifespan lost"
+      -6: "6 months of healthy lifespan lost"
+      -8: "2 years of healthy lifespan lost"
+      -10: "8+ years of healthy lifespan lost"
   comfort_experience:
     name: "Comfort & Experience"
     anchor_type: "subjective"
@@ -143,6 +168,11 @@ saving:
       4: "5-6 days of emergency fund"
       2: "1-2 days of emergency fund"
 
+      -2: "1-2 days of emergency fund depleted"
+      -4: "5-6 days of emergency fund depleted"
+      -6: "3 weeks of emergency fund depleted"
+      -8: "3 months of emergency fund depleted"
+      -10: "12+ months of emergency fund depleted"
   growth:
     name: "Growth"
     anchor_type: "linear"
@@ -156,6 +186,11 @@ saving:
       4: "0.8% of gross income saved"
       2: "0.2% of gross income saved"
 
+      -2: "0.2% of gross income net dissaving"
+      -4: "0.8% of gross income net dissaving"
+      -6: "3% of gross income net dissaving"
+      -8: "12-13% of gross income net dissaving"
+      -10: "50%+ of gross income net dissaving"
   lifestyle:
     name: "Lifestyle"
     anchor_type: "linear"
@@ -169,6 +204,11 @@ saving:
       4: "5-6 days of liquid reserves"
       2: "1-2 days of liquid reserves"
 
+      -2: "1-2 days of liquid reserves depleted"
+      -4: "5-6 days of liquid reserves depleted"
+      -6: "3 weeks of liquid reserves depleted"
+      -8: "3 months of liquid reserves depleted"
+      -10: "12+ months of liquid reserves depleted"
 investing:
   growth:
     name: "Growth"
@@ -183,6 +223,11 @@ investing:
       4: "$156,000 – solid passive equity returns at ~10% real annual (15.6x)"
       2: "$39,000 – barely keeping pace with inflation (3.9x)"
 
+      -2: "$10,000 reduced to ~$2,500 — significant loss of capital"
+      -4: "$10,000 reduced to ~$625 — severe loss of capital"
+      -6: "$10,000 reduced to ~$160 — catastrophic loss of capital"
+      -8: "$10,000 reduced to ~$40 — near-total loss of capital"
+      -10: "$10,000 reduced to ~$10 — total loss of capital"
   safety:
     name: "Safety"
     anchor_type: "subjective"
@@ -242,6 +287,11 @@ career-planning:
       4: "1 warm contact in target field"
       2: "No meaningful contacts yet"
 
+      -2: "1 warm contact in target field lost"
+      -4: "~3 warm contacts in target field lost"
+      -6: "~12 warm contacts in target field lost"
+      -8: "~25 warm contacts in target field lost"
+      -10: "50+ warm contacts in target field lost"
   security:
     name: "Security"
     anchor_type: "subjective"
@@ -336,6 +386,11 @@ organisation:
       4: "1-2 missed commitments per month"
       2: "5 missed commitments per month"
 
+      -2: "~0.2 additional missed commitments per month"
+      -4: "~0.8 additional missed commitments per month"
+      -6: "~3 additional missed commitments per month"
+      -8: "~13 additional missed commitments per month"
+      -10: "20+ additional missed commitments per month"
   speed:
     name: "Speed"
     anchor_type: "subjective"
@@ -365,6 +420,11 @@ goals:
       4: "1-2% of goals completed on time"
       2: "Less than 1% of goals completed on time"
 
+      -2: "~1% reduction in goals completed on time"
+      -4: "~2% reduction in goals completed on time"
+      -6: "~6% reduction in goals completed on time"
+      -8: "~25% reduction in goals completed on time"
+      -10: "Near-total reduction in goals completed on time"
   follow_through:
     name: "Follow-through"
     anchor_type: "linear"
@@ -378,6 +438,11 @@ goals:
       4: "1-2% of days with goal action"
       2: "Less than 1% of days with goal action"
 
+      -2: "~1% reduction in days with goal action"
+      -4: "~2% reduction in days with goal action"
+      -6: "~6% reduction in days with goal action"
+      -8: "~25% reduction in days with goal action"
+      -10: "Near-total reduction in days with goal action"
   adaptability:
     name: "Adaptability"
     anchor_type: "subjective"
@@ -407,6 +472,11 @@ body-image:
       6: "1.5% body weight lost and sustained"
       4: "0.4% body weight lost and sustained"
       2: "0.1% body weight lost and sustained"
+      -2: "0.1% body weight gained as fat"
+      -4: "0.4% body weight gained as fat"
+      -6: "1.5% body weight gained as fat"
+      -8: "6% body weight gained as fat"
+      -10: "25%+ body weight gained as fat"
   muscle_gain:
     name: "Muscle Gain"
     anchor_type: "linear"
@@ -420,6 +490,11 @@ body-image:
       4: "0.25 kg lean mass gained"
       2: "0.06 kg lean mass gained"
 
+      -2: "~0.06 kg lean mass lost"
+      -4: "~0.23 kg lean mass lost"
+      -6: "~0.94 kg lean mass lost"
+      -8: "~3.75 kg lean mass lost"
+      -10: "15+ kg lean mass lost"
 housework:
   health:
     name: "Health & Hygiene"
@@ -547,6 +622,11 @@ cognitive-skills:
       4: "1 card memorised in 15 minutes"
       2: "Unable to reliably memorise a single card in sequence"
 
+      -2: "~0.2 fewer cards memorised in 15 minutes"
+      -4: "~0.8 fewer cards memorised in 15 minutes"
+      -6: "~3 fewer cards memorised in 15 minutes"
+      -8: "~13 fewer cards memorised in 15 minutes"
+      -10: "52+ fewer cards memorised — memory system collapse"
   focus:
     name: "Focus"
     anchor_type: "linear"
@@ -560,6 +640,11 @@ cognitive-skills:
       4: "2 minutes of sustained deep focus"
       2: "Less than 1 minute before distraction"
 
+      -2: "~0.5 fewer minutes of sustained deep focus"
+      -4: "~2 fewer minutes of sustained deep focus"
+      -6: "~7.5 fewer minutes of sustained deep focus"
+      -8: "~30 fewer minutes of sustained deep focus"
+      -10: "120+ fewer minutes of sustained deep focus"
   reasoning:
     name: "Reasoning & Problem-Solving"
     anchor_type: "subjective"
@@ -588,6 +673,11 @@ cognitive-skills:
       4: "Basic sleep hygiene with some awareness of lifestyle effects"
       2: "No deliberate lifestyle practices for cognitive support"
 
+      -2: "Trivial abandonment of cognitive-support practices"
+      -4: "~1 cognitive-support practice abandoned"
+      -6: "~2 cognitive-support practices abandoned"
+      -8: "~3-4 cognitive-support practices abandoned"
+      -10: "All 5 cognitive-support practices abandoned"
 ethics:
   philosophical:
     name: "Philosophical Depth"
@@ -679,6 +769,11 @@ information-management:
       4: "Important items usually found within 5-10 minutes"
       2: "Frequently unable to locate previously captured information"
 
+      -2: "Marginal increase in time to locate captured information"
+      -4: "Noticeable increase in time to locate captured information"
+      -6: "Significant increase in time to locate captured information"
+      -8: "Severe increase in time to locate captured information"
+      -10: "Capture system effectively unusable for retrieval"
   insight:
     name: "Insight Generation"
     anchor_type: "subjective"
@@ -753,6 +848,11 @@ learning-methods:
       4: "2-4 weeks of study routine maintained during intensive periods"
       2: "Unable to sustain any learning routine beyond a few days"
 
+      -2: "~1 week of learning habit lost"
+      -4: "~1 month of learning habit lost"
+      -6: "~3 months of learning habit lost"
+      -8: "~1 year of learning habit lost"
+      -10: "10+ years of learning habit lost"
 life-purpose:
   clarity:
     name: "Clarity & Direction"
@@ -813,6 +913,11 @@ life-skills:
       4: "2-3 basic skills performed with some confidence"
       2: "Cannot perform basic practical tasks without professional assistance"
 
+      -2: "Trivial loss of practical skill competence"
+      -4: "~1 practical skill at competent level lost"
+      -6: "~2 practical skills at competent level lost"
+      -8: "~4 practical skills at competent level lost"
+      -10: "15+ practical skills at competent level lost"
   systematic:
     name: "Systematic Competence"
     anchor_type: "subjective"
@@ -857,6 +962,11 @@ media-diet:
       4: "1+ quality source monthly; distinguishes opinion from reporting"
       2: "No regular consumption of high-quality, in-depth information sources"
 
+      -2: "~0.15 fewer non-fiction books read annually"
+      -4: "~0.6 fewer non-fiction books read annually"
+      -6: "~2.5 fewer non-fiction books read annually"
+      -8: "~10 fewer non-fiction books read annually"
+      -10: "40+ fewer non-fiction books read annually"
   relevance:
     name: "Actionable Relevance"
     anchor_type: "subjective"
@@ -901,6 +1011,11 @@ media-diet:
       4: "Under 2 hours daily on news; basic systems to avoid duplicate coverage"
       2: "3+ hours daily on news with frequent information overload and poor retention"
 
+      -2: "Marginal increase in wasted information-consumption hours"
+      -4: "Noticeable increase in wasted information-consumption hours"
+      -6: "Significant increase in wasted information-consumption hours"
+      -8: "Severe increase in wasted information-consumption hours"
+      -10: "Overwhelming information consumption displacing productive work"
 rationality:
   accurate-beliefs:
     name: "Accurate Beliefs"
@@ -1083,6 +1198,11 @@ worldview:
       4: "3-4 domains at primary to early secondary level"
       2: "Significant knowledge gaps across most major domains"
 
+      -2: "Trivial reduction in domain knowledge"
+      -4: "~0.3 knowledge domains lost or degraded"
+      -6: "~1 knowledge domain lost or degraded"
+      -8: "~2 knowledge domains lost or degraded"
+      -10: "8+ knowledge domains lost — collapse of general understanding"
   depth:
     name: "Depth"
     anchor_type: "subjective"
@@ -1161,6 +1281,11 @@ behaviours:
       4: "2-3 reactive episodes per week with basic coping strategies"
       2: "Daily reactive episodes with no healthy coping strategies"
 
+      -2: "Marginal increase in stress-driven reactive episodes"
+      -4: "Noticeable increase in stress-driven reactive episodes"
+      -6: "Significant increase in stress-driven reactive episodes"
+      -8: "Daily stress-driven reactive episodes with no coping"
+      -10: "Constant dysregulation from minor stressors"
   social:
     name: "Social & Relational Patterns"
     anchor_type: "subjective"
@@ -1189,6 +1314,11 @@ behaviours:
       4: "3-6 months sustained in stable conditions"
       2: "Less than 1 month before reverting to old patterns"
 
+      -2: "~0.4 months of behavioural change eroded"
+      -4: "~1.5 months of behavioural change eroded"
+      -6: "~6 months of behavioural change eroded"
+      -8: "~2 years of behavioural change eroded"
+      -10: "24+ months of behavioural change lost"
 digital-safety:
   security:
     name: "Comprehensive Security"
@@ -1234,6 +1364,11 @@ emergency-preparedness:
       4: "3-7 days of food, water, and essential supplies"
       2: "Less than 1 day of emergency supplies on hand"
 
+      -2: "~5 days of household supply autonomy lost"
+      -4: "~22 days of household supply autonomy lost"
+      -6: "~90 days of household supply autonomy lost"
+      -8: "~1 year of household supply autonomy lost"
+      -10: "365+ days of household supply autonomy lost"
   community:
     name: "Community Resilience"
     anchor_type: "linear"
@@ -1247,6 +1382,11 @@ emergency-preparedness:
       4: "Basic contact information for immediate neighbours and local emergency resources"
       2: "No knowledge of neighbours or local emergency response resources"
 
+      -2: "Trivial weakening of mutual aid relationships"
+      -4: "~1 household lost from mutual aid network"
+      -6: "~2-3 households lost from mutual aid network"
+      -8: "~5 households lost from mutual aid network"
+      -10: "20+ households lost — full dissolution of mutual aid"
   baseline:
     name: "Baseline Resilience"
     anchor_type: "subjective"
@@ -1291,6 +1431,11 @@ food-management:
       4: "10-11 meals per week meeting standards; frequent reliance on unplanned convenience food"
       2: "Fewer than 7 adequate meals per week; food provision is unreliable"
 
+      -2: "~0.3 adequate meals per week lost"
+      -4: "~1.3 adequate meals per week lost"
+      -6: "~5 adequate meals per week lost"
+      -8: "~20 adequate meals per week lost"
+      -10: "All 21 adequate meals per week lost"
   craft:
     name: "Craft"
     anchor_type: "subjective"
@@ -1319,6 +1464,11 @@ food-management:
       4: "65-75% of purchased food consumed; regular waste from forgotten items or over-purchasing"
       2: "Less than 50% of purchased food consumed; significant waste from poor management"
 
+      -2: "~1% reduction in purchased food consumed"
+      -4: "~4% reduction in purchased food consumed"
+      -6: "~16% reduction in purchased food consumed"
+      -8: "~60% reduction in purchased food consumed"
+      -10: "Near-total waste of purchased food"
 health-management:
   longterm:
     name: "Long-term Health"
@@ -1348,6 +1498,11 @@ health-management:
       4: "6-7 hours of adequate energy; health issues sometimes affect daily function"
       2: "Fewer than 4 hours of adequate energy; persistent fatigue or health complaints"
 
+      -2: "~0.2 high-energy hours per day lost"
+      -4: "~0.9 high-energy hours per day lost"
+      -6: "~3.5 high-energy hours per day lost"
+      -8: "~14 high-energy hours per day lost"
+      -10: "All high-energy hours lost — persistent severe fatigue"
   control:
     name: "Personal Control"
     anchor_type: "subjective"
@@ -1392,6 +1547,11 @@ legal-matters:
       4: "1-2 documents (basic will and healthcare directive) with understanding of major legal risks"
       2: "No legal documents in place; unaware of essential legal protections needed"
 
+      -2: "Trivial weakening of legal documentation"
+      -4: "~0.3 essential legal documents invalidated"
+      -6: "~1 essential legal document invalidated"
+      -8: "~2 essential legal documents invalidated"
+      -10: "All essential legal protections compromised"
   simplicity:
     name: "Simplicity & Peace of Mind"
     anchor_type: "subjective"
@@ -1451,6 +1611,11 @@ mindfulness:
       4: "Irregular practice but knows how to return attention to the present moment"
       2: "No mindfulness practice; unaware of own attention patterns"
 
+      -2: "~0.7 minutes of daily mindfulness practice lost"
+      -4: "~3 minutes of daily mindfulness practice lost"
+      -6: "~11 minutes of daily mindfulness practice lost"
+      -8: "~45 minutes of daily mindfulness practice lost"
+      -10: "Full abandonment of mindfulness practice"
   emotional:
     name: "Emotional Wellbeing"
     anchor_type: "subjective"
@@ -1510,6 +1675,11 @@ physical-safety:
       4: "Basic protective measures reducing common risks by 50-70% (seat belts, home security, situational awareness)"
       2: "No systematic safety practices; unaware of personal vulnerability patterns"
 
+      -2: "~1% increase in preventable incident mortality risk"
+      -4: "~4% increase in preventable incident mortality risk"
+      -6: "~17% increase in preventable incident mortality risk"
+      -8: "~70% increase in preventable incident mortality risk"
+      -10: "Catastrophic increase in preventable mortality risk"
   freedom:
     name: "Freedom and Convenience"
     anchor_type: "subjective"
@@ -1633,6 +1803,11 @@ communication:
       4: "Presents to small groups of 5 -- 10 without anxiety interfering"
       2: "Significant anxiety in most formal communication situations"
 
+      -2: "Trivial reduction in audience size handled confidently"
+      -4: "~1 fewer audience member handled confidently"
+      -6: "~3 fewer audience members handled confidently"
+      -8: "~12 fewer audience members handled confidently"
+      -10: "50+ fewer — cannot address any audience without anxiety"
   conflict:
     name: "Conflict Navigation"
     anchor_type: "subjective"
@@ -1677,6 +1852,11 @@ extended-family:
       4: "Monthly meaningful contact with 3 -- 5 extended family members beyond logistics"
       2: "Surface-level contact limited to holidays and emergencies"
 
+      -2: "Trivial weakening of extended-family contact"
+      -4: "~0.3 meaningful extended-family contacts lost"
+      -6: "~1.3 meaningful extended-family contacts lost"
+      -8: "~5 meaningful extended-family contacts lost"
+      -10: "20+ meaningful extended-family contacts lost"
   balance:
     name: "Balance"
     anchor_type: "subjective"
@@ -1767,6 +1947,11 @@ friendship:
       4: "2 -- 3 close friends with at least monthly sharing of personal feelings"
       2: "No friendships involving regular emotional sharing"
 
+      -2: "Trivial weakening of intimate friendships"
+      -4: "~0.08 intimate friendships lost"
+      -6: "~0.3 intimate friendships lost"
+      -8: "~1.3 intimate friendships lost"
+      -10: "5+ intimate friendships lost"
   breadth:
     name: "Breadth"
     anchor_type: "linear"
@@ -1780,6 +1965,11 @@ friendship:
       4: "8 -- 12 friends across 3 -- 4 different contexts"
       2: "Fewer than 4 friends concentrated in a single context"
 
+      -2: "Trivial weakening of active friendships"
+      -4: "~0.5 active friendships lost"
+      -6: "~2 active friendships lost"
+      -8: "~7.5 active friendships lost"
+      -10: "30+ active friendships lost"
   growth:
     name: "Growth"
     anchor_type: "subjective"
@@ -1855,6 +2045,11 @@ relationship-status:
       4: "Multiple active channels maintained -- social activities, dating platforms, and introductions"
       2: "Relies on chance encounters or a single passive method"
 
+      -2: "Trivial weakening of partner-meeting channels"
+      -4: "~0.1 active channels for meeting partners lost"
+      -6: "~0.3 active channels for meeting partners lost"
+      -8: "~1.3 active channels for meeting partners lost"
+      -10: "All active channels for meeting partners lost"
   independence:
     name: "Independence"
     anchor_type: "subjective"
@@ -1945,6 +2140,11 @@ sex:
       4: "Regular intimacy at a frequency both partners find satisfying with open communication"
       2: "Significant unaddressed gap between desired and actual frequency"
 
+      -2: "~0.07 fewer intimate encounters per week"
+      -4: "~0.25 fewer intimate encounters per week"
+      -6: "~1 fewer intimate encounter per week"
+      -8: "~4 fewer intimate encounters per week"
+      -10: "Complete loss of sexual frequency"
   variety:
     name: "Variety"
     anchor_type: "subjective"
@@ -2068,6 +2268,11 @@ financial-planning-tracking:
       4: "1-2% of spending tracked beyond rough mental estimates"
       2: "Less than 1% of spending tracked; no idea where money goes"
 
+      -2: "~1% reduction in spending tracked"
+      -4: "~4% reduction in spending tracked"
+      -6: "~16% reduction in spending tracked"
+      -8: "~62% reduction in spending tracked"
+      -10: "Near-total collapse of spending tracking"
   simplicity:
     name: "Simplicity & Convenience"
     anchor_type: "linear"
@@ -2082,6 +2287,11 @@ financial-planning-tracking:
       4: "1-2 hours per week of manual financial admin"
       2: "3+ hours per week yet still disorganised"
 
+      -2: "Marginal increase in financial admin time"
+      -4: "Noticeable increase in financial admin time"
+      -6: "Significant increase in financial admin time"
+      -8: "Severe increase in financial admin time"
+      -10: "Overwhelming financial admin burden"
   insight:
     name: "Insight & Optimisation"
     anchor_type: "subjective"
@@ -2111,6 +2321,11 @@ habits:
       4: "1 life area with some improvement from a maintained habit"
       2: "No measurable positive change from any deliberate habit"
 
+      -2: "Trivial reduction in habit-improved life areas"
+      -4: "~0.2 life areas with habit benefits lost"
+      -6: "~0.9 life areas with habit benefits lost"
+      -8: "~3.5 life areas with habit benefits lost"
+      -10: "10+ life areas with habit benefits lost"
   consistency:
     name: "Consistency"
     anchor_type: "linear"
@@ -2124,6 +2339,11 @@ habits:
       4: "40% daily adherence over 1 month before lapsing"
       2: "Under 20% adherence; habits abandoned within days"
 
+      -2: "~1% reduction in daily habit adherence"
+      -4: "~4% reduction in daily habit adherence"
+      -6: "~16% reduction in daily habit adherence"
+      -8: "~62% reduction in daily habit adherence"
+      -10: "Near-total collapse of habit adherence"
   enjoyment:
     name: "Enjoyment"
     anchor_type: "subjective"
@@ -2169,6 +2389,11 @@ housing:
       4: "Under 30% of income on housing with a buffer for unexpected costs"
       2: "Over 35% of income on housing with no financial buffer"
 
+      -2: "Marginal increase in housing cost burden"
+      -4: "Noticeable increase in housing cost burden"
+      -6: "Significant increase in housing cost burden"
+      -8: "Severe increase in housing cost burden"
+      -10: "Overwhelming housing cost burden"
   location:
     name: "Location"
     anchor_type: "linear"
@@ -2183,6 +2408,11 @@ housing:
       4: "Under 40-minute commute with basic amenity access"
       2: "Over 60-minute commute with poor amenity access and weak neighbourhood fit"
 
+      -2: "Marginal increase in commute and reduction in location quality"
+      -4: "Noticeable increase in commute and reduction in location quality"
+      -6: "Significant worsening of location fit"
+      -8: "Severe worsening of location fit"
+      -10: "Catastrophic location mismatch"
 possessions:
   functionality:
     name: "Functionality"
@@ -2197,6 +2427,11 @@ possessions:
       4: "50-60% of possessions regularly used; several broken items and no organisation system"
       2: "Most possessions unused, broken, or impossible to locate when needed"
 
+      -2: "~1% reduction in possessions in working order"
+      -4: "~4% reduction in possessions in working order"
+      -6: "~16% reduction in possessions in working order"
+      -8: "~62% reduction in possessions in working order"
+      -10: "Near-total possessions unusable"
   simplicity:
     name: "Simplicity"
     anchor_type: "subjective"
@@ -2256,6 +2491,11 @@ systems:
       4: "Core workflows covered with at least one multi-step automation"
       2: "No automation; all processes handled manually and ad hoc"
 
+      -2: "~1% reduction in recurring processes automated"
+      -4: "~4% reduction in recurring processes automated"
+      -6: "~16% reduction in recurring processes automated"
+      -8: "~62% reduction in recurring processes automated"
+      -10: "All automation lost — full manual regression"
   simplicity:
     name: "Simplicity"
     anchor_type: "subjective"
@@ -2284,6 +2524,11 @@ systems:
       4: "Systems work for weeks without intervention; key processes backed up"
       2: "Frequent failures requiring constant manual intervention"
 
+      -2: "~5 fewer days between unplanned system failures"
+      -4: "~22 fewer days between unplanned system failures"
+      -6: "~90 fewer days between unplanned system failures"
+      -8: "~1 year fewer days between unplanned system failures"
+      -10: "Constant unplanned system failures"
 time-management:
   productivity:
     name: "Productivity & Achievement"
@@ -2298,6 +2543,11 @@ time-management:
       4: "50% of planned tasks completed; frequent missed deadlines"
       2: "Under 30% of planned tasks completed; no system for tracking commitments"
 
+      -2: "~1% reduction in planned tasks completed on time"
+      -4: "~4% reduction in planned tasks completed on time"
+      -6: "~16% reduction in planned tasks completed on time"
+      -8: "~62% reduction in planned tasks completed on time"
+      -10: "Near-total collapse of on-time task completion"
   balance:
     name: "Balance & Wellbeing"
     anchor_type: "subjective"
@@ -2343,6 +2593,11 @@ transportation:
       4: "Sub-30-minute commute with batched errands; costs below 15% of income"
       2: "Over 60-minute commute with costs above 20% of income"
 
+      -2: "Marginal increase in transportation cost burden"
+      -4: "Noticeable increase in transportation cost burden"
+      -6: "Significant increase in transportation cost burden"
+      -8: "Severe increase in transportation cost burden"
+      -10: "Overwhelming transportation cost burden"
   comfort:
     name: "Comfort"
     anchor_type: "subjective"
@@ -2509,6 +2764,11 @@ global-impact:
       4: "0.15% of income given sporadically"
       2: "0.04% of income given or less"
 
+      -2: "~0.04% of income given annually lost"
+      -4: "~0.15% of income given annually lost"
+      -6: "~0.6% of income given annually lost"
+      -8: "~2.5% of income given annually lost"
+      -10: "10%+ of income given annually lost"
   fulfilment:
     name: "Fulfilment"
     anchor_type: "subjective"
@@ -2538,6 +2798,11 @@ networks:
       4: "1 professional who would genuinely advocate for you"
       2: "No one who would actively advocate for your professional work"
 
+      -2: "~0.5 professional advocates lost"
+      -4: "~2 professional advocates lost"
+      -6: "~8 professional advocates lost"
+      -8: "~31 professional advocates lost"
+      -10: "50+ professional advocates lost"
   breadth:
     name: "Breadth"
     anchor_type: "subjective"

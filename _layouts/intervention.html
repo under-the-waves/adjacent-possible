@@ -643,15 +643,20 @@ function calculateEBS() {
             console.warn('No value definition found in values.yml for: ' + key);
             display = ebs.toFixed(1);
         } else if (def.anchor_type === 'linear' && def.anchor_max) {
-            let linearValue;
+            // Compute magnitude from |ebs|, then apply sign
+            const magnitude = (Math.pow(2, Math.abs(ebs)) / Math.pow(2, 10)) * def.anchor_max;
+            const sign = ebs < 0 ? -1 : 1;
+            const linearValue = sign * magnitude;
+            const prefix = linearValue > 0 ? '+' : '';
             if (def.anchor_inverted) {
-                linearValue = def.anchor_max / Math.pow(2, ebs);
-                display = ebs.toFixed(1) + ' (' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
+                // Inverted: positive EBS = less of the (bad) thing, negative EBS = more
+                const direction = linearValue > 0 ? 'less' : 'more';
+                display = ebs.toFixed(1) + ' (' + magnitude.toFixed(1) + ' ' + (def.anchor_unit || '') + ' ' + direction + ')';
+                reasoningSuffix = '. Converted to linear: ' + magnitude.toFixed(1) + ' ' + (def.anchor_unit || '') + ' ' + direction + '.';
             } else {
-                linearValue = (Math.pow(2, ebs) / Math.pow(2, 10)) * def.anchor_max;
-                display = ebs.toFixed(1) + ' (+' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
+                display = ebs.toFixed(1) + ' (' + prefix + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
+                reasoningSuffix = '. Converted to linear: ' + prefix + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + '.';
             }
-            reasoningSuffix = '. Converted to linear: ' + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + '.';
         } else {
             const scaleDesc = getScaleDescription(key, ebs);
             display = ebs.toFixed(1) + ' (' + scaleDesc + ')';
@@ -683,13 +688,17 @@ function calculateEBS() {
             function toRealUnits(score, vdef) {
                 if (!vdef) return 'score ' + score.toFixed(1);
                 if (vdef.anchor_type === 'linear' && vdef.anchor_max) {
-                    var realVal = (Math.pow(2, score) / Math.pow(2, 10)) * vdef.anchor_max;
+                    var magnitude = (Math.pow(2, Math.abs(score)) / Math.pow(2, 10)) * vdef.anchor_max;
+                    var sign = score < 0 ? -1 : 1;
+                    var realVal = sign * magnitude;
+                    var unit = vdef.anchor_unit || '';
                     if (vdef.anchor_inverted) {
-                        realVal = vdef.anchor_max / Math.pow(2, score);
+                        var direction = realVal > 0 ? 'less' : 'more';
+                        return magnitude.toFixed(1) + ' ' + unit + ' ' + direction;
                     }
-                    if (realVal < 0.1) return realVal.toFixed(2) + ' ' + (vdef.anchor_unit || '');
-                    if (realVal < 1) return realVal.toFixed(1) + ' ' + (vdef.anchor_unit || '');
-                    return realVal.toFixed(1) + ' ' + (vdef.anchor_unit || '');
+                    var prefix = realVal > 0 ? '+' : '';
+                    if (Math.abs(realVal) < 0.1) return prefix + realVal.toFixed(2) + ' ' + unit;
+                    return prefix + realVal.toFixed(1) + ' ' + unit;
                 }
                 // Subjective: use nearest scale level description
                 var rounded = Math.round(score / 2) * 2;
