@@ -387,6 +387,71 @@ layout: default
 .summary-label a:hover {
     text-decoration: underline;
 }
+
+.what-it-is,
+.how-to-do-it,
+.success-looks-like,
+.common-pitfalls {
+    margin-bottom: 20px;
+    line-height: 1.55;
+}
+
+.what-it-is a {
+    color: #155799;
+    text-decoration: underline;
+}
+
+.prereq-list {
+    margin-bottom: 25px;
+}
+
+.top-effects-summary {
+    font-size: 1.05em;
+    background-color: #e3f2fd;
+    padding: 12px 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.effects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.effects-table th,
+.effects-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.effects-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+.effects-table td a {
+    color: #155799;
+    text-decoration: none;
+}
+
+.effects-table td a:hover {
+    text-decoration: underline;
+}
+
+.effects-table .ebs-cell {
+    font-weight: 600;
+    color: #155799;
+    white-space: nowrap;
+}
+
+.effects-table .ebs-cell.negative {
+    color: #c62828;
+}
 </style>
 
 <div class="breadcrumb">
@@ -398,15 +463,79 @@ layout: default
 
 <h1>{{ intervention.name }}</h1>
 
+{% if intervention.what_it_is %}
+<h2>What it is</h2>
+<div class="what-it-is">
+    {{ intervention.what_it_is | markdownify }}
+</div>
+{% elsif intervention.description %}
 <div class="description">
     {{ intervention.description | markdownify }}
 </div>
+{% endif %}
 
-<h2>Score Summary</h2>
-<div class="score-summary">
-    <div id="plain-summary" class="plain-summary"></div>
+<h2>Cost</h2>
+<ul class="resource-list">
+    <li><strong>Upfront cost:</strong> ${{ intervention.resources.upfront_cost }} <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span></li>
+    <li><strong>Ongoing cost:</strong> ${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }} <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span></li>
+    <li><strong>Upfront time:</strong> {{ intervention.resources.upfront_time }} hours <span class="info-icon" onclick="showReasoning('upfront-time')">i</span></li>
+    <li><strong>Ongoing time:</strong> {{ intervention.resources.ongoing_time }} hours/{{ intervention.resources.ongoing_time_period }} <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span></li>
+</ul>
+
+{% if intervention.how_to_do_it %}
+<h2>How to do it</h2>
+<div class="how-to-do-it">
+    {{ intervention.how_to_do_it | markdownify }}
+</div>
+{% endif %}
+
+{% if intervention.success_looks_like %}
+<h2>What success looks like</h2>
+<div class="success-looks-like">
+    {{ intervention.success_looks_like | markdownify }}
+</div>
+{% endif %}
+
+{% if intervention.common_pitfalls %}
+<h2>Common pitfalls</h2>
+<div class="common-pitfalls">
+    {{ intervention.common_pitfalls | markdownify }}
+</div>
+{% endif %}
+
+{% if intervention.prerequisites %}
+<h2>Prerequisites</h2>
+<ul class="prereq-list">
+    {% for prereq in intervention.prerequisites %}
+        <li>{{ prereq }}</li>
+    {% endfor %}
+</ul>
+{% if intervention.alternatives %}
+    <p><em>Consider {% for alt in intervention.alternatives %}<a href="{{ site.baseurl }}{{ alt.url }}">{{ alt.name }}</a> {{ alt.reason }}{% unless forloop.last %}, {% endunless %}{% endfor %}.</em></p>
+{% endif %}
+{% if intervention.related_areas %}
+    <p><em>{% for area in intervention.related_areas %}{{ area.relationship }}: <a href="{{ site.baseurl }}{{ area.url }}">{{ area.area }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.</em></p>
+{% endif %}
+{% endif %}
+
+<h2>Expected effects</h2>
+<p id="top-effects-summary" class="top-effects-summary">Loading...</p>
+
+<table class="effects-table">
+    <thead>
+        <tr>
+            <th>Life area</th>
+            <th>Value</th>
+            <th>PBS</th>
+            <th>ISR</th>
+            <th>UAR</th>
+            <th>EBS</th>
+        </tr>
+    </thead>
+    <tbody>
     {% for value_pair in intervention.values %}
         {% assign value_key = value_pair[0] %}
+        {% assign value_data = value_pair[1] %}
         {% assign value_parts = value_key | split: '.' %}
         {% assign current_domain = value_parts[0] %}
         {% assign vkey = value_parts[1] %}
@@ -422,35 +551,17 @@ layout: default
                 {% assign domain_display = domain_display | append: ' ' | append: cap_word %}
             {% endif %}
         {% endfor %}
-        <div class="summary-item">
-            <span class="summary-label"><a href="{{ site.baseurl }}/{{ current_domain }}/">{{ domain_display }}</a> – {{ value_name }}:</span>
-            <span class="summary-score" id="summary-{{ value_key }}">Loading...</span>
-        </div>
+        <tr>
+            <td><a href="{{ site.baseurl }}/{{ current_domain }}/">{{ domain_display }}</a></td>
+            <td>{{ value_name }}</td>
+            <td>{{ value_data.pbs }}</td>
+            <td>{{ value_data.isr }}%</td>
+            <td>{{ value_data.uar }}%</td>
+            <td class="ebs-cell" id="table-ebs-{{ value_key }}">…</td>
+        </tr>
     {% endfor %}
-</div>
-
-<h2>Resource Requirements</h2>
-<ul class="resource-list">
-    <li><strong>Upfront Cost:</strong> ${{ intervention.resources.upfront_cost }} <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span></li>
-    <li><strong>Ongoing Cost:</strong> ${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }} <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span></li>
-    <li><strong>Upfront Time:</strong> {{ intervention.resources.upfront_time }} hours <span class="info-icon" onclick="showReasoning('upfront-time')">i</span></li>
-    <li><strong>Ongoing Time:</strong> {{ intervention.resources.ongoing_time }} hours/{{ intervention.resources.ongoing_time_period }} <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span></li>
-</ul>
-
-<div class="prerequisites">
-    <h3>Suggested Prerequisites</h3>
-    <ul>
-    {% for prereq in intervention.prerequisites %}
-        <li>{{ prereq }}</li>
-    {% endfor %}
-    </ul>
-    {% if intervention.alternatives %}
-        <p><em>Consider {% for alt in intervention.alternatives %}<a href="{{ site.baseurl }}{{ alt.url }}">{{ alt.name }}</a> {{ alt.reason }}{% unless forloop.last %}, {% endunless %}{% endfor %}.</em></p>
-    {% endif %}
-    {% if intervention.related_areas %}
-        <p><em>{% for area in intervention.related_areas %}{{ area.relationship }}: <a href="{{ site.baseurl }}{{ area.url }}">{{ area.area }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.</em></p>
-    {% endif %}
-</div>
+    </tbody>
+</table>
 
 <details class="detailed-scoring">
 <summary><h2 style="display:inline;">Detailed Scoring</h2></summary>
@@ -662,8 +773,16 @@ function calculateEBS() {
             display = ebs.toFixed(1) + ' (' + scaleDesc + ')';
         }
 
-        document.getElementById('ebs-' + key).textContent = ebs.toFixed(1);
-        document.getElementById('summary-' + key).textContent = display;
+        // Populate the detail-view EBS field (inside the collapsible section)
+        var detailEbsEl = document.getElementById('ebs-' + key);
+        if (detailEbsEl) detailEbsEl.textContent = ebs.toFixed(1);
+
+        // Populate the effects table cell
+        var tableCell = document.getElementById('table-ebs-' + key);
+        if (tableCell) {
+            tableCell.textContent = display;
+            if (ebs < 0) tableCell.classList.add('negative');
+        }
 
         reasoningData['ebs-' + key].content =
             'Logarithmic calculation: ' + data.pbs + ' + log₂(' + data.isr + '%) + log₂(' + data.uar + '%) = ' +
@@ -671,55 +790,70 @@ function calculateEBS() {
             ebs.toFixed(1) + reasoningSuffix;
     }
 
-    // Generate plain English summaries
-    var summaryEl = document.getElementById('plain-summary');
-    if (summaryEl) {
-        var paragraphs = [];
-        for (var vkey in interventionData) {
-            var d = interventionData[vkey];
-            var def = valueDefinitions[vkey];
-            var ebs = d.pbs + Math.log2(d.isr / 100) + Math.log2(d.uar / 100);
-            var parts = vkey.split('.');
-            var domainKey = parts[0];
-            var domainDisplay = domainKey.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-            var valueName = (def && def.name) || parts[1].replace(/_/g, ' ');
-            var domainLink = '<a href="{{ site.baseurl }}/' + domainKey + '/">' + domainDisplay + '</a>';
-
-            function toRealUnits(score, vdef) {
-                if (!vdef) return 'score ' + score.toFixed(1);
-                if (vdef.anchor_type === 'linear' && vdef.anchor_max) {
-                    var magnitude = (Math.pow(2, Math.abs(score)) / Math.pow(2, 10)) * vdef.anchor_max;
-                    var sign = score < 0 ? -1 : 1;
-                    var realVal = sign * magnitude;
-                    var unit = vdef.anchor_unit || '';
-                    if (vdef.anchor_inverted) {
-                        var direction = realVal > 0 ? 'less' : 'more';
-                        return magnitude.toFixed(1) + ' ' + unit + ' ' + direction;
-                    }
-                    var prefix = realVal > 0 ? '+' : '';
-                    if (Math.abs(realVal) < 0.1) return prefix + realVal.toFixed(2) + ' ' + unit;
-                    return prefix + realVal.toFixed(1) + ' ' + unit;
-                }
-                // Subjective: use nearest scale level description
-                var rounded = Math.round(score / 2) * 2;
-                if (rounded === 0) return 'negligible expected effect';
-                if (rounded > 10) rounded = 10;
-                if (rounded < -10) rounded = -10;
-                return (vdef.scale_levels && vdef.scale_levels[rounded]) || 'score ' + score.toFixed(1);
+    // Helper: convert an EBS value into a plain-English effect description
+    function toRealUnits(score, vdef) {
+        if (!vdef) return 'score ' + score.toFixed(1);
+        if (vdef.anchor_type === 'linear' && vdef.anchor_max) {
+            var magnitude = (Math.pow(2, Math.abs(score)) / Math.pow(2, 10)) * vdef.anchor_max;
+            var sign = score < 0 ? -1 : 1;
+            var realVal = sign * magnitude;
+            var unit = vdef.anchor_unit || '';
+            if (vdef.anchor_inverted) {
+                var direction = realVal > 0 ? 'less' : 'more';
+                return magnitude.toFixed(1) + ' ' + unit + ' ' + direction;
             }
-
-            var pbsReal = toRealUnits(d.pbs, def);
-            var ebsReal = toRealUnits(ebs, def);
-
-            paragraphs.push(
-                '<p><strong>' + domainLink + ' – ' + valueName + ':</strong> ' +
-                'If this works for you, the effect is ' + pbsReal + '. ' +
-                'We estimate ' + d.isr + '% of people who follow it properly see meaningful results, ' +
-                'and ' + d.uar + '% stick with it long-term. ' +
-                'Expected benefit: ' + ebsReal + '.</p>'
-            );
+            var prefix = realVal > 0 ? '+' : '';
+            if (Math.abs(realVal) < 0.1) return prefix + realVal.toFixed(2) + ' ' + unit;
+            return prefix + realVal.toFixed(1) + ' ' + unit;
         }
-        summaryEl.innerHTML = paragraphs.join('');
+        // Subjective: use nearest scale level description
+        var rounded = Math.round(score / 2) * 2;
+        if (rounded === 0) return 'negligible expected effect';
+        if (rounded > 10) rounded = 10;
+        if (rounded < -10) rounded = -10;
+        return (vdef.scale_levels && vdef.scale_levels[rounded]) || 'score ' + score.toFixed(1);
+    }
+
+    // Build "top effects" summary sentence from the 1-2 highest-magnitude EBS values
+    var ranked = [];
+    for (var vkey in interventionData) {
+        var d = interventionData[vkey];
+        var def = valueDefinitions[vkey];
+        var ebs = d.pbs + Math.log2(d.isr / 100) + Math.log2(d.uar / 100);
+        var parts = vkey.split('.');
+        var domainKey = parts[0];
+        var domainDisplay = domainKey.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+        var valueName = (def && def.name) || parts[1].replace(/_/g, ' ');
+        var domainLink = '<a href="{{ site.baseurl }}/' + domainKey + '/">' + domainDisplay + '</a>';
+        ranked.push({
+            vkey: vkey,
+            ebs: ebs,
+            magnitude: Math.abs(ebs),
+            label: domainLink + ' – ' + valueName,
+            effect: toRealUnits(ebs, def),
+            negative: ebs < 0
+        });
+    }
+    // Sort by magnitude descending (largest effect in either direction first)
+    ranked.sort(function(a, b) { return b.magnitude - a.magnitude; });
+
+    var summaryEl = document.getElementById('top-effects-summary');
+    if (summaryEl && ranked.length > 0) {
+        var sentence;
+        var top = ranked[0];
+        if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
+            // Single dominant top effect
+            var verb = top.negative ? 'The largest expected harm is to' : 'The strongest expected benefit is to';
+            sentence = verb + ' ' + top.label + ': ' + top.effect + '.';
+        } else {
+            // Two close top effects
+            var second = ranked[1];
+            var verb2 = (top.negative && second.negative) ? 'The largest expected harms are to' :
+                        (top.negative || second.negative) ? 'The most significant effects are on' :
+                        'The strongest expected benefits are on';
+            sentence = verb2 + ' ' + top.label + ' (' + top.effect + ') and ' + second.label + ' (' + second.effect + ').';
+        }
+        summaryEl.innerHTML = sentence;
     }
 }
 
