@@ -463,6 +463,8 @@ layout: default
 
 <h1>{{ intervention.name }}</h1>
 
+<p id="top-effects-summary" class="top-effects-summary">Loading expected effects…</p>
+
 {% if intervention.what_it_is %}
 <h2>What it is</h2>
 <div class="what-it-is">
@@ -518,8 +520,7 @@ layout: default
 {% endif %}
 {% endif %}
 
-<h2>Expected effects</h2>
-<p id="top-effects-summary" class="top-effects-summary">Loading...</p>
+<h2>Expected effects across life areas</h2>
 
 <table class="effects-table">
     <thead>
@@ -723,7 +724,7 @@ const valueDefinitions = {
                 {% for level_pair in value_data.scale_levels %}
                     {% assign score = level_pair[0] %}
                     {% assign description = level_pair[1] %}
-                    {{ score }}: {{ description | jsonify }}{% unless forloop.last %},{% endunless %}
+                    "{{ score }}": {{ description | jsonify }}{% unless forloop.last %},{% endunless %}
                 {% endfor %}
             }
         }{% unless forloop.last %},{% endunless %}
