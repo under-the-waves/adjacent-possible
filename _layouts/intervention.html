@@ -625,10 +625,12 @@ function calculateEBS() {
     function getScaleDescription(valueKey, score) {
         const def = valueDefinitions[valueKey];
         if (!def || !def.scale_levels) return '';
-        if (score < 0) return 'Net negative expected outcome';
-        const scoreRounded = Math.round(score / 2) * 2;
-        if (scoreRounded === 0) return 'Negligible expected benefit';
-        return def.scale_levels[scoreRounded] || 'Moderate benefit level';
+        // Round to nearest even number (toward zero for values between -2 and +2)
+        let scoreRounded = Math.round(score / 2) * 2;
+        if (scoreRounded === 0) return 'Negligible expected effect';
+        if (scoreRounded > 10) scoreRounded = 10;
+        if (scoreRounded < -10) scoreRounded = -10;
+        return def.scale_levels[scoreRounded] || 'score ' + score.toFixed(1);
     }
 
     for (const [key, data] of Object.entries(interventionData)) {
@@ -637,9 +639,7 @@ function calculateEBS() {
         let display;
         let reasoningSuffix = '.';
 
-        if (ebs < 0) {
-            display = ebs.toFixed(1) + ' (Net negative expected outcome)';
-        } else if (!def) {
+        if (!def) {
             console.warn('No value definition found in values.yml for: ' + key);
             display = ebs.toFixed(1);
         } else if (def.anchor_type === 'linear' && def.anchor_max) {
@@ -693,8 +693,9 @@ function calculateEBS() {
                 }
                 // Subjective: use nearest scale level description
                 var rounded = Math.round(score / 2) * 2;
-                if (rounded < 2) rounded = 2;
+                if (rounded === 0) return 'negligible expected effect';
                 if (rounded > 10) rounded = 10;
+                if (rounded < -10) rounded = -10;
                 return (vdef.scale_levels && vdef.scale_levels[rounded]) || 'score ' + score.toFixed(1);
             }
 
