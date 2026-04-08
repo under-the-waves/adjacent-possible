@@ -1,4 +1,8 @@
 name: "High Intensity Interval Training"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Alternating periods of high-intensity exercise (80-95% maximum heart rate) with active recovery or rest, in sessions lasting 15-30 minutes, typically 3 times per week
   - Work intervals range from 30 seconds to 4 minutes, recruiting maximal muscle fibre activation and stressing cardiovascular systems before partial recovery
@@ -19,6 +23,7 @@ values:
       - Physiological adaptations (VO2max improvement, mitochondrial biogenesis, cardiac remodelling) are well-characterised with reliable dose-response relationships ([MacInnis & Gibala 2017, J Physiol](https://doi.org/10.1113/JP273196))
       - Benefits are reproduced across clinical populations including cardiac rehabilitation, type 2 diabetes, and metabolic syndrome patients with low heterogeneity between studies ([Weston et al. 2014, Br J Sports Med](https://doi.org/10.1136/bjsports-2013-092576))
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Real-world adherence shows HIIT compliance averages 89.4% in supervised settings but drops to 63% in unsupervised environments, with adherence declining to 19.6% by 12 months unsupervised ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
       - Dropout rates from HIIT interventions average 17.6% in RCTs, but real-world retention is substantially lower due to the sustained motivational demands of high-intensity effort ([Kellogg et al. 2019, Int J Exerc Sci](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6719818/))
@@ -36,6 +41,7 @@ values:
       - Performance gains are reliable for cardiovascular fitness but more variable for other performance domains; the protocol specificity matters considerably ([Buchheit & Laursen 2013, Sports Med](https://doi.org/10.1007/s40279-013-0029-x))
       - Evidence base for HIIT performance benefits is somewhat smaller than for health outcomes, with some studies having limited sample sizes and varied protocols ([Laursen & Jenkins 2002, Sports Med](https://doi.org/10.2165/00007256-200232010-00003))
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Athletes and performance-motivated exercisers show higher adherence rates than the general population due to existing training habits and clear performance goals ([Lox et al. 2014, The Psychology of Exercise](https://doi.org/10.4324/9781315213187))
       - Supervised compliance rates exceed 85% in athletic populations, but self-directed HIIT adherence drops significantly without external accountability ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
@@ -53,6 +59,7 @@ values:
       - Interval structure significantly moderates enjoyment: shorter intervals (30-60 seconds) with adequate recovery produce substantially more positive affective responses than longer intervals (3-4 minutes), meaning protocol design heavily influences the proportion who find it enjoyable ([Thum et al. 2017, PLoS ONE](https://doi.org/10.1371/journal.pone.0166299))
       - Individual variation in affective response to high-intensity exercise is large and systematic: those with higher baseline fitness report more positive affect, while less fit individuals experience disproportionately negative responses at the same relative intensity ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Enjoyment supports adherence but real-world implementation still faces challenges from the high-intensity nature, which can be intimidating for sedentary individuals ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Proper progression and interval selection are crucial for maintaining positive experiences over time; poorly designed protocols produce aversive responses ([Oliveira et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0916-7))
@@ -72,6 +79,7 @@ values:
       - Protocol variation introduces meaningful heterogeneity: shorter intervals (30 – 60 seconds) and running-based formats produce more consistent fat loss than longer intervals or cycling protocols ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
       - Score 70 reflects that roughly two-thirds to three-quarters of consistent HIIT practitioners achieve meaningful fat loss, with the higher caloric demand reducing but not eliminating compensatory non-response
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - Real-world unsupervised HIIT adherence drops to 19.6% at 12 months, compared with 89% in supervised settings – a large gap that severely limits sustained weight loss outcomes ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
       - The intensity barrier is the primary adherence limiter: many people find sustained high-intensity effort aversive, and weight-motivated exercisers may lack the intrinsic drive to tolerate discomfort long-term ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
@@ -89,6 +97,7 @@ values:
       - In clinical and at-risk populations, the evidence is stronger: [meta-analysis of cardiovascular patients](https://pmc.ncbi.nlm.nih.gov/articles/PMC9560824/) found statistically significant depression reductions following HIIT compared to usual care
       - An estimated 50-60% of adherent HIIT practitioners with some baseline mood instability experience meaningful stabilisation, but the proportion drops for those starting from a healthy emotional baseline
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -104,6 +113,7 @@ values:
       - Transfer from physical to psychological distress tolerance is not automatic; approximately half of adherent practitioners may experience the broader resilience benefit while others compartmentalise exercise tolerance separately from life stress coping
       - The short session duration (15-30 minutes) limits the sustained exposure to discomfort compared to longer endurance activities, further reducing the proportion who develop generalisable resilience
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

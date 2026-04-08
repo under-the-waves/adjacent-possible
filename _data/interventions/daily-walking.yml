@@ -1,4 +1,8 @@
 name: "Daily Walking"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Brisk walking for 30-60 minutes daily at conversational intensity (3-4 mph), performed continuously or accumulated in 10+ minute bouts, targeting 7,000-10,000+ steps
   - Requires no equipment, facilities, or technical skill, making it the most accessible structured exercise intervention available
@@ -20,6 +24,7 @@ values:
       - Studies consistently show health benefits across diverse populations, ages, and fitness levels, with minimal risk of adverse effects or contraindications ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
       - The simplicity and low intensity make benefits highly reliable and reproducible; virtually everyone who walks consistently derives health benefit ([Paluch et al. 2022, Lancet Public Health](https://doi.org/10.1016/S2468-2667(21)00302-9))
     uar: 85
+    confidence: medium
     uar_reasoning: |
       - Walking has the highest adherence rates among exercise interventions due to accessibility, low barrier to entry, and ability to integrate into daily routines ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - Studies show 70-85% maintain daily walking programmes beyond 6 months, far exceeding gym-based or structured exercise retention ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
@@ -37,6 +42,7 @@ values:
       - The performance ceiling is inherently limited by the low-intensity nature of the activity, but within that ceiling, improvements are highly consistent ([Swain & Franklin 2006, Am Heart J](https://doi.org/10.1016/j.ahj.2005.03.052))
       - Essentially zero risk of overtraining or maladaptation, making the success rate for achievable performance gains very high ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
     uar: 80
+    confidence: medium
     uar_reasoning: |
       - Performance-focused walkers often maintain programmes due to low physical demands and joint-friendly nature, with high adherence among older adults and rehabilitation populations ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - Those seeking significant athletic gains may abandon walking for more intensive activities, reducing the walking-specific adherence pool ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
@@ -54,6 +60,7 @@ values:
       - Population surveys consistently rank walking as the most preferred and most enjoyed form of physical activity across age groups, genders, and fitness levels, with very few people reporting it as aversive ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Green exercise research confirms that outdoor walking produces reliably positive affective responses across populations, with the combination of movement and nature exposure generating consistent enjoyment regardless of individual fitness or temperament ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
     uar: 80
+    confidence: medium
     uar_reasoning: |
       - Walkers often develop strong long-term habits due to enjoyment and lifestyle integration, with many reporting walking as their preferred form of exercise ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - High satisfaction and adherence rates reflect the low barrier: walking requires no special skills, equipment, or facilities, and can be done almost anywhere ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
@@ -73,6 +80,7 @@ values:
       - Constrained energy expenditure theory suggests the body downregulates other energy costs when exercise increases, making walking particularly vulnerable to compensation given its modest caloric burn ([Pontzer et al. 2016, Curr Biol](https://doi.org/10.1016/j.cub.2015.12.046))
       - Score 55 reflects that while the mechanism is sound, only about half of consistent walkers achieve meaningful scale weight reduction without explicit dietary management
     uar: 80
+    confidence: medium
     uar_reasoning: |
       - Walking has the highest long-term adherence of any exercise modality, with 70 – 85% maintaining programmes beyond 6 months, directly supporting sustained weight management ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
       - Individuals maintaining 250+ minutes per week of moderate activity are significantly more likely to sustain weight loss at 12 months ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
@@ -90,6 +98,7 @@ values:
       - When compared to active controls, walking showed no significant difference from other active interventions (SMD -0.13 for depression, -0.05 for anxiety), indicating it works but is not uniquely effective ([JMIR Public Health 2024](https://publichealth.jmir.org/2024/1/e48355))
       - The low intensity ensures almost universally positive affective responses during the activity itself, meaning the mood benefit operates both during and after sessions, raising the proportion who experience meaningful stability gains ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
     uar: 85
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile; walking has the highest long-term adherence of any exercise modality
 
@@ -105,6 +114,7 @@ values:
       - Individual variation is substantial: those with high baseline stress benefit more, while those already well-regulated see minimal resilience gains from low-intensity activity ([Olafsdottir et al. 2020, Environ Behav](https://journals.sagepub.com/doi/abs/10.1177/0013916518800798))
       - Approximately 60% of regular outdoor walkers report improved stress management, though the causal pathway from walking to resilience is indirect and multiply determined
     uar: 85
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -120,6 +130,7 @@ values:
       - Positive affective responses to walking are near-universal at self-selected paces below ventilatory threshold, meaning the flourishing pathway operates reliably across populations ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - The proportion experiencing meaningful flourishing gains is slightly lower than stability gains because flourishing requires sustained positive affect rather than mere symptom reduction, and walking's sensory rewards, while reliable, are modest in magnitude
     uar: 85
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

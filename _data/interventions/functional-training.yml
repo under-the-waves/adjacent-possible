@@ -1,4 +1,8 @@
 name: "Functional Training"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Structured resistance training using compound movements, kettlebells, bodyweight exercises, and free weights to develop strength, coordination, and movement quality applicable to everyday life
   - Sessions last 45-60 minutes, 3-4 times per week, emphasising multi-joint exercises (squats, deadlifts, presses, rows, carries, Turkish get-ups) with progressive overload applied through load, volume, or movement complexity
@@ -20,6 +24,7 @@ values:
       - Benefits are reliable when training is performed with adequate intensity and progressive overload; the J-shaped mortality curve peaks at 30-60 minutes per week ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
       - Proper form is important to avoid injury, but even suboptimal execution produces meaningful health adaptations at adequate training volumes ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Long-term adherence to functional/high-intensity functional training is challenging: ~60% abandon HIFT programmes within three months, and only 12.8% remain beyond twelve months ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - General gym dropout rates range from 47-96% within 12 months, though functional training's variety and scalability offer modestly better retention than traditional programmes ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
@@ -37,6 +42,7 @@ values:
       - The breadth of functional training means no single capacity is maximised, introducing moderate variability in outcomes depending on programme design and coaching quality ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
       - Individual variation in response to training, programme quality, and coaching competence are secondary factors; the directional performance improvement is nearly universal ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Performance-focused functional trainees have moderately better retention due to measurable progress (weight on the bar, movement quality improvements) providing positive reinforcement ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Plateaus, injury risk from complex movements, and the technical learning curve contribute to dropout, particularly at intermediate levels ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
@@ -54,6 +60,7 @@ values:
       - Affective responses to high-intensity functional training vary substantially by individual: those with higher fitness and tolerance for discomfort report positive affect, while others find the intensity aversive ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Enjoyment is heavily context-dependent: the same movements performed in a supportive group environment produce markedly different affective responses than solo training, introducing significant variability in the proportion who genuinely enjoy it ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Enjoyment-based retention in functional training is moderate; variety helps prevent boredom, but physical demands and technical requirements create barriers for recreational exercisers ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - Community-embedded programmes show significantly better retention than solo training, but overall long-term adherence remains challenged by intensity expectations ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
@@ -73,6 +80,7 @@ values:
       - Functional training specifically (as distinct from conventional resistance training) has a thinner evidence base for weight outcomes; most meta-analyses aggregate all resistance modalities together, introducing additional uncertainty ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
       - Estimated 55 – 65% meaningful response rate: most consistent practitioners see some favourable body composition shift, but many experience recomposition (muscle gain offsetting fat loss) rather than net fat reduction
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - Long-term adherence to functional training is poor: only 12.8% remain in HIFT programmes beyond twelve months, and general gym dropout ranges from 47–96% within 12 months ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - Weight loss-motivated exercisers face additional attrition because the scale may not move substantially even when body composition improves, creating a perceived lack of progress ([Dalle Grave et al. 2011, Behav Res Ther](https://doi.org/10.1016/j.brat.2011.09.004))
@@ -90,6 +98,7 @@ values:
       - Group-based formats may improve reliability of mood benefits through social accountability and belonging, but self-selection into community fitness creates confounding – those who join group programmes may already be more socially connected ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
       - An estimated 50-60% of adherent functional trainees experience meaningful mood stabilisation, with the community element modestly increasing reliability compared to solo resistance training
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -105,6 +114,7 @@ values:
       - High early dropout (~60% within three months) means many participants never reach the training duration needed to develop resilience benefits, though those who persist in community formats may benefit disproportionately ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - Approximately half of those who maintain consistent practice experience broader stress coping improvements, with community-embedded trainees showing somewhat higher rates than solo practitioners
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -120,6 +130,7 @@ values:
       - Self-selection bias is a concern: people drawn to community fitness may already have stronger social needs and networks, inflating observed flourishing benefits in CrossFit studies ([PMC 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/))
       - An estimated 45-55% of adherent functional trainees in group settings experience meaningful flourishing gains, with the rate substantially lower for those training independently
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

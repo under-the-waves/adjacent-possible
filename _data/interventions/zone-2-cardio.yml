@@ -1,4 +1,8 @@
 name: "Zone 2 Cardio"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Sustained low-intensity aerobic exercise at 60-70% of maximum heart rate (below the first ventilatory or lactate threshold), for 30-60 minutes per session, 3-5 times per week
   - Modalities include cycling, jogging, swimming, rowing, or elliptical training, with intensity characterised by the ability to maintain a conversation throughout
@@ -20,6 +24,7 @@ values:
       - Zone 2 training reliably produces aerobic adaptations when performed at adequate volume; all exercise intensities robustly increase VO2max ([Poole et al. 2021, J Physiol](https://doi.org/10.1113/JP279564))
       - The specific claim that Zone 2 is optimal for mitochondrial biogenesis lacks strong RCT support, which introduces uncertainty about the mechanism while the health outcome remains well-supported ([MacInnis & Gibala 2017, J Physiol](https://doi.org/10.1113/JP273196))
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - Zone 2 cardio has relatively high adherence potential due to its low perceived exertion, minimal post-exercise fatigue, and low injury risk, making it sustainable as a daily practice ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - The comfortable intensity allows combination with other activities (podcasts, socialising) without performance decrement, reducing the perceived burden ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
@@ -37,6 +42,7 @@ values:
       - The performance ceiling from Zone 2 alone is limited; higher intensities are needed to maximise VO2max and lactate threshold, reducing the ISR for high-level performance outcomes ([Seiler 2010, Int J Sports Physiol Perform](https://doi.org/10.1123/ijspp.5.3.275))
       - Evidence supports Zone 2 as a necessary but insufficient component of optimal endurance performance training ([San-Millan & Brooks 2018, Sports Med](https://doi.org/10.1007/s40279-017-0820-x))
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Performance-focused Zone 2 practitioners tend to be disciplined endurance athletes who understand the training rationale and can tolerate monotony for long-term gains ([Seiler 2010, Int J Sports Physiol Perform](https://doi.org/10.1123/ijspp.5.3.275))
       - The low recovery cost allows high training frequency, supporting adherence, but the delayed and indirect nature of performance benefits can test motivation ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
@@ -54,6 +60,7 @@ values:
       - Enjoyment is heavily modality-dependent: outdoor cycling through scenic routes produces a very different affective response than 45 minutes on an indoor trainer, meaning the proportion who enjoy it varies substantially by context ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - General low-intensity exercise enjoyment data supports moderate satisfaction for most populations, but Zone 2-specific evidence is limited; the requirement for heart rate monitoring adds a constraint element that can reduce the free-form pleasure of simply moving ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Low barrier, low fatigue, and compatibility with daily routines support long-term habit formation for those who find a sustainable format ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - Monotony risk is real; rotating modalities and outdoor settings improve retention, as does pairing with valued secondary activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
@@ -73,6 +80,7 @@ values:
       - Zone 2's moderate calorie burn (300 – 500 kcal/hour) means the margin for dietary compensation is narrow; even modest increases in post-exercise eating can eliminate the deficit entirely ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
       - Estimated 60 – 70% meaningful response rate: the exercise-to-weight-loss pathway is mechanistically sound but behaviourally fragile, with a substantial minority seeing negligible fat loss despite consistent training
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Zone 2's low perceived exertion, minimal recovery cost, and compatibility with daily routines support higher long-term adherence than vigorous exercise ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000)), but weight-loss-specific adherence requires sustained commitment over 6 – 12+ months
       - [General exercise adherence data](https://doi.org/10.1136/bjsports-2015-095948) (Rhodes et al. 2017) shows approximately 50 – 60% of adults maintain moderate exercise programmes beyond 6 months; Zone 2's tolerability places it at the higher end of this range
@@ -90,6 +98,7 @@ values:
       - The comfortable intensity means affective responses are almost universally positive during sessions, creating a reliable acute mood boost that accumulates over time ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Approximately 70% of adherent practitioners experience meaningful stability improvements, with the regularity and sustainability of Zone 2 training supporting consistent neurochemical benefits
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile; Zone 2's low perceived exertion supports strong long-term adherence
 
@@ -105,6 +114,7 @@ values:
       - Zone 2's low recovery cost means the physiological stress exposure per session is modest, limiting the magnitude of stress-system adaptation for most practitioners
       - Approximately 55% of adherent Zone 2 practitioners develop meaningfully improved stress tolerance, with the benefit being more reliable for mood buffering than for resilience to acute stressors
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -120,6 +130,7 @@ values:
       - Modality strongly moderates the flourishing benefit: outdoor cycling through scenic routes produces substantially better affective responses than 45 minutes on an indoor trainer, creating high individual variation ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Approximately 60% of adherent practitioners report improved daily mood and life satisfaction from regular Zone 2 sessions, with the remainder finding the monotony limits the positive psychological impact
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

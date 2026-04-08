@@ -1,4 +1,8 @@
 name: "Optimising Home Lighting"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Strategically managing light exposure across three phases: bright, blue-enriched light in the morning (10,000 lux therapy lamp or direct sunlight within 30 minutes of waking for 20-30 minutes), normal lighting during the day, and dim, warm lighting in the evening (below 50 lux using smart bulbs set to amber/warm tones or amber filter glasses)
   - Targets the suprachiasmatic nucleus (the brain's master clock) to strengthen circadian entrainment, advancing melatonin onset in the evening and suppressing it in the morning for sharper wake/sleep transitions
@@ -20,6 +24,7 @@ values:
       - [Phillips et al. (2019)](https://www.pnas.org/doi/10.1073/pnas.1901824116) demonstrated high interindividual variability in circadian light sensitivity, with the most sensitive individuals showing >50% melatonin suppression at just 10 lux whilst the least sensitive required 400 lux, meaning a meaningful minority will not respond adequately to standard protocols.
       - Combining morning and evening interventions likely improves response rates over single-component approaches, but the evidence base for the combined protocol in healthy adults is thinner than for individual components. Conservatively estimated at 60%.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - [A systematic review of light therapy adherence](https://www.sciencedirect.com/science/article/pii/S2352721820300619) found adherence comparable to antidepressant medication, with [trial data](https://pubmed.ncbi.nlm.nih.gov/17161464/) showing 83% adherence among completers but ~20% dropout over 5-week interventions.
       - The morning component requires a dedicated 20-30 minute session with a therapy lamp, which competes with rushed morning routines. The evening component is easier once smart bulbs are automated but requires initial setup discipline and occasional manual overrides for social situations.
@@ -37,6 +42,7 @@ values:
       - [Circadian misalignment studies](https://www.pnas.org/doi/10.1073/pnas.1516953113) demonstrate increased inflammatory markers (CRP, TNF-alpha, IL-6) during acute misalignment, but it remains unclear what proportion of non-shift-workers have sufficient baseline circadian disruption for lighting optimisation to meaningfully reduce these markers.
       - The long-term health pathway requires years of sustained practice to manifest, during which confounding variables (diet, exercise, stress) may dominate. Conservatively estimated at 45%.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
@@ -52,6 +58,7 @@ values:
       - The melatonin-mediated mechanism for subjective sleepiness is well-established – users who achieve even modest melatonin timing shifts typically notice easier sleep onset and a more natural wind-down experience.
       - Some users will not notice subjective improvement due to low baseline circadian disruption or non-light-related sleep comfort issues. Estimated 65% of adherent users experience meaningful comfort gains.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
@@ -67,6 +74,7 @@ values:
       - Most evidence comes from epidemiological associations with shift work rather than interventional studies of lighting changes in healthy adults. The proportion of the general population with sufficient baseline circadian disruption for lighting changes to meaningfully shift health outcomes is uncertain.
       - Conservatively estimated at 35% given the indirect pathway and thin interventional evidence base.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
@@ -82,6 +90,7 @@ values:
       - The pathway from lighting to work competence passes through sleep quality and daytime alertness, each introducing variability. Some users may sleep better without noticeable work performance gains if they were not cognitively impaired by their prior sleep.
       - Estimated 45% of adherent users experience meaningful improvements in work-relevant cognitive performance.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
@@ -97,6 +106,7 @@ values:
       - [Evidence for anxiety](https://pmc.ncbi.nlm.nih.gov/articles/PMC11622018/) is weaker and inconsistent, with some trials showing benefit in specific populations (epilepsy, Parkinson's) but no robust general-population evidence. This limits the proportion of people with mixed anxiety-depression who will see full stability gains.
       - Most trial participants had clinically diagnosed depression; the intervention's success rate for subclinical mood instability in healthy adults is less well-established and likely lower. Conservatively estimated at 40%.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 

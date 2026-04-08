@@ -1,4 +1,8 @@
 name: "Index Fund Investing"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Regularly investing in broad-market index funds (global equity trackers, S&P 500, or total world funds) through a low-cost platform
   - Consistent contributions via pound-cost averaging, minimal trading, and a time horizon of 10+ years
@@ -19,6 +23,7 @@ values:
       - However, shorter timeframes introduce meaningful uncertainty – the S&P 500 has experienced drawdowns of 30-50% that took 2-7 years to recover from, affecting investors who need to access funds during downturns.
       - Score 80 reflects high long-term reliability tempered by genuine short-to-medium-term uncertainty that affects many investors' actual experience, particularly those unable to maintain a full 15+ year horizon.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - [Dalbar's Quantitative Analysis of Investor Behavior](https://www.dalbar.com/QAIB/Index) consistently shows the average equity fund investor underperforms the market by 3-4% annually due to buying high and selling low, suggesting a significant minority fail to maintain the buy-and-hold strategy.
       - During the 2008-09 crash, [Vanguard research](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) showed significant numbers of retail investors sold at or near the bottom, converting temporary paper losses into permanent real losses.
@@ -36,6 +41,7 @@ values:
       - The strategy provides no protection against systematic market drawdowns (30-50% declines), meaning the risk management is partial by design.
       - Score 85 reflects high reliability for the specific risk it addresses (concentration risk) tempered by the systematic risks it deliberately accepts. The diversification benefit is delivered automatically and does not depend on investor skill or judgement.
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - Most index fund investors maintain their diversified position passively, meaning the risk management benefit persists through inertia. [Vanguard research](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) shows the majority of buy-and-hold investors remain invested through downturns.
       - However, during severe drawdowns some investors abandon the strategy entirely, converting paper losses into real ones – precisely when diversification matters most.
@@ -53,6 +59,7 @@ values:
       - The timeline to FI depends heavily on savings rate and starting point, and sequence-of-returns risk can significantly affect when FI is actually achieved. A major drawdown early in the accumulation phase can delay FI by several years.
       - Score 75 reflects high directional reliability tempered by genuine uncertainty about timing, particularly the interaction between market conditions and the specific years when contributions are largest.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Maintaining a consistent index fund strategy oriented toward FI is genuinely difficult over the 10-20 year timescales typically required. [Dalbar](https://www.dalbar.com/QAIB/Index) data shows many investors lose focus, redirect funds to consumption, or abandon the strategy during drawdowns.
       - [Vanguard's behavioural coaching research](https://advisors.vanguard.com/insights/article/IWE_ReijssFTAQPF) estimates that without guidance, roughly 40% of investors deviate significantly from their original FI-oriented investment plan over a 10+ year period.

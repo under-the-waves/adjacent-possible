@@ -1,4 +1,8 @@
 name: "Buying a Lottery Ticket"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Purchasing a lottery ticket once or twice per week as a wealth-building strategy, costing $2-5 per ticket depending on the game
   - Jackpot odds range from ~1 in 14 million ([UK Lotto](https://www.national-lottery.co.uk/games/lotto)) to ~1 in 292 million ([US Powerball](https://www.powerball.com/about))
@@ -19,6 +23,7 @@ values:
       - Including smaller prizes, fewer than 0.1% of regular players achieve a net positive return in any given year. [Clotfelter & Cook (1989)](https://doi.org/10.4159/harvard.9780674423084) established that lotteries function as a regressive tax on participants.
       - [Matheson & Grote (2004)](https://doi.org/10.1111/j.1465-7295.2004.tb01384.x) calculated that US lottery tickets return $0.45-0.80 per dollar spent, confirming a consistent negative expected return.
     uar: 85
+    confidence: medium
     uar_reasoning: |
       - [Camelot annual reports](https://www.national-lottery.co.uk/life-changing) show stable or growing regular player bases over decades, with most monthly players maintaining the habit for years.
       - [Griffiths & Wood (2001)](https://doi.org/10.1080/14459790108732861) found lottery play is among the most persistent gambling forms due to social acceptability, low per-transaction cost, and intermittent reinforcement from small wins.

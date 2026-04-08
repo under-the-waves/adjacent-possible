@@ -1,4 +1,8 @@
 name: "Cold Exposure (Cold Showers)"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Ending a regular shower with 30–90 seconds of cold water (10–15°C), performed daily, progressively increasing duration over the first 2–4 weeks as habituation develops
   - Triggers a sympathetic nervous system response that elevates norepinephrine and dopamine, with [research](https://pubmed.ncbi.nlm.nih.gov/10751106/) showing norepinephrine increases of up to 530% and dopamine increases of up to 250% during cold immersion
@@ -21,6 +25,7 @@ values:
       - [Systematic review](https://doi.org/10.1371/journal.pone.0317615) found no significant effect on immune function markers immediately or 1 hour post-immersion; longer-term immune benefits rest on limited evidence
       - Cardiovascular improvements (reduced heart rate, blood pressure) are demonstrated acutely but lack long-term outcome data; the proportion of adherents who achieve clinically meaningful cardiovascular adaptation from brief daily showers is uncertain ([Esperland et al. 2022, Int J Circumpolar Health](https://doi.org/10.1080/22423982.2022.2111789))
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - In the Buijze RCT, 79% of participants completed the initial 30-day protocol, demonstrating feasible short-term adherence ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
       - Quality of life improvements observed at 30 days had faded by 90 days, suggesting novelty-driven compliance that declines substantially over time ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
@@ -39,6 +44,7 @@ values:
       - The window for benefit is narrow: cold exposure helps recovery when separated from resistance training but hinders adaptation when applied immediately after; many users will apply it at suboptimal times ([Piñero et al. 2024, Eur J Sport Sci](https://doi.org/10.1002/ejsc.12074))
       - Individual variation in cold tolerance and thermoregulatory response means some people experience negligible recovery benefit even from proper CWI protocols ([Esperland et al. 2022, Int J Circumpolar Health](https://doi.org/10.1080/22423982.2022.2111789))
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -54,6 +60,7 @@ values:
       - Some individuals develop genuine anticipation and enjoyment of the practice over time, while others find it persistently aversive regardless of habituation – population preference data is limited but suggests roughly even split ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
       - The novelty and "challenge completed" psychological reward fades for some practitioners, reducing enjoyment over time, as suggested by the loss of quality-of-life improvements between 30 and 90 days ([Buijze et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0161749))
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -69,6 +76,7 @@ values:
       - [Systematic review](https://doi.org/10.1371/journal.pone.0317615) found no significant effect on mood and only transient stress reduction (significant at 12 hours post-CWI only), suggesting the psychological benefits are inconsistent across individuals
       - Cold showers deliver a substantially weaker stimulus than the ice baths and open-water swimming studied in most resilience research; the proportion of cold-shower practitioners who develop meaningfully transferable stress tolerance is likely lower than CWI literature implies
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

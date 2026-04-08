@@ -1,4 +1,8 @@
 name: "Phone and Notification Management"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Aggressively curating digital inputs by disabling non-essential notifications, setting phone-free periods (especially during focused work and before bed), using Do Not Disturb modes, removing social media apps, and configuring screen time limits to reclaim attention and reduce compulsive checking
   - Core techniques include notification auditing (disabling all but essential contacts and calendar alerts), batching remaining notifications to 2-3 delivery windows per day, establishing device-free zones (desk during deep work, bedroom after a set time), and using built-in or third-party screen time tools to enforce limits
@@ -20,6 +24,7 @@ values:
       - Conversely, [Fitz et al. (2019)](https://www.sciencedirect.com/science/article/abs/pii/S0747563219302596) found batching notifications 3x daily significantly improved attentiveness and perceived productivity, suggesting approach matters as much as intent.
       - The mixed evidence base suggests roughly half of proper adopters experience meaningful tracking improvements, with success depending on whether users batch rather than fully suppress, and whether they address the habitual checking that persists even without notifications.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - [Roffarello & De Russis (2023)](https://dl.acm.org/doi/10.1145/3571810) found digital self-control tools had moderate short-term effects (d = 0.5), but most studies only measured outcomes over ~21 days; long-term adherence data is sparse.
       - A [consumer survey](https://www.journals.uchicago.edu/doi/abs/10.1086/714365?journalCode=jacr) found users readily monitor screen time but are unlikely to sustain actual reductions, particularly those highest in smartphone dependence.
@@ -37,6 +42,7 @@ values:
       - The [PNAS Nexus RCT](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) showed 91% of participants improved on at least one outcome when blocking mobile internet, but commitment-keeping was not directly measured.
       - Conservative estimate given the indirect pathway from attention protection to commitment fulfilment.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile. Social pressure and habitual checking are the primary failure modes regardless of which organisational dimension benefits.
 
@@ -52,6 +58,7 @@ values:
       - [Digital self-control research](https://dl.acm.org/doi/10.1145/3571810) focuses on usage time and wellbeing rather than system minimalism as an outcome, making this an inferred benefit.
       - Conservative score reflecting the plausible but weakly evidenced connection between fewer digital inputs and perceived system speed.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 
@@ -67,6 +74,7 @@ values:
       - Individual baseline phone usage varies enormously; heavy users have more to gain, while light users may see negligible competence improvements from further reduction.
       - Conservative estimate reflecting genuine but inconsistent evidence for productivity gains from notification management.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 
@@ -82,6 +90,7 @@ values:
       - No studies directly measure goal completion rates as an outcome of notification interventions, making this an inferred rather than observed benefit.
       - Conservative estimate given the inferential gap between attention protection and daily goal action.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 
@@ -97,6 +106,7 @@ values:
       - The [Radtke et al. (2022) systematic review](https://journals.sagepub.com/doi/10.1177/20501579211028647) of digital detox found diverse outcomes across studies, with more stable effects for reduction approaches than complete abstinence.
       - Individual variation in screen sensitivity is substantial; some people sleep well regardless of evening phone use, limiting the population-level success rate.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile. Evening phone-free periods face additional adherence challenges (boredom, habit of scrolling in bed) but benefit from a clear environmental trigger (bedtime).
 
@@ -113,6 +123,7 @@ values:
       - The [social media detox meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11392003/) found significant depression reduction only when pooling across studies; individual trial results varied substantially, and stress and general wellbeing effects were non-significant.
       - Baseline severity matters: [higher baseline symptom severity](https://pmc.ncbi.nlm.nih.gov/articles/PMC11392003/) predicted larger benefits, meaning light phone users or those without pre-existing distress may see negligible stability gains. Conservative estimate reflecting genuine but inconsistent effects across the population.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 
@@ -129,6 +140,7 @@ values:
       - Reclaimed time does not automatically convert to meaningful engagement; users may substitute other passive activities (television, web browsing on a laptop) rather than pursuing flourishing-enhancing ones. The [PNAS Nexus trial](https://pubmed.ncbi.nlm.nih.gov/39967678/) noted decreased media consumption across all devices, but this was under controlled experimental conditions unlikely to persist universally.
       - Conservative estimate reflecting the indirect and unreliable pathway from reduced phone use to positive affect and meaning.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 

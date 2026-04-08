@@ -1,4 +1,8 @@
 name: "Keyboard Shortcuts Mastery"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - A deliberate practice programme to learn and internalise keyboard shortcuts for your most-used applications, replacing mouse-driven menu navigation with direct key combinations across your core tools (IDE, browser, email, OS)
   - Involves identifying the 20-30 highest-impact shortcuts, practising through spaced repetition or forced usage (e.g., temporarily disabling mouse access to menus), and gradually expanding your repertoire as earlier shortcuts become automatic
@@ -19,6 +23,7 @@ values:
       - The only variability comes from application-specific inconsistencies and occasional shortcut conflicts, but these are minor and well-documented in standard software documentation.
       - Multiple studies confirm that keyboard input is consistently faster than mouse-driven menu navigation for trained users, making this one of the most mechanistically certain interventions available per [Card, Moran & Newell's (1983)](https://doi.org/10.1201/9780203736166) keystroke-level model.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) found that even experienced computer users largely do not learn or use shortcuts, and years of computer experience do not correlate with shortcut knowledge – most people learn a handful of basics (Ctrl+C, Ctrl+V) and plateau.
       - The primary barriers are the initial slowdown during learning (shortcuts are slower than familiar mouse actions until they become automatic), the effort of memorisation, and the lack of external reinforcement. [Carroll & Rosson (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X) described this as the 'production paradox' – users resist learning efficient methods because they can already accomplish tasks with less efficient ones.
@@ -36,6 +41,7 @@ values:
       - The effect is reliable but modest in magnitude – it is a facilitating condition for engagement rather than a sufficient cause. [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) confirmed that expert shortcut users report smoother workflows.
       - The engagement benefit only materialises fully once shortcuts are internalised to automaticity, which is a well-established threshold in motor learning literature.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Same adherence pattern as competence – the engagement benefit only materialises once shortcuts are fully internalised, which requires sustained practice through the initial awkward phase.
       - Many people give up before reaching the fluency threshold where shortcuts feel natural and begin to support flow, per [Carroll & Rosson's (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X) production paradox.
@@ -53,6 +59,7 @@ values:
       - However, the conversion of saved time into actual impact depends entirely on how the individual uses that freed time, which is outside the intervention's control. [Parkinson's (1955)](https://doi.org/10.1093/oxfordhb/9780199846146.013.0001) law suggests that work expands to fill available time, limiting the practical impact dividend.
       - The ISR for the rewards pathway is really about the time-saving mechanism itself (which is reliable), not the downstream impact conversion (which is uncertain but not part of the intervention's direct mechanism).
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Same adherence pattern as other current-work values, per [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) and [Carroll & Rosson (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X).
       - The additional challenge for rewards is that the connection between shortcuts and meaningful outcomes is so indirect that it provides even less motivational reinforcement – people rarely attribute career recognition to input method efficiency.

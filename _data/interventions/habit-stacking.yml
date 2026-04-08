@@ -1,4 +1,8 @@
 name: "Habit Stacking"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Attaching a new desired behaviour to an existing established habit using an 'After I [current habit], I will [new habit]' formula, leveraging existing contextual triggers as reliable anchors for new actions
   - Implementation involves identifying 3-5 existing habits as anchor points, then sequencing new micro-behaviours immediately after each, with noticeable routine integration within 2-4 weeks and full automaticity over 6-10 weeks
@@ -19,6 +23,7 @@ values:
       - A [British Psychological Society study](https://doi.org/10.1111/bjop.12585) found 64% higher success rates for executives using habit stacking versus standalone habit formation, suggesting strong effectiveness among motivated adopters.
       - Most studies cover 7 days to several months; long-term data beyond 6 months is limited. The 60% score reflects strong short-term evidence tempered by uncertainty about sustained effectiveness.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Habit stacking piggybacks on existing routines, reducing the need for separate motivation or reminders. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found routine-based cues produce stronger automaticity than time- or location-based cues.
       - Disruptions to the anchor habit (travel, illness, schedule changes) cascade and break the stacked behaviour, which is the primary failure mode. [Wood et al. (2005)](https://doi.org/10.1037/0022-3514.88.6.918) found that context changes disrupt even well-established habits.
@@ -36,6 +41,7 @@ values:
       - [Implementation intention research](https://doi.org/10.1016/S0065-2601(06)38002-1) broadly supports the execution mechanism, but translating habit-level consistency into on-time goal completion requires additional systems (tracking, milestone review, capacity assessment).
       - The moderate score reflects that habit stacking reliably produces daily action but only indirectly improves the timing accuracy that the clarity anchor measures.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Same adherence profile as follow-through: the technique's simplicity and integration into existing routines support sustained use. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found contextual repetition is the strongest driver of habit formation.
       - The main risk is that users stack trivially small habits that feel productive but do not meaningfully advance goal completion timelines. Those who connect stacked habits to explicit goal milestones tend to persist longer.
@@ -53,6 +59,7 @@ values:
       - [Cognitive load research (Sweller, 1988)](https://doi.org/10.1207/s15516709cog1202_4) supports the freed-bandwidth mechanism in principle, but whether this bandwidth actually gets redirected to goal review rather than other demands is undemonstrated.
       - The conservative score reflects genuine uncertainty about a theoretically plausible but empirically unsupported pathway.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Adherence mirrors the overall habit stacking rate since the same behaviour is sustained regardless of which value dimension it serves. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found habit duration does not vary by outcome category once formed.
       - Flexibility benefits would only emerge if the user also has a separate review practice, making this dimension dependent on complementary interventions.

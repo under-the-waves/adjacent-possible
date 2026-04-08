@@ -1,4 +1,8 @@
 name: "Basic Tax Optimisation"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Using government-provided tax wrappers as intended: maximising ISA allowances (£20,000/year), pension tax relief (20-45% depending on band), salary sacrifice, and capital gains/dividend allowances
   - Not aggressive tax planning or avoidance – simply ensuring money is held in the most tax-efficient structures available
@@ -19,6 +23,7 @@ values:
       - Historical stability is strong – ISA tax benefits have been a feature of the UK tax system since 1999, and pension tax relief has existed in various forms for decades. Changes have generally been grandfathered for existing holdings.
       - The main risk is future legislative change, but the track record of protection for existing holdings supports a high ISR. Score 85 reflects near-certainty tempered by long-term policy risk.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Tax optimisation requires more active management than automated savings – annual ISA allowance usage, pension contribution monitoring, and staying current with changing thresholds. [HMRC data](https://www.gov.uk/government/statistics/annual-savings-statistics) shows a significant proportion of higher-rate taxpayers fail to claim additional pension tax relief they are entitled to.
       - [Nest Insight research](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that while initial setup rates for tax-efficient accounts are high, annual optimisation (e.g. maximising ISA allowance, adjusting pension contributions after pay rises) is neglected by the majority of savers.
@@ -36,6 +41,7 @@ values:
       - [IFS analysis](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) confirms that pension tax relief delivers its stated benefit with near-certainty for qualifying contributions.
       - The main uncertainty relates to future tax policy changes, but the UK government has historically protected existing ISA and pension holdings. Score 85 reflects high reliability with a small long-term policy risk discount.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Initial setup is common but annual optimisation (maximising allowances, rebalancing within tax wrappers, timing contributions) requires ongoing attention that many people neglect. [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that fewer than half of pension scheme members actively review their contribution levels annually.
       - [HMRC data](https://www.gov.uk/government/statistics/annual-savings-statistics) on ISA subscription rates shows most ISA holders contribute well below the annual allowance limit, suggesting incomplete optimisation is the norm.
@@ -53,6 +59,7 @@ values:
       - Pensions reliably restrict access until a known age, though this has already increased from 55 to 57. The main uncertainty is further legislative changes to access rules.
       - Score 80 reflects high predictability of the liquidity characteristics, tempered by long-term legislative risk on pension access ages and ISA rule changes.
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - Liquidity-focused individuals may resist pension contributions precisely because of the access restrictions, reducing adherence to the most tax-efficient strategies. [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that access restrictions are a primary reason savers under-contribute to pensions relative to ISAs.
       - Many savers over-weight ISAs (which have lower contribution limits) and under-weight pensions, limiting the overall tax benefit. The ongoing administrative work of annual optimisation can deter continued engagement.
@@ -70,6 +77,7 @@ values:
       - Pension tax relief has been subject to more political debate but the basic structure has persisted for decades. [IFS analysis](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) confirms reliable delivery of stated benefits.
       - Score 85 reflects near-certain benefit delivery, discounted slightly for long-term policy risk over a 30-year investment horizon.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Maintaining optimal tax efficiency across investments requires annual attention – ensuring new contributions go into tax wrappers before taxable accounts, using bed-and-ISA strategies, managing capital gains allowances, and rebalancing within tax-efficient structures.
       - [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) research shows many investors set up tax-efficient accounts initially but do not maintain optimal allocation between wrappers over time.
@@ -87,6 +95,7 @@ values:
       - Pension tax relief provides a guaranteed uplift to the invested base, reducing shortfall risk. The UK has historically grandfathered existing holdings during legislative changes.
       - Score 80 reflects high reliability of the tax certainty benefit, tempered by long-term policy risk over multi-decade horizons.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Maintaining optimal tax efficiency requires ongoing attention – annual ISA allowance usage, pension contribution reviews, and staying current with changing rules. [HMRC data](https://www.gov.uk/government/statistics/annual-savings-statistics) shows many savers fail to use their full annual allowances.
       - The bureaucratic nature of tax administration can make ongoing engagement feel like a chore, leading to gradual disengagement from active optimisation.
@@ -104,6 +113,7 @@ values:
       - The pension component introduces a tension with FI goals: pension wealth is inaccessible until age 57+, which may not align with early FI timelines, reducing the intervention's effectiveness for early retirees.
       - Score 75 reflects reliable benefit delivery with a meaningful constraint for early-FI seekers who need access to funds before pension age.
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - FI-focused individuals may find the administrative burden of annual tax optimisation at odds with their desire for simplicity and freedom. [Nest Insight](https://www.nestinsight.org.uk/research-projects/understanding-retirement/) found that even financially engaged savers often neglect annual optimisation tasks.
       - The tension between pension lock-in and early FI goals can reduce motivation to maximise pension contributions, leading to suboptimal tax structuring.

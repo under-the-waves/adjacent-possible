@@ -1,4 +1,8 @@
 name: "Time-Restricted Eating"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Limiting all food consumption to a fixed 8-10 hour daily window (e.g. 10am-6pm), with only water, black coffee, or plain tea outside that window; no calorie counting or food tracking required
   - Creates a caloric deficit through structural restriction of eating opportunities rather than conscious energy monitoring; [meta-analytic evidence](https://doi.org/10.1038/s41430-023-01311-w) shows participants spontaneously reduce intake by approximately 400 kcal/day
@@ -21,6 +25,7 @@ values:
       - [Circadian alignment matters](https://doi.org/10.1001/jamainternmed.2022.3050): early TRE produces somewhat larger effects than late TRE, meaning individual response depends partly on which window is chosen – a source of variation that reduces the overall proportion achieving meaningful results
       - Score of 65 reflects that while the majority of proper adherents do lose some weight, a substantial minority (~30 – 35%) fail to achieve meaningful fat loss due to compensatory intake, suboptimal window timing, or individual metabolic variation
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - [A study of TRE adherence](https://doi.org/10.3390/nu15102336) found that adherence across trials ranged from 47% to 95% of days, with substantial variation by study design and population; free-living adherence was notably lower than supervised conditions
       - [A 6-month follow-up study](https://www.nature.com/articles/s41366-025-01968-2) found that only 11.8% of participants met the predefined adherence criterion of 5+ days per week during unsupervised follow-up, despite 86% adherence during the supervised phase

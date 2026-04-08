@@ -1,4 +1,8 @@
 name: "Bedtime Routine"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - A consistent sequence of relaxing activities performed 30-90 minutes before sleep at the same time each night
   - Typical activities include dimming lights, avoiding screens, warm bath or shower, reading, gentle stretching, or meditation
@@ -19,6 +23,7 @@ values:
       - [Irish et al. (2015)](https://doi.org/10.1016/j.smrv.2014.10.007) confirmed high response rates across multiple RCTs, with consistent effect sizes for sleep onset latency and efficiency improvements.
       - The intervention targets well-understood behavioural conditioning mechanisms (stimulus control, wind-down cues) with replicated results across diverse populations.
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - [Harvey et al. (2014)](https://doi.org/10.1016/j.brat.2014.04.003) found simplified routines (3-4 activities) had significantly higher long-term adherence than complex ones, with approximately 70-75% maintenance beyond 3 months.
       - [Lacks & Rotert (1986)](https://doi.org/10.1016/S0005-7894(86)80039-X) reported 70% adherence to stimulus control instructions at 6-month follow-up in insomnia treatment trials.
@@ -36,6 +41,7 @@ values:
       - [Huang et al. (2020)](https://doi.org/10.1038/s41746-020-0270-1) found that sleep regularity was a stronger predictor of health outcomes than total sleep duration, supporting a high ISR for regularity-promoting interventions.
       - Slightly lower than daily functioning ISR (80 vs 85) because long-term health benefits depend on sustained implementation over years and involve more complex causal pathways.
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - Same adherence rate as daily functioning, since the same behaviour produces both outcomes. [Harvey et al. (2014)](https://doi.org/10.1016/j.brat.2014.04.003) retention data applies equally.
       - Health benefits require sustained implementation over months to years, but the routine is the same daily commitment regardless of which outcome is being measured.
@@ -53,6 +59,7 @@ values:
       - Subjective comfort outcomes are more consistently achieved than objective sleep metrics, as the relaxation activities directly reduce pre-sleep arousal regardless of downstream sleep architecture effects.
       - Multiple RCTs show very high success rates (85-90%) for improved subjective sleep experience when routines are properly implemented for 4+ weeks.
     uar: 75
+    confidence: medium
     uar_reasoning: |
       - Slightly higher adherence than other sleep outcomes because comfort improvements are immediately noticeable within the first week, providing positive reinforcement. [Buysse et al. (2011)](https://doi.org/10.1001/archinternmed.2011.476) found that perceived sleep quality gains predicted continued adherence.
       - [Harvey et al. (2014)](https://doi.org/10.1016/j.brat.2014.04.003) noted that participants who experienced subjective improvements in the first 2 weeks were significantly more likely to maintain routines at 6-month follow-up.
@@ -70,6 +77,7 @@ values:
       - [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) found mixed results for depressive symptoms depending on sleep loss type, suggesting the sleep-mood pathway is less reliable than the sleep-functioning pathway.
       - Conservatively estimated at 55% – higher than the optimising-lighting ISR for mental health (40%) because bedtime routines have more consistent effects on subjective sleep quality, but lower than the primary sleep ISR (85%) due to the indirect pathway.
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 

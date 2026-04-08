@@ -452,6 +452,76 @@ layout: default
 .effects-table .ebs-cell.negative {
     color: #c62828;
 }
+
+.effects-table .ebs-cell .ebs-was {
+    font-weight: 400;
+    font-size: 0.85em;
+    color: #888;
+    margin-left: 4px;
+}
+
+.confidence-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.confidence-high {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.confidence-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.confidence-low {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.view-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.toggle-btn {
+    padding: 6px 14px;
+    border: 1px solid #155799;
+    background: white;
+    color: #155799;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.toggle-btn.active {
+    background: #155799;
+    color: white;
+}
+
+.toggle-btn:hover:not(.active) {
+    background: #e3f2fd;
+}
+
+.toggle-note {
+    font-size: 0.85em;
+    color: #666;
+    margin-left: 4px;
+}
+
+.toggle-note a {
+    color: #155799;
+}
 </style>
 
 <div class="breadcrumb">
@@ -522,6 +592,12 @@ layout: default
 
 <h2>Expected effects across life areas</h2>
 
+<div class="view-toggle" id="view-toggle" style="display:none;">
+    <button class="toggle-btn active" data-view="personalised" onclick="setView('personalised')">For you</button>
+    <button class="toggle-btn" data-view="typical" onclick="setView('typical')">Typical</button>
+    <span class="toggle-note">Personalised using your <a href="#" id="toggle-assess-link">Level 1 assessment data</a></span>
+</div>
+
 <table class="effects-table">
     <thead>
         <tr>
@@ -530,6 +606,7 @@ layout: default
             <th>PBS</th>
             <th>ISR</th>
             <th>UAR</th>
+            <th>Confidence</th>
             <th>EBS</th>
         </tr>
     </thead>
@@ -542,6 +619,7 @@ layout: default
         {% assign vkey = value_parts[1] %}
         {% assign value_def = site.data.values[current_domain][vkey] %}
         {% assign value_name = value_def.name | default: value_key | replace: '_', ' ' | replace: '.', ' ' | capitalize %}
+        {% assign value_confidence = value_data.confidence | default: 'medium' %}
         {% assign domain_words = current_domain | split: '-' %}
         {% assign domain_display = '' %}
         {% for word in domain_words %}
@@ -558,6 +636,7 @@ layout: default
             <td>{{ value_data.pbs }}</td>
             <td>{{ value_data.isr }}%</td>
             <td>{{ value_data.uar }}%</td>
+            <td><span class="confidence-badge confidence-{{ value_confidence }}">{{ value_confidence }}</span></td>
             <td class="ebs-cell" id="table-ebs-{{ value_key }}">…</td>
         </tr>
     {% endfor %}
@@ -701,7 +780,8 @@ const interventionData = {
     '{{ value_key }}': {
         pbs: {{ value_data.pbs }},
         isr: {{ value_data.isr }},
-        uar: {{ value_data.uar }}
+        uar: {{ value_data.uar }},
+        confidence: {{ value_data.confidence | default: 'medium' | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 };
@@ -720,6 +800,7 @@ const valueDefinitions = {
             {% if value_data.anchor_max %}anchor_max: {{ value_data.anchor_max }},{% endif %}
             {% if value_data.anchor_unit %}anchor_unit: {{ value_data.anchor_unit | jsonify }},{% endif %}
             {% if value_data.anchor_inverted %}anchor_inverted: true,{% endif %}
+            baseline_percentile: {{ value_data.baseline_percentile | default: 35 }},
             scale_levels: {
                 {% for level_pair in value_data.scale_levels %}
                     {% assign score = level_pair[0] %}
@@ -732,95 +813,189 @@ const valueDefinitions = {
 {% endfor %}
 };
 
-// Calculate EBS and populate displays
-function calculateEBS() {
-    function getScaleDescription(valueKey, score) {
-        const def = valueDefinitions[valueKey];
-        if (!def || !def.scale_levels) return '';
-        // Round to nearest even number (toward zero for values between -2 and +2)
-        let scoreRounded = Math.round(score / 2) * 2;
-        if (scoreRounded === 0) return 'Negligible expected effect';
-        if (scoreRounded > 10) scoreRounded = 10;
-        if (scoreRounded < -10) scoreRounded = -10;
-        return def.scale_levels[scoreRounded] || 'score ' + score.toFixed(1);
+// Confidence factors – shrinkage applied to EBS in log form
+const CONFIDENCE_FACTORS = { high: 1.0, medium: 0.75, low: 0.5 };
+
+// Read user percentile data from Level 1 assessments
+function loadUserPercentiles() {
+    try {
+        var raw = localStorage.getItem('ap-level1-scores');
+        return raw ? JSON.parse(raw) : {};
+    } catch(e) { return {}; }
+}
+
+// Diminishing returns sigmoid: factor = 1 - sigmoid(0.1 * (delta - 30))
+// At baseline: factor ≈ 0.95 (full effect)
+// 30 above baseline: factor = 0.5 (half effect)
+// 50 above: factor ≈ 0.12 (mostly maxed out)
+function diminishingReturnsFactor(userPercentile, baselinePercentile) {
+    if (userPercentile == null || baselinePercentile == null) return 1.0;
+    var delta = userPercentile - baselinePercentile - 30;
+    var sig = 1 / (1 + Math.exp(-0.1 * delta));
+    return 1 - sig;
+}
+
+function getUserPercentileForValue(domain, valueKey) {
+    var scores = loadUserPercentiles();
+    if (!scores[domain]) return null;
+    return scores[domain][valueKey] != null ? scores[domain][valueKey] : null;
+}
+
+// Helper: convert an EBS value into a plain-English effect description
+function toRealUnits(score, vdef) {
+    if (!vdef) return 'score ' + score.toFixed(1);
+    if (vdef.anchor_type === 'linear' && vdef.anchor_max) {
+        var magnitude = (Math.pow(2, Math.abs(score)) / Math.pow(2, 10)) * vdef.anchor_max;
+        var sign = score < 0 ? -1 : 1;
+        var realVal = sign * magnitude;
+        var unit = vdef.anchor_unit || '';
+        if (vdef.anchor_inverted) {
+            var direction = realVal > 0 ? 'less' : 'more';
+            return magnitude.toFixed(1) + ' ' + unit + ' ' + direction;
+        }
+        var prefix = realVal > 0 ? '+' : '';
+        if (Math.abs(realVal) < 0.1) return prefix + realVal.toFixed(2) + ' ' + unit;
+        return prefix + realVal.toFixed(1) + ' ' + unit;
     }
+    // Subjective: use nearest scale level description
+    var rounded = Math.round(score / 2) * 2;
+    if (rounded === 0) return 'negligible expected effect';
+    if (rounded > 10) rounded = 10;
+    if (rounded < -10) rounded = -10;
+    return (vdef.scale_levels && vdef.scale_levels[rounded]) || 'score ' + score.toFixed(1);
+}
+
+// Per-key results from EBS calculation, populated by calculateEBS
+// Each entry: { typicalEbs, personalisedEbs, hasPersonalisation, def, key }
+var ebsResults = {};
+var hasAnyPersonalisation = false;
+var currentView = 'personalised';  // toggled by setView()
+
+function calculateEBS() {
+    ebsResults = {};
+    hasAnyPersonalisation = false;
 
     for (const [key, data] of Object.entries(interventionData)) {
-        const ebs = data.pbs + Math.log2(data.isr / 100) + Math.log2(data.uar / 100);
         const def = valueDefinitions[key];
-        let display;
-        let reasoningSuffix = '.';
+        const confidence = data.confidence || 'medium';
+        const confFactor = CONFIDENCE_FACTORS[confidence] || 0.75;
+        const confLog = Math.log2(confFactor);
 
+        // Typical EBS: PBS + log2(ISR) + log2(UAR) + log2(confidence)
+        const typicalEbs = data.pbs + Math.log2(data.isr / 100) + Math.log2(data.uar / 100) + confLog;
+
+        // Personalised EBS: shrink PBS by diminishing-returns factor based on user percentile
+        const parts = key.split('.');
+        const domain = parts[0];
+        const valueKey = parts[1];
+        const userPct = getUserPercentileForValue(domain, valueKey);
+        const baselinePct = (def && def.baseline_percentile != null) ? def.baseline_percentile : 35;
+        const drFactor = diminishingReturnsFactor(userPct, baselinePct);
+        const hasPersonalisation = userPct != null;
+        if (hasPersonalisation) hasAnyPersonalisation = true;
+        // Floor drFactor to avoid log(0)
+        const drLog = Math.log2(Math.max(drFactor, 0.001));
+        const personalisedEbs = typicalEbs + drLog;
+
+        ebsResults[key] = {
+            typicalEbs: typicalEbs,
+            personalisedEbs: personalisedEbs,
+            hasPersonalisation: hasPersonalisation,
+            userPct: userPct,
+            baselinePct: baselinePct,
+            drFactor: drFactor,
+            confidence: confidence,
+            confFactor: confFactor,
+            def: def,
+            data: data
+        };
+
+        // Populate the detail-view EBS field (always shows typical EBS)
+        var detailEbsEl = document.getElementById('ebs-' + key);
+        if (detailEbsEl) detailEbsEl.textContent = typicalEbs.toFixed(1);
+
+        // Build EBS reasoning popup content (shows the full calculation incl. confidence)
+        var reasoningStr =
+            'Logarithmic calculation: ' + data.pbs +
+            ' + log₂(' + data.isr + '%) + log₂(' + data.uar + '%) + log₂(' + confFactor + ' confidence) = ' +
+            data.pbs + ' + ' +
+            Math.log2(data.isr / 100).toFixed(3) + ' + ' +
+            Math.log2(data.uar / 100).toFixed(3) + ' + ' +
+            confLog.toFixed(3) + ' = ' +
+            typicalEbs.toFixed(1) + '.';
+        if (hasPersonalisation) {
+            reasoningStr += ' Personalised for your percentile (' + userPct +
+                ', baseline ' + baselinePct + '): typical EBS × ' +
+                drFactor.toFixed(2) + ' = ' + personalisedEbs.toFixed(1) + '.';
+        }
+        reasoningStr += ' Confidence: ' + confidence + '.';
+        if (reasoningData['ebs-' + key]) reasoningData['ebs-' + key].content = reasoningStr;
+    }
+
+    renderTable();
+    renderTopEffectsSummary();
+    renderViewToggle();
+}
+
+function renderTable() {
+    for (const [key, result] of Object.entries(ebsResults)) {
+        var ebsForDisplay = (currentView === 'personalised' && result.hasPersonalisation)
+            ? result.personalisedEbs
+            : result.typicalEbs;
+        var typicalEbs = result.typicalEbs;
+        var def = result.def;
+
+        var displayText;
         if (!def) {
-            console.warn('No value definition found in values.yml for: ' + key);
-            display = ebs.toFixed(1);
+            displayText = ebsForDisplay.toFixed(1);
         } else if (def.anchor_type === 'linear' && def.anchor_max) {
-            // Compute magnitude from |ebs|, then apply sign
-            const magnitude = (Math.pow(2, Math.abs(ebs)) / Math.pow(2, 10)) * def.anchor_max;
-            const sign = ebs < 0 ? -1 : 1;
-            const linearValue = sign * magnitude;
-            const prefix = linearValue > 0 ? '+' : '';
+            var magnitude = (Math.pow(2, Math.abs(ebsForDisplay)) / Math.pow(2, 10)) * def.anchor_max;
+            var sign = ebsForDisplay < 0 ? -1 : 1;
+            var linearValue = sign * magnitude;
+            var prefix = linearValue > 0 ? '+' : '';
             if (def.anchor_inverted) {
-                // Inverted: positive EBS = less of the (bad) thing, negative EBS = more
-                const direction = linearValue > 0 ? 'less' : 'more';
-                display = ebs.toFixed(1) + ' (' + magnitude.toFixed(1) + ' ' + (def.anchor_unit || '') + ' ' + direction + ')';
-                reasoningSuffix = '. Converted to linear: ' + magnitude.toFixed(1) + ' ' + (def.anchor_unit || '') + ' ' + direction + '.';
+                var direction = linearValue > 0 ? 'less' : 'more';
+                displayText = ebsForDisplay.toFixed(1) + ' (' + magnitude.toFixed(1) + ' ' + (def.anchor_unit || '') + ' ' + direction + ')';
             } else {
-                display = ebs.toFixed(1) + ' (' + prefix + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
-                reasoningSuffix = '. Converted to linear: ' + prefix + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + '.';
+                displayText = ebsForDisplay.toFixed(1) + ' (' + prefix + linearValue.toFixed(1) + ' ' + (def.anchor_unit || '') + ')';
             }
         } else {
-            const scaleDesc = getScaleDescription(key, ebs);
-            display = ebs.toFixed(1) + ' (' + scaleDesc + ')';
+            // Subjective
+            var rounded = Math.round(ebsForDisplay / 2) * 2;
+            var scaleDesc;
+            if (rounded === 0) {
+                scaleDesc = 'Negligible expected effect';
+            } else {
+                if (rounded > 10) rounded = 10;
+                if (rounded < -10) rounded = -10;
+                scaleDesc = (def.scale_levels && def.scale_levels[rounded]) || 'score ' + ebsForDisplay.toFixed(1);
+            }
+            displayText = ebsForDisplay.toFixed(1) + ' (' + scaleDesc + ')';
         }
 
-        // Populate the detail-view EBS field (inside the collapsible section)
-        var detailEbsEl = document.getElementById('ebs-' + key);
-        if (detailEbsEl) detailEbsEl.textContent = ebs.toFixed(1);
+        // In personalised mode with data, show "(was X.X)" hint when they differ meaningfully
+        var wasHint = '';
+        if (currentView === 'personalised' && result.hasPersonalisation &&
+            Math.abs(typicalEbs - ebsForDisplay) > 0.1) {
+            wasHint = '<span class="ebs-was">(was ' + typicalEbs.toFixed(1) + ')</span>';
+        }
 
-        // Populate the effects table cell
         var tableCell = document.getElementById('table-ebs-' + key);
         if (tableCell) {
-            tableCell.textContent = display;
-            if (ebs < 0) tableCell.classList.add('negative');
+            tableCell.innerHTML = displayText + wasHint;
+            tableCell.classList.toggle('negative', ebsForDisplay < 0);
         }
-
-        reasoningData['ebs-' + key].content =
-            'Logarithmic calculation: ' + data.pbs + ' + log₂(' + data.isr + '%) + log₂(' + data.uar + '%) = ' +
-            data.pbs + ' + ' + Math.log2(data.isr / 100).toFixed(3) + ' + ' + Math.log2(data.uar / 100).toFixed(3) + ' = ' +
-            ebs.toFixed(1) + reasoningSuffix;
     }
+}
 
-    // Helper: convert an EBS value into a plain-English effect description
-    function toRealUnits(score, vdef) {
-        if (!vdef) return 'score ' + score.toFixed(1);
-        if (vdef.anchor_type === 'linear' && vdef.anchor_max) {
-            var magnitude = (Math.pow(2, Math.abs(score)) / Math.pow(2, 10)) * vdef.anchor_max;
-            var sign = score < 0 ? -1 : 1;
-            var realVal = sign * magnitude;
-            var unit = vdef.anchor_unit || '';
-            if (vdef.anchor_inverted) {
-                var direction = realVal > 0 ? 'less' : 'more';
-                return magnitude.toFixed(1) + ' ' + unit + ' ' + direction;
-            }
-            var prefix = realVal > 0 ? '+' : '';
-            if (Math.abs(realVal) < 0.1) return prefix + realVal.toFixed(2) + ' ' + unit;
-            return prefix + realVal.toFixed(1) + ' ' + unit;
-        }
-        // Subjective: use nearest scale level description
-        var rounded = Math.round(score / 2) * 2;
-        if (rounded === 0) return 'negligible expected effect';
-        if (rounded > 10) rounded = 10;
-        if (rounded < -10) rounded = -10;
-        return (vdef.scale_levels && vdef.scale_levels[rounded]) || 'score ' + score.toFixed(1);
-    }
-
-    // Build "top effects" summary sentence from the 1-2 highest-magnitude EBS values
+function renderTopEffectsSummary() {
     var ranked = [];
-    for (var vkey in interventionData) {
-        var d = interventionData[vkey];
-        var def = valueDefinitions[vkey];
-        var ebs = d.pbs + Math.log2(d.isr / 100) + Math.log2(d.uar / 100);
+    for (var vkey in ebsResults) {
+        var result = ebsResults[vkey];
+        var ebs = (currentView === 'personalised' && result.hasPersonalisation)
+            ? result.personalisedEbs
+            : result.typicalEbs;
+        var def = result.def;
         var parts = vkey.split('.');
         var domainKey = parts[0];
         var domainDisplay = domainKey.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
@@ -835,28 +1010,52 @@ function calculateEBS() {
             negative: ebs < 0
         });
     }
-    // Sort by magnitude descending (largest effect in either direction first)
     ranked.sort(function(a, b) { return b.magnitude - a.magnitude; });
 
     var summaryEl = document.getElementById('top-effects-summary');
-    if (summaryEl && ranked.length > 0) {
-        var sentence;
-        var top = ranked[0];
-        if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
-            // Single dominant top effect
-            var verb = top.negative ? 'The largest expected harm is to' : 'The strongest expected benefit is to';
-            sentence = verb + ' ' + top.label + ': ' + top.effect + '.';
-        } else {
-            // Two close top effects
-            var second = ranked[1];
-            var verb2 = (top.negative && second.negative) ? 'The largest expected harms are to' :
-                        (top.negative || second.negative) ? 'The most significant effects are on' :
-                        'The strongest expected benefits are on';
-            sentence = verb2 + ' ' + top.label + ' (' + top.effect + ') and ' + second.label + ' (' + second.effect + ').';
-        }
-        summaryEl.innerHTML = sentence;
+    if (!summaryEl || ranked.length === 0) return;
+
+    var prefix = (currentView === 'personalised' && hasAnyPersonalisation)
+        ? 'Based on your assessment, '
+        : '';
+
+    var sentence;
+    var top = ranked[0];
+    if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
+        var verb = top.negative ? 'the largest expected harm is to' : 'the strongest expected benefit is to';
+        if (!prefix) verb = verb.charAt(0).toUpperCase() + verb.slice(1);
+        sentence = prefix + verb + ' ' + top.label + ': ' + top.effect + '.';
+    } else {
+        var second = ranked[1];
+        var verb2 = (top.negative && second.negative) ? 'the largest expected harms are to' :
+                    (top.negative || second.negative) ? 'the most significant effects are on' :
+                    'the strongest expected benefits are on';
+        if (!prefix) verb2 = verb2.charAt(0).toUpperCase() + verb2.slice(1);
+        sentence = prefix + verb2 + ' ' + top.label + ' (' + top.effect + ') and ' + second.label + ' (' + second.effect + ').';
+    }
+    summaryEl.innerHTML = sentence;
+}
+
+function renderViewToggle() {
+    var toggleEl = document.getElementById('view-toggle');
+    if (!toggleEl) return;
+    if (hasAnyPersonalisation) {
+        toggleEl.style.display = 'flex';
+        var btns = toggleEl.querySelectorAll('.toggle-btn');
+        btns.forEach(function(btn) {
+            btn.classList.toggle('active', btn.getAttribute('data-view') === currentView);
+        });
+    } else {
+        toggleEl.style.display = 'none';
     }
 }
+
+window.setView = function(view) {
+    currentView = view;
+    renderTable();
+    renderTopEffectsSummary();
+    renderViewToggle();
+};
 
 function renderReasoning(text) {
     if (!text) return '';

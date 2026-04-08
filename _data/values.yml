@@ -8,6 +8,7 @@ fitness:
     anchor_max: 15
     anchor_unit: "years"
     anchor_description: "Additional healthy lifespan"
+    baseline_percentile: 35
     scale_levels:
       10: "15+ years additional healthy lifespan"
       8: "3-4 years additional healthy lifespan"
@@ -26,6 +27,7 @@ fitness:
     anchor_max: 100
     anchor_unit: "fitness test percentile"
     anchor_description: "Fitness test percentile ranking among age-matched population"
+    baseline_percentile: 35
     scale_levels:
       10: "99th+ fitness test percentile"
       8: "25th fitness test percentile"
@@ -42,6 +44,7 @@ fitness:
     name: "Enjoyment"
     anchor_type: "subjective"
     anchor_description: "Change in how much physical activity is experienced as a source of satisfaction"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in enjoyment of physical activity"
       8: "Major gain in enjoyment of physical activity"
@@ -60,6 +63,7 @@ nutrition:
     anchor_max: 12
     anchor_unit: "years"
     anchor_description: "Additional healthy lifespan from optimal nutrition"
+    baseline_percentile: 35
     scale_levels:
       10: "12+ years additional healthy lifespan"
       8: "3 years additional healthy lifespan"
@@ -76,6 +80,7 @@ nutrition:
     name: "Pleasure & Connection"
     anchor_type: "subjective"
     anchor_description: "Change in how much food contributes to cultural expression and social bonding"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in pleasure and connection from food"
       8: "Major gain in pleasure and connection from food"
@@ -91,6 +96,7 @@ nutrition:
     name: "Ethical & Environmental Impact"
     anchor_type: "subjective"
     anchor_description: "Change in alignment of food choices with environmental and ethical values"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in ethical and environmental alignment of food choices"
       8: "Major gain in ethical and environmental alignment of food choices"
@@ -109,6 +115,7 @@ sleep:
     anchor_max: 14
     anchor_unit: "productive hours per day"
     anchor_description: "Productive hours per day of sustained cognitive and physical performance"
+    baseline_percentile: 35
     scale_levels:
       10: "14 productive hours per day"
       8: "3.5 productive hours per day"
@@ -127,6 +134,7 @@ sleep:
     anchor_max: 8
     anchor_unit: "years"
     anchor_description: "Additional healthy lifespan from optimal sleep"
+    baseline_percentile: 35
     scale_levels:
       10: "8+ years additional healthy lifespan"
       8: "2 years additional healthy lifespan"
@@ -143,6 +151,7 @@ sleep:
     name: "Comfort & Experience"
     anchor_type: "subjective"
     anchor_description: "Change in how restorative and pleasant the sleep experience is"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in quality of sleep experience"
       8: "Major gain in quality of sleep experience"
@@ -161,6 +170,7 @@ saving:
     anchor_max: 12
     anchor_unit: "months of emergency fund"
     anchor_description: "Months of expenses covered by emergency fund reserves"
+    baseline_percentile: 35
     scale_levels:
       10: "12+ months of emergency fund"
       8: "3 months of emergency fund"
@@ -179,6 +189,7 @@ saving:
     anchor_max: 50
     anchor_unit: "percent of gross income saved"
     anchor_description: "Percentage of gross income saved and invested for long-term wealth accumulation"
+    baseline_percentile: 35
     scale_levels:
       10: "50%+ of gross income saved"
       8: "12-13% of gross income saved"
@@ -197,6 +208,7 @@ saving:
     anchor_max: 12
     anchor_unit: "months of liquid reserves"
     anchor_description: "Months of expenses covered by accessible liquid savings for lifestyle flexibility"
+    baseline_percentile: 35
     scale_levels:
       10: "12+ months of liquid reserves"
       8: "3 months of liquid reserves"
@@ -216,6 +228,7 @@ investing:
     anchor_max: 10000000
     anchor_unit: "dollars"
     anchor_description: "What $10,000 could grow to over 30 years across all strategies (in today's dollars)"
+    baseline_percentile: 35
     scale_levels:
       10: "$10,000,000 – transformative entrepreneurial or investment success (1000x)"
       8: "$2,500,000 – very successful business or concentrated bets (250x)"
@@ -232,6 +245,7 @@ investing:
     name: "Safety"
     anchor_type: "subjective"
     anchor_description: "Change in portfolio risk management and downside protection"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in investment safety"
       8: "Major gain in investment safety"
@@ -247,6 +261,7 @@ investing:
     name: "Simplicity"
     anchor_type: "subjective"
     anchor_description: "Change in simplicity and maintainability of investment approach"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in investment simplicity"
       8: "Major gain in investment simplicity"
@@ -263,6 +278,7 @@ career-planning:
     name: "Clarity"
     anchor_type: "subjective"
     anchor_description: "Change in career direction clarity and confidence in chosen path"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in career direction clarity"
       8: "Major gain in career direction clarity"
@@ -280,6 +296,7 @@ career-planning:
     anchor_max: 50
     anchor_unit: "warm professional contacts in target field"
     anchor_description: "Number of warm professional contacts in target field who would take your call"
+    baseline_percentile: 35
     scale_levels:
       10: "50+ warm contacts in target field"
       8: "12-13 warm contacts in target field"
@@ -296,6 +313,7 @@ career-planning:
     name: "Security"
     anchor_type: "subjective"
     anchor_description: "Change in career adaptability, options, and network strength"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in career security and adaptability"
       8: "Major gain in career security and adaptability"
@@ -312,6 +330,7 @@ current-work:
     name: "Competence"
     anchor_type: "subjective"
     anchor_description: "Change in mastery, speed, and quality of execution in the current work role"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in work mastery and execution quality"
       8: "Major gain in skill and execution quality"
@@ -328,6 +347,7 @@ current-work:
     name: "Engagement"
     anchor_type: "subjective"
     anchor_description: "Change in absorption, enjoyment, and energy during daily work"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in work engagement and sustained flow"
       8: "Major gain in daily work enjoyment and motivation"
@@ -344,6 +364,7 @@ current-work:
     name: "Rewards"
     anchor_type: "subjective"
     anchor_description: "Change in contribution to organisational goals and recognition received"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in contribution and recognition at work"
       8: "Major gain in contribution and recognition at work"
@@ -360,6 +381,7 @@ organisation:
     name: "Tracking"
     anchor_type: "subjective"
     anchor_description: "Change in efficiency of movement from intention to action through organisational systems"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in organisational efficiency (eliminates nearly all overhead)"
       8: "Major gain in organisational flow"
@@ -379,6 +401,7 @@ organisation:
     anchor_unit: "missed commitments per month"
     anchor_inverted: true
     anchor_description: "Number of missed commitments per month (lower is better)"
+    baseline_percentile: 35
     scale_levels:
       10: "Near-zero missed commitments per month"
       8: "Less than 1 missed commitment per month"
@@ -395,6 +418,7 @@ organisation:
     name: "Speed"
     anchor_type: "subjective"
     anchor_description: "Change in minimalism and speed of organisational systems"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in organisational speed and minimalism"
       8: "Major gain in organisational speed and minimalism"
@@ -413,6 +437,7 @@ goals:
     anchor_max: 100
     anchor_unit: "percent of goals completed on time"
     anchor_description: "Percentage of goals completed on time through accurate capacity calibration"
+    baseline_percentile: 35
     scale_levels:
       10: "100% of goals completed on time"
       8: "25% of goals completed on time"
@@ -431,6 +456,7 @@ goals:
     anchor_max: 100
     anchor_unit: "percent of days with goal action"
     anchor_description: "Percentage of days with at least one deliberate action toward an active goal"
+    baseline_percentile: 35
     scale_levels:
       10: "100% of days with goal action"
       8: "25% of days with goal action"
@@ -447,6 +473,7 @@ goals:
     name: "Adaptability"
     anchor_type: "subjective"
     anchor_description: "Change in capacity to review, adjust, and strategically pivot goals as circumstances change"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in strategic goal flexibility"
       8: "Major gain in goal flexibility (routine review and willingness to pivot)"
@@ -466,6 +493,7 @@ body-image:
     anchor_max: 25
     anchor_unit: "percent body fat lost"
     anchor_description: "Percentage of body weight lost as fat, sustained for 12+ months"
+    baseline_percentile: 35
     scale_levels:
       10: "25%+ body weight lost and sustained"
       8: "6% body weight lost and sustained"
@@ -483,6 +511,7 @@ body-image:
     anchor_max: 15
     anchor_unit: "kg lean mass gained"
     anchor_description: "Kilograms of lean muscle mass gained and sustained for 12+ months"
+    baseline_percentile: 35
     scale_levels:
       10: "15+ kg lean mass gained"
       8: "3.75 kg lean mass gained"
@@ -500,6 +529,7 @@ housework:
     name: "Health & Hygiene"
     anchor_type: "subjective"
     anchor_description: "Change in how well the living environment supports physical health and hygiene"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in health and hygiene of living environment"
       8: "Major gain in health and hygiene of living environment"
@@ -515,6 +545,7 @@ housework:
     name: "Order"
     anchor_type: "subjective"
     anchor_description: "Change in mental calm from an organised, uncluttered living space"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in order and calm of living space"
       8: "Major gain in order and calm of living space"
@@ -530,6 +561,7 @@ housework:
     name: "Aesthetics"
     anchor_type: "subjective"
     anchor_description: "Change in visual appeal and sensory pleasure of living space"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in aesthetics of living space"
       8: "Major gain in aesthetics of living space"
@@ -545,6 +577,7 @@ housework:
     name: "Environmental Impact"
     anchor_type: "subjective"
     anchor_description: "Change in ecological footprint of home management practices"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in environmental impact of home management"
       8: "Major gain in environmental impact of home management"
@@ -561,6 +594,7 @@ mental-health:
     name: "Stability"
     anchor_type: "subjective"
     anchor_description: "Change in freedom from distressing symptoms and steadiness of emotional baseline"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in emotional stability"
       8: "Major gain in emotional stability and resistance to mood disruption"
@@ -577,6 +611,7 @@ mental-health:
     name: "Resilience"
     anchor_type: "subjective"
     anchor_description: "Change in capacity to maintain functioning during adversity and recover from setbacks"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in stress resilience (fundamental shift in ability to handle adversity)"
       8: "Major gain in stress recovery and coping"
@@ -593,6 +628,7 @@ mental-health:
     name: "Flourishing"
     anchor_type: "subjective"
     anchor_description: "Change in depth and frequency of joy, meaning, and life satisfaction"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in life satisfaction and meaning"
       8: "Major gain in frequency of positive emotions and meaningful engagement"
@@ -615,6 +651,7 @@ cognitive-skills:
     anchor_max: 52
     anchor_unit: "playing cards memorised in 15 minutes"
     anchor_description: "Number of playing cards memorised in correct sequence within 15 minutes"
+    baseline_percentile: 35
     scale_levels:
       10: "52 cards memorised in 15 minutes (full deck)"
       8: "13 cards memorised in 15 minutes"
@@ -633,6 +670,7 @@ cognitive-skills:
     anchor_max: 120
     anchor_unit: "minutes of sustained deep focus"
     anchor_description: "Longest continuous period of focused cognitive work without distraction"
+    baseline_percentile: 35
     scale_levels:
       10: "120 minutes of sustained deep focus"
       8: "30 minutes of sustained deep focus"
@@ -649,6 +687,7 @@ cognitive-skills:
     name: "Reasoning & Problem-Solving"
     anchor_type: "subjective"
     anchor_description: "Change in ability to generate novel solutions to complex, multi-step problems"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in reasoning and problem-solving ability"
       8: "Major gain in reasoning and problem-solving ability"
@@ -666,6 +705,7 @@ cognitive-skills:
     anchor_max: 5
     anchor_unit: "cognitive-support practices maintained daily"
     anchor_description: "Number of evidence-based lifestyle practices maintained daily for cognitive benefit (sleep, exercise, nutrition, stress management, social engagement)"
+    baseline_percentile: 35
     scale_levels:
       10: "5 practices maintained daily with optimised protocols"
       8: "3 practices maintained daily with understanding of cognitive effects"
@@ -683,6 +723,7 @@ ethics:
     name: "Philosophical Depth"
     anchor_type: "subjective"
     anchor_description: "Change in sophistication of understanding across ethical theories"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in philosophical ethical understanding"
       8: "Major gain in philosophical ethical understanding"
@@ -698,6 +739,7 @@ ethics:
     name: "Practical Guidance"
     anchor_type: "subjective"
     anchor_description: "Change in reliability and consistency of ethical decision-making across real-world situations"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in practical ethical decision-making"
       8: "Major gain in practical ethical decision-making"
@@ -713,6 +755,7 @@ ethics:
     name: "Moral Integrity"
     anchor_type: "subjective"
     anchor_description: "Change in consistency between moral beliefs and actions, especially under personal cost"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in moral integrity under pressure"
       8: "Major gain in moral integrity under pressure"
@@ -728,6 +771,7 @@ ethics:
     name: "Community Ethics & Belonging"
     anchor_type: "subjective"
     anchor_description: "Change in how ethical choices strengthen communities and honour responsibilities to others"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in ethical contribution to community"
       8: "Major gain in ethical contribution to community"
@@ -744,6 +788,7 @@ information-management:
     name: "Information Retention"
     anchor_type: "subjective"
     anchor_description: "Change in breadth and reliability of information capture across sources and time"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in information retention and recall"
       8: "Major gain in information retention and recall"
@@ -762,6 +807,7 @@ information-management:
     anchor_unit: "minutes to locate any previously captured item"
     anchor_inverted: true
     anchor_description: "Time to locate any previously captured piece of information (lower is better)"
+    baseline_percentile: 35
     scale_levels:
       10: "Near-instantaneous access to any previously captured information"
       8: "Most information found within 1-2 minutes across all life contexts"
@@ -778,6 +824,7 @@ information-management:
     name: "Insight Generation"
     anchor_type: "subjective"
     anchor_description: "Change in frequency and quality of novel understanding generated by connecting ideas"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in insight generation from information"
       8: "Major gain in insight generation from information"
@@ -793,6 +840,7 @@ information-management:
     name: "System Simplicity"
     anchor_type: "subjective"
     anchor_description: "Change in ratio of benefit to maintenance burden in information management approach"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in simplicity of information management"
       8: "Major gain in simplicity of information management"
@@ -809,6 +857,7 @@ learning-methods:
     name: "Efficiency & Speed"
     anchor_type: "subjective"
     anchor_description: "Change in use of evidence-based techniques that accelerate comprehension and retention"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in learning efficiency"
       8: "Major gain in learning efficiency"
@@ -824,6 +873,7 @@ learning-methods:
     name: "Depth & Mastery"
     anchor_type: "subjective"
     anchor_description: "Change in quality of understanding achieved through deliberate practice"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in depth of learning and mastery"
       8: "Major gain in depth of learning and mastery"
@@ -841,6 +891,7 @@ learning-methods:
     anchor_max: 10
     anchor_unit: "years of sustained learning habit"
     anchor_description: "Longest period of maintaining an effective learning routine without abandoning it"
+    baseline_percentile: 35
     scale_levels:
       10: "10+ years of sustained effective learning habits"
       8: "3-5 years of sustained challenging learning projects"
@@ -858,6 +909,7 @@ life-purpose:
     name: "Clarity & Direction"
     anchor_type: "subjective"
     anchor_description: "Change in confidence and stability of life direction through changing circumstances"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in clarity of life direction"
       8: "Major gain in clarity of life direction"
@@ -873,6 +925,7 @@ life-purpose:
     name: "Meaning & Fulfilment"
     anchor_type: "subjective"
     anchor_description: "Change in depth and stability of fulfilment experienced from working toward life purpose"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in fulfilment from life purpose"
       8: "Major gain in fulfilment from life purpose"
@@ -888,6 +941,7 @@ life-purpose:
     name: "Integration & Coherence"
     anchor_type: "subjective"
     anchor_description: "Change in how well life purpose organises and creates synergy across all life domains"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in integration of life purpose across domains"
       8: "Major gain in integration of life purpose across domains"
@@ -906,6 +960,7 @@ life-skills:
     anchor_max: 15
     anchor_unit: "practical skills at competent level"
     anchor_description: "Number of high-impact practical skills performed at competent level (first aid, cooking, repairs, maintenance, financial tasks)"
+    baseline_percentile: 35
     scale_levels:
       10: "15+ practical skills at competent level including major renovation and specialist domains"
       8: "8-10 skills including plumbing, electrical, intermediate cooking, and tech troubleshooting"
@@ -922,6 +977,7 @@ life-skills:
     name: "Systematic Competence"
     anchor_type: "subjective"
     anchor_description: "Change in organisation and proactive maintenance in practical life management"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in systematic life-skill competence"
       8: "Major gain in systematic life-skill competence"
@@ -937,6 +993,7 @@ life-skills:
     name: "Teaching & Sharing"
     anchor_type: "subjective"
     anchor_description: "Change in practical skill transfer to others"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in capacity to teach and share skills"
       8: "Major gain in capacity to teach and share skills"
@@ -955,6 +1012,7 @@ media-diet:
     anchor_max: 40
     anchor_unit: "non-fiction books read annually"
     anchor_description: "Non-fiction books read per year as proxy for depth of information consumption"
+    baseline_percentile: 35
     scale_levels:
       10: "40+ books annually with high retention; contributes to expert networks"
       8: "25+ books annually across diverse domains; engages with academic papers"
@@ -971,6 +1029,7 @@ media-diet:
     name: "Actionable Relevance"
     anchor_type: "subjective"
     anchor_description: "Change in how directly information consumption drives decisions and practical outcomes"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in actionable relevance of information consumption"
       8: "Major gain in actionable relevance of information consumption"
@@ -986,6 +1045,7 @@ media-diet:
     name: "Breadth & Discovery"
     anchor_type: "subjective"
     anchor_description: "Change in deliberate exposure to diverse perspectives and assumption-challenging ideas"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in breadth of perspective and discovery"
       8: "Major gain in breadth of perspective and discovery"
@@ -1004,6 +1064,7 @@ media-diet:
     anchor_unit: "hours daily on news and information"
     anchor_inverted: true
     anchor_description: "Daily hours spent on news and information consumption (lower is better for given output)"
+    baseline_percentile: 35
     scale_levels:
       10: "Information consumption seamlessly integrated with productive work; optimal cognitive load"
       8: "Sophisticated processing systems with optimal timing and format selection"
@@ -1021,6 +1082,7 @@ rationality:
     name: "Accurate Beliefs"
     anchor_type: "subjective"
     anchor_description: "Change in calibration accuracy and predictive performance"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in accuracy of beliefs"
       8: "Major gain in accuracy of beliefs"
@@ -1036,6 +1098,7 @@ rationality:
     name: "Effective Decision-Making"
     anchor_type: "subjective"
     anchor_description: "Change in consistency and sophistication of decision-making under uncertainty"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in decision-making effectiveness"
       8: "Major gain in decision-making effectiveness"
@@ -1051,6 +1114,7 @@ rationality:
     name: "Intellectual Honesty"
     anchor_type: "subjective"
     anchor_description: "Change in willingness to update beliefs, acknowledge uncertainty, and follow evidence"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in intellectual honesty"
       8: "Major gain in intellectual honesty"
@@ -1067,6 +1131,7 @@ self-awareness:
     name: "Psychological"
     anchor_type: "subjective"
     anchor_description: "Change in depth and accuracy of understanding of own mental patterns, triggers, and emotional dynamics"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in psychological self-knowledge"
       8: "Major gain in psychological self-knowledge"
@@ -1082,6 +1147,7 @@ self-awareness:
     name: "Contemplative/Somatic"
     anchor_type: "subjective"
     anchor_description: "Change in awareness of internal states through mindfulness, body sensations, and present-moment attention"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in contemplative and somatic awareness"
       8: "Major gain in contemplative and somatic awareness"
@@ -1097,6 +1163,7 @@ self-awareness:
     name: "Relational"
     anchor_type: "subjective"
     anchor_description: "Change in accuracy of understanding of own interpersonal patterns and impact on others"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in relational self-awareness"
       8: "Major gain in relational self-awareness"
@@ -1112,6 +1179,7 @@ self-awareness:
     name: "Experiential"
     anchor_type: "subjective"
     anchor_description: "Change in self-knowledge gained through diverse experiences"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in experiential self-knowledge"
       8: "Major gain in experiential self-knowledge"
@@ -1128,6 +1196,7 @@ value-system:
     name: "Practical Decision-Making"
     anchor_type: "subjective"
     anchor_description: "Change in how much values actively guide daily choices and major life decisions"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in values-driven decision-making"
       8: "Major gain in values-driven decision-making"
@@ -1143,6 +1212,7 @@ value-system:
     name: "Comprehensive Insight"
     anchor_type: "subjective"
     anchor_description: "Change in depth of understanding of own authentic values, their origins, hierarchies, and trade-offs"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in insight into own values"
       8: "Major gain in insight into own values"
@@ -1158,6 +1228,7 @@ value-system:
     name: "Authentic Expression"
     anchor_type: "subjective"
     anchor_description: "Change in consistency between inner values and outer behaviour under social pressure and personal cost"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in authentic expression under pressure"
       8: "Major gain in authentic expression under pressure"
@@ -1173,6 +1244,7 @@ value-system:
     name: "Values Evolution"
     anchor_type: "subjective"
     anchor_description: "Change in capacity for intentional values development balanced with appropriate stability"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in intentional values evolution"
       8: "Major gain in intentional values evolution"
@@ -1191,6 +1263,7 @@ worldview:
     anchor_max: 8
     anchor_unit: "domains at secondary school level or above"
     anchor_description: "Number of knowledge domains (history, economics, psychology, politics, philosophy, culture, technology, science) understood at secondary school level or above"
+    baseline_percentile: 35
     scale_levels:
       10: "4-5 domains at undergraduate level plus 3-4 additional at secondary level"
       8: "6-7 domains at secondary to early undergraduate level"
@@ -1207,6 +1280,7 @@ worldview:
     name: "Depth"
     anchor_type: "subjective"
     anchor_description: "Change in sophisticated, nuanced understanding within chosen knowledge domains"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in depth of worldview understanding"
       8: "Major gain in depth of worldview understanding"
@@ -1222,6 +1296,7 @@ worldview:
     name: "Utility"
     anchor_type: "subjective"
     anchor_description: "Change in how well worldview enhances real-world decision-making and prediction"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in utility of worldview for decision-making"
       8: "Major gain in utility of worldview for decision-making"
@@ -1237,6 +1312,7 @@ worldview:
     name: "Meaning"
     anchor_type: "subjective"
     anchor_description: "Change in how much worldview provides psychological grounding and sense of purpose"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in meaning derived from worldview"
       8: "Major gain in meaning derived from worldview"
@@ -1256,6 +1332,7 @@ behaviours:
     name: "Freedom & Control"
     anchor_type: "subjective"
     anchor_description: "Change in liberation from compulsive patterns and restored genuine choice"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in freedom from compulsive behaviours"
       8: "Major gain in freedom from compulsive behaviours"
@@ -1274,6 +1351,7 @@ behaviours:
     anchor_unit: "stress-driven reactive episodes per week"
     anchor_inverted: true
     anchor_description: "Frequency of stress-driven reactive behaviours per week (lower is better)"
+    baseline_percentile: 35
     scale_levels:
       10: "Near-zero reactive episodes; equanimity maintained even during trauma or major loss"
       8: "Fewer than 1 reactive episode per week even during high-stress periods"
@@ -1290,6 +1368,7 @@ behaviours:
     name: "Social & Relational Patterns"
     anchor_type: "subjective"
     anchor_description: "Change in consistency of authentic, boundaried responses in interpersonal situations"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in authentic and boundaried social behaviour"
       8: "Major gain in authentic and boundaried social behaviour"
@@ -1307,6 +1386,7 @@ behaviours:
     anchor_max: 24
     anchor_unit: "months of sustained behavioural change"
     anchor_description: "Longest period of sustained behavioural improvement maintained through life disruptions"
+    baseline_percentile: 35
     scale_levels:
       10: "24+ months sustained through any life circumstance with seamless adaptation"
       8: "12-18 months sustained through major life transitions with only brief disruptions"
@@ -1324,6 +1404,7 @@ digital-safety:
     name: "Comprehensive Security"
     anchor_type: "subjective"
     anchor_description: "Change in breadth and sophistication of digital security practices"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in comprehensive digital security"
       8: "Major gain in comprehensive digital security"
@@ -1339,6 +1420,7 @@ digital-safety:
     name: "Usability and Convenience"
     anchor_type: "subjective"
     anchor_description: "Change in how seamlessly security measures integrate into daily workflows"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in convenience of digital security practices"
       8: "Major gain in convenience of digital security practices"
@@ -1357,6 +1439,7 @@ emergency-preparedness:
     anchor_max: 365
     anchor_unit: "days of household supply autonomy"
     anchor_description: "Days your household can sustain itself without external assistance"
+    baseline_percentile: 35
     scale_levels:
       10: "365+ days with renewable resource systems and extensive skill development"
       8: "90-180 days with backup power and comprehensive medical supplies"
@@ -1375,6 +1458,7 @@ emergency-preparedness:
     anchor_max: 20
     anchor_unit: "households in active mutual aid network"
     anchor_description: "Number of households you have active mutual aid relationships with for emergencies"
+    baseline_percentile: 35
     scale_levels:
       10: "20+ households across multiple communities with extensive mutual aid networks"
       8: "8-12 households with active coordination of neighbourhood preparedness efforts"
@@ -1391,6 +1475,7 @@ emergency-preparedness:
     name: "Baseline Resilience"
     anchor_type: "subjective"
     anchor_description: "Change in preparedness for probable disruptions like natural disasters and outages"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in baseline emergency preparedness"
       8: "Major gain in baseline emergency preparedness"
@@ -1406,6 +1491,7 @@ emergency-preparedness:
     name: "Catastrophic Resilience"
     anchor_type: "subjective"
     anchor_description: "Change in preparedness for rare but severe societal disruptions"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in catastrophic-scenario preparedness"
       8: "Major gain in catastrophic-scenario preparedness"
@@ -1424,6 +1510,7 @@ food-management:
     anchor_max: 21
     anchor_unit: "adequate meals provided per week"
     anchor_description: "Number of meals per week that reliably meet nutritional and taste standards through any method"
+    baseline_percentile: 35
     scale_levels:
       10: "21 meals per week reliably provided with consistent quality and nutritional adequacy"
       8: "17-18 meals per week meeting standards; occasional gaps filled by convenience options"
@@ -1440,6 +1527,7 @@ food-management:
     name: "Craft"
     anchor_type: "subjective"
     anchor_description: "Change in satisfaction, creativity, and skill development from food preparation"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in craft and enjoyment of food preparation"
       8: "Major gain in craft and enjoyment of food preparation"
@@ -1457,6 +1545,7 @@ food-management:
     anchor_max: 100
     anchor_unit: "percent of purchased food consumed"
     anchor_description: "Percentage of purchased food that is actually consumed rather than discarded"
+    baseline_percentile: 35
     scale_levels:
       10: "98-100% of purchased food consumed through systematic stock management"
       8: "90-95% of purchased food consumed with good use-up routines and storage practices"
@@ -1474,6 +1563,7 @@ health-management:
     name: "Long-term Health"
     anchor_type: "subjective"
     anchor_description: "Change in comprehensiveness of preventive care strategy"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in long-term preventive health strategy"
       8: "Major gain in long-term preventive health strategy"
@@ -1491,6 +1581,7 @@ health-management:
     anchor_max: 14
     anchor_unit: "high-energy hours per day"
     anchor_description: "Hours per day of sustained high energy and cognitive function"
+    baseline_percentile: 35
     scale_levels:
       10: "14 hours of sustained high energy and cognitive function through personalised interventions"
       8: "10-12 hours of consistently high energy through optimised sleep, nutrition, and exercise"
@@ -1507,6 +1598,7 @@ health-management:
     name: "Personal Control"
     anchor_type: "subjective"
     anchor_description: "Change in knowledge, skill, and confidence making informed health decisions"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in personal control over health decisions"
       8: "Major gain in personal control over health decisions"
@@ -1522,6 +1614,7 @@ health-management:
     name: "Simplicity"
     anchor_type: "subjective"
     anchor_description: "Change in efficiency and low maintenance of health management systems"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in simplicity of health management"
       8: "Major gain in simplicity of health management"
@@ -1540,6 +1633,7 @@ legal-matters:
     anchor_max: 5
     anchor_unit: "essential legal documents in place"
     anchor_description: "Number of essential legal documents completed and current (will, healthcare directive, power of attorney, insurance review, beneficiary designations)"
+    baseline_percentile: 40
     scale_levels:
       10: "5 essential documents plus sophisticated planning addressing complex scenarios with regular professional review"
       8: "5 essential documents with comprehensive professional estate planning and proactive risk assessment"
@@ -1556,6 +1650,7 @@ legal-matters:
     name: "Simplicity & Peace of Mind"
     anchor_type: "subjective"
     anchor_description: "Change in how streamlined, accessible, and low-anxiety legal affairs are"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in simplicity and peace of mind in legal affairs"
       8: "Major gain in simplicity and peace of mind in legal affairs"
@@ -1571,6 +1666,7 @@ legal-matters:
     name: "Strategic Advantage"
     anchor_type: "subjective"
     anchor_description: "Change in how well legal knowledge is leveraged to optimise outcomes"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in strategic use of legal knowledge"
       8: "Major gain in strategic use of legal knowledge"
@@ -1586,6 +1682,7 @@ legal-matters:
     name: "Access & Empowerment"
     anchor_type: "subjective"
     anchor_description: "Change in confidence and capability navigating legal situations"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in access to and empowerment in legal situations"
       8: "Major gain in access to and empowerment in legal situations"
@@ -1604,6 +1701,7 @@ mindfulness:
     anchor_max: 45
     anchor_unit: "minutes of daily mindfulness practice"
     anchor_description: "Duration of daily mindfulness practice sustained consistently over time"
+    baseline_percentile: 35
     scale_levels:
       10: "45+ minutes daily for many years with multiple retreats; exceptional mental clarity"
       8: "20-30 minutes daily sustained consistently; improved focus and attention regulation"
@@ -1620,6 +1718,7 @@ mindfulness:
     name: "Emotional Wellbeing"
     anchor_type: "subjective"
     anchor_description: "Change in emotional resilience, reduced reactivity, and equanimity"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in emotional wellbeing from mindfulness practice"
       8: "Major gain in emotional wellbeing from mindfulness practice"
@@ -1635,6 +1734,7 @@ mindfulness:
     name: "Self-Knowledge"
     anchor_type: "subjective"
     anchor_description: "Change in insight into own thought patterns and habitual behaviours"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in self-knowledge from contemplative practice"
       8: "Major gain in self-knowledge from contemplative practice"
@@ -1650,6 +1750,7 @@ mindfulness:
     name: "Spiritual Development"
     anchor_type: "subjective"
     anchor_description: "Change in connection to meaning, transcendence, and existential questions"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in spiritual development"
       8: "Major gain in spiritual development"
@@ -1668,6 +1769,7 @@ physical-safety:
     anchor_max: 70
     anchor_unit: "percent reduction in preventable incident mortality risk"
     anchor_description: "Estimated percentage reduction in preventable incident mortality risk below population average"
+    baseline_percentile: 45
     scale_levels:
       10: "50-70% reduction through advanced competency in 2-3 safety domains with systematic threat assessment"
       8: "30-50% reduction through self-defence capabilities, advanced certifications, and comprehensive risk management"
@@ -1684,6 +1786,7 @@ physical-safety:
     name: "Freedom and Convenience"
     anchor_type: "subjective"
     anchor_description: "Change in lifestyle flexibility and spontaneity while maintaining personal safety"
+    baseline_percentile: 50
     scale_levels:
       10: "Transformative gain in freedom and convenience alongside personal safety"
       8: "Major gain in freedom and convenience alongside personal safety"
@@ -1703,6 +1806,7 @@ children:
     name: "Wellbeing"
     anchor_type: "subjective"
     anchor_description: "Change in how much a child thrives physically, emotionally, and psychologically"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in child's wellbeing"
       8: "Major gain in child's wellbeing"
@@ -1718,6 +1822,7 @@ children:
     name: "Relationship"
     anchor_type: "subjective"
     anchor_description: "Change in depth of the parent-child bond measured by warmth and trust"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in parent-child relationship quality"
       8: "Major gain in parent-child relationship quality"
@@ -1733,6 +1838,7 @@ children:
     name: "Achievement"
     anchor_type: "subjective"
     anchor_description: "Change in effectiveness of support for cognitive, academic, and skill development"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in support for child's achievement"
       8: "Major gain in support for child's achievement"
@@ -1748,6 +1854,7 @@ children:
     name: "Development"
     anchor_type: "subjective"
     anchor_description: "Change in how well a child develops independence, resilience, and self-direction"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in child's development of independence"
       8: "Major gain in child's development of independence"
@@ -1764,6 +1871,7 @@ communication:
     name: "Influence"
     anchor_type: "subjective"
     anchor_description: "Change in ability to persuade others and drive decisions through communication"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in communicative influence"
       8: "Major gain in communicative influence"
@@ -1779,6 +1887,7 @@ communication:
     name: "Connection"
     anchor_type: "subjective"
     anchor_description: "Change in ability to build genuine relationships through communication"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in connection built through communication"
       8: "Major gain in connection built through communication"
@@ -1796,6 +1905,7 @@ communication:
     anchor_max: 50
     anchor_unit: "audience size handled confidently"
     anchor_description: "Largest audience size you can address confidently without anxiety interfering"
+    baseline_percentile: 35
     scale_levels:
       10: "Handles very challenging communication situations with remarkable skill others admire"
       8: "Speaks confidently to audiences of 30 -- 50 and handles unexpected challenges"
@@ -1812,6 +1922,7 @@ communication:
     name: "Conflict Navigation"
     anchor_type: "subjective"
     anchor_description: "Change in ability to handle disagreements constructively while maintaining relationships"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in constructive conflict navigation"
       8: "Major gain in constructive conflict navigation"
@@ -1828,6 +1939,7 @@ extended-family:
     name: "Harmony"
     anchor_type: "subjective"
     anchor_description: "Change in peacefulness and low-conflict nature of extended-family relationships"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in extended-family harmony"
       8: "Major gain in extended-family harmony"
@@ -1845,6 +1957,7 @@ extended-family:
     anchor_max: 20
     anchor_unit: "extended family members in regular meaningful contact"
     anchor_description: "Number of extended family members with whom you maintain emotionally meaningful contact"
+    baseline_percentile: 45
     scale_levels:
       10: "20+ relatives across 3+ generations in regular deep contact; distant branches unified"
       8: "10+ extended family members in sustained emotionally intimate relationships"
@@ -1861,6 +1974,7 @@ extended-family:
     name: "Balance"
     anchor_type: "subjective"
     anchor_description: "Change in healthy boundaries with extended family"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in healthy extended-family boundaries"
       8: "Major gain in healthy extended-family boundaries"
@@ -1877,6 +1991,7 @@ family-of-origin:
     name: "Personal Autonomy"
     anchor_type: "subjective"
     anchor_description: "Change in freedom to live according to own values regardless of family expectations"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in autonomy from family-of-origin expectations"
       8: "Major gain in autonomy from family-of-origin expectations"
@@ -1892,6 +2007,7 @@ family-of-origin:
     name: "Emotional Connection"
     anchor_type: "subjective"
     anchor_description: "Change in quality of emotional bonds with parents and siblings"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in emotional connection with family of origin"
       8: "Major gain in emotional connection with family of origin"
@@ -1907,6 +2023,7 @@ family-of-origin:
     name: "Active Healing"
     anchor_type: "subjective"
     anchor_description: "Change in progress working through family dysfunction and breaking harmful patterns"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in healing from family-of-origin dysfunction"
       8: "Major gain in healing from family-of-origin dysfunction"
@@ -1922,6 +2039,7 @@ family-of-origin:
     name: "Family Duty"
     anchor_type: "subjective"
     anchor_description: "Change in effectiveness at fulfilling obligations and supporting family members"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in follow-through on family duty"
       8: "Major gain in follow-through on family duty"
@@ -1940,6 +2058,7 @@ friendship:
     anchor_max: 5
     anchor_unit: "intimate friendships"
     anchor_description: "Number of intimate friendships involving high trust, vulnerability, and mutual understanding"
+    baseline_percentile: 35
     scale_levels:
       10: "5+ intimate friendships with daily meaningful contact and complete emotional transparency"
       8: "3 -- 4 friendships of extraordinary depth that influence major life decisions"
@@ -1958,6 +2077,7 @@ friendship:
     anchor_max: 30
     anchor_unit: "active friendships"
     anchor_description: "Number of active friendships maintained across different life contexts"
+    baseline_percentile: 45
     scale_levels:
       10: "30+ active friendships across multiple life domains with quality connections maintained"
       8: "20+ meaningful friendships with balanced emotional investment across all"
@@ -1974,6 +2094,7 @@ friendship:
     name: "Growth"
     anchor_type: "subjective"
     anchor_description: "Change in how much friendships challenge you to improve and develop"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in growth-promoting friendships"
       8: "Major gain in growth-promoting friendships"
@@ -1990,6 +2111,7 @@ personality:
     name: "Personality Alignment"
     anchor_type: "subjective"
     anchor_description: "Change in how well life is designed around natural personality patterns"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in life-to-personality alignment"
       8: "Major gain in life-to-personality alignment"
@@ -2005,6 +2127,7 @@ personality:
     name: "Personality Growth"
     anchor_type: "subjective"
     anchor_description: "Change in active development and modification of personality characteristics"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in personality growth"
       8: "Major gain in personality growth"
@@ -2021,6 +2144,7 @@ relationship-status:
     name: "Partner Selection"
     anchor_type: "subjective"
     anchor_description: "Change in quality of partner selection based on genuine compatibility"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in partner-selection quality"
       8: "Major gain in partner-selection quality"
@@ -2038,6 +2162,7 @@ relationship-status:
     anchor_max: 5
     anchor_unit: "active channels for meeting partners"
     anchor_description: "Number of active, distinct channels maintained for meeting potential romantic partners"
+    baseline_percentile: 35
     scale_levels:
       10: "Exceptional consistency meeting highly compatible people across any context with minimal wasted effort"
       8: "Sustained effectiveness at generating quality prospects across different contexts and life stages"
@@ -2054,6 +2179,7 @@ relationship-status:
     name: "Independence"
     anchor_type: "subjective"
     anchor_description: "Change in comfort and fulfilment without a romantic partner"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in romantic independence and fulfilment"
       8: "Major gain in romantic independence and fulfilment"
@@ -2069,6 +2195,7 @@ relationship-status:
     name: "Transition Navigation"
     anchor_type: "subjective"
     anchor_description: "Change in ability to manage romantic transitions gracefully"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in graceful navigation of romantic transitions"
       8: "Major gain in graceful navigation of romantic transitions"
@@ -2085,6 +2212,7 @@ romantic-relationships:
     name: "Connection"
     anchor_type: "subjective"
     anchor_description: "Change in emotional closeness, vulnerability, and trust in a romantic partnership"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in romantic emotional connection"
       8: "Major gain in romantic emotional connection"
@@ -2100,6 +2228,7 @@ romantic-relationships:
     name: "Harmony"
     anchor_type: "subjective"
     anchor_description: "Change in day-to-day smoothness and constructive disagreement in a partnership"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in romantic partnership harmony"
       8: "Major gain in romantic partnership harmony"
@@ -2115,6 +2244,7 @@ romantic-relationships:
     name: "Alignment"
     anchor_type: "subjective"
     anchor_description: "Change in shared values, compatible goals, and common vision with a partner"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in alignment of values and goals with partner"
       8: "Major gain in alignment of values and goals with partner"
@@ -2133,6 +2263,7 @@ sex:
     anchor_max: 4
     anchor_unit: "times per week"
     anchor_description: "Weekly frequency of sexual intimacy at a level both partners find satisfying"
+    baseline_percentile: 35
     scale_levels:
       10: "Sustained mutual desire and initiation across the lifespan, adapting gracefully to ageing"
       8: "Mutually satisfying frequency maintained across years, adapting fluidly to life changes"
@@ -2149,6 +2280,7 @@ sex:
     name: "Variety"
     anchor_type: "subjective"
     anchor_description: "Change in diversity and novelty of sexual experiences"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in sexual variety"
       8: "Major gain in sexual variety"
@@ -2164,6 +2296,7 @@ sex:
     name: "Pleasure"
     anchor_type: "subjective"
     anchor_description: "Change in physical and psychological enjoyment of sexual activity"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in sexual pleasure"
       8: "Major gain in sexual pleasure"
@@ -2179,6 +2312,7 @@ sex:
     name: "Contentment"
     anchor_type: "subjective"
     anchor_description: "Change in overall peace and satisfaction with the role sex plays in life"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in sexual contentment"
       8: "Major gain in sexual contentment"
@@ -2195,6 +2329,7 @@ style:
     name: "Attractiveness"
     anchor_type: "subjective"
     anchor_description: "Change in how appealing appearance is through deliberate presentation choices"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in attractiveness through presentation"
       8: "Major gain in attractiveness through presentation"
@@ -2210,6 +2345,7 @@ style:
     name: "Status & Professional"
     anchor_type: "subjective"
     anchor_description: "Change in how effectively clothing signals competence and credibility in professional settings"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in professional status and credibility through clothing"
       8: "Major gain in professional status and credibility through clothing"
@@ -2225,6 +2361,7 @@ style:
     name: "Self-Expression"
     anchor_type: "subjective"
     anchor_description: "Change in how well clothing communicates identity, values, and personality"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in self-expression through clothing"
       8: "Major gain in self-expression through clothing"
@@ -2240,6 +2377,7 @@ style:
     name: "Comfort & Function"
     anchor_type: "subjective"
     anchor_description: "Change in how well clothing supports daily activities and physical comfort"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in comfort and function of clothing"
       8: "Major gain in comfort and function of clothing"
@@ -2261,6 +2399,7 @@ financial-planning-tracking:
     anchor_max: 100
     anchor_unit: "percent of spending tracked"
     anchor_description: "Percentage of total spending accurately tracked and categorised"
+    baseline_percentile: 35
     scale_levels:
       10: "100% of spending tracked with real-time multi-account accuracy"
       8: "25% of spending tracked with consistent categorisation"
@@ -2280,6 +2419,7 @@ financial-planning-tracking:
     anchor_unit: "minutes per week on financial admin"
     anchor_inverted: true
     anchor_description: "Minutes per week spent on financial tracking and admin (lower is better for given accuracy)"
+    baseline_percentile: 35
     scale_levels:
       10: "Near-zero manual effort; fully automated systems handle everything"
       8: "Under 5 minutes per week of manual financial admin"
@@ -2296,6 +2436,7 @@ financial-planning-tracking:
     name: "Insight & Optimisation"
     anchor_type: "subjective"
     anchor_description: "Change in quality and frequency of actionable financial insights from tracking"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in financial insight and optimisation"
       8: "Major gain in financial insight and optimisation"
@@ -2314,6 +2455,7 @@ habits:
     anchor_max: 10
     anchor_unit: "life areas measurably improved by habits"
     anchor_description: "Number of distinct life areas where habits produce measurable positive change"
+    baseline_percentile: 35
     scale_levels:
       10: "10+ life areas measurably improved through keystone habits and cascading effects"
       8: "5-6 life areas measurably improved through well-designed habits"
@@ -2332,6 +2474,7 @@ habits:
     anchor_max: 100
     anchor_unit: "percent daily adherence over 6 months"
     anchor_description: "Percentage of days habits performed as intended over a rolling 6-month period"
+    baseline_percentile: 35
     scale_levels:
       10: "95%+ daily adherence over 6+ months across all active habits"
       8: "80% daily adherence over 6+ months"
@@ -2348,6 +2491,7 @@ habits:
     name: "Enjoyment"
     anchor_type: "subjective"
     anchor_description: "Change in how intrinsically rewarding habit routines feel"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in enjoyment of habit routines"
       8: "Major gain in enjoyment of habit routines"
@@ -2364,6 +2508,7 @@ housing:
     name: "Comfort"
     anchor_type: "subjective"
     anchor_description: "Change in physical quality and pleasantness of the living environment"
+    baseline_percentile: 50
     scale_levels:
       10: "Transformative gain in home comfort"
       8: "Major gain in home comfort"
@@ -2382,6 +2527,7 @@ housing:
     anchor_unit: "percent of gross income on housing"
     anchor_inverted: true
     anchor_description: "Total housing costs as percentage of gross income (lower is better)"
+    baseline_percentile: 50
     scale_levels:
       10: "Housing costs negligible relative to income; complete financial freedom on housing"
       8: "Under 20% of income on housing with substantial equity and relocation flexibility"
@@ -2401,6 +2547,7 @@ housing:
     anchor_unit: "minutes average commute"
     anchor_inverted: true
     anchor_description: "Average one-way commute time in minutes (lower is better, with access to amenities held constant)"
+    baseline_percentile: 50
     scale_levels:
       10: "Optimal location with walkable daily needs, strong community, and zero meaningful compromise"
       8: "Under 15-minute commute with walkable amenities and good community connections"
@@ -2420,6 +2567,7 @@ possessions:
     anchor_max: 100
     anchor_unit: "percent of possessions in working order and regularly used"
     anchor_description: "Percentage of owned items that are in working order and serve a clear, regular purpose"
+    baseline_percentile: 35
     scale_levels:
       10: "100% of possessions functional, maintained, and regularly used; zero friction from belongings"
       8: "90%+ of possessions in working order with designated places and maintenance schedules"
@@ -2436,6 +2584,7 @@ possessions:
     name: "Simplicity"
     anchor_type: "subjective"
     anchor_description: "Change in degree of curation and freedom from excess possessions"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in simplicity of possessions"
       8: "Major gain in simplicity of possessions"
@@ -2451,6 +2600,7 @@ possessions:
     name: "Quality"
     anchor_type: "subjective"
     anchor_description: "Change in durability, craftsmanship, and fitness for purpose of owned items"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in quality of possessions"
       8: "Major gain in quality of possessions"
@@ -2466,6 +2616,7 @@ possessions:
     name: "Meaning"
     anchor_type: "subjective"
     anchor_description: "Change in personal, sentimental, or aesthetic significance of possessions"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in meaningfulness of possessions"
       8: "Major gain in meaningfulness of possessions"
@@ -2484,6 +2635,7 @@ systems:
     anchor_max: 100
     anchor_unit: "percent of recurring processes automated"
     anchor_description: "Percentage of recurring life-admin processes handled by automated or semi-automated systems"
+    baseline_percentile: 35
     scale_levels:
       10: "Near-complete life-admin coverage with intelligent exception handling and pattern learning"
       8: "80%+ of recurring processes automated with sophisticated conditional logic"
@@ -2500,6 +2652,7 @@ systems:
     name: "Simplicity"
     anchor_type: "subjective"
     anchor_description: "Change in ratio of system capability to user-facing complexity"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in simplicity of systems"
       8: "Major gain in simplicity of systems"
@@ -2517,6 +2670,7 @@ systems:
     anchor_max: 365
     anchor_unit: "days between unplanned system failures"
     anchor_description: "Average number of days between unplanned failures requiring manual intervention"
+    baseline_percentile: 35
     scale_levels:
       10: "Self-monitoring systems with essentially zero unplanned downtime across years"
       8: "Graceful degradation design with proactive maintenance; failures extremely rare"
@@ -2536,6 +2690,7 @@ time-management:
     anchor_max: 100
     anchor_unit: "percent of planned tasks completed on time"
     anchor_description: "Percentage of planned important tasks completed within intended timeframes"
+    baseline_percentile: 35
     scale_levels:
       10: "95%+ of planned tasks completed on time across multiple complex domains"
       8: "85-90% of planned tasks completed on time with structured planning methods"
@@ -2552,6 +2707,7 @@ time-management:
     name: "Balance & Wellbeing"
     anchor_type: "subjective"
     anchor_description: "Change in sustainability of work rhythms and protected time for rest"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in time balance and wellbeing"
       8: "Major gain in time balance and wellbeing"
@@ -2567,6 +2723,7 @@ time-management:
     name: "Flexibility & Responsiveness"
     anchor_type: "subjective"
     anchor_description: "Change in ability to adapt to changing priorities and unexpected demands"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in time-management flexibility"
       8: "Major gain in time-management flexibility"
@@ -2586,6 +2743,7 @@ transportation:
     anchor_unit: "percent of income on transportation"
     anchor_inverted: true
     anchor_description: "Total transportation costs as percentage of income (lower is better)"
+    baseline_percentile: 35
     scale_levels:
       10: "Near-zero wasted time and minimal cost through lifestyle and location optimisation"
       8: "Commute negligible or genuinely enjoyable; transportation costs minimal"
@@ -2602,6 +2760,7 @@ transportation:
     name: "Comfort"
     anchor_type: "subjective"
     anchor_description: "Change in physical and psychological pleasantness of daily transportation"
+    baseline_percentile: 45
     scale_levels:
       10: "Transformative gain in transportation comfort"
       8: "Major gain in transportation comfort"
@@ -2617,6 +2776,7 @@ transportation:
     name: "Safety"
     anchor_type: "subjective"
     anchor_description: "Change in minimisation of transportation risk"
+    baseline_percentile: 50
     scale_levels:
       10: "Transformative gain in transportation safety"
       8: "Major gain in transportation safety"
@@ -2633,6 +2793,7 @@ community-contribution:
     name: "Impact"
     anchor_type: "subjective"
     anchor_description: "Change in tangible difference made in the local community"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in community impact"
       8: "Major gain in community impact"
@@ -2648,6 +2809,7 @@ community-contribution:
     name: "Belonging"
     anchor_type: "subjective"
     anchor_description: "Change in genuine connection and rootedness in the local community"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in community belonging"
       8: "Major gain in community belonging"
@@ -2663,6 +2825,7 @@ community-contribution:
     name: "Fulfilment"
     anchor_type: "subjective"
     anchor_description: "Change in personal satisfaction from contributing to community life"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in fulfilment from community contribution"
       8: "Major gain in fulfilment from community contribution"
@@ -2679,6 +2842,7 @@ consumptive-leisure:
     name: "Restoration"
     anchor_type: "subjective"
     anchor_description: "Change in genuine recovery from work and stress through leisure"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in restoration from leisure"
       8: "Major gain in restoration from leisure"
@@ -2694,6 +2858,7 @@ consumptive-leisure:
     name: "Enrichment"
     anchor_type: "subjective"
     anchor_description: "Change in knowledge and perspectives gained through media consumption"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in enrichment from media consumption"
       8: "Major gain in enrichment from media consumption"
@@ -2709,6 +2874,7 @@ consumptive-leisure:
     name: "Enjoyment"
     anchor_type: "subjective"
     anchor_description: "Change in direct pleasure and satisfaction from leisure activities"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in enjoyment of consumptive leisure"
       8: "Major gain in enjoyment of consumptive leisure"
@@ -2725,6 +2891,7 @@ global-impact:
     name: "Impartiality"
     anchor_type: "subjective"
     anchor_description: "Change in how well resources are directed toward causes based on evidence of impact"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in impartial, evidence-led giving"
       8: "Major gain in impartial, evidence-led giving"
@@ -2740,6 +2907,7 @@ global-impact:
     name: "Passion"
     anchor_type: "subjective"
     anchor_description: "Change in sustained, personally meaningful commitment to causes"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in passion for chosen causes"
       8: "Major gain in passion for chosen causes"
@@ -2757,6 +2925,7 @@ global-impact:
     anchor_max: 10
     anchor_unit: "percent of income given annually"
     anchor_description: "Percentage of income donated annually to charitable causes, sustained over time"
+    baseline_percentile: 35
     scale_levels:
       10: "10%+ of income given annually with lifetime giving plan"
       8: "2.5% of income given annually with formal commitment"
@@ -2773,6 +2942,7 @@ global-impact:
     name: "Fulfilment"
     anchor_type: "subjective"
     anchor_description: "Change in personal satisfaction from making a positive difference globally"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in fulfilment from global impact"
       8: "Major gain in fulfilment from global impact"
@@ -2791,6 +2961,7 @@ networks:
     anchor_max: 50
     anchor_unit: "professional advocates"
     anchor_description: "Number of professionals who genuinely understand your work and would actively advocate for you"
+    baseline_percentile: 35
     scale_levels:
       10: "50+ professional advocates across multiple fields built over decades"
       8: "12-13 strong professional advocates including mentors and collaborators"
@@ -2807,6 +2978,7 @@ networks:
     name: "Breadth"
     anchor_type: "subjective"
     anchor_description: "Change in range and diversity of professional connections"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in network breadth"
       8: "Major gain in network breadth"
@@ -2822,6 +2994,7 @@ networks:
     name: "Relevance"
     anchor_type: "subjective"
     anchor_description: "Change in alignment of network with current and future professional direction"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in network relevance"
       8: "Major gain in network relevance"
@@ -2838,6 +3011,7 @@ participatory-leisure:
     name: "Social Connection"
     anchor_type: "subjective"
     anchor_description: "Change in relationships and community built through shared leisure activities"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in social connection from leisure"
       8: "Major gain in social connection from leisure"
@@ -2853,6 +3027,7 @@ participatory-leisure:
     name: "Achievement & Mastery"
     anchor_type: "subjective"
     anchor_description: "Change in skill development and accomplishment through leisure pursuits"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in achievement and mastery in leisure"
       8: "Major gain in achievement and mastery in leisure"
@@ -2868,6 +3043,7 @@ participatory-leisure:
     name: "Adventure & Exploration"
     anchor_type: "subjective"
     anchor_description: "Change in novelty, challenge, and transformative experiences through leisure"
+    baseline_percentile: 35
     scale_levels:
       10: "Transformative gain in adventure and exploration through leisure"
       8: "Major gain in adventure and exploration through leisure"

@@ -1,4 +1,8 @@
 name: "Yoga"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Combining physical postures (asanas), breathing techniques (pranayama), and meditation elements across 3-5 sessions per week of 30-75 minutes each, with styles ranging from gentle (yin, hatha) to physically demanding (ashtanga, vinyasa, power yoga)
   - Develops flexibility, balance, core stability, body awareness, and stress resilience, with noticeable improvements emerging within 2-4 weeks and significant benefits over 2-3 months of consistent practice
@@ -19,6 +23,7 @@ values:
       - Health benefits for stress reduction and flexibility are highly reliable; cardiovascular risk factor improvements are consistently demonstrated but effect sizes are smaller than dedicated aerobic or resistance training ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - Some high-profile findings (e.g. 81% CVD mortality reduction in one meditation study) are outliers that should be interpreted cautiously and inflate naive success rate estimates ([Lauche et al. 2015, Prev Med](https://doi.org/10.1016/j.ypmed.2015.10.003))
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - Yoga has notably high adherence rates: a meta-analysis of 168 RCTs found only 11.4% dropout from yoga groups, substantially better than the 50% general exercise benchmark ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
       - For programmes longer than 12 weeks, dropout increased to 15.2% but remained well below other exercise interventions; class attendance among completers averages 77% ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
@@ -36,6 +41,7 @@ values:
       - Strength and power adaptations are limited to bodyweight capacities and less predictable than structured resistance training ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - Performance benefits are most reliable when yoga serves a complementary role rather than as the primary training modality ([Lauche et al. 2015, Prev Med](https://doi.org/10.1016/j.ypmed.2015.10.003))
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Performance-focused yoga practitioners have moderate-to-good retention as they experience steady improvement in flexibility and movement quality ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
       - Those seeking significant strength or cardiovascular gains may become frustrated with yoga's limitations in these areas and supplement or replace it with more targeted training ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
@@ -53,6 +59,7 @@ values:
       - Enjoyment reliability depends significantly on style match and instructor quality: practitioners in styles mismatched to their preferences (e.g. someone wanting intensity placed in restorative yoga, or vice versa) report lower satisfaction, but the wide range of available styles means most people can find a good fit ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - A minority find yoga boring, too slow, or uncomfortably spiritual, but this group is small enough that approximately 80% of those who practise regularly report genuine enjoyment rather than mere tolerance ([Cramer et al. 2018, Cochrane Database](https://doi.org/10.1002/14651858.CD012563.pub2))
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - Yoga's high enjoyment translates to strong long-term adherence; the 11.4% RCT dropout rate and 77% class attendance among completers are among the best in exercise intervention research ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
       - Low injury risk, scalable difficulty, home practice option, and stress-relief benefits create multiple reinforcement pathways sustaining engagement ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
@@ -72,6 +79,7 @@ values:
       - Weight loss effects are highly inconsistent across yoga styles: vigorous styles (vinyasa, power yoga) likely produce larger effects than gentle styles (yin, restorative), but few studies compare styles head-to-head, and most community yoga classes are not at vigorous intensity ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - Estimated 30 – 40% meaningful response rate: most consistent yoga practitioners do not lose meaningful weight, as the energy expenditure is simply too low to drive fat loss without concurrent dietary change
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Yoga has exceptionally low dropout rates (11.4% across 168 RCTs), suggesting strong general adherence, but weight loss-specific motivation may wane when results are modest ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
       - Practitioners who begin yoga primarily for weight loss may shift to other modalities offering faster results, though those who stay often find broader wellbeing benefits that sustain practice ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
@@ -89,6 +97,7 @@ values:
       - Individual response varies with yoga style: vigorous styles (vinyasa, ashtanga) provide stronger anxiolytic effects through cardiovascular pathways, while gentle styles (yin, restorative) work primarily through parasympathetic activation; style mismatch reduces response rates ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - Approximately 60-70% of adherent practitioners achieve meaningful stability improvements, with non-responders typically being those whose distress stems from sources not amenable to somatic-attentional intervention (e.g. situational stressors, personality factors)
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile; yoga's exceptionally low dropout rate (11.4% across 168 RCTs) applies across all benefit domains ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
 
@@ -104,6 +113,7 @@ values:
       - Not all yoga styles emphasise the discomfort-tolerance and breath-control elements most relevant to resilience; restorative styles may improve stability without meaningfully building stress recovery capacity
       - Approximately 50-60% of regular practitioners develop noticeably improved stress recovery, with the remainder finding benefits confined to in-session relaxation without transfer to real-world adversity
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -119,6 +129,7 @@ values:
       - Flow states require adequate challenge-skill balance; gentle styles and repetitive home practice may not reliably induce flow, reducing the proportion who experience the flourishing benefit ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
       - Approximately 50-60% of regular practitioners report enhanced life satisfaction and positive affect, with the remainder finding yoga primarily functional (stress relief, flexibility) without meaningful flourishing gains
     uar: 70
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

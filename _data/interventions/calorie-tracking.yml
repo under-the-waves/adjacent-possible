@@ -1,4 +1,8 @@
 name: "Calorie Tracking"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Systematically logging all food and drink intake to maintain awareness of energy consumption, typically using a mobile app (e.g. MyFitnessPal, Cronometer, MacroFactor) to scan barcodes, search databases, and record portions against a daily calorie target
   - Requires daily logging of all meals and snacks, ideally in real time or shortly after eating, with periodic recalibration of calorie targets as body weight changes; most protocols recommend tracking every day, though 5+ days per week appears sufficient for meaningful results
@@ -21,6 +25,7 @@ values:
       - [Research on dietary assessment accuracy](https://pmc.ncbi.nlm.nih.gov/articles/PMC6543803/) shows systematic underreporting of 10 – 45%, meaning many who log consistently still fail to achieve an actual deficit – a mechanistic failure mode specific to self-reported intake
       - Score of 60 reflects that only about half to two-thirds of proper adherents achieve meaningful fat loss, because tracking requires both accurate logging and maintaining a real deficit – a dual condition many consistent trackers do not meet
     uar: 15
+    confidence: medium
     uar_reasoning: |
       - [A systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) found that only 25% of participants were still self-monitoring by the end of intervention periods, with adherence declining sharply after the first few weeks
       - [Mobile dietary self-monitoring research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6856872/) shows fewer than half of participants were still tracking after week 10, and only about one-quarter qualified as consistent trackers (6+ days/week for 75%+ of the programme)

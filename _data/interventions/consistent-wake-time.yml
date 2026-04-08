@@ -1,4 +1,8 @@
 name: "Consistent Wake Time"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Waking up at the same time every day (within 15-30 minutes) including weekends and days off, regardless of when you went to bed
   - Stabilises the body's internal clock by maintaining a fixed anchor point for the sleep-wake cycle, naturally regulating bedtime through homeostatic sleep pressure
@@ -18,6 +22,7 @@ values:
       - The intervention targets fundamental circadian mechanisms (zeitgeber entrainment, cortisol awakening response) with well-established physiological pathways that respond reliably to timing regularity.
       - [Huang et al. (2020)](https://doi.org/10.1038/s41746-020-0270-1) confirmed that sleep regularity was a stronger predictor of cognitive outcomes than total sleep duration, supporting a high success rate for this specific approach.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - [Roenneberg et al. (2012)](https://doi.org/10.1016/j.cub.2012.03.038) large cohort study (n > 65,000) found that most adults vary wake times by 2+ hours between weekdays and weekends ("social jetlag"), indicating that fewer than 55-60% can maintain strict consistency beyond 3 months.
       - Weekend social activities, late-night events, and the temptation to "sleep in" after poor nights create persistent barriers that behavioural intention alone cannot overcome.
@@ -35,6 +40,7 @@ values:
       - [Huang et al. (2020)](https://doi.org/10.1038/s41746-020-0270-1) found sleep regularity independently predicted cardiometabolic health markers, supporting the causal pathway from consistent wake times to reduced disease risk.
       - The biological mechanisms (cortisol rhythm normalisation, glucose metabolism regulation, blood pressure entrainment) are well-characterised, though individual genetic variation in circadian sensitivity may reduce the proportion who achieve maximum benefit.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Same adherence challenges as daily functioning -- the behaviour is identical. [Roenneberg et al. (2012)](https://doi.org/10.1016/j.cub.2012.03.038) social jetlag data applies equally to health outcomes.
       - Long-term health benefits require sustained consistency over years, compounding the difficulty of maintaining rigid wake times through life changes, holidays, illness, and shifting social demands.
@@ -52,6 +58,7 @@ values:
       - [Buysse et al. (2011)](https://doi.org/10.1001/archinternmed.2011.476) found that sleep regularity was one of the strongest predictors of subjective sleep satisfaction in both clinical and non-clinical populations.
       - High ISR for subjective outcomes because the mechanism directly addresses the experience of sleep timing and predictability, which are major contributors to perceived sleep quality.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Slightly better adherence for comfort benefits because users notice improvements in morning alertness and sleep quality relatively quickly (2-3 weeks), providing positive reinforcement. [Buysse et al. (2011)](https://doi.org/10.1001/archinternmed.2011.476) found perceived sleep quality gains predicted continued adherence.
       - The experiential feedback of waking feeling genuinely rested (rather than groggy from oversleeping) helps some users maintain consistency through social pressure to sleep in.
@@ -69,6 +76,7 @@ values:
       - Most evidence linking circadian regularity to depression risk is observational rather than interventional, making the causal contribution of wake time consistency alone (vs. overall sleep hygiene) uncertain.
       - Conservatively estimated at 50% – the circadian mechanism is well-established but the proportion of the general population with sufficient baseline circadian disruption for wake time consistency alone to meaningfully shift mood stability is unclear.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 

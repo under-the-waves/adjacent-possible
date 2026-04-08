@@ -1,4 +1,8 @@
 name: "Strategic Saying No"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Developing explicit criteria for which commitments to accept or decline, then systematically applying those criteria to incoming requests, invitations, and opportunities using pre-prepared response templates
   - Implementation involves auditing current commitments against personal goals, defining 3-5 acceptance criteria (e.g., 'Does this advance a top-3 priority?'), drafting polite refusal templates, and conducting a weekly commitment review to catch scope creep, with most practitioners stabilising within 4-6 weeks
@@ -19,6 +23,7 @@ values:
       - [Achtziger & Gollwitzer (2008)](https://doi.org/10.1177/0146167207311201) demonstrated goal shielding via implementation intentions in field experiments on dieting and athletics, but no direct RCTs test the specific protocol of systematically declining requests for goal protection.
       - The causal pathway (fewer commitments leads to more goal action) is well-supported theoretically but evidence is indirect. Roughly half of proper adopters will achieve meaningfully improved follow-through; others will face social costs, guilt-driven re-acceptance, or criteria that prove poorly calibrated.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - [Speed et al. (2018)](https://doi.org/10.1111/cpsp.12216) note that assertiveness-based interventions face significant adherence challenges due to social anxiety, conflict avoidance, and interpersonal pressure, all of which directly apply to declining requests.
       - [Aeon et al. (2021)](https://doi.org/10.1371/journal.pone.0245066) meta-analysis of time management behaviours found moderate effect sizes (r ~ 0.25 for job performance), but the behaviours studied (planning, prioritising) are less socially costly than actively refusing people. Saying no requires ongoing willingness to tolerate interpersonal discomfort.
@@ -36,6 +41,7 @@ values:
       - [Goals Gone Wild (Ordonez et al., 2009)](https://www.hbs.edu/ris/Publication%20Files/09-083.pdf) identified that narrow goal focus can cause practitioners to neglect valuable non-goal activities. Overly rigid acceptance criteria risk the same pathology, filtering out serendipitous opportunities.
       - No direct evidence that commitment-reduction protocols improve goal completion rates specifically. The mechanism is plausible but success depends on calibration quality, yielding a conservative estimate.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
@@ -51,6 +57,7 @@ values:
       - [Gollwitzer (1999)](https://www.prospectivepsych.org/sites/default/files/pictures/Gollwitzer_Implementation-intentions-1999.pdf) notes that implementation intentions can paradoxically reduce flexibility by automating responses, which may work against adaptability if decline criteria become rigid.
       - Conservative estimate given the indirect mechanism and risk of rigidity.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
@@ -66,6 +73,7 @@ values:
       - Workplace norms often reward visible busyness and availability. Declining requests may reduce perceived competence even if actual output quality improves, creating a confounded outcome.
       - Conservative estimate reflecting the indirect causal pathway and potential for social costs to offset quality gains.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile. Workplace-specific social pressure may slightly reduce adherence in professional contexts, but the overall profile is similar.
 
@@ -81,6 +89,7 @@ values:
       - [Decision fatigue research (Baumeister & Vohs, 2016)](https://doi.org/10.1016/bs.adms.2016.04.002) supports the cognitive benefit of fewer active decision points, but the evidence is for decision quality rather than system simplicity specifically.
       - Conservative estimate given that organisational simplicity is a second-order benefit and evidence is indirect.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
@@ -96,6 +105,7 @@ values:
       - The stability benefit depends on overcommitment being a primary driver of the individual's distress. For practitioners whose anxiety or low mood stems from other sources (relationship difficulties, health concerns, neurobiological factors), reducing commitment volume will not meaningfully improve symptom burden.
       - An estimated 40-50% of adherent practitioners will experience meaningful symptom reduction, with non-responders being those for whom overcommitment is not the dominant stressor or who replace declined commitments with new sources of stress.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
@@ -111,6 +121,7 @@ values:
       - The causal pathway from 'declines requests effectively' to 'handles adversity better and recovers faster' involves multiple inferential steps. No direct evidence tests whether commitment-reduction protocols improve resilience to unrelated stressors.
       - Conservative estimate of 35-45% of adherent practitioners experiencing meaningful resilience gains, reflecting the indirect mechanism and reliance on skill generalisation.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 

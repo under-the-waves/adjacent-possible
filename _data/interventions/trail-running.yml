@@ -1,4 +1,8 @@
 name: "Trail Running"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Running on natural terrain (dirt paths, forest trails, mountain tracks, mixed surfaces), typically 3-4 sessions per week of 30-90 minutes each
   - Combines cardiovascular endurance training with the proprioceptive demands of uneven footing, elevation changes, and variable conditions, engaging stabiliser muscles and requiring greater neuromuscular coordination than road running
@@ -20,6 +24,7 @@ values:
       - The relationship between CRF and longevity is the strongest and most consistent predictor across 199 unique cohort studies representing over 20.9 million observations ([Ross et al. 2016, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0000000000000892))
       - Trail-specific evidence is thinner than road running research, but the underlying physiological mechanisms are identical; the health benefits transfer fully ([Li et al. 2010, Environ Health Prev Med](https://doi.org/10.1007/s12199-009-0091-z))
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
       - Trail running may have modestly better adherence than road running due to enjoyment of natural environments and terrain variety, but is constrained by weather, geographic access, and higher acute injury risk (ankle sprains) ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299))
@@ -37,6 +42,7 @@ values:
       - Trail-specific adaptations (balance, proprioception, hill power) are consistently developed through regular practice on uneven terrain ([Barnes & Kilding 2015, Sports Med](https://doi.org/10.1007/s40279-014-0282-2))
       - Individual variation exists in rate of improvement, but directional performance gains are nearly universal among those who maintain consistent training ([Midgley et al. 2006, Sports Med](https://doi.org/10.2165/00007256-200636020-00004))
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Performance-oriented trail runners benefit from measurable progress through pace improvements, distance milestones, and race results; the community and event calendar provide strong external motivation ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Overuse injuries (knee, ankle, lower leg) can interrupt training and lead to dropout, with running injury incidence of 19-79% per year depending on volume and terrain ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299))
@@ -54,6 +60,7 @@ values:
       - Affective response to running is intensity-dependent: at self-selected pace on trails, most runners report positive affect, but those who push beyond ventilatory threshold experience sharp declines in pleasure, meaning enjoyment reliability depends on pacing discipline ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Among regular trail runners (6+ months), survey data shows very high enjoyment ratings, but adverse weather, insect exposure, and access constraints reduce session-level enjoyment on roughly 15-20% of outings, keeping ISR at 80 rather than higher ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Enjoyment-driven trail runners tend to have better long-term retention than road runners, as variety of trails and natural environments prevents monotony ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
       - The community aspect, race culture, and personal exploration goals provide sustained motivation beyond physical fitness ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
@@ -73,6 +80,7 @@ values:
       - [Compensatory eating research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) shows roughly half of exercisers increase intake on training days, but vigorous exercise like running may partially suppress acute appetite via elevated core temperature and catecholamines, improving the response rate relative to moderate-intensity exercise
       - Estimated 70 – 75% meaningful response rate: running's high energy expenditure makes it one of the more effective exercise-only fat loss modalities, though a meaningful minority still compensate behaviourally
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92)); trail running adds travel-to-trailhead barriers that further constrain session frequency
       - Overuse injuries (knee, ankle, lower leg) are a significant adherence barrier, with running injury incidence of 19 – 79% per year depending on volume and terrain ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299)); injuries interrupt the consistency needed for sustained weight loss
@@ -90,6 +98,7 @@ values:
       - Trail-specific evidence adds nature-exposure benefits, but the evidence base is thinner than for general running; the [green exercise literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) shows additional positive affect from natural settings though the incremental mental health benefit over indoor exercise remains uncertain
       - Approximately 65% of adherent runners experience meaningful stability improvements, with non-responders typically being those whose symptoms stem from factors less responsive to exercise (e.g. trauma, personality disorders, situational stressors)
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile; trail running's moderate adherence rate constrains the stability benefit
 
@@ -105,6 +114,7 @@ values:
       - BDNF increases from vigorous exercise [protect hippocampal neurons under stress](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/), providing a biological substrate for improved stress tolerance, though the translation from neurobiological markers to real-world resilience is not one-to-one
       - Approximately 60% of consistent trail runners develop meaningfully improved stress management, with the mastery-experience pathway being particularly reliable for those who progressively tackle more challenging terrain and distances
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -120,6 +130,7 @@ values:
       - Flow-state research on trail running specifically highlights the sustained attentional demands of uneven terrain as a reliable trigger for autotelic experience, though flow is not guaranteed on every session ([Springer Nature 2026, Mindfulness](https://link.springer.com/article/10.1007/s12671-026-02767-0))
       - Among regular trail runners (6+ months), the majority report trail running as a significant source of life satisfaction and positive identity, though a minority find the physical demands override the enjoyment during challenging sessions
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

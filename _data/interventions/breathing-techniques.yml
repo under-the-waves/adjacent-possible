@@ -1,4 +1,8 @@
 name: "Breathing Techniques for Stress"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Structured breathing protocols (box breathing, 4-7-8 breathing, physiological sigh) practised daily for 5-10 minutes and used as needed for acute stress relief
   - Box breathing uses equal-duration inhale, hold, exhale, hold cycles (typically 4 seconds each); 4-7-8 breathing uses a 4-second inhale, 7-second hold, 8-second exhale; the physiological sigh uses a double inhale through the nose followed by a long exhale
@@ -20,6 +24,7 @@ values:
       - Smaller studies show positive results, but most are unblinded and use self-reported insomniacs, inflating response rates. Conservatively, perhaps 55% of consistent practitioners see meaningful sleep improvement.
       - Individual variation in baseline sleep quality matters: those with stress-related sleep disruption respond better than those with other causes of poor sleep.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - [Huberman Lab RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947/) achieved good compliance with 5-minute daily sessions over one month, but self-reported adherence in broader mindfulness literature shows participants practise only about half of recommended days.
       - [A systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10741869/) found that long-term compliance remains a challenge, with practice frequency peaking around week 3 and declining thereafter, and dropout rates in self-guided breathing and mindfulness interventions averaging around 40%.
@@ -37,6 +42,7 @@ values:
       - [The coherent breathing RCT](https://www.nature.com/articles/s41598-023-49279-8) found no significant effect on sleep disturbance versus placebo at four weeks, raising questions about whether the sleep pathway reliably mediates long-term health benefits.
       - Given the indirect causal chain (breathing → sleep quality → reduced disease risk), a conservative ISR of 45% accounts for the attenuation at each step.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Long-term health benefits require years of consistent practice, which is harder to sustain than the intervention's one-month trial periods suggest.
@@ -54,6 +60,7 @@ values:
       - Subjective comfort improvements are more consistently achieved than objective sleep metrics, as the relaxation response is relatively reliable across individuals even when downstream sleep architecture effects vary.
       - Some individuals find breath-focused attention activating or anxiety-provoking (particularly those with respiratory conditions or panic disorder), reducing the universal success rate to approximately 65%.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Slightly higher than other sleep values because comfort improvements are noticeable within the first session, providing immediate positive reinforcement that supports continued practice.
       - [The systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10741869/) noted that interventions producing faster acute effects encourage better adherence because participants feel the benefit during the practice itself.
@@ -71,6 +78,7 @@ values:
       - The physiological mechanism (baroreflex stimulation, vagal tone enhancement) is well-characterised and operates reliably when breathing rate is maintained at ~6 cycles per minute.
       - Some non-response is expected in normotensive individuals (who have less room for improvement) and those who cannot maintain the slow breathing rate consistently, reducing the overall success rate to approximately 65%.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Cardiovascular benefits require consistent daily practice; the same compliance challenges apply regardless of which outcome is being measured.
@@ -88,6 +96,7 @@ values:
       - [Workplace mindfulness research](https://onlinelibrary.wiley.com/doi/full/10.1002/mhs2.84) shows modest improvements in engagement among workers whose disengagement is stress-driven, but limited effects for those disengaged due to boredom, poor role fit, or lack of challenge.
       - Given the multiple conditions required for meaningful engagement improvement, a conservative ISR of 40% reflects the subset of workers who would genuinely benefit.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Workplace use requires remembering to practise during stressful moments, which is harder than a scheduled bedtime routine, but the acute relief provides immediate reinforcement.
@@ -105,6 +114,7 @@ values:
       - [The largest placebo-controlled breathwork RCT](https://www.nature.com/articles/s41598-023-49279-8) found coherent breathing did not significantly outperform a placebo breathing exercise on several mental health measures, indicating that some of the benefit may reflect non-specific relaxation rather than a breathing-specific mechanism.
       - Individuals whose distress is primarily anxiety-driven (with high physiological arousal) respond best; those with depression rooted in anhedonia or situational factors are less likely to benefit, reducing the overall success rate to approximately 55%.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Acute anxiety relief provides immediate reinforcement, but the practice must be sustained daily to maintain symptom stability, and [long-term dropout rates average around 40%](https://pmc.ncbi.nlm.nih.gov/articles/PMC10741869/).
@@ -122,6 +132,7 @@ values:
       - Most RCTs measure acute symptom reduction rather than resilience per se (i.e., recovery from adversity), so the evidence base for this specific construct is thinner than for stability.
       - Resilience also depends heavily on cognitive and social factors that breathing does not address, meaning the physiological contribution alone produces meaningful results in a smaller subset of practitioners, conservatively estimated at 40%.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Resilience benefits are not immediately perceptible (unlike acute anxiety relief), which may reduce motivation, but the practice itself is identical.

@@ -1,4 +1,8 @@
 name: "Creating SOPs for Recurring Tasks"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Writing step-by-step standard operating procedures (SOPs) for tasks performed regularly – packing for trips, grocery shopping, weekly reviews, onboarding new tools, hosting guests – so that each repetition follows a documented sequence rather than relying on memory and improvisation
   - Implementation involves identifying 5-10 recurring tasks that cause friction, drafting a numbered checklist for each (typically 8-20 steps), testing it over 2-3 repetitions, refining based on what was missed or redundant, and storing all SOPs in an accessible location (digital note, shared doc, or printed binder)
@@ -19,6 +23,7 @@ values:
       - Personal SOPs lack the institutional enforcement that drives compliance in clinical settings. [Cognitive load theory research](https://journals.sagepub.com/doi/full/10.1177/0963721420922183) supports the mechanism but most evidence comes from professional rather than personal contexts.
       - Estimated 60% of proper adopters see meaningful tracking improvements, discounted from the clinical figure to reflect the less structured personal context and the thinner evidence base for personal-task SOPs specifically.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Initial SOP creation requires meaningful upfront effort (auditing tasks, drafting procedures, testing over multiple repetitions), which creates a significant adoption barrier. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found that more complex behaviours take substantially longer to become automatic (up to 254 days).
       - Once created, SOPs reduce rather than add friction during task execution, which supports sustained use. However, SOPs require periodic maintenance as processes change, tools update, or circumstances shift – creating an ongoing maintenance burden that pure habit-based interventions avoid.
@@ -36,6 +41,7 @@ values:
       - The [WHO checklist meta-analysis](https://pubmed.ncbi.nlm.nih.gov/24469615/?dopt=Abstract) found an odds ratio of 0.75 for mortality reduction, but 2 of 13 studies found no significant effect, indicating that standardised procedures do not universally deliver on their promise.
       - Estimated 55% of adherent users achieve meaningful reductions in missed commitments, reflecting the solid but not universal mechanism and the gap between clinical and personal contexts.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR – same intervention, same adherence profile. The maintenance burden and adoption barriers are identical regardless of which organisational value is being measured.
 
@@ -51,6 +57,7 @@ values:
       - Some users create overly detailed SOPs that add bureaucratic overhead rather than reducing it, which is a well-documented failure mode in [organisational process standardisation literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC4953332/).
       - Estimated 50% achieve genuine simplification; the remainder either over-engineer their SOPs or fail to maintain them as processes evolve.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR – same intervention, same adherence profile.
 
@@ -66,6 +73,7 @@ values:
       - SOPs are most effective for procedural goals (completing a tax return, setting up a system) and less effective for creative or ambiguous goals where the steps cannot be fully pre-specified. This limits the proportion of goals where SOPs meaningfully improve follow-through.
       - Estimated 50% of adherent users see meaningful improvement in daily goal action, reflecting the strong mechanism but limited applicability across goal types.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR – same intervention, same adherence profile. The person creating SOPs for organisational tasks is the same person using them for goal follow-through.
 
@@ -81,6 +89,7 @@ values:
       - Work competence depends heavily on role type: SOPs are highly effective for procedural roles (operations, administration) but less so for roles requiring judgement, creativity, or interpersonal skills.
       - Estimated 45% of adherent users see meaningful competence improvements, reflecting the role-dependent nature of the benefit and the inferential evidence base.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - See organisation.tracking UAR – same intervention, same adherence profile.
 

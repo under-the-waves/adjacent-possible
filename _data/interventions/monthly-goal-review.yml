@@ -1,4 +1,8 @@
 name: "Monthly Goal Review"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - A structured monthly session for reviewing progress against all active goals, evaluating whether each remains worth pursuing, updating timelines and priorities, and planning the next month's focus
   - Follows a consistent format: assess completion status, identify obstacles and enablers, decide whether to continue, modify, or retire each goal, and set concrete next actions for the coming month
@@ -19,6 +23,7 @@ values:
       - [Matthews (2015, Dominican University)](https://www.dominican.edu/dominicannews/study-highlights-strategies-for-achieving-goals) found that writing goals down increases achievement by 42%, and accountability check-ins further boosted success rates.
       - Most evidence examines monitoring frequency generally rather than monthly review specifically, but the mechanisms (written recording, structured reflection) are well-validated. The high score reflects strong evidence for the core mechanism.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Studies of [GTD and review-based systems](https://doi.org/10.1016/j.chb.2008.12.006) suggest weekly reviews are sustained by roughly 30-40% of practitioners beyond 6 months; monthly reviews likely fare better due to lower frequency burden.
       - The main dropout risk is skipping one month and never resuming. [Rothman (2000)](https://doi.org/10.1037/0278-6133.19.Suppl1.64) found that satisfaction with initial outcomes predicts maintenance, so early months with slow progress increase abandonment risk.
@@ -36,6 +41,7 @@ values:
       - Monthly review specifically has less direct experimental evidence than monitoring in general, but the components (written recording, explicit evaluation, timeline adjustment) are each individually well-supported.
       - [Locke & Latham (2002)](https://doi.org/10.1037/0003-066X.57.9.705) goal-setting theory established that feedback loops are essential for goal attainment, and monthly review provides a formal feedback loop. The score reflects strong but slightly indirect evidence.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Monthly cadence is both an advantage (lower burden than weekly) and a disadvantage (easier to let slide without noticing). [Soman & Cheema (2004)](https://doi.org/10.1509/jmkg.68.1.21.24035) found that longer intervals between review points reduce perceived urgency.
       - Practitioners focused on capacity calibration tend to sustain reviews longer, as they see direct links between reviews and improved goal-setting accuracy. This creates a positive feedback loop for retention.
@@ -53,6 +59,7 @@ values:
       - [Harkin et al. (2016)](https://doi.org/10.1037/bul0000025) findings on monitoring generalise to the review-and-adjust cycle, though flexibility as a specific outcome variable has received less direct experimental attention than achievement.
       - The score reflects solid but somewhat more theoretical than empirical evidence for adaptability specifically: the mechanism is well-understood but the outcome variable (strategic flexibility) is less frequently measured.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Adherence is the same as for other goal review dimensions since it is the same practice. The challenge specific to adaptability is that flexibility requires honest self-assessment about failed or inappropriate goals, which is psychologically uncomfortable.
       - [Arkes & Blumer (1985)](https://doi.org/10.1016/0749-5978(85)90049-4) demonstrated that sunk-cost bias makes people persist with failing goals; monthly reviews must overcome this bias each session, adding psychological friction.

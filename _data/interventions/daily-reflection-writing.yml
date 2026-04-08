@@ -36,6 +36,7 @@ values:
       - The evidence base for daily structured reflection specifically (as opposed to progress monitoring generally) is thinner. Most studies examine weekly or event-triggered reflection rather than daily writing, so the transfer to this specific cadence involves some extrapolation.
       - Individual variation in reflective capacity matters: some people naturally extract actionable insights from reviewing their day, while others produce descriptive accounts without calibration value. Estimated 55-65% of adherent practitioners achieve meaningful clarity gains.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - A [12-week journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found mean adherence of 47.8% when measured as completed sessions divided by maximum sessions, despite structured prompts and study accountability. Real-world adherence without study scaffolding is likely lower.
       - Daily habits face steeper adherence curves than weekly or monthly ones. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found habit formation takes a median of 66 days, but complex behaviours (writing requires more cognitive effort than, say, drinking water) sit at the upper end of this range with higher dropout.
@@ -53,6 +54,7 @@ values:
       - A [field experiment on weekly planning](https://pmc.ncbi.nlm.nih.gov/articles/PMC10952538/) found that planning and reflection behaviour increased work engagement and reduced rumination. Daily reflection extends this mechanism but with less direct experimental validation at daily cadence.
       - Not all reflectors translate insight into action – some identify gaps in follow-through repeatedly without changing behaviour. The reflection-to-action gap reduces ISR below the theoretical maximum. Estimated 55-65% achieve meaningful follow-through improvements.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
@@ -68,6 +70,7 @@ values:
       - The evidence for daily reflection improving adaptability specifically is more theoretical than empirical. Most goal flexibility research examines structured interventions with explicit decision frameworks, not open-ended daily writing.
       - Sunk-cost bias operates at a deeper level than daily tactical reflection typically reaches. Estimated 50-60% of adherent reflectors achieve meaningful adaptability improvements, lower than for clarity and follow-through where the mechanism is more direct.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
@@ -83,6 +86,7 @@ values:
       - The tracking benefit depends on the reflection format: structured templates that include explicit next-action capture produce stronger organisational benefits than narrative reflection. Without deliberate organisational structure, the tracking benefit may not materialise.
       - Estimated 45-55% of adherent reflectors see meaningful organisational tracking improvements, with the remainder producing reflections that are insightful but not organisationally actionable.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
@@ -98,6 +102,7 @@ values:
       - [A mixed-methods systematic review](https://www.sciencedirect.com/science/article/abs/pii/S0260691725003855) of 55 studies found that reflective writing enhances competence development, but emphasised that structured guidance and constructive feedback are important conditions for success – conditions that self-directed daily reflection may not always meet.
       - Estimated 45-55% of adherent reflectors achieve meaningful competence gains, with success depending on whether reflections focus on extracting actionable lessons versus merely describing events.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
@@ -113,6 +118,7 @@ values:
       - Engagement is influenced by many factors beyond self-awareness (job design, autonomy, relationships, meaning), and reflection can only address the subset of engagement barriers that stem from misallocated attention or unrecognised preferences. Many engagement barriers are structural.
       - Estimated 40-50% of adherent reflectors see meaningful engagement improvements, primarily those whose disengagement stems from poor self-knowledge about their energy and interest patterns rather than from genuinely unsuitable work.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
@@ -128,6 +134,7 @@ values:
       - The [positive affect journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found reduced anxiety and mental distress from structured journaling over 12 weeks, but that intervention used emotionally focused prompts. Decision-focused reflection activates a less direct pathway to emotional stability, so fewer adherent practitioners will see clinically meaningful symptom reduction.
       - Estimated 40-50% of adherent reflectors achieve meaningful stability improvements. Those whose anxiety is driven by decision uncertainty and unprocessed daily experiences benefit most; those with biologically driven mood instability or trauma-related symptoms are unlikely to see meaningful change from this intervention alone.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
@@ -143,6 +150,7 @@ values:
       - The resilience benefit depends on whether reflectors engage analytically with setbacks or simply record them descriptively. [Research on adaptive self-reflection](https://www.sciencedirect.com/science/article/abs/pii/S0191886921006139) found that insight mediated the relationship between self-reflection and resilience, but only when rumination was low – suggesting the intervention may not help those who most need resilience support.
       - Estimated 40-50% of adherent reflectors achieve meaningful resilience gains, with success depending on baseline reflective capacity and the degree to which the structured format prevents descriptive entries from drifting into ruminative ones.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
@@ -158,6 +166,7 @@ values:
       - The relationship between self-reflection and wellbeing may follow an [inverted U-shape](https://www.sciencedirect.com/topics/psychology/self-reflection), with excessive reflection associated with decreased wellbeing. Decision-focused reflection is less prone to this than emotional introspection, but the risk of over-analysis reducing satisfaction is non-trivial.
       - Estimated 35-45% of adherent reflectors experience meaningful flourishing gains. The analytical frame of this intervention limits positive affect generation compared to explicitly positive writing interventions, and some reflectors may find that daily scrutiny of their decisions creates self-criticism rather than satisfaction.
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 

@@ -1,4 +1,8 @@
 name: "Meditation"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Daily mindfulness meditation practice of 10-20 minutes, typically seated with eyes closed, focusing attention on the breath or body sensations and non-judgementally redirecting attention when the mind wanders
   - The core technique involves sustained attention (focused awareness on a single object) combined with open monitoring (noticing thoughts and sensations without attachment), which together train attentional control and emotional regulation
@@ -20,6 +24,7 @@ values:
       - Individual variation is substantial: people with high baseline stress or anxiety-driven insomnia respond better, while those with other sleep disorders (e.g. sleep apnoea, circadian disruption) show minimal benefit ([Ong et al. 2014, J Psychosom Res](https://pubmed.ncbi.nlm.nih.gov/27663102/))
       - Roughly two-thirds of adherent participants in mindfulness-for-insomnia trials achieve clinically meaningful sleep quality improvements, with the remainder showing little change ([Gong et al. 2016, J Psychosom Res](https://pubmed.ncbi.nlm.nih.gov/27663102/))
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - Population-level meditation persistence is low: roughly 46% of adults who start meditation have stopped entirely within 2 years ([Lam et al. 2023, Mindfulness](https://pmc.ncbi.nlm.nih.gov/articles/PMC9910079/))
       - App-based meditation trials show 25-38% dropout rates within the intervention period, with self-reported practice averaging only 7-8 days out of 14 recommended ([Goldberg et al. 2021, Mindfulness](https://pmc.ncbi.nlm.nih.gov/articles/PMC8024418/); [Borghouts et al. 2024, Behav Res Ther](https://www.sciencedirect.com/science/article/pii/S0005796723001699))
@@ -37,6 +42,7 @@ values:
       - Long-term epidemiological data specifically linking meditation-induced sleep improvement to mortality reduction is lacking; existing evidence extrapolates from sleep quality research and meditation cardiovascular studies separately ([Levine et al. 2017, J Am Heart Assoc](https://www.ahajournals.org/doi/10.1161/jaha.117.002218))
       - Among adherent meditators who achieve sleep improvements, perhaps 50-60% sustain these gains long enough to plausibly affect long-term health trajectories, given that meditation's sleep benefits require ongoing practice
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
@@ -52,6 +58,7 @@ values:
       - The mechanism (reduced rumination, lower pre-sleep arousal) operates even when objective sleep metrics do not change, making the subjective benefit more broadly accessible than the physiological benefit ([Ong et al. 2014, J Psychosom Res](https://pubmed.ncbi.nlm.nih.gov/27663102/))
       - An estimated 70% of adherent practitioners report noticeably better subjective sleep experience, as mindfulness directly trains the psychological skills (acceptance, non-reactivity) most relevant to sleep comfort
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
@@ -67,6 +74,7 @@ values:
       - The American Heart Association concluded the evidence for meditation and cardiovascular risk reduction is modest in quality and quantity, warranting further research ([Levine et al. 2017, J Am Heart Assoc](https://www.ahajournals.org/doi/10.1161/jaha.117.002218))
       - Cortisol reduction effects are significant primarily in at-risk populations; in healthy adults, salivary cortisol changes are small and often non-significant ([Pascoe et al. 2017, Health Psychol Rev](https://www.tandfonline.com/doi/full/10.1080/17437199.2020.1760727))
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
@@ -82,6 +90,7 @@ values:
       - Not all meditators show executive function gains; the meta-analysis found significant heterogeneity across studies, suggesting individual variation in response ([Gill et al. 2020, Cogn Ther Res](https://link.springer.com/article/10.1007/s10608-020-10177-2))
       - The causal chain from improved attentional control to measurably more days with goal action requires additional factors (goal clarity, motivation, planning systems) that meditation does not directly provide
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
@@ -97,6 +106,7 @@ values:
       - Individual variation is high: people with high baseline distractibility benefit most, while those already focused may see minimal engagement gains ([Gill et al. 2020, Cogn Ther Res](https://link.springer.com/article/10.1007/s10608-020-10177-2))
       - Roughly half of adherent meditators report noticeably improved work focus, while others find the benefits remain confined to the meditation session itself without transferring to work tasks
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
@@ -112,6 +122,7 @@ values:
       - A [broader meta-analytic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC2848393/) found Hedges' g = 0.63 for anxiety improvement, but with significant heterogeneity across studies, suggesting roughly half of adherent participants achieve clinically meaningful symptom reductions while others show minimal change
       - Baseline severity moderates response: those with elevated anxiety or depression at baseline respond better, while those with subclinical symptoms or non-mood-related distress see less benefit ([Nature Mental Health 2023](https://www.nature.com/articles/s44220-023-00081-5))
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
@@ -127,6 +138,7 @@ values:
       - [MBCT trials](https://www.sciencedirect.com/science/article/abs/pii/S0005789411001316) show that emotional reactivity reductions partially mediate improvements in depressive relapse, suggesting the resilience pathway is mechanistically robust for those who develop the skill
       - Approximately 60% of adherent practitioners develop meaningfully improved stress recovery, with non-responders typically being those who struggle to shift from conceptual understanding to experiential application of acceptance ([Nature Mental Health 2023](https://www.nature.com/articles/s44220-023-00081-5))
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
@@ -142,6 +154,7 @@ values:
       - [Dose-response research](https://pmc.ncbi.nlm.nih.gov/articles/PMC12336962/) suggests the typical 10-20 minute daily practice falls below the threshold (25-41 monthly hours) associated with meaningful wellbeing gains, reducing the proportion of practitioners who achieve flourishing benefits at standard doses
       - An estimated 40-50% of adherent practitioners at standard doses report enhanced life satisfaction and positive affect, with the remainder finding that symptom reduction does not automatically translate into increased flourishing ([Nature Mental Health 2023](https://www.nature.com/articles/s44220-023-00081-5))
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 

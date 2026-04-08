@@ -1,4 +1,8 @@
 name: "Blue Light Blocking"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Reducing exposure to blue light (400-490nm wavelengths) in the 2-3 hours before bedtime using blocking glasses, screen filters, or device night-mode settings
   - Prevents suppression of melatonin production caused by artificial light from phones, computers, and LED lighting
@@ -18,6 +22,7 @@ values:
       - Many studies have small sample sizes (n < 50) and short durations (1-2 weeks), and [Lawrenson et al. (2017)](https://doi.org/10.1002/14651858.CD013244.pub2) Cochrane review noted insufficient evidence to draw firm conclusions about efficacy.
       - Individual variation in melatonin sensitivity to blue light is substantial, with some people showing minimal melatonin suppression from screens, reducing the proportion who benefit meaningfully.
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) found only 40-50% of participants consistently used blue light blocking devices beyond 2 months in real-world follow-up.
       - Common barriers include forgetting to put on glasses, discomfort with frames, colour distortion interfering with evening activities (watching films, social media), and social awkwardness of wearing tinted lenses around others.
@@ -35,6 +40,7 @@ values:
       - The few longer-term studies (> 3 months) show inconsistent results, and individual variation in melatonin sensitivity means a substantial minority may not achieve meaningful circadian correction even with perfect compliance.
       - Conservatively estimated at 50% given weak evidence base and high individual variability in the physiological pathway.
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - Same adherence challenges as daily functioning -- the behaviour is identical regardless of which outcome is being measured. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) 40-50% retention rate applies.
       - Long-term health benefits require sustained use over months to years, but practical barriers significantly limit consistent implementation even when users are motivated.
@@ -52,6 +58,7 @@ values:
       - [Burkhart & Phelps (2009)](https://doi.org/10.3109/07420520903523719) found that 70% of compliant participants reported improved subjective sleep quality, with the remaining 30% showing no meaningful change.
       - Subjective outcomes are more consistently reported than objective sleep metrics, as even modest melatonin timing shifts can produce noticeable changes in evening wind-down experience.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Slightly better adherence than health-focused use because users notice immediate effects (reduced eye strain, easier wind-down), providing modest positive reinforcement.
       - However, practical barriers remain significant: remembering glasses, discomfort with frames, colour distortion during screen use. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) showed ~50% retention at 3 months even among those who reported comfort benefits.

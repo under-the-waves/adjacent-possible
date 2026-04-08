@@ -1,4 +1,8 @@
 name: "Automated Savings"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Setting up automatic transfers from current accounts to savings accounts on a fixed schedule, typically aligned with payday
   - Includes standing orders, direct debits into ISAs or savings accounts, and employer-based salary sacrifice schemes where available
@@ -19,6 +23,7 @@ values:
       - The only failure mode is insufficient income to cover the transfers, which is a prerequisite issue rather than an intervention failure.
       - [Thaler & Benartzi (2004)](https://doi.org/10.1086/380085) found Save More Tomorrow participants increased savings rates from 3.5% to 13.6% over 40 months, demonstrating the mechanism's reliability even with escalating contribution rates.
     uar: 92
+    confidence: medium
     uar_reasoning: |
       - [Vanguard's How America Saves (2024)](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) shows 94% participation persistence for auto-enrolled plans, with opt-out rates of only 5-10% in the first year.
       - The status quo bias that usually works against good financial behaviour here works in its favour – [Choi et al. (2004)](https://doi.org/10.3386/w10486) demonstrated that default effects persist for years after enrolment.
@@ -36,6 +41,7 @@ values:
       - Real growth depends on the savings vehicle chosen; basic savings accounts may yield near-zero real returns in high-inflation environments, slightly reducing the growth reliability.
       - [Beshears et al. (2009)](https://doi.org/10.3386/w12009) confirmed that automatic mechanisms produce reliable capital accumulation across income levels and demographic groups.
     uar: 92
+    confidence: medium
     uar_reasoning: |
       - Same adherence dynamics as saving.security – automation removes the decision point, and status quo bias maintains the behaviour. [Vanguard (2024)](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) reports 94% persistence in auto-enrolled pension schemes.
       - Growth-oriented savers who see their balance increasing receive positive reinforcement, potentially boosting retention above the baseline automation rate.
@@ -53,6 +59,7 @@ values:
       - The main risk to liquidity is if the saver later moves accumulated funds into locked-in products, but the automation itself reliably builds an accessible buffer.
       - [Beshears et al. (2009)](https://doi.org/10.3386/w12009) found no evidence that automated savers systematically redirect liquid savings into illiquid vehicles, suggesting the liquidity benefit persists.
     uar: 90
+    confidence: medium
     uar_reasoning: |
       - Liquidity-focused savers benefit strongly from automation because accessible savings feel less 'locked away' than pension contributions or fixed-term deposits. [Benartzi & Thaler (2013)](https://doi.org/10.1126/science.1231320) showed automation persistence is highest when savers retain access to their funds.
       - The instant-access nature of the savings reduces the psychological friction that causes some people to cancel automated transfers to locked-in products.

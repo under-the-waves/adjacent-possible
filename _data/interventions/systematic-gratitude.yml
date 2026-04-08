@@ -1,4 +1,8 @@
 name: "Systematic Gratitude Practices"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - A structured daily practice (5-10 minutes) of analysing why specific experiences were meaningful, identifying the causes, people involved, and conditions that made them possible
   - Distinct from superficial gratitude listing: requires causal analysis of each item (e.g. 'Why did this matter? Who contributed? What made it possible?') rather than simply naming things you appreciate
@@ -20,6 +24,7 @@ values:
       - [Digdon & Koble (2011)](https://doi.org/10.1111/j.1758-0854.2011.01049.x) pilot trial (n=41) found gratitude journaling reduced pre-sleep arousal and improved sleep quality, but the gratitude condition did not significantly outperform other active interventions (constructive worry, imagery distraction).
       - The strongest evidence (Wood 2009) is correlational rather than interventional, and [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis of 27 RCTs found only small effect sizes for gratitude interventions on psychological outcomes overall. Conservative estimate: roughly 55% of adherent practitioners achieve meaningful daily functioning gains.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis noted that gratitude interventions are low-cost and easy to understand, but structured analytical journaling (5-10 minutes of causal analysis) is more demanding than simple listing, reducing long-term retention.
       - [Komase et al. (2021)](https://doi.org/10.1002/1348-9585.12290) systematic review of workplace gratitude interventions found high dropout rates in self-directed formats due to the absence of external accountability and the need for sustained motivation.
@@ -37,6 +42,7 @@ values:
       - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) found effect sizes diminished at follow-up compared to post-test, raising questions about whether sleep benefits persist without continued active practice.
       - The causal chain from gratitude to pre-sleep cognitions to sleep quality to long-term health outcomes involves multiple steps, each with its own attenuation. More conservative than daily functioning ISR given the longer and less direct pathway.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Long-term health benefits require sustained practice over years, but the daily behaviour is identical regardless of which outcome is being measured.
@@ -54,6 +60,7 @@ values:
       - [Digdon & Koble (2011)](https://doi.org/10.1111/j.1758-0854.2011.01049.x) found participants rated the gratitude intervention as moderately helpful for sleep quality, with reductions in pre-sleep arousal observed across the majority of the gratitude group.
       - [Jackowska et al. (2016)](https://doi.org/10.1177/1359105315572455) RCT confirmed subjective wellbeing and sleep quality improvements, though not all participants showed meaningful changes. Higher than daily functioning ISR because the experiential benefit is more direct and immediate.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Slightly higher than other sleep UAR values because subjective comfort improvements are noticeable within the first week, providing positive reinforcement that supports continued practice.
       - [Emmons & McCullough (2003)](https://doi.org/10.1037/0022-3514.84.2.377) found the gratitude condition had better retention than other journaling conditions, partly because participants noticed immediate experiential benefits.
@@ -71,6 +78,7 @@ values:
       - The causal pathway from evening gratitude practice to next-day work engagement is indirect and mediated by multiple factors (sleep quality, morning mood, task characteristics), each attenuating the effect.
       - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis found small overall effect sizes for gratitude interventions, and engagement is a secondary outcome rather than the primary target. Conservative estimate of 40% achieving meaningful engagement improvements.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - The engagement benefit is a secondary outcome of the same evening practice, so adherence is determined by the same factors as the primary sleep domain.
@@ -87,6 +95,7 @@ values:
       - Effect sizes were larger against waitlist controls than active controls, suggesting some of the apparent benefit may reflect non-specific factors (expectancy, self-monitoring) rather than gratitude-specific mechanisms.
       - The pathway from gratitude to stability is indirect (cognitive reappraisal reducing rumination reducing symptoms), and individual variation in baseline rumination levels means many practitioners have limited room for improvement. Conservative estimate of 45%.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Stability benefits share the same 5-10 minute evening practice; adherence is determined by identical behavioural demands regardless of which outcome is measured.
@@ -103,6 +112,7 @@ values:
       - Flourishing benefits are more reliably achieved than symptom reduction because the practice directly generates positive affect rather than working indirectly through cognitive reappraisal. The mechanism is shorter and less attenuated.
       - [Choi et al. (2025)](https://doi.org/10.1073/pnas.2425193122) confirmed positive affect showed the largest effect sizes among well-being outcomes, supporting higher reliability for flourishing than for stability. Estimate of 55% reflects this stronger but still modest pathway.
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Flourishing benefits emerge from the same evening practice; adherence constraints are identical.

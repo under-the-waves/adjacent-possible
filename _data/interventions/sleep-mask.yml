@@ -1,4 +1,8 @@
 name: "Sleep Mask"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Wearing a light-blocking eye mask during sleep to create complete darkness and eliminate visual stimuli that can disrupt sleep cycles
   - A properly fitted mask blocks 99-100% of ambient light including early morning sunlight, streetlights, and device indicators
@@ -19,6 +23,7 @@ values:
       - Multiple studies show 70-80% of users experience meaningful improvements in sleep continuity and morning alertness when using effective light-blocking masks, as the intervention addresses a direct physiological mechanism with predictable outcomes.
       - Individual variation is relatively low compared to behavioural sleep interventions, since light sensitivity is a universal biological feature, though some people already sleep in sufficiently dark environments and gain minimal additional benefit.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - [Hu et al. (2017)](https://doi.org/10.1016/j.sleep.2017.01.018) found approximately 55-65% of users continued wearing sleep masks beyond 3 months, with primary dropout driven by physical comfort issues (mask displacement, eye pressure, elastic discomfort).
       - Higher-quality contoured masks that avoid eye contact have better retention rates, but even among satisfied users, ~35% discontinue due to mask shifting during sleep or interference with sleep positions.
@@ -36,6 +41,7 @@ values:
       - [Cho et al. (2013)](https://doi.org/10.1177/0748730413507714) is one of the few studies tracking health biomarkers with mask use, and found modest effects with high individual variation, suggesting ~60% of consistent users achieve meaningful health marker improvements.
       - The biological mechanism (maintaining circadian rhythm integrity through melatonin preservation) is sound, but the effect size for health outcomes from masks alone is small relative to total sleep quality determinants.
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Same adherence rate as daily functioning since the behaviour is identical. [Hu et al. (2017)](https://doi.org/10.1016/j.sleep.2017.01.018) retention data applies regardless of which outcome is being measured.
       - Long-term health benefits require nightly use over months to years, but the physical comfort barriers are consistent across all timeframes.
@@ -53,6 +59,7 @@ values:
       - [Horne & Reid (2007)](https://doi.org/10.1093/sleep/30.10.1378) found 75-85% of users who tolerated wearing masks reported improved sleep satisfaction and reduced sleep disruptions within the first week.
       - Subjective comfort improvements are more consistent than objective health metrics because users can directly perceive the difference in light exposure and sleep continuity from the first night.
     uar: 65
+    confidence: medium
     uar_reasoning: |
       - Better adherence for comfort benefits because improvements are immediately noticeable -- users can feel the difference in sleep quality within the first few nights, providing strong positive reinforcement.
       - [Hu et al. (2017)](https://doi.org/10.1016/j.sleep.2017.01.018) showed that users who reported subjective sleep improvements in the first week were significantly more likely to continue use at 6 months.

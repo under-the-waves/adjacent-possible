@@ -1,4 +1,8 @@
 name: "Informational Interviews"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Structured 20-30 minute conversations with professionals in fields or roles of interest, conducted to gather career intelligence rather than to ask for a job, covering career paths, daily responsibilities, industry trends, and advice
   - A programme of 2-4 interviews per month over several months exposes you to a wide range of career possibilities, builds a professional network organically, and surfaces opportunities that never appear on job boards
@@ -19,6 +23,7 @@ values:
       - The main risk factor is interview quality – poorly prepared questions or mismatched interviewees reduce value – but even mediocre interviews typically surface at least one useful insight about a field or role.
       - Career services data from [NACE surveys](https://www.naceweb.org/career-development/best-practices/) consistently report that students who complete informational interviews rate them as highly valuable, suggesting that the activity reliably delivers on its core promise when executed.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Career services professionals consistently report that fewer than half of students who learn about informational interviewing go on to conduct them regularly, per [NACE annual survey data](https://www.naceweb.org/career-development/best-practices/).
       - The primary barriers are social discomfort of reaching out to strangers, difficulty scheduling, and premature satisfaction after a small sample – all well-documented in [Wanberg, Kanfer & Banas (2000)](https://doi.org/10.1111/j.1744-6570.2000.tb00206.x) on job search behaviour and sustained effort.
@@ -36,6 +41,7 @@ values:
       - Research on professional networking consistently shows that people are willing to help those who have invested time in understanding their field, provided the interviewer follows up appropriately.
       - The success rate for converting informational interviews into useful professional relationships is high because the format inherently creates reciprocity and rapport – the interviewee feels valued and the interviewer demonstrates initiative.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Same adherence challenges as clarity: social effort of reaching out, scheduling, and following up is the primary barrier, per [Wanberg et al. (2000)](https://doi.org/10.1111/j.1744-6570.2000.tb00206.x).
       - Network-building benefits require sustained effort over months – a handful of interviews rarely builds enough density to generate opportunities. Many people stop before reaching the critical mass of contacts needed for meaningful career positioning.
@@ -53,6 +59,7 @@ values:
       - [Kossek, Roberts, Fisher & Demarr (1998)](https://doi.org/10.1177/014920639802400302) found that employees with broader professional networks reported greater career resilience and lower anxiety about job loss.
       - People who have explored multiple fields through informational interviews consistently report feeling less trapped and more confident about their ability to pivot, though this self-reported confidence has limited empirical validation as a predictor of actual career recovery speed.
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Resilience-building through informational interviews requires the same sustained effort as clarity and advancement, with the added challenge that benefits are latent – value may not surface until a career crisis occurs.
       - Without immediate payoff, many people deprioritise this activity in favour of more urgent career tasks. [Klehe et al. (2011)](https://doi.org/10.1037/a0024914) found that proactive career behaviours are most common during active job search, not during stable employment when resilience-building would be most strategic.

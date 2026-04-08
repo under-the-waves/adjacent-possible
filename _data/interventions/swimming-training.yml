@@ -1,4 +1,8 @@
 name: "Swimming Training"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Structured pool-based training involving progressive protocols for technique refinement, endurance building, and strength development, typically 3-6 sessions per week of 45-90 minutes each
   - Focuses on stroke mechanics, cardiovascular conditioning, and muscular endurance across varying distances and intensities, with a higher technical skill requirement than most exercise modalities
@@ -20,6 +24,7 @@ values:
       - Cardiovascular adaptations from swimming are well-characterised and reliably reproduced across diverse populations including elderly and clinical groups ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
       - Benefits require adequate training volume and technique competence; those who can swim continuously for 20+ minutes at moderate intensity reliably achieve health improvements ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Pool access limitations and scheduling constraints create significant barriers, with studies showing 40-50% dropout in the first 6 months due to facility access, time commitments, and technical learning curve ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
       - Those who establish routine often maintain long-term adherence due to low injury rates and the joint-friendly nature providing a sustainable exercise option into old age ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
@@ -37,6 +42,7 @@ values:
       - Technique complexity means performance gains require proper instruction and progressive programming; raw effort without technique produces limited fitness improvements ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
       - Individual variation in technique acquisition rate introduces meaningful variability in performance outcomes, particularly in the first 6-12 months ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - Performance-focused training requires 4-6 sessions weekly with structured progression, creating high adherence barriers; studies show 60-70% dropout rates from competitive programmes ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
       - Success requires access to coaching, pool facilities, and significant time commitment (including travel and changing time) that limits long-term adherence for recreational athletes ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
@@ -54,6 +60,7 @@ values:
       - Enjoyment is bimodal: those who develop competent technique report high satisfaction, while those who struggle with breathing coordination or dislike the pool environment (chlorine, crowding, early-morning scheduling) find it aversive, creating a wider spread than most activities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Among swimmers who achieve technical competency and establish a routine, approximately 75-80% report swimming as genuinely enjoyable rather than merely tolerable, supporting the 80 ISR ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Swimmers who overcome initial technical barriers and establish routine often develop strong long-term adherence driven by enjoyment ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
       - Pool access and scheduling create ongoing challenges; the bimodal distribution shows either high long-term adherence (5+ years) or early dropout ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
@@ -73,6 +80,7 @@ values:
       - Individual variation in appetite compensation after swimming is large: some participants fully offset the exercise-induced caloric deficit while others do not, making outcomes less predictable than for running or cycling ([White et al. 2005, Int J Sport Nutr Exerc Metab](https://doi.org/10.1123/ijsnem.15.1.38))
       - Score 50 reflects that roughly half of consistent swimmers achieve meaningful scale weight reduction, with cold-water appetite stimulation being a well-documented mechanism driving non-response
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - Pool access constraints and scheduling barriers produce approximately 40 – 50% dropout within 6 months ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199)), limiting the proportion who sustain swimming long enough for meaningful weight loss
       - Weight-loss-motivated swimmers face the additional discouragement of slow or negligible scale changes due to appetite compensation, which may reduce adherence further compared to swimmers motivated by health or enjoyment
@@ -90,6 +98,7 @@ values:
       - Swimming's mood benefits operate through well-established exercise-depression pathways (endorphin release, neurogenesis, cortisol regulation) that are mechanistically robust across populations ([Rebar et al. 2015, Health Psychol Rev](https://pubmed.ncbi.nlm.nih.gov/25739893/))
       - Approximately 55-65% of regular swimmers achieve meaningful mood stability improvements; non-responders tend to be those whose distress is not primarily stress- or inactivity-mediated
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile; pool access constraints and scheduling barriers produce approximately 40-50% dropout within 6 months ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
 
@@ -105,6 +114,7 @@ values:
       - General exercise-resilience research shows modest but inconsistent effects: not all fit individuals show improved psychological stress recovery, as resilience depends heavily on cognitive appraisal and social factors that swimming does not address
       - Approximately 45-55% of regular swimmers experience noticeably improved stress tolerance, with the remainder finding physical and psychological stress recovery remain largely independent
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -120,6 +130,7 @@ values:
       - The bimodal enjoyment distribution (those who develop technique find it highly satisfying; those who struggle find it aversive) means flourishing benefits are concentrated among the technically competent majority ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Approximately 55-65% of regular swimmers report swimming as a meaningful source of positive affect and life satisfaction, with the remainder finding it functional but not flourishing-enhancing
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

@@ -1,4 +1,8 @@
 name: "Progressive Strength Training"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Resistance training built around gradually increasing weight, repetitions, or sets over time to drive continuous muscular adaptation
   - Sessions typically last 45-75 minutes, 3-4 times per week, combining compound movements (squats, deadlifts, bench press) with isolation exercises and applying progressive overload weekly or bi-weekly
@@ -19,6 +23,7 @@ values:
       - Physiological mechanisms (muscle protein synthesis, bone remodelling, glucose uptake) are well-understood and reliably reproduced across diverse populations including elderly, diabetic, and cardiac patients ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
       - The dose-response relationship is well-characterised: even modest resistance training volumes produce measurable health improvements ([Shailendra et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2022-105669))
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - Gym membership retention studies show approximately 50% dropout within 6 months, with only 30-40% maintaining consistent training beyond one year ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
       - Barriers include perceived complexity of programming, gym intimidation, time constraints, and delayed visible results compared to expectations ([Schutzer & Graves 2004, Prev Med](https://doi.org/10.1016/j.ypmed.2004.04.003))
@@ -36,6 +41,7 @@ values:
       - Multiple systematic reviews confirm consistent strength improvements across populations when programmes follow progressive overload principles, with effect sizes typically large (d > 0.8) ([Rhea et al. 2003, Med Sci Sports Exerc](https://doi.org/10.1249/01.MSS.0000053727.63505.D4))
       - Genetic variation affects rate and ceiling of adaptation, but the directional response to progressive overload is essentially universal in healthy adults ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
     uar: 45
+    confidence: medium
     uar_reasoning: |
       - Athletes and serious fitness enthusiasts show higher adherence rates (~40-50%) due to clear performance goals and external accountability from coaches, teammates, or competition schedules ([Lox et al. 2014, The Psychology of Exercise](https://doi.org/10.4324/9781315213187))
       - Measurable progress (weight on the bar) provides strong positive reinforcement that supports adherence among performance-motivated trainees ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
@@ -53,6 +59,7 @@ values:
       - Exercise preference surveys consistently rank resistance training below outdoor, social, and play-based activities for enjoyment, though a dedicated subset reports high intrinsic satisfaction ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Enjoyment reliability improves substantially with competence: those who persist past the initial 3-6 month learning phase report significantly higher intrinsic motivation, but many drop out before reaching that threshold ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
     uar: 25
+    confidence: medium
     uar_reasoning: |
       - Enjoyment-based adherence is particularly challenging as resistance training can be uncomfortable, repetitive, and lacks the social or playful elements of team sports or outdoor activities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Many individuals require external motivation (appearance goals, health concerns, social pressure) rather than intrinsic enjoyment to maintain consistency long-term ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
@@ -72,6 +79,7 @@ values:
       - Without dietary co-intervention, resistance training produces only 1.0 kg fat mass loss on average, and dietary compliance is the primary moderator of larger effects; most people who lift without adjusting nutrition see little scale movement ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
       - Score 65 reflects reliable but small recomposition in most lifters, with the caveat that 'meaningful fat loss' as measured by scale weight requires dietary modification that not all adherents adopt
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Gym-based adherence is challenging, with approximately 50% dropout within 6 months and only 30 – 40% maintaining consistent training beyond one year ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
       - Weight-focused trainees may become discouraged when scale weight does not change despite genuine body composition improvements, reducing motivation to continue ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
@@ -89,6 +97,7 @@ values:
       - Baseline severity moderates response: those with elevated depressive or anxiety symptoms at baseline show larger improvements, while those with subclinical symptoms see smaller effects ([Frontiers 2025 meta-analysis](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1655855/full))
       - An estimated 55-65% of adherent strength trainees experience clinically meaningful mood stabilisation, with the remainder showing minimal change due to low baseline symptom levels or non-mood-related sources of instability
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -104,6 +113,7 @@ values:
       - The causal pathway from lifting heavier weights to handling life stressors better is plausible but requires psychological transfer that does not occur automatically; roughly half to two-thirds of adherent trainees report subjectively improved stress tolerance
       - Evidence for the resilience pathway specifically is thinner than for mood stabilisation, warranting a more conservative ISR than the stability value
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -119,6 +129,7 @@ values:
       - Flourishing benefits are more reliably reported by those who find intrinsic satisfaction in the training process itself, which is a subset of all adherent trainees (see fitness.enjoyment ISR)
       - An estimated 40-50% of consistent trainees report enhanced life satisfaction attributable to their training practice, with the remainder viewing it instrumentally without broader wellbeing spillover
     uar: 35
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

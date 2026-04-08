@@ -1,4 +1,8 @@
 name: "Rock Climbing"
+what_it_is: ""
+how_to_do_it: ""
+success_looks_like: ""
+common_pitfalls: ""
 description: |
   - Indoor and/or outdoor climbing (bouldering, top-rope, lead) typically 2-3 sessions per week of 60-120 minutes, ascending routes of graded difficulty (V-scale for bouldering, YDS for roped climbing)
   - Demands grip strength, upper body pulling power, core stability, balance, flexibility, and route-reading problem-solving, making it uniquely cognitive among exercise modalities
@@ -20,6 +24,7 @@ values:
       - Benefits are reliable for grip strength and upper body development but less consistent for cardiovascular markers; the intermittent nature (climb-rest-climb) produces different physiological adaptations than sustained exercise ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
       - Variable effects depending on climbing style, intensity, and session structure introduce uncertainty in expected health outcomes ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - Climbing has moderate long-term adherence, limited by facility access, injury risk (particularly finger tendon overuse), cost of gym membership, and the steep difficulty curve at intermediate levels ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
       - Social and problem-solving aspects enhance retention for those who engage with the community, but geographic and financial barriers contribute to dropout ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
@@ -37,6 +42,7 @@ values:
       - The technical skill component means progress is not purely a function of physical training; movement quality, fear management, and route-reading ability introduce variability ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
       - Genetic factors (finger tendon strength, body proportions, flexibility) influence performance ceiling more than in simpler exercise modalities ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
     uar: 55
+    confidence: medium
     uar_reasoning: |
       - Performance-oriented climbers tend to have better retention due to the clear grading system providing measurable progression and the addictive nature of completing harder routes ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
       - Finger injuries are common at intermediate-to-advanced levels and can force extended breaks; plateaus in the V4-V6 range are a well-known dropout point ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
@@ -54,6 +60,7 @@ values:
       - Retention data supports high enjoyment reliability: climbers who pass the initial 3-6 month learning phase show very high long-term continuation rates, suggesting that enjoyment builds with competence rather than declining ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
       - The main enjoyment detractors (fear of falling, skin pain, plateau frustration) affect a minority and tend to resolve with experience; among those climbing regularly for 6+ months, approximately 85% report it as a primary source of enjoyment in exercise preference surveys ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
     uar: 60
+    confidence: medium
     uar_reasoning: |
       - Enjoyment-based retention in climbing is higher than most exercise modalities for those who pass the initial learning phase; the social community, progression system, and variety provide strong hooks ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
       - Fear of falling, self-consciousness in gym settings, and frustration during plateaus cause dropout among a significant minority during the first 3-6 months ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
@@ -73,6 +80,7 @@ values:
       - Active climbers consistently show lower body fat than non-climbing controls in observational studies, but self-selection bias (leaner individuals being drawn to climbing) and dietary confounds limit the reliability of attributing this to climbing itself ([Michailov et al. 2023, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph20105831))
       - Estimated 50 – 60% meaningful response rate: climbing burns meaningful calories and incentivises leanness, but the intermittent session structure and modest total energy expenditure mean many consistent climbers see limited fat loss without dietary adjustment
     uar: 40
+    confidence: medium
     uar_reasoning: |
       - Climbing has significant access barriers (gym membership costs of $60–100/month, geographic availability, need for partners or belay certification) that reduce the population who can sustain regular practice for weight management ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
       - Weight loss-motivated individuals may find climbing's indirect and slow body composition effects frustrating compared to more predictable modalities like running or cycling ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
@@ -90,6 +98,7 @@ values:
       - The [adolescent mental health study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11581854/) found significant reductions in cognitive and somatic anxiety, but the evidence base for climbing-specific mood stabilisation is still small (fewer than 10 RCTs)
       - Approximately 50-60% of regular climbers experience meaningful mood stability improvements, with the remainder finding that the intermittent, high-intensity nature of climbing sessions provides excitement without sustained mood-stabilising effects
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile; climbing's moderate long-term adherence is limited by facility access, injury risk, and cost ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
 
@@ -105,6 +114,7 @@ values:
       - [Prospective survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows climbers consistently report improved confidence and stress management, with 73.1% reporting positive mental health impacts; the self-selection caveat applies but the mechanism is plausible for most participants
       - Approximately 55-65% of regular climbers develop meaningfully improved stress recovery and adversity tolerance, with non-responders typically being those who avoid challenging routes or disengage from the fear-management aspect of the activity
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
@@ -120,6 +130,7 @@ values:
       - The strong community dimension adds a social flourishing pathway that is less dependent on individual variation; [survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows camaraderie and mutual support are consistently cited as contributors to wellbeing among climbers
       - Approximately 65-75% of regular climbers report climbing as a primary source of positive affect and life satisfaction, with non-responders mainly being those who plateau and disengage before developing competence
     uar: 50
+    confidence: medium
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
