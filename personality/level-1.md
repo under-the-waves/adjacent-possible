@@ -371,7 +371,7 @@ life_area_slug: personality
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account. Percentile estimates are approximate – they position you roughly relative to the general population based on your self-report, but could easily be off by 10–15 points.</div>
 
 <p>Awareness means knowing your starting point. Answer each question below &ndash; some you might know off the top of your head, others might take a few minutes to look up or reflect on.</p>
 
@@ -696,7 +696,7 @@ life_area_slug: personality
             return;
         }
         var pct = getItemPercentile(itemId);
-        hintEl.textContent = pct !== null ? '~' + ordinalSuffix(pct) + ' percentile' : '';
+        hintEl.textContent = pct !== null ? 'roughly ' + ordinalSuffix(Math.round(pct / 10) * 10) + ' percentile' : '';
     }
 
     function updateAssessSummary() {
@@ -708,7 +708,7 @@ life_area_slug: personality
             if (barEl && valEl) {
                 if (pct !== null) {
                     barEl.style.width = pct + '%';
-                    valEl.textContent = ordinalSuffix(pct);
+                    valEl.textContent = ordinalSuffix(Math.round(pct / 10) * 10);
                     anyAnswered = true;
                 } else {
                     barEl.style.width = '0%';

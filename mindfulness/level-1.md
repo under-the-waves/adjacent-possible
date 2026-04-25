@@ -387,7 +387,7 @@ life_area_slug: mindfulness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account.</div>
+<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account. Percentile estimates are approximate – they position you roughly relative to the general population based on your self-report, but could easily be off by 10–15 points.</div>
 
 <div class="assess-group">
 <h4>Mental Clarity</h4>
@@ -852,7 +852,7 @@ life_area_slug: mindfulness
             return;
         }
         var pct = getItemPercentile(itemId);
-        hintEl.textContent = pct !== null ? '~' + ordinalSuffix(pct) + ' percentile' : '';
+        hintEl.textContent = pct !== null ? 'roughly ' + ordinalSuffix(Math.round(pct / 10) * 10) + ' percentile' : '';
     }
 
     function updateAssessSummary() {
@@ -864,7 +864,7 @@ life_area_slug: mindfulness
             if (barEl && valEl) {
                 if (pct !== null) {
                     barEl.style.width = pct + '%';
-                    valEl.textContent = ordinalSuffix(pct);
+                    valEl.textContent = ordinalSuffix(Math.round(pct / 10) * 10);
                     anyAnswered = true;
                 } else {
                     barEl.style.width = '0%';
