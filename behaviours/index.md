@@ -140,6 +140,8 @@ life_area_slug: behaviours
     <a href="{{ site.baseurl }}/behaviours/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about behaviours
 
 People pursue behavioural change for different reasons. This site scores every behaviours intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

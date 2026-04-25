@@ -140,6 +140,8 @@ life_area_slug: habits
     <a href="{{ site.baseurl }}/habits/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about habits
 
 People pursue habit formation for different reasons. This site scores every habits intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

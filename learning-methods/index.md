@@ -138,6 +138,8 @@ life_area_slug: learning-methods
     <a href="{{ site.baseurl }}/learning-methods/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about learning methods
 
 People pursue better learning methods for different reasons. This site scores every learning methods intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

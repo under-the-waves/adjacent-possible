@@ -138,6 +138,8 @@ life_area_slug: personality
     <a href="{{ site.baseurl }}/personality/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about personality
 
 People pursue personality development for different reasons. This site scores every personality intervention across two core values, and ranks them by how well they deliver on the things you actually care about.

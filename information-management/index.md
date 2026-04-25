@@ -140,6 +140,8 @@ life_area_slug: information-management
     <a href="{{ site.baseurl }}/information-management/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about information management
 
 People manage information for different reasons. This site scores every information management intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

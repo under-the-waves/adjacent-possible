@@ -140,6 +140,8 @@ life_area_slug: health-management
     <a href="{{ site.baseurl }}/health-management/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about health management
 
 People approach health management for different reasons. This site scores every health management intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

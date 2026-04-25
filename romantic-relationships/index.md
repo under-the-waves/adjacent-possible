@@ -140,6 +140,8 @@ life_area_slug: romantic-relationships
     <a href="{{ site.baseurl }}/romantic-relationships/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about relationship quality
 
 People pursue relationship quality for different reasons. This site scores every relationship quality intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

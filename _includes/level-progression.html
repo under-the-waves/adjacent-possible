@@ -1,0 +1,273 @@
+{% assign lp_area = site.data.life_areas[page.life_area_slug] %}
+{% if lp_area %}
+
+<style>
+.lp-container {
+    margin: 24px 0;
+}
+.lp-container h2 {
+    margin-bottom: 16px;
+}
+.lp-value-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.lp-value-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.lp-value-name {
+    font-weight: 600;
+    font-size: 1.05em;
+}
+.lp-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.lp-benchmark {
+    padding: 6px 0;
+    line-height: 1.4;
+}
+.lp-benchmark label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+.lp-benchmark input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.lp-done {
+    opacity: 0.55;
+    font-size: 0.9em;
+}
+.lp-done label {
+    cursor: pointer;
+}
+.lp-done input[disabled] {
+    cursor: default;
+}
+.lp-next {
+    font-size: 0.95em;
+    padding: 10px 12px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+}
+.lp-lvl-num {
+    font-weight: 600;
+    color: #888;
+    font-size: 0.85em;
+    min-width: 22px;
+    flex-shrink: 0;
+}
+.lp-mastered {
+    color: #1565c0;
+    font-weight: 600;
+    padding: 8px 0;
+    font-size: 0.95em;
+}
+.lp-overall {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #f0f4ff;
+    border-radius: 8px;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.lp-overall-note {
+    color: #666;
+    font-size: 0.9em;
+}
+@media (max-width: 600px) {
+    .lp-value-header { flex-direction: column; align-items: flex-start; }
+}
+</style>
+
+<div id="levelProgression" class="lp-container" style="display:none;"></div>
+
+<script>
+var LP_DATA = {
+    slug: {{ lp_area.slug | jsonify }},
+    values: [
+        {% for v in lp_area.values %}
+        {
+            key: {{ v.key | jsonify }},
+            name: {{ v.name | jsonify }},
+            weight: {{ v.weight }},
+            benchmarks: {
+                1: {{ v.benchmarks.level_1.text | jsonify }},
+                2: {{ v.benchmarks.level_2.text | jsonify }},
+                3: {{ v.benchmarks.level_3.text | jsonify }},
+                4: {{ v.benchmarks.level_4.text | jsonify }},
+                5: {{ v.benchmarks.level_5.text | jsonify }}
+            }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+};
+
+(function() {
+    'use strict';
+    if (typeof APStorage === 'undefined') return;
+
+    var slug = LP_DATA.slug;
+    var LEVEL_COLORS = {0:'#bdbdbd', 1:'#e53935', 2:'#fb8c00', 3:'#fdd835', 4:'#43a047', 5:'#1565c0'};
+    var LEVEL_NAMES = {0:'Not assessed', 1:'Awareness', 2:'Foundation', 3:'Proficiency', 4:'Excellence', 5:'Mastery'};
+
+    // Check Level 1 completion
+    var progress = APStorage.load('ap-level1-progress') || {};
+    var area = progress[slug] || {};
+    var priorSteps = ['why', 'values', 'achievable', 'assess'];
+    var l1Done = priorSteps.every(function(s) { return area[s]; });
+    var sliderWeights = APStorage.load('ap-slider-weights') || {};
+    var hasSliders = !!sliderWeights[slug];
+
+    if (!l1Done || !hasSliders) return;
+
+    // Load checklist state
+    var allChecklist = APStorage.load('ap-level-checklist') || {};
+    var state = allChecklist[slug] || {};
+
+    // Initialise: each value starts at level 1 (Level 1 confirmed by completing the flow)
+    LP_DATA.values.forEach(function(v) {
+        if (!state[v.key] || state[v.key] < 1) state[v.key] = 1;
+    });
+
+    // Get weights (prefer user slider weights, fall back to YAML defaults)
+    var weights = {};
+    LP_DATA.values.forEach(function(v) {
+        weights[v.key] = (sliderWeights[slug] && sliderWeights[slug][v.key] !== undefined)
+            ? sliderWeights[slug][v.key]
+            : v.weight;
+    });
+
+    render();
+
+    function computeOverall() {
+        var wSum = 0, wTotal = 0;
+        LP_DATA.values.forEach(function(v) {
+            var w = weights[v.key];
+            wSum += (state[v.key] || 1) * w;
+            wTotal += w;
+        });
+        return wTotal > 0 ? Math.floor(wSum / wTotal) : 1;
+    }
+
+    function save() {
+        allChecklist[slug] = state;
+        APStorage.save('ap-level-checklist', allChecklist);
+        var levels = APStorage.load('ap-dashboard-levels') || {};
+        levels[slug] = computeOverall();
+        APStorage.save('ap-dashboard-levels', levels);
+    }
+
+    function handleCheck(valueKey, level, checked) {
+        if (checked) {
+            state[valueKey] = level;
+        } else {
+            // Unchecking level N drops back to N-1
+            state[valueKey] = level - 1;
+        }
+        save();
+        render();
+    }
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        var el = document.createElement('span');
+        el.textContent = str;
+        return el.innerHTML;
+    }
+
+    function badgeStyle(level) {
+        var bg = LEVEL_COLORS[level] || '#bdbdbd';
+        var fg = level === 3 ? '#333' : '#fff';
+        return 'background:' + bg + ';color:' + fg;
+    }
+
+    function render() {
+        var el = document.getElementById('levelProgression');
+        el.style.display = '';
+
+        var h = '<h2>Level Progression</h2>';
+
+        LP_DATA.values.forEach(function(v) {
+            var cur = state[v.key] || 1;
+            var next = cur < 5 ? cur + 1 : null;
+
+            h += '<div class="lp-value-card">';
+            h += '<div class="lp-value-header">';
+            h += '<span class="lp-value-name">' + escapeHtml(v.name) + '</span>';
+            h += '<span class="lp-badge" style="' + badgeStyle(cur) + '">Level ' + cur + ' \u2013 ' + LEVEL_NAMES[cur] + '</span>';
+            h += '</div>';
+
+            // Completed levels (checked; Level 1 is disabled, others are uncheckable)
+            for (var l = 1; l <= cur; l++) {
+                if (!v.benchmarks[l]) continue;
+                h += '<div class="lp-benchmark lp-done">';
+                h += '<label>';
+                if (l === 1) {
+                    h += '<input type="checkbox" checked disabled>';
+                } else {
+                    h += '<input type="checkbox" checked data-vkey="' + v.key + '" data-lvl="' + l + '">';
+                }
+                h += '<span class="lp-lvl-num">L' + l + '</span> ';
+                h += '<span>' + escapeHtml(v.benchmarks[l]) + '</span>';
+                h += '</label>';
+                h += '</div>';
+            }
+
+            // Next level (unchecked, prominent)
+            if (next && v.benchmarks[next]) {
+                h += '<div class="lp-benchmark lp-next">';
+                h += '<label>';
+                h += '<input type="checkbox" data-vkey="' + v.key + '" data-lvl="' + next + '">';
+                h += '<span class="lp-lvl-num">L' + next + '</span> ';
+                h += '<span>' + escapeHtml(v.benchmarks[next]) + '</span>';
+                h += '</label>';
+                h += '</div>';
+            } else if (cur === 5) {
+                h += '<div class="lp-mastered">\u2713 All levels complete</div>';
+            }
+
+            h += '</div>';
+        });
+
+        // Overall level
+        var overall = computeOverall();
+        h += '<div class="lp-overall">';
+        h += '<strong>Overall:</strong> ';
+        h += '<span class="lp-badge" style="' + badgeStyle(overall) + '">Level ' + overall + ' \u2013 ' + LEVEL_NAMES[overall] + '</span>';
+        h += '<span class="lp-overall-note">(weighted average, rounded down)</span>';
+        h += '</div>';
+
+        el.innerHTML = h;
+
+        // Bind checkbox events
+        var cbs = el.querySelectorAll('input[type="checkbox"]:not([disabled])');
+        Array.prototype.forEach.call(cbs, function(cb) {
+            cb.addEventListener('change', function() {
+                handleCheck(this.dataset.vkey, parseInt(this.dataset.lvl, 10), this.checked);
+            });
+        });
+    }
+})();
+</script>
+
+{% endif %}

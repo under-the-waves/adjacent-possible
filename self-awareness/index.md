@@ -140,6 +140,8 @@ life_area_slug: self-awareness
     <a href="{{ site.baseurl }}/self-awareness/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about self-awareness
 
 People develop self-awareness through different approaches. This site scores every self-awareness intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

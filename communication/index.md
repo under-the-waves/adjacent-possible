@@ -139,6 +139,8 @@ life_area_slug: communication
     <a href="{{ site.baseurl }}/communication/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about communication
 
 People pursue communication growth for different reasons. This site scores every communication intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

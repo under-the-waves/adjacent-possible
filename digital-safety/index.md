@@ -140,6 +140,8 @@ life_area_slug: digital-safety
     <a href="{{ site.baseurl }}/digital-safety/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about digital safety
 
 People approach digital safety with different priorities. This site scores every digital safety intervention across two core values, and ranks them by how well they deliver on the things you actually care about.

@@ -138,6 +138,8 @@ life_area_slug: children
     <a href="{{ site.baseurl }}/children/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about parenting
 
 People approach parenting for different reasons. This site scores every parenting intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

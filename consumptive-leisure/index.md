@@ -140,6 +140,8 @@ life_area_slug: consumptive-leisure
     <a href="{{ site.baseurl }}/consumptive-leisure/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about consumptive leisure
 
 People approach leisure consumption for different reasons. This site scores every consumptive leisure intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

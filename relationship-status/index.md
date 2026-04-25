@@ -139,6 +139,8 @@ life_area_slug: relationship-status
     <a href="{{ site.baseurl }}/relationship-status/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about relationship status
 
 People approach relationship status for different reasons. This site scores every relationship-status intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

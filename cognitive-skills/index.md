@@ -138,6 +138,8 @@ life_area_slug: cognitive-skills
     <a href="{{ site.baseurl }}/cognitive-skills/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about cognitive skills
 
 People pursue cognitive improvement for different reasons. This site scores every cognitive skills intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

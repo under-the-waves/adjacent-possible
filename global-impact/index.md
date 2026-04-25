@@ -140,6 +140,8 @@ life_area_slug: global-impact
     <a href="{{ site.baseurl }}/global-impact/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about global impact
 
 People approach global impact for different reasons. This site scores every global impact intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

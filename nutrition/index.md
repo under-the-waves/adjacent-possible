@@ -140,6 +140,8 @@ life_area_slug: nutrition
     <a href="{{ site.baseurl }}/nutrition/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about nutrition
 
 People pursue good nutrition for different reasons. This site scores every nutrition intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

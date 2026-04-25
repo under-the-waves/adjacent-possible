@@ -140,6 +140,8 @@ life_area_slug: emergency-preparedness
     <a href="{{ site.baseurl }}/emergency-preparedness/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about emergency preparedness
 
 People pursue preparedness for different reasons. This site scores every emergency preparedness intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

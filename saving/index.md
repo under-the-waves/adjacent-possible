@@ -140,6 +140,8 @@ life_area_slug: saving
     <a href="{{ site.baseurl }}/saving/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about saving
 
 People save for different reasons. This site scores every saving intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

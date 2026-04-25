@@ -139,6 +139,8 @@ life_area_slug: media-diet
     <a href="{{ site.baseurl }}/media-diet/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about media diet
 
 People pursue better information consumption for different reasons. This site scores every media diet intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

@@ -140,6 +140,8 @@ life_area_slug: legal-matters
     <a href="{{ site.baseurl }}/legal-matters/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about legal matters
 
 People approach legal matters for different reasons. This site scores every legal matters intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

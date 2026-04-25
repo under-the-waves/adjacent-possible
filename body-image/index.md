@@ -139,6 +139,8 @@ life_area_slug: body-image
     <a href="{{ site.baseurl }}/body-image/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about body image
 
 People care about body image for different reasons. This site scores every body image intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

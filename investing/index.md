@@ -140,6 +140,8 @@ life_area_slug: investing
     <a href="{{ site.baseurl }}/investing/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about investing
 
 People invest for different reasons. This site scores every investing intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

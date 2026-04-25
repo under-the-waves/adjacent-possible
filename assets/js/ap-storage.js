@@ -16,7 +16,8 @@
         'ap-slider-weights': 'sliderWeights',
         'ap-level1-progress': 'level1Progress',
         'ap-level1-assess': 'level1Assess',
-        'ap-level1-scores': 'level1Scores'
+        'ap-level1-scores': 'level1Scores',
+        'ap-level-checklist': 'levelChecklist'
     };
 
     function load(key) {

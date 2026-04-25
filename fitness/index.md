@@ -140,6 +140,8 @@ life_area_slug: fitness
     <a href="{{ site.baseurl }}/fitness/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about fitness
 
 People pursue fitness for different reasons. This site scores every fitness intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

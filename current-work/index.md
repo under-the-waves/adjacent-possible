@@ -140,6 +140,8 @@ life_area_slug: current-work
     <a href="{{ site.baseurl }}/current-work/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about current work
 
 People approach their working lives for different reasons. This site scores every current work intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

@@ -140,6 +140,8 @@ life_area_slug: physical-safety
     <a href="{{ site.baseurl }}/physical-safety/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about physical safety
 
 People approach physical safety for different reasons. This site scores every physical safety intervention across two core values, and ranks them by how well they deliver on the things you actually care about.

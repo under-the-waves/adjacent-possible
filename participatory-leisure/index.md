@@ -140,6 +140,8 @@ life_area_slug: participatory-leisure
     <a href="{{ site.baseurl }}/participatory-leisure/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about participatory leisure
 
 People pursue active leisure for different reasons. This site scores every participatory leisure intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

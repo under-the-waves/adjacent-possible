@@ -140,6 +140,8 @@ life_area_slug: organisation
     <a href="{{ site.baseurl }}/organisation/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about organisation
 
 People pursue organisation for different reasons. This site scores every organisation intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

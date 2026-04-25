@@ -140,6 +140,8 @@ life_area_slug: sex
     <a href="{{ site.baseurl }}/sex/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about sex
 
 People pursue sexual wellbeing for different reasons. This site scores every sex intervention across four core values, and ranks them by how well they deliver on the things you actually care about.

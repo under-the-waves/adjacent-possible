@@ -140,6 +140,8 @@ life_area_slug: goals
     <a href="{{ site.baseurl }}/goals/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about goals
 
 People pursue goal-setting for different reasons. This site scores every goals intervention across three core values, and ranks them by how well they deliver on the things you actually care about.

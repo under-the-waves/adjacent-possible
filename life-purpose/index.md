@@ -138,6 +138,8 @@ life_area_slug: life-purpose
     <a href="{{ site.baseurl }}/life-purpose/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
+{% include level-progression.html %}
+
 ## What people value about life purpose
 
 People develop life purpose for different reasons. This site scores every life purpose intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
