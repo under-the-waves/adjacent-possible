@@ -1027,16 +1027,16 @@ function renderTopEffectsSummary() {
     var top = ranked[0];
 
     // Build magnitude explanation popup content
-    var magExplain = '<p>The magnitude label describes the expected size of the benefit:</p><ul>' +
-        '<li><strong>Slight</strong> (EBS 0\u20131): barely noticeable effect</li>' +
-        '<li><strong>Modest</strong> (EBS 1\u20133): noticeable but small effect</li>' +
-        '<li><strong>Meaningful</strong> (EBS 3\u20135): clearly worthwhile effect</li>' +
-        '<li><strong>Strong</strong> (EBS 5\u20137): substantial improvement</li>' +
-        '<li><strong>Transformative</strong> (EBS 7+): fundamental life change</li></ul>' +
-        '<p>This intervention scores <strong>' + top.ebs.toFixed(1) + '</strong> on ' + top.userDesc + ', which falls in the <strong>' + top.magnitude + '</strong> range.</p>';
+    var magDescriptions = {
+        'slight': 'A slight improvement is a small effect that you probably would not notice day to day, but which adds up over time.',
+        'modest': 'A modest improvement is a noticeable but small effect \u2013 you would recognise the change if you looked for it.',
+        'meaningful': 'A meaningful improvement is a clearly worthwhile effect \u2013 noticeable enough that you would recognise the change in your daily life.',
+        'strong': 'A strong improvement is a substantial change that would meaningfully reshape how this area of your life feels and works.',
+        'transformative': 'A transformative improvement is a fundamental life change \u2013 the kind of shift that redefines what is normal for you.'
+    };
     reasoningData['magnitude-explanation'] = {
         title: 'What does \u201c' + top.magnitude + '\u201d mean?',
-        content: magExplain,
+        content: '<p>' + (magDescriptions[top.magnitude] || '') + '</p>',
         isHtml: true
     };
 
