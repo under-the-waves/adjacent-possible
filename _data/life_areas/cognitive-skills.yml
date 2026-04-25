@@ -27,12 +27,12 @@ values:
         Research suggests approximately 20% of adults can consistently remember names of 2-3 new people and retain key information for several days. This represents basic but reliable memory function without special techniques.
     level_3:
       text: |-
-        Learn and apply basic memory techniques like creating mental associations or stories to remember lists, sequences, or study materials with noticeably improved retention
+        Reliably memorise lists, sequences, or study materials with noticeably improved retention compared to passive review alone
       reasoning: |-
         Research indicates approximately 5% of adults learn and apply basic memory techniques like creating associations or stories to improve retention of lists and study materials.
     level_4:
       text: |-
-        Apply memory techniques to learn substantial amounts of information – such as memorising 20-30 items in sequence or retaining detailed study materials with minimal forgetting over weeks
+        Memorise 20–30 items in sequence or retain detailed study materials with minimal forgetting over weeks
       reasoning: |-
         Research suggests roughly 1% of adults apply memory techniques to learn substantial amounts of information - memorising 20-30 items in sequence or retaining detailed study materials for weeks.
     level_5:
@@ -91,7 +91,7 @@ values:
         Problem-solving approach assessment involves reflecting on how you typically tackle complex challenges - whether through systematic analysis, intuitive leaps, or seeking external input.
     level_2:
       text: |-
-        Approach problems more systematically than pure intuition – taking time to consider different approaches rather than jumping immediately to solutions
+        Consider multiple approaches to problems before committing to a solution, rather than acting on first instinct
       reasoning: |-
         Approximately 20% of adults consistently approach problems systematically rather than relying purely on intuition, taking time to consider multiple approaches before choosing solutions.
     level_3:

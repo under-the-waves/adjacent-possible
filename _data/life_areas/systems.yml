@@ -32,12 +32,12 @@ values:
         Systems that handle most recurring processes including edge cases represent top 5% capability. This requires significant investment in configuration, automation, and the technical skill to build systems that go beyond basic functionality.
     level_4:
       text: |-
-        Comprehensive systems covering personal, household, and professional domains, with sophisticated automations that handle complex conditional logic and edge cases gracefully
+        Most recurring life administration across personal, household, and professional domains is handled automatically, including complex and edge-case situations
       reasoning: |-
         Comprehensive systems with sophisticated conditional logic across personal, household, and professional domains represent top 1% capability. This level of system sophistication requires both deep technical skill and sustained investment over years.
     level_5:
       text: |-
-        Near-complete coverage of all life administration, with systems sophisticated enough to handle exceptions, learn from patterns, and alert you only when genuine decisions are needed
+        Nearly all life administration is handled without your involvement; you are only alerted when a genuine decision is needed
       reasoning: |-
         Near-complete life administration coverage with intelligent exception handling represents 99.9th percentile capability -- fewer than 1 in 1,000 people build systems this powerful and comprehensive.
 - key: simplicity
@@ -72,7 +72,7 @@ values:
         High capability with maintained understandability -- complexity hidden behind clean interfaces with replaceable components -- represents top 1% system design. Most powerful systems become incomprehensible to their creators over time; keeping them simple despite growing capability is exceptionally rare.
     level_5:
       text: |-
-        Extraordinary capability delivered through systems that feel effortless to use. The underlying complexity is invisible -- interactions are intuitive, and the system adapts to you rather than requiring you to adapt to it
+        Extraordinary capability with minimal apparent complexity – interactions feel intuitive and adapt to you rather than requiring you to adapt to them
       reasoning: |-
         Extraordinary capability that feels effortless -- where the system adapts to the user rather than the reverse -- represents 99.9th percentile design. This level of invisible complexity requires years of refinement and is achieved by fewer than 1 in 1,000 system builders.
 - key: reliability
@@ -100,7 +100,7 @@ values:
         Tested and proven systems with documented fallback procedures represent top 5% reliability. Most people have never stress-tested their systems or prepared for component failure, leaving them vulnerable to cascading problems.
     level_4:
       text: |-
-        Systems designed with graceful degradation -- if any single tool fails, the overall system continues functioning. Regular stress-testing and proactive maintenance prevent failures before they occur
+        If any single tool or process fails, your overall life administration continues functioning; failures are anticipated and prevented before they cause disruption
       reasoning: |-
         Systems with graceful degradation, regular stress-testing, and proactive maintenance represent top 1% resilience. Most personal systems have single points of failure that would cause cascading problems if any component failed.
     level_5:

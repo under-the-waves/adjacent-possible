@@ -23,13 +23,13 @@ values:
         Occasionally consider your personality traits when making decisions, even informally, rather than purely external factors
     level_3:
       text: |-
-        Make at least one major life choice (career direction, relationship approach, or living situation) with deliberate consideration of your personality patterns and needs
+        At least one major life area (career, relationships, or living situation) is deliberately shaped around your personality strengths and needs
     level_4:
       text: |-
         Consistently consider personality patterns when making major decisions across multiple life domains, with systematic awareness of strengths and limitations
     level_5:
       text: |-
-        Systematically optimize major life choices around personality strengths while building effective systems to compensate for natural limitations
+        All major life domains are shaped around your personality strengths, with effective approaches to compensate for natural limitations
 - key: growth
   name: Personality Growth
   weight: 60

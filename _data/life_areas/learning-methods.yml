@@ -21,17 +21,17 @@ values:
         Basic awareness that some methods work better than others represents achievement relative to the 80% of people who believe cramming is as effective as spaced practice. Simply recognising that last-minute studying is suboptimal puts someone ahead of most of the population.
     level_2:
       text: |-
-        Occasionally space out studying over several days rather than always cramming, sometimes use active recall instead of just rereading, and plan study sessions in advance
+        You learn new material noticeably faster than by just rereading or cramming, through whatever techniques work for you
       reasoning: |-
         Research shows most students rely primarily on cramming. Occasionally spacing out study sessions and using active recall represents meaningful improvement over typical study habits, placing someone in the top 20% of learners based on method usage studies.
     level_3:
       text: |-
-        Systematically space out learning over time rather than cramming for most important goals, regularly use self-testing as a primary study method, and apply basic spaced repetition principles
+        Your learning approach consistently produces better retention than typical methods, with most important material remembered long-term
       reasoning: |-
         Systematic application of spaced repetition and self-testing represents sophisticated learning behaviour documented in fewer than 5% of students in learning strategy studies. This level requires understanding and consistently applying evidence-based principles.
     level_4:
       text: |-
-        Systematically apply multiple evidence-based learning techniques across different domains with measurably superior retention and acquisition rates compared to typical approaches
+        Your retention and skill acquisition rates are measurably superior to typical approaches, across multiple domains
       reasoning: |-
         Systematically applying multiple evidence-based techniques across domains requires extensive knowledge of learning science and exceptional implementation skills, found in roughly 1% of learners based on advanced learning strategy usage patterns.
     level_5:

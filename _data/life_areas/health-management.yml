@@ -21,7 +21,7 @@ values:
         At the awareness level, understanding current health status requires basic self-assessment of health history, current symptoms, and identifying obvious gaps in care. This represents the foundation needed before implementing any health management strategy.
     level_2:
       text: |-
-        Attend regular checkups with primary care provider, complete basic recommended screenings when due, and avoid major health risks like smoking
+        You are up to date on recommended health screenings, have a primary care relationship, and have eliminated major avoidable health risks
       reasoning: |-
         Based on national health statistics, approximately 20% of Americans maintain regular primary care relationships and complete basic preventive screenings consistently. About 89% avoid smoking, making this a reasonable component of 80th percentile health management.
     level_3:
@@ -132,11 +132,11 @@ values:
         Effective use of health technology and coordinated care management requires both technical competency and organisational systems. Studies suggest approximately 5% of patients achieve this level of healthcare efficiency.
     level_4:
       text: |-
-        Operate efficient health management systems that require minimal daily attention while maintaining high standards, with trusted provider relationships and streamlined processes
+        Health management requires minimal daily attention while maintaining high standards, with trusted provider relationships that handle routine needs smoothly
       reasoning: |-
         Operating efficient, high-standard health management systems with minimal daily effort requires exceptional organisational capability and provider relationships. This represents the top 1% of healthcare efficiency achievement.
     level_5:
       text: |-
-        Operate sophisticated health management systems that appear effortless, with trusted provider networks and automated monitoring that prevents issues before they require intervention
+        Health management feels effortless, with proactive monitoring that catches potential issues before they require intervention
       reasoning: |-
         Sophisticated health management systems that appear effortless require exceptional infrastructure and provider networks. The automation and prevention capabilities at this level represent the top 0.1% of healthcare efficiency.

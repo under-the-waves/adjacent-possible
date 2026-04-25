@@ -33,12 +33,12 @@ values:
         This represents 95th percentile capability (top 5%) based on population research. While 41% use 2FA for some accounts, comprehensive 2FA across all critical services, sophisticated phishing recognition, and systematic security reviews represent advanced practices achieved by very few people. Quarterly security reviews indicate proactive rather than reactive security management.
     level_4:
       text: |-
-        Personal threat assessment considering individual risk factors, hardware security keys for most important accounts, regular VPN usage for privacy protection, consistent encrypted communication practices, systematic approach to monitoring account activity and responding to security alerts, and careful management of digital footprint across platforms
+        Your digital security covers individual risk factors with layered protections: strong authentication on all important accounts, encrypted communications where needed, and active monitoring of account activity
       reasoning: |-
         This represents 99th percentile capability (top 1%) incorporating advanced practices like personal threat assessment and hardware security keys. With only 32% of Americans using VPNs and most using free/less secure options, regular strategic VPN usage plus systematic security monitoring represents sophisticated personal security practices achieved by very few individuals.
     level_5:
       text: |-
-        Systematic personal security planning based on individual threat landscape, sophisticated authentication and privacy protection across all digital activities, comprehensive approach to digital privacy including selective platform usage, proactive security monitoring with clear response procedures for suspicious activity, and serves as informal security advisor for family and friends
+        Comprehensive digital security tailored to your individual threat landscape, with proactive monitoring and clear response procedures; others seek your advice on security practices
       reasoning: |-
         This represents 99.9th percentile capability (top 0.1%, ~340,000 Americans) with systematic personal security planning and comprehensive threat management. This level includes serving as informal security advisor, indicating expertise sufficient to guide others while maintaining sophisticated personal security practices across all digital activities.
 - key: convenience
@@ -67,7 +67,7 @@ values:
         Level 3 convenience focuses on streamlined workflows using premium tools that balance protection with functionality. This level represents users who have moved beyond basic security to sophisticated but manageable systems that enhance rather than hinder digital productivity.
     level_4:
       text: |-
-        Highly efficient security systems that enhance rather than hinder productivity through advanced automation and integration. Seamless protection across all digital activities with minimal daily security management required
+        Security measures enhance rather than hinder your productivity, with protection across all digital activities requiring minimal daily attention
       reasoning: |-
         Level 4 convenience represents highly efficient security systems that enhance productivity through advanced automation. This level indicates security expertise that allows for sophisticated protection without daily management overhead, representing the top 1% of personal security implementations.
     level_5:

@@ -21,12 +21,12 @@ values:
           Awareness only -- no behaviour change required. Most people cannot accurately estimate their weekly activity. Simply knowing where you stand relative to the 150-minute guideline is a meaningful first step.
       level_2:
         text: |-
-          You complete at least 150 minutes of moderate aerobic activity and at least 2 strength-training sessions per week, every week.
+          Your cardiovascular fitness and muscular strength are both above the population median, sustained consistently over months
         reasoning: |-
           Only 24-26% of US adults meet both CDC guidelines for aerobic and strength training (<a href="https://www.cdc.gov/nchs/data/nhis/earlyrelease/EarlyRelease202409-07.pdf" target="_blank">CDC NHIS 2024</a>). 58% do no strength training at all (<a href="https://www.cdc.gov/mmwr/volumes/73/wr/mm7340a1.htm" target="_blank">CDC MMWR</a>). Sustained weekly compliance is lower than self-report suggests.
       level_3:
         text: |-
-          You follow a structured training programme of 5 or more sessions per week, totalling at least 300 minutes.
+          Your cardiovascular fitness and muscular strength place you in approximately the top 5% for your age group, sustained consistently
         reasoning: |-
           About 27% exercise 5+ days/week (Gallup), but far fewer follow a structured programme at 300+ minutes/week. This meets the CDC "additional benefits" threshold and represents roughly top 5% when structured and sustained.
       level_4:

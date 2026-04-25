@@ -59,12 +59,12 @@ values:
         Consistently exceeding expectations places you above roughly 80% of workers. The Dreyfus proficient stage describes someone who sees situations holistically rather than following rules, and whose output requires minimal correction. This level of reliable quality and independent judgement distinguishes strong performers from the majority.
     level_3:
       text: |-
-        Dreyfus expert stage; output approximately 4x the average; actively sought out by colleagues for advice, review, and problem-solving
+        Output approximately 4× the average in your role; colleagues actively seek your advice, review, and problem-solving expertise
       reasoning: |-
         The Dreyfus expert stage describes someone whose responses are fluid and intuitive, drawing on extensive pattern recognition. Producing 4x average output and being actively sought for advice represents top 5% competence. At this level, colleagues trust your judgement implicitly and you can handle novel problems without established procedures.
     level_4:
       text: |-
-        Dreyfus mastery stage; output approximately 8x the average; sets the quality standard others aspire to within the organisation
+        Output approximately 8× the average; you set the quality standard others aspire to within your organisation
       reasoning: |-
         Dreyfus mastery with 8x average output represents the top 1% of performers. McKinsey data confirms that top performers in complex roles can be 800% more productive. At this level, you define the quality standard and your work serves as the benchmark others aspire to reach. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights" target="_blank">McKinsey research</a>
     level_5:

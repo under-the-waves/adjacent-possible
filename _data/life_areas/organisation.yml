@@ -29,12 +29,12 @@ values:
       reasoning: |-
         Rarely searching for anything, retrieving documents within 60 seconds, and achieving daily inbox-zero represent 95th-percentile speed. This requires well-designed storage systems, consistent filing habits, and disciplined daily processing routines that prioritise throughput.
     level_4:
-      text: Retrieve any item in seconds; digital retrieval under 30 seconds; routine decisions systematised and largely automated
+      text: You can locate any item or piece of information within seconds; routine decisions happen with minimal deliberation
       reasoning: |-
         Retrieving any item in seconds, digital retrieval under 30 seconds, and systematised decision-making represent 99th-percentile speed. At this level, organisational systems are so well-tuned that they operate almost invisibly, freeing cognitive resources for higher-order work.
     level_5:
       text: |-
-        Zero search time; fully integrated physical and digital systems with seamless transitions; zero cognitive overhead from organisational maintenance
+        Zero time lost to searching or organising; movement from intention to action is essentially frictionless
       reasoning: |-
         Zero search time and fully integrated systems with zero cognitive overhead represent the theoretical maximum of organisational speed. At this level, the system is so deeply embedded that organisation requires no conscious effort, and every transition between contexts is seamless.
 - key: order
@@ -88,7 +88,7 @@ values:
         Using 1 - 2 core tools consistently and maintaining a single capture point already exceeds what most people manage. The majority scatter their organisational efforts across many tools without mastering any. Consolidation to a simple, consistent system is an 80th-percentile practice.
     level_3:
       text: |-
-        Organisational system fits on one page; new tools or processes added only when existing ones prove inadequate; minimal maintenance overhead
+        Your organisational approach is minimal and fast – no unnecessary tools, no redundant processes, and low maintenance overhead
       reasoning: |-
         An organisational system that fits on one page, with new tools added only when existing ones prove inadequate, represents 95th-percentile simplicity. Most people who reach this level of organisation do so by adding complexity; keeping the system minimal while maintaining effectiveness is a rare and deliberate achievement.
     level_4:
