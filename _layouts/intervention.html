@@ -1014,7 +1014,8 @@ function renderTopEffectsSummary() {
             absEbs: Math.abs(ebs),
             userDesc: userDesc,
             magnitude: ebsMagnitudeLabel(ebs),
-            negative: ebs < 0
+            negative: ebs < 0,
+            result: result
         });
     }
     ranked.sort(function(a, b) { return b.absEbs - a.absEbs; });
@@ -1022,23 +1023,73 @@ function renderTopEffectsSummary() {
     var summaryEl = document.getElementById('top-effects-summary');
     if (!summaryEl || ranked.length === 0) return;
 
-    var prefix = (currentView === 'personalised' && hasAnyPersonalisation)
-        ? 'Based on your assessment, t'
-        : 'T';
-
+    var isPersonalised = currentView === 'personalised' && hasAnyPersonalisation;
     var top = ranked[0];
+
+    // Build magnitude explanation popup content
+    var magExplain = '<p>The magnitude label describes the expected size of the benefit:</p><ul>' +
+        '<li><strong>Slight</strong> (EBS 0\u20131): barely noticeable effect</li>' +
+        '<li><strong>Modest</strong> (EBS 1\u20133): noticeable but small effect</li>' +
+        '<li><strong>Meaningful</strong> (EBS 3\u20135): clearly worthwhile effect</li>' +
+        '<li><strong>Strong</strong> (EBS 5\u20137): substantial improvement</li>' +
+        '<li><strong>Transformative</strong> (EBS 7+): fundamental life change</li></ul>' +
+        '<p>This intervention scores <strong>' + top.ebs.toFixed(1) + '</strong> on ' + top.userDesc + ', which falls in the <strong>' + top.magnitude + '</strong> range.</p>';
+    reasoningData['magnitude-explanation'] = {
+        title: 'What does \u201c' + top.magnitude + '\u201d mean?',
+        content: magExplain
+    };
+
+    // Build personalised data popup content
+    if (isPersonalised) {
+        var pdLines = '<p>Your Level 1 assessment data was used to personalise this estimate:</p><ul>';
+        // Show data for the top 1-2 values
+        var topValues = [top];
+        if (ranked.length > 1 && Math.abs(top.ebs - ranked[1].ebs) <= 0.5) {
+            topValues.push(ranked[1]);
+        }
+        topValues.forEach(function(item) {
+            var r = item.result;
+            if (r.hasPersonalisation) {
+                pdLines += '<li><strong>' + item.userDesc + '</strong>: your estimated percentile is <strong>' +
+                    r.userPct + 'th</strong> (baseline for typical adopters: ' + r.baselinePct + 'th). ' +
+                    'Diminishing returns factor: ' + (r.drFactor * 100).toFixed(0) + '% of typical effect. ' +
+                    'Typical EBS: ' + r.typicalEbs.toFixed(1) + ' \u2192 your EBS: ' + r.personalisedEbs.toFixed(1) + '.</li>';
+            } else {
+                pdLines += '<li><strong>' + item.userDesc + '</strong>: no assessment data \u2013 showing typical estimate.</li>';
+            }
+        });
+        pdLines += '</ul>';
+        reasoningData['personalised-data'] = {
+            title: 'Your personalised data',
+            content: pdLines
+        };
+    }
+
+    // Build sentence
+    var magnitudeSpan = '<strong>' + top.magnitude + '</strong> <span class="info-icon" onclick="showReasoning(\'magnitude-explanation\')">i</span>';
+
     var sentence;
-    if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
-        // Single dominant effect
-        var word = top.negative ? 'harm' : 'benefit';
-        sentence = prefix + 'he strongest expected ' + word + ' is a <strong>' +
-            top.magnitude + '</strong> improvement in ' + top.userDesc + '.';
+    if (isPersonalised) {
+        var pdSpan = '<strong>your personalised data</strong> <span class="info-icon" onclick="showReasoning(\'personalised-data\')">i</span>';
+        if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
+            var word = top.negative ? 'harm' : 'benefit';
+            sentence = 'Based on ' + pdSpan + ', the strongest expected ' + word +
+                ' of this intervention is a ' + magnitudeSpan + ' improvement in ' + top.userDesc + '.';
+        } else {
+            var second = ranked[1];
+            sentence = 'Based on ' + pdSpan + ', the strongest expected benefits of this intervention are a ' +
+                magnitudeSpan + ' improvement in ' + top.userDesc + ' and ' + second.userDesc + '.';
+        }
     } else {
-        // Two close effects
-        var second = ranked[1];
-        sentence = prefix + 'he strongest expected benefits are a <strong>' +
-            top.magnitude + '</strong> improvement in ' + top.userDesc +
-            ' and ' + second.userDesc + '.';
+        if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
+            var word2 = top.negative ? 'harm' : 'benefit';
+            sentence = 'The strongest expected ' + word2 + ' of this intervention is a ' +
+                magnitudeSpan + ' improvement in ' + top.userDesc + '.';
+        } else {
+            var second2 = ranked[1];
+            sentence = 'The strongest expected benefits of this intervention are a ' +
+                magnitudeSpan + ' improvement in ' + top.userDesc + ' and ' + second2.userDesc + '.';
+        }
     }
     summaryEl.innerHTML = sentence;
 }
