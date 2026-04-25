@@ -1026,17 +1026,23 @@ function renderTopEffectsSummary() {
     var isPersonalised = currentView === 'personalised' && hasAnyPersonalisation;
     var top = ranked[0];
 
-    // Build magnitude explanation popup: show concrete effect size
-    var topR = top.result;
-    var topDef = top.result.def;
-    var pbsEffect = toRealUnits(topR.data.pbs, topDef);
-    var ebsEffect = toRealUnits(top.ebs, topDef);
-    var magContent = '<p>If this intervention works for you, the effect on <strong>' +
-        top.userDesc + '</strong> would be: <strong>' + pbsEffect + '</strong>.</p>' +
-        '<p>After accounting for the likelihood it works and that you stick with it, ' +
-        'the expected effect is: <strong>' + ebsEffect + '</strong>.</p>';
+    // Build magnitude explanation popup: estimated effect in plain language
+    var magPlain = {
+        'slight': 'small enough that you might not notice day to day, but it adds up',
+        'modest': 'noticeable if you look for it, but not dramatic',
+        'meaningful': 'you would recognise the change in your daily life',
+        'strong': 'substantial enough to reshape this area of your life',
+        'transformative': 'a fundamental shift in how this area of your life works'
+    };
+    var pbsMag = ebsMagnitudeLabel(top.result.data.pbs);
+    var ebsMag = top.magnitude;
+    var magContent = '<p>If this intervention works for you, the estimated effect on ' +
+        top.userDesc + ' is <strong>' + pbsMag + '</strong> \u2013 ' +
+        (magPlain[pbsMag] || '') + '.</p>' +
+        '<p>After accounting for the likelihood of success and adherence, the estimated effect ' +
+        'is <strong>' + ebsMag + '</strong> \u2013 ' + (magPlain[ebsMag] || '') + '.</p>';
     reasoningData['magnitude-explanation'] = {
-        title: 'Expected effect size',
+        title: 'Estimated effect size',
         content: magContent,
         isHtml: true
     };
