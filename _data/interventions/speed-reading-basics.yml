@@ -1,0 +1,127 @@
+name: "Speed Reading Basics"
+what_it_is: |
+  A set of evidence-based techniques for reading more efficiently – primarily strategic skimming, fixation-span widening, and partial subvocalisation reduction – applied selectively depending on the purpose and difficulty of the material. Pure speed reading (claiming 1,000+ WPM with full comprehension) has been thoroughly debunked: Rayner et al.'s landmark 2016 review in Psychological Science in the Public Interest found that comprehension degrades sharply above 400 WPM, and that eye-movement constraints are a hard biological limit no training reliably overcomes. What the evidence does support is more modest: a 20–40% speed increase on appropriate material (expository non-fiction, familiar topics) via better use of previewing, strategic skimming for structure before deep reading, and awareness of when subvocalisation is helping versus slowing you. Compounded over a lifetime of reading, even a genuine 25–30% efficiency gain translates to materially more books, papers, and ideas consumed.
+how_to_do_it: |
+  - Before reading anything substantial, spend 2–3 minutes previewing: read the introduction, chapter headings, first and last paragraphs of each section, and any summary – this builds a mental schema that speeds and deepens subsequent reading
+  - Practise widening your fixation span by reading phrase-by-phrase rather than word-by-word; use a pointer (finger or pen) to guide your eye down the centre of a column, reducing unnecessary horizontal saccades – effective for journalism, reports, and expository prose
+  - Reduce but do not eliminate subvocalisation: internally narrating complex or unfamiliar text aids comprehension; save subvocalisation-suppression techniques (counting, humming) for light or repetitive material where the primary goal is extraction, not mastery
+  - Match technique to purpose: skim when surveying literature or deciding whether to read further; scan when locating a specific fact; read normally when comprehension and retention are the real goal – most people already read too slowly for the latter but try to skim when they should not
+success_looks_like: |
+  - You consistently preview non-fiction before committing to full reads and find this reduces re-reading and increases retention
+  - Your WPM on expository non-fiction rises 20–35% on timed tests without measurable drop in comprehension on the same material
+  - You have internalised a decision heuristic for when to skim, scan, or read fully – and you apply it without deliberate thought
+common_pitfalls: |
+  - Applying speed-reading techniques uniformly across all material, including dense technical text, literary fiction, or unfamiliar fields where comprehension already requires maximum processing
+  - Chasing WPM as the metric – measuring speed without testing comprehension leads to systematic self-deception about how much was actually absorbed
+  - Abandoning subvocalisation entirely on complex material: the inner voice supports phonological working memory, and suppressing it on difficult text demonstrably reduces retention
+description: |
+  - Combines three trainable techniques: strategic previewing (schema-building before deep reading), fixation-span widening (fewer, broader eye fixations per line), and selective subvocalisation management (reducing inner speech on familiar or expository material)
+  - [Rayner et al. (2016)](https://journals.sagepub.com/doi/10.1177/1529100615623267) established the scientific consensus: skilled readers average 200–400 WPM; comprehension degrades sharply above this; speed-reading apps produce faster eye movement but not genuine reading at claimed speeds
+  - [Klimovich et al. (2023)](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9817.12417) found that metacognitive training produced speed gains comparable to commercial speed-reading training, without the comprehension losses – suggesting the real mechanism is strategic, not perceptual
+  - Studies on skimming and scanning strategies show meaningful but bounded gains: experimental groups averaged 274 WPM versus 204 WPM in controls, with higher comprehension scores, when applied to appropriate material
+  - Distinct from speed-reading programmes (Spritz, Spreeder, Iris Reading courses) in that it does not claim to bypass eye-movement physiology; instead it improves reading strategy within biological constraints
+applicable_domains: ["learning-methods", "media-diet", "information-management"]
+
+values:
+  learning-methods.efficiency:
+    pbs: 6
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adoption of strategic reading habits, a user could plausibly reach the 60th–65th percentile. Delta: ~25–30 percentile points.
+      - [Klimovich et al. (2023)](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9817.12417) found speed gains without comprehension loss from metacognitive training, mapping to a meaningful efficiency gain.
+      - The gain is domain-specific and modest relative to transformative learning interventions (spaced repetition, retrieval practice) – hence score 6 rather than 7–8. Bounded by biological reading constraints established by [Rayner et al. (2016)](https://journals.sagepub.com/doi/10.1177/1529100615623267).
+    isr_reasoning: |
+      - [Klimovich et al. (2023)](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9817.12417) found reading speed gains in training conditions but noted the effect was driven by metacognitive awareness, not perceptual change.
+      - [Rayner et al. (2016)](https://journals.sagepub.com/doi/10.1177/1529100615623267) showed that above 400 WPM comprehension reliably falls; the majority of people attempting speed reading improve speed while degrading comprehension.
+      - ISR of 55% reflects that roughly half of motivated adopters achieve genuine efficiency gains (speed + maintained comprehension) rather than illusory speed inflation.
+    uar_reasoning: |
+      - Strategic reading requires a persistent shift in pre-reading habits (previewing, schema-building) which many readers abandon once the deliberate phase ends.
+      - Long-term maintenance data are absent; habit formation research generally shows 40–60% of cognitive skill habits are maintained at 6 months without reinforcement.
+      - The intervention requires ongoing discrimination between material types (when to skim vs. read fully), which is a cognitively demanding metacognitive habit.
+
+  learning-methods.depth:
+    pbs: 4
+    isr: 45
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adoption, a user who correctly applies deep reading for complex material and skimming for lighter material could reach the 45th–50th percentile. Delta: ~10–15 percentile points.
+      - Strategic reading is orthogonal to depth: it helps efficient extraction but does not deepen conceptual understanding. PBS of 4 reflects that the intervention produces modest depth gains only when previewing is used to frame subsequent deep reading.
+      - Mis-applied (skimming material that requires deep reading), the intervention can actively harm depth.
+    isr_reasoning: |
+      - [Rayner et al. (2016)](https://journals.sagepub.com/doi/10.1177/1529100615623267) explicitly found that skimming leads to missing nuance; success requires users to correctly identify when to apply each technique.
+      - Evidence on previewing (SQ3R and related protocols) does show improved recall and understanding of expository text structure.
+      - ISR for depth improvement is lower than for efficiency because the primary risk is applying speed techniques where depth is needed.
+    uar_reasoning: |
+      - Same adherence profile as learning-methods.efficiency. Users who feel they are reading more efficiently may substitute quantity for quality, reducing average depth.
+
+  media-diet.efficiency:
+    pbs: 6
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A user who adopts strategic reading for media consumption could plausibly move from 35th to 60th–65th percentile – reading the same volume in meaningfully less time. Delta: ~25–30 percentile points.
+      - Media diet material (journalism, newsletters, reports) is exactly the kind of expository, familiar-domain text where skimming and scanning produce the largest gains.
+      - Score 6 rather than 7 reflects that much of the efficiency gain is already captured by media diet curation interventions; strategic reading adds a meaningful but not transformative further gain.
+    isr_reasoning: |
+      - Skimming and scanning are particularly well-matched to journalism and reports, where structure is predictable. ISR is higher here than for learning-methods.efficiency.
+      - [Klimovich et al. (2023)](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9817.12417) found metacognitive reading awareness produced speed gains without comprehension loss on standard prose.
+      - The main ISR risk is that faster processing leads to consuming more content rather than reducing time spent. Roughly 40% of users likely expand consumption volume rather than reducing time.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR. Media consumption contexts (commute, lunch break) may support slightly higher adherence due to natural time constraints.
+
+  media-diet.quality:
+    pbs: 5
+    isr: 45
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A user who reads 25–35% faster could plausibly read 1–2 additional books per year. PBS = 10 + log₂(1.5/40) = 10 - 4.74 = 5.3, consistent with score 5.
+      - The mechanism is indirect – strategic reading doesn't guarantee more quality content is chosen, only that it is processed faster when chosen.
+      - Score 5 reflects the realistic expectation that perhaps half the efficiency gain is directed toward depth reading.
+    isr_reasoning: |
+      - The causal chain (faster reading then more books read then higher quality) introduces additional failure points; many users who read faster simply spend reclaimed time on lower-quality media.
+      - No studies track whether speed reading training increases annual non-fiction book consumption. Confidence is low.
+      - ISR of 45% reflects that slightly fewer than half direct efficiency gains toward quality reading material.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile.
+
+  information-management.retention:
+    pbs: 4
+    isr: 40
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Previewing and schema-building before deep reading have evidence of modest retention improvements. A user could plausibly move to the 45th percentile. Delta: ~10 percentile points.
+      - Strategic reading contributes to retention primarily through previewing (schema activation), but this effect is modest relative to spaced repetition or active recall.
+      - Score 4 reflects that retention is not the primary target of this intervention.
+    isr_reasoning: |
+      - [Rayner et al. (2016)](https://journals.sagepub.com/doi/10.1177/1529100615623267) found no evidence that speed reading techniques improve retention; comprehension and retention both decline at elevated speeds.
+      - Schema activation through previewing does improve retention but is associated with slow previewing followed by normal-speed reading – not the speed component.
+      - ISR of 40% reflects that a minority correctly apply the previewing component in a way that generates retention improvements.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "The core techniques require no purchases. A free resource such as the Rayner et al. 2016 paper or a library book on reading strategy is sufficient."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No ongoing costs. Commercial speed reading apps are not required and the evidence does not support them over metacognitive training."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 2–3 hours to read a reliable overview of the evidence and practise the core techniques on a sample text with comprehension self-testing."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 1 hour per week of deliberate practice on varied material types until the strategic habits become automatic – typically 6–8 weeks of active practice."
+
+prerequisites:
+  - "Adult-level reading proficiency in the target language; the techniques assume fluent decoding and a functional vocabulary"
+  - "Access to varied expository texts to practise on (newspaper articles, non-fiction chapters, reports)"
+  - "Willingness to test comprehension after timed reading sessions, not just clock speed, to avoid self-deception about actual gains"
+
+flagged_domains:
+  - domain: "time-management"
+    rationale: "Faster reading of work documents and reports directly reduces time spent on information processing tasks, freeing time for other priorities."

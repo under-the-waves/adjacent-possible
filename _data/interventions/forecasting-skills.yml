@@ -1,0 +1,148 @@
+name: "Forecasting Skills"
+what_it_is: |
+  Deliberate practice in making calibrated probabilistic predictions about future events – assigning specific numerical probabilities (e.g. "70% chance this happens"), tracking outcomes, and iterating on the gap between predicted and actual frequencies. Popularised by Philip Tetlock's Good Judgment Project (GJP), which showed that structured training and feedback can meaningfully improve predictive accuracy. The core skill is not certainty but calibration: a forecaster who says "70%" should be right roughly 70% of the time across all such predictions. This forces explicit probabilistic reasoning into domains where most people rely on vague intuitions, and the feedback loop – knowing whether you were right, and by how much – gradually corrects systematic biases like overconfidence and base-rate neglect.
+how_to_do_it: |
+  - Start by completing a short training module on probabilistic reasoning – the GJP's one-hour training covers outside-view thinking, reference classes, and common biases, and in RCT conditions improved Brier scores by 6–12% over control; the Good Judgment Open platform at [gjopen.com](https://www.gjopen.com) offers this for free
+  - Begin making forecasts on active questions at a platform such as [Good Judgment Open](https://www.gjopen.com), [Metaculus](https://www.metaculus.com), or [Manifold Markets](https://manifold.markets) – aim for at least 5–10 forecasts per week, revisiting and updating as new information arrives
+  - Keep a personal forecasting log: record your probability, your reasoning, and the outcome; after questions resolve, review where your predicted frequencies diverged from actual outcomes (e.g. your "80%" calls resolved only 55% of the time, indicating overconfidence in that range)
+  - Gradually extend to real-life decisions – project timelines, personal goals, professional predictions – applying the same explicit probability assignment and later scoring; this is where calibration transfers from an exercise into a decision-making habit
+success_looks_like: |
+  - Your Brier scores on a forecasting platform improve measurably over 3–6 months, and your calibration curves show predicted probabilities aligning more closely with outcome frequencies
+  - You naturally assign numerical probabilities to claims in conversation and planning, rather than using vague hedges like "probably" or "I think"
+  - Your project and goal timelines become more reliable because you are accounting for base rates and uncertainty rather than planning under assumed best-case conditions
+common_pitfalls: |
+  - Treating forecasting as an intellectual exercise without closing the feedback loop – you must track outcomes to improve; forecasting without scoring is just opinion-sharing
+  - Overconfidence on high-probability predictions (e.g. assigning 95% to events that resolve only 75% of the time) is the most common calibration error and often persists without deliberate attention to the calibration curve
+  - Cherry-picking only questions where you feel confident, which prevents exposure to the full probability range and distorts feedback; a good practice is to take all questions in a tournament category rather than self-selecting
+description: |
+  - The practice involves assigning explicit numerical probabilities to specific future events, then scoring those probabilities against outcomes using metrics like the Brier score (lower = more accurate)
+  - Training typically covers three techniques: using reference classes to anchor estimates (outside view), breaking complex questions into sub-components (Fermi decomposition), and actively seeking disconfirming evidence to counteract confirmation bias
+  - [RCT evidence from the Good Judgment Project](https://www.cambridge.org/core/journals/judgment-and-decision-making/article/developing-expert-political-judgment-the-impact-of-training-and-practice-on-judgmental-accuracy-in-geopolitical-forecasting-tournaments/123EB18425391D05FA6581FDBB3F309F) shows a one-hour training module improved forecasting accuracy by 6–12% over control; superforecasters – the top ~2% of GJP participants – outperformed professional intelligence analysts with access to classified data by roughly 30% on Brier scores
+  - Unlike most cognitive improvement practices, forecasting generates objective, numeric feedback on performance; this makes it possible to know whether you are actually improving, not just feeling more confident
+  - Platforms such as [Metaculus](https://www.metaculus.com) and [Good Judgment Open](https://www.gjopen.com) provide structured question sets with verified resolutions, removing the burden of self-designing a feedback system
+applicable_domains: ["rationality", "cognitive-skills", "goals"]
+
+values:
+  rationality.accurate-beliefs:
+    pbs: 7
+    isr: 65
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th–75th percentile in calibration accuracy. Delta: ~35–40 percentile points.
+      - [Mellers et al. (2015)](https://web.stanford.edu/~knutson/jdm/mellers15.pdf) found that GJP participants receiving training improved Brier scores by 6–12% relative to controls; superforecasters achieved Brier scores of approximately 0.15–0.20, placing them well above the median adult. This maps to a meaningful but not transformative gain – score 7 (meaningful gain in accuracy of beliefs) rather than 8 (major gain), because the training effect is real but bounded by individual differences in willingness to update and reasoning ability.
+      - The subjective anchor for accurate-beliefs means PBS reflects the perceived quality of one's belief-forming processes; consistent forecasters report qualitative shifts in how they reason about uncertainty, consistent with a score-7 meaningful gain rather than a score-8 major gain.
+      - Score 8 would require a transformative shift across all belief domains; forecasting training reliably improves calibration on explicit predictions but the transfer to general belief quality, while documented, is less complete.
+    isr_reasoning: |
+      - [Mellers et al. (2015)](https://web.stanford.edu/~knutson/jdm/mellers15.pdf) showed consistent accuracy improvements across all four years of the GJP tournament for trained participants, but the distribution of gains was wide – roughly 60–70% of trained participants showed meaningful improvement on Brier scores, with a minority showing no reliable gain.
+      - [AI Impacts' review of GJP evidence](https://aiimpacts.org/evidence-on-good-forecasting-practices-from-the-good-judgment-project/) notes that training effects are strongest for participants who actively update forecasts as new information arrives; passive participants who set-and-forget see substantially smaller gains, pulling the overall ISR below 70%.
+      - The approximately 35% who do not improve meaningfully appear to struggle with consistently applying outside-view thinking and updating away from anchors – failures that training identifies but does not always correct.
+    uar_reasoning: |
+      - Forecasting on structured platforms requires ongoing time investment (scoring questions, reviewing outcomes) that most people reduce or abandon within 6–12 months; dropout from forecasting tournaments is high, estimated at 40–60% annually based on platform retention patterns at [Good Judgment Open FAQ](https://www.gjopen.com/faq).
+      - The activity provides intrinsic feedback and gamified scoring, which supports retention better than most cognitive training, but the feedback loop only closes when questions resolve – sometimes months later – creating motivation gaps.
+      - Unlike automated habits (e.g. automated savings), forecasting requires active cognitive effort per session; [habit formation meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/) shows cognitively demanding practices have substantially lower long-term adherence than behavioural defaults, supporting a UAR of approximately 35%.
+
+  rationality.decision-making:
+    pbs: 7
+    isr: 55
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile in decision quality under uncertainty. Delta: ~30–35 percentile points.
+      - Forecasting training directly targets the cognitive mechanisms underlying good decisions under uncertainty: base-rate use, bias identification, and explicit probability weighting. These are the same skills documented in decision-science research as driving better outcomes. Score 7 (meaningful gain) is appropriate; a transformative gain (score 8) would require evidence of large real-world outcome improvements, which is harder to demonstrate directly.
+      - Transfer from forecasting accuracy to actual decision quality is plausible but less direct than the core calibration benefit; the mechanism requires the forecaster to apply probabilistic thinking outside the tournament context, which not all adherents do consistently.
+    isr_reasoning: |
+      - Direct evidence of real-world decision improvement from forecasting training is thinner than evidence on Brier scores; [Tetlock's Good Judgment research](https://goodjudgment.com/about/the-science-of-superforecasting/) documents improved accuracy on political/economic predictions but does not directly measure downstream decision outcomes for individual forecasters.
+      - Among those who actively apply forecasting habits to personal and professional decisions, the mechanism is sound: planning fallacy corrections, more realistic project timelines, and better resource allocation have clear causal pathways from calibration training. But active transfer is itself a behaviour that only a subset of trained forecasters adopt, pulling ISR below the raw accuracy improvement rate.
+      - [Page & Clemen (2013)](https://people.duke.edu/~clemen/bio/Published%20Papers/45.PredictionMarkets-Page&Clemen-EJ-2013.pdf) show prediction markets are reasonably well calibrated in the short term, suggesting participation correlates with decent calibration, but individual-level transfer to decision quality is not uniformly demonstrated.
+    uar_reasoning: |
+      - See rationality.accurate-beliefs UAR – same intervention, same adherence profile. UAR of 35% reflects high initial engagement followed by substantial dropout as question resolution timelines lengthen and novelty fades.
+
+  rationality.intellectual-honesty:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile in intellectual honesty. Delta: ~25–30 percentile points.
+      - Forecasting requires publicly committing to specific numerical estimates and then confronting outcomes – a structural incentive for intellectual honesty that most practices lack. The act of recording and reviewing wrong predictions builds the habit of acknowledging error rather than rationalising it. Score 6 (meaningful gain) rather than 7 because this is a secondary benefit; the training targets calibration accuracy, and intellectual honesty improves as a byproduct rather than the primary mechanism.
+      - The gain is real but bounded: forecasting platforms create honesty norms within the forecasting context, but transfer to domains where there is no scoring system – interpersonal beliefs, political views – requires additional deliberate effort.
+    isr_reasoning: |
+      - [GJP research](https://aiimpacts.org/evidence-on-good-forecasting-practices-from-the-good-judgment-project/) shows that active forecasters develop stronger norms around updating beliefs on evidence, a core component of intellectual honesty; participants who track their forecasts regularly report qualitative improvements in willingness to change their minds.
+      - The ISR for this secondary benefit is slightly lower than for calibration accuracy because intellectual honesty also depends on social context and ego-threat, which forecasting training does not directly address; roughly 60% of consistent forecasters show meaningful gains in self-reported belief-updating behaviour.
+      - Evidence here is more observational than for the core calibration outcome; no RCT has directly measured intellectual honesty as an outcome of forecasting training.
+    uar_reasoning: |
+      - See rationality.accurate-beliefs UAR – same intervention, same adherence profile.
+
+  cognitive-skills.reasoning:
+    pbs: 6
+    isr: 50
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile in reasoning and problem-solving ability. Delta: ~25 percentile points.
+      - Forecasting trains specific reasoning sub-skills – decomposing complex questions, applying reference classes, updating on evidence – that transfer partially to general problem-solving. Score 6 (meaningful gain) reflects that this is a genuine but domain-constrained reasoning improvement, not a broad-spectrum cognitive upgrade.
+      - [Mellers et al. (2015)](https://web.stanford.edu/~knutson/jdm/mellers15.pdf) found that superforecasters score higher on actively open-minded thinking and need for cognition scales, suggesting forecasting practice correlates with broader reasoning improvements, though causality is partially confounded by selection.
+    isr_reasoning: |
+      - Transfer from structured forecasting to general reasoning is less well-evidenced than the core calibration effect; approximately 50% of consistent forecasters show generalised reasoning gains, based on observed correlations between forecasting accuracy and performance on reasoning tests in GJP data.
+      - The training explicitly targets several reasoning biases (anchoring, scope insensitivity, availability heuristic), and repeated practice creates some generalisation; however, reasoning improvements tend to be strongest in domains structurally similar to forecasting questions.
+      - No direct RCT measures general reasoning as an outcome of forecasting training; ISR here is an extrapolation from observed correlations, warranting conservative treatment.
+    uar_reasoning: |
+      - See rationality.accurate-beliefs UAR – same intervention, same adherence profile.
+
+  goals.clarity:
+    pbs: 6
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile in goals completed on time. Delta: ~25 percentile points, corresponding to roughly 6% of goals completed on time (anchor: 100% = score 10, 6% = score 6 via log formula: 10 + log₂(6/100) ≈ 6.0).
+      - Forecasting training directly targets planning fallacy – the systematic tendency to underestimate task duration and overestimate one's own output. Explicitly assigning probabilities to project milestones and applying outside-view base rates (e.g. "what percentage of similar projects finish on time?") produces more realistic timelines. Score 6 reflects a meaningful but bounded improvement; the gain accrues only if the forecaster actively applies these techniques to personal goal-setting, which is an additional transfer step.
+      - The causal pathway is direct: calibrated probabilistic reasoning applied to goal timelines reduces systematic optimism bias, a documented driver of missed deadlines.
+    isr_reasoning: |
+      - No direct RCT evidence links forecasting training to goal completion rates; this is an extrapolation from the documented planning fallacy correction mechanism. ISR of 50% reflects that roughly half of trained forecasters apply the skills to personal goal management, based on the fraction who actively transfer platform skills to life decisions.
+      - [GJP ten commandments](https://goodjudgment.com/philip-tetlocks-10-commandments-of-superforecasting/) include applying outside-view thinking to personal plans, and anecdotal evidence from superforecaster communities suggests many do, but systematic outcome data is absent.
+      - The transfer step (from tournament forecasting to personal goal-setting) is a meaningful barrier; ISR for this domain is accordingly lower than for the primary rationality domain.
+    uar_reasoning: |
+      - See rationality.accurate-beliefs UAR – same intervention, same adherence profile.
+
+  goals.adaptability:
+    pbs: 5
+    isr: 45
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–58th percentile in goal adaptability. Delta: ~20–23 percentile points.
+      - Forecasting trains the habit of updating estimates when new evidence arrives – a direct analogue to updating goals when circumstances change. Consistently reviewing and revising forecasts builds tolerance for changing one's position, which transfers to willingness to pivot or abandon goals that are no longer viable. Score 5 rather than 6 because this is a more distal benefit; the mechanism requires explicit carry-over from forecasting practice to goal review.
+      - The subjective anchor means PBS reflects a perceived shift in strategic flexibility; a score-5 benefit is meaningful but modest, consistent with a secondary transfer effect rather than a primary mechanism.
+    isr_reasoning: |
+      - Adaptability benefits depend on forecasters adopting an updating mindset beyond the platform; this is plausible but less well-evidenced than core calibration gains, supporting an ISR of approximately 45%.
+      - Forecasting communities actively model updating as a virtue (penalising stubbornness in Brier scoring), which may reinforce the norm across contexts; but the frequency with which this generalises to goal review behaviour is uncertain.
+      - No direct evidence; ISR is a conservative extrapolation. Confidence is low.
+    uar_reasoning: |
+      - See rationality.accurate-beliefs UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "All major forecasting platforms (Good Judgment Open, Metaculus, Manifold Markets) are free to join. No software purchase required."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Free platforms cover the full practice. Premium tiers exist on some platforms but are not required for effective skill development."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to complete an introductory training module (e.g. the GJP probabilistic reasoning tutorial) and register on a forecasting platform."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective practice is approximately 1 hour per week: reviewing active questions, making or updating forecasts, and reviewing resolved questions for calibration feedback."
+
+prerequisites:
+  - "Basic numeracy: comfort interpreting percentages and probability statements (e.g. understanding that 70% means 7 in 10, not 'very likely')"
+  - "Access to a forecasting platform with resolved questions and scoring (Good Judgment Open, Metaculus, or equivalent)"
+  - "Willingness to record predictions before outcomes are known and to review results honestly when questions resolve"
+
+flagged_domains:
+  - domain: "time-management"
+    rationale: "Calibrated planning reduces planning fallacy, producing more realistic schedules and reducing time lost to rework when optimistic timelines fail."
+  - domain: "career-planning"
+    rationale: "Forecasting skills improve career decision quality by enabling more calibrated assessments of job market probabilities, promotion timelines, and skill investment returns."
+  - domain: "information-management"
+    rationale: "Forecasting practice builds habits of tracking sources, base rates, and prior predictions, improving how information is retained and retrieved for decision use."

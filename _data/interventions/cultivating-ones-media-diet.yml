@@ -1,0 +1,226 @@
+name: "Cultivating One's Media Diet"
+what_it_is: |
+  Deliberately and systematically curating the information sources one regularly consumes – unfollowing low-quality accounts, subscribing to high-quality ones, setting hard limits on passive consumption, and actively seeking out diverse, well-sourced perspectives. Because information inputs are largely invisible as a variable in mood, decision-making, and worldview, most people never audit them; this intervention makes the audit explicit and acts on it. The result is not less information but better information: fewer reaction pieces and outrage cycles, more in-depth analysis, primary sources, and genuine expertise.
+how_to_do_it: |
+  - Audit your current information sources over one week: list every regular input (social feeds, news sites, newsletters, podcasts) and rate each for signal quality, depth, and relevance to your actual goals
+  - Unsubscribe from, unfollow, or mute sources that produce primarily reaction, outrage, or shallow takes – then actively replace them with outlets known for evidence-based analysis, primary sources, or genuine expertise
+  - Set consumption limits using built-in screen-time controls or a dedicated app: cap total passive news and social time to a daily budget (30–45 minutes is a reasonable starting point), and designate one or two specific windows rather than grazing throughout the day
+  - Deliberately add at least two sources that challenge your existing perspective or cover domains you currently ignore – this is the breadth counterweight to the quality filter, and prevents the curated diet from collapsing into a narrow, self-confirming bubble
+success_looks_like: |
+  - You finish each reading session having learned something specific and applicable, rather than experiencing a vague sense of being "up to date"
+  - You can name the core argument of the last three things you consumed, rather than remembering only that you read about a topic
+  - Your ambient anxiety about the news cycle decreases without a corresponding sense of being uninformed
+common_pitfalls: |
+  - Replacing low-quality social feeds with high-quality newsletters that still get skimmed in the same fragmented, reactive way – curation is wasted unless consumption habits also change
+  - Treating "avoiding bad sources" as the whole job and neglecting to actively add depth and breadth, resulting in a smaller diet rather than a better one
+  - Periodic crises or major news events triggering reversion to doomscrolling, which gradually re-infects the curated diet if the reversion is not caught and corrected
+description: |
+  - Involves auditing and deliberately replacing default information inputs – social feeds, news apps, newsletters, podcasts – with sources selected for depth, accuracy, and relevance to one's actual goals and interests, combined with hard time limits on passive consumption
+  - [Research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9135112/) shows that frequent exposure to negative news predicts elevated same-day and next-day worry and hopelessness; reducing passive news consumption breaks this feedback loop without requiring uninformed disengagement from current events
+  - [Studies on compulsive news consumption](https://pmc.ncbi.nlm.nih.gov/articles/PMC9580444/) find that doomscrolling mediates reductions in life satisfaction and mental well-being via psychological distress; deliberate curation interrupts the mechanism by replacing compulsive checking with intentional, bounded reading sessions
+  - [Information overload research](https://www.ijrls.in/wp-content/uploads/2024/11/ijrls-1797.pdf) finds that multitasking across multiple information streams reduces effective productivity by up to 40% due to task-switching costs; a curated diet consolidates consumption into fewer, higher-quality sessions, reducing this drag
+  - Distinct from simple "news avoidance" in being selective and additive – the goal is higher signal, not lower volume; the active addition of breadth sources is what separates deliberate curation from withdrawal
+applicable_domains: ["media-diet", "worldview", "rationality", "information-management", "cognitive-skills"]
+
+values:
+  media-diet.quality:
+    pbs: 8
+    isr: 85
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – approximately 2–3 non-fiction books read annually, with most consumption driven by social algorithms and headline news. After successful curation, a user plausibly reaches the equivalent of 8–10 books annually in depth and quality of consumption. Delta ≈ 7–8 book-equivalents. PBS = 10 + log₂(8/40) = 10 – 2.32 = 8.
+      - The quality gain is primarily about depth and sourcing, not raw volume: three in-depth expert essays per week make faster epistemic progress than fifty social-media posts from generalists, placing a successful adopter at the 70th–75th percentile for information quality.
+      - The anchor ceiling (score 10 = 40 books/year with high retention) is not reachable through source curation alone – it requires deliberate reading schedules and active retention methods – which caps PBS at 8.
+    isr_reasoning: |
+      - Among people who successfully restructure their source list, content quality improves almost by construction – better sources produce better content. ISR estimated at 85% to account for the ~15% who curate inputs but retain passive, skimming consumption habits that negate the quality gain.
+      - [Research on deliberate news curation vs. avoidance](https://journals.sagepub.com/doi/10.1177/14614448251351280) distinguishes users who genuinely shift to deliberate consumption from those who merely reduce volume without improving quality; approximately 80–90% of those completing a source audit report meaningful sustained improvement in perceived information quality at three months.
+      - The remaining failure rate captures users who substitute one low-quality feed for another or who upgrade sources but consume them in the same passive, fragmented way.
+    uar_reasoning: |
+      - [Research on news restriction during COVID-19 lockdowns](https://www.tandfonline.com/doi/full/10.1080/1461670X.2021.2021105) found that deliberate news limitation was widely adopted as a wellbeing strategy but hard to maintain long-term; most participants reported partial reversion within 2–3 months as major news events triggered renewed compulsive checking.
+      - [Doomscrolling scale research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9580444/) identifies intolerance of uncertainty and trait anxiety as persistent drivers of compulsive news consumption; these traits do not disappear through curation alone, making sustained adherence uncertain for approximately half of adopters.
+      - UAR estimated at 45%: the initial audit and source swap is low-effort, but maintaining the curated diet against algorithmic re-engagement, social FOMO, and breaking-news reversion requires ongoing vigilance that most users do not sustain consistently over 6+ months.
+
+  media-diet.relevance:
+    pbs: 7
+    isr: 80
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – most non-adopters consume information driven by algorithms and social proximity rather than personal relevance. After curation, a user actively selects sources matched to their current goals, profession, and interests, plausibly reaching the 70th–75th percentile. Delta ≈ 35–40 percentile points. Score 7.
+      - Relevance is the value most directly targeted by the intervention: the entire purpose of a source audit is to align information inputs with what actually matters to the individual. A successful adopter sees a major gain in actionable relevance.
+      - Score 8 or higher would require not just curation but active synthesis – linking consumption to specific decisions in real time – which goes beyond the scope of source selection and time limits.
+    isr_reasoning: |
+      - When a user substitutes algorithmically served content for hand-picked sources matched to stated goals, relevance improves almost by definition. ISR estimated at 80%, accounting for the ~20% who over-curate into a narrow niche or who select sources based on prestige rather than actual relevance.
+      - [Research on information overload and decision support](https://www.deltapsychology.com/psychology-ponderings/the-psychological-impact-of-misinformation-and-information-overload) confirms that high-quality, targeted information environments substantially improve perceived relevance and decision support compared to general news feeds.
+      - The 20% non-success rate reflects users who choose high-status but poorly matched sources, or who interpret "relevant" through existing interests rather than actual current goals.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  media-diet.breadth:
+    pbs: 6
+    isr: 65
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – most non-adopters consume sources that cluster around existing preferences, creating an inadvertent filter bubble. After deliberate curation with a breadth mandate (adding sources outside current domains), a user plausibly reaches the 60th–65th percentile for perspective diversity. Delta ≈ 25–30 percentile points. Score 6.
+      - Score 6 reflects a meaningful but not major gain: deliberate curation opens new domains and perspectives, but achieving genuinely broad coverage (score 8) requires sustained engagement across many areas over years, not just a source audit.
+      - The breadth gain depends critically on whether the user follows the "add diverse sources" step; users who only prune low-quality sources may see breadth remain flat or narrow.
+    isr_reasoning: |
+      - The breadth component is the hardest to execute reliably: most users are motivated by quality and relevance and neglect diversification. ISR estimated at 65%, reflecting that only roughly two-thirds of curation adopters consistently add genuinely diverse sources.
+      - [Information diet research](https://www.ijrls.in/wp-content/uploads/2024/11/ijrls-1797.pdf) notes that balanced, diverse information exposure is widely recommended but rarely achieved in practice even among intentional curators, because confirmation bias re-asserts itself during source selection.
+      - Breadth gains take longer to materialise than quality or efficiency gains; some users perceive no short-term benefit and drop the breadth mandate before it compounds.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  media-diet.efficiency:
+    pbs: 9
+    isr: 75
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – approximately 3+ hours daily on passive news and social consumption (scale score 2). After curation plus time limits, a successful adopter reaches 45–60 minutes of intentional, high-value consumption daily. Delta ≈ 2+ hours recovered. PBS = 10 + log₂(2/2) = 10; conservatively scored at 9 to account for partial reversion and residual low-value consumption even among successful adopters.
+      - Replacing three hours of reactive scrolling with one hour of deliberate reading reclaims approximately 14 hours per week – one of the largest time-recapture gains available through any low-cost behavioural intervention.
+      - Score 9 rather than 10 acknowledges that near-perfect efficiency (score 10 = "information consumption seamlessly integrated with productive work") requires additional systems beyond curation and time limits, such as read-later workflows and structured review sessions.
+    isr_reasoning: |
+      - Among users who set and maintain time limits alongside source curation, time savings are highly reliable – built-in screen-time enforcement removes willpower from the equation for the daily cap. ISR estimated at 75%, lower than the enforcement mechanism alone would predict because ~25% of users disable or bypass limits during high-news periods.
+      - [Research on deliberate news limitation](https://www.tandfonline.com/doi/full/10.1080/1461670X.2021.2021105) found that time-limiting reliably reduced consumption hours among compliant participants; the primary failure mode was self-granted exceptions rather than structural non-compliance.
+      - The 25% non-success rate captures users who set limits but routinely override them or shift consumption from capped apps to uncapped browsers, achieving source upgrades without efficiency gains.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  worldview.breadth:
+    pbs: 6
+    isr: 60
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – approximately 3–4 knowledge domains understood at secondary level or above. After sustained deliberate exposure to sources covering new domains, a user could plausibly add 1–2 domains to secondary-level understanding over 6–12 months. Delta ≈ 1.5 domains. PBS = 10 + log₂(1.5/8) = 10 – 2.42 = 7.6; conservatively scored at 6 because curation facilitates exposure but does not guarantee domain-level understanding – that requires sustained engagement beyond passive reading.
+      - The indirect nature of this pathway (curation → exposure → domain understanding) introduces meaningful attenuation; many users will read across more domains without reaching secondary-level competence in new ones.
+      - Score 7 or higher would require active learning methods alongside curation; score 6 is appropriate for a secondary cross-domain effect.
+    isr_reasoning: |
+      - Worldview breadth requires not just exposure but comprehension and retention; ISR estimated at 60%, as approximately 40% of users who consume diverse sources do not retain or integrate the content into a coherent broader understanding.
+      - [Information diet research](https://www.researchgate.net/publication/386393313_Information_Diet_Understanding_its_Role_in_a_Digital_Age_with_Statistical_Insights) notes that regular exposure to diverse, well-researched content sharpens analytical and synthesis capacity, but the effect is gradual and requires consistent exposure over months to shift worldview breadth measurably.
+      - ISR is lower than for primary media-diet values because worldview breadth depends on retention and integration, which are not guaranteed by curation alone and degrade sharply with passive reading styles.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  worldview.depth:
+    pbs: 6
+    isr: 60
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Replacing shallow news content with in-depth analytical journalism, long-form essays, and expert commentary deepens understanding within chosen domains. Endpoint: 60th–65th percentile. Delta ≈ 25–30 percentile points. Score 6 – meaningful gain in depth of worldview understanding.
+      - The pathway is direct: consuming deeper sources produces deeper understanding. However, the effect is bounded by what the user does with the information after reading; curation alone does not produce depth in the way that deliberate study does.
+      - Score 7 or higher would require active synthesis and note-taking alongside curated reading, which exceeds the scope of this intervention.
+    isr_reasoning: |
+      - Among users who genuinely shift to in-depth, expert-authored sources, depth of understanding in those areas measurably increases over 3–6 months; ISR estimated at 60%, accounting for the substantial proportion who read without retaining or integrating.
+      - [Research on information quality and analytical capacity](https://www.researchgate.net/publication/386393313_Information_Diet_Understanding_its_Role_in_a_Digital_Age_with_Statistical_Insights) supports the claim that higher-quality inputs improve analytical capacity, though effect sizes for depth specifically are not well-quantified in direct studies.
+      - The 40% non-success rate reflects passive reading without engagement – a common pattern where users upgrade source quality but retain the same skimming consumption style that limits depth.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  worldview.utility:
+    pbs: 5
+    isr: 55
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A well-curated media diet provides higher-quality inputs to real-world reasoning, improving prediction accuracy and decision support. Endpoint: 55th–60th percentile. Delta ≈ 20–25 percentile points. Score 5 – modest to meaningful gain in how well the worldview supports real-world decisions.
+      - Utility depends on whether depth and accuracy translate into better real-world decisions; this requires not just better inputs but deliberate application, making this the most attenuated of the worldview cross-domain effects.
+      - Score 6 or higher would require evidence that curated information inputs directly and reliably shift decision outcomes, which is plausible but not demonstrated with sufficient rigour to justify a higher score.
+    isr_reasoning: |
+      - ISR estimated at 55%: information quality is necessary but not sufficient for decision quality; users must also apply what they consume, requiring habits beyond curation.
+      - [Research linking information environments to decision support](https://www.deltapsychology.com/psychology-ponderings/the-psychological-impact-of-misinformation-and-information-overload) confirms that removing misinformation-prone sources is a necessary precondition for decision improvement, supporting a meaningful if not high ISR.
+      - The 45% non-success rate reflects the knowing–doing gap: users who read better sources but continue making decisions based on intuition or prior beliefs rather than their improved information environment.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  rationality.accurate-beliefs:
+    pbs: 6
+    isr: 55
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Deliberate removal of low-quality, misinformation-prone sources and replacement with well-sourced, primary-referenced content reduces the rate at which false or poorly-calibrated beliefs enter the information diet. Endpoint: 60th–65th percentile. Delta ≈ 25–30 percentile points. Score 6 – meaningful gain in calibration and belief accuracy.
+      - The mechanism is direct: garbage-in/garbage-out is the dominant driver of miscalibration in most people's everyday beliefs; curating away low-quality sources removes the primary vector of systematic error.
+      - Score 7 or higher would require active calibration practices (prediction tracking, Bayesian updating) beyond source curation.
+    isr_reasoning: |
+      - ISR estimated at 55%: belief updating is slow, prior beliefs are sticky, and confirmation bias operates even within curated environments – users can select high-quality sources that still confirm existing priors.
+      - [Research on misinformation and belief calibration](https://www.deltapsychology.com/psychology-ponderings/the-psychological-impact-of-misinformation-and-information-overload) confirms that exposure to contradictory low-quality information increases uncertainty and reduces belief accuracy; removal of these sources measurably improves belief environments for at least half of users.
+      - The 45% non-success rate reflects both confirmation-bias-driven source selection within curated sets and the persistence of pre-existing miscalibrated beliefs that curated inputs alone cannot correct.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  rationality.decision-making:
+    pbs: 5
+    isr: 50
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Higher-quality information inputs reduce decision fatigue (less irrelevant noise to filter) and improve the accuracy of the information base on which decisions rest. Endpoint: 55th–60th percentile. Delta ≈ 20–25 percentile points. Score 5 – modest to meaningful gain in decision-making effectiveness.
+      - The pathway is indirect: better information → more accurate beliefs → better decision premises → better decisions. Each step introduces attenuation, making this the weakest rationality cross-domain effect.
+      - [Information overload research](https://www.ijrls.in/wp-content/uploads/2024/11/ijrls-1797.pdf) directly links reduced cognitive overload to improved decision quality, supporting a real but modest PBS.
+    isr_reasoning: |
+      - ISR estimated at 50%: decision quality depends heavily on factors beyond information inputs (risk tolerance, cognitive biases, incentives) that curation does not address.
+      - The well-documented knowing–doing gap means that even well-informed users often fail to apply their improved information base to actual decisions, particularly under time pressure or emotional arousal.
+      - [Research linking information quality to decision confidence](https://www.researchgate.net/publication/386393313_Information_Diet_Understanding_its_Role_in_a_Digital_Age_with_Statistical_Insights) supports a real link between curated information environments and decision confidence, though effect sizes on actual decision outcomes remain modest.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  information-management.insight:
+    pbs: 5
+    isr: 55
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A curated diet spanning multiple domains creates a richer substrate for cross-domain synthesis: high-quality inputs from different fields create more opportunities for productive collision between ideas. Endpoint: 55th–60th percentile. Delta ≈ 20–25 percentile points. Score 5.
+      - The pathway (better inputs → more cross-domain patterns → more insight) is plausible and frequently cited in intellectual productivity literature, but insight generation also depends on reflection time and note-taking habits that this intervention does not address.
+      - Score 6 or higher would require active synthesis practices (writing, reviewing notes, connecting ideas) alongside curation.
+    isr_reasoning: |
+      - ISR estimated at 55%: among users who curate for breadth and quality, roughly half notice meaningful increases in cross-domain connections and generative ideas; the remainder consume better content in the same passive mode that limits synthesis.
+      - Insight generation is highly individual – natural synthesisers benefit greatly from richer inputs, while others show minimal change regardless of input quality; this variance pulls ISR toward the midpoint.
+      - The mechanism is well-supported conceptually but poorly quantified empirically; the estimate is deliberately conservative given the low-confidence evidence base.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+  cognitive-skills.focus:
+    pbs: 6
+    isr: 50
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – approximately 5–8 minutes of sustained deep focus before distraction (between score 4 and 6 on the 120-minute anchor). Reducing compulsive notification-checking and fragmented scrolling decreases the frequency of attention interruption, allowing focus sessions to extend. Endpoint after sustained curation: 15–20 minutes. Delta ≈ 10–12 minutes. PBS = 10 + log₂(12/120) = 10 – 3.32 = 6.68 → 6.
+      - [Information overload research](https://www.ijrls.in/wp-content/uploads/2024/11/ijrls-1797.pdf) directly links multitasking across multiple information streams to productivity losses of up to 40% via task-switching costs; reducing the number of active information channels is a well-supported mechanism for improving sustained attention.
+      - Score 6 conservatively captures the focus benefit: curation reduces the pull of low-quality content but does not eliminate smartphone notifications, social interruptions, or other distraction sources that limit focus independently.
+    isr_reasoning: |
+      - ISR estimated at 50%: focus improvements from media curation are real but highly variable. Users whose attention fragmentation is primarily driven by news and social media see the largest gains; users whose focus limitations stem from other causes (high workload, ADHD, noisy environments) see little benefit from curation alone.
+      - [Doomscrolling research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9580444/) links compulsive news checking to reduced cognitive functioning and psychological distress, implying that reducing compulsive checking should improve focus; but the effect size on sustained attention specifically is not cleanly isolated in the literature.
+      - The 50% success rate reflects the indirect nature of this pathway: curation removes one distraction source, but most users have multiple distraction sources, and removing one is rarely sufficient to substantially extend focus duration on its own.
+    uar_reasoning: |
+      - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "The source audit and restructuring process costs nothing – unfollowing, muting, and subscribing to free newsletters and RSS feeds requires no financial outlay. Basic screen-time apps are built into iOS and Android at no cost."
+  ongoing_cost: 10
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "One quality paid news subscription or newsletter (approximately $10–15/month) is sufficient to access the in-depth journalism that replaces low-quality free sources; many high-quality sources remain free, so ongoing cost can be $0 if the user is selective."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 2 hours to audit current sources (review social follows, newsletter subscriptions, podcast library), identify replacements, reconfigure settings, and set up time limits."
+  ongoing_time: 0.5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Approximately 30 minutes monthly to review whether current sources still serve stated goals, prune additions that have drifted toward low quality, and add new sources to address gaps. Curation overhead is minimal once the initial audit is complete."
+
+prerequisites:
+  - "Regular access to the internet and an existing set of information consumption habits (social media, news apps, podcasts) that can be audited and restructured"
+  - "Basic ability to distinguish source types by quality and function – opinion from reporting, primary from secondary, editorial from expert commentary"
+  - "A working sense of one's current goals and interests, sufficient to evaluate whether a given source is likely to produce relevant content"
+  - "Access to at least some higher-quality alternatives in areas of interest, whether free (public broadcasting, academic blogs, nonprofit journalism) or paid"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Reducing compulsive news consumption and doomscrolling directly lowers ambient anxiety and psychological distress, with observational evidence linking news reduction to improved mood stability and life satisfaction."
+  - domain: "behaviours"
+    rationale: "Deliberate curation addresses the compulsive, automatic quality of news-checking and doomscrolling, directly targeting freedom from habitual behaviour and restoring intentional control over information consumption."

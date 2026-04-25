@@ -1,0 +1,180 @@
+name: "Learning to Name Emotions Precisely"
+what_it_is: |
+  Systematically expanding your emotional vocabulary beyond basic labels – happy, sad, angry – to precise, context-specific terms such as apprehensive, melancholic, wistful, or affronted. The core skill, known as emotional granularity, is the capacity to distinguish finely among discrete emotional states rather than collapsing them into coarse categories. Research by Lisa Feldman Barrett and colleagues shows that people high in emotional granularity are better equipped to regulate those emotions, because a precise emotional label generates precise information about what to do next – how to act, whom to approach, what to change. The practice is low-cost and requires no specialist training: it amounts to a deliberate habit of pausing, consulting a richer vocabulary, and choosing the most accurate word for what you feel.
+how_to_do_it: |
+  - Keep a short daily emotion log – at two or three fixed points in the day, pause and record not just what happened but what you felt, reaching for a specific word rather than a generic one; an "emotion wheel" or vocabulary reference (e.g. the Junto Emotion Wheel or Atlas of the Heart by Brene Brown) is useful in the early weeks
+  - When you notice a strong feeling, run a brief internal audit: intensity (how strong?), valence (pleasant or unpleasant?), action tendency (what does the feeling push you toward?) – these three questions often resolve ambiguity between similar emotions (e.g. shame vs. guilt, irritation vs. contempt)
+  - Practise affect labelling in real time during low-stakes moments first – naming what you feel during a routine frustration before attempting it during conflict or distress; Lieberman's fMRI research suggests even a single precise label measurably reduces amygdala reactivity
+  - Review your log weekly, looking for recurrent patterns: does a specific situation reliably produce the same emotion? Naming the pattern builds the metacognitive layer that supports deliberate regulation
+success_looks_like: |
+  - You routinely reach for precise emotional terms without consulting a reference, and can distinguish between, say, disappointment and resentment, or excitement and anxiety, in the moment rather than in retrospect
+  - Reactive episodes – snapping, withdrawing, spiralling – become less frequent because the feeling is named before it peaks, giving you decision time
+  - Your daily log or reflection practice reveals legible emotional patterns across situations, giving you actionable information about what your environment or relationships are actually doing to you
+common_pitfalls: |
+  - Intellectualising rather than labelling – generating a clever analysis of why you feel something rather than simply naming the feeling; the practice requires landing on a word, not writing an essay
+  - Using the vocabulary as performance – deploying precise emotional language in conversation to seem self-aware rather than as a genuine internal act; the regulation benefit is neurological and requires honest private labelling
+  - Abandoning the log before patterns emerge – most people need four to eight weeks of data before reliable emotional patterns become visible; quitting after two weeks yields vocabulary gains but misses the metacognitive payoff
+description: |
+  - The practice centres on affect labelling – naming a felt emotion with a precise word – which [fMRI research](https://pubmed.ncbi.nlm.nih.gov/17576282/) shows disrupts amygdala activity and increases prefrontal regulation, producing a measurable dampening of emotional reactivity
+  - Emotional granularity – the ability to make fine-grained distinctions among emotional states – is the underlying construct; [Barrett and colleagues](https://pmc.ncbi.nlm.nih.gov/articles/PMC1201429/) show high-granularity individuals are 30% more flexible in emotion regulation and less likely to engage in maladaptive behaviours such as binge drinking or aggression under stress
+  - The method requires a daily emotion log, an expanded vocabulary reference, and a brief structured audit (intensity, valence, action tendency) applied to felt emotions throughout the day
+  - Results accumulate over four to eight weeks as recurring emotional patterns become visible, enabling deliberate rather than reactive responses; [cross-sectional research](https://pmc.ncbi.nlm.nih.gov/articles/PMC11987076/) links high emotional granularity to lower social anxiety and better interpersonal functioning
+  - Distinct from general journalling or mindfulness in that the target output is a specific emotional label, not narrative reflection or attentional training – though it complements both
+applicable_domains: ["self-awareness", "behaviours", "mental-health", "mindfulness", "communication"]
+
+values:
+  self-awareness.psychological:
+    pbs: 7
+    isr: 70
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After consistent practice, a user could plausibly reach the 65th–70th percentile – able to name their emotional patterns accurately and anticipate triggers. Delta: ~30 percentile points.
+      - Emotional granularity is definitionally a form of psychological self-knowledge; [Barrett's constructionist framework](https://journals.sagepub.com/doi/abs/10.1177/0963721414550708) argues that labelling emotions with precision is both a measurement of and a driver of self-understanding.
+      - The gain is meaningful but not transformative because emotional granularity addresses one axis of self-knowledge (emotional states); deeper knowledge of personality structure or unconscious motivation requires complementary practices.
+    isr_reasoning: |
+      - [Frontiers in Psychology (2021)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.703658/full) reviews granularity-cultivation studies and reports consistent improvements in emotion differentiation scores across training conditions, with medium effect sizes on average.
+      - The mechanism is highly direct: vocabulary growth is the intervention and the outcome simultaneously; failure requires that users learn words but fail to apply them to their own states.
+      - Some individual variation exists – people with alexithymia show smaller gains from vocabulary-alone approaches without additional somatic or therapeutic support.
+    uar_reasoning: |
+      - The intervention is low-friction – a brief daily log and occasional vocabulary reference – with no financial cost; [Lieberman's work](https://pubmed.ncbi.nlm.nih.gov/17576282/) suggests even irregular practice produces neurological effects.
+      - Journalling habits have documented attrition: general journalling studies report ~50–60% dropout within 4–8 weeks when not embedded in a structured programme; emotion-specific logging is narrower and more purposeful.
+      - UAR of 65% reflects a realistic long-term adherence for a motivated self-improver absent external accountability.
+
+  self-awareness.contemplative:
+    pbs: 5
+    isr: 60
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After consistent labelling practice, a user might plausibly reach the 52nd–55th percentile on contemplative/somatic awareness. Delta: ~17–20 percentile points.
+      - Affect labelling requires a moment of inward attention – pausing to notice a felt state before naming it – which develops interoceptive sensitivity as a byproduct. However, this is secondary to vocabulary expansion; dedicated mindfulness practice produces far larger gains.
+      - Score 5 reflects a real but modest cross-domain lift.
+    isr_reasoning: |
+      - No direct studies measure somatic awareness gains from emotion-labelling practice specifically; the pathway is plausible but untested as a primary outcome.
+      - Users who engage the audit (intensity, valence, action tendency) are explicitly directed inward, which should produce some interoceptive development.
+      - Conservative ISR of 60% reflects the indirectness of the mechanism.
+    uar_reasoning: |
+      - See self-awareness.psychological UAR – same intervention, same adherence profile.
+
+  behaviours.emotional:
+    pbs: 7
+    isr: 55
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding roughly to ~5 stress-driven reactive episodes per week. Endpoint after successful practice: plausibly 2–3 episodes/week. Delta: reduction of ~2–3 episodes/week.
+      - [Barrett's research](https://pmc.ncbi.nlm.nih.gov/articles/PMC1201429/) shows high-granularity individuals are 30% more flexible in emotion regulation and significantly less likely to engage in maladaptive reactive behaviours; [Lieberman (2007)](https://pubmed.ncbi.nlm.nih.gov/17576282/) demonstrates acute amygdala suppression from single-trial labelling.
+      - Score 7 reflects a meaningful reduction in reactivity, not near-elimination; the PBS is discounted from the raw log formula for cross-domain status and the indirect pathway.
+    isr_reasoning: |
+      - Emotional labelling reduces reactivity reliably in lab settings, but real-world deployment during acute stress is harder: the practice must be applied at the precise moment of emotional arousal.
+      - [Lieberman (2007)](https://journals.sagepub.com/doi/10.1111/j.1467-9280.2007.01916.x) establishes the acute neural mechanism; generalisation from lab to daily life is supported but not yet precisely quantified.
+      - Individuals with very high baseline reactivity (e.g. borderline-spectrum presentations) show reduced ability to access labelling during dysregulation; [PMC granularity-BPD study](https://pmc.ncbi.nlm.nih.gov/articles/PMC3104325/) confirms this ceiling effect.
+    uar_reasoning: |
+      - See self-awareness.psychological UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 6
+    isr: 55
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, plausible endpoint: 55th–60th percentile – meaningfully fewer distressing episodes and faster recovery. Delta: ~20–25 percentile points.
+      - [Emotion differentiation research](https://pmc.ncbi.nlm.nih.gov/articles/PMC8377228/) shows higher granularity is associated with fewer symptoms of depression and anxiety, experiencing daily stressors as less aversive, and more frequent successful regulation.
+      - Score 6 reflects that emotional granularity is one input to stability; sleep, exercise, social support, and stress load are co-determinants not addressed by this practice alone.
+    isr_reasoning: |
+      - Cross-sectional studies consistently link granularity to stability outcomes, but the causal direction is partly contested: high granularity may partly be a consequence of stability rather than purely a cause.
+      - [Kashdan et al. (2015)](https://journals.sagepub.com/doi/abs/10.1177/0963721414550708) note that controlling for mean negative affect substantially reduces the granularity-depression association.
+      - Prospective intervention studies are limited; conservative ISR of 55% reflects the gap between correlational evidence and demonstrated causal effect.
+    uar_reasoning: |
+      - See self-awareness.psychological UAR – same intervention, same adherence profile.
+
+  mental-health.resilience:
+    pbs: 5
+    isr: 50
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after practice: plausibly 50th–52nd percentile. Delta: ~15–17 percentile points.
+      - Resilience requires not just naming emotions accurately but sustaining that capacity under adversity; emotional granularity provides the diagnostic input ("I am grieving, not failing") that supports appropriate coping responses.
+      - Score 5 reflects a modest cross-domain lift; the causal pathway is sound but the effect size is smaller than for stability because resilience depends more heavily on behavioural coping resources.
+    isr_reasoning: |
+      - No studies directly test emotional granularity training as a resilience intervention; the pathway is mechanistically plausible but extrapolated.
+      - [PMC emotion differentiation review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8377228/) notes resilience associations but acknowledges the evidence base is thinner than for stability.
+      - Conservative ISR of 50% reflects low direct evidence and likely heterogeneity.
+    uar_reasoning: |
+      - See self-awareness.psychological UAR – same intervention, same adherence profile.
+
+  mindfulness.emotional:
+    pbs: 6
+    isr: 60
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: plausibly 57th–60th percentile. Delta: ~22–25 percentile points.
+      - The labelling act is itself a moment of present-moment attention directed at internal states, producing an equanimity-adjacent outcome; [Lieberman (2007)](https://pubmed.ncbi.nlm.nih.gov/17576282/) establishes the acute dampening mechanism.
+      - Score 6 reflects a meaningful cross-domain gain that is bounded: emotion labelling produces equanimity through a linguistic-regulatory pathway, not through the decentring and acceptance mechanisms of deeper mindfulness.
+    isr_reasoning: |
+      - The neurological effect (labelling then prefrontal activation then amygdala suppression) is well-established; [multiple replications](https://academic.oup.com/scan/article/12/9/1437/3979177) support the mechanism.
+      - Generalisation from lab paradigms to everyday emotional wellbeing involves some extrapolation; real-world gains depend on users actually applying labelling during emotional arousal.
+      - ISR of 60% reflects the reliable mechanism moderated by the lab-to-life gap.
+    uar_reasoning: |
+      - See self-awareness.psychological UAR – same intervention, same adherence profile.
+
+  mindfulness.knowledge:
+    pbs: 5
+    isr: 60
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: plausibly 50th–52nd percentile. Delta: ~15–17 percentile points.
+      - Weekly log review surfaces patterns (situation then emotion then behaviour) that constitute genuine self-knowledge about habitual emotional responding.
+      - Score 5 reflects a modest but real gain; deeper contemplative self-knowledge requires practices that go beyond vocabulary training.
+    isr_reasoning: |
+      - Pattern recognition from an emotion log is close to certain for users who maintain the log consistently; the bottleneck is adherence rather than mechanism failure.
+      - For the 65% who sustain the log, pattern recognition emerges naturally; unconditional ISR is moderated by the UAR, yielding an effective ISR near 55–60%.
+      - No direct studies measure this specific outcome; estimate is common-sense reasoning from the structure of the practice.
+    uar_reasoning: |
+      - See self-awareness.psychological UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 5
+    isr: 55
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: plausibly 50th–53rd percentile. Delta: ~15–18 percentile points.
+      - [PMC (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11987076/) finds high emotional granularity associated with better empathic accuracy and lower social anxiety; the causal pathway (accurate naming then more precise disclosure then better relational understanding) is plausible.
+      - Score 5 reflects a real but modest cross-domain effect; relational connection depends heavily on reciprocal factors not addressed by this practice.
+    isr_reasoning: |
+      - The benefit materialises only when users actually disclose their precisely named emotions to others – people who use the vocabulary purely privately may see no relational benefit.
+      - [Scoping review (ScienceDirect, 2025)](https://www.sciencedirect.com/science/article/abs/pii/S0022395625004881) confirms granularity associations with social functioning, but most evidence is cross-sectional.
+      - Conservative ISR of 55% reflects the conditionality on disclosure behaviour.
+    uar_reasoning: |
+      - See self-awareness.psychological UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Free vocabulary resources are widely available online (e.g. Junto Emotion Wheel, Feelings Inventory). A paid reference such as Atlas of the Heart costs approximately $18–25 but is optional."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The practice requires only a notebook or notes app and a vocabulary reference, both of which are free."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to read an introductory resource on emotional granularity, download or print a vocabulary reference, and set up a simple log template."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Two to three brief daily check-ins of two to three minutes each, plus a ten-minute weekly pattern review – totalling approximately 30 minutes per week at minimum effective dose."
+
+prerequisites:
+  - "Basic literacy and access to a vocabulary reference (printed or digital); the practice is language-dependent"
+  - "Sufficient emotional safety to turn attention inward – individuals in acute crisis or active trauma response are unlikely to benefit without concurrent professional support"
+  - "A note-taking medium – paper notebook, notes app, or journal – available at the times designated for check-ins"
+  - "Willingness to develop a new vocabulary; individuals with significant alexithymia may need complementary somatic or therapeutic work before this practice is productive"
+
+flagged_domains:
+  - domain: "communication.conflict"
+    rationale: "Precise emotional naming reduces the likelihood of reactive escalation during disagreements by giving the speaker accurate information about their own state before responding."
+  - domain: "romantic-relationships.harmony"
+    rationale: "Higher emotional granularity is associated with better empathic accuracy for a partner's emotions, reducing misattribution and conflict arising from emotional misreading."
+  - domain: "mental-health.flourishing"
+    rationale: "Positive emotional granularity – distinguishing among pleasant states (serene vs. elated vs. grateful) – has been linked to greater subjective wellbeing independent of negative affect regulation."

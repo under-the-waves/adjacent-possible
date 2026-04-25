@@ -1,0 +1,129 @@
+name: "Learning to Read Nutrition Labels Effectively"
+what_it_is: |
+  A one-time learning investment – typically 1–3 hours spread across a few sessions – in which you develop the practical skill to decode nutrition facts panels, ingredient lists, and serving-size declarations accurately. Rather than passively glancing at labels, you learn to identify nutrient density, spot hidden sugars and ultra-processed ingredients, translate percentage daily values into meaningful benchmarks, and adjust for actual serving sizes versus declared ones. Because this knowledge transfers to every food purchase for the rest of your life, the skill compounds in value far beyond the initial time spent.
+how_to_do_it: |
+  - Start with the [FDA's Nutrition Facts label guide](https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label) to understand the regulatory structure – serving size, calories, and the %DV system – then practise on five real products in your kitchen, comparing the declared serving to what you actually eat
+  - Learn to read ingredient lists top-to-bottom by weight: identify added sugar under its 60+ synonyms (e.g. dextrose, maltose, fruit juice concentrate), spot refined grain markers ("enriched flour"), and use a short ingredients list as a quick screen for less-processed products
+  - Internalise three key %DV thresholds – 5% or less is low, 20% or more is high – and apply them to sodium, saturated fat, fibre, and key micronutrients; practise converting a food's profile to your actual consumption (eating half a package means halving all values)
+  - Consolidate the skill during one full grocery shop, comparing at least two versions of ten common products (e.g. breakfast cereals, yoghurts, bread) and choosing based on nutritional density rather than front-of-pack marketing claims
+success_looks_like: |
+  - You can pick up an unfamiliar packaged product and within 30 seconds identify whether it is nutritionally dense, how it fits your daily targets, and whether the ingredient list contains meaningful red flags
+  - Your grocery basket shifts measurably toward products with higher fibre, lower added sugar, and fewer ultra-processed ingredients without requiring constant willpower or external prompts
+  - You are no longer misled by front-of-pack health claims ("low fat", "natural", "multigrain") because you verify them against the actual panel and ingredient list
+common_pitfalls: |
+  - Focusing exclusively on calories and ignoring ingredient quality – a 200-calorie product can be nutritionally excellent or almost entirely ultra-processed; calorie-only reading misses the most actionable information
+  - Failing to adjust for serving size before comparing products – a cereal that looks lower in sugar per serving may simply declare a smaller serving than its competitor
+  - Learning the rules once but never applying them habitually at the point of purchase; knowledge that stays abstract does not change dietary behaviour
+description: |
+  - A skill-building intervention in which the user learns to accurately read and apply nutrition facts panels, ingredient lists, and serving-size declarations to make better food choices at the point of purchase
+  - Covers the %DV system (5% = low, 20% = high), ingredient list ordering by weight, added sugar synonyms, and how to scale declared values to actual portions consumed
+  - [Educational interventions on nutrition label comprehension](https://pmc.ncbi.nlm.nih.gov/articles/PMC6213388/) consistently produce statistically significant improvements in label understanding, label use, and food choices across all studies reviewed
+  - Distinct from general nutrition education in that it provides a transferable decision-making tool applied at every purchase encounter, rather than abstract dietary rules
+  - [Regular label users](https://pmc.ncbi.nlm.nih.gov/articles/PMC10560412/) are significantly more likely to meet fibre intake recommendations and show lower odds of consuming high-sugar, high-sodium products
+applicable_domains: ["nutrition", "food-management", "health-management"]
+
+values:
+  nutrition.physical_wellbeing:
+    pbs: 6
+    isr: 45
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a consistent label reader could plausibly reach the 55th–60th percentile in diet quality. Delta: ~20–25 percentile points.
+      - The anchor_max is 12 years of additional healthy lifespan. Plausible effect: 0.5–1 additional healthy year via chronic disease risk reduction through improved dietary quality. PBS = 10 + log₂(0.75/12) = 10 - 4.0 = 6.
+      - [A meta-analysis of food labelling effects](https://www.ajpmonline.org/article/S0749-3797(18)32357-2/abstract) found that label use is associated with meaningfully healthier food choices, though effect sizes on long-term health outcomes are modest when label use is the sole intervention.
+    isr_reasoning: |
+      - [The systematic review of educational interventions](https://pmc.ncbi.nlm.nih.gov/articles/PMC6213388/) found statistically significant improvements in label knowledge and food choices across all reviewed studies, but the translation from knowledge to sustained dietary change involves multiple further steps.
+      - [Research on label use and dietary behaviour](https://pmc.ncbi.nlm.nih.gov/articles/PMC10560412/) shows that frequent label readers are more likely to meet fibre recommendations, but only a fraction uses labels consistently enough to drive meaningful change.
+      - ISR of 45% reflects that roughly half of those who learn the skill apply it consistently enough to shift their dietary pattern measurably.
+    uar_reasoning: |
+      - This is a knowledge-based skill with near-zero ongoing cost or time burden once acquired, which raises adherence relative to habit-based interventions.
+      - The skill must be applied at every relevant purchase point to deliver value, and habitual application is the barrier. UAR of 65% reflects that most learners retain the knowledge but a meaningful minority revert to scanning only familiar signals.
+      - [Research on label use patterns](https://pmc.ncbi.nlm.nih.gov/articles/PMC9266186/) indicates that regular label use is strongly tied to pre-existing health motivation.
+
+  food-management.competence:
+    pbs: 5
+    isr: 55
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile in food provision competence. Delta: ~15–20 percentile points.
+      - Label literacy improves ingredient selection but does not address planning, cooking skill, or time management – the other major drivers of food provision competence. Score 5 reflects a modest-to-meaningful gain.
+      - [Research on nutrition literacy and food management](https://pmc.ncbi.nlm.nih.gov/articles/PMC10378922/) notes that food literacy is associated with improved dietary outcomes but only when paired with practical cooking and planning skills.
+    isr_reasoning: |
+      - [Educational interventions on label comprehension](https://pmc.ncbi.nlm.nih.gov/articles/PMC6213388/) show that improved understanding leads to better food choices in a majority of participants.
+      - ISR is limited by the indirect pathway: improving purchasing decisions does not automatically convert to more nutritionally adequate meals.
+      - The knowledge-behaviour gap is well-documented in nutrition research.
+    uar_reasoning: |
+      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+
+  food-management.waste_reduction:
+    pbs: 4
+    isr: 40
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A user who reads labels more carefully – particularly serving sizes – may plan purchases more accurately and waste less. Endpoint: ~45th–50th percentile. Delta: ~10–15 percentile points.
+      - The realistic improvement is small: waste reduction depends far more on planning, storage, and cooking habits than on label literacy. PBS = 10 + log₂(5/100) = 10 - 4.32 = 5.7, conservatively scored at 4 given the highly indirect pathway.
+      - This is a borderline inclusion – the causal pathway is real but weak.
+    isr_reasoning: |
+      - No direct evidence links nutrition label literacy to food waste reduction specifically; the mechanism is indirect via serving-size awareness.
+      - A minority of label readers will actively use serving-size information to calibrate purchase quantities.
+      - ISR of 40% reflects the weak and indirect causal chain.
+    uar_reasoning: |
+      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+
+  health-management.control:
+    pbs: 5
+    isr: 60
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Understanding how to read nutrition labels expands a person's ability to make informed, self-directed health decisions at the daily level of food choice. Endpoint: ~50th–55th percentile. Delta: ~15–20 percentile points.
+      - Label literacy provides concrete, actionable knowledge that converts previously opaque product choices into transparent ones – a meaningful but not transformative gain in health agency.
+      - [CDC guidance on food literacy](https://www.cdc.gov/health-literacy/php/research-summaries/food-literacy.html) identifies food label comprehension as a key component of health literacy.
+    isr_reasoning: |
+      - [Research on nutrition knowledge and label use](https://pmc.ncbi.nlm.nih.gov/articles/PMC4499482/) shows that improved nutrition knowledge reliably increases the sense of personal agency over food decisions.
+      - Users do not need to change dietary behaviour to experience greater control; understanding what they are eating is itself the benefit. ISR of 60%.
+      - ISR is not 80%+ because some learners find the label system confusing or incomplete when eating out or using unpackaged food.
+    uar_reasoning: |
+      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+
+  health-management.longterm:
+    pbs: 4
+    isr: 40
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Label literacy is one input into a long-term preventive health strategy. Endpoint: ~45th–50th percentile. Delta: ~10–15 percentile points.
+      - Label literacy modestly improves the dietary component of preventive strategy but does not contribute to screening, exercise, stress management, or medical engagement. Score 4 reflects a modest gain.
+      - The one-time nature of this learning permanently improves one facet of the user's preventive toolkit.
+    isr_reasoning: |
+      - [The review of label use and dietary behaviour](https://pmc.ncbi.nlm.nih.gov/articles/PMC10560412/) confirms that consistent label users have measurably healthier diets.
+      - ISR of 40% reflects the indirect pathway: fewer than half of learners frame food choices explicitly as part of a preventive health strategy.
+      - Evidence is observational and indirect; no RCT directly measures this pathway.
+    uar_reasoning: |
+      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No purchases required. The FDA label guide and comparable resources are free online. Practise occurs on products already in the home."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Once learned, the skill is applied during normal grocery shopping with no additional cost."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 1 hour to read foundational material, 1 hour to practise on products at home, and 1 hour applying the skill during a full grocery shop."
+  ongoing_time: 0
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Reading a nutrition panel takes 20–30 seconds and is performed during time already allocated to shopping. No separate ongoing time commitment."
+
+prerequisites:
+  - "Basic numeracy sufficient to interpret percentages and compare values across products"
+  - "Access to packaged food products with nutrition facts panels"
+  - "Sufficient reading literacy to decode ingredient lists and panel text"
+
+flagged_domains:
+  - domain: "rationality"
+    rationale: "Learning to see through front-of-pack health claims and read primary data is a direct application of epistemic hygiene – preferring primary sources over marketing framing."
+  - domain: "body-image"
+    rationale: "For users pursuing fat loss or muscle gain, label literacy enables accurate tracking of caloric intake and macronutrient ratios."

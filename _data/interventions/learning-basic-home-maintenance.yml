@@ -1,0 +1,145 @@
+name: "Learning Basic Home Maintenance"
+what_it_is: |
+  A one-time learning investment in five core household skills – unclogging drains, replacing HVAC air filters, fixing running toilets, doing basic interior painting, and resetting circuit breakers – that eliminates routine reliance on tradespeople for minor problems. Unlike ongoing service contracts or professional callouts, the skills are acquired once and applied repeatedly for life, compounding in value every time an issue arises. Research shows that deferred maintenance costs escalate at a roughly 4:1 ratio – for every dollar of prevention skipped, approximately four dollars of capital repair follows.
+how_to_do_it: |
+  - Work through each skill in a single dedicated session: watch two or three YouTube tutorials, then immediately practise on your own home while the information is fresh
+  - For plumbing tasks (drains, toilets), assemble a basic kit before problems occur: a plunger ($8–15), a drain snake ($20–30), and a toilet flapper replacement kit ($5–10)
+  - For electrical (breaker resets), learn your panel's layout by labelling each breaker with a helper switching circuits; this surfaces any mislabelled or unknown circuits
+  - Treat air filter replacement as a scheduled calendar event every 90 days; pairing it with a quarterly walkthrough of other systems (flush all toilets, run all taps) creates a lightweight preventive maintenance rhythm
+success_looks_like: |
+  - When a drain clogs or a toilet starts running, your first instinct is to fix it yourself – and you do, in under 30 minutes, without calling anyone
+  - Your HVAC filters are changed on schedule, air quality improves noticeably, and your heating or cooling system runs without incident between professional services
+  - You can walk a partner or friend through any of the five skills, confirming genuine competence
+common_pitfalls: |
+  - Watching tutorials without immediately practising – procedural skills decay within days without hands-on reinforcement
+  - Misidentifying the problem scope: a slow drain may be a simple clog (DIY) or a collapsed pipe (call a plumber); knowing which symptoms require professional help is part of the skill set
+  - Skipping tool acquisition – most people who know how to fix a running toilet still call a plumber because they have no flapper on hand
+description: |
+  - A deliberate one-time learning programme covering five foundational household skills: drain unclogging, HVAC filter replacement, running toilet repair, basic interior painting, and circuit breaker resets
+  - Each skill can be learned in 1–3 hours via free resources and practised immediately; total upfront time is 10–15 hours
+  - [Research on deferred maintenance](https://peakspropertyservices.com/blog/the-hidden-costs-of-deferred-home-maintenance-what-homeowners-need-to-know/) documents a $1-to-$4 escalation ratio; a running toilet costs $270–470/year in excess water bills per [EPA and plumbing industry data](https://www.expresssewer.com/blog/how-much-does-a-running-toilet-really-cost/), and professional drain clearing runs $100–275 per visit per [HomeGuide](https://homeguide.com/costs/cost-to-unclog-snake-a-drain)
+  - Skills are retained indefinitely and compound: a homeowner who fixes two drain clogs, one running toilet, and changes HVAC filters annually avoids $600–1,200 in professional fees per year
+  - Distinct from home improvement or renovation in that these are purely maintenance tasks – they restore function rather than improve it
+applicable_domains: ["life-skills", "housing", "saving", "housework"]
+
+values:
+  life-skills.high:
+    pbs: 8
+    isr: 80
+    uar: 88
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~2–3 practical skills). After successful adherence, a user gains 5 specific skills, plausibly reaching 7–8 total. Delta: ~5 skills. PBS = 10 + log₂(5/15) = 10 - 1.58 = 8.
+      - Score 8 on the anchor maps to "8–10 skills including plumbing, electrical, intermediate cooking, and tech troubleshooting" – plumbing and electrical are explicitly cited.
+      - The skills are discrete and teachable, not probabilistic – a person who completes the programme reliably possesses all five competencies.
+    isr_reasoning: |
+      - These are procedural skills with low intrinsic difficulty: [home improvement resources](https://www.ahs.com/home-matters/quick-tips/learn-home-improvement-skills/) confirm most adults can achieve competence with 1–3 hours of guided practice per skill.
+      - ISR of 80%: a minority will encounter genuinely complex versions of nominally basic problems that make DIY unrealistic.
+      - [Survey data](https://chachingqueen.com/essential-home-maintenance-skills/) showing 60% of younger adults cannot fix a leaky faucet confirms a meaningful gap that is closeable with deliberate effort.
+    uar_reasoning: |
+      - UAR is high because this is a one-time learning event, not an ongoing habit: once skills are learned and tools purchased, no recurring commitment is required.
+      - Most learners who complete a hands-on session retain the skill – the main dropout risk is never finishing the initial learning.
+      - A small minority (~12%) will lack physical capability, rental restrictions, or confidence to apply skills when issues arise.
+
+  life-skills.systematic:
+    pbs: 6
+    isr: 65
+    uar: 88
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - Learning five skills and pairing them with a scheduled review rhythm constitutes a meaningful gain in systematic competence – moving from purely reactive to partly proactive.
+      - Score 6: this is a narrow slice of practical life management, not a comprehensive system overhaul.
+    isr_reasoning: |
+      - The systematic benefit is contingent on adopting a scheduled maintenance rhythm, not just learning skills ad hoc.
+      - Roughly 65% of learners will extend knowledge into a proactive system.
+      - Individual variation is high: people with pre-existing organisational tendencies will absorb the rhythm; those without may apply skills reactively only.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  housing.comfort:
+    pbs: 6
+    isr: 72
+    uar: 88
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 50th percentile (housing comfort baseline is already average). After successful adherence, plausibly reaching the 65th–70th percentile. Delta: ~15–20 percentile points.
+      - Functioning drains, clean air from maintained filters, and freshly painted surfaces genuinely improve the physical pleasantness of a home – but these are restorations of baseline function, not upgrades.
+      - The comfort benefit is most pronounced for users currently living with deferred minor failures.
+    isr_reasoning: |
+      - Clean filters demonstrably improve indoor air quality per [EPA indoor air quality data](https://www.epa.gov/indoor-air-quality-iaq); functioning drains and silent toilets remove low-level daily friction.
+      - ISR of 72%: gains are contingent on the home actually having deferred maintenance issues to resolve.
+      - Painting results have the most variable comfort effect.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  saving.security:
+    pbs: 6
+    isr: 68
+    uar: 88
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Avoided costs of $600–1,200/year free up capital that compounds into emergency savings. Over 3–5 years, this accumulates to ~1.5–3 months of expenses at median US household income. Endpoint: ~50th–55th percentile. Delta: ~15–20 percentile points.
+      - PBS = 10 + log₂(0.75/12) = 10 - 4 = 6. A running toilet alone costs $270–470/year per [Express Sewer](https://www.expresssewer.com/blog/how-much-does-a-running-toilet-really-cost/); a single avoided plumber callout is $100–275 per [HomeGuide](https://homeguide.com/costs/cost-to-unclog-snake-a-drain).
+      - The saving benefit is indirect (freed-up cash) but real and recurrent.
+    isr_reasoning: |
+      - Savings materialise only when maintenance problems arise and are fixed DIY: [ConsumerAffairs](https://www.consumeraffairs.com/homeowners/home-maintenance-cost-breakdown.html) shows average homeowners spend $1,400–$2,300/year on routine maintenance with a meaningful DIY-addressable fraction.
+      - [Angi toilet repair data](https://www.angi.com/articles/how-much-should-toilet-repairs-cost.htm) ($100–400 per visit) confirms the savings opportunity is real and recurrent.
+      - ISR of 68%: some users live in settings where these savings don't apply (fully managed rentals, new builds).
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  housework.health:
+    pbs: 6
+    isr: 72
+    uar: 88
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - Replacing HVAC filters on schedule directly improves indoor air quality – the [EPA](https://www.epa.gov/indoor-air-quality-iaq) identifies indoor air pollutants as a significant health risk. Maintaining clear drains prevents mould and bacterial growth.
+      - A meaningful but not major health gain – the skills address environmental hygiene, not primary health behaviours.
+    isr_reasoning: |
+      - HVAC filter replacement is mechanically reliable in its air-quality effect per [EPA guidance](https://www.epa.gov/indoor-air-quality-iaq).
+      - The health pathway from drain maintenance is plausible and supported by environmental health literature.
+      - ISR of 72%: the benefit is most pronounced for households with allergy or respiratory sensitivities.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  housework.aesthetics:
+    pbs: 5
+    isr: 65
+    uar: 80
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 50th–55th percentile. Delta: ~15–20 percentile points.
+      - Basic interior painting produces a genuine visual improvement but the quality ceiling for a first-time DIY painter is below professional finish.
+      - The aesthetic gain is real but modest and bounded.
+    isr_reasoning: |
+      - DIY painting outcomes vary considerably with technique; most first-time painters achieve acceptable results on flat surfaces but struggle with cutting in and even coverage.
+      - ISR of 65%: roughly a third produce results they are dissatisfied with on first attempt.
+      - No direct research on DIY painting satisfaction rates; this is a conservative estimate.
+    uar_reasoning: |
+      - UAR slightly lower (80%): painting is the only skill with meaningful physical demands and consumable costs creating recurring friction.
+
+resources:
+  upfront_cost: 60
+  upfront_cost_reasoning: "Minimum tool kit: plunger ($10), drain snake ($25), toilet flapper kit ($8), first HVAC filter ($15), circuit breaker labels and torch ($5). Paint and rollers excluded as task-specific consumables."
+  ongoing_cost: 15
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Quarterly HVAC filter replacements (~$15/year for basic disposable filters). All other skills have negligible ongoing material costs."
+  upfront_time: 12
+  upfront_time_reasoning: "Approximately 2–3 hours per skill across five skills: watching tutorials, gathering materials, and completing first practice. Total 10–15 hours; 12 is a reasonable minimum."
+  ongoing_time: 1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Roughly 1 hour per month averaged over a year: quarterly filter swaps, occasional drain maintenance, and ad hoc repairs. Most months require nothing."
+
+prerequisites:
+  - "Physical access to the home's systems – own or rent a property where you are responsible for basic maintenance"
+  - "Basic tool access or willingness to purchase a starter kit: plunger, drain snake, screwdrivers, and a torch"
+  - "Ability to recognise when a problem exceeds DIY scope – distinguishing a simple clog from a pipe failure, or a tripped breaker from a faulty circuit"
+
+flagged_domains:
+  - domain: "emergency-preparedness"
+    rationale: "Knowing how to reset breakers, identify electrical faults, and manage plumbing failures reduces household vulnerability during minor emergencies."
+  - domain: "behaviours"
+    rationale: "Successfully completing hands-on repairs builds generalised self-efficacy and reduces learned helplessness around practical problems."

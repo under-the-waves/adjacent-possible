@@ -1,0 +1,225 @@
+name: "Learning Basic Ethical Frameworks"
+what_it_is: |
+  A concentrated self-study intervention – typically one weekend of focused reading and reflection – in which a person acquires working knowledge of the three dominant ethical frameworks: consequentialism (particularly utilitarianism), deontology, and virtue ethics. The goal is not academic mastery but practical literacy: understanding each framework's core logic, strengths, and failure modes well enough to apply them as lenses when facing real moral decisions. This provides the scaffolding that converts vague moral intuitions into structured reasoning, reduces ethical blind spots caused by over-reliance on a single implicit framework, and creates a common vocabulary for discussing ethics with others.
+how_to_do_it: |
+  - Allocate one full weekend (~10–14 hours total) using a single accessible introductory text (Michael Sandel's Justice, Peter Singer's Practical Ethics, or the free MIT OpenCourseWare 24.231 Ethics lecture notes) supplemented by the Stanford Encyclopedia of Philosophy entries for each framework
+  - Work through each framework in sequence – utilitarianism first, then Kantian deontology, then virtue ethics – reading the primary exposition, then one critique of it, so you understand not just what the framework says but where it struggles
+  - For each framework, apply it to two or three real decisions you have faced recently; write a short paragraph on what each framework would recommend and why – this active application step is where conceptual knowledge converts to usable reasoning
+  - After completing all three, do a brief comparative review: which framework most closely matches your existing intuitions, which challenges them most, and which you find most practically useful
+success_looks_like: |
+  - When facing a significant ethical decision, you instinctively consider it from at least two distinct frameworks and notice when they conflict, rather than defaulting immediately to a single intuitive response
+  - You can explain to another person, in plain language and without consulting notes, the core logic and a key limitation of each of the three frameworks
+  - Within three months, you identify at least one instance where framework-aware reasoning led you to a different (and better-considered) decision than you would have reached by intuition alone
+common_pitfalls: |
+  - Treating one framework as definitively correct after initial study and using it to rationalise pre-existing intuitions rather than genuinely testing them
+  - Stopping at conceptual understanding without the applied practice step; knowledge of ethical theories that is never tested against real cases does not reliably improve decision-making
+  - Expecting behaviour to change immediately; framework literacy primarily improves the deliberative step of moral reasoning – converting that into different actions under real social pressure requires additional practice
+description: |
+  - A self-directed weekend study of the three major ethical frameworks: consequentialism (maximising good outcomes), deontology (acting according to duties and rights regardless of consequences), and virtue ethics (cultivating character traits of a good person)
+  - Combines reading of introductory texts with active application exercises – applying each framework to personal real-world dilemmas – which [research](https://pmc.ncbi.nlm.nih.gov/articles/PMC2762211/) shows produces substantially larger gains in moral reasoning than passive reading alone
+  - [Meta-analytic evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC6368181/) across 106 ethics courses and 10,069 participants finds medium effect sizes (d = 0.48) on ethics outcomes overall, with knowledge gains (d = 0.78) and decision-making quality (d = 0.51) showing the strongest effects
+  - [Philosophy instruction research](https://www.eduresearchjournal.com/index.php/ijep/article/view/640) on 1,672 students across 32 institutions found gains of 0.51 SD on principled moral reasoning that transferred to novel real-world scenarios
+  - Distinct from ongoing ethics study or formal coursework: this is a bounded, one-time intervention designed to install a durable mental toolkit
+applicable_domains: ["ethics", "rationality", "worldview", "value-system", "life-purpose"]
+
+values:
+  ethics.philosophical:
+    pbs: 8
+    isr: 72
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile in philosophical ethical understanding. Delta: ~40–45 percentile points.
+      - This is the direct target of the intervention: moving from implicit, unarticulated moral intuitions to structured literacy across three major frameworks represents a major gain for most adults who have never studied ethics formally.
+      - [Philosophy instruction research](https://www.eduresearchjournal.com/index.php/ijep/article/view/640) across 1,672 students found effect sizes of 0.51 SD on principled moral reasoning.
+    isr_reasoning: |
+      - [The 2019 meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6368181/) found knowledge gains averaging d = 0.78 – the strongest outcome category – suggesting conceptual understanding of ethical frameworks is reliably achievable.
+      - [Rest and Thoma's DIT review](https://onlineethics.org/cases/evaluation-tools/defining-issues-test-dit-and-dit-2) found more intensive interventions with active application consistently outperform passive instruction.
+      - ISR of 72%: a subset of learners engage superficially, fail to do the applied-practice step, or encounter the frameworks too briefly to consolidate understanding.
+    uar_reasoning: |
+      - The intervention is bounded (one weekend), removing the long-term adherence problem; the relevant UAR question is completion rate.
+      - [UC Riverside research](https://news.ucr.edu/articles/2020/09/22/can-ethics-classes-actually-influence-students-moral-behavior) found that a single 50-minute philosophy discussion meaningfully shifted behaviour, confirming the threshold for impact is low.
+      - UAR of 65% reflects that a meaningful share who intend to do a weekend deep-dive get interrupted, skim rather than engage, or skip the applied-practice component.
+
+  ethics.practical:
+    pbs: 6
+    isr: 50
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - The knowledge-to-practice gap is well-documented: Haidt's social intuitionist work shows moral judgements are often made before reasoning begins.
+      - [Ethics training meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6368181/) found ethical decision-making effect sizes (d = 0.51) meaningfully below knowledge gains (d = 0.78).
+    isr_reasoning: |
+      - [Behavioural ethics research](https://ethicsunwrapped.utexas.edu/wp-content/uploads/2015/05/EthicalDecisionMaking.pdf) documents that even people with strong ethical frameworks often fail to recognise ethical dimensions of situations in real time.
+      - [BMC Medical Ethics RCT](https://link.springer.com/article/10.1186/s12910-023-00938-5) found measurable but modest improvements in moral sensitivity and decision consistency, with roughly half of trained participants showing meaningful practical gains.
+      - Practical improvement requires repeated application over time; a single weekend provides vocabulary but not practice repetitions.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  ethics.integrity:
+    pbs: 5
+    isr: 40
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile. Delta: ~15–20 percentile points.
+      - Integrity – acting consistently with moral beliefs under personal cost – is more downstream from framework literacy than philosophical understanding.
+      - No direct evidence links a single ethics study weekend to sustained integrity gains.
+    isr_reasoning: |
+      - [Academy of Management review](https://journals.aom.org/doi/10.5465/19416520802211677) found ethics training reliably improves awareness and reasoning but shows weak effects on behaviour under real conditions.
+      - The moral-action gap is the hardest problem in applied ethics; Haidt's intuitionist critique targets the assumption that better reasoning produces better behaviour.
+      - ISR of 40% reflects genuine but limited probability.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  rationality.decision-making:
+    pbs: 6
+    isr: 55
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–62nd percentile. Delta: ~20–27 percentile points.
+      - Ethical frameworks function as structured decision procedures under moral uncertainty: they force explicit trade-off articulation, surface ignored stakeholders, and check consistency.
+      - [Ethics training meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6368181/) found ethical decision-making gains (d = 0.51) from instruction.
+    isr_reasoning: |
+      - The decision-making benefit is conditional on encountering decisions with ethical dimensions and remembering to apply frameworks.
+      - [PMC4578657](https://pmc.ncbi.nlm.nih.gov/articles/PMC4578657/) found responsible conduct training improved decision-making consistency in roughly 55% of participants with active application exercises.
+      - Gains are more reliable for novel, slow-moving decisions than for fast, emotionally charged ones.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  rationality.intellectual-honesty:
+    pbs: 6
+    isr: 55
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - Studying multiple competing frameworks and their critiques is a direct exercise in epistemic humility: the learner confronts situations where their intuitive framework fails.
+      - The gain is meaningful but bounded: reading about moral uncertainty is not the same as internalising it.
+    isr_reasoning: |
+      - [DIT research](https://onlineethics.org/cases/evaluation-tools/defining-issues-test-dit-and-dit-2) shows postconventional moral reasoning increases with formal ethics exposure.
+      - The effect requires genuinely engaging with each framework's strongest version and its critics.
+      - [Moral psychology review](https://journals.sagepub.com/doi/10.1177/1088868318811759) finds moral views are highly resistant to revision under social identity pressure.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  worldview.breadth:
+    pbs: 5
+    isr: 80
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. One weekend of ethics study takes a person with no prior philosophy to roughly secondary-school level in ethical theory – approximately 0.3 domain equivalent. PBS = 10 + log₂(0.3/8) = 10 - 4.74 = 5.
+      - The anchor is domains at secondary-school level or above. Ethics study covers one sub-domain (ethics within philosophy) to genuine introductory depth.
+      - A real but modest breadth gain.
+    isr_reasoning: |
+      - The breadth gain is almost mechanically reliable: a person who reads introductory texts on three frameworks will acquire secondary-school-level familiarity with moral philosophy.
+      - [Knowledge gains from ethics instruction](https://pmc.ncbi.nlm.nih.gov/articles/PMC6368181/) are the most reliable outcome (d = 0.78).
+      - ISR of 80% reflects a minority who surface-skim without achieving genuine comprehension.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  worldview.depth:
+    pbs: 6
+    isr: 65
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in worldview depth within the ethics/philosophy domain. Delta: ~20–25 percentile points.
+      - Understanding frameworks, their critiques, and how they interact produces genuine philosophical depth.
+      - PBS of 6: one weekend reaches introductory depth, not undergraduate-level sophistication (score 8).
+    isr_reasoning: |
+      - Depth gains depend on active engagement; the applied-practice component is critical.
+      - [Case-based instruction research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4578657/) confirms application exercises drive depth.
+      - ISR of 65%: roughly two-thirds of engaged weekend learners who complete applied exercises achieve meaningful depth gains.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  worldview.utility:
+    pbs: 6
+    isr: 50
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - Ethical frameworks directly enhance the decision-making utility of one's worldview: they provide explicit procedures for evaluating options and testing consistency.
+      - PBS of 6: utility gains are bounded by the frequency of ethics-relevant decisions in daily life.
+    isr_reasoning: |
+      - [UC Riverside study](https://news.ucr.edu/articles/2020/09/22/can-ethics-classes-actually-influence-students-moral-behavior) found measurable behavioural change after a single ethics discussion, demonstrating real-world utility.
+      - However, the effect is domain-specific and time-limited without reinforcement.
+      - ISR of 50% reflects genuine uncertainty about sustained utility improvements.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  value-system.insight:
+    pbs: 7
+    isr: 65
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile. Delta: ~30–35 percentile points.
+      - Studying ethical frameworks forces explicit confrontation with one's own value commitments: when utilitarianism recommends something your intuition rejects, you learn something real about your own values.
+      - PBS of 7: this is a major use of the intervention – arguably the primary practical benefit beyond the philosophical domain itself.
+    isr_reasoning: |
+      - [Moral psychology research](https://journals.sagepub.com/doi/10.1177/1088868318811759) shows explicit engagement with normative frameworks reliably increases awareness of one's own moral intuitions.
+      - The applied-practice component is the mechanism: applying frameworks to own past decisions surfaces the gap between implicit and stated values.
+      - ISR of 65%: value insight requires genuine engagement with the discomfort that arises when frameworks challenge intuitions.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  value-system.evolution:
+    pbs: 6
+    isr: 55
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - Knowing multiple ethical frameworks gives a person the conceptual tools to deliberately examine and update their values; the intervention installs the toolkit, but using it requires ongoing effort.
+    isr_reasoning: |
+      - [DIT longitudinal research](https://www.researchgate.net/publication/263302474_Moral_Judgement_Development_in_Higher_Education_Insights_from_the_Defining_Issues_Test) shows sustained postconventional moral reasoning gains in approximately 55% of students exposed to intensive ethics instruction.
+      - Values evolution as a capacity requires ongoing deliberate practice to actualise.
+      - Evidence here is more indirect than for the primary ethics domain.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+  life-purpose.clarity:
+    pbs: 5
+    isr: 45
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 48th–53rd percentile. Delta: ~13–18 percentile points.
+      - Virtue ethics in particular, with its focus on human flourishing (eudaimonia), directly addresses questions of what constitutes a good life.
+      - The effect is partial and indirect: ethical frameworks address the normative dimension but not one's particular strengths, interests, and circumstances.
+    isr_reasoning: |
+      - The life-purpose pathway depends on the learner's specific reason for purpose uncertainty.
+      - No direct evidence links ethics study to life-purpose clarity; the mechanism is plausible but extrapolated.
+      - ISR of 45% reflects genuine uncertainty.
+    uar_reasoning: |
+      - See ethics.philosophical UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "All three frameworks can be studied using free resources: Stanford Encyclopedia of Philosophy covers utilitarianism, Kantian ethics, and virtue ethics comprehensively at no cost. MIT OpenCourseWare 24.231 provides free lecture notes."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "This is a bounded one-time intervention. No ongoing cost."
+  upfront_time: 12
+  upfront_time_reasoning: "One weekend: approximately 10–14 hours of reading, note-taking, and applied practice exercises. Minimum effective dose is roughly 10 hours to cover all three frameworks with application."
+  ongoing_time: 0
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "No ongoing time requirement. The frameworks are retained and applied as needed during decision-making, adding negligible time to existing deliberation."
+
+prerequisites:
+  - "Literacy and reading comprehension sufficient to engage with introductory academic texts (secondary-school level minimum)"
+  - "Access to at least one introductory source: free options include Stanford Encyclopedia of Philosophy and MIT OpenCourseWare"
+  - "No prior philosophy background required – this intervention is designed for people beginning from folk morality and implicit intuitions"
+  - "Willingness to apply the frameworks to real personal decisions, not just read about them abstractly"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Framework literacy can reduce moral distress by providing structured ways to process ethical conflicts."
+  - domain: "cognitive-skills"
+    rationale: "Ethical reasoning exercises the same structured argumentation skills as formal logic training."

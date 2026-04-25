@@ -1,0 +1,204 @@
+name: "Regular Decluttering"
+what_it_is: |
+  A recurring quarterly practice of reviewing a defined category of possessions – clothing, books, kitchen equipment, tools, electronics – and removing items that are unused, broken, or duplicated by something better. Unlike a one-time purge, the cadence approach counteracts ongoing acquisition, maintaining a long-run equilibrium between what enters a household and what leaves. Each session is bounded in scope (one category at a time) to keep the time cost low and decision-making tractable. The mechanism operates on two levels: practically, reducing inventory lowers search time, maintenance load, and the mental overhead of tracking many possessions; cognitively, [research](https://pubmed.ncbi.nlm.nih.gov/19934011/) links higher home clutter scores to flatter cortisol slopes – a marker of chronic stress – suggesting that a less cluttered environment reduces background physiological arousal.
+how_to_do_it: |
+  - Divide all possessions into categories (clothing, books, kitchen, tools, documents, electronics, sport/hobby) and schedule one category per quarter – this prevents sessions from becoming overwhelming and keeps the habit sustainable across years
+  - For each item in the category under review, apply a three-part test: used in the past 12 months, in working order, not duplicated by something better? Items failing all three leave; items failing one or two go on a watchlist for next quarter
+  - Route outgoing items to an exit channel before the session ends – charity donation, local give-away groups, resale (eBay, Facebook Marketplace), or recycling – not into a holding pile that persists indefinitely
+  - After removing items, reassign freed storage space deliberately rather than leaving it open; consider a one-in-one-out rule for the reviewed category to prevent re-accumulation
+success_looks_like: |
+  - After 4–6 quarterly sessions, you can locate any everyday household item within 60 seconds and maintain that standard without a dedicated search
+  - Each quarterly session takes under 2 hours, making the habit easy to initiate rather than a reluctant undertaking
+  - Maintenance overhead decreases visibly – fewer items to repair, clean, store, or track – freeing attentional and time resources for other priorities
+common_pitfalls: |
+  - Keeping an unresolved "maybe" pile at session end – items not disposed of by close reliably remain permanently
+  - Relying solely on charity donation as the exit channel so sessions stall when the shop is inconvenient; building multiple exit routes (resale, recycling, local groups) prevents this bottleneck
+  - Addressing outflow without addressing inflow, so the inventory restores itself within a few acquisition cycles; pairing with a one-in-one-out rule closes the loop
+description: |
+  - A quarterly, category-by-category review of possessions that removes unused, broken, or redundant items on a rolling basis rather than through infrequent large purges
+  - Operates via two mechanisms: reducing the total item count (lowering search time and maintenance burden) and reducing visual environmental load, associated with lower chronic stress markers in [observational research](https://pubmed.ncbi.nlm.nih.gov/19934011/)
+  - [Research](https://www.tandfonline.com/doi/abs/10.1080/17439760.2021.1991450) on voluntary simplicity consistently links curated ownership to higher life satisfaction and psychological need fulfilment, though benefits are strongest when the practice is adopted voluntarily
+  - Distinct from one-time KonMari-style purges in that the quarterly cadence counteracts re-accumulation; [evidence](https://academic.oup.com/jcr/article/52/2/393/7680547) suggests single large purges tend to lose their gains as material disorder reasserts itself
+  - No monetary cost; time requirement is approximately 2 hours per quarter once the category schedule is established
+applicable_domains: ["possessions", "housework", "organisation", "mental-health", "time-management"]
+
+values:
+  possessions.functionality:
+    pbs: 8
+    isr: 80
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding to approximately 50–60% of possessions regularly used. After sustained quarterly decluttering, a user could plausibly reach the 75th percentile – approximately 75% of possessions in active use. Delta: ~25 anchor-unit percentage points.
+      - PBS = 10 + log₂(25/100) = 10 - 2 = 8. The mechanism is direct: removing unused items by definition raises the ratio of used-to-owned items.
+      - [Research on voluntary simplicity](https://www.tandfonline.com/doi/abs/10.1080/17439760.2021.1991450) confirms that regular curation of possessions produces sustained improvements in perceived ownership quality.
+    isr_reasoning: |
+      - Among people who conduct a session properly, the causal mechanism is near-deterministic – removing unused items raises the used-to-total ratio by definition. The primary failure mode is incomplete sessions rather than the mechanism itself.
+      - [Frontiers in Sustainability (2022)](https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2022.958538/full) found that participants who completed structured decluttering rounds consistently reported gains in perceived home functionality.
+      - ISR 80% rather than higher because approximately 20% of adherent practitioners find items re-enter the home rapidly enough within the same quarter to neutralise the gain.
+    uar_reasoning: |
+      - [Journal of Consumer Research (2025)](https://academic.oup.com/jcr/article/52/2/393/7680547) characterises most consumers as "fighting a losing battle with material disorder" – inflow tends to outpace outflow regardless of effort.
+      - [Frontiers in Sustainability (2022)](https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2022.958538/full) identifies three decluttering orientations; the "enthusiastic" group (~30–35% of participants) maintains the practice long-term; the majority do not.
+      - Quarterly cadence is the least demanding form of the habit. UAR 40% reflects the minority who genuinely maintain a consistent annual rhythm.
+
+  possessions.simplicity:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained quarterly decluttering, a user could plausibly reach the 65th percentile – a meaningful gain in freedom from excess possessions. Delta: ~30 percentile points.
+      - Score 6 is appropriate for a practice that systematically removes clutter on a cadence but does not impose the level of curation associated with committed minimalism (score 8+).
+      - [Systematic review on voluntary simplicity](https://www.tandfonline.com/doi/abs/10.1080/17439760.2021.1991450) links reduced possession loads to higher life satisfaction via autonomy and competence need fulfilment.
+    isr_reasoning: |
+      - Perception of simplicity is more variable than the objective functionality ratio – some people feel unburdened after removing 20% of their items; others require much deeper cuts.
+      - [Frontiers in Sustainability (2022)](https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2022.958538/full) reports that the "challenged" subgroup experiences decluttering as stressful rather than liberating.
+      - ISR 65% reflects that the majority who complete sessions experience a meaningful sense of lightness, but a substantial minority do not.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  possessions.meaning:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. By removing items that no longer serve a clear purpose, what remains is a higher-average-meaningfulness set. Plausible endpoint: ~58th–60th percentile. Delta: ~23–25 percentile points.
+      - The gain is indirect: the intervention promotes meaning by removing the unmeaningful rather than actively curating meaningful items.
+      - No direct evidence exists on decluttering and perceived possession meaning; score draws on qualitative accounts in [voluntary simplicity research](https://link.springer.com/article/10.1007/s41042-020-00030-y).
+    isr_reasoning: |
+      - Individual variation in object attachment is high – for some, keeping fewer items heightens appreciation; for others, removal is experienced as loss.
+      - Evidence is drawn from self-selected samples likely overrepresenting people who experienced the benefit.
+      - ISR 55% reflects genuine uncertainty; roughly half report stronger connection to retained possessions.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  housework.order:
+    pbs: 6
+    isr: 75
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Reducing household item count directly reduces visual disorder and the effort required to maintain order. Plausible endpoint: ~65th percentile. Delta: ~30 percentile points.
+      - Score 6: the order benefit is real and reliable but falls short of major change because the intervention addresses one driver of disorder (excess items) without changing cleaning habits.
+      - [Saxbe and Repetti (2010)](https://pubmed.ncbi.nlm.nih.gov/19934011/) found that women who described their homes as stressful/cluttered had measurably worse cortisol profiles.
+    isr_reasoning: |
+      - Removing items from a space is mechanistically reliable for producing order – the pathway from fewer items to less visual disorder is tight.
+      - [Frontiers in Sustainability (2022)](https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2022.958538/full) participants who completed structured rounds consistently reported improved home order perception.
+      - ISR 75%: the 25% failure rate captures re-accumulation, household members who counteract order, and storage constraints.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  housework.aesthetics:
+    pbs: 5
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Decluttering removes visual noise and allows existing furniture and decor to read more clearly. Plausible endpoint: ~58th–60th percentile. Delta: ~23–25 percentile points.
+      - The aesthetic gain depends on what the underlying space looks like after removal; the intervention is necessary but not sufficient for aesthetic improvement.
+      - Common-sense reasoning: fewer competing visual elements produce cleaner sightlines.
+    isr_reasoning: |
+      - Aesthetic perception is highly subjective – removing items may reveal disorganised storage or dated decor that was previously obscured.
+      - For approximately 60% of users, the primary visible effect is a calmer space that reads as more attractive; for the remainder, the effect is neutral.
+      - No RCT evidence; ISR 60% is a conservative estimate.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  organisation.tracking:
+    pbs: 4
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Fewer total items means fewer items to track and locate. Plausible endpoint: ~48th–50th percentile. Delta: ~13–15 percentile points.
+      - Score 4: the benefit is real but limited because decluttering removes items without imposing a tracking system.
+      - [Princeton Neuroscience Institute research](https://www.nuvancehealth.org/health-tips-and-news/how-clutter-affects-your-brain-health) on visual clutter and cognitive load implies fewer competing stimuli reduce the mental effort of locating items.
+    isr_reasoning: |
+      - The benefit depends on whether the practitioner already uses an organisational system; without one, the disorganisation of remaining items persists.
+      - ISR 65% reflects the mixed population – higher for users with existing systems, lower for those without.
+      - No direct research on this pathway; extrapolated from cognitive load literature.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  organisation.speed:
+    pbs: 4
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Fewer items means faster retrieval. Plausible endpoint: ~48th–50th percentile. Delta: ~13–15 percentile points.
+      - Score 4: the speed improvement is real but proportional to volume removed; it does not constitute a systemic organisational upgrade.
+      - Retrieval time scales with the number of items competing for the same storage space; reducing item count directly reduces average retrieval time.
+    isr_reasoning: |
+      - Among people who complete sessions, retrieval speed improvement in reviewed categories is mechanistically reliable. The failure mode is re-accumulation.
+      - ISR 65% reflects that gains are partial and category-specific rather than whole-home.
+      - No direct research; extrapolated from cognitive load literature.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 5
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The clutter-cortisol pathway suggests a real but modest contribution to emotional stability. Plausible endpoint: ~55th–58th percentile. Delta: ~20–23 percentile points.
+      - Score 5: [Saxbe and Repetti (2010)](https://pubmed.ncbi.nlm.nih.gov/19934011/) found flatter cortisol slopes in cluttered homes, but the effect size is modest relative to primary mental-health interventions.
+      - Evidence is observational and causal direction is uncertain; decluttering is not an evidence-based treatment for anxiety or depression.
+    isr_reasoning: |
+      - No RCTs have tested decluttering as a mental-health stability intervention; causal inference is uncertain.
+      - [ScienceDirect (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0272494421000062) found clutter predicted negative affect (n = 501), but reverse causation cannot be ruled out.
+      - ISR 50% reflects genuine uncertainty and high individual variation in environmental sensitivity.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 4
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Voluntary simplicity research links reduced possession loads to higher life satisfaction through autonomy and competence need fulfilment. Plausible endpoint: ~48th–50th percentile. Delta: ~13–15 percentile points.
+      - Score 4: the flourishing benefit is real in the literature but modest relative to interventions targeting purpose, connection, or positive affect directly.
+      - [Tandfonline systematic review (2021)](https://www.tandfonline.com/doi/abs/10.1080/17439760.2021.1991450) found consistent but modest positive associations.
+    isr_reasoning: |
+      - The benefit is conditional on voluntary adoption – the same review found no significant association for involuntary simplification.
+      - Among voluntary adopters, approximately half report meaningful well-being gains; the remainder show neutral results.
+      - No controlled trial evidence; estimate drawn from observational data.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+  time-management.productivity:
+    pbs: 4
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Fewer possessions reduces time spent searching, maintaining, and reorganising. Plausible endpoint: ~48th–50th percentile. Delta: ~13–15 percentile points.
+      - Score 4: the time saving is real but small – 5–10 minutes per day reclaimed from search and maintenance overhead.
+      - [Neuroscience research](https://www.nuvancehealth.org/health-tips-and-news/how-clutter-affects-your-brain-health) suggests reduced environmental complexity decreases the attentional tax of navigating a cluttered space.
+    isr_reasoning: |
+      - The time-saving mechanism is plausible but no studies directly measure productivity gains from household decluttering.
+      - For approximately 60% of adherents, the reduction in overhead is perceptible; for others, the freed time is absorbed without conscious gain.
+      - ISR 60% is conservative given the absence of direct evidence.
+    uar_reasoning: |
+      - See possessions.functionality UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No purchases required. Bags or boxes for donation are sourced from existing household supplies. Resale platforms are free to list on."
+  ongoing_cost: 0
+  ongoing_cost_period: "quarter"
+  ongoing_cost_reasoning: "No recurring costs. Charity donation is free; resale generates income rather than expense."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 1 hour to map all possession categories, establish a quarterly schedule, and identify disposal channels before the first session."
+  ongoing_time: 2
+  ongoing_time_period: "quarter"
+  ongoing_time_reasoning: "A single focused session of approximately 2 hours per quarter covers one possession category thoroughly."
+
+prerequisites:
+  - "Physical ability to sort, lift, and carry household items for disposal"
+  - "Residential stability sufficient to make multi-year household curation worthwhile"
+  - "Access to at least one disposal route – a nearby charity shop, recycling centre, or internet connection for resale or local give-away groups"
+  - "A household with enough accumulated possessions to benefit from reduction"

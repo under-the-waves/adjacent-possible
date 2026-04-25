@@ -1,0 +1,178 @@
+name: "Reading Across the Ideological Spectrum"
+what_it_is: |
+  A deliberate practice of regularly consuming substantive content – books, long-form essays, podcasts, academic writing – that represents political and philosophical perspectives meaningfully different from one's own, with the explicit goal of understanding those views on their strongest terms rather than as foils to be dismissed. Unlike passive or incidental exposure to contrary opinions on social media, this practice involves selecting credible voices from across the ideological range, engaging charitably with their best arguments (steelmanning rather than strawmanning), and reflecting on where one's existing beliefs hold up and where they don't. Over time, it builds intellectual humility, reduces overconfidence in prior views, and produces a more accurate, robustly tested worldview.
+how_to_do_it: |
+  - Start by identifying two or three trusted thinkers whose views differ meaningfully from yours – prioritise those who argue from evidence and first principles rather than partisan talking points; sources like Heterodox Academy's reading lists and cross-ideological recommendation services can help
+  - Adopt a steelmanning discipline when reading: before evaluating a piece, try to state the author's core argument in its strongest possible form; only then assess it critically; writing one-sentence steelman summaries in a reading journal makes this active rather than passive
+  - Set a consistent cadence – one opposing-perspective piece per week is a realistic minimum; monthly long-form reads from a tradition you find least intuitive provide deeper exposure than daily short-form counterpart content
+  - After every session, note one idea that genuinely challenged something you believed or added nuance you didn't have; tracking these entries over months creates visible evidence of worldview evolution
+success_looks_like: |
+  - You can articulate the strongest version of political or philosophical positions you disagree with, in terms their proponents would recognise and accept
+  - Your confidence in prior beliefs becomes better calibrated – you hold high conviction on well-tested positions and genuine uncertainty on positions you haven't yet pressure-tested
+  - You notice partisan or ideological framing in your default reading habits that you previously couldn't see
+common_pitfalls: |
+  - Consuming only low-quality partisan content from the other side – hostile op-eds or caricature journalism – which reinforces rather than challenges prior beliefs and can increase affective polarisation
+  - Treating exposure as the endpoint rather than the beginning: reading opposing views without any structured reflection or steelmanning reduces the practice to intellectual tourism with minimal belief-updating
+  - Seeking emotional validation for one's own views by focusing on the weakest opposing arguments; true intellectual humility requires engaging with the best representatives of a tradition
+description: |
+  - Deliberately and regularly consuming long-form content from political and philosophical traditions different from one's own, with the specific goal of understanding those views at their strongest
+  - Steelmanning is the core active technique: reconstructing an opposing argument in its most credible form before evaluating it; [research](https://mentalimmunityproject.org/wp-content/uploads/2024/07/Steelmanning_What-Works-Series_MIMIC.pdf) shows this shifts engagement from dominance-seeking to accuracy-seeking
+  - [Studies](https://www.tandfonline.com/doi/full/10.1080/17439760.2024.2394447) consistently find intellectual humility is associated with less affective polarisation, more positive expectations of outgroup engagement, and greater tolerance for opposing views
+  - [Research on interventions](https://onlinelibrary.wiley.com/doi/10.1002/ejsp.3177) shows that explaining the benefits of intellectual humility in polarised discussions produces measurable increases in the disposition itself
+  - Distinct from passive algorithmic cross-cutting exposure: the deliberate, reflective nature is what separates it from simply encountering opposing views on social media, where [evidence](https://www.pnas.org/doi/10.1073/pnas.1804840115) suggests exposure alone can increase polarisation
+applicable_domains: ["worldview", "rationality", "ethics", "media-diet", "cognitive-skills"]
+
+values:
+  worldview.breadth:
+    pbs: 7
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A committed practitioner reading across ideological traditions for 12 months could plausibly add 1.5 knowledge domains. PBS = 10 + log₂(1.5/8) = 10 - 2.4 = 7.6, rounded to 7.
+      - The breadth gain is genuine but bounded: this practice deepens familiarity with perspectives within political/philosophical space rather than expanding across entirely new domains.
+      - [Frontiers in Communication (2024)](https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2024.1384706/full) confirms deliberate exposure to diverse political views increases breadth of political and social knowledge.
+    isr_reasoning: |
+      - [PNAS (2018)](https://www.pnas.org/doi/10.1073/pnas.1804840115) found that exposure to low-quality partisan content increased polarisation, meaning source selection is a significant failure mode.
+      - Among users who select credible sources, structured bipartisan engagement substantially improved accuracy and eliminated belief polarisation.
+      - ISR of 55% reflects that a meaningful minority will self-select into lower-quality outgroup content.
+    uar_reasoning: |
+      - [Pew Research (2021)](https://www.pewresearch.org/journalism/2021/02/22/about-a-quarter-of-republicans-democrats-consistently-turned-only-to-news-outlets-whose-audiences-aligned-with-them-politically-in-2020/) found roughly a quarter of partisans consume only aligned news; breaking this pattern voluntarily requires sustained motivation.
+      - The practice relies on ongoing active choice with no automation; the cognitive and emotional friction of engaging charitably with challenging views means dropout rates are high.
+      - UAR of 40% reflects that sustained engagement over 6+ months characterises a minority of those who start.
+
+  worldview.depth:
+    pbs: 7
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A committed practitioner who steelmans opposing views for 12 months plausibly reaches the 65th–70th percentile. Delta: ~30 percentile points.
+      - [Research on intellectual humility](https://www.nature.com/articles/s44159-022-00081-9) confirms that engaging with diverse, high-quality arguments increases calibration accuracy and reduces overconfidence.
+      - Depth gains are bounded by the quality of sources selected.
+    isr_reasoning: |
+      - [Knochelmann et al. (2025)](https://onlinelibrary.wiley.com/doi/10.1002/ejsp.3177) found small-to-medium increases in intellectual humility in an intervention tournament.
+      - The mechanism of steelmanning reliably produces depth gains for those who apply it.
+      - ISR of 60%: modestly higher than for breadth because depth gain requires only quality engagement with a smaller number of sources.
+    uar_reasoning: |
+      - See worldview.breadth UAR – same intervention, same adherence profile.
+
+  worldview.utility:
+    pbs: 6
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A practitioner who updates beliefs based on opposing sources makes fewer decisions based on ideological blind spots. Endpoint: ~60th percentile. Delta: ~25 percentile points.
+      - The causal pathway from ideological reading to better decisions is real but mediated: better calibrated beliefs only translate into better decisions if the person also applies their updated worldview.
+      - Limited direct evidence linking ideological reading to decision quality.
+    isr_reasoning: |
+      - [Research on calibration](https://advances.in/psychology/10.56296/aip00026/) shows intellectual humility is associated with greater misinformation discernment and metacognitive insight.
+      - The translation from better beliefs to better decisions is imperfect; even well-calibrated beliefs can fail to change habitual decision patterns.
+      - ISR of 50%: roughly half of committed practitioners will see utility improvements in real decisions.
+    uar_reasoning: |
+      - See worldview.breadth UAR – same intervention, same adherence profile.
+
+  rationality.accurate-beliefs:
+    pbs: 7
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A committed practitioner who regularly steelmans opposing views plausibly reaches the 65th–70th percentile. Delta: ~30 percentile points.
+      - [Intellectual humility research](https://advances.in/psychology/10.56296/aip00026/) shows IH is associated with greater misinformation discernment; [structured bipartisan exposure](https://www.pnas.org/doi/10.1073/pnas.1804840115) substantially improved accuracy of political judgements.
+      - The backfire effect has been largely debunked; [PNAS (2019)](https://www.pnas.org/doi/10.1073/pnas.1912440117) found no evidence of backfire across 52 issues.
+    isr_reasoning: |
+      - [Knochelmann et al. (2025)](https://onlinelibrary.wiley.com/doi/10.1002/ejsp.3177) found small-to-medium IH gains from structured sociopolitical engagement.
+      - The primary failure mode is source quality: exposure to extremely partisan content can increase rather than improve belief accuracy.
+      - ISR of 55% reflects this meaningful minority failure mode.
+    uar_reasoning: |
+      - See worldview.breadth UAR – same intervention, same adherence profile.
+
+  rationality.intellectual-honesty:
+    pbs: 7
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Intellectual honesty is arguably the most direct target beyond belief accuracy; regular steelmanning trains the habit of acknowledging when one's prior view was incomplete. Endpoint: 65th–70th percentile. Delta: ~30 percentile points.
+      - [Tandfonline (2024)](https://www.tandfonline.com/doi/full/10.1080/17439760.2024.2394447) found intellectual humility consistently related to less overconfidence and more openness to opposing views.
+      - [APA (2024)](https://www.apa.org/pubs/journals/releases/psp-pspi0000462.pdf) showed IH predicted approach behaviours toward opposing discussion partners.
+    isr_reasoning: |
+      - [Knochelmann et al. (2025)](https://onlinelibrary.wiley.com/doi/10.1002/ejsp.3177) replicated IH gains across multiple conceptual replications in a population-stratified sample.
+      - ISR is higher than on accurate beliefs because the disposition is self-reinforcing: each successful steelmann that reveals a flaw in one's prior view creates a positive feedback loop.
+      - [PMC (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9244574/) confirms IH gains persist and compound when the practice is maintained.
+    uar_reasoning: |
+      - See worldview.breadth UAR – same intervention, same adherence profile.
+
+  ethics.philosophical:
+    pbs: 6
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Reading across ideological traditions necessarily involves engaging with different moral frameworks. Endpoint: 60th–65th percentile. Delta: ~25–30 percentile points.
+      - The mechanism is credible but indirect: the practice is not explicitly designed as ethics education.
+      - No direct studies measure ethics gains from ideological reading specifically.
+    isr_reasoning: |
+      - Philosophical depth gains follow from engaging with high-quality ideological traditions; users who read Rawls, Hayek, or Singer will gain philosophical understanding.
+      - The failure mode is that many users will read political journalism rather than philosophical sources.
+      - ISR of 55% reflects this split.
+    uar_reasoning: |
+      - See worldview.breadth UAR – same intervention, same adherence profile.
+
+  media-diet.breadth:
+    pbs: 8
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Media diet breadth is by definition what this practice maximises; a committed practitioner reaches the 75th–80th percentile. Delta: ~40 percentile points.
+      - This is the closest match between intervention mechanism and value definition.
+      - [Frontiers in Communication (2024)](https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2024.1384706/full) confirms deliberate diversity in political media consumption significantly shifts perspective breadth.
+    isr_reasoning: |
+      - ISR is higher here because breadth is the direct output of the practice rather than a downstream effect.
+      - [Nature Human Behaviour (2025)](https://www.nature.com/articles/s41562-025-02205-6) found diversified news following boosted political knowledge accuracy and trust.
+      - ISR of 70% accounts for those who maintain quality source selection long enough to produce meaningful breadth gains.
+    uar_reasoning: |
+      - See worldview.breadth UAR – same intervention, same adherence profile.
+
+  cognitive-skills.reasoning:
+    pbs: 5
+    isr: 45
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Steelmanning trains the ability to hold and evaluate competing argument structures simultaneously. Endpoint: 55th–60th percentile. Delta: ~20 percentile points.
+      - The mechanism is plausible but indirect; reasoning improvement is a by-product.
+      - No direct studies measure general reasoning gains from ideological reading.
+    isr_reasoning: |
+      - Generating arguments for the opposing side [has been shown](https://www.psychologicalscience.org/news/releases/perspective-taking-self-peruasion.html) to increase receptiveness, suggesting active reasoning engagement.
+      - ISR of 45%: reasoning gains require active application of steelmanning technique; passive readers are unlikely to see improvement.
+      - Evidence is extrapolated from adjacent research on argumentation practice.
+    uar_reasoning: |
+      - See worldview.breadth UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 20
+  upfront_cost_reasoning: "Minimum cost: one book from an opposing tradition. Most content is available free (online essays, podcasts, public libraries); $20 covers a single book to get started."
+  ongoing_cost: 15
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Roughly one book per month from an opposing tradition ($10–20 second-hand or digital); many sources are free."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 1 hour to identify credible voices from opposing traditions, compile a starting reading list, and establish a tracking system."
+  ongoing_time: 3
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum of 3 hours per week: roughly one long-form article session plus 30 minutes of structured reflection and steelman note-writing."
+
+prerequisites:
+  - "Sufficient reading literacy to engage with book-length or long-form essay arguments"
+  - "Access to a public library, digital book subscription, or free essay/podcast sources"
+  - "Basic familiarity with one's own ideological position – knowing where one stands is necessary to identify what constitutes a genuinely opposing perspective"
+  - "A note-taking system for recording steelman summaries and belief updates"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Engaging charitably with opposing views may reduce identity-threat responses, but could also increase stress in users with low distress tolerance."
+  - domain: "personality"
+    rationale: "Regular steelmanning and belief-updating may cultivate trait openness to experience over time."

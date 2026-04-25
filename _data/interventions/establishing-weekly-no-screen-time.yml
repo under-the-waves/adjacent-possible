@@ -1,0 +1,179 @@
+name: "Establishing Weekly No-Screen Time"
+what_it_is: |
+  Blocking out recurring, fixed periods – such as Sunday mornings or weekday evenings – during which all personal screens (phone, laptop, television) are set aside entirely. The practice works by removing the default path of least resistance (scrolling) and forcing re-engagement with the physical world: books, cooking, conversation, walking, craft, or simply sitting without an agenda. Because the commitment is structural and calendar-bound rather than willpower-dependent in the moment, it has more staying power than informal intentions to "use the phone less."
+how_to_do_it: |
+  - Choose a specific, recurring time block (e.g. Saturday morning 8–11 am, or weekday evenings after 8 pm) and add it to your calendar as a hard commitment
+  - Before the block begins, physically relocate devices to another room or place them in a drawer; consider enabling Do Not Disturb and telling close contacts in advance
+  - Prepare at least one alternative activity in advance – a book, a walk route, a craft project, a board game – to lower the activation energy when the block begins
+  - Start with one block per week of 2–3 hours, then expand gradually; trying to go fully screen-free for entire weekends from the outset is a common cause of abandonment
+success_looks_like: |
+  - You reach the end of a screen-free block feeling genuinely rested or absorbed rather than restless and deprived, with the urge to immediately check your phone noticeably weaker over successive weeks
+  - Conversations, books, or activities that used to feel slow now feel adequately engaging – your attention span has reset toward longer, uninterrupted focus
+  - After 4–6 weeks you find yourself looking forward to the block as a scheduled relief rather than a restriction
+common_pitfalls: |
+  - Using "emergency exceptions" as a wedge – one justified check becomes habitual, and the block quietly dissolves; if genuine emergencies are a concern, use a single-purpose device or ask a household member to screen calls
+  - Failing to plan alternative activities, which makes the first 10–15 minutes feel aversive and leads to abandoning the block early; boredom is the intended mechanism, not a sign the practice is failing
+  - Measuring success by feelings of productivity rather than restoration – screen-free time is not meant to be efficient; discomfort with doing "nothing" is normal and dissipates with repetition
+description: |
+  - Designating fixed, recurring calendar blocks (typically 2–4 hours, 1–2 times per week) during which all personal screens are put away, with no exceptions for social media, news, or entertainment
+  - The mechanism is structural constraint rather than willpower: removing access during a pre-committed window sidesteps moment-by-moment temptation
+  - [A 2025 RCT](https://link.springer.com/article/10.1186/s12916-025-03944-z) found that three weeks of daily screen time reduction to two hours or less produced small-to-medium improvements in sleep quality, depressive symptoms, stress, and well-being in healthy adults
+  - [Research on boredom and divergent thinking](https://www.tandfonline.com/doi/abs/10.1080/10400419.2014.901073) finds that unstructured, unstimulated time activates associative thought and supports creative ideation
+  - Distinct from full "digital detox" programmes: this targets all screen-based consumption in bounded windows, preserving the rest of the week as normal, which markedly improves adherence
+applicable_domains: ["consumptive-leisure", "mindfulness", "participatory-leisure", "sleep"]
+
+values:
+  consumptive-leisure.restoration:
+    pbs: 7
+    isr: 60
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After consistent adherence, a user could plausibly reach the 65th–70th percentile – leisure that genuinely detaches from work and stress. Delta: ~30 percentile points.
+      - Screen-based leisure is consistently rated lower on restoration than non-screen alternatives; Kaplan's Attention Restoration Theory posits that screens sustain directed attention rather than permitting involuntary attention to replenish.
+      - [The 2025 BMC Medicine RCT](https://link.springer.com/article/10.1186/s12916-025-03944-z) showed well-being improvements at small-to-medium effect sizes (Cohen's d ~0.4–0.5), consistent with a score of 7.
+    isr_reasoning: |
+      - [A 2024 scoping review](https://pmc.ncbi.nlm.nih.gov/articles/PMC11871965/) found highly variable outcomes across digital detox studies, with well-being effects inconsistent across populations.
+      - Restoration benefit depends heavily on what fills the screen-free time – passive inactivity produces less restoration than active alternatives.
+      - [The RCT evidence](https://link.springer.com/article/10.1186/s12916-025-03944-z) shows meaningful gains in roughly 60% of adherent participants.
+    uar_reasoning: |
+      - [A 2025 RCT on digital detox planning](https://www.sciencedirect.com/science/article/pii/S0747563225000718) found that even with structured planning support, long-term adherence to screen-reduction commitments is low.
+      - Reflexive phone-checking is deeply habituated – [nudge-based RCTs](https://link.springer.com/article/10.1007/s11469-022-00826-w) show that without structural enforcement, around half of participants revert to baseline within weeks.
+      - UAR of 45% reflects that the intervention requires active ongoing commitment each occurrence.
+
+  consumptive-leisure.enjoyment:
+    pbs: 6
+    isr: 55
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~60th percentile. Delta: ~25 percentile points.
+      - The enjoyment gain mechanism is hedonic recalibration: removing constant low-grade stimulation raises baseline sensitivity to slower pleasures.
+      - [Frontiers eudaimonic well-being study (2025)](https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2025.1572587/full) found digital detox participants reported improved eudaimonic satisfaction with leisure.
+    isr_reasoning: |
+      - One RCT found no significant difference in reported leisure enjoyment between active nudge and control groups, suggesting enjoyment gains are not universal.
+      - Enjoyment requires finding adequate alternatives; individuals with limited access to non-screen hobbies may experience the block as deprivation.
+      - Population-level survey data indicates that a majority who persist do find the experience net positive, supporting an ISR around 55%.
+    uar_reasoning: |
+      - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
+
+  consumptive-leisure.enrichment:
+    pbs: 4
+    isr: 50
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~50th percentile. Delta: ~15 percentile points.
+      - The gain is constrained because the intervention does not direct users toward enriching content – it only removes screens; whether substitutes are enriching depends entirely on individual choice.
+      - This is a secondary effect; enrichment gain is real for users who substitute toward reading or learning, negligible for those who substitute toward passive non-screen activities.
+    isr_reasoning: |
+      - Enrichment depends on substitution choice, which is unconstrained; only a subset will fill screen-free time with materially enriching activities.
+      - No direct evidence on enrichment outcomes from screen-free time interventions.
+      - Survey evidence suggests reading and conversation are the most common substitutes during detox periods.
+    uar_reasoning: |
+      - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
+
+  mindfulness.clarity:
+    pbs: 5
+    isr: 50
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~50th percentile. Delta: ~15 percentile points.
+      - [Research linking trait mindfulness to reduced problematic smartphone use](https://www.sciencedirect.com/science/article/abs/pii/S0306460325000279) confirms the inverse relationship, but the causal direction is uncertain.
+      - PBS 5 reflects that screen-free blocks create conditions for mindful awareness but do not teach or train it.
+    isr_reasoning: |
+      - [Springer 2024 research](https://link.springer.com/article/10.1007/s12671-024-02349-y) found that reducing use did not reliably produce increased mindfulness practice.
+      - Users who already have some mindfulness disposition are more likely to use screen-free time contemplatively.
+      - ISR of 50%: roughly half of adherent users will experience meaningfully increased present-moment awareness.
+    uar_reasoning: |
+      - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
+
+  mindfulness.emotional:
+    pbs: 5
+    isr: 55
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~58th percentile. Delta: ~23 percentile points.
+      - [The BMC Medicine 2025 RCT](https://link.springer.com/article/10.1186/s12916-025-03944-z) showed small-to-medium improvements in depressive symptoms and stress from screen time reduction.
+      - PBS 5 rather than 6: the emotional gains are real but modest without accompanying formal mindfulness practice.
+    isr_reasoning: |
+      - [The 2025 BMC Medicine RCT](https://link.springer.com/article/10.1186/s12916-025-03944-z) found significant stress and depression improvements in roughly 55–60% of the intervention group.
+      - Emotional wellbeing gains from reduced screen time appear more reliable than mindfulness clarity gains because they operate through a simpler mechanism (lower stimulation load).
+      - Individual differences in baseline emotional regulation mean a meaningful minority will not notice change from reduced screen time alone.
+    uar_reasoning: |
+      - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
+
+  participatory-leisure.social:
+    pbs: 6
+    isr: 55
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~60th percentile. Delta: ~25 percentile points.
+      - Blocking screens removes the most common competitor to in-person attention during leisure time, increasing the quality of social interaction.
+      - PBS 6 rather than higher because the intervention does not schedule or prompt social activity – it only removes screens.
+    isr_reasoning: |
+      - No RCT directly measures relationship quality outcomes from screen-free time.
+      - ISR is contingent on the social context of the screen-free block: users who spend blocks with others will see this benefit; those alone will not.
+      - [Behavioural Health News review (2025)](https://behavioralhealthnews.org/digital-well-being-managing-screen-time-and-promoting-healthy-tech-habits-in-families/) notes family screen-free time is among the most-cited motivations for digital detox.
+    uar_reasoning: |
+      - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
+
+  participatory-leisure.achievement:
+    pbs: 4
+    isr: 40
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~48th percentile. Delta: ~13 percentile points.
+      - PBS 4: the intervention does not direct users toward achievement-oriented activities; only a subset will use screen-free time for skill-building.
+      - The gain is real but secondary and conditional.
+    isr_reasoning: |
+      - Achievement gains require sustained, deliberate practice, which the intervention does not structure.
+      - No direct evidence; ISR estimated conservatively at 40%.
+      - The benefit, when it occurs, is genuine (weekly craft/instrument/sport practice accumulates); when it does not, it leaves no trace.
+    uar_reasoning: |
+      - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
+
+  sleep.daily_functioning:
+    pbs: 6
+    isr: 60
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~62nd percentile. Delta: ~27 percentile points.
+      - [The BMC Medicine 2025 RCT](https://link.springer.com/article/10.1186/s12916-025-03944-z) found a significant group difference in sleep quality post-intervention (MD = 2.59 on PSQI).
+      - The mechanism (blue light reduction, lower pre-sleep arousal) is well-established; [National Sleep Foundation consensus (2024)](https://www.sleephealthjournal.org/article/S2352-7218%2824%2900090-1/fulltext) confirms screen use before bed delays sleep onset.
+    isr_reasoning: |
+      - [The active nudge RCT (Frontiers Psychiatry 2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC12310694/) found a significant effect of screen time reduction on sleep delay frequency, with roughly 60% of the intervention group showing meaningful improvement.
+      - Sleep benefit is most reliable when the screen-free block includes the 1–2 hours before bed.
+      - [Electronic Media Use and Sleep meta-analysis (JMIR 2024)](https://www.jmir.org/2024/1/e48356) confirmed consistent associations between screen reduction and improved sleep quality.
+    uar_reasoning: |
+      - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment or purchases required. The intervention uses absence of devices rather than any product."
+  ongoing_cost: 0
+  ongoing_cost_period: "week"
+  ongoing_cost_reasoning: "No recurring costs. Optional items (books, board games, craft materials) are not required to begin."
+  upfront_time: 0.5
+  upfront_time_reasoning: "Approximately 30 minutes to choose a recurring time block, add it to the calendar, identify 2–3 alternative activities, and inform household members."
+  ongoing_time: 3
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective implementation is one 2–3 hour block per week. Time spent within the block is leisure time that would otherwise be spent on screens, so it is substitution rather than addition."
+
+prerequisites:
+  - "No specific physical or health requirements; suitable for all ages and fitness levels"
+  - "A recurring time slot that is genuinely discretionary – the intervention does not apply to work-required screen use"
+  - "Basic awareness of one or two non-screen activities to substitute, to avoid the block collapsing in the first 10 minutes"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Screen time reduction produces small-to-medium improvements in depressive symptoms and stress (BMC Medicine 2025 RCT)."
+  - domain: "friendship"
+    rationale: "Screen-free blocks spent with friends or family displace phone use during shared time, plausibly deepening relationship quality."
+  - domain: "cognitive-skills"
+    rationale: "Sustained screen-free periods allow attentional recovery and may improve focus and concentration over time."

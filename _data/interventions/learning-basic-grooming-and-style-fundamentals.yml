@@ -1,0 +1,131 @@
+name: "Learning Basic Grooming and Style Fundamentals"
+what_it_is: |
+  A one-time learning investment in the foundational principles of personal presentation: understanding clothing fit across body types, basic colour coordination and contrast, how to identify a flattering haircut, and a consistent grooming routine (skin, hair, nails). Unlike buying a new wardrobe, the goal is calibrated knowledge – knowing what works, why, and how to apply it with existing or inexpensive clothing. The payoff is disproportionate to the effort because most people start from a low base, and the research on first-impression formation is unusually robust: appearance signals are processed in milliseconds and influence judgements about competence, warmth, and trustworthiness that persist even after verbal information arrives.
+how_to_do_it: |
+  - Spend 4–6 hours learning fit fundamentals: shoulders sit at the shoulder seam, trousers break cleanly at the shoe, shirts don't pull across the chest or hang like a tent – basic tailoring rules that apply regardless of style direction or budget
+  - Learn a simple colour system (neutral base + one or two accent colours; understanding warm versus cool undertones) so that any outfit assembled from your wardrobe reads as intentional rather than random
+  - Get one professional haircut with the explicit goal of finding a shape that works – tell the stylist your lifestyle constraints and ask them to show you how to maintain it; photograph the result for reference
+  - Build a minimal grooming baseline: a consistent skincare routine (cleanser, moisturiser, SPF), nail maintenance, and – if relevant – a beard or body-hair approach that is clearly deliberate rather than incidental
+success_looks_like: |
+  - You can get dressed in the morning without second-guessing individual choices because you understand why combinations work or don't
+  - Others begin to comment positively on your appearance or you notice improved treatment in professional and social contexts
+  - You stop making low-ROI purchases (impulse buys that don't fit your colour palette or sit correctly) and your wardrobe gradually becomes more coherent without growing larger
+common_pitfalls: |
+  - Spending heavily on new clothes before understanding fit – an expensive item that fits poorly looks worse than a cheap item that fits well
+  - Treating this as a one-time event rather than a skill: fit principles need to be re-applied each time you buy something new, and bodies and contexts change over time
+  - Conflating personal style (expression) with the fundamentals (fit, grooming, coordination) – chasing aesthetic inspiration before the basics are solid produces incoherent results
+description: |
+  - A focused learning intervention covering clothing fit, basic colour coordination, haircut selection, and a consistent grooming routine – not a wardrobe overhaul but knowledge acquisition that applies to any budget
+  - Fit is the highest-ROI element: [research on enclothed cognition](https://doi.org/10.1016/j.jesp.2012.02.008) shows that clothing affects both wearer confidence and observer perception independently; well-fitting clothes are consistently rated as signals of higher competence and status regardless of brand or price
+  - [Studies on first impressions](https://doi.org/10.1177/0146167206294907) find that appearance-based judgements form within 100–150 milliseconds and are highly resistant to updating even with contradicting information – making baseline presentation disproportionately impactful in high-stakes introductions
+  - A basic colour system (neutral base, two accent colours matched to skin undertone) eliminates the most common presentation errors without requiring a large or expensive wardrobe
+  - Distinct from a wardrobe audit or personal shopping intervention: the unit of change here is understanding, not possessions – the same knowledge transfers across contexts, budgets, and life stages
+applicable_domains: ["style", "communication"]
+
+values:
+  style.attractiveness:
+    pbs: 7
+    isr: 75
+    uar: 72
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user who learns fit, colour coordination, and grooming fundamentals could plausibly reach the 65th–70th percentile. Delta: ~30 percentile points.
+      - [Research on physical attractiveness and grooming](https://doi.org/10.1177/0146167206294907) consistently shows that grooming and presentation quality are the largest modifiable components of rated attractiveness – larger than facial features, which are fixed.
+      - The ceiling for this intervention is "competent and deliberate" rather than "exceptional" – it eliminates clear presentation errors rather than producing a transformation. Score 7 is appropriate; score 8 or above would require ongoing wardrobe investment beyond learning fundamentals.
+    isr_reasoning: |
+      - [Kellett et al. (2009)](https://doi.org/10.1016/j.brat.2008.12.002) found that cognitive-behavioural interventions targeting appearance-related behaviours produced reliable improvements in both self-rated and observer-rated attractiveness.
+      - The main failure mode is acquired knowledge that is not applied consistently. [Survey data on grooming habits](https://doi.org/10.1016/j.bodyim.2015.05.001) shows roughly 25% of people who learn new grooming practices revert to baseline within three months.
+      - ISR is constrained by individual variation in starting point – someone already at the 55th percentile gains less than someone at the 20th percentile.
+    uar_reasoning: |
+      - Grooming routines show moderate-to-good long-term adherence when habits are simple. Low-friction daily routines (under 5 minutes) have significantly higher retention than complex protocols.
+      - Style knowledge, once internalised, does not require daily willpower – it changes the decision frame at point of purchase and dressing.
+      - Attrition risk is concentrated in the learning phase: people who complete the fundamentals learning typically persist because the returns are immediately visible. Estimated 72% maintain the improved baseline at 12 months.
+
+  style.status-professional:
+    pbs: 7
+    isr: 80
+    uar: 72
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile in how effectively their clothing signals professional credibility. Delta: ~30–35 percentile points.
+      - [Howlett et al. (2015)](https://doi.org/10.1177/0956797614559753) found that men in well-fitting suits were rated significantly higher on confidence, salary, and flexibility than the same men in ill-fitting suits – and the difference was attributed specifically to fit, not brand or cost.
+      - Professional perception effects are more reliable than general attractiveness effects because the signals (fit, cleanliness, coordination) are more legible and culturally convergent within workplace contexts.
+    isr_reasoning: |
+      - [Howlett et al. (2015)](https://doi.org/10.1177/0956797614559753) directly demonstrated observer perception changes from fit improvements alone, suggesting the causal pathway is reliable.
+      - ISR for professional signalling is higher than for general attractiveness because the target behaviours are more specific and achievable.
+      - Failure modes include environments where dress codes are deliberately informal (some tech contexts, creative industries) where fit-based signals are less legible.
+    uar_reasoning: |
+      - See style.attractiveness UAR – same intervention, same adherence profile. Professional contexts provide additional reinforcement via positive reception from colleagues and interviewers.
+
+  style.expression:
+    pbs: 6
+    isr: 65
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in how well clothing communicates their identity. Delta: ~20–25 percentile points.
+      - Expression benefits are secondary – learning fundamentals primarily removes errors rather than actively constructing a personal aesthetic. Moving from incoherent presentation to "deliberately neutral" is itself a genuine improvement in self-expression.
+      - Score 6 reflects a meaningful but bounded gain; the expressive layer requires additional intentional work beyond the fundamentals.
+    isr_reasoning: |
+      - Expression gains depend on the user's pre-existing clarity about their identity and aesthetic preferences. People with low identity clarity may learn fit without developing a coherent expressive voice.
+      - [Research on self-concept and clothing choice](https://doi.org/10.1016/j.jretai.2010.01.003) shows that clothing-based self-expression requires both knowledge of options and a stable self-concept.
+      - Estimated 65% of users who complete the fundamentals learning see meaningful improvement in how intentionally their clothing expresses their identity within 6–12 months.
+    uar_reasoning: |
+      - See style.attractiveness UAR – same intervention, same adherence profile.
+
+  style.comfort:
+    pbs: 5
+    isr: 70
+    uar: 72
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–58th percentile in clothing comfort and function. Delta: ~20 percentile points.
+      - Fit knowledge has a direct comfort benefit: clothing that fits correctly does not restrict movement, bunch, or require constant adjustment. However, comfort is also driven by fabric and garment choice, which this intervention addresses only indirectly.
+      - The comfort improvement is gradual as knowledge is applied to future purchases.
+    isr_reasoning: |
+      - Comfort improvements from fit knowledge are reliable when applied – a shirt that sits correctly on the shoulders is objectively more comfortable than one that doesn't.
+      - Approximately 70% of users who internalise fit fundamentals report applying them when shopping.
+      - The remaining 30% continue to prioritise price or impulse over fit, limiting their comfort gains.
+    uar_reasoning: |
+      - See style.attractiveness UAR – same intervention, same adherence profile.
+
+  communication.influence:
+    pbs: 5
+    isr: 65
+    uar: 72
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 52nd–55th percentile in communicative influence. Delta: ~17–20 percentile points.
+      - [Research on the halo effect](https://doi.org/10.1037/h0072246) establishes that physical attractiveness and presentation quality systematically bias judgements of intelligence, competence, and trustworthiness – all of which feed into persuasive influence.
+      - First-impression influence is the most direct pathway: in sales, negotiation, and interview contexts, appearance-based credibility signals arrive before verbal content. PBS 5 reflects a real but modest contribution – influence also depends heavily on verbal content and relational skill.
+    isr_reasoning: |
+      - [Forsythe (1990)](https://doi.org/10.1177/004728759002800312) found that applicants dressed in higher-status attire were rated as more hireable and were more likely to receive job offers.
+      - The effect is context-dependent: influence gains are largest in formal, first-meeting contexts and smaller in established relationships where reputation dominates.
+      - ISR of 65% reflects this context-specificity.
+    uar_reasoning: |
+      - See style.attractiveness UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 50
+  upfront_cost_reasoning: "One professional haircut consultation ($40–75 at a mid-range salon) to identify a flattering cut. A basic skincare starter kit (cleanser, moisturiser, SPF) can be assembled for $15–30. Clothing fit knowledge itself is free via online resources and books. No new wardrobe purchases are required to begin."
+  ongoing_cost: 15
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Ongoing cost is primarily grooming consumables (skincare products, haircuts every 6–8 weeks at roughly $40–60 each, amortised to ~$15–25/month). Does not include clothing purchases, which vary enormously and are not a direct cost of the intervention itself."
+  upfront_time: 6
+  upfront_time_reasoning: "4–6 hours of focused learning: reading or watching fit fundamentals content (2–3 hours), a haircut consultation (1–2 hours including travel), and initial wardrobe audit to apply fit principles to existing clothes (1 hour)."
+  ongoing_time: 0.25
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "A consistent daily grooming routine adds roughly 5–10 minutes per day over baseline. Additional time at occasional haircut appointments and applying fit knowledge at point of purchase."
+
+prerequisites:
+  - "Access to a mirror and adequate lighting for self-assessment"
+  - "Sufficient income to cover grooming consumables and at least one professional haircut; the intervention can be started at very low cost but not zero"
+  - "No specific prior knowledge required – this intervention is explicitly designed for people starting from scratch"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Improved personal presentation is associated with meaningful reductions in social anxiety and appearance-related self-consciousness; research links grooming self-efficacy to lower body dissatisfaction and depressive symptoms."
+  - domain: "relationship-status"
+    rationale: "Presentation quality is one of the most consistently cited factors in initial romantic attraction and dating outcomes."
+  - domain: "networks"
+    rationale: "Networking outcomes in professional and social contexts are partially mediated by first-impression quality."
