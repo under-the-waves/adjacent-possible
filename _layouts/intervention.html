@@ -1079,8 +1079,8 @@ function renderTopEffectsSummary() {
                     '</strong> is <strong>' + r.userPct + 'th</strong>.</p>';
             }
         });
-        pdLines += '<p>Estimated adherence rate for this intervention: <strong>' +
-            top.result.data.uar + '%</strong> of people stick with it long-term.</p>';
+        // TODO: Add personalised UAR here once user adherence data is collected
+        // (e.g. from habits life area assessment or self-report on adherence tendency)
         reasoningData['personalised-data'] = {
             title: 'Your personalised data',
             content: pdLines,
