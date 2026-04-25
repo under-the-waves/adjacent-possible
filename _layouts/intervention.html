@@ -1036,7 +1036,8 @@ function renderTopEffectsSummary() {
         '<p>This intervention scores <strong>' + top.ebs.toFixed(1) + '</strong> on ' + top.userDesc + ', which falls in the <strong>' + top.magnitude + '</strong> range.</p>';
     reasoningData['magnitude-explanation'] = {
         title: 'What does \u201c' + top.magnitude + '\u201d mean?',
-        content: magExplain
+        content: magExplain,
+        isHtml: true
     };
 
     // Build personalised data popup content
@@ -1061,7 +1062,8 @@ function renderTopEffectsSummary() {
         pdLines += '</ul>';
         reasoningData['personalised-data'] = {
             title: 'Your personalised data',
-            content: pdLines
+            content: pdLines,
+            isHtml: true
         };
     }
 
@@ -1146,7 +1148,7 @@ function showReasoning(key) {
     const data = reasoningData[key];
     if (data) {
         document.getElementById('popupHeader').textContent = data.title;
-        document.getElementById('popupContent').innerHTML = renderReasoning(data.content);
+        document.getElementById('popupContent').innerHTML = data.isHtml ? data.content : renderReasoning(data.content);
         document.getElementById('popupOverlay').classList.add('visible');
         document.getElementById('reasoningPopup').classList.add('visible');
     }
