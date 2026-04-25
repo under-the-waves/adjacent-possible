@@ -454,43 +454,43 @@ life_area_slug: relationship-status
 <h4>Meeting New Partners</h4>
 
 <div class="assess-input-group" id="ig-search-proactivity">
-    <span class="assess-label">How active is your current approach to meeting potential partners?</span>
-    <span class="assess-hint">Are you on dating apps, expanding your social circles, asking friends for introductions, or mainly hoping to meet someone organically?</span>
+    <span class="assess-label">If you were looking for a partner, how effective would your approach be?</span>
+    <span class="assess-hint">Think about your skills and social infrastructure for meeting people, whether or not you are currently looking. If partnered, consider how you would approach it if you needed to.</span>
     <select id="a-search-proactivity" onchange="handleAssessInput('a-search-proactivity')">
         <option value="">Select...</option>
-        <option value="passive">Passive &ndash; entirely relying on chance</option>
-        <option value="single-channel">Single channel &ndash; one method (e.g. one dating app) without much effort</option>
-        <option value="moderate">Moderate &ndash; a couple of methods with some consistency</option>
-        <option value="active">Active &ndash; multiple deliberate methods used regularly</option>
-        <option value="systematic">Systematic &ndash; structured approach across several channels with regular review</option>
+        <option value="passive">Passive &ndash; would rely entirely on chance</option>
+        <option value="single-channel">Single channel &ndash; would use one method without much strategy</option>
+        <option value="moderate">Moderate &ndash; would use a couple of methods with some consistency</option>
+        <option value="active">Active &ndash; would use multiple deliberate methods</option>
+        <option value="systematic">Systematic &ndash; would have a structured approach across several channels</option>
     </select> <span class="assess-percentile-hint" id="pct-search-proactivity"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-search-proactivity" onchange="handleSkip('a-search-proactivity')"><label for="skip-search-proactivity">I know but prefer not to say</label></div>
 </div>
 
 <div class="assess-input-group" id="ig-search-effectiveness">
-    <span class="assess-label">Which of your methods for meeting people are actually generating compatible matches?</span>
-    <span class="assess-hint">Think about where your best dates or connections have come from vs. where you spend the most time searching.</span>
+    <span class="assess-label">How well do you know which social contexts generate compatible connections for you?</span>
+    <span class="assess-hint">Whether single or partnered, think about where your best relationships (romantic or otherwise) have come from.</span>
     <select id="a-search-effectiveness" onchange="handleAssessInput('a-search-effectiveness')">
         <option value="">Select...</option>
-        <option value="no-idea">No idea &ndash; have not tracked what works</option>
-        <option value="nothing-works">Nothing working &ndash; no method is generating compatible matches</option>
-        <option value="one-works">One works &ndash; one method produces decent results, others do not</option>
-        <option value="several-work">Several work &ndash; a few methods reliably produce compatible matches</option>
-        <option value="optimised">Optimised &ndash; know exactly which channels work and focus effort there</option>
+        <option value="no-idea">No idea &ndash; have not thought about this</option>
+        <option value="nothing-works">Unclear &ndash; no method has reliably generated compatible connections</option>
+        <option value="one-works">One context &ndash; one setting produces good connections, others do not</option>
+        <option value="several-work">Several &ndash; a few contexts reliably produce compatible connections</option>
+        <option value="optimised">Clear picture &ndash; know exactly where I connect well and why</option>
     </select> <span class="assess-percentile-hint" id="pct-search-effectiveness"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-search-effectiveness" onchange="handleSkip('a-search-effectiveness')"><label for="skip-search-effectiveness">I know but prefer not to say</label></div>
 </div>
 
 <div class="assess-input-group" id="ig-search-barriers">
-    <span class="assess-label">What is your main barrier to meeting new partners?</span>
-    <span class="assess-hint">Is it a volume problem (not meeting enough people), a conversion problem (meeting people but not generating interest), or an avoidance problem?</span>
+    <span class="assess-label">What would be your main challenge if you needed to meet a new partner?</span>
+    <span class="assess-hint">Even if currently partnered, consider what barrier would be hardest to overcome.</span>
     <select id="a-search-barriers" onchange="handleAssessInput('a-search-barriers')">
         <option value="">Select...</option>
-        <option value="avoidance">Avoidance &ndash; I am not really trying</option>
-        <option value="volume">Volume &ndash; not meeting enough new people</option>
-        <option value="conversion">Conversion &ndash; meeting people but not generating mutual interest</option>
-        <option value="selectivity">Selectivity &ndash; meeting people but few meet my standards</option>
-        <option value="no-major-barrier">No major barrier &ndash; my search process is working reasonably well</option>
+        <option value="avoidance">Avoidance &ndash; I would struggle to put myself out there</option>
+        <option value="volume">Volume &ndash; I do not meet enough new people in my daily life</option>
+        <option value="conversion">Conversion &ndash; I meet people but struggle to generate mutual interest</option>
+        <option value="selectivity">Selectivity &ndash; I meet people but few meet my standards</option>
+        <option value="no-major-barrier">No major barrier &ndash; I am confident I could find someone compatible</option>
     </select> <span class="assess-percentile-hint" id="pct-search-barriers"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-search-barriers" onchange="handleSkip('a-search-barriers')"><label for="skip-search-barriers">I know but prefer not to say</label></div>
 </div>
@@ -500,39 +500,39 @@ life_area_slug: relationship-status
 <h4>Independence</h4>
 
 <div class="assess-input-group" id="ig-single-comfort">
-    <span class="assess-label">How comfortable are you being single?</span>
-    <span class="assess-hint">Consider whether you feel pressure from yourself, family, or society to be in a relationship.</span>
+    <span class="assess-label">How confident are you that you could build a fulfilling life without a partner?</span>
+    <span class="assess-hint">Whether single or partnered, consider how you would feel and cope if you were on your own long-term.</span>
     <select id="a-single-comfort" onchange="handleAssessInput('a-single-comfort')">
         <option value="">Select...</option>
-        <option value="very-uncomfortable">Very uncomfortable &ndash; being single feels like a serious problem</option>
-        <option value="uncomfortable">Uncomfortable &ndash; strong internal or external pressure to couple up</option>
-        <option value="mixed">Mixed &ndash; some discomfort but managing</option>
-        <option value="comfortable">Comfortable &ndash; genuinely fine being single</option>
-        <option value="thriving">Thriving &ndash; single life feels like a deliberate, fulfilling choice</option>
+        <option value="very-uncomfortable">Not at all &ndash; being without a partner feels like a serious problem</option>
+        <option value="uncomfortable">Low confidence &ndash; strong internal or external pressure to be partnered</option>
+        <option value="mixed">Mixed &ndash; some anxiety but believe I could manage</option>
+        <option value="comfortable">Confident &ndash; genuinely believe I would be fine on my own</option>
+        <option value="thriving">Very confident &ndash; could build a rich, complete life without a partner</option>
     </select> <span class="assess-percentile-hint" id="pct-single-comfort"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-single-comfort" onchange="handleSkip('a-single-comfort')"><label for="skip-single-comfort">I know but prefer not to say</label></div>
 </div>
 
 <div class="assess-input-group" id="ig-solo-fulfilment">
-    <span class="assess-label">How fulfilling is your daily life independently of your relationship status?</span>
-    <span class="assess-hint">Would your life feel meaningfully emptier without a partner, or roughly the same?</span>
+    <span class="assess-label">How much of your daily fulfilment comes from sources other than your romantic relationship?</span>
+    <span class="assess-hint">Friendships, hobbies, work, purpose, community. If single, consider how fulfilling your life feels right now.</span>
     <select id="a-solo-fulfilment" onchange="handleAssessInput('a-solo-fulfilment')">
         <option value="">Select...</option>
-        <option value="empty">Empty &ndash; life feels hollow without a partner</option>
-        <option value="lacking">Lacking &ndash; noticeably less fulfilling when single</option>
-        <option value="adequate">Adequate &ndash; fine but could be better</option>
-        <option value="fulfilling">Fulfilling &ndash; rich friendships, hobbies, and purpose regardless of status</option>
-        <option value="deeply-fulfilling">Deeply fulfilling &ndash; a partner would add to an already complete life</option>
+        <option value="empty">Very little &ndash; a partner is the main source of fulfilment</option>
+        <option value="lacking">Some &ndash; but life would feel noticeably hollow without a partner</option>
+        <option value="adequate">Moderate &ndash; a mix of relationship and independent sources</option>
+        <option value="fulfilling">Mostly independent &ndash; rich friendships, hobbies, and purpose regardless of status</option>
+        <option value="deeply-fulfilling">Fully independent &ndash; a partner adds to an already complete life</option>
     </select> <span class="assess-percentile-hint" id="pct-solo-fulfilment"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-solo-fulfilment" onchange="handleSkip('a-solo-fulfilment')"><label for="skip-solo-fulfilment">I know but prefer not to say</label></div>
 </div>
 
 <div class="assess-input-group" id="ig-fear-single">
-    <span class="assess-label">How much does fear of being alone drive your relationship decisions?</span>
+    <span class="assess-label">How much does fear of being alone influence your relationship decisions?</span>
     <span class="assess-hint">Have you ever stayed in or entered a relationship primarily because being single felt worse?</span>
     <select id="a-fear-single" onchange="handleAssessInput('a-fear-single')">
         <option value="">Select...</option>
-        <option value="primary-driver">Primary driver &ndash; fear of being alone is my main motivation</option>
+        <option value="primary-driver">Primary driver &ndash; fear of being alone is my main motivation for being partnered</option>
         <option value="significant">Significant &ndash; has kept me in relationships I should have left</option>
         <option value="some-influence">Some influence &ndash; aware it plays a role but not the main factor</option>
         <option value="minor">Minor &ndash; rarely affects my decisions</option>
@@ -546,8 +546,8 @@ life_area_slug: relationship-status
 <h4>Transition Navigation</h4>
 
 <div class="assess-input-group" id="ig-breakup-speed">
-    <span class="assess-label">How long do you typically stay in a relationship after recognising it is not working?</span>
-    <span class="assess-hint">Weeks, months, or years? Some people leave quickly; others stay for years past the point of knowing.</span>
+    <span class="assess-label">When you recognise a relationship is not working, how quickly do you act on that?</span>
+    <span class="assess-hint">Think about past experience or how you believe you would handle it. Some people address issues quickly; others stay for years past the point of knowing.</span>
     <select id="a-breakup-speed" onchange="handleAssessInput('a-breakup-speed')">
         <option value="">Select...</option>
         <option value="years">Years &ndash; tend to stay long past the point of knowing</option>

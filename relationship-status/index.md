@@ -127,7 +127,7 @@ life_area_slug: relationship-status
 - Whether your current relationship status matches what you want. Finding a partner, deciding to stay or leave, and building a fulfilling life whether single or partnered.
 
 **Why it matters**
-- Who you choose matters more than how hard you try. Research shows that relationship-specific perceptions at the outset predict relationship quality far more than individual traits, and that fear of being single consistently predicts settling for less. Getting this right is one of the highest-leverage decisions in life.
+- Your relationship status is a foundational condition that shapes almost every other area of your life. The decisions around it – who to be with, whether to stay or leave, how to handle transitions, and whether you can thrive on your own – are among the highest-leverage choices you make.
 
 **Related life areas**
 - [Romantic Relationships]({{ site.baseurl }}/romantic-relationships/) – the quality and health of an existing partnership
