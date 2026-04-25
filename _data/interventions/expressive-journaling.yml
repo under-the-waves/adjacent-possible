@@ -1,0 +1,95 @@
+name: "Expressive Journaling"
+what_it_is: |
+  Writing freely for 15–20 minutes about your deepest thoughts and feelings regarding stressful, emotional, or unresolved experiences. Based on James Pennebaker's expressive writing paradigm, the practice involves sustained emotional disclosure without structure or editing – you write what you feel, not what you planned. For structured decision review focused on goal calibration, see [Daily Decision Review](/resources/intervention-database/daily-decision-review).
+how_to_do_it: |
+  - Many people set a timer for 15–20 minutes and write continuously about whatever is most emotionally present, without worrying about grammar or structure
+  - You may find it helpful to focus on a specific stressful event or unresolved feeling, writing about both the facts and your emotional response to them
+  - Some practitioners write about the same topic across 3–4 consecutive sessions, which research suggests produces stronger effects than switching topics each time
+success_looks_like: |
+  - Emotional weight from stressful experiences feels lighter after writing – you have processed rather than suppressed
+  - You notice fewer intrusive thoughts about unresolved situations
+  - Stress-related physical symptoms (tension, sleep disruption, fatigue) decrease over weeks
+common_pitfalls: |
+  - Writing becomes ruminative rather than processing – re-living distress without gaining perspective
+  - Skipping the practice when you most need it, because emotional topics feel uncomfortable to approach
+  - Expecting immediate relief; the benefits typically emerge over weeks, not individual sessions
+description: |
+  - Writing freely for 15–20 minutes about emotionally significant experiences, focusing on both facts and feelings
+  - Based on [Pennebaker's expressive writing paradigm](https://doi.org/10.1037/0278-6133.5.1.19), which has been studied in over 200 experiments since 1986
+  - [A meta-analysis of 146 studies](https://bpb-us-e2.wpmucdn.com/faculty.sites.uci.edu/dist/c/602/files/2019/08/Frattaroli-psych-bulletin-2006.pdf) found significant effects of written disclosure on psychological health, with depression showing a significant subcategory effect
+  - Distinct from [Daily Decision Review](/resources/intervention-database/daily-decision-review): the emphasis is on emotional processing and disclosure, not decision calibration
+applicable_domains: ["mental-health"]
+
+values:
+  mental-health.stability:
+    pbs: 6
+    pbs_reasoning: |
+      - Expressive writing directly targets the mechanism underlying emotional instability: unprocessed emotional experiences cycle through working memory, fuelling rumination and mood disruption. Writing about these experiences with emotional depth externalises and organises them, reducing their cognitive load.
+      - [Frattaroli (2006)](https://bpb-us-e2.wpmucdn.com/faculty.sites.uci.edu/dist/c/602/files/2019/08/Frattaroli-psych-bulletin-2006.pdf) found a significant effect of written disclosure on psychological health (r = .075) across 146 studies, with depression showing a significant subcategory effect. This is small but consistent across a large evidence base.
+      - The [positive affect journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found reduced anxiety and mental distress from structured journaling over 12 weeks using emotionally focused prompts – directly applicable to this intervention.
+    isr: 55
+    isr_reasoning: |
+      - [Frattaroli's (2006)](https://bpb-us-e2.wpmucdn.com/faculty.sites.uci.edu/dist/c/602/files/2019/08/Frattaroli-psych-bulletin-2006.pdf) meta-analysis found stronger effects with three or more sessions of at least 15 minutes with emotionally specific prompts. Expressive journaling meets all three criteria (unlike decision-focused reflection, which falls short on emotional specificity).
+      - Individual variation remains: some people naturally process emotions through writing, while others find the exercise uncomfortable or unproductive. Estimated 50–60% of adherent practitioners achieve meaningful stability improvements.
+      - Those whose instability is driven by unprocessed experiences benefit most; those with biologically driven mood disorders may see limited change from writing alone.
+    uar: 30
+    confidence: medium
+    uar_reasoning: |
+      - Expressive writing is emotionally demanding in a way that structured decision review is not. Approaching painful topics daily requires psychological willingness that many people lack, especially without therapeutic support.
+      - A [12-week journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found mean adherence of 47.8%, but that study used structured prompts and study accountability. Real-world adherence to open-ended emotional writing is likely lower.
+      - Estimated 25–35% sustained at 6 months. The emotional difficulty of the practice is the primary adherence barrier.
+
+  mental-health.resilience:
+    pbs: 6
+    pbs_reasoning: |
+      - Expressive writing builds resilience by processing setbacks emotionally rather than suppressing or avoiding them. [Glass et al. (2019)](https://www.sciencedirect.com/science/article/abs/pii/S1744388118306157) found that a six-week writing intervention increased resilience and decreased depressive symptoms and perceived stress in a trauma-exposed outpatient sample.
+      - The mechanism is well-matched to resilience: writing about difficulties with emotional depth activates cognitive reappraisal, a core resilience process. Unlike decision review (which asks "what to adjust"), expressive writing asks "what did I feel and why," which builds emotional coping capacity.
+      - Score 6 rather than 5 because the evidence base directly supports this intervention's effect on resilience, unlike decision-focused reflection where the evidence was borrowed.
+    isr: 55
+    isr_reasoning: |
+      - [The positive affect journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found greater resilience after one and two months of journaling with emotionally focused prompts. The sample had elevated anxiety at baseline, creating more room for improvement, but the mechanism is directly applicable.
+      - [Research on adaptive self-reflection](https://www.sciencedirect.com/science/article/abs/pii/S0191886921006139) found that insight mediated the relationship between self-reflection and resilience, but only when rumination was low. Expressive writing carries a rumination risk if practitioners re-live rather than process – reducing ISR below the theoretical maximum.
+      - Estimated 50–60% of adherent practitioners achieve meaningful resilience gains.
+    uar: 30
+    confidence: medium
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 5
+    pbs_reasoning: |
+      - Expressive writing creates opportunities for meaning-making by processing experiences at emotional depth. [A study on reflection diaries](https://pmc.ncbi.nlm.nih.gov/articles/PMC8472181/) found that structured reflection on everyday events enhanced meaning in life and wellbeing among emerging adults, with self-efficacy mediating the effect.
+      - Unlike decision-focused reflection, expressive writing is affectively oriented – it directly engages positive and negative emotions, which is closer to what flourishing research measures. The mechanism for flourishing is more direct here than for decision review.
+      - Score 5 rather than 4 because the emotional engagement is the primary mechanism for meaning-making and life satisfaction, not a byproduct.
+    isr: 45
+    isr_reasoning: |
+      - [Research on dispositional self-reflection and journaling](https://www.cambridge.org/core/journals/behaviour-change/article/writing-yourself-well-dispositional-selfreflection-moderates-the-effect-of-a-smartphone-appbased-journaling-intervention-on-psychological-wellbeing-across-time/651C4C3AB0BB362B121823E095D3DF6F) found that journaling improved psychological wellbeing over time, but the effect was moderated by dispositional self-reflection.
+      - The relationship between self-reflection and wellbeing may follow an [inverted U-shape](https://www.sciencedirect.com/topics/psychology/self-reflection), with excessive emotional writing potentially decreasing wellbeing if it becomes ruminative.
+      - Estimated 40–50% of adherent practitioners experience meaningful flourishing gains.
+    uar: 30
+    confidence: medium
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost required. Any notebook, text editor, or note-taking app works. No special equipment needed."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring financial costs."
+  upfront_time: 0.5
+  upfront_time_reasoning: "Approximately 30 minutes to read about the expressive writing approach, decide on a time of day, and try the first session. Less setup than structured decision review because there is no template to design."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "15-20 minutes per session, ideally 3-4 sessions per week. Daily practice is optional but not required – the research shows benefits from as few as 3 sessions per week."
+
+prerequisites:
+  - "Willingness to engage with emotionally difficult material in writing"
+  - "A private, uninterrupted writing environment where emotional expression feels safe"
+  - "Basic literacy and comfort articulating feelings in writing"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "Sustained emotional writing builds insight into personal emotional patterns, triggers, and coping responses"
+  - domain: "goals"
+    rationale: "Processing emotional barriers to action may indirectly improve goal follow-through, but the mechanism is indirect"

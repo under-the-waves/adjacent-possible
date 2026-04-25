@@ -1,6 +1,6 @@
-name: "Daily Reflection Writing"
+name: "Daily Decision Review"
 what_it_is: |
-  A ten-minute structured review of your day, focused on what you planned versus what actually happened, what you learnt, and what you might adjust tomorrow. It is distinct from free-form journaling in that the prompts push you toward honest calibration of decisions rather than emotional processing.
+  A ten-minute structured review of your day, focused on what you planned versus what actually happened, what you learnt, and what you might adjust tomorrow. The emphasis is on calibrating future decisions through honest assessment of past ones – not on emotional processing. For writing focused on processing emotions and stress, see [Expressive Journaling](/resources/intervention-database/expressive-journaling).
 how_to_do_it: |
   - Many people pick a consistent ten-minute slot anchored to an existing routine (after dinner, before bed) so the practice has a reliable trigger
   - A typical session answers four questions: what did I plan today, what actually happened, what did I learn, and what might I adjust tomorrow
@@ -8,20 +8,19 @@ how_to_do_it: |
   - Most practitioners find that structured prompts work better than open-ended reflection, especially in the first few months
 success_looks_like: |
   - Plans start matching outcomes more often – you are forecasting your own capacity with less optimism bias
-  - End-of-day rumination decreases because unresolved mental business has somewhere to go
   - Patterns you could not see before become visible: what drains you, what energises you, which commitments you keep
   - You start making small corrections within days rather than weeks
 common_pitfalls: |
   - Sessions drift into descriptive journaling ("today I did X") rather than analytical reflection ("I planned X, Y happened, the cause was Z")
-  - Setbacks get treated as personal failures rather than data points, which reduces the resilience benefit and can increase rumination
   - Daily cadence is abandoned within 2–3 weeks; compounding benefits typically require at least 2–3 months of consistency
+  - Over-analysing minor decisions creates fatigue; the practice works better when focused on 2–3 priorities per day
 description: |
-  - Spending 10 minutes daily writing structured reflections on decisions made, priorities pursued, and outcomes versus expectations – distinct from free-form emotional journaling or morning pages
+  - Spending 10 minutes daily writing structured reflections on decisions made, priorities pursued, and outcomes versus expectations
   - Each session follows a consistent format: what was planned, what actually happened, what was learnt, and what to adjust tomorrow – creating a written feedback loop between intention and action
   - [Research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2414478) found that employees who spent 15 minutes daily reflecting in writing on what they had learnt performed 23% better on final assessments than non-reflectors, with self-efficacy mediating the effect
   - A [meta-analysis of 138 studies](https://doi.org/10.1037/bul0000025) showed that progress monitoring significantly promotes goal attainment (d = 0.40), with physically recording progress producing stronger effects than mental tracking alone
-  - The structured format distinguishes this from expressive or therapeutic journaling: the emphasis is on calibrating future behaviour through honest assessment of past decisions, not on emotional processing
-applicable_domains: ["goals", "organisation", "current-work", "mental-health"]
+  - Distinct from [expressive journaling](/resources/intervention-database/expressive-journaling): the emphasis is on calibrating future behaviour through honest assessment of past decisions, not on emotional processing
+applicable_domains: ["goals", "organisation", "current-work"]
 
 values:
   goals.clarity:
@@ -122,54 +121,6 @@ values:
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
-  mental-health.stability:
-    pbs: 5
-    pbs_reasoning: |
-      - Structured daily reflection converts open-ended worry about unresolved decisions into concrete written assessment with explicit next steps, closing cognitive loops that otherwise fuel rumination. This is a well-established mechanism: [Frattaroli (2006)](https://bpb-us-e2.wpmucdn.com/faculty.sites.uci.edu/dist/c/602/files/2019/08/Frattaroli-psych-bulletin-2006.pdf) found a significant effect of written disclosure on psychological health (r = .075) across 146 studies, with depression showing a significant subcategory effect.
-      - The benefit here is indirect compared to expressive writing: this intervention reviews decisions and priorities rather than processing emotions directly. The stability gain comes from reduced end-of-day cognitive load – unfinished mental business is externalised onto paper rather than cycling through working memory during the evening and overnight.
-      - Score 5 represents movement from "frequent distress affecting daily functioning" (4) toward "occasional distress that resolves quickly" (6). A successful reflector gains a modest but reliable buffer against rumination, without approaching the ceiling that targeted therapeutic interventions (e.g., CBT, metacognitive therapy) can reach.
-    isr: 45
-    isr_reasoning: |
-      - [Frattaroli's (2006)](https://bpb-us-e2.wpmucdn.com/faculty.sites.uci.edu/dist/c/602/files/2019/08/Frattaroli-psych-bulletin-2006.pdf) meta-analysis found that stronger effects required three or more sessions of at least 15 minutes with specific prompts. Daily 10-minute structured reflection meets the frequency criterion but falls short on session length and emotional specificity, reducing the proportion who experience meaningful stability gains.
-      - The [positive affect journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found reduced anxiety and mental distress from structured journaling over 12 weeks, but that intervention used emotionally focused prompts. Decision-focused reflection activates a less direct pathway to emotional stability, so fewer adherent practitioners will see clinically meaningful symptom reduction.
-      - Estimated 40-50% of adherent reflectors achieve meaningful stability improvements. Those whose anxiety is driven by decision uncertainty and unprocessed daily experiences benefit most; those with biologically driven mood instability or trauma-related symptoms are unlikely to see meaningful change from this intervention alone.
-    uar: 35
-    confidence: medium
-    uar_reasoning: |
-      - See goals.clarity UAR – same intervention, same adherence profile.
-
-  mental-health.resilience:
-    pbs: 5
-    pbs_reasoning: |
-      - Daily review of what worked and what did not builds an implicit library of coping responses. Over months, this creates a pattern where setbacks are automatically processed as data points ("what happened, what did I learn, what to adjust") rather than experienced as failures. [Glass et al. (2019)](https://www.sciencedirect.com/science/article/abs/pii/S1744388118306157) found that a six-week writing intervention increased resilience and decreased depressive symptoms and perceived stress in a trauma-exposed outpatient sample.
-      - The structured format is well-suited to resilience specifically: the "what to adjust tomorrow" prompt requires forward-looking problem-solving after reviewing difficulties, which mirrors the cognitive reappraisal process central to resilient coping. [A field experiment on weekly planning and reflection](https://pmc.ncbi.nlm.nih.gov/articles/PMC10952538/) found that reflection behaviour reduced rumination, a key mechanism through which poor resilience manifests.
-      - Score 5 represents movement from "significant disruption from moderate stressors" (4) toward "manages moderate stressors adequately" (6). The benefit is meaningful but bounded – daily reflection builds everyday resilience to routine setbacks, not the deep psychological resources needed to weather major life crises.
-    isr: 45
-    isr_reasoning: |
-      - [The positive affect journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found greater resilience after one and two months of journaling, but the sample had elevated anxiety at baseline, creating more room for improvement than a general population would have. Transfer to non-clinical populations with moderate baseline resilience is less certain.
-      - The resilience benefit depends on whether reflectors engage analytically with setbacks or simply record them descriptively. [Research on adaptive self-reflection](https://www.sciencedirect.com/science/article/abs/pii/S0191886921006139) found that insight mediated the relationship between self-reflection and resilience, but only when rumination was low – suggesting the intervention may not help those who most need resilience support.
-      - Estimated 40-50% of adherent reflectors achieve meaningful resilience gains, with success depending on baseline reflective capacity and the degree to which the structured format prevents descriptive entries from drifting into ruminative ones.
-    uar: 35
-    confidence: medium
-    uar_reasoning: |
-      - See goals.clarity UAR – same intervention, same adherence profile.
-
-  mental-health.flourishing:
-    pbs: 4
-    pbs_reasoning: |
-      - Reviewing daily experiences through a structured lens creates opportunities for meaning-making: noticing what went well, identifying patterns of satisfaction, and recognising progress that might otherwise go unregistered. [A study on reflection diaries](https://pmc.ncbi.nlm.nih.gov/articles/PMC8472181/) found that structured reflection on everyday events enhanced meaning in life and wellbeing among emerging adults, with self-efficacy mediating the effect.
-      - The flourishing benefit is the weakest of the three mental health values because this intervention is designed for decision calibration, not positive emotion cultivation. Unlike gratitude journaling or best-possible-self writing, the prompts ("what was planned, what happened, what was learnt") are analytically rather than affectively oriented. The meaning-making occurs as a byproduct of honest self-assessment, not as the primary mechanism.
-      - Score 4 represents the lower boundary of scoreable benefit – movement from "going through the motions" toward "regular moments of satisfaction and meaning" (6). A successful reflector may gain a modest increase in life coherence from seeing their days as connected and purposeful rather than as disconnected events, but the effect is small relative to interventions explicitly targeting positive affect.
-    isr: 40
-    isr_reasoning: |
-      - [Research on dispositional self-reflection and journaling](https://www.cambridge.org/core/journals/behaviour-change/article/writing-yourself-well-dispositional-selfreflection-moderates-the-effect-of-a-smartphone-appbased-journaling-intervention-on-psychological-wellbeing-across-time/651C4C3AB0BB362B121823E095D3DF6F) found that journaling improved psychological wellbeing over time, but the effect was moderated by dispositional self-reflection – those naturally inclined toward reflection benefited more. This suggests the flourishing benefit is not evenly distributed across adherent practitioners.
-      - The relationship between self-reflection and wellbeing may follow an [inverted U-shape](https://www.sciencedirect.com/topics/psychology/self-reflection), with excessive reflection associated with decreased wellbeing. Decision-focused reflection is less prone to this than emotional introspection, but the risk of over-analysis reducing satisfaction is non-trivial.
-      - Estimated 35-45% of adherent reflectors experience meaningful flourishing gains. The analytical frame of this intervention limits positive affect generation compared to explicitly positive writing interventions, and some reflectors may find that daily scrutiny of their decisions creates self-criticism rather than satisfaction.
-    uar: 35
-    confidence: medium
-    uar_reasoning: |
-      - See goals.clarity UAR – same intervention, same adherence profile.
-
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. Daily reflection can be done with any existing notebook, text editor, or note-taking app. No special equipment or materials needed."
@@ -190,3 +141,5 @@ prerequisites:
 flagged_domains:
   - domain: "self-awareness"
     rationale: "Regular written self-examination builds metacognitive capacity and pattern recognition about one's own decision-making tendencies"
+  - domain: "mental-health"
+    rationale: "Externalising unresolved decisions onto paper may reduce end-of-day rumination, but the mechanism is indirect – see Expressive Journaling for writing that directly targets emotional processing"
