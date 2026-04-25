@@ -796,6 +796,7 @@ const valueDefinitions = {
         {% assign value_data = value_pair[1] %}
         '{{ domain_name }}.{{ value_name }}': {
             name: {{ value_data.name | jsonify }},
+            user_description: {{ value_data.user_description | default: value_data.name | jsonify }},
             anchor_type: {{ value_data.anchor_type | jsonify }},
             {% if value_data.anchor_max %}anchor_max: {{ value_data.anchor_max }},{% endif %}
             {% if value_data.anchor_unit %}anchor_unit: {{ value_data.anchor_unit | jsonify }},{% endif %}
@@ -988,6 +989,16 @@ function renderTable() {
     }
 }
 
+// Map EBS score to a magnitude word
+function ebsMagnitudeLabel(ebs) {
+    var abs = Math.abs(ebs);
+    if (abs < 1) return 'slight';
+    if (abs < 3) return 'modest';
+    if (abs < 5) return 'meaningful';
+    if (abs < 7) return 'strong';
+    return 'transformative';
+}
+
 function renderTopEffectsSummary() {
     var ranked = [];
     for (var vkey in ebsResults) {
@@ -996,42 +1007,38 @@ function renderTopEffectsSummary() {
             ? result.personalisedEbs
             : result.typicalEbs;
         var def = result.def;
-        var parts = vkey.split('.');
-        var domainKey = parts[0];
-        var domainDisplay = domainKey.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-        var valueName = (def && def.name) || parts[1].replace(/_/g, ' ');
-        var domainLink = '<a href="{{ site.baseurl }}/' + domainKey + '/">' + domainDisplay + '</a>';
+        var userDesc = (def && def.user_description) || vkey;
         ranked.push({
             vkey: vkey,
             ebs: ebs,
-            magnitude: Math.abs(ebs),
-            label: domainLink + ' – ' + valueName,
-            effect: toRealUnits(ebs, def),
+            absEbs: Math.abs(ebs),
+            userDesc: userDesc,
+            magnitude: ebsMagnitudeLabel(ebs),
             negative: ebs < 0
         });
     }
-    ranked.sort(function(a, b) { return b.magnitude - a.magnitude; });
+    ranked.sort(function(a, b) { return b.absEbs - a.absEbs; });
 
     var summaryEl = document.getElementById('top-effects-summary');
     if (!summaryEl || ranked.length === 0) return;
 
     var prefix = (currentView === 'personalised' && hasAnyPersonalisation)
-        ? 'Based on your assessment, '
-        : '';
+        ? 'Based on your assessment, t'
+        : 'T';
 
-    var sentence;
     var top = ranked[0];
+    var sentence;
     if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
-        var verb = top.negative ? 'the largest expected harm is to' : 'the strongest expected benefit is to';
-        if (!prefix) verb = verb.charAt(0).toUpperCase() + verb.slice(1);
-        sentence = prefix + verb + ' ' + top.label + ': ' + top.effect + '.';
+        // Single dominant effect
+        var word = top.negative ? 'harm' : 'benefit';
+        sentence = prefix + 'he strongest expected ' + word + ' is a <strong>' +
+            top.magnitude + '</strong> improvement in ' + top.userDesc + '.';
     } else {
+        // Two close effects
         var second = ranked[1];
-        var verb2 = (top.negative && second.negative) ? 'the largest expected harms are to' :
-                    (top.negative || second.negative) ? 'the most significant effects are on' :
-                    'the strongest expected benefits are on';
-        if (!prefix) verb2 = verb2.charAt(0).toUpperCase() + verb2.slice(1);
-        sentence = prefix + verb2 + ' ' + top.label + ' (' + top.effect + ') and ' + second.label + ' (' + second.effect + ').';
+        sentence = prefix + 'he strongest expected benefits are a <strong>' +
+            top.magnitude + '</strong> improvement in ' + top.userDesc +
+            ' and ' + second.userDesc + '.';
     }
     summaryEl.innerHTML = sentence;
 }

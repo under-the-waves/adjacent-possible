@@ -4,6 +4,7 @@
 fitness:
   health:
     name: "Health & Longevity"
+    user_description: "healthy years added to your lifespan"
     anchor_type: "linear"
     anchor_max: 15
     anchor_unit: "years"
@@ -23,6 +24,7 @@ fitness:
       -10: "15+ years of healthy lifespan lost"
   performance:
     name: "Performance"
+    user_description: "your physical fitness relative to your age group"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "fitness test percentile"
@@ -42,6 +44,7 @@ fitness:
       -10: "Near-total loss of fitness test ranking"
   enjoyment:
     name: "Enjoyment"
+    user_description: "how much you enjoy physical activity"
     anchor_type: "subjective"
     anchor_description: "Change in how much physical activity is experienced as a source of satisfaction"
     baseline_percentile: 35
@@ -59,6 +62,7 @@ fitness:
 nutrition:
   physical_wellbeing:
     name: "Physical Wellbeing"
+    user_description: "healthy years added through better nutrition"
     anchor_type: "linear"
     anchor_max: 12
     anchor_unit: "years"
@@ -78,6 +82,7 @@ nutrition:
       -10: "12+ years of healthy lifespan lost"
   pleasure_connection:
     name: "Pleasure & Connection"
+    user_description: "pleasure and social connection from food"
     anchor_type: "subjective"
     anchor_description: "Change in how much food contributes to cultural expression and social bonding"
     baseline_percentile: 35
@@ -94,6 +99,7 @@ nutrition:
       -10: "Severe damage to pleasure and connection from food"
   ethical_environmental:
     name: "Ethical & Environmental Impact"
+    user_description: "ethical and environmental alignment of what you eat"
     anchor_type: "subjective"
     anchor_description: "Change in alignment of food choices with environmental and ethical values"
     baseline_percentile: 35
@@ -111,6 +117,7 @@ nutrition:
 sleep:
   daily_functioning:
     name: "Daily Functioning"
+    user_description: "productive hours you get each day from good sleep"
     anchor_type: "linear"
     anchor_max: 14
     anchor_unit: "productive hours per day"
@@ -130,6 +137,7 @@ sleep:
       -10: "14 productive hours per day lost"
   long_term_health:
     name: "Long-term Health"
+    user_description: "healthy years added through better sleep"
     anchor_type: "linear"
     anchor_max: 8
     anchor_unit: "years"
@@ -149,6 +157,7 @@ sleep:
       -10: "8+ years of healthy lifespan lost"
   comfort_experience:
     name: "Comfort & Experience"
+    user_description: "how restorative and pleasant your sleep feels"
     anchor_type: "subjective"
     anchor_description: "Change in how restorative and pleasant the sleep experience is"
     baseline_percentile: 35
@@ -166,6 +175,7 @@ sleep:
 saving:
   security:
     name: "Security"
+    user_description: "months of expenses covered by your emergency fund"
     anchor_type: "linear"
     anchor_max: 12
     anchor_unit: "months of emergency fund"
@@ -185,6 +195,7 @@ saving:
       -10: "12+ months of emergency fund depleted"
   growth:
     name: "Growth"
+    user_description: "percentage of income you save and invest"
     anchor_type: "linear"
     anchor_max: 50
     anchor_unit: "percent of gross income saved"
@@ -204,6 +215,7 @@ saving:
       -10: "50%+ of gross income net dissaving"
   lifestyle:
     name: "Lifestyle"
+    user_description: "months of accessible liquid reserves"
     anchor_type: "linear"
     anchor_max: 12
     anchor_unit: "months of liquid reserves"
@@ -224,6 +236,7 @@ saving:
 investing:
   growth:
     name: "Growth"
+    user_description: "long-term growth of your investments"
     anchor_type: "linear"
     anchor_max: 10000000
     anchor_unit: "dollars"
@@ -243,6 +256,7 @@ investing:
       -10: "$10,000 reduced to ~$10 — total loss of capital"
   safety:
     name: "Safety"
+    user_description: "how well-protected your portfolio is against losses"
     anchor_type: "subjective"
     anchor_description: "Change in portfolio risk management and downside protection"
     baseline_percentile: 35
@@ -259,6 +273,7 @@ investing:
       -10: "Severe damage to investment safety"
   simplicity:
     name: "Simplicity"
+    user_description: "how simple and low-maintenance your investment approach is"
     anchor_type: "subjective"
     anchor_description: "Change in simplicity and maintainability of investment approach"
     baseline_percentile: 35
@@ -276,6 +291,7 @@ investing:
 career-planning:
   clarity:
     name: "Clarity"
+    user_description: "clarity about your career direction"
     anchor_type: "subjective"
     anchor_description: "Change in career direction clarity and confidence in chosen path"
     baseline_percentile: 35
@@ -292,6 +308,7 @@ career-planning:
       -10: "Severe damage to career direction clarity"
   advancement:
     name: "Advancement"
+    user_description: "professional contacts in your target field"
     anchor_type: "linear"
     anchor_max: 50
     anchor_unit: "warm professional contacts in target field"
@@ -311,6 +328,7 @@ career-planning:
       -10: "50+ warm contacts in target field lost"
   security:
     name: "Security"
+    user_description: "career adaptability and backup options"
     anchor_type: "subjective"
     anchor_description: "Change in career adaptability, options, and network strength"
     baseline_percentile: 35
@@ -328,6 +346,7 @@ career-planning:
 current-work:
   competence:
     name: "Competence"
+    user_description: "your skill and execution quality at work"
     anchor_type: "subjective"
     anchor_description: "Change in mastery, speed, and quality of execution in the current work role"
     baseline_percentile: 35
@@ -345,6 +364,7 @@ current-work:
 
   engagement:
     name: "Engagement"
+    user_description: "how absorbed and energised you are by your work"
     anchor_type: "subjective"
     anchor_description: "Change in absorption, enjoyment, and energy during daily work"
     baseline_percentile: 35
@@ -362,6 +382,7 @@ current-work:
 
   rewards:
     name: "Rewards"
+    user_description: "recognition and impact of your work contributions"
     anchor_type: "subjective"
     anchor_description: "Change in contribution to organisational goals and recognition received"
     baseline_percentile: 35
@@ -379,6 +400,7 @@ current-work:
 organisation:
   tracking:
     name: "Tracking"
+    user_description: "how smoothly you move from deciding to doing"
     anchor_type: "subjective"
     anchor_description: "Change in efficiency of movement from intention to action through organisational systems"
     baseline_percentile: 35
@@ -396,6 +418,7 @@ organisation:
 
   order:
     name: "Order"
+    user_description: "how rarely you miss commitments"
     anchor_type: "linear"
     anchor_max: 20
     anchor_unit: "missed commitments per month"
@@ -416,6 +439,7 @@ organisation:
       -10: "20+ additional missed commitments per month"
   speed:
     name: "Speed"
+    user_description: "how minimal and fast your organisational systems are"
     anchor_type: "subjective"
     anchor_description: "Change in minimalism and speed of organisational systems"
     baseline_percentile: 35
@@ -433,6 +457,7 @@ organisation:
 goals:
   clarity:
     name: "Clarity"
+    user_description: "how reliably you complete goals on time"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent of goals completed on time"
@@ -452,6 +477,7 @@ goals:
       -10: "Near-total reduction in goals completed on time"
   follow_through:
     name: "Follow-through"
+    user_description: "how often you take daily action toward your goals"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent of days with goal action"
@@ -471,6 +497,7 @@ goals:
       -10: "Near-total reduction in days with goal action"
   adaptability:
     name: "Adaptability"
+    user_description: "your ability to adjust goals when circumstances change"
     anchor_type: "subjective"
     anchor_description: "Change in capacity to review, adjust, and strategically pivot goals as circumstances change"
     baseline_percentile: 35
@@ -489,6 +516,7 @@ goals:
 body-image:
   fat_loss:
     name: "Fat Loss"
+    user_description: "sustained fat loss"
     anchor_type: "linear"
     anchor_max: 25
     anchor_unit: "percent body fat lost"
@@ -507,6 +535,7 @@ body-image:
       -10: "25%+ body weight gained as fat"
   muscle_gain:
     name: "Muscle Gain"
+    user_description: "lean muscle gained"
     anchor_type: "linear"
     anchor_max: 15
     anchor_unit: "kg lean mass gained"
@@ -527,6 +556,7 @@ body-image:
 housework:
   health:
     name: "Health & Hygiene"
+    user_description: "how well your home environment supports physical health"
     anchor_type: "subjective"
     anchor_description: "Change in how well the living environment supports physical health and hygiene"
     baseline_percentile: 35
@@ -543,6 +573,7 @@ housework:
       -10: "Severe damage to health and hygiene of living environment"
   order:
     name: "Order"
+    user_description: "mental calm from an organised living space"
     anchor_type: "subjective"
     anchor_description: "Change in mental calm from an organised, uncluttered living space"
     baseline_percentile: 35
@@ -559,6 +590,7 @@ housework:
       -10: "Severe damage to order and calm of living space"
   aesthetics:
     name: "Aesthetics"
+    user_description: "how good your living space looks and feels"
     anchor_type: "subjective"
     anchor_description: "Change in visual appeal and sensory pleasure of living space"
     baseline_percentile: 35
@@ -575,6 +607,7 @@ housework:
       -10: "Severe damage to aesthetics of living space"
   environmental:
     name: "Environmental Impact"
+    user_description: "environmental sustainability of your home management"
     anchor_type: "subjective"
     anchor_description: "Change in ecological footprint of home management practices"
     baseline_percentile: 35
@@ -592,6 +625,7 @@ housework:
 mental-health:
   stability:
     name: "Stability"
+    user_description: "your emotional steadiness day to day"
     anchor_type: "subjective"
     anchor_description: "Change in freedom from distressing symptoms and steadiness of emotional baseline"
     baseline_percentile: 35
@@ -609,6 +643,7 @@ mental-health:
 
   resilience:
     name: "Resilience"
+    user_description: "how well you bounce back from setbacks"
     anchor_type: "subjective"
     anchor_description: "Change in capacity to maintain functioning during adversity and recover from setbacks"
     baseline_percentile: 35
@@ -626,6 +661,7 @@ mental-health:
 
   flourishing:
     name: "Flourishing"
+    user_description: "how much joy and meaning you experience in daily life"
     anchor_type: "subjective"
     anchor_description: "Change in depth and frequency of joy, meaning, and life satisfaction"
     baseline_percentile: 35
@@ -647,6 +683,7 @@ mental-health:
 cognitive-skills:
   memory:
     name: "Memory"
+    user_description: "how much you can memorise and recall"
     anchor_type: "linear"
     anchor_max: 52
     anchor_unit: "playing cards memorised in 15 minutes"
@@ -666,6 +703,7 @@ cognitive-skills:
       -10: "52+ fewer cards memorised — memory system collapse"
   focus:
     name: "Focus"
+    user_description: "how long you can sustain deep focus"
     anchor_type: "linear"
     anchor_max: 120
     anchor_unit: "minutes of sustained deep focus"
@@ -685,6 +723,7 @@ cognitive-skills:
       -10: "120+ fewer minutes of sustained deep focus"
   reasoning:
     name: "Reasoning & Problem-Solving"
+    user_description: "your ability to solve complex problems systematically"
     anchor_type: "subjective"
     anchor_description: "Change in ability to generate novel solutions to complex, multi-step problems"
     baseline_percentile: 35
@@ -701,6 +740,7 @@ cognitive-skills:
       -10: "Severe damage to reasoning and problem-solving ability"
   lifestyle:
     name: "Lifestyle Integration"
+    user_description: "daily habits that support cognitive performance"
     anchor_type: "linear"
     anchor_max: 5
     anchor_unit: "cognitive-support practices maintained daily"
@@ -721,6 +761,7 @@ cognitive-skills:
 ethics:
   philosophical:
     name: "Philosophical Depth"
+    user_description: "depth of your understanding of ethical frameworks"
     anchor_type: "subjective"
     anchor_description: "Change in sophistication of understanding across ethical theories"
     baseline_percentile: 35
@@ -737,6 +778,7 @@ ethics:
       -10: "Severe damage to philosophical ethical understanding"
   practical:
     name: "Practical Guidance"
+    user_description: "consistency of your ethical decision-making in practice"
     anchor_type: "subjective"
     anchor_description: "Change in reliability and consistency of ethical decision-making across real-world situations"
     baseline_percentile: 35
@@ -753,6 +795,7 @@ ethics:
       -10: "Severe damage to practical ethical decision-making"
   integrity:
     name: "Moral Integrity"
+    user_description: "how well your actions match your moral beliefs under pressure"
     anchor_type: "subjective"
     anchor_description: "Change in consistency between moral beliefs and actions, especially under personal cost"
     baseline_percentile: 35
@@ -769,6 +812,7 @@ ethics:
       -10: "Severe damage to moral integrity under pressure"
   community:
     name: "Community Ethics & Belonging"
+    user_description: "how your ethical choices strengthen communities around you"
     anchor_type: "subjective"
     anchor_description: "Change in how ethical choices strengthen communities and honour responsibilities to others"
     baseline_percentile: 35
@@ -786,6 +830,7 @@ ethics:
 information-management:
   retention:
     name: "Information Retention"
+    user_description: "how reliably you capture and retain information"
     anchor_type: "subjective"
     anchor_description: "Change in breadth and reliability of information capture across sources and time"
     baseline_percentile: 35
@@ -802,6 +847,7 @@ information-management:
       -10: "Severe damage to information retention and recall"
   retrieval:
     name: "Retrieval Efficiency"
+    user_description: "how quickly you can find information you have saved"
     anchor_type: "linear"
     anchor_max: 10
     anchor_unit: "minutes to locate any previously captured item"
@@ -822,6 +868,7 @@ information-management:
       -10: "Capture system effectively unusable for retrieval"
   insight:
     name: "Insight Generation"
+    user_description: "novel understanding generated by connecting ideas"
     anchor_type: "subjective"
     anchor_description: "Change in frequency and quality of novel understanding generated by connecting ideas"
     baseline_percentile: 35
@@ -838,6 +885,7 @@ information-management:
       -10: "Severe damage to insight generation from information"
   simplicity:
     name: "System Simplicity"
+    user_description: "how simple your information management system is"
     anchor_type: "subjective"
     anchor_description: "Change in ratio of benefit to maintenance burden in information management approach"
     baseline_percentile: 35
@@ -855,6 +903,7 @@ information-management:
 learning-methods:
   efficiency:
     name: "Efficiency & Speed"
+    user_description: "how quickly and effectively you learn new things"
     anchor_type: "subjective"
     anchor_description: "Change in use of evidence-based techniques that accelerate comprehension and retention"
     baseline_percentile: 35
@@ -871,6 +920,7 @@ learning-methods:
       -10: "Severe damage to learning efficiency"
   depth:
     name: "Depth & Mastery"
+    user_description: "depth of mastery you achieve through deliberate practice"
     anchor_type: "subjective"
     anchor_description: "Change in quality of understanding achieved through deliberate practice"
     baseline_percentile: 35
@@ -887,6 +937,7 @@ learning-methods:
       -10: "Severe damage to depth of learning and mastery"
   enjoyment:
     name: "Enjoyment & Motivation"
+    user_description: "how long you sustain an effective learning routine"
     anchor_type: "linear"
     anchor_max: 10
     anchor_unit: "years of sustained learning habit"
@@ -907,6 +958,7 @@ learning-methods:
 life-purpose:
   clarity:
     name: "Clarity & Direction"
+    user_description: "clarity and confidence about your life direction"
     anchor_type: "subjective"
     anchor_description: "Change in confidence and stability of life direction through changing circumstances"
     baseline_percentile: 35
@@ -923,6 +975,7 @@ life-purpose:
       -10: "Severe damage to clarity of life direction"
   meaning:
     name: "Meaning & Fulfilment"
+    user_description: "fulfilment from working toward your life purpose"
     anchor_type: "subjective"
     anchor_description: "Change in depth and stability of fulfilment experienced from working toward life purpose"
     baseline_percentile: 35
@@ -939,6 +992,7 @@ life-purpose:
       -10: "Severe damage to fulfilment from life purpose"
   integration:
     name: "Integration & Coherence"
+    user_description: "how well your life purpose ties your different domains together"
     anchor_type: "subjective"
     anchor_description: "Change in how well life purpose organises and creates synergy across all life domains"
     baseline_percentile: 35
@@ -956,6 +1010,7 @@ life-purpose:
 life-skills:
   high:
     name: "High-Impact Capabilities"
+    user_description: "number of practical skills you can handle competently"
     anchor_type: "linear"
     anchor_max: 15
     anchor_unit: "practical skills at competent level"
@@ -975,6 +1030,7 @@ life-skills:
       -10: "15+ practical skills at competent level lost"
   systematic:
     name: "Systematic Competence"
+    user_description: "how organised your approach to practical life management is"
     anchor_type: "subjective"
     anchor_description: "Change in organisation and proactive maintenance in practical life management"
     baseline_percentile: 35
@@ -991,6 +1047,7 @@ life-skills:
       -10: "Severe damage to systematic life-skill competence"
   teaching:
     name: "Teaching & Sharing"
+    user_description: "your ability to teach practical skills to others"
     anchor_type: "subjective"
     anchor_description: "Change in practical skill transfer to others"
     baseline_percentile: 35
@@ -1008,6 +1065,7 @@ life-skills:
 media-diet:
   quality:
     name: "Information Quality & Depth"
+    user_description: "depth and quality of information you regularly consume"
     anchor_type: "linear"
     anchor_max: 40
     anchor_unit: "non-fiction books read annually"
@@ -1027,6 +1085,7 @@ media-diet:
       -10: "40+ fewer non-fiction books read annually"
   relevance:
     name: "Actionable Relevance"
+    user_description: "how much your information consumption drives real decisions"
     anchor_type: "subjective"
     anchor_description: "Change in how directly information consumption drives decisions and practical outcomes"
     baseline_percentile: 35
@@ -1043,6 +1102,7 @@ media-diet:
       -10: "Severe damage to actionable relevance of information consumption"
   breadth:
     name: "Breadth & Discovery"
+    user_description: "exposure to diverse perspectives and unfamiliar ideas"
     anchor_type: "subjective"
     anchor_description: "Change in deliberate exposure to diverse perspectives and assumption-challenging ideas"
     baseline_percentile: 35
@@ -1059,6 +1119,7 @@ media-diet:
       -10: "Severe damage to breadth of perspective and discovery"
   efficiency:
     name: "Cognitive Efficiency"
+    user_description: "how little time you waste on low-value information"
     anchor_type: "linear"
     anchor_max: 2
     anchor_unit: "hours daily on news and information"
@@ -1080,6 +1141,7 @@ media-diet:
 rationality:
   accurate-beliefs:
     name: "Accurate Beliefs"
+    user_description: "accuracy of your beliefs and predictions"
     anchor_type: "subjective"
     anchor_description: "Change in calibration accuracy and predictive performance"
     baseline_percentile: 35
@@ -1096,6 +1158,7 @@ rationality:
       -10: "Severe damage to accuracy of beliefs"
   decision-making:
     name: "Effective Decision-Making"
+    user_description: "quality of your decisions under uncertainty"
     anchor_type: "subjective"
     anchor_description: "Change in consistency and sophistication of decision-making under uncertainty"
     baseline_percentile: 35
@@ -1112,6 +1175,7 @@ rationality:
       -10: "Severe damage to decision-making effectiveness"
   intellectual-honesty:
     name: "Intellectual Honesty"
+    user_description: "willingness to update your views when evidence changes"
     anchor_type: "subjective"
     anchor_description: "Change in willingness to update beliefs, acknowledge uncertainty, and follow evidence"
     baseline_percentile: 35
@@ -1129,6 +1193,7 @@ rationality:
 self-awareness:
   psychological:
     name: "Psychological"
+    user_description: "understanding of your own mental patterns and triggers"
     anchor_type: "subjective"
     anchor_description: "Change in depth and accuracy of understanding of own mental patterns, triggers, and emotional dynamics"
     baseline_percentile: 35
@@ -1145,6 +1210,7 @@ self-awareness:
       -10: "Severe damage to psychological self-knowledge"
   contemplative:
     name: "Contemplative/Somatic"
+    user_description: "awareness of your internal states and present-moment experience"
     anchor_type: "subjective"
     anchor_description: "Change in awareness of internal states through mindfulness, body sensations, and present-moment attention"
     baseline_percentile: 35
@@ -1161,6 +1227,7 @@ self-awareness:
       -10: "Severe damage to contemplative and somatic awareness"
   relational:
     name: "Relational"
+    user_description: "understanding of how you affect others in relationships"
     anchor_type: "subjective"
     anchor_description: "Change in accuracy of understanding of own interpersonal patterns and impact on others"
     baseline_percentile: 35
@@ -1177,6 +1244,7 @@ self-awareness:
       -10: "Severe damage to relational self-awareness"
   experiential:
     name: "Experiential"
+    user_description: "self-knowledge gained through varied experiences"
     anchor_type: "subjective"
     anchor_description: "Change in self-knowledge gained through diverse experiences"
     baseline_percentile: 35
@@ -1194,6 +1262,7 @@ self-awareness:
 value-system:
   practical:
     name: "Practical Decision-Making"
+    user_description: "how much your values guide your daily choices"
     anchor_type: "subjective"
     anchor_description: "Change in how much values actively guide daily choices and major life decisions"
     baseline_percentile: 35
@@ -1210,6 +1279,7 @@ value-system:
       -10: "Severe damage to values-driven decision-making"
   insight:
     name: "Comprehensive Insight"
+    user_description: "depth of understanding of your own authentic values"
     anchor_type: "subjective"
     anchor_description: "Change in depth of understanding of own authentic values, their origins, hierarchies, and trade-offs"
     baseline_percentile: 35
@@ -1226,6 +1296,7 @@ value-system:
       -10: "Severe damage to insight into own values"
   authentic:
     name: "Authentic Expression"
+    user_description: "consistency between your values and your behaviour under pressure"
     anchor_type: "subjective"
     anchor_description: "Change in consistency between inner values and outer behaviour under social pressure and personal cost"
     baseline_percentile: 35
@@ -1242,6 +1313,7 @@ value-system:
       -10: "Severe damage to authentic expression under pressure"
   evolution:
     name: "Values Evolution"
+    user_description: "capacity to intentionally develop and refine your values"
     anchor_type: "subjective"
     anchor_description: "Change in capacity for intentional values development balanced with appropriate stability"
     baseline_percentile: 35
@@ -1259,6 +1331,7 @@ value-system:
 worldview:
   breadth:
     name: "Breadth"
+    user_description: "breadth of your knowledge across major domains"
     anchor_type: "linear"
     anchor_max: 8
     anchor_unit: "domains at secondary school level or above"
@@ -1278,6 +1351,7 @@ worldview:
       -10: "8+ knowledge domains lost — collapse of general understanding"
   depth:
     name: "Depth"
+    user_description: "depth of understanding within your chosen knowledge areas"
     anchor_type: "subjective"
     anchor_description: "Change in sophisticated, nuanced understanding within chosen knowledge domains"
     baseline_percentile: 35
@@ -1294,6 +1368,7 @@ worldview:
       -10: "Severe damage to depth of worldview understanding"
   utility:
     name: "Utility"
+    user_description: "how well your worldview helps you make real-world decisions"
     anchor_type: "subjective"
     anchor_description: "Change in how well worldview enhances real-world decision-making and prediction"
     baseline_percentile: 35
@@ -1310,6 +1385,7 @@ worldview:
       -10: "Severe damage to utility of worldview for decision-making"
   meaning:
     name: "Meaning"
+    user_description: "psychological grounding and sense of purpose from your worldview"
     anchor_type: "subjective"
     anchor_description: "Change in how much worldview provides psychological grounding and sense of purpose"
     baseline_percentile: 35
@@ -1330,6 +1406,7 @@ worldview:
 behaviours:
   freedom:
     name: "Freedom & Control"
+    user_description: "freedom from compulsive or automatic behaviours"
     anchor_type: "subjective"
     anchor_description: "Change in liberation from compulsive patterns and restored genuine choice"
     baseline_percentile: 35
@@ -1346,6 +1423,7 @@ behaviours:
       -10: "Severe damage to freedom from compulsive behaviours"
   emotional:
     name: "Emotional Regulation"
+    user_description: "how well you regulate emotions under stress"
     anchor_type: "linear"
     anchor_max: 7
     anchor_unit: "stress-driven reactive episodes per week"
@@ -1366,6 +1444,7 @@ behaviours:
       -10: "Constant dysregulation from minor stressors"
   social:
     name: "Social & Relational Patterns"
+    user_description: "how authentically you respond in social situations"
     anchor_type: "subjective"
     anchor_description: "Change in consistency of authentic, boundaried responses in interpersonal situations"
     baseline_percentile: 35
@@ -1382,6 +1461,7 @@ behaviours:
       -10: "Severe damage to authentic and boundaried social behaviour"
   resilience:
     name: "Resilience & Adaptability"
+    user_description: "how long you sustain positive behavioural changes"
     anchor_type: "linear"
     anchor_max: 24
     anchor_unit: "months of sustained behavioural change"
@@ -1402,6 +1482,7 @@ behaviours:
 digital-safety:
   security:
     name: "Comprehensive Security"
+    user_description: "how well-protected your digital accounts and devices are"
     anchor_type: "subjective"
     anchor_description: "Change in breadth and sophistication of digital security practices"
     baseline_percentile: 35
@@ -1418,6 +1499,7 @@ digital-safety:
       -10: "Severe damage to comprehensive digital security"
   convenience:
     name: "Usability and Convenience"
+    user_description: "how seamlessly security fits into your daily digital use"
     anchor_type: "subjective"
     anchor_description: "Change in how seamlessly security measures integrate into daily workflows"
     baseline_percentile: 35
@@ -1435,6 +1517,7 @@ digital-safety:
 emergency-preparedness:
   self-reliance:
     name: "Self-Reliance"
+    user_description: "how long your household can sustain itself in a disruption"
     anchor_type: "linear"
     anchor_max: 365
     anchor_unit: "days of household supply autonomy"
@@ -1454,6 +1537,7 @@ emergency-preparedness:
       -10: "365+ days of household supply autonomy lost"
   community:
     name: "Community Resilience"
+    user_description: "mutual aid relationships for emergencies"
     anchor_type: "linear"
     anchor_max: 20
     anchor_unit: "households in active mutual aid network"
@@ -1473,6 +1557,7 @@ emergency-preparedness:
       -10: "20+ households lost — full dissolution of mutual aid"
   baseline:
     name: "Baseline Resilience"
+    user_description: "readiness for common disruptions like power outages"
     anchor_type: "subjective"
     anchor_description: "Change in preparedness for probable disruptions like natural disasters and outages"
     baseline_percentile: 35
@@ -1489,6 +1574,7 @@ emergency-preparedness:
       -10: "Severe damage to baseline emergency preparedness"
   catastrophic:
     name: "Catastrophic Resilience"
+    user_description: "readiness for rare but severe societal disruptions"
     anchor_type: "subjective"
     anchor_description: "Change in preparedness for rare but severe societal disruptions"
     baseline_percentile: 35
@@ -1506,6 +1592,7 @@ emergency-preparedness:
 food-management:
   competence:
     name: "Competence"
+    user_description: "how reliably you provide adequate meals each week"
     anchor_type: "linear"
     anchor_max: 21
     anchor_unit: "adequate meals provided per week"
@@ -1525,6 +1612,7 @@ food-management:
       -10: "All 21 adequate meals per week lost"
   craft:
     name: "Craft"
+    user_description: "satisfaction and skill you get from preparing food"
     anchor_type: "subjective"
     anchor_description: "Change in satisfaction, creativity, and skill development from food preparation"
     baseline_percentile: 35
@@ -1541,6 +1629,7 @@ food-management:
       -10: "Severe damage to craft and enjoyment of food preparation"
   waste_reduction:
     name: "Waste Reduction"
+    user_description: "how much of the food you buy actually gets eaten"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent of purchased food consumed"
@@ -1561,6 +1650,7 @@ food-management:
 health-management:
   longterm:
     name: "Long-term Health"
+    user_description: "how comprehensive your preventive health strategy is"
     anchor_type: "subjective"
     anchor_description: "Change in comprehensiveness of preventive care strategy"
     baseline_percentile: 35
@@ -1577,6 +1667,7 @@ health-management:
       -10: "Severe damage to long-term preventive health strategy"
   vitality:
     name: "Present Vitality"
+    user_description: "hours of high energy you have each day"
     anchor_type: "linear"
     anchor_max: 14
     anchor_unit: "high-energy hours per day"
@@ -1596,6 +1687,7 @@ health-management:
       -10: "All high-energy hours lost — persistent severe fatigue"
   control:
     name: "Personal Control"
+    user_description: "your confidence making informed health decisions"
     anchor_type: "subjective"
     anchor_description: "Change in knowledge, skill, and confidence making informed health decisions"
     baseline_percentile: 35
@@ -1612,6 +1704,7 @@ health-management:
       -10: "Severe damage to personal control over health decisions"
   simplicity:
     name: "Simplicity"
+    user_description: "how low-maintenance your health management is"
     anchor_type: "subjective"
     anchor_description: "Change in efficiency and low maintenance of health management systems"
     baseline_percentile: 35
@@ -1629,6 +1722,7 @@ health-management:
 legal-matters:
   protection:
     name: "Comprehensive Protection"
+    user_description: "essential legal documents you have in place"
     anchor_type: "linear"
     anchor_max: 5
     anchor_unit: "essential legal documents in place"
@@ -1648,6 +1742,7 @@ legal-matters:
       -10: "All essential legal protections compromised"
   simplicity:
     name: "Simplicity & Peace of Mind"
+    user_description: "how stress-free your legal affairs are"
     anchor_type: "subjective"
     anchor_description: "Change in how streamlined, accessible, and low-anxiety legal affairs are"
     baseline_percentile: 35
@@ -1664,6 +1759,7 @@ legal-matters:
       -10: "Severe damage to simplicity and peace of mind in legal affairs"
   strategic:
     name: "Strategic Advantage"
+    user_description: "how well you leverage legal knowledge to your advantage"
     anchor_type: "subjective"
     anchor_description: "Change in how well legal knowledge is leveraged to optimise outcomes"
     baseline_percentile: 35
@@ -1680,6 +1776,7 @@ legal-matters:
       -10: "Severe damage to strategic use of legal knowledge"
   access:
     name: "Access & Empowerment"
+    user_description: "your confidence navigating legal situations"
     anchor_type: "subjective"
     anchor_description: "Change in confidence and capability navigating legal situations"
     baseline_percentile: 35
@@ -1697,6 +1794,7 @@ legal-matters:
 mindfulness:
   clarity:
     name: "Mental Clarity"
+    user_description: "sustained daily mindfulness practice"
     anchor_type: "linear"
     anchor_max: 45
     anchor_unit: "minutes of daily mindfulness practice"
@@ -1716,6 +1814,7 @@ mindfulness:
       -10: "Full abandonment of mindfulness practice"
   emotional:
     name: "Emotional Wellbeing"
+    user_description: "emotional resilience cultivated through mindfulness"
     anchor_type: "subjective"
     anchor_description: "Change in emotional resilience, reduced reactivity, and equanimity"
     baseline_percentile: 35
@@ -1732,6 +1831,7 @@ mindfulness:
       -10: "Severe damage to emotional wellbeing from mindfulness practice"
   knowledge:
     name: "Self-Knowledge"
+    user_description: "self-knowledge from contemplative practice"
     anchor_type: "subjective"
     anchor_description: "Change in insight into own thought patterns and habitual behaviours"
     baseline_percentile: 35
@@ -1748,6 +1848,7 @@ mindfulness:
       -10: "Severe damage to self-knowledge from contemplative practice"
   spiritual:
     name: "Spiritual Development"
+    user_description: "connection to meaning and transcendence through contemplation"
     anchor_type: "subjective"
     anchor_description: "Change in connection to meaning, transcendence, and existential questions"
     baseline_percentile: 35
@@ -1765,6 +1866,7 @@ mindfulness:
 physical-safety:
   risk:
     name: "Risk Reduction"
+    user_description: "reduction in your risk of preventable injury or death"
     anchor_type: "linear"
     anchor_max: 70
     anchor_unit: "percent reduction in preventable incident mortality risk"
@@ -1784,6 +1886,7 @@ physical-safety:
       -10: "Catastrophic increase in preventable mortality risk"
   freedom:
     name: "Freedom and Convenience"
+    user_description: "lifestyle freedom maintained alongside personal safety"
     anchor_type: "subjective"
     anchor_description: "Change in lifestyle flexibility and spontaneity while maintaining personal safety"
     baseline_percentile: 50
@@ -1804,6 +1907,7 @@ physical-safety:
 children:
   wellbeing:
     name: "Wellbeing"
+    user_description: "your child's physical and emotional wellbeing"
     anchor_type: "subjective"
     anchor_description: "Change in how much a child thrives physically, emotionally, and psychologically"
     baseline_percentile: 35
@@ -1820,6 +1924,7 @@ children:
       -10: "Severe damage to child's wellbeing"
   relationship:
     name: "Relationship"
+    user_description: "warmth and trust in the parent-child relationship"
     anchor_type: "subjective"
     anchor_description: "Change in depth of the parent-child bond measured by warmth and trust"
     baseline_percentile: 35
@@ -1836,6 +1941,7 @@ children:
       -10: "Severe damage to parent-child relationship quality"
   achievement:
     name: "Achievement"
+    user_description: "how effectively you support your child's development"
     anchor_type: "subjective"
     anchor_description: "Change in effectiveness of support for cognitive, academic, and skill development"
     baseline_percentile: 35
@@ -1852,6 +1958,7 @@ children:
       -10: "Severe damage to support for child's achievement"
   development:
     name: "Development"
+    user_description: "your child's growing independence and resilience"
     anchor_type: "subjective"
     anchor_description: "Change in how well a child develops independence, resilience, and self-direction"
     baseline_percentile: 35
@@ -1869,6 +1976,7 @@ children:
 communication:
   influence:
     name: "Influence"
+    user_description: "your ability to persuade and drive decisions"
     anchor_type: "subjective"
     anchor_description: "Change in ability to persuade others and drive decisions through communication"
     baseline_percentile: 35
@@ -1885,6 +1993,7 @@ communication:
       -10: "Severe damage to communicative influence"
   connection:
     name: "Connection"
+    user_description: "your ability to build genuine relationships through conversation"
     anchor_type: "subjective"
     anchor_description: "Change in ability to build genuine relationships through communication"
     baseline_percentile: 35
@@ -1901,6 +2010,7 @@ communication:
       -10: "Severe damage to connection built through communication"
   performance:
     name: "Performance"
+    user_description: "confidence speaking to groups or in formal settings"
     anchor_type: "linear"
     anchor_max: 50
     anchor_unit: "audience size handled confidently"
@@ -1920,6 +2030,7 @@ communication:
       -10: "50+ fewer — cannot address any audience without anxiety"
   conflict:
     name: "Conflict Navigation"
+    user_description: "how constructively you handle disagreements"
     anchor_type: "subjective"
     anchor_description: "Change in ability to handle disagreements constructively while maintaining relationships"
     baseline_percentile: 35
@@ -1937,6 +2048,7 @@ communication:
 extended-family:
   harmony:
     name: "Harmony"
+    user_description: "peace and low conflict across extended family"
     anchor_type: "subjective"
     anchor_description: "Change in peacefulness and low-conflict nature of extended-family relationships"
     baseline_percentile: 35
@@ -1953,6 +2065,7 @@ extended-family:
       -10: "Severe damage to extended-family harmony"
   closeness:
     name: "Closeness"
+    user_description: "meaningful contact with extended family members"
     anchor_type: "linear"
     anchor_max: 20
     anchor_unit: "extended family members in regular meaningful contact"
@@ -1972,6 +2085,7 @@ extended-family:
       -10: "20+ meaningful extended-family contacts lost"
   balance:
     name: "Balance"
+    user_description: "healthy boundaries with extended family"
     anchor_type: "subjective"
     anchor_description: "Change in healthy boundaries with extended family"
     baseline_percentile: 35
@@ -1989,6 +2103,7 @@ extended-family:
 family-of-origin:
   autonomy:
     name: "Personal Autonomy"
+    user_description: "freedom to live by your own values despite family expectations"
     anchor_type: "subjective"
     anchor_description: "Change in freedom to live according to own values regardless of family expectations"
     baseline_percentile: 35
@@ -2005,6 +2120,7 @@ family-of-origin:
       -10: "Severe damage to autonomy from family-of-origin expectations"
   connection:
     name: "Emotional Connection"
+    user_description: "emotional closeness with parents and siblings"
     anchor_type: "subjective"
     anchor_description: "Change in quality of emotional bonds with parents and siblings"
     baseline_percentile: 35
@@ -2021,6 +2137,7 @@ family-of-origin:
       -10: "Severe damage to emotional connection with family of origin"
   healing:
     name: "Active Healing"
+    user_description: "progress healing from family dysfunction"
     anchor_type: "subjective"
     anchor_description: "Change in progress working through family dysfunction and breaking harmful patterns"
     baseline_percentile: 35
@@ -2037,6 +2154,7 @@ family-of-origin:
       -10: "Severe damage to healing from family-of-origin dysfunction"
   duty:
     name: "Family Duty"
+    user_description: "how well you support and show up for family members"
     anchor_type: "subjective"
     anchor_description: "Change in effectiveness at fulfilling obligations and supporting family members"
     baseline_percentile: 35
@@ -2054,6 +2172,7 @@ family-of-origin:
 friendship:
   depth:
     name: "Depth"
+    user_description: "number of close, high-trust friendships"
     anchor_type: "linear"
     anchor_max: 5
     anchor_unit: "intimate friendships"
@@ -2073,6 +2192,7 @@ friendship:
       -10: "5+ intimate friendships lost"
   breadth:
     name: "Breadth"
+    user_description: "number of active friendships across different contexts"
     anchor_type: "linear"
     anchor_max: 30
     anchor_unit: "active friendships"
@@ -2092,6 +2212,7 @@ friendship:
       -10: "30+ active friendships lost"
   growth:
     name: "Growth"
+    user_description: "how much your friendships challenge you to grow"
     anchor_type: "subjective"
     anchor_description: "Change in how much friendships challenge you to improve and develop"
     baseline_percentile: 35
@@ -2109,6 +2230,7 @@ friendship:
 personality:
   alignment:
     name: "Personality Alignment"
+    user_description: "how well your life is designed around your natural tendencies"
     anchor_type: "subjective"
     anchor_description: "Change in how well life is designed around natural personality patterns"
     baseline_percentile: 35
@@ -2125,6 +2247,7 @@ personality:
       -10: "Severe damage to life-to-personality alignment"
   growth:
     name: "Personality Growth"
+    user_description: "active development of your personality characteristics"
     anchor_type: "subjective"
     anchor_description: "Change in active development and modification of personality characteristics"
     baseline_percentile: 35
@@ -2142,6 +2265,7 @@ personality:
 relationship-status:
   partner-selection:
     name: "Partner Selection"
+    user_description: "quality of romantic partner choices"
     anchor_type: "subjective"
     anchor_description: "Change in quality of partner selection based on genuine compatibility"
     baseline_percentile: 35
@@ -2158,6 +2282,7 @@ relationship-status:
       -10: "Severe damage to partner-selection quality"
   meeting-new-partners:
     name: "Meeting New Partners"
+    user_description: "how effectively you meet potential partners"
     anchor_type: "linear"
     anchor_max: 5
     anchor_unit: "active channels for meeting partners"
@@ -2177,6 +2302,7 @@ relationship-status:
       -10: "All active channels for meeting partners lost"
   independence:
     name: "Independence"
+    user_description: "comfort and fulfilment without a romantic partner"
     anchor_type: "subjective"
     anchor_description: "Change in comfort and fulfilment without a romantic partner"
     baseline_percentile: 35
@@ -2193,6 +2319,7 @@ relationship-status:
       -10: "Severe damage to romantic independence and fulfilment"
   transition-navigation:
     name: "Transition Navigation"
+    user_description: "how gracefully you manage romantic transitions"
     anchor_type: "subjective"
     anchor_description: "Change in ability to manage romantic transitions gracefully"
     baseline_percentile: 35
@@ -2210,6 +2337,7 @@ relationship-status:
 romantic-relationships:
   connection:
     name: "Connection"
+    user_description: "emotional closeness and trust with your partner"
     anchor_type: "subjective"
     anchor_description: "Change in emotional closeness, vulnerability, and trust in a romantic partnership"
     baseline_percentile: 35
@@ -2226,6 +2354,7 @@ romantic-relationships:
       -10: "Severe damage to romantic emotional connection"
   harmony:
     name: "Harmony"
+    user_description: "day-to-day smoothness of your partnership"
     anchor_type: "subjective"
     anchor_description: "Change in day-to-day smoothness and constructive disagreement in a partnership"
     baseline_percentile: 35
@@ -2242,6 +2371,7 @@ romantic-relationships:
       -10: "Severe damage to romantic partnership harmony"
   alignment:
     name: "Alignment"
+    user_description: "shared values and compatible goals with your partner"
     anchor_type: "subjective"
     anchor_description: "Change in shared values, compatible goals, and common vision with a partner"
     baseline_percentile: 35
@@ -2259,6 +2389,7 @@ romantic-relationships:
 sex:
   frequency:
     name: "Frequency"
+    user_description: "how often you and your partner are intimate"
     anchor_type: "linear"
     anchor_max: 4
     anchor_unit: "times per week"
@@ -2278,6 +2409,7 @@ sex:
       -10: "Complete loss of sexual frequency"
   variety:
     name: "Variety"
+    user_description: "diversity and novelty in your sexual experiences"
     anchor_type: "subjective"
     anchor_description: "Change in diversity and novelty of sexual experiences"
     baseline_percentile: 35
@@ -2294,6 +2426,7 @@ sex:
       -10: "Severe damage to sexual variety"
   pleasure:
     name: "Pleasure"
+    user_description: "physical and psychological enjoyment of sex"
     anchor_type: "subjective"
     anchor_description: "Change in physical and psychological enjoyment of sexual activity"
     baseline_percentile: 35
@@ -2310,6 +2443,7 @@ sex:
       -10: "Severe damage to sexual pleasure"
   contentment:
     name: "Contentment"
+    user_description: "overall satisfaction with sex in your life"
     anchor_type: "subjective"
     anchor_description: "Change in overall peace and satisfaction with the role sex plays in life"
     baseline_percentile: 35
@@ -2327,6 +2461,7 @@ sex:
 style:
   attractiveness:
     name: "Attractiveness"
+    user_description: "how appealing you look through deliberate presentation"
     anchor_type: "subjective"
     anchor_description: "Change in how appealing appearance is through deliberate presentation choices"
     baseline_percentile: 35
@@ -2343,6 +2478,7 @@ style:
       -10: "Severe damage to attractiveness through presentation"
   status-professional:
     name: "Status & Professional"
+    user_description: "how effectively your clothing signals professional credibility"
     anchor_type: "subjective"
     anchor_description: "Change in how effectively clothing signals competence and credibility in professional settings"
     baseline_percentile: 35
@@ -2359,6 +2495,7 @@ style:
       -10: "Severe damage to professional status and credibility through clothing"
   expression:
     name: "Self-Expression"
+    user_description: "how well your clothing communicates your identity"
     anchor_type: "subjective"
     anchor_description: "Change in how well clothing communicates identity, values, and personality"
     baseline_percentile: 35
@@ -2375,6 +2512,7 @@ style:
       -10: "Severe damage to self-expression through clothing"
   comfort:
     name: "Comfort & Function"
+    user_description: "how comfortable and functional your clothing is"
     anchor_type: "subjective"
     anchor_description: "Change in how well clothing supports daily activities and physical comfort"
     baseline_percentile: 35
@@ -2395,6 +2533,7 @@ style:
 financial-planning-tracking:
   accuracy:
     name: "Accuracy & Control"
+    user_description: "how completely you track where your money goes"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent of spending tracked"
@@ -2414,6 +2553,7 @@ financial-planning-tracking:
       -10: "Near-total collapse of spending tracking"
   simplicity:
     name: "Simplicity & Convenience"
+    user_description: "how little time financial admin takes you"
     anchor_type: "linear"
     anchor_max: 30
     anchor_unit: "minutes per week on financial admin"
@@ -2434,6 +2574,7 @@ financial-planning-tracking:
       -10: "Overwhelming financial admin burden"
   insight:
     name: "Insight & Optimisation"
+    user_description: "useful financial insights from your tracking data"
     anchor_type: "subjective"
     anchor_description: "Change in quality and frequency of actionable financial insights from tracking"
     baseline_percentile: 35
@@ -2451,6 +2592,7 @@ financial-planning-tracking:
 habits:
   impact:
     name: "Impact"
+    user_description: "how many areas of your life your habits measurably improve"
     anchor_type: "linear"
     anchor_max: 10
     anchor_unit: "life areas measurably improved by habits"
@@ -2470,6 +2612,7 @@ habits:
       -10: "10+ life areas with habit benefits lost"
   consistency:
     name: "Consistency"
+    user_description: "how consistently you stick to your habit routines"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent daily adherence over 6 months"
@@ -2489,6 +2632,7 @@ habits:
       -10: "Near-total collapse of habit adherence"
   enjoyment:
     name: "Enjoyment"
+    user_description: "how intrinsically rewarding your habit routines feel"
     anchor_type: "subjective"
     anchor_description: "Change in how intrinsically rewarding habit routines feel"
     baseline_percentile: 35
@@ -2506,6 +2650,7 @@ habits:
 housing:
   comfort:
     name: "Comfort"
+    user_description: "physical comfort and pleasantness of where you live"
     anchor_type: "subjective"
     anchor_description: "Change in physical quality and pleasantness of the living environment"
     baseline_percentile: 50
@@ -2522,6 +2667,7 @@ housing:
       -10: "Severe damage to home comfort"
   affordability:
     name: "Affordability"
+    user_description: "how affordable your housing is relative to income"
     anchor_type: "linear"
     anchor_max: 30
     anchor_unit: "percent of gross income on housing"
@@ -2542,6 +2688,7 @@ housing:
       -10: "Overwhelming housing cost burden"
   location:
     name: "Location"
+    user_description: "how well your location fits your commute and daily needs"
     anchor_type: "linear"
     anchor_max: 30
     anchor_unit: "minutes average commute"
@@ -2563,6 +2710,7 @@ housing:
 possessions:
   functionality:
     name: "Functionality"
+    user_description: "how much of what you own actually works and gets used"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent of possessions in working order and regularly used"
@@ -2582,6 +2730,7 @@ possessions:
       -10: "Near-total possessions unusable"
   simplicity:
     name: "Simplicity"
+    user_description: "freedom from excess possessions and clutter"
     anchor_type: "subjective"
     anchor_description: "Change in degree of curation and freedom from excess possessions"
     baseline_percentile: 35
@@ -2598,6 +2747,7 @@ possessions:
       -10: "Severe damage to simplicity of possessions"
   quality:
     name: "Quality"
+    user_description: "durability and fitness for purpose of what you own"
     anchor_type: "subjective"
     anchor_description: "Change in durability, craftsmanship, and fitness for purpose of owned items"
     baseline_percentile: 35
@@ -2614,6 +2764,7 @@ possessions:
       -10: "Severe damage to quality of possessions"
   meaning:
     name: "Meaning"
+    user_description: "personal significance of your possessions beyond function"
     anchor_type: "subjective"
     anchor_description: "Change in personal, sentimental, or aesthetic significance of possessions"
     baseline_percentile: 35
@@ -2631,6 +2782,7 @@ possessions:
 systems:
   power:
     name: "Power"
+    user_description: "how much of your recurring admin is automated"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent of recurring processes automated"
@@ -2650,6 +2802,7 @@ systems:
       -10: "All automation lost — full manual regression"
   simplicity:
     name: "Simplicity"
+    user_description: "simplicity of your life-admin systems"
     anchor_type: "subjective"
     anchor_description: "Change in ratio of system capability to user-facing complexity"
     baseline_percentile: 35
@@ -2666,6 +2819,7 @@ systems:
       -10: "Severe damage to simplicity of systems"
   reliability:
     name: "Reliability"
+    user_description: "how rarely your systems break down unexpectedly"
     anchor_type: "linear"
     anchor_max: 365
     anchor_unit: "days between unplanned system failures"
@@ -2686,6 +2840,7 @@ systems:
 time-management:
   productivity:
     name: "Productivity & Achievement"
+    user_description: "how often you complete planned tasks on time"
     anchor_type: "linear"
     anchor_max: 100
     anchor_unit: "percent of planned tasks completed on time"
@@ -2705,6 +2860,7 @@ time-management:
       -10: "Near-total collapse of on-time task completion"
   balance:
     name: "Balance & Wellbeing"
+    user_description: "protected time for health, relationships, and rest"
     anchor_type: "subjective"
     anchor_description: "Change in sustainability of work rhythms and protected time for rest"
     baseline_percentile: 35
@@ -2721,6 +2877,7 @@ time-management:
       -10: "Severe damage to time balance and wellbeing"
   flexibility:
     name: "Flexibility & Responsiveness"
+    user_description: "your ability to adapt when priorities shift unexpectedly"
     anchor_type: "subjective"
     anchor_description: "Change in ability to adapt to changing priorities and unexpected demands"
     baseline_percentile: 35
@@ -2738,6 +2895,7 @@ time-management:
 transportation:
   efficiency:
     name: "Efficiency"
+    user_description: "how affordable your transportation is"
     anchor_type: "linear"
     anchor_max: 15
     anchor_unit: "percent of income on transportation"
@@ -2758,6 +2916,7 @@ transportation:
       -10: "Overwhelming transportation cost burden"
   comfort:
     name: "Comfort"
+    user_description: "comfort and pleasantness of your daily travel"
     anchor_type: "subjective"
     anchor_description: "Change in physical and psychological pleasantness of daily transportation"
     baseline_percentile: 45
@@ -2774,6 +2933,7 @@ transportation:
       -10: "Severe damage to transportation comfort"
   safety:
     name: "Safety"
+    user_description: "how safe your transportation is"
     anchor_type: "subjective"
     anchor_description: "Change in minimisation of transportation risk"
     baseline_percentile: 50
@@ -2791,6 +2951,7 @@ transportation:
 community-contribution:
   impact:
     name: "Impact"
+    user_description: "tangible difference you make in your community"
     anchor_type: "subjective"
     anchor_description: "Change in tangible difference made in the local community"
     baseline_percentile: 35
@@ -2807,6 +2968,7 @@ community-contribution:
       -10: "Severe damage to community impact"
   belonging:
     name: "Belonging"
+    user_description: "how connected you feel to your local community"
     anchor_type: "subjective"
     anchor_description: "Change in genuine connection and rootedness in the local community"
     baseline_percentile: 35
@@ -2823,6 +2985,7 @@ community-contribution:
       -10: "Severe damage to community belonging"
   fulfilment:
     name: "Fulfilment"
+    user_description: "satisfaction from contributing to community life"
     anchor_type: "subjective"
     anchor_description: "Change in personal satisfaction from contributing to community life"
     baseline_percentile: 35
@@ -2840,6 +3003,7 @@ community-contribution:
 consumptive-leisure:
   restoration:
     name: "Restoration"
+    user_description: "how well leisure restores you from work and stress"
     anchor_type: "subjective"
     anchor_description: "Change in genuine recovery from work and stress through leisure"
     baseline_percentile: 35
@@ -2856,6 +3020,7 @@ consumptive-leisure:
       -10: "Severe damage to restoration from leisure"
   enrichment:
     name: "Enrichment"
+    user_description: "knowledge and perspectives gained from media and content"
     anchor_type: "subjective"
     anchor_description: "Change in knowledge and perspectives gained through media consumption"
     baseline_percentile: 35
@@ -2872,6 +3037,7 @@ consumptive-leisure:
       -10: "Severe damage to enrichment from media consumption"
   enjoyment:
     name: "Enjoyment"
+    user_description: "pleasure and satisfaction from leisure activities"
     anchor_type: "subjective"
     anchor_description: "Change in direct pleasure and satisfaction from leisure activities"
     baseline_percentile: 35
@@ -2889,6 +3055,7 @@ consumptive-leisure:
 global-impact:
   impartiality:
     name: "Impartiality"
+    user_description: "how evidence-based your charitable giving is"
     anchor_type: "subjective"
     anchor_description: "Change in how well resources are directed toward causes based on evidence of impact"
     baseline_percentile: 35
@@ -2905,6 +3072,7 @@ global-impact:
       -10: "Severe damage to impartial, evidence-led giving"
   passion:
     name: "Passion"
+    user_description: "sustained personal commitment to causes you care about"
     anchor_type: "subjective"
     anchor_description: "Change in sustained, personally meaningful commitment to causes"
     baseline_percentile: 35
@@ -2921,6 +3089,7 @@ global-impact:
       -10: "Severe damage to passion for chosen causes"
   sustainability:
     name: "Sustainability"
+    user_description: "percentage of income donated to charity"
     anchor_type: "linear"
     anchor_max: 10
     anchor_unit: "percent of income given annually"
@@ -2940,6 +3109,7 @@ global-impact:
       -10: "10%+ of income given annually lost"
   fulfilment:
     name: "Fulfilment"
+    user_description: "personal satisfaction from making a global difference"
     anchor_type: "subjective"
     anchor_description: "Change in personal satisfaction from making a positive difference globally"
     baseline_percentile: 35
@@ -2957,6 +3127,7 @@ global-impact:
 networks:
   depth:
     name: "Depth"
+    user_description: "people who would actively advocate for your professional work"
     anchor_type: "linear"
     anchor_max: 50
     anchor_unit: "professional advocates"
@@ -2976,6 +3147,7 @@ networks:
       -10: "50+ professional advocates lost"
   breadth:
     name: "Breadth"
+    user_description: "range and diversity of your professional connections"
     anchor_type: "subjective"
     anchor_description: "Change in range and diversity of professional connections"
     baseline_percentile: 35
@@ -2992,6 +3164,7 @@ networks:
       -10: "Severe damage to network breadth"
   relevance:
     name: "Relevance"
+    user_description: "how well your network matches your professional direction"
     anchor_type: "subjective"
     anchor_description: "Change in alignment of network with current and future professional direction"
     baseline_percentile: 35
@@ -3009,6 +3182,7 @@ networks:
 participatory-leisure:
   social:
     name: "Social Connection"
+    user_description: "friendships and community built through shared activities"
     anchor_type: "subjective"
     anchor_description: "Change in relationships and community built through shared leisure activities"
     baseline_percentile: 35
@@ -3025,6 +3199,7 @@ participatory-leisure:
       -10: "Severe damage to social connection from leisure"
   achievement:
     name: "Achievement & Mastery"
+    user_description: "skill and accomplishment from leisure pursuits"
     anchor_type: "subjective"
     anchor_description: "Change in skill development and accomplishment through leisure pursuits"
     baseline_percentile: 35
@@ -3041,6 +3216,7 @@ participatory-leisure:
       -10: "Severe damage to achievement and mastery in leisure"
   adventure:
     name: "Adventure & Exploration"
+    user_description: "novelty and challenge in your leisure experiences"
     anchor_type: "subjective"
     anchor_description: "Change in novelty, challenge, and transformative experiences through leisure"
     baseline_percentile: 35
