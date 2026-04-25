@@ -693,8 +693,8 @@ life_area_slug: media-diet
     // median is 4; average daily screen time for news/social is ~3-4 hrs.
     var THRESHOLDS = {
         'a-books-read': [
-            // ~24% read zero books; median is ~4; over 20 is top few percent
-            {v:'zero',p:12},{v:'1-3',p:35},{v:'4-10',p:60},{v:'11-20',p:82},{v:'over-20',p:96}
+            // ~50% read zero non-fiction; only ~10% read 10+ books total (any genre)
+            {v:'zero',p:25},{v:'1-3',p:65},{v:'4-10',p:82},{v:'11-20',p:93},{v:'over-20',p:98}
         ],
         'a-echo-chamber': [
             // Most people consume from a narrow ideological range; deliberate diversity is rare
