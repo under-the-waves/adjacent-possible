@@ -148,22 +148,22 @@ People pursue sexual wellbeing for different reasons. This site scores every sex
 
 <div class="value-card">
 <h3>Frequency</h3>
-<p>Maintaining a satisfying rate of sexual activity that meets both partners' needs. Initiating regularly, managing desire discrepancies constructively, and ensuring sexual intimacy remains a consistent part of the relationship.</p>
+<p>Maintaining a rate of sexual activity that genuinely satisfies you, whether your sex life is solo, casual, with one partner, or with multiple. Initiating proactively, managing desire alignment, and keeping sexual activity a consistent part of your life when you want it to be.</p>
 </div>
 
 <div class="value-card">
 <h3>Variety</h3>
-<p>Diversity and novelty in sexual experiences. Openness to exploration, comfort discussing preferences, and actively introducing new experiences to prevent routine.</p>
+<p>Diversity and novelty in sexual experiences &ndash; new activities, settings, dynamics, and where appropriate, new partners. Self-knowledge about preferences, comfort discussing desires, and active introduction of novelty through whichever channels suit your sexual life.</p>
 </div>
 
 <div class="value-card">
 <h3>Pleasure</h3>
-<p>The direct experience of physical and psychological enjoyment from sexual activity. Knowledge of your own body, ability to communicate desires, and the pursuit of mutually satisfying experiences.</p>
+<p>The direct experience of physical and psychological enjoyment from sexual activity. Self-knowledge of your own body and responses, the ability to communicate desires clearly, and the pursuit of experiences that are satisfying for everyone involved.</p>
 </div>
 
 <div class="value-card">
 <h3>Contentment</h3>
-<p>Overall satisfaction with your sexual life as a whole. Feeling at peace with the role sex plays in your life and relationship, with realistic expectations and genuine fulfilment.</p>
+<p>Overall satisfaction with your sexual life as a whole. Feeling at peace with the role sex plays in your life, with realistic expectations, freedom from health and safety anxiety, and genuine fulfilment.</p>
 </div>
 
 <div class="la-paths">

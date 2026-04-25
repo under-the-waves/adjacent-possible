@@ -333,16 +333,16 @@ life_area_slug: sex
 <p>People pursue sexual wellbeing for different reasons. This site scores every sex intervention across four core values. Later, you'll set your own weighting across these four values, and the site will rank interventions by how well they deliver on the things you actually care about.</p>
 
 <h3>Frequency</h3>
-<p>Maintaining a satisfying rate of sexual activity that meets both partners' needs. Initiating regularly, managing desire discrepancies constructively, and ensuring sexual intimacy remains a consistent part of the relationship rather than something that fades over time.</p>
+<p>Maintaining a rate of sexual activity that genuinely satisfies you, whether your sex life is solo, casual, with one partner, or with multiple. Initiating proactively, managing desire alignment with any partners involved, and keeping sexual activity a consistent part of your life when you want it to be.</p>
 
 <h3>Variety</h3>
-<p>Diversity and novelty in sexual experiences &ndash; exploring new activities, settings, dynamics, and expressions of intimacy. Openness to experimentation, comfort discussing preferences, and actively introducing novelty to prevent routine.</p>
+<p>Diversity and novelty in sexual experiences &ndash; exploring new activities, settings, dynamics, expressions of intimacy, and where appropriate, new partners. Self-knowledge about preferences, comfort discussing desires, and active introduction of novelty through whichever channels suit your sexual life.</p>
 
 <h3>Pleasure</h3>
-<p>The direct experience of physical and psychological enjoyment from sexual activity. Knowledge of your own body, ability to communicate desires, and the pursuit of mutually satisfying experiences.</p>
+<p>The direct experience of physical and psychological enjoyment from sexual activity. Self-knowledge of your own body and responses, the ability to communicate desires clearly, and the pursuit of experiences that are satisfying for everyone involved.</p>
 
 <h3>Contentment</h3>
-<p>Overall satisfaction with your sexual life as a whole &ndash; feeling at peace with the role sex plays in your life and relationship. Acceptance, realistic expectations, and the sense that your sexual life is genuinely fulfilling.</p>
+<p>Overall satisfaction with your sexual life as a whole &ndash; feeling at peace with the role sex plays in your life, whatever shape it currently takes. Acceptance, realistic expectations, freedom from health and safety anxiety, and the sense that your sexual life is genuinely fulfilling.</p>
 
 <button class="l1-mark-done" onclick="completeStep('values')">I've read this &ndash; continue</button>
 
@@ -431,16 +431,15 @@ life_area_slug: sex
 </div>
 
 <div class="assess-input-group" id="ig-initiation">
-    <span class="assess-label">Who typically initiates sex in your relationship?</span>
-    <span class="assess-hint">Is initiation roughly balanced, or does one person carry most of the responsibility?</span>
+    <span class="assess-label">How proactive are you about creating the sex you want?</span>
+    <span class="assess-hint">Initiating with a partner, pursuing new connections, or otherwise making space for sex &ndash; whichever applies.</span>
     <select id="a-initiation" onchange="handleAssessInput('a-initiation')">
         <option value="">Select...</option>
-        <option value="almost-always-me">Almost always me</option>
-        <option value="mostly-me">Mostly me</option>
-        <option value="roughly-equal">Roughly equal</option>
-        <option value="mostly-partner">Mostly my partner</option>
-        <option value="almost-always-partner">Almost always my partner</option>
-        <option value="neither">Neither &ndash; it rarely happens</option>
+        <option value="very-passive">Very passive &ndash; I rarely initiate or pursue</option>
+        <option value="mostly-passive">Mostly passive &ndash; I usually wait for things to happen</option>
+        <option value="balanced">Balanced &ndash; proactive when it matters</option>
+        <option value="often-proactive">Often proactive &ndash; I usually initiate or pursue what I want</option>
+        <option value="highly-proactive">Highly proactive &ndash; I consistently make sex happen on my terms</option>
     </select> <span class="assess-percentile-hint" id="pct-initiation"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-initiation" onchange="handleSkip('a-initiation')"><label for="skip-initiation">I know but prefer not to say</label></div>
 </div>
@@ -464,15 +463,15 @@ life_area_slug: sex
 </div>
 
 <div class="assess-input-group" id="ig-curiosities">
-    <span class="assess-label">Are there things you are curious about but have not tried or discussed with your partner?</span>
+    <span class="assess-label">Do you have sexual curiosities you have not acted on or shared?</span>
     <span class="assess-hint">Unexpressed curiosities are common &ndash; the point is to notice them, not to act on all of them.</span>
     <select id="a-curiosities" onchange="handleAssessInput('a-curiosities')">
         <option value="">Select...</option>
-        <option value="many-unspoken">Many unspoken &ndash; several curiosities I have not raised</option>
-        <option value="a-few-unspoken">A few unspoken &ndash; one or two things I have not mentioned</option>
-        <option value="discussed-not-tried">Discussed but not tried &ndash; we have talked about things but not acted</option>
-        <option value="exploring">Exploring &ndash; we discuss and try new things regularly</option>
-        <option value="fully-expressed">Fully expressed &ndash; I have shared all my curiosities with my partner</option>
+        <option value="many-unexpressed">Many unexpressed &ndash; several curiosities I have not acted on or shared</option>
+        <option value="a-few-unexpressed">A few unexpressed &ndash; one or two things I have not raised or pursued</option>
+        <option value="considered-not-acted">Considered but not acted &ndash; I have thought about them but not pursued</option>
+        <option value="exploring">Exploring &ndash; I regularly try or discuss new things</option>
+        <option value="fully-expressed">Fully expressed &ndash; I have acted on or shared all my main curiosities</option>
     </select> <span class="assess-percentile-hint" id="pct-curiosities"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-curiosities" onchange="handleSkip('a-curiosities')"><label for="skip-curiosities">I know but prefer not to say</label></div>
 </div>
@@ -539,6 +538,20 @@ life_area_slug: sex
         <option value="grounded">Grounded &ndash; my sense of satisfaction is based entirely on my own experience</option>
     </select> <span class="assess-percentile-hint" id="pct-comparison"></span>
     <div class="assess-skip"><input type="checkbox" id="skip-comparison" onchange="handleSkip('a-comparison')"><label for="skip-comparison">I know but prefer not to say</label></div>
+</div>
+
+<div class="assess-input-group" id="ig-peace">
+    <span class="assess-label">How much background worry, if any, do you carry about sexual health, safety, or consent?</span>
+    <span class="assess-hint">Includes anxiety about STIs, pregnancy, regret, consent concerns, or unsafe situations.</span>
+    <select id="a-peace" onchange="handleAssessInput('a-peace')">
+        <option value="">Select...</option>
+        <option value="significant-worry">Significant ongoing worry</option>
+        <option value="some-worry">Some persistent worry</option>
+        <option value="occasional-worry">Occasional worry</option>
+        <option value="rarely-worry">Rarely worry</option>
+        <option value="no-worry">No background worry &ndash; fully at peace</option>
+    </select> <span class="assess-percentile-hint" id="pct-peace"></span>
+    <div class="assess-skip"><input type="checkbox" id="skip-peace" onchange="handleSkip('a-peace')"><label for="skip-peace">I know but prefer not to say</label></div>
 </div>
 </div>
 
@@ -615,7 +628,7 @@ life_area_slug: sex
         'a-current-frequency', 'a-desire-gap', 'a-initiation',
         'a-routine', 'a-curiosities',
         'a-own-body', 'a-communication',
-        'a-overall-satisfaction', 'a-comparison'
+        'a-overall-satisfaction', 'a-comparison', 'a-peace'
     ];
 
     var UNSCORED_ITEMS = [];
@@ -628,13 +641,13 @@ life_area_slug: sex
             {v:'large-gap-want-more',p:10},{v:'some-gap-want-more',p:30},{v:'well-matched',p:80},{v:'some-gap-want-less',p:40},{v:'large-gap-want-less',p:15}
         ],
         'a-initiation': [
-            {v:'almost-always-me',p:25},{v:'mostly-me',p:40},{v:'roughly-equal',p:85},{v:'mostly-partner',p:40},{v:'almost-always-partner',p:25},{v:'neither',p:5}
+            {v:'very-passive',p:10},{v:'mostly-passive',p:25},{v:'balanced',p:60},{v:'often-proactive',p:80},{v:'highly-proactive',p:92}
         ],
         'a-routine': [
             {v:'very-predictable',p:10},{v:'mostly-predictable',p:28},{v:'some-variation',p:50},{v:'good-variation',p:78},{v:'highly-varied',p:95}
         ],
         'a-curiosities': [
-            {v:'many-unspoken',p:10},{v:'a-few-unspoken',p:30},{v:'discussed-not-tried',p:52},{v:'exploring',p:78},{v:'fully-expressed',p:95}
+            {v:'many-unexpressed',p:10},{v:'a-few-unexpressed',p:30},{v:'considered-not-acted',p:52},{v:'exploring',p:78},{v:'fully-expressed',p:95}
         ],
         'a-own-body': [
             {v:'unsure',p:8},{v:'vague',p:25},{v:'reasonable',p:50},{v:'well',p:78},{v:'very-well',p:95}
@@ -648,13 +661,16 @@ life_area_slug: sex
         'a-comparison': [
             {v:'constant-negative',p:8},{v:'sometimes-negative',p:28},{v:'aware-not-affected',p:52},{v:'rarely',p:75},{v:'grounded',p:95}
         ],
+        'a-peace': [
+            {v:'significant-worry',p:10},{v:'some-worry',p:28},{v:'occasional-worry',p:52},{v:'rarely-worry',p:78},{v:'no-worry',p:95}
+        ],
     };
 
     var VALUE_ITEMS = {
         frequency: ['a-current-frequency', 'a-desire-gap', 'a-initiation'],
         variety: ['a-routine', 'a-curiosities'],
         pleasure: ['a-own-body', 'a-communication'],
-        contentment: ['a-overall-satisfaction', 'a-comparison'],
+        contentment: ['a-overall-satisfaction', 'a-comparison', 'a-peace'],
     };
 
     // --- Scoring functions ---
@@ -939,7 +955,32 @@ life_area_slug: sex
         updateAssessCompletion();
     }
 
+    function maybeResetForNewSchema() {
+        if (typeof APStorage === 'undefined') return;
+
+        var allAnswers = {};
+        try { allAnswers = JSON.parse(localStorage.getItem('ap-level1-answers')) || {}; } catch(e) {}
+        var saved = allAnswers[AREA];
+        if (!saved) return;
+
+        var allPresent = ASSESS_IDS.every(function(id) { return saved.hasOwnProperty(id); });
+        if (allPresent) return;
+
+        var allProgress = APStorage.load('ap-level1-progress') || {};
+        if (allProgress[AREA]) {
+            delete allProgress[AREA].assess;
+            delete allProgress[AREA].interventions;
+            APStorage.save('ap-level1-progress', allProgress);
+        }
+        var allScores = APStorage.load('ap-level1-scores') || {};
+        if (allScores[AREA]) {
+            delete allScores[AREA];
+            APStorage.save('ap-level1-scores', allScores);
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
+        maybeResetForNewSchema();
         restoreAssessment();
         updateUI();
     });

@@ -9,134 +9,134 @@ values:
   name: Frequency
   weight: 30
   description:
-  - "Maintaining a satisfying rate of sexual activity that meets both partners' needs."
+  - "Maintaining a rate of sexual activity that genuinely satisfies you, whether your sex life is solo, casual, with one partner, or with multiple."
   - |-
-    Initiating regularly, managing desire discrepancies constructively, and ensuring sexual intimacy remains a consistent part of the relationship rather than something that fades.
-  - People who prioritise this value focus on sustaining regular sexual connection.
+    Initiating proactively, managing desire alignment with any partners involved, and keeping sexual activity a consistent part of your life when you want it to be.
+  - People who prioritise this value focus on sustaining sexual activity at a level that matches their actual desires.
   benchmarks:
     level_1:
       text: |-
-        Understand your current sexual frequency relative to your own desires and your partner's, and identify whether there is a meaningful gap between what you want and what occurs
+        Understand your current sexual frequency relative to your own desires – whether you experience sex as often as you want – and identify what is driving any gap
       reasoning: |-
-        Many couples have never explicitly discussed whether their current sexual frequency meets both partners' needs. Understanding the gap between desired and actual frequency -- and whether that gap causes dissatisfaction -- is the baseline for improvement.
+        Many people have never honestly compared their actual sexual frequency to their desired frequency. Identifying the gap, and the reason for it (lack of partners, desire mismatch with a partner, low libido, life stage), is the baseline for any meaningful change.
     level_2:
       text: |-
-        Regular sexual intimacy at a frequency both partners find satisfying, with open communication about desire and willingness to initiate and respond
+        Regular sexual activity at a frequency you find satisfying, with proactive initiation when partnered and effective management of any desire mismatches
       reasoning: |-
-        Regular sexual intimacy at a mutually satisfying frequency with open communication represents top 20% achievement. Many couples experience significant desire discrepancies they never discuss, leading to chronic dissatisfaction for one or both partners.
+        Regular sexual activity at a self-satisfying frequency, with proactive initiation and effective handling of mismatches when relevant, represents 80th percentile achievement. Many people experience chronic frequency dissatisfaction without addressing it directly – through lack of opportunity when single, or unspoken desire gaps when partnered.
     level_3:
       text: |-
-        Sustained sexual frequency that both partners experience as genuinely satisfying, with proactive management of desire discrepancies and life-stage changes
+        Sustained sexual frequency that you experience as genuinely satisfying, with proactive management of desire fluctuations, partner availability, and life-stage changes
       reasoning: |-
-        Sustained mutually satisfying frequency with proactive management of desire discrepancies and life-stage changes represents top 5%. Most couples experience significant frequency decline over time without addressing it constructively.
+        Sustained satisfaction with frequency, including proactive management of fluctuations and life-stage changes, represents top 5%. Most people experience significant frequency decline or volatility over time without addressing it constructively.
     level_4:
       text: |-
-        Sexual frequency maintained at a mutually satisfying level across years or decades, adapting fluidly to life changes, health shifts, and evolving desires without sustained dissatisfaction
+        Sexual frequency maintained at a self-satisfying level across years or decades, adapting fluidly to life changes, health shifts, partnership transitions, and evolving desires without sustained dissatisfaction
       reasoning: |-
-        Mutually satisfying frequency maintained across years or decades, adapting fluidly to life changes, represents top 1%. Most long-term relationships experience significant and unaddressed frequency decline.
+        Self-satisfying frequency maintained across years or decades, adapting fluidly through major life transitions, represents top 1%. Most people experience significant unaddressed frequency decline through ageing, partnership changes, or life upheavals.
     level_5:
       text: |-
-        Sexual connection sustained across the lifespan with continued desire and initiation from both partners, adapting gracefully to ageing and health changes without loss of regular intimacy
+        Sexual frequency sustained across the lifespan at a level that continues to match your evolving desires, adapting gracefully to ageing, health changes, and shifts in relationship structure
       reasoning: |-
-        Sexual connection sustained across the lifespan with continued mutual desire, adapting gracefully to ageing, represents 99.9th percentile frequency. Most couples experience major frequency decline with age that this level transcends.
+        Frequency sustained across the lifespan at a level matching evolving desires, adapting gracefully to ageing and structural shifts, represents 99.9th percentile. Fewer than 1 in 1,000 people sustain this level of frequency satisfaction across the full arc of adult life.
 - key: variety
   name: Variety
   weight: 25
   description:
   - |-
-    Diversity and novelty in sexual experiences -- exploring new activities, settings, dynamics, and expressions of intimacy.
-  - Openness to experimentation, comfort discussing fantasies, and actively introducing novelty to prevent routine.
+    Diversity and novelty in sexual experiences – exploring new activities, settings, dynamics, expressions of intimacy, and where appropriate, new partners.
+  - Self-knowledge about preferences, comfort discussing desires, and active introduction of novelty through whichever channels suit your sexual life.
   - People who prioritise this value believe sexual growth comes through exploration.
   benchmarks:
     level_1:
       text: |-
-        Know your own preferences, curiosities, and boundaries well enough to identify where you would welcome more exploration and where you feel satisfied with current patterns
+        Know your own preferences, curiosities, and boundaries well enough to identify where you would welcome more exploration – through new activities, partners, or contexts – and where you feel content with current patterns
       reasoning: |-
-        Self-knowledge about sexual curiosities, preferences, and boundaries is surprisingly uncommon. Many people have unexplored interests they have never articulated, and identifying where you would welcome more exploration is the first step toward a richer sexual life.
+        Self-knowledge about sexual curiosities, preferences, and boundaries is uncommon. Many people have unexplored interests they have never articulated. Identifying where you would welcome more variety, in whichever form, is the first step toward a richer sexual life.
     level_2:
       text: |-
-        Comfort discussing preferences and occasional introduction of novelty -- new activities, settings, or dynamics -- with mutual enthusiasm
+        Comfort discussing preferences and occasional introduction of novelty – through new activities, settings, dynamics, or partners – with whoever is involved
       reasoning: |-
-        Comfort discussing preferences and occasionally introducing novelty represents 80th percentile variety. Most couples settle into fixed patterns early in the relationship and rarely introduce new experiences, even when both partners would welcome them.
+        Comfort discussing preferences and occasionally introducing novelty represents 80th percentile variety. Most people settle into fixed patterns – the same activities, the same partner profile, the same contexts – and rarely introduce new experiences even when they would welcome them.
     level_3:
       text: |-
-        Active exploration of new experiences with comfort and trust, maintaining novelty within a committed relationship without either partner feeling pressured
+        Active exploration of new sexual experiences – activities, contexts, or partners as appropriate to your situation – with comfort, trust, and clear communication about expectations
       reasoning: |-
-        Active exploration with comfort and trust, maintaining novelty without pressure, represents top 5% variety. The ability to explore comfortably while maintaining trust requires exceptional communication and mutual respect that few couples sustain.
+        Active exploration with comfort and clear communication, in whichever form variety takes, represents top 5%. Most people narrow their sexual repertoire over time, or pursue novelty in ways that erode trust or wellbeing. Sustaining exploration with clarity and comfort is rare.
     level_4:
       text: |-
-        Rich, evolving sexual repertoire sustained over years, with both partners fully comfortable proposing and exploring new experiences together
+        Rich, evolving sexual repertoire sustained over years, with full comfort proposing and exploring new experiences, and the discernment to introduce novelty in ways that strengthen your sexual life
       reasoning: |-
-        A rich, evolving sexual repertoire sustained over years with full mutual comfort represents top 1% variety. Most long-term couples narrow rather than expand their sexual experiences over time.
+        A rich, evolving repertoire sustained over years with full comfort and discernment represents top 1% variety. Most people narrow their sexual experiences over time, or pursue novelty in ways that destabilise wellbeing or relationships. The combination of openness and discernment is rare.
     level_5:
       text: |-
-        Sustained, evolving sexual exploration across decades with complete trust and openness, where both partners continue to discover new dimensions of their sexual connection
+        Sustained, evolving sexual exploration across decades with complete trust and openness, continuing to discover new dimensions of your sexual life across changing partners, contexts, and circumstances
       reasoning: |-
-        Sustained evolving sexual exploration across decades with complete trust represents 99.9th percentile variety. The combination of sustained curiosity, openness, and trust over decades is extraordinarily rare.
+        Sustained evolving sexual exploration across decades, with continued discovery, represents 99.9th percentile variety. The combination of sustained curiosity, openness, and the discernment to explore well across life's changes is extraordinarily rare.
 - key: pleasure
   name: Pleasure
   weight: 25
   description:
   - The direct experience of physical and psychological enjoyment from sexual activity.
-  - Knowledge of your own body, ability to communicate desires, and the pursuit of mutually satisfying experiences.
-  - "People who prioritise this value focus on expanding their capacity for enjoyment and their partner's."
+  - Self-knowledge of your own body and responses, the ability to communicate desires clearly, and the pursuit of experiences that are satisfying for everyone involved.
+  - "People who prioritise this value focus on expanding their capacity for enjoyment, alone and with others."
   benchmarks:
     level_1:
-      text: Know your own body, preferences, and responses well enough to communicate basic desires and boundaries to a partner
+      text: Know your own body, preferences, and responses well enough to communicate basic desires and boundaries to a partner, and to enjoy your own sexuality in solo contexts
       reasoning: |-
-        Self-knowledge about sexual preferences and the ability to communicate them is surprisingly uncommon. Research shows many people struggle to articulate their desires or boundaries, limiting sexual satisfaction.
+        Self-knowledge about sexual preferences and the ability to communicate them is uncommon. Many people struggle to articulate their desires or boundaries, limiting satisfaction whether they are with partners or alone with their own sexuality.
     level_2:
       text: |-
-        Both partners regularly experience satisfying sexual encounters, with the ability to communicate preferences and adjust to each other's responses
+        Regularly experience satisfying sexual encounters, with the ability to communicate preferences and adjust to others' responses when partnered
       reasoning: |-
-        Regular mutual satisfaction with the ability to communicate and adjust represents 80th percentile. Research shows significant satisfaction gaps between partners in many relationships, often due to lack of communication.
+        Regular satisfying sexual encounters, with effective communication when partnered, represents 80th percentile. Significant satisfaction gaps are common – between partners (often due to lack of communication), or for individuals who have not developed enough self-knowledge to access pleasure consistently.
     level_3:
       text: |-
-        High mutual satisfaction sustained over time, with comfort exploring new experiences and the ability to maintain novelty within a committed relationship
+        High sexual satisfaction sustained over time, with comfort exploring new experiences and the ability to maintain pleasure across changing partners, contexts, and life stages
       reasoning: |-
-        Sustained high satisfaction with maintained novelty in a committed relationship is top 5% achievement. The ability to explore comfortably while maintaining trust requires exceptional communication and mutual respect.
+        Sustained high satisfaction with maintained comfort across changing contexts represents top 5%. Keeping pleasure central through partnership transitions, casual encounters, or solo periods requires self-knowledge and communication skills few people develop.
     level_4:
       text: |-
-        Consistently exceptional mutual satisfaction maintained across years or decades, with both partners fully comfortable communicating evolving needs and exploring together
+        Consistently exceptional sexual satisfaction maintained across years or decades, with full comfort communicating evolving needs and adapting to whoever you are with
       reasoning: |-
-        Consistently exceptional mutual satisfaction across years or decades is top 1% achievement. Most long-term relationships experience significant satisfaction decline that this level avoids.
+        Consistently exceptional satisfaction maintained across years or decades, with full comfort communicating evolving needs, represents top 1%. Most sexual lives experience significant satisfaction decline that this level avoids, and most people lack the communication skills to sustain pleasure across changing situations.
     level_5:
       text: |-
-        Sustained, evolving sexual satisfaction across the lifespan that both partners rate as deeply fulfilling, with the flexibility and communication skills to adapt to any changes in desire, function, or circumstance
+        Sustained, evolving sexual satisfaction across the lifespan that you experience as deeply fulfilling, with the flexibility and communication skills to adapt to any change in partner, desire, function, or circumstance
       reasoning: |-
-        Sustained, evolving sexual fulfilment across the lifespan with full adaptability represents 99.9th percentile. The combination of sustained desire, communication, and flexibility over decades is extraordinarily rare.
+        Sustained, evolving sexual fulfilment across the lifespan, with full adaptability, represents 99.9th percentile. The combination of sustained pleasure, communication, and flexibility through every life transition is extraordinarily rare.
 - key: contentment
   name: Contentment
   weight: 20
   description:
   - |-
-    Overall satisfaction with your sexual life as a whole -- feeling at peace with the role sex plays in your life and relationship.
+    Overall satisfaction with your sexual life as a whole – feeling at peace with the role sex plays in your life, whatever shape it currently takes.
   - |-
-    Acceptance, gratitude, realistic expectations, and the sense that your sexual life is genuinely fulfilling rather than a source of stress or inadequacy.
-  - People who prioritise this value focus on satisfaction rather than optimisation.
+    Acceptance, gratitude, realistic expectations, freedom from health and safety anxiety, and a sense that your sexual life is genuinely fulfilling.
+  - People who prioritise this value focus on satisfaction over optimisation.
   benchmarks:
     level_1:
       text: |-
-        Honestly assess your overall satisfaction with your sexual life -- whether it is a source of fulfilment, frustration, or indifference -- and identify what would need to change
+        Honestly assess your overall satisfaction with your sexual life – whether it is a source of fulfilment, frustration, or anxiety – and identify what would need to change for you to feel at peace with it
       reasoning: |-
-        Honestly assessing overall satisfaction with your sexual life -- rather than avoiding the question or assuming it is fine -- is the prerequisite for meaningful improvement. Many people carry chronic dissatisfaction without examining its sources.
+        Honest assessment of overall satisfaction with your sexual life, including any background anxiety about health, safety, or unmet desires, is the prerequisite for meaningful improvement. Many people carry chronic dissatisfaction or low-grade anxiety without examining its sources.
     level_2:
       text: |-
-        Generally satisfied with sexual life; it is experienced as a positive aspect of the relationship rather than a source of tension or inadequacy
+        Generally satisfied with your sexual life and experience it as a positive aspect of life, with sensible practices around sexual health and safety in place
       reasoning: |-
-        General satisfaction with sexual life as a positive aspect of the relationship represents 80th percentile contentment. Many people experience their sexual life as a source of tension, inadequacy, or indifference rather than genuine satisfaction.
+        General satisfaction with sexual life as a positive aspect of life, supported by sensible health and safety practices, represents 80th percentile contentment. Many people experience their sexual life as a source of tension, indifference, or low-grade anxiety, often from unaddressed health or safety concerns alongside dissatisfaction.
     level_3:
       text: |-
-        Deep satisfaction with sexual life as a whole; sex is experienced as a genuinely fulfilling part of life rather than something requiring constant improvement
+        Deep satisfaction with your sexual life as a whole; experienced as genuinely fulfilling, free from chronic anxiety about health, safety, or regret, and free from constant comparison or the pull to optimise
       reasoning: |-
-        Deep satisfaction with sexual life as genuinely fulfilling rather than requiring constant improvement represents top 5% contentment. Most sexually active adults harbour some chronic dissatisfaction or comparison anxiety about their sexual lives.
+        Deep satisfaction with sexual life as genuinely fulfilling, free from chronic anxiety, and free from constant comparison represents top 5% contentment. Most adults harbour some chronic dissatisfaction, low-grade health anxiety, or comparison-driven inadequacy about their sexual lives.
     level_4:
       text: |-
-        Genuine peace with sexual life; both partners feel grateful for and fulfilled by the role sex plays in their relationship, with no chronic dissatisfaction or comparison anxiety
+        Genuine peace with your sexual life; you feel grateful for and fulfilled by the role sex plays in your life, with full confidence in your health and safety practices and no chronic dissatisfaction or comparison anxiety
       reasoning: |-
-        Genuine peace with sexual life, with gratitude and fulfilment and no chronic dissatisfaction, represents top 1% contentment. At this level, sex is a source of deep satisfaction rather than anxiety or comparison.
+        Genuine peace with sexual life, with full confidence in health and safety practices and no chronic dissatisfaction or comparison anxiety, represents top 1% contentment. At this level, sex is a source of deep satisfaction, supported by practices that have eliminated background worry.
     level_5:
       text: |-
-        Profound contentment with sexual life as a whole, sustained across decades; sex is experienced as a source of renewal, gratitude, and deep satisfaction rather than a domain requiring vigilance
+        Profound contentment with your sexual life as a whole, sustained across decades; experienced as a source of renewal, gratitude, and deep satisfaction, with full peace around health, safety, and the place of sex in your life
       reasoning: |-
-        Profound contentment with sexual life sustained across decades, experienced as a source of renewal and deep satisfaction, represents 99.9th percentile. Fewer than 1 in 1,000 adults achieve this level of sustained sexual peace and fulfilment.
+        Profound contentment with sexual life sustained across decades, with full peace around health, safety, and meaning, represents 99.9th percentile. Fewer than 1 in 1,000 adults achieve this level of sustained sexual peace and fulfilment.
