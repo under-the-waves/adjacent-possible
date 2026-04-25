@@ -1042,24 +1042,18 @@ function renderTopEffectsSummary() {
 
     // Build personalised data popup content
     if (isPersonalised) {
-        var pdLines = '<p>Your Level 1 assessment data was used to personalise this estimate:</p><ul>';
-        // Show data for the top 1-2 values
         var topValues = [top];
         if (ranked.length > 1 && Math.abs(top.ebs - ranked[1].ebs) <= 0.5) {
             topValues.push(ranked[1]);
         }
+        var pdLines = '';
         topValues.forEach(function(item) {
             var r = item.result;
             if (r.hasPersonalisation) {
-                pdLines += '<li><strong>' + item.userDesc + '</strong>: your estimated percentile is <strong>' +
-                    r.userPct + 'th</strong> (baseline for typical adopters: ' + r.baselinePct + 'th). ' +
-                    'Diminishing returns factor: ' + (r.drFactor * 100).toFixed(0) + '% of typical effect. ' +
-                    'Typical EBS: ' + r.typicalEbs.toFixed(1) + ' \u2192 your EBS: ' + r.personalisedEbs.toFixed(1) + '.</li>';
-            } else {
-                pdLines += '<li><strong>' + item.userDesc + '</strong>: no assessment data \u2013 showing typical estimate.</li>';
+                pdLines += '<p>Your estimated percentile for <strong>' + item.userDesc +
+                    '</strong> is <strong>' + r.userPct + 'th</strong>.</p>';
             }
         });
-        pdLines += '</ul>';
         reasoningData['personalised-data'] = {
             title: 'Your personalised data',
             content: pdLines,
