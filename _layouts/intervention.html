@@ -550,8 +550,8 @@ layout: default
 <ul class="resource-list">
     <li><strong>Upfront cost:</strong> ${{ intervention.resources.upfront_cost }} <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span></li>
     <li><strong>Ongoing cost:</strong> ${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }} <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span></li>
-    <li><strong>Upfront time:</strong> {{ intervention.resources.upfront_time }} hours <span class="info-icon" onclick="showReasoning('upfront-time')">i</span></li>
-    <li><strong>Ongoing time:</strong> {{ intervention.resources.ongoing_time }} hours/{{ intervention.resources.ongoing_time_period }} <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span></li>
+    <li><strong>Upfront time:</strong> {{ intervention.resources.upfront_time }} {% if intervention.resources.upfront_time == 1 %}hour{% else %}hours{% endif %} <span class="info-icon" onclick="showReasoning('upfront-time')">i</span></li>
+    <li><strong>Ongoing time:</strong> {{ intervention.resources.ongoing_time }} {% if intervention.resources.ongoing_time == 1 %}hour{% else %}hours{% endif %}/{{ intervention.resources.ongoing_time_period }} <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span></li>
 </ul>
 
 {% if intervention.how_to_do_it %}
