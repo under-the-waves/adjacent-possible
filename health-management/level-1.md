@@ -773,6 +773,11 @@ life_area_slug: health-management
 
     // --- Scoring functions ---
 
+    function ordinalSuffix(n) {
+        var s = ['th','st','nd','rd'];
+        var v = n % 100;
+        return n + (s[(v-20)%10] || s[v] || s[0]);
+    }
     function interpolatePercentile(value, thresholds) {
         var num = parseFloat(value);
         // Check if thresholds use string keys (dropdowns)
@@ -845,7 +850,7 @@ life_area_slug: health-management
             return;
         }
         var pct = getItemPercentile(itemId);
-        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+        hintEl.textContent = pct !== null ? '~' + ordinalSuffix(pct) + ' percentile' : '';
     }
 
     function updateInputGroupState(itemId) {
@@ -862,7 +867,7 @@ life_area_slug: health-management
             if (barEl && valEl) {
                 if (pct !== null) {
                     barEl.style.width = pct + '%';
-                    valEl.textContent = pct + 'th';
+                    valEl.textContent = ordinalSuffix(pct);
                     anyAnswered = true;
                 } else {
                     barEl.style.width = '0%';

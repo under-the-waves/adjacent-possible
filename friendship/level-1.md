@@ -714,6 +714,11 @@ life_area_slug: friendship
 
     // --- Scoring functions ---
 
+    function ordinalSuffix(n) {
+        var s = ['th','st','nd','rd'];
+        var v = n % 100;
+        return n + (s[(v-20)%10] || s[v] || s[0]);
+    }
     function interpolatePercentile(value, thresholds) {
         if (typeof thresholds[0].v === 'string') {
             for (var i = 0; i < thresholds.length; i++) {
@@ -757,7 +762,7 @@ life_area_slug: friendship
             return;
         }
         var pct = getItemPercentile(itemId);
-        hintEl.textContent = pct !== null ? '~' + pct + 'th percentile' : '';
+        hintEl.textContent = pct !== null ? '~' + ordinalSuffix(pct) + ' percentile' : '';
     }
 
     function updateAssessSummary() {
@@ -769,7 +774,7 @@ life_area_slug: friendship
             if (barEl && valEl) {
                 if (pct !== null) {
                     barEl.style.width = pct + '%';
-                    valEl.textContent = pct + 'th';
+                    valEl.textContent = ordinalSuffix(pct);
                     anyAnswered = true;
                 } else {
                     barEl.style.width = '0%';
