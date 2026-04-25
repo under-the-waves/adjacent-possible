@@ -1101,11 +1101,10 @@ function renderResults() {
     });
 
     const totalAreas = getAllAreas().length;
-    const tierLabel = loadTier() > 0 ? ` (Tier ${loadTier()})` : '';
 
     el.innerHTML = `
         <div class="dashboard-header">
-            <h1>Life Areas Dashboard${tierLabel}</h1>
+            <h1>Life Areas Dashboard</h1>
             <p>Your self-assessment results. Areas link to detailed guides.</p>
         </div>
 

@@ -308,7 +308,7 @@ life_area_slug: consumptive-leisure
 
 <p>Research consistently shows that not all leisure consumption is equal. A <a href="https://link.springer.com/article/10.1007/s12529-024-10307-0" target="_blank">longitudinal study</a> found that different types of screen-based leisure &ndash; social media, news, video, gaming &ndash; have distinct effects on 24 parameters of wellbeing. Some consumption restores and enriches; some merely fills time; some actively depletes.</p>
 
-<p>The good news is that curating your consumptive leisure is one of the most accessible quality-of-life upgrades available. It requires no special equipment, no major life changes, and no money. It requires only awareness of what you currently consume, what effects it has on you, and what you might choose differently.</p>
+<p>The good news is that curating your consumptive leisure is one of the most accessible quality-of-life upgrades available. It requires no special equipment and no major life changes. It requires only awareness of what you currently consume, what effects it has on you, and what you might choose differently.</p>
 
 <button class="l1-mark-done" onclick="completeStep('why')">I've read this &ndash; continue</button>
 
