@@ -1026,32 +1026,41 @@ function renderTopEffectsSummary() {
     var isPersonalised = currentView === 'personalised' && hasAnyPersonalisation;
     var top = ranked[0];
 
-    // Build magnitude explanation popup: EBS in anchor units or scale description
+    // Build magnitude explanation popup: EBS + perfect-adherence EBS in anchor units
     var topDef = top.result.def;
+    var topR = top.result;
     var topEbs = top.ebs;
-    var magContent;
-    if (topDef && topDef.anchor_type === 'linear' && topDef.anchor_max) {
-        var mag = (Math.pow(2, Math.abs(topEbs)) / Math.pow(2, 10)) * topDef.anchor_max;
-        var sign = topEbs < 0 ? -1 : 1;
-        var val = sign * mag;
-        var unit = topDef.anchor_unit || '';
-        if (topDef.anchor_inverted) {
-            var dir = val > 0 ? 'reduction' : 'increase';
-            magContent = '<p>This intervention is estimated to produce a <strong>' +
-                mag.toFixed(1) + ' ' + unit + '</strong> ' + dir + ' in ' + top.userDesc + '.</p>';
-        } else {
-            var verb = val >= 0 ? 'improve' : 'reduce';
-            magContent = '<p>This intervention is estimated to ' + verb + ' ' +
-                top.userDesc + ' by about <strong>' + Math.abs(val).toFixed(1) + ' ' + unit + '</strong>.</p>';
-        }
-    } else {
-        // Subjective: scale description already includes the subject
-        var ebsEffect = toRealUnits(topEbs, topDef);
-        magContent = '<p>This intervention is estimated to produce a <strong>' +
-            ebsEffect + '</strong>.</p>';
+    // Perfect adherence = EBS without the UAR discount
+    var perfectAdherenceEbs = topR.data.pbs + Math.log2(topR.data.isr / 100) + Math.log2(topR.confFactor);
+    if (topR.hasPersonalisation) {
+        var drLog = Math.log2(Math.max(topR.drFactor, 0.001));
+        perfectAdherenceEbs += drLog;
     }
+
+    function effectInUnits(ebs, def, userDesc) {
+        if (def && def.anchor_type === 'linear' && def.anchor_max) {
+            var mag = (Math.pow(2, Math.abs(ebs)) / Math.pow(2, 10)) * def.anchor_max;
+            var sign = ebs < 0 ? -1 : 1;
+            var val = sign * mag;
+            var unit = def.anchor_unit || '';
+            if (def.anchor_inverted) {
+                var dir = val > 0 ? 'reduction' : 'increase';
+                return '<strong>' + mag.toFixed(1) + ' ' + unit + '</strong> ' + dir + ' in ' + userDesc;
+            }
+            var verb = val >= 0 ? 'improve' : 'reduce';
+            return verb + ' ' + userDesc + ' by about <strong>' + Math.abs(val).toFixed(1) + ' ' + unit + '</strong>';
+        }
+        // Subjective
+        var desc = toRealUnits(ebs, def);
+        return 'produce a <strong>' + desc + '</strong>';
+    }
+
+    var magContent = '<p>This intervention is estimated to ' +
+        effectInUnits(topEbs, topDef, top.userDesc) + '.</p>' +
+        '<p>For perfect adherence, the estimated effect is to ' +
+        effectInUnits(perfectAdherenceEbs, topDef, top.userDesc) + '.</p>';
     reasoningData['magnitude-explanation'] = {
-        title: 'Estimated effect size',
+        title: '',
         content: magContent,
         isHtml: true
     };
@@ -1070,6 +1079,8 @@ function renderTopEffectsSummary() {
                     '</strong> is <strong>' + r.userPct + 'th</strong>.</p>';
             }
         });
+        pdLines += '<p>Estimated adherence rate for this intervention: <strong>' +
+            top.result.data.uar + '%</strong> of people stick with it long-term.</p>';
         reasoningData['personalised-data'] = {
             title: 'Your personalised data',
             content: pdLines,
@@ -1157,7 +1168,9 @@ function renderReasoning(text) {
 function showReasoning(key) {
     const data = reasoningData[key];
     if (data) {
-        document.getElementById('popupHeader').textContent = data.title;
+        var header = document.getElementById('popupHeader');
+        header.textContent = data.title || '';
+        header.style.display = data.title ? '' : 'none';
         document.getElementById('popupContent').innerHTML = data.isHtml ? data.content : renderReasoning(data.content);
         document.getElementById('popupOverlay').classList.add('visible');
         document.getElementById('reasoningPopup').classList.add('visible');
