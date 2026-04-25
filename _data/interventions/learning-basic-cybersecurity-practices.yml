@@ -1,0 +1,98 @@
+name: "Learning Basic Cybersecurity Practices"
+what_it_is: |
+  A structured effort to adopt the core layer of personal digital security that sits above password management: enabling two-factor authentication (2FA) on important accounts, learning to recognise and avoid phishing attempts, keeping devices and software updated promptly, and preferring encrypted connections (HTTPS, avoiding unprotected public Wi-Fi). Together these four practices address the most common vectors through which personal accounts and devices are compromised – credential takeover, social engineering, unpatched vulnerabilities, and network interception. The intervention is distinct from password manager setup, which is a prerequisite: that intervention eliminates credential reuse; this one hardens the surrounding security layer against attacks that a strong password alone cannot stop.
+how_to_do_it: |
+  - Enable 2FA on every important account (email, banking, cloud storage, social media) – prefer an authenticator app (e.g. Aegis, Authy, Google Authenticator) over SMS, which is vulnerable to SIM-swap attacks; work through accounts in one session ranked by sensitivity
+  - Learn to identify phishing: check sender addresses (not just display names), hover over links before clicking, be sceptical of urgency cues ("your account will be suspended"), and verify unexpected requests through a separate channel rather than replying in-thread
+  - Enable automatic updates on your operating system, browser, and key apps; where auto-update is unavailable, schedule a monthly manual check – patching known vulnerabilities is one of the highest-ROI security actions available
+  - Use encrypted connections by default: confirm HTTPS (padlock icon) before entering credentials, avoid entering sensitive data on public Wi-Fi without a VPN, and prefer mobile data over unknown networks for banking or email
+success_looks_like: |
+  - Every email, banking, and cloud account prompts for a second factor at login – and you have backup codes stored securely in case the primary device is lost
+  - You can reliably identify the structural features of a phishing attempt (mismatched domain, urgency framing, unexpected attachment) before clicking, and you have a habit of pausing on surprising messages
+  - Your devices and browser update automatically or on a regular schedule, and you have not deferred a critical security patch for more than a week
+common_pitfalls: |
+  - Enabling 2FA only on one or two high-profile accounts while leaving secondary accounts (which are often used for password reset flows) unprotected – attackers target the weakest link in the chain
+  - Relying on SMS-based 2FA as the default without recognising its vulnerability to SIM-swapping; authenticator apps or hardware keys are meaningfully more secure
+  - Treating phishing training as a one-time exercise – threat actors continuously update tactics (AI-generated spear phishing, voice phishing), so the skill requires periodic refreshing
+description: |
+  - Covers four practices in a single behaviour-change intervention: 2FA enrolment across important accounts, phishing recognition skills, systematic software patching, and encrypted-connection habits – each targets a distinct attack vector, providing defence in depth
+  - [Research from KnowBe4](https://www.knowbe4.com/press/knowbe4-report-reveals-security-training-reduces-global-phishing-click-rates-by-86) across millions of users shows security awareness training reduces phishing click rates by up to 86% within a year; baseline susceptibility across untrained populations is around 33%
+  - [Statistics from electroiq.com](https://electroiq.com/stats/two-factor-authentication-statistics/) indicate 2FA blocks 100% of automated bot-based credential attacks and stopped an estimated 42% of cyberattacks in 2024; adoption among individuals remains low (~52% have it on at least one account)
+  - [Automox research](https://www.automox.com/blog/bad-cyber-hygiene-breaches-tied-to-unpatched-vulnerabilities) attributes approximately 60% of data breaches to known, unpatched vulnerabilities – keeping software current is one of the most structurally reliable risk reductions available
+  - Distinct from password manager setup: that intervention eliminates credential reuse; this one addresses what happens after credentials are set – account takeover via stolen second-factor bypass, social engineering, and device-level exploitation
+applicable_domains: ["digital-safety", "cognitive-skills"]
+
+values:
+  digital-safety.security:
+    pbs: 7
+    isr: 70
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user who has already set up a password manager could plausibly reach the 70th–75th percentile – 2FA, phishing awareness, patching, and encrypted connections collectively close the four most common remaining attack vectors. Delta: ~35–40 percentile points.
+      - [electroiq.com 2FA statistics](https://electroiq.com/stats/two-factor-authentication-statistics/) document 2FA blocking 100% of automated bot attacks and stopping 42% of cyberattacks in 2024; combined with phishing training reducing susceptibility by up to 86% ([KnowBe4](https://www.knowbe4.com/press/knowbe4-report-reveals-security-training-reduces-global-phishing-click-rates-by-86)), the security uplift is substantial.
+      - [Automox](https://www.automox.com/blog/bad-cyber-hygiene-breaches-tied-to-unpatched-vulnerabilities) links ~60% of breaches to unpatched vulnerabilities; addressing this alongside the others compounds the gain. Score 7 rather than 8 reflects residual risk from zero-days and sophisticated social engineering.
+    isr_reasoning: |
+      - 2FA is mechanically reliable once enrolled: the second-factor requirement cannot be bypassed by credential-stuffing alone. However, adversary-in-the-middle attacks can bypass SMS-based 2FA, and [electroiq.com](https://electroiq.com/stats/two-factor-authentication-statistics/) notes 33% of users disable 2FA citing inconvenience.
+      - Phishing training effectiveness varies significantly by format and reinforcement frequency: [KnowBe4's benchmark report](https://www.knowbe4.com/resources/reports/phishing-by-industry-benchmarking-report) shows 86% reduction is achievable but requires ongoing simulation. Self-directed learners rarely maintain that level.
+      - [Hoxhunt research](https://hoxhunt.com/blog/how-effective-is-security-awareness-training) found meaningful risk reduction requires continuous training – one-off learning produces temporary gains.
+    uar_reasoning: |
+      - [electroiq.com 2FA data](https://electroiq.com/stats/two-factor-authentication-statistics/) shows only 52% of internet users have 2FA on any account, and 33% who try it disable it due to inconvenience.
+      - [Keepnet security awareness statistics](https://keepnetlabs.com/blog/security-awareness-training-statistics) show that without institutional reinforcement, individuals revert to pre-training behaviour; phishing recognition decays without periodic refreshing.
+      - UAR of 50% reflects that 2FA and updates are largely set-and-forget (higher adherence), but phishing vigilance and encrypted-connection habits require ongoing active attention.
+
+  digital-safety.convenience:
+    pbs: -3
+    isr: 80
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. This intervention introduces a net convenience cost: 2FA adds a step to every login, phishing checks require pausing before clicking, and VPN use introduces latency. Endpoint: approximately the 25th–28th percentile. Delta: roughly -7 to -10 percentile points.
+      - Authenticator apps reduce (but do not eliminate) friction versus SMS 2FA; even the best implementations require an additional device interaction per login.
+      - Score -3 rather than -5 reflects that patching via auto-update and HTTPS are essentially invisible once configured, partially offsetting the 2FA friction.
+    isr_reasoning: |
+      - The convenience cost is near-certain for users who enrol in 2FA across many accounts – the mechanism (additional authentication step) is direct and universal.
+      - A minority of users adopt hardware keys or passkeys that make authentication faster than password entry, which could flip the sign; this is not the typical adopter experience.
+      - ISR of 80% reflects that the convenience reduction reliably materialises for most adherent users.
+    uar_reasoning: |
+      - See digital-safety.security UAR – same intervention, same adherence profile.
+
+  cognitive-skills.lifestyle:
+    pbs: 4
+    isr: 55
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Developing a working threat model, learning to read URLs, and building systematic habits around updates trains a category of practical reasoning about digital systems. Endpoint: approximately the 48th–52nd percentile. Delta: ~13–17 percentile points.
+      - The causal pathway is direct: phishing recognition requires learning to decompose URLs, identify social engineering patterns, and apply sceptical reasoning – these are transferable cognitive skills.
+      - Score 4 reflects that the cognitive gains are real but narrow in scope (digital threat recognition) and do not generalise widely to other reasoning domains.
+    isr_reasoning: |
+      - [KnowBe4 benchmark data](https://www.knowbe4.com/resources/reports/phishing-by-industry-benchmarking-report) demonstrates that trained users genuinely internalise recognition patterns. However, individuals who learn once without reinforcement retain less.
+      - ISR of 55% reflects that the cognitive-skills benefit depends heavily on how the learning is done: systematic practice produces durable skills; reading a single article does not.
+      - No direct studies measure this intervention's effect on general cognitive-skills outcomes; this score is extrapolated, hence low confidence.
+    uar_reasoning: |
+      - See digital-safety.security UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Authenticator apps (Aegis on Android, built-in on iOS) are free. All four practices require no paid software to begin; a VPN is optional."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No ongoing cost for the core bundle. A VPN subscription (~$3–5/month) is a meaningful upgrade for users who regularly use public Wi-Fi but is not the minimum viable starting point."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 1–2 hours to enrol 2FA across 10–15 key accounts; 30–60 minutes to read a reliable phishing recognition guide and configure auto-updates on all devices."
+  ongoing_time: 0.25
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimal once configured – auto-updates and 2FA are largely passive. Approximately 15 minutes per week of active attention: reviewing 2FA alerts, checking for pending updates, and maintaining phishing vigilance during email triage."
+
+prerequisites:
+  - "A smartphone or computer with internet access, and accounts on services that support 2FA"
+  - "A password manager already in use (or unique strong passwords per account) – this intervention assumes credential hygiene is already in place"
+  - "Basic literacy with device settings and app installation – sufficient to configure auto-updates and install an authenticator app"
+  - "An email address or phone number for account recovery setup, required by most 2FA enrolment flows"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Reducing background anxiety about account compromise and identity theft may lower chronic low-level digital stress."
+  - domain: "financial-planning-tracking"
+    rationale: "Securing banking and financial accounts via 2FA and phishing awareness directly reduces the risk of financial fraud and unauthorised transactions."

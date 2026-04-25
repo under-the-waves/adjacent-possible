@@ -1,8 +1,19 @@
 name: "Swimming Training"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Structured pool-based training involving progressive protocols for technique refinement, cardiovascular conditioning, and muscular endurance, typically 3–6 sessions per week of 45–90 minutes each. The low-impact, joint-friendly nature makes swimming uniquely sustainable into old age, though the higher technical skill requirement distinguishes it from simpler exercise modalities like [daily walking](/resources/intervention-database/daily-walking) or [Zone 2 cardio](/resources/intervention-database/zone-2-cardio).
+how_to_do_it: |
+  - Many people find that investing in a few coached sessions early on pays dividends – efficient stroke mechanics determine how much fitness benefit you get per lap, and self-taught habits are hard to correct later
+  - Start with 2–3 sessions per week of 30–45 minutes, focusing on technique drills and building continuous swim distance before adding structured sets or intensity
+  - You may find that mixing strokes (freestyle, backstroke, breaststroke) within a session reduces monotony and distributes load across different muscle groups, lowering overuse injury risk
+  - Track a simple metric like continuous distance or pace per 100m to make progress visible – improvement in swimming is often more technique-driven than effort-driven, which can feel counterintuitive
+success_looks_like: |
+  - You can swim continuously for 30+ minutes at a comfortable pace with relaxed, rhythmic breathing – a sign that technique is adequate for meaningful fitness gains
+  - Lap times improve gradually without an increase in perceived effort, indicating genuine efficiency gains rather than just harder work
+  - Swimming becomes a routine you look forward to rather than endure – the meditative rhythm of laps and the sensory experience of the water feel restorative
+common_pitfalls: |
+  - Skipping technique instruction and relying on raw effort – poor stroke mechanics produce exhaustion without proportionate fitness benefit, and reinforce bad habits
+  - Underestimating the total time commitment: travel to the pool, changing, showering, and drying add 30–45 minutes on top of actual swim time
+  - Training through shoulder pain rather than addressing it – repetitive overhead motion makes swimmer's shoulder extremely common at higher volumes, and early intervention prevents long layoffs
 description: |
   - Structured pool-based training involving progressive protocols for technique refinement, endurance building, and strength development, typically 3-6 sessions per week of 45-90 minutes each
   - Focuses on stroke mechanics, cardiovascular conditioning, and muscular endurance across varying distances and intensities, with a higher technical skill requirement than most exercise modalities
@@ -15,7 +26,7 @@ values:
   fitness.health:
     pbs: 8
     pbs_reasoning: |
-      - Large cohort studies show swimming reduces all-cause mortality by 28% and cardiovascular disease risk by 41%, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Chase et al. 2008, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.02.03.03))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile. Delta: ~42 percentile points of improvement. Large cohort studies show swimming reduces all-cause mortality by 28% and cardiovascular disease risk by 41%, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Chase et al. 2008, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.02.03.03))
       - The Cooper Institute longitudinal studies (40+ years of data) demonstrate swimmers have significantly lower mortality rates than sedentary individuals, walkers, and runners in some analyses ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
       - The low-impact nature provides joint protection while delivering full-body cardiovascular and muscular benefits with substantially lower injury risk than running or contact sports ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
     isr: 85
@@ -24,7 +35,7 @@ values:
       - Cardiovascular adaptations from swimming are well-characterised and reliably reproduced across diverse populations including elderly and clinical groups ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
       - Benefits require adequate training volume and technique competence; those who can swim continuously for 20+ minutes at moderate intensity reliably achieve health improvements ([Wanivenhaus et al. 2012, Sports Health](https://doi.org/10.1177/1941738112439554))
     uar: 55
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - Pool access limitations and scheduling constraints create significant barriers, with studies showing 40-50% dropout in the first 6 months due to facility access, time commitments, and technical learning curve ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
       - Those who establish routine often maintain long-term adherence due to low injury rates and the joint-friendly nature providing a sustainable exercise option into old age ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
@@ -33,7 +44,7 @@ values:
   fitness.performance:
     pbs: 8
     pbs_reasoning: |
-      - Swimming develops exceptional cardiovascular efficiency, with elite swimmers achieving VO2max values of 65-75 ml/kg/min and superior lung capacity (vital capacity 15-25% above average), placing dedicated swimmers in the 25th-90th+ percentile on general fitness tests ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile. Delta: ~42 percentile points of improvement. Swimming develops exceptional cardiovascular efficiency, with elite swimmers achieving VO2max values of 65-75 ml/kg/min and superior lung capacity (vital capacity 15-25% above average), placing dedicated swimmers in the 25th-90th+ percentile on general fitness tests ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
       - Full-body muscular endurance, cardiac output, and training produce near-maximum aquatic performance, though transfer to land-based fitness tests is somewhat reduced compared to running ([Lavoie & Montpetit 1986, Sports Med](https://doi.org/10.2165/00007256-198603060-00004))
       - Score 8 rather than 9 because swimming performance is sport-specific; the 25th percentile anchor (score 8) matches the cross-domain fitness level achievable through dedicated swimming alone ([Tanaka 2009, Sports Med](https://doi.org/10.2165/00007256-200939050-00004))
     isr: 75
@@ -51,7 +62,7 @@ values:
   fitness.enjoyment:
     pbs: 8
     pbs_reasoning: |
-      - Rhythmic breathing and repetitive stroke patterns create strong flow-state potential, with the sensory experience of water immersion offering a uniquely calming quality absent from land-based exercise
+      - Baseline: 35th percentile (below-average enjoyment). After successful adherence, a user could plausibly reach the 75th–80th percentile (highly enjoyable). Delta: ~42 percentile points. Rhythmic breathing and repetitive stroke patterns create strong flow-state potential, with the sensory experience of water immersion offering a uniquely calming quality absent from land-based exercise
       - The main enjoyment limitation is monotony: pool swimming involves repetitive laps in a confined, chlorinated environment with limited visual stimulation and no social interaction during effort, which can feel tedious compared to outdoor or group activities
       - Score 8 (highly enjoyable) rather than 9: the meditative quality and distinctive sensory experience elevate swimming above merely pleasant exercise, but the repetitiveness and restricted environment prevent it reaching the exploration and variety that characterise a 9
     isr: 80
@@ -69,7 +80,7 @@ values:
   body-image.fat_loss:
     pbs: 6
     pbs_reasoning: |
-      - The SWEAT 2 trial found swimmers lost approximately 1.1 kg more than walkers over 12 months in older women, but absolute losses remained modest at roughly 1 – 2% of body weight ([Cox et al. 2010, Metabolism](https://doi.org/10.1016/j.metabol.2010.02.001))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. The SWEAT 2 trial found swimmers lost approximately 1.1 kg more than walkers over 12 months in older women, but absolute losses remained modest at roughly 1 – 2% of body weight ([Cox et al. 2010, Metabolism](https://doi.org/10.1016/j.metabol.2010.02.001))
       - Swimming burns 400 – 700 kcal per hour, but cold-water appetite compensation limits net fat loss; successful swimmers who manage dietary intake sustain roughly 1 – 2% body weight loss ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
       - A 12-week swimming study in young women found a 2.3% reduction in body fat percentage but no significant change in total body weight, illustrating how modest the scale-weight effect is even with consistent training ([PMC 2019, Effect of Swimming Training on Body Composition](https://pmc.ncbi.nlm.nih.gov/articles/PMC6388213/))
       - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
@@ -89,7 +100,7 @@ values:
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - A [systematic review and meta-analysis of aquatic exercise](https://pmc.ncbi.nlm.nih.gov/articles/PMC9714032/) found swimming reduced mental disorder symptoms with SMD = -0.51, and anxiety symptoms specifically with SMD = -1.28, demonstrating meaningful mood-stabilising effects for adherent swimmers
+      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 50th percentile (average stability). Delta: ~15 percentile points. A [systematic review and meta-analysis of aquatic exercise](https://pmc.ncbi.nlm.nih.gov/articles/PMC9714032/) found swimming reduced mental disorder symptoms with SMD = -0.51, and anxiety symptoms specifically with SMD = -1.28, demonstrating meaningful mood-stabilising effects for adherent swimmers
       - The rhythmic, repetitive stroke patterns combined with controlled breathing create a meditative quality that down-regulates the stress response, lowering cortisol and promoting parasympathetic activation; [longitudinal research](https://pmc.ncbi.nlm.nih.gov/articles/PMC12206784/) shows sustained swimming interventions improve emotional stability and mood regulation
       - Score 5 corresponds to movement from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6); swimming's stability benefit operates primarily through general aerobic exercise mechanisms (endorphin release, cortisol regulation) with a modest additional contribution from the rhythmic-meditative quality, making it slightly weaker than yoga's targeted breathwork-mindfulness approach
     isr: 60
@@ -105,7 +116,7 @@ values:
   mental-health.resilience:
     pbs: 4
     pbs_reasoning: |
-      - Swimming builds cardiovascular fitness and physical endurance, which [meta-meta-analyses](https://pubmed.ncbi.nlm.nih.gov/25739893/) associate with improved stress tolerance and faster physiological recovery from acute stressors through enhanced autonomic regulation
+      - Baseline: 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 45th–50th percentile (approaching average). Delta: ~12 percentile points. Swimming builds cardiovascular fitness and physical endurance, which [meta-meta-analyses](https://pubmed.ncbi.nlm.nih.gov/25739893/) associate with improved stress tolerance and faster physiological recovery from acute stressors through enhanced autonomic regulation
       - The discipline of sustained effort through physical discomfort (oxygen debt, muscle fatigue, cold water) provides a form of stress inoculation, but the mechanism is indirect compared to activities that involve explicit fear management or adversity exposure
       - Score 4 is the minimum threshold: swimming modestly improves stress recovery capacity, moving practitioners from 'significant disruption' (4) toward 'manages moderate stressors adequately' (6), but the effect is small and operates primarily through general fitness rather than targeted resilience training
     isr: 50
@@ -114,14 +125,14 @@ values:
       - General exercise-resilience research shows modest but inconsistent effects: not all fit individuals show improved psychological stress recovery, as resilience depends heavily on cognitive appraisal and social factors that swimming does not address
       - Approximately 45-55% of regular swimmers experience noticeably improved stress tolerance, with the remainder finding physical and psychological stress recovery remain largely independent
     uar: 55
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.flourishing:
     pbs: 5
     pbs_reasoning: |
-      - Swimming's rhythmic, repetitive nature combined with water immersion creates reliable flow-state potential; the sensory experience of gliding through water and the meditative quality of lap swimming contribute to positive affect and in-session satisfaction
+      - Baseline: 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 50th percentile (average flourishing). Delta: ~15 percentile points. Swimming's rhythmic, repetitive nature combined with water immersion creates reliable flow-state potential; the sensory experience of gliding through water and the meditative quality of lap swimming contribute to positive affect and in-session satisfaction
       - [Aquatic exercise research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9714032/) notes that water-based exercise may be uniquely effective for mood improvement compared to land-based exercise, with the water environment itself contributing to relaxation and positive emotional states
       - Score 5 reflects movement from 'occasional positive experiences' (4) toward 'regular moments of satisfaction and meaning' (6); swimming provides genuine enjoyment and flow but its flourishing benefit is limited by the confined, repetitive pool environment and lack of social interaction during effort
     isr: 60
@@ -130,7 +141,7 @@ values:
       - The bimodal enjoyment distribution (those who develop technique find it highly satisfying; those who struggle find it aversive) means flourishing benefits are concentrated among the technically competent majority ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
       - Approximately 55-65% of regular swimmers report swimming as a meaningful source of positive affect and life satisfaction, with the remainder finding it functional but not flourishing-enhancing
     uar: 55
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

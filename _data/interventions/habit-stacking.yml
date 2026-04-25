@@ -1,8 +1,19 @@
 name: "Habit Stacking"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Attaching a new desired behaviour to an existing established habit using the formula 'After I [current habit], I will [new habit]', leveraging reliable contextual triggers as anchors for new actions. A refined form of implementation intention that roughly doubles follow-through rates compared to standalone habit formation. Works well alongside [Eliminating Micro-Decisions](/resources/intervention-database/eliminating-micro-decisions) and [Creating SOPs](/resources/intervention-database/creating-sops) as part of a broader behavioural design approach.
+how_to_do_it: |
+  - Identify 3–5 existing habits that occur reliably in the same context and sequence every day (morning coffee, brushing teeth, arriving at your desk) – these are your anchor points
+  - For each anchor, attach one new micro-behaviour that takes under two minutes: 'After I pour my coffee, I will write one sentence in my journal' or 'After I sit at my desk, I will open my task list'
+  - Many people find it helpful to write the stacking formula down and place it somewhere visible for the first two weeks, until the sequence begins to feel automatic
+  - Scale up gradually – start with the trivially small version of the behaviour and increase duration or complexity only after the trigger-action link feels effortless
+success_looks_like: |
+  - The new behaviour begins happening without conscious decision – you catch yourself doing it before you remember you were supposed to
+  - Daily goal-relevant actions increase from sporadic to near-daily, with the stacked behaviours providing a reliable floor of consistency
+  - When the anchor habit occurs, the stacked behaviour feels like a natural continuation rather than an interruption or additional task
+common_pitfalls: |
+  - Stacking too-large behaviours onto anchors ('After I brush my teeth, I will meditate for 20 minutes') – the new behaviour needs to feel trivially easy at first, or the stack breaks under its own weight
+  - Choosing anchor habits that are themselves inconsistent or context-dependent, so the trigger fails on travel days, weekends, or schedule changes and the whole chain collapses
+  - Confusing activity with progress: stacking several tiny habits that feel productive but do not meaningfully advance any goal, creating the illusion of consistency without substance
 description: |
   - Attaching a new desired behaviour to an existing established habit using an 'After I [current habit], I will [new habit]' formula, leveraging existing contextual triggers as reliable anchors for new actions
   - Implementation involves identifying 3-5 existing habits as anchor points, then sequencing new micro-behaviours immediately after each, with noticeable routine integration within 2-4 weeks and full automaticity over 6-10 weeks
@@ -14,7 +25,7 @@ values:
   goals.follow_through:
     pbs: 7
     pbs_reasoning: |
-      - The anchor measures % of days with at least one deliberate goal action. Habit stacking directly creates daily goal-relevant action by embedding it into existing routines. For a successful user stacking 3-5 goal-relevant behaviours, daily follow-through could rise from sporadic (~6%, score 6) to near-daily (~80%+), a substantial shift.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 70th percentile (consistently higher daily goal action). Delta: ~30 percentile points of improvement. The anchor measures % of days with at least one deliberate goal action. Habit stacking directly creates daily goal-relevant action by embedding it into existing routines. For a successful user stacking 3-5 goal-relevant behaviours, daily follow-through could rise from sporadic (~6%, score 6) to near-daily (~80%+), a substantial shift.
       - [Gollwitzer (1999)](https://doi.org/10.1037/0003-066X.54.7.493) found implementation intentions (specifying when/where a behaviour will occur) roughly double follow-through rates. Habit stacking is a refined form of implementation intention using existing habits as cues.
       - Score 7 rather than higher because stacked habits cover only the behaviours you've anchored – goals requiring varied or non-routine actions (e.g., networking, complex projects) are not well served by this technique. It raises the floor of daily consistency substantially but cannot guarantee action across all goal types.
     isr: 60
@@ -32,7 +43,7 @@ values:
   goals.clarity:
     pbs: 5
     pbs_reasoning: |
-      - The anchor measures % of goals completed on time through accurate capacity calibration. Habit stacking improves daily execution consistency, which contributes to on-time completion, but does not address the core calibration challenge: estimating how long goals take, setting realistic timelines, or managing scope.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average goal completion rates). Delta: ~15 – 20 percentile points of improvement. The anchor measures % of goals completed on time through accurate capacity calibration. Habit stacking improves daily execution consistency, which contributes to on-time completion, but does not address the core calibration challenge: estimating how long goals take, setting realistic timelines, or managing scope.
       - [Gollwitzer & Sheeran (2006)](https://doi.org/10.1016/S0065-2601(06)38002-1) meta-analysis found implementation intentions have a medium-to-large effect (d = 0.65) on goal attainment, suggesting daily consistency translates meaningfully to completion rates.
       - Score 5 because a successful user might move from ~6% on-time completion (score 6) to ~10-15%, a real but modest gain. The intervention raises execution consistency without improving the upstream capacity estimation that the anchor specifically targets.
     isr: 55
@@ -41,7 +52,7 @@ values:
       - [Implementation intention research](https://doi.org/10.1016/S0065-2601(06)38002-1) broadly supports the execution mechanism, but translating habit-level consistency into on-time goal completion requires additional systems (tracking, milestone review, capacity assessment).
       - The moderate score reflects that habit stacking reliably produces daily action but only indirectly improves the timing accuracy that the clarity anchor measures.
     uar: 65
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - Same adherence profile as follow-through: the technique's simplicity and integration into existing routines support sustained use. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found contextual repetition is the strongest driver of habit formation.
       - The main risk is that users stack trivially small habits that feel productive but do not meaningfully advance goal completion timelines. Those who connect stacked habits to explicit goal milestones tend to persist longer.
@@ -50,7 +61,7 @@ values:
   goals.adaptability:
     pbs: 3
     pbs_reasoning: |
-      - The anchor (proactive portfolio management with systematic review and strategic pivots) describes a practice fundamentally different from habit stacking. Habit stacking builds fixed routines, which can actually reduce flexibility if over-applied by creating rigid behavioural sequences.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 40th – 45th percentile (slightly above average goal adaptability). Delta: ~5 – 10 percentile points of improvement. The anchor (proactive portfolio management with systematic review and strategic pivots) describes a practice fundamentally different from habit stacking. Habit stacking builds fixed routines, which can actually reduce flexibility if over-applied by creating rigid behavioural sequences.
       - [Wood & Neal (2007)](https://doi.org/10.1037/0033-295X.114.4.843) showed that strong habits resist change and persist even when goals shift, suggesting automaticity works against adaptability in some contexts.
       - Score 3 reflects only the indirect benefit that automated daily routines free cognitive resources for higher-order strategic thinking. This is a second-order effect, not a direct contribution to goal portfolio management.
     isr: 50
@@ -59,7 +70,7 @@ values:
       - [Cognitive load research (Sweller, 1988)](https://doi.org/10.1207/s15516709cog1202_4) supports the freed-bandwidth mechanism in principle, but whether this bandwidth actually gets redirected to goal review rather than other demands is undemonstrated.
       - The conservative score reflects genuine uncertainty about a theoretically plausible but empirically unsupported pathway.
     uar: 65
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - Adherence mirrors the overall habit stacking rate since the same behaviour is sustained regardless of which value dimension it serves. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found habit duration does not vary by outcome category once formed.
       - Flexibility benefits would only emerge if the user also has a separate review practice, making this dimension dependent on complementary interventions.

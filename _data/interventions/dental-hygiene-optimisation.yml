@@ -1,0 +1,115 @@
+name: "Dental Hygiene Optimisation"
+what_it_is: |
+  Optimising the full oral hygiene routine: brushing for two minutes twice daily with fluoride toothpaste and proper technique (45-degree angle to the gumline, gentle circular motions), flossing all interproximal spaces once daily, and attending professional check-ups every six to twelve months. Most people brush inadequately (under 45 seconds, missing proximal surfaces) and skip flossing entirely – this intervention closes those gaps.
+how_to_do_it: |
+  - Use a soft-bristled or electric toothbrush at a 45-degree angle to the gumline, moving in gentle circular motions for a full two minutes – time yourself until the duration becomes habitual
+  - Floss once daily, ideally before brushing in the evening, wrapping the floss in a C-shape around each tooth and sliding below the gumline; floss picks or a water flosser are acceptable alternatives for those who struggle with manual technique
+  - Book a dental check-up and professional clean every six to twelve months – the check-up catches early caries and periodontal disease before they require expensive restorative work
+  - Anchor flossing to an existing habit (e.g. immediately before evening brushing) to build automaticity; the habit takes 59–154 days to stabilise
+success_looks_like: |
+  - Your gums no longer bleed when flossing – a sign that inflammation has resolved, typically within 2–4 weeks of consistent flossing
+  - Your dentist confirms no new caries or progression of existing periodontal issues at each check-up
+  - You complete the full routine (brush + floss) on autopilot, taking roughly 5 minutes per day without feeling it is an effort
+common_pitfalls: |
+  - Brushing too hard or with a hard-bristled brush, which can abrade enamel and irritate gum tissue – firm pressure is counterproductive
+  - Flossing sporadically (a few times per week rather than daily), which is insufficient to disrupt plaque biofilm formation between teeth
+  - Skipping dental check-ups because nothing hurts – by the time dental problems cause pain, they typically require expensive restorative treatment rather than simple prevention
+description: |
+  - Brush teeth for two minutes, twice daily, using fluoride toothpaste and proper technique (45-degree angle to the gumline, gentle circular motions); floss all interproximal spaces once daily; attend a professional check-up and scale-and-polish every six to twelve months
+  - "Proper technique" means covering all tooth surfaces systematically – outer, inner, and chewing surfaces – and not pressing hard enough to abrade enamel or irritate gum tissue; many people brush for under 45 seconds and miss proximal surfaces entirely
+  - [A Cochrane review of 35 RCTs](https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012018.pub2/full) found that flossing in addition to brushing reduces gingivitis and that long-term interdental cleaning reduces tooth loss risk; regular check-ups catch early caries and periodontal disease before they require expensive restorative work
+  - The intervention is distinct from simply "brushing teeth" in that it adds daily flossing (the most commonly skipped step), technique correction, and professional monitoring – all three components together close the gaps that routine brushing alone leaves
+  - Total time cost is roughly 5 minutes daily plus two dental visits per year; consumable cost is negligible (~$30/year for floss, toothpaste, and a replacement toothbrush head)
+applicable_domains: ["health-management", "saving"]
+
+values:
+  health-management.longterm:
+    pbs: 6
+    isr: 80
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile on comprehensiveness of preventive health strategy – oral health is one discrete domain within a broader prevention portfolio, so the gain is meaningful but not major. Delta: ~25 percentile points.
+      - [The American Heart Association's 2024 scientific statement](https://www.ahajournals.org/doi/10.1161/CIR.0000000000001390) identifies periodontal disease as an independent cardiovascular risk factor, confirming that dental hygiene contributes to a genuinely comprehensive preventive strategy beyond merely avoiding toothache.
+      - The Cochrane evidence shows flossing reduces gingivitis with consistent effect across multiple time points; preventing progression to periodontitis – which is largely irreversible – represents a meaningful structural improvement to long-term health trajectory rather than a cosmetic gain.
+      - Score 6 rather than 8 because dental hygiene, however important, addresses only one organ system; a user at the 35th percentile on overall preventive strategy still has major gaps in fitness, sleep, nutrition, and screening that this intervention does not address.
+    isr_reasoning: |
+      - [The Cochrane review (Worthington et al., 2019)](https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012018.pub2/full) found consistent gingivitis reduction across 12 flossing trials and evidence that prolonged interdental cleaning reduces tooth loss risk – the biological mechanism (plaque disruption preventing anaerobic colonisation) is well-established and highly reliable for adherent users.
+      - Brushing with fluoride toothpaste has the strongest evidence base in dentistry; [systematic reviews confirm](https://pmc.ncbi.nlm.nih.gov/articles/PMC5724709/) that good oral hygiene reliably prevents the transition from gingivitis to destructive periodontitis in the vast majority of patients without pre-existing bone loss.
+      - Regular professional check-ups catch caries and early periodontal disease before irreversible damage, further compounding the preventive reliability; the main failure mode is pre-existing severe periodontitis that has already caused bone loss, which is not reversed by hygiene alone.
+    uar_reasoning: |
+      - [NHANES data (2009–2020)](https://pubmed.ncbi.nlm.nih.gov/38752966/) show that only ~32% of US adults floss daily and this figure has not improved meaningfully over a decade despite public health messaging, indicating that the majority of people who intend to floss do not sustain it long-term.
+      - [Judah et al. (2013)](https://pubmed.ncbi.nlm.nih.gov/22989272/) found flossing habits take 59–154 days to form, with substantial individual variability; without a strong implementation intention or environmental cue, most people revert within weeks.
+      - At-risk populations (lower income, current smokers) have significantly lower daily flossing rates per NHANES, suggesting the intervention faces the steepest adherence challenge in the populations that stand to benefit most.
+      - UAR of 35% reflects the real-world population prevalence of sustained daily flossing – roughly the ceiling of what unsupported intention achieves – though users who reach this page and implement deliberately may perform slightly better than the general population.
+
+  health-management.vitality:
+    pbs: 5
+    isr: 40
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (roughly 6–7 high-energy hours/day). After successful adherence, a user with previously active periodontal disease could plausibly reclaim 0.3–0.5 high-energy hours/day via reduced systemic inflammation. Delta: ~0.4 hours/day. PBS = 10 + log₂(0.4/14) = 10 - 5.1 = 5.
+      - [Research on systemic links between periodontal disease and inflammatory markers](https://pmc.ncbi.nlm.nih.gov/articles/PMC12651253/) shows chronic periodontal infection elevates IL-6, CRP, and TNF-alpha – the same cytokines that cause fatigue and cognitive fog in other inflammatory conditions – providing a plausible mechanism for a modest vitality benefit.
+      - The PBS is modest (score 5) because the vitality effect is indirect and only material for users who already have active gum disease; for users with healthy gums, the prevention of future deterioration does not translate to a measurable near-term vitality gain.
+    isr_reasoning: |
+      - The oral-systemic inflammation pathway is observationally well-supported but causal RCT evidence specifically linking dental hygiene improvement to measurable energy levels is limited; [a 2024 AHA scientific statement](https://www.ahajournals.org/doi/10.1161/CIR.0000000000001390) acknowledges association but notes causality is not established for most outcomes.
+      - Many users who adopt this intervention will not have clinically significant periodontal disease at baseline, meaning the inflammatory-reduction pathway is not activated; ISR of 40% reflects that the vitality benefit is real for the subset with active gum inflammation but largely absent for those with healthy gums.
+      - Individual variation in the oral microbiome and systemic susceptibility to periodontal pathogens means the intervention's energy impact is highly heterogeneous even among adherent users.
+    uar_reasoning: |
+      - See health-management.longterm UAR – same intervention, same adherence profile. Only ~32% of adults sustain daily flossing per [NHANES (2009–2020)](https://pubmed.ncbi.nlm.nih.gov/38752966/).
+
+  health-management.control:
+    pbs: 4
+    isr: 75
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After learning correct brushing technique, understanding why flossing matters, and establishing a relationship with a dentist for monitoring, a user could plausibly reach the 50th percentile on informed health decision-making confidence in this domain. Delta: ~15 percentile points – a modest gain.
+      - Dental hygiene is a narrow domain; even perfect oral-health knowledge leaves most of a person's health decision-making unchanged. Score 4 is appropriate given the specificity of the skill set involved.
+      - The gain is real – many people have never been taught the 2-minute, 45-degree technique or understand what gingivitis looks like – but it does not transfer to broader health control in the way that, say, learning to read a blood panel or understand medication interactions would.
+    isr_reasoning: |
+      - The knowledge and confidence gains from this intervention are direct and reliable for any adherent user: brushing and flossing correctly is a learnable motor skill with clear, observable feedback (bleeding gums reducing, dentist confirmation at check-up).
+      - [Cochrane evidence](https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012018.pub2/full) provides users with accurate mental models of what the intervention achieves, supporting confidence calibration rather than false certainty.
+      - The main ISR risk is that users do not seek adequate instruction and continue incorrect technique; a single dental appointment providing technique feedback resolves this for most people.
+    uar_reasoning: |
+      - See health-management.longterm UAR – same intervention, same adherence profile. Only ~32% of adults sustain daily flossing per [NHANES (2009–2020)](https://pubmed.ncbi.nlm.nih.gov/38752966/).
+
+  saving.security:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile for emergency fund. The saving cross-domain here operates via avoided dental treatment costs rather than positive saving behaviour.
+      - [Average out-of-pocket cost for a root canal plus crown in the USA](https://www.carecredit.com/dentistry/costs/) is $1,600–$3,200 without insurance; periodontal scaling and root planing adds $170–$350 per quadrant. A person who prevents two such episodes over a decade avoids $3,000–$7,000 in costs – equivalent to roughly 0.5–1.5 months of emergency fund on a median US income.
+      - PBS = 10 + log₂(1/12) = 6.4 at the optimistic end; conservatively capping at PBS = 5, given that many users have dental insurance that partially absorbs these costs and that the causal link from improved hygiene to zero major procedures is probabilistic rather than certain.
+    isr_reasoning: |
+      - [Research from UIC College of Dentistry](https://dentistry.uic.edu/news-stories/the-value-of-preventive-oral-health-care/) and insurer data consistently show that preventive care reduces major restorative treatment rates, but the magnitude varies substantially with baseline dental health, genetics, diet, and insurance status.
+      - For users who already have good dental health, the incremental cost saving from optimising hygiene is small; ISR of 55% reflects that about half of adherent users will avoid at least one meaningful dental expense over a five-year horizon that they would otherwise have incurred.
+      - Users with pre-existing periodontal disease may still require restorative work despite improved hygiene, limiting the cost-avoidance benefit for those who start with the most room to improve clinically.
+    uar_reasoning: |
+      - See health-management.longterm UAR – same intervention, same adherence profile. Only ~32% of adults sustain daily flossing per [NHANES (2009–2020)](https://pubmed.ncbi.nlm.nih.gov/38752966/).
+
+resources:
+  upfront_cost: 15
+  upfront_cost_reasoning: "A standard manual toothbrush ($3–5) and a pack of dental floss ($3–5) are the only required purchases. An electric toothbrush is optional but not necessary to begin effectively; it can be introduced later if desired."
+  ongoing_cost: 30
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Annual consumables: replacement toothbrush heads or new toothbrush (~$5), toothpaste (~$10), and dental floss (~$5). Professional check-ups are the main recurring cost; with NHS dentistry (UK) a Band 1 check-up is GBP 26.80; in the USA without insurance a check-up and clean runs $100–$300 per visit. The $30/year figure covers consumables only – dental visits are a separate variable cost depending on location and coverage."
+  upfront_time: 0.5
+  upfront_time_reasoning: "Approximately 30 minutes to watch a technique demonstration (e.g. NHS or ADA guidance video), purchase supplies, and book the first dental appointment. No extended setup is required."
+  ongoing_time: 0.6
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Two 2-minute brushing sessions daily plus one 1-minute flossing session = roughly 5 minutes/day = 35 minutes/week. Professional appointments (two per year, ~45 minutes each) average about 3 minutes/week when annualised."
+
+prerequisites:
+  - "Access to a dentist for at least an annual check-up and professional clean (required to complete the full protocol)"
+  - "No active dental emergency requiring immediate treatment before a preventive routine can be established"
+  - "Basic manual dexterity sufficient to manipulate floss between teeth (adaptive tools such as floss picks or water flossers are available for those with limited dexterity)"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Dental pain and visible tooth decay are established sources of chronic stress and social anxiety; preventing deterioration plausibly reduces low-level health anxiety over time."
+  - domain: "style"
+    rationale: "Whiter teeth and healthier gums from optimised hygiene plausibly improve smile appearance and therefore perceived attractiveness, but no scoring anchor exists for this sub-domain effect."

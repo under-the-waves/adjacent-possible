@@ -1,0 +1,148 @@
+name: "Creating Basic Legal Documents"
+what_it_is: |
+  Assembling the core set of legal documents that protect you and your family if you die or become incapacitated – a will, a durable power of attorney (POA), a healthcare directive, and up-to-date beneficiary designations on financial accounts and insurance policies. Each document serves a distinct function: the will governs asset distribution after death; the durable POA authorises someone to manage your finances if you lose capacity; the healthcare directive records your medical preferences and designates a proxy decision-maker; and beneficiary designations override the will for accounts and policies that pass outside probate. Together they form the legal infrastructure that ensures your intentions are carried out and spares your family from expensive court proceedings, ambiguity, and conflict. Documents can be created through a solicitor (~$200–500), an online legal service (~$50–150), or free templates from state bar websites – making this one of the highest-leverage one-time administrative investments available to any adult.
+how_to_do_it: |
+  - Start with beneficiary designations – these are free, take 15–30 minutes per account, and override everything else for accounts such as 401(k)s, IRAs, and life insurance; log in to each financial institution and confirm or update the named beneficiary before touching any other document
+  - Draft a will (specifying who inherits your assets and, if applicable, who guardians your minor children), a durable power of attorney (naming someone to manage your finances if you lose capacity), and a healthcare directive (stating medical preferences and naming a healthcare proxy); use a solicitor for complex estates or blended families, an online service such as Trust and Will or LegalZoom for straightforward situations, or free state bar templates as a minimum viable option
+  - Sign each document in compliance with your state's execution requirements – most wills require two witnesses and a notary; POAs and advance directives have varying requirements; verify requirements on your state's official court or bar website, as errors in execution render documents legally void
+  - Store originals somewhere your named agents can physically access (not a safe deposit box that requires court access to open after death); inform your executor, healthcare proxy, and POA agent of their roles and share digital copies via a password manager or secure cloud folder
+success_looks_like: |
+  - You have four signed, legally valid documents – will, durable POA, healthcare directive, and updated beneficiary designations on every financial account and insurance policy
+  - Your executor, healthcare proxy, and financial POA each know their role, know where the originals are stored, and hold a copy they can access independently of you
+  - Your family could navigate your incapacity or death without court involvement – no guardianship proceedings, no intestacy disputes, no contested probate
+common_pitfalls: |
+  - Signing a will or POA without meeting your state's execution formalities (correct witness count, notarisation, witness eligibility rules) – a formally defective document has no legal force and may be worse than none because it creates false confidence
+  - Overlooking beneficiary designations – a valid will does not govern accounts with named beneficiaries; an ex-spouse or deceased parent listed as beneficiary on a 401(k) will receive the funds regardless of what the will says
+  - Creating documents once and never revisiting them after major life events such as marriage, divorce, the birth of a child, or significant asset changes – an outdated will appointing a deceased executor or excluding a new child can cause serious harm
+description: |
+  - A coordinated set of four legal instruments: a last will and testament (asset distribution and minor guardianship after death), a durable power of attorney (financial decision-making during incapacity), a healthcare directive or advance directive (medical preferences and healthcare proxy designation), and beneficiary designations on accounts and policies that pass outside the probate estate
+  - Beneficiary designations supersede the will for all assets held in beneficiary-designated form (retirement accounts, life insurance, payable-on-death bank accounts) – making them the highest-priority document for most households, completed directly through each financial institution at no cost
+  - [Survey data](https://www.caring.com/resources/wills-survey) shows only 24% of Americans have a will as of 2025, down from 33% in 2022; [research across 150 studies](https://pubmed.ncbi.nlm.nih.gov/28679811/) found only 36.7% of US adults have any advance directive, making complete legal documentation a near-universal gap
+  - Without a durable POA, families seeking to manage an incapacitated person's finances must pursue court guardianship – a process requiring legal filings, psychiatric assessments, bond posting, and ongoing quarterly accounting, at a cost of several thousand dollars, compared with the one-time cost of a POA
+  - Distinct from broader estate planning (trusts, tax optimisation, business succession) in scope: this intervention covers only the essential protective floor that every adult needs regardless of wealth or family complexity
+applicable_domains: ["legal-matters", "emergency-preparedness"]
+
+values:
+  legal-matters.protection:
+    pbs: 9
+    isr: 82
+    uar: 52
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 40th percentile. The typical person considering this intervention has 0 documents in place – consistent with [Caring.com's 2025 survey](https://www.caring.com/resources/wills-survey) finding 76% of Americans lack a will. Endpoint after successful completion: 4 documents (will, durable POA, healthcare directive, beneficiary designations), placing the user at approximately the 85th percentile. Delta: approximately 3.5–4 documents gained.
+      - PBS = 10 + log₂(3.5/5) = 10 - 0.51 = 9.5; rounded conservatively to 9. The anchor_max of 5 documents represents a fully comprehensive estate plan with sophisticated planning and professional review; reaching 4 documents captures the vast majority of protective benefit.
+      - Score 9 reflects a near-complete protective uplift from a baseline of none – creating all four core documents eliminates the primary legal vulnerabilities (intestacy, court-ordered guardianship, medical proxy disputes) identified in [estate planning consequence research](https://www.justvanilla.com/blog/what-happens-if-you-die-intestate).
+    isr_reasoning: |
+      - Among adults who actually complete a will, durable POA, and advance directive, the documents reliably achieve their legal purpose – assets pass as intended, court intervention for incapacity is avoided, and medical wishes are on record. The mechanism is legally enforced, not probabilistic.
+      - [WealthCounsel survey data cited by estate planning researchers](https://legacyassuranceplan.com/articles/intestacy/the-hidden-costs-of-intestacy-clearly-appear-when-it-is-too-late) indicates over one-third of Americans have witnessed family conflict arising from absent estate planning; documents preventing such conflict is the primary ISR signal.
+      - ISR is held below ceiling because an estimated 15–20% of completed documents contain meaningful flaws: incorrect execution (wrong witness count or notarisation), outdated beneficiary designations not updated after life events, or state-law mismatches following relocation.
+    uar_reasoning: |
+      - [Caring.com's 2025 survey](https://www.caring.com/resources/wills-survey) found 43% of adults without a will cite procrastination as the primary barrier, and the proportion with a will has fallen from 33% to 24% since 2022 – suggesting strong systemic avoidance even among adults who acknowledge the need.
+      - This is a one-time task, not an ongoing habit; once all four documents are signed, UAR for continued protection is near-100%. The 52% UAR captures the probability that a person who begins the intervention finishes all four documents within a reasonable timeframe (~3 months) rather than completing one and indefinitely deferring the rest.
+      - [Trust and Will's 2025 demographic breakdown](https://trustandwill.com/learn/2025-report-estate-planning-demographic-breakdown) shows only 22% of Millennials have a will despite widespread awareness of the need, confirming that intention-to-completion rates are low.
+
+  legal-matters.simplicity:
+    pbs: 7
+    isr: 78
+    uar: 52
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A person with no legal documents carries ongoing background anxiety about what would happen to their assets and dependants. Endpoint: with four documents signed and agents informed, the user reaches approximately the 75th percentile on simplicity and peace of mind. Delta: approximately 40 percentile points.
+      - A 40-point gain maps to a "major gain" on the scale, corresponding to score 8. Score 7 reflects conservative adjustment for individual variation: peace-of-mind gains depend partly on baseline anxiety level, and a minority of completers remain anxious about document accuracy or future updating.
+      - The primary source of legal-affairs anxiety for most adults is the awareness that they have not made arrangements. Completing the documents resolves this definitively, producing a durable gain.
+    isr_reasoning: |
+      - Survey research on estate planning consistently shows that adults who complete documents report reduced anxiety about family financial security – the subjective benefit is a direct and near-certain consequence of task completion.
+      - ISR is not at ceiling because a minority of completers experience residual concern (about document accuracy, future updating obligations, or uncertainty about whether agents will act correctly).
+      - No direct RCT evidence exists on peace-of-mind outcomes from estate planning; ISR estimate is grounded in the logical structure of the intervention and qualitative survey sentiment from [estate planning studies](https://www.caring.com/resources/wills-survey).
+    uar_reasoning: |
+      - See legal-matters.protection UAR – same intervention, same adherence profile.
+
+  legal-matters.strategic:
+    pbs: 5
+    isr: 70
+    uar: 52
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Basic legal documents provide modest strategic advantage – the user gains the ability to name preferred beneficiaries, exclude unintended heirs, structure gifts to minimise family conflict, and designate trusted agents. Endpoint: approximately the 55th percentile. Delta: approximately 20 percentile points.
+      - Score 5 reflects that basic documents create meaningful strategic optionality (especially beneficiary nominations and guardian designation) without rising to the level of sophisticated estate planning such as trusts, tax structuring, or business succession.
+      - The strategic benefit is real but narrow: it primarily addresses the single scenario of death or incapacity.
+    isr_reasoning: |
+      - Among those who complete the documents, the strategic benefit (assets going where intended, preferred agents appointed) is reliably achieved – the mechanism is direct and legally enforced.
+      - ISR is below ceiling because strategic advantage also depends on the quality of the choices made (selecting a capable executor, structuring beneficiary nominations sensibly).
+      - No direct evidence base specific to strategic advantage from basic estate documents; confidence is low.
+    uar_reasoning: |
+      - See legal-matters.protection UAR – same intervention, same adherence profile.
+
+  legal-matters.access:
+    pbs: 6
+    isr: 72
+    uar: 52
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Most adults who have never engaged with the legal system feel genuine uncertainty around legal matters. Completing basic documents requires engaging with legal terminology, state-specific execution requirements, and the logic of estate law – producing a real uplift in legal confidence and capability. Endpoint: approximately the 65th percentile. Delta: approximately 30 percentile points.
+      - Score 6 reflects that going through the process demystifies legal procedure, introduces key concepts (probate, intestacy, fiduciary duty, notarisation), and gives the user a concrete reference point for future legal situations.
+      - The gain is bounded: basic estate documents do not transfer general legal literacy across contract law, employment law, or dispute resolution.
+    isr_reasoning: |
+      - The access and empowerment gain is a reliable by-product of document creation – engagement with the process is inherently educational, regardless of whether a solicitor or an online service is used.
+      - ISR is moderated by mode of completion: adults who use a solicitor gain more understanding through explanation and dialogue; those using fully automated online tools may complete documents without meaningfully engaging with the underlying concepts.
+      - No direct evidence base; ISR of 72% reflects the expectation that most completers gain at least moderate legal confidence.
+    uar_reasoning: |
+      - See legal-matters.protection UAR – same intervention, same adherence profile.
+
+  emergency-preparedness.catastrophic:
+    pbs: 6
+    isr: 75
+    uar: 52
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Legal documents directly address the most personally catastrophic non-physical events: unexpected death and incapacity. Without them, these events trigger court proceedings, asset freezes, and family conflict. With them, the transition is legally managed and agents can act immediately. Endpoint: approximately the 65th percentile. Delta: approximately 30 percentile points.
+      - Score 6 reflects "meaningful gain in catastrophic-scenario preparedness". Legal documents provide the institutional scaffolding that determines whether a catastrophic personal event results in orderly or chaotic outcomes for dependants.
+      - [Research on intestacy consequences](https://legacyassuranceplan.com/articles/intestacy/the-hidden-costs-of-intestacy-clearly-appear-when-it-is-too-late) confirms that the absence of legal documents is a primary driver of family financial and emotional catastrophe following unexpected death.
+    isr_reasoning: |
+      - Legal documents reliably prevent the specific catastrophic outcomes they are designed to address (court-ordered guardianship, intestacy distribution, medical proxy disputes) when correctly executed and kept current.
+      - [Health Affairs research](https://www.healthaffairs.org/doi/10.1377/hlthaff.2017.0175) found advance directives reduce unwanted aggressive end-of-life interventions and proxy decision-making conflict, confirming ISR for healthcare directives specifically.
+      - ISR is below ceiling because the documents must be correctly executed, known to the relevant agents, and physically accessible at the moment they are needed.
+    uar_reasoning: |
+      - See legal-matters.protection UAR – same intervention, same adherence profile.
+
+  emergency-preparedness.baseline:
+    pbs: 4
+    isr: 65
+    uar: 52
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Legal documents address a narrow slice of baseline emergency preparedness – specifically the administrative and legal dimensions of personal disruption. They do not address physical supply resilience, communication plans, or evacuation logistics. Endpoint: approximately the 45th percentile. Delta: approximately 10 percentile points.
+      - Score 4 reflects a genuine but modest contribution: legal clarity reduces the administrative chaos that compounds physical emergencies, particularly the specific failure mode of family members being unable to access bank accounts during a hospitalisation because no POA exists.
+      - The causal pathway is narrow and indirect for most common baseline emergencies.
+    isr_reasoning: |
+      - The baseline preparedness benefit is real but contingent: a durable POA preventing frozen financial accounts during hospitalisation addresses a specific, well-defined failure mode but does not generalise to most common emergency scenarios.
+      - ISR is conservative at 65% because the baseline preparedness gain is only activated in a subset of emergency types (those involving incapacity or death).
+      - No direct evidence base for this cross-domain link; confidence is low.
+    uar_reasoning: |
+      - See legal-matters.protection UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Free state bar templates and state-provided advance directive forms allow completion of all four core documents at no monetary cost. A paid online service ($50–150) or solicitor ($200–500) is optional and recommended for complex estates but not required."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost once documents are executed. Periodic review (every 3–5 years or after major life events) can be done by re-reading existing documents; a solicitor update only becomes necessary when substantive changes are needed."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately 2–4 hours to inventory assets and accounts, identify and confirm agents (executor, POA, healthcare proxy), research state execution requirements, complete forms or work through an online service, arrange witnesses and notarisation, and update beneficiary designations."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Roughly 1 hour per year to review documents for continued accuracy following life events. No ongoing time required in years with no significant life changes."
+
+prerequisites:
+  - "Legal capacity to execute documents – you must be of legal age (typically 18) and of sound mind at the time of signing"
+  - "A working inventory of your financial accounts, insurance policies, real property, and retirement accounts that need beneficiary designations or will coverage"
+  - "Named and willing candidates for all key roles – executor, durable POA agent, healthcare proxy, and (if applicable) minor child guardian – who have explicitly agreed to serve"
+  - "Access to two witnesses and a notary for document execution, or access to an online notarisation service where remote notarisation is permitted by your state"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Completing estate documents resolves a recognised source of background anxiety about family security after death or incapacity."
+  - domain: "extended-family"
+    rationale: "Clear legal instructions about asset distribution and decision-making authority directly reduce the likelihood of family conflict following death or incapacity."
+  - domain: "saving"
+    rationale: "Beneficiary designations and a will ensure accumulated savings reach intended heirs rather than being reduced by probate costs or distributed under intestacy rules."

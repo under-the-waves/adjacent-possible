@@ -1,8 +1,19 @@
 name: "Systematic Gratitude Practices"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  A structured daily practice (5–10 minutes, typically before bed) of identifying specific positive experiences and analysing why they mattered – who contributed, what conditions made them possible, and what they reveal about what you value. Distinct from superficial gratitude listing: the analytical depth is what drives larger effects on rumination reduction, sleep quality, and sustained positive affect.
+how_to_do_it: |
+  - Each evening, write down 2–3 specific things that went well and, for each, answer: 'Why did this happen? Who contributed? What made it possible?' – the causal analysis is what distinguishes this from a generic 'three good things' list
+  - Many people find a dedicated physical notebook works better than a phone app, since the act of handwriting slows thinking and the notebook itself becomes a cue for the habit
+  - Anchor the practice to an existing routine (e.g. after brushing teeth, before turning off the light) so it has a reliable trigger rather than relying on motivation
+  - You may find it helpful to vary the scope – some evenings reflect on small moments (a good conversation), others on larger patterns (a relationship that has deepened over months)
+success_looks_like: |
+  - Pre-sleep rumination noticeably decreases – you fall asleep thinking about what went well rather than what went wrong
+  - You start noticing positive moments as they happen during the day, not just when prompted by the evening practice
+  - Over several weeks, you can look back through entries and see recurring themes that clarify what genuinely matters to you
+common_pitfalls: |
+  - Listing items without analysis ('good weather, nice lunch, finished work') – this produces a superficial log that does not engage the cognitive reappraisal mechanism driving the benefit
+  - Forcing gratitude during genuinely difficult periods, which can feel invalidating; the practice works best as honest reflection, not compulsory positivity
+  - Treating it as a performance task with a completion streak to maintain – anxiety about breaking the streak undermines the practice's purpose
 description: |
   - A structured daily practice (5-10 minutes) of analysing why specific experiences were meaningful, identifying the causes, people involved, and conditions that made them possible
   - Distinct from superficial gratitude listing: requires causal analysis of each item (e.g. 'Why did this matter? Who contributed? What made it possible?') rather than simply naming things you appreciate
@@ -15,7 +26,7 @@ values:
   sleep.daily_functioning:
     pbs: 6
     pbs_reasoning: |
-      - [Wood et al. (2009)](https://doi.org/10.1016/j.jpsychores.2008.09.002) found gratitude uniquely predicted better subjective sleep quality, reduced sleep latency, and less daytime dysfunction after controlling for Big Five personality traits, in a sample where 40% had clinically impaired sleep.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. [Wood et al. (2009)](https://doi.org/10.1016/j.jpsychores.2008.09.002) found gratitude uniquely predicted better subjective sleep quality, reduced sleep latency, and less daytime dysfunction after controlling for Big Five personality traits, in a sample where 40% had clinically impaired sleep.
       - [Emmons & McCullough (2003)](https://doi.org/10.1037/0022-3514.84.2.377) found the gratitude condition reported longer sleep duration and feeling more refreshed upon waking compared to hassles and neutral conditions across three studies.
       - For successful practitioners, the primary mechanism is replacement of ruminative pre-sleep cognitions with positive reflections, reducing sleep onset latency by roughly 10-20 minutes and improving sleep efficiency. This translates to approximately 30-60 additional productive minutes per day, yielding PBS = 10 + log2(0.75/14) = 5.8, rounded to 6.
     isr: 55
@@ -33,7 +44,7 @@ values:
   sleep.long_term_health:
     pbs: 5
     pbs_reasoning: |
-      - The causal pathway is indirect: gratitude improves subjective sleep quality, which over years reduces cardiovascular and metabolic disease risk. [Cappuccio et al. (2010)](https://doi.org/10.1093/sleep/33.5.585) meta-analysis found improved sleep quality associated with reduced all-cause mortality, but the specific contribution of a gratitude practice (vs. other sleep interventions) is modest.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile. Delta: 15 percentile points of improvement. The causal pathway is indirect: gratitude improves subjective sleep quality, which over years reduces cardiovascular and metabolic disease risk. [Cappuccio et al. (2010)](https://doi.org/10.1093/sleep/33.5.585) meta-analysis found improved sleep quality associated with reduced all-cause mortality, but the specific contribution of a gratitude practice (vs. other sleep interventions) is modest.
       - [Jackowska et al. (2016)](https://doi.org/10.1177/1359105315572455) found a brief gratitude intervention reduced diastolic blood pressure, suggesting a cardiovascular pathway, but effects were small and measured over only 2 weeks.
       - Estimating roughly 2-4 months of additional healthy lifespan through improved sleep quality over decades of practice. PBS = 10 + log2(0.25/8) = 5.0, rounded to 5.
     isr: 45
@@ -42,7 +53,7 @@ values:
       - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) found effect sizes diminished at follow-up compared to post-test, raising questions about whether sleep benefits persist without continued active practice.
       - The causal chain from gratitude to pre-sleep cognitions to sleep quality to long-term health outcomes involves multiple steps, each with its own attenuation. More conservative than daily functioning ISR given the longer and less direct pathway.
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Long-term health benefits require sustained practice over years, but the daily behaviour is identical regardless of which outcome is being measured.
@@ -51,7 +62,7 @@ values:
   sleep.comfort_experience:
     pbs: 7
     pbs_reasoning: |
-      - This is the strongest pathway for gratitude practices. [Wood et al. (2009)](https://doi.org/10.1016/j.jpsychores.2008.09.002) demonstrated that gratitude directly influences the subjective experience of falling asleep by replacing negative pre-sleep cognitions with positive reflections, producing a calmer, more pleasant transition to sleep.
+      - Baseline: 35th percentile (below-average sleep comfort). After successful adherence, a user could plausibly reach the 65th–70th percentile (consistently restful sleep). Delta: ~32 percentile points. This is the strongest pathway for gratitude practices. [Wood et al. (2009)](https://doi.org/10.1016/j.jpsychores.2008.09.002) demonstrated that gratitude directly influences the subjective experience of falling asleep by replacing negative pre-sleep cognitions with positive reflections, producing a calmer, more pleasant transition to sleep.
       - [Emmons & McCullough (2003)](https://doi.org/10.1037/0022-3514.84.2.377) found participants in the gratitude condition reported feeling more refreshed upon waking and rated their sleep experience more positively than control groups.
       - For successful practitioners, the shift from ruminative worry to structured positive reflection fundamentally changes the subjective quality of the pre-sleep period. This maps to a score between 'generally good sleep quality' (6) and 'consistently restful and comfortable sleep' (8), placing it at 7.
     isr: 65
@@ -69,7 +80,7 @@ values:
   current-work.engagement:
     pbs: 4
     pbs_reasoning: |
-      - Structured gratitude reduces rumination and negative affect, freeing cognitive resources for task absorption and engagement during work hours. The mechanism is indirect but plausible: less residual worry from the previous evening creates more mental bandwidth for flow states.
+      - Baseline: 35th percentile (below-average engagement). After successful adherence, a user could plausibly reach the 45th–50th percentile (approaching average). Delta: ~12 percentile points. Structured gratitude reduces rumination and negative affect, freeing cognitive resources for task absorption and engagement during work hours. The mechanism is indirect but plausible: less residual worry from the previous evening creates more mental bandwidth for flow states.
       - [Komase et al. (2021)](https://doi.org/10.1002/1348-9585.12290) systematic review found some evidence for gratitude interventions improving work engagement among employees, though effects were inconsistent and modest across studies.
       - On the subjective engagement scale, this represents a small but meaningful shift – perhaps moving from 'partially disengaged' toward 'generally engaged' for some practitioners. Score 4 reflects this modest secondary benefit.
     isr: 40
@@ -78,7 +89,7 @@ values:
       - The causal pathway from evening gratitude practice to next-day work engagement is indirect and mediated by multiple factors (sleep quality, morning mood, task characteristics), each attenuating the effect.
       - [Cregg & Cheavens (2021)](https://doi.org/10.1007/s10902-020-00236-6) meta-analysis found small overall effect sizes for gratitude interventions, and engagement is a secondary outcome rather than the primary target. Conservative estimate of 40% achieving meaningful engagement improvements.
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - The engagement benefit is a secondary outcome of the same evening practice, so adherence is determined by the same factors as the primary sleep domain.
@@ -86,7 +97,7 @@ values:
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - Structured gratitude practice reduces rumination by redirecting attention from negative repetitive thought toward causal analysis of positive events. [Research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10014497/) demonstrates that gratitude induction increases accessibility of positive memories and counters the negative cognitive biases characteristic of depression and anxiety.
+      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 50th percentile (average stability). Delta: ~15 percentile points. Structured gratitude practice reduces rumination by redirecting attention from negative repetitive thought toward causal analysis of positive events. [Research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10014497/) demonstrates that gratitude induction increases accessibility of positive memories and counters the negative cognitive biases characteristic of depression and anxiety.
       - [A systematic review and meta-analysis of 64 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC10393216/) found gratitude interventions produced approximately 7% lower GAD-7 (anxiety) and 7% lower PHQ-9 (depression) scores compared to control groups, indicating moderate symptom reduction for successful practitioners.
       - For adherent practitioners, the cognitive reappraisal mechanism shifts the emotional baseline from 'frequent distress affecting daily functioning' (4) toward 'occasional distress that resolves quickly' (6). Score 5 reflects the moderate but incomplete relief from distressing symptoms.
     isr: 45
@@ -103,7 +114,7 @@ values:
   mental-health.flourishing:
     pbs: 6
     pbs_reasoning: |
-      - Gratitude practice directly cultivates the core components of flourishing: positive affect, meaning-making, and appreciation of one's circumstances. This is the most direct mental health pathway, as the practice itself is an exercise in attending to sources of meaning and satisfaction.
+      - Baseline: 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 55th–65th percentile (moderately above average). Delta: ~25 percentile points. Gratitude practice directly cultivates the core components of flourishing: positive affect, meaning-making, and appreciation of one's circumstances. This is the most direct mental health pathway, as the practice itself is an exercise in attending to sources of meaning and satisfaction.
       - [Choi et al. (2025)](https://doi.org/10.1073/pnas.2425193122) meta-analysis of 145 papers (N = 24,804) found gratitude interventions were most effective when well-being was measured as positive affect, confirming that flourishing-adjacent outcomes are the strongest benefit.
       - For successful practitioners, regular structured reflection on meaningful experiences shifts the baseline toward 'regular moments of satisfaction and meaning; generally positive outlook' (6) approaching 'frequent positive emotions and meaningful engagement' (8). Score 6 reflects a meaningful but not transformative shift, consistent with the small-to-moderate effect sizes in the literature.
     isr: 55

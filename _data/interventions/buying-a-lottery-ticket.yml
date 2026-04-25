@@ -1,8 +1,19 @@
 name: "Buying a Lottery Ticket"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Purchasing lottery tickets regularly as a wealth-building strategy. The expected value of a £2 ticket is approximately £0.50–0.80, meaning the average player loses 60–75% of every pound spent. Jackpot odds range from roughly 1 in 14 million (UK Lotto) to 1 in 292 million (US Powerball). Contrast with [Index Fund Investing](/resources/intervention-database/index-fund-investing) or [Automated Savings](/resources/intervention-database/automated-savings) for positive expected-value alternatives.
+how_to_do_it: |
+  - Most players buy 1–2 tickets per week for a single game, either at a newsagent or through a direct debit subscription that selects numbers automatically
+  - You may find that setting a strict weekly budget (e.g. £5) and treating it as entertainment spend rather than investment helps prevent gradual escalation
+  - Some people prefer syndicates (pooling tickets with colleagues or friends) to increase the number of entries without increasing personal spend, though this dilutes any winnings proportionally
+  - Checking results can be automated through the National Lottery app or email notifications, removing the need to remember draw nights
+success_looks_like: |
+  - Spending remains at a fixed, trivial amount (under £10/week) that does not affect savings rate or essential spending
+  - The player treats tickets as a small entertainment purchase with no expectation of return, not as a financial plan
+  - If a win occurs, it is a genuine windfall rather than a recovery of cumulative losses – the player has not been spending more to chase previous losses
+common_pitfalls: |
+  - Gradually increasing spend after near-misses or during rollover weeks, turning a trivial outlay into a meaningful drain on disposable income
+  - Treating lottery play as a substitute for actual saving or investing, thereby forgoing years of compound growth on the money spent – £10/week invested at 7% nominal return grows to roughly £76,000 over 30 years
+  - Anchoring financial hopes on an astronomically unlikely outcome, which can reduce motivation to pursue achievable wealth-building strategies
 description: |
   - Purchasing a lottery ticket once or twice per week as a wealth-building strategy, costing $2-5 per ticket depending on the game
   - Jackpot odds range from ~1 in 14 million ([UK Lotto](https://www.national-lottery.co.uk/games/lotto)) to ~1 in 292 million ([US Powerball](https://www.powerball.com/about))
@@ -14,7 +25,7 @@ values:
   investing.growth:
     pbs: 10
     pbs_reasoning: |
-      - UK Lotto jackpots average [£5-10 million](https://www.national-lottery.co.uk/results/lotto/draw-history); US Powerball regularly exceeds [$100 million](https://www.powerball.com/previous-results). These sums vastly exceed the $10M anchor maximum, placing a successful outcome at the ceiling of the scale.
+      - Baseline (per values.yml): 35th percentile. After successful adherence (i.e. a jackpot win), a user would reach the 99th+ percentile (wealth far exceeding any conventional investment outcome). Delta: ~65 percentile points of improvement. UK Lotto jackpots average [£5–10 million](https://www.national-lottery.co.uk/results/lotto/draw-history); US Powerball regularly exceeds [$100 million](https://www.powerball.com/previous-results). These sums vastly exceed the $10M anchor maximum, placing a successful outcome at the ceiling of the scale.
       - PBS measures magnitude assuming success, not probability. A jackpot win is unambiguously transformative and exceeds what any conventional investment strategy could produce from $10k over 30 years.
       - [Hankins, Hoekstra & Skiba (2011)](https://doi.org/10.1162/REST_a_00114) found large winners show increased bankruptcy rates within 3-5 years, but the initial windfall magnitude still meets the $10M+ threshold for score 10 – retention risk is a separate consideration from the size of the payout itself.
     isr: 0.1

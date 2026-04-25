@@ -1,0 +1,80 @@
+name: "Daily Sunscreen"
+what_it_is: |
+  Applying broad-spectrum SPF 30+ sunscreen to all exposed skin – face, neck, and hands – every morning as part of a fixed routine, regardless of whether outdoor activity is planned. This prevents both acute UV damage (sunburn) and cumulative photodamage that causes skin cancer and premature ageing. "Broad-spectrum" means the product protects against both UVA (ageing, deep skin penetration) and UVB (burning, surface damage).
+how_to_do_it: |
+  - Apply roughly a teaspoon of sunscreen to face and neck combined (~2 mg/cm²) as the final step in your morning skincare routine, before makeup or moisturiser if layering
+  - Attach the habit to an existing daily cue – after brushing teeth, after shaving, or alongside morning moisturiser – to maximise long-term consistency
+  - Reapply every two hours during extended outdoor exposure; for a typical office day, morning application alone provides adequate protection
+  - Choose a formulation with good cosmetic elegance (non-greasy, no white cast) to reduce the friction that causes most people to abandon the habit within weeks
+success_looks_like: |
+  - Sunscreen application feels as automatic as brushing your teeth – you do it without deliberation every morning
+  - Over years, your skin shows noticeably less pigmentation unevenness, fine lines, and texture damage compared to peers who use sunscreen only at the beach
+  - You have significantly reduced your cumulative UV exposure, lowering your lifetime risk of squamous cell carcinoma and melanoma
+common_pitfalls: |
+  - Applying too little product – most people use roughly a quarter of the recommended amount, which sharply reduces the realised SPF
+  - Skipping application on cloudy or winter days, when up to 80% of UV radiation still penetrates cloud cover
+  - Choosing a product that feels unpleasant on the skin (greasy, heavy, strong-smelling), leading to abandonment within weeks – cosmetic elegance matters more than maximum SPF for long-term adherence
+description: |
+  - Apply a broad-spectrum SPF 30+ sunscreen to all exposed skin – face, neck, and hands – every morning as part of a fixed routine, regardless of whether outdoor activity is planned
+  - "Broad-spectrum" means the product protects against both UVA (ageing, deep skin penetration) and UVB (burning, surface damage); SPF 30 blocks ~97% of UVB; SPF 50 blocks ~98%
+  - [The Nambour Skin Cancer Prevention Trial](https://pubmed.ncbi.nlm.nih.gov/10475183/) found daily sunscreen reduced squamous cell carcinoma incidence by 40% over 4.5 years; a 15-year follow-up showed ~50% reduction in invasive melanoma in the daily-use group
+  - [Hughes et al. (2013)](https://pubmed.ncbi.nlm.nih.gov/23732711/) demonstrated that daily sunscreen users showed 24% less skin ageing than discretionary users in a 4.5-year RCT – the only trial to measure photoageing prevention directly
+  - Application takes roughly 30 seconds; attaching it to an existing morning routine (moisturiser, shaving) maximises long-term adherence
+applicable_domains: ["health-management", "style"]
+
+values:
+  health-management.longterm:
+    pbs: 5
+    isr: 85
+    uar: 40
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained daily use, a user could plausibly reach the 55th percentile in comprehensiveness of preventive health strategy – sunscreen closes a specific, high-evidence gap but does not overhaul the whole strategy. Delta: ~20 percentile points, placing PBS between "modest" (4) and "meaningful" (6) on the subjective scale.
+      - The Nambour trial showed a 40% reduction in squamous cell carcinoma incidence with daily use ([Green et al. 1999](https://pubmed.ncbi.nlm.nih.gov/10475183/)); a 15-year follow-up found ~50% lower invasive melanoma risk ([Green et al. 2011](https://pubmed.ncbi.nlm.nih.gov/21135266/)). This represents a meaningful, targeted reduction in one major preventable cancer risk.
+      - A cost-effectiveness analysis of the Nambour data estimated that daily sunscreen promotion prevents 168 SCCs, 33 melanomas, and 4 melanoma deaths per cohort ([Shih et al. 2011](https://www.valueinhealthjournal.com/article/S1098-3015(11)03530-3/fulltext)), confirming the intervention's long-term preventive value even at population scale.
+      - The benefit is real but bounded: sunscreen addresses UV exposure, which is one of many contributors to long-term health. Someone who already avoids excessive sun exposure or lives at high latitude sees proportionally less gain.
+    isr_reasoning: |
+      - The causal mechanism is direct and well-established: UV radiation is the primary driver of keratinocyte DNA damage leading to SCC and melanoma; broad-spectrum SPF 30+ blocks ~97% of UVB and attenuates UVA, interrupting the carcinogenic pathway ([CMAJ review, 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7759112/)).
+      - Among adherent participants in the Nambour RCT, SCC incidence was 1,115 vs 1,832 per 100,000 – a rate ratio of 0.61, meaning roughly 39% of SCCs were prevented in those who complied ([Green et al. 1999](https://pubmed.ncbi.nlm.nih.gov/10475183/)). The protective effect persisted 8 years after trial completion (35% lower SCC incidence).
+      - The main population of non-responders is people with very low baseline UV exposure (indoor workers, high-latitude residents) for whom the absolute risk reduction is smaller – not a failure of the intervention mechanistically, but a mismatch between the intervention and the risk profile.
+    uar_reasoning: |
+      - Population-level adherence to daily sunscreen use is low: CDC MMWR 2020 data show only 12.3% of men and 29.0% of women always use sunscreen when outside on a sunny day ([CDC MMWR 2022](https://www.cdc.gov/mmwr/volumes/71/wr/mm7122a5.htm)). Among all sunscreen users, only ~18% apply it daily.
+      - A dermatology outpatient survey found only 31.2% of patients – people already attending skin-health appointments – reported daily use, suggesting even motivated individuals struggle with consistency ([PMC 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12187030/)).
+      - Barriers include forgetting (no built-in cue for many people), perceived inconvenience (greasy texture, time), seasonal reasoning ("it's not sunny today"), and low subjective risk perception – all of which erode daily adherence over months and years. UAR of 40% reflects the gap between intention and sustained daily practice.
+
+  style.attractiveness:
+    pbs: 6
+    isr: 80
+    uar: 40
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Consistent daily sunscreen over years measurably preserves skin texture, pigmentation evenness, and wrinkle depth. A user who maintains the habit through their 30s and 40s could plausibly reach the 60th percentile in skin appearance relative to peers without the habit. Delta: ~25 percentile points.
+      - Hughes et al. (2013) found that daily sunscreen users showed 24% less skin ageing than discretionary users after 4.5 years (relative odds 0.76, 95% CI 0.59–0.98) in an RCT of 903 adults ([Ann Intern Med 2013](https://pubmed.ncbi.nlm.nih.gov/23732711/)). This is the only RCT to directly measure photoageing prevention; the effect is likely larger over 20–30 years of sustained use.
+      - The benefit compounds over time: photoageing is cumulative and largely irreversible, so prevention early in adulthood has disproportionately large effects on appearance by midlife compared with remedial interventions introduced later.
+    isr_reasoning: |
+      - The Hughes et al. (2013) RCT showed statistically significant photoageing retardation across the daily-use group at the population level – not just in a subgroup – confirming the benefit is broadly reliable rather than confined to high-UV individuals ([Ann Intern Med 2013](https://pubmed.ncbi.nlm.nih.gov/23732711/)).
+      - UV-driven photoageing operates through two well-characterised pathways: direct DNA damage to fibroblasts reducing collagen synthesis, and reactive oxygen species degrading elastin. Broad-spectrum SPF 30+ attenuates both UVA and UVB, addressing both pathways mechanistically ([CMAJ 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7759112/)).
+      - The primary source of non-response is insufficient UV exposure (making the intervention irrelevant rather than ineffective) or habitual under-application (using less than 2 mg/cm², which sharply reduces realised SPF). For users applying correctly, the protective effect is highly reliable.
+    uar_reasoning: |
+      - See health-management.longterm UAR – same intervention, same adherence profile. Daily face-application adherence in the general population is ~18–31%; UAR = 40% reflects the upper range for people who have specifically adopted this as a morning habit.
+
+resources:
+  upfront_cost: 15
+  upfront_cost_reasoning: "A single tube of broad-spectrum SPF 30+ sunscreen (50 ml) costs $10–20 at a pharmacy or supermarket. No other equipment is required."
+  ongoing_cost: 50
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Daily face, neck, and hands application uses roughly 1–2 ml per day (~500 ml per year). A budget broad-spectrum SPF 30+ sunscreen costs $8–12 per 200 ml bottle, putting annual cost at $20–30 for a budget option; $50/year reflects a mid-range product with better cosmetic elegance, which materially improves adherence."
+  upfront_time: 0.25
+  upfront_time_reasoning: "Selecting a product and reading basic application guidance takes 10–15 minutes."
+  ongoing_time: 0.06
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Application to face, neck, and hands takes approximately 30 seconds per day, or roughly 3.5 minutes per week."
+
+prerequisites:
+  - "No known allergy or hypersensitivity to sunscreen ingredients (chemical filters such as oxybenzone or physical filters such as zinc oxide); mineral (zinc/titanium) formulations are available for those sensitive to chemical filters"
+  - "Access to a pharmacy, supermarket, or online retailer stocking broad-spectrum SPF 30+ products"
+  - "Basic understanding of what 'broad-spectrum' and 'SPF 30+' mean and how to apply the correct amount (~2 mg/cm², roughly a teaspoon for face and neck combined)"
+
+flagged_domains:
+  - domain: "physical-safety"
+    rationale: "Reduces risk of skin cancer, a leading cause of cancer morbidity, via UV protection – but physical-safety anchors focus on acute injury risk rather than chronic disease prevention, making scoring imprecise."

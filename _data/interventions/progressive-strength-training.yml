@@ -1,8 +1,19 @@
 name: "Progressive Strength Training"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Resistance training built around gradually increasing weight, repetitions, or sets over time to drive continuous muscular adaptation. Sessions typically last 45–75 minutes, 3–4 times per week, combining compound movements (squats, deadlifts, bench press, rows) with targeted isolation work. Distinguished from other exercise modalities by its systematic load progression, which provides a clear, measurable feedback loop and underpins long-term strength and health gains. Complements [zone 2 cardio](/resources/intervention-database/zone-2-cardio) for a balanced fitness programme.
+how_to_do_it: |
+  - Many people start with a proven beginner programme (e.g., Starting Strength, StrongLifts 5x5, or GZCLP) that prescribes specific compound lifts with clear progression rules, removing the need to design your own sessions
+  - You may find it worthwhile to invest 2–3 sessions with a qualified coach or experienced training partner to learn proper form on the main lifts (squat, deadlift, bench press, overhead press) before adding meaningful weight – this reduces injury risk and builds confidence
+  - Most practitioners log every session (sets, reps, weight) in a notebook or app so that progressive overload is tracked explicitly rather than guessed – the data also makes stalls visible early
+  - Starting conservatively (lighter than you think you need to) and adding small increments each session builds a long runway of progress and reduces the early-stage soreness that drives many beginners to quit
+success_looks_like: |
+  - You are consistently adding weight or reps to your main lifts over a period of months, with a clear training log showing the progression
+  - Basic compound movements feel technically confident – you can set up and execute a squat or deadlift with good form without needing to think through each cue
+  - After 3–4 months, you notice functional differences outside the gym: carrying heavy items, climbing stairs, and general physical tasks feel noticeably easier
+common_pitfalls: |
+  - Increasing weight too quickly to hit an ego target, which leads to form breakdown and either injury or a forced reset – small, consistent increments (1–2.5 kg per session for upper body, 2.5–5 kg for lower body) compound faster than irregular jumps
+  - Programme-hopping every few weeks in search of the "optimal" routine, which prevents the consistent progressive overload that any reasonable programme provides – adherence to one plan for 12+ weeks matters more than which plan you choose
+  - Skipping sessions after the initial muscle soreness (DOMS) of the first 1–2 weeks, not realising that soreness diminishes rapidly with consistent training and is not a signal of damage
 description: |
   - Resistance training built around gradually increasing weight, repetitions, or sets over time to drive continuous muscular adaptation
   - Sessions typically last 45-75 minutes, 3-4 times per week, combining compound movements (squats, deadlifts, bench press) with isolation exercises and applying progressive overload weekly or bi-weekly
@@ -14,7 +25,7 @@ values:
   fitness.health:
     pbs: 8
     pbs_reasoning: |
-      - Meta-analyses show resistance training reduces all-cause mortality by 15-21%, with maximum benefit at 30-60 minutes per week, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile on health and longevity. Delta: ~40–45 percentile points of improvement. Meta-analyses show resistance training reduces all-cause mortality by 15-21%, with maximum benefit at 30-60 minutes per week, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
       - Substantial independent benefits for bone mineral density, sarcopenia prevention, and type 2 diabetes risk reduction (17% lower risk) that compound over decades ([Westcott 2012, Current Sports Medicine Reports](https://doi.org/10.1249/JSR.0b013e31825dabb8))
       - When combined with aerobic exercise, mortality risk drops by up to 40%, placing strength training among the top longevity interventions ([Stamatakis et al. 2018, Am J Epidemiol](https://doi.org/10.1093/aje/kwx345))
     isr: 85
@@ -23,7 +34,7 @@ values:
       - Physiological mechanisms (muscle protein synthesis, bone remodelling, glucose uptake) are well-understood and reliably reproduced across diverse populations including elderly, diabetic, and cardiac patients ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
       - The dose-response relationship is well-characterised: even modest resistance training volumes produce measurable health improvements ([Shailendra et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2022-105669))
     uar: 35
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - Gym membership retention studies show approximately 50% dropout within 6 months, with only 30-40% maintaining consistent training beyond one year ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
       - Barriers include perceived complexity of programming, gym intimidation, time constraints, and delayed visible results compared to expectations ([Schutzer & Graves 2004, Prev Med](https://doi.org/10.1016/j.ypmed.2004.04.003))
@@ -32,7 +43,7 @@ values:
   fitness.performance:
     pbs: 9
     pbs_reasoning: |
-      - Resistance training is foundational to elite athletic performance across most sports, with novice strength gains of 20-40% and trained athletes achieving 5-10% further improvement, capable of reaching 90th+ percentile on strength-based fitness tests ([Kraemer & Ratamess 2004, Med Sci Sports Exerc](https://doi.org/10.1249/01.MSS.0000128273.34987.04))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 85th–90th percentile on fitness performance. Delta: ~50–55 percentile points of improvement. Resistance training is foundational to elite athletic performance across most sports, with novice strength gains of 20-40% and trained athletes achieving 5-10% further improvement, capable of reaching 90th+ percentile on strength-based fitness tests ([Kraemer & Ratamess 2004, Med Sci Sports Exerc](https://doi.org/10.1249/01.MSS.0000128273.34987.04))
       - Combined with sport-specific training, progressive strength training underpins elite competitive performance in powerlifting, Olympic weightlifting, and field sports where it is the primary performance driver ([Suchomel et al. 2016, Sports Med](https://doi.org/10.1007/s40279-016-0486-0))
       - Develops maximal strength, rate of force development, and power output that transfer broadly across athletic contexts, with measurable improvements on standardised fitness testing protocols ([Cormie et al. 2011, Sports Med](https://doi.org/10.2165/11538560-000000000-00000))
     isr: 90
@@ -41,7 +52,7 @@ values:
       - Multiple systematic reviews confirm consistent strength improvements across populations when programmes follow progressive overload principles, with effect sizes typically large (d > 0.8) ([Rhea et al. 2003, Med Sci Sports Exerc](https://doi.org/10.1249/01.MSS.0000053727.63505.D4))
       - Genetic variation affects rate and ceiling of adaptation, but the directional response to progressive overload is essentially universal in healthy adults ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
     uar: 45
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - Athletes and serious fitness enthusiasts show higher adherence rates (~40-50%) due to clear performance goals and external accountability from coaches, teammates, or competition schedules ([Lox et al. 2014, The Psychology of Exercise](https://doi.org/10.4324/9781315213187))
       - Measurable progress (weight on the bar) provides strong positive reinforcement that supports adherence among performance-motivated trainees ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
@@ -50,7 +61,7 @@ values:
   fitness.enjoyment:
     pbs: 7
     pbs_reasoning: |
-      - Measurable progress is a core enjoyment driver: adding weight to the bar, hitting rep PRs, and tracking strength gains over weeks provides a clear, tangible feedback loop that most goal-oriented people find satisfying
+      - Baseline (per values.yml): 35th percentile (below-average enjoyment of physical activity). After successful adherence, a user could plausibly reach the 65th–70th percentile (regularly satisfying). Delta: ~30–35 percentile points. Measurable progress is a core enjoyment driver: adding weight to the bar, hitting rep PRs, and tracking strength gains over weeks provides a clear, tangible feedback loop that most goal-oriented people find satisfying
       - Sessions are structured and predictable but lack the variety, social spontaneity, nature exposure, or playfulness that characterise the most enjoyable activities; rest periods can feel tedious, and the repetitive nature of programmed sets limits novelty
       - Score 7 sits between 'generally enjoyable' (6) and 'highly enjoyable' (8): satisfying for those who value self-improvement and discipline, but rarely anticipated with excitement or described as a primary source of life satisfaction
     isr: 70
@@ -68,7 +79,7 @@ values:
   body-image.fat_loss:
     pbs: 6
     pbs_reasoning: |
-      - Meta-analysis of 58 trials found resistance training alone reduces body fat percentage by 1.46% and fat mass by 0.55 kg in healthy adults, while simultaneously increasing lean mass; net scale weight change is minimal (~0 – 1%) despite genuine recomposition ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile on sustained fat loss. Delta: ~20–25 percentile points of improvement. Meta-analysis of 58 trials found resistance training alone reduces body fat percentage by 1.46% and fat mass by 0.55 kg in healthy adults, while simultaneously increasing lean mass; net scale weight change is minimal (~0 – 1%) despite genuine recomposition ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2))
       - In overweight/obese populations, resistance training alone produces 1.6% body fat reduction and 1.0 kg fat mass loss; combined with caloric restriction, successful lifters lose up to 5.3 kg fat mass while preserving muscle ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
       - Resistance training uniquely preserves or increases fat-free mass (0.7 kg gain on average), which offsets fat loss on the scale, limiting total body weight change to roughly 1 – 3% even in successful adherents ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
       - On the logarithmic anchor, 2% sustained loss maps to 10 + log₂(2/25) = 6.36, rounding to PBS 6
@@ -88,7 +99,7 @@ values:
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - [Meta-analysis of 33 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) (n = 1,877) found resistance exercise training significantly reduced depressive symptoms with a moderate effect size (ES = 0.66), regardless of health status or training volume; a [2025 meta-analysis of 29 RCTs](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1655855/full) reported a large pooled SMD of -0.94 for depression
+      - Baseline (per values.yml): 35th percentile (below-average emotional steadiness). After successful adherence, a user could plausibly reach the 50th percentile (roughly average). Delta: ~15 percentile points. [Meta-analysis of 33 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) (n = 1,877) found resistance exercise training significantly reduced depressive symptoms with a moderate effect size (ES = 0.66), regardless of health status or training volume; a [2025 meta-analysis of 29 RCTs](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1655855/full) reported a large pooled SMD of -0.94 for depression
       - [Resistance exercise also produces anxiolytic effects](https://pmc.ncbi.nlm.nih.gov/articles/PMC4090891/) across diverse populations, with meta-analytic effect sizes of d = 0.31 for anxiety reduction, contributing to a more stable emotional baseline
       - Score 5 reflects a genuine but secondary benefit: successful strength trainees move from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6), but the effect is moderate compared to dedicated psychological interventions
     isr: 60
@@ -97,14 +108,14 @@ values:
       - Baseline severity moderates response: those with elevated depressive or anxiety symptoms at baseline show larger improvements, while those with subclinical symptoms see smaller effects ([Frontiers 2025 meta-analysis](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1655855/full))
       - An estimated 55-65% of adherent strength trainees experience clinically meaningful mood stabilisation, with the remainder showing minimal change due to low baseline symptom levels or non-mood-related sources of instability
     uar: 35
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.resilience:
     pbs: 5
     pbs_reasoning: |
-      - Progressive strength training builds resilience through repeated mastery experiences: systematically overcoming progressively heavier loads develops self-efficacy and tolerance for discomfort; [research on barbell training](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1439431/full) found both mastery and resilience self-efficacy subscales increased significantly over a 16-week programme
+      - Baseline (per values.yml): 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 50th percentile (roughly average). Delta: ~15 percentile points. Progressive strength training builds resilience through repeated mastery experiences: systematically overcoming progressively heavier loads develops self-efficacy and tolerance for discomfort; [research on barbell training](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1439431/full) found both mastery and resilience self-efficacy subscales increased significantly over a 16-week programme
       - [Physical fitness is positively associated with stress resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC9095527/), with the relationship partly mediated by general self-efficacy; higher self-efficacy predicted lower reactivity to life events and daily stressors
       - Score 5 reflects a meaningful but moderate shift from 'significant disruption from moderate stressors' (4) toward 'manages moderate stressors adequately' (6); the mechanism is genuine but indirect – strength training builds general self-efficacy rather than directly training stress coping skills
     isr: 55
@@ -113,14 +124,14 @@ values:
       - The causal pathway from lifting heavier weights to handling life stressors better is plausible but requires psychological transfer that does not occur automatically; roughly half to two-thirds of adherent trainees report subjectively improved stress tolerance
       - Evidence for the resilience pathway specifically is thinner than for mood stabilisation, warranting a more conservative ISR than the stability value
     uar: 35
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.flourishing:
     pbs: 4
     pbs_reasoning: |
-      - Progressive strength training provides a clear mastery pathway (measurable PRs, visible physique changes) that supports agency and self-determination; [systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC7504332/) links exercise self-efficacy to improved life satisfaction and quality of life across physical and mental domains
+      - Baseline (per values.yml): 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 40th–45th percentile (slightly below to average). Delta: ~5–10 percentile points. Progressive strength training provides a clear mastery pathway (measurable PRs, visible physique changes) that supports agency and self-determination; [systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC7504332/) links exercise self-efficacy to improved life satisfaction and quality of life across physical and mental domains
       - The discipline and goal-directed structure of progressive overload can foster a sense of purpose and personal growth, which are components of eudaimonic wellbeing, but these benefits are indirect and depend on the individual's psychological orientation to training
       - Score 4 represents the minimum scoreable threshold: strength training contributes modestly to flourishing through mastery and agency but lacks the social connection, variety, or contemplative elements that more directly cultivate sustained positive affect and meaning
     isr: 45
@@ -129,7 +140,7 @@ values:
       - Flourishing benefits are more reliably reported by those who find intrinsic satisfaction in the training process itself, which is a subset of all adherent trainees (see fitness.enjoyment ISR)
       - An estimated 40-50% of consistent trainees report enhanced life satisfaction attributable to their training practice, with the remainder viewing it instrumentally without broader wellbeing spillover
     uar: 35
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

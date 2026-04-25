@@ -1,8 +1,19 @@
 name: "Yoga"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Combining physical postures (asanas), breathing techniques (pranayama), and meditation elements across 3–5 sessions per week of 30–75 minutes each. Styles range from gentle (yin, hatha) to physically demanding (ashtanga, vinyasa, power yoga), with the integration of movement, breath, and attention distinguishing yoga from both [progressive strength training](/resources/intervention-database/progressive-strength-training) and [meditation](/resources/intervention-database/meditation) as standalone practices.
+how_to_do_it: |
+  - Try 2–3 different styles (e.g. vinyasa for intensity, yin for deep stretching, hatha for balanced pacing) before committing – style match strongly predicts both enjoyment and long-term adherence
+  - Many people find that starting with a guided class or video series builds better foundational habits than self-directed practice, since alignment cues and breathing prompts are hard to self-teach
+  - You may find a consistent time slot (morning for energy, evening for wind-down) helps the practice become automatic; home sessions of 20–30 minutes on non-class days maintain momentum
+  - Focus on breath coordination from the start – the breathwork component is what drives much of yoga's stress-reduction benefit, and it is easy to neglect when concentrating on postures
+success_looks_like: |
+  - You notice improved flexibility and balance within 3–4 weeks, and can hold poses that were initially inaccessible
+  - The breathwork becomes instinctive during practice and starts influencing how you handle stress outside sessions – slower, more deliberate breathing in tense moments
+  - You practise consistently without relying solely on scheduled classes – you can run a satisfying 20–30 minute session independently when needed
+common_pitfalls: |
+  - Choosing a style that does not match your temperament (e.g. restorative yoga when you want physical challenge, or power yoga when you need stress relief) and concluding that yoga is not for you
+  - Pushing into pain to achieve impressive-looking postures – yoga injuries are most common when ego overrides the body's feedback, particularly in shoulders, lower back, and hamstrings
+  - Treating yoga as purely physical exercise and skipping the breathwork and mindfulness elements, which removes the mechanisms responsible for its mental health benefits
 description: |
   - Combining physical postures (asanas), breathing techniques (pranayama), and meditation elements across 3-5 sessions per week of 30-75 minutes each, with styles ranging from gentle (yin, hatha) to physically demanding (ashtanga, vinyasa, power yoga)
   - Develops flexibility, balance, core stability, body awareness, and stress resilience, with noticeable improvements emerging within 2-4 weeks and significant benefits over 2-3 months of consistent practice
@@ -14,7 +25,7 @@ values:
   fitness.health:
     pbs: 6
     pbs_reasoning: |
-      - Meta-analyses demonstrate yoga significantly reduces cardiovascular disease risk factors including blood pressure (systolic reduction of 5-10 mmHg), blood lipids, blood glucose, and body weight, corresponding to roughly 1 year of additional healthy life on the linear anchor ([Cramer et al. 2014, Eur J Prev Cardiol](https://doi.org/10.1177/2047487314523132))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. Meta-analyses demonstrate yoga significantly reduces cardiovascular disease risk factors including blood pressure (systolic reduction of 5-10 mmHg), blood lipids, blood glucose, and body weight, corresponding to roughly 1 year of additional healthy life on the linear anchor ([Cramer et al. 2014, Eur J Prev Cardiol](https://doi.org/10.1177/2047487314523132))
       - Yoga improves flexibility, balance (reducing fall risk in elderly), chronic pain outcomes, and immune function markers; stress reduction effects lower cortisol and inflammatory markers ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - Score 6 rather than 7: yoga provides lower cardiovascular stimulus than aerobic exercise and limited stimulus for bone density or muscular strength, placing it at the 1-year anchor rather than 3-4 years; health benefits are meaningful but modest compared to vigorous exercise ([Lauche et al. 2015, Prev Med](https://doi.org/10.1016/j.ypmed.2015.10.003))
     isr: 75
@@ -32,7 +43,7 @@ values:
   fitness.performance:
     pbs: 5
     pbs_reasoning: |
-      - Yoga develops flexibility, balance, coordination, and body awareness to a high degree, with core stability improvements benefiting posture and movement quality, but provides limited maximal strength, explosive power, or cardiovascular endurance development ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile. Delta: 15 percentile points of improvement. Yoga develops flexibility, balance, coordination, and body awareness to a high degree, with core stability improvements benefiting posture and movement quality, but provides limited maximal strength, explosive power, or cardiovascular endurance development ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - Studies show significant improvements in muscular endurance and flexibility in previously sedentary populations, but performance ceiling is limited to bodyweight capacities, placing dedicated practitioners around the 6th-15th percentile on general fitness tests ([Hagins et al. 2007, J Altern Complement Med](https://doi.org/10.1089/acm.2006.6355))
       - Score 5 reflects performance between the 6th percentile (score 6) and 2nd percentile (score 4): yoga's primary performance contribution is as a complementary practice for mobility and recovery rather than a standalone performance intervention ([Hagins et al. 2007, J Altern Complement Med](https://doi.org/10.1089/acm.2006.6355))
     isr: 75
@@ -50,7 +61,7 @@ values:
   fitness.enjoyment:
     pbs: 8
     pbs_reasoning: |
-      - Yoga offers a distinctive enjoyment profile: the integration of physical movement with breathwork and mindfulness creates a contemplative, almost ritualistic quality that feels rewarding beyond the physical effort itself, with progressive posture mastery providing clear skill progression
+      - Baseline: 35th percentile (below-average enjoyment). After successful adherence, a user could plausibly reach the 75th–80th percentile (highly enjoyable). Delta: ~42 percentile points. Yoga offers a distinctive enjoyment profile: the integration of physical movement with breathwork and mindfulness creates a contemplative, almost ritualistic quality that feels rewarding beyond the physical effort itself, with progressive posture mastery providing clear skill progression
       - Adaptability is a major enjoyment strength: practice can be gentle or intense, solo or social, at home or in a studio, and integrated with personal philosophical or spiritual interests, meaning practitioners can tailor the experience to what they find most satisfying
       - Score 8 (highly enjoyable) rather than 9: the multi-layered satisfaction of body, breath, and mind is genuinely compelling, but yoga lacks the adventure, exploration, and adrenaline dimensions that push outdoor and problem-solving activities to a 9
     isr: 80
@@ -68,7 +79,7 @@ values:
   body-image.fat_loss:
     pbs: 6
     pbs_reasoning: |
-      - [A systematic review of 30 trials](https://doi.org/10.1016/j.ypmed.2016.03.013) (n = 2,173; Thind et al. 2017) found that in overweight/obese subgroups, yoga reduced body weight by approximately 3.5 kg versus usual care – roughly 1 – 2% of body weight sustained over 12+ months
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. [A systematic review of 30 trials](https://doi.org/10.1016/j.ypmed.2016.03.013) (n = 2,173; Thind et al. 2017) found that in overweight/obese subgroups, yoga reduced body weight by approximately 3.5 kg versus usual care – roughly 1 – 2% of body weight sustained over 12+ months
       - Yoga's caloric expenditure is modest (150 – 400 kcal/hour depending on style), meaning any weight loss among successful practitioners likely operates partly through stress-mediated cortisol reduction and improved eating behaviours rather than direct energy expenditure ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
       - In normal-weight populations, yoga produces negligible weight change; the 1 – 2% effect is confined to overweight/obese individuals practising consistently for 6+ months ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
@@ -79,7 +90,7 @@ values:
       - Weight loss effects are highly inconsistent across yoga styles: vigorous styles (vinyasa, power yoga) likely produce larger effects than gentle styles (yin, restorative), but few studies compare styles head-to-head, and most community yoga classes are not at vigorous intensity ([Ross & Thomas 2010, J Altern Complement Med](https://doi.org/10.1089/acm.2009.0044))
       - Estimated 30 – 40% meaningful response rate: most consistent yoga practitioners do not lose meaningful weight, as the energy expenditure is simply too low to drive fat loss without concurrent dietary change
     uar: 55
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - Yoga has exceptionally low dropout rates (11.4% across 168 RCTs), suggesting strong general adherence, but weight loss-specific motivation may wane when results are modest ([Cramer et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0159665))
       - Practitioners who begin yoga primarily for weight loss may shift to other modalities offering faster results, though those who stay often find broader wellbeing benefits that sustain practice ([Caldwell et al. 2022, Obes Sci Pract](https://doi.org/10.1002/osp4.552))
@@ -88,7 +99,7 @@ values:
   mental-health.stability:
     pbs: 6
     pbs_reasoning: |
-      - [Meta-analyses of yoga for anxiety](https://pubmed.ncbi.nlm.nih.gov/29697885/) find small-to-moderate effect sizes (SMD = -0.43 vs no treatment; SMD = -0.86 vs active comparators), while [depression meta-analyses](https://pmc.ncbi.nlm.nih.gov/articles/PMC10077871/) report SMD = -0.43 to -0.69, indicating meaningful symptom reduction for successful practitioners
+      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 55th–65th percentile (moderately above average). Delta: ~25 percentile points. [Meta-analyses of yoga for anxiety](https://pubmed.ncbi.nlm.nih.gov/29697885/) find small-to-moderate effect sizes (SMD = -0.43 vs no treatment; SMD = -0.86 vs active comparators), while [depression meta-analyses](https://pmc.ncbi.nlm.nih.gov/articles/PMC10077871/) report SMD = -0.43 to -0.69, indicating meaningful symptom reduction for successful practitioners
       - Yoga's integration of breathwork (pranayama) and physical postures activates the parasympathetic nervous system, reducing cortisol and improving heart rate variability, providing a direct physiological pathway to emotional stability distinct from exercise alone ([Zaccaro et al. 2018 meta-analysis on slow breathing](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137615/))
       - Score 6 corresponds to moving from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6) on the subjective anchor; yoga's combined somatic and attentional mechanisms make it slightly stronger for stability than pure meditation (PBS 5), justified by the addition of active breathwork and physical stress inoculation
     isr: 65
@@ -104,7 +115,7 @@ values:
   mental-health.resilience:
     pbs: 5
     pbs_reasoning: |
-      - Yoga trains equanimity through sustained physical discomfort (holding poses), controlled breathing under exertion, and mindfulness of bodily sensations, building tolerance for distress and faster recovery from stress responses
+      - Baseline: 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 50th percentile (average resilience). Delta: ~15 percentile points. Yoga trains equanimity through sustained physical discomfort (holding poses), controlled breathing under exertion, and mindfulness of bodily sensations, building tolerance for distress and faster recovery from stress responses
       - A [2025 study of IT professionals](https://www.ijcrt.org/papers/IJCRT2509475.pdf) found all dimensions of resilience (including equanimity) were positively and significantly correlated with regular yoga practice, while [research on stress reactivity](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137615/) shows yoga-trained breathing improves HRV-mediated stress recovery
       - Score 5 rather than 6: yoga builds resilience through somatic stress inoculation and equanimity training, moving practitioners from 'significant disruption from moderate stressors' (4) toward 'manages moderate stressors adequately' (6), but the typical class setting provides less intense adversity exposure than dedicated resilience-building activities
     isr: 55
@@ -113,14 +124,14 @@ values:
       - Not all yoga styles emphasise the discomfort-tolerance and breath-control elements most relevant to resilience; restorative styles may improve stability without meaningfully building stress recovery capacity
       - Approximately 50-60% of regular practitioners develop noticeably improved stress recovery, with the remainder finding benefits confined to in-session relaxation without transfer to real-world adversity
     uar: 70
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.flourishing:
     pbs: 5
     pbs_reasoning: |
-      - Yoga cultivates present-moment awareness, body-mind integration, and a contemplative quality that practitioners report as intrinsically meaningful; [research](https://www.sciencedirect.com/science/article/abs/pii/S1360859213001873) finds more frequent practice is associated with increased positive affect, life satisfaction, and both hedonic and eudaimonic wellbeing
+      - Baseline: 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 50th percentile (average flourishing). Delta: ~15 percentile points. Yoga cultivates present-moment awareness, body-mind integration, and a contemplative quality that practitioners report as intrinsically meaningful; [research](https://www.sciencedirect.com/science/article/abs/pii/S1360859213001873) finds more frequent practice is associated with increased positive affect, life satisfaction, and both hedonic and eudaimonic wellbeing
       - The flow-state potential of physically demanding yoga styles (vinyasa, ashtanga) adds a flourishing pathway: Csikszentmihalyi identified Hatha Yoga as one of the best models for psychic energy flowing along a single channel of consciousness
       - Score 5 reflects movement from 'occasional positive experiences' (4) toward 'regular moments of satisfaction and meaning' (6); yoga genuinely enhances daily satisfaction through embodied awareness but does not by itself generate the deep sustained purpose characteristic of higher anchor levels
     isr: 55
@@ -129,7 +140,7 @@ values:
       - Flow states require adequate challenge-skill balance; gentle styles and repetitive home practice may not reliably induce flow, reducing the proportion who experience the flourishing benefit ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
       - Approximately 50-60% of regular practitioners report enhanced life satisfaction and positive affect, with the remainder finding yoga primarily functional (stress relief, flexibility) without meaningful flourishing gains
     uar: 70
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

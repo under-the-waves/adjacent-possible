@@ -1,0 +1,163 @@
+name: "Regular Volunteering"
+what_it_is: |
+  Committing to a structured, recurring volunteering role with a community organisation – typically 2–4 hours per month – rather than one-off or ad hoc participation. Structured volunteering means showing up on a regular schedule, building ongoing relationships with the people you serve and the team you work alongside, and taking on a defined role whose absence would be noticed. This regularity is what distinguishes it from occasional good deeds: it creates accountability, deepens familiarity with a cause, and generates the cumulative effects on belonging and fulfilment that episodic volunteering rarely achieves.
+how_to_do_it: |
+  - Identify an organisation whose cause aligns with an existing interest or value – food banks, mentoring programmes, conservation groups, hospices, and literacy charities all offer structured roles; browsing a local volunteer centre or a platform such as Do It (UK) or VolunteerMatch (US) narrows options quickly
+  - Choose a role with a predictable schedule (e.g. every second Saturday morning) rather than an on-call or episodic arrangement – regularity is what produces the relationship and meaning benefits; commit to at least three months before evaluating fit
+  - Treat the commitment as a fixed appointment: block it in your calendar, inform the coordinator if you cannot attend, and resist the temptation to downgrade it when work or social demands increase
+  - After 3–6 months, reassess whether the role is using your skills well – volunteering in a capacity that draws on your competencies (teaching, logistics, care, fundraising) tends to generate more satisfaction and more durable retention than roles that feel arbitrary
+success_looks_like: |
+  - You recognise faces, remember names, and feel genuinely missed when you are absent – the hallmark of belonging rather than peripheral participation
+  - The hours feel restorative rather than draining; you return home with a sense of perspective that ordinary work rarely produces
+  - After 12–18 months you can point to concrete outcomes: a person supported, a project completed, a skill passed on – the 'tangible difference' that distinguishes this from passive goodwill
+common_pitfalls: |
+  - Choosing a role based on availability rather than fit, then losing motivation within the first few sessions because it feels meaningless or beneath your abilities
+  - Over-committing early (weekly or more) and burning out; 2–4 hours monthly is enough to build relationships without crowding out recovery time
+  - Treating volunteering as a performance – logging hours for a CV rather than investing in the relationships that make it worthwhile – which hollows out the belonging and fulfilment benefits
+description: |
+  - Structured, recurring participation in a community organisation at a fixed rhythm (2–4 hours per month minimum), in a named role with ongoing relationships rather than one-off tasks
+  - [Meta-analysis of 40 studies](https://link.springer.com/article/10.1186/1471-2458-13-773) found volunteers had 22% lower mortality risk (RR 0.78, 95% CI 0.66–0.90), with the strongest effects for volunteering driven by social motives and regular participation
+  - [Umbrella review of 37 systematic reviews](https://pmc.ncbi.nlm.nih.gov/articles/PMC10159229/) identified psychological wellbeing as the most commonly improved outcome, including life satisfaction, positive mood, pride, self-efficacy, and sense of community
+  - [Longitudinal data across two large national samples](https://link.springer.com/article/10.1007/s11205-023-03268-6) confirmed a bi-directional relationship between volunteering and social cohesion – each reinforces the other over time, creating a compounding return
+  - Distinct from charitable giving or one-off events: the mechanism is relational and experiential, not financial; the benefit accrues through repeated contact, role identity, and felt contribution rather than transactional exchange
+applicable_domains:
+  - "community-contribution"
+  - "friendship"
+  - "global-impact"
+
+values:
+  community-contribution.impact:
+    pbs: 6
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained regular volunteering, a user could plausibly reach the 62nd–65th percentile in tangible community difference – a meaningful but not major gain. Delta: ~27–30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in community impact."
+      - [Umbrella review (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10159229/) documents concrete community outcomes: increased neighbourhood connections, civic participation, and peer support – all consistent with a meaningful but not transformative individual impact at 2–4h/month
+      - The ceiling is set by dose: 2–4 hours monthly is enough to move a needle locally (a person mentored, meals delivered, a child tutored) but falls well short of the sustained, high-hours commitment that would warrant a score of 8 or above
+    isr_reasoning: |
+      - Of volunteers who maintain a regular structured role, the majority report making a felt difference – [Do Good Institute research (2023)](https://dogood.umd.edu/news/new-research-reveals-linkages-between-volunteerism-social-connections-0) found volunteering in the prior year increased community group membership by 24.4 percentage points, indicating real embedding in community structures
+      - ISR is not universal: some roles are poorly managed, with volunteers left underutilised or without feedback – [Givebutter retention data](https://givebutter.com/blog/volunteer-retention) notes 26% of UK volunteers felt their role was too burdensome or ill-defined, which undermines felt impact
+      - A meaningful minority (~35%) do not sustain the role long enough to achieve the relational depth at which tangible impact is felt; ISR estimate of 65% reflects those who stay and are well-matched to their role
+    uar_reasoning: |
+      - [National volunteer retention data](https://givebutter.com/blog/volunteer-retention) shows average annual retention of ~65%, with first-year dropout around 35% – broadly consistent with a UAR of 55% for the 2–4h/month target over 12+ months
+      - Long-term retention is higher for volunteers who chose roles aligned to their skills and values; the 55% figure reflects the general population of starters, not those who have already been pre-screened for fit
+      - [Forner et al. (2024) meta-analysis](https://onlinelibrary.wiley.com/doi/full/10.1002/job.2729) on volunteer turnover identifies role clarity, perceived organisational support, and personal fit as the strongest predictors of retention – all addressable but requiring active management
+
+  community-contribution.belonging:
+    pbs: 6
+    isr: 60
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Regular structured volunteering builds repeated contact with the same people in the same place, generating genuine rootedness. Plausible endpoint: 60th–65th percentile. Delta: ~25–30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in community belonging."
+      - [Longitudinal cross-lagged analysis (2024)](https://link.springer.com/article/10.1007/s11205-023-03268-6) confirmed that volunteering causally increases social cohesion and community trust, not just the reverse – the belonging gain is real and directional
+      - NHS Volunteer Responders data cited in the belong network review showed that intermediate levels of volunteering (consistent with 2–4h/month) produced the highest reported neighbourhood belonging, supporting a PBS of 6 rather than 4 or 8
+    isr_reasoning: |
+      - [Belonging Network literature review (2024)](https://www.belongnetwork.co.uk/wp-content/uploads/2024/04/Social-cohesion-and-volunteering-lit-review_final-1-1.pdf) found that belonging gains require regularity and relational investment – episodic volunteers showed weaker effects, implying structured roles are the relevant condition
+      - The relationship is not guaranteed: belonging depends on organisational culture; volunteers in impersonal, high-turnover environments report lower gains than those in close-knit teams
+      - Estimated 60% of adherent structured volunteers experience a meaningful shift in community belonging, with the remainder reporting only modest or no change – often linked to poorly embedded organisations or high geographic mobility
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention and adherence profile. UAR of 55% reflects ~65% annual retention averaged across the multi-year horizon needed for belonging to consolidate.
+
+  community-contribution.fulfilment:
+    pbs: 7
+    isr: 70
+    uar: 55
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Volunteering is one of the most robustly evidenced activities for personal fulfilment derived from contribution. Plausible endpoint after sustained regular participation: 65th–70th percentile. Delta: ~30–35 percentile points. Subjective scale: PBS 7 sits between "Meaningful" (6) and "Major" (8) gain – appropriate for a moderate-dose intervention with strong but not transformative effects.
+      - [Thoits & Hewitt (2001)](https://www.asanet.org/wp-content/uploads/savvy/images/members/docs/pdf/featured/volunteer.pdf) found volunteering positively predicted happiness, life satisfaction, self-esteem, sense of control, and sense of purpose – the full constellation of fulfilment-related outcomes
+      - [BMC Public Health meta-analysis (2013)](https://link.springer.com/article/10.1186/1471-2458-13-773) confirmed favourable effects on wellbeing and life satisfaction from cohort studies, with the strongest effect sizes for regular volunteers motivated by social connection and meaning
+    isr_reasoning: |
+      - [Journal of Happiness Studies (2020)](https://link.springer.com/article/10.1007/s10902-020-00242-8) addressed reverse causality and found that after controlling for pre-existing happiness, volunteering still produced significant wellbeing gains – confirming the effect is not merely selection bias
+      - The fulfilment benefit is highest when the volunteer experiences role identity and felt contribution; approximately 70% of regular structured volunteers report this, with the remainder finding the role routine or disconnected from personal values
+      - [Longitudinal Australian study (2017)](https://link.springer.com/article/10.1186/s12889-017-4561-8) found cumulative effects of volunteering on health and wellbeing, with benefits increasing with sustained participation – supporting the structured, recurring format specified here
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention and adherence profile.
+
+  friendship.breadth:
+    pbs: 7
+    isr: 55
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile. Anchor max: 30 active friendships. Someone at the 45th percentile likely maintains ~8–10 active friendships (scale_levels show 4 = "8–12 friends"). Regular volunteering in a structured role plausibly adds 3–5 new active friendships from the volunteer cohort over 12–18 months. Delta: ~4 active friendships. PBS = 10 + log₂(4/30) = 10 – 2.91 = 7.1 → PBS 7.
+      - [Do Good Institute research (2023)](https://dogood.umd.edu/news/new-research-reveals-linkages-between-volunteerism-social-connections-0) found volunteering in the prior year increased likelihood of joining community groups by 24.4 percentage points – a natural pathway to expanded active friendships across new contexts
+      - [PMC review on social connection and volunteering (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11892048/) confirmed that volunteers gain individual social capital through new social networks, consistent with breadth gains of this magnitude
+    isr_reasoning: |
+      - Not all volunteer contexts are equally generative of new active friendships – some roles (sorting donations, solo data entry) involve limited peer interaction; structured team roles are more reliably friendship-forming
+      - [PMC social connection review (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11892048/) notes that friendship formation through volunteering is context-dependent, with several volunteers emphasising they did not form true friendships with other participants – but active friendships (as distinct from intimate ones) are more commonly reported
+      - ISR of 55% reflects that a majority of regular team-based volunteers expand their active friend count meaningfully, but a substantial minority volunteer in contexts that do not generate new social ties
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention and adherence profile.
+
+  friendship.depth:
+    pbs: 6
+    isr: 25
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Anchor max: 5 intimate friendships. Someone at baseline likely has 1–2 intimate friendships. Volunteering occasionally produces a genuine close friendship, but it is not the primary mechanism. Plausible delta for those who do form one: ~0.3 intimate friendships. PBS = 10 + log₂(0.3/5) = 10 – 4.06 = 5.94 → PBS 6.
+      - The PBS represents the size of the gain for the minority who do form deep friendships through volunteering – the effect is real when it occurs (a shared mission, regular proximity, and mutual vulnerability are all present) but the magnitude is modest relative to the anchor
+      - Subjective reasoning: the conditions for intimate friendship formation (high trust, repeated vulnerability, mutual investment) can emerge in close volunteer teams, particularly in emotionally demanding contexts such as hospice work or crisis support
+    isr_reasoning: |
+      - [PMC social connection review (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11892048/) explicitly notes that true friendships are not necessarily acquired through volunteering, with volunteers themselves distinguishing between collegial and intimate relationships
+      - ISR of 25% reflects the minority of regular volunteers who cross from collegial to genuinely intimate friendship – plausible in emotionally intense roles but not typical of most structured volunteering contexts
+      - No strong RCT evidence exists for intimate friendship formation through volunteering specifically; this estimate is extrapolated from social network and proximity research
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention and adherence profile.
+
+  global-impact.passion:
+    pbs: 5
+    isr: 60
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Direct engagement with a cause through volunteering deepens personal commitment beyond abstract concern. Plausible endpoint: 55th–58th percentile. Delta: ~20–23 percentile points. Subjective scale: PBS 5 sits between "Slight" (2) and "Modest" (4) and "Meaningful" (6) – landing at 5 reflects a real but modest effect relative to the full scale.
+      - Lived experience of a cause – meeting beneficiaries, understanding frontline constraints, seeing impact up close – reliably converts abstract sympathy into sustained personal commitment, a qualitatively different state
+      - The effect is bounded by the local scope of most structured volunteering; passion for global causes is more likely to be deepened by international or EA-adjacent volunteering than by a local food bank role
+    isr_reasoning: |
+      - The mechanism is experiential: contact with beneficiaries and frontline realities tends to either deepen or redirect passion, rarely leaving it unchanged; approximately 60% of regular volunteers report increased personal commitment to the cause over time
+      - For volunteers already committed to a cause (the likely adopter of this intervention), the passion effect may be smaller because they begin above baseline; for those new to the cause, the gain is likely larger
+      - Evidence is primarily observational; no RCTs on passion-deepening through volunteering exist
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention and adherence profile.
+
+  global-impact.fulfilment:
+    pbs: 5
+    isr: 55
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. For someone who cares about making a positive difference globally, local volunteering provides a tangible, proximate instance of that value being lived out. Plausible endpoint: 53rd–57th percentile. Delta: ~18–22 percentile points. Subjective scale: PBS 5.
+      - The gap between local and global fulfilment is real – serving at a food bank does not typically produce the same sense of global-scale impact as direct work on cause-prioritised interventions, limiting the PBS relative to community-contribution.fulfilment
+      - The gain is genuine for those who experience volunteering as an expression of their broader ethical commitments, but it is secondary to the community-contribution fulfilment effect
+    isr_reasoning: |
+      - [Thoits & Hewitt (2001)](https://www.asanet.org/wp-content/uploads/savvy/images/members/docs/pdf/featured/volunteer.pdf) found volunteering increases sense of purpose broadly, which maps onto global-impact fulfilment for those who frame contribution in universal rather than purely local terms
+      - ISR of 55% reflects that roughly half of regular volunteers experience their work as contributing to something larger than themselves; the remainder experience it as primarily local or personal
+      - No direct evidence on global-impact fulfilment from local volunteering; confidence is low
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention and adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Structured volunteering requires no financial outlay. Volunteer platforms (Do It, VolunteerMatch) are free. Some roles require a basic DBS check, which is free for volunteers in the UK."
+  ongoing_cost: 5
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Minimal incidental costs – occasional travel to and from the volunteer site. Estimated at roughly $5–10/month assuming local travel; many organisations reimburse travel expenses, making the true cost zero for some."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 2–3 hours to research suitable organisations, attend an orientation or induction session, and complete any required onboarding (DBS check application, basic training)."
+  ongoing_time: 3
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "2–4 hours monthly for the volunteering sessions themselves, per the intervention specification. Travel time is additional but typically under 30 minutes each way for local roles."
+
+prerequisites:
+  - "Physical or cognitive capacity to perform the chosen role (some roles – heavy lifting, driving, emotionally demanding care – require specific capability; desk-based and administrative roles are accessible to almost all)"
+  - "Access to a local organisation offering structured volunteer roles with a regular schedule – urban areas have substantially more options than rural; an internet connection for initial search via Do It or VolunteerMatch is sufficient"
+  - "Willingness to complete any required screening, such as a Disclosure and Barring Service (DBS) check for roles involving children or vulnerable adults – typically free for volunteers but requires 2–4 weeks processing time"
+  - "Sufficient baseline stability in schedule to commit to a recurring monthly time slot – those in highly irregular shift work or frequent travel may need to choose episodic rather than structured roles"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Regular volunteering reduces depression and increases life satisfaction via mechanisms of social connection, role identity, and sense of purpose – [meta-analytic evidence](https://link.springer.com/article/10.1186/1471-2458-13-773) shows favourable effects on depression and wellbeing in cohort studies, though experimental confirmation is limited"

@@ -1,8 +1,19 @@
 name: "Sleep Mask"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Wearing a contoured, light-blocking eye mask during sleep to eliminate ambient light that suppresses melatonin production and disrupts sleep cycles. A well-fitted mask blocks 99–100% of light from streetlamps, early sunrise, and device indicators, improving sleep continuity with minimal effort or cost.
+how_to_do_it: |
+  - Start with a contoured mask that sits around the eyes without pressing on them – many people find these far more comfortable than flat fabric masks, and they block light more completely
+  - Wear the mask for a few nights in a familiar sleeping environment to adapt before judging comfort; most people adjust within a week
+  - If the mask shifts during sleep, you may find a wider elastic band or a wrap-around design stays in place better than a narrow strap
+  - Keep a spare mask accessible (bedside drawer, travel bag) so the habit is not interrupted by wear or loss
+success_looks_like: |
+  - You stop waking prematurely from early morning light or ambient glow – sleep feels more continuous
+  - Putting the mask on becomes automatic, taking seconds as part of your existing bedtime routine
+  - You notice a difference on the nights you forget the mask, confirming it is doing something measurable
+common_pitfalls: |
+  - Buying a cheap flat mask that lets light leak around the nose bridge – inadequate light blocking eliminates the primary benefit
+  - Abandoning the mask after a few uncomfortable nights rather than trying a different shape or material; comfort varies significantly between designs
+  - Assuming a mask solves all sleep problems when other factors (noise, temperature, caffeine timing) are the dominant issue
 description: |
   - Wearing a light-blocking eye mask during sleep to create complete darkness and eliminate visual stimuli that can disrupt sleep cycles
   - A properly fitted mask blocks 99-100% of ambient light including early morning sunlight, streetlights, and device indicators
@@ -14,7 +25,7 @@ values:
   sleep.daily_functioning:
     pbs: 6
     pbs_reasoning: |
-      - [Zeitzer et al. (2000)](https://doi.org/10.1113/jphysiol.2000.012684) found that even small amounts of light (3 lux) can suppress melatonin by 50%, and complete darkness via a sleep mask eliminates this suppression, improving sleep efficiency by 5-10% and reducing early-morning awakenings.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. [Zeitzer et al. (2000)](https://doi.org/10.1113/jphysiol.2000.012684) found that even small amounts of light (3 lux) can suppress melatonin by 50%, and complete darkness via a sleep mask eliminates this suppression, improving sleep efficiency by 5-10% and reducing early-morning awakenings.
       - [Reid et al. (2011)](https://doi.org/10.1016/j.smrv.2010.09.001) demonstrated that blackout conditions improved next-day cognitive performance by 10-15% compared to ambient light exposure, corresponding to roughly 30-60 additional productive minutes.
       - On the updated anchor (10 = 14h, 8 = 3.5h, 6 = 50min), a gain of ~50 minutes of productive capacity places this at score 6.
     isr: 75
@@ -32,7 +43,7 @@ values:
   sleep.long_term_health:
     pbs: 5
     pbs_reasoning: |
-      - [Cho et al. (2013)](https://doi.org/10.1177/0748730413507714) found modest improvements in inflammatory markers (IL-6, CRP) over 3-month periods with consistent darkness during sleep, suggesting a benefit in the 3-4 month range for healthy lifespan.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile. Delta: 15 percentile points of improvement. [Cho et al. (2013)](https://doi.org/10.1177/0748730413507714) found modest improvements in inflammatory markers (IL-6, CRP) over 3-month periods with consistent darkness during sleep, suggesting a benefit in the 3-4 month range for healthy lifespan.
       - [Stevens et al. (2014)](https://doi.org/10.1098/rstb.2013.0571) linked chronic light-at-night exposure to increased cancer risk and metabolic disruption, implying that successful light blocking during sleep could prevent meaningful health loss through circadian integrity maintenance.
       - On the updated anchor (10 = 8+ years, 8 = 2 years, 6 = 6 months), an estimated 3-4 months of additional healthy lifespan for a successful user places this at score 5, between the 2-month (score 4) and 6-month (score 6) benchmarks.
     isr: 60
@@ -50,7 +61,7 @@ values:
   sleep.comfort_experience:
     pbs: 7
     pbs_reasoning: |
-      - Sleep masks directly target sleep environment quality. [Horne & Reid (2007)](https://doi.org/10.1093/sleep/30.10.1378) found that complete darkness conditions improved subjective sleep satisfaction scores by 20-25%, with users reporting deeper, more uninterrupted sleep and reduced early morning awakenings.
+      - Baseline: 35th percentile (below-average sleep comfort). After successful adherence, a user could plausibly reach the 65th–70th percentile (consistently restful sleep). Delta: ~32 percentile points. Sleep masks directly target sleep environment quality. [Horne & Reid (2007)](https://doi.org/10.1093/sleep/30.10.1378) found that complete darkness conditions improved subjective sleep satisfaction scores by 20-25%, with users reporting deeper, more uninterrupted sleep and reduced early morning awakenings.
       - For people in environments with significant ambient light (streetlights, early sunrise, partner's devices), a sleep mask can transform the sleep experience from disrupted to consistently restful.
       - On the updated anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), successful use typically moves someone from light-disrupted sleep to reliably good-to-restful sleep, aligning with score 7.
     isr: 80

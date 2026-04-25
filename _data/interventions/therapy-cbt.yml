@@ -1,0 +1,181 @@
+name: "Therapy (CBT)"
+what_it_is: |
+  Cognitive Behavioural Therapy (CBT) is a structured, time-limited psychotherapy in which a trained therapist helps you identify and restructure maladaptive thought patterns and behaviours that maintain psychological distress. Sessions typically run 50 minutes and are held weekly over a 12–20 week course. CBT rests on the premise that thoughts, feelings, and behaviours are mutually reinforcing: by systematically examining and challenging automatic negative thoughts – using techniques such as thought records, behavioural experiments, and graded exposure – a client can interrupt distress cycles and build more adaptive patterns that persist long after treatment ends. It is the most extensively researched form of psychotherapy, with strong meta-analytic support across depression, anxiety disorders, OCD, PTSD, and a range of other presentations.
+how_to_do_it: |
+  - Find a licensed CBT therapist (look for accreditation with the BABCP in the UK or APA-recognised CBT training in the US); many GPs can refer via IAPT in England, which offers free or subsidised sessions – private rates run $100–200/session without insurance
+  - Commit to the full course: research consistently shows that completing 12–20 sessions produces better outcomes than brief or interrupted contact; block a recurring weekly slot and treat it as a non-negotiable appointment
+  - Engage actively between sessions – CBT assigns homework (thought records, behavioural experiments, exposure hierarchies) and the between-session practice accounts for a substantial share of the therapeutic gain; half-hearted homework substantially reduces outcomes
+  - Be specific about your goals in the first session; CBT works best when targeting a defined problem (e.g. panic attacks, low mood, social anxiety) rather than vague general distress – this also allows you and your therapist to track progress against measurable benchmarks
+success_looks_like: |
+  - Distressing symptoms (low mood, anxiety, intrusive thoughts) are substantially reduced or in remission by the end of the course, and you possess a portable toolkit of techniques you can apply independently when symptoms re-emerge
+  - You can identify your characteristic cognitive distortions (catastrophising, mind-reading, all-or-nothing thinking) in real time and interrupt their effects before they escalate into sustained distress
+  - At 12-month follow-up, you remain below your pre-treatment symptom level without requiring further intervention – CBT's relapse protection advantage over medication is most visible in this window
+common_pitfalls: |
+  - Dropping out early: the modal dropout occurs in the first few sessions before the model has been personalised and before behavioural experiments have begun; if the first 2–3 sessions feel abstract or unhelpful, raise this explicitly with your therapist rather than disengaging
+  - Treating sessions as a passive listening experience rather than an active working session; CBT is skill-based and requires deliberate practice – attending without doing the homework produces markedly worse outcomes
+  - Choosing a therapist who uses CBT language but delivers something closer to supportive counselling; ask specifically about thought records, behavioural experiments, and exposure hierarchies to verify the approach is genuinely structured
+description: |
+  - Weekly 50-minute sessions with a licensed CBT therapist over a standard 12–20 week course; techniques include thought records, Socratic questioning, behavioural experiments, graded exposure, and activity scheduling
+  - CBT teaches clients to identify cognitive distortions (catastrophising, mind-reading, all-or-nothing thinking) and test them empirically, replacing maladaptive appraisals with more accurate, flexible alternatives
+  - [Meta-analysis across 269 meta-analytic studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC3584580/) confirms strong efficacy for depression, anxiety, PTSD, OCD, and related presentations, with effect sizes consistently in the moderate-to-large range versus control conditions
+  - [Relapse prevention meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6389220/) shows CBT reduces depression relapse rates from ~41% to ~32% at follow-up, outperforming medication alone at 6–12 month post-treatment windows
+  - Distinct from supportive counselling (non-directive) and psychodynamic therapy (focus on historical origins): CBT is present-focused, skill-based, and explicitly collaborative – therapist and client work as co-investigators testing beliefs against evidence
+applicable_domains: ["mental-health", "self-awareness", "romantic-relationships", "current-work"]
+
+values:
+  mental-health.stability:
+    pbs: 8
+    isr: 60
+    uar: 55
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A person seeking CBT for depression or anxiety is, by definition, experiencing significant distress; after a successful full course, remission is plausible, bringing them to roughly the 70th–75th percentile of emotional stability. Delta: ~35–40 percentile points.
+      - [Cuijpers et al. (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9840507/) meta-analysis across 409 trials (52,702 patients) shows moderate-to-large effect sizes (d = 0.6–1.1) for CBT versus control on depression outcomes; this magnitude of symptom reduction maps to a major gain in emotional stability (PBS 8) for successful responders.
+      - [Carpenter et al. (2018)](https://pubmed.ncbi.nlm.nih.gov/29451967/) meta-analysis of 41 placebo-controlled RCTs confirms large effect sizes for CBT on anxiety (d = 0.8 vs. placebo), consistent with a PBS of 8 for the stability anchor.
+      - Score 8 rather than 9 reflects that CBT rarely eliminates all symptom vulnerability; it reduces frequency and intensity rather than producing complete insensitivity to future stressors.
+    isr_reasoning: |
+      - [Cuijpers et al. (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9840507/) reports meta-analytically weighted response rates of approximately 50–60% for CBT in depression versus 20–30% for control, giving a net responder rate of ~55–60% among adherent participants.
+      - [Relapse prevention meta-analysis (BMC Psychiatry, 2018)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6389220/) found remission rates of ~54% following a full CBT course, with non-responders often attributable to severe comorbidity or insufficient dose rather than intervention failure per se.
+      - A meaningful minority (~20–30%) of adherent patients show partial response only; the ISR of 60% reflects this heterogeneity – CBT is highly effective on average but not universally so, and individual variation in response is well-documented across trials.
+    uar_reasoning: |
+      - [Swift & Greenberg (2015)](https://pubmed.ncbi.nlm.nih.gov/26302248/) meta-analysis of 115 CBT studies (n = 20,995) found a weighted average dropout rate of 26% during treatment, implying ~74% treatment completion among those who start.
+      - However, UAR must also account for those who never initiate: cost ($100–200/session), availability, stigma, and waitlist barriers mean many who could benefit do not begin; combining initiation and completion rates, a realistic population-level UAR is approximately 55%.
+      - [Tandfonline (2025)](https://www.tandfonline.com/doi/full/10.1080/16506073.2025.2542364) confirms face-to-face CBT dropout of ~12% during treatment in RCT settings, which is lower than naturalistic rates, suggesting real-world completion is somewhat worse than trial evidence implies.
+
+  mental-health.resilience:
+    pbs: 8
+    isr: 58
+    uar: 55
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. CBT explicitly trains coping skills and adaptive appraisal that remain available after treatment ends; a successful course plausibly moves a person from the 35th to the 70th–75th percentile in capacity to handle adversity. Delta: ~35–40 percentile points.
+      - [10-year follow-up RCT (ScienceDirect, 2024)](https://www.sciencedirect.com/science/article/pii/S0165032724007511) found that CBT-treated older adults showed significantly higher remission rates and lower rates of chronic treatment resistance than controls even a decade later, indicating durable resilience gains rather than temporary symptom suppression.
+      - CBT's core mechanism – teaching clients to treat distressing thoughts as hypotheses rather than facts – produces a transferable skill set applicable to novel stressors, which is precisely the construct captured by the resilience anchor. Score 8 reflects a major, durable gain rather than a transformative one, given that roughly 30% of respondents do relapse over long follow-ups.
+    isr_reasoning: |
+      - [BMC Psychiatry meta-analysis (2018)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6389220/) shows CBT reduces relapse/recurrence from 41.3% (control) to 31.6% (CBT), implying approximately 58% of adherent completers maintain sustained resilience gains over 12+ month follow-up.
+      - The 10-year follow-up study above found approximately one-third of acute CBT responders had relapsed, consistent with an ISR for durable resilience of ~60–65% among initial responders and ~55–60% overall among adherent participants.
+      - Resilience ISR is modestly lower than stability ISR because it measures the durability of gains beyond acute treatment response; some patients who remit acutely still show diminished coping under subsequent major stressors.
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile. UAR of 55% reflects ~74% in-treatment completion adjusted for initiation barriers (cost, access, stigma).
+
+  mental-health.flourishing:
+    pbs: 7
+    isr: 50
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. CBT primarily targets symptom reduction (stability/resilience) rather than positive psychology outcomes; however, successful treatment of depression and anxiety reliably increases positive affect and life satisfaction as downstream effects. A plausible endpoint is the 60th–65th percentile of flourishing. Delta: ~25–30 percentile points.
+      - [Hofmann et al. (2012)](https://pmc.ncbi.nlm.nih.gov/articles/PMC3584580/) review notes that while CBT's primary mechanism is symptom reduction, quality of life and positive affect measures consistently improve alongside symptom measures in RCTs, though effect sizes for positive outcomes are smaller than for symptom reduction.
+      - Score 7 rather than 8 reflects that CBT does not directly target meaning-making, positive emotion cultivation, or engagement with valued activities in the same way that positive psychology interventions do; flourishing gains are real but secondary to the primary mechanism.
+    isr_reasoning: |
+      - Flourishing ISR is lower than stability ISR because positive outcomes are downstream of symptom reduction; patients who achieve partial symptom response may see little gain in positive affect or meaning.
+      - Evidence on quality-of-life outcomes in CBT trials is less consistent than symptom measures; [Cuijpers et al. (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9840507/) notes greater heterogeneity in QoL effect sizes than in symptom effect sizes across trials.
+      - Approximately 50% of adherent CBT completers can plausibly expect meaningful flourishing gains; those who achieve only partial symptom remission or who were not primarily limited by depression/anxiety (e.g. existential distress) are less likely to see this outcome.
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+  self-awareness.psychological:
+    pbs: 8
+    isr: 70
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. CBT's central technique is structured introspection – identifying automatic thoughts, core beliefs, and cognitive schemas with a trained guide. A person who completes a full course systematically maps their own psychological patterns in a way most people never do. Plausible endpoint: 75th–80th percentile. Delta: ~40–45 percentile points.
+      - The structured nature of CBT (thought records, schema mapping, functional analysis) produces explicit, articulable self-knowledge as a direct product of the work, not merely as a side effect; this distinguishes it from general therapy and makes psychological self-awareness gain unusually reliable among responders.
+      - Score 8 is appropriate because the insight gained is deep and domain-specific (own cognitive distortions, triggers, interpersonal schemas) rather than transformative across all dimensions of self-understanding.
+    isr_reasoning: |
+      - Self-awareness gain is more universal among CBT completers than symptom reduction, because the process of completing thought records and behavioural experiments produces insight regardless of whether symptoms fully remit; ISR of 70% reflects this relative breadth.
+      - The main failure mode is clients who engage superficially with homework or who intellectualise without genuine emotional engagement; therapist skill in facilitating genuine reflection moderates this substantially.
+      - No direct RCT evidence on self-awareness as a primary outcome exists; this ISR is estimated from the structure of the intervention and clinical observation. Confidence is accordingly medium rather than high.
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+  self-awareness.relational:
+    pbs: 6
+    isr: 55
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. CBT includes interpersonal schema work and often addresses patterns in relationships (abandonment schemas, people-pleasing, conflict avoidance); a successful course plausibly moves a person from 35th to 60th percentile in relational self-awareness. Delta: ~25 percentile points.
+      - Relational self-awareness is a secondary rather than primary target of standard CBT; gains are real but more variable than psychological self-awareness gains, warranting score 6 rather than 8.
+      - Where interpersonal difficulties are part of the presenting problem (social anxiety, relationship conflict), relational insight gains are likely larger; where CBT is focused narrowly on depression or panic, they may be modest.
+    isr_reasoning: |
+      - Relational self-awareness gains depend substantially on whether the therapist explicitly addresses interpersonal patterns; in standard manualised CBT for depression or anxiety, this is variable rather than guaranteed.
+      - ISR of 55% reflects that roughly half of adherent completers gain meaningful insight into their relational patterns, with the remainder receiving more symptom-focused work that produces less relational insight as a by-product.
+      - Evidence is indirect; no meta-analysis directly measures relational self-awareness as a CBT outcome. Medium confidence.
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+  romantic-relationships.harmony:
+    pbs: 6
+    isr: 45
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. CBT reduces emotional reactivity and improves interpersonal problem-solving, which directly improves day-to-day relationship smoothness. Plausible endpoint for a person in an established relationship: 58th–62nd percentile. Delta: ~23–27 percentile points.
+      - [PMC review of cognitive-behavioural couple therapy (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9645475/) documents large effect sizes for CBT-based couple approaches on relationship distress; individual CBT produces smaller but real harmony gains via reduced reactivity and improved emotion regulation rather than direct couple work.
+      - Score 6 reflects that individual CBT benefits relationship harmony indirectly (through the treated person's changed behaviour) rather than targeting the dyad directly; gains are meaningful but not major.
+    isr_reasoning: |
+      - Effect on relationship harmony depends on whether relationship conflict is downstream of the mental health problem being treated (more likely to improve) or independent of it (less likely); ISR of 45% reflects this conditionality.
+      - [Cognitive-behavioural couple therapy research (PMC, 2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9645475/) shows that emotion regulation improvements from CBT transfer to relationship contexts for most – but not all – clients, consistent with a moderate ISR.
+      - Where the partner is not in therapy and maintains their own maladaptive patterns, the treated person's gains may be insufficient to shift overall relationship harmony; dyadic factors limit individual-level ISR.
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+  romantic-relationships.connection:
+    pbs: 5
+    isr: 40
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Reduction of depression and anxiety can unlock emotional availability and vulnerability that distress suppresses, plausibly moving a person from 35th to 55th percentile in romantic connection. Delta: ~20 percentile points.
+      - The mechanism is real but indirect: CBT does not train emotional intimacy or attachment repair directly; gains in connection are contingent on both symptom reduction and the partner's response. Score 5 reflects a modest-to-meaningful gain for successful cases.
+      - Where depression or anxiety was the primary barrier to emotional presence in the relationship, gains can be substantial; where the relationship has independent structural problems, individual CBT will not address them.
+    isr_reasoning: |
+      - Connection gains are the most contingent of the romantic-relationship outcomes: they require symptom response, partner receptivity, and some translation of insight into relational behaviour change – three conditions that do not always co-occur.
+      - ISR of 40% is conservative, reflecting that roughly 40% of adherent CBT completers in relationships will see meaningful improvement in felt emotional connection with their partner.
+      - Confidence is low because no direct evidence measures romantic connection as a CBT outcome; this is extrapolated from relationship quality literature and general symptom-connection linkages.
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+  current-work.engagement:
+    pbs: 6
+    isr: 50
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Depression and anxiety are major drivers of presenteeism – the experience of being physically present but cognitively disengaged. Successful CBT treatment can plausibly move a person from 35th to 60th percentile in work engagement. Delta: ~25 percentile points.
+      - [Cognitive Behaviour Therapy (2021)](https://www.tandfonline.com/doi/full/10.1080/16506073.2021.1875039) found that among consistently employed CBT patients, presenteeism decreased significantly over the course of treatment and reductions in negative cognitive style mediated reductions in presenteeism, confirming a specific mechanism linking CBT to engagement.
+      - Score 6 reflects that work engagement gains are secondary to mental health improvement; they are real for those whose disengagement was primarily driven by anxiety or depression, but CBT does not address structural job factors (poor management, role misfit) that also drive disengagement.
+    isr_reasoning: |
+      - [PMC workplace CBT study (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7932200/) 5-year retrospective analysis found significant improvements in work functioning among CBT-treated employees, but effect sizes were smaller than for clinical symptom outcomes, consistent with ISR of ~50%.
+      - Presenteeism improvement is contingent on symptom response; the ~55–60% symptom response rate, discounted for cases where disengagement has non-mental-health causes, yields an ISR of approximately 50% for work engagement.
+      - Where the presenting problem directly impairs concentration (depression, generalised anxiety, OCD), work engagement gains are more reliable; where the problem is more interpersonal (social anxiety), engagement effects are less direct.
+    uar_reasoning: |
+      - See mental-health.stability UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No one-time equipment or setup cost is required. The only upfront action is identifying and contacting a therapist, which is free. In England, NHS IAPT referral (via GP) is free at the point of use."
+  ongoing_cost: 120
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Approximately $120–160/month at the lower end of private rates ($100–120/session weekly in lower-cost markets or trainee therapist settings). NHS IAPT in England is free; US sliding-scale community mental health clinics can reduce cost to $20–60/session. $120/month represents a realistic minimum for private-pay access."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 1–2 hours to research therapists, verify credentials and CBT specialism, make contact, and attend an initial assessment session."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "50-minute weekly session plus approximately 30–60 minutes of between-session homework (thought records, behavioural experiments); total ~2 hours per week for active engagement."
+
+prerequisites:
+  - "Access to a licensed CBT therapist – either via NHS IAPT referral (England), insurance coverage, or ability to fund private sessions"
+  - "Sufficient psychological stability to engage in active structured work; acute crisis states (active suicidality, severe dissociation) typically require stabilisation before standard CBT can begin"
+  - "Basic literacy and willingness to complete written homework exercises (thought records, worksheets) between sessions"
+  - "A presenting problem amenable to CBT – strong evidence base covers depression, GAD, panic disorder, social anxiety, OCD, PTSD, and health anxiety; less evidence for personality disorders or psychosis without adaptation"
+
+flagged_domains:
+  - domain: "behaviours"
+    rationale: "CBT directly targets emotional regulation by restructuring appraisals that drive dysregulated emotional responses, producing lasting change in emotional behavioural patterns."
+  - domain: "communication"
+    rationale: "CBT reduces reactive anger, catastrophic appraisal of interpersonal threat, and avoidance behaviours, all of which directly improve conflict communication."
+  - domain: "mindfulness"
+    rationale: "Third-wave CBT variants (MBCT, ACT) explicitly cultivate present-moment awareness and emotional equanimity as therapeutic mechanisms."

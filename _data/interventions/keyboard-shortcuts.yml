@@ -1,8 +1,19 @@
 name: "Keyboard Shortcuts Mastery"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  A deliberate practice programme to learn and internalise keyboard shortcuts for your most-used applications, replacing mouse-driven menu navigation with direct key combinations. The goal is to close the gap between intention and action so that common operations (switching tabs, formatting text, navigating code) happen at the speed of thought rather than the speed of pointing and clicking.
+how_to_do_it: |
+  - Many people start by auditing their three most-used applications, identifying the 10–15 actions they perform most often via menus or mouse, and printing or pinning a cheat sheet of the corresponding shortcuts next to their screen
+  - You may find that learning shortcuts in small batches (3–5 per week) and forcing yourself to use them even when they feel slower at first helps push past the initial awkwardness – some practitioners temporarily cover their mouse or trackpad to remove the fallback
+  - Most people find that practising in low-pressure contexts first (e.g., personal browsing rather than a timed work task) builds confidence before the shortcuts need to be fast
+  - Once the first batch feels automatic (typically 1–2 weeks), adding the next batch and gradually expanding your repertoire keeps the learning curve manageable
+success_looks_like: |
+  - Common operations in your core applications happen without conscious thought – you reach for the key combination before your hand moves toward the mouse
+  - You notice a measurable reduction in the friction of routine tasks: formatting, file management, and navigation feel faster and less interruptive to your train of thought
+  - When switching to a new tool, your first instinct is to look up its shortcuts rather than learning the menu layout
+common_pitfalls: |
+  - Trying to learn 30+ shortcuts at once, which overloads working memory and causes reversion to mouse habits within days – small batches with consolidation time between them are more durable
+  - Abandoning the practice after the first week because shortcuts feel slower than familiar mouse actions – this initial slowdown (the "production paradox") is normal and typically resolves within 2–3 weeks of consistent use
+  - Learning shortcuts for rarely used actions while neglecting the high-frequency basics (copy, paste, undo, switch window, find) that account for most of the cumulative time savings
 description: |
   - A deliberate practice programme to learn and internalise keyboard shortcuts for your most-used applications, replacing mouse-driven menu navigation with direct key combinations across your core tools (IDE, browser, email, OS)
   - Involves identifying the 20-30 highest-impact shortcuts, practising through spaced repetition or forced usage (e.g., temporarily disabling mouse access to menus), and gradually expanding your repertoire as earlier shortcuts become automatic
@@ -14,7 +25,7 @@ values:
   current-work.competence:
     pbs: 6
     pbs_reasoning: |
-      - [Lane et al. (2005)](https://doi.org/10.1080/10447310500196737) measured 0.5-1.5 seconds saved per individual task when using shortcuts versus toolbar or menu navigation. Extrapolated across a full working day, this compounds to roughly 30-40 minutes saved daily – approximately 8 full working days per year for a standard office worker.
+      - Baseline (per values.yml): 35th percentile (below-average work competence). After successful adherence, a user could plausibly reach the 55th–60th percentile (moderately above average execution speed). Delta: ~20–25 percentile points. [Lane et al. (2005)](https://doi.org/10.1080/10447310500196737) measured 0.5-1.5 seconds saved per individual task when using shortcuts versus toolbar or menu navigation. Extrapolated across a full working day, this compounds to roughly 30-40 minutes saved daily – approximately 8 full working days per year for a standard office worker.
       - Beyond raw speed, shortcuts reduce context-switching between mouse and keyboard, enabling smoother workflow and fewer interruptions to train of thought. Against the subjective anchor (10 = exceptional mastery with elite execution), this represents a meaningful but bounded gain – you become notably faster at executing known tasks, but shortcuts do not improve thinking quality, decision-making, or domain expertise.
       - [Tak, Westendorp & van Rooij (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) found that expert users who rely on shortcuts demonstrate measurably faster task completion, but the performance ceiling is constrained to mechanical execution speed, not overall role competence.
     isr: 90
@@ -32,7 +43,7 @@ values:
   current-work.engagement:
     pbs: 4
     pbs_reasoning: |
-      - Keyboard shortcuts contribute modestly to engagement by reducing friction between intention and action. Against the subjective anchor (10 = deeply absorbed with sustained flow), shortcuts remove a small source of interruption but do not transform the nature of work itself.
+      - Baseline (per values.yml): 35th percentile (below-average work engagement). After successful adherence, a user could plausibly reach the 40th–45th percentile (slightly below to average). Delta: ~5–10 percentile points. Keyboard shortcuts contribute modestly to engagement by reducing friction between intention and action. Against the subjective anchor (10 = deeply absorbed with sustained flow), shortcuts remove a small source of interruption but do not transform the nature of work itself.
       - [Csikszentmihalyi's (1990)](https://doi.org/10.1017/CBO9780511621956) flow research identifies challenge-skill balance and clear goals as primary flow drivers – input method efficiency is a peripheral facilitator, not a core determinant.
       - Studies on tool fluency, including [Reber, Schwarz & Winkielman (2004)](https://doi.org/10.1177/1088868304341564), show that processing fluency correlates with positive affect and reduced cognitive load, but the magnitude of this effect from shortcuts alone is modest compared to task meaningfulness and autonomy.
     isr: 90
@@ -41,7 +52,7 @@ values:
       - The effect is reliable but modest in magnitude – it is a facilitating condition for engagement rather than a sufficient cause. [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) confirmed that expert shortcut users report smoother workflows.
       - The engagement benefit only materialises fully once shortcuts are internalised to automaticity, which is a well-established threshold in motor learning literature.
     uar: 60
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - Same adherence pattern as competence – the engagement benefit only materialises once shortcuts are fully internalised, which requires sustained practice through the initial awkward phase.
       - Many people give up before reaching the fluency threshold where shortcuts feel natural and begin to support flow, per [Carroll & Rosson's (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X) production paradox.
@@ -50,7 +61,7 @@ values:
   current-work.rewards:
     pbs: 3
     pbs_reasoning: |
-      - The link between keyboard shortcuts and work impact is indirect. Against the subjective anchor (10 = transformative contributions with full recognition), faster execution frees up roughly 30-40 minutes per day, but [Mark, Gonzalez & Harris (2005)](https://doi.org/10.1145/1054972.1055017) found that recovered time in knowledge work is typically absorbed by other low-value tasks rather than strategically redeployed.
+      - Baseline (per values.yml): 35th percentile (below-average work recognition and impact). After successful adherence, a user could plausibly reach the 35th–40th percentile (minimal change). Delta: ~0–5 percentile points. The link between keyboard shortcuts and work impact is indirect. Against the subjective anchor (10 = transformative contributions with full recognition), faster execution frees up roughly 30-40 minutes per day, but [Mark, Gonzalez & Harris (2005)](https://doi.org/10.1145/1054972.1055017) found that recovered time in knowledge work is typically absorbed by other low-value tasks rather than strategically redeployed.
       - Shortcuts do not improve the quality, creativity, or strategic value of output – they only speed up execution of decisions already made. For most knowledge workers, thinking quality matters far more than typing speed for driving recognition and impact.
       - For specific roles where execution speed is a visible bottleneck (e.g., live coding, data entry under time pressure), the rewards benefit is somewhat higher, but these are edge cases rather than the typical use.
     isr: 90
@@ -59,7 +70,7 @@ values:
       - However, the conversion of saved time into actual impact depends entirely on how the individual uses that freed time, which is outside the intervention's control. [Parkinson's (1955)](https://doi.org/10.1093/oxfordhb/9780199846146.013.0001) law suggests that work expands to fill available time, limiting the practical impact dividend.
       - The ISR for the rewards pathway is really about the time-saving mechanism itself (which is reliable), not the downstream impact conversion (which is uncertain but not part of the intervention's direct mechanism).
     uar: 60
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - Same adherence pattern as other current-work values, per [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) and [Carroll & Rosson (1987)](https://doi.org/10.1016/B978-0-12-515210-9.50006-X).
       - The additional challenge for rewards is that the connection between shortcuts and meaningful outcomes is so indirect that it provides even less motivational reinforcement – people rarely attribute career recognition to input method efficiency.

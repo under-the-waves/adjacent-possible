@@ -1,0 +1,97 @@
+name: "Preventive Health Screening"
+what_it_is: |
+  Following age-appropriate clinical screening guidelines to detect serious health conditions before symptoms appear – covering cancer screenings (colonoscopy, mammography, cervical smear, skin checks), metabolic screens (blood pressure, cholesterol, HbA1c for diabetes), and STI testing. The core logic is that most lethal diseases are far more treatable when caught early: a colonoscopy that finds and removes a polyp prevents colorectal cancer entirely; a mammogram that catches a stage-I tumour changes a prognosis from poor to excellent. Most individual screens return negative results, so the benefit is probabilistic – but a comprehensive, maintained screening programme is one of the highest-leverage things an adult can do for long-term health precisely because the expected value across a lifetime is very high.
+how_to_do_it: |
+  - Build a personal screening calendar using your age, sex, family history, and the relevant national guidelines (USPSTF in the US, NHS Health Check in the UK) – most primary care clinicians will generate this for you at a routine annual appointment; the USPSTF recommendation finder at uspreventiveservicestaskforce.org is also a reliable starting point
+  - Anchor each screen to a recurring calendar reminder set well in advance (e.g., book your colonoscopy in your early 40s for the decade you turn 45, or set a recurring two-year reminder for mammography after age 40) – treating the booking as a non-negotiable appointment rather than something to get around to dramatically improves follow-through
+  - If a screen returns a positive or ambiguous result, treat the follow-up appointment as part of the same intervention – the screening is only complete once the diagnostic loop is closed, whether that means a clear biopsy, a treated infection, or a confirmed diagnosis and treatment plan
+  - Keep a simple health record (a single note or document) logging which screens you have had, the dates, and the results – this prevents duplication, helps clinicians spot trends, and removes the cognitive burden of remembering when you last had each test
+success_looks_like: |
+  - You have a complete, up-to-date screening calendar covering every test appropriate for your age, sex, and family history, with no gaps larger than the guideline interval
+  - Any screen that returned a positive or unclear result has been fully followed up – you are not carrying unresolved findings
+  - You can recall, without searching, when each of your last major screens occurred and when the next is due
+common_pitfalls: |
+  - Treating a single normal result as permanently reassuring and skipping subsequent screens – screening is an ongoing programme, not a one-time event, and risk profiles change with age
+  - Letting a positive or ambiguous result create enough anxiety that you avoid follow-up appointments – this is the worst possible outcome, as early detection is only useful if acted upon
+  - Conflating being generally healthy and asymptomatic with being screened – most conditions that screening is designed to catch produce no symptoms until they are advanced, which is precisely why screening exists
+description: |
+  - Preventive health screening means completing guideline-recommended tests at prescribed intervals to detect conditions before symptoms appear – including colonoscopy (every 10 years from age 45), mammography (every 1–2 years from age 40–50 depending on guidelines), cervical smear (every 3–5 years), fasting lipid and glucose panels, blood pressure checks, and STI testing at intervals based on sexual behaviour
+  - The mechanism of benefit is stage-shift: cancers caught at stage I have 5-year survival rates of 90–99% for breast, colorectal, and cervical cancers, compared with 10–30% at stage IV; screening systematically moves the distribution toward earlier detection
+  - [A large European RCT](https://www.nejm.org/doi/full/10.1056/NEJMoa2208375) found colonoscopy screening reduced colorectal cancer-specific mortality by 50% (per-protocol) and cancer incidence by 31% over 10 years, with an NNS of approximately 263 to prevent one cancer case; [systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC10093633/) supports 73% mortality reduction with 10-yearly colonoscopy
+  - [RCT-based meta-analysis](https://jamanetwork.com/journals/jama/fullarticle/2818284) for mammography finds a 15% relative reduction in breast cancer mortality (RR 0.85, 95% CI 0.78–0.93) with absolute benefits ranging from 0.27 to 0.92 fewer deaths per 1,000 women over 10 years depending on age group; cervical screening with Pap smears is associated with an approximately 80% relative reduction in cervical cancer mortality compared with unscreened populations
+  - The expected benefit across the screened population is necessarily modest on a per-person basis – most screens are negative – but the asymmetry is strongly favourable: the cost of screening is low and the benefit of a true positive is potentially life-saving; [CDC data from 2021](https://www.cdc.gov/pcd/issues/2023/23_0071.htm) show only ~72–76% of US adults are up to date on breast, cervical, and colorectal screening, meaning a large share of the population is foregoing this expected value entirely
+applicable_domains: ["health-management", "mental-health"]
+
+values:
+  health-management.longterm:
+    pbs: 8
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A person who adopts a comprehensive, maintained screening programme moves from "no systematic preventive strategy" to a fully guideline-adherent approach covering all major age-appropriate screens – a major gain in the comprehensiveness of their preventive health strategy. Endpoint: ~80th percentile. Delta: ~45 percentile points, mapping to PBS 8.
+      - The stage-shift mechanism is the primary driver of long-term benefit: [colonoscopy reduces colorectal cancer-specific mortality by 50% per-protocol](https://www.nejm.org/doi/full/10.1056/NEJMoa2208375); [mammography reduces breast cancer mortality by ~15% in RCT data and 29–62% in observational data](https://jamanetwork.com/journals/jama/fullarticle/2818284); cervical screening is associated with ~80% relative mortality reduction – each of these independently justifies a major contribution to long-term health strategy.
+      - The PBS reflects the expected benefit across the screened population, not only those who receive a positive result. Even for individuals whose screens are consistently negative, the programme provides genuine value: it closes the gap between actual risk status and perceived risk status, enables early-stage treatment if a future screen is positive, and constitutes a comprehensive preventive strategy that most adults lack.
+      - PBS 8 (rather than 9 or 10) reflects that screening addresses a subset of the risk landscape – it does not cover occupational hazards, lifestyle risk factors, or conditions without effective screens – so the completeness of preventive strategy, while substantially improved, does not reach transformative levels.
+    isr: 85
+    isr_reasoning: |
+      - The strategy benefit – having a maintained screening programme – accrues with near-certainty for those who complete their screens: the person either receives reassuring negative results or receives an early-stage finding that enables better treatment. The ISR question for this value is "does following the screening programme reliably produce a major improvement in preventive health strategy comprehensiveness?" and the answer is yes in roughly 85% of cases, with the remainder undermined by poor follow-up on positive results.
+      - [USPSTF systematic review evidence](https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/Pboxx4DR35wz5GPozm-XNF) confirms the screening modalities covered here (colonoscopy, mammography, cervical smear, lipid panels, blood pressure) all have Grade A or B recommendations, meaning the task force found convincing or adequate evidence that net benefits are substantial – these are not speculative interventions.
+      - The primary failure mode is non-completion of follow-up after a positive screen – approximately 10–20% of individuals with abnormal screening results do not complete recommended follow-up according to [multiple implementation studies](https://www.ncbi.nlm.nih.gov/books/NBK570918/), which is why ISR sits at 85% rather than 95%.
+    uar: 60
+    confidence: high
+    uar_reasoning: |
+      - [CDC BRFSS and NHIS data from 2021](https://www.cdc.gov/pcd/issues/2023/23_0071.htm) show that approximately 72–76% of eligible US adults are up to date with breast, cervical, and colorectal screening individually; full adherence across all relevant screens simultaneously is substantially lower, likely 40–55% of eligible adults.
+      - Among those who explicitly adopt preventive screening as a deliberate health strategy (the target population for this intervention), adherence is higher than the population average, but significant friction remains: appointments must be scheduled months in advance, some screens (colonoscopy) require unpleasant preparation, and health avoidance – the tendency to avoid reminders of mortality – is a documented barrier; UAR of 60% reflects this motivated-but-imperfect subpopulation.
+      - Structural barriers including cost, insurance coverage gaps, and access to screening facilities reduce adherence below what motivation alone would predict; [USPSTF data](https://www.ncbi.nlm.nih.gov/books/NBK609719/) consistently shows national screening targets are not met even among insured, health-engaged populations.
+
+  health-management.control:
+    pbs: 6
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Completing a comprehensive screening programme gives the individual concrete, current data about their health status across multiple risk domains – enabling informed conversations with clinicians, grounded risk assessment, and structured health planning. Endpoint: ~60th percentile. Delta: ~25 percentile points, mapping to PBS 6.
+      - The control benefit is real but narrower than the longterm value: screening produces actionable information (you know your blood pressure, cholesterol, cervical status, colon polyp risk) but does not in itself build the skills or knowledge to manage complex health conditions – it is an input to informed decision-making, not the full capability.
+      - PBS 6 (meaningful rather than major) reflects that health-management control is broad, and screening addresses the detection and monitoring component but leaves treatment literacy, medication management, and lifestyle modification largely untouched.
+    isr: 80
+    isr_reasoning: |
+      - For those who complete their screens and engage with the results, the control benefit is highly reliable: receiving concrete test results with clinician interpretation directly increases the individual's knowledge base and confidence in health conversations – this is an intrinsic property of the intervention, not a probabilistic outcome.
+      - The 20% non-success rate reflects individuals who complete screens but do not engage with results (do not read reports, do not ask questions of their clinician, do not update their health self-model) – a pattern observed in [patient engagement literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC5507224/) where passive receipt of test results produces minimal control gains.
+      - ISR is lower than for longterm because the control value requires active engagement with results, whereas the longterm value accrues partly through the mechanical fact of having screened regardless of cognitive engagement with the results.
+    uar: 60
+    confidence: medium
+    uar_reasoning: |
+      - See health-management.longterm UAR – same intervention, same adherence profile. UAR of 60% reflects motivated adopters facing scheduling friction, health avoidance, and structural access barriers.
+
+  mental-health.stability:
+    pbs: 4
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. For individuals with significant health anxiety – a common reason adults seek or avoid screening – a clean result provides concrete reassurance that reduces rumination and catastrophising. Endpoint: ~50th percentile. Delta: ~15 percentile points, mapping to PBS 4.
+      - The PBS is deliberately modest because (a) the benefit is concentrated in the health-anxious subset of the population, (b) false-positive results temporarily increase anxiety and partially offset the reassurance benefit at the population level, and (c) screening does not address the underlying anxiety disposition – the reassurance benefit tends to decay between screening intervals.
+      - The causal pathway is direct: a clean result replaces uncertainty with confirmed negative status, which removes the cognitive content feeding health-related rumination; this is a meaningful but not major contribution to emotional stability.
+    isr: 50
+    isr_reasoning: |
+      - The reassurance benefit is reliable for individuals who receive clearly negative results and are disposed to accept them; however, [research on false-positive effects](https://pmc.ncbi.nlm.nih.gov/articles/PMC5507224/) shows that false-positive results – which occur in roughly 10–50% of mammography screens and at lower rates for other modalities – produce measurable short-term anxiety increases that partially offset population-level stability gains.
+      - Individuals with high health anxiety sometimes experience the screening process itself as anxiety-provoking and derive less net benefit from negative results than average, because the reassurance is shorter-lived; this segment reduces population-level ISR.
+      - Approximately half of those who adopt this intervention as an explicit practice will experience a net positive stability effect; the remainder either experience negligible change (low baseline health anxiety) or a temporary negative effect from false positives or the anticipation of results.
+    uar: 60
+    confidence: low
+    uar_reasoning: |
+      - See health-management.longterm UAR – same intervention, same adherence profile. The mental-health benefit accrues automatically if the screens are completed; no additional adherence burden beyond the primary intervention.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No one-time purchases are required to begin preventive screening. Screens are accessed through a primary care clinician or directly through health services. Insurance-covered screens (all USPSTF Grade A/B recommendations are covered under the ACA without cost-sharing in the US) have zero out-of-pocket cost for the initial screens."
+  ongoing_cost: 50
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "For individuals with health insurance covering USPSTF-recommended screens, out-of-pocket cost is minimal – primarily co-pays for any ancillary visits or diagnostic follow-up. For uninsured or underinsured individuals, community health centres and federally qualified health centres offer sliding-scale screening; estimated $50/year represents typical co-pay or sliding-scale cost for one to two screens annually, excluding any diagnostic follow-up costs."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 1–2 hours to review relevant guidelines for your age and sex (USPSTF recommendation finder is the fastest route), compile your personal and family health history, identify which screens are due, and book the first appointments."
+  ongoing_time: 4
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Most active screens take 15–60 minutes per appointment; colonoscopy preparation adds a day. Across all relevant screens spread over a year, the total time commitment for a typical adult is 3–6 hours annually including travel and waiting, with heavier years (colonoscopy year) at the higher end."
+
+prerequisites:
+  - "Access to a primary care clinician or health system that can order and interpret screening tests, or direct access to a community health centre or self-referral screening programme"
+  - "Basic knowledge of personal and immediate family health history (parents, siblings) – family history of colorectal, breast, or ovarian cancer changes the recommended screening start age and interval"
+  - "Insurance coverage or financial means to cover any out-of-pocket costs for screens and, critically, for follow-up diagnostic testing if a screen returns a positive result"
+  - "Willingness to receive and act on results, including completing diagnostic follow-up if a screen is abnormal – the intervention is only complete when the diagnostic loop is closed"
+
+flagged_domains:
+  - domain: "physical-safety"
+    rationale: "Early detection of cardiovascular risk factors (hypertension, dyslipidaemia) through screening enables treatment that directly reduces risk of heart attack and stroke, which are physical safety events."

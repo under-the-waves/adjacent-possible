@@ -26,7 +26,7 @@ values:
   goals.clarity:
     pbs: 7
     pbs_reasoning: |
-      - The anchor measures % of goals completed on time through accurate capacity calibration. Daily reflection directly builds calibration accuracy: each entry compares planned vs actual outcomes, creating a longitudinal record of estimation errors that compounds into better forecasting over weeks and months.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 70th percentile (noticeably better goal completion rates). Delta: ~30 percentile points of improvement. The anchor measures % of goals completed on time through accurate capacity calibration. Daily reflection directly builds calibration accuracy: each entry compares planned vs actual outcomes, creating a longitudinal record of estimation errors that compounds into better forecasting over weeks and months.
       - [Di Stefano et al. (2014)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2414478) found 23% performance improvement from 15-minute daily reflection writing. For goal clarity specifically, this maps to progressively more accurate goal-setting: a successful reflector could plausibly move from ~6% on-time completion to ~15-20% over 6-12 months.
       - Using the logarithmic formula: if the intervention moves someone to ~18% on-time completion, PBS = 10 + log2(18/100) = 10 - 2.47 = 7.5, rounded to 7. This is a meaningful improvement in self-knowledge but does not approach the ceiling of systematic goal calibration methods.
     isr: 60
@@ -44,7 +44,7 @@ values:
   goals.follow_through:
     pbs: 7
     pbs_reasoning: |
-      - The anchor measures % of days with at least one deliberate goal action. Daily reflection creates a daily accountability checkpoint: reviewing whether today included goal-directed action makes the absence of action salient and increases the likelihood of corrective action the following day.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 70th percentile (consistently higher daily goal action). Delta: ~30 percentile points of improvement. The anchor measures % of days with at least one deliberate goal action. Daily reflection creates a daily accountability checkpoint: reviewing whether today included goal-directed action makes the absence of action salient and increases the likelihood of corrective action the following day.
       - Unlike monthly reviews (which create periodic accountability spikes), daily reflection operates at the same cadence as the anchor metric itself. Each evening's "what did I do toward my goals today?" prompt directly reinforces daily goal action, creating a tighter feedback loop.
       - A successful daily reflector could plausibly move from sporadic goal action (~6% of days, score 6) to consistent action on most days (~20-25% of days, score ~8). PBS = 10 + log2(20/100) = 10 - 2.32 = 7.7, rounded to 7, reflecting the strong but not maximal benefit of daily self-monitoring.
     isr: 60
@@ -60,7 +60,7 @@ values:
   goals.adaptability:
     pbs: 6
     pbs_reasoning: |
-      - The anchor describes proactive goal portfolio management with systematic review and strategic pivots. Daily reflection surfaces misalignment between goals and reality incrementally rather than in periodic review sessions, enabling earlier course corrections.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 65th percentile (moderately above average goal adaptability). Delta: ~25 percentile points of improvement. The anchor describes proactive goal portfolio management with systematic review and strategic pivots. Daily reflection surfaces misalignment between goals and reality incrementally rather than in periodic review sessions, enabling earlier course corrections.
       - Daily cadence provides faster feedback on whether a goal still makes sense, but the short time window (10 minutes) limits the depth of strategic reassessment possible in each session. Deep portfolio-level thinking requires more time and is better served by weekly or monthly reviews.
       - Score 6 rather than 7 because daily reflection is better suited to tactical adjustments (reprioritising tomorrow's actions) than strategic pivots (retiring or replacing goals). It complements but does not replace periodic deep reviews for adaptability.
     isr: 55
@@ -76,7 +76,7 @@ values:
   organisation.tracking:
     pbs: 5
     pbs_reasoning: |
-      - The anchor describes zero time lost to organisational overhead with instant movement from intention to action. Daily reflection writing creates a written record of commitments, decisions, and next actions that serves as a lightweight tracking system, reducing the cognitive load of remembering what was decided and what comes next.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average organisational efficiency). Delta: ~15 – 20 percentile points of improvement. The anchor describes zero time lost to organisational overhead with instant movement from intention to action. Daily reflection writing creates a written record of commitments, decisions, and next actions that serves as a lightweight tracking system, reducing the cognitive load of remembering what was decided and what comes next.
       - The tracking benefit is secondary to the reflective purpose: the written output happens to function as an organisational record, but it is not optimised for retrieval or task management the way dedicated systems (e.g., GTD, task managers) are. The benefit is real but indirect.
       - Score 5 on the subjective scale represents a moderate organisational improvement – somewhere between "noticeable time lost" (4) and "generally efficient" (6). Daily reflection reduces friction but does not eliminate it.
     isr: 50
@@ -85,14 +85,14 @@ values:
       - The tracking benefit depends on the reflection format: structured templates that include explicit next-action capture produce stronger organisational benefits than narrative reflection. Without deliberate organisational structure, the tracking benefit may not materialise.
       - Estimated 45-55% of adherent reflectors see meaningful organisational tracking improvements, with the remainder producing reflections that are insightful but not organisationally actionable.
     uar: 35
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
   current-work.competence:
     pbs: 5
     pbs_reasoning: |
-      - The anchor describes exceptional mastery of role with elite-level execution. [Di Stefano et al. (2014)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2414478) found that 15 minutes of daily reflective writing produced a 23% performance improvement in a field experiment at a business process outsourcing company, demonstrating a direct mechanism from reflection to work competence.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average work execution). Delta: ~15 – 20 percentile points of improvement. The anchor describes exceptional mastery of role with elite-level execution. [Di Stefano et al. (2014)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2414478) found that 15 minutes of daily reflective writing produced a 23% performance improvement in a field experiment at a business process outsourcing company, demonstrating a direct mechanism from reflection to work competence.
       - A [systematic review of reflective writing in health professions](https://pmc.ncbi.nlm.nih.gov/articles/PMC9830881/) found that reflective practice enhances clinical decision-making, critical thinking, and professional competence, though most studies are in educational rather than workplace settings.
       - Score 5 on the subjective scale represents movement from "adequate performance" (4) toward "competent and reliable" (6). Reflection accelerates learning from experience but cannot substitute for deliberate practice, mentorship, or domain-specific skill development.
     isr: 50
@@ -108,7 +108,7 @@ values:
   current-work.engagement:
     pbs: 4
     pbs_reasoning: |
-      - The anchor describes deep absorption and energisation by daily work with frequent flow states. Daily reflection increases awareness of which tasks are engaging and which are draining, enabling better task selection and energy management over time.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th – 50th percentile (slightly above average work engagement). Delta: ~10 – 15 percentile points of improvement. The anchor describes deep absorption and energisation by daily work with frequent flow states. Daily reflection increases awareness of which tasks are engaging and which are draining, enabling better task selection and energy management over time.
       - A [field experiment on weekly planning and reflection](https://pmc.ncbi.nlm.nih.gov/articles/PMC10952538/) found that planning behaviour increased work engagement and reduced rumination, supporting a causal link between structured reflection and engagement.
       - Score 4 on the subjective scale represents movement from "partially disengaged" (4) toward "generally engaged" (6). The engagement benefit is real but modest – reflection helps identify engagement patterns but cannot change the fundamental nature of the work itself.
     isr: 45
@@ -117,7 +117,7 @@ values:
       - Engagement is influenced by many factors beyond self-awareness (job design, autonomy, relationships, meaning), and reflection can only address the subset of engagement barriers that stem from misallocated attention or unrecognised preferences. Many engagement barriers are structural.
       - Estimated 40-50% of adherent reflectors see meaningful engagement improvements, primarily those whose disengagement stems from poor self-knowledge about their energy and interest patterns rather than from genuinely unsuitable work.
     uar: 35
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 

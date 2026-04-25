@@ -24,7 +24,7 @@ values:
   mental-health.stability:
     pbs: 6
     pbs_reasoning: |
-      - Expressive writing directly targets the mechanism underlying emotional instability: unprocessed emotional experiences cycle through working memory, fuelling rumination and mood disruption. Writing about these experiences with emotional depth externalises and organises them, reducing their cognitive load.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 65th percentile (moderately above average emotional stability). Delta: ~25 percentile points of improvement. Expressive writing directly targets the mechanism underlying emotional instability: unprocessed emotional experiences cycle through working memory, fuelling rumination and mood disruption. Writing about these experiences with emotional depth externalises and organises them, reducing their cognitive load.
       - [Frattaroli (2006)](https://bpb-us-e2.wpmucdn.com/faculty.sites.uci.edu/dist/c/602/files/2019/08/Frattaroli-psych-bulletin-2006.pdf) found a significant effect of written disclosure on psychological health (r = .075) across 146 studies, with depression showing a significant subcategory effect. This is small but consistent across a large evidence base.
       - The [positive affect journaling RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/) found reduced anxiety and mental distress from structured journaling over 12 weeks using emotionally focused prompts – directly applicable to this intervention.
     isr: 55
@@ -42,7 +42,7 @@ values:
   mental-health.resilience:
     pbs: 6
     pbs_reasoning: |
-      - Expressive writing builds resilience by processing setbacks emotionally rather than suppressing or avoiding them. [Glass et al. (2019)](https://www.sciencedirect.com/science/article/abs/pii/S1744388118306157) found that a six-week writing intervention increased resilience and decreased depressive symptoms and perceived stress in a trauma-exposed outpatient sample.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 65th percentile (moderately above average resilience). Delta: ~25 percentile points of improvement. Expressive writing builds resilience by processing setbacks emotionally rather than suppressing or avoiding them. [Glass et al. (2019)](https://www.sciencedirect.com/science/article/abs/pii/S1744388118306157) found that a six-week writing intervention increased resilience and decreased depressive symptoms and perceived stress in a trauma-exposed outpatient sample.
       - The mechanism is well-matched to resilience: writing about difficulties with emotional depth activates cognitive reappraisal, a core resilience process. Unlike decision review (which asks "what to adjust"), expressive writing asks "what did I feel and why," which builds emotional coping capacity.
       - Score 6 rather than 5 because the evidence base directly supports this intervention's effect on resilience, unlike decision-focused reflection where the evidence was borrowed.
     isr: 55
@@ -58,7 +58,7 @@ values:
   mental-health.flourishing:
     pbs: 5
     pbs_reasoning: |
-      - Expressive writing creates opportunities for meaning-making by processing experiences at emotional depth. [A study on reflection diaries](https://pmc.ncbi.nlm.nih.gov/articles/PMC8472181/) found that structured reflection on everyday events enhanced meaning in life and wellbeing among emerging adults, with self-efficacy mediating the effect.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average flourishing). Delta: ~15 – 20 percentile points of improvement. Expressive writing creates opportunities for meaning-making by processing experiences at emotional depth. [A study on reflection diaries](https://pmc.ncbi.nlm.nih.gov/articles/PMC8472181/) found that structured reflection on everyday events enhanced meaning in life and wellbeing among emerging adults, with self-efficacy mediating the effect.
       - Unlike decision-focused reflection, expressive writing is affectively oriented – it directly engages positive and negative emotions, which is closer to what flourishing research measures. The mechanism for flourishing is more direct here than for decision review.
       - Score 5 rather than 4 because the emotional engagement is the primary mechanism for meaning-making and life satisfaction, not a byproduct.
     isr: 45
@@ -67,7 +67,7 @@ values:
       - The relationship between self-reflection and wellbeing may follow an [inverted U-shape](https://www.sciencedirect.com/topics/psychology/self-reflection), with excessive emotional writing potentially decreasing wellbeing if it becomes ruminative.
       - Estimated 40–50% of adherent practitioners experience meaningful flourishing gains.
     uar: 30
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See mental-health.stability UAR – same intervention, same adherence profile.
 

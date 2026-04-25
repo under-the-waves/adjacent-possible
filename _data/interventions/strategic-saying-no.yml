@@ -1,8 +1,19 @@
 name: "Strategic Saying No"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Developing explicit criteria for which commitments to accept or decline, then systematically applying those criteria to incoming requests using pre-prepared response templates and a weekly commitment review. Distinct from general time management in that it targets the acceptance decision point itself – reducing the total volume of obligations rather than optimising execution of existing ones.
+how_to_do_it: |
+  - Audit your current commitments against your top 3–5 priorities, and define simple acceptance criteria (e.g. 'Does this advance a current goal? Would I regret saying no in a month?')
+  - Draft 3–5 polite refusal templates for common request types – having pre-written language removes the friction of composing a decline in the moment
+  - Many people find a weekly 15–30 minute commitment review useful for catching scope creep, noticing new obligations that crept in, and confirming that active commitments still align with priorities
+  - When declining, you may find it helps to offer a brief, honest reason and – where appropriate – suggest an alternative person or resource, which preserves the relationship without accepting the commitment
+success_looks_like: |
+  - Your active commitments visibly shrink to those that genuinely advance your priorities, and you can articulate why each one is there
+  - You spend less time context-switching between unrelated obligations and more time on focused work within a few key areas
+  - Saying no feels routine rather than guilt-inducing – you have a practised response and a clear rationale behind it
+common_pitfalls: |
+  - Defining vague acceptance criteria ('only say yes to important things') that provide no actionable guidance when a real request arrives
+  - Declining requests rigidly without exercising judgement – filtering out genuinely valuable serendipitous opportunities alongside low-value noise
+  - Backfilling freed capacity with new commitments, leaving total load unchanged; the weekly review should explicitly check for this pattern
 description: |
   - Developing explicit criteria for which commitments to accept or decline, then systematically applying those criteria to incoming requests, invitations, and opportunities using pre-prepared response templates
   - Implementation involves auditing current commitments against personal goals, defining 3-5 acceptance criteria (e.g., 'Does this advance a top-3 priority?'), drafting polite refusal templates, and conducting a weekly commitment review to catch scope creep, with most practitioners stabilising within 4-6 weeks
@@ -14,7 +25,7 @@ values:
   goals.follow_through:
     pbs: 7
     pbs_reasoning: |
-      - The anchor is 100% of days with goal action. For someone who successfully eliminates low-value commitments, the freed time and cognitive bandwidth directly increase the proportion of days with deliberate goal action. Moving from scattered attention across 15 commitments to focused pursuit of 5 plausibly doubles or triples the days with meaningful goal action.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile. Delta: 30 percentile points of improvement. The anchor is 100% of days with goal action. For someone who successfully eliminates low-value commitments, the freed time and cognitive bandwidth directly increase the proportion of days with deliberate goal action. Moving from scattered attention across 15 commitments to focused pursuit of 5 plausibly doubles or triples the days with meaningful goal action.
       - [Goal systems research (Kruglanski et al., 2002)](https://www.researchgate.net/publication/242082665_A_theory_of_goal_systems) demonstrates that reducing competing goal connections strengthens the focal goal-means association, improving follow-through via cognitive inhibition of alternatives.
       - [Lindberg (2011)](https://doi.org/10.1111/j.1559-1816.2011.00837.x) found that goal commitment drives role overload, which is negative for performance. Reducing the total number of commitments directly addresses this dysfunctional pathway, protecting follow-through on remaining goals.
     isr: 50
@@ -32,7 +43,7 @@ values:
   goals.clarity:
     pbs: 6
     pbs_reasoning: |
-      - The anchor is 100% of goals completed on time. The commitment audit process forces explicit prioritisation: defining which goals matter enough to protect. This clarification alone helps practitioners calibrate capacity more accurately, improving on-time completion rates.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. The anchor is 100% of goals completed on time. The commitment audit process forces explicit prioritisation: defining which goals matter enough to protect. This clarification alone helps practitioners calibrate capacity more accurately, improving on-time completion rates.
       - [Harkin et al. (2016)](https://doi.org/10.1037/bul0000025) meta-analysis found progress monitoring (d = 0.40) improves goal attainment. The weekly commitment review serves as a monitoring mechanism, surfacing when new commitments threaten existing goal timelines.
       - Score 6 rather than higher because clarity also depends on goal-setting quality, feedback loops, and self-knowledge about capacity, which this intervention does not directly address. It improves clarity by reducing noise but does not build the signal.
     isr: 45
@@ -48,7 +59,7 @@ values:
   goals.adaptability:
     pbs: 5
     pbs_reasoning: |
-      - The anchor (proactive portfolio management with systematic review) maps directly to the weekly commitment audit component. Regular review of commitments against goals creates a structured opportunity to retire, modify, or reprioritise goals as circumstances change.
+      - Baseline: 35th percentile (below-average adaptability). After successful adherence, a user could plausibly reach the 50th percentile (average adaptability). Delta: ~15 percentile points. The anchor (proactive portfolio management with systematic review) maps directly to the weekly commitment audit component. Regular review of commitments against goals creates a structured opportunity to retire, modify, or reprioritise goals as circumstances change.
       - This benefit is a second-order effect of the commitment review process rather than the primary mechanism. The practitioner gains adaptability as a byproduct of reviewing what to decline, not from a dedicated goal-review protocol.
       - Score 5 because the intervention creates the review habit but does not provide frameworks for when to pivot, how to evaluate changing circumstances, or how to distinguish persistence from stubbornness.
     isr: 45
@@ -57,14 +68,14 @@ values:
       - [Gollwitzer (1999)](https://www.prospectivepsych.org/sites/default/files/pictures/Gollwitzer_Implementation-intentions-1999.pdf) notes that implementation intentions can paradoxically reduce flexibility by automating responses, which may work against adaptability if decline criteria become rigid.
       - Conservative estimate given the indirect mechanism and risk of rigidity.
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
   current-work.competence:
     pbs: 5
     pbs_reasoning: |
-      - The anchor (exceptional mastery with elite-level execution) is supported indirectly: by declining low-value work commitments, the practitioner concentrates effort on fewer tasks, enabling deeper engagement and higher quality output on core responsibilities.
+      - Baseline: 35th percentile (below-average competence). After successful adherence, a user could plausibly reach the 50th percentile (average competence). Delta: ~15 percentile points. The anchor (exceptional mastery with elite-level execution) is supported indirectly: by declining low-value work commitments, the practitioner concentrates effort on fewer tasks, enabling deeper engagement and higher quality output on core responsibilities.
       - [Aeon et al. (2021)](https://doi.org/10.1371/journal.pone.0245066) found time management moderately predicts job performance (r ~ 0.25), and the relationship has strengthened over time. Strategic refusal is a specific, high-leverage time management behaviour targeting the commitment intake rather than execution.
       - Score 5 because competence depends primarily on skill development, deliberate practice, and feedback, not on commitment reduction alone. The intervention removes obstacles to competence expression but does not directly build competence.
     isr: 40
@@ -73,14 +84,14 @@ values:
       - Workplace norms often reward visible busyness and availability. Declining requests may reduce perceived competence even if actual output quality improves, creating a confounded outcome.
       - Conservative estimate reflecting the indirect causal pathway and potential for social costs to offset quality gains.
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile. Workplace-specific social pressure may slightly reduce adherence in professional contexts, but the overall profile is similar.
 
   organisation.speed:
     pbs: 5
     pbs_reasoning: |
-      - The anchor (perfectly minimal system with fewest possible tools, steps, and rules) is served by reducing the total volume of commitments flowing through organisational systems. Fewer active projects and obligations means fewer tracking items, simpler review processes, and less context-switching overhead.
+      - Baseline: 35th percentile (below-average organisational speed). After successful adherence, a user could plausibly reach the 50th percentile (average speed). Delta: ~15 percentile points. The anchor (perfectly minimal system with fewest possible tools, steps, and rules) is served by reducing the total volume of commitments flowing through organisational systems. Fewer active projects and obligations means fewer tracking items, simpler review processes, and less context-switching overhead.
       - [Cognitive load theory (Sweller, 1988)](https://doi.org/10.1207/s15516709cog1202_4) supports the principle that reducing active items in working memory improves processing efficiency. Fewer commitments directly reduce the cognitive load of the organisational system.
       - Score 5 because the intervention simplifies what flows through the system but does not redesign the system itself. A practitioner with a cluttered organisational setup will still have that setup, just with fewer items in it.
     isr: 45
@@ -89,14 +100,14 @@ values:
       - [Decision fatigue research (Baumeister & Vohs, 2016)](https://doi.org/10.1016/bs.adms.2016.04.002) supports the cognitive benefit of fewer active decision points, but the evidence is for decision quality rather than system simplicity specifically.
       - Conservative estimate given that organisational simplicity is a second-order benefit and evidence is indirect.
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - Overcommitment is a well-established pathway to chronic psychological distress. [Siegrist's effort-reward imbalance model](https://www.uniklinik-duesseldorf.de/fileadmin/Fuer-Patienten-und-Besucher/Kliniken-Zentren-Institute/Institute/Institut_fuer_Medizinische_Soziologie/Forschung/Siegrist/ERI.pdf) identifies overcommitment as an intrinsic risk factor for anxiety and depressive symptoms, and [prospective cohort data](https://www.ssph-journal.org/journals/international-journal-of-public-health/articles/10.3389/ijph.2023.1606160/full) confirms that high overcommitment predicts occupational burnout over time.
+      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 50th percentile (average stability). Delta: ~15 percentile points. Overcommitment is a well-established pathway to chronic psychological distress. [Siegrist's effort-reward imbalance model](https://www.uniklinik-duesseldorf.de/fileadmin/Fuer-Patienten-und-Besucher/Kliniken-Zentren-Institute/Institute/Institut_fuer_Medizinische_Soziologie/Forschung/Siegrist/ERI.pdf) identifies overcommitment as an intrinsic risk factor for anxiety and depressive symptoms, and [prospective cohort data](https://www.ssph-journal.org/journals/international-journal-of-public-health/articles/10.3389/ijph.2023.1606160/full) confirms that high overcommitment predicts occupational burnout over time.
       - [Role overload research](https://pmc.ncbi.nlm.nih.gov/articles/PMC8176030/) shows it is positively associated with psychological strain (anxiety, depression, job tension) and negatively associated with psychological wellbeing, establishing that commitment volume itself is a stressor independent of how well tasks are managed.
       - Score 5 reflects a meaningful but bounded benefit: for someone whose distress is primarily driven by overcommitment, systematically declining low-value requests reduces chronic stress exposure, shifting from 'frequent distress affecting daily functioning' (4) toward 'occasional distress that resolves quickly' (6). The benefit is capped because saying no addresses one source of distress but does not treat underlying vulnerability, rumination patterns, or distress from non-commitment sources.
     isr: 45
@@ -105,14 +116,14 @@ values:
       - The stability benefit depends on overcommitment being a primary driver of the individual's distress. For practitioners whose anxiety or low mood stems from other sources (relationship difficulties, health concerns, neurobiological factors), reducing commitment volume will not meaningfully improve symptom burden.
       - An estimated 40-50% of adherent practitioners will experience meaningful symptom reduction, with non-responders being those for whom overcommitment is not the dominant stressor or who replace declined commitments with new sources of stress.
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
   mental-health.resilience:
     pbs: 4
     pbs_reasoning: |
-      - Practising boundary-setting builds a transferable coping skill: the capacity to assert personal limits under social pressure. [Speed et al. (2018)](https://doi.org/10.1111/cpsp.12216) identify assertiveness as a transdiagnostic protective factor, noting that assertiveness deficits are associated with anxiety, depression, and poor stress management.
+      - Baseline: 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 45th–50th percentile (approaching average). Delta: ~12 percentile points. Practising boundary-setting builds a transferable coping skill: the capacity to assert personal limits under social pressure. [Speed et al. (2018)](https://doi.org/10.1111/cpsp.12216) identify assertiveness as a transdiagnostic protective factor, noting that assertiveness deficits are associated with anxiety, depression, and poor stress management.
       - The resilience pathway is indirect: saying no reduces exposure to overwhelming demands (a preventive mechanism) rather than directly training recovery from adversity. This maps to the lower end of the resilience anchor  –  'manages moderate stressors adequately' (6) is unlikely; a shift from 'significant disruption' (4) to a slightly more capable baseline is more realistic.
       - Score 4 reflects a genuine but modest resilience benefit. The intervention builds one component of stress management (demand regulation) but does not train emotional recovery, cognitive reappraisal, or the acceptance skills that [research identifies as core resilience mechanisms](https://pmc.ncbi.nlm.nih.gov/articles/PMC6681655/).
     isr: 40
@@ -121,7 +132,7 @@ values:
       - The causal pathway from 'declines requests effectively' to 'handles adversity better and recovers faster' involves multiple inferential steps. No direct evidence tests whether commitment-reduction protocols improve resilience to unrelated stressors.
       - Conservative estimate of 35-45% of adherent practitioners experiencing meaningful resilience gains, reflecting the indirect mechanism and reliance on skill generalisation.
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 

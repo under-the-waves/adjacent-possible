@@ -1,8 +1,19 @@
 name: "Basic Tax Optimisation"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Using the tax-efficient wrappers the government already provides – ISAs, pension tax relief, salary sacrifice, and capital gains allowances – to ensure your savings and investments are held in the most favourable structures available. This is not aggressive tax planning; it is simply making sure you are not paying tax you do not need to pay. Works best when combined with [Automated Savings](/resources/intervention-database/automated-savings) to direct transfers into the right accounts from the start.
+how_to_do_it: |
+  - Many people find it helpful to start by identifying their tax band and working backwards: higher-rate taxpayers benefit most from pension contributions (effectively paying £60 for £100 of pension), while basic-rate taxpayers often prioritise ISAs for their flexibility
+  - You may want to set a calendar reminder for early March to use any remaining ISA allowance before the April tax year-end, since unused allowance cannot be carried forward
+  - Salary sacrifice for pension contributions is often the single highest-value action – it saves both income tax and National Insurance, but requires a conversation with your employer's HR or payroll team
+  - Most practitioners find that reviewing their tax position once per year (after receiving a P60 or completing self-assessment) is sufficient to catch missed opportunities without creating ongoing administrative burden
+success_looks_like: |
+  - All new savings and investments flow into ISA or pension wrappers before taxable accounts, with the full £20,000 ISA allowance used most years
+  - You can see a clear difference between your gross savings rate and what you would have retained without tax wrappers – typically 20–40% more over a decade
+  - Tax-related decisions feel routine rather than confusing: you know your band, your allowances, and your annual deadlines without needing to look them up
+common_pitfalls: |
+  - Over-weighting pension contributions at the expense of accessible savings, leaving insufficient liquid reserves for short-term needs – the tax benefit is wasted if you have to take out high-interest debt to cover emergencies
+  - Opening an ISA but consistently contributing well below the annual limit, then assuming the wrapper alone is doing the work – the allowance is use-it-or-lose-it each year
+  - Ignoring salary sacrifice because the payslip mechanics seem complicated, despite it often being the single largest tax saving available to employed workers
 description: |
   - Using government-provided tax wrappers as intended: maximising ISA allowances (£20,000/year), pension tax relief (20-45% depending on band), salary sacrifice, and capital gains/dividend allowances
   - Not aggressive tax planning or avoidance – simply ensuring money is held in the most tax-efficient structures available
@@ -14,7 +25,7 @@ values:
   saving.security:
     pbs: 5
     pbs_reasoning: |
-      - Tax optimisation indirectly improves security by ensuring more of each pound saved is retained rather than lost to tax. ISA wrappers protect interest from tax, preserving the real value of emergency fund growth. However, the primary determinant of emergency fund size is the amount saved, not the tax wrapper.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–55th percentile (modestly accelerated emergency fund growth through retained tax savings). Delta: ~10–20 percentile points of improvement. Tax optimisation indirectly improves security by ensuring more of each pound saved is retained rather than lost to tax. ISA wrappers protect interest from tax, preserving the real value of emergency fund growth. However, the primary determinant of emergency fund size is the amount saved, not the tax wrapper.
       - [HMRC ISA statistics](https://www.gov.uk/government/statistics/annual-savings-statistics) show that ISA holders retain an additional 0.8-1.6% annually on savings (depending on tax band), which translates to modest acceleration in building an emergency buffer.
       - Score 5 reflects a meaningful but secondary contribution – tax savings accumulate over time but the impact on months-of-expenses covered is incremental rather than transformative. On the anchor (10 = 12+ months), tax optimisation alone might add a few additional weeks of buffer over several years.
     isr: 85
@@ -32,7 +43,7 @@ values:
   saving.growth:
     pbs: 6
     pbs_reasoning: |
-      - Pension tax relief provides an immediate 25% uplift for basic-rate taxpayers (£80 becomes £100) and 67% for higher-rate taxpayers (£60 becomes £100). For someone saving 10% of gross income, pension tax relief effectively increases their savings rate to 12.5-16.7%, pushing them from score 6 toward score 8 on the anchor.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–65th percentile (effective savings rate boosted to 12.5–16.7% of gross income via pension tax relief). Delta: ~20–30 percentile points of improvement. Pension tax relief provides an immediate 25% uplift for basic-rate taxpayers (£80 becomes £100) and 67% for higher-rate taxpayers (£60 becomes £100), pushing someone saving 10% of gross income from score 6 toward score 8 on the anchor.
       - [Cribb & Emmerson (2019, IFS)](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) estimated that tax-efficient structuring adds 20-40% to terminal wealth over a 30-year savings horizon compared to identical savings in taxable accounts.
       - Score 6 reflects a significant acceleration in wealth accumulation. The intervention doesn't change the savings behaviour itself (that depends on the saver's commitment) but amplifies whatever is saved by eliminating tax drag.
     isr: 85
@@ -50,7 +61,7 @@ values:
   saving.lifestyle:
     pbs: 5
     pbs_reasoning: |
-      - ISAs preserve full liquidity – funds are accessible at any time, tax-free – making them the ideal vehicle for liquid savings. However, pensions sacrifice liquidity entirely until age 57+, creating a direct tension between tax efficiency and accessibility.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–55th percentile (modestly improved tax-efficient liquid reserves via ISA wrappers). Delta: ~10–20 percentile points of improvement. ISAs preserve full liquidity – funds are accessible at any time, tax-free – making them the ideal vehicle for liquid savings. However, pensions sacrifice liquidity entirely until age 57+, creating a direct tension between tax efficiency and accessibility.
       - [HMRC ISA statistics](https://www.gov.uk/government/statistics/annual-savings-statistics) show that ISA balances are fully liquid, but annual contribution limits (£20,000) constrain the rate at which tax-efficient liquid reserves can be built.
       - Score 5 reflects that ISA usage genuinely improves tax-efficient liquidity, but pension contributions – often the highest-impact tax optimisation – actively reduce it. The net effect on months of liquid reserves is positive but modest.
     isr: 80
@@ -68,7 +79,7 @@ values:
   investing.growth:
     pbs: 5
     pbs_reasoning: |
-      - Tax optimisation provides a guaranteed boost to investment returns by eliminating tax drag on growth. Within an ISA, all capital gains, dividends, and interest are tax-free. Over 30 years, avoiding 20% capital gains tax and dividend tax can increase terminal wealth by 15-30% compared to identical investments held outside tax wrappers.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–55th percentile (terminal wealth boosted 15–30% through elimination of tax drag). Delta: ~10–20 percentile points of improvement. Tax optimisation provides a guaranteed boost to investment returns by eliminating tax drag on growth. Within an ISA, all capital gains, dividends, and interest are tax-free. Over 30 years, avoiding 20% capital gains tax and dividend tax can increase terminal wealth by 15–30% compared to identical investments held outside tax wrappers.
       - On the anchor ($10k over 30 years), tax optimisation applied to a passive equity portfolio returning ~$156k (score 4) could boost the outcome to ~$180-200k. This falls between score 4 ($156k) and score 6 ($625k), closer to score 4-5.
       - [Cribb & Emmerson (2019, IFS)](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) estimated the pension tax relief uplift compounds significantly over long horizons, with higher-rate taxpayers seeing the largest benefit. Score 5 reflects the multiplicative benefit on underlying investment returns.
     isr: 85
@@ -86,7 +97,7 @@ values:
   investing.safety:
     pbs: 4
     pbs_reasoning: |
-      - Tax optimisation eliminates one specific category of risk – unexpected tax liabilities on gains, dividends, and interest. ISA wrappers provide certainty about net returns, removing the variable of future tax rate changes on investment income.
+      - Baseline (per values.yml): 35th percentile (below-average investment safety). After successful adherence, a user could plausibly reach the 40th–50th percentile (modestly improved risk profile through tax certainty). Delta: ~5–15 percentile points of improvement. Tax optimisation eliminates one specific category of risk – unexpected tax liabilities on gains, dividends, and interest. ISA wrappers provide certainty about net returns, removing the variable of future tax rate changes on investment income.
       - However, tax optimisation does not address market risk, concentration risk, or portfolio construction risk. On the subjective anchor (10 = comprehensive risk management), eliminating tax risk alone represents a partial contribution.
       - Score 4 reflects that tax certainty is a genuine but limited component of overall portfolio risk management, mapping to "basic diversification but significant exposure to market drawdowns" on the scale.
     isr: 80
@@ -104,7 +115,7 @@ values:
   investing.simplicity:
     pbs: 4
     pbs_reasoning: |
-      - Tax optimisation accelerates progress toward financial independence by ensuring more of each pound contributes to the FI target. Pension tax relief (25-67% uplift depending on tax band) directly increases the invested base compounding toward a freedom number.
+      - Baseline (per values.yml): 35th percentile (below-average investment simplicity). After successful adherence, a user could plausibly reach the 40th–50th percentile (modestly accelerated FI progress, offset by added administrative complexity). Delta: ~5–15 percentile points of improvement. Tax optimisation accelerates progress toward financial independence by ensuring more of each pound contributes to the FI target. Pension tax relief (25–67% uplift depending on tax band) directly increases the invested base compounding toward a freedom number.
       - However, tax optimisation adds administrative complexity (annual allowance monitoring, self-assessment filing, wrapper selection decisions) that works against the simplicity anchor. The intervention is a multiplier on other behaviours rather than a simplifying force.
       - Score 4 reflects that tax optimisation meaningfully accelerates FI progress but introduces "somewhat complex system requiring regular attention" – the trade-off between tax efficiency and system simplicity.
     isr: 75

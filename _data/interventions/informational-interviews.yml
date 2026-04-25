@@ -1,8 +1,19 @@
 name: "Informational Interviews"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Structured 20–30 minute conversations with professionals in fields or roles you are considering, conducted to gather career intelligence – not to ask for a job. A sustained programme of 2–4 interviews per month over several months builds a realistic picture of career paths, surfaces opportunities that never appear on job boards, and grows your professional network organically.
+how_to_do_it: |
+  - Many people find it easiest to start by identifying 3–5 target roles or fields, then searching LinkedIn for professionals one or two levels above entry in those areas and sending a brief, specific outreach message explaining what you are exploring and why their experience is relevant
+  - You may find that preparing 5–7 core questions (e.g., "What does a typical week look like?", "What do you wish you had known before entering this field?") keeps conversations focused while leaving room for follow-up
+  - After each interview, sending a brief thank-you note within 24 hours and recording 3–4 key takeaways helps build the relationship and makes patterns visible across multiple conversations
+  - Most people find that scheduling interviews in batches (e.g., two per week for a fortnight, then a week off to digest) prevents outreach fatigue while maintaining momentum
+success_looks_like: |
+  - After 8–10 interviews, you can articulate specific differences between the fields you have explored – not just what each involves, but which trade-offs suit your priorities
+  - At least 2–3 interviewees have become warm contacts who would respond to a future message, and one or two have proactively shared an opportunity or introduction
+  - You have ruled out at least one option you were previously considering, saving months of pursuing a poor fit
+common_pitfalls: |
+  - Asking generic questions you could answer with desk research ("What does your company do?"), which wastes the interviewee's time and yields little insight beyond what is publicly available
+  - Stopping after 2–3 interviews because early conversations feel unproductive – the value compounds as you develop sharper questions and begin spotting patterns across conversations
+  - Treating the interview as a covert job application (pitching yourself, asking about openings), which breaks the implicit social contract and makes future referrals less likely
 description: |
   - Structured 20-30 minute conversations with professionals in fields or roles of interest, conducted to gather career intelligence rather than to ask for a job, covering career paths, daily responsibilities, industry trends, and advice
   - A programme of 2-4 interviews per month over several months exposes you to a wide range of career possibilities, builds a professional network organically, and surfaces opportunities that never appear on job boards
@@ -14,7 +25,7 @@ values:
   career-planning.clarity:
     pbs: 8
     pbs_reasoning: |
-      - [Kanar (2023)](https://doi.org/10.1177/10690727221150185) demonstrated significant gains in networking self-efficacy and career clarity among students who completed informational interviews across two studies (n=90 and n=72).
+      - Baseline (per values.yml): 35th percentile (below-average career clarity). After successful adherence, a user could plausibly reach the 75th–80th percentile (clear, well-researched direction). Delta: ~40–45 percentile points. [Kanar (2023)](https://doi.org/10.1177/10690727221150185) demonstrated significant gains in networking self-efficacy and career clarity among students who completed informational interviews across two studies (n=90 and n=72).
       - Each conversation exposes the interviewer to real career trajectories, day-to-day realities, and industry-specific opportunities invisible through desk research alone. A programme of 10-15 interviews can move someone from vague aspiration to concrete, informed direction – approaching but not guaranteeing the anchor's score 10 of full confidence in a well-researched path.
       - [Crosby (2010)](https://doi.org/10.1002/j.2161-0045.2010.tb00035.x) found that experiential career exploration activities (including informational interviews) produced larger gains in career decidedness than purely self-directed research methods.
     isr: 85
@@ -32,7 +43,7 @@ values:
   career-planning.advancement:
     pbs: 8
     pbs_reasoning: |
-      - A sustained programme of 2-4 interviews per month over 6-12 months generates 12-48 conversations. Even conservatively, converting half to warm contacts yields 6-24 contacts – landing squarely in the score 8 range (12-13 contacts) on the linear anchor, with successful practitioners exceeding this.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile on professional network size. Delta: ~40–45 percentile points of improvement. A sustained programme of 2-4 interviews per month over 6-12 months generates 12-48 conversations. Even conservatively, converting half to warm contacts yields 6-24 contacts – landing squarely in the score 8 range (12-13 contacts) on the linear anchor, with successful practitioners exceeding this.
       - [UC Berkeley Extension career resources](https://extension.berkeley.edu/professional-development/career-management/) note that 70-80% of jobs are filled through networking rather than public postings, and informational interviews are the primary mechanism for building such networks from scratch.
       - Each conversation creates a qualitatively different connection from cold applications or LinkedIn requests – someone who knows your name, interests, and initiative, and who is likely to respond to future contact per [Granovetter's (1973)](https://doi.org/10.1086/225469) weak ties theory.
     isr: 85
@@ -50,7 +61,7 @@ values:
   career-planning.security:
     pbs: 5
     pbs_reasoning: |
-      - Informational interviews contribute to career resilience indirectly by diversifying understanding of available options and building a broader professional network. On the subjective anchor (10 = highly adaptable with multiple viable options), this moves the needle modestly – awareness of alternatives is valuable but does not itself create portable skills or financial buffers.
+      - Baseline (per values.yml): 35th percentile (below-average career security). After successful adherence, a user could plausibly reach the 50th percentile (roughly average adaptability). Delta: ~15 percentile points. Informational interviews contribute to career resilience indirectly by diversifying understanding of available options and building a broader professional network. On the subjective anchor (10 = highly adaptable with multiple viable options), this moves the needle modestly – awareness of alternatives is valuable but does not itself create portable skills or financial buffers.
       - [Fugate, Kinicki & Ashforth (2004)](https://doi.org/10.1016/j.jvb.2003.10.005) define employability as a psycho-social construct including career identity, personal adaptability, and social/human capital – informational interviews primarily develop the first and third components.
       - The resilience benefit is secondary to clarity and advancement – interviews primarily inform and connect rather than directly building the cross-domain competencies that drive true career security.
     isr: 85
@@ -59,7 +70,7 @@ values:
       - [Kossek, Roberts, Fisher & Demarr (1998)](https://doi.org/10.1177/014920639802400302) found that employees with broader professional networks reported greater career resilience and lower anxiety about job loss.
       - People who have explored multiple fields through informational interviews consistently report feeling less trapped and more confident about their ability to pivot, though this self-reported confidence has limited empirical validation as a predictor of actual career recovery speed.
     uar: 55
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - Resilience-building through informational interviews requires the same sustained effort as clarity and advancement, with the added challenge that benefits are latent – value may not surface until a career crisis occurs.
       - Without immediate payoff, many people deprioritise this activity in favour of more urgent career tasks. [Klehe et al. (2011)](https://doi.org/10.1037/a0024914) found that proactive career behaviours are most common during active job search, not during stable employment when resilience-building would be most strategic.

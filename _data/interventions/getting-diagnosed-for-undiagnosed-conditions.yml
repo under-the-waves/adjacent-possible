@@ -1,0 +1,162 @@
+name: "Getting Diagnosed for Undiagnosed Conditions"
+what_it_is: |
+  Proactively investigating whether you have one or more common but frequently undiagnosed conditions – including ADHD, obstructive sleep apnoea, depression and anxiety, coeliac disease, thyroid disorders, vitamin deficiencies (B12, D, iron), and hearing or vision deterioration – by seeking appropriate clinical assessment rather than waiting for symptoms to escalate to crisis. [An estimated 80–90% of obstructive sleep apnoea cases remain undiagnosed](https://www.sciencedirect.com/science/article/abs/pii/S0954611125004111), ADHD affects roughly 6% of adults with [fewer than 20% aware of their diagnosis](https://www.webmd.com/add-adhd/adult-adhd-facts-statistics), and [approximately 2.8 million Britons live with an undiagnosed thyroid disorder](https://wecovr.com/guides/uk-thyroid-crisis-1-in-10-secretly-undiagnosed/). The intervention is asymmetric: for those who receive a diagnosis, the impact can be transformative across energy, cognition, mood, and work performance; for the majority who receive an all-clear, the cost is small and the reassurance is genuinely valuable.
+how_to_do_it: |
+  - Begin by reviewing your symptom profile across four high-yield categories: cognitive and attentional (persistent difficulty sustaining focus, forgetfulness, or executive dysfunction – suggesting ADHD or hypothyroidism); sleep and energy (unrefreshing sleep, daytime fatigue, or snoring – suggesting sleep apnoea or thyroid disorder); gastrointestinal and nutritional (bloating, fatigue after meals, or anaemia – suggesting coeliac disease or B12 deficiency); and mood (persistent low mood, anxiety, or irritability, which may be primary or secondary to any of the above)
+  - Request a GP or primary care appointment framed around unexplained fatigue or cognitive difficulties – the most efficient single entry point, as it opens the path to a blood panel (thyroid function, full blood count, B12, D, ferritin, coeliac antibodies), onward referral for a sleep study, and adult ADHD assessment
+  - For hearing and vision, arrange an optician and audiologist check separately – both are routinely available without a GP referral, free or low-cost in most UK settings, and frequently reveal subclinical deterioration that has been silently compensating for years
+  - If initial investigations return normal but symptoms persist, advocate specifically for a sleep study (polysomnography or home monitoring) and an adult ADHD assessment – both are systematically under-referred relative to their prevalence and often require patient-initiated prompting
+success_looks_like: |
+  - You either receive a diagnosis and begin a treatment pathway that meaningfully changes your daily functioning, or you receive a documented all-clear across the key conditions and can redirect energy to other explanations for your symptoms
+  - If diagnosed, you have a clinically grounded explanation for patterns that previously seemed like character flaws or lifestyle failures – the most commonly reported benefit of late ADHD diagnosis is a reframing of decades of perceived underperformance as neurological rather than motivational
+  - Within 3–12 months of beginning treatment (medication, CPAP, dietary change, or hormone replacement as appropriate), you notice measurable change in at least one domain: sustained focus, daily energy, mood stability, or physical symptoms
+common_pitfalls: |
+  - Self-diagnosing based on online symptom checklists and arriving at the appointment with a fixed conclusion – this reduces diagnostic quality; present symptoms and history, not a verdict
+  - Accepting a single normal blood panel as definitive when symptoms persist – thyroid function can sit within normal range while symptoms remain significant, and coeliac antibody tests carry meaningful false-negative rates; persistence and retesting are often warranted
+  - Treating diagnosis as the finish line – without actively engaging with a treatment plan, follow-up appointments, and sustained adherence (particularly for ADHD and sleep apnoea, which require ongoing medication or CPAP use), diagnosis alone changes very little
+description: |
+  - A proactive, symptom-guided evaluation for conditions commonly missed in routine healthcare: ADHD, obstructive sleep apnoea, hypothyroidism, coeliac disease, vitamin deficiencies (B12, D, iron), and sensory deterioration (hearing and vision)
+  - Distinct from routine check-ups in that it is investigative rather than age-triggered – the person actively seeks specific tests based on their symptom profile rather than waiting for standard screening thresholds or referral criteria
+  - [OSA affects an estimated 32% of US adults](https://academic.oup.com/sleep/article/48/Supplement_1/A278/8135407) with ~80% undiagnosed; [adult ADHD affects ~6%](https://www.nimh.nih.gov/health/statistics/attention-deficit-hyperactivity-disorder-adhd) with fewer than 20% diagnosed; [coeliac disease affects ~1% with ~70% undiagnosed](https://en.wikipedia.org/wiki/Coeliac_disease) – together representing a large pool of preventable impairment
+  - The expected population-level benefit is highly skewed: most people investigated will not have the relevant condition, but for those who do, impact can be life-changing – [meta-analysis](https://www.jaacap.org/article/S0890-8567(24)00304-6/fulltext) shows moderate effect sizes for pharmacological ADHD treatment on quality of life, and [long-term CPAP studies](https://www.sciencedirect.com/science/article/pii/S0954611104001362) show clinically meaningful improvements in vitality, social functioning, and general health for moderate-to-severe OSA responders
+  - ISR scores across all domains carry a population-level probability discount: PBS captures the benefit magnitude for those who have a condition and respond to treatment; ISR captures the combined probability of having the condition and responding – low for any single condition, but meaningfully higher across the bundle evaluated simultaneously
+applicable_domains: ["health-management", "cognitive-skills", "mental-health", "current-work"]
+
+values:
+  health-management.vitality:
+    pbs: 9
+    isr: 25
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A person with undiagnosed sleep apnoea or hypothyroidism may sustain only 3–5 high-energy hours per day. After diagnosis and effective treatment, reaching 9–11 hours is plausible for confirmed responders – consistent with the 65th–75th percentile. Delta: ~6 hours gained. PBS = 10 + log₂(6/14) = 10 − 1.22 = 8.78, rounded to 9.
+      - [CPAP treatment](https://www.sciencedirect.com/science/article/pii/S0954611104001362) produces clinically meaningful improvements in vitality and general health perception after 18 months; hypothyroidism treatment restores energy in the majority of compliant patients – both supporting the high PBS for confirmed responders.
+      - [OSA treatment studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC5436801/) report effect sizes of 0.41–0.98 across quality-of-life domains including vitality in compliant patients, confirming large individual-level gains for true responders.
+    isr_reasoning: |
+      - ISR reflects the population-level probability: among symptomatic adults who investigate, roughly 30–40% will have a clinically significant condition; of those, treatment response rates for vitality are approximately 60–70% (CPAP adherence ~50–70% at 12 months; hypothyroidism response ~70%). Combined: ~20–28%, giving ISR = 25%.
+      - [CPAP adherence data](https://www.mdpi.com/2254-9625/14/9/163) show ~50–70% of patients use CPAP ≥4 hours/night at 12 months – the threshold for clinically meaningful benefit – reducing the effective treatment response rate within the OSA subgroup.
+      - ADHD medication produces quality-of-life improvements in ~60–70% of adults who respond ([Lancet Psychiatry, 2024](https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(24)00360-2/fulltext)); however, only ~6% of adults have ADHD and a subset have undiagnosed ADHD-driven fatigue, keeping the population-level ISR moderate-low.
+    uar_reasoning: |
+      - UAR captures likelihood of completing the investigation rather than ongoing treatment adherence, which belongs to subsequent treatment interventions. The main barrier is inertia in booking and attending GP appointments – real but modest for motivated adults.
+      - [NHS appointment non-attendance rates](https://digital.nhs.uk/data-and-information/publications/statistical/appointments-in-general-practice) run at approximately 15–20% for GP appointments, suggesting a UAR of ~80% for completing an initial consultation.
+      - This intervention is staged – partial completion (blood panel, optician, audiologist) still yields meaningful value, so UAR of 80% reflects a realistic completion profile rather than an all-or-nothing threshold.
+
+  health-management.longterm:
+    pbs: 8
+    isr: 70
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The typical person who has not proactively investigated these conditions has significant gaps in their preventive health picture. After a systematic evaluation, they achieve a substantially more comprehensive preventive posture regardless of whether a condition is found. Delta: movement from below-median to well-above-median preventive strategy comprehensiveness – PBS 8, a major gain.
+      - The investigation simultaneously addresses multiple high-stakes conditions: [coeliac disease left untreated](https://pmc.ncbi.nlm.nih.gov/articles/PMC4406898/) carries elevated risk of osteoporosis, lymphoma, and depression; hypothyroidism untreated increases cardiovascular risk; sleep apnoea untreated approximately doubles cardiovascular event risk.
+      - Even for those receiving an all-clear, the comprehensive evaluation closes knowledge gaps most people carry for decades – the informational gain alone represents a major improvement in preventive health strategy.
+    isr_reasoning: |
+      - ISR is high for this value because the long-term strategy improvement is not contingent on finding a condition – completing the evaluation is itself the mechanism, reliably improving health self-knowledge regardless of outcome.
+      - The main failure mode is incomplete investigation – stopping after a single blood panel without pursuing sleep or ADHD assessment leaves the strategy improvement partial. This reduces ISR from near-certainty to ~70%.
+      - [Early detection of hypothyroidism](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01614-3/abstract) and [coeliac disease](https://en.wikipedia.org/wiki/Coeliac_disease) consistently shows substantially improved long-term outcomes when diagnosed before complications develop, confirming that earlier investigation is robustly beneficial.
+    uar_reasoning: |
+      - See health-management.vitality UAR – same intervention, same adherence profile.
+
+  health-management.control:
+    pbs: 7
+    isr: 75
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Most adults who have not proactively investigated these conditions lack confidence navigating relevant clinical pathways and feel uncertain whether their symptoms have medical explanations. After a systematic evaluation, they gain significantly greater knowledge of their own health status and clearer frameworks for future clinical decisions. Delta: meaningful gain in navigation ability and health confidence – PBS 7.
+      - PBS 7 rather than 8 reflects the bounded nature of the gain: clinical knowledge has inherent limits, health uncertainties remain even after a thorough evaluation, and the gain is in navigation ability rather than transformative new control over outcomes.
+      - Having navigated the diagnostic process builds lasting understanding of which tests exist, what thresholds trigger referral, and how to advocate effectively – applicable to future health encounters beyond these specific conditions.
+    isr_reasoning: |
+      - ISR is high because the control gain does not depend on finding a condition – understanding your health status and the clinical systems involved is a reliable outcome of completing the investigation whatever the result.
+      - An estimated ~25% of those who complete the investigation may find the process confusing, encounter dismissive GPs, or fail to receive clear results – reducing ISR to ~75%.
+      - [Patient self-advocacy research](https://www.ncbi.nlm.nih.gov/books/NBK550859/) indicates that patients who actively seek investigation report higher confidence in health decisions, including when results are negative.
+    uar_reasoning: |
+      - See health-management.vitality UAR – same intervention, same adherence profile.
+
+  cognitive-skills.focus:
+    pbs: 8
+    isr: 15
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A person with undiagnosed ADHD or significant sleep apnoea may sustain only 5–8 minutes of deep focus. After diagnosis and effective treatment, reaching 25–35 minutes is plausible for confirmed responders – consistent with the 65th–75th percentile. Delta: ~25 minutes gained. PBS = 10 + log₂(25/120) = 10 − 2.26 = 7.74, rounded to 8.
+      - [Lancet Psychiatry meta-analysis (2024)](https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(24)00360-2/fulltext) confirms stimulant medications and other ADHD treatments produce moderate effect sizes on attention and executive function in adult responders, supporting the endpoint estimate.
+      - [Attentional deficits occur in up to 95% of OSA patients](https://www.sciencedirect.com/science/article/abs/pii/S0012369215376017), and CPAP treatment is associated with meaningful attention recovery in compliant patients, supporting the PBS for the OSA subgroup.
+    isr_reasoning: |
+      - ISR is low because it reflects the population-level probability: adult ADHD prevalence ~6% with roughly half undiagnosed and symptomatic (~3%); OSA causing meaningful attentional impairment is more prevalent but requires both the condition and CPAP adherence. Combined probability of meaningful focus improvement: ~12–18%, giving ISR = 15%.
+      - [Stimulant medications](https://www.jaacap.org/article/S0890-8567(24)00304-6/fulltext) produce meaningful quality-of-life improvement in ~60–70% of confirmed ADHD adults – conditional on the prior probability of having ADHD, which is low at the population level.
+      - Vitamin deficiency and hypothyroidism may recover some focus after treatment, but effect sizes specifically for sustained attention are smaller and less well-evidenced than for ADHD or OSA, keeping the overall ISR low.
+    uar_reasoning: |
+      - See health-management.vitality UAR – same intervention, same adherence profile for the investigation phase.
+
+  mental-health.stability:
+    pbs: 8
+    isr: 20
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A person with undiagnosed depression, untreated coeliac disease, or sleep apnoea-related mood disruption may experience frequent emotional instability as a secondary symptom. After diagnosis and treatment, reaching the 65th–75th percentile of emotional steadiness is plausible for confirmed responders. Delta: ~30–40 percentile points – PBS 8, a major gain.
+      - [Coeliac disease patients have an 80% increased risk of depression](https://pmc.ncbi.nlm.nih.gov/articles/PMC4763959/), and dietary treatment after diagnosis is associated with significant mood improvement; ADHD treatment similarly reduces emotional dysregulation in responders.
+      - Mood improvement secondary to treating a physical cause is often more rapid and complete than treating primary mood disorders in isolation, supporting the high PBS for confirmed responders.
+    isr_reasoning: |
+      - ISR reflects the probability of finding a condition with secondary mood effects and successfully treating it: primary depression and anxiety affect ~10–15% of adults; coeliac disease ~1% with elevated depression rates; OSA with mood effects perhaps 5–10%. Of those with conditions, treatment response for mood ~50–70%. Combined: ~15–25%, giving ISR = 20%.
+      - [OSA treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC5436801/) shows effect sizes of 0.28–0.51 for depression and anxiety in compliant patients – meaningful but not universal, with mild-severity and non-compliant patients showing less benefit.
+      - [Long-term ADHD treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC12434355/) is associated with improvements in emotional regulation and mood, but effect sizes vary substantially by individual and medication response, warranting a conservative ISR.
+    uar_reasoning: |
+      - See health-management.vitality UAR – same intervention, same adherence profile for the investigation phase.
+
+  current-work.competence:
+    pbs: 7
+    isr: 18
+    uar: 80
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A person with undiagnosed ADHD or chronic fatigue from sleep apnoea or thyroid disorder performs below their neurological and physical potential – evidenced in missed deadlines, higher error rates, and slower task completion. After effective treatment, returning to an unimpaired baseline represents a meaningful gain in mastery and execution quality – PBS 7.
+      - [Adults with ADHD report significantly impaired work performance](https://pmc.ncbi.nlm.nih.gov/articles/PMC3398685/) compared to controls, and treatment is associated with improvements in time management, task completion, and reliability for responders.
+      - The gain is bounded: diagnosis and treatment restore baseline neurological function but do not deliver skills never acquired – competence improvements are real but limited to closing the impaired-to-unimpaired gap.
+    isr_reasoning: |
+      - ISR is low: meaningful work competence improvement requires both a relevant diagnosis (ADHD, OSA, or thyroid disorder affecting cognition) and sustained treatment adherence. The combined population-level probability is approximately 15–20%.
+      - [Lancet Psychiatry (2024)](https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(24)00360-2/fulltext) confirms efficacy for attention and executive function in ADHD medication responders, but non-responders (~30–40%) see limited benefit – reducing effective ISR.
+      - Evidence linking OSA treatment specifically to work competence (rather than general quality of life) is indirect and less well-characterised, warranting low confidence overall.
+    uar_reasoning: |
+      - See health-management.vitality UAR – same intervention, same adherence profile for the investigation phase.
+
+  current-work.engagement:
+    pbs: 7
+    isr: 18
+    uar: 80
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Work engagement is substantially undermined by untreated ADHD (chronic boredom, frustration, difficulty sustaining motivation) and by fatigue from sleep apnoea or hypothyroidism. Treatment that restores cognitive and energy capacity can produce meaningful gains in daily absorption and motivation – PBS 7.
+      - The mechanism is direct for ADHD: stimulant medication improves dopaminergic and noradrenergic function, which underpins motivation and reward-seeking, directly affecting how engaging work feels. [Adults with ADHD report significantly less work enjoyment and satisfaction](https://pmc.ncbi.nlm.nih.gov/articles/PMC3398685/) than controls, and treatment closes part of this gap for responders.
+      - PBS is capped at 7 because work engagement is also driven by job fit, team dynamics, and intrinsic interest – factors that diagnosis and treatment do not address.
+    isr_reasoning: |
+      - ISR mirrors current-work.competence at 18%: the same population-level probability applies, and engagement gains are conditional on the same diagnosis and treatment response pathway.
+      - Treatment response for motivation and engagement specifically is less well-evidenced in RCTs than for attention – the indirect pathway from improved attention to increased efficacy to improved engagement introduces additional steps that may not all materialise.
+      - [Long-term ADHD treatment outcomes](https://pmc.ncbi.nlm.nih.gov/articles/PMC12434355/) show engagement benefits in naturalistic studies, but RCT evidence isolating engagement as a distinct outcome is limited, warranting low confidence.
+    uar_reasoning: |
+      - See health-management.vitality UAR – same intervention, same adherence profile for the investigation phase.
+
+resources:
+  upfront_cost: 25
+  upfront_cost_reasoning: "GP appointments are free on the NHS; blood testing through a GP carries no additional charge. An optician check is free for NHS-eligible groups and approximately £25 (~$32) privately. Audiologist assessment is available via NHS referral at no charge. The minimum viable investigation – GP appointment plus private optician check – costs approximately $32 assuming NHS blood testing."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The investigation itself has no ongoing cost – it is a time-limited process. Ongoing costs associated with any treatment pathway (medication, CPAP equipment, specialist monitoring) belong to subsequent treatment interventions, not to the diagnostic investigation."
+  upfront_time: 5
+  upfront_time_reasoning: "Approximately 5 hours: 1 hour to review symptoms and prepare for the GP appointment; 1 hour for the GP consultation; 1 hour for optician and audiologist checks; 1–2 hours for follow-up appointments or reviewing test results. Excludes NHS waiting time for referrals, which can be substantial."
+  ongoing_time: 0
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "The investigation phase is self-terminating once assessments are complete and results received. Any ongoing time commitment belongs to the subsequent treatment plan, which is a separate intervention."
+
+prerequisites:
+  - "Access to a GP or primary care service capable of ordering blood tests and making onward referrals – the investigation cannot proceed adequately through self-testing alone"
+  - "Ability to describe your symptom profile clearly: when symptoms began, their frequency and severity, and how they affect daily functioning – required for the GP to order appropriate tests and consider relevant referrals"
+  - "Willingness to advocate for further investigation if initial results are normal and symptoms persist – the NHS gatekeeping structure means passive patients may receive an early discharge without assessment for all relevant conditions"
+  - "No existing diagnosis already covering the primary conditions of concern – this intervention targets people who have not yet been evaluated, not those already managing a known condition"
+
+flagged_domains:
+  - domain: "sleep"
+    rationale: "Diagnosis and CPAP treatment of obstructive sleep apnoea directly transforms sleep quality, daily functioning, and long-term health – but the sleep life area currently lacks scoring anchors in values.yml."
+  - domain: "fitness"
+    rationale: "Untreated sleep apnoea and hypothyroidism suppress exercise capacity and recovery; effective treatment can meaningfully restore fitness potential, but the causal pathway is indirect and conditional on the specific diagnosis found."

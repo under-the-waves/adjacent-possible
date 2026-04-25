@@ -1,8 +1,19 @@
 name: "Bedtime Routine"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  A consistent sequence of relaxing activities performed in the same order 30–90 minutes before bed each night, designed to signal wind-down through predictable, calming behaviours. Typical activities include dimming lights, reading, gentle stretching, or a warm shower. Complements [Blue Light Blocking](/resources/intervention-database/blue-light-blocking) and [Breathing Techniques](/resources/intervention-database/breathing-techniques) as part of a broader sleep hygiene approach.
+how_to_do_it: |
+  - Many people find that keeping the routine to 3–4 activities in a fixed order works better than elaborate multi-step sequences – simplicity is what makes it sustainable
+  - You may want to anchor the routine to a consistent start time rather than a consistent bedtime, since the wind-down period itself is what trains the sleep signal
+  - Including at least one activity that is genuinely enjoyable (light reading, a warm drink, gentle music) helps the routine feel like a reward rather than a chore
+  - Most practitioners find that dimming household lights as the first step creates an immediate environmental shift that separates the routine from the rest of the evening
+success_looks_like: |
+  - You feel noticeably drowsy by the end of the routine most nights, rather than lying in bed waiting for sleep to arrive
+  - Sleep onset becomes faster and more predictable – falling asleep within 15–20 minutes of lights-out on most nights
+  - The routine itself becomes automatic within 4–6 weeks: you move through the steps without needing to think about what comes next
+common_pitfalls: |
+  - Building an overly ambitious routine (seven steps, 90 minutes) that feels burdensome and is abandoned within two weeks – start with 3 steps and 30 minutes
+  - Performing the routine inconsistently – doing it on weeknights but skipping weekends – which prevents the conditioning effect from building
+  - Including screen-based activities (scrolling social media, watching television) as part of the routine, which undermines the wind-down signal the routine is meant to create
 description: |
   - A consistent sequence of relaxing activities performed 30-90 minutes before sleep at the same time each night
   - Typical activities include dimming lights, avoiding screens, warm bath or shower, reading, gentle stretching, or meditation
@@ -14,7 +25,7 @@ values:
   sleep.daily_functioning:
     pbs: 7
     pbs_reasoning: |
-      - [Irish et al. (2015)](https://doi.org/10.1016/j.smrv.2014.10.007) meta-analysis found bedtime routines reduce sleep onset latency by 10-15 minutes and improve sleep efficiency by 5-8%, translating to roughly 1-2 additional productive hours per day for someone with previously disrupted sleep.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile (gaining ~1.5 additional productive hours per day). Delta: ~30–40 percentile points of improvement. [Irish et al. (2015)](https://doi.org/10.1016/j.smrv.2014.10.007) meta-analysis found bedtime routines reduce sleep onset latency by 10–15 minutes and improve sleep efficiency by 5–8%, translating to roughly 1–2 additional productive hours per day for someone with previously disrupted sleep.
       - [Mindell et al. (2015)](https://doi.org/10.5665/sleep.4886) found consistent routines improved daytime alertness scores by 15-20% in adults, supporting a gain in the 1-2 hour range on the daily functioning anchor.
       - On the updated anchor (10 = 14h, 8 = 3.5h, 6 = 50min), a gain of ~1.5 productive hours places this at score 7, between the 50-minute and 3.5-hour benchmarks.
     isr: 85
@@ -32,7 +43,7 @@ values:
   sleep.long_term_health:
     pbs: 6
     pbs_reasoning: |
-      - [Hirshkowitz et al. (2015)](https://doi.org/10.1016/j.sleh.2014.12.010) National Sleep Foundation guidelines indicate consistent sleep patterns reduce cardiovascular disease risk by 10-15% and improve immune function markers, corresponding to roughly 6 months additional healthy lifespan.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–65th percentile (~6 months additional healthy lifespan through reduced cardiovascular disease risk). Delta: ~20–30 percentile points of improvement. [Hirshkowitz et al. (2015)](https://doi.org/10.1016/j.sleh.2014.12.010) National Sleep Foundation guidelines indicate consistent sleep patterns reduce cardiovascular disease risk by 10–15% and improve immune function markers, corresponding to roughly 6 months additional healthy lifespan.
       - [Cappuccio et al. (2010)](https://doi.org/10.1093/sleep/33.5.585) meta-analysis of 1.3 million participants found that improved sleep quality was associated with reduced all-cause mortality, though the specific contribution of bedtime routines (vs. total sleep quality) is moderate.
       - On the updated anchor (10 = 8+ years, 8 = 2 years, 6 = 6 months), the estimated ~6 months of additional healthy lifespan aligns with score 6.
     isr: 80
@@ -50,7 +61,7 @@ values:
   sleep.comfort_experience:
     pbs: 8
     pbs_reasoning: |
-      - [Mindell et al. (2015)](https://doi.org/10.5665/sleep.4886) systematic review found 80-85% improvement in subjective sleep satisfaction scores among adults with consistent routines, with participants reporting significantly easier sleep transitions and reduced bedtime anxiety.
+      - Baseline (per values.yml): 35th percentile (below-average sleep comfort). After successful adherence, a user could plausibly reach the 75th–85th percentile (consistently restful sleep with easier transitions). Delta: ~40–50 percentile points of improvement. [Mindell et al. (2015)](https://doi.org/10.5665/sleep.4886) systematic review found 80–85% improvement in subjective sleep satisfaction scores among adults with consistent routines, with participants reporting significantly easier sleep transitions and reduced bedtime anxiety.
       - The intervention directly targets the subjective experience of falling asleep and sleep quality through relaxation, environmental cues, and psychological wind-down, making it one of the most effective comfort-focused sleep interventions.
       - On the updated anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), successful implementation typically moves someone to "consistently restful" sleep, aligning with score 8.
     isr: 90
@@ -68,7 +79,7 @@ values:
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) meta-analysis of 154 studies (n = 5,717) found sleep loss reduces positive affect (SMD = -0.27 to -1.14) and impairs emotion regulation, with [Goldstein & Walker (2014)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7181893/) establishing that sleep quality modulates prefrontal-amygdala connectivity essential for emotional regulation.
+      - Baseline (per values.yml): 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 45th–55th percentile (moderately improved mood stability through better sleep quality). Delta: ~10–20 percentile points of improvement. [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) meta-analysis of 154 studies (n = 5,717) found sleep loss reduces positive affect (SMD = -0.27 to -1.14) and impairs emotion regulation, with [Goldstein & Walker (2014)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7181893/) establishing that sleep quality modulates prefrontal-amygdala connectivity essential for emotional regulation.
       - [Kahn et al. (2013)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8193556/) meta-analysis found sleep restriction produces medium effect sizes on negative mood (g = 0.45), indicating that improving sleep quality via a bedtime routine raises the emotional baseline and reduces mood instability.
       - On the subjective anchor (10 = complete freedom from distressing symptoms, 6 = occasional distress resolving quickly, 4 = frequent distress affecting daily functioning), a bedtime routine improves sleep quality which supports emotional regulation, moving someone modestly up the scale. Score 5 reflects a meaningful but secondary benefit – sleep quality is one contributor to mood stability but does not address cognitive or social drivers of distress.
     isr: 55
@@ -77,7 +88,7 @@ values:
       - [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) found mixed results for depressive symptoms depending on sleep loss type, suggesting the sleep-mood pathway is less reliable than the sleep-functioning pathway.
       - Conservatively estimated at 55% – higher than the optimising-lighting ISR for mental health (40%) because bedtime routines have more consistent effects on subjective sleep quality, but lower than the primary sleep ISR (85%) due to the indirect pathway.
     uar: 70
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 

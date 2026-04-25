@@ -1,0 +1,149 @@
+name: "Learning Basic Negotiation"
+what_it_is: |
+  Spending one weekend (8–16 hours) studying foundational negotiation frameworks – primarily the principled negotiation method from Fisher and Ury's Getting to Yes – covering BATNA (Best Alternative to a Negotiated Agreement), anchoring, active listening, and separating people from problems. The skill is then applied situationally to salary reviews, job offers, large purchases, lease renewals, and contractor quotes. The learning is upfront and the payoff is event-driven.
+how_to_do_it: |
+  - Read Getting to Yes (~4–6 hours) to internalise the four principles: separate people from problems, focus on interests not positions, generate options for mutual gain, and insist on objective criteria
+  - Learn your BATNA before every negotiation – this is the best outcome you can achieve without the other party's agreement, and it sets the rational floor below which you should not accept any deal
+  - Practise via role-play with a friend, recorded solo, or using an AI counterpart before applying to real situations; the gap between knowing a concept and applying it under pressure only closes through rehearsal
+  - Before each real negotiation, spend 30–60 minutes preparing: research the market rate, identify your BATNA, plan your opening anchor, and anticipate the other party's interests
+success_looks_like: |
+  - You enter salary discussions and large purchases with a prepared strategy rather than hoping for the best or accepting the first offer
+  - You consistently achieve outcomes 10–20% better than you would have without preparation – compounding across dozens of negotiations over a career
+  - Conflicts at work and in personal relationships feel less adversarial because you habitually look for underlying interests rather than defending positions
+common_pitfalls: |
+  - Reading about negotiation but never practising it – intellectual understanding does not translate to composed execution under social pressure without rehearsal
+  - Applying aggressive tactics (hardball anchoring, take-it-or-leave-it ultimatums) rather than principled negotiation, which damages relationships and often produces worse outcomes
+  - Only negotiating salary and ignoring the dozens of other situations where the skill applies – contractor quotes, lease terms, service prices, project scope at work
+description: |
+  - Spend one weekend (8–16 hours) studying foundational negotiation frameworks – primarily the principled negotiation method from Fisher and Ury's Getting to Yes – covering BATNA (Best Alternative to a Negotiated Agreement), anchoring, active listening, and separating people from problems
+  - BATNA means identifying the best outcome you can achieve without the other party's agreement; knowing your BATNA sets a rational floor below which you should not accept any deal
+  - Anchoring means making the first offer when you have good information, as [research](https://www.pon.harvard.edu/daily/negotiation-skills-daily/the-drawbacks-of-goals/) shows the first number stated heavily influences the final settlement
+  - Practice via role-play (with a friend, recorded solo, or using an AI counterpart) before applying to real situations; the gap between knowing a concept and applying it under pressure is large and only closes through rehearsal
+  - Apply situationally – salary reviews, job offers, freelance rates, large purchases, lease renewals, contractor quotes – rather than as a daily habit; the learning is upfront and the payoff is event-driven
+  - [Research](https://direct.mit.edu/ngtn/article/24/4/509/122013/The-Effectiveness-of-Negotiation-Training) consistently shows negotiation training improves outcomes in post-training simulations; over 80% of trained participants report applying skills in real work contexts
+applicable_domains: ["life-skills", "current-work", "career-planning", "saving", "communication"]
+
+values:
+  life-skills.high:
+    pbs: 6
+    isr: 70
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~2–3 practical skills at competent level). After successful adherence, a user gains negotiation as a competent practical skill, moving to ~3–4 skills – an increase of roughly 1 skill unit. PBS = 10 + log₂(1/15) = 10 - 3.91 = 6.
+      - Negotiation qualifies as a high-impact practical skill: [CareerBuilder survey](https://resources.careerbuilder.com/news-research/73-of-employers-would-negotiate-salary-55-of-workers-don-t-ask) data and [Linda Babcock's research](https://www.inc.com/jeff-haden/research-shows-not-negotiating-your-salary-could-cost-you-1-million-especially-.html) show that failure to negotiate costs professionals $750,000–$1.5 million in lifetime earnings – comparable in impact to financial literacy or first aid.
+      - The skill is durable and broadly applicable across domains (salary, purchases, contracts, conflict), distinguishing it from single-context skills and justifying its classification as a high-impact practical capability.
+    isr_reasoning: |
+      - [Movius (2008)](https://www.cbi.org/assets/files/CBI_Effectiveness_Negotiation_Training.pdf) in the Negotiation Journal finds that negotiation training consistently improves performance in post-training simulations, but real-world transfer is less reliable – sales professionals required six months of follow-up before demonstrating effective skill use with real customers.
+      - [Oehlschlaeger et al. (2022)](https://onlinelibrary.wiley.com/doi/10.1111/nejo.12429) finds that 80% of trained participants report applying negotiation skills on the job, but only 30% report a measurable impact on pay or promotion – suggesting successful acquisition of the skill is common, but translation into tangible life-skills outcomes is moderate.
+      - A score of 70 reflects that most people who study and practise negotiation do reach competent proficiency, but a meaningful minority remain uncomfortable applying it under pressure or in emotionally charged situations.
+    uar_reasoning: |
+      - [Movius (2008)](https://www.cbi.org/assets/files/CBI_Effectiveness_Negotiation_Training.pdf) notes that behavioural change from negotiation training decays without reinforcement – researchers assume only 10–50% of training results in lasting behavioural change.
+      - The intervention requires deliberate application in naturally occurring but infrequent situations (job offers, reviews, large purchases); without repeated use, skills atrophy between episodes, reducing long-term adherence to the full framework.
+      - A UAR of 55 reflects that roughly half of learners will continue applying at least some negotiation skills situationally after the initial learning period, while the other half revert to default acceptance behaviours within 12–18 months.
+
+  current-work.rewards:
+    pbs: 6
+    isr: 60
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user who negotiates salary at each job transition or review could plausibly reach the 60th–65th percentile in contribution and recognition – a meaningful gain driven by higher compensation and increased confidence in advocating for one's contributions. Delta: ~25–30 percentile points.
+      - [CareerBuilder data](https://resources.careerbuilder.com/news-research/73-of-employers-would-negotiate-salary-55-of-workers-don-t-ask) shows 73% of employers expect negotiation and would go higher – yet 55% of workers never ask. For those who do ask, 66% succeed and gain an average of ~19% above the initial offer, mapping to a meaningful gain in rewards.
+      - PBS is capped at 6 because current-work.rewards is subjective and the contribution/recognition component does not move in lockstep with compensation alone – recognition requires performance as well as self-advocacy.
+    isr_reasoning: |
+      - [Procurementtactics (2025)](https://procurementtactics.com/salary-negotiation-statistics/) aggregates multiple surveys: 66% of those who negotiate achieve their target, and 85% get at least partial success. ISR of 60 is conservative because these figures capture those who attempt negotiation, not all who are trained.
+      - The main failure mode is psychological – trained individuals who understand the theory but cannot overcome anxiety or social discomfort in the actual conversation. [Bowles, Babcock & Lai (2007)](https://www.pon.harvard.edu/daily/salary-negotiations/should-you-negotiate-a-job-offer/) show that social context and perceived risk strongly moderate willingness to apply skills.
+      - ISR is distinct from PBS here: even among those who successfully negotiate, the rewards improvement depends on employer flexibility, market conditions, and the individual's leverage – not solely on negotiation skill.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention and adherence profile. Salary negotiation opportunities arise at most once or twice per year; without regular practice, confidence degrades between events.
+      - [Procurementtactics (2025)](https://procurementtactics.com/salary-negotiation-statistics/) reports that 55% of workers still do not negotiate even after being aware of its benefits, suggesting that knowledge alone does not reliably sustain the behaviour.
+
+  career-planning.security:
+    pbs: 4
+    isr: 55
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Negotiation skills modestly improve career security by expanding optionality – a practitioner who negotiates job offers, contract terms, and notice periods has more favourable exit and entry conditions than one who does not. Plausible endpoint: ~45th–50th percentile. Delta: ~10–15 points.
+      - The career-planning.security anchor is subjective (adaptability and options). Negotiation contributes to this indirectly: better starting compensation gives more runway; better contract terms reduce lock-in. But the dominant drivers of career security are network, skills, and track record – negotiation is a secondary lever.
+      - Score 4 is conservative given that the mechanism is real but the effect size on overall career adaptability is small relative to other interventions (networking, skill-building).
+    isr_reasoning: |
+      - Evidence for negotiation improving career security specifically (as opposed to salary) is indirect – no studies directly measure career adaptability as an outcome of negotiation training.
+      - The mechanism is plausible: [Harvard PON research](https://www.pon.harvard.edu/daily/salary-negotiations/should-you-negotiate-a-job-offer/) shows those who negotiate starting conditions set better contractual foundations, but the link to long-term security is unquantified.
+      - Confidence is low; ISR of 55 reflects genuine but uncertain benefit rather than a well-evidenced effect size.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention and adherence profile. Career security benefits accrue only if the skill is actively applied at career transitions, which are infrequent.
+
+  saving.growth:
+    pbs: 4
+    isr: 45
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Negotiation on large purchases (cars, rent, contractor work, insurance renewals) could plausibly recover 1–3% of gross income annually for a disciplined practitioner who applies skills across multiple domains. PBS = 10 + log₂(1.5/50) = 10 - 5.06 = 5; rounding down to 4 given conservatism about how consistently people apply negotiation to purchases.
+      - The primary saving benefit flows through salary negotiation (already scored under current-work.rewards); the incremental saving from purchase negotiation is the relevant delta here, and it is modest for most people.
+      - Score 4 reflects a real but small effect: most people negotiate only occasional large purchases, not systematically across spending categories.
+    isr_reasoning: |
+      - No direct studies measure saving rate improvement attributable to negotiation skills specifically; evidence is extrapolated from general price-negotiation literature.
+      - [Procurementtactics (2025)](https://procurementtactics.com/negotiation-statistics/) documents that trained negotiators achieve 5–15% better outcomes on transactional deals, but most personal purchases have limited negotiation scope (fixed-price retail, subscription services).
+      - ISR of 45 reflects that fewer than half of trained individuals apply negotiation skills often enough across purchases to generate a measurable saving rate improvement.
+    uar_reasoning: |
+      - Applying negotiation to everyday purchases requires a mindset shift that most people do not sustain; the social discomfort of haggling in cultures where prices are considered fixed is a persistent barrier.
+      - [Movius (2008)](https://www.cbi.org/assets/files/CBI_Effectiveness_Negotiation_Training.pdf) notes that without reinforcement and repeated practice, training effects decay – purchase negotiation lacks the high-stakes motivation of salary negotiation to sustain application.
+
+  communication.conflict:
+    pbs: 6
+    isr: 60
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Principled negotiation training directly addresses conflict navigation: separating people from problems, identifying underlying interests, and using objective criteria map cleanly to constructive disagreement resolution. Plausible endpoint: 55th–60th percentile. Delta: ~20–25 points.
+      - The Getting to Yes framework was explicitly designed for conflict contexts (Fisher and Ury developed it from the Harvard Negotiation Project studying real disputes). Active listening and interest-based reframing are its core tools, directly improving conflict navigation quality.
+      - Score 6 reflects that most conflict situations also involve emotional regulation factors that one weekend of cognitive training does not fully address.
+    isr_reasoning: |
+      - [Movius (2008)](https://www.cbi.org/assets/files/CBI_Effectiveness_Negotiation_Training.pdf) finds training improves negotiation performance in simulations consistently, including dispute-resolution scenarios, but real-world application in emotionally charged conflicts is harder to sustain.
+      - [Frontiers in Psychology (2018)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.00907/full) shows mindset-oriented negotiation training produces better conflict outcomes than skill-only approaches, suggesting the framework matters but not all training designs achieve the same effect.
+      - ISR of 60 reflects that a meaningful majority of trained individuals improve their conflict navigation, but the emotionally activated nature of real conflicts reduces consistent skill application compared to calmer negotiation scenarios.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention and adherence profile. Conflict situations occur more frequently than salary negotiations, providing more practice opportunities, but they also carry higher emotional stakes that erode composed application of the framework.
+      - [Oehlschlaeger et al. (2022)](https://onlinelibrary.wiley.com/doi/10.1111/nejo.12429) finds that ongoing reinforcement (coaching, reflection) significantly boosts retention – without it, skills regress toward habitual responses under stress.
+
+  communication.influence:
+    pbs: 5
+    isr: 55
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Anchoring, framing, and principled persuasion techniques from negotiation training improve general communicative influence. Plausible endpoint: ~50th–55th percentile. Delta: ~15–20 points.
+      - Influence is a broader construct than negotiation success; the training teaches specific techniques (anchoring, framing, interest identification) that transfer partially but do not cover the full influence toolkit (storytelling, authority, emotional appeal).
+      - Score 5 is conservative relative to communication.conflict (score 6) because influence requires a wider range of skills than conflict navigation, and negotiation training addresses a narrower slice of it.
+    isr_reasoning: |
+      - No direct studies measure influence improvement as a standalone outcome of basic negotiation training; evidence is extrapolated from communication skill transfer literature.
+      - [Movius (2008)](https://www.cbi.org/assets/files/CBI_Effectiveness_Negotiation_Training.pdf) confirms skill transfer to work contexts for 80% of participants, which plausibly includes influence situations, but the specific effect on persuasion is unquantified.
+      - ISR of 55 reflects a genuine but uncertain benefit, with confidence low due to indirect evidence.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention and adherence profile. Influence is exercised frequently enough that skills may be reinforced naturally, but the specific negotiation-derived techniques (BATNA, anchoring) are most salient in formal or high-stakes settings.
+
+resources:
+  upfront_cost: 15
+  upfront_cost_reasoning: "Getting to Yes (Fisher and Ury) costs approximately $10–15 new or $3–8 used. No other materials are required to begin."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The skill is applied situationally using knowledge already acquired. Optional: occasional books or courses to deepen specific areas, but these are not required for basic competence."
+  upfront_time: 12
+  upfront_time_reasoning: "One weekend of focused study: reading Getting to Yes (~4–6 hours), supplementary material or summary resources (~2 hours), and deliberate practice via role-play or written scenario work (~4 hours). Total approximately 10–14 hours; 12 is a reasonable midpoint."
+  ongoing_time: 1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Preparation time before each negotiation situation (researching market rates, identifying BATNA, planning anchor) averages roughly 1 hour per month across salary reviews, purchase decisions, and contract discussions. No routine daily or weekly time commitment."
+
+prerequisites:
+  - "Ability to read and study independently from a book or equivalent resource"
+  - "At least one upcoming situation in which to apply the skill (job offer, salary review, major purchase, or contract) – without application opportunities, learning remains theoretical"
+  - "Basic comfort with written English, as the primary resource (Getting to Yes) is in English and most supplementary materials assume reading literacy"
+
+flagged_domains:
+  - domain: "rationality"
+    rationale: "Principled negotiation trains interest-based reasoning and separating positions from underlying goals, which improves decision-making quality in high-stakes bilateral situations."
+  - domain: "behaviours"
+    rationale: "Learning to advocate for one's interests builds assertiveness and reduces conflict-avoidant behaviour patterns over time."

@@ -1,0 +1,164 @@
+name: "Learning About Cognitive Biases"
+what_it_is: |
+  A structured self-education programme in which you study the major cognitive biases – systematic errors in human reasoning such as confirmation bias, anchoring, the sunk cost fallacy, and the availability heuristic – with the goal of recognising and partially correcting these patterns in your own thinking. Rather than learning abstract psychology trivia, the aim is practical: to build a mental vocabulary for common reasoning errors so that you can catch them in real decisions, slow down automatic judgements, and apply deliberate corrective strategies. Because biases affect thinking across every domain of life, this is a meta-skill – an investment in the machinery of decision-making itself rather than any single outcome area. It is low-cost and self-directed, but benefits are diffuse and highly dependent on active application rather than passive knowledge accumulation.
+how_to_do_it: |
+  - Work through a structured source covering at minimum: confirmation bias, anchoring, the sunk cost fallacy, the availability heuristic, overconfidence, and the planning fallacy – options range from books such as Thinking, Fast and Slow to shorter formats like the You Are Not So Smart podcast or the Clearer Thinking interactive tools
+  - For each bias, do not just read the definition – work through a concrete example from your own recent decisions and identify where the bias likely applied; this is the difference between declarative knowledge and usable pattern-recognition
+  - Create a short personal reference (a note or card for each bias) summarising the trigger situation, the distortion it causes, and the corrective strategy – then review this before high-stakes decisions, not after
+  - After completing an initial study phase (4–8 weeks), build a lightweight practice habit: a brief pre-mortem or "bias check" before major decisions, asking which of your catalogued biases is most likely operating right now
+success_looks_like: |
+  - You spontaneously name a specific bias mid-decision and apply a corrective strategy (e.g. generating counterevidence before confirming an existing belief), rather than only recognising the error in hindsight
+  - Over 3–6 months, you notice a reduction in a specific recurring error pattern – for example, fewer sunk cost continuations on projects that are not working, or better-calibrated time estimates
+  - You can explain the mechanism of at least six major biases to someone else without notes, demonstrating that the knowledge is genuinely encoded rather than surface-level
+common_pitfalls: |
+  - Treating bias knowledge as a weapon to use on others' reasoning while remaining blind to it in your own – sometimes called the "bias blind spot bias"; intellectual humility about self-application is the harder and more important skill
+  - Stopping at recognition without practising corrective strategies; research consistently shows that knowing a bias exists is insufficient to reduce it – structured countermeasures are required
+  - Over-pathologising normal reasoning by seeing biases everywhere; this can produce paralysis, motivated scepticism of valid intuitions, or cynicism about all human judgement rather than selective, targeted correction
+description: |
+  - Structured study of cognitive biases – systematic, predictable errors in human reasoning arising from mental shortcuts (heuristics) – with the explicit goal of reducing their influence on personal decisions
+  - Core curriculum: confirmation bias (seeking confirming evidence while ignoring disconfirmation), anchoring (over-relying on the first number encountered), sunk cost fallacy (continuing bad investments to avoid feeling loss), availability heuristic (overweighting vivid or recent examples when assessing probability), and ideally overconfidence and the planning fallacy
+  - [Morewedge et al. (2015)](https://journals.sagepub.com/doi/abs/10.1177/2372732215600886) found that a single training intervention (interactive game) reduced six cognitive biases by more than 30% immediately and more than 20% at three-month follow-up, with domain-general transfer to untrained problem types
+  - [Sellier, Scopelliti, and Morewedge (2019)](https://journals.sagepub.com/doi/10.1177/0956797619861429) demonstrated field transfer: graduate students who received debiasing training were 19–29% less likely to make a bias-driven error on an unannounced real-world business case than untrained peers
+  - Distinct from generic critical-thinking courses in that it targets specific, named biases with specific corrective strategies (perspective-taking, consider-the-opposite, reference class forecasting) rather than general argumentation or logic skills
+applicable_domains: ["rationality", "cognitive-skills", "goals", "value-system", "worldview"]
+
+values:
+  rationality.decision-making:
+    pbs: 6
+    isr: 40
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence – sustained study and active application of corrective strategies – a user could plausibly reach the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - [Morewedge et al. (2015)](https://journals.sagepub.com/doi/abs/10.1177/2372732215600886) showed 30%+ immediate bias reduction and 20%+ at three months post-training; this is the strongest single-study evidence for a substantial shift in decision quality from structured debiasing.
+      - Score 8 is not warranted: the [Frontiers systematic review (Vries et al., 2021)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.629354/full) found real-world transfer is modest and fragile; decision-making quality is also shaped by information quality, emotional state, and structural factors that bias training does not address.
+    isr_reasoning: |
+      - [Vries et al. (2021)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.629354/full) found that only one study in their systematic review measured genuine real-world behavioural transfer, and the effect was observed in roughly 19% of participants.
+      - [Sellier et al. (2019)](https://journals.sagepub.com/doi/10.1177/0956797619861429) showed a 19–29% reduction in bias-driven error in a field setting, but this was for a single, well-structured bias under experimental conditions.
+      - The systematic review notes that merely teaching abstract knowledge is insufficient; active corrective strategy practice is required, which most self-study programmes do not enforce.
+    uar_reasoning: |
+      - Self-directed bias study has no external accountability and produces benefits that are invisible in the short term; unlike fitness or savings, there is no tangible metric to motivate continuation.
+      - General online course completion rates run 5–15%; unstructured reading programmes fare similarly.
+      - The "bias blind spot" – the tendency to see biases in others but not oneself – actively undermines application even among people who complete the learning.
+
+  rationality.accurate-beliefs:
+    pbs: 6
+    isr: 35
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: ~20 percentile points.
+      - Confirmation bias training directly targets the most prevalent source of belief distortion – selectively seeking confirming evidence. [Morewedge et al. (2015)](https://journals.sagepub.com/doi/abs/10.1177/2372732215600886) showed 31.94%+ reduction in confirmation bias in trained participants.
+      - Availability heuristic and anchoring training further improve probability estimates and numerical judgements, producing cumulative accuracy gains.
+      - Score 8 is not warranted because belief accuracy depends heavily on information quality and domain expertise that bias training does not supply.
+    isr_reasoning: |
+      - [Morewedge et al. (2015)](https://journals.sagepub.com/doi/abs/10.1177/2372732215600886) demonstrated reliable bias reduction in laboratory settings; however, the 2021 systematic review found that effects on genuine belief-formation outside the lab are substantially weaker.
+      - [Debiasing training in national risk analysts (2025)](https://www.nature.com/articles/s41598-025-28794-w) found effects in a professional sample, suggesting some real-world transfer – but self-directed learners are a less favourable population.
+      - A conservative ISR of 35% reflects the gap between laboratory efficacy and real-world belief accuracy improvement.
+    uar_reasoning: |
+      - See rationality.decision-making UAR – same intervention and same adherence profile.
+
+  rationality.intellectual-honesty:
+    pbs: 5
+    isr: 40
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile. Delta: ~15–20 percentile points.
+      - Studying motivated reasoning and confirmation bias builds explicit awareness that one's own beliefs are systematically biased – a necessary precondition for intellectual honesty even if not sufficient.
+      - The effect is bounded: intellectual honesty also requires emotional willingness to update and social courage to admit error. Score 5 reflects this partial mechanism.
+    isr_reasoning: |
+      - No direct RCT evidence links bias education to improved intellectual honesty as a trait. The pathway is indirect.
+      - [Cognitive debiasing: PMC review](https://pmc.ncbi.nlm.nih.gov/articles/PMC3786644/) notes that overconfidence – closely related to intellectual honesty failures – is one of the most resistant biases to training.
+      - ISR of 40% reflects plausible but unverified transfer.
+    uar_reasoning: |
+      - See rationality.decision-making UAR – same intervention and same adherence profile.
+
+  cognitive-skills.reasoning:
+    pbs: 5
+    isr: 30
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile. Delta: ~15 percentile points.
+      - The causal pathway is indirect: reducing anchoring and availability heuristic errors improves numerical and probabilistic reasoning; reducing confirmation bias improves hypothesis generation. But reasoning ability encompasses many facets that bias training does not address.
+      - [Morewedge et al. (2015)](https://journals.sagepub.com/doi/abs/10.1177/2372732215600886) demonstrated domain-general transfer, but effect sizes are smaller for untrained problem types.
+    isr_reasoning: |
+      - No direct evidence that bias education improves general reasoning performance; the claim rests on transfer from bias-specific training to untrained reasoning scenarios.
+      - [Vries et al. (2021)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.629354/full) found that the "learned trick" hypothesis undermines confidence in broad reasoning transfer.
+      - ISR of 30% reflects meaningful but uncertain benefit.
+    uar_reasoning: |
+      - See rationality.decision-making UAR – same intervention and same adherence profile.
+
+  goals.follow_through:
+    pbs: 4
+    isr: 30
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–50th percentile. Delta: ~10–15 percentile points.
+      - The sunk cost fallacy directly undermines goal follow-through by causing people to persist with failing strategies rather than adapting; training on this bias produces a specific and mechanistically plausible benefit.
+      - Anchoring training may also improve milestone-setting realism, indirectly supporting follow-through by reducing the planning fallacy's contribution to goal abandonment.
+    isr_reasoning: |
+      - No direct RCT measures goal follow-through as an outcome of bias training; this is an indirect benefit.
+      - The benefit is specific to goal decisions where sunk cost reasoning is the operative distortion.
+      - ISR of 30% is conservative, reflecting indirect causal pathway and absence of direct evidence.
+    uar_reasoning: |
+      - See rationality.decision-making UAR – same intervention and same adherence profile.
+
+  value-system.insight:
+    pbs: 4
+    isr: 35
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–50th percentile. Delta: ~10–15 percentile points.
+      - Studying the psychology of motivated reasoning, tribal epistemics, and in-group bias directly informs understanding of why one's own values may be inconsistently applied or environmentally conditioned.
+      - The benefit is bounded: value-system insight also requires emotional self-awareness and life experience that cognitive study does not supply.
+    isr_reasoning: |
+      - No direct evidence links bias education to value-system insight specifically; this is extrapolated from motivated reasoning training.
+      - The benefit likely accrues only to learners who actively apply the material to their own value commitments.
+      - ISR of 35% reflects plausible but unverified transfer.
+    uar_reasoning: |
+      - See rationality.decision-making UAR – same intervention and same adherence profile.
+
+  worldview.depth:
+    pbs: 4
+    isr: 35
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–50th percentile. Delta: ~10–15 percentile points.
+      - Cognitive bias education is itself a significant domain of cognitive science and social psychology; studying it adds genuine depth to one's understanding of how human minds construct reality.
+      - The effect is real but secondary – this intervention is not designed to broaden worldview breadth.
+    isr_reasoning: |
+      - Worldview depth benefit is a natural byproduct of engaging seriously with cognitive science literature; the benefit is constitutive of the study itself rather than requiring downstream transfer.
+      - The benefit is bounded by how deeply the learner engages – skimming a list of bias names produces no depth benefit.
+      - ISR of 35% reflects that genuine depth engagement requires more rigour than most self-study learners apply.
+    uar_reasoning: |
+      - See rationality.decision-making UAR – same intervention and same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "High-quality free resources exist: the Clearer Thinking platform, the You Are Not So Smart podcast, and Daniel Kahneman's foundational work is available via most public libraries. No purchase is required."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs for self-directed study using free resources."
+  upfront_time: 10
+  upfront_time_reasoning: "Approximately 8–12 hours to work through a structured introduction covering six or more major biases with concrete examples and corrective strategies."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective ongoing practice: 20–30 minutes per week for a brief pre-mortem or bias-check before major decisions, plus periodic review of personal bias notes."
+
+prerequisites:
+  - "Basic literacy in English or the language of the chosen resource – no specialist prior knowledge is required"
+  - "Access to at minimum one structured source covering multiple cognitive biases with corrective strategies (free options exist online and via public libraries)"
+  - "Willingness to apply the material retrospectively to real personal decisions, not just consume it abstractly – without this, the intervention produces no benefit"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Reducing catastrophising (a form of availability bias) and all-or-nothing thinking may modestly reduce anxiety and depressive rumination, but clinical evidence for self-directed bias training is lacking."
+  - domain: "self-awareness"
+    rationale: "Studying cognitive biases builds explicit knowledge of one's own systematic distortions, which is a direct input to psychological self-awareness."
+  - domain: "ethics"
+    rationale: "Motivated reasoning and in-group bias training may reduce morally-distorted judgements, improving practical ethical decision-making."

@@ -1,0 +1,113 @@
+name: "Regularly Backing Up Digital Data"
+what_it_is: |
+  Setting up automated backups of your digital files – photos, documents, work, and system data – across at least two locations (one local, one cloud) using the 3-2-1 rule: three copies of your data, on two different media types, with one stored off-site. The setup is largely one-time; once configured, backups run without ongoing decisions. This protects against the leading causes of personal data loss – hardware failure (30%), accidental deletion (34%), and device theft or damage – ensuring that a single catastrophic event cannot permanently destroy irreplaceable files.
+how_to_do_it: |
+  - Choose a cloud backup service (e.g. Backblaze, iCloud, Google One, or OneDrive) and configure it to back up your most critical folders automatically – typically Documents, Photos, and Desktop; most services complete this in under 30 minutes of setup
+  - Configure a local backup to an external hard drive using your operating system's built-in tool (Time Machine on macOS, Backup and Restore on Windows) and schedule it to run daily or weekly; drives in the 1–2 TB range cost $50–80 and cover most personal use cases
+  - Apply the 3-2-1 rule explicitly: confirm you have three copies (original + local backup + cloud), on two media types (SSD/HDD + cloud storage), with one copy off-site (the cloud satisfies this for most users)
+  - Verify restores at least once per year – a backup you have never tested is not a backup; most cloud services offer a simple download-and-check workflow that takes under 15 minutes
+success_looks_like: |
+  - You can restore any file or folder from at least two independent sources within minutes, without contacting a recovery service or paying a recovery fee
+  - A device failure, accidental deletion, or ransomware event results in no permanent data loss – recovery is a nuisance, not a catastrophe
+  - Backups run automatically without your attention; you check the status dashboard quarterly and find no failures
+common_pitfalls: |
+  - Relying solely on sync services (Dropbox, Google Drive, OneDrive) as a backup – sync propagates deletions and ransomware encryption to all copies within minutes, making it a mirror, not a backup
+  - Setting up a local backup only, then experiencing theft, fire, or flood that destroys both the original device and the external drive simultaneously
+  - Never testing a restore: backup software can fail silently for weeks, and the failure only becomes apparent when you need to recover something
+description: |
+  - Automated backup means scheduled software processes copy your data to a separate location without requiring a manual action each time; once configured, cloud backup agents and OS backup utilities run in the background on a schedule you set
+  - The 3-2-1 rule – three copies, two media types, one off-site – is the industry-standard baseline for personal data resilience, endorsed by CISA and widely adopted by IT professionals; [Backblaze](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) has documented its effectiveness across millions of consumer drives since 2007
+  - [Surveys](https://www.handyrecovery.com/data-loss-statistics/) show over 70% of users have experienced data loss at least once, with hardware failure (30%) and accidental deletion (34%) as the two leading causes – both are fully mitigated by automated 3-2-1 backups
+  - Only [33% of users back up their data regularly](https://www.handyrecovery.com/data-backup-statistics/), meaning the majority of people who implement this intervention are moving from an unprotected baseline to meaningful coverage
+  - This intervention is distinct from file organisation or digital decluttering: it adds no new structure to your files and requires no ongoing curation – it simply ensures copies exist and are retrievable
+applicable_domains: ["digital-safety", "systems", "organisation"]
+
+values:
+  digital-safety.security:
+    pbs: 8
+    isr: 95
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user moves from having no systematic backup (the norm – only 33% back up regularly) to full 3-2-1 coverage across cloud and local. This places them at roughly the 80th–85th percentile of digital security practice for this specific dimension. Delta: ~45–50 percentile points.
+      - The anchor is subjective (breadth and sophistication of digital security practices). Backups address one of the most consequential attack surfaces – permanent data loss from hardware failure, ransomware, theft, and accidental deletion – representing a major gain in comprehensive digital security.
+      - [CISA's data protection guidance](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf) classifies automated offsite backup as a Tier 1 control, placing it at the same priority level as password management and multi-factor authentication.
+    isr_reasoning: |
+      - The mechanism is highly deterministic: automated backup software copies files on a schedule regardless of user attention. Unlike behavioural interventions, there is no ongoing willpower requirement once configured. [Backblaze's drive failure data](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) shows that users running cloud backup consistently recover successfully from drive failure events.
+      - Failure modes are narrow: backup software misconfiguration, storage quota exhaustion, or silent sync-not-backup confusion. These affect a minority of setups and are largely avoided by the testing step recommended in the protocol.
+      - [Infrascale survey data](https://www.infrascale.com/data-loss-statistics-usa/) shows that organisations with tested backup plans recover from data loss events in hours rather than days, with near-zero permanent loss rates.
+    uar_reasoning: |
+      - [HandyRecovery's backup survey](https://www.handyrecovery.com/data-backup-statistics/) reports only 33% of users back up regularly, suggesting that ~67% of users who intend to back up do not sustain it. However, this intervention specifically prescribes automation, which removes the decision point from each backup event.
+      - [Electroiq backup statistics (2025)](https://electroiq.com/stats/backup-statistics/) report 78% of US digital users backed up their data in the past year, with 32.8% doing so regularly. For automated cloud backup, the continuous-sync model means most failures are one-time configuration errors rather than ongoing drop-off.
+      - The main attrition risk is storage quota exhaustion or subscription cancellation leading to silent backup failure. UAR of 70 reflects that a meaningful minority (~30%) will experience configuration drift, quota issues, or subscription lapse within 1–2 years.
+
+  systems.reliability:
+    pbs: 7
+    isr: 92
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A user with no backup who experiences a drive failure faces weeks-to-months of recovery work and potential permanent loss. After implementing automated 3-2-1 backups, the same failure becomes a same-day recovery. This shifts the user from frequent manual intervention to sustained uninterrupted function.
+      - Score 6 on the systems.reliability anchor corresponds to "all critical systems tested with documented fallbacks; failures caught quickly." A working 3-2-1 backup with annual restore testing meets this description. Score 7 reflects that cloud backup additionally provides version history, catching accidental deletion before the user notices.
+      - [TechTarget's 3-2-1 analysis](https://www.techtarget.com/searchdatabackup/definition/3-2-1-Backup-Strategy) notes the strategy has been validated across decades of enterprise use and remains the de facto standard because its redundancy structure reliably prevents single-event data loss.
+    isr_reasoning: |
+      - For users who correctly configure both a local and cloud backup, the probability that a single hardware failure, ransomware event, or accidental deletion causes permanent data loss is near zero – both backups would need to fail simultaneously.
+      - Cloud backup services publish uptime SLAs of 99.9%+. The practical ISR is constrained mainly by configuration errors at setup, which careful onboarding instructions mitigate. ISR of 92 reflects the small residual risk of misconfiguration or quota issues.
+      - [Backblaze's 3-2-1 analysis](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) confirms this redundancy design eliminates single points of failure.
+    uar_reasoning: |
+      - See digital-safety.security UAR – same intervention, same adherence profile.
+
+  systems.power:
+    pbs: 5
+    isr: 90
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Backup is one discrete process among many (finances, scheduling, communications, household tasks). Adding automated backup moves from perhaps 10–15% of recurring processes automated to 15–20%. Delta: ~5 percentage points. PBS = 10 + log₂(5/100) = 10 - 4.32 = 5.68, conservatively scored 5.
+      - The systems.power scale places score 6 at "50% of recurring processes covered including finances, backups, and scheduling." Backup alone contributes one of those three example categories.
+      - This is a cross-domain effect: the primary benefit is in digital-safety. The systems.power gain is real but bounded.
+    isr_reasoning: |
+      - Automated backup software, once configured, runs reliably on schedule. The process-automation effect is essentially binary: either it is configured and runs, or it is not. ISR of 90 reflects the high determinism of scheduled software processes.
+      - [Unitrends Backup and Recovery Trends 2025](https://www.unitrends.com/blog/backup-and-recovery-trends-2025/) confirms that automated scheduling is the most reliable form of backup adherence.
+      - The automation benefit is immediate upon setup – unlike behavioural habits, it does not require practice or skill development.
+    uar_reasoning: |
+      - See digital-safety.security UAR – same intervention, same adherence profile.
+
+  organisation.tracking:
+    pbs: 4
+    isr: 80
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Backups are not primarily an organisational efficiency tool, but they prevent the most severe organisational disruption: losing all your files and spending days or weeks reconstructing work. Endpoint: approximately 45th percentile. Delta: ~10 percentile points.
+      - Score 4 corresponds to "modest reduction in time lost to searching or reorganising." Preventing a data-loss recovery episode maps to this description.
+      - The causal pathway is direct: if data is lost without backup, significant time is spent on reconstruction; backup eliminates this category of organisational disruption entirely.
+    isr_reasoning: |
+      - The organisational benefit is contingent on a data loss event occurring. For users who never experience data loss, the backup provides no active organisational gain – only insurance. ISR of 80 reflects that most users will at some point encounter a data loss event (>70% historically per [HandyRecovery](https://www.handyrecovery.com/data-loss-statistics/)).
+      - The recovery benefit when a loss event does occur is near-certain – files are restored to a known good state without reconstruction effort.
+      - Evidence here is indirect; no studies directly measure backup's effect on organisational efficiency metrics, hence low confidence.
+    uar_reasoning: |
+      - See digital-safety.security UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 60
+  upfront_cost_reasoning: "A 1 TB external hard drive for local backup costs $50–80. Cloud backup services such as Backblaze Personal Backup cost $99/year but offer a free trial; Google One and iCloud storage upgrades start at $2.99/month. $60 covers the external drive; the cloud component is included in ongoing costs."
+  ongoing_cost: 3
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Lowest-cost cloud backup option is Google One 100 GB at $2.99/month or iCloud+ 50 GB at $0.99/month (sufficient for documents and photos for most users). External drive has no ongoing cost once purchased."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 1 hour to select and configure a cloud backup service (create account, install agent, select folders, initiate first backup) and 1 hour to configure local backup via Time Machine or Windows Backup and Restore. First backup may run for hours in the background but requires no user attention."
+  ongoing_time: 0.25
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Backups run automatically; ongoing time is approximately 15 minutes per month to verify backup status in the cloud dashboard and confirm the external drive is connected. Annual restore test adds roughly 15 minutes once per year."
+
+prerequisites:
+  - "A computer or device with sufficient internet connectivity to upload files to a cloud backup service (most home broadband connections are adequate)"
+  - "An external hard drive or USB storage device (1 TB minimum recommended) for local backup; available for $50–80"
+  - "A cloud storage or backup account (Google One, iCloud, Backblaze, or equivalent) with sufficient quota for your data volume"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Knowing irreplaceable photos and documents are backed up removes a low-grade background anxiety that many people carry about device loss or failure."
+  - domain: "emergency-preparedness"
+    rationale: "Data backup is a standard component of personal emergency preparedness – disasters that destroy hardware are recovered from without permanent data loss when off-site backup exists."

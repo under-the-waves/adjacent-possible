@@ -1,8 +1,19 @@
 name: "High-Protein Diet"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Increasing daily protein intake to 1.2–2.2 g/kg body weight (roughly 25–35% of total energy), structured around at least 25–30 g protein per meal using lean meats, fish, eggs, dairy, legumes, and whey protein. Works through higher thermic effect of food, increased satiety, and preservation of lean mass during caloric restriction – improving body composition rather than just reducing scale weight. Pairs naturally with [Functional Training](/resources/intervention-database/functional-training) or [Progressive Strength Training](/resources/intervention-database/progressive-strength-training) for lean mass development.
+how_to_do_it: |
+  - Calculate your target protein intake (1.6 g/kg is a practical starting point for most people) and divide it across 3–4 meals of at least 25–30 g each, rather than loading it all into one meal
+  - Many people find that anchoring protein sources first when planning meals – choose the protein, then build the rest around it – simplifies the process considerably
+  - Batch-cook protein sources (grilled chicken, boiled eggs, cooked lentils) at the start of the week so high-protein options are always available without daily cooking effort
+  - You may find a food-tracking app helpful for the first 2–3 weeks to calibrate your sense of portion sizes, then shift to intuitive estimation once you can reliably eyeball 30 g of protein
+success_looks_like: |
+  - Hunger between meals diminishes noticeably – you feel satisfied for 3–4 hours after eating rather than reaching for snacks within 90 minutes
+  - Body composition shifts visibly over 8–12 weeks: clothes fit differently even if scale weight has not changed dramatically, reflecting fat loss with lean mass preservation
+  - Protein-rich meals become the default rather than requiring constant planning – your go-to breakfasts, lunches, and dinners all hit 25+ g without deliberate effort
+common_pitfalls: |
+  - Focusing on protein supplements (shakes, bars) at the expense of whole food sources, which provide micronutrients and fibre that supplements lack and tend to be more satiating per calorie
+  - Assuming high protein alone will produce fat loss without an energy deficit – protein increases satiety, which makes a deficit easier, but does not guarantee one
+  - Letting the grocery bill become a barrier: protein-rich foods cost more per calorie than starches, and without budget-conscious sourcing (eggs, tinned fish, frozen chicken, legumes) the approach becomes unsustainable
 description: |
   - Increasing daily protein intake to 1.2 – 2.2 g/kg body weight (typically 25 – 35% of total energy), prioritising lean meats, fish, eggs, dairy, legumes, and whey protein, structured around at least 25 – 30 g protein per meal
   - Works through three reinforcing mechanisms: higher thermic effect of food (protein costs ~20 – 30% of its energy to digest vs ~5 – 10% for carbohydrates), increased satiety via GLP-1 and reduced ghrelin secretion, and preservation of lean mass during caloric restriction which sustains resting metabolic rate
@@ -14,7 +25,7 @@ values:
   body-image.fat_loss:
     pbs: 8
     pbs_reasoning: |
-      - [A 12-month RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC7539343/) comparing 1.6 g/kg/day protein versus 0.8 g/kg/day found the high-protein group lost 8.2 kg (~8 – 9% body weight) at 4 months; with some regain by 12 months, sustained loss sits at approximately 5 – 7%
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th – 80th percentile on sustained fat loss outcomes. Delta: ~40 percentile points of improvement. [A 12-month RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC7539343/) comparing 1.6 g/kg/day protein versus 0.8 g/kg/day found the high-protein group lost 8.2 kg (~8 – 9% body weight) at 4 months; with some regain by 12 months, sustained loss sits at approximately 5 – 7%
       - [An RCT of adherent subgroups](https://pmc.ncbi.nlm.nih.gov/articles/PMC5644969/) found that participants who maintained >75% compliance with a high-protein prescription achieved 9.5% weight loss versus 5.8% for standard protein, confirming that successful adherents reach 5 – 10%
       - [A meta-analysis of 24 RCTs](https://doi.org/10.3945/ajcn.112.044321) shows high-protein groups achieve greater fat mass loss (0.87 kg more) with better lean mass retention (0.43 kg) – the effective fat loss for successful adherents is somewhat larger than scale weight suggests
       - On the logarithmic anchor, 6% sustained loss maps to 10 + log₂(6/25) = 7.94, rounding to PBS 8
@@ -25,7 +36,7 @@ values:
       - [A systematic review of 74 RCTs](https://pubmed.ncbi.nlm.nih.gov/22510792/) shows consistent directional benefits across populations, but heterogeneity between trials is substantial depending on whether a deliberate caloric deficit was also imposed – without one, response rates drop considerably
       - Score of 70 reflects that the underlying mechanisms (thermic effect, satiety, lean mass preservation) are well-characterised and reliable, but fat loss still depends on achieving an energy deficit, which high protein facilitates but does not guarantee
     uar: 40
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - [Long-term efficacy reviews](https://pubmed.ncbi.nlm.nih.gov/22411369/) find that prescribed protein intake differences between groups erode substantially over time; in studies targeting a 10%+ energy difference, actual achieved difference was only 2 – 5% after 6 months to 3 years
       - [RCT data](https://pmc.ncbi.nlm.nih.gov/articles/PMC7539343/) shows dropout rates of 30 – 55% across dietary intervention trials, with the high-protein group retaining slightly better (36% dropout vs 55% for standard protein in one 12-month study), likely due to greater satiety

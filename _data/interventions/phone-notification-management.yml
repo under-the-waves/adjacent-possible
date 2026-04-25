@@ -1,8 +1,19 @@
 name: "Phone and Notification Management"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Aggressively curating digital inputs by disabling non-essential notifications, batching the remainder to 2–3 delivery windows per day, establishing phone-free periods (especially during focused work and before bed), and removing or restricting attention-fragmenting apps. The goal is sustainable curation – preserving essential phone functionality (calls, messaging, maps) while systematically eliminating the interruptions that fragment attention and erode self-regulation. Distinct from a full digital detox in that it is designed to be maintained indefinitely.
+how_to_do_it: |
+  - Many people start with a notification audit: going through every app's notification settings and disabling all except those from people who genuinely need to reach you in real time (family, manager, on-call systems) – most find that 80–90% of notifications can be silenced without consequence
+  - You may find that batching remaining notifications to 2–3 scheduled delivery windows (e.g., 9am, 1pm, 5pm) works better than full suppression, which can create anxiety about missing messages
+  - Setting up phone-free zones (desk during deep work blocks, bedroom after a set time) and communicating altered response-time expectations to key contacts removes the social pressure to check constantly
+  - Most practitioners find that removing social media apps from the phone entirely (using them only via browser on a laptop, if at all) eliminates the most compulsive checking behaviour with minimal practical cost
+success_looks_like: |
+  - You complete 60–90 minute deep work blocks without reaching for your phone or being interrupted by an alert – the phone is no longer a source of ambient distraction
+  - When you do check your phone, it is a deliberate choice at a planned time rather than an automatic response to a notification or a boredom impulse
+  - Evening screen time decreases noticeably, and you fall asleep without having scrolled in bed – the bedroom phone-free rule holds on most nights
+common_pitfalls: |
+  - Disabling all notifications in a burst of enthusiasm, then gradually re-enabling them over the following weeks as individual apps prompt you to turn them back on – periodic re-audits (monthly) prevent this creep
+  - Suppressing notifications without addressing the habitual checking that persists even without alerts – if you unlock the phone 80 times a day out of habit, notification management alone will not solve the problem
+  - Making exceptions for "just one more app" until the exception list grows back to the original state – defining a strict whitelist of permitted notification sources and reviewing it monthly keeps the system honest
 description: |
   - Aggressively curating digital inputs by disabling non-essential notifications, setting phone-free periods (especially during focused work and before bed), using Do Not Disturb modes, removing social media apps, and configuring screen time limits to reclaim attention and reduce compulsive checking
   - Core techniques include notification auditing (disabling all but essential contacts and calendar alerts), batching remaining notifications to 2-3 delivery windows per day, establishing device-free zones (desk during deep work, bedroom after a set time), and using built-in or third-party screen time tools to enforce limits
@@ -15,7 +26,7 @@ values:
   organisation.tracking:
     pbs: 6
     pbs_reasoning: |
-      - Phone notifications are a primary source of deliberation friction: each alert pulls attention from the current task, and [research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9671478/) shows even unattended notifications impair cognitive control, slowing transition from intention to action.
+      - Baseline (per values.yml): 35th percentile (below-average organisational tracking). After successful adherence, a user could plausibly reach the 55th–60th percentile (moderately above average). Delta: ~20–25 percentile points. Phone notifications are a primary source of deliberation friction: each alert pulls attention from the current task, and [research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9671478/) shows even unattended notifications impair cognitive control, slowing transition from intention to action.
       - [Gloria Mark's research](https://tctecinnovation.com/blogs/daily-blog/every-distraction-costs-you-23-minutes) found it takes an average of 23 minutes to fully regain deep focus after an interruption. Eliminating the majority of notification triggers removes a substantial layer of organisational friction.
       - Score 6 because the anchor (zero overhead, instant intention-to-action) requires addressing all organisational systems. Notification management removes one major friction source but does not address task capture, prioritisation, or workflow design.
     isr: 55
@@ -33,7 +44,7 @@ values:
   organisation.order:
     pbs: 5
     pbs_reasoning: |
-      - Reduced notification interruptions mean fewer moments where incoming alerts derail commitment follow-through. The inverted anchor (missed commitments/month) benefits when attention is protected during task execution windows.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile on commitment reliability. Delta: ~15 percentile points of improvement. Reduced notification interruptions mean fewer moments where incoming alerts derail commitment follow-through. The inverted anchor (missed commitments/month) benefits when attention is protected during task execution windows.
       - [Implementation intention research](https://doi.org/10.1037/0003-066X.54.7.493) shows pre-commitment rules (such as 'phone on DND during work blocks') roughly double follow-through rates by removing decision points where commitments slip.
       - Score 5 because missed commitments depend more on capture and review systems than on notification discipline alone. A successful user might move from 5 missed/month to 1-2/month, a meaningful but not transformative shift.
     isr: 50
@@ -49,7 +60,7 @@ values:
   organisation.speed:
     pbs: 4
     pbs_reasoning: |
-      - The anchor (perfectly minimal system) refers to reducing tools, steps, and rules. Notification management simplifies the experience of using one's phone but does not restructure organisational systems themselves.
+      - Baseline (per values.yml): 35th percentile (below-average organisational speed). After successful adherence, a user could plausibly reach the 40th–45th percentile (slightly below to average). Delta: ~5–10 percentile points. The anchor (perfectly minimal system) refers to reducing tools, steps, and rules. Notification management simplifies the experience of using one's phone but does not restructure organisational systems themselves.
       - Disabling unnecessary notification channels and removing social media apps does eliminate some system complexity (fewer apps, fewer input streams to manage), representing a modest simplification.
       - Score 4 because the intervention makes the digital environment feel less cluttered without fundamentally reducing structural system complexity.
     isr: 45
@@ -58,14 +69,14 @@ values:
       - [Digital self-control research](https://dl.acm.org/doi/10.1145/3571810) focuses on usage time and wellbeing rather than system minimalism as an outcome, making this an inferred benefit.
       - Conservative score reflecting the plausible but weakly evidenced connection between fewer digital inputs and perceived system speed.
     uar: 60
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 
   current-work.competence:
     pbs: 5
     pbs_reasoning: |
-      - Sustained attention is a core input to work competence. The [PNAS Nexus RCT](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) found blocking mobile internet reversed 10 years of age-related attention decline, a substantial cognitive performance gain.
+      - Baseline (per values.yml): 35th percentile (below-average work competence). After successful adherence, a user could plausibly reach the 50th percentile (roughly average). Delta: ~15 percentile points. Sustained attention is a core input to work competence. The [PNAS Nexus RCT](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) found blocking mobile internet reversed 10 years of age-related attention decline, a substantial cognitive performance gain.
       - [Notification research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9671478/) shows smartphone alerts disrupt performance on attention-demanding tasks at a scale similar to active phone use, meaning even brief notifications carry a significant competence cost.
       - Score 5 (not higher) because competence depends on skills, knowledge, and experience beyond attention alone. Protecting attention is necessary but not sufficient for elite-level execution.
     isr: 50
@@ -81,7 +92,7 @@ values:
   goals.follow_through:
     pbs: 5
     pbs_reasoning: |
-      - The anchor (% of days with deliberate goal action) benefits when attention is available for goal-directed work rather than being fragmented by notifications. Each protected attention block increases the probability of taking at least one goal action that day.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile on daily goal follow-through. Delta: ~15 percentile points of improvement. The anchor (% of days with deliberate goal action) benefits when attention is available for goal-directed work rather than being fragmented by notifications. Each protected attention block increases the probability of taking at least one goal action that day.
       - [Problematic smartphone use research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9223448/) demonstrates that excessive phone use leads to both behavioural and cognitive self-control deficits, directly undermining the self-regulation needed for daily goal follow-through.
       - Score 5 because goal follow-through depends on goal clarity, planning, and motivation beyond attention availability. Notification management removes one barrier but not the full set.
     isr: 45
@@ -90,14 +101,14 @@ values:
       - No studies directly measure goal completion rates as an outcome of notification interventions, making this an inferred rather than observed benefit.
       - Conservative estimate given the inferential gap between attention protection and daily goal action.
     uar: 60
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 
   sleep.daily_functioning:
     pbs: 5
     pbs_reasoning: |
-      - The anchor is productive hours per day (max 14). A [meta-analysis of 55 studies (N = 41,716)](https://www.jmir.org/2024/1/e48356) found smartphone use was significantly associated with decreased sleep quality (pooled effect size 0.28), and poor sleep directly reduces productive hours the following day.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile on daily productive hours. Delta: ~15 percentile points of improvement. The anchor is productive hours per day (max 14). A [meta-analysis of 55 studies (N = 41,716)](https://www.jmir.org/2024/1/e48356) found smartphone use was significantly associated with decreased sleep quality (pooled effect size 0.28), and poor sleep directly reduces productive hours the following day.
       - Evening phone-free periods reduce blue light exposure and cognitive arousal before bed. [Evening smartphone use](https://jcsm.aasm.org/doi/10.5664/jcsm.10392) specifically predicted worse sleep quality independent of total usage, and the [PNAS Nexus trial](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) participants reported improved sleep alongside attention gains.
       - Score 5 because the sleep-mediated pathway to productive hours is real but represents only one of many factors affecting daily functioning. Someone already practising good sleep hygiene would see minimal additional benefit.
     isr: 50
@@ -106,14 +117,14 @@ values:
       - The [Radtke et al. (2022) systematic review](https://journals.sagepub.com/doi/10.1177/20501579211028647) of digital detox found diverse outcomes across studies, with more stable effects for reduction approaches than complete abstinence.
       - Individual variation in screen sensitivity is substantial; some people sleep well regardless of evening phone use, limiting the population-level success rate.
     uar: 60
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile. Evening phone-free periods face additional adherence challenges (boredom, habit of scrolling in bed) but benefit from a clear environmental trigger (bedtime).
 
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - An [RCT (N = 467)](https://pubmed.ncbi.nlm.nih.gov/39967678/) blocking mobile internet for two weeks found mental health symptom improvement with dz = 0.57 (P < 0.001), an effect larger than reported in multiple antidepressant trials. Participants also reported increased self-control, directly relevant to compulsive checking and anxiety cycles.
+      - Baseline (per values.yml): 35th percentile (below-average emotional steadiness). After successful adherence, a user could plausibly reach the 50th percentile (roughly average). Delta: ~15 percentile points. An [RCT (N = 467)](https://pubmed.ncbi.nlm.nih.gov/39967678/) blocking mobile internet for two weeks found mental health symptom improvement with dz = 0.57 (P < 0.001), an effect larger than reported in multiple antidepressant trials. Participants also reported increased self-control, directly relevant to compulsive checking and anxiety cycles.
       - A [separate RCT (N = 111)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11846175/) reducing screen time to two hours per day for three weeks found small-to-medium effects on depressive symptoms (eta-squared = .109) and stress (eta-squared = .085), with improvements persisting at six-week follow-up.
       - A [meta-analysis of 10 studies (N = 2,503)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11392003/) found social media detox significantly reduced depressive symptoms (SMD = -0.29, P = 0.01), though stress reduction was not statistically significant.
       - Score 5 because a successful adopter plausibly moves from frequent distress (scale 4) toward occasional, quickly resolving distress (scale 6). The intervention reduces anxiety triggers and social comparison but does not address underlying vulnerability or provide therapeutic skills.
@@ -130,7 +141,7 @@ values:
   mental-health.flourishing:
     pbs: 4
     pbs_reasoning: |
-      - The [PNAS Nexus RCT (N = 467)](https://pubmed.ncbi.nlm.nih.gov/39967678/) found significant subjective wellbeing improvements (dz = 0.46, P < 0.001), with participants reporting increased offline engagement (hobbies, face-to-face conversation, time in nature) and greater social connectedness -- all inputs to present-moment awareness and meaning.
+      - Baseline (per values.yml): 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 40th–45th percentile (slightly below to average). Delta: ~5–10 percentile points. The [PNAS Nexus RCT (N = 467)](https://pubmed.ncbi.nlm.nih.gov/39967678/) found significant subjective wellbeing improvements (dz = 0.46, P < 0.001), with participants reporting increased offline engagement (hobbies, face-to-face conversation, time in nature) and greater social connectedness -- all inputs to present-moment awareness and meaning.
       - However, a [meta-analysis of social media detox studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC11392003/) found no significant effect on life satisfaction (SMD = 0.20, P = 0.23) or general mental wellbeing (SMD = 0.04, P = 0.90), suggesting the flourishing pathway is weaker than the stability pathway.
       - The [BMC Medicine RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC11846175/) found a small effect on WHO-5 wellbeing (eta-squared = .053), the weakest of its four outcomes.
       - Score 4 because the mechanism is real -- reclaimed attention enables greater engagement with valued activities -- but the evidence for sustained flourishing gains (as opposed to transient mood improvements) is weak. A successful adopter moves from neutral (scale 4) toward regular moments of satisfaction (scale 6) only modestly.
@@ -140,7 +151,7 @@ values:
       - Reclaimed time does not automatically convert to meaningful engagement; users may substitute other passive activities (television, web browsing on a laptop) rather than pursuing flourishing-enhancing ones. The [PNAS Nexus trial](https://pubmed.ncbi.nlm.nih.gov/39967678/) noted decreased media consumption across all devices, but this was under controlled experimental conditions unlikely to persist universally.
       - Conservative estimate reflecting the indirect and unreliable pathway from reduced phone use to positive affect and meaning.
     uar: 60
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 

@@ -1,8 +1,19 @@
 name: "Eliminating Micro-Decisions"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Systematically identifying and removing low-stakes recurring decisions – meals, clothing, routes, scheduling – by establishing default choices and 'if X, then always Y' rules. Once defaults are in place, the intervention works by removing effort rather than adding it, which makes it unusually durable. Complements [Creating SOPs](/resources/intervention-database/creating-sops), which preserves all steps but offloads sequencing, and [Habit Stacking](/resources/intervention-database/habit-stacking), which anchors new behaviours to existing routines.
+how_to_do_it: |
+  - Audit a typical week by noting every recurring choice point from waking to sleeping, then categorise each as high-stakes (worth deliberating) or low-stakes (safe to automate)
+  - For each low-stakes decision, set a permanent default: a weekday meal rotation, a standard outfit formula, a fixed route to work, a standing meeting slot for recurring appointments
+  - Many people find it helpful to communicate defaults to household members or colleagues so others stop presenting options ('what do you want for dinner?') that reintroduce the decision
+  - Review defaults monthly for about 15 minutes to catch any that no longer work – seasonal changes, new routines, or shifting preferences may require updates
+success_looks_like: |
+  - Mornings and mealtimes feel noticeably smoother – you move through routine parts of the day on autopilot, reserving deliberation for things that actually matter
+  - Decision fatigue in the late afternoon diminishes: you have more patience and mental clarity for complex work and personal interactions at the end of the day
+  - The number of 'what should I…?' moments in a typical day drops by half or more within the first month
+common_pitfalls: |
+  - Automating decisions that actually matter to you – wearing the same outfit every day works for some people but feels soul-crushing for others; the line between low-stakes and meaningful is personal
+  - Setting defaults without testing them, then discovering the 'optimal' meal plan or capsule wardrobe is unpleasant to live with and abandoning the whole approach
+  - Scope creep in the other direction: gradually reintroducing deliberation ('maybe I should try a different route today') until most defaults have eroded within a few months
 description: |
   - Systematically identifying and removing or automating low-stakes recurring decisions (meals, clothing, routes, scheduling) by establishing default choices and creating decision rules for recurring situations ('if X, then always Y')
   - Implementation involves auditing a typical week for recurring decision points, categorising each as high-stakes or low-stakes, and designing defaults or automation for the low-stakes category, with most practitioners eliminating 15-30 micro-decisions per day within 2-3 weeks
@@ -14,7 +25,7 @@ values:
   organisation.tracking:
     pbs: 6
     pbs_reasoning: |
-      - Knowledge workers make an estimated [35,000 decisions per day](https://go.roberts.edu/leadingedge/the-great-choices-of-strategic-leaders), many trivial but cumulatively costly. Eliminating 15-30 of these removes a significant layer of deliberation friction between intention and action.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 65th percentile (moderately above average organisational efficiency). Delta: ~25 percentile points of improvement. Knowledge workers make an estimated [35,000 decisions per day](https://go.roberts.edu/leadingedge/the-great-choices-of-strategic-leaders), many trivial but cumulatively costly. Eliminating 15-30 of these removes a significant layer of deliberation friction between intention and action.
       - [Vohs et al. (2008)](https://doi.org/10.1111/j.1467-9280.2008.02057.x) demonstrated that accumulated decisions deplete self-regulatory resources, slowing subsequent action initiation. Defaults bypass this depletion mechanism entirely.
       - Score 6 rather than higher because the anchor (zero overhead, instant intention-to-action) requires addressing structural overhead too (capture systems, prioritisation, context-switching), which this intervention does not touch. It removes one meaningful friction layer but not the whole system.
     isr: 55
@@ -32,7 +43,7 @@ values:
   organisation.order:
     pbs: 5
     pbs_reasoning: |
-      - The inverted anchor (missed commitments/month) means this scores how much the intervention reduces missed commitments. Decision rules for recurring situations ('if a meeting has no agenda, decline it') remove points where procrastination or poor judgement cause commitments to slip.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly fewer missed commitments). Delta: ~15 – 20 percentile points of improvement. The inverted anchor (missed commitments/month) means this scores how much the intervention reduces missed commitments. Decision rules for recurring situations ('if a meeting has no agenda, decline it') remove points where procrastination or poor judgement cause commitments to slip.
       - [Gollwitzer (1999)](https://doi.org/10.1037/0003-066X.54.7.493) found implementation intentions (a form of decision rule) doubled follow-through rates, suggesting defaults meaningfully reduce the failure points where commitments get missed.
       - Score 5 rather than higher because missed commitments depend more on capture systems, review practices, and follow-through habits than on decision reduction alone. A successful user might move from 5 missed/month (score 2) to 1-2/month (score 4), a meaningful but not transformative shift.
     isr: 50
@@ -50,7 +61,7 @@ values:
   organisation.speed:
     pbs: 4
     pbs_reasoning: |
-      - The anchor (perfectly minimal system) refers to reducing tools, steps, and rules. Eliminating micro-decisions reduces the decision layer but does not itself simplify organisational tools or processes.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th – 50th percentile (slightly above average system minimalism). Delta: ~10 – 15 percentile points of improvement. The anchor (perfectly minimal system) refers to reducing tools, steps, and rules. Eliminating micro-decisions reduces the decision layer but does not itself simplify organisational tools or processes.
       - [Cognitive load theory (Sweller, 1988)](https://doi.org/10.1207/s15516709cog1202_4) supports the principle that fewer active choice points reduce cognitive architecture complexity, but this is an indirect contribution to system minimalism.
       - Score 4 because the intervention makes the experience of using your system feel simpler without actually reducing the system's structural complexity. It is a real but modest simplicity gain.
     isr: 45
@@ -59,7 +70,7 @@ values:
       - [Decision fatigue research](https://doi.org/10.1016/j.joep.2017.07.008) has focused on decision quality and willpower rather than on system minimalism as an outcome variable.
       - The score reflects the plausible but weakly evidenced nature of this connection: simplicity is a second-order effect of decision elimination rather than a primary outcome.
     uar: 75
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - Same adherence profile as other organisation dimensions: the intervention reduces cognitive load rather than adding it, supporting sustained adoption. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found that effortless behaviours are the most durable.
       - No additional maintenance burden for the speed dimension specifically, since it is the same set of defaults and decision rules being sustained.

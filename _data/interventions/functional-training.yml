@@ -1,8 +1,19 @@
 name: "Functional Training"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Structured resistance training using compound movements – squats, deadlifts, presses, rows, carries, kettlebell work – performed 3–4 times per week for 45–60 minutes, with progressive overload applied through load, volume, or movement complexity. Distinguished from [HIIT](/resources/intervention-database/hiit-training) by its lower metabolic intensity and greater emphasis on controlled technique, and from conventional strength training by its focus on movement quality and real-world transfer.
+how_to_do_it: |
+  - Many people find that starting with a few introductory coaching sessions (in-person or video) to learn the squat, hinge, press, and pull patterns prevents early injury and builds confidence with the movements
+  - Follow a structured programme with clear progression (adding weight, reps, or movement complexity each week) rather than improvising sessions – beginner templates from reputable coaches are widely available for free
+  - You may find that group-based formats (CrossFit affiliates, coached classes) significantly improve retention through social accountability and structured programming
+  - Start conservatively with loads you can control for 8–12 repetitions with good form, and increase only when technique remains solid – the learning curve is steeper than it appears
+success_looks_like: |
+  - Everyday physical tasks – carrying shopping, climbing stairs, lifting objects from the floor – become noticeably easier within 6–8 weeks
+  - You can track measurable strength progress (weight on the bar, reps completed) from session to session, providing clear evidence that the training is working
+  - Movement quality improves: you can squat to depth, hinge without back pain, and press overhead with full range of motion, reflecting genuine functional capacity
+common_pitfalls: |
+  - Prioritising load over technique, especially on complex movements like cleans or Turkish get-ups – this is the fastest route to injury and programme abandonment
+  - Programme-hopping every few weeks in pursuit of variety, which prevents the progressive overload needed for measurable strength gains
+  - Training at unsustainable intensity or frequency in the first month, leading to burnout or injury before the habit has time to consolidate – the 87% twelve-month dropout rate reflects this pattern
 description: |
   - Structured resistance training using compound movements, kettlebells, bodyweight exercises, and free weights to develop strength, coordination, and movement quality applicable to everyday life
   - Sessions last 45-60 minutes, 3-4 times per week, emphasising multi-joint exercises (squats, deadlifts, presses, rows, carries, Turkish get-ups) with progressive overload applied through load, volume, or movement complexity
@@ -15,7 +26,7 @@ values:
   fitness.health:
     pbs: 8
     pbs_reasoning: |
-      - Meta-analyses show resistance/muscle-strengthening activity reduces all-cause mortality by 15-23%, with maximum risk reduction of ~27% at 60 minutes per week, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th – 80th percentile on longevity-related health markers. Delta: ~40 percentile points of improvement. Meta-analyses show resistance/muscle-strengthening activity reduces all-cause mortality by 15-23%, with maximum risk reduction of ~27% at 60 minutes per week, corresponding to roughly 3-5 additional healthy years on the linear anchor ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
       - When combined with aerobic exercise, mortality risk drops by 40%; functional training's metabolic conditioning elements provide some aerobic stimulus alongside resistance work ([Stamatakis et al. 2018, Am J Epidemiol](https://doi.org/10.1093/aje/kwx345))
       - Compound multi-joint movements independently reduce type 2 diabetes risk by 17%, improve glucose homeostasis, blood pressure, and bone mineral density, with broader systemic benefits than isolated machine-based training ([Westcott 2012, Current Sports Medicine Reports](https://doi.org/10.1249/JSR.0b013e31825dabb8))
     isr: 85
@@ -24,7 +35,7 @@ values:
       - Benefits are reliable when training is performed with adequate intensity and progressive overload; the J-shaped mortality curve peaks at 30-60 minutes per week ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
       - Proper form is important to avoid injury, but even suboptimal execution produces meaningful health adaptations at adequate training volumes ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
     uar: 50
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - Long-term adherence to functional/high-intensity functional training is challenging: ~60% abandon HIFT programmes within three months, and only 12.8% remain beyond twelve months ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - General gym dropout rates range from 47-96% within 12 months, though functional training's variety and scalability offer modestly better retention than traditional programmes ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
@@ -33,7 +44,7 @@ values:
   fitness.performance:
     pbs: 7
     pbs_reasoning: |
-      - Functional training develops broad-spectrum physical capacity: compound movements produce 20-40% strength gains in novices over 12 weeks, while kettlebell training improves VO2max by 6-14%, placing dedicated trainees around the 50th-85th percentile on general fitness tests ([Falatic et al. 2015, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000001014))
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 70th percentile on general fitness tests. Delta: ~30 percentile points of improvement. Functional training develops broad-spectrum physical capacity: compound movements produce 20-40% strength gains in novices over 12 weeks, while kettlebell training improves VO2max by 6-14%, placing dedicated trainees around the 50th-85th percentile on general fitness tests ([Falatic et al. 2015, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000001014))
       - The movement variety translates well to general athletic performance and everyday physical tasks, but lacks the specificity to maximise any single capacity to elite levels ([Suchomel et al. 2016, Sports Med](https://doi.org/10.1007/s40279-016-0486-0))
       - Score 7 reflects performance between the 25th percentile (score 8) and 6th percentile (score 6) anchor points: functional training can reach high general fitness but not elite sport-specific performance without dedicated specialisation ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
     isr: 80
@@ -42,7 +53,7 @@ values:
       - The breadth of functional training means no single capacity is maximised, introducing moderate variability in outcomes depending on programme design and coaching quality ([Feito et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0924-7))
       - Individual variation in response to training, programme quality, and coaching competence are secondary factors; the directional performance improvement is nearly universal ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
     uar: 50
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - Performance-focused functional trainees have moderately better retention due to measurable progress (weight on the bar, movement quality improvements) providing positive reinforcement ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
       - Plateaus, injury risk from complex movements, and the technical learning curve contribute to dropout, particularly at intermediate levels ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
@@ -51,7 +62,7 @@ values:
   fitness.enjoyment:
     pbs: 7
     pbs_reasoning: |
-      - High movement variety (kettlebells, Olympic lifts, bodyweight, carries) keeps sessions mentally engaging and reduces the repetitiveness that limits enjoyment in conventional strength training; skill progression through increasingly complex movements provides ongoing novelty
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 70th percentile (well above average enjoyment of physical activity). Delta: ~30 percentile points of improvement. High movement variety (kettlebells, Olympic lifts, bodyweight, carries) keeps sessions mentally engaging and reduces the repetitiveness that limits enjoyment in conventional strength training; skill progression through increasingly complex movements provides ongoing novelty
       - Strong social and community potential, especially in group formats: shared suffering during challenging workouts, friendly competition on whiteboard scores, and coaching interaction add layers of enjoyment beyond the exercise itself
       - Score 7 sits between 'generally enjoyable' (6) and 'highly enjoyable' (8): the variety and social elements elevate it above standard gym work, but high-intensity discomfort, technical frustration with complex movements, and post-session fatigue prevent it from reaching 8
     isr: 70
@@ -69,7 +80,7 @@ values:
   body-image.fat_loss:
     pbs: 6
     pbs_reasoning: |
-      - [A systematic review of 114 trials](https://doi.org/10.1111/obr.13428) (n = 4,184; Lopez et al. 2022) found resistance training alone reduces body fat percentage by 1.6% and fat mass by 1.0 kg versus controls, with a concurrent increase in lean mass of 0.8 kg – successful adherents sustain roughly 1 – 2% net body weight reduction
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 60th percentile on sustained fat loss outcomes. Delta: ~20 – 25 percentile points of improvement. [A systematic review of 114 trials](https://doi.org/10.1111/obr.13428) (n = 4,184; Lopez et al. 2022) found resistance training alone reduces body fat percentage by 1.6% and fat mass by 1.0 kg versus controls, with a concurrent increase in lean mass of 0.8 kg – successful adherents sustain roughly 1 – 2% net body weight reduction
       - Functional training's compound movements and metabolic conditioning elements produce higher caloric expenditure than traditional resistance training, with circuit-style sessions burning 400 – 600 kcal/hour; for those who respond well, this supports approximately 1 – 2% sustained fat loss without dietary intervention ([Westcott 2012, Curr Sports Med Rep](https://doi.org/10.1249/JSR.0b013e31825dabb8))
       - The primary body composition benefit for successful practitioners is fat-to-muscle recomposition rather than scale weight reduction; true non-responders to resistance training are rare for muscle gain, but scale weight may not shift substantially ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
       - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
@@ -89,7 +100,7 @@ values:
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - Functional training shares the general exercise-depression mechanism: [meta-analytic evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) shows resistance exercise reduces depressive symptoms with moderate effect sizes (ES = 0.66), and the compound movement patterns in functional training provide comparable neurochemical benefits (endorphin release, cortisol regulation)
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average emotional stability). Delta: ~15 – 20 percentile points of improvement. Functional training shares the general exercise-depression mechanism: [meta-analytic evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) shows resistance exercise reduces depressive symptoms with moderate effect sizes (ES = 0.66), and the compound movement patterns in functional training provide comparable neurochemical benefits (endorphin release, cortisol regulation)
       - The community element in group functional training formats (CrossFit affiliates, group classes) adds social support, which independently buffers against mood instability; [systematic review of CrossFit psychological variables](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/) found increased satisfaction and social improvement among participants
       - Score 5 reflects a meaningful but secondary mood stabilisation benefit, moving practitioners from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6), with the social component providing a modest advantage over solo training modalities
     isr: 55
@@ -98,14 +109,14 @@ values:
       - Group-based formats may improve reliability of mood benefits through social accountability and belonging, but self-selection into community fitness creates confounding – those who join group programmes may already be more socially connected ([Heinrich et al. 2014, J Sports Sci Med](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234951/))
       - An estimated 50-60% of adherent functional trainees experience meaningful mood stabilisation, with the community element modestly increasing reliability compared to solo resistance training
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.resilience:
     pbs: 4
     pbs_reasoning: |
-      - Functional training builds distress tolerance through exposure to physically demanding compound movements and high-intensity conditioning, while the community setting provides social support during difficulty – both contribute to psychological resilience
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th – 50th percentile (slightly above average resilience). Delta: ~10 – 15 percentile points of improvement. Functional training builds distress tolerance through exposure to physically demanding compound movements and high-intensity conditioning, while the community setting provides social support during difficulty – both contribute to psychological resilience
       - [Research on physical fitness and resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC9095527/) shows muscular fitness is positively associated with stress resilience, partly mediated by self-efficacy; functional training's emphasis on movement mastery across varied patterns provides broader self-efficacy opportunities than single-modality training
       - Score 4 represents the minimum scoreable threshold: the resilience pathway through discomfort tolerance and community support is genuine but indirect, and the high dropout rate (only 12.8% remain beyond twelve months) limits the proportion who train long enough to develop meaningful resilience gains
     isr: 50
@@ -114,14 +125,14 @@ values:
       - High early dropout (~60% within three months) means many participants never reach the training duration needed to develop resilience benefits, though those who persist in community formats may benefit disproportionately ([Claudino et al. 2023, Sports Med](https://doi.org/10.1007/s40279-022-01756-0))
       - Approximately half of those who maintain consistent practice experience broader stress coping improvements, with community-embedded trainees showing somewhat higher rates than solo practitioners
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.flourishing:
     pbs: 5
     pbs_reasoning: |
-      - Functional training's strongest flourishing pathway is community belonging: [CrossFit research](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/) consistently finds high levels of sense of community, social improvement, and intrinsic motivation for participation driven by enjoyment, challenge, and affiliation – all components of eudaimonic wellbeing
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average flourishing). Delta: ~15 – 20 percentile points of improvement. Functional training's strongest flourishing pathway is community belonging: [CrossFit research](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/) consistently finds high levels of sense of community, social improvement, and intrinsic motivation for participation driven by enjoyment, challenge, and affiliation – all components of eudaimonic wellbeing
       - Movement variety (kettlebells, Olympic lifts, gymnastics, conditioning) provides ongoing novelty and skill mastery opportunities that sustain engagement and personal growth, moving practitioners from 'occasional positive experiences' (4) toward 'regular moments of satisfaction and meaning' (6)
       - Score 5 reflects a genuine flourishing benefit driven primarily by community and variety: functional training in group formats cultivates belonging and purpose that most solo exercise modalities cannot match, but the benefit depends heavily on the group context and is weaker for solo practitioners
     isr: 50
@@ -130,7 +141,7 @@ values:
       - Self-selection bias is a concern: people drawn to community fitness may already have stronger social needs and networks, inflating observed flourishing benefits in CrossFit studies ([PMC 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7456358/))
       - An estimated 45-55% of adherent functional trainees in group settings experience meaningful flourishing gains, with the rate substantially lower for those training independently
     uar: 50
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 

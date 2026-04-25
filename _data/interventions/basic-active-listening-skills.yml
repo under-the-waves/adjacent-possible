@@ -1,0 +1,129 @@
+name: "Basic Active Listening Skills"
+what_it_is: |
+  A set of simple conversational techniques – paraphrasing what someone has said, asking open follow-up questions, and reflecting the feelings behind their words – practised consistently in everyday interactions. Unlike formal communication training, this intervention requires no equipment, no dedicated time block, and no special setting: every conversation becomes a practice opportunity. The goal is to shift the listener's default mode from waiting to respond to genuinely trying to understand, which partners, friends, and colleagues reliably experience as more connecting and less combative.
+how_to_do_it: |
+  - In each conversation, pause before responding and briefly paraphrase the key content back ("So what you're saying is...") to confirm you understood before sharing your own view
+  - Ask at least one open follow-up question per meaningful exchange ("What made that difficult?" or "How did that land for you?") rather than pivoting to your own experience or advice
+  - When someone shares a problem or frustration, name the emotion you hear before offering a solution – "It sounds like you're feeling overwhelmed" – and wait for them to confirm or correct it
+  - Reserve advice and your own opinions until the other person signals they feel fully heard; this often happens naturally once you have paraphrased and reflected twice
+success_looks_like: |
+  - People share more with you, go deeper, and initiate personal conversations more often than they did before
+  - Conflicts de-escalate more quickly because the other person feels understood rather than opposed
+  - Close relationships feel more mutual: you receive more openness in return for the attention you give
+common_pitfalls: |
+  - Paraphrasing mechanically or robotically in a way that feels like a technique rather than genuine interest – the words matter less than the intent behind them
+  - Listening for a pause to insert your own story rather than following the thread the other person is pulling on
+  - Applying the techniques selectively (only in formal or high-stakes conversations) rather than as a consistent daily habit, which limits both the skill development and the relationship benefits
+description: |
+  - Core techniques: paraphrasing content back to the speaker, asking open follow-up questions, and reflecting feelings before offering advice or opinions – applied in any conversation, no scheduled session required
+  - [Experimental evidence](https://www.tandfonline.com/doi/full/10.1080/10904018.2013.813234) shows that active listening responses make speakers feel significantly more understood than advice or simple acknowledgements, with higher perceived social attractiveness of the listener
+  - [A 2023 RCT](https://onlinelibrary.wiley.com/doi/full/10.1002/hrm.22103) on listening training found it increased relatedness, reduced burnout, and lowered turnover intentions among employees, with meta-analytic correlation r = -0.28 for burnout across ten studies and 3,858 participants
+  - [Receptive listening](https://pmc.ncbi.nlm.nih.gov/articles/PMC9999077/) showed a significant positive correlation with romantic relationship satisfaction (r = .27), making it one of the strongest single emotion-regulation behaviours linked to partner well-being
+  - Distinct from structured communication courses or couples therapy: this intervention is a lightweight habit layer applied moment-to-moment rather than a time-blocked skill module
+applicable_domains: ["communication", "friendship", "romantic-relationships"]
+
+values:
+  communication.connection:
+    pbs: 6
+    isr: 70
+    uar: 60
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 62nd–65th percentile – shifting from below-average conversational depth to reliably building genuine rapport. Delta: ~27–30 percentile points.
+      - [Lemay et al. (2023)](https://labsites.rochester.edu/lelab/wp-content/uploads/2023/06/Lemay-et-al.-2023-Listening-and-the-pursuit-of-communal-relationships.pdf) document a robust causal pathway: high-quality listening signals communal motivation, which partners and friends reciprocate, compounding connection over time.
+      - Score 6 reflects a meaningful gain; the techniques work on depth-of-conversation rather than fundamentally restructuring the user's social network.
+    isr_reasoning: |
+      - [Gold et al. (2013)](https://www.tandfonline.com/doi/full/10.1080/10904018.2013.813234) found in a controlled experiment that active listening responses produced significantly higher felt-understanding scores; the effect was consistent across participants.
+      - [Itzchakov and Kluger (2022)](https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-012420-091013) review evidence that listening is associated with improved relationship quality across multiple populations and contexts.
+      - ISR is set at 70% rather than higher because some conversations involve partners who are poor disclosers, topic-avoidant, or in acute conflict – in these cases the technique yields smaller gains even when applied correctly.
+    uar_reasoning: |
+      - [Itzchakov (2023, HRM)](https://onlinelibrary.wiley.com/doi/full/10.1002/hrm.22103) notes that listening training effects persisted post-training, but required periodic reinforcement.
+      - The intervention has near-zero cost and no scheduled session, which removes the most common adherence barriers; the limiting factor is cognitive load – active listening requires deliberate attention and is easy to drop under stress or fatigue.
+      - UAR of 60% reflects that many people begin applying the techniques inconsistently within weeks, particularly in emotionally charged conversations.
+
+  communication.conflict:
+    pbs: 6
+    isr: 65
+    uar: 60
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–63rd percentile – moving from reactive conflict behaviour to reliably de-escalating most disagreements. Delta: ~25–28 percentile points.
+      - [Research on assertive listening responses](https://ncmr.lps.library.cmu.edu/article/id/853/) with 975 participants found that assertive/active listening statements made interlocutors willing to resolve conflict, while passive or aggressive responses escalated tension.
+      - Score 6 reflects a meaningful gain; active listening does not alone resolve deep value conflicts or highly entrenched disputes.
+    isr_reasoning: |
+      - [Assertive listening studies](https://ncmr.lps.library.cmu.edu/article/id/853/) show clear separation between active and non-active listening on conflict willingness, but effect sizes are moderate and not all conflict types respond equally.
+      - [Itzchakov and Kluger (2022)](https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-012420-091013) find listening reduces defensive responding and opens perspective-taking, but the effect is strongest when both parties listen.
+      - ISR set at 65% because single-sided active listening has limited power when the counterpart remains in a defensive or aggressive mode.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile. Conflict situations may additionally suppress adherence because stress and emotion are exactly the conditions under which deliberate listening habits are hardest to maintain.
+
+  friendship.depth:
+    pbs: 7
+    isr: 55
+    uar: 60
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly deepen existing friendships sufficiently to gain roughly 0.75–1 additional intimate friendship. Delta: ~0.75–1 intimate friendship gained.
+      - Using the linear anchor (anchor_max = 5): PBS = 10 + log₂(0.75/5) = 10 - 2.74 = 7.26, rounded to 7. Better listening is one of the most powerful single levers for deepening existing friendships.
+      - [Lemay et al. (2023)](https://labsites.rochester.edu/lelab/wp-content/uploads/2023/06/Lemay-et-al.-2023-Listening-and-the-pursuit-of-communal-relationships.pdf) show that perceived listening quality predicts communal relationship pursuit – friends who feel heard invest more in the relationship, compounding depth over time.
+    isr_reasoning: |
+      - ISR is lower (55%) than for communication.connection because friendship depth depends on reciprocal investment: the listener improves their half of the equation, but depth requires the friend to also open up and invest.
+      - Evidence linking listening specifically to intimate friendship count (as opposed to felt closeness) is indirect.
+      - [Gold et al. (2013)](https://www.tandfonline.com/doi/full/10.1080/10904018.2013.813234) found active listening increased social attractiveness in initial interactions; the effect on long-standing friendships is plausible but less directly evidenced.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+  romantic-relationships.connection:
+    pbs: 6
+    isr: 65
+    uar: 60
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile in emotional closeness and trust with their partner. Delta: ~25–30 percentile points.
+      - [Receptive listening research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9999077/) found r = .27 between receptive listening and relationship satisfaction – a meaningful effect size consistent with PBS 6.
+      - Score 6 reflects that receptive listening cannot alone compensate for mismatched values, low attraction, or entrenched resentment.
+    isr_reasoning: |
+      - [Empathic accuracy meta-analysis](https://pubmed.ncbi.nlm.nih.gov/28394141/) across 21 studies (n = 2,739) found r = .134 between empathic accuracy and relationship satisfaction – a small but reliable association.
+      - [Receptive listening data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9999077/) show it is among the most effective emotion-regulation strategies partners can use, but the benefit is contingent on the partner being receptive.
+      - ISR of 65% reflects that a meaningful minority of partners are in relational states where the technique has limited traction in the short term.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+  romantic-relationships.harmony:
+    pbs: 6
+    isr: 60
+    uar: 60
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile in day-to-day partnership smoothness. Delta: ~25 percentile points.
+      - Active listening directly addresses the primary driver of relationship conflict – the feeling of not being heard or understood.
+      - [Assertive listening research](https://ncmr.lps.library.cmu.edu/article/id/853/) demonstrates a clear causal pathway from active listening responses to willingness to resolve conflict.
+    isr_reasoning: |
+      - Harmony improvement in couples requires that active listening translate into fewer escalated conflicts; [Itzchakov and Kluger (2022)](https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-012420-091013) confirm listening reduces defensive responding.
+      - Harmony also depends on structural factors (living arrangements, financial stress, parenting load) that listening alone cannot address.
+      - ISR of 60% reflects that active listening reliably prevents a majority of minor conflict escalations but cannot fully offset high-stress relational environments.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment, materials, or paid training required. The techniques can be learned from freely available articles or a single library book."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The intervention is applied within conversations that already occur; there is no recurring fee, subscription, or consumable."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to read an accessible overview of the three core techniques and practise them in one low-stakes conversation."
+  ongoing_time: 0
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "The intervention adds no time to the user's schedule – it is applied within conversations that would happen regardless. The only investment is attentional, not temporal."
+
+prerequisites:
+  - "No physical, health, or cognitive prerequisites; the techniques are accessible to any adult capable of ordinary conversation"
+  - "Access to regular interpersonal interaction (in-person, phone, or video) – the habit cannot develop in purely text-based or asynchronous communication contexts"
+  - "Basic familiarity with the three core techniques (paraphrasing, open questions, feeling-reflection) via any free resource before first application"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Being listened to well is a robust predictor of psychological well-being; practitioners who listen better also tend to feel more relationally secure, reducing loneliness and anxiety."
+  - domain: "self-awareness"
+    rationale: "Reflecting feelings back to others requires first noticing and labelling emotions, which builds the practitioner's own emotional vocabulary and self-awareness over time."

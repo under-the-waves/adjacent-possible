@@ -1,8 +1,19 @@
 name: "Monthly Goal Review"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  A structured monthly session – typically 1.5–2 hours – for reviewing progress against all active goals, evaluating whether each remains worth pursuing, updating timelines and priorities, and planning the next month's focus. The practice sits between [daily decision review](/resources/intervention-database/daily-decision-review) (which calibrates individual days) and longer-term planning, providing a regular decision point to continue, modify, or retire goals before drift accumulates. Pairs well with [habit stacking](/resources/intervention-database/habit-stacking) for translating monthly priorities into daily action.
+how_to_do_it: |
+  - Many people find a consistent monthly anchor (e.g., the first Sunday of each month) with a calendar block and reminder works better than trying to fit the review in ad hoc – treating it as a non-negotiable appointment protects it from being crowded out
+  - A typical session follows four steps: (1) assess each active goal's completion status against its timeline, (2) identify what helped and what blocked progress, (3) decide whether to continue, modify, or retire each goal, and (4) set 2–3 concrete next actions for the coming month
+  - You may find it useful to keep a running log of monthly reviews so you can spot recurring patterns – goals that stall for three consecutive months are usually candidates for retirement or redesign
+  - Most practitioners find that limiting active goals to 3–5 at a time makes the review sharper and reduces the likelihood of spreading effort too thin
+success_looks_like: |
+  - Your goal list reflects what you are actually working on, not an aspirational backlog – retired or paused goals are explicitly marked rather than silently ignored
+  - Timeline estimates improve over successive months as you calibrate capacity against real data rather than optimistic projection
+  - You retire or substantially modify at least one goal per quarter based on evidence from reviews, rather than persisting with goals out of inertia
+common_pitfalls: |
+  - Skipping one month and never resuming – the practice compounds through consistency, and a single missed review often becomes permanent abandonment
+  - Spending the session updating task lists rather than making strategic decisions about whether each goal still deserves its place in your portfolio
+  - Reviewing goals without recording conclusions, which means the same issues surface month after month without resolution – written decisions create accountability
 description: |
   - A structured monthly session for reviewing progress against all active goals, evaluating whether each remains worth pursuing, updating timelines and priorities, and planning the next month's focus
   - Follows a consistent format: assess completion status, identify obstacles and enablers, decide whether to continue, modify, or retire each goal, and set concrete next actions for the coming month
@@ -14,7 +25,7 @@ values:
   goals.follow_through:
     pbs: 6
     pbs_reasoning: |
-      - The anchor measures % of days with at least one deliberate goal action. Monthly reviews happen once per month, so their effect on daily follow-through is indirect: the review session plans and motivates daily action, but 29 of 30 days depend on self-sustaining momentum between reviews.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile on daily goal follow-through. Delta: ~20–25 percentile points of improvement. The anchor measures % of days with at least one deliberate goal action. Monthly reviews happen once per month, so their effect on daily follow-through is indirect: the review session plans and motivates daily action, but 29 of 30 days depend on self-sustaining momentum between reviews.
       - [Harkin et al. (2016)](https://doi.org/10.1037/bul0000025) meta-analysis (138 studies, N = 19,951) found progress monitoring produces d = 0.40 improvement in goal attainment, with physically recording progress strengthening the effect. Monthly review inherently involves written recording.
       - Score 6 because a successful reviewer might move from ~6% of days with goal action (score 6) to ~15-20%, a meaningful but not dramatic uplift. The monthly cadence creates accountability spikes but cannot sustain daily action the way daily-trigger interventions (e.g., habit stacking) can.
     isr: 70
@@ -32,7 +43,7 @@ values:
   goals.clarity:
     pbs: 7
     pbs_reasoning: |
-      - The anchor measures % of goals completed on time through accurate capacity calibration. Monthly review is one of the most direct interventions for this: it catches timeline drift, identifies where estimates were too aggressive or conservative, and builds a longitudinal record of actual vs planned capacity.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile on goal completion accuracy. Delta: ~30–35 percentile points of improvement. The anchor measures % of goals completed on time through accurate capacity calibration. Monthly review is one of the most direct interventions for this: it catches timeline drift, identifies where estimates were too aggressive or conservative, and builds a longitudinal record of actual vs planned capacity.
       - [Matthews (2015)](https://www.dominican.edu/dominicannews/study-highlights-strategies-for-achieving-goals) found 42% higher goal achievement from writing goals down, and regular review compounds this by enabling iterative recalibration across months.
       - Score 7 because a successful reviewer could plausibly move from ~6% on-time completion (score 6) to ~25% (score 8) over 6-12 months of calibration. The review process progressively improves estimation accuracy, but monthly cadence may miss fast-moving goals needing weekly recalibration.
     isr: 70
@@ -50,7 +61,7 @@ values:
   goals.adaptability:
     pbs: 7
     pbs_reasoning: |
-      - The anchor (proactive portfolio management with systematic review and strategic pivots) describes almost exactly what a monthly goal review is. The structured decision point forces explicit evaluation of whether each goal should continue, be modified, or be retired – directly countering both sunk-cost rigidity and impulsive abandonment.
+      - Baseline (per values.yml): 35th percentile (below-average goal adaptability). After successful adherence, a user could plausibly reach the 65th–70th percentile (systematic review with strategic pivots). Delta: ~30–35 percentile points. The anchor (proactive portfolio management with systematic review and strategic pivots) describes almost exactly what a monthly goal review is. The structured decision point forces explicit evaluation of whether each goal should continue, be modified, or be retired – directly countering both sunk-cost rigidity and impulsive abandonment.
       - [Brandstatter & Rothermund (2002)](https://doi.org/10.1016/S0065-2601(02)80009-2) showed that deliberative mindsets (activated by structured review) improve the quality of goal disengagement decisions, reducing both premature quitting and excessive persistence.
       - Score 7 rather than 8+ because truly proactive portfolio management also requires real-time responsiveness to major changes (job loss, health crisis, unexpected opportunities), which a monthly cadence cannot fully provide. It is systematic but not fully responsive.
     isr: 65

@@ -1,8 +1,19 @@
 name: "Calorie Tracking"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Systematically logging all food and drink intake using a mobile app (e.g. MyFitnessPal, Cronometer, MacroFactor) to maintain awareness of energy consumption against a daily calorie target. Research identifies dietary self-monitoring as the single strongest behavioural correlate of weight loss. Compatible with any dietary pattern – the constraint is total intake, not food selection. Can be combined with a [High-Protein Diet](/resources/intervention-database/high-protein-diet) for improved satiety and body composition.
+how_to_do_it: |
+  - Many people find that logging meals in real time (or within 30 minutes of eating) is substantially more accurate than trying to recall intake at the end of the day
+  - You may want to invest in a basic kitchen scale (£10–15) for the first 2–4 weeks to calibrate your portion size estimates – most people underestimate portions by 20–40% until they have practised weighing
+  - Saving frequently eaten meals as presets in the app dramatically reduces logging time after the first few weeks, turning a 10-minute task into a 2-minute one
+  - Most practitioners find that tracking consistently for 5+ days per week produces meaningful results; perfect daily logging is not required and insisting on it tends to accelerate burnout
+success_looks_like: |
+  - You develop an intuitive sense of calorie density for your regular meals within 4–6 weeks, even on days you do not formally log
+  - Weight trends move in the expected direction (loss, gain, or maintenance) within 2–3 weeks of consistent tracking, confirming your target is calibrated correctly
+  - You can identify which meals or snacks are responsible for surplus intake, enabling targeted adjustments rather than blanket restriction
+common_pitfalls: |
+  - Logging consistently but underreporting portion sizes, cooking oils, and liquid calories – the tracking creates a false sense of control while the actual deficit never materialises
+  - Developing an obsessive or anxious relationship with the app, where unlogged meals trigger guilt or where social eating becomes stressful – this is a signal to take a break or switch to less granular methods
+  - Abandoning tracking entirely after a single bad day or week, rather than accepting imperfect data as still more useful than no data at all
 description: |
   - Systematically logging all food and drink intake to maintain awareness of energy consumption, typically using a mobile app (e.g. MyFitnessPal, Cronometer, MacroFactor) to scan barcodes, search databases, and record portions against a daily calorie target
   - Requires daily logging of all meals and snacks, ideally in real time or shortly after eating, with periodic recalibration of calorie targets as body weight changes; most protocols recommend tracking every day, though 5+ days per week appears sufficient for meaningful results
@@ -14,7 +25,7 @@ values:
   body-image.fat_loss:
     pbs: 8
     pbs_reasoning: |
-      - [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/17904936/) from behavioural diet interventions with 1+ year follow-up shows successful participants sustain 5 – 7% body weight loss at 12 months, with peak losses of 5 – 9% at 6 months before partial regain
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile (6.5% sustained body weight loss). Delta: ~40–45 percentile points of improvement. [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/17904936/) from behavioural diet interventions with 1+ year follow-up shows successful participants sustain 5–7% body weight loss at 12 months, with peak losses of 5–9% at 6 months before partial regain
       - [Long-term maintenance data](https://www.sciencedirect.com/science/article/pii/S0002916523063748) shows that 5 years after structured weight loss programmes, successful maintainers retain >3% loss from baseline, though the best adherents sustain 5 – 8%
       - [An app-based tracking trial](https://link.springer.com/article/10.1007/s10865-019-00091-8) found mean losses of 5 – 8% among those who achieved clinically significant results, confirming the effect size ceiling for this intervention
       - On the logarithmic anchor, 6.5% sustained loss maps to 10 + log₂(6.5/25) = 8.06, rounding to PBS 8

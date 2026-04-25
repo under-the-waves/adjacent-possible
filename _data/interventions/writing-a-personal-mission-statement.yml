@@ -1,0 +1,164 @@
+name: "Writing a Personal Mission Statement"
+what_it_is: |
+  A personal mission statement is a short written document – typically 1–3 paragraphs or a structured set of bullet points – that articulates your core values, your most important life priorities, and the guiding principles you want to apply across domains. The process of writing one forces the kind of slow, deliberate reflection that day-to-day life rarely affords: you must examine what you actually believe matters, where your commitments conflict, and what you want your life to be about at the level of operating principle rather than individual goal. The output is less important than the clarification it produces. A well-written statement becomes a decision-making heuristic – a reference point you can return to when facing trade-offs between career, relationships, contribution, and personal development.
+how_to_do_it: |
+  - Block a single weekend morning (3–4 hours uninterrupted) for the drafting session. Begin by free-writing responses to three questions: What would I most regret not having done? What kind of person do I most want to be? What do I want to have contributed? Do not edit during this phase – the goal is surface-level honesty before the inner critic engages
+  - After the free-write, identify recurring themes and candidate values. Rank your top five. Then draft one sentence per value that states what it means in practice – not an abstraction ("I value honesty") but a principle ("I will say difficult true things to people who need to hear them, even when it costs me"). These sentences form the core of your statement
+  - Draft the full statement in your own voice. Aim for under 300 words. Read it aloud – if any sentence sounds like someone else wrote it or like a corporate value statement, rewrite it until it sounds like you. A mission statement that could belong to anyone belongs to no one
+  - Review the statement against your current calendar and financial decisions: does how you actually spend your time and money reflect the priorities you have written? Note the gaps – these become your highest-leverage action areas. Revisit the statement annually or after major life transitions
+success_looks_like: |
+  - When you face a significant decision – a job offer, a relationship question, how to spend discretionary time – you can articulate within a few minutes which choice is more consistent with your stated priorities, and why
+  - The statement reduces the number of commitments you accept by default: you can decline things that are simply inconsistent with your mission without needing to construct a specific justification each time
+  - Twelve months after writing it, you can read the statement and confirm that it still feels genuinely yours, that it has influenced at least one significant decision, and that your daily behaviour is more aligned with your stated values than it was before
+common_pitfalls: |
+  - Writing a statement that is aspirational rather than honest – describing the person you wish you were rather than the person you actually are and the values you actually hold. An aspirational statement produces guilt rather than clarity
+  - Treating the statement as a completed document once written rather than a living reference. A mission statement that is never consulted does not influence decisions, and its benefit disappears entirely
+  - Over-engineering the process: spending weeks researching frameworks, reading books about purpose, or iterating through dozens of drafts. The value is in committing to a direction under uncertainty, not in achieving philosophical perfection before committing
+description: |
+  - A one-time reflective writing intervention: the person spends 3–4 hours producing a personal mission statement that documents core values, life priorities, and guiding principles in their own words
+  - Draws on values clarification methodology – a structured technique with evidence in both clinical and positive psychology contexts for helping people identify and articulate what they genuinely care about, distinct from what they feel they should care about
+  - [Life crafting research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6923189/) (Schippers and Ziegler, 2019) shows that structured written reflection on values, passions, and goals increases well-being and goal follow-through in student populations
+  - [Written goal commitment research](https://scholar.dominican.edu/cgi/viewcontent.cgi?article=1002&context=psychology-faculty-conference-presentations) (Matthews, 2015) found that participants who wrote down goals and shared them achieved significantly more than those who only thought about goals
+  - Distinct from goal-setting: mission statements operate at the level of values and principles, not specific outcomes. They constrain which goals are worth setting rather than specifying how to achieve any particular one
+applicable_domains: ["life-purpose", "value-system", "goals"]
+
+values:
+  life-purpose.clarity:
+    pbs: 7
+    isr: 55
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful completion and sustained reference, a user could plausibly reach the 70th–75th percentile in confidence and stability of life direction. Delta: ~35–40 percentile points.
+      - [Schippers and Ziegler (2019)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6923189/) report that life crafting – which centrally involves written reflection on values and life purpose – produces significant and lasting gains in sense of purpose and direction, with effect sizes in the moderate range.
+      - Score 7 rather than 8 reflects that the intervention is a single writing session, not an ongoing practice. The clarity benefit is real but bounded.
+    isr_reasoning: |
+      - [A systematic review of values interventions in ACT and related approaches](https://ijpsy.com/volumen20/num3/557/a-systematic-review-of-values-interventions-EN.pdf) finds consistent positive effects from values clarification exercises across diverse populations, with the majority of participants reporting increased clarity. However, people with low introspective access or high emotional avoidance show attenuated effects.
+      - [Frontiers in Psychology meta-analysis on well-being interventions](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.02778/full) notes that brief writing interventions reliably shift momentary sense of purpose but long-term change requires further evaluation.
+      - ISR of 55% reflects that roughly half of people who complete the exercise will have a meaningfully clearer sense of life direction as a result.
+    uar_reasoning: |
+      - UAR of 70% reflects the one-time nature of this intervention: the primary adherence question is simply whether the person completes the session. A weekend writing block is achievable for most motivated adults.
+      - The residual 30% non-adherence reflects procrastination and avoidance of the emotional discomfort that genuine values reflection produces.
+      - [Psychology Today analysis of mission statement adoption](https://www.psychologytoday.com/us/blog/trust-yourself/202207/why-you-need-a-personal-mission-statement) notes that while most people recognise the value of clarifying purpose, far fewer complete a structured exercise.
+
+  life-purpose.meaning:
+    pbs: 6
+    isr: 45
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful completion, a user could plausibly reach the 60th–65th percentile in depth and stability of fulfilment from working toward life purpose. Delta: ~25–30 percentile points.
+      - The mechanism is indirect: the mission statement itself does not produce meaning; it clarifies what activities and pursuits the person expects to find meaningful, which then enables better selection of commitments. [Research on purpose and daily meaning](https://pmc.ncbi.nlm.nih.gov/articles/PMC10938924/) shows that sense of purpose fluctuates substantially and is sensitive to whether current activities align with articulated values.
+      - Score 6 rather than 7 because the fulfilment benefit depends on subsequent behaviour change – the statement must actually shift what the person spends time on.
+    isr_reasoning: |
+      - [A meta-analysis of meaning and purpose interventions](https://pmc.ncbi.nlm.nih.gov/articles/PMC6602826/) found a weighted average effect of g = 0.371 for purpose-focused interventions – a small-to-moderate effect. Mission statement writing is a lighter-touch intervention than full meaning-therapy protocols.
+      - The fulfilment benefit requires not just clarity but subsequent alignment between decisions and stated values.
+      - ISR of 45% reflects that less than half of completers will experience a meaningful sustained increase in sense of fulfilment from the exercise alone.
+    uar_reasoning: |
+      - See life-purpose.clarity UAR – same intervention, same adherence profile. UAR of 70%.
+
+  life-purpose.integration:
+    pbs: 6
+    isr: 45
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful completion, a user could plausibly reach the 60th percentile in how well their life purpose organises and creates synergy across life domains. Delta: ~25 percentile points.
+      - A mission statement that articulates values at a domain-transcending level provides a shared organising principle that can reduce the sense of fragmentation between work, relationships, and personal development.
+      - Score 6 rather than higher because integration is a downstream effect: it requires the statement to be broad enough to span domains, and requires the person to actively apply it across contexts.
+    isr_reasoning: |
+      - No direct evidence exists on mission statement writing and cross-domain life integration specifically.
+      - The integration benefit is the most cognitively demanding outcome: it requires writing a statement abstract enough to apply across domains while specific enough to be actionable.
+      - ISR of 45% reflects that fewer than half produce a statement broad and robust enough to function as a genuine cross-domain integrating principle.
+    uar_reasoning: |
+      - See life-purpose.clarity UAR – same intervention, same adherence profile. UAR of 70%.
+
+  value-system.insight:
+    pbs: 7
+    isr: 60
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful completion, a user could plausibly reach the 70th–75th percentile in depth of understanding of their own authentic values, their hierarchies, and trade-offs. Delta: ~35–40 percentile points.
+      - The mission statement exercise is directly targeted at this value: it requires the person to surface implicit values, rank them, and articulate their practical meaning. [Values clarification systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) confirms that structured exercises produce meaningful gains in values insight.
+      - Score 7 reflects a significant step-change in insight – most people have never systematically examined their values hierarchy – but stops short of the deep understanding from sustained philosophical reflection over years.
+    isr_reasoning: |
+      - [Clarifying values meta-analysis (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) found that structured values clarification exercises reliably improve values insight across diverse populations. The effect on insight is more robust than the effect on downstream behaviour change.
+      - ISR of 60% – higher than for life-purpose values – because the insight gain is the most direct output of the exercise and requires the least subsequent behaviour change.
+      - A minority report confusion or distress when confronting value conflicts, reducing the net gain.
+    uar_reasoning: |
+      - See life-purpose.clarity UAR – same intervention, same adherence profile. UAR of 70%.
+
+  value-system.practical:
+    pbs: 6
+    isr: 40
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful completion and active use of the statement as a decision reference, a user could plausibly reach the 60th percentile in values-driven daily decision-making. Delta: ~25 percentile points.
+      - The mission statement operates as an externalised decision heuristic: by making values explicit and written, it reduces the cognitive load required to apply them at decision points. [Matthews (2015)](https://scholar.dominican.edu/cgi/viewcontent.cgi?article=1002&context=psychology-faculty-conference-presentations) found that externalising intentions in written form increases the probability of acting on them.
+      - Score 6 rather than 7 because practical decision-making improvement requires not just having a statement but consulting it at actual decision points.
+    isr_reasoning: |
+      - Values clarification research shows mixed effects on downstream decision-making: reliable improvements in perceived clarity but more modest effects on observed decision behaviour.
+      - ISR of 40% reflects that fewer than half of completers will show meaningful improvement in values-driven daily decisions, because many achieve insight without consistently applying it.
+    uar_reasoning: |
+      - See life-purpose.clarity UAR – same intervention, same adherence profile. UAR of 70%.
+
+  goals.clarity:
+    pbs: 6
+    isr: 45
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user starting at baseline could plausibly improve their on-time goal completion rate by ~10–12 percentage points through better goal selection and priority alignment.
+      - PBS = 10 + log₂(12/100) = 10 + (-3.06) = 6.94, conservatively scored at 6 given that the mission statement addresses goal selection and priority, not goal execution systems.
+      - [Written goal commitment research](https://scholar.dominican.edu/cgi/viewcontent.cgi?article=1002&context=psychology-faculty-conference-presentations) (Matthews, 2015) confirms that externalising goals with stated purpose rationale improves completion rates.
+    isr_reasoning: |
+      - The link between mission statements and improved goal completion rates is indirect and mediated by sustained reference to the statement at planning cycles.
+      - [Life crafting research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6923189/) shows that structured purpose reflection improves academic goal follow-through in students, but effect sizes are small-to-moderate.
+      - ISR of 45% reflects that fewer than half of completers will show meaningful improvement in goal clarity metrics.
+    uar_reasoning: |
+      - See life-purpose.clarity UAR – same intervention, same adherence profile. UAR of 70%.
+
+  goals.adaptability:
+    pbs: 5
+    isr: 40
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful completion, a user could plausibly reach the 55th percentile in capacity to review and strategically pivot goals. Delta: ~20 percentile points.
+      - A mission statement provides a stable reference point against which to evaluate whether a goal still makes sense as circumstances change – a principled basis for distinguishing adaptive pivots from unmotivated abandonment.
+      - Score 5 because the adaptability benefit is modest and conditional.
+    isr_reasoning: |
+      - No direct evidence exists on mission statements and goal adaptability specifically.
+      - [Values clarification literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) shows that knowing what one values reduces decisional conflict in ambiguous situations.
+      - ISR of 40% is conservative given the indirect pathway and absence of direct evidence.
+    uar_reasoning: |
+      - See life-purpose.clarity UAR – same intervention, same adherence profile. UAR of 70%.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials required beyond pen and paper or a word processor. Optional: a book or workbook on personal mission statements, available for under $15 used but not necessary."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost. The annual review is a 30–60 minute reading and revision session requiring no materials."
+  upfront_time: 4
+  upfront_time_reasoning: "A focused 3–4 hour session is the minimum for completing the free-write, values ranking, principle articulation, and final drafting phases without rushing to premature closure."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "An annual review of 30–60 minutes to confirm the statement still reflects current priorities and to update it for any major life transitions."
+
+prerequisites:
+  - "Basic literacy and the ability to write reflectively in a first or second language – the exercise requires articulating abstract values in concrete language"
+  - "A stable enough life situation to engage in reflective planning – acute crises will make the exercise emotionally inaccessible and should be resolved first"
+  - "Sufficient self-knowledge to have at least intuitive access to one's values – people who have never engaged in any form of self-reflection may benefit from a simpler precursor exercise (e.g. journalling for 2–4 weeks) before attempting a full mission statement"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Values clarity and sense of purpose are well-established protective factors for psychological wellbeing; a mission statement exercise may reduce existential anxiety."
+  - domain: "rationality"
+    rationale: "Articulating an explicit values hierarchy reduces motivated reasoning and post-hoc rationalisation by making prior commitments legible at subsequent decision points."
+  - domain: "self-awareness"
+    rationale: "The free-write and values-ranking phases are direct contemplative and psychological self-awareness practices."
+  - domain: "career-planning"
+    rationale: "A mission statement that addresses professional contribution provides a filter for evaluating career moves against stated life priorities."

@@ -1,0 +1,131 @@
+name: "Regular One-on-One Conversations"
+what_it_is: |
+  Scheduling recurring, uninterrupted one-on-one conversations with close friends or family members – typically monthly – with the explicit purpose of going beyond surface-level updates. Most people, even in long-standing close relationships, default to logistical or performative exchange: plans, news, mutual complaints. This intervention creates a protected space for genuine self-disclosure and mutual attention. It costs nothing beyond time, requires no new relationships, and works on existing ones. The core mechanism is intentional structure: a fixed cadence replaces the social friction of "we should catch up" with an already-scheduled meeting, and an explicit intent to go deeper replaces the drift toward small talk.
+how_to_do_it: |
+  - Schedule a recurring monthly slot directly in both people's calendars – 60–90 minutes, in-person or video call, with phone calls as a minimum viable fallback; treat it as a fixed appointment rather than an optional catch-up
+  - Open with a substantive prompt rather than "what's new" – effective openers include "what's been on your mind lately that you haven't said out loud?" or "what's one thing you're proud of and one thing you're struggling with this month?"
+  - Take turns holding the floor for 10–15 minutes without interruption, then discuss – this prevents the conversation from being hijacked by whoever is more extroverted or has more urgent news
+  - Review the relationship briefly at the end once a quarter: is the cadence right? Is there anything unsaid? This catches drift before it becomes distance
+success_looks_like: |
+  - You consistently know what your close friends are actually working through, not just what they posted or mentioned in passing
+  - Conversations start skipping the warm-up phase because the relationship context is always fresh – you pick up where you left off rather than rebuilding rapport from scratch each time
+  - Both parties begin to raise difficult or vulnerable topics in ordinary interactions because the regular deeper channel has normalised self-disclosure
+common_pitfalls: |
+  - Letting the conversation stay in update mode – recapping events rather than exploring feelings, uncertainties, or values; the format without the intent produces nothing beyond a structured small-talk session
+  - Scheduling it too infrequently (quarterly or less) or too frequently (weekly without enough life to discuss), either of which causes the sessions to feel either stale or pressured
+  - Treating it as a favour to the other person rather than a mutual structure – both parties need to show up prepared to receive as well as disclose, or the dynamic becomes lopsided and collapses
+description: |
+  - A recurring, calendar-anchored one-on-one with a close friend or family member – typically monthly, 60–90 minutes – designed specifically for substantive conversation beyond logistical or social-performance exchange
+  - [Research](https://pmc.ncbi.nlm.nih.gov/articles/PMC2861779/) finds the happiest people have roughly half as much small talk and twice as many substantive conversations as the unhappiest, with a strong within-person daily correlation between depth of conversation and positive affect
+  - [Evidence](https://www.apa.org/pubs/journals/releases/psp-pspa0000281.pdf) shows people systematically underestimate how satisfying deeper conversations will be and how well others will receive their disclosures – the main barrier is a miscalibrated expectation, not a real incompatibility
+  - The scheduled cadence removes the coordination friction ("we should catch up") that causes even motivated friends to drift apart; [research on friendship maintenance](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) identifies consistent outreach and self-disclosure as the highest-impact maintenance behaviours
+  - Unlike therapy or journalling, this intervention is bilateral – both parties benefit simultaneously, and the accountability of a recurring slot sustains the habit without requiring ongoing willpower
+applicable_domains: ["friendship", "family-of-origin", "romantic-relationships", "mental-health"]
+
+values:
+  friendship.depth:
+    pbs: 8
+    isr: 70
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, approximately 1 intimate friendship. After successful adherence, a user converting 2–3 shallow-but-close relationships into genuine intimate ones reaches the 55th–60th percentile. Delta: ~20–25 percentile points, equating to roughly +1.5 intimate friendships on a max-5 anchor. PBS = 10 + log₂(1.5/5) = 10 - 1.74 = 8.
+      - [A 2023 systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) found friendship quality – operationalised as depth of self-disclosure and emotional intimacy – is the strongest predictor of wellbeing among adult friendship variables.
+      - [Kardas, Kumar and Epley (2021)](https://www.apa.org/pubs/journals/releases/psp-pspa0000281.pdf) demonstrated that deeper conversations produce substantially more connectedness and closeness than participants expect; the mechanism works most powerfully in existing close relationships where trust is already established.
+    isr_reasoning: |
+      - [Mehl et al. (2010)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2861779/) found substantive conversation predicted higher wellbeing and closeness in daily life, but the effect depended on both parties engaging genuinely – unilateral disclosure without reciprocation does not produce depth gains.
+      - The intervention works best on relationships that already have latent depth (close friends who have drifted into shallowness) rather than relationships with genuine misalignment of values or low underlying trust.
+      - [Langheit and Poulin (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11196206/) found best-friendship quality predicts wellbeing longitudinally, confirming that depth gains are durable once established.
+    uar_reasoning: |
+      - The main adherence risk is the coordination burden: scheduling recurring social commitments requires both parties to agree and maintain the habit.
+      - Calendar-anchored scheduling substantially reduces friction compared to ad hoc catch-ups, but life disruptions frequently break the cadence, and many dyads fail to restart after a missed session.
+      - [Our World in Data's analysis of social connections](https://ourworldindata.org/social-connections-and-loneliness) shows adults consistently report wanting more meaningful contact with friends while failing to prioritise it in practice – the intention-behaviour gap is large in this domain.
+
+  friendship.growth:
+    pbs: 6
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Deeper monthly conversations expose each party to their friend's current challenges, perspectives, and aspirations – a person who converts 2–3 shallow friendships into growth-promoting ones plausibly reaches the 60th percentile. Delta: ~25 percentile points.
+      - Growth-oriented outcomes of deep friendship (intellectual challenge, normative feedback, accountability) are well-documented, but they are secondary to connection rather than the primary output of this intervention.
+      - The causal pathway is reliable – conversations involving genuine self-disclosure naturally surface current projects, goals, and struggles – but the effect size is modest compared to interventions designed explicitly for growth.
+    isr_reasoning: |
+      - [Adult friendship research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) confirms that friendship quality predicts growth and challenge outcomes, but the effect is weaker for growth than for wellbeing or connection.
+      - Not all deep friendships are growth-promoting; the intervention does not specifically select for intellectually challenging relationships.
+      - [Mehl et al. (2010)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2861779/) found substantive conversation predicts positive affect broadly, which includes but is not limited to growth.
+    uar_reasoning: |
+      - See friendship.depth UAR – same intervention, same adherence profile.
+
+  family-of-origin.connection:
+    pbs: 6
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A user who applies monthly structured one-on-ones to one or two family-of-origin relationships could plausibly reach the 60th–65th percentile in emotional closeness. Delta: ~25–30 percentile points.
+      - The mechanism is direct: intentional self-disclosure with a parent or sibling, repeated monthly, increases mutual understanding through the same pathways as friendship – [Holt-Lunstad et al. (2015)](https://pubmed.ncbi.nlm.nih.gov/25910392/) documents family relationships as among the most protective social connections for health and wellbeing.
+      - Family-of-origin relationships carry more pre-existing history and role-constraint than friendships, which limits the ceiling; PBS 6 rather than 8 reflects this constraint.
+    isr_reasoning: |
+      - Success depends heavily on whether the family-of-origin relationship is willing to shift registers – many family relationships are structured around duty, logistics, and role performance rather than emotional disclosure.
+      - [Holt-Lunstad (2024)](https://onlinelibrary.wiley.com/doi/full/10.1002/wps.21224) confirms family social connections are protective but notes that quality matters more than frequency of contact.
+      - ISR is lower than for friendship because the user has less selection control over family-of-origin relationships.
+    uar_reasoning: |
+      - See friendship.depth UAR – same intervention, same adherence profile. Family relationships may have slightly lower adherence due to higher emotional stakes.
+
+  romantic-relationships.connection:
+    pbs: 6
+    isr: 65
+    uar: 60
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A couple who implements regular deliberate one-on-one conversations – beyond daily logistics – can plausibly reach the 60th–65th percentile in emotional closeness and trust. Delta: ~25–30 percentile points.
+      - The causal pathway is the most direct of any domain: romantic partners who create protected space for genuine emotional exchange are implementing what relationship researchers identify as the core mechanism of intimacy maintenance.
+      - PBS is capped at 6 because the intervention is a conversation practice, not a full relationship intervention – it does not address conflict resolution, physical intimacy, or structural misalignment.
+    isr_reasoning: |
+      - ISR is higher for romantic partners than for friends because both parties are already in regular contact, reducing coordination burden.
+      - [Research on couples communication](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/) consistently identifies intentional, non-logistical conversation as a key differentiator between high- and low-satisfaction partnerships.
+      - Not all couples are in a place where deeper conversation is productive – high-conflict or distressed relationships may find structured intimacy conversations counterproductive without professional facilitation.
+    uar_reasoning: |
+      - Romantic partners have higher structural adherence than friendship dyads because the relationship is already co-located and the scheduling coordination cost is lower.
+      - The main dropout risk is that sessions migrate toward logistics and the intent to go deeper is lost.
+      - UAR is slightly higher here (60% vs 55%) due to reduced coordination friction.
+
+  mental-health.stability:
+    pbs: 6
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A user who converts 2–3 shallow relationships into genuine sources of emotional support could plausibly reach the 60th percentile in emotional stability. Delta: ~25 percentile points.
+      - [Holt-Lunstad et al. (2015)](https://pubmed.ncbi.nlm.nih.gov/25910392/) found social isolation increases mortality risk by 29% and loneliness by 26%, with depression and emotional instability as primary mediating mechanisms.
+      - The mechanism is well-established: regular emotional self-disclosure with a trusted person reduces rumination and increases perceived social support. Effect is meaningful but not equivalent to structured therapeutic intervention; PBS 6 rather than 8 reflects this ceiling.
+    isr_reasoning: |
+      - [A meta-analysis of loneliness interventions](https://pmc.ncbi.nlm.nih.gov/articles/PMC3865701/) found significant reductions in loneliness and depression across social connection interventions, with moderate-to-large effects.
+      - ISR is moderated by the user's starting mental health status: those with subclinical loneliness show the strongest response; those with clinical depression require professional intervention alongside.
+      - [Holt-Lunstad (2024)](https://onlinelibrary.wiley.com/doi/full/10.1002/wps.21224) confirms social connection as a transdiagnostic protective factor with consistent effect across population studies.
+    uar_reasoning: |
+      - See friendship.depth UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No purchases required. A calendar app (free) and a phone or video call capability are the only tools needed."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The intervention is entirely free. No subscriptions, venues, or consumables are required."
+  upfront_time: 0.5
+  upfront_time_reasoning: "Approximately 30 minutes to identify 2–3 relationships to prioritise, reach out to schedule the first sessions, and add recurring calendar events."
+  ongoing_time: 1.5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "One 60–90 minute conversation per close relationship per month. A user prioritising two relationships invests roughly 2–3 hours per month; the minimum effective dose is one relationship at 60–90 minutes."
+
+prerequisites:
+  - "At least one existing close or formerly close relationship where there is mutual goodwill and willingness to engage more deeply"
+  - "A reliable communication channel shared with each person – phone, video call, or ability to meet in person"
+  - "Basic willingness to self-disclose – the intervention does not require therapeutic-level vulnerability, but does require moving beyond purely logistical or performative exchange"
+
+flagged_domains:
+  - domain: "communication"
+    rationale: "Regular practice of substantive self-disclosure and active listening builds communication skills that transfer to other relationships and contexts."
+  - domain: "self-awareness"
+    rationale: "Articulating one's inner life to another person in monthly conversations surfaces thoughts and feelings that would otherwise remain unexamined."

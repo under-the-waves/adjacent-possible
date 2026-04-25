@@ -1,0 +1,163 @@
+name: "Asking for Feedback"
+what_it_is: |
+  Deliberately and regularly soliciting honest, specific feedback from colleagues, friends, mentors, or managers about particular behaviours, outputs, or blind spots – rather than waiting passively for feedback to arrive, or relying on self-assessment alone. The practice costs nothing material but does require tolerating ego threat, which is precisely why most people avoid it: research consistently finds that self-assessments correlate poorly with external evaluations (average r = 0.29, near zero for interpersonal skills), yet few people compensate by asking. Done systematically – targeting specific behaviours, choosing credible sources, and acting visibly on what is heard – it converts other people's observations into a personal development signal that is otherwise almost entirely inaccessible.
+how_to_do_it: |
+  - Pick one specific behaviour or output per request rather than asking "how am I doing?" – specificity is what separates actionable signal from polite noise. For example: "In yesterday's presentation, did my explanation of the data hold together?" or "Do I interrupt people in meetings more than I realise?"
+  - Choose sources with genuine visibility into the behaviour in question and the standing to be honest – a direct manager, a peer who works closely with you, or a mentor who has observed you in context. Rotate sources over time to avoid anchoring on a single perspective.
+  - Make it easy for the source to be candid: frame the request as seeking improvement rather than validation, explicitly give permission to be critical, and follow up with a genuine "tell me more" when you receive something uncomfortable rather than defending yourself
+  - Close the loop – after receiving feedback, summarise what you heard, note what you plan to change, and briefly update the source two to four weeks later. This signals that the feedback was used, which makes the source more likely to be candid again
+success_looks_like: |
+  - You regularly discover specific blind spots – things you do that undermine your effectiveness – that you had no access to through self-reflection alone
+  - Colleagues and mentors become progressively more candid with you over time, because they have seen that feedback leads to visible change rather than defensiveness
+  - Your trajectory on the skills that matter most to you accelerates noticeably compared to periods when you were relying on self-assessment
+common_pitfalls: |
+  - Asking for feedback but visibly bristling at criticism – this trains sources to give you only positive responses in future, negating the entire mechanism
+  - Soliciting feedback too broadly ("any thoughts on how I'm doing?") which produces vague, socially safe answers rather than useful signal
+  - Treating each feedback event as a data point of one – a single person's view may reflect their own preferences as much as your actual behaviour; triangulate across multiple sources before making significant changes
+description: |
+  - Proactively requesting specific, honest evaluations of named behaviours or outputs from people with genuine observational access – distinct from passive performance review cycles or unsolicited praise
+  - [A 30-year meta-analysis](https://journals.sagepub.com/doi/10.1177/0149206313484521) of feedback-seeking behaviour in organisations found it reliably predicts higher performance ratings, greater creativity, and stronger learning outcomes compared to non-seekers, mediated by reduced uncertainty and faster error correction
+  - [Kluger and DeNisi's landmark meta-analysis](https://mrbartonmaths.com/resourcesnew/8.%20Research/Marking%20and%20Feedback/The%20effects%20of%20feedback%20interventions.pdf) of 607 effect sizes found feedback interventions improve performance on average (d = 0.41), with largest gains when feedback is specific, behavioural, and solicited rather than unsolicited
+  - Self-assessment accuracy is structurally poor: [research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6041499/) finds average self-other correlations of 0.29 overall, dropping near zero for interpersonal and managerial behaviours – the exact domains where external feedback is most irreplaceable
+  - The intervention requires no equipment, no cost, and as little as 10–15 minutes per week; the primary barrier is psychological – ego protection and fear of negative evaluation – which also explains why it is dramatically underutilised relative to its value
+applicable_domains: ["learning-methods", "current-work", "self-awareness", "communication"]
+
+values:
+  learning-methods.efficiency:
+    pbs: 7
+    isr: 65
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from passive, self-directed learning to a system informed by external calibration. Delta: ~30 percentile points.
+      - [Anseel et al. (2015)](https://journals.sagepub.com/doi/10.1177/0149206313484521) meta-analysis finds feedback seeking consistently predicts faster skill acquisition and reduced time-to-competence by surfacing errors earlier than self-monitoring alone would allow – a meaningful efficiency gain on the anchor.
+      - Score 7 reflects that the gain is real but bounded: feedback seeking accelerates learning by improving signal quality, not by replacing the underlying practice or effort required. It is a multiplier, not a substitute.
+    isr_reasoning: |
+      - [Kluger and DeNisi (1996)](https://mrbartonmaths.com/resourcesnew/8.%20Research/Marking%20and%20Feedback/The%20effects%20of%20feedback%20interventions.pdf) found that over one-third of feedback interventions decrease performance, primarily when feedback is ambiguous, ego-threatening, or focused on the self rather than the task – a meaningful failure mode even for deliberate seekers.
+      - [Ashford, Blatt, and VandeWalle (2003)](https://journals.sagepub.com/doi/10.1016/S0149-2063_03_00079-5) note that outcomes are moderated by the image-protection motive: people who seek feedback primarily to look good (rather than to learn) systematically misuse the information and see weaker performance gains.
+      - ISR of 65% reflects that the mechanism works when the seeker has genuine learning orientation and sources with honest visibility – conditions that hold for the majority but not all adherent users.
+    uar_reasoning: |
+      - [Research on feedback avoidance](https://www.apa.org/pubs/journals/features/apl-apl0000432.pdf) shows that high-self-efficacy individuals systematically underestimate the diagnostic value of feedback, treating it as unnecessary – a structural bias toward non-seeking that is hard to override through habit alone.
+      - Feedback seeking is reported as among the least frequently enacted developmental behaviours by managers and professionals, suggesting that even motivated individuals default to avoidance under time pressure or social discomfort.
+      - UAR of 45% reflects that regular, specific, ego-tolerant feedback solicitation is a genuine behaviour change requiring sustained intentionality; many users will drift toward sporadic or socially safe requests within weeks.
+
+  learning-methods.depth:
+    pbs: 7
+    isr: 60
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile – developing a materially more accurate mental model of their own skill level and gaps through external calibration. Delta: ~30 percentile points.
+      - Depth of mastery depends on accurate identification of what is actually wrong, not just what feels wrong from the inside. [Research on self-assessment accuracy](https://pmc.ncbi.nlm.nih.gov/articles/PMC6041499/) shows self-other correlations near zero for interpersonal and managerial skills, meaning solicited feedback is the primary route to identifying the real gaps that limit mastery.
+      - Score 7 reflects meaningful but not transformative depth gains – feedback seeking improves the targeting of deliberate practice, but depth still depends on the quality of that practice.
+    isr_reasoning: |
+      - [Anseel et al. (2015)](https://journals.sagepub.com/doi/10.1177/0149206313484521) find feedback seeking predicts stronger learning outcomes and creativity, consistent with depth gains; however, effect sizes are heterogeneous across studies, supporting a conservative ISR.
+      - Depth gains are most reliable when the feedback is specific and behavioural rather than general – vague feedback ("good job") produces no depth improvement and may slightly inflate false confidence.
+      - ISR of 60% is modestly lower than efficiency because depth requires not just receiving useful signal but correctly interpreting it and integrating it into practice – an additional failure point beyond signal quality alone.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile. UAR of 45% reflects the structural difficulty of sustaining ego-tolerant, specific feedback requests over time.
+
+  current-work.competence:
+    pbs: 7
+    isr: 60
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – meaningfully closing the gap between perceived and actual competence, and redirecting effort toward the real limiting factors. Delta: ~30 percentile points.
+      - [Anseel et al. (2015)](https://journals.sagepub.com/doi/10.1177/0149206313484521) find feedback-seeking behaviour reliably predicts higher supervisor performance ratings, greater creative output, and stronger learning outcomes in organisational settings, with the effect operating through reduced uncertainty and faster error correction.
+      - Score 7 reflects a meaningful work-competence gain – the mechanism is most powerful for interpersonal, managerial, and communication dimensions of competence where self-assessment is least accurate, which are also the dimensions most visible to colleagues.
+    isr_reasoning: |
+      - [Ashford, Blatt, and VandeWalle (2003)](https://journals.sagepub.com/doi/10.1016/S0149-2063_03_00079-5) report mixed findings on performance as an outcome of feedback seeking, with consistency depending heavily on the motive: learning-oriented seekers outperform ego-protection seekers, and the distinction between these groups is not trivial.
+      - [Frontiers research on feedback seeking and safety performance](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.630669/full) confirms the feedback environment mediates outcomes – if the workplace does not support honest feedback, solicitation alone does not produce gains.
+      - ISR of 60% reflects that the mechanism is reliable when preconditions hold (learning motive, honest sources, receptive attitude) but a meaningful minority of adherent users will not achieve competence gains due to environmental or motivational factors.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile.
+
+  current-work.engagement:
+    pbs: 5
+    isr: 55
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – feedback seeking can increase engagement by creating clearer progress signals and a sense of relational investment in the work. Delta: ~20 percentile points.
+      - The mechanism is indirect: feedback seeking that leads to visible competence gains can increase absorption and motivation, but this is a secondary effect that depends on the primary competence pathway working first. Score 5 reflects a modest, conditional engagement benefit.
+      - This is a low-confidence score – the causal pathway from feedback seeking to engagement is plausible but underresearched as a direct effect.
+    isr_reasoning: |
+      - [Frontiers leadership and feedback seeking research](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.890861/full) notes that feedback-seeking behaviour supports professional development and motivation, but the engagement effect is context-dependent and leadership-mediated.
+      - For users already disengaged due to structural factors (misaligned role, poor management), feedback seeking will not meaningfully shift engagement regardless of how well it is executed.
+      - ISR of 55% reflects genuine but fragile engagement benefits conditional on the broader work environment being at least moderately positive.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile.
+
+  self-awareness.relational:
+    pbs: 8
+    isr: 70
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th–75th percentile – moving from a largely self-constructed model of interpersonal impact to one systematically informed by external observation. Delta: ~35–40 percentile points.
+      - [Research on self-other rating discrepancies](https://pmc.ncbi.nlm.nih.gov/articles/PMC6041499/) finds self-assessment of interpersonal and managerial abilities correlates near zero with external assessment (r = 0.04–0.17) – meaning relational self-awareness is the domain where external feedback provides the most irreplaceable signal. Score 8 reflects this high-value gap.
+      - Asking for feedback on specific interpersonal behaviours (interrupting, listening quality, communication clarity) directly targets the construct this value measures, making it one of the intervention's most natural primary effects.
+    isr_reasoning: |
+      - [Ashford et al. (2003)](https://journals.sagepub.com/doi/10.1016/S0149-2063_03_00079-5) identify feedback seeking as the core mechanism by which individuals develop and maintain self-awareness and interpersonal acuity – the ISR here is higher than for performance because awareness gains do not require the same downstream skill-translation step.
+      - The main failure mode is self-deceptive processing: receiving feedback but unconsciously discounting it to preserve existing self-image. This is well-documented but not universal.
+      - ISR of 70% reflects that most people who genuinely solicit specific interpersonal feedback and remain open to it will achieve meaningful relational self-awareness gains.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile. Relational self-awareness feedback is often more ego-threatening than task feedback, which may slightly reduce adherence for this specific domain.
+
+  self-awareness.psychological:
+    pbs: 6
+    isr: 55
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – external feedback illuminates behavioural patterns and emotional reactions that others observe but the individual may rationalise away. Delta: ~25 percentile points.
+      - The mechanism is less direct than for relational self-awareness: colleagues can describe observable behaviours ("you seem to shut down in conflict") but cannot access internal mental patterns directly. Score 6 reflects a meaningful but partial signal into psychological self-knowledge.
+      - This is a low-confidence score because the link between solicited interpersonal feedback and psychological self-understanding is plausible but not well-studied as a distinct outcome.
+    isr_reasoning: |
+      - The psychological self-awareness gain depends on the seeker's ability to connect external behavioural observation to internal patterns – a reflective capacity that varies substantially across individuals.
+      - Feedback from mentors and close colleagues who know the person well is more likely to yield psychological insight than task-focused feedback from acquaintances.
+      - ISR of 55% reflects genuine but variable psychological gains, conditional on the quality of sources and the seeker's reflective capacity.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 6
+    isr: 60
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–62nd percentile – asking for feedback on conversational habits and listening quality creates a loop that visibly deepens relational trust with the source, and improvements in self-awareness of interpersonal patterns generalise to communication quality. Delta: ~25 percentile points.
+      - The act of soliciting honest feedback from someone is itself a relational signal of trust and genuine interest in the other person's perspective, which has a direct connection-building effect independent of what is learned.
+      - Score 6 reflects a real but modest effect – connection gains from feedback seeking are secondary to the primary learning mechanism and depend on the relationship context.
+    isr_reasoning: |
+      - The connection benefit is most reliable in existing relationships where the request signals deepened investment – it is less reliable with acquaintances or transactional professional contacts where the request may feel unusual.
+      - [Psychological safety research](https://pmc.ncbi.nlm.nih.gov/articles/PMC7393970/) confirms that open feedback exchange predicts stronger team relationships and trust, supporting the connection pathway.
+      - ISR of 60% reflects that the relational benefit of asking for feedback is reasonably reliable when the relationship has sufficient existing warmth to support candid exchange.
+    uar_reasoning: |
+      - See learning-methods.efficiency UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials, subscriptions, or services required. The intervention is a behavioural practice requiring only an existing relationship with at least one person willing to give honest feedback."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The intervention requires only time and the willingness to tolerate honest evaluation."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to identify two to three feedback sources, decide on the first specific behaviour to ask about, and draft the initial request. No formal training or reading required to begin."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 20–30 minutes per week: composing a specific request, having a brief conversation or exchanging a message, and recording what was heard for later reflection. This is a minimum viable cadence – one substantive feedback exchange per week."
+
+prerequisites:
+  - "At least one ongoing relationship (professional or personal) with a person who has genuine observational access to the behaviour you want feedback on"
+  - "Basic capacity to tolerate critical evaluation without immediate defensiveness – not comfort, but sufficient self-regulation to hear the feedback before reacting"
+  - "A specific enough understanding of your own goals or development areas to ask a targeted question, rather than a fully open-ended one"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Regular feedback seeking, when handled well, reduces rumination by replacing imagined social judgements with actual ones, which may reduce social anxiety and uncertainty-driven stress."
+  - domain: "career-planning"
+    rationale: "Feedback from managers and mentors on advancement-relevant behaviours directly informs career strategy and surfaces promotion-blocking blind spots."
+  - domain: "personality"
+    rationale: "Systematic exposure to external perspectives on one's behaviour is a recognised mechanism for intentional personality development and alignment between self-concept and actual conduct."

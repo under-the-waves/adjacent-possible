@@ -1,0 +1,127 @@
+name: "Learning First Aid and CPR"
+what_it_is: |
+  Completing a certified first aid and cardiopulmonary resuscitation (CPR) course – typically delivered over a single weekend (~8 hours) by organisations such as the Red Cross or American Heart Association – to acquire the skills needed to respond to cardiac arrests, choking, severe bleeding, fractures, burns, and other medical emergencies. CPR is the technique of manually compressing the chest and, in full CPR, delivering rescue breaths to maintain circulation and oxygenation until emergency services arrive. The training is primarily a one-time upfront investment, with recertification recommended every two years to counteract the well-documented decay of practical skills. The benefit is asymmetric: the personal cost is one weekend, but the potential payoff is the ability to double or triple a cardiac arrest victim's chance of survival – most likely for someone the user knows, since the majority of out-of-hospital cardiac arrests occur in the home.
+how_to_do_it: |
+  - Book a combined first aid and CPR/AED course through the American Red Cross, American Heart Association, or St John Ambulance; look for courses that include hands-on manikin practice, as physical repetition is the single strongest predictor of skill retention
+  - During the course, prioritise chest compression depth, rate (100–120 per minute), and recoil over rescue breaths – dispatcher-assisted hands-only CPR evidence suggests compressions alone are what saves most lives, so this is where to focus practice time
+  - After certifying, schedule a 20–30 minute refresher using a phone app (e.g. PulsePoint Respond) or a brief manikin session every six months; this is not optional – [research](https://www.redcross.org/content/dam/redcross/Health-Safety-Services/scientific-advisory-council/Scientific%20Advisory%20Council%20SCIENTIFIC%20REVIEW%20-%20CPR%20Skill%20Retention.pdf) shows the majority of skill decay occurs within the first six months
+  - Note the location of the nearest automated external defibrillator (AED) at your workplace, gym, and frequently visited public spaces; AED use is covered in certification and dramatically improves cardiac arrest survival when available
+success_looks_like: |
+  - You can perform high-quality chest compressions for at least two minutes without stopping, at the correct depth and rate, on a manikin or in a real emergency
+  - You know what to do in the first 90 seconds of a cardiac arrest: call emergency services, retrieve or dispatch for an AED, begin compressions – without freezing
+  - Your certification is current (within two years) and you have completed at least one brief refresher practice between certification dates
+common_pitfalls: |
+  - Taking an online-only course and skipping manikin practice – theoretical knowledge and practical skill retention are measured separately, and participants with high theoretical scores consistently fail practical skill assessments at 12 months without hands-on repetition
+  - Treating initial certification as sufficient indefinitely – CPR skill decay is well-established within six months, yet the standard recertification cycle is two years; without interim refreshers, most certified individuals cannot meet passing criteria by month twelve
+  - Freezing at the moment of an emergency due to fear of causing harm or doing it wrong – bystander CPR, even imperfect, consistently improves survival; the risk of inaction (7.6% survival) substantially exceeds the risk of imperfect compressions
+description: |
+  - An ~8-hour certified course covering CPR (chest compressions and rescue breaths), AED operation, choking response (Heimlich manoeuvre), severe bleeding control, fracture management, burns, and scene assessment; delivered with manikin and scenario-based practice
+  - CPR works by manually maintaining circulation during cardiac arrest, buying time until a defibrillator or emergency services can restore a normal heart rhythm; AEDs deliver a controlled shock to correct ventricular fibrillation, the most treatable arrest rhythm
+  - [Bystander CPR doubles or triples out-of-hospital cardiac arrest survival](https://cpr.heart.org/en/resources/cpr-facts-and-stats) compared to no bystander action (13.0% vs 7.6% survival to discharge); 350,000 OHCAs occur annually in the US, with only 40.2% currently receiving bystander CPR
+  - [CPR skill decay begins within six months](https://www.redcross.org/content/dam/redcross/Health-Safety-Services/scientific-advisory-council/Scientific%20Advisory%20Council%20SCIENTIFIC%20REVIEW%20-%20CPR%20Skill%20Retention.pdf) and is near-universal at two years without refresher practice; brief (<30 min) semi-annual manikin sessions substantially extend retention
+  - [CPR training increases willingness to perform bystander CPR on strangers by 7.7x](https://pmc.ncbi.nlm.nih.gov/articles/PMC12118831/) (OR 7.67, 95% CI 5.01–11.73); lack of confidence is the primary cited barrier to bystander action, making training the most direct intervention available
+applicable_domains: ["life-skills", "emergency-preparedness", "physical-safety", "community-contribution"]
+
+values:
+  life-skills.high:
+    pbs: 6
+    isr: 85
+    uar: 88
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A typical adult seeking this intervention can perform perhaps 1–2 practical skills competently. After certification, they add first aid and CPR as one distinct, certifiable high-impact skill. Delta: approximately +1 skill. PBS = 10 + log₂(1/15) = 10 - 3.91 = 6.
+      - The values.yml scale explicitly places "first aid" as one of the exemplar skills at score 6 ("4–5 essential skills such as first aid, cooking from scratch, basic repairs, and own tax returns"), confirming that acquiring this skill maps directly to a score-6 contribution.
+      - The PBS represents the benefit of adding this single skill; users who already hold many practical skills would see less marginal gain, handled by the personalisation layer.
+    isr_reasoning: |
+      - Certified courses with manikin practice produce demonstrably competent performers at the point of training; [Red Cross scientific review data](https://www.redcross.org/content/dam/redcross/Health-Safety-Services/scientific-advisory-council/Scientific%20Advisory%20Council%20SCIENTIFIC%20REVIEW%20-%20CPR%20Skill%20Retention.pdf) shows passing rates of 85–95% on practical skill assessments immediately post-training.
+      - The skill is binary in a useful sense: you either complete the course and can perform the techniques or you do not; there is no meaningful "partial success" category, which keeps ISR high for those who complete training.
+      - ISR is discounted slightly from 95% to 85% to account for the minority who complete a course but do not retain enough practical skill to perform effectively, particularly those who take online-only courses without manikin access.
+    uar_reasoning: |
+      - This is a one-time certification event (~8 hours) with a low completion barrier; [JAMA data](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1779728) shows 65% of US adults report having received CPR training at some point, indicating the barrier to initial training is surmountable for the majority.
+      - The ongoing burden is minimal: recertification every two years and optional brief refreshers; this is categorically different from habit-based interventions and does not require sustained daily behaviour change.
+      - UAR is set at 88% rather than higher to account for the ~12% of enrollees who book a course but do not attend or who fail to recertify within the two-year window.
+
+  emergency-preparedness.baseline:
+    pbs: 6
+    isr: 80
+    uar: 88
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Most adults who would seek this training have no certified first aid or CPR capability. After certification, they can respond to the most likely medical emergencies (cardiac arrest, choking, severe bleeding) – a meaningful gain in preparedness. This maps to score 6.
+      - First aid and CPR are the skills most likely to be activated in realistic emergency scenarios; [AHA data](https://cpr.heart.org/en/resources/cpr-facts-and-stats) shows 70% of OHCAs occur in homes, meaning the user's most probable emergency is one they are now equipped to address.
+      - The PBS does not reach score 8 because the training does not address supply stockpiling, backup power, water storage, or the structural preparedness dimensions that define higher-tier readiness.
+    isr_reasoning: |
+      - Completion of a certified course reliably produces baseline competency; [PMC skill-retention research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3044091/) confirms that immediate post-training performance is high across layperson populations.
+      - ISR is moderated to 80% to reflect the documented gap between theoretical knowledge and practical performance under stress.
+      - The preparedness benefit is probabilistic – it only activates if an emergency occurs – but ISR measures reliable skill acquisition, not the probability of a triggering event.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  emergency-preparedness.catastrophic:
+    pbs: 4
+    isr: 60
+    uar: 88
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. In a severe societal disruption, first aid and CPR capability becomes more rather than less valuable – emergency services are unavailable and self-reliance on medical response is critical. However, this single skill set without accompanying supply stockpiles, shelter capability, or community networks is insufficient for comprehensive catastrophic preparedness. Score 4.
+      - The causal pathway is direct (trained person can keep cardiac arrest victims alive without emergency services), but the contribution to overall catastrophic resilience is modest relative to supply stockpiling and shelter provisions.
+      - PBS does not reach score 6 because the intervention is a skill only; catastrophic resilience at higher scores requires material preparedness.
+    isr_reasoning: |
+      - Evidence on first aid effectiveness in true catastrophic scenarios is indirect and observational; most training-effectiveness data comes from controlled civilian settings.
+      - Skills transfer more reliably in practised, familiar-context scenarios; the gap between training and catastrophic-context performance is wider here, warranting a conservative ISR of 60%.
+      - [AHA Circulation Research](https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.118.313157) notes that even in ideal community settings, CPR skill transfer to real-world effectiveness is imperfect.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  physical-safety.risk:
+    pbs: 6
+    isr: 75
+    uar: 88
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile (higher default for physical-safety.risk). Endpoint after certification: 65th–70th percentile. Delta: ~20–25 percentile points.
+      - The values.yml scale explicitly places "current CPR/first aid certification" as one of the defining characteristics of score 6, confirming that this intervention maps directly to score 6 on this value.
+      - PBS does not reach score 8 because that band requires self-defence capabilities and advanced certifications across multiple safety domains.
+    isr_reasoning: |
+      - The risk-reduction benefit operates through two channels: the user's own trained response in emergencies they are party to, and their capacity to help others. Both channels reliably activate when training is current.
+      - [AHA Circulation](https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.116.024400) shows bystander CPR meaningfully improves survival across a range of ambulance response times, confirming the real-world risk-reduction mechanism operates reliably.
+      - ISR is set at 75% rather than higher because the risk reduction is contingent on (a) the user being present during an emergency and (b) skills being current; skill decay after 6–12 months without refreshers reduces real-world effectiveness for a meaningful proportion.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  community-contribution.impact:
+    pbs: 4
+    isr: 55
+    uar: 88
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A certified first-aider can save a community member's life in a cardiac arrest scenario – a tangible and high-magnitude community impact when it occurs. However, the triggering event (cardiac arrest in the user's presence) is rare at the individual level. Score 4 appropriately reflects the probabilistic, low-frequency nature of the benefit.
+      - The PBS captures the potential magnitude of the benefit in expectation; the rarity of the triggering event depresses ISR rather than PBS, per the scoring methodology.
+      - Score 4 rather than 6 because community impact at score 6 requires more systematic or frequent contributions.
+    isr_reasoning: |
+      - The community-impact benefit only materialises if the user witnesses a cardiac arrest or serious medical emergency while their certification is current – a low-probability event.
+      - Among the subset who do witness an arrest, [willingness to act increases 7.7x with training](https://pmc.ncbi.nlm.nih.gov/articles/PMC12118831/), so trained bystanders who are present are highly likely to intervene effectively.
+      - ISR at 55% reflects the combined effect of low event probability discounting the real-world activation rate.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 80
+  upfront_cost_reasoning: "American Red Cross and AHA Heartsaver First Aid CPR/AED courses are typically $70–$100 for a combined in-person certification. No equipment needs to be purchased."
+  ongoing_cost: 80
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Recertification is recommended every two years (~$70–$100 per recertification), averaging ~$40–$50 per year. Optional: free or low-cost refresher apps can supplement between formal recertifications at no cost. Conservative estimate uses ~$80/year to account for periodic recertification."
+  upfront_time: 8
+  upfront_time_reasoning: "Standard combined first aid and CPR/AED certification courses run approximately 7–9 hours including skill stations and assessment."
+  ongoing_time: 0.5
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Recertification every two years (~8 hours, or ~4 hours/year amortised). Semi-annual brief refreshers of 20–30 minutes each add a further ~1 hour/year."
+
+prerequisites:
+  - "Physical ability to kneel and perform sustained chest compressions for at least 2 minutes – modified instruction is available for those with physical limitations, but some upper-body function is required for effective CPR"
+  - "Access to an in-person certified course with manikin practice (online-only courses are insufficient for practical skill acquisition)"
+  - "Basic English comprehension or availability of a course in the user's language, as the assessment component is conducted verbally or in writing"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "CPR training reduces the anxiety and helplessness associated with witnessing a medical emergency, and survey evidence shows self-reported confidence increases significantly post-training."

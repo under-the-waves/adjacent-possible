@@ -1,0 +1,180 @@
+name: "Quitting Smoking"
+what_it_is: |
+  Completely and permanently ceasing tobacco smoking through any effective method – nicotine replacement therapy (NRT), prescription varenicline, cold turkey, or combination approaches. Unlike cutting down, quitting smoking means achieving and maintaining full abstinence, typically defined as zero cigarettes smoked beyond the quit date. Smoking is the single largest modifiable risk factor for premature death in high-income countries, responsible for roughly half of all cancer deaths, most cases of chronic obstructive pulmonary disease (COPD), and a substantial share of cardiovascular disease – making cessation one of the highest-ROI interventions available to any current smoker, regardless of age.
+how_to_do_it: |
+  - Set a specific quit date within the next two weeks and remove all cigarettes, lighters, and ashtrays from your home and car beforehand – preparation is strongly associated with higher success rates
+  - Choose a cessation aid before your quit date: varenicline (Champix/Chantix) has the strongest evidence base and approximately doubles quit rates versus NRT alone; NRT (patch, gum, lozenge, or inhaler) is available over the counter and effective; combining a long-acting NRT patch with a short-acting form (gum or lozenge) outperforms either alone
+  - Identify your three highest-risk triggers – typically stress, alcohol, or social situations – and plan specific substitution behaviours for each (e.g., a 5-minute walk, chewing gum, or a short call to a support contact)
+  - Use a free cessation support service such as a national quitline or a health-service-backed app (e.g., the NHS Quit Smoking app or Smoke Free) to provide structured check-ins; behavioural support combined with pharmacotherapy roughly doubles success rates compared to medication alone
+success_looks_like: |
+  - You have not smoked a single cigarette for 12 months from your quit date, with craving intensity having dropped to manageable levels within the first 4–8 weeks
+  - Within 3–6 months, resting heart rate, blood pressure, and exercise tolerance have measurably improved; within 1 year, excess cardiovascular risk has halved relative to a continuing smoker
+  - The money previously spent on cigarettes has been redirected to savings or discretionary spending without a conscious budgeting change – the financial benefit becomes felt rather than calculated
+common_pitfalls: |
+  - Treating a lapse (a single cigarette) as evidence of failure and abandoning the attempt entirely – most successful long-term quitters required multiple attempts, and returning to full abstinence immediately after a slip is strongly associated with eventual success
+  - Using cessation aids for too short a period – varenicline and NRT are most effective when used for the full recommended course (12 weeks for varenicline; 8–12 weeks for NRT), and early discontinuation sharply increases relapse risk
+  - Underestimating alcohol as a relapse trigger – drinking is the most commonly cited precipitant of relapse in the first year; temporarily reducing alcohol intake during the initial quit period significantly improves 12-month outcomes
+description: |
+  - Complete tobacco cessation using any combination of NRT (patch, gum, lozenge, inhaler), prescription pharmacotherapy (varenicline or bupropion), behavioural support, and trigger management – with the goal of permanent, sustained abstinence
+  - Varenicline (a partial nicotinic receptor agonist) is the most effective single agent; [Cochrane network meta-analysis](https://www.cochrane.org/about-us/news/e-cigarettes-varenicline-and-cytisine-are-most-effective-stop-smoking-aids-analysis-over-150000) across 150,000+ smokers finds varenicline outperforms both NRT and placebo, roughly tripling odds of abstinence versus placebo at 12 months
+  - [NEJM Evidence meta-analysis (2023)](https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272) found quitting before age 40 recovers survival to age 80 by approximately 12 years; quitting at 40–49 recovers ~6 years; even cessation at 50–59 confers ~2.5 years of additional survival
+  - Real-world quit rates are low: only 3–5% of cold-turkey attempts produce sustained 6-month abstinence; pharmacotherapy raises 12-month abstinence to approximately 20%, making cessation a high-PBS, low-UAR intervention
+  - Unlike most health interventions, quitting smoking produces large benefits across multiple systems simultaneously – cardiovascular, pulmonary, oncological, metabolic, and financial – with risk reduction beginning within hours of the last cigarette
+applicable_domains: ["fitness", "health-management", "saving", "nutrition"]
+
+values:
+  fitness.health:
+    pbs: 9
+    isr: 88
+    uar: 10
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A smoker who successfully quits at age 40–45 plausibly reaches the 80th–85th percentile of lifespan outcomes, recovering most of the mortality gap versus lifetime non-smokers. Delta: ~45–50 percentile points of improvement.
+      - [NEJM Evidence pooled analysis (2023)](https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272) found quitting before age 40 confers a ~12-year survival gain to age 80; quitting at 40–49 confers ~6 years; quitting at 50–59 confers ~2.5 years. Using 8 years as a representative gain for a mid-40s quitter: PBS = 10 + log₂(8/15) = 9.1, rounded to 9.
+      - [AJPM (2024)](https://www.ajpmonline.org/article/S0749-3797(24)00217-4/fulltext) confirmed gains across all ages – even cessation at age 65 avoids an expected 1.7 years of life lost, and at 75 avoids 0.7 years – reinforcing that the benefit is large even for late quitters.
+      - The anchor_max is 15 years; an 8-year gain maps to score 9 on the log scale, consistent with the scale description ("3–4 years" at score 8 and "15+ years" at score 10).
+    isr_reasoning: |
+      - Among smokers who achieve and maintain 12-month abstinence, nearly all experience substantial, measurable health benefits – cardiovascular risk halves within 1 year, and excess all-cause mortality falls by ~96–99% in those who quit by age 50 per [NEJM Evidence (2023)](https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272).
+      - A minority of quitters – particularly those with existing COPD or prior cancers – will see attenuated benefit because some smoking-related damage is irreversible; this moderates ISR from 100% to ~88%.
+      - [Doll et al.'s British Doctors Study](https://pmc.ncbi.nlm.nih.gov/articles/PMC1447499/) and large cohort follow-ups consistently show near-universal mortality benefit among sustained quitters, with no identified subgroup that fails to benefit entirely.
+    uar_reasoning: |
+      - [Truth Initiative statistics](https://truthinitiative.org/research-resources/quitting-smoking-vaping/quitting-tobacco-facts-and-stats) report that only 3–5% of cold-turkey attempts achieve sustained 6-month abstinence; even with pharmacotherapy, [meta-analytic 12-month abstinence rates](https://pmc.ncbi.nlm.nih.gov/articles/PMC1764891/) reach only ~20% of those who make a serious attempt.
+      - Relapse risk remains elevated well beyond the quit date: [a PMC meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC2577779/) found ~10% annual relapse after the first year of abstinence, and approximately 47% of those who reach 1-year abstinence relapse within 3 years.
+      - Aggregating across all quit attempts in a given year, including unplanned and unsupported attempts, the population-level rate of durable (>1 year) abstinence is approximately 7–10%, justifying UAR = 10.
+
+  fitness.performance:
+    pbs: 7
+    isr: 80
+    uar: 10
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A smoker who successfully quits could plausibly move to the 50th–55th percentile of age-matched cardiorespiratory fitness within 1–2 years. Delta: ~15–20 percentile points.
+      - Smoking suppresses VO₂max by approximately 10–15% and impairs lung function; [research on exercise capacity after cessation](https://pmc.ncbi.nlm.nih.gov/articles/PMC1764891/) shows meaningful but not transformative performance gains – roughly a 10-percentile improvement in cardiorespiratory fitness for those who were previously sedentary smokers.
+      - PBS = 10 + log₂(10/100) = 6.7, rounded to 7. This reflects a meaningful but bounded improvement – quitting smoking restores baseline capacity rather than developing elite fitness.
+    isr_reasoning: |
+      - Lung function (FEV₁) reliably improves in ex-smokers within 3–12 months of cessation; approximately 80% of quitters see measurable VO₂max improvement within 1 year per cardiorespiratory studies.
+      - A minority of long-term smokers with established COPD or emphysema will not recover meaningful functional capacity – the structural damage to alveoli is irreversible, capping ISR below 100%.
+      - Benefit is most pronounced in smokers who also increase physical activity post-cessation; those who remain sedentary see smaller performance gains, contributing modest heterogeneity in the ISR.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile. Population-level sustained quit rates are approximately 7–10%.
+
+  health-management.longterm:
+    pbs: 9
+    isr: 88
+    uar: 10
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile for preventive health strategy comprehensiveness. A smoker who quits moves to approximately the 85th percentile by eliminating the single largest modifiable risk factor for cancer, COPD, and cardiovascular disease in one action. Delta: ~50 percentile points – a major-to-transformative gain.
+      - Smoking is causally implicated in at least 15 cancer types, COPD, peripheral artery disease, stroke, and coronary artery disease. Eliminating it is a qualitatively distinct improvement in preventive health strategy, not merely one item checked off a list.
+      - Score 9 reflects that this is a near-transformative gain in long-term preventive health; it falls short of 10 because other high-impact preventive actions (e.g. cancer screening, hypertension management) remain on the table after cessation.
+    isr_reasoning: |
+      - Among sustained quitters, the risk reduction across cardiovascular disease, lung cancer, and COPD is robust and well-replicated; [Doll et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC1447499/) demonstrated that cessation by age 50 eliminates about half the excess risk of lung cancer.
+      - Some residual cancer risk persists for decades even after cessation – lung cancer risk in ex-smokers does not return to never-smoker levels for 10–15 years – which moderates ISR slightly below the fitness.health figure.
+      - ISR is nonetheless high (88%) because the health system benefit of removing this risk factor is so broad that essentially all sustained quitters experience meaningful improvement in their overall preventive health profile.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  health-management.vitality:
+    pbs: 7
+    isr: 75
+    uar: 10
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (approximately 6–7 hours of sustained high energy per day for a typical smoker). A successful quitter plausibly reaches the 55th–60th percentile (~8–9 hours of sustained high energy). Delta: ~20 percentile points.
+      - Smokers commonly report chronic fatigue, impaired sleep quality, and reduced exercise tolerance that collectively suppress daily energy; quitting is associated with improved sleep architecture and reduced daytime fatigue within 4–8 weeks of cessation.
+      - A gain of approximately 2 high-energy hours/day maps to PBS = 10 + log₂(2/14) = 7.2, rounded to 7. This is consistent with the vitality scale (score 8 = 10–12 hours of consistently high energy through optimised lifestyle), as quitting alone does not reach that ceiling.
+    isr_reasoning: |
+      - Approximately 75% of ex-smokers report meaningful improvements in energy levels and exercise tolerance within 3 months; a minority see little vitality benefit because their fatigue is driven by comorbidities unrelated to smoking.
+      - Sleep quality improvements after cessation are well-documented but variable – some ex-smokers experience nicotine withdrawal-related sleep disruption for 4–8 weeks before net improvement materialises, dampening near-term ISR.
+      - Confidence is medium because direct RCT measurement of energy hours (as opposed to fatigue self-report or VO₂max) is less common than mortality data.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  health-management.control:
+    pbs: 7
+    isr: 80
+    uar: 10
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile for confidence in making informed health decisions. A smoker who successfully quits moves to approximately the 60th–65th percentile – achieving a difficult, evidence-backed health goal substantially increases health self-efficacy. Delta: ~25–30 percentile points.
+      - Successfully quitting smoking is one of the strongest demonstrations of health agency available to a smoker; research consistently shows that successful cessation improves general health self-efficacy and willingness to engage with other preventive health behaviours.
+      - Score 7 reflects a meaningful-to-major gain: the control benefit is real and broad, but does not fully transform health literacy or decision-making ability on its own.
+    isr_reasoning: |
+      - Among sustained quitters, improved health self-efficacy is a well-replicated secondary outcome; the majority report feeling more in control of their health after cessation.
+      - ISR is slightly attenuated because the control benefit depends in part on the method used – those who quit with pharmacotherapy may attribute success partly to the medication, dampening self-efficacy gains relative to those who quit with behavioural support alone.
+      - Confidence is medium because direct measurement of health control as a construct (rather than self-efficacy proxies) is less standardised in cessation trials.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  saving.security:
+    pbs: 8
+    isr: 95
+    uar: 10
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (typical smoker has minimal emergency fund). A smoker spending $3,000/year on cigarettes who redirects that sum into savings accumulates approximately 2–3 months of emergency fund within 2 years on a median income (~$55,000). Delta: ~40–45 percentile points, moving from approximately 35th to 75th–80th percentile.
+      - PBS = 10 + log₂(2.5/12) = 7.7, rounded to 8. This aligns with the scale description (score 8 = 3 months of emergency fund), which is approximately what a pack-a-day quitter accumulates in 2 years without any change in other spending.
+      - [WalletHub (2026)](https://wallethub.com/edu/the-financial-cost-of-smoking-by-state/9520) estimates direct cigarette costs at $2,000–$4,700/year depending on state and consumption; using the conservative end, a 2-year redirect produces $4,000+ in new savings – approximately 2 months of expenses for a median household.
+    isr_reasoning: |
+      - The mechanism is nearly mechanical: if a person quits and does not replace the spending, the saving is automatic. Unlike most behavioural interventions, the financial benefit does not require additional action – cessation alone eliminates the expense.
+      - ISR is very high (95%) because the cost saving is certain for anyone who actually quits; the 5% uncertainty reflects the small proportion who substitute other consumable spending (e.g. nicotine pouches, food) in amounts comparable to cigarette costs.
+      - [CDC economic data](https://www.cdc.gov/tobacco/php/data-statistics/economic-trends/index.html) confirms tobacco expenditure is a discrete, measurable cost that disappears entirely on cessation.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile. The financial benefit is fully conditional on sustaining abstinence.
+
+  saving.growth:
+    pbs: 7
+    isr: 92
+    uar: 10
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile for savings rate. A smoker spending $3,000/year on a $55,000 gross income is spending 5.5% of income on cigarettes. Redirecting this to savings/investment immediately adds 5.5% to the effective savings rate. Delta: ~30–35 percentile points of improvement.
+      - PBS = 10 + log₂(5.5/50) = 6.8, rounded to 7. This is consistent with the scale (score 8 = 12–13% of income saved), as the freed cigarette spend alone brings a low-saver to a meaningful savings rate but not into high-saver territory.
+      - [MMM-Online study](https://www.mmm-online.com/home/channel/smokers-face-nearly-3m-in-costs-over-a-lifetime-of-smoking-study/) estimates lifetime personal costs approaching $1.4M+ when including health costs and lost investment returns – confirming substantial long-run growth impact for quitters who redirect spending.
+    isr_reasoning: |
+      - As with saving.security, the growth benefit is near-certain for sustained quitters who do not substitute equivalent spending – the cost elimination is discrete and immediate.
+      - ISR is slightly lower than saving.security (92%) because growth outcomes depend partly on where the freed money lands; quitters who do not actively redirect savings into investment vehicles capture less of the long-run compounding benefit.
+      - The financial saving is unambiguous on cessation; the growth benefit requires modest additional action (directing freed funds to savings rather than consumption drift).
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  nutrition.pleasure_connection:
+    pbs: 6
+    isr: 85
+    uar: 10
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile for food pleasure and connection. Smoking significantly blunts taste and smell receptors; quitting restores olfactory and gustatory sensitivity within 2–8 weeks, meaningfully improving the pleasure of eating. Delta: ~20–25 percentile points, moving from 35th to approximately 55th–60th percentile.
+      - Score 6 reflects a meaningful gain in food pleasure – the recovery of taste and smell is real and well-documented, but it does not transform the social or cultural dimensions of food connection, keeping it below a major gain.
+      - This is a secondary cross-domain benefit; the causal pathway is direct (nicotine and combustion products damage olfactory epithelium; cessation allows regeneration) but the magnitude is moderate.
+    isr_reasoning: |
+      - Taste and smell recovery after smoking cessation is well-documented; the majority of ex-smokers report noticeable improvement in food flavour within weeks. The mechanism (olfactory epithelium regeneration) is biological and reliable.
+      - A minority of long-term heavy smokers may have sustained olfactory nerve damage that does not fully recover, moderating ISR below 100%.
+      - Confidence is medium because direct measurement of taste/smell recovery in large-scale cessation RCTs is less systematic than mortality outcomes.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Choosing a quit date and removing smoking materials costs nothing. NRT is available over the counter ($20–50 for a starter kit) but many national health services provide it free; varenicline requires a prescription but is often subsidised or covered by insurance. Minimum viable start (cold turkey or free quitline support) costs $0."
+  ongoing_cost: 30
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "NRT patch plus short-acting NRT (gum or lozenge) costs approximately $60–120/month if self-funded; varenicline costs $150–300/month without insurance subsidy. Many health services subsidise or fully fund cessation pharmacotherapy. $30/month reflects a subsidised or partially covered NRT regimen – the minimum effective pharmacotherapy cost. Cold turkey costs $0 ongoing."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 1–2 hours to read cessation evidence, choose a method, set a quit date, remove smoking materials, identify personal triggers, and download a support app or register with a quitline."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimal ongoing time: brief daily app check-ins (5–10 minutes), applying NRT patches (2 minutes), and attending any scheduled quitline or pharmacist support calls (~30 minutes/week in the first month). Reduces to near-zero time after the acute withdrawal phase (weeks 4–12)."
+
+prerequisites:
+  - "Currently smoking tobacco – this intervention is not applicable to non-smokers or those who have already quit"
+  - "Access to a healthcare provider or pharmacy if pursuing pharmacotherapy (varenicline requires a prescription in most countries; NRT is over-the-counter)"
+  - "Willingness to set a firm quit date – cessation without a specific quit date has significantly lower success rates than planned cessation"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Quitting smoking reduces anxiety and depressive symptoms in the medium term (after the acute withdrawal phase), with ex-smokers reporting better mental health than continuing smokers in large longitudinal studies."
+  - domain: "behaviours"
+    rationale: "Successfully quitting smoking builds general behavioural self-regulation capacity and freedom from chemical dependence, with measurable effects on self-efficacy and habit control."
+  - domain: "sleep"
+    rationale: "Nicotine is a stimulant that disrupts sleep architecture; cessation improves sleep quality and duration in the majority of ex-smokers within 4–8 weeks of quitting."

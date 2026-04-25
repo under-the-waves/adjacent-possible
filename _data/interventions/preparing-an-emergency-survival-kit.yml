@@ -1,0 +1,113 @@
+name: "Preparing an Emergency Survival Kit"
+what_it_is: |
+  Assembling a ready-to-use 72-hour household emergency kit containing water (one gallon per person per day for three days), non-perishable food, a first aid kit, a battery-powered or hand-crank radio, a torch with spare batteries, copies of critical documents, cash, medications, and basic sanitation supplies. The kit is stored in an accessible location, checked every six months to replace expired consumables, and kept current with household changes (new medications, new household members). The one-time assembly cost is typically $50–150 depending on household size and starting inventory. The kit addresses the most probable emergency scenarios – short-term natural disasters, power outages, and local disruptions – where households must be self-sufficient for 72 hours before relief services become available.
+how_to_do_it: |
+  - Start with the FEMA/Ready.gov checklist as a baseline: one gallon of water per person per day for three days, three days of non-perishable food, a basic first aid kit, a battery-powered radio, a torch with batteries, a multi-tool or basic toolkit, dust masks, and sanitation supplies; add household-specific items (prescription medications, infant supplies, pet food) before purchasing anything
+  - Store the kit in a single, clearly labelled, portable container (a waterproof tote or dedicated backpack) in a location all household members know – near an exit is conventional; avoid attics or locations that may become inaccessible
+  - Photograph or scan critical documents (passports, insurance policies, prescriptions, bank account information) and store copies both in the physical kit and encrypted cloud storage
+  - Set a recurring six-month calendar reminder to rotate perishable items (water, food, batteries, medications) before expiry – tying this to daylight-saving time changes is a common mnemonic
+success_looks_like: |
+  - Every household member can locate the kit and knows what it contains, without prompting, within two minutes
+  - No item in the kit has expired, and the kit has been reviewed within the last six months
+  - The household can sustain basic water, food, light, and communication needs for 72 hours without any external assistance or supply run
+common_pitfalls: |
+  - Assembling the kit once and never revisiting it – water degrades in non-food-grade containers, food expires, and batteries discharge in storage, rendering the kit unreliable precisely when it is needed
+  - Over-engineering the first version: spending weeks planning the perfect kit rather than assembling a functional 80% version this week; a partial kit is substantially better than no kit
+  - Storing the kit in an inaccessible location (locked garage, high shelf, car boot) that may not be reachable during the emergency scenario the kit is designed for
+description: |
+  - A 72-hour emergency kit is the standard preparedness baseline recommended by FEMA, the Red Cross, and equivalent agencies globally; it targets the period between disaster onset and when organised relief services become operational
+  - Core components: three days of water (one gallon per person per day), three days of non-perishable food, first aid kit, battery-powered or hand-crank radio, torch, spare batteries, whistle, dust mask, plastic sheeting and duct tape, moist towelettes, bin bags, wrench or pliers, manual can opener, local maps, mobile phone chargers, and cash in small denominations
+  - [FEMA's 2023 National Household Survey](https://preparede.org/wp-content/uploads/2024/08/fema_national_household_survey_2023.pdf) found that only 48% of US adults had assembled or updated disaster supplies in the prior year, and [SafeHome.org research (2025)](https://www.safehome.org/research/home-emergency-preparedness-study/) found just 5% of homes have a fully stocked kit – indicating most adopters of this intervention are moving from a near-zero baseline
+  - [A 2016 systematic review in AJPH](https://pmc.ncbi.nlm.nih.gov/articles/PMC4880243/) found no RCT evidence directly linking kit possession to improved survival or self-sufficiency outcomes; the mechanism is plausible and universally recommended but empirically unverified, making this a low-evidence intervention despite strong face validity
+  - A [2024 systematic review and meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11003604/) of household preparedness interventions found no statistically significant effect on preparedness supplies outcomes and only a small positive effect on preparedness behaviours, with very low certainty of evidence
+applicable_domains: ["emergency-preparedness", "physical-safety"]
+
+values:
+  emergency-preparedness.self-reliance:
+    pbs: 4
+    isr: 90
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding to roughly 0–1 days of supply autonomy for a typical under-prepared household. After successful adherence, the household reaches approximately 3–5 days of autonomy (a well-assembled kit with modest extras). Delta: roughly 4–5 days of autonomy added.
+      - Applying the log formula with anchor_max = 365 days: PBS = 10 + log₂(5/365) = 10 - 6.19 = 4. A 72-hour kit is explicitly designed for the minimum baseline scenario, not extended self-reliance; the anchor's score 4 level ("3–7 days of food, water, and essential supplies") is precisely where this intervention lands.
+      - [FEMA's Ready.gov kit guidance](https://www.ready.gov/kit) targets 72 hours as the minimum; households are not materially closer to the 14-day (score 6) or 90-day (score 8) levels without substantial additional investment beyond this intervention's scope.
+    isr_reasoning: |
+      - The mechanism is straightforward and deterministic: if the kit is assembled and maintained, the household has the stated supplies available. Unlike behavioural interventions, success does not depend on habit formation during a crisis – the supplies are either there or they are not.
+      - The primary failure mode is kit degradation over time (expired water, food, batteries) rather than mechanism failure; a kit that is properly maintained per the intervention's instructions reliably delivers the 3–5 day autonomy outcome.
+      - [PMC4880243](https://pmc.ncbi.nlm.nih.gov/articles/PMC4880243/) notes the absence of RCT evidence on survival outcomes, but the supply-provision mechanism (you have water or you do not) does not require an RCT to establish; the uncertainty is about survival benefit, not supply availability.
+    uar_reasoning: |
+      - Assembly adherence is moderate: [FEMA's 2023 survey](https://preparede.org/wp-content/uploads/2024/08/fema_national_household_survey_2023.pdf) found 48% of adults had assembled or updated supplies in the prior year, suggesting roughly half of those who intend to prepare actually complete the task.
+      - Maintenance adherence is substantially lower: [SafeHome.org (2025)](https://www.safehome.org/research/home-emergency-preparedness-study/) found only 5% of US homes have a fully stocked kit, implying most households that partially assemble a kit do not maintain it to a complete standard.
+      - The intervention is low-complexity and one-time by design, which removes most ongoing adherence barriers; the main failure mode is the six-monthly maintenance check, which requires calendar discipline but minimal effort or expense.
+
+  emergency-preparedness.baseline:
+    pbs: 7
+    isr: 85
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – a household with no kit and no plan. Endpoint after successful adherence: approximately 70th–75th percentile (fully stocked 72-hour kit, all household members aware, documents secured, kit maintained). Delta: major gain in baseline emergency preparedness.
+      - The 72-hour kit is the canonical definition of baseline preparedness per FEMA, the Red Cross, and equivalent bodies globally; moving from no kit to a complete, maintained kit represents the entirety of what "baseline preparedness" means in practice.
+      - Score 7 (between "meaningful" at 6 and "major" at 8) reflects that this intervention essentially completes the baseline preparedness domain for its primary purpose, though it stops short of household plan rehearsal, neighbourhood coordination, or extended supply stockpiling that would push toward score 8.
+    isr_reasoning: |
+      - For this subjective value, ISR addresses whether a household that assembles and maintains a kit reliably experiences the preparedness improvement. The mechanism is near-certain: having supplies available is definitionally what baseline preparedness means.
+      - The 15% discount accounts for households that assemble a partial kit, allow it to degrade, or have household members unaware of its location – all of which undermine the completeness of the baseline preparedness benefit.
+      - [FEMA's 2023 National Household Survey](https://preparede.org/wp-content/uploads/2024/08/fema_national_household_survey_2023.pdf) treats kit assembly as the primary behavioural marker of preparedness; households meeting the full checklist are classified as prepared, supporting ISR of 85% for adherent households.
+    uar_reasoning: |
+      - See emergency-preparedness.self-reliance UAR – same intervention, same adherence profile.
+
+  emergency-preparedness.catastrophic:
+    pbs: 3
+    isr: 40
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – essentially no catastrophic-scenario preparedness. Endpoint after a 72-hour kit: slight-to-modest gain; a 72-hour supply is meaningless for scenarios lasting weeks or months (extended grid failure, pandemic, societal disruption).
+      - The kit addresses the very opening window of a catastrophic event – the first 72 hours – and provides documents and medication continuity that may have marginal value in longer scenarios. This is a slight gain, not a meaningful one: score 3 reflects just below the "modest" threshold given the severe mismatch between kit duration and catastrophic scenario duration.
+      - Extended catastrophic preparedness requires backup power, long-term food and water storage, medical capabilities, and community networks – none of which a 72-hour kit provides.
+    isr_reasoning: |
+      - A 72-hour kit provides meaningful benefit in roughly the first three days of a catastrophic scenario, but most catastrophic events extend well beyond this window; the proportion of catastrophic scenarios where a 72-hour kit is the binding constraint on outcomes is low.
+      - The secured documents (passports, insurance policies, financial records) may have lasting value across scenario durations – this is the primary channel through which the kit provides some catastrophic-scenario benefit.
+      - [PMC11003604](https://pmc.ncbi.nlm.nih.gov/articles/PMC11003604/) found only a small positive effect on preparedness behaviours and no significant effect on supply outcomes from preparedness interventions, supporting a conservative ISR for the catastrophic domain.
+    uar_reasoning: |
+      - See emergency-preparedness.self-reliance UAR – same intervention, same adherence profile.
+
+  physical-safety.risk:
+    pbs: 4
+    isr: 30
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile for physical-safety.risk. A 72-hour kit addresses a specific, low-frequency risk class: disaster-related mortality. For the average US household, annual disaster mortality risk is extremely low (estimated at 0.01–0.05% per year), meaning the absolute risk reduction from a kit is very small even if the relative reduction within that class is meaningful.
+      - Conservatively discounting for the absence of direct evidence and the narrow scope (disasters only, not the broader preventable mortality risk that anchors this value), a score of 4 is appropriate.
+      - The kit does contribute modestly to general risk reduction via first aid supplies (usable for everyday injuries, not only disasters) and document security (reducing identity theft and financial disruption risk).
+    isr_reasoning: |
+      - The proportion of physical-safety risk that is addressable by a 72-hour kit is small; most preventable mortality risk in this domain comes from traffic, falls, cardiovascular events, and interpersonal violence – none of which a 72-hour kit addresses.
+      - [PMC4880243](https://pmc.ncbi.nlm.nih.gov/articles/PMC4880243/) explicitly found no empirical evidence that disaster supply kits improve survival outcomes; this directly depresses ISR for mortality risk reduction.
+      - The first aid kit component has established benefit for minor injury management, but this is a marginal contribution to overall mortality risk reduction. ISR of 30% reflects a real but narrow and poorly evidenced channel of benefit.
+    uar_reasoning: |
+      - See emergency-preparedness.self-reliance UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 75
+  upfront_cost_reasoning: "Minimum viable kit for a one-to-two person household assembling from scratch: water storage containers ($10–15), three days of non-perishable food ($20–30), basic first aid kit ($15–25), torch and batteries ($10–15), battery-powered radio ($15–20). Most households will have partial inventories already, reducing actual cost."
+  ongoing_cost: 20
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Biannual rotation of water (if stored in non-reusable containers), replacement of expired food items, and battery replacement. Estimated at $10 per six-month check for a one-to-two person household."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately one hour to inventory existing supplies against a checklist, one hour to shop or order items, and one hour to assemble, label, and store the kit and photograph/scan documents."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Two biannual checks of approximately 30 minutes each: inspect supplies, rotate expired items, update documents, verify all household members still know the kit's location."
+
+prerequisites:
+  - "Sufficient household storage space for a medium-sized tote or backpack in an accessible location"
+  - "Basic literacy to follow a preparedness checklist and read expiry dates on consumables"
+  - "Access to a retail or online supplier for basic emergency supplies (widely available in most countries)"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Completing preparedness planning reduces disaster-related anxiety and perceived vulnerability, with preparedness associated with lower psychological distress in several observational studies."
+  - domain: "legal-matters"
+    rationale: "Securing copies of critical legal and financial documents in the kit directly reduces risk of document loss during disasters, which has legal and financial protection value."

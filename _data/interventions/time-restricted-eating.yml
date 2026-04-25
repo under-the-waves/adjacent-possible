@@ -1,8 +1,19 @@
 name: "Time-Restricted Eating"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Limiting all food consumption to a fixed 8–10 hour daily window (e.g. 10am–6pm), with only water, black coffee, or plain tea outside that window. Creates a caloric deficit through structural restriction of eating opportunities rather than conscious calorie counting or food tracking, making it simpler to sustain than approaches like [calorie tracking](/resources/intervention-database/calorie-tracking).
+how_to_do_it: |
+  - Choose an eating window that fits your social and work schedule – many people find a 10am–6pm or 11am–7pm window works well, but the specific hours matter less than consistency
+  - Start with a 10-hour window for the first 1–2 weeks, then narrow to 8 hours once you have adapted to the initial constraint
+  - You may find it easier to skip or delay breakfast than to cut off eating early in the evening, since social meals tend to cluster in the evening – but earlier windows show slightly better metabolic outcomes in research
+  - On days when social commitments fall outside your window (a late dinner, an early work breakfast), shift the window rather than abandoning it – flexibility on individual days preserves the overall pattern
+success_looks_like: |
+  - You eat within your window on most days without conscious effort – the schedule feels like a default rather than a restriction
+  - Hunger outside the window diminishes noticeably after 2–3 weeks as your body adapts to the new meal timing
+  - You notice modest, sustained weight loss (1–2 kg over the first 2–3 months) without tracking calories or changing what you eat
+common_pitfalls: |
+  - Compensating by eating larger or more calorie-dense meals during the window, which eliminates the spontaneous caloric deficit that drives the benefit
+  - Choosing a window that conflicts with regular social meals (family dinners, work lunches), creating friction that erodes adherence within weeks
+  - Gradually widening the window over time without noticing – a strict 8-hour window drifts to 10, then 12, until the constraint is nominal
 description: |
   - Limiting all food consumption to a fixed 8-10 hour daily window (e.g. 10am-6pm), with only water, black coffee, or plain tea outside that window; no calorie counting or food tracking required
   - Creates a caloric deficit through structural restriction of eating opportunities rather than conscious energy monitoring; [meta-analytic evidence](https://doi.org/10.1038/s41430-023-01311-w) shows participants spontaneously reduce intake by approximately 400 kcal/day
@@ -14,7 +25,7 @@ values:
   body-image.fat_loss:
     pbs: 7
     pbs_reasoning: |
-      - [A 12-month RCT](https://doi.org/10.7326/M23-0052) of 8-hour TRE without calorie counting found a mean weight loss of 4.61 kg (~5% body weight), and [a trial in adults with type 2 diabetes](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2811116) showed 3.56% loss at 6 months – placing the sustained effect at 3 – 5%
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile. Delta: 30 percentile points of improvement. [A 12-month RCT](https://doi.org/10.7326/M23-0052) of 8-hour TRE without calorie counting found a mean weight loss of 4.61 kg (~5% body weight), and [a trial in adults with type 2 diabetes](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2811116) showed 3.56% loss at 6 months – placing the sustained effect at 3 – 5%
       - [The NEJM trial](https://doi.org/10.1056/NEJMoa2114833) (Liu et al. 2022) showed TRE combined with calorie restriction produced ~9% loss at 12 months, but TRE alone – the intervention being scored here – typically yields 3 – 5% without deliberate restriction
       - [A meta-analysis of RCTs](https://doi.org/10.1038/s41430-023-01311-w) confirms participants spontaneously reduce intake by ~400 kcal/day, producing moderate but meaningful weight reduction in successful adherents
       - On the logarithmic anchor, 4% sustained loss maps to 10 + log₂(4/25) = 7.36, rounding to PBS 7

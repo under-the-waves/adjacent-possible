@@ -1,8 +1,19 @@
 name: "GLP-1 Receptor Agonists"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Pharmaceutical weight management using injectable GLP-1 receptor agonists – primarily semaglutide (Wegovy) and the dual GIP/GLP-1 agonist tirzepatide (Mounjaro/Zepbound) – which mimic gut satiety hormones to reduce appetite, slow gastric emptying, and alter central reward signalling. The most effective non-surgical fat loss intervention available, producing 15–22% body weight loss in trials, but requiring indefinite use as weight regain occurs rapidly on cessation.
+how_to_do_it: |
+  - Obtain a prescription through a GP or weight management specialist after meeting eligibility criteria (typically BMI 30+, or 27+ with a weight-related comorbidity), including baseline blood work and medical history review
+  - Begin at the lowest dose and titrate up over 16–20 weeks following the prescribed schedule – rushing titration substantially increases nausea and gastrointestinal side effects
+  - Many people find that eating slowly, choosing smaller meals, and keeping hydrated reduces the nausea that is most common during dose escalation
+  - Combine with resistance training and adequate protein intake (1.6+ g/kg/day) to preserve lean mass – without this, a meaningful proportion of weight lost is muscle rather than fat
+success_looks_like: |
+  - Appetite feels genuinely reduced rather than suppressed by willpower – food noise quietens, portions naturally shrink, and cravings for calorie-dense foods diminish noticeably
+  - Sustained weight loss of 10–15% within 6–9 months, with body composition improving alongside scale weight as dietary quality shifts toward higher protein and lower volume
+  - Gastrointestinal side effects from dose escalation settle within the first 4–8 weeks at each dose level, and the weekly injection becomes a brief, unremarkable routine
+common_pitfalls: |
+  - Stopping the medication after reaching a target weight – two-thirds of lost weight typically returns within 12 months of cessation, making this effectively a lifelong commitment
+  - Neglecting resistance training and protein intake during rapid weight loss, resulting in significant muscle mass loss that worsens body composition and reduces metabolic rate
+  - Underestimating the financial burden: at £250–1,000+ per month without insurance coverage, cost is the single largest driver of discontinuation in real-world data
 description: |
   - Pharmaceutical weight management using injectable GLP-1 receptor agonists – primarily semaglutide 2.4 mg (Wegovy) and the dual GIP/GLP-1 agonist tirzepatide (Mounjaro/Zepbound) – which mimic gut satiety hormones to reduce appetite, slow gastric emptying, and alter central reward signalling
   - Administered as a weekly subcutaneous injection, with dose titration over 16-20 weeks to minimise gastrointestinal side effects; maintenance dosing is indefinite, as weight regain occurs rapidly on cessation
@@ -14,7 +25,7 @@ values:
   body-image.fat_loss:
     pbs: 9
     pbs_reasoning: |
-      - [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) showed mean weight loss of 14.9% at 68 weeks with semaglutide 2.4 mg; [STEP 5](https://www.nature.com/articles/s41591-022-02026-4) confirmed 15.2% sustained at 104 weeks of continuous use
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 85th – 90th percentile on sustained fat loss outcomes. Delta: ~50 – 55 percentile points of improvement. [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) showed mean weight loss of 14.9% at 68 weeks with semaglutide 2.4 mg; [STEP 5](https://www.nature.com/articles/s41591-022-02026-4) confirmed 15.2% sustained at 104 weeks of continuous use
       - [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) showed tirzepatide achieving 16.0% (5 mg), 21.4% (10 mg), and 22.5% (15 mg) weight loss at 72 weeks, with the highest-dose group averaging over 20% loss
       - On the logarithmic anchor (25% = score 10, each point = 2x), semaglutide's ~15% maps to 10 + log₂(15/25) = 9.3 and tirzepatide's ~21% maps to 9.75; weighting toward semaglutide as the more commonly prescribed starting agent, PBS 9 reflects a successful user on continued treatment
       - These are the largest sustained effect sizes of any non-surgical fat loss intervention, driven by potent appetite suppression and metabolic effects
@@ -25,7 +36,7 @@ values:
       - The pharmacological mechanism (GLP-1/GIP receptor activation) bypasses behavioural variability – the drug directly suppresses appetite and slows gastric emptying, producing reliable caloric reduction in virtually all compliant users; true non-response is rare in clinical data
       - Score of 88 reflects that out of 100 people who sustain proper use, approximately 86 – 96 achieve clinically meaningful fat loss, with the small minority of non-responders likely explained by genetic variation in receptor sensitivity
     uar: 25
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - [STEP 1 extension](https://pmc.ncbi.nlm.nih.gov/articles/PMC9542252/) showed participants regained two-thirds of lost weight within one year of stopping, reducing net weight loss from 17.3% to 5.6% – the requirement for indefinite use is the single largest adherence barrier
       - [Real-world discontinuation data](https://www.biospace.com/drug-development/glp-1-side-effects-only-one-factor-driving-patient-discontinuation-rates) shows 64.8% of non-diabetic patients discontinue within the first year, driven primarily by cost ($350-1,350/month without insurance) and gastrointestinal side effects

@@ -1,8 +1,19 @@
 name: "Consistent Wake Time"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Waking up at the same time every day – within a 15–30 minute window, including weekends – regardless of when you fell asleep. The fixed wake point anchors the circadian clock, naturally regulating sleep pressure so that bedtime sleepiness becomes predictable without effort. Pairs well with a [Bedtime Routine](/resources/intervention-database/bedtime-routine) for full sleep-cycle control.
+how_to_do_it: |
+  - Choose a wake time that works on your most constrained day (typically a workday), set a single non-negotiable alarm, and commit to the same time on weekends and days off
+  - Many people find that getting out of bed immediately – feet on the floor within 60 seconds of the alarm – prevents the snooze-button drift that undermines consistency
+  - You may find it helpful to pair the alarm with a bright light source (opening curtains, a sunrise lamp) to support the cortisol awakening response and reduce grogginess
+  - If your current wake time varies by two or more hours, shift gradually – 15 minutes earlier every three days – to avoid acute sleep deprivation during the transition
+success_looks_like: |
+  - You wake within a few minutes of your target time most days, often before the alarm sounds, and feel alert within 15–20 minutes of rising
+  - Bedtime sleepiness arrives at a predictable hour without deliberate effort, replacing the pattern of lying awake or scrolling until exhausted
+  - Weekend mornings no longer feel like a different timezone – energy and mood are consistent across the week rather than cycling between weekday fatigue and weekend oversleep
+common_pitfalls: |
+  - Sleeping in after a bad night to 'catch up' – this resets the circadian anchor and delays adaptation; maintaining wake time even after poor sleep is the hardest but most important part
+  - Setting an aspirational wake time that is incompatible with social or work commitments, leading to chronic sleep restriction rather than circadian alignment
+  - Focusing on wake time without addressing the other end – staying up late and waking on schedule produces sleep deprivation, not circadian stability
 description: |
   - Waking up at the same time every day (within 15-30 minutes) including weekends and days off, regardless of when you went to bed
   - Stabilises the body's internal clock by maintaining a fixed anchor point for the sleep-wake cycle, naturally regulating bedtime through homeostatic sleep pressure
@@ -13,7 +24,7 @@ values:
   sleep.daily_functioning:
     pbs: 8
     pbs_reasoning: |
-      - [Reid et al. (2014)](https://doi.org/10.1016/j.smrv.2013.06.001) demonstrated that consistent wake times enhance sustained attention and working memory performance equivalent to gaining 1-2 hours of additional sleep, with cognitive performance improvements of 20-25%.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–85th percentile (~3.5 additional productive hours per day). Delta: ~40–50 percentile points of improvement. [Reid et al. (2014)](https://doi.org/10.1016/j.smrv.2013.06.001) demonstrated that consistent wake times enhance sustained attention and working memory performance equivalent to gaining 1–2 hours of additional sleep, with cognitive performance improvements of 20–25%.
       - [Hirshkowitz et al. (2015)](https://doi.org/10.1016/j.sleh.2014.12.010) found that stable circadian rhythms reduce daytime sleepiness scores by 30-40%, translating to roughly 3-4 additional productive hours for someone moving from irregular to perfectly consistent wake times.
       - On the updated anchor (10 = 14h, 8 = 3.5h, 6 = 50min), a gain of ~3.5 productive hours aligns with score 8, reflecting this intervention's status as one of the most impactful single sleep behaviours for daytime performance.
     isr: 80
@@ -31,7 +42,7 @@ values:
   sleep.long_term_health:
     pbs: 7
     pbs_reasoning: |
-      - [Scheer et al. (2009)](https://doi.org/10.1073/pnas.0808180106) demonstrated that circadian disruption increases diabetes risk by 25-30% and cardiovascular disease risk by 15-20%, implying that correcting circadian misalignment through consistent wake times prevents substantial disease burden.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile (~1–1.5 years additional healthy lifespan through reduced circadian disruption). Delta: ~30–40 percentile points of improvement. [Scheer et al. (2009)](https://doi.org/10.1073/pnas.0808180106) demonstrated that circadian disruption increases diabetes risk by 25–30% and cardiovascular disease risk by 15–20%, implying that correcting circadian misalignment through consistent wake times prevents substantial disease burden.
       - [Roenneberg et al. (2012)](https://doi.org/10.1016/j.cub.2012.03.038) cohort study (n > 65,000) found 10-15% lower all-cause mortality among people with consistent sleep-wake patterns, translating to approximately 1-1.5 years additional healthy lifespan.
       - On the updated anchor (10 = 8+ years, 8 = 2 years, 6 = 6 months), an estimated 1-1.5 years of additional healthy lifespan places this at score 7, between the 6-month and 2-year benchmarks.
     isr: 75
@@ -49,7 +60,7 @@ values:
   sleep.comfort_experience:
     pbs: 7
     pbs_reasoning: |
-      - [Walker (2017)](https://doi.org/10.1016/j.neuron.2017.07.007) found that stable circadian rhythms enhance deep sleep stages by 15-20% and reduce sleep fragmentation, directly improving subjective sleep quality and morning refreshment.
+      - Baseline (per values.yml): 35th percentile (below-average sleep comfort). After successful adherence, a user could plausibly reach the 65th–75th percentile (reliably good-to-restful sleep with consistent morning refreshment). Delta: ~30–40 percentile points of improvement. [Walker (2017)](https://doi.org/10.1016/j.neuron.2017.07.007) found that stable circadian rhythms enhance deep sleep stages by 15–20% and reduce sleep fragmentation, directly improving subjective sleep quality and morning refreshment.
       - Consistent wake times naturally regulate sleep pressure so that bedtime sleepiness becomes reliable and predictable, reducing the frustration of lying awake and producing more naturally restorative sleep experiences.
       - On the updated anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), successful implementation moves someone from variable to reliably good-to-restful sleep, placing this between score 6 and 8 at score 7.
     isr: 85
@@ -67,7 +78,7 @@ values:
   mental-health.stability:
     pbs: 5
     pbs_reasoning: |
-      - [A large prospective cohort study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12404321/) using accelerometer data from the UK Biobank found regular sleepers had 38% lower depression risk (HR = 0.62, 95% CI 0.52–0.73) compared to irregular sleepers, with this association holding even after controlling for sleep duration.
+      - Baseline (per values.yml): 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 45th–55th percentile (moderately improved mood stability through circadian alignment). Delta: ~10–20 percentile points of improvement. [A large prospective cohort study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12404321/) using accelerometer data from the UK Biobank found regular sleepers had 38% lower depression risk (HR = 0.62, 95% CI 0.52–0.73) compared to irregular sleepers, with this association holding even after controlling for sleep duration.
       - [Walker et al. (2020)](https://www.nature.com/articles/s41398-020-0694-0) systematic review found circadian disruption independently predicts depression onset, with the severity of depressive symptoms correlating with the degree of circadian misalignment. Consistent wake time is the primary anchor point for circadian entrainment.
       - On the subjective anchor (10 = complete freedom from distressing symptoms, 6 = occasional distress resolving quickly, 4 = frequent distress affecting daily functioning), circadian stabilisation via consistent wake time provides a moderate protective effect against mood instability. Score 5 reflects a meaningful but secondary benefit – circadian alignment supports serotonergic and cortisol regulation but does not address psychological or social drivers of distress.
     isr: 50
@@ -76,7 +87,7 @@ values:
       - Most evidence linking circadian regularity to depression risk is observational rather than interventional, making the causal contribution of wake time consistency alone (vs. overall sleep hygiene) uncertain.
       - Conservatively estimated at 50% – the circadian mechanism is well-established but the proportion of the general population with sufficient baseline circadian disruption for wake time consistency alone to meaningfully shift mood stability is unclear.
     uar: 55
-    confidence: medium
+    confidence: low
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 

@@ -1,0 +1,211 @@
+name: "Identifying and Critically Assessing One's Values"
+what_it_is: |
+  A structured set of exercises for surfacing, ranking, and stress-testing the personal values that drive behaviour – covering tools such as the Schwartz Values Survey, the ACT Personal Values Card Sort, and written reflection protocols. The process moves through three phases: elicitation (generating a raw list of what matters to you), prioritisation (ranking values against each other and against your actual time allocation), and critical examination (asking whether each value is authentically yours or absorbed from social pressure, whether your hierarchy is internally consistent, and where values conflict). Because values are the upstream variable for most major life decisions, clarifying them is a foundational act that reduces decisional conflict and improves alignment between intentions and behaviour.
+how_to_do_it: |
+  - Begin with a structured elicitation tool – the ACT Personal Values Card Sort (free at psychwire.com) or the Schwartz Values Survey – to generate a ranked list of values without relying on top-of-mind recall, which tends to surface socially desirable answers rather than authentic ones
+  - For each top-ranked value, write a short paragraph answering: Where did this value come from? Would I still hold it if no one were watching? Does my calendar and spending actually reflect it? This surfaces the gap between espoused and enacted values
+  - Run a pairwise trade-off exercise: for each pair of your top 5–7 values, ask which you would sacrifice if forced to choose – this reveals the implicit hierarchy your decisions already follow and makes it explicit
+  - Revisit the list every 6–12 months, or after major life transitions, comparing your current ranking against the previous one to track whether your values are evolving deliberately or drifting by default
+success_looks_like: |
+  - You can articulate your top 5 values clearly and give a concrete recent example of each one influencing a decision
+  - When facing a difficult choice, you have a framework for evaluating options against your hierarchy rather than deciding by mood or social pressure
+  - Your time and spending audit shows meaningful alignment between stated values and actual allocation, with any gaps identified and consciously accepted rather than overlooked
+common_pitfalls: |
+  - Selecting values that feel virtuous or socially acceptable rather than descriptive of how you actually behave – the output becomes aspirational fiction rather than a usable map
+  - Treating the exercise as a one-time event and filing the result away; values clarification only improves decision-making if the ranked list is actively consulted during real choices
+  - Identifying conflicting values but not working through the tension – unresolved conflicts between, say, family and ambition leave the hierarchy as cluttered as before the exercise
+description: |
+  - Structured elicitation using validated instruments (Schwartz Values Survey, ACT Values Card Sort, or Miller and C'de Baca's Personal Values Card Sort) to generate and rank personal values; followed by written critical reflection on authenticity, origin, and consistency
+  - The critical examination phase distinguishes this from simple preference surveys – participants interrogate whether values are intrinsic or introjected, and whether the ranked hierarchy matches their actual resource allocation (time, money, attention)
+  - [A 2021 systematic review and meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) (Witteman et al., 74 RCTs) found that explicit values clarification methods significantly reduce decisional conflict and increase values-congruent decision-making compared to implicit or no-clarification controls
+  - Within ACT, [values work is associated with increased quality of life](https://pmc.ncbi.nlm.nih.gov/articles/PMC8854463/) across multiple functioning domains, with evidence that benefits generalise beyond the specific domain targeted by the intervention
+  - The intervention is distinct from goal-setting: goals are the destinations; values are the directional compass that determines which goals are worth pursuing and why
+applicable_domains: ["value-system", "self-awareness", "life-purpose", "goals", "rationality", "personality"]
+
+values:
+  value-system.insight:
+    pbs: 8
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile – moving from vague, implicit awareness of what they value to a coherent, examined, explicitly ranked hierarchy. Delta: ~40–45 percentile points.
+      - This is the most direct target of the intervention; the entire exercise is designed to produce comprehensive insight into one's authentic values, their origins, and their trade-offs. For someone starting with little reflective framework, a major gain (score 8) is a conservative upper bound.
+      - The Schwartz Values Survey has strong psychometric validity across 49 cultural groups ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9131418/)), meaning the measurement instrument itself reliably reveals structure in values that participants were not previously aware of.
+    isr_reasoning: |
+      - [Witteman et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) found explicit values clarification methods consistently outperformed implicit methods across 74 RCTs, with the majority of participants achieving meaningful improvement in values awareness and congruence – but a minority found the process confronting or produced inconclusive hierarchies.
+      - [Working With Values (PMC 2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8854463/) notes that elicitation alone is insufficient; critical examination and application to real decisions is required for durable insight.
+      - Individual variation is substantial: people with high psychological rigidity or strong social desirability bias tend to produce inauthentic value rankings on first pass, requiring multiple iterations. A conservative ISR of 65% accounts for this.
+    uar_reasoning: |
+      - The initial elicitation exercise takes 30–60 minutes and has minimal barriers; completion rates for self-administered values surveys in research contexts are high, typically 75–85%.
+      - The critical examination and pairwise trade-off phases require sustained effortful introspection, which many participants abandon after the initial survey.
+      - Revisiting and applying the hierarchy to real decisions requires ongoing motivation with no external accountability; dropout at this stage is the primary driver of a UAR of 55%.
+
+  value-system.practical:
+    pbs: 7
+    isr: 50
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from ad hoc, mood-driven decisions to a consistent practice of checking major choices against an explicit values hierarchy. Delta: ~30–35 percentile points.
+      - [Witteman et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) found explicit values clarification significantly reduced decisional conflict and increased values-congruent choices compared to controls – the mechanism for practical improvement is empirically supported.
+      - Score 7 rather than 8 because the practical benefit requires actively consulting the hierarchy at decision points, which depends on habituation that a single exercise does not guarantee.
+    isr_reasoning: |
+      - Among participants who complete the full clarification protocol, [ACT values research](https://pmc.ncbi.nlm.nih.gov/articles/PMC8854463/) consistently finds significant increases in values-congruent behaviour, but the proportion achieving durable improvement in real-world decision-making is lower than in controlled settings – estimated at roughly 50%.
+      - The translation from knowing your values to using them under pressure is not automatic; it requires deliberate practice and often breaks down under time pressure or emotional arousal.
+      - People with high baseline decision-making conscientiousness gain less; those with chaotic decision styles gain more but may struggle to apply an abstract hierarchy in the moment.
+    uar_reasoning: |
+      - Sustained use of an explicit values framework requires forming a new habit of deliberate reflection before choices; without a trigger or reminder system, most people revert to heuristic decision-making within weeks.
+      - UAR of 50% reflects that roughly half of adherent users build a durable habit of values-referencing in decisions.
+
+  value-system.authentic:
+    pbs: 7
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from significant inconsistency between stated values and behaviour under pressure, to meaningful alignment. Delta: ~30–35 percentile points.
+      - The critical examination phase (interrogating whether values are intrinsic vs. introjected, and auditing time and spending against the hierarchy) directly targets authentic expression.
+      - Authenticity gains require integration of insight into behaviour over time, not just intellectual awareness – this caps the PBS relative to value-system.insight where the gain is purely cognitive.
+    isr_reasoning: |
+      - [ACT values research (PMC 2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8854463/) reports significant increases in values-congruent behaviour across studies, but authentic expression under social pressure is harder to shift than behaviour in neutral conditions, reducing ISR to ~55%.
+      - Social desirability effects mean some participants produce value hierarchies that are themselves performative, limiting authentic expression gains.
+      - Authenticity under pressure requires psychological flexibility that values clarification alone does not fully develop.
+    uar_reasoning: |
+      - See value-system.insight UAR – same intervention, same adherence profile.
+
+  value-system.evolution:
+    pbs: 6
+    isr: 60
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – developing a repeatable practice of intentional values review rather than passive drift. Delta: ~25–30 percentile points.
+      - The intervention, when practised as a recurring review (every 6–12 months), directly builds the meta-skill of deliberate values development. Score 6 reflects that the practice is straightforward but values evolution is a years-long process.
+      - Evidence for deliberate values evolution as a distinct outcome is indirect; the score is conservative.
+    isr_reasoning: |
+      - The mechanism is plausible and direct: repeated structured review creates a longitudinal record that reveals drift vs. development. However, there is limited direct evidence on how reliably this translates to intentional values evolution.
+      - Individuals with high openness to experience are significantly more likely to use the review as a development tool; population-level ISR is therefore modest at 60%.
+      - [ACT values literature (PMC 2019)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6905635/) treats values as dynamic and evolving but focuses on short-term intervention effects.
+    uar_reasoning: |
+      - See value-system.insight UAR – same intervention, same adherence profile. Recurring review requires scheduling discipline over years.
+
+  self-awareness.psychological:
+    pbs: 7
+    isr: 55
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from shallow self-concept to a structured understanding of which psychological patterns drive their value rankings. Delta: ~30–35 percentile points.
+      - The critical examination phase – asking where each value came from and whether it reflects authentic preference or absorbed social norms – is a direct psychological self-knowledge exercise.
+      - The gain is real but bounded: values clarification does not produce the depth of psychological self-knowledge available through therapy or longitudinal journalling; score 7 rather than 8 reflects this ceiling.
+    isr_reasoning: |
+      - [Working With Values (PMC 2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8854463/) shows that guided values work reliably surfaces previously implicit psychological patterns for the majority of participants, but a substantial minority find the reflection superficial or produce intellectualised responses.
+      - Psychological self-knowledge is subject to motivated reasoning and blind spots that structured exercises can mitigate but not eliminate; ISR of 55% reflects the proportion achieving genuine rather than surface-level gains.
+      - Users with prior reflective practice (journalling, therapy, mindfulness) tend to have higher ISR.
+    uar_reasoning: |
+      - See value-system.insight UAR – same intervention, same adherence profile.
+
+  self-awareness.relational:
+    pbs: 5
+    isr: 40
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – gaining some clarity on how their values shape interpersonal patterns. Delta: ~20–25 percentile points.
+      - The pathway from values clarification to relational self-awareness is indirect: understanding that you value independence may partially explain relational patterns, but values work does not examine interpersonal dynamics directly. Score 5 reflects a real but secondary effect.
+      - Direct relational self-awareness gains require feedback from others or relational exercises, which values clarification does not include.
+    isr_reasoning: |
+      - The causal pathway requires the user to make an inferential connection that many do not spontaneously draw without facilitation.
+      - ISR of 40% reflects that fewer than half of adherent users actively apply their values hierarchy to understanding their relational behaviour.
+      - Evidence is indirect; no studies directly measure relational self-awareness as an outcome of standalone values clarification exercises.
+    uar_reasoning: |
+      - See value-system.insight UAR – same intervention, same adherence profile.
+
+  life-purpose.clarity:
+    pbs: 7
+    isr: 55
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from uncertain or borrowed life direction to a values-anchored sense of what they are orienting toward. Delta: ~30–35 percentile points.
+      - Values are the upstream construct for life purpose: knowing what you value and how you rank competing values is a necessary (though not sufficient) condition for articulating a coherent life direction.
+      - The gain is meaningful but not transformative (score 7 rather than 8–9) because values clarification alone does not resolve how to translate values into a specific purpose narrative – that integration work is additional.
+    isr_reasoning: |
+      - [ACT values work (PMC 2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8854463/) reports quality-of-life gains generalising beyond the targeted domain, consistent with values clarity feeding upward into purpose clarity.
+      - Users who complete the full three-phase protocol are more likely to achieve purpose clarity than those who stop at the card sort; ISR of 55% reflects completion of the full protocol among adherent users.
+      - Life-purpose clarity also depends on factors outside the intervention (career circumstances, relationship status, existential maturity).
+    uar_reasoning: |
+      - See value-system.insight UAR – same intervention, same adherence profile.
+
+  goals.clarity:
+    pbs: 6
+    isr: 60
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – moving from goals driven by external benchmarks or social comparison to goals anchored in an explicit personal value hierarchy. Delta: ~25–30 percentile points.
+      - Values clarification directly improves goal clarity by providing the evaluative framework for deciding which goals are worth pursuing.
+      - The gain is bounded because values clarification answers "why" but not "what specifically" or "how" – goal specificity, planning, and execution are distinct skills not addressed by this intervention. Score 6 reflects the genuine but upstream nature of the contribution.
+    isr_reasoning: |
+      - [Witteman et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) found explicit values clarification reduced decisional conflict in goal-relevant decisions; the mechanism is well-established but the translation to sustained goal clarity is less certain.
+      - Users with high goal-setting baseline skill integrate values clarity into their goal framework readily; users who lack goal-setting practice may not know how to use the values hierarchy to select and commit to goals.
+      - ISR of 60% reflects that a majority of adherent users achieve meaningful improvement in goal clarity.
+    uar_reasoning: |
+      - See value-system.insight UAR – same intervention, same adherence profile.
+
+  rationality.decision-making:
+    pbs: 6
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – moving from intuitive or socially-conditioned decision-making to a more structured approach anchored in an examined values hierarchy. Delta: ~25–30 percentile points.
+      - [Witteman et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) found explicit values clarification methods significantly outperformed implicit methods in producing values-congruent decisions across 74 RCTs.
+      - The gain is meaningful but not transformative for decision-making quality overall: the intervention addresses values ambiguity but not probability estimation, cognitive bias correction, or structured reasoning.
+    isr_reasoning: |
+      - [Witteman et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) found multicriteria decision analysis produced the largest and most reliable improvements in decision congruence; simpler card-sort methods produced significant but smaller effects.
+      - ISR of 55% reflects that meaningful improvement in real-world decision-making quality requires both completing the clarification exercise and actively applying the hierarchy during decisions under time pressure and emotional load.
+      - Values clarification does not correct cognitive biases or improve probabilistic reasoning; users who conflate values clarity with decision-making skill may overestimate their improvement.
+    uar_reasoning: |
+      - See value-system.practical UAR – same intervention; this outcome requires the same habit of consulting the hierarchy during live decisions.
+
+  personality.alignment:
+    pbs: 6
+    isr: 50
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – achieving greater congruence between personality traits and values hierarchy. Delta: ~25–30 percentile points.
+      - Values clarification can surface misalignments between how a person naturally behaves (personality) and what they believe they value (espoused values), enabling deliberate correction. Score 6 reflects a real but indirect effect.
+      - Evidence is indirect; personality-values alignment as a distinct outcome is not directly studied.
+    isr_reasoning: |
+      - The pathway requires the user to identify personality-values tensions and then act to either adjust behaviour or update espoused values – a sophisticated integration step.
+      - ISR of 50% is conservative given the absence of direct evidence and the demanding nature of the integration step.
+      - Users with high self-awareness baseline are more likely to achieve alignment gains.
+    uar_reasoning: |
+      - See value-system.insight UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "All core instruments are freely available – the ACT Personal Values Card Sort is free at psychwire.com, the Schwartz Values Survey is available as a short-form instrument in the public domain. No purchase is required to begin."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "The intervention is entirely self-directed using free instruments. Optional costs include a values-focused workbook (~$15–25 one-off) or coaching sessions, but these are not required."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 1–2 hours for the initial elicitation exercise (30–60 minutes for the card sort or survey), the authenticity reflection (30 minutes), and the pairwise trade-off exercise (20–30 minutes)."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "The minimum effective ongoing commitment is an annual review of approximately 60 minutes – revisiting the hierarchy, comparing it to the previous year's, and auditing time and spending alignment."
+
+prerequisites:
+  - "Basic literacy and ability to engage in written self-reflection – the critical examination phase requires producing short written responses to structured prompts"
+  - "Access to a quiet environment for 1–2 hours without interruption – the reflection phases are cognitively demanding"
+  - "No history of active psychosis or severe dissociation that would impair structured introspection; individuals in acute mental health crises should complete this work with professional support"
+  - "Sufficient life experience to have formed some implicit values hierarchy – typically mid-adolescence or later"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Values clarification reduces psychological distress by resolving values-behaviour incongruence, a known source of anxiety and chronic dissatisfaction"
+  - domain: "career-planning"
+    rationale: "An explicit values hierarchy is a direct input to career decisions, reducing the frequency of values-misaligned job choices"

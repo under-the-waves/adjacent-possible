@@ -1,8 +1,19 @@
 name: "Automated Savings"
-what_it_is: ""
-how_to_do_it: ""
-success_looks_like: ""
-common_pitfalls: ""
+what_it_is: |
+  Setting up automatic transfers from your current account to savings accounts on a fixed schedule – typically aligned with payday – so that saving happens by default without requiring a decision each time. This leverages the same status quo bias that usually works against good financial behaviour, turning it into an advantage. Pairs well with [Basic Tax Optimisation](/resources/intervention-database/basic-tax-optimisation) to ensure automated transfers land in tax-efficient wrappers.
+how_to_do_it: |
+  - Many people find it most effective to set transfers for the day after payday, before discretionary spending begins – this reframes savings as a fixed expense rather than whatever is left over
+  - You may want to start with a modest amount (e.g. 5–10% of take-home pay) and use an automatic escalation rule: increase the transfer by 1% each time you receive a pay rise
+  - Splitting transfers across multiple accounts (emergency fund, ISA, pension top-up) can help match savings to specific goals without requiring ongoing reallocation
+  - Most people find that reviewing the transfer amounts quarterly – rather than monthly – strikes the right balance between staying current and avoiding the temptation to reduce contributions
+success_looks_like: |
+  - Your savings balance grows steadily each month without any conscious effort or willpower expenditure on your part
+  - You stop thinking of the transferred amount as available income – your spending adjusts to the post-transfer balance within 2–3 months
+  - After 12–18 months, you have a meaningful emergency buffer (1–3 months of expenses) that you built without noticing the sacrifice
+common_pitfalls: |
+  - Setting the transfer amount too high initially, leading to overdrafts or cancellation within the first month – it is better to start conservatively and escalate
+  - Treating the savings account as a secondary current account, dipping into it for impulse purchases and negating the automation benefit
+  - Automating transfers but never choosing an appropriate savings vehicle, leaving months of contributions in a near-zero-interest current account
 description: |
   - Setting up automatic transfers from current accounts to savings accounts on a fixed schedule, typically aligned with payday
   - Includes standing orders, direct debits into ISAs or savings accounts, and employer-based salary sacrifice schemes where available
@@ -14,7 +25,7 @@ values:
   saving.security:
     pbs: 8
     pbs_reasoning: |
-      - A successful automated saver consistently directing funds to an emergency account can build 3+ months of expenses within 1-2 years on median income, mapping to score 8 on the anchor (3 months of emergency fund). [Madrian & Shea (2001)](https://doi.org/10.1162/00335530152466232) showed auto-enrolled participants accumulate 50-80% more in savings over 5 years.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile (3+ months of emergency fund built within 1–2 years on median income). Delta: ~40–45 percentile points of improvement. [Madrian & Shea (2001)](https://doi.org/10.1162/00335530152466232) showed auto-enrolled participants accumulate 50–80% more in savings over 5 years, mapping to score 8 on the anchor (3 months of emergency fund).
       - With sustained automation over 3-5 years, many savers reach 6-12 months of emergency reserves, approaching score 9-10. The mechanism reliably produces the outcome when income is sufficient.
       - [CFPB Financial Well-Being Scale studies](https://www.consumerfinance.gov/data-research/research-reports/financial-well-being-scale/) show that building even 3 months of buffer reduces financial stress by ~40%, confirming the anchor's placement of 3 months at score 8.
     isr: 95
@@ -23,7 +34,7 @@ values:
       - The only failure mode is insufficient income to cover the transfers, which is a prerequisite issue rather than an intervention failure.
       - [Thaler & Benartzi (2004)](https://doi.org/10.1086/380085) found Save More Tomorrow participants increased savings rates from 3.5% to 13.6% over 40 months, demonstrating the mechanism's reliability even with escalating contribution rates.
     uar: 92
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - [Vanguard's How America Saves (2024)](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) shows 94% participation persistence for auto-enrolled plans, with opt-out rates of only 5-10% in the first year.
       - The status quo bias that usually works against good financial behaviour here works in its favour – [Choi et al. (2004)](https://doi.org/10.3386/w10486) demonstrated that default effects persist for years after enrolment.
@@ -32,7 +43,7 @@ values:
   saving.growth:
     pbs: 7
     pbs_reasoning: |
-      - A successful automated saver using escalation features (e.g. Save More Tomorrow) can reach 10-15% of gross income saved, mapping to approximately score 7-8 on the anchor (8 = 12-13%). [Thaler & Benartzi (2004)](https://doi.org/10.1086/380085) documented participants reaching 13.6% savings rates through automatic escalation.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile (10–15% of gross income saved). Delta: ~30–40 percentile points of improvement. [Thaler & Benartzi (2004)](https://doi.org/10.1086/380085) documented participants reaching 13.6% savings rates through automatic escalation, mapping to approximately score 7–8 on the anchor (8 = 12–13%).
       - Without escalation, typical auto-enrolment defaults of 5-8% map to roughly score 6-7 on the anchor. The intervention's ceiling is limited by the fact that it automates a fixed percentage rather than driving aggressive savings behaviour.
       - Score 7 reflects that successful implementation reliably produces savings rates in the 10-15% range – meaningful wealth accumulation but well below the 50% achievable through deliberate high-savings-rate strategies.
     isr: 90
@@ -41,7 +52,7 @@ values:
       - Real growth depends on the savings vehicle chosen; basic savings accounts may yield near-zero real returns in high-inflation environments, slightly reducing the growth reliability.
       - [Beshears et al. (2009)](https://doi.org/10.3386/w12009) confirmed that automatic mechanisms produce reliable capital accumulation across income levels and demographic groups.
     uar: 92
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - Same adherence dynamics as saving.security – automation removes the decision point, and status quo bias maintains the behaviour. [Vanguard (2024)](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) reports 94% persistence in auto-enrolled pension schemes.
       - Growth-oriented savers who see their balance increasing receive positive reinforcement, potentially boosting retention above the baseline automation rate.
@@ -50,7 +61,7 @@ values:
   saving.lifestyle:
     pbs: 8
     pbs_reasoning: |
-      - When automated transfers are directed to instant-access savings accounts, the intervention reliably builds liquid reserves of 3+ months within 1-2 years, mapping to score 8 on the anchor (3 months of liquid reserves). [Madrian & Shea (2001)](https://doi.org/10.1162/00335530152466232) showed substantial accumulation rates for auto-enrolled savers.
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile (3+ months of liquid reserves built within 1–2 years). Delta: ~40–45 percentile points of improvement. [Madrian & Shea (2001)](https://doi.org/10.1162/00335530152466232) showed substantial accumulation rates for auto-enrolled savers, mapping to score 8 on the anchor (3 months of liquid reserves).
       - With sustained automation over several years, savers can build 6-12+ months of accessible reserves, approaching the anchor ceiling. The key is directing funds to instant-access accounts rather than locked-in vehicles.
       - The PBS is conditional on configuration – automation into pensions or fixed-term accounts reduces liquidity. Score 8 assumes the saver directs at least a portion of automated savings to accessible accounts, which is the standard setup for emergency and lifestyle funds.
     isr: 90
@@ -59,7 +70,7 @@ values:
       - The main risk to liquidity is if the saver later moves accumulated funds into locked-in products, but the automation itself reliably builds an accessible buffer.
       - [Beshears et al. (2009)](https://doi.org/10.3386/w12009) found no evidence that automated savers systematically redirect liquid savings into illiquid vehicles, suggesting the liquidity benefit persists.
     uar: 90
-    confidence: medium
+    confidence: high
     uar_reasoning: |
       - Liquidity-focused savers benefit strongly from automation because accessible savings feel less 'locked away' than pension contributions or fixed-term deposits. [Benartzi & Thaler (2013)](https://doi.org/10.1126/science.1231320) showed automation persistence is highest when savers retain access to their funds.
       - The instant-access nature of the savings reduces the psychological friction that causes some people to cancel automated transfers to locked-in products.
