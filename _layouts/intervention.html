@@ -1090,31 +1090,27 @@ function renderTopEffectsSummary() {
 
     // Build sentence
     var magnitudeSpan = '<strong>' + top.magnitude + '</strong> <span class="info-icon" onclick="showReasoning(\'magnitude-explanation\')">i</span>';
+    var pdSpan = '<strong>your personalised data</strong> <span class="info-icon" onclick="showReasoning(\'personalised-data\')">i</span>';
+    var prefix = isPersonalised ? 'Based on ' + pdSpan + ', this' : 'This';
 
-    var sentence;
-    if (isPersonalised) {
-        var pdSpan = '<strong>your personalised data</strong> <span class="info-icon" onclick="showReasoning(\'personalised-data\')">i</span>';
-        if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
-            var word = top.negative ? 'harm' : 'benefit';
-            sentence = 'Based on ' + pdSpan + ', the strongest expected ' + word +
-                ' of this intervention is a ' + magnitudeSpan + ' improvement in ' + top.userDesc + '.';
-        } else {
-            var second = ranked[1];
-            sentence = 'Based on ' + pdSpan + ', the strongest expected benefits of this intervention are a ' +
-                magnitudeSpan + ' improvement in ' + top.userDesc + ' and ' + second.userDesc + '.';
-        }
+    var topCount;
+    var mainClause;
+    if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
+        topCount = 1;
+        mainClause = prefix + ' intervention is estimated to produce a ' + magnitudeSpan +
+            ' improvement in ' + top.userDesc;
     } else {
-        if (ranked.length === 1 || (ranked[1] && Math.abs(top.ebs - ranked[1].ebs) > 0.5)) {
-            var word2 = top.negative ? 'harm' : 'benefit';
-            sentence = 'The strongest expected ' + word2 + ' of this intervention is a ' +
-                magnitudeSpan + ' improvement in ' + top.userDesc + '.';
-        } else {
-            var second2 = ranked[1];
-            sentence = 'The strongest expected benefits of this intervention are a ' +
-                magnitudeSpan + ' improvement in ' + top.userDesc + ' and ' + second2.userDesc + '.';
-        }
+        topCount = 2;
+        var second = ranked[1];
+        mainClause = prefix + ' intervention is estimated to produce a ' + magnitudeSpan +
+            ' improvement in ' + top.userDesc + ' and ' + second.userDesc;
     }
-    summaryEl.innerHTML = sentence;
+
+    var otherCount = ranked.length - topCount;
+    if (otherCount > 0) {
+        mainClause += ', with smaller effects across ' + otherCount + ' other area' + (otherCount === 1 ? '' : 's');
+    }
+    summaryEl.innerHTML = mainClause + '.';
 }
 
 function renderViewToggle() {
