@@ -1045,10 +1045,10 @@ function renderTopEffectsSummary() {
                 top.userDesc + ' by about <strong>' + Math.abs(val).toFixed(1) + ' ' + unit + '</strong>.</p>';
         }
     } else {
-        // Subjective: use scale level description
+        // Subjective: scale description already includes the subject
         var ebsEffect = toRealUnits(topEbs, topDef);
         magContent = '<p>This intervention is estimated to produce a <strong>' +
-            ebsEffect + '</strong> in ' + top.userDesc + '.</p>';
+            ebsEffect + '</strong>.</p>';
     }
     reasoningData['magnitude-explanation'] = {
         title: 'Estimated effect size',
