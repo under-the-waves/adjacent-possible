@@ -55,11 +55,13 @@ Last updated: 2026-04-26. This file captures all discussed-but-not-done work fro
 
 ---
 
-## 3. Intervention Page Creation for New Interventions
+## 3. Intervention Page Creation for New Interventions – COMPLETE
 
-**Status:** Not started.
+**Status:** Complete as of 2026-04-26. All 42 intervention YAMLs now have corresponding stub pages in `resources/intervention-database/` using the `intervention` layout. The layout reads YAML content via `intervention_key`, so the stubs only need frontmatter (layout, title, intervention_key).
 
-**What:** The 42 new intervention YAMLs (32 from 2026-04-25 plus 10 from 2026-04-26) have full scoring data, descriptions, and content fields (`what_it_is`, `how_to_do_it`, `success_looks_like`, `common_pitfalls`), but they do not yet have corresponding Markdown pages in `resources/intervention-database/`. Each needs a page at `resources/intervention-database/[intervention-name].md` using the `intervention` layout so they appear on the site.
+**Pre-existing follow-ups noticed during this work (not addressed):**
+- `calisthenics.md` exists as a page but has no YAML in `_data/interventions/`. Either add the YAML or remove the page.
+- `hiit-training.md` page title ("High-Intensity Interval Training (HIIT)") differs from the YAML name ("High Intensity Interval Training"). Reconcile if the canonical name has shifted.
 
 ---
 
