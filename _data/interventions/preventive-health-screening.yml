@@ -1,3 +1,5 @@
+evaluated_at: 2026-04-25
+evaluated_by: claude-opus-4-7
 name: "Preventive Health Screening"
 what_it_is: |
   Following age-appropriate clinical screening guidelines to detect serious health conditions before symptoms appear – covering cancer screenings (colonoscopy, mammography, cervical smear, skin checks), metabolic screens (blood pressure, cholesterol, HbA1c for diabetes), and STI testing. The core logic is that most lethal diseases are far more treatable when caught early: a colonoscopy that finds and removes a polyp prevents colorectal cancer entirely; a mammogram that catches a stage-I tumour changes a prognosis from poor to excellent. Most individual screens return negative results, so the benefit is probabilistic – but a comprehensive, maintained screening programme is one of the highest-leverage things an adult can do for long-term health precisely because the expected value across a lifetime is very high.

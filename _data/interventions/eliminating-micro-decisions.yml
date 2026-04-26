@@ -1,3 +1,5 @@
+evaluated_at: 2026-03-21
+evaluated_by: claude-opus-4-7
 name: "Eliminating Micro-Decisions"
 what_it_is: |
   Systematically identifying and removing low-stakes recurring decisions – meals, clothing, routes, scheduling – by establishing default choices and 'if X, then always Y' rules. Once defaults are in place, the intervention works by removing effort rather than adding it, which makes it unusually durable. Complements [Creating SOPs](/resources/intervention-database/creating-sops), which preserves all steps but offloads sequencing, and [Habit Stacking](/resources/intervention-database/habit-stacking), which anchors new behaviours to existing routines.

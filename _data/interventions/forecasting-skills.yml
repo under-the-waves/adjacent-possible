@@ -1,3 +1,5 @@
+evaluated_at: 2026-04-25
+evaluated_by: claude-opus-4-7
 name: "Forecasting Skills"
 what_it_is: |
   Deliberate practice in making calibrated probabilistic predictions about future events – assigning specific numerical probabilities (e.g. "70% chance this happens"), tracking outcomes, and iterating on the gap between predicted and actual frequencies. Popularised by Philip Tetlock's Good Judgment Project (GJP), which showed that structured training and feedback can meaningfully improve predictive accuracy. The core skill is not certainty but calibration: a forecaster who says "70%" should be right roughly 70% of the time across all such predictions. This forces explicit probabilistic reasoning into domains where most people rely on vague intuitions, and the feedback loop – knowing whether you were right, and by how much – gradually corrects systematic biases like overconfidence and base-rate neglect.

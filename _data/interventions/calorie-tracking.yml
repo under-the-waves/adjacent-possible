@@ -1,3 +1,5 @@
+evaluated_at: 2026-03-23
+evaluated_by: claude-opus-4-7
 name: "Calorie Tracking"
 what_it_is: |
   Systematically logging all food and drink intake using a mobile app (e.g. MyFitnessPal, Cronometer, MacroFactor) to maintain awareness of energy consumption against a daily calorie target. Research identifies dietary self-monitoring as the single strongest behavioural correlate of weight loss. Compatible with any dietary pattern – the constraint is total intake, not food selection. Can be combined with a [High-Protein Diet](/resources/intervention-database/high-protein-diet) for improved satiety and body composition.

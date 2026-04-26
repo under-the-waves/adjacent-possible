@@ -1,3 +1,5 @@
+evaluated_at: 2026-04-25
+evaluated_by: claude-opus-4-7
 name: "Regularly Backing Up Digital Data"
 what_it_is: |
   Setting up automated backups of your digital files – photos, documents, work, and system data – across at least two locations (one local, one cloud) using the 3-2-1 rule: three copies of your data, on two different media types, with one stored off-site. The setup is largely one-time; once configured, backups run without ongoing decisions. This protects against the leading causes of personal data loss – hardware failure (30%), accidental deletion (34%), and device theft or damage – ensuring that a single catastrophic event cannot permanently destroy irreplaceable files.

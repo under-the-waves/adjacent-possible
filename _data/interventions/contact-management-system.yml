@@ -1,3 +1,5 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
 name: "Contact Management System"
 what_it_is: |
   A personal CRM – typically a spreadsheet, Notion database, Airtable base, or a dedicated tool such as Clay, Dex, Monica, or Cloze – that stores professional and personal contacts alongside structured metadata: where you met, shared interests, key dates (birthdays, work anniversaries, kids' names), last interaction, and a planned next follow-up. The system replaces ad hoc memory with a deliberate trigger mechanism so that relationships are maintained on a cadence rather than drifting until a need arises. The intervention is structurally trivial – setting up a spreadsheet takes an afternoon – but the value flows entirely from consistent use over months and years. Most adopters abandon their system within weeks; the small minority who sustain it accumulate a meaningful relational moat.

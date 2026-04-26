@@ -1,3 +1,5 @@
+evaluated_at: 2026-04-25
+evaluated_by: claude-opus-4-7
 name: "Learning Basic Cybersecurity Practices"
 what_it_is: |
   A structured effort to adopt the core layer of personal digital security that sits above password management: enabling two-factor authentication (2FA) on important accounts, learning to recognise and avoid phishing attempts, keeping devices and software updated promptly, and preferring encrypted connections (HTTPS, avoiding unprotected public Wi-Fi). Together these four practices address the most common vectors through which personal accounts and devices are compromised – credential takeover, social engineering, unpatched vulnerabilities, and network interception. The intervention is distinct from password manager setup, which is a prerequisite: that intervention eliminates credential reuse; this one hardens the surrounding security layer against attacks that a strong password alone cannot stop.
