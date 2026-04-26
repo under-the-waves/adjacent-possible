@@ -1,113 +1,150 @@
-evaluated_at: 2025-06-02
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "Bedtime Routine"
 what_it_is: |
-  A consistent sequence of relaxing activities performed in the same order 30–90 minutes before bed each night, designed to signal wind-down through predictable, calming behaviours. Typical activities include dimming lights, reading, gentle stretching, or a warm shower. Complements [Blue Light Blocking](/resources/intervention-database/blue-light-blocking) and [Breathing Techniques](/resources/intervention-database/breathing-techniques) as part of a broader sleep hygiene approach.
+  A consistent 30–60 minute pre-sleep ritual performed in the same order every night – typically dimming household lights, cutting off screens, light reading or stretching, hygiene routine, and going to bed at the same time. The focus is the routine itself as a behavioural cue for sleep onset, distinct from sleep hygiene generally. Complements [Blue Light Blocking](/resources/intervention-database/blue-light-blocking) and [Breathing Techniques](/resources/intervention-database/breathing-techniques) but operates through stimulus control rather than any single physiological lever.
 how_to_do_it: |
-  - Many people find that keeping the routine to 3–4 activities in a fixed order works better than elaborate multi-step sequences – simplicity is what makes it sustainable
-  - You may want to anchor the routine to a consistent start time rather than a consistent bedtime, since the wind-down period itself is what trains the sleep signal
-  - Including at least one activity that is genuinely enjoyable (light reading, a warm drink, gentle music) helps the routine feel like a reward rather than a chore
-  - Most practitioners find that dimming household lights as the first step creates an immediate environmental shift that separates the routine from the rest of the evening
+  - Pick 3–4 simple activities and perform them in a fixed sequence every night – simplicity is what makes the routine sustainable
+  - Anchor the routine to a fixed start time rather than a fixed bedtime; the wind-down period itself is what trains the sleep signal
+  - Include at least one genuinely enjoyable activity (light reading, a warm drink, gentle music) so the routine feels like a reward
+  - Dim household lights as the first step; sub-20 lux exposure in the hour before bed produces measurable circadian benefit per [field studies on home lighting](https://pmc.ncbi.nlm.nih.gov/articles/PMC4053688/)
 success_looks_like: |
-  - You feel noticeably drowsy by the end of the routine most nights, rather than lying in bed waiting for sleep to arrive
+  - You feel noticeably drowsy by the end of the routine on most nights, rather than lying in bed waiting for sleep to arrive
   - Sleep onset becomes faster and more predictable – falling asleep within 15–20 minutes of lights-out on most nights
-  - The routine itself becomes automatic within 4–6 weeks: you move through the steps without needing to think about what comes next
+  - The sequence becomes automatic within roughly 2 months, in line with [habit formation research](https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/) showing a median of 59 days to peak automaticity
 common_pitfalls: |
   - Building an overly ambitious routine (seven steps, 90 minutes) that feels burdensome and is abandoned within two weeks – start with 3 steps and 30 minutes
-  - Performing the routine inconsistently – doing it on weeknights but skipping weekends – which prevents the conditioning effect from building
-  - Including screen-based activities (scrolling social media, watching television) as part of the routine, which undermines the wind-down signal the routine is meant to create
+  - Performing the routine inconsistently – doing it on weeknights but skipping weekends – which prevents both the conditioning effect and the regularity benefit (sleep regularity is a stronger mortality predictor than duration per [Windred et al. (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10782501/))
+  - Including screen-based activities (scrolling, television) inside the routine, which raises melanopic irradiance and delays melatonin onset per [Brown et al. (2023)](https://www.nature.com/articles/s42003-023-04598-4)
 description: |
-  - A consistent sequence of relaxing activities performed 30-90 minutes before sleep at the same time each night
-  - Typical activities include dimming lights, avoiding screens, warm bath or shower, reading, gentle stretching, or meditation
-  - The fixed sequence signals wind-down through predictable, calming behaviours performed in the same order nightly
-  - Most people see improvements in sleep onset within 1-2 weeks, with full benefits typically achieved within 4-6 weeks
-applicable_domains: ["sleep", "mental-health"]
+  - A fixed 30–60 minute sequence of wind-down activities performed in the same order each night, ending at a consistent bedtime
+  - Typical components: dimming lights, screen cut-off, light reading or stretching, hygiene routine, then bed at the same clock time
+  - The mechanism is stimulus control – pairing a stable cue chain with sleep onset – not any single physiological intervention; [meta-analytic evidence](https://onlinelibrary.wiley.com/doi/10.1111/jsr.14002) supports stimulus control as an effective single-component therapy for insomnia
+  - Subjective improvements typically emerge within 1–2 weeks; full automaticity takes around 2 months per [habit formation research](https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/)
+  - Distinct from sleep hygiene generally: the focus is the predictability of the sequence, not the merits of any individual component
+applicable_domains: ["sleep", "mental-health", "cognitive-skills"]
 
 values:
   sleep.daily_functioning:
-    pbs: 7
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile (gaining ~1.5 additional productive hours per day). Delta: ~30–40 percentile points of improvement. [Irish et al. (2015)](https://doi.org/10.1016/j.smrv.2014.10.007) meta-analysis found bedtime routines reduce sleep onset latency by 10–15 minutes and improve sleep efficiency by 5–8%, translating to roughly 1–2 additional productive hours per day for someone with previously disrupted sleep.
-      - [Mindell et al. (2015)](https://doi.org/10.5665/sleep.4886) found consistent routines improved daytime alertness scores by 15-20% in adults, supporting a gain in the 1-2 hour range on the daily functioning anchor.
-      - On the updated anchor (10 = 14h, 8 = 3.5h, 6 = 50min), a gain of ~1.5 productive hours places this at score 7, between the 50-minute and 3.5-hour benchmarks.
-    isr: 85
-    isr_reasoning: |
-      - [Mindell et al. (2015)](https://doi.org/10.5665/sleep.4886) systematic review found 85-90% of participants showed meaningful improvement in sleep metrics when adhering to structured bedtime routines for 4+ weeks.
-      - [Irish et al. (2015)](https://doi.org/10.1016/j.smrv.2014.10.007) confirmed high response rates across multiple RCTs, with consistent effect sizes for sleep onset latency and efficiency improvements.
-      - The intervention targets well-understood behavioural conditioning mechanisms (stimulus control, wind-down cues) with replicated results across diverse populations.
-    uar: 70
+    pbs: 6
+    isr: 65
+    uar: 65
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile, recovering roughly 45–60 productive minutes per day from faster sleep onset, fewer awakenings, and reduced morning grogginess. Delta: ~20–25 percentile points.
+      - PBS = 10 + log₂(0.85/14) = 10 − 4.04 ≈ 6 on the daily-functioning anchor (anchor_max = 14 productive hours). [Sleep regularity research](https://pubmed.ncbi.nlm.nih.gov/33054339/) and [stimulus-control meta-analysis](https://onlinelibrary.wiley.com/doi/10.1111/jsr.14002) support sleep onset latency reductions of 10–15 minutes plus modest improvements in sleep efficiency, which translate to under an hour of additional functional time per day for a typical adult.
+      - The previous YAML claimed 1.5 added productive hours mapping to score 7; that overstates what stimulus control alone delivers. Successful adherents see a meaningful but bounded gain – this is a single behavioural lever, not a comprehensive sleep overhaul.
+    isr_reasoning: |
+      - Among adherent participants, [Verreault et al. (2024) network meta-analysis](https://onlinelibrary.wiley.com/doi/10.1111/jsr.14008) found stimulus control produced significant improvements in sleep onset latency and efficiency, with response rates in the 55–70% range across included RCTs.
+      - [Jansson-Fröjmark et al. (2024) meta-analysis](https://onlinelibrary.wiley.com/doi/10.1111/jsr.14002) found stimulus control as a single component is effective but heterogeneous – about a third of compliant users show no clinically meaningful change in objective sleep metrics.
+      - ISR set at 65%: better than placebo, well below the 85% in the prior scoring. The pathway is reliable for subjective improvement but objective daily-functioning gains depend on baseline sleep architecture and lifestyle factors the routine alone cannot fix.
     uar_reasoning: |
-      - [Harvey et al. (2014)](https://doi.org/10.1016/j.brat.2014.04.003) found simplified routines (3-4 activities) had significantly higher long-term adherence than complex ones, with approximately 70-75% maintenance beyond 3 months.
-      - [Lacks & Rotert (1986)](https://doi.org/10.1016/S0005-7894(86)80039-X) reported 70% adherence to stimulus control instructions at 6-month follow-up in insomnia treatment trials.
-      - Primary barriers include irregular work schedules, social commitments, and gradual motivation decline, though the low complexity of the intervention supports relatively high retention.
+      - [Adherence reviews](https://pmc.ncbi.nlm.nih.gov/articles/PMC3720832/) report stimulus-control adherence of 40–85% with a central estimate around 65%; main barriers are weekend disruption, social commitments, and discomfort during early implementation.
+      - [Habit formation research](https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/) puts median time-to-automaticity at 59 days, meaning users must sustain effortful adherence for roughly 2 months before the routine self-maintains; many drop out before that point.
+      - Simpler 3–4 step routines retain users at the upper end of that range; elaborate multi-component routines fall toward the lower end.
 
   sleep.long_term_health:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–65th percentile (~6 months additional healthy lifespan through reduced cardiovascular disease risk). Delta: ~20–30 percentile points of improvement. [Hirshkowitz et al. (2015)](https://doi.org/10.1016/j.sleh.2014.12.010) National Sleep Foundation guidelines indicate consistent sleep patterns reduce cardiovascular disease risk by 10–15% and improve immune function markers, corresponding to roughly 6 months additional healthy lifespan.
-      - [Cappuccio et al. (2010)](https://doi.org/10.1093/sleep/33.5.585) meta-analysis of 1.3 million participants found that improved sleep quality was associated with reduced all-cause mortality, though the specific contribution of bedtime routines (vs. total sleep quality) is moderate.
-      - On the updated anchor (10 = 8+ years, 8 = 2 years, 6 = 6 months), the estimated ~6 months of additional healthy lifespan aligns with score 6.
-    isr: 80
-    isr_reasoning: |
-      - Multiple longitudinal studies (n > 50,000) demonstrate reliable associations between regular sleep routines and reduced disease risk, though most evidence is observational rather than from RCTs specifically testing bedtime routines.
-      - [Huang et al. (2020)](https://doi.org/10.1038/s41746-020-0270-1) found that sleep regularity was a stronger predictor of health outcomes than total sleep duration, supporting a high ISR for regularity-promoting interventions.
-      - Slightly lower than daily functioning ISR (80 vs 85) because long-term health benefits depend on sustained implementation over years and involve more complex causal pathways.
-    uar: 70
+    pbs: 5
+    isr: 60
+    uar: 65
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile, gaining roughly 2–3 months of additional healthy lifespan via improved sleep regularity and modestly better sleep quality. Delta: ~15–20 percentile points.
+      - PBS = 10 + log₂(0.21/8) = 10 − 5.25 ≈ 5 on the long-term-health anchor (anchor_max = 8 years). [Windred et al. (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10782501/) found that moving from low to high sleep regularity is associated with up to a 48% lower all-cause mortality hazard, but a bedtime routine moves regularity by a fraction of that range, not the full delta.
+      - The prior PBS of 6 (≈6 months of healthy lifespan) overstates the contribution of the routine itself. Most observational mortality benefits attributed to sleep regularity confound with overall lifestyle quality; the isolated effect of adopting a bedtime routine is meaningful but smaller.
+    isr_reasoning: |
+      - [Sleep regularity and cardiovascular events](https://pubmed.ncbi.nlm.nih.gov/39603689/) shows the dose-response is shallow until SRI exceeds ~77 – a routine helps shift users into the protective zone, but only if adherence is high enough to actually stabilise wake/sleep timing.
+      - [Sleep timing systematic review](https://pubmed.ncbi.nlm.nih.gov/33054339/) confirms the regularity–health association across 41 studies and 92,340 participants but notes most evidence is observational; causal attribution to bedtime routines specifically is weaker than for sleep duration interventions.
+      - ISR of 60%: lower than daily functioning because the long-term health benefit requires sustained regularity for years and depends on the routine actually anchoring a stable bedtime, not just adding a wind-down sequence.
     uar_reasoning: |
-      - Same adherence rate as daily functioning, since the same behaviour produces both outcomes. [Harvey et al. (2014)](https://doi.org/10.1016/j.brat.2014.04.003) retention data applies equally.
-      - Health benefits require sustained implementation over months to years, but the routine is the same daily commitment regardless of which outcome is being measured.
-      - The absence of immediate health feedback (unlike the noticeable comfort improvements) does not change adherence because the behaviour is identical.
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile. The absence of immediate health feedback does not change adherence because the daily behaviour is identical.
 
   sleep.comfort_experience:
-    pbs: 8
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile (below-average sleep comfort). After successful adherence, a user could plausibly reach the 75th–85th percentile (consistently restful sleep with easier transitions). Delta: ~40–50 percentile points of improvement. [Mindell et al. (2015)](https://doi.org/10.5665/sleep.4886) systematic review found 80–85% improvement in subjective sleep satisfaction scores among adults with consistent routines, with participants reporting significantly easier sleep transitions and reduced bedtime anxiety.
-      - The intervention directly targets the subjective experience of falling asleep and sleep quality through relaxation, environmental cues, and psychological wind-down, making it one of the most effective comfort-focused sleep interventions.
-      - On the updated anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), successful implementation typically moves someone to "consistently restful" sleep, aligning with score 8.
-    isr: 90
-    isr_reasoning: |
-      - The mechanism is straightforward: consistent routines create psychological and physiological cues for sleep preparation, with [Bootzin & Epstein (2011)](https://doi.org/10.1037/a0023438) confirming that stimulus control procedures produce reliable subjective sleep improvements in 90%+ of compliant participants.
-      - Subjective comfort outcomes are more consistently achieved than objective sleep metrics, as the relaxation activities directly reduce pre-sleep arousal regardless of downstream sleep architecture effects.
-      - Multiple RCTs show very high success rates (85-90%) for improved subjective sleep experience when routines are properly implemented for 4+ weeks.
-    uar: 75
+    pbs: 7
+    isr: 80
+    uar: 70
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile, with subjective sleep transitioning from "below average" to "consistently restful" on most nights. Delta: ~30–40 percentile points.
+      - On the subjective anchor (10 = transformative gain, 8 = major gain, 6 = meaningful gain), the experience of falling asleep more easily, lower bedtime anxiety, and a sense of evening boundaries between work and rest is a major but not transformative gain – score 7 sits between meaningful and major.
+      - The comfort effect is the strongest of the three sleep value-domains because the routine directly targets the subjective experience of sleep preparation: reduced pre-sleep arousal, environmental cues for relaxation, and the psychological satisfaction of a deliberate end-of-day ritual.
+    isr_reasoning: |
+      - [Stimulus control meta-analyses](https://onlinelibrary.wiley.com/doi/10.1111/jsr.14002) consistently show subjective sleep quality improves more reliably than objective sleep architecture among compliant users – roughly 75–85% report meaningful subjective improvement.
+      - The relaxation activities reduce pre-sleep arousal regardless of downstream sleep architecture effects, which is why subjective comfort is the most reliable benefit.
+      - ISR set at 80%: high, but not as high as the prior 90% – a meaningful minority of users feel the routine is performative or fail to find activities that genuinely help them wind down.
     uar_reasoning: |
-      - Slightly higher adherence than other sleep outcomes because comfort improvements are immediately noticeable within the first week, providing positive reinforcement. [Buysse et al. (2011)](https://doi.org/10.1001/archinternmed.2011.476) found that perceived sleep quality gains predicted continued adherence.
-      - [Harvey et al. (2014)](https://doi.org/10.1016/j.brat.2014.04.003) noted that participants who experienced subjective improvements in the first 2 weeks were significantly more likely to maintain routines at 6-month follow-up.
-      - Approximately 25% still struggle with long-term consistency due to lifestyle demands, travel, and competing evening activities, though the immediate feedback loop supports better retention than health-focused outcomes.
+      - Slightly higher adherence (70 vs 65) because comfort improvements are noticeable within the first week, providing positive reinforcement that sustains the habit. [CBT-I adherence research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5837899/) shows perceived benefit predicts continued adherence.
+      - Same baseline barriers as daily functioning – weekend disruption, social commitments, travel – but the immediate feedback loop pulls UAR upward.
+      - Approximately 30% still struggle with long-term consistency despite enjoying the experience when they do it.
 
   mental-health.stability:
-    pbs: 5
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 45th–55th percentile (moderately improved mood stability through better sleep quality). Delta: ~10–20 percentile points of improvement. [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) meta-analysis of 154 studies (n = 5,717) found sleep loss reduces positive affect (SMD = -0.27 to -1.14) and impairs emotion regulation, with [Goldstein & Walker (2014)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7181893/) establishing that sleep quality modulates prefrontal-amygdala connectivity essential for emotional regulation.
-      - [Kahn et al. (2013)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8193556/) meta-analysis found sleep restriction produces medium effect sizes on negative mood (g = 0.45), indicating that improving sleep quality via a bedtime routine raises the emotional baseline and reduces mood instability.
-      - On the subjective anchor (10 = complete freedom from distressing symptoms, 6 = occasional distress resolving quickly, 4 = frequent distress affecting daily functioning), a bedtime routine improves sleep quality which supports emotional regulation, moving someone modestly up the scale. Score 5 reflects a meaningful but secondary benefit – sleep quality is one contributor to mood stability but does not address cognitive or social drivers of distress.
-    isr: 55
-    isr_reasoning: |
-      - The causal pathway from bedtime routine to mood stability passes through sleep quality improvement, then emotional regulation, each step introducing variability. Not all sleep quality gains translate to noticeable mood changes, particularly for individuals without baseline sleep-related mood disruption.
-      - [Palmer et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38127505/) found mixed results for depressive symptoms depending on sleep loss type, suggesting the sleep-mood pathway is less reliable than the sleep-functioning pathway.
-      - Conservatively estimated at 55% – higher than the optimising-lighting ISR for mental health (40%) because bedtime routines have more consistent effects on subjective sleep quality, but lower than the primary sleep ISR (85%) due to the indirect pathway.
-    uar: 70
+    pbs: 4
+    isr: 50
+    uar: 65
     confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 40th–50th percentile via improved sleep quality supporting prefrontal–amygdala connectivity essential for emotion regulation. Delta: ~5–15 percentile points.
+      - On the subjective anchor (6 = occasional distress resolving quickly, 4 = frequent distress affecting daily functioning, 2 = barely noticeable gain), score 4 reflects a modest but real benefit – sleep quality is one contributor to mood stability, but a bedtime routine alone does not address cognitive, social, or biological drivers of distress.
+      - [Palmer et al. (2024) meta-analysis](https://pubmed.ncbi.nlm.nih.gov/38127505/) of 154 studies and 5,717 participants found sleep loss reduces positive affect and impairs emotion regulation; better sleep quality from a routine moves the dial in the opposite direction, but the effect is bounded by how much sleep itself improves.
+    isr_reasoning: |
+      - The causal pathway is two-step (routine → sleep quality → mood stability), with each step introducing variability. [Sleep–emotion meta-analysis](https://www.apa.org/pubs/journals/releases/bul-bul0000410.pdf) shows mood effects are heterogeneous across sleep loss types.
+      - Not all sleep quality gains translate to noticeable mood changes, particularly for users without baseline sleep-related mood disruption.
+      - ISR set at 50%: roughly half of adherent users will notice meaningful day-to-day mood stability gains; the rest see sleep improvements that don't propagate to emotional baseline.
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+
+  cognitive-skills.lifestyle:
+    pbs: 5
+    isr: 80
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~1–2 of 5 evidence-based lifestyle practices maintained). The anchor explicitly counts sleep as one of the 5 practices (sleep, exercise, nutrition, stress management, social engagement). Adopting a stable bedtime routine moves a user from "not maintaining sleep practice" to "maintaining sleep practice", a gain of roughly 1 practice. Endpoint: ~50th–55th percentile.
+      - PBS = 10 + log₂(1/5) = 10 − 2.32 ≈ 5 on the cognitive-skills.lifestyle anchor (anchor_max = 5 practices).
+      - The routine doesn't add other practices, so the gain is bounded at one anchor unit. Score 5 maps cleanly to "1 of 5 practices" on the log scale.
+    isr_reasoning: |
+      - The mechanical link is direct: maintaining a consistent bedtime routine essentially is the sleep lifestyle practice. ISR of 80% reflects that adherent users mechanically satisfy this anchor – it doesn't require a downstream cognitive outcome.
+      - The 20% loss accounts for users whose routine is too inconsistent or too short to count as a maintained daily practice in the spirit of the anchor.
+      - No separate mechanism risk here – this is a definitional alignment, not a probabilistic causal chain.
+    uar_reasoning: |
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
+
+  cognitive-skills.focus:
+    pbs: 4
+    isr: 55
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The cognitive-skills.focus anchor (anchor_max = 120 minutes of sustained focused work) responds to sleep quality through next-day attention and working memory. Better sleep typically extends sustained-focus capacity by 5–10 minutes for someone starting near baseline. Endpoint: ~40th–45th percentile.
+      - PBS = 10 + log₂(7.5/120) = 10 − 4.0 ≈ 4 on the focus anchor.
+      - [Whitehall II findings](https://pmc.ncbi.nlm.nih.gov/articles/PMC3079935/) and [sleep-cognition reviews](https://www.sciencedirect.com/science/article/abs/pii/S2352721823002930) confirm the link between consistent sleep and working memory/response inhibition, but the effect attributable to a routine alone (vs full sleep optimisation) is modest.
+    isr_reasoning: |
+      - The pathway runs routine → sleep quality → next-day focus, with attenuation at each step. Not all sleep quality gains produce noticeable focus improvements, particularly in users whose focus bottleneck is attentional control rather than sleep deprivation.
+      - [National Sleep Foundation consensus](https://www.thensf.org/sleep-schedules-sleep-timing-guideline/) supports the regularity–attention link but notes high individual variability in dose-response.
+      - ISR of 55%: roughly half of adherent users will notice meaningful focus gains; the remainder see sleep improvements that don't translate to next-day attentional capacity.
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
 resources:
   upfront_cost: 25
-  upfront_cost_reasoning: "Basic essentials only: blackout curtains or eye mask (£15), basic book or journal (£10). Many routine activities require no additional purchases (dimming existing lights, basic stretching, shower/bath with existing supplies)."
+  upfront_cost_reasoning: "Basic essentials only: blackout curtains or eye mask (£15), basic book or journal (£10). Most routine activities require no additional purchases – existing dimmable lights, basic stretching, hygiene supplies."
   ongoing_cost: 0
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "No recurring expenses required for basic bedtime routine implementation. All activities can use existing household items and require no subscriptions or consumables."
+  ongoing_cost_reasoning: "No recurring expenses required. All routine activities can use existing household items; no subscriptions or consumables needed."
   upfront_time: 2
-  upfront_time_reasoning: "Minimal setup time to establish routine sequence, install blackout curtains if needed, and identify preferred relaxing activities. Most time is spent in initial planning and environmental preparation."
+  upfront_time_reasoning: "Time to design the routine sequence, identify preferred wind-down activities, and adjust the bedroom environment (curtains, lighting). Most setup is one-off planning rather than equipment installation."
   ongoing_time: 4
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "30-60 minutes per night for routine activities, totalling approximately 4 hours per week. This represents minimum effective implementation - shorter routines may be less effective for sleep preparation."
+  ongoing_time_reasoning: "30–60 minutes per night for the routine, totalling roughly 4 hours per week. Shorter routines may not produce sufficient wind-down; longer routines tend to be abandoned."
 
 prerequisites:
-  - "Ability to maintain consistent evening schedule most nights of the week"
-  - "Access to private space for relaxing activities without major disruptions"
-  - "Basic understanding of sleep hygiene principles and routine sequencing"
-  - "Physical capability to perform chosen relaxing activities (reading, stretching, bathing)"
+  - "Ability to maintain a consistent evening schedule on most nights – shift work and frequent late commitments make this prohibitive"
+  - "Access to a bedroom and bathroom space where the routine can be performed without major interruption"
+  - "Physical capability to perform chosen wind-down activities (reading, light stretching, bathing)"
+
+flagged_domains:
+  - domain: "behaviours"
+    rationale: "The emotional sub-value (anchor: stress-driven reactive behaviours per week) plausibly improves via better sleep quality reducing daytime emotional reactivity, but the effect is captured more directly in mental-health.stability and would double-count if scored separately."
+  - domain: "habits"
+    rationale: "The intervention itself is a habit, so scoring it against habits.consistency or habits.impact would be circular – the value of the routine showing up consistently is already captured by the UAR fields above."

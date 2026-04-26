@@ -1,149 +1,146 @@
-evaluated_at: 2025-06-02
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "High-Intensity Interval Training (HIIT)"
 what_it_is: |
-  Alternating periods of high-intensity exercise (80–95% maximum heart rate) with active recovery or rest, in sessions lasting 15–30 minutes, typically 3 times per week. Work intervals range from 30 seconds to 4 minutes. Distinct from steady-state cardio in its time efficiency and superior VO2max stimulus per minute, and from [Functional Training](/resources/intervention-database/functional-training) in its metabolic rather than mechanical emphasis. Pairs well with [Daily Walking](/resources/intervention-database/daily-walking) on recovery days.
+  Alternating periods of high-intensity exercise (80–95% maximum heart rate) with active recovery, in sessions lasting 15–30 minutes, typically 2–3 times per week. Work intervals range from 30 seconds (sprint-interval and Tabata-style protocols) to 4 minutes (Norwegian 4x4). Distinguished from [Zone 2 Cardio](/resources/intervention-database/zone-2-cardio) by its short duration and high per-minute VO2max stimulus, and from [Calisthenics](/resources/intervention-database/calisthenics) by its metabolic rather than skill-based emphasis. Zone 2 and HIIT are complementary in a polarised training model rather than substitutes – Zone 2 provides aerobic base, HIIT provides VO2max ceiling.
 how_to_do_it: |
-  - Start with a protocol that matches your current fitness: beginners often do well with 30-second work intervals and 60–90 seconds of recovery, repeated 6–8 times, on a bike, rower, or running route
-  - Many people find that shorter intervals (30–60 seconds) produce a more positive experience than longer ones (3–4 minutes), making them a better starting point for building the habit
-  - Use a simple timer app or interval timer rather than tracking heart rate obsessively – perceived exertion of 'hard but not maximal' during work intervals is sufficient for most people
-  - Allow at least 48 hours between HIIT sessions to recover; three sessions per week is the practical ceiling for most non-athletes, with diminishing returns beyond that
+  - Start with a protocol matched to current fitness: beginners often do well with 30-second work intervals and 60–90 seconds of recovery, repeated 6–8 times on a bike, rower, or running route
+  - Two well-validated formats anchor most programmes: the Norwegian 4x4 (4 minutes at ~90% HRmax, 3 minutes recovery, four times) for VO2max gains in trained populations, and shorter sprint-interval formats (30-second hard efforts) which produce more positive in-session affect for beginners
+  - A simple timer app or interval timer is sufficient – perceived exertion of 'hard but not maximal' during work intervals reliably tracks the prescribed zone for most people
+  - Allow at least 48 hours between HIIT sessions; 2–3 sessions per week is the practical ceiling for non-athletes, and additional sessions produce diminishing returns and overtraining risk
 success_looks_like: |
-  - Cardiovascular fitness improves measurably within 2–4 weeks: the same interval protocol feels noticeably easier, and resting heart rate drops
+  - VO2max improves measurably within 6–12 weeks: the same interval protocol feels noticeably easier, and resting heart rate drops 5–10 bpm
   - You recover faster between intervals and between sessions – the post-workout fatigue that dominated the first few weeks diminishes as adaptation occurs
-  - The time efficiency feels genuinely valuable: 20 minutes of focused effort produces fitness gains that previously required 45–60 minutes of steady-state cardio
+  - The time efficiency feels genuinely valuable: 60–90 minutes of total weekly effort produces fitness gains that previously required 3–4 hours of steady-state cardio
 common_pitfalls: |
-  - Going too hard too soon – starting at true maximal effort before building a base leads to excessive soreness, dread of the next session, and early abandonment
-  - Performing HIIT daily without recovery days, which produces overtraining symptoms (persistent fatigue, elevated resting heart rate, poor sleep) within 2–3 weeks
-  - Relying on HIIT alone for fat loss without addressing diet – compensatory eating after intense sessions can offset the caloric expenditure, and the scale may not move despite improved fitness
+  - Going too hard too soon – starting at true maximal effort before building a base leads to excessive soreness, dread of the next session, and early abandonment within weeks
+  - Performing HIIT daily without recovery, which produces overtraining symptoms (persistent fatigue, elevated resting heart rate, poor sleep) within 2–3 weeks
+  - Over-relying on the post-exercise oxygen consumption (EPOC) effect for fat loss – the [actual EPOC contribution](https://doi.org/10.1111/obr.12532) is modest (around 6–15% of session energy expenditure), and compensatory eating after intense sessions can offset much of the deficit
 description: |
-  - Alternating periods of high-intensity exercise (80-95% maximum heart rate) with active recovery or rest, in sessions lasting 15-30 minutes, typically 3 times per week
-  - Work intervals range from 30 seconds to 4 minutes, recruiting maximal muscle fibre activation and stressing cardiovascular systems before partial recovery
-  - Distinct from steady-state cardio in its time efficiency and superior VO2max stimulus per minute; distinct from strength training in its metabolic rather than mechanical emphasis
-  - [Umbrella review evidence](https://doi.org/10.1007/s40279-021-01505-1) across 429 primary studies shows significant improvements in 14 cardiometabolic health parameters, with results emerging within 2-4 weeks and substantial gains by 8-12 weeks
+  - Alternating high-intensity work intervals (80–95% maximum heart rate) with active recovery, in sessions lasting 15–30 minutes, typically 2–3 times per week
+  - Work intervals span 30 seconds to 4 minutes; the 4x4 Norwegian protocol and shorter sprint-interval formats are the two most evidenced templates
+  - [Meta-analytic evidence](https://doi.org/10.1007/s40279-015-0365-0) across 39 studies shows HIIT produces VO2max improvements 4.5–9.5% larger than moderate continuous training at matched programme duration, with the strongest stimulus per minute of any cardio modality
+  - Distinct from [Zone 2 Cardio](/resources/intervention-database/zone-2-cardio) (slower aerobic adaptations but higher adherence and volume tolerance) and from steady-state cardio in general by its time efficiency and superior VO2max stimulus per minute
 applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
     pbs: 8
+    isr: 80
+    uar: 50
+    confidence: high
     pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile on health and longevity. Delta: ~40–45 percentile points of improvement. Large-scale umbrella review of 24 systematic reviews (429 primary studies, 12,967 participants) demonstrates HIIT produces significant improvements in 14 clinically relevant cardiometabolic health parameters ([Atakan et al. 2021, Sports Med](https://doi.org/10.1007/s40279-021-01505-1))
-      - Studies show 37-49% lower all-cause mortality risk compared to current physical activity guidelines, and HIIT improves VO2max (strongest mortality predictor) by 0.58 standard deviations in meta-analyses, corresponding to 3-5 additional healthy years on the linear anchor ([Ross et al. 2016, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0000000000000892))
-      - Substantial improvements in blood pressure, glucose regulation, and cardiovascular risk factors; the GENERATION 100 trial found vigorous exercise superior to moderate for cardiovascular health in elderly populations ([Stensvold et al. 2020, BMJ](https://doi.org/10.1136/bmj.m3485))
-    isr: 85
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile on health and longevity. Delta: ~40–45 percentile points. Cardiorespiratory fitness is the strongest single predictor of all-cause mortality across [199 cohort studies and 20.9 million observations](https://doi.org/10.1249/MSS.0000000000000892); each 1-MET increase associates with 11–17% lower all-cause mortality risk
+      - [Meta-analysis of CRF and mortality](https://doi.org/10.1001/jama.2009.681) (Kodama et al. 2009) confirms a 13% mortality reduction per 1-MET CRF increase, and HIIT is the most time-efficient way to improve CRF: meta-analytic VO2max gains of ~3.5 ml/kg/min map to ~1 MET, corresponding to roughly 3–5 additional healthy years on the linear anchor
+      - Beyond longevity, HIIT produces broad cardiometabolic improvements – blood pressure, glucose regulation, insulin sensitivity, and arterial stiffness – with [umbrella review evidence](https://doi.org/10.1007/s40279-021-01505-1) across 14 cardiometabolic parameters confirming the breadth of effect
     isr_reasoning: |
-      - Very high-quality evidence from multiple large meta-analyses across diverse populations consistently confirms HIIT effectiveness for cardiometabolic health outcomes ([Atakan et al. 2021, Sports Med](https://doi.org/10.1007/s40279-021-01505-1))
-      - Physiological adaptations (VO2max improvement, mitochondrial biogenesis, cardiac remodelling) are well-characterised with reliable dose-response relationships ([MacInnis & Gibala 2017, J Physiol](https://doi.org/10.1113/JP273196))
-      - Benefits are reproduced across clinical populations including cardiac rehabilitation, type 2 diabetes, and metabolic syndrome patients with low heterogeneity between studies ([Weston et al. 2014, Br J Sports Med](https://doi.org/10.1136/bjsports-2013-092576))
+      - HIIT reliably improves VO2max in trained and untrained populations: [Milanović et al. 2015 meta-analysis](https://doi.org/10.1007/s40279-015-0365-0) of 39 studies found mean VO2max gains of 4.2–4.5 ml/kg/min, with roughly 80% of adherent participants achieving meaningful improvement
+      - Cardiometabolic adaptations are reproduced across diverse clinical populations including cardiac rehabilitation, type 2 diabetes, and metabolic syndrome with low between-study heterogeneity ([Weston et al. 2014, Br J Sports Med](https://doi.org/10.1136/bjsports-2013-092576))
+      - Modest reduction relative to Zone 2 (ISR 80) is unwarranted – HIIT matches or exceeds Zone 2 on the VO2max-mortality pathway, and ISR for the longevity outcome is comparably high
+    uar_reasoning: |
+      - Real-world HIIT adherence is meaningfully lower than Zone 2: supervised compliance averages 89% but drops to 63% unsupervised at 3 months and 19.6% at 12 months ([Roy et al. 2018](https://doi.org/10.3390/ijerph15122540)), reflecting the intensity barrier
+      - The intensity barrier is the primary adherence limiter: [dual-mode theory and affective response research](https://doi.org/10.2165/11590680-000000000-00000) shows in-exercise affect at supra-threshold intensities is consistently negative for most people, particularly those with lower baseline fitness
+      - UAR ~50 sits below Zone 2 (UAR 70) and below Calisthenics (UAR 45) by a small margin; the time efficiency partially offsets aversiveness for the time-constrained, but for most users the willingness to repeatedly tolerate near-maximal effort is the binding constraint
+  fitness.performance:
+    pbs: 8
+    isr: 80
     uar: 55
     confidence: high
-    uar_reasoning: |
-      - Real-world adherence shows HIIT compliance averages 89.4% in supervised settings but drops to 63% in unsupervised environments, with adherence declining to 19.6% by 12 months unsupervised ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
-      - Dropout rates from HIIT interventions average 17.6% in RCTs, but real-world retention is substantially lower due to the sustained motivational demands of high-intensity effort ([Kellogg et al. 2019, Int J Exerc Sci](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6719818/))
-      - The intensity barrier is the primary adherence limiter: many people find sustained high-intensity effort aversive, particularly those new to exercise ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-
-  fitness.performance:
-    pbs: 7
     pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile on fitness performance. Delta: ~30–35 percentile points of improvement. HIIT significantly improves VO2max in both untrained and trained populations, with meta-analyses showing 0.58 SMD improvement over conventional training, capable of elevating sedentary individuals to the 50th-85th percentile on cardio fitness tests ([Milanovic et al. 2015, Sports Med](https://doi.org/10.1007/s40279-015-0365-0))
-      - Elite athletes can achieve VO2max values of 70-85 ml/kg/min; HIIT produces meaningful improvements even in already-trained populations, though marginal gains diminish at higher fitness levels ([Laursen & Jenkins 2002, Sports Med](https://doi.org/10.2165/00007256-200232010-00003))
-      - HIIT develops cardiovascular and anaerobic capacity effectively but provides limited strength, power, or sport-specific skill development, placing performance ceiling below dedicated sport-specific training ([Buchheit & Laursen 2013, Sports Med](https://doi.org/10.1007/s40279-013-0029-x))
-    isr: 75
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–85th percentile on age-matched fitness tests. Delta: ~40–50 percentile points. HIIT is the most VO2max-targeted protocol available and VO2max is the primary determinant of cardiorespiratory fitness percentile rankings
+      - [Milanović et al. 2015 meta-analysis](https://doi.org/10.1007/s40279-015-0365-0) found HIIT produced VO2max gains 4.5–9.5% larger than moderate continuous training in healthy young adults, and [head-to-head trials](https://doi.org/10.1249/MSS.0000000000000800) show HIIT outperforming endurance training on VO2max despite ~40% lower time investment
+      - Score 8 sits one point above Zone 2 (PBS 6) on this axis: HIIT directly trains the VO2max ceiling that anchors fitness percentile rankings, while Zone 2 alone cannot push the ceiling without supplemental high-intensity work
     isr_reasoning: |
-      - Strong evidence from controlled studies in athletic and general populations demonstrates consistent VO2max improvements, with meta-analysis of studies showing significant improvements over conventional training methods ([Milanovic et al. 2015, Sports Med](https://doi.org/10.1007/s40279-015-0365-0))
-      - Performance gains are reliable for cardiovascular fitness but more variable for other performance domains; the protocol specificity matters considerably ([Buchheit & Laursen 2013, Sports Med](https://doi.org/10.1007/s40279-013-0029-x))
-      - Evidence base for HIIT performance benefits is somewhat smaller than for health outcomes, with some studies having limited sample sizes and varied protocols ([Laursen & Jenkins 2002, Sports Med](https://doi.org/10.2165/00007256-200232010-00003))
-    uar: 60
-    confidence: medium
+      - VO2max response to HIIT is essentially universal in healthy adults: [pooled analysis](https://doi.org/10.1007/s40279-015-0365-0) shows ~80% of adherent participants achieve meaningful gains, with non-responders typically clustering in already-trained populations near genetic ceilings
+      - Protocol specificity matters: the 4x4 Norwegian format and sprint-interval formats produce different adaptation patterns, but both reliably improve VO2max ([Buchheit & Laursen 2013](https://doi.org/10.1007/s40279-013-0029-x))
+      - Performance gains in non-cardiorespiratory domains (strength, sport-specific skill) are limited; ISR for the broader 'fitness performance' construct is bounded by HIIT's narrow training stimulus
     uar_reasoning: |
-      - Athletes and performance-motivated exercisers show higher adherence rates than the general population due to existing training habits and clear performance goals ([Lox et al. 2014, The Psychology of Exercise](https://doi.org/10.4324/9781315213187))
-      - Supervised compliance rates exceed 85% in athletic populations, but self-directed HIIT adherence drops significantly without external accountability ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
-      - The time efficiency of HIIT is a significant adherence advantage for time-constrained individuals, partially offsetting the intensity barrier ([Gibala et al. 2012, J Physiol](https://doi.org/10.1113/jphysiol.2011.224725))
-
+      - Performance-motivated exercisers show somewhat better adherence than the general population due to existing training habits and explicit goals; supervised compliance exceeds 85% in athletic populations ([Roy et al. 2018](https://doi.org/10.3390/ijerph15122540))
+      - Time efficiency is a meaningful adherence advantage for time-constrained individuals, partially offsetting the intensity barrier ([Gibala et al. 2012](https://doi.org/10.1113/jphysiol.2011.224725))
+      - UAR 55 reflects modest improvement over the general-population HIIT figure (50), driven by performance-goal selection effects, but well below the Zone 2 performance UAR (65) where the lower per-session aversion supports more reliable long-term practice
   fitness.enjoyment:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile (below-average enjoyment of physical activity). After successful adherence, a user could plausibly reach the 55th–60th percentile (moderately above average). Delta: ~20–25 percentile points. Time efficiency is a genuine enjoyment factor: knowing a session will be over in 15-25 minutes reduces dread and makes the effort psychologically manageable, and the sense of accomplishment after completing a hard interval set provides a satisfying 'done' feeling
-      - During high-intensity work intervals, the experience is genuinely unpleasant for most people: breathlessness, muscular burn, and cardiovascular strain dominate the in-session experience, which limits how enjoyable the activity can be rated overall
-      - Score 6 ('generally enjoyable') reflects the trade-off: the brevity and post-session satisfaction offset the in-session discomfort, but HIIT lacks variety, skill progression, social elements, or nature exposure that characterise more inherently enjoyable activities
-    isr: 75
-    isr_reasoning: |
-      - Meta-analysis of affective responses shows HIIT produces comparable or slightly higher post-exercise enjoyment ratings than moderate continuous training on the PACES scale, but in-exercise affect is consistently more negative at prescribed high intensities ([Oliveira et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0916-7))
-      - Interval structure significantly moderates enjoyment: shorter intervals (30-60 seconds) with adequate recovery produce substantially more positive affective responses than longer intervals (3-4 minutes), meaning protocol design heavily influences the proportion who find it enjoyable ([Thum et al. 2017, PLoS ONE](https://doi.org/10.1371/journal.pone.0166299))
-      - Individual variation in affective response to high-intensity exercise is large and systematic: those with higher baseline fitness report more positive affect, while less fit individuals experience disproportionately negative responses at the same relative intensity ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-    uar: 55
+    pbs: 5
+    isr: 60
+    uar: 50
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (below-average enjoyment of physical activity). After successful adherence, a user could plausibly reach the 50th–55th percentile (modest gain). Delta: ~15–20 percentile points. Time efficiency is a genuine enjoyment factor: short sessions reduce dread and provide a satisfying 'done' feeling that many people find rewarding once finished
+      - In-session experience is the constraint: at prescribed high intensities, breathlessness and muscular discomfort dominate, and [meta-analytic affective response data](https://doi.org/10.1007/s40279-018-0916-7) shows in-exercise affect at HIIT intensities is consistently more negative than at moderate intensities, even when post-session ratings are similar
+      - Score 5 sits below Zone 2 (PBS 6) and Calisthenics (PBS 7) on this axis: HIIT lacks the modality-stacking pleasantness of Zone 2 and the skill-progression engagement of calisthenics; only the brevity and post-session satisfaction prevent it from scoring lower
+    isr_reasoning: |
+      - [Affective response meta-analyses](https://doi.org/10.1007/s40279-018-0916-7) show that while post-session enjoyment ratings are comparable to moderate-intensity training, in-exercise affect varies widely – roughly 60% of adherent practitioners come to find the format tolerable to enjoyable, but a meaningful minority continue to find the intensity aversive
+      - Interval structure significantly moderates enjoyment: [shorter intervals (30–60 seconds)](https://doi.org/10.1371/journal.pone.0166299) produce substantially more positive affective responses than longer 3–4 minute intervals, meaning protocol design heavily influences who finds it enjoyable
+      - Individual variation is large: [those with higher baseline fitness](https://doi.org/10.2165/11590680-000000000-00000) report more positive affect at prescribed high intensities, while less fit individuals experience disproportionately negative responses
     uar_reasoning: |
-      - Enjoyment supports adherence but real-world implementation still faces challenges from the high-intensity nature, which can be intimidating for sedentary individuals ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Proper progression and interval selection are crucial for maintaining positive experiences over time; poorly designed protocols produce aversive responses ([Oliveira et al. 2018, Sports Med](https://doi.org/10.1007/s40279-018-0916-7))
-      - The lack of variety, social interaction, and environmental stimulation in typical HIIT formats reduces long-term engagement compared to more inherently enjoyable activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-
+      - See fitness.health UAR – same intervention, same adherence profile; enjoyment-driven adherence faces the same intensity barrier as health-driven adherence
   body-image.fat_loss:
     pbs: 7
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile on sustained fat loss. Delta: ~30–35 percentile points of improvement. Meta-analysis of 39 studies found successful HIIT practitioners lose 1.4 kg fat mass on average, with body fat percentage reductions of 1.5 – 2.4% over 8 – 12 weeks; running-based protocols produce stronger results than cycling ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
-      - Umbrella meta-analysis confirms interval training reduces body fat by a pooled 1.5% with fat mass losses of 1.8 kg, and programmes exceeding 12 weeks in overweight populations produce the largest effects ([Atakan et al. 2024, Sports Med](https://doi.org/10.1007/s40279-024-02070-9))
-      - HIIT produces similar total fat loss to moderate-intensity continuous training despite 40% less time investment, with the caloric afterburn (EPOC) providing a modest additional edge ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532))
-      - On the logarithmic anchor, 3% sustained loss maps to 10 + log₂(3/25) = 6.94, rounding to PBS 7
-    isr: 70
-    isr_reasoning: |
-      - Exercise-alone trials show large individual variation in fat loss response to HIIT, ranging from 8 kg lost to 0.1 kg gained within the same study; compensatory eating offsets a substantial fraction of exercise energy expenditure in many participants ([Boutcher 2011, J Obes](https://doi.org/10.1155/2011/868305); [King et al. 2008, PLoS ONE](https://doi.org/10.1371/journal.pone.0002398))
-      - HIIT's high caloric burn per session (~400 – 600 kcal) makes it more resistant to full compensation than low-intensity exercise, and some evidence suggests HIIT may suppress appetite acutely more than moderate-intensity training ([Deighton et al. 2013, Appetite](https://doi.org/10.1016/j.appet.2013.06.006))
-      - Protocol variation introduces meaningful heterogeneity: shorter intervals (30 – 60 seconds) and running-based formats produce more consistent fat loss than longer intervals or cycling protocols ([Maillard et al. 2018, Sports Med](https://doi.org/10.1007/s40279-017-0807-y))
-      - Score 70 reflects that roughly two-thirds to three-quarters of consistent HIIT practitioners achieve meaningful fat loss, with the higher caloric demand reducing but not eliminating compensatory non-response
+    isr: 65
     uar: 40
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile on sustained fat loss. Delta: ~25–30 percentile points. [Meta-analysis of 39 studies](https://doi.org/10.1007/s40279-017-0807-y) found successful HIIT practitioners lose 1.4 kg fat mass on average, with body fat percentage reductions of 1.5–2.4% over 8–12 weeks; running-based protocols produce stronger results than cycling
+      - [Umbrella meta-analysis](https://doi.org/10.1007/s40279-024-02070-9) confirms interval training reduces body fat by a pooled 1.5% with fat mass losses of ~1.8 kg, with programmes exceeding 12 weeks in overweight populations producing the largest effects
+      - HIIT produces similar total fat loss to moderate-intensity continuous training despite ~40% lower time investment ([Wewege et al. 2017, Obes Rev](https://doi.org/10.1111/obr.12532)); the EPOC contribution is real but modest at 6–15% of session energy expenditure, and is often overstated in popular framing
+      - On the logarithmic anchor, 3% sustained loss maps to 10 + log₂(3/25) = 6.94, rounding to PBS 7 – one point above Zone 2 (PBS 6) and matching Calisthenics on a different mechanism (caloric burn vs muscle gain)
+    isr_reasoning: |
+      - Exercise-alone fat loss trials show large individual variation: ranges from 8 kg lost to 0.1 kg gained within the same study, driven primarily by [compensatory eating that offsets a substantial fraction of exercise energy expenditure](https://doi.org/10.1371/journal.pone.0002398)
+      - HIIT's higher per-session caloric burn (~400–600 kcal for 30 minutes total session time) makes it more resistant to full compensation than low-intensity exercise, and [acute appetite research](https://doi.org/10.1016/j.appet.2013.06.006) suggests HIIT may suppress appetite more than moderate-intensity training
+      - Approximately 65% of consistent HIIT practitioners achieve meaningful fat loss without dietary co-intervention, with the remainder seeing the deficit largely eliminated by compensatory non-exercise behaviour
     uar_reasoning: |
-      - Real-world unsupervised HIIT adherence drops to 19.6% at 12 months, compared with 89% in supervised settings – a large gap that severely limits sustained weight loss outcomes ([Roy et al. 2018, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph15122540))
-      - The intensity barrier is the primary adherence limiter: many people find sustained high-intensity effort aversive, and weight-motivated exercisers may lack the intrinsic drive to tolerate discomfort long-term ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Time efficiency partially offsets the intensity barrier for time-constrained individuals, but weight maintenance requires ongoing consistency that few achieve without external accountability ([Gibala et al. 2012, J Physiol](https://doi.org/10.1113/jphysiol.2011.224725))
-
+      - Real-world unsupervised HIIT adherence drops to ~20% at 12 months ([Roy et al. 2018](https://doi.org/10.3390/ijerph15122540)); weight-loss-motivated exercisers without external accountability are particularly vulnerable to dropout when scale change is slow
+      - The intensity barrier compounds with the slow visible-progress problem: weight loss from exercise alone requires sustained 6–12+ months of consistent training, but HIIT's per-session aversiveness undermines the long-term consistency required ([Ekkekakis et al. 2011](https://doi.org/10.2165/11590680-000000000-00000))
+      - UAR 40 sits well below Zone 2 (UAR 55) on this axis – Zone 2 practitioners have a much easier time sustaining the volume-over-time required for body composition change
   mental-health.stability:
     pbs: 5
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile (below-average emotional steadiness). After successful adherence, a user could plausibly reach the 50th percentile (roughly average). Delta: ~15 percentile points. [Systematic review and meta-analysis](https://pubmed.ncbi.nlm.nih.gov/34531186/) found HIIT produced moderate improvements in depression severity and perceived stress compared to non-active controls, with small improvements in mental wellbeing compared to active controls
-      - [RCT during COVID-19 confinement](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full) found HIIT significantly reduced stress, anxiety, and depression, with HIIT appearing more beneficial for depression reduction than moderate-intensity training
-      - Score 5 reflects a meaningful acute mood stabilisation effect: post-session endorphin release and catecholamine regulation shift the emotional baseline from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6), but the benefit is transient and requires repeated sessions to maintain
     isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile on emotional steadiness. Delta: ~15 percentile points. [Systematic review and meta-analysis](https://pubmed.ncbi.nlm.nih.gov/34531186/) found HIIT produced moderate improvements in depression severity (SMD = -0.39) and perceived stress compared to non-active controls
+      - [RCT during COVID-19 confinement](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full) found HIIT significantly reduced stress, anxiety, and depression, with HIIT appearing more beneficial for depression reduction than moderate-intensity training in that population
+      - Score 5 reflects a meaningful but secondary benefit, comparable to Zone 2 (PBS 5) – exercise modality is largely interchangeable on the mood axis once adequate dose is achieved, with the neurochemical pathway (endorphin release, BDNF, catecholamine regulation) operating across intensities
     isr_reasoning: |
-      - [Meta-analysis of healthy individuals](https://pubmed.ncbi.nlm.nih.gov/38566446/) found HIIT did not significantly improve depression or anxiety symptoms in already-healthy populations, suggesting the mood stabilisation benefit is primarily for those with elevated baseline symptoms
-      - In clinical and at-risk populations, the evidence is stronger: [meta-analysis of cardiovascular patients](https://pmc.ncbi.nlm.nih.gov/articles/PMC9560824/) found statistically significant depression reductions following HIIT compared to usual care
-      - An estimated 50-60% of adherent HIIT practitioners with some baseline mood instability experience meaningful stabilisation, but the proportion drops for those starting from a healthy emotional baseline
-    uar: 55
-    confidence: low
+      - [Meta-analysis in already-healthy populations](https://pubmed.ncbi.nlm.nih.gov/38566446/) found HIIT did not significantly improve depression or anxiety symptoms in healthy adults, suggesting the mood stabilisation benefit is concentrated in those with elevated baseline symptoms
+      - In clinical populations, evidence is stronger: [meta-analysis of cardiovascular patients](https://pmc.ncbi.nlm.nih.gov/articles/PMC9560824/) found statistically significant depression reductions following HIIT compared to usual care
+      - An estimated 50–60% of adherent practitioners with some baseline mood instability experience meaningful stabilisation; ISR is below Zone 2 (ISR 70) because the in-session negative affect can blunt the cumulative mood benefit for a substantial subset
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
-
   mental-health.resilience:
     pbs: 4
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 40th–45th percentile (slightly below to average). Delta: ~5–10 percentile points. HIIT systematically exposes practitioners to controlled acute discomfort (breathlessness, muscular burn, cardiovascular strain) and requires tolerating it repeatedly, which builds distress tolerance – a core component of psychological resilience
-      - [RCT evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full) found HIIT increased self-reported resilience scores in healthy adults, suggesting the repeated experience of pushing through high-intensity effort transfers to broader stress coping
-      - Score 4 represents the minimum scoreable threshold: the discomfort tolerance mechanism is genuine but narrow – HIIT builds tolerance for physical distress specifically, and transfer to psychological or social stressors requires generalisation that does not reliably occur
     isr: 50
-    isr_reasoning: |
-      - The discomfort tolerance pathway is mechanistically plausible but the evidence base for HIIT specifically improving psychological resilience (as distinct from mood) is thin, with only a small number of studies measuring resilience as an outcome ([Frontiers 2021](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full))
-      - Transfer from physical to psychological distress tolerance is not automatic; approximately half of adherent practitioners may experience the broader resilience benefit while others compartmentalise exercise tolerance separately from life stress coping
-      - The short session duration (15-30 minutes) limits the sustained exposure to discomfort compared to longer endurance activities, further reducing the proportion who develop generalisable resilience
-    uar: 55
+    uar: 50
     confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 40th–45th percentile on resilience. Delta: ~5–10 percentile points. HIIT systematically exposes practitioners to controlled acute discomfort (breathlessness, muscular burn, cardiovascular strain) and requires tolerating it repeatedly, which builds distress tolerance – a recognised component of psychological resilience
+      - [Meta-analytic evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) suggests vigorous-intensity exercise produces stronger resilience gains than moderate-intensity activity, supporting a small advantage for HIIT over Zone 2 (PBS 4) on this specific pathway
+      - Score 4 represents the minimum scoreable threshold: the discomfort tolerance mechanism is genuine but narrow – HIIT builds tolerance for physical distress specifically, and transfer to psychological or social stressors requires generalisation that does not reliably occur
+    isr_reasoning: |
+      - The discomfort tolerance pathway is mechanistically plausible but evidence specifically measuring HIIT-induced psychological resilience is thin, with only a small number of studies measuring resilience as an outcome ([Frontiers 2021](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.643069/full))
+      - Transfer from physical to psychological distress tolerance is not automatic; approximately half of adherent practitioners experience the broader resilience benefit while others compartmentalise exercise tolerance separately from life stress coping
+      - The short session duration (15–30 minutes) limits sustained exposure to discomfort compared to longer endurance challenges, somewhat constraining the proportion who develop generalisable resilience
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 0
-  upfront_cost_reasoning: "HIIT can be performed with bodyweight exercises, running, or basic equipment like stairs. No mandatory equipment purchases required to begin effective implementation."
+  upfront_cost_reasoning: "HIIT can be performed with bodyweight exercises, running, stair climbing, or basic equipment. No mandatory equipment purchases required to begin effective implementation. An interval timer app is free."
   ongoing_cost: 0
   ongoing_cost_period: "month"
   ongoing_cost_reasoning: "Can be performed in public spaces, at home, or using existing facilities. No mandatory subscription or membership fees required for basic implementation."
   upfront_time: 2
-  upfront_time_reasoning: "Minimal learning required - basic understanding of interval timing and intensity monitoring. One session to learn proper form and timing structure."
-  ongoing_time: 2
+  upfront_time_reasoning: "Minimal learning required – basic understanding of interval timing and intensity monitoring (perceived exertion of 'hard but not maximal'). One session to learn proper form and timing structure."
+  ongoing_time: 1.5
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "Minimum effective dose is 45-90 minutes per week (3 sessions of 15-30 minutes each including warm-up and cool-down)."
+  ongoing_time_reasoning: "Minimum effective dose is 60–90 minutes per week (2–3 sessions of 15–30 minutes each, including warm-up and cool-down). The time efficiency of HIIT is its primary practical advantage."
 
 prerequisites:
   - "Medical clearance for high-intensity exercise, especially for individuals over 40 or with cardiovascular risk factors"
-  - "Basic cardiovascular fitness to safely tolerate high-intensity efforts without immediate exhaustion"
-  - "Access to safe exercise environment (space for movement, non-slip surfaces, emergency assistance if needed)"
-  - "Ability to monitor exercise intensity through perceived exertion, heart rate, or other intensity markers"
+  - "Basic cardiovascular fitness sufficient to safely tolerate near-maximal efforts without immediate exhaustion"
+  - "Access to a safe exercise environment (space for movement, non-slip surfaces) and an interval timer"
+  - "Ability to monitor exercise intensity through perceived exertion or heart rate"
+
+flagged_domains:
+  - domain: "habits"
+    rationale: "HIIT's time efficiency makes it a candidate keystone habit for time-constrained schedules, but the high adherence cost limits the consistency dimension that habits.consistency would capture"

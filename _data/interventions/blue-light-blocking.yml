@@ -1,96 +1,84 @@
-evaluated_at: 2025-06-02
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "Blue Light Blocking"
 what_it_is: |
-  Reducing exposure to blue light (400–490nm wavelengths) in the 2–3 hours before bedtime, using amber-tinted glasses, screen filters, or device night-mode settings, to prevent suppression of melatonin production. A targeted, low-effort complement to a broader [Bedtime Routine](/resources/intervention-database/bedtime-routine).
+  Reducing exposure to short-wavelength (~400–490nm) light in the 2–3 hours before bed by wearing amber-tinted glasses, enabling screen filters (Night Shift, f.lux), or simply dimming screens and overhead LEDs. The mechanistic case is solid – blue light suppresses melatonin via melanopsin-containing retinal ganglion cells – but in healthy adults the downstream effect on objective sleep is small or null. A [2025 meta-analysis of three crossover RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC12668929/) found non-significant changes in sleep onset latency (−4.9 min), total sleep time (+8.8 min), and sleep efficiency (−0.6 pp), and the [2023 Cochrane review](https://www.cochrane.org/about-us/news/blue-light-filtering-spectacles-probably-make-no-difference-eye-strain-eye-health-or-sleep) (17 RCTs) concluded the evidence is inconclusive.
 how_to_do_it: |
-  - Many people find that dedicated amber-tinted glasses provide more consistent blocking than software filters alone, since they also cover ambient LED lighting in the room
-  - You may want to set a daily phone alarm for 2 hours before your target bedtime as a reminder to put on glasses or activate filters – the habit is easy to forget in the first few weeks
-  - Enabling automatic night-mode scheduling on all devices (phone, laptop, tablet) removes at least one decision point, even if glasses provide the primary blocking
-  - Most practitioners find that pairing blue light blocking with dimming overhead lights amplifies the effect, since standard LED room lighting also suppresses melatonin
+  - Pick a clear cut-off time (typically 2 hours before target bedtime) and either put on amber-tinted glasses ($15–30) or activate device filters – glasses cover ambient LED lighting too, software does not
+  - Combine with dimming overhead lights, since standard LED room lighting suppresses melatonin independently of screens
+  - Treat the intervention as a low-cost adjunct to better sleep hygiene (consistent bedtime, dark cool room, reduced evening stimulation), not a substitute – the [2024 Frontiers meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC12668929/) authors explicitly frame BBGs as a pragmatic adjunct rather than stand-alone therapy
+  - Set realistic expectations: people with diagnosed insomnia, delayed sleep phase, or shift-work disruption have the strongest case for benefit; healthy sleepers should expect minimal change
 success_looks_like: |
-  - You notice a natural feeling of drowsiness developing 30–60 minutes earlier than before, without forcing it
-  - Morning alertness improves because sleep onset is earlier and less disrupted – you wake feeling more rested rather than groggy
-  - The glasses or filter become a habitual part of your evening without requiring conscious effort to remember
+  - You wear the glasses or run filters consistently in the wind-down window without it feeling like a chore
+  - If you started with subjective sleep complaints, you notice modestly easier wind-down and earlier drowsiness within 2–4 weeks
+  - You have not displaced more impactful sleep behaviours (consistent schedule, screen-free wind-down, caffeine timing) by treating the glasses as the main lever
 common_pitfalls: |
-  - Relying solely on device night-mode settings, which reduce but do not eliminate blue light – overhead LED lighting and ambient screens in the room continue to suppress melatonin
-  - Buying cheap glasses that block an insufficient range of wavelengths; effective lenses should appear distinctly amber or orange, not just faintly tinted
-  - Treating blue light blocking as a substitute for reducing screen time altogether – the glasses help, but the stimulating content on screens still activates the brain independently of light wavelength
+  - Treating blue light blocking as a primary sleep intervention; the [Cochrane evidence](https://www.cochrane.org/about-us/news/blue-light-filtering-spectacles-probably-make-no-difference-eye-strain-eye-health-or-sleep) suggests it does little for healthy adults compared to actually reducing evening stimulation
+  - Relying on Night Shift or f.lux alone; [observational data](https://pubmed.ncbi.nlm.nih.gov/38461462/) on filter apps found no sustained sleep-quality benefit, and software does nothing about overhead LEDs
+  - Buying lightly-tinted "blue light glasses" sold for daytime computer use; for melatonin protection you need lenses that look distinctly orange or amber and block the short-wavelength range
+  - Using the glasses while continuing high-arousal screen content – the cognitive stimulation drives wakefulness independently of light wavelength
 description: |
-  - Reducing exposure to blue light (400-490nm wavelengths) in the 2-3 hours before bedtime using blocking glasses, screen filters, or device night-mode settings
-  - Prevents suppression of melatonin production caused by artificial light from phones, computers, and LED lighting
-  - Most users see improvements in sleep onset within 1-2 weeks of consistent evening use, with full benefits after 3-4 weeks
+  - Wearing amber-tinted glasses, enabling screen filters (Night Shift, f.lux), or reducing screen and LED-light exposure in the 2–3 hours before bed
+  - Targets melatonin suppression via melanopsin-containing retinal ganglion cells; the mechanism is well-established but downstream effects on real-world sleep are small
+  - In healthy adults, [the most recent meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC12668929/) found non-significant trends on actigraphic sleep onset, duration, and efficiency; the [2023 Cochrane review](https://www.cochrane.org/about-us/news/blue-light-filtering-spectacles-probably-make-no-difference-eye-strain-eye-health-or-sleep) deemed the evidence inconclusive
+  - Larger effects appear in clinical populations (insomnia, delayed sleep phase, shift work) per the [Shechter 2020 meta-analysis](https://academic.oup.com/sleepadvances/article/1/1/zpaa002/5851240); healthy sleepers should expect minimal change
 applicable_domains: ["sleep"]
 
 values:
   sleep.daily_functioning:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–65th percentile (~50 minutes of additional productive capacity per day). Delta: ~20–30 percentile points of improvement. [Shechter et al. (2018)](https://doi.org/10.1080/07420528.2018.1502170) systematic review found blue light blocking improves sleep onset latency by 8–12 minutes and increases total sleep time by 10–15 minutes, which for a successful user translates to roughly 30–60 additional productive minutes per day through reduced morning grogginess and improved alertness.
-      - [Burkhart & Phelps (2009)](https://doi.org/10.3109/07420520903523719) found 8-12% improvement in next-day alertness scores with amber-tinted lenses worn for 3 hours before bed, consistent with a moderate gain in daily productive capacity.
-      - On the updated anchor (10 = 14h, 8 = 3.5h, 6 = 50min), a gain of ~50 minutes of productive capacity places this squarely at score 6.
-    isr: 65
-    isr_reasoning: |
-      - [Shechter et al. (2018)](https://doi.org/10.1080/07420528.2018.1502170) systematic review found significant heterogeneity between studies, with approximately 60-70% of participants showing meaningful improvement in controlled trials.
-      - Many studies have small sample sizes (n < 50) and short durations (1-2 weeks), and [Lawrenson et al. (2017)](https://doi.org/10.1002/14651858.CD013244.pub2) Cochrane review noted insufficient evidence to draw firm conclusions about efficacy.
-      - Individual variation in melatonin sensitivity to blue light is substantial, with some people showing minimal melatonin suppression from screens, reducing the proportion who benefit meaningfully.
+    pbs: 4
+    isr: 30
     uar: 45
     confidence: low
-    uar_reasoning: |
-      - [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) found only 40-50% of participants consistently used blue light blocking devices beyond 2 months in real-world follow-up.
-      - Common barriers include forgetting to put on glasses, discomfort with frames, colour distortion interfering with evening activities (watching films, social media), and social awkwardness of wearing tinted lenses around others.
-      - Unlike behavioural sleep interventions, blue light blocking requires remembering a specific accessory or activating software daily, creating a friction point that erodes adherence over time.
-
-  sleep.long_term_health:
-    pbs: 5
     pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–55th percentile (~3–4 months of additional healthy lifespan through improved circadian alignment). Delta: ~10–20 percentile points of improvement. For someone who successfully blocks blue light and achieves better circadian alignment, the long-term benefit operates through improved melatonin timing and reduced circadian disruption. [Cho et al. (2015)](https://doi.org/10.3109/07420528.2014.986682) found improvements in inflammatory markers and cortisol rhythms over 3-month intervention periods.
-      - [Stevens et al. (2014)](https://doi.org/10.1098/rstb.2013.0571) linked chronic light-at-night exposure to increased cancer and metabolic disease risk, suggesting that successful blue light blocking could prevent 3-4 months of health loss, placing it between score 4 (2 months) and score 6 (6 months).
-      - PBS should not be discounted for weak evidence -- the question is how much benefit a successful user gets. A person whose circadian rhythm genuinely improves from blue light blocking likely gains modest but real health protection.
-    isr: 50
+      - Baseline (per values.yml): 35th percentile. After successful adherence in a responsive user, plausibly reaching the 40th–45th percentile. Delta: ~5–10 percentile points, equivalent to roughly 10–15 productive minutes per day on the better-sleep days.
+      - The [2025 Frontiers meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC12668929/) of crossover RCTs found a non-significant ~5-minute reduction in sleep onset latency and ~9-minute increase in total sleep time – even taking the central estimates at face value, the daytime productivity gain is small.
+      - On the linear anchor (10 = 14h, 8 = 3.5h, 6 = 50min, 4 = 13min), ~10–15 extra minutes of productive capacity sits at score 4, not 6. The previous score of 6 implicitly assumed effect sizes that the strongest current evidence does not support.
     isr_reasoning: |
-      - Most studies focus on short-term sleep metrics rather than long-term health biomarkers, making it difficult to estimate what proportion of users achieve lasting health benefits. [Gringras et al. (2015)](https://doi.org/10.1111/jpi.12270) found melatonin improvements but no significant cortisol or inflammatory changes over 3 months.
-      - The few longer-term studies (> 3 months) show inconsistent results, and individual variation in melatonin sensitivity means a substantial minority may not achieve meaningful circadian correction even with perfect compliance.
-      - Conservatively estimated at 50% given weak evidence base and high individual variability in the physiological pathway.
-    uar: 45
-    confidence: low
+      - Among adherent participants in the [2025 meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC12668929/), pooled effects on sleep onset, total sleep time, and efficiency were all statistically non-significant – the modal adherent user does not get a measurable objective benefit.
+      - The [2023 Cochrane review](https://www.cochrane.org/about-us/news/blue-light-filtering-spectacles-probably-make-no-difference-eye-strain-eye-health-or-sleep) (17 RCTs) found roughly half of trials showed benefit and half did not, and described overall certainty as limited.
+      - Response is concentrated in clinical sub-populations: the [Shechter 2020 meta-analysis](https://academic.oup.com/sleepadvances/article/1/1/zpaa002/5851240) reported "larger combined effect sizes for sleep and/or psychiatric patients compared to healthy patients", consistent with an ISR around 30% in the general adult population.
     uar_reasoning: |
-      - Same adherence challenges as daily functioning -- the behaviour is identical regardless of which outcome is being measured. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) 40-50% retention rate applies.
-      - Long-term health benefits require sustained use over months to years, but practical barriers significantly limit consistent implementation even when users are motivated.
-      - The delayed nature of health benefits (no immediate feedback) further reduces motivation to maintain the intervention compared to comfort-related outcomes.
+      - Real-world adherence to evening blue-blocking routines is fragile – glasses get forgotten, removed when watching films with others, or set aside as the novelty wears off; software filters tend to be enabled once and then ignored, but do nothing about ambient LEDs.
+      - The [2024 Rabiei survey](https://pubmed.ncbi.nlm.nih.gov/38461462/) of smartphone users found only ~10% used blue-light filtering apps regularly while ~80% never used them, suggesting that even the lowest-friction version of this intervention has weak uptake.
+      - Glasses add cosmetic and social friction (visible amber tint, colour distortion during evening media), which empirically erodes long-run adherence even among initially-motivated users.
 
   sleep.comfort_experience:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile (below-average sleep comfort). After successful adherence, a user could plausibly reach the 55th–65th percentile (generally good sleep quality with easier evening wind-down). Delta: ~20–30 percentile points of improvement. Blue light blocking primarily targets physiological sleep preparation rather than comfort directly, but successful users report easier transition to sleepiness and reduced eye strain in evening hours. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) found 60–70% of participants reported subjectively more comfortable evening wind-down periods.
-      - On the updated anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), the improvement typically moves someone toward "generally good" sleep quality rather than deeply restorative, as blue light is only one factor in overall sleep comfort.
-      - The intervention does not address noise, temperature, mattress quality, or psychological factors that are often larger contributors to subjective sleep experience.
-    isr: 70
-    isr_reasoning: |
-      - Multiple studies consistently show that users who adhere to blue light blocking report better evening comfort and easier sleep transitions. The melatonin-mediated mechanism for subjective sleepiness is well-established and reliable.
-      - [Burkhart & Phelps (2009)](https://doi.org/10.3109/07420520903523719) found that 70% of compliant participants reported improved subjective sleep quality, with the remaining 30% showing no meaningful change.
-      - Subjective outcomes are more consistently reported than objective sleep metrics, as even modest melatonin timing shifts can produce noticeable changes in evening wind-down experience.
+    pbs: 5
+    isr: 50
     uar: 50
     confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 45th–55th percentile in subjective wind-down comfort. Delta: ~10–20 percentile points – a modest gain in evening sleep experience.
+      - Subjective outcomes show larger and more consistent improvements than objective ones: the [Shechter 2020 meta-analysis](https://academic.oup.com/sleepadvances/article/1/1/zpaa002/5851240) reported a large self-report PSQI effect (Hedge's g = −1.25) versus only small effects on actigraphy, suggesting meaningful felt-experience benefit even where objective sleep barely shifts.
+      - On the subjective anchor, this maps to a "modest gain in quality of sleep experience" (score 4) for healthy users and a "meaningful gain" (score 6) for those with mild sleep complaints – score 5 reflects the mid-range across users likely to try this.
+    isr_reasoning: |
+      - Subjective benefit is more reliably reported than objective benefit, but is also vulnerable to placebo and expectation effects – the [Shechter 2020 review](https://academic.oup.com/sleepadvances/article/1/1/zpaa002/5851240) noted the gap between large subjective and small objective effects, which limits how much weight to put on self-report alone.
+      - The [2023 Cochrane review](https://www.cochrane.org/about-us/news/blue-light-filtering-spectacles-probably-make-no-difference-eye-strain-eye-health-or-sleep) found subjective sleep-quality outcomes were also inconclusive across 17 RCTs, with substantial study-to-study variability.
+      - Roughly half of adherent users report a subjective improvement in evening wind-down across the trial literature; ISR ~50% reflects the mixed picture.
     uar_reasoning: |
-      - Slightly better adherence than health-focused use because users notice immediate effects (reduced eye strain, easier wind-down), providing modest positive reinforcement.
-      - However, practical barriers remain significant: remembering glasses, discomfort with frames, colour distortion during screen use. [Ostrin et al. (2017)](https://doi.org/10.1080/02713683.2017.1339784) showed ~50% retention at 3 months even among those who reported comfort benefits.
-      - The intervention competes with the convenience of unrestricted screen use, and many users gradually revert to unfiltered device use as the novelty wears off.
+      - Subjective comfort gains may provide modest positive reinforcement in the first few weeks, slightly improving adherence relative to outcomes that lack short-term feedback.
+      - However, the same practical barriers apply: forgetting glasses, social/cosmetic friction, and reverting to unfiltered screens during evening leisure. The [2024 Rabiei survey](https://pubmed.ncbi.nlm.nih.gov/38461462/) found ~80% never use filters regularly even when freely available.
+      - UAR ~50% reflects modestly better stickiness than the productivity-framed use case but still substantial dropout over months.
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Some [trial evidence](https://academic.oup.com/sleepadvances/article/1/1/zpaa002/5851240) suggests larger effects in patients with insomnia, bipolar disorder, or delayed sleep phase, with plausible knock-on effects on mood stability via improved circadian alignment."
 
 resources:
   upfront_cost: 20
-  upfront_cost_reasoning: "Basic blue light blocking glasses from reputable manufacturers cost £15-25. Free software options (f.lux, Night Shift) available but glasses provide more comprehensive blocking. Minimum viable option is basic amber-tinted glasses that block 90%+ of blue light."
+  upfront_cost_reasoning: "Basic amber-tinted blue-blocking glasses cost £15–25 from reputable manufacturers. Software alternatives (f.lux, Night Shift) are free, so $0 is also viable; $20 reflects the recommended minimum for glasses that block a meaningful portion of short-wavelength light."
   ongoing_cost: 0
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "No recurring costs required. Blue light glasses last 1-2 years with normal use, and software solutions are typically free. Replacement glasses every 18-24 months represent minimal ongoing expense."
+  ongoing_cost_reasoning: "No recurring costs. Glasses last 1–2 years with normal use; software updates are free."
   upfront_time: 1
-  upfront_time_reasoning: "Minimal setup time to install software on devices or establish routine of wearing glasses. Initial adjustment period to determine optimal timing and comfortable fit takes under one hour total."
+  upfront_time_reasoning: "Under an hour to install software on devices, identify a wear-time cut-off, and try the glasses once or twice."
   ongoing_time: 0
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "No additional time investment required - simply wearing glasses or having software active during normal evening activities. The intervention integrates seamlessly into existing routines without requiring dedicated time."
+  ongoing_time_reasoning: "No additional dedicated time – the intervention runs in parallel with existing evening activities."
 
 prerequisites:
-  - "Access to blue light blocking glasses or devices with adjustable screen settings"
-  - "Regular evening use of electronic devices or exposure to LED lighting"
-  - "Ability to remember and maintain consistent evening routine modifications"
-  - "Tolerance for mild colour distortion during evening hours when using filters"
+  - "Access to amber-tinted glasses or to devices with screen-temperature controls"
+  - "Regular evening exposure to screens or LED lighting for there to be anything to block"
+  - "Tolerance for orange-tinted vision and modest colour distortion during the wind-down window"

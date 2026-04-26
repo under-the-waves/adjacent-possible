@@ -1,166 +1,227 @@
-evaluated_at: 2025-06-08
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "Rock Climbing"
 what_it_is: |
-  Indoor and/or outdoor climbing (bouldering, top-rope, or lead) typically 2–3 sessions per week of 60–120 minutes, ascending routes of graded difficulty. Uniquely combines physical effort with real-time problem-solving – each route is a puzzle requiring grip strength, balance, flexibility, and spatial reasoning. Distinguished from [progressive strength training](/resources/intervention-database/progressive-strength-training) by its emphasis on relative strength, movement problem-solving, and skill progression rather than absolute load, and identified as one of the activities most reliably inducing flow states.
+  Indoor or outdoor climbing as a primary fitness modality – typically 2–3 sessions per week of 60–120 minutes, ascending graded routes (V-scale for [bouldering](https://en.wikipedia.org/wiki/Bouldering), [YDS](https://en.wikipedia.org/wiki/Yosemite_Decimal_System) for roped climbing). Combines full-body strength (especially grip, fingers, and upper-body pulling), real-time problem-solving, and a built-in social structure. Distinguished from [progressive strength training](/resources/intervention-database/progressive-strength-training) by skill-based progression and movement puzzles, and from [calisthenics](/resources/intervention-database/calisthenics) by its outdoor and competitive variants and the central role of fear management.
 how_to_do_it: |
-  - Many people start with indoor bouldering, which requires only climbing shoes and chalk (no harness, rope, or partner), making it the lowest-barrier entry point – most gyms offer introductory sessions that cover basic technique and etiquette
-  - You may find it helpful to climb with someone slightly better than you during your first few sessions, as watching how experienced climbers read routes and position their bodies teaches more than verbal instruction alone
-  - Most practitioners focus on technique and movement quality in the first few months rather than chasing grades – learning to use your feet precisely, keep your arms straight on holds, and read sequences before leaving the ground builds a foundation that pays off at every level
-  - For roped climbing (top-rope or lead), completing a belay certification course at your gym is typically required and takes 1–2 hours; this opens up taller walls, longer routes, and a built-in social structure of belaying partnerships
+  - Most people start with indoor bouldering, which requires only climbing shoes (rented or $80–150) and chalk – no rope, harness, or partner – making it the lowest-barrier entry point; introductory sessions at most gyms cover etiquette and basic technique
+  - For roped climbing (top-rope or lead), a one-off belay certification at the gym (1–2 hours, $20–50) opens up taller walls, longer routes, and partner-based sessions
+  - In the first few months, most coaches recommend prioritising technique – using your feet precisely, hanging with straight arms, reading routes before leaving the ground – over chasing harder grades, since grip-strength shortcuts at this stage are the main pathway to finger pulley injuries
+  - Deliberately attempting routes slightly above your current grade (and accepting frequent falls) is where progression happens; staying inside the comfort zone feels pleasant but stalls skill development
 success_looks_like: |
-  - Within 2–3 months, you are completing routes that felt impossible on your first visit, and you can feel a clear difference in grip strength, core stability, and body awareness
-  - You find yourself thinking about route sequences between sessions – the problem-solving element has become genuinely engaging rather than purely physical
-  - You have a regular climbing partner or small group, and sessions feel social as well as athletic – the community aspect reinforces consistency
+  - Within 2–3 months, you are sending routes that felt impossible on your first visit and can feel a clear difference in grip strength, core stability, and body awareness
+  - You catch yourself thinking about route sequences between sessions – the problem-solving element has become genuinely engaging rather than purely physical
+  - You have a regular climbing partner or small group, and sessions have a strong social component as well as an athletic one
 common_pitfalls: |
-  - Over-gripping holds with tense, bent arms (the "death grip"), which exhausts forearms within minutes – learning to hang with straight arms and trust your feet is the single most important early technique adjustment
-  - Ignoring finger and tendon recovery, especially in the first 6 months when connective tissue adapts more slowly than muscles – finger pulley injuries are the most common climbing-specific injury and often result from progressing intensity too quickly
-  - Climbing only routes within your comfort zone, which feels pleasant but stalls progression – deliberate attempts on routes slightly beyond your current grade (and accepting frequent falls) is where skill development happens
+  - The 'death grip' – over-gripping holds with bent, tense arms, which exhausts the forearms within minutes and prevents technique development; learning to hang with straight arms and trust your feet is the single most important early adjustment
+  - Progressing finger and tendon load too quickly in the first 6–12 months, when connective tissue adapts more slowly than muscle; [finger pulley injuries](https://pubmed.ncbi.nlm.nih.gov/22030134/) are the most common climbing-specific injury and tend to come from intensity outpacing tissue tolerance
+  - Climbing only routes well within your current grade – it feels pleasant but stalls progression; attempts on routes slightly beyond your level (with frequent falls) are where skill development happens
 description: |
-  - Indoor and/or outdoor climbing (bouldering, top-rope, lead) typically 2-3 sessions per week of 60-120 minutes, ascending routes of graded difficulty (V-scale for bouldering, YDS for roped climbing)
-  - Demands grip strength, upper body pulling power, core stability, balance, flexibility, and route-reading problem-solving, making it uniquely cognitive among exercise modalities
-  - Distinguished from conventional strength training by its emphasis on relative strength, movement problem-solving, and skill progression rather than absolute load; [flow-state research](https://doi.org/10.1348/000712607X183614) identifies climbing as one of the activities most reliably inducing flow
-  - [Meta-analytic evidence](https://doi.org/10.1080/02640414.2016.1151924) shows significant improvements in grip strength (d=0.81), upper body pulling, and core stability, though cardiovascular benefits are limited by the intermittent climb-rest pattern
-  - Noticeable strength and technique improvements emerge within 4-6 weeks, with significant performance gains developing over 6-12 months
-applicable_domains: ["fitness", "body-image", "mental-health"]
+  - Indoor or outdoor climbing 2–3 sessions per week of 60–120 minutes, ascending graded routes (bouldering, top-rope, or lead). Demands grip, finger, and upper-body pulling strength alongside balance, flexibility, and route-reading
+  - The intermittent climb–rest pattern produces a different physiological profile from continuous cardio: [meta-analytic evidence](https://doi.org/10.1080/02640414.2016.1151924) shows large gains in grip strength and pulling power but limited cardiovascular adaptation
+  - [Bouldering psychotherapy trials](https://pmc.ncbi.nlm.nih.gov/articles/PMC4548691/) (Buechter & Fechtelpeter 2015; [Karg et al. 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7429724/)) show effects on depressive symptoms comparable to CBT, suggesting climbing is unusually well-suited to depression-spectrum mental-health gains
+  - [Flow research](https://doi.org/10.1348/000712607X183614) identifies climbing as among the activities most reliably inducing flow states, with the gym social structure and graded mastery system providing strong intrinsic motivation
+  - Distinct from gym-based strength work in its skill-based progression, problem-solving demands, and built-in social and adventure dimensions; gym membership $60–120/month
+applicable_domains: ["fitness", "body-image", "mental-health", "participatory-leisure"]
 
 values:
   fitness.health:
     pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. Climbing provides moderate cardiovascular benefits with heart rates consistent with CDC/ACSM guidelines (average 122 bpm over 90-minute sessions), and builds substantial grip strength which correlates with reduced all-cause mortality in epidemiological studies, corresponding to roughly 1 year of additional healthy life on the linear anchor. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - Score 6 aligns with the 1-year anchor point: climbing lacks the sustained aerobic stimulus of continuous cardio and carries higher acute injury risk (4.2 injuries per 1000 hours overall) than lower-impact activities ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-      - Grip strength is independently associated with cardiovascular mortality and all-cause mortality in large cohort studies, providing a meaningful but secondary health pathway ([Leong et al. 2015, Lancet](https://doi.org/10.1016/S0140-6736(14)62000-6))
-    isr: 70
-    isr_reasoning: |
-      - Health benefits from climbing are supported by a growing but still limited evidence base compared to traditional exercise modalities; the meta-analysis by Orth et al. (2016) examined only nine studies ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - Benefits are reliable for grip strength and upper body development but less consistent for cardiovascular markers; the intermittent nature (climb-rest-climb) produces different physiological adaptations than sustained exercise ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Variable effects depending on climbing style, intensity, and session structure introduce uncertainty in expected health outcomes ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+    isr: 65
     uar: 50
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after successful adherence: ~55th percentile. Delta: ~20 percentile points.
+      - Climbing produces moderate cardiovascular stimulus (mean HR ~120–150 bpm during climbing, but session VO2 averages are low because of long rest periods), and trained climbers show only modest VO2max elevations relative to sedentary controls ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3)); this is meaningfully below the longevity profile of progressive strength training or running
+      - Grip strength is independently associated with all-cause and cardiovascular mortality in the [PURE cohort (n = 139,691)](https://doi.org/10.1016/S0140-6736(14)62000-6), and climbing is among the most effective grip-developing modalities, providing a real but secondary longevity pathway
+      - Acute injury risk (4.2 injuries per 1000 hours overall, with finger pulleys and elbow tendinopathy most common) partly offsets the health benefit relative to lower-impact modalities ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001)); on the linear anchor, ~1 year additional healthy lifespan maps to PBS 6
+    isr_reasoning: |
+      - The [Orth et al. 2016 meta-analysis](https://doi.org/10.1080/02640414.2016.1151924) (9 studies) shows reliable strength and grip adaptations across consistent climbers, but cardiovascular and metabolic outcomes are inconsistent due to the intermittent climb–rest session structure
+      - [Cross-sectional comparisons](https://doi.org/10.3390/ijerph20105831) show favourable lipid, body composition, and bone density profiles in regular climbers, but self-selection limits causal inference
+      - Estimated 60–70% of consistent climbers achieve meaningful health markers (improved grip, body composition, basic cardiovascular fitness); non-responders typically include those whose sessions are heavily rest-dominated or who incur recurring injuries
     uar_reasoning: |
-      - Climbing has moderate long-term adherence, limited by facility access, injury risk (particularly finger tendon overuse), cost of gym membership, and the steep difficulty curve at intermediate levels ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-      - Social and problem-solving aspects enhance retention for those who engage with the community, but geographic and financial barriers contribute to dropout ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - No large-scale adherence studies exist specifically for climbing; the 50% estimate is based on general gym retention data adjusted for climbing's higher engagement and higher barrier profile ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
+      - No large-scale climbing-specific adherence studies exist; estimated from gym retention data ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199)) adjusted upward for climbing's higher engagement and clearer progression structure
+      - The strong intrinsic enjoyment and social structure of climbing gyms favours retention, but financial cost ($60–120/month), facility access, and intermediate-level injury risk (finger pulleys, elbow tendinopathy) drive measurable dropout ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+      - Among those who pass the initial 3–6 month learning phase, long-term retention is unusually high relative to gym-based strength training, but the early dropout reduces aggregate UAR to ~50%
 
   fitness.performance:
     pbs: 7
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. Climbing develops exceptional grip strength (effect size d=0.81 in meta-analysis), upper body pulling power, core stability, balance, and flexibility, with significant improvements in handgrip, pull-ups, and sit-and-reach (all P<0.01). After successful adherence, a user could plausibly reach the 65th percentile. Delta: 30 percentile points of improvement. ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - The problem-solving demands develop spatial awareness, body proprioception, and movement efficiency; climbing has a uniquely high skill ceiling with decades of progression possible ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Score 7 rather than 8 because climbing develops a relatively narrow performance profile (upper body pulling, grip, core) with limited cardiovascular endurance, lower body power, or general athletic capacity development ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
     isr: 75
-    isr_reasoning: |
-      - Performance improvements are well-documented for the specific capacities climbing develops, with consistent significant improvements across fitness parameters in the Orth et al. (2016) meta-analysis ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - The technical skill component means progress is not purely a function of physical training; movement quality, fear management, and route-reading ability introduce variability ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Genetic factors (finger tendon strength, body proportions, flexibility) influence performance ceiling more than in simpler exercise modalities ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-    uar: 55
+    uar: 50
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~65th percentile. Delta: ~30 percentile points.
+      - Climbing produces large grip-strength gains (effect size d = 0.81 in meta-analysis), substantial upper-body pulling strength, and improvements in core stability and flexibility ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924)); on a generic fitness-test percentile, dedicated climbers reach the 60th–75th percentile despite often training only one or two strength capacities to high levels
+      - The performance profile is uneven: climbing develops exceptional grip, finger, and upper-body relative strength but provides limited lower-body power, sprint capacity, or sustained aerobic endurance, which caps generalised performance gains around PBS 7 (one point below progressive strength training's broader profile)
+      - The high skill ceiling means progression continues for many years, but the gains are increasingly concentrated in climbing-specific capacities rather than transferring broadly to other physical tests
+    isr_reasoning: |
+      - Strength and grip adaptations are reliably documented across the meta-analytic evidence base; the directional response is essentially universal in healthy adults ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
+      - Genetic factors (finger tendon strength, ape index, body composition) influence the performance ceiling more than in simpler exercise modalities, and the technical skill component means progress depends partly on movement quality and route-reading rather than physical training alone ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
+      - Estimated 70–80% of consistent climbers achieve meaningful gains in measured grip and pulling strength; non-responders are typically those whose sessions are dominated by sub-maximal volume or who plateau due to chronic finger injuries
     uar_reasoning: |
-      - Performance-oriented climbers tend to have better retention due to the clear grading system providing measurable progression and the addictive nature of completing harder routes ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Finger injuries are common at intermediate-to-advanced levels and can force extended breaks; plateaus in the V4-V6 range are a well-known dropout point ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-      - Those who climb regularly for 6+ months tend to become long-term participants, but the initial attrition due to technical difficulty and physical demands is significant ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
+      - See fitness.health UAR – same intervention, same adherence profile
 
   fitness.enjoyment:
     pbs: 9
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average enjoyment). After successful adherence, a user could plausibly reach the 85th–90th percentile (among the most enjoyable exercise modalities). Delta: ~52 percentile points. Every route is a puzzle: climbing uniquely combines physical effort with real-time problem-solving (reading sequences, managing body position, choosing holds), creating inherently engaging sessions where boredom is nearly impossible
-      - The grading system provides clear, tangible skill progression with immediate feedback (you either send the route or you don't), and the social structure of belaying partnerships and gym community adds a strong relational enjoyment layer
-      - Score 9 (approaching primary source of satisfaction) rather than 8: the combination of mental challenge, physical intensity, adventure (especially outdoors), and community creates multi-dimensional enjoyment that few exercise modalities match
-    isr: 85
-    isr_reasoning: |
-      - Climbing is identified as one of the activities most reliably inducing flow states due to its optimal balance of challenge, skill demand, and immediate feedback, which predicts consistently high enjoyment among practitioners ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
-      - Retention data supports high enjoyment reliability: climbers who pass the initial 3-6 month learning phase show very high long-term continuation rates, suggesting that enjoyment builds with competence rather than declining ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-      - The main enjoyment detractors (fear of falling, skin pain, plateau frustration) affect a minority and tend to resolve with experience; among those climbing regularly for 6+ months, approximately 85% report it as a primary source of enjoyment in exercise preference surveys ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-    uar: 60
+    isr: 80
+    uar: 55
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~85th–90th percentile. Delta: ~50 percentile points.
+      - Every route is a movement puzzle: climbing combines physical effort with real-time problem-solving (reading sequences, choosing holds, adjusting body position), creating session-to-session novelty that few exercise modalities approach – the activity is inherently flow-conducive ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - The graded difficulty system provides clear, tangible mastery feedback (you either send the route or you don't), and the partner/community structure adds a strong relational enjoyment layer absent from most solo gym training
+      - Score 9 reflects climbing's standing as one of the most enjoyable forms of structured exercise: the combination of mental challenge, physical intensity, social context, and (outdoors) genuine adventure produces multi-dimensional enjoyment that calisthenics (PBS 7) and functional training (PBS 7) cannot match
+    isr_reasoning: |
+      - [Flow research](https://doi.org/10.1348/000712607X183614) identifies climbing as among the most reliable flow-inducing physical activities, predicting consistently high enjoyment among practitioners with adequate skill
+      - Survey evidence ([Stelzer et al. 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/)) shows 73% of climbers report positive mental-health and wellbeing effects; the main detractors (fear of falling, skin pain, plateau frustration) typically resolve with experience
+      - Estimated 75–85% of climbers active for 6+ months experience climbing as a primary source of exercise enjoyment, with the initial learning phase (where fear and forearm pump dominate) accounting for most non-responders
     uar_reasoning: |
-      - Enjoyment-based retention in climbing is higher than most exercise modalities for those who pass the initial learning phase; the social community, progression system, and variety provide strong hooks ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
-      - Fear of falling, self-consciousness in gym settings, and frustration during plateaus cause dropout among a significant minority during the first 3-6 months ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-      - Those who climb for 6+ months tend to become long-term participants, but the initial dropout reduces the overall enjoyment-based adherence rate to approximately 60% ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
+      - Enjoyment-based retention in climbing is among the highest of any exercise modality for those who pass the 3–6 month learning phase, due to the combination of community, progression, and inherent novelty ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - Initial dropout from fear of falling, gym self-consciousness, and frustration during early plateaus reduces aggregate adherence; among those who continue past 6 months, the practice tends to become highly sticky
+      - UAR set 5 points above fitness.health/performance because enjoyment-driven adherence in this domain is reinforced by climbing's flow profile, even though the same access and injury barriers apply
 
   body-image.fat_loss:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. Rock climbing burns 8 – 11 kcal per active minute (approximately 500 – 700 kcal/hour at moderate-to-high intensity), though rest periods between climbs reduce net session expenditure to approximately 400 – 500 kcal for a typical 90-minute session. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Interventions lasting 24+ weeks show significant body fat decreases; climbing's emphasis on relative strength naturally incentivises leaner body composition, with successful climbers sustaining approximately 1 – 2% body fat reduction over 6+ months ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - Climbing engages nearly every major muscle group (forearms, back, core, legs) creating high metabolic demand through sustained isometric contractions and dynamic movements, which supports modest recomposition alongside fat loss ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - On the logarithmic anchor, 1.5% sustained loss maps to 10 + log₂(1.5/25) = 5.94, rounding to PBS 6
-    isr: 55
-    isr_reasoning: |
-      - The evidence base for climbing-specific weight loss is thin – most body composition studies in climbers are cross-sectional (comparing climbers to non-climbers) rather than interventional, limiting causal inference about what proportion actually lose fat ([Orth et al. 2016, J Sports Sci](https://doi.org/10.1080/02640414.2016.1151924))
-      - Climbing sessions are intermittent by nature (climb 3 – 5 minutes, rest 3 – 10 minutes), reducing total energy expenditure per session compared to continuous aerobic exercise of equivalent duration; this narrower caloric deficit makes dietary compensation more likely to eliminate the weight loss effect ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
-      - Active climbers consistently show lower body fat than non-climbing controls in observational studies, but self-selection bias (leaner individuals being drawn to climbing) and dietary confounds limit the reliability of attributing this to climbing itself ([Michailov et al. 2023, Int J Environ Res Public Health](https://doi.org/10.3390/ijerph20105831))
-      - Estimated 50 – 60% meaningful response rate: climbing burns meaningful calories and incentivises leanness, but the intermittent session structure and modest total energy expenditure mean many consistent climbers see limited fat loss without dietary adjustment
-    uar: 40
+    pbs: 5
+    isr: 50
+    uar: 45
     confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~50th percentile. Delta: ~15 percentile points.
+      - Climbing burns roughly 8–11 kcal per active climbing minute, but rest-dominated session structure brings net 90-minute session expenditure to ~400–500 kcal, lower than a continuous run or HIIT session of equivalent length ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
+      - Climbing's relative-strength emphasis incentivises leaner body composition, and consistent climbers in [cross-sectional studies](https://doi.org/10.3390/ijerph20105831) show lower body-fat than non-climbing controls; among adherents, ~1–1.5% sustained body-fat reduction over 6+ months is typical without dietary change
+      - On the logarithmic anchor, 1.0% sustained loss maps to 10 + log₂(1.0/25) = 5.36, rounding to PBS 5; this sits below calisthenics (PBS 6) and progressive strength training because climbing's intermittent session structure produces lower mean caloric expenditure per session
+    isr_reasoning: |
+      - Direct interventional evidence for climbing-specific weight loss is thin; most body-composition data is cross-sectional and confounded by self-selection (leaner individuals being drawn to climbing)
+      - The intermittent climb–rest pattern reduces total session energy expenditure, and dietary compensation is more likely to eliminate the deficit than for continuous aerobic activity ([Watts 2004, Eur J Appl Physiol](https://doi.org/10.1007/s00421-003-0989-3))
+      - Estimated 45–55% of consistent climbers see meaningful body-composition shifts without dietary co-intervention; the remainder either compensate calorically or reach a plateau near their current composition
     uar_reasoning: |
-      - Climbing has significant access barriers (gym membership costs of $60–100/month, geographic availability, need for partners or belay certification) that reduce the population who can sustain regular practice for weight management ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
-      - Weight loss-motivated individuals may find climbing's indirect and slow body composition effects frustrating compared to more predictable modalities like running or cycling ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
-      - Finger and upper extremity injuries are common at intermediate levels and can force extended breaks that disrupt any weight management trajectory ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+      - See fitness.health UAR – same intervention, same adherence profile, with weight-loss-motivated users facing additional attrition because climbing's body-composition effects are slower and less predictable than running or HIIT ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
 
   mental-health.stability:
-    pbs: 4
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 45th–50th percentile (approaching average stability). Delta: ~12 percentile points. A [systematic review of bouldering as depression treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC12459035/) found bouldering psychotherapy (BPT) produced comparable results to CBT for depressive symptoms, and was more effective than physical exercise alone; a [prospective survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) found 73.1% of climbers felt climbing positively impacted their mental health
-      - Climbing provides moderate aerobic and anaerobic exercise, releasing endorphins and reducing cortisol, but the intermittent climb-rest pattern limits sustained cardiovascular stimulus compared to continuous aerobic activities like running or swimming
-      - Score 4 is the minimum threshold: climbing meaningfully reduces depressive and anxious symptoms for successful practitioners, but its stability pathway is less direct than yoga's targeted breathwork or swimming's sustained aerobic stimulus; the benefit corresponds to the lower end of 'occasional distress that resolves quickly' (6) from a baseline of 'frequent distress' (4)
-    isr: 55
-    isr_reasoning: |
-      - [RCTs comparing bouldering psychotherapy to CBT](https://pmc.ncbi.nlm.nih.gov/articles/PMC4548691/) show comparable depression outcomes, but these trials combine climbing with explicit psychotherapeutic elements; the effect of climbing alone on symptom stability is less well-isolated
-      - The [adolescent mental health study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11581854/) found significant reductions in cognitive and somatic anxiety, but the evidence base for climbing-specific mood stabilisation is still small (fewer than 10 RCTs)
-      - Approximately 50-60% of regular climbers experience meaningful mood stability improvements, with the remainder finding that the intermittent, high-intensity nature of climbing sessions provides excitement without sustained mood-stabilising effects
+    pbs: 6
+    isr: 65
     uar: 50
-    confidence: low
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~55th percentile. Delta: ~20 percentile points.
+      - [Buechter & Fechtelpeter 2015](https://pmc.ncbi.nlm.nih.gov/articles/PMC4548691/) RCT and the [Karg et al. 2020 multicentre trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC7429724/) (n = 240) showed bouldering psychotherapy produced reductions in depressive symptoms comparable to CBT, with moderate-to-large effect sizes – more direct evidence for climbing on a mental-health outcome than exists for most exercise modalities
+      - Mechanism is multi-pathway: physical activity (endorphins, BDNF), focused attention (climbing demands present-moment focus, displacing rumination), and social connection (gyms have unusually strong default-social structure) – this combination is more depression-targeted than continuous-aerobic exercise alone
+      - Score 6 sits above calisthenics (PBS 5) and functional training (PBS 5) because the bouldering psychotherapy trials provide direct evidence on stability, where most resistance-training mental-health evidence is extrapolated; the gain corresponds to movement from 'frequent distress' (4) toward 'meaningful gain in steadiness' (6)
+    isr_reasoning: |
+      - The bouldering psychotherapy trials combine climbing with explicit therapeutic elements; the effect of climbing alone (without group-based reflective components) is less well-isolated, introducing some uncertainty
+      - [Survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows ~73% of climbers report positive mental-health effects, supporting reliability of the stability benefit beyond the formal trial population
+      - Estimated 60–70% of adherent climbers with mild-to-moderate mood instability experience meaningful stabilisation; non-responders include those whose sessions are dominated by physical exhaustion or fear-driven anxiety
     uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile; climbing's moderate long-term adherence is limited by facility access, injury risk, and cost ([Schoffl et al. 2011, Wilderness Environ Med](https://doi.org/10.1016/j.wem.2011.06.001))
+      - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.resilience:
     pbs: 6
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 55th–65th percentile (moderately above average). Delta: ~25 percentile points. Climbing uniquely combines physical challenge with explicit fear management: every route requires assessing risk, committing to moves despite uncertainty, and recovering from falls, providing systematic exposure to manageable adversity that directly builds psychological resilience
-      - [Research on climbing's psychological mechanisms](https://pmc.ncbi.nlm.nih.gov/articles/PMC11581854/) identifies improved self-efficacy, fear management, and boundary awareness as key outcomes; the graded difficulty system (V-scale, YDS) creates a natural progressive exposure framework analogous to therapeutic exposure hierarchies
-      - Score 6 corresponds to movement from 'significant disruption from moderate stressors' (4) toward 'handles major stressors with brief disruption' (8); climbing's unique contribution is training the capacity to act effectively under acute fear and uncertainty, a resilience skill that transfers beyond the climbing context
     isr: 60
-    isr_reasoning: |
-      - The fear-management and self-efficacy pathway is mechanistically robust: climbing inherently requires confronting fear and pushing through discomfort, making the resilience benefit a direct consequence of participation rather than an incidental side effect ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
-      - [Prospective survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows climbers consistently report improved confidence and stress management, with 73.1% reporting positive mental health impacts; the self-selection caveat applies but the mechanism is plausible for most participants
-      - Approximately 55-65% of regular climbers develop meaningfully improved stress recovery and adversity tolerance, with non-responders typically being those who avoid challenging routes or disengage from the fear-management aspect of the activity
     uar: 50
     confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~55th percentile. Delta: ~20 percentile points.
+      - Climbing inherently requires confronting fear and committing to moves under acute uncertainty – every route involves assessing risk, deciding to commit despite incomplete information, and recovering from falls; the graded difficulty system provides systematic exposure to manageable adversity, structurally analogous to therapeutic exposure hierarchies
+      - [Research on climbing's psychological mechanisms](https://pmc.ncbi.nlm.nih.gov/articles/PMC11581854/) identifies improved self-efficacy, fear management, and boundary awareness as outcomes; the pathway is mechanistically robust because it is intrinsic to participation, not an incidental side-effect
+      - Score 6 reflects climbing's distinctive resilience profile: above calisthenics and functional training (both PBS 5) because climbing trains the capacity to act effectively under acute fear, a resilience skill that transfers beyond the climbing context
+    isr_reasoning: |
+      - The fear-management pathway is mechanistically intrinsic – you cannot climb seriously without confronting fear at some point, making the resilience benefit a near-direct consequence of participation
+      - [Prospective survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows climbers consistently report improved confidence and stress management; self-selection caveat applies, but the mechanism is plausible for most participants
+      - Estimated 55–65% of regular climbers develop meaningfully improved stress recovery and adversity tolerance; non-responders typically avoid challenging routes or disengage from the fear-management aspect
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.flourishing:
     pbs: 7
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 65th–70th percentile (well above average). Delta: ~32 percentile points. Climbing is [identified as one of the activities most reliably inducing flow states](https://doi.org/10.1348/000712607X183614) due to its optimal balance of challenge, skill demand, and immediate feedback; the problem-solving element (route-reading), physical intensity, and clear success criteria create multi-dimensional engagement that generates deep satisfaction
-      - The graded mastery system provides a continuous stream of achievement experiences: sending a new grade delivers a potent sense of accomplishment, while the social structure (belaying partnerships, gym community, outdoor trips) adds belonging and shared meaning
-      - Score 7 corresponds to movement well into 'frequent positive emotions and meaningful engagement' (8) territory; climbing's combination of flow, mastery, community, and adventure generates flourishing benefits that exceed most exercise modalities, capped only by the fact that it remains a leisure activity rather than a life purpose
     isr: 70
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~65th–70th percentile. Delta: ~30–35 percentile points.
+      - Climbing combines four flourishing-supportive elements at high intensity: flow ([Llewellyn & Sanchez 2008](https://doi.org/10.1348/000712607X183614)), graded mastery (sending a new grade is a discrete, hard-won achievement), community (belaying partnerships, gym regulars, outdoor trips), and adventure (especially outdoors, but indoor bouldering retains a strong novelty element)
+      - This composite profile is unusually well-suited to eudaimonic wellbeing: most exercise modalities deliver one or two of these elements; climbing reliably delivers three to four, putting it well above calisthenics (PBS 4) and functional training (PBS 5) on this domain
+      - Score 7 corresponds to movement well into 'frequent positive emotions and meaningful engagement' (8) territory, capped by the fact that climbing remains a leisure activity rather than a life-purpose source
     isr_reasoning: |
-      - Flow-state research specifically identifies climbing as one of the highest-flow activities, with the challenge-skill balance and immediate feedback reliably inducing optimal experience among competent practitioners ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
-      - The strong community dimension adds a social flourishing pathway that is less dependent on individual variation; [survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) shows camaraderie and mutual support are consistently cited as contributors to wellbeing among climbers
-      - Approximately 65-75% of regular climbers report climbing as a primary source of positive affect and life satisfaction, with non-responders mainly being those who plateau and disengage before developing competence
+      - Flow-state research specifically identifies climbing as among the highest-flow activities, with reliable challenge-skill balance and immediate feedback ([Llewellyn & Sanchez 2008, Br J Psychol](https://doi.org/10.1348/000712607X183614))
+      - Community is a structural feature of climbing gyms (belaying partnerships are functionally required for roped climbing; bouldering produces shared problem-solving conversations even among strangers), making the social-flourishing pathway less dependent on individual effort than most exercise modalities
+      - Estimated 65–75% of climbers active for 6+ months report climbing as a primary source of positive affect and life satisfaction
+    uar_reasoning: |
+      - See fitness.enjoyment UAR – flourishing-driven adherence tracks the same enjoyment profile, with retention boosted by community and progression once past the initial learning phase
+
+  participatory-leisure.social:
+    pbs: 7
+    isr: 70
     uar: 50
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~65th percentile. Delta: ~30 percentile points.
+      - Climbing has unusually strong default-social structure: roped climbing requires a belay partner (you cannot climb alone), and bouldering produces shared problem-solving where strangers routinely exchange beta on routes – the activity has a built-in scaffold for repeat encounters that ripen into friendship
+      - Indoor gyms function as recurring social spaces with stable regular populations; outdoor trips amplify this further with shared travel, multi-day cohabitation, and high-trust safety dependencies on partners
+      - Score 7 reflects climbing's standing among the strongest exercise modalities for social connection, well above solo modalities (calisthenics, running) and modestly above group fitness classes where interactions are typically transactional rather than partnership-based
+    isr_reasoning: |
+      - The roped-climbing belay structure mechanically requires partnership, making reliable social contact a near-precondition of participation rather than an optional layer
+      - [Survey data](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/) consistently identifies camaraderie and community as among the top reported benefits of climbing
+      - Estimated 65–75% of consistent climbers develop meaningful new friendships through the activity; non-responders typically include solo boulderers who arrive and leave without engaging the community
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  participatory-leisure.achievement:
+    pbs: 7
+    isr: 75
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~65th percentile. Delta: ~30 percentile points.
+      - The graded difficulty system (V-scale, YDS) provides one of the clearest mastery feedback loops in any leisure activity: each grade is a discrete, well-defined accomplishment, with a near-infinite ceiling for progression (elite outdoor climbers continue progressing into their 40s and beyond)
+      - The dual physical-cognitive demand means achievement is multi-dimensional: improvements come from strength, technique, route-reading, and fear management, providing several distinct pathways to feel mastery
+      - Score 7 reflects climbing's unusually rich achievement profile – well above leisure activities with no measurable progression (e.g., walking) and at least equal to most skill-based hobbies (instruments, chess) for sustained mastery experience
+    isr_reasoning: |
+      - The grading system makes mastery experience near-automatic for any consistent climber: any week with measurable strength or technique improvement translates to grade progression in a relatively legible way
+      - Plateau zones (especially V4–V6 in bouldering, 5.11 in roped climbing) can produce extended periods without measurable progress, but most climbers continue to experience mastery via secondary metrics (volume, style, outdoor projects) during these zones
+      - Estimated 70–80% of consistent climbers experience meaningful and sustained sense of accomplishment from the activity
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  participatory-leisure.adventure:
+    pbs: 7
+    isr: 70
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~65th percentile. Delta: ~30 percentile points.
+      - Outdoor climbing is among the more genuinely adventurous mainstream leisure activities: it involves real consequences (height, falls, weather, route-finding), travel to natural settings, and committing physical and psychological challenge under partial uncertainty
+      - Indoor climbing carries less true adventure but retains the novelty element through ever-changing route-setting (most gyms reset routes monthly), so even gym-only climbers experience routine novelty in their training environment
+      - Score 7 reflects climbing's standing among the strongest legal adventure-sport options accessible to non-elite practitioners; below white-water expedition or alpine climbing (PBS 8–9) only because the typical practice is gym-based and the consequence level is well-managed
+    isr_reasoning: |
+      - The outdoor pathway delivers strong adventure benefits reliably to those who progress to it; indoor-only climbers receive a meaningfully smaller adventure dose, splitting the population's experience
+      - Survey evidence ([Stelzer et al. 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/)) supports climbing's identification as a distinctly novel, challenging activity even among those who do not progress to outdoor settings
+      - Estimated 60–75% of regular climbers experience meaningful adventure and novelty gains, with the higher end concentrated among those who climb outdoors at least occasionally
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
-  upfront_cost: 250
-  upfront_cost_reasoning: "Climbing shoes ($100-150), chalk bag and chalk ($25), harness for roped climbing ($60), and belay device ($25). Indoor bouldering requires only shoes and chalk ($125 minimum). Outdoor climbing requires additional gear investment. First-time introductory courses or belay certification ($20-50) at most gyms."
+  upfront_cost: 150
+  upfront_cost_reasoning: "Climbing shoes ($80–150) and chalk bag with chalk ($20–30) are the only essential gear for indoor bouldering. Gym rental shoes ($5/session) reduce upfront cost to under $30. Roped climbing requires a harness ($50–80) and belay device ($20–30), and a belay certification course ($20–50) at the gym. Outdoor climbing requires substantial additional gear (rope, draws, helmet) but this can be deferred."
   ongoing_cost: 80
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Indoor climbing gym membership ($60-100/month depending on location). Shoe resoling every 6-12 months ($40-60, amortised). Chalk replenishment ($5/month). Outdoor climbing is essentially free once gear is owned, though travel costs apply. Day passes ($15-25 per session) are an alternative to membership for less frequent climbers."
+  ongoing_cost_reasoning: "Indoor climbing gym membership $60–120/month depending on location; $80/month is a typical mid-range figure. Day passes ($15–25) are an alternative for less frequent climbers. Shoe resoling every 6–12 months ($40–60, amortised) and chalk replenishment ($5/month) are minor additional costs. Outdoor climbing is essentially free once gear is owned, though travel costs apply."
   upfront_time: 4
-  upfront_time_reasoning: "Introductory course or belay certification (2 hours), learning basic climbing technique and gym etiquette (2 hours across first few sessions). Bouldering has a lower barrier as it requires no rope skills. Most climbers become self-sufficient for indoor sessions within 2-3 visits."
+  upfront_time_reasoning: "Introductory bouldering session or belay certification course (1–2 hours), and 2–3 initial gym visits to learn basic technique, etiquette, and route-reading conventions. Bouldering has a meaningfully lower entry bar than roped climbing because no rope skills or partner are required."
   ongoing_time: 5
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "Two to three sessions of 90-120 minutes per week, including warm-up, climbing, and cool-down/stretching. Sessions tend to be longer than other exercise modalities due to rest between climbs and the social nature of the activity. Minimum effective dose for progression is approximately 2 sessions per week."
+  ongoing_time_reasoning: "Two to three sessions of 90–120 minutes per week, including warm-up, climbing with rest, and cool-down. Sessions tend to be longer than gym-based strength training due to mandatory rest between climbs and the social-conversational nature of the activity."
 
 prerequisites:
-  - "Sufficient upper body strength to hang from a bar briefly and perform basic pulling movements without shoulder pain"
-  - "Access to an indoor climbing gym or suitable outdoor climbing areas with appropriate safety equipment and partners"
-  - "Willingness to manage height-related discomfort and accept minor skin abrasion on hands during the initial learning phase"
-  - "No significant finger, wrist, or shoulder injuries that would be aggravated by gripping and pulling movements under load"
+  - "Sufficient baseline upper-body and grip strength to hang from a bar briefly and perform basic pulling movements without joint pain"
+  - "Access to an indoor climbing gym, or an outdoor climbing area with appropriate gear and partners; major cities and many mid-sized towns have at least one bouldering or full-service gym"
+  - "No significant active finger, wrist, elbow, or shoulder injuries that would be aggravated by gripping and pulling under bodyweight load"
+  - "Willingness to manage acute height-related discomfort and accept minor skin abrasion on hands during the initial learning phase"
+
+flagged_domains:
+  - domain: "friendship"
+    rationale: "Climbing partnerships involve repeated high-trust interactions (belay safety, problem-solving, multi-day outdoor trips) that mature into friendships at higher rates than transactional gym contact, plausibly increasing friendship.depth and friendship.breadth"
+  - domain: "self-awareness"
+    rationale: "Climbing develops kinaesthetic and proprioceptive awareness, and the fear-management aspect produces direct experiential learning about one's own response to acute uncertainty, plausibly contributing to self-awareness.experiential"
+  - domain: "cognitive-skills"
+    rationale: "Route-reading and sequencing demand spatial reasoning and working memory under physical fatigue, plausibly contributing to cognitive-skills.reasoning over sustained practice"

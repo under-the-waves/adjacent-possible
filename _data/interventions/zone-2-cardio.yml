@@ -1,166 +1,171 @@
-evaluated_at: 2025-06-08
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "Zone 2 Cardio"
 what_it_is: |
-  Sustained low-intensity aerobic exercise at 60–70% of maximum heart rate (below the first ventilatory threshold), for 30–60 minutes per session, 3–5 times per week. Modalities include cycling, jogging, swimming, rowing, or elliptical training – the defining feature is maintaining a conversational pace throughout. Serves as the aerobic foundation in polarised training models and pairs well with higher-intensity work like [HIIT training](/resources/intervention-database/hiit-training).
+  Sustained low-intensity steady-state cardio – running, cycling, rowing, or brisk walking – held at roughly 60–70% of maximum heart rate (a conversational pace, just below the first ventilatory threshold) for 45–90 minutes per session, 2–4 sessions per week. The hallmark intervention for building mitochondrial density and aerobic base, and the high-volume foundation in [polarised training models](https://doi.org/10.1123/ijspp.5.3.275) that pair it with [HIIT](/resources/intervention-database/hiit-training) under the often-cited 80/20 rule.
 how_to_do_it: |
-  - Use a heart rate monitor (chest strap preferred for accuracy) and establish your personal Zone 2 range – perceived exertion is unreliable at this intensity, and most people default to going too hard without objective feedback
-  - Many people find the pace feels frustratingly slow at first; the key adaptation is accepting that the benefit comes from sustained easy effort, not from pushing harder
-  - You may find that pairing sessions with podcasts, audiobooks, or conversation makes the time feel productive and reduces perceived monotony – at this intensity, secondary activities do not interfere with the training stimulus
-  - Rotate modalities (e.g. cycling one day, jogging another) if monotony becomes an issue; the physiological adaptations are modality-independent as long as heart rate stays in range
+  - Use a heart rate monitor (chest strap is more accurate than wrist optical) to keep effort in range; perceived exertion alone is unreliable at this intensity, and most beginners default to going too hard
+  - Many people find the prescribed pace feels frustratingly slow at first; the discipline is to accept that the adaptation comes from sustained easy effort, not from pushing harder
+  - You may find sessions easiest to sustain when stacked with podcasts, audiobooks, or a walking/riding partner – the intensity is low enough that secondary activity does not compromise the training stimulus
+  - Rotate modalities (e.g. cycling one day, jogging another) to limit monotony and joint repetition; physiological adaptations are largely modality-agnostic when the heart rate target is met
 success_looks_like: |
-  - Your pace at the same heart rate gradually increases over 6–12 weeks – you can cover more ground at the same comfortable effort, reflecting genuine aerobic base improvement
-  - Sessions feel easy and repeatable; you finish without significant fatigue and can train again the next day without needing recovery
-  - Resting heart rate drops by 5–10 bpm over several months, a reliable indicator of improved cardiovascular efficiency
+  - Pace at the same heart rate gradually rises over 6–12 weeks: you cover more ground at the same comfortable effort, reflecting genuine aerobic base improvement
+  - Sessions feel repeatable and leave little fatigue; you can train the next day without needing dedicated recovery
+  - Resting heart rate falls 5–10 bpm over a few months, consistent with improved cardiovascular efficiency
 common_pitfalls: |
-  - Drifting above Zone 2 intensity because the pace feels 'too easy' – this shifts the training stimulus away from aerobic base development and increases recovery cost, undermining the approach
-  - Skipping the heart rate monitor and training by feel, which almost always results in sessions that are too intense to qualify as Zone 2
-  - Expecting visible performance or body composition changes within weeks – Zone 2 adaptations are slow and cumulative, and impatience leads many people to abandon it for higher-intensity alternatives before the benefits materialise
+  - Drifting above Zone 2 because the prescribed pace feels 'too easy' – this shifts the stimulus toward threshold work and inflates recovery cost, undermining the rationale for the session
+  - Skipping the heart rate monitor and training by feel, which almost always lands sessions above the target zone
+  - Expecting visible body composition or performance changes within weeks; the adaptations are slow and cumulative, and impatience often pushes people to abandon the protocol before benefits accrue
 description: |
-  - Sustained low-intensity aerobic exercise at 60-70% of maximum heart rate (below the first ventilatory or lactate threshold), for 30-60 minutes per session, 3-5 times per week
-  - Modalities include cycling, jogging, swimming, rowing, or elliptical training, with intensity characterised by the ability to maintain a conversation throughout
-  - Preferentially develops mitochondrial oxidative capacity, fat oxidation, and aerobic base fitness, though [recent reviews](https://doi.org/10.1113/JP279564) note current evidence does not conclusively show Zone 2 is superior to higher intensities for mitochondrial adaptations
-  - Distinguished from HIIT by its low perceived exertion and minimal recovery cost, allowing high training frequency; serves as the foundation of [polarised training models](https://doi.org/10.1123/ijspp.5.3.275) used by elite endurance athletes
-  - Meaningful cardiovascular and metabolic adaptations develop over 6-12 weeks of consistent training
+  - Sustained low-intensity steady-state cardio at 60–70% maximum heart rate (conversational pace, below the first ventilatory threshold) for 45–90 minutes per session, 2–4 sessions per week
+  - Modalities include running, cycling, rowing, swimming, or brisk uphill walking; the defining feature is heart rate, not the activity itself
+  - Preferentially develops mitochondrial oxidative capacity and fat oxidation, with [reliable VO2max gains](https://doi.org/10.1007/s40279-015-0365-0) emerging over months – slower week-to-week than HIIT, but sustainable at much higher weekly volume
+  - For all-cause mortality and longevity outcomes, [total cardiorespiratory volume matters more than intensity choice](https://doi.org/10.1249/MSS.0000000000000892); Zone 2 wins on the volume axis because it is repeatable nearly daily without recovery cost
+  - Distinct from [HIIT](/resources/intervention-database/hiit-training) (higher per-minute stimulus, lower sustainable volume) and [Daily Walking](/resources/intervention-database/daily-walking) (lower intensity, lower per-session aerobic stimulus); the three pair well in a polarised programme
 applicable_domains: ["fitness", "body-image", "mental-health"]
 
 values:
   fitness.health:
     pbs: 8
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile. Delta: ~42 percentile points of improvement. Cardiorespiratory fitness (CRF) is the strongest and most consistent predictor of morbidity and mortality across 199 cohort studies representing over 20.9 million observations; each 1-MET increase is associated with 11-17% reduction in all-cause mortality, corresponding to 3-5+ additional healthy years ([Ross et al. 2016, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0000000000000892))
-      - Zone 2 specifically improves mitochondrial oxidative capacity and fat oxidation, central to metabolic health, insulin sensitivity, and chronic disease prevention ([San-Millan & Brooks 2018, Sports Med](https://doi.org/10.1007/s40279-017-0820-x))
-      - A recent narrative review (2025) notes current evidence does not conclusively support Zone 2 as superior to higher intensities for mitochondrial adaptations, but all aerobic exercise intensities robustly increase VO2max and confer substantial longevity benefits ([Poole et al. 2021, J Physiol](https://doi.org/10.1113/JP279564))
     isr: 80
-    isr_reasoning: |
-      - The relationship between CRF and longevity is among the most robustly established in preventive medicine, supported by decades of epidemiological data and large cohort studies ([Ross et al. 2016, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0000000000000892))
-      - Zone 2 training reliably produces aerobic adaptations when performed at adequate volume; all exercise intensities robustly increase VO2max ([Poole et al. 2021, J Physiol](https://doi.org/10.1113/JP279564))
-      - The specific claim that Zone 2 is optimal for mitochondrial biogenesis lacks strong RCT support, which introduces uncertainty about the mechanism while the health outcome remains well-supported ([MacInnis & Gibala 2017, J Physiol](https://doi.org/10.1113/JP273196))
     uar: 70
     confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile on cardiorespiratory fitness (CRF). Delta: ~42 percentile points of improvement. CRF is the strongest single predictor of all-cause mortality across [199 cohorts and 20.9 million observations](https://doi.org/10.1249/MSS.0000000000000892); each 1-MET gain is associated with an 11–17% reduction in mortality, mapping to roughly 3–4 additional healthy years – score 8 on the lifespan anchor.
+      - Sustained Zone 2 work [preferentially expands mitochondrial density, capillarisation, and fat-oxidation capacity](https://doi.org/10.1007/s40279-017-0820-x), the substrate-level adaptations that underpin metabolic health, insulin sensitivity, and cardiovascular disease prevention.
+      - For pure mortality outcomes, total aerobic volume drives most of the benefit – and Zone 2's low recovery cost is what allows the volume HIIT cannot sustain. [Recent reviews](https://doi.org/10.1113/JP279564) note Zone 2 is not conclusively superior to higher intensities for mitochondrial adaptation, but it is at least as effective and more accumulable per week.
+    isr_reasoning: |
+      - The CRF–mortality relationship is among the most replicated findings in preventive medicine, with effects observed across age, sex, and clinical subgroups ([Ross et al. 2016](https://doi.org/10.1249/MSS.0000000000000892)).
+      - Aerobic adaptations from sustained low-intensity training are reliably produced when weekly volume is adequate; [meta-analytic evidence](https://doi.org/10.1007/s40279-015-0365-0) shows VO2max gains across virtually all training studies meeting minimum-dose thresholds.
+      - The ~80% figure reflects that some people undertrain (insufficient weekly minutes to drive adaptation) or train above zone, blunting the mitochondrial-specific stimulus, but cardiometabolic benefit still accrues for nearly all consistent practitioners ([MacInnis & Gibala 2017](https://doi.org/10.1113/JP273196)).
     uar_reasoning: |
-      - Zone 2 cardio has relatively high adherence potential due to its low perceived exertion, minimal post-exercise fatigue, and low injury risk, making it sustainable as a daily practice ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - The comfortable intensity allows combination with other activities (podcasts, socialising) without performance decrement, reducing the perceived burden ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - Some individuals find the enforced low intensity boring or frustrating, and heart rate monitoring adds a minor complexity barrier, but overall the sustainability profile is strong ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Zone 2's low perceived exertion, minimal recovery cost, and low injury rate place it well above HIIT (real-world adherence ~20% at 12 months unsupervised) but below pure walking. [Affective response data](https://doi.org/10.2165/11590680-000000000-00000) predicts positive in-session affect at intensities below ventilatory threshold, supporting sustainability.
+      - Heart rate monitor dependence and 45–90 min session length are real friction relative to walking; [exercise adherence reviews](https://doi.org/10.1136/bjsports-2015-095948) show duration is among the strongest predictors of dropout at the 6–12 month mark.
+      - The pace can feel boring or frustratingly slow for those used to higher-intensity training, producing a meaningful minority who drift above zone or abandon the protocol within months ([Dishman et al. 2006](https://doi.org/10.1249/01.mss.0000185084.72008.92)).
 
   fitness.performance:
     pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. Zone 2 builds the aerobic base underpinning endurance performance: mitochondrial density, capillary networks, stroke volume, and fat oxidation capacity, but alone produces limited improvements in lactate threshold, VO2max ceiling, anaerobic power, or speed ([San-Millan & Brooks 2018, Sports Med](https://doi.org/10.1007/s40279-017-0820-x))
-      - As a standalone programme, Zone 2 can elevate sedentary individuals to roughly the 6th-15th percentile on general fitness tests; its primary performance value is as one component of a polarised training model rather than a standalone programme ([Seiler 2010, Int J Sports Physiol Perform](https://doi.org/10.1123/ijspp.5.3.275))
-      - Score 6 aligns with the 6th percentile anchor point: Zone 2 alone develops foundational fitness but cannot approach higher percentiles without higher-intensity training supplementation ([Poole et al. 2021, J Physiol](https://doi.org/10.1113/JP279564))
     isr: 75
-    isr_reasoning: |
-      - Aerobic base adaptations from sustained low-intensity training are reliably produced and well-characterised in exercise physiology, with predictable and consistent improvements across individuals ([Midgley et al. 2006, Sports Med](https://doi.org/10.2165/00007256-200636020-00004))
-      - The performance ceiling from Zone 2 alone is limited; higher intensities are needed to maximise VO2max and lactate threshold, reducing the ISR for high-level performance outcomes ([Seiler 2010, Int J Sports Physiol Perform](https://doi.org/10.1123/ijspp.5.3.275))
-      - Evidence supports Zone 2 as a necessary but insufficient component of optimal endurance performance training ([San-Millan & Brooks 2018, Sports Med](https://doi.org/10.1007/s40279-017-0820-x))
     uar: 65
     confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~55th percentile on a general fitness test. Delta: ~20 percentile points. As a standalone programme, Zone 2 builds the aerobic base – mitochondrial density, capillarisation, stroke volume, fat oxidation – but is [intrinsically limited for VO2max ceiling, lactate threshold, and anaerobic power](https://doi.org/10.1007/s40279-017-0820-x), capping where it alone can take a non-elite trainee.
+      - Within a [polarised model](https://doi.org/10.1123/ijspp.5.3.275) (the 80/20 rule), Zone 2 is the high-volume foundation that makes hard sessions productive; absent the hard 20%, performance gains plateau well below what HIIT or threshold work can deliver ([Seiler 2010](https://doi.org/10.1123/ijspp.5.3.275)).
+      - Score 6 maps to the 6th percentile anchor: meaningful improvement from sedentary baseline, but well short of the 25th-percentile (score 8) ceiling that requires intensity supplementation.
+    isr_reasoning: |
+      - Aerobic-base adaptations are predictable and consistent across individuals at adequate volume ([Midgley et al. 2006](https://doi.org/10.2165/00007256-200636020-00004)); the dose-response is well-characterised.
+      - Performance ceiling from Zone 2 alone is genuinely limited – [head-to-head trials](https://doi.org/10.1007/s40279-015-0365-0) show HIIT produces larger VO2max gains in shorter timeframes – so even adherent practitioners pursuing performance often fall short of their goals without adding intensity.
+      - The ~75% figure reflects that base adaptations land reliably, but the proportion who reach genuinely competitive performance from Zone 2 alone is small without complementary work.
     uar_reasoning: |
-      - Performance-focused Zone 2 practitioners tend to be disciplined endurance athletes who understand the training rationale and can tolerate monotony for long-term gains ([Seiler 2010, Int J Sports Physiol Perform](https://doi.org/10.1123/ijspp.5.3.275))
-      - The low recovery cost allows high training frequency, supporting adherence, but the delayed and indirect nature of performance benefits can test motivation ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - Athletes who track heart rate data and understand the physiological rationale have better adherence than those who find the pace frustratingly slow ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - Performance-motivated trainees tend to be more disciplined and tolerate the volume demands, but the delayed and indirect feel of Zone 2 benefits tests motivation more than HIIT's faster feedback loop ([Seiler 2010](https://doi.org/10.1123/ijspp.5.3.275)).
+      - Heart rate monitoring and 45–90 min session demands raise the friction bar relative to walking, lowering UAR for the general performance-curious population ([Rhodes et al. 2017](https://doi.org/10.1136/bjsports-2015-095948)).
+      - Pairing with a structured polarised plan and tracked progress (pace at HR, FTP) materially improves long-term adherence among performance trainees ([Dishman et al. 2006](https://doi.org/10.1249/01.mss.0000185084.72008.92)).
 
   fitness.enjoyment:
     pbs: 6
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average enjoyment). After successful adherence, a user could plausibly reach the 55th–60th percentile (generally enjoyable). Delta: ~22 percentile points. Comfortable intensity permits stacking with podcasts, audiobooks, music, or conversation, and outdoor modalities (cycling, jogging) provide nature exposure and changing scenery; the experience is rarely unpleasant, but the enforced low effort can feel boring or frustratingly slow for those who prefer to push themselves
-      - No skill progression, competitive element, or movement variety within a session: once you have settled into your heart rate zone, the remaining 30-50 minutes are monotonous by design, which limits the intrinsic interest of the activity itself
-      - Score 6 ('generally enjoyable') reflects that Zone 2 is pleasant and non-punishing but rarely anticipated with excitement or described as a highlight of the day; it sits well above 'tolerable' (4) because the low discomfort and stacking potential keep it positive, but below 'highly enjoyable' (8) because the activity itself provides limited engagement
-    isr: 70
-    isr_reasoning: |
-      - At Zone 2 intensity, affective responses are predicted to be positive by dual-mode theory, but the enforced ceiling on effort creates frustration for a meaningful minority who prefer more stimulating intensities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Enjoyment is heavily modality-dependent: outdoor cycling through scenic routes produces a very different affective response than 45 minutes on an indoor trainer, meaning the proportion who enjoy it varies substantially by context ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - General low-intensity exercise enjoyment data supports moderate satisfaction for most populations, but Zone 2-specific evidence is limited; the requirement for heart rate monitoring adds a constraint element that can reduce the free-form pleasure of simply moving ([Parfitt & Hughes 2009, J Health Psychol](https://doi.org/10.1177/1359105308100214))
+    isr: 65
     uar: 65
     confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~55th–60th percentile (generally enjoyable). Delta: ~20–25 percentile points. The intensity is consistently below ventilatory threshold, where [affective response is reliably positive](https://doi.org/10.2165/11590680-000000000-00000); the activity is rarely unpleasant in the moment.
+      - The session structure is highly stackable with podcasts, audiobooks, conversation, or scenic outdoor routes, allowing the time to be experienced as productive or restorative rather than as an exercise burden.
+      - The cap on enjoyment is monotony: 45–90 minutes at a single comfortable pace lacks the variety, skill progression, or competitive thrill of higher-engagement activities, which is why score 6 ('meaningful gain') rather than 8 ('major gain') is appropriate.
+    isr_reasoning: |
+      - Dual-mode theory predicts positive affect at this intensity, but a meaningful minority – those who prefer harder, shorter efforts – find the enforced low pace frustrating rather than pleasant ([Ekkekakis et al. 2011](https://doi.org/10.2165/11590680-000000000-00000)).
+      - Modality and setting strongly moderate the experience: outdoor cycling on scenic routes consistently outperforms indoor trainer or treadmill sessions for self-reported enjoyment ([Rhodes et al. 2017](https://doi.org/10.1136/bjsports-2015-095948)).
+      - The heart rate monitor adds a constraint that some experience as friction with the free-form pleasure of moving; ~65% experience meaningful enjoyment gains, with the remainder neutral or aversive ([Parfitt & Hughes 2009](https://doi.org/10.1177/1359105308100214)).
     uar_reasoning: |
-      - Low barrier, low fatigue, and compatibility with daily routines support long-term habit formation for those who find a sustainable format ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - Monotony risk is real; rotating modalities and outdoor settings improve retention, as does pairing with valued secondary activities ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - Those who pair Zone 2 with podcasts, learning, or socialising report the highest sustained enjoyment and adherence ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Low fatigue, low injury risk, and integration with other activities support sustained habit formation for those who find a workable format ([Dishman et al. 2006](https://doi.org/10.1249/01.mss.0000185084.72008.92)).
+      - Monotony is a real attrition driver; rotating modalities and outdoor settings improves retention materially ([Rhodes et al. 2017](https://doi.org/10.1136/bjsports-2015-095948)).
+      - Practitioners who pair Zone 2 with valued secondary activity (podcasts, learning, a riding partner) report the strongest long-term adherence ([Ekkekakis et al. 2011](https://doi.org/10.2165/11590680-000000000-00000)).
 
   body-image.fat_loss:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) (Bellicha et al. 2021) found aerobic exercise training produces mean weight loss of 1.5 – 3.5 kg in overweight/obese adults; at Zone 2 volumes of 150 – 300 min/week, successful adherents sustain roughly 2 – 3% body weight loss over 12+ months without dietary intervention
-      - [A dose-response meta-analysis](https://doi.org/10.1001/jamanetworkopen.2024.52185) of 116 RCTs (JAMA Network Open, 2024) found aerobic exercise at moderate intensity produces linear weight loss of approximately 0.52 kg per 30-minute weekly increment; a dedicated Zone 2 practitioner doing 4 – 5 hours/week can expect approximately 2 – 3 kg sustained loss
-      - [Meta-analytic evidence](https://doi.org/10.1007/s40279-016-0650-6) (Keating et al. 2017) shows no difference in fat loss between moderate and vigorous intensities when total energy expenditure is matched, meaning Zone 2's lower per-minute burn is offset by higher sustainable weekly volume
-      - On the logarithmic anchor, 2% sustained loss maps to 10 + log₂(2/25) = 6.36, rounding to PBS 6
+    pbs: 7
     isr: 65
-    isr_reasoning: |
-      - The [Midwest Exercise Trial 2](https://doi.org/10.1002/oby.21073) found that approximately 46% of overweight adults completing a 10-month supervised aerobic programme failed to achieve clinically significant ( greater than 5%) weight loss, largely due to compensatory increases in energy intake
-      - [Daily diary research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) shows roughly half of exercisers increase caloric intake on training days ('compensators'), substantially blunting the expected deficit from moderate-intensity sessions like Zone 2
-      - Zone 2's moderate calorie burn (300 – 500 kcal/hour) means the margin for dietary compensation is narrow; even modest increases in post-exercise eating can eliminate the deficit entirely ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
-      - Estimated 60 – 70% meaningful response rate: the exercise-to-weight-loss pathway is mechanistically sound but behaviourally fragile, with a substantial minority seeing negligible fat loss despite consistent training
-    uar: 55
+    uar: 60
     confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~60th–65th percentile on sustained fat loss. Delta: ~25–30 percentile points. [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) found aerobic training produces 1.5–3.5 kg mean weight loss; at Zone 2 volumes of 200–360 min/week, successful adherents typically sustain 2.5–3.5% body weight loss without dietary intervention.
+      - [Dose-response meta-analysis of 116 RCTs](https://doi.org/10.1001/jamanetworkopen.2024.52185) shows roughly 0.52 kg additional loss per 30-min weekly increment of moderate aerobic exercise; a dedicated Zone 2 practitioner training 4–6 hours/week can expect ~3 kg sustained loss, mapping to score 7 (10 + log₂(3/25) ≈ 6.94).
+      - [When total energy expenditure is matched](https://doi.org/10.1007/s40279-016-0650-6), moderate and vigorous intensities produce equivalent fat loss; Zone 2's lower per-minute burn is offset by higher sustainable weekly volume, putting it on par with HIIT for adherent practitioners (and ahead of walking on per-session caloric expenditure).
+    isr_reasoning: |
+      - Among consistent Zone 2 trainees, ~60–70% achieve clinically meaningful (>3%) sustained fat loss; the rest are caloric compensators – [daily-diary research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) shows roughly half of exercisers eat back exercise calories, eroding the deficit.
+      - [The Midwest Exercise Trial 2](https://doi.org/10.1002/oby.21073) found ~46% of overweight adults completing a 10-month supervised aerobic programme failed to reach >5% loss, primarily via compensatory intake.
+      - Per-session caloric burn at Zone 2 (400–700 kcal for 60–90 min) is materially larger than walking's 200–400 kcal, leaving more room for compensation to occur and still net a deficit ([Bellicha et al. 2021](https://doi.org/10.1111/obr.13256)).
     uar_reasoning: |
-      - Zone 2's low perceived exertion, minimal recovery cost, and compatibility with daily routines support higher long-term adherence than vigorous exercise ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000)), but weight-loss-specific adherence requires sustained commitment over 6 – 12+ months
-      - [General exercise adherence data](https://doi.org/10.1136/bjsports-2015-095948) (Rhodes et al. 2017) shows approximately 50 – 60% of adults maintain moderate exercise programmes beyond 6 months; Zone 2's tolerability places it at the higher end of this range
-      - The slow rate of visible change (1 – 2 kg over 3 months without dietary change) can be demotivating for weight-loss-focused individuals, leading some to abandon the approach for more aggressive strategies ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - See fitness.health UAR – same intervention, same adherence profile, slightly lower for fat-loss-specific motivation because slow visible change tests patience.
+      - [Adherence research](https://doi.org/10.1136/bjsports-2015-095948) shows ~50–60% of adults maintain moderate exercise programmes beyond 6 months; fat-loss seekers in particular often pivot to more aggressive strategies when scale change is slow ([Teixeira et al. 2012](https://doi.org/10.1186/1479-5868-9-78)).
+      - The 60% figure splits the difference between general Zone 2 UAR (70%) and the steeper attrition curve when motivation is tied to a body-composition outcome that takes 6–12+ months to materialise.
 
   mental-health.stability:
     pbs: 5
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 50th percentile (average stability). Delta: ~15 percentile points. The [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) found light-to-moderate physical activity produces clinically meaningful reductions in depressive symptoms (g = -0.58), with Zone 2 intensity falling squarely in the moderate range that drives reliable mood improvement
-      - Zone 2's sustainable, non-punishing intensity creates a reliable mood floor: the low perceived exertion ensures consistently positive affective responses during sessions, and [dual-mode theory](https://doi.org/10.2165/11590680-000000000-00000) predicts near-universal pleasure at intensities below ventilatory threshold
-      - Score 5 reflects a moderate stability benefit: Zone 2 cardio reliably reduces baseline anxiety and depressive symptoms through serotonergic and anti-inflammatory pathways, but the effect size is smaller than vigorous exercise (g = -0.74) and the benefit is a secondary domain effect
     isr: 70
-    isr_reasoning: |
-      - Moderate-intensity aerobic exercise is one of the most consistently supported interventions for mood improvement, with [meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/36796860/) showing significant effects across diverse populations and clinical presentations
-      - The comfortable intensity means affective responses are almost universally positive during sessions, creating a reliable acute mood boost that accumulates over time ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Approximately 70% of adherent practitioners experience meaningful stability improvements, with the regularity and sustainability of Zone 2 training supporting consistent neurochemical benefits
     uar: 70
     confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~50th percentile (average emotional steadiness). Delta: ~15 percentile points. The [BMJ 2024 network meta-analysis of 218 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) found light-to-moderate physical activity produces clinically meaningful reductions in depressive symptoms (g = -0.58); Zone 2 sits squarely in this dose range.
+      - The sub-threshold intensity reliably produces positive in-session affect ([dual-mode theory](https://doi.org/10.2165/11590680-000000000-00000)), creating a daily mood floor that accumulates across sessions.
+      - Score 5 represents a 'meaningful' but secondary-domain stability gain: the effect is smaller than vigorous exercise (g = -0.74) and operates as one input among many, not as a primary therapeutic intervention.
+    isr_reasoning: |
+      - Moderate aerobic exercise's mood benefits are among the most replicated findings in exercise psychology ([Singh et al. 2023, BJSM](https://pubmed.ncbi.nlm.nih.gov/36796860/)).
+      - The comfortable intensity ensures near-universal positive in-session affect ([Ekkekakis et al. 2011](https://doi.org/10.2165/11590680-000000000-00000)), so the mood pathway operates reliably across populations.
+      - ~70% of adherent practitioners experience meaningful stability gains; non-responders are concentrated among those with severe mood disorders requiring direct treatment, where exercise is adjunctive rather than primary ([BMJ 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/)).
     uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile; Zone 2's low perceived exertion supports strong long-term adherence
+      - See fitness.health UAR – same intervention, same adherence profile.
 
   mental-health.resilience:
     pbs: 4
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 45th–50th percentile (approaching average). Delta: ~12 percentile points. [Research on exercise and stress resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC4013452/) shows regular exercise is associated with emotional resilience to acute stress, including lower cortisol reactivity and faster recovery, though the effect is intensity-dependent and [meta-analytic evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) shows resilience gains are significantly stronger with vigorous than moderate-intensity activity
-      - Zone 2 provides mild stress-system activation through sustained aerobic effort, supporting some physiological adaptation, but the deliberately comfortable intensity limits the stress-inoculation pathway that builds psychological hardiness
-      - Score 4 reflects a threshold-level resilience benefit: Zone 2 cardio provides a modest mood buffer and stress-recovery improvement through regular autonomic nervous system training, but falls short of the mastery experiences and discomfort tolerance built by higher-intensity activities
     isr: 55
-    isr_reasoning: |
-      - The stress-adaptation pathway at moderate intensity is weaker and less consistently observed than at vigorous intensity; [biological research](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/) shows BDNF increases are dose-dependent with exercise intensity
-      - Zone 2's low recovery cost means the physiological stress exposure per session is modest, limiting the magnitude of stress-system adaptation for most practitioners
-      - Approximately 55% of adherent Zone 2 practitioners develop meaningfully improved stress tolerance, with the benefit being more reliable for mood buffering than for resilience to acute stressors
     uar: 70
     confidence: low
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~45th–50th percentile. Delta: ~10–15 percentile points. [Exercise–stress research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4013452/) shows regular aerobic activity is associated with lower cortisol reactivity and faster recovery from acute stressors, but [meta-analytic evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) finds resilience gains are stronger with vigorous than moderate-intensity activity.
+      - Zone 2 provides mild autonomic-system training and a regular ritual of self-regulation, both of which support stress recovery; the deliberately comfortable intensity, however, limits the discomfort-tolerance pathway that builds psychological hardiness.
+      - Score 4 reflects a threshold-level benefit: a real but modest contribution to coping, well short of what is delivered by activities involving sustained discomfort or mastery challenge.
+    isr_reasoning: |
+      - The stress-adaptation pathway at moderate intensity is weaker and less consistently observed than at vigorous intensity; [BDNF and HPA-axis adaptations](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/) are dose-dependent.
+      - Zone 2's low recovery cost means per-session physiological stress is modest, capping the magnitude of stress-system adaptation for most practitioners.
+      - ~55% of adherent practitioners develop meaningfully improved stress tolerance, more reliably for mood buffering than for resilience to acute non-physical stressors.
     uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile
+      - See fitness.health UAR – same intervention, same adherence profile.
 
   mental-health.flourishing:
     pbs: 4
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 45th–50th percentile (approaching average). Delta: ~12 percentile points. Zone 2 cardio is pleasant and non-punishing, permitting stacking with podcasts, music, or conversation, which provides consistent low-level positive affect; however, the enforced low intensity and monotonous pacing limit intrinsic engagement, flow potential, and the sense of accomplishment that drive higher flourishing scores
-      - Outdoor Zone 2 modalities (cycling, jogging) provide some nature-exposure benefits linked to [improved positive affect and self-esteem](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) (d = 0.46-0.54), but the protocol is modality-agnostic and many practitioners use indoor equipment, reducing this pathway
-      - Score 4 reflects a threshold-level flourishing benefit: Zone 2 cardio provides a reliable baseline of positive affect during and after sessions, corresponding to 'occasional positive experiences' (4), but lacks the skill progression, flow states, or peak experiences needed to move into 'regular moments of satisfaction and meaning' (6)
     isr: 60
-    isr_reasoning: |
-      - Positive affective responses at Zone 2 intensity are reliably predicted by dual-mode theory, but the enjoyment ceiling is lower than for activities with greater variety, challenge, or nature exposure ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Modality strongly moderates the flourishing benefit: outdoor cycling through scenic routes produces substantially better affective responses than 45 minutes on an indoor trainer, creating high individual variation ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - Approximately 60% of adherent practitioners report improved daily mood and life satisfaction from regular Zone 2 sessions, with the remainder finding the monotony limits the positive psychological impact
     uar: 70
     confidence: low
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~45th–50th percentile. Delta: ~10–15 percentile points. Zone 2 is pleasant and stackable with valued secondary activities (podcasts, conversation, scenic routes), generating consistent low-level positive affect, but the enforced low intensity and steady pacing limit flow potential and the sense of accomplishment that drive higher flourishing scores.
+      - Outdoor modalities provide some [nature-exposure benefits](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) (d ≈ 0.46–0.54 for positive affect and self-esteem); the protocol is modality-agnostic, so this pathway depends on practitioner choices.
+      - Score 4 reflects a 'modest gain' threshold: reliable baseline of pleasant time and post-session afterglow, without the peak experiences, mastery progression, or rich social engagement that move flourishing into the 'meaningful' (6) range.
+    isr_reasoning: |
+      - Positive in-session affect is reliably predicted at this intensity ([Ekkekakis et al. 2011](https://doi.org/10.2165/11590680-000000000-00000)), but enjoyment ceiling is lower than for activities with greater variety, challenge, or social dimension.
+      - Modality and setting strongly moderate the flourishing pathway; outdoor practitioners report substantially better outcomes than indoor-trainer users ([Rhodes et al. 2017](https://doi.org/10.1136/bjsports-2015-095948)).
+      - ~60% of adherent practitioners report meaningful flourishing gains; the remainder find the monotony limits the positive psychological impact.
     uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile
+      - See fitness.health UAR – same intervention, same adherence profile.
 
 resources:
   upfront_cost: 100
-  upfront_cost_reasoning: "Heart rate monitor (chest strap preferred for accuracy, $50-80) and appropriate footwear or equipment for chosen modality ($50-100). A heart rate monitor is effectively required to train in Zone 2 accurately, as perceived exertion is unreliable at this intensity. If using cycling, the cost of a bicycle ($300-1000+) or gym membership significantly increases the upfront investment."
+  upfront_cost_reasoning: "Heart rate monitor (chest strap preferred for accuracy, $50–80) and basic appropriate footwear or equipment for chosen modality ($50). HR monitor is effectively required at this intensity because perceived exertion is unreliable. If cycling indoors, an existing bike or gym access materially shifts the cost; the estimate assumes running or outdoor cycling on owned equipment."
   ongoing_cost: 20
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Minimal ongoing costs if using running or outdoor cycling as the modality. Gym membership ($30-60/month) if using indoor equipment. Heart rate monitor battery or subscription costs are negligible. Shoe replacement for runners ($120 every 4-6 months, amortised). The estimate assumes a mix of outdoor and indoor training."
+  ongoing_cost_reasoning: "Minimal if running or outdoor cycling is the modality. Gym or indoor-cycling membership ($30–60/month) only if needed. Shoe replacement amortised across the year for runners. HR monitor batteries negligible."
   upfront_time: 2
-  upfront_time_reasoning: "Establishing personal heart rate zones through a max heart rate test or lactate threshold estimation, learning to use a heart rate monitor, and identifying appropriate modalities and routes. The conceptual learning curve (understanding Zone 2 and why to stay in it) takes minimal time but is important for adherence."
+  upfront_time_reasoning: "Establish personal Zone 2 heart rate range (max HR test, age estimation, or lactate threshold proxy), learn to use the monitor, and identify suitable routes or equipment. Conceptual learning curve – understanding why to stay in zone – is short but matters for adherence."
   ongoing_time: 4
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "Three to four sessions of 30-60 minutes per week represents the minimum effective dose for meaningful aerobic base development. Some Zone 2 proponents recommend 150-180 minutes per week as a minimum, aligning with WHO physical activity guidelines. The low intensity means sessions can be longer without excessive fatigue or recovery demands."
+  ongoing_time_reasoning: "Two to four sessions of 45–90 minutes per week represents the minimum effective dose for meaningful aerobic base development; ~180–240 min/week is the commonly cited target. The low intensity allows sessions at the longer end without excessive recovery cost."
 
 prerequisites:
-  - "Baseline cardiovascular health sufficient to sustain 20-30 minutes of low-intensity continuous movement without distress"
-  - "A heart rate monitor (chest strap or optical) to accurately maintain the target intensity zone during sessions"
-  - "Access to at least one appropriate cardio modality (walking, jogging, cycling, swimming, rowing, or gym cardio equipment)"
-  - "Understanding of personal heart rate zones, derived from a maximum heart rate test, age-based estimation, or lactate threshold testing"
+  - "Baseline cardiovascular health sufficient to sustain 30+ minutes of continuous low-intensity movement without distress; medical clearance if over 50 or with cardiovascular risk factors"
+  - "Heart rate monitor (chest strap or optical wrist) – effectively required because perceived exertion is unreliable at this intensity"
+  - "Access to at least one suitable cardio modality (running, cycling, rowing, swimming, brisk uphill walking, or gym cardio equipment)"
+  - "Knowledge of personal heart rate zones, derived from a max HR test, age-based estimation, or lactate threshold proxy"
+
+flagged_domains:
+  - domain: "sleep"
+    rationale: "Regular aerobic exercise improves sleep latency, slow-wave sleep, and total sleep time via thermoregulation, autonomic balance, and circadian entrainment from outdoor light exposure."
+  - domain: "cognitive-skills"
+    rationale: "Aerobic exercise reliably improves executive function, working memory, and processing speed via BDNF upregulation and cerebral perfusion, with effects observed across age groups."

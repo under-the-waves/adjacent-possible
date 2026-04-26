@@ -1,166 +1,210 @@
-evaluated_at: 2025-06-02
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "Daily Walking"
 what_it_is: |
-  Brisk walking for 30–60 minutes daily at conversational intensity (3–4 mph), targeting 7,000–10,000 steps, performed continuously or accumulated in 10+ minute bouts. The most accessible structured exercise intervention available – no equipment, facilities, or technical skill required – with the highest long-term adherence of any exercise modality, though its low intensity limits performance and body composition outcomes compared to [HIIT](/resources/intervention-database/hiit-training) or [Functional Training](/resources/intervention-database/functional-training).
+  A daily walk of 30–60 minutes at moderate, conversational pace (3–4 mph), accumulating roughly 6,000–10,000 steps. Often broken into multiple shorter sessions across the day. Outdoors is usually preferred for adherence and mood, but the core intervention is the activity itself, not the environment. Walking sits in Zone 1 intensity – low enough to require no recovery and to be sustainable indefinitely – which is its defining feature relative to structured cardio modalities like [HIIT](/resources/intervention-database/hiit-training) or [progressive running](/resources/intervention-database/progressive-running).
 how_to_do_it: |
-  - Many people find it easiest to anchor a walk to an existing daily event – commuting, a lunch break, after dinner – so it becomes part of the routine rather than a separate commitment
-  - You may find that stacking walks with something enjoyable (podcasts, audiobooks, phone calls, a walking companion) makes them something you look forward to rather than endure
-  - Start with whatever duration feels easy and build gradually; 10-minute bouts count, and consistency matters more than hitting a step target from day one
-  - Track steps with a phone or basic pedometer if you find measurement motivating, but avoid letting the tracker become a source of guilt on rest days
+  - Anchor walks to existing daily events – commuting, lunch break, after dinner – so they become part of the routine rather than a separate commitment requiring willpower
+  - Stack walks with something enjoyable (podcasts, audiobooks, phone calls, a walking companion) so the experience is something you anticipate rather than tolerate
+  - Start at whatever distance feels easy and grow gradually; 10-minute bouts accumulate to the same total and there is no minimum bout length for cardiovascular benefit
+  - Track steps with a phone or basic pedometer if measurement motivates you, but treat 7,000–8,000 steps as the practical target rather than the often-quoted 10,000
 success_looks_like: |
-  - Walking feels like a natural part of the day rather than an obligation – you notice its absence when you skip it, rather than having to force yourself to start
-  - Sustained energy through the afternoon replaces the mid-day slump, and sleep quality improves noticeably within 2–4 weeks
-  - You can comfortably walk for 45–60 minutes at a brisk pace without fatigue, and everyday physical tasks (stairs, carrying shopping) feel easier
+  - Walking has become automatic – you notice its absence on missed days rather than having to decide each morning whether to go
+  - Mood, energy, and sleep noticeably improve within 2–4 weeks; everyday physical tasks (stairs, carrying shopping) feel easier
+  - You can comfortably sustain 45–60 minutes at brisk pace and have a backup plan (treadmill, indoor mall, pacing) for weather that would otherwise break the streak
 common_pitfalls: |
-  - Treating walking as a weight-loss tool and abandoning it when the scale does not move – the health and mood benefits are substantial even without fat loss
-  - All-or-nothing thinking: skipping a walk entirely because 30 minutes is not available, when a 10-minute bout still provides meaningful benefit
-  - Letting bad weather end the habit for weeks – having an indoor fallback (shopping centre, treadmill, pacing at home) prevents seasonal dropout
+  - Treating walking as a weight-loss tool and quitting when the scale doesn't move – the mortality, mood, and metabolic benefits are substantial even without fat loss
+  - All-or-nothing thinking: skipping a walk entirely because 30 minutes isn't available, when a 10-minute bout still delivers most of the benefit
+  - Letting bad weather end the habit for weeks – without an indoor fallback, seasonal dropout is the single most common failure mode
 description: |
-  - Brisk walking for 30-60 minutes daily at conversational intensity (3-4 mph), performed continuously or accumulated in 10+ minute bouts, targeting 7,000-10,000+ steps
-  - Requires no equipment, facilities, or technical skill, making it the most accessible structured exercise intervention available
-  - Distinguished from other cardio modalities by its exceptionally high adherence rate and negligible injury risk, though its low intensity limits performance and body composition outcomes
-  - [Large-scale meta-analyses](https://doi.org/10.1136/bjsports-2014-094157) show walking reduces all-cause mortality by 20-30%, with [step-count research](https://doi.org/10.1016/S2468-2667(21)00302-9) indicating diminishing returns above 7,000-8,000 steps per day
-  - Health benefits become noticeable within 2-4 weeks, with significant cardiovascular and metabolic improvements developing over 8-12 weeks
-applicable_domains: ["fitness", "body-image", "mental-health"]
+  - A daily walk of 30–60 minutes at moderate, conversational pace (3–4 mph), accumulating roughly 6,000–10,000 steps – often broken into multiple sessions
+  - Distinct from progressive cardio in its low (Zone 1) intensity, accessibility, and absence of recovery burden – this is what makes it sustainable for almost anyone
+  - [Meta-analysis of 15 international cohorts](https://doi.org/10.1016/S2468-2667(21)00302-9) shows mortality risk falls steeply between 2,000 and ~7,500 steps per day, then flattens; under-60s benefit up to ~8,000–10,000 steps, over-60s up to ~6,000–8,000
+  - [Cardiovascular meta-analysis](https://doi.org/10.1161/CIRCULATIONAHA.122.061288) confirms a parallel dose-response for cardiovascular events; [longitudinal physical-activity research](https://doi.org/10.1016/j.amepre.2013.08.001) finds even low-volume walking (<150 min/week) is protective against future depression
+  - Health and mood benefits emerge within 2–4 weeks; cardiovascular markers shift over 8–12 weeks; raw fitness (VO2max, strength) gains are modest because intensity is sub-threshold for most adaptive stress
+applicable_domains: ["fitness", "body-image", "mental-health", "sleep", "health-management", "habits", "cognitive-skills"]
 
 values:
   fitness.health:
     pbs: 7
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 70th percentile on longevity-related health markers. Delta: ~30 percentile points of improvement. Large-scale meta-analyses show daily walking reduces all-cause mortality by 20-30% and cardiovascular disease risk by 30-35%, corresponding to roughly 2-4 additional healthy years on the linear anchor ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
-      - The Nurses' Health Study and other longitudinal research demonstrate 2-4 additional healthy years for regular walkers, with walking significantly reducing diabetes risk (30-40%), improving blood pressure, and enhancing metabolic health ([Manson et al. 2002, N Engl J Med](https://doi.org/10.1056/NEJMoa020694))
-      - Score 7 reflects a position between 1 year (score 6) and 3-4 years (score 8) on the health anchor: strong evidence but benefits plateau relative to more vigorous activities, with diminishing returns above 7,000-8,000 steps/day ([Paluch et al. 2022, Lancet Public Health](https://doi.org/10.1016/S2468-2667(21)00302-9))
-    isr: 95
-    isr_reasoning: |
-      - Exceptionally robust evidence base with multiple large RCTs and decades of epidemiological data; walking health benefits are among the most replicated findings in exercise science ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
-      - Studies consistently show health benefits across diverse populations, ages, and fitness levels, with minimal risk of adverse effects or contraindications ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
-      - The simplicity and low intensity make benefits highly reliable and reproducible; virtually everyone who walks consistently derives health benefit ([Paluch et al. 2022, Lancet Public Health](https://doi.org/10.1016/S2468-2667(21)00302-9))
-    uar: 85
+    isr: 90
+    uar: 90
     confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after successful adherence: 65th–75th percentile on longevity markers. Delta: ~30–40 percentile points.
+      - The [Paluch 2022 Lancet Public Health meta-analysis of 15 cohorts](https://doi.org/10.1016/S2468-2667(21)00302-9) shows adults in the highest step quartile have 40–53% lower all-cause mortality than the lowest, with the curve flattening around 7,500 steps for under-60s and 6,000–8,000 for over-60s.
+      - The [Paluch 2023 Circulation harmonised meta-analysis](https://doi.org/10.1161/CIRCULATIONAHA.122.061288) finds a parallel dose-response for cardiovascular events. Translated onto the 15-year anchor, a sedentary adult moving to 7,000+ steps gains roughly 2–3 healthy years: 10 + log₂(2.5/15) = 7.4, rounding to PBS 7.
+      - Score 7 sits between 1 year (6) and 3–4 years (8) and reflects that walking captures most of the available longevity benefit but not the additional gains from vigorous activity, resistance training, or sustained cardiometabolic load.
+    isr_reasoning: |
+      - Among adherent walkers in the [Paluch 2022 cohort](https://doi.org/10.1016/S2468-2667(21)00302-9), the mortality benefit appears across age, sex, and starting fitness strata, with no subgroup showing null or reversed effect – mechanistic non-response is rare.
+      - The [umbrella review of step-count meta-analyses](https://doi.org/10.1016/j.ypmed.2024.108007) confirms the dose-response is replicated across 15+ independent cohorts, indicating very high reliability of the underlying biology.
+      - The remaining ~10% reflects individuals whose health trajectory is dominated by non-walking-modifiable factors (advanced disease, severe genetic risk) where the marginal mortality reduction from walking is washed out.
     uar_reasoning: |
-      - Walking has the highest adherence rates among exercise interventions due to accessibility, low barrier to entry, and ability to integrate into daily routines ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - Studies show 70-85% maintain daily walking programmes beyond 6 months, far exceeding gym-based or structured exercise retention ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
-      - Dropout is primarily due to weather, motivation fluctuations, or life changes rather than physical limitations or complexity; pedometer-based interventions further improve adherence ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
+      - [Bravata et al. 2007 in JAMA](https://doi.org/10.1001/jama.298.19.2296) and [Dishman et al. 2006](https://doi.org/10.1249/01.mss.0000185084.72008.92) document 70–85% six-month retention for walking programmes, the highest of any structured exercise modality.
+      - Walking's UAR is exceptionally high because it has zero recovery burden, no equipment friction, and integrates into routines (commute, lunch, dog) that people would do anyway – the marginal cost of "going for a walk" is unusually low.
+      - The 90% reflects that the main remaining failure mode is environmental (weather, urban walkability, mobility limitation) rather than motivational; with an indoor fallback, almost everyone who starts can sustain it.
 
   fitness.performance:
     pbs: 4
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 40th – 45th percentile on fitness test performance. Delta: ~5 – 10 percentile points of improvement. Walking provides modest cardiovascular improvements with VO2max increases of 5-15% in sedentary individuals, placing most walkers around the 2nd-6th percentile on cardiorespiratory fitness tests relative to the general exercising population ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
-      - Benefits include improved walking economy, basic endurance, and functional capacity, but walking lacks the intensity for significant anaerobic capacity, power development, or sport-specific adaptations ([Swain & Franklin 2006, Am Heart J](https://doi.org/10.1016/j.ahj.2005.03.052))
-      - Score 4 corresponds to the 2nd percentile anchor point: walking develops functional baseline fitness but cannot approach general fitness test performance achieved by higher-intensity modalities ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
-    isr: 90
-    isr_reasoning: |
-      - Research consistently demonstrates reliable but modest performance improvements from walking programmes, with predictable cardiovascular adaptations and functional capacity gains across populations ([Murtagh et al. 2015, Br J Sports Med](https://doi.org/10.1136/bjsports-2014-094157))
-      - The performance ceiling is inherently limited by the low-intensity nature of the activity, but within that ceiling, improvements are highly consistent ([Swain & Franklin 2006, Am Heart J](https://doi.org/10.1016/j.ahj.2005.03.052))
-      - Essentially zero risk of overtraining or maladaptation, making the success rate for achievable performance gains very high ([Hanson & Jones 2015, Ann Intern Med](https://doi.org/10.7326/M14-1651))
-    uar: 80
+    isr: 85
+    uar: 85
     confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~40th–45th percentile on age-adjusted fitness tests. Delta: ~5–10 percentile points.
+      - The [Crowley 2022 overview of training-intensity meta-analyses](https://doi.org/10.1155/2022/9310710) reports VO2max gains of roughly 10–16% in previously sedentary adults from walking-volume interventions – meaningful but well below the 20–30% achievable with vigorous training or HIIT.
+      - On the anchor, the 2nd percentile maps to score 4 and the 6th to score 6. Walking lifts a sedentary adult into the bottom of the trained range but does not approach a competitive-fitness percentile, so PBS 4 is the honest read.
+      - Walking's intrinsic intensity ceiling caps the adaptation: it does not stress anaerobic capacity, power, or strength systems, which is why this PBS is much lower than fitness.health.
+    isr_reasoning: |
+      - The [Huang 2005 meta-analysis of endurance training in older adults](https://doi.org/10.1111/j.0197-3118.2005.04324.x) reports a moderate standardised effect (d = 0.64) for VO2max gains across 41 controlled trials, indicating reliable but bounded improvement among adherent walkers.
+      - Non-response is rare for the modest gains walking can deliver – essentially everyone consistent gets some cardiovascular adaptation – but the 15% who don't show measurable VO2max change typically have starting fitness already above the sedentary baseline.
+      - Risk of overtraining or maladaptation is effectively zero, which removes a class of failure modes that plague higher-intensity programmes.
     uar_reasoning: |
-      - Performance-focused walkers often maintain programmes due to low physical demands and joint-friendly nature, with high adherence among older adults and rehabilitation populations ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - Those seeking significant athletic gains may abandon walking for more intensive activities, reducing the walking-specific adherence pool ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - Studies show good long-term retention for walkers who set realistic performance expectations (step counts, walking pace, distance) rather than broader athletic goals ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
+      - See fitness.health UAR – same intervention, same adherence profile. The marginal 5-point reduction reflects that performance-focused users sometimes graduate to higher-intensity modalities and stop logging walks.
 
   fitness.enjoyment:
-    pbs: 8
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th – 80th percentile (well above average enjoyment of physical activity). Delta: ~40 percentile points of improvement. Walking is uniquely stackable with other enjoyable activities: podcasts, audiobooks, music, conversation with a companion, dog walking, or simply observing the neighbourhood; this means the experience is rarely just 'exercise' and can be actively looked forward to
-      - Nature exposure, sunlight, fresh air, and changing scenery provide rich sensory variety without any physical discomfort, skill barrier, or performance pressure; the activity is inherently pleasant rather than merely tolerable
-      - Score 8 ('highly enjoyable and anticipated') reflects that walking combines low effort with high flexibility and sensory reward; it falls short of 10 only because it lacks the flow states, skill mastery, or competitive thrill of peak-enjoyment activities
+    pbs: 7
     isr: 85
-    isr_reasoning: |
-      - Walking sits comfortably below the ventilatory threshold for virtually all adults, placing it in the intensity range where affective responses are almost universally positive; Ekkekakis's dual-mode theory predicts reliable pleasure at self-paced low intensities ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Population surveys consistently rank walking as the most preferred and most enjoyed form of physical activity across age groups, genders, and fitness levels, with very few people reporting it as aversive ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - Green exercise research confirms that outdoor walking produces reliably positive affective responses across populations, with the combination of movement and nature exposure generating consistent enjoyment regardless of individual fitness or temperament ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
-    uar: 80
+    uar: 90
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: 65th–75th percentile on enjoyment of physical activity. Delta: ~30–40 percentile points.
+      - Walking is uniquely stackable with intrinsically pleasant activities – podcasts, audiobooks, music, conversation, dog walking, observing the neighbourhood – meaning the experience is rarely "just exercise" and can be actively anticipated.
+      - Score 7 sits between "meaningful gain" (6) and "major gain" (8). Walking falls short of an 8 because it lacks the flow states, mastery progression, and competitive thrill of peak-enjoyment activities, but its low effort and high sensory variety place it well above modest gain.
+    isr_reasoning: |
+      - [Ekkekakis et al. 2011 Sports Medicine](https://doi.org/10.2165/11590680-000000000-00000) shows that exercise below the ventilatory threshold produces near-universally positive affective responses; walking sits comfortably below this threshold for almost all adults.
+      - [Rhodes et al. 2017 in BJSM](https://doi.org/10.1136/bjsports-2015-095948) finds walking is consistently the most preferred and most enjoyed form of physical activity across age, gender, and fitness strata in population surveys.
+      - The remaining 15% reflects individuals with mobility limitations, urban environments without walkable routes, or strong preferences for higher-intensity or skill-based activity.
     uar_reasoning: |
-      - Walkers often develop strong long-term habits due to enjoyment and lifestyle integration, with many reporting walking as their preferred form of exercise ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - High satisfaction and adherence rates reflect the low barrier: walking requires no special skills, equipment, or facilities, and can be done almost anywhere ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
-      - Weather dependency and seasonal motivation fluctuations are the primary barriers, but overall retention is strong among those who find personal enjoyment in walking routines ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - See fitness.health UAR – same intervention, same adherence profile.
 
   body-image.fat_loss:
-    pbs: 7
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 70th percentile on sustained fat loss outcomes. Delta: ~30 percentile points of improvement. Meta-analysis of pedometer-based walking interventions shows successful adherents lose 1.3 – 3.7 kg depending on programme duration, with longer programmes (1 year+) at the upper end ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
-      - With dietary awareness, walkers maintaining 200+ minutes per week sustain 3 – 5% body weight loss at 12 months; dose-response meta-analysis confirms losses increase linearly up to 300 minutes per week ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333); [JAMA Network Open 2024](https://doi.org/10.1001/jamanetworkopen.2024.52185))
-      - Walking's low intensity caps caloric expenditure at roughly 200 – 400 kcal per session, limiting maximum sustainable loss compared to vigorous modalities ([Bellicha et al. 2021, Obes Rev](https://doi.org/10.1111/obr.13256))
-      - On the logarithmic anchor, 3% sustained loss maps to 10 + log₂(3/25) = 6.94, rounding to PBS 7
-    isr: 55
-    isr_reasoning: |
-      - Exercise-alone trials show roughly half of participants are 'non-responders' who compensate for exercise energy expenditure through increased food intake or reduced non-exercise activity; one study found compensators offset 63% of exercise calories ([King et al. 2008, PLoS ONE](https://doi.org/10.1371/journal.pone.0002398); [Myers et al. 2023, Front Psychol](https://doi.org/10.3389/fpsyg.2023.1098394))
-      - Walking without dietary co-intervention produces mean weight loss of only 1.3 kg across meta-analyses, with many individual participants showing zero or negative weight change, indicating a large non-response fraction ([Richardson et al. 2008, Ann Fam Med](https://doi.org/10.1370/afm.761))
-      - Constrained energy expenditure theory suggests the body downregulates other energy costs when exercise increases, making walking particularly vulnerable to compensation given its modest caloric burn ([Pontzer et al. 2016, Curr Biol](https://doi.org/10.1016/j.cub.2015.12.046))
-      - Score 55 reflects that while the mechanism is sound, only about half of consistent walkers achieve meaningful scale weight reduction without explicit dietary management
+    pbs: 6
+    isr: 50
     uar: 80
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint among walkers who do respond: 55th–65th percentile on sustained fat loss. Delta: ~20–30 percentile points.
+      - The [Richardson 2008 meta-analysis of pedometer interventions](https://doi.org/10.1370/afm.761) shows mean weight loss of 1.3 kg from walking-only programmes, with longer programmes reaching 2–3 kg. Successful walkers without dietary co-intervention sustain roughly 1.5–2% body weight loss at 12 months.
+      - On the 25%-loss anchor, 1.75% loss maps to 10 + log₂(1.75/25) = 6.2, rounding to PBS 6. With dietary awareness this rises to ~3% loss (PBS 7), but the unconditional walking-only effect anchors at 6.
+      - Walking's caloric expenditure (~200–400 kcal/session) caps the maximum sustainable deficit, so even successful responders rarely reach the body-composition outcomes available from higher-intensity or strength-based modalities.
+    isr_reasoning: |
+      - The [Pontzer 2016 constrained-energy-expenditure work](https://doi.org/10.1016/j.cub.2015.12.046) and follow-up exercise-compensation literature show that roughly half of exercise-only participants are non-responders for weight loss because they offset the energy expenditure through increased intake or reduced non-exercise activity.
+      - [King et al. 2008 in PLoS ONE](https://doi.org/10.1371/journal.pone.0002398) found compensators offset 63% of exercise calories on average, explaining why mean weight loss in walking-only trials hovers around 1 kg despite the underlying mechanism being sound.
+      - ISR 50 reflects that fewer than half of consistent walkers achieve clinically meaningful (>3%) scale weight loss without explicit dietary management, even though the cardiovascular and metabolic benefits accrue regardless.
     uar_reasoning: |
-      - Walking has the highest long-term adherence of any exercise modality, with 70 – 85% maintaining programmes beyond 6 months, directly supporting sustained weight management ([Bravata et al. 2007, JAMA](https://doi.org/10.1001/jama.298.19.2296))
-      - Individuals maintaining 250+ minutes per week of moderate activity are significantly more likely to sustain weight loss at 12 months ([Donnelly et al. 2009, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0b013e3181949333))
-      - Walking integrates into daily routines with minimal scheduling friction, but weight maintenance still requires dietary consistency that not all walkers adopt ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - See fitness.health UAR – same intervention, same adherence profile. UAR is a touch lower (80) because users who frame walking primarily as a weight-loss tool tend to drop out faster when scale results don't appear, per [Teixeira et al. 2012](https://doi.org/10.1186/1479-5868-9-78).
 
   mental-health.stability:
     pbs: 5
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average emotional stability). Delta: ~15 – 20 percentile points of improvement. A [meta-analysis of 75 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC11287235/) found walking significantly reduces depressive symptoms (SMD -0.59) and anxiety symptoms (SMD -0.45) compared with inactive controls, corresponding to a moderate shift from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6)
-      - The [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) of 218 RCTs found light physical activity including walking produced clinically meaningful effects on depression (g = -0.58), confirming walking as an effective standalone mood intervention
-      - Score 5 reflects a genuine but moderate stability benefit: walking reliably lifts baseline mood and reduces symptom burden, but effect sizes are smaller than vigorous exercise (g = -0.74) and the benefit is a secondary domain effect rather than a primary therapeutic intervention
-    isr: 70
-    isr_reasoning: |
-      - Walking's mood benefits are among the most consistently replicated findings in exercise psychology, with significant effects across subgroups including different frequencies, durations, indoor/outdoor settings, and group/individual formats ([JMIR Public Health 2024](https://publichealth.jmir.org/2024/1/e48355))
-      - When compared to active controls, walking showed no significant difference from other active interventions (SMD -0.13 for depression, -0.05 for anxiety), indicating it works but is not uniquely effective ([JMIR Public Health 2024](https://publichealth.jmir.org/2024/1/e48355))
-      - The low intensity ensures almost universally positive affective responses during the activity itself, meaning the mood benefit operates both during and after sessions, raising the proportion who experience meaningful stability gains ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-    uar: 85
+    isr: 75
+    uar: 90
     confidence: medium
-    uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile; walking has the highest long-term adherence of any exercise modality
-
-  mental-health.resilience:
-    pbs: 4
     pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th – 50th percentile (slightly above average resilience). Delta: ~10 – 15 percentile points of improvement. [Nature walk research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6466337/) shows group walks in nature buffer the effects of stressful life events on mental health, providing a modest stress-recovery pathway through environmental restoration and cortisol reduction
-      - Walking's low intensity limits the physiological stress-adaptation mechanism that builds resilience; [meta-analytic evidence](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) shows resilience increases significantly with vigorous physical activity intensity, an effect not observed with moderate-intensity exercise or walking
-      - Score 4 reflects a threshold-level benefit: outdoor walking provides environmental restoration and mild stress inoculation, moving a person from 'significant disruption from moderate stressors' (4) partway toward 'manages moderate stressors adequately' (6), but the effect is limited by the absence of vigorous challenge
-    isr: 60
+      - Baseline (per values.yml): 35th percentile. Endpoint: 55th–60th percentile on day-to-day emotional steadiness. Delta: ~20–25 percentile points.
+      - The [Mammen and Faulkner 2013 systematic review of 30 prospective studies](https://doi.org/10.1016/j.amepre.2013.08.001) found that even low-volume physical activity (walking <150 min/week) reduces the risk of subsequent depression, with 25 of 30 studies showing protective associations.
+      - The [BMJ 2024 network meta-analysis of 218 RCTs](https://doi.org/10.1136/bmj-2023-075847) found walking and jogging produced clinically meaningful reductions in depression symptoms (effect size around g = -0.6), confirming walking as a standalone mood intervention.
+      - Score 5 reflects a moderate but real symptom-reducing effect – walking lifts baseline mood and reduces distress frequency, but vigorous exercise and dedicated psychological interventions produce larger effect sizes.
     isr_reasoning: |
-      - The stress-buffering effect of nature walks is supported by [Stress Reduction Theory](https://pmc.ncbi.nlm.nih.gov/articles/PMC8125471/) research, but the magnitude is modest and depends on the walking environment being natural rather than urban
-      - Individual variation is substantial: those with high baseline stress benefit more, while those already well-regulated see minimal resilience gains from low-intensity activity ([Olafsdottir et al. 2020, Environ Behav](https://journals.sagepub.com/doi/abs/10.1177/0013916518800798))
-      - Approximately 60% of regular outdoor walkers report improved stress management, though the causal pathway from walking to resilience is indirect and multiply determined
-    uar: 85
-    confidence: low
+      - The [BMJ 2024 network meta-analysis](https://doi.org/10.1136/bmj-2023-075847) confirms the antidepressant effect of walking is statistically robust across subgroups (age, sex, baseline severity), indicating high mechanistic reliability.
+      - Acute affective responses below ventilatory threshold are near-universally positive per [Ekkekakis et al. 2011](https://doi.org/10.2165/11590680-000000000-00000), so a meaningful share of the benefit accrues even to walkers who don't sustain large effect sizes longitudinally.
+      - The 25% who don't experience meaningful stability gains tend to have severe baseline depression where walking alone is sub-therapeutic, or environmental conditions (winter, urban isolation) that blunt the mood pathway.
     uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile
+      - See fitness.health UAR – same intervention, same adherence profile.
 
   mental-health.flourishing:
-    pbs: 5
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th – 55th percentile (modestly above average flourishing). Delta: ~15 – 20 percentile points of improvement. Walking is uniquely stackable with enjoyable activities (podcasts, conversation, dog walking) and provides nature exposure, sunlight, and changing scenery that [green exercise research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) links to improved positive affect (d = 0.54) and self-esteem (d = 0.46)
-      - The activity generates consistent low-level positive affect through sensory variety, social connection, and environmental enrichment, moving a person from 'occasional positive experiences' (4) toward 'regular moments of satisfaction and meaning' (6) on the flourishing anchor
-      - Score 5 reflects a meaningful but moderate flourishing benefit: walking reliably improves daily mood and life satisfaction through pleasant sensory experience and nature contact, but lacks the flow states, mastery progression, or peak experiences that drive higher flourishing scores
-    isr: 75
-    isr_reasoning: |
-      - [Green exercise meta-analyses](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) consistently find improved self-esteem, mood, and revitalisation from outdoor physical activity, with walking being the most commonly studied modality
-      - Positive affective responses to walking are near-universal at self-selected paces below ventilatory threshold, meaning the flourishing pathway operates reliably across populations ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - The proportion experiencing meaningful flourishing gains is slightly lower than stability gains because flourishing requires sustained positive affect rather than mere symptom reduction, and walking's sensory rewards, while reliable, are modest in magnitude
-    uar: 85
+    pbs: 4
+    isr: 65
+    uar: 90
     confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~50th percentile on flourishing measures. Delta: ~15 percentile points.
+      - Walking generates consistent low-level positive affect through routine sensory variety, light exposure, and (for some) social companionship, raising daily mood floor without producing peak experiences or sustained meaning.
+      - Score 4 reflects a "modest gain" – the flourishing pathway operates through cumulative pleasant moments rather than transformative experiences. Note: this score deliberately does not lean on green-exercise meta-analyses, which conflate walking with environment-specific effects that are not intrinsic to the intervention itself.
+    isr_reasoning: |
+      - Walking's stability benefit (mood floor) translates partially but not fully into flourishing (active satisfaction); roughly two-thirds of people who experience the stability gain also report increased life satisfaction, the rest experience only symptom reduction.
+      - The [BMJ 2024 network meta-analysis](https://doi.org/10.1136/bmj-2023-075847) shows walking produces reliable reductions in depressive symptoms but smaller and noisier effects on positive-affect and wellbeing measures, reflecting the asymmetry between symptom reduction and flourishing.
+      - Confidence is low because few RCTs measure flourishing directly; most use depression/anxiety scales that capture stability rather than flourishing.
     uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  sleep.daily_functioning:
+    pbs: 5
+    isr: 70
+    uar: 90
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~55th percentile. Delta: ~20 percentile points, equivalent to roughly 30–60 productive minutes per day from improved sleep quality and reduced daytime fatigue.
+      - The [Kredlow 2015 meta-analysis](https://doi.org/10.1007/s10865-015-9617-6) shows regular moderate exercise improves sleep onset latency, total sleep time, and sleep efficiency with small-to-moderate effect sizes; daytime alertness gains follow.
+      - On the 14-hour anchor, ~45 min/day of recovered productive time maps to 10 + log₂(0.75/14) = 5.8, rounding down to PBS 5 to reflect that walking's effect on sleep is real but modest relative to direct sleep interventions.
+    isr_reasoning: |
+      - The [Kredlow meta-analysis](https://doi.org/10.1007/s10865-015-9617-6) reports the sleep-improving effect of moderate exercise replicates across age groups and exercise modalities, but with substantial individual variation in magnitude.
+      - Roughly 70% of consistent walkers report improved sleep, but the remaining 30% see no measurable sleep change – particularly those whose sleep problems stem from anxiety, shift work, or medical conditions where exercise alone is insufficient.
+      - Late-evening walking can occasionally disrupt sleep onset, but at typical daytime walking times this risk is negligible.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  health-management.vitality:
+    pbs: 6
+    isr: 75
+    uar: 90
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~6–7 high-energy hours per day). Endpoint: 55th–60th percentile (~8–9 high-energy hours). Delta: ~1.5–2 high-energy hours added per day.
+      - On the 14-hour anchor, 1.5 added high-energy hours maps to 10 + log₂(1.5/14) = 6.78, rounding down to PBS 6 conservatively.
+      - The mechanism stacks several inputs: improved cardiovascular efficiency reduces fatigue at given workloads; improved sleep ([Kredlow 2015](https://doi.org/10.1007/s10865-015-9617-6)) extends alert hours; mood stabilisation reduces motivational drag; and sub-clinical metabolic improvements support sustained energy.
+    isr_reasoning: |
+      - Self-reported energy increases are among the most consistently replicated subjective benefits of walking programmes per [Bravata et al. 2007](https://doi.org/10.1001/jama.298.19.2296) and pedometer-trial follow-ups.
+      - The 25% of non-responders typically have underlying conditions (anaemia, hypothyroidism, chronic fatigue) where exercise increases rather than reduces fatigue, or are over-trained relative to their starting capacity.
+      - The vitality pathway is partially additive across mechanisms (cardio + sleep + mood), so it shows up reliably even when any single mechanism is weak.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  habits.impact:
+    pbs: 6
+    isr: 75
+    uar: 90
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~1 life area improved by deliberate habit). Endpoint: ~55th percentile (~2–3 life areas). Delta: ~2 life areas.
+      - On the 10-area anchor, a delta of 2 maps to 10 + log₂(2/10) = 7.68 – but cross-domain caution applies, and walking is a single habit rather than a habits programme. PBS 6 ("2–3 life areas measurably improved") is the conservative read.
+      - Walking is unusually keystone-like: a single daily practice that measurably moves fitness, mental health, sleep, and vitality. Few habits cover four domains with this kind of evidence base.
+    isr_reasoning: |
+      - The cross-domain effects of walking are individually well-evidenced (see fitness.health, mental-health.stability, sleep.daily_functioning ISRs above), so the compound habit-impact case rests on the conjunction holding.
+      - Roughly three-quarters of consistent walkers experience improvement in at least 2 of the 4 main domains; the remainder experience improvement in 1 or fewer.
+      - ISR 75 reflects the dependency on the underlying domain-level effects all reliably manifesting.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  cognitive-skills.lifestyle:
+    pbs: 6
+    isr: 80
+    uar: 90
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~0–1 cognitive-support practices). Endpoint: ~55th percentile (1–2 practices specifically maintained for cognitive benefit). Delta: ~1 practice.
+      - On the 5-practice anchor, the delta of 1 maps to 10 + log₂(1/5) = 7.68; conservatively rounded down to PBS 6 because walking is a single, narrow contribution to a broader practice set.
+      - Walking is one of the canonical "5 cognitive-support practices" in the anchor (sleep, exercise, nutrition, stress management, social engagement). Adopting it cleanly upgrades you from "no deliberate practices" to "one practice maintained specifically for cognitive benefit".
+    isr_reasoning: |
+      - The reliability of walking-as-exercise as a cognitive-support practice is high: [exercise-cognition meta-analyses](https://doi.org/10.1038/s41562-019-0732-1) consistently show small-to-moderate effects on processing speed, attention, and executive function in healthy adults.
+      - The 20% who don't experience cognitive benefit tend to be those whose baseline cognition is already optimised, or who walk too irregularly to produce the chronic adaptations.
+      - This is fundamentally a discrete-counting domain – the practice exists or it doesn't – which makes ISR less variable than for outcome-anchored domains.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
 
 resources:
-  upfront_cost: 80
-  upfront_cost_reasoning: "Quality walking shoes ($60) and basic weather-appropriate clothing ($20). Conservative estimate for essential footwear and minimal weather protection to begin safe, comfortable daily walking."
+  upfront_cost: 60
+  upfront_cost_reasoning: "Decent walking shoes ($50) and basic weather-appropriate clothing ($10). The most accessible structured exercise intervention; no gym, equipment, or membership required."
   ongoing_cost: 0
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "No recurring costs required as walking utilises public spaces, sidewalks, and free outdoor areas. Optional expenses like gym memberships or guided programmes not necessary for effective implementation."
+  ongoing_cost_reasoning: "No recurring expenses for the core intervention. Public sidewalks, parks, and indoor spaces (malls, treadmills) are freely available. Optional pedometer or smartphone tracking adds nothing."
   upfront_time: 1
-  upfront_time_reasoning: "Minimal setup time needed - primarily route planning and initial pace assessment. Activity can begin immediately with basic safety awareness and appropriate footwear."
-  ongoing_time: 4
+  upfront_time_reasoning: "Minimal: route planning, pace assessment, and basic safety awareness. The activity can begin the same day with appropriate footwear."
+  ongoing_time: 5
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "Minimum effective dose of 30 minutes daily for 4 days weekly, representing conservative baseline for meaningful health benefits while maintaining high adherence potential."
+  ongoing_time_reasoning: "Roughly 45 minutes per day, 5–7 days per week, totalling 4–5 hours weekly. The minimum effective dose for most benefits is ~30 minutes daily; the upper end captures the 60-minute sessions some people prefer."
 
 prerequisites:
   - "Ability to walk continuously for 15+ minutes without significant pain or breathing difficulty"
-  - "Access to safe walking areas such as sidewalks, parks, or indoor facilities during preferred exercise times"
-  - "Basic understanding of weather-appropriate clothing and hydration needs for outdoor activity"
-  - "Medical clearance for moderate physical activity if over 50 or with existing cardiovascular conditions"
+  - "Access to safe walking routes (sidewalks, parks, or indoor alternatives like malls or treadmills) during preferred times"
+  - "Medical clearance for moderate physical activity if over 50 or living with a cardiovascular or musculoskeletal condition"

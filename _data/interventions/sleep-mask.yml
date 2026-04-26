@@ -1,101 +1,103 @@
-evaluated_at: 2025-06-02
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "Sleep Mask"
 what_it_is: |
-  Wearing a contoured, light-blocking eye mask during sleep to eliminate ambient light that suppresses melatonin production and disrupts sleep cycles. A well-fitted mask blocks 99–100% of light from streetlamps, early sunrise, and device indicators, improving sleep continuity with minimal effort or cost.
+  Wearing a contoured, light-blocking eye mask during sleep to eliminate ambient light that suppresses melatonin and disrupts circadian signalling. A well-fitted mask blocks the great majority of light from streetlamps, early sunrise, and device indicators. The intervention is most useful for people whose sleeping environment is not already very dark – urban dwellers, people whose partner keeps a different schedule, shift workers, and frequent travellers. For someone who already sleeps in a black-out bedroom, the marginal benefit is modest.
 how_to_do_it: |
-  - Start with a contoured mask that sits around the eyes without pressing on them – many people find these far more comfortable than flat fabric masks, and they block light more completely
-  - Wear the mask for a few nights in a familiar sleeping environment to adapt before judging comfort; most people adjust within a week
-  - If the mask shifts during sleep, you may find a wider elastic band or a wrap-around design stays in place better than a narrow strap
-  - Keep a spare mask accessible (bedside drawer, travel bag) so the habit is not interrupted by wear or loss
+  - Pick a contoured (3D) mask that sits around the eyes without pressing on the lids; flat fabric masks tend to leak light around the nose bridge and squash the eyes
+  - Wear it for several consecutive nights to adapt before judging comfort – most people habituate within a week or so
+  - If the mask shifts during the night, try a wider elastic, an adjustable Velcro strap, or a wrap-around design
+  - Keep a spare in your travel bag and bedside drawer so the habit is not interrupted by wear, loss, or being away from home
 success_looks_like: |
-  - You stop waking prematurely from early morning light or ambient glow – sleep feels more continuous
-  - Putting the mask on becomes automatic, taking seconds as part of your existing bedtime routine
-  - You notice a difference on the nights you forget the mask, confirming it is doing something measurable
+  - You stop waking prematurely from early-morning light or ambient glow, and feel that mornings are less abrupt
+  - Putting the mask on takes seconds and integrates into your existing wind-down without conscious effort
+  - You notice a clear difference on nights you forget it, confirming the effect is real for your environment
 common_pitfalls: |
-  - Buying a cheap flat mask that lets light leak around the nose bridge – inadequate light blocking eliminates the primary benefit
-  - Abandoning the mask after a few uncomfortable nights rather than trying a different shape or material; comfort varies significantly between designs
-  - Assuming a mask solves all sleep problems when other factors (noise, temperature, caffeine timing) are the dominant issue
+  - Buying a cheap flat mask that lets light leak around the nose – inadequate light blocking removes the primary mechanism
+  - Abandoning after two or three uncomfortable nights instead of trialling a different shape; comfort varies a lot between designs
+  - Treating the mask as a fix-all when the dominant disruption is actually noise, temperature, caffeine timing, or a partner's movement
+  - Expecting the same benefit as users in a bright bedroom when your room is already dark – the gain is roughly proportional to how much ambient light you currently get
 description: |
-  - Wearing a light-blocking eye mask during sleep to create complete darkness and eliminate visual stimuli that can disrupt sleep cycles
-  - A properly fitted mask blocks 99-100% of ambient light including early morning sunlight, streetlights, and device indicators
-  - Maintains melatonin production and prevents premature awakening
-  - Most users see improved sleep continuity within the first few nights, with full adaptation to wearing the mask within 1-2 weeks
+  - Wearing a contoured light-blocking eye mask during sleep to suppress ambient light that interferes with melatonin signalling and sleep continuity
+  - Most relevant for people in urban environments, with a partner on a different schedule, doing shift work, or travelling frequently; marginal for those who already sleep in a fully dark room
+  - [Light exposure during sleep](https://www.pnas.org/doi/10.1073/pnas.2113290119) measurably elevates next-morning insulin resistance and overnight heart rate even at modest intensity
+  - [Eye masks combined with earplugs in ICU settings](https://doi.org/10.1186/cc8965) improved REM sleep, reduced awakenings, and lowered cortisol and elevated melatonin
+  - One-time cost of $10–30 for a basic mask; no recurring effort beyond putting it on at bedtime
 applicable_domains: ["sleep"]
 
 values:
   sleep.daily_functioning:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile. Delta: 20 percentile points of improvement. [Zeitzer et al. (2000)](https://doi.org/10.1113/jphysiol.2000.012684) found that even small amounts of light (3 lux) can suppress melatonin by 50%, and complete darkness via a sleep mask eliminates this suppression, improving sleep efficiency by 5-10% and reducing early-morning awakenings.
-      - [Reid et al. (2011)](https://doi.org/10.1016/j.smrv.2010.09.001) demonstrated that blackout conditions improved next-day cognitive performance by 10-15% compared to ambient light exposure, corresponding to roughly 30-60 additional productive minutes.
-      - On the updated anchor (10 = 14h, 8 = 3.5h, 6 = 50min), a gain of ~50 minutes of productive capacity places this at score 6.
-    isr: 75
-    isr_reasoning: |
-      - The mechanism is straightforward and reliable: blocking light prevents photoreceptor-mediated melatonin suppression via a well-characterised physiological pathway. [Zeitzer et al. (2000)](https://doi.org/10.1113/jphysiol.2000.012684) confirmed the dose-response relationship between light exposure and melatonin suppression.
-      - Multiple studies show 70-80% of users experience meaningful improvements in sleep continuity and morning alertness when using effective light-blocking masks, as the intervention addresses a direct physiological mechanism with predictable outcomes.
-      - Individual variation is relatively low compared to behavioural sleep interventions, since light sensitivity is a universal biological feature, though some people already sleep in sufficiently dark environments and gain minimal additional benefit.
-    uar: 60
+    pbs: 5
+    isr: 55
+    uar: 55
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence in a light-affected sleeping environment, a user could plausibly reach the 45th–50th percentile. Delta: ~10–15 percentile points.
+      - For users with meaningful ambient light, [Mason et al. (2022)](https://www.pnas.org/doi/10.1073/pnas.2113290119) found that a single night of moderate light exposure (~100 lux) impaired next-morning insulin sensitivity and elevated overnight heart rate, suggesting daytime energy and cognition gains on the order of 15–30 minutes of additional productive capacity from restoring darkness.
+      - Anchor calibration: 10 + log₂(20 minutes / (14 × 60 minutes)) = 10 + log₂(0.024) ≈ 4.6, rounded to 5. The score sits between the 13-minute (4) and 50-minute (6) benchmarks, reflecting that the average gain across a mixed population is closer to 20 minutes than to a full hour.
+    isr_reasoning: |
+      - Direct mask trials are concentrated in highly light-disrupted settings. [Hu et al. (2015) Cochrane meta-analysis of eye masks plus earplugs in ICU](https://doi.org/10.1186/s13054-015-0855-3) found consistent improvements in subjective sleep quality and REM percentage, but generalising to home settings is imperfect.
+      - Among users with genuinely light-affected bedrooms, roughly 55–60% experience a noticeable next-day functional benefit; among users whose bedrooms are already mostly dark, the benefit is at the noise floor. The 55% ISR averages across this mix.
+      - The mechanism via [photoreceptor-mediated melatonin suppression](https://doi.org/10.1113/jphysiol.2000.012684) is well characterised, but real-world masks rarely achieve 100% light blocking and many adopters do not have the underlying problem the intervention solves.
     uar_reasoning: |
-      - [Hu et al. (2017)](https://doi.org/10.1016/j.sleep.2017.01.018) found approximately 55-65% of users continued wearing sleep masks beyond 3 months, with primary dropout driven by physical comfort issues (mask displacement, eye pressure, elastic discomfort).
-      - Higher-quality contoured masks that avoid eye contact have better retention rates, but even among satisfied users, ~35% discontinue due to mask shifting during sleep or interference with sleep positions.
-      - The nightly application requirement creates a consistent friction point, though the low effort (seconds to put on) partially offsets this compared to more time-intensive sleep interventions.
+      - [Hu et al. (2010) ICU intervention study](https://doi.org/10.1186/cc8965) found high in-trial compliance, but home retention data are thinner. Survey evidence on travel and shift-work mask users suggests roughly 50–60% continue nightly use beyond 3–6 months.
+      - Physical-comfort dropout is the dominant attrition channel: mask shift during side-sleeping, eyelash contact, elastic discomfort, and partner-visibility issues each push a meaningful share of users to discontinue.
+      - The effort is trivially low (seconds) and the cost is one-off, which keeps UAR from collapsing despite the comfort friction; users who clear the first two weeks usually persist.
 
   sleep.long_term_health:
-    pbs: 5
+    pbs: 4
+    isr: 35
+    uar: 55
+    confidence: low
     pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile. Delta: 15 percentile points of improvement. [Cho et al. (2013)](https://doi.org/10.1177/0748730413507714) found modest improvements in inflammatory markers (IL-6, CRP) over 3-month periods with consistent darkness during sleep, suggesting a benefit in the 3-4 month range for healthy lifespan.
-      - [Stevens et al. (2014)](https://doi.org/10.1098/rstb.2013.0571) linked chronic light-at-night exposure to increased cancer risk and metabolic disruption, implying that successful light blocking during sleep could prevent meaningful health loss through circadian integrity maintenance.
-      - On the updated anchor (10 = 8+ years, 8 = 2 years, 6 = 6 months), an estimated 3-4 months of additional healthy lifespan for a successful user places this at score 5, between the 2-month (score 4) and 6-month (score 6) benchmarks.
-    isr: 60
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user in a light-affected environment could plausibly reach the 40th–45th percentile. Delta: ~5–10 percentile points.
+      - [Mason et al. (2022)](https://www.pnas.org/doi/10.1073/pnas.2113290119) and the broader [Northwestern light-at-night cohort work](https://doi.org/10.1093/sleep/zsac130) link ambient light during sleep to elevated cardiometabolic risk, but the absolute effect size attributable to a sleep mask alone (rather than full bedroom darkening) is small – plausibly 1–3 months of additional healthy lifespan over decades of consistent use.
+      - Anchor calibration: 10 + log₂(2 months / 96 months) ≈ 4.4, rounded to 4. Sits at the 2-month benchmark, reflecting that downstream health effects are modest, downstream of sleep quality, and only partially capturable by a mask versus other darkening strategies.
     isr_reasoning: |
-      - Limited long-term studies on sleep masks specifically -- most research focuses on light exposure effects in controlled laboratory settings rather than mask interventions in real-world bedrooms.
-      - [Cho et al. (2013)](https://doi.org/10.1177/0748730413507714) is one of the few studies tracking health biomarkers with mask use, and found modest effects with high individual variation, suggesting ~60% of consistent users achieve meaningful health marker improvements.
-      - The biological mechanism (maintaining circadian rhythm integrity through melatonin preservation) is sound, but the effect size for health outcomes from masks alone is small relative to total sleep quality determinants.
-    uar: 60
-    confidence: medium
+      - Long-term health effects from masks specifically are largely extrapolated from light-exposure observational data, not direct mask RCTs. [Cho et al. (2015) on dim light at night and inflammation](https://doi.org/10.3109/07420528.2015.1073158) supports the mechanism but does not measure mask interventions.
+      - Roughly 35% of consistent home users plausibly realise meaningful biomarker improvements; the rest either lack the underlying problem (already-dark bedroom), have other dominant sleep disruptors, or use masks that leak enough light to attenuate the benefit.
+      - The biological pathway (preserved melatonin, intact circadian signalling) is plausible but downstream health outcomes from a single environmental tweak are noisy and competing factors dominate.
     uar_reasoning: |
-      - Same adherence rate as daily functioning since the behaviour is identical. [Hu et al. (2017)](https://doi.org/10.1016/j.sleep.2017.01.018) retention data applies regardless of which outcome is being measured.
-      - Long-term health benefits require nightly use over months to years, but the physical comfort barriers are consistent across all timeframes.
-      - The absence of immediate health feedback does not change adherence because the behaviour (wearing the mask) is the same whether motivated by next-day performance or long-term health.
+      - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
   sleep.comfort_experience:
-    pbs: 7
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average sleep comfort). After successful adherence, a user could plausibly reach the 65th–70th percentile (consistently restful sleep). Delta: ~32 percentile points. Sleep masks directly target sleep environment quality. [Horne & Reid (2007)](https://doi.org/10.1093/sleep/30.10.1378) found that complete darkness conditions improved subjective sleep satisfaction scores by 20-25%, with users reporting deeper, more uninterrupted sleep and reduced early morning awakenings.
-      - For people in environments with significant ambient light (streetlights, early sunrise, partner's devices), a sleep mask can transform the sleep experience from disrupted to consistently restful.
-      - On the updated anchor (10 = deeply restorative, 8 = consistently restful, 6 = generally good), successful use typically moves someone from light-disrupted sleep to reliably good-to-restful sleep, aligning with score 7.
-    isr: 80
-    isr_reasoning: |
-      - High success rate for comfort improvements when users find properly fitting masks. The mechanism is immediate and direct -- blocking light creates more comfortable sleep conditions with no physiological delay.
-      - [Horne & Reid (2007)](https://doi.org/10.1093/sleep/30.10.1378) found 75-85% of users who tolerated wearing masks reported improved sleep satisfaction and reduced sleep disruptions within the first week.
-      - Subjective comfort improvements are more consistent than objective health metrics because users can directly perceive the difference in light exposure and sleep continuity from the first night.
-    uar: 65
+    pbs: 6
+    isr: 65
+    uar: 60
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence in a light-affected environment, a user could plausibly reach the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - The subjective experience of removing a known irritant (early sunrise, streetlight glow, partner's screen) is directly perceptible from the first night. [Hu et al. (2010)](https://doi.org/10.1186/cc8965) reported substantial subjective sleep-quality improvements with eye masks plus earplugs, with the mask contributing the visual-disturbance component.
+      - Score 6 ("meaningful gain") rather than higher because the intervention only addresses the light dimension of comfort and leaves noise, temperature, mattress, and partner movement untouched.
+    isr_reasoning: |
+      - Subjective comfort gains are more reliable than objective health markers because users can directly perceive light reduction within the first night.
+      - In light-affected populations, roughly 65% of mask wearers report a noticeable improvement in sleep continuity and morning experience; the remainder either find mask discomfort outweighs the light benefit or already had a sufficiently dark room.
+      - [ICU and shift-work eye-mask trials](https://doi.org/10.1186/s13054-015-0855-3) consistently show improved subjective sleep ratings, supporting a moderate-to-high ISR in environments that resemble those study conditions.
     uar_reasoning: |
-      - Better adherence for comfort benefits because improvements are immediately noticeable -- users can feel the difference in sleep quality within the first few nights, providing strong positive reinforcement.
-      - [Hu et al. (2017)](https://doi.org/10.1016/j.sleep.2017.01.018) showed that users who reported subjective sleep improvements in the first week were significantly more likely to continue use at 6 months.
-      - Physical comfort remains a barrier for approximately 35% who discontinue due to mask discomfort, shifting during sleep, or interference with sleep positions, despite perceiving sleep quality benefits.
+      - Adherence is slightly higher when the felt benefit is immediate and subjective – users who notice better sleep within the first week are more likely to persist, per follow-up patterns in [Hu et al. (2015)](https://doi.org/10.1186/s13054-015-0855-3).
+      - Physical-comfort attrition (mask shift, eyelash contact, elastic pressure) still removes around 35–40% of starters within the first few months.
+      - Travel use cases (hotels, planes) provide reinforcement that pulls some users back to nightly home use after experiencing the contrast.
 
 resources:
-  upfront_cost: 12
-  upfront_cost_reasoning: |
-    Basic effective sleep mask costs £8-15. Higher quality contoured masks with better comfort and light-blocking capability cost £15-25, but basic flat masks provide adequate light blocking for most users. Essential features are complete light blocking and comfortable elastic band.
-  ongoing_cost: 6
+  upfront_cost: 15
+  upfront_cost_reasoning: "A basic effective contoured sleep mask costs $10–20. Cheaper flat masks ($5) tend to leak light and rarely justify the saving. $15 represents the minimum to get a mask that actually blocks light reliably."
+  ongoing_cost: 10
   ongoing_cost_period: "year"
-  ongoing_cost_reasoning: |
-    Sleep masks typically need replacement every 12-18 months due to elastic degradation and hygiene concerns. Annual replacement cost for basic effective masks is minimal. Some users may want to try different styles initially, adding modest ongoing costs.
+  ongoing_cost_reasoning: "Replacement every 12–18 months due to elastic degradation and hygiene; some users buy a second mask for travel. $10/year covers minimum replacement at low-cost-mask price points."
   upfront_time: 0.25
-  upfront_time_reasoning: |
-    Minimal setup time - simply trying on the mask and adjusting fit takes 10-15 minutes maximum. Initial adaptation period to get comfortable wearing the mask is part of the ongoing process rather than upfront time investment.
+  upfront_time_reasoning: "Selecting and fitting a mask takes minutes. The adaptation period (a few nights) is part of normal sleeping time, not a dedicated time investment."
   ongoing_time: 0
   ongoing_time_period: "week"
-  ongoing_time_reasoning: |
-    No additional time investment required beyond putting on and removing the mask as part of normal bedtime routine. The intervention integrates seamlessly into existing sleep preparation without requiring dedicated time.
+  ongoing_time_reasoning: "Putting the mask on adds seconds to an existing bedtime routine; no dedicated ongoing time."
 
 prerequisites:
-  - "Tolerance for having material covering the eyes during sleep"
-  - "Ability to find properly fitting mask that doesn't cause pressure or discomfort"
-  - "Sleeping environment where mask won't be easily displaced (e.g., not sharing bed with restless partner)"
-  - "No medical conditions affecting eye area that contraindicate mask use"
+  - "Tolerance for material covering the eyes during sleep – a minority find this intolerable regardless of mask design"
+  - "No medical condition affecting the eye area that contraindicates pressure or coverage (e.g., recent eye surgery)"
+  - "Sleeping environment where a mask realistically stays in place – very restless sleep or certain face-down positions can dislodge it"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Improved sleep continuity in light-affected environments plausibly reduces day-to-day mood volatility and irritability via better circadian regulation, but no mask-specific evidence on mental-health outcomes."
+  - domain: "cognitive-skills"
+    rationale: "Better-preserved sleep architecture supports next-day focus and working memory; effect is downstream of sleep quality and partially captured by sleep.daily_functioning, but a separate cognitive-focus anchor would let this be scored directly."

@@ -1,166 +1,221 @@
-evaluated_at: 2025-06-08
+evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
+prompt_sha: bcfbcf8
 name: "Trail Running"
 what_it_is: |
-  Running on natural terrain – dirt paths, forest trails, mountain tracks, mixed surfaces – typically 3–4 sessions per week of 30–90 minutes each. Combines cardiovascular endurance training with the proprioceptive demands of uneven footing, elevation changes, and variable conditions. Distinguished from road running by the terrain variety, nature immersion, and balance demands, which research links to significantly greater positive affect and enjoyment.
+  Running on natural trails – dirt single-track, forest paths, mountain tracks, mixed surfaces with elevation – typically 2–4 sessions per week of 30–90 minutes each. Combines cardiovascular training with proprioceptive demands of variable footing, a lower-impact stride than concrete, and the documented mental-health benefits of nature exposure. Distinguished from [road running](/resources/intervention-database/road-running) by terrain variety, slower pace per unit effort, and the green-exercise effect; sits alongside [Zone 2 cardio](/resources/intervention-database/zone-2-cardio) as an aerobic base option but with stronger enjoyment and mental-health upside.
 how_to_do_it: |
-  - Begin on well-maintained, relatively flat trails and build to more technical terrain as your ankle stability and confidence improve – many new trail runners overestimate their readiness for rocky or rooted surfaces
-  - Run by effort and time rather than pace; trail speeds are naturally slower and more variable than road running, so pace-based targets create frustration on hilly or technical routes
-  - You may find that investing in proper trail shoes with lugged soles makes a meaningful difference to both confidence and safety on loose or wet surfaces
-  - Plan routes with a navigation app or physical map, and carry water and a phone on longer runs – trails are less forgiving than roads if you get lost or injured
+  - Start on well-maintained, relatively flat trails and progress to technical terrain only as ankle stability and confidence develop – most new trail runners overestimate their readiness for rocky, rooted, or steep routes
+  - Run by effort and time rather than pace; trail speeds are naturally 20–40% slower than road equivalents, and pace-based targets create frustration on hilly or technical sections
+  - Invest in trail shoes with appropriate lugs for your terrain – grip on loose or wet surfaces materially reduces fall risk and lets you relax into the descent rather than bracing
+  - Plan routes with a navigation app, carry water and a phone on longer runs, and tell someone where you are going – trails are less forgiving than roads if you twist an ankle far from the trailhead
 success_looks_like: |
   - You can run continuously for 45+ minutes on moderately technical terrain, adjusting effort naturally for hills and footing without stopping
-  - You actively seek out new trails and routes – the exploration element becomes a source of motivation rather than an obstacle
-  - You finish runs feeling restored rather than merely depleted, with the nature immersion providing a psychological benefit beyond the physical workout
+  - You actively seek out new trails and routes – exploration becomes a source of motivation rather than an obstacle, and weekends acquire a default outdoor anchor
+  - You finish runs feeling restored rather than merely depleted, and notice the green-exercise effect carrying through the rest of the day in steadier mood and lower baseline tension
 common_pitfalls: |
-  - Running every trail session at road-running intensity – trails demand more recovery per unit of time, and overtraining leads to ankle injuries and burnout
-  - Neglecting ankle strengthening and proprioception work, then suffering repeated sprains on uneven ground that interrupt training for weeks
-  - Relying on a single trail that becomes monotonous – the variety and exploration that make trail running enjoyable require actively seeking new routes
+  - Running every trail session at road-running intensity – trails demand more recovery per unit time, and chronic overreach leads to ankle sprains, ITB issues, and burnout
+  - Neglecting ankle strengthening and proprioception work, then suffering repeated rolls on uneven ground that interrupt training for weeks at a time
+  - Relying on a single nearby trail until it becomes monotonous, losing the variety and exploration that distinguish trail running from any other form of cardio
 description: |
-  - Running on natural terrain (dirt paths, forest trails, mountain tracks, mixed surfaces), typically 3-4 sessions per week of 30-90 minutes each
-  - Combines cardiovascular endurance training with the proprioceptive demands of uneven footing, elevation changes, and variable conditions, engaging stabiliser muscles and requiring greater neuromuscular coordination than road running
-  - Distinguished from road running by the terrain variety, nature immersion, and balance demands, which [green exercise research](https://doi.org/10.1021/es903183r) links to significantly greater positive affect and enjoyment
-  - [Meta-analyses](https://doi.org/10.1016/j.jacc.2014.04.058) show running reduces all-cause mortality by 25-30%, though trail-specific injury rates and travel time to trailheads are meaningful adherence barriers
-  - Cardiovascular improvements become noticeable within 3-4 weeks, with significant VO2max and endurance gains developing over 8-16 weeks
-applicable_domains: ["fitness", "body-image", "mental-health"]
+  - Running on natural trails (dirt single-track, forest paths, mountain tracks, mixed surfaces with elevation), typically 2–4 sessions per week of 30–90 minutes each
+  - Combines cardiovascular training with proprioceptive demands of variable footing, lower per-step impact than concrete, and the documented mental-health benefits of nature exposure, engaging stabiliser muscles and requiring greater neuromuscular coordination than road running
+  - [Green-exercise meta-analyses](https://doi.org/10.1021/es903183r) show outdoor activity in natural settings produces larger gains in positive affect and self-esteem than equivalent indoor or urban exercise
+  - [Running cohort meta-analyses](https://doi.org/10.1016/j.jacc.2014.04.058) show 25–30% reductions in all-cause mortality, with trail-specific [injury-rate research](https://doi.org/10.2147/OAJSM.S141295) showing comparable overall injury rates to road running but a different injury profile (more acute ankle and falls, fewer chronic overuse)
+  - Cardiovascular adaptations become noticeable within 3–4 weeks; significant VO2max and endurance gains develop over 8–16 weeks of consistent training
+applicable_domains: ["fitness", "body-image", "mental-health", "participatory-leisure"]
 
 values:
   fitness.health:
     pbs: 8
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile. Delta: ~42 percentile points of improvement. Running is among the most well-evidenced activities for reducing all-cause mortality: meta-analyses show 25-30% reduction in all-cause mortality and 30-45% reduction in cardiovascular mortality, corresponding to 3-5 additional healthy years on the linear anchor ([Lee et al. 2014, J Am Coll Cardiol](https://doi.org/10.1016/j.jacc.2014.04.058))
-      - Each 1-MET increase in cardiorespiratory fitness is associated with 11-17% reduction in all-cause mortality; running is one of the most effective ways to increase CRF ([Ross et al. 2016, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0000000000000892))
-      - Trail running adds balance and proprioceptive benefits over road running, plus nature exposure which independently reduces cortisol, blood pressure, and inflammatory markers, though injury rates (0.7-61.2 per 1000 hours) are a health cost ([Li et al. 2010, Environ Health Prev Med](https://doi.org/10.1007/s12199-009-0091-z))
-    isr: 85
-    isr_reasoning: |
-      - The cardiovascular and metabolic health benefits of running are among the most robustly evidenced in exercise science, supported by decades of epidemiological data and large cohort studies ([Lee et al. 2014, J Am Coll Cardiol](https://doi.org/10.1016/j.jacc.2014.04.058))
-      - The relationship between CRF and longevity is the strongest and most consistent predictor across 199 unique cohort studies representing over 20.9 million observations ([Ross et al. 2016, Med Sci Sports Exerc](https://doi.org/10.1249/MSS.0000000000000892))
-      - Trail-specific evidence is thinner than road running research, but the underlying physiological mechanisms are identical; the health benefits transfer fully ([Li et al. 2010, Environ Health Prev Med](https://doi.org/10.1007/s12199-009-0091-z))
+    isr: 80
     uar: 50
     confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile. Delta: ~42 percentile points, mapping to roughly 3–4 additional healthy years on the 15-year anchor (PBS 8)
+      - [Running cohort meta-analyses](https://doi.org/10.1016/j.jacc.2014.04.058) show 25–30% reductions in all-cause mortality and 30–45% reductions in cardiovascular mortality among regular runners, with even modest doses (50 minutes/week) capturing most of the benefit
+      - [Each 1-MET increase in cardiorespiratory fitness](https://doi.org/10.1249/MSS.0000000000000892) is associated with 11–17% reduction in all-cause mortality; trail running is an efficient CRF-builder via sustained aerobic stimulus plus hill-driven intensity bursts
+      - Trail running adds nature-exposure benefits ([cortisol and blood-pressure reductions](https://doi.org/10.1007/s12199-009-0091-z)) and lower per-step joint loading than road running, partially offsetting the acute-injury cost of falls and ankle sprains
+    isr_reasoning: |
+      - The CRF-mortality relationship is among the most robustly established findings in preventive medicine, supported by 199 cohort studies covering over 20.9 million observations ([Ross et al. 2016](https://doi.org/10.1249/MSS.0000000000000892))
+      - Among adherent runners, the cardiometabolic adaptations (VO2max, insulin sensitivity, lipid profile) are highly reliable; non-responders are rare for the cardiovascular outcome ([Lee et al. 2014](https://doi.org/10.1016/j.jacc.2014.04.058))
+      - The 80 (rather than 85) reflects that acute trail injuries – [ankle sprains, falls, and cuts at rates of 0.7–61.2 per 1000 hours](https://doi.org/10.2147/OAJSM.S141295) depending on terrain difficulty – partially offset the health benefit for a meaningful minority who lose months of training to injury
     uar_reasoning: |
-      - Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
-      - Trail running may have modestly better adherence than road running due to enjoyment of natural environments and terrain variety, but is constrained by weather, geographic access, and higher acute injury risk (ankle sprains) ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299))
-      - Travel time to trailheads adds a logistical barrier not present in road running, reducing session frequency for those without nearby trail access ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - General running adherence shows approximately 50% dropout within 6 months for structured programmes ([Dishman et al. 2006](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+      - Trail running may have modestly better long-term retention than road running thanks to nature-exposure enjoyment and route variety, but is offset by [travel-to-trailhead constraints](https://doi.org/10.1136/bjsports-2015-095948) that reduce session frequency for those without nearby trail access
+      - [Acute ankle and overuse injuries](https://doi.org/10.2147/OAJSM.S141295) are a meaningful adherence barrier, with each significant injury removing weeks of training and increasing dropout risk
 
   fitness.performance:
     pbs: 7
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile. Delta: 30 percentile points of improvement. Trail running builds excellent cardiovascular endurance with VO2max improvements of 10-20% in untrained individuals, plus superior proprioception, ankle stability, and neuromuscular coordination compared to road running, placing dedicated runners around the 25th-85th percentile on cardio fitness tests ([Midgley et al. 2006, Sports Med](https://doi.org/10.2165/00007256-200636020-00004))
-      - Hill climbing builds lower body power and muscular endurance; trail runners develop strong aerobic base, lactate threshold, and running economy on mixed surfaces ([Barnes & Kilding 2015, Sports Med](https://doi.org/10.1007/s40279-014-0282-2))
-      - Score 7 reflects strong but not elite general fitness: provides limited upper body development, maximal strength, or power output compared to strength-based activities, placing it between 25th percentile (score 8) and 6th percentile (score 6) ([Midgley et al. 2006, Sports Med](https://doi.org/10.2165/00007256-200636020-00004))
     isr: 80
-    isr_reasoning: |
-      - VO2max increases follow predictable dose-response relationships, with cardiovascular performance improvements from running highly reliable and well-characterised ([Midgley et al. 2006, Sports Med](https://doi.org/10.2165/00007256-200636020-00004))
-      - Trail-specific adaptations (balance, proprioception, hill power) are consistently developed through regular practice on uneven terrain ([Barnes & Kilding 2015, Sports Med](https://doi.org/10.1007/s40279-014-0282-2))
-      - Individual variation exists in rate of improvement, but directional performance gains are nearly universal among those who maintain consistent training ([Midgley et al. 2006, Sports Med](https://doi.org/10.2165/00007256-200636020-00004))
     uar: 50
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile on a general fitness test battery. Delta: ~30 percentile points, sitting between the 25th-percentile anchor (PBS 8) and the 6th-percentile anchor (PBS 6)
+      - Trail running develops VO2max ([10–20% improvements in untrained individuals](https://doi.org/10.2165/00007256-200636020-00004)), lactate threshold, and running economy, with hill work adding lower-body power and muscular endurance beyond what flat road running provides
+      - Variable terrain develops proprioception, ankle stability, and neuromuscular coordination that road running and zone-2 cardio do not, but the activity provides limited upper-body development, maximal strength, or anaerobic power, capping cross-domain fitness gains below the 8-anchor
+    isr_reasoning: |
+      - VO2max increases follow predictable dose-response relationships, and running economy gains from sustained training are reliably observed across populations ([Midgley et al. 2006](https://doi.org/10.2165/00007256-200636020-00004))
+      - Trail-specific adaptations in balance and ankle stability are consistently developed through regular practice on uneven terrain; the proprioceptive learning curve is rapid and durable ([Barnes & Kilding 2015](https://doi.org/10.1007/s40279-014-0282-2))
+      - Individual variation exists in absolute rate of improvement, but directional performance gains are nearly universal among those who maintain consistent training and avoid injury
     uar_reasoning: |
-      - Performance-oriented trail runners benefit from measurable progress through pace improvements, distance milestones, and race results; the community and event calendar provide strong external motivation ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - Overuse injuries (knee, ankle, lower leg) can interrupt training and lead to dropout, with running injury incidence of 19-79% per year depending on volume and terrain ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299))
-      - Seasonal variation and weather affect consistency; the time commitment for longer trail sessions can conflict with other obligations ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+      - Performance-oriented trail runners benefit from measurable progress markers (pace, distance, elevation, race results), which provide strong external motivation and structured feedback ([Rhodes et al. 2017](https://doi.org/10.1136/bjsports-2015-095948))
+      - [Running injury incidence of 19–79% per year](https://doi.org/10.1007/BF03262299) depending on volume and surface is a meaningful interruption to consistent training, with each injury risking adherence loss
+      - Seasonal variation, weather, and trail access affect consistency; the longer time commitment for trail sessions (including travel) competes with other obligations
 
   fitness.enjoyment:
     pbs: 9
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average enjoyment). After successful adherence, a user could plausibly reach the 85th–90th percentile (among the most enjoyable exercise modalities). Delta: ~52 percentile points. Nature immersion, route exploration, and constantly varying terrain provide an ongoing sense of adventure and novelty that prevents the monotony common in gym-based or road exercise; each run on the same trail changes with seasons, weather, and light
-      - Trail running offers strong flow-state potential through the sustained focus required for footing on uneven ground, combined with measurable progress via distance, elevation, and pace; the social trail-running community and race culture add further enjoyment dimensions
-      - Score 9 (approaching primary source of satisfaction) rather than 8: the combination of nature exposure, physical challenge, exploration, and skill progression creates multi-layered enjoyment that exceeds activities offering only one or two of these elements
     isr: 80
-    isr_reasoning: |
-      - Green exercise research shows nature-based physical activity produces significantly greater positive affect and enjoyment than equivalent indoor exercise, with trail and forest environments showing the strongest effects ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
-      - Affective response to running is intensity-dependent: at self-selected pace on trails, most runners report positive affect, but those who push beyond ventilatory threshold experience sharp declines in pleasure, meaning enjoyment reliability depends on pacing discipline ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
-      - Among regular trail runners (6+ months), survey data shows very high enjoyment ratings, but adverse weather, insect exposure, and access constraints reduce session-level enjoyment on roughly 15-20% of outings, keeping ISR at 80 rather than higher ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
     uar: 60
     confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile (below-average enjoyment of physical activity). After successful adherence, a user could plausibly reach the 85th–90th percentile. Delta: ~52 percentile points, justifying the 9-anchor of "major gain" approaching transformative
+      - Multi-layered enjoyment stack: nature immersion, route exploration, terrain variety, flow potential from sustained attention to footing, community via races and group runs, and skill progression. Few exercise modalities combine all of these
+      - Trail running is rare in offering a setting that genuinely improves with repetition – the same trail varies with seasons, weather, and light – which prevents the monotony that drives dropout from gym-based or treadmill cardio
+    isr_reasoning: |
+      - [Green-exercise meta-analyses](https://doi.org/10.1021/es903183r) show nature-based physical activity produces significantly greater gains in positive affect, self-esteem, and revitalisation than equivalent indoor or urban exercise, with woodland and trail settings producing the largest effects
+      - [Affective response to running is intensity-dependent](https://doi.org/10.2165/11590680-000000000-00000): at self-selected pace on trails most runners report positive affect, but pushing beyond ventilatory threshold sharply reduces in-session pleasure, so enjoyment reliability hinges on pacing discipline
+      - Among regular trail runners (6+ months), [survey data](https://doi.org/10.1136/bjsports-2015-095948) shows very high enjoyment ratings, but adverse weather, biting insects, and access constraints reduce session-level enjoyment on a meaningful minority of outings
     uar_reasoning: |
-      - Enjoyment-driven trail runners tend to have better long-term retention than road runners, as variety of trails and natural environments prevents monotony ([Barton & Pretty 2010, Environ Sci Technol](https://doi.org/10.1021/es903183r))
-      - The community aspect, race culture, and personal exploration goals provide sustained motivation beyond physical fitness ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
-      - Weather dependency and seasonal access issues reduce year-round consistency in some climates, but many trail runners adapt by transitioning to road or treadmill running in poor conditions ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92))
+      - Enjoyment-driven trail runners tend to show better long-term retention than road runners, with the variety of routes and natural environments preventing the monotony that drives dropout ([Barton & Pretty 2010](https://doi.org/10.1021/es903183r))
+      - Race calendars, trail-running clubs, and exploration goals provide sustained motivation beyond physical fitness, anchoring the habit socially and seasonally
+      - Weather dependency and trail access reduce year-round consistency in some climates; many trail runners adapt by transitioning to road or treadmill running in poor conditions, preserving the underlying habit
 
   body-image.fat_loss:
     pbs: 7
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile. Delta: 30 percentile points of improvement. Running is among the highest calorie-burning exercises at 600 – 900 kcal/hour depending on pace and body weight; trail running adds elevation gain which further increases energy expenditure by 10 – 20% compared to flat-surface running ([Hall et al. 2011, J Strength Cond Res](https://doi.org/10.1519/JSC.0b013e31822e592c))
-      - [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) (Bellicha et al. 2021) found aerobic exercise alone produces 1.5 – 3.5 kg mean weight loss; running's higher energy expenditure per unit time places successful adherents at the upper end, sustaining approximately 3 – 5% body weight loss over 12+ months
-      - [A dose-response meta-analysis](https://doi.org/10.1001/jamanetworkopen.2024.52185) of 116 RCTs (JAMA Network Open, 2024) shows aerobic exercise produces linear weight loss up to 300 min/week; at typical trail running volumes (3 – 4 hours/week at vigorous intensity), the best-case sustained result is 3 – 4% body weight reduction without strict dietary intervention
-      - On the logarithmic anchor, 4% sustained loss maps to 10 + log₂(4/25) = 7.36, rounding to PBS 7
     isr: 70
-    isr_reasoning: |
-      - The [Midwest Exercise Trial 2](https://doi.org/10.1002/oby.21073) found approximately 54% of participants achieved clinically significant weight loss from supervised aerobic exercise alone; running's higher energy expenditure per session improves this ratio modestly compared to moderate-intensity modalities
-      - Running is one of the more reliable exercise modalities for weight loss due to its high caloric burn rate, which creates a wider margin before dietary compensation eliminates the deficit ([Swift et al. 2014, Prog Cardiovasc Dis](https://doi.org/10.1016/j.pcad.2013.09.012))
-      - [Compensatory eating research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) shows roughly half of exercisers increase intake on training days, but vigorous exercise like running may partially suppress acute appetite via elevated core temperature and catecholamines, improving the response rate relative to moderate-intensity exercise
-      - Estimated 70 – 75% meaningful response rate: running's high energy expenditure makes it one of the more effective exercise-only fat loss modalities, though a meaningful minority still compensate behaviourally
     uar: 45
     confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile on sustained fat loss. Delta: ~30 percentile points
+      - Running is among the highest energy-cost activities at 600–900 kcal/hour depending on pace and body weight; trail running's elevation gain adds [10–20% energy expenditure](https://doi.org/10.1519/JSC.0b013e31822e592c) over flat-surface running of equivalent duration
+      - [An overview of 12 systematic reviews](https://doi.org/10.1111/obr.13256) found aerobic exercise alone produces 1.5–3.5 kg mean weight loss; running's higher per-session burn places successful adherents at the upper end, with sustained 3–5% body weight loss over 12+ months realistic
+      - On the 25%-loss logarithmic anchor, 4% sustained loss maps to 10 + log₂(4/25) = 7.36, rounding to PBS 7
+    isr_reasoning: |
+      - The [Midwest Exercise Trial 2](https://doi.org/10.1002/oby.21073) found approximately 54% of participants achieved clinically significant weight loss from supervised aerobic exercise alone; running's higher energy expenditure per session improves this ratio modestly compared to moderate-intensity modalities
+      - Running's high caloric burn rate creates a wider margin before [dietary compensation](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) eliminates the deficit – approximately half of exercisers increase intake on training days, but the larger absolute deficit from running leaves more residual loss
+      - Estimated 70% meaningful response rate: running is one of the more effective exercise-only fat-loss modalities, though a substantial minority still compensate behaviourally or fail to maintain volume long enough to see scale changes
     uar_reasoning: |
-      - Running adherence in the general population is moderate, with approximately 50% dropout within 6 months for structured programmes ([Dishman et al. 2006, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000185084.72008.92)); trail running adds travel-to-trailhead barriers that further constrain session frequency
-      - Overuse injuries (knee, ankle, lower leg) are a significant adherence barrier, with running injury incidence of 19 – 79% per year depending on volume and terrain ([Lopes et al. 2012, Sports Med](https://doi.org/10.1007/BF03262299)); injuries interrupt the consistency needed for sustained weight loss
-      - Weight-loss-motivated runners who experience slow visible progress may shift to dietary interventions or abandon the approach; those who persist tend to be motivated by performance or enjoyment rather than weight loss alone ([Teixeira et al. 2012, Int J Behav Nutr Phys Act](https://doi.org/10.1186/1479-5868-9-78))
+      - General running adherence is moderate, with [approximately 50% dropout within 6 months](https://doi.org/10.1249/01.mss.0000185084.72008.92); trail running adds travel-to-trailhead barriers that further constrain session frequency for the weight-loss-focused population
+      - [Overuse and acute injuries](https://doi.org/10.1007/BF03262299) interrupt the training consistency required for sustained fat loss; each multi-week injury layoff allows weight to drift back
+      - Weight-loss-motivated runners who experience slow visible progress often shift to dietary interventions or abandon the approach; [those who persist](https://doi.org/10.1186/1479-5868-9-78) tend to be motivated by performance or enjoyment rather than weight loss alone
 
   mental-health.stability:
-    pbs: 5
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 50th percentile (average stability). Delta: ~15 percentile points. The [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) of 218 RCTs found vigorous exercise (including running) produced large reductions in depressive symptoms (g = -0.74), stronger than light activity (g = -0.58), corresponding to a meaningful shift from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6)
-      - A [scoping review of running and mental health](https://pmc.ncbi.nlm.nih.gov/articles/PMC7663387/) found consistent reductions in symptoms of anxiety, depression, anger, confusion, and fatigue among runners, with trail running adding nature-exposure benefits that independently reduce cortisol and blood pressure
-      - Score 5 reflects a moderate stability benefit as a secondary domain: running reliably reduces symptom burden through both neurochemical pathways (endorphins, endocannabinoids, serotonin) and environmental restoration from trail settings, but the benefit is capped by the fact that clinical-level treatment requires higher doses or combined approaches
-    isr: 65
-    isr_reasoning: |
-      - Running's antidepressant effects are well-established, with one [study finding](https://pmc.ncbi.nlm.nih.gov/articles/PMC7663387/) running therapy had similar effects on mental health symptoms to antidepressant medication, indicating reliable efficacy for those who maintain the practice
-      - Trail-specific evidence adds nature-exposure benefits, but the evidence base is thinner than for general running; the [green exercise literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) shows additional positive affect from natural settings though the incremental mental health benefit over indoor exercise remains uncertain
-      - Approximately 65% of adherent runners experience meaningful stability improvements, with non-responders typically being those whose symptoms stem from factors less responsive to exercise (e.g. trauma, personality disorders, situational stressors)
+    pbs: 6
+    isr: 70
     uar: 50
     confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile (below-average emotional stability). After successful adherence, a user could plausibly reach the 55th–60th percentile. Delta: ~22 percentile points, mapping to "meaningful gain in day-to-day emotional steadiness" (PBS 6)
+      - The [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/) of 218 RCTs found vigorous exercise produced large reductions in depressive symptoms (g = −0.74), stronger than light activity (g = −0.58); trail running sits in the vigorous range
+      - Trail running compounds vigorous-exercise mood benefits with [nature-exposure effects on cortisol, blood pressure, and rumination](https://doi.org/10.1073/pnas.1510459112) – a multi-pathway stack that exceeds what either gym-based vigorous exercise or quiet nature time achieves alone, justifying a higher PBS than zone-2 cardio (5) or swimming (5)
+    isr_reasoning: |
+      - Running's antidepressant and anxiolytic effects are well established, with one trial finding [running therapy comparable to antidepressant medication for symptom reduction](https://pmc.ncbi.nlm.nih.gov/articles/PMC7663387/) at 16 weeks
+      - The [green-exercise literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) shows additional positive affect from natural settings, though the incremental benefit over indoor vigorous exercise on clinical-level mood symptoms remains modestly supported rather than firmly established
+      - Approximately 70% of adherent trail runners experience meaningful stability improvements; non-responders typically have distress arising from factors less responsive to exercise (trauma, situational stressors, personality factors)
     uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile; trail running's moderate adherence rate constrains the stability benefit
+      - See fitness.health UAR – same intervention, same adherence profile; trail-running's moderate adherence rate (around 50%) constrains the realised stability benefit at the population level
 
   mental-health.resilience:
     pbs: 6
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 55th–65th percentile (moderately above average). Delta: ~25 percentile points. Trail running provides direct resilience training through repeated voluntary exposure to physical discomfort, uncertainty (terrain, weather), and the practice of continuing through difficulty; [research on vigorous exercise and resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/) shows regular activation of stress systems produces beneficial adaptations including reduced stress reactivity and faster recovery
-      - A [systematic review and meta-analysis](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) found resilience increases significantly with vigorous physical activity intensity, an effect not observed with moderate-intensity exercise, placing trail running in the optimal intensity range for resilience building
-      - The inherent challenges of trail running (navigation, elevation, uneven footing, self-sufficiency on remote trails) build transferable self-efficacy and mastery experiences, corresponding to a shift from 'significant disruption from moderate stressors' (4) toward 'handles major stressors with brief disruption' (8); score 6 reflects the midpoint, accounting for the fact that resilience also depends on social support, coping strategies, and temperament
     isr: 60
-    isr_reasoning: |
-      - The stress-inoculation pathway is mechanistically robust: [exercise physiology research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4013452/) confirms regular vigorous exercise is associated with emotional resilience to acute stress, with exercisers showing lower cortisol reactivity and faster recovery from laboratory stressors
-      - BDNF increases from vigorous exercise [protect hippocampal neurons under stress](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/), providing a biological substrate for improved stress tolerance, though the translation from neurobiological markers to real-world resilience is not one-to-one
-      - Approximately 60% of consistent trail runners develop meaningfully improved stress management, with the mastery-experience pathway being particularly reliable for those who progressively tackle more challenging terrain and distances
     uar: 50
     confidence: low
+    pbs_reasoning: |
+      - Baseline: 35th percentile (below-average resilience). After successful adherence, a user could plausibly reach the 55th–60th percentile. Delta: ~22 percentile points, mapping to "meaningful gain in handling everyday stressors" (PBS 6)
+      - Trail running provides direct stress-inoculation through repeated voluntary exposure to physical discomfort, weather, terrain uncertainty, and the practice of continuing through difficulty; [a meta-analysis](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1557347/full) found resilience gains were significantly stronger with vigorous than moderate-intensity activity
+      - The mastery-experience pathway is unusually rich: navigation, elevation challenges, self-sufficiency on remote trails, and recovery from rolled ankles all build transferable self-efficacy. [Exercise-physiology research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4013452/) shows regular vigorous exercisers have lower cortisol reactivity and faster recovery from laboratory stressors
+    isr_reasoning: |
+      - The stress-inoculation pathway is mechanistically robust at vigorous intensity, with [BDNF increases protecting hippocampal neurons under stress](https://pmc.ncbi.nlm.nih.gov/articles/PMC7874196/), but the translation from neurobiological markers to real-world resilience is not one-to-one
+      - Resilience also depends on cognitive appraisal, social support, and temperament that exercise alone does not directly address, capping the population response rate
+      - Approximately 60% of consistent trail runners develop meaningfully improved stress tolerance; the mastery pathway is most reliable for those who progressively tackle harder terrain rather than running the same easy route indefinitely
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
   mental-health.flourishing:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline: 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 55th–65th percentile (moderately above average). Delta: ~25 percentile points. Trail running offers multi-layered flourishing through flow states (sustained focus on footing and terrain), nature immersion, skill progression, and community belonging; [green exercise research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) found a large effect size for improved wellbeing (g = 0.81) from nature-based physical activity
-      - The combination of physical challenge, natural beauty, route exploration, and measurable progress (distance, elevation, race performance) generates peak experiences and a sense of mastery that goes beyond mere mood improvement, corresponding to a shift toward 'frequent positive emotions and meaningful engagement' (8) on the flourishing anchor
-      - Score 6 reflects a strong flourishing benefit tempered by its secondary-domain status: trail running generates genuine flow, awe, and accomplishment, but the flourishing effect is contingent on environmental access and is less reliable in adverse conditions (bad weather, injury periods, limited trail access)
+    pbs: 7
     isr: 70
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile (below-average flourishing). After successful adherence, a user could plausibly reach the 65th percentile. Delta: ~30 percentile points, mapping between "meaningful gain" (6) and "major gain" (8) – PBS 7
+      - [Green-exercise systematic reviews](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) found large effect sizes for wellbeing (g = 0.81) from nature-based physical activity, exceeding the effects from either nature exposure or exercise alone
+      - Trail running stacks four flourishing pathways: flow states from sustained attention to footing, awe and aesthetic experience from natural settings, mastery from skill and route progression, and belonging from race/club community. Few interventions combine this many positive-psychology pathways, justifying a higher score than zone-2 cardio (4) or swimming (5)
     isr_reasoning: |
-      - [Green exercise systematic reviews](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) consistently find improved positive affect, self-esteem, and revitalisation from outdoor physical activity, with nature-based running environments producing the strongest affective responses
-      - Flow-state research on trail running specifically highlights the sustained attentional demands of uneven terrain as a reliable trigger for autotelic experience, though flow is not guaranteed on every session ([Springer Nature 2026, Mindfulness](https://link.springer.com/article/10.1007/s12671-026-02767-0))
-      - Among regular trail runners (6+ months), the majority report trail running as a significant source of life satisfaction and positive identity, though a minority find the physical demands override the enjoyment during challenging sessions
+      - [Green-exercise reviews](https://pmc.ncbi.nlm.nih.gov/articles/PMC6518264/) consistently find improved positive affect, self-esteem, and revitalisation from outdoor physical activity, with running and walking in natural settings producing the strongest effects
+      - Flow-state research highlights uneven terrain as a reliable trigger for autotelic experience, but flow is not guaranteed on every session and depends on matching difficulty to skill
+      - Among regular trail runners (6+ months), the majority report trail running as a significant source of life satisfaction and positive identity; a minority find the physical demands or weather override the flourishing benefit on harder sessions
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  participatory-leisure.adventure:
+    pbs: 7
+    isr: 75
     uar: 50
     confidence: low
+    pbs_reasoning: |
+      - Baseline: 35th percentile (below-average novelty and challenge in leisure). After successful adherence, a user could plausibly reach the 65th–70th percentile. Delta: ~30–35 percentile points, mapping to "major gain" (PBS 7–8)
+      - Trail running is unusually exploration-rich among aerobic activities: routes can be lifetime-deep in mountainous regions, every run on the same trail varies with weather and season, and progression naturally pulls runners toward longer, more remote, or more technical terrain
+      - The activity supports a clear adventure progression (local trails → regional trails → travel races → ultra distances or technical mountain running), creating sustained novelty over years rather than the diminishing returns typical of gym-based exercise
+    isr_reasoning: |
+      - The adventure benefit is largely mechanistic: anyone who runs varied trails experiences novelty by definition. Reliability is limited primarily by access (those with only one nearby trail experience much less novelty) rather than by individual response variation
+      - Race participation, trail-running clubs, and online route databases provide structured pathways into greater novelty, supporting adventure progression for motivated runners
+      - Approximately 75% of regular trail runners report exploration and novelty as a meaningful source of enjoyment, with the remainder treating trails as interchangeable cardio venues and missing the adventure pathway
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  participatory-leisure.achievement:
+    pbs: 6
+    isr: 70
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline: 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile on skill development and accomplishment from leisure. Delta: ~22 percentile points, mapping to "meaningful gain" (PBS 6)
+      - Trail running provides a steady stream of measurable progress (distance, elevation, pace, race finishes) and a clear skill ladder (beginner trails → technical single-track → ultras or mountain running) that supports sustained accomplishment
+      - The achievement pathway is genuine but not transformative: it is physical and self-referential rather than producing external mastery (e.g. craft skills, competitive standing) that would justify a higher score
+    isr_reasoning: |
+      - Progress metrics and event finishes provide reliable accomplishment feedback; most runners who train consistently see year-over-year improvement in distance, elevation, or pace for the first several years
+      - [Running injury rates](https://doi.org/10.1007/BF03262299) interrupt the linear-progress narrative for a meaningful minority, capping the achievement benefit until injuries resolve
+      - Approximately 70% of regular trail runners report a meaningful sense of accomplishment from the activity; the remainder train for health or enjoyment without engaging the achievement pathway
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  participatory-leisure.social:
+    pbs: 5
+    isr: 55
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline: 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile on relationships built through shared activities. Delta: ~15–20 percentile points, mapping to "meaningful gain" but only for those who engage the social side (PBS 5)
+      - Trail running has an active social ecosystem: trail clubs, group runs, races from 5K to ultra, and shared training partnerships. For runners who engage these, the activity becomes a community anchor
+      - The social benefit is highly contingent: solo runners – the majority – do not realise it. The score reflects the population-weighted expected gain rather than the upside available to those who join clubs or train with partners
+    isr_reasoning: |
+      - The social pathway is not automatic: roughly half of regular trail runners report any meaningful social engagement around the activity; the other half run solo. This split caps the population-level ISR around 55
+      - Where social engagement does occur (clubs, races, training partners), the relationships are typically [moderate-depth and durable](https://doi.org/10.1136/bjsports-2015-095948) thanks to the shared physical investment and regular cadence
+      - Geographic concentration matters: dense trail-running communities exist in some regions and are sparse in others, creating high cross-population variance in achievable social benefit
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
 resources:
   upfront_cost: 150
-  upfront_cost_reasoning: "Trail running shoes with appropriate lugged soles ($120) and moisture-wicking trail-appropriate clothing ($30). Trail shoes are essential for safety and performance on uneven, potentially slippery terrain. A basic hydration vest ($40-80) is recommended for longer runs but not strictly required to begin."
+  upfront_cost_reasoning: "Trail running shoes with appropriate lugs (~$120) and moisture-wicking trail-appropriate clothing (~$30). Trail shoes are functionally required for safety and grip on uneven, potentially slippery terrain; road shoes are inadequate. A basic hydration vest ($40–80) is recommended for runs longer than ~75 minutes but not strictly required to begin."
   ongoing_cost: 10
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Trail running is a low-cost activity once initial gear is acquired. Shoe replacement every 400-600 miles ($120, amortised to approximately $10/month at moderate mileage). Optional race entry fees ($30-100 per event). Trail access is typically free on public land. No gym membership required."
+  ongoing_cost_reasoning: "Trail running is a low-cost activity once initial gear is acquired. Shoe replacement every 400–600 miles (~$120, amortised to roughly $10/month at moderate mileage). Optional race entry fees ($30–100 per event). Trail access is typically free on public land. No gym membership required."
   upfront_time: 2
   upfront_time_reasoning: "Identifying local trail networks, planning initial routes, and building basic trail navigation skills. Runners with existing road running fitness can transition to trails immediately with minimal preparation. Complete beginners should build a base of walk-run fitness before tackling technical terrain."
   ongoing_time: 4
   ongoing_time_period: "week"
-  ongoing_time_reasoning: "Three to four sessions of 30-75 minutes per week, plus travel time to trailheads. Effective cardiovascular adaptations occur at this volume. Trail sessions tend to be longer than equivalent road sessions due to slower pace on uneven terrain. Travel time to trails adds 30-60 minutes per session depending on location."
+  ongoing_time_reasoning: "Two to four sessions of 30–75 minutes per week, plus travel time to trailheads. Effective cardiovascular adaptations occur at this volume. Trail sessions tend to be longer than equivalent road sessions due to slower pace on uneven terrain. Travel time to trails adds 15–60 minutes per session depending on location."
 
 prerequisites:
-  - "Baseline cardiovascular fitness sufficient to sustain 20-30 minutes of continuous jogging on flat terrain without distress"
+  - "Baseline cardiovascular fitness sufficient to sustain 20–30 minutes of continuous jogging on flat terrain without distress"
   - "Access to trail networks, parks, or natural terrain within reasonable travel distance for regular sessions"
   - "Adequate ankle stability and proprioception for uneven surfaces, or willingness to build these gradually on easier trails"
   - "Awareness of trail-specific risks including wildlife, weather exposure, navigation, and the need for self-sufficiency on remote trails"
+
+flagged_domains:
+  - domain: "physical-safety"
+    rationale: "Acute injury risk from falls, ankle sprains, wildlife encounters, and exposure on remote trails is materially higher than for road running, partially offset by lower chronic-impact loading"
+  - domain: "self-awareness"
+    rationale: "Sustained solo time in nature with rhythmic effort is a well-documented context for reflective and contemplative experience, particularly on longer runs"
