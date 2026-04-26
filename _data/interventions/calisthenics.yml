@@ -1,0 +1,208 @@
+name: "Calisthenics"
+what_it_is: |
+  Progressive bodyweight resistance training organised around movement patterns – push, pull, squat, hinge, core, and gymnastics-style skills – where resistance is scaled by leverage, range of motion, tempo, and skill complexity rather than added external load. Sessions typically run 30–60 minutes, three to four times per week. Distinguished from [progressive strength training](/resources/intervention-database/progressive-strength-training) by its skill-based progression and minimal equipment, and from [functional training](/resources/intervention-database/functional-training) by its specific focus on relative bodyweight strength and gymnastics-style movements (handstands, levers, muscle-ups).
+how_to_do_it: |
+  - Many people start with a structured progression-based programme (Convict Conditioning, GMB Elements, the Recommended Routine on r/bodyweightfitness, or Beastskills tutorials) that prescribes a sequence of movements and clear rules for moving up to harder variations
+  - Progression works through movement variations (knee push-ups → standard push-ups → archer push-ups → one-arm push-ups) rather than adding plates – the same logic as adding weight, applied through leverage
+  - A doorway pull-up bar ($30–80) is the only piece of equipment many programmes need; gymnastic rings ($35) significantly expand the upper-body progression options for those who continue past the beginner stage
+  - You may find that filming yourself periodically helps catch form drift on bodyweight movements, where the feedback loop is less obvious than weight on a bar
+success_looks_like: |
+  - You can perform progressively harder variations of the core movement patterns – moving from knee push-ups to full push-ups to one-arm progressions, or from assisted pull-ups to full pull-ups to archer or one-arm work
+  - Relative strength feels noticeably high: you can move your own bodyweight through space (climbing, jumping down from height, controlling your body in unstable positions) with confidence
+  - The practice fits into life with minimal friction – you can travel without losing your training, and a missed gym day stops being a missed training day
+common_pitfalls: |
+  - Skipping progressions and attempting advanced moves (muscle-ups, planches, levers) before the prerequisite strength is built, leading to wrist, elbow, or shoulder injuries that derail training
+  - Treating it as a 'no-progress' workout because there is no number on a barbell to chase – without explicit tracking of which variation, rep count, or hold time you are working at, progression stalls
+  - Neglecting lower-body work because bodyweight squats feel easy at moderate volumes – meaningful leg development requires progressing toward pistol squats, shrimp squats, or weighted variations
+description: |
+  - Progressive bodyweight resistance training using push-ups, pull-ups, dips, squats, lunges, and planks, with progression toward more advanced moves like handstand push-ups, muscle-ups, planches, levers, and pistol squats
+  - Sessions typically last 30-60 minutes, 3-4 times per week, structured around movement patterns rather than muscle groups; progression scales by leverage, range of motion, tempo, and skill complexity rather than added weight
+  - [Recent comparative research](https://pubmed.ncbi.nlm.nih.gov/29466268/) shows progressive calisthenics produces strength and hypertrophy gains comparable to traditional weight training when volume and proximity to failure are matched, with a lower ceiling for raw maximal strength but a higher ceiling for relative strength and bodyweight skill expression
+  - Distinct from progressive strength training in its leverage-based progression, and from functional training in its specific focus on relative bodyweight strength and gymnastics-style skills; equipment is minimal (a pull-up bar at most), making the practice highly portable
+applicable_domains: ["fitness", "body-image", "mental-health", "behaviours", "self-awareness"]
+
+values:
+  fitness.health:
+    pbs: 8
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile on health and longevity. Delta: ~40–45 percentile points of improvement. [Meta-analytic evidence](https://doi.org/10.1136/bjsports-2021-105099) on muscle-strengthening activity (which encompasses calisthenics) shows a 15–21% reduction in all-cause mortality with maximum benefit at 30–60 minutes per week, corresponding to roughly 3–5 additional healthy years on the linear anchor
+      - Independent benefits for bone mineral density, sarcopenia prevention, glucose regulation, and cardiovascular risk markers; calisthenics-specific RCT evidence shows comparable strength and body composition adaptations to weight training when volume is matched ([Kotarsky et al. 2018, J Strength Cond Res](https://pubmed.ncbi.nlm.nih.gov/29466268/))
+      - When combined with aerobic activity, mortality risk drops by up to 40%, placing resistance training of any modality among the top longevity interventions ([Stamatakis et al. 2018, Am J Epidemiol](https://doi.org/10.1093/aje/kwx345))
+    isr: 80
+    isr_reasoning: |
+      - Strength and hypertrophy adaptations from progressive bodyweight training are reliable when intensity (proximity to failure) is sufficient; [head-to-head trials](https://pubmed.ncbi.nlm.nih.gov/29466268/) show calisthenic push-up training produces strength and muscle thickness gains comparable to bench press at matched volume
+      - Physiological mechanisms (muscle protein synthesis, bone remodelling, glucose uptake) are well-understood and reproducible across diverse populations ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
+      - Modest reduction relative to weighted progressive strength training (ISR 85) reflects the higher risk of plateau at intermediate stages once basic variations become easy and the trainee has not learned harder progressions or added external load
+    uar: 45
+    confidence: medium
+    uar_reasoning: |
+      - Home-based exercise adherence is meaningfully higher than gym-based: [a 2017 randomised trial in adults with chronic conditions](https://pubmed.ncbi.nlm.nih.gov/28655559/) found home-based exercise produced equivalent outcomes and similar long-term adherence to gym-based exercise, while removing commute and membership barriers
+      - General exercise adherence sits at ~66% in supervised programmes but drops sharply unsupervised; the absence of external accountability is the main risk for solo calisthenics practitioners ([STRRIDE analysis 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9165469/))
+      - The lower friction of bodyweight training (no commute, no gym fees, travel-portable) plausibly improves UAR by ~10 points relative to gym-based progressive strength training (UAR 35), but lack of social environment and equipment-driven cues partially offsets this advantage
+
+  fitness.performance:
+    pbs: 8
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–85th percentile on general fitness tests and well above the 90th percentile on bodyweight-relative metrics (pull-ups, push-ups, pistol squats). Delta: ~40–50 percentile points of improvement. Calisthenics develops exceptional relative strength: trained practitioners routinely achieve performance feats (one-arm push-ups, muscle-ups, front levers) that put them well above the 90th percentile on standardised fitness tests where bodyweight movement is measured
+      - The ceiling for raw maximal strength is lower than for weighted training (a calisthenics specialist will not deadlift as much as a powerlifter), placing PBS one point below progressive strength training (PBS 9); however, performance on relative-to-bodyweight metrics, bodyweight skill expression, and general athletic transfer is at least equal ([Thomas et al. 2017](https://www.researchgate.net/publication/317321468_The_effects_of_a_calisthenics_training_intervention_on_posture_strength_and_body_composition))
+      - Comparative trials show calisthenics produces strength gains in 1RM bench-press-equivalent movements that match traditional weight training over 4-week interventions, with significantly greater gains in calisthenic-specific progressions ([Kotarsky et al. 2018, J Strength Cond Res](https://pubmed.ncbi.nlm.nih.gov/29466268/))
+    isr: 80
+    isr_reasoning: |
+      - Strength gains from progressive calisthenics are reliable when proximity to failure and progressive variation increases are maintained; [pooled load-comparison meta-analyses](https://pubmed.ncbi.nlm.nih.gov/35015560/) show hypertrophy is similar across loading schemes when volume is matched, but maximal strength favours higher loads – meaning calisthenics reliably builds general strength but less reliably maximises 1RM
+      - The directional response is essentially universal in healthy adults; individual variation in rate of progression is similar to that for weighted training ([Hubal et al. 2005, Med Sci Sports Exerc](https://doi.org/10.1249/01.mss.0000170559.19054.55))
+      - Slightly lower than progressive strength training (ISR 90) because of the higher technical demand of advanced progressions, where many trainees stall at intermediate variations without proper coaching
+    uar: 45
+    confidence: medium
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  fitness.enjoyment:
+    pbs: 7
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile on enjoyment of physical activity. Delta: ~30–35 percentile points. Skill progression is intrinsically engaging: unlocking new movements (first pull-up, first muscle-up, first handstand) provides a clear mastery feedback loop that many find more satisfying than adding 2.5 kg to a bar
+      - The bodyweight-skill format has a 'play' character missing from gym-based training: practising handstands, levers, and gymnastics-style moves resembles skill acquisition rather than rep-counting, which sustains engagement through novelty
+      - Score 7 sits between 'generally enjoyable' (6) and 'highly enjoyable' (8): satisfying for those drawn to skill mastery and minimal-equipment training, but the solo nature, lack of social context, and physical discomfort during high-intensity sets keep it below activities with stronger social or play elements
+
+    isr: 75
+    isr_reasoning: |
+      - Self-selected intensity exercise produces more positive affect than prescribed intensity; calisthenics' progression-based structure means users naturally regulate to their current level, supporting more positive in-session experience than fixed-load training ([Ekkekakis et al. 2011, Sports Med](https://doi.org/10.2165/11590680-000000000-00000))
+      - Skill-based progression is reliably engaging for those motivated by mastery, but the solo nature and lack of social environment limit appeal for the substantial subset who derive exercise enjoyment primarily from group context ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
+      - An estimated 70–80% of adherent calisthenics practitioners report positive intrinsic experience, with the skill-acquisition pathway reaching individuals who find traditional rep-counting tedious
+
+    uar: 45
+    confidence: medium
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  body-image.muscle_gain:
+    pbs: 7
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile on lean mass gained. Delta: ~30–40 percentile points. Hypertrophy from progressive bodyweight training is comparable to weight training when volume and proximity to failure are matched: [load-equating meta-analyses](https://pubmed.ncbi.nlm.nih.gov/35015560/) show similar muscle growth across loading schemes, and successful adherents typically gain 2–4 kg of lean mass over a year of consistent training
+      - Calisthenics-specific RCTs show measurable triceps and pectoral hypertrophy after 4 weeks of progressive push-up training, comparable to bench press at matched intensity ([Kotarsky et al. 2018, J Strength Cond Res](https://pubmed.ncbi.nlm.nih.gov/29466268/))
+      - Slightly below progressive strength training on the ceiling: at advanced stages, adding external load is the most efficient way to drive continued hypertrophy, and the leverage-based progression of calisthenics has a practical upper limit; on the logarithmic anchor, 3 kg of sustained lean mass gain maps to 10 + log₂(3/15) = 7.68, rounding to PBS 7 (vs. PBS 7-8 for weighted training in this domain)
+    isr: 70
+    isr_reasoning: |
+      - Hypertrophy response to bodyweight training is reliable for novice and intermediate trainees but more variable at advanced stages where the leverage progression hits practical ceilings without added external load
+      - Volume and proximity to failure are the primary mediators: [reviews confirm](https://pmc.ncbi.nlm.nih.gov/articles/PMC8884877/) that hypertrophy outcomes equate when these variables are matched, but bodyweight trainees often under-volume by stopping at sub-failure rep counts
+      - An estimated 65–75% of consistent calisthenics practitioners achieve meaningful muscle gain; the lower bound reflects undertraining intensity rather than physiological non-response
+    uar: 45
+    confidence: medium
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  body-image.fat_loss:
+    pbs: 6
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile on sustained fat loss. Delta: ~20–25 percentile points. Resistance training (including calisthenics) reduces body fat percentage by ~1.5% and produces 1.0 kg fat mass loss without dietary modification, alongside lean mass gains that mask scale weight change ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
+      - Calisthenics-specific [body composition trials](https://www.researchgate.net/publication/317321468_The_effects_of_a_calisthenics_training_intervention_on_posture_strength_and_body_composition) show measurable fat-mass reductions over 8-week protocols, with the metabolic conditioning element of higher-rep bodyweight circuits providing modest caloric expenditure beyond pure resistance work
+      - On the logarithmic anchor, 2% sustained loss maps to 10 + log₂(2/25) = 6.36, rounding to PBS 6 – matching progressive strength training rather than HIIT, since the metabolic component is moderate rather than maximal
+    isr: 60
+    isr_reasoning: |
+      - Without dietary modification, fat loss from resistance training of any modality is small and partially masked by simultaneous muscle gain; many practitioners experience recomposition without scale weight change ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2))
+      - Caloric expenditure per session is moderate (typically 200–400 kcal for a 45-minute session), lower than HIIT or running-based training, limiting the fat-loss effect when isolated from dietary changes
+      - An estimated 55–65% of consistent practitioners see meaningful body composition shifts; weight-focused users without dietary co-intervention often perceive no progress and disengage
+    uar: 45
+    confidence: medium
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.stability:
+    pbs: 5
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile on emotional stability. Delta: ~15 percentile points. Calisthenics shares the general resistance-training mood mechanism: [meta-analytic evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) (n = 1,877 across 33 RCTs) found resistance exercise reduces depressive symptoms with moderate effect size (ES = 0.66), and the neurochemical pathway (endorphin release, BDNF, cortisol regulation) is independent of training modality
+      - Resistance exercise also produces anxiolytic effects across diverse populations with effect sizes of d = 0.31 ([Gordon et al. 2017](https://pmc.ncbi.nlm.nih.gov/articles/PMC4090891/)); these effects are mediated by physiological adaptation rather than equipment type
+      - Score 5 reflects a meaningful but secondary benefit, moving practitioners from 'frequent distress' (4) toward 'occasional distress that resolves quickly' (6); calisthenics matches weighted resistance training on this axis
+    isr: 55
+    isr_reasoning: |
+      - The exercise-mood mechanism applies, but [evidence specifically for calisthenics on mental health outcomes](https://pmc.ncbi.nlm.nih.gov/articles/PMC7429724/) is thinner than for weighted resistance training; most direct mood research aggregates resistance modalities together
+      - Baseline severity moderates response: those with elevated depressive symptoms show larger improvements, while those with subclinical symptoms see smaller effects ([Gordon et al. 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/))
+      - An estimated 50–60% of adherent calisthenics practitioners with some baseline mood instability experience meaningful stabilisation
+    uar: 45
+    confidence: low
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.resilience:
+    pbs: 5
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile on resilience. Delta: ~15 percentile points. Calisthenics builds resilience through repeated mastery experiences: progressing from a chest-to-floor push-up to a one-arm push-up requires sustained effort over months and develops self-efficacy via measurable, hard-won skill acquisition; [research on physical fitness and resilience](https://pmc.ncbi.nlm.nih.gov/articles/PMC9095527/) confirms muscular fitness is positively associated with stress resilience, mediated by general self-efficacy
+      - The skill-progression structure may produce stronger self-efficacy gains than weight-on-bar progression because each new movement is a discrete, visible competence (you can or cannot do a pull-up); this provides a clearer mastery feedback than incremental weight increases
+      - Score 5 matches progressive strength training: meaningful but moderate shift from 'significant disruption from moderate stressors' (4) toward 'manages moderate stressors adequately' (6), driven by self-efficacy transfer from physical to general life domains
+    isr: 50
+    isr_reasoning: |
+      - Self-efficacy gains from calisthenics are mechanistically plausible but not specifically evidenced; research extrapolates from general resistance-training resilience studies ([Frontiers 2024 barbell training](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1439431/full))
+      - Transfer from physical mastery to general resilience requires psychological generalisation that does not occur automatically; roughly half of adherent practitioners report broader stress-coping benefits
+      - Evidence is thinner for the resilience pathway than for mood stabilisation, warranting a slightly lower ISR
+    uar: 45
+    confidence: low
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  mental-health.flourishing:
+    pbs: 4
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 40th–45th percentile on flourishing. Delta: ~5–10 percentile points. Calisthenics contributes to flourishing through mastery and agency: skill progression provides a clear pathway from incompetence to competence that supports self-determination and intrinsic motivation, components of eudaimonic wellbeing ([systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC7504332/))
+      - The minimal-equipment, location-flexible nature of the practice means it can be sustained through life disruptions in ways gym-dependent training cannot, supporting the integration of practice into a meaningful life rather than as a compartmentalised activity
+      - Score 4 matches progressive strength training: minimum scoreable threshold; calisthenics contributes modestly to flourishing through mastery but lacks the social connection, contemplative depth, or service dimensions that more directly cultivate sustained meaning
+    isr: 45
+    isr_reasoning: |
+      - The pathway from physical skill mastery to life satisfaction is mediated by self-efficacy and identity, introducing multiple links where the benefit can attenuate
+      - Solo training format limits the community-belonging pathway available to group functional fitness or sport contexts, reducing reliability of flourishing benefits compared to socially-embedded exercise modalities
+      - An estimated 40–50% of consistent practitioners report enhanced life satisfaction attributable to their training practice
+    uar: 45
+    confidence: low
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  behaviours.resilience:
+    pbs: 5
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile on sustained behavioural change. Delta: ~20–25 percentile points. Calisthenics has unusually strong properties for sustained behavioural change: minimal equipment dependence, high travel-portability, and low time/cost friction make it more likely to survive life disruptions (moves, travel, schedule changes) than gym-based training
+      - Practitioners frequently maintain calisthenics practices across multiple years and life transitions because the practice does not require external infrastructure; this maps to 6–12 months of sustained change (score 6 anchor) for typical adherents and longer for committed practitioners
+      - Score 5 reflects this advantage: the minimal-friction format genuinely supports behavioural maintenance better than infrastructure-dependent alternatives, but adherence still ultimately depends on individual motivation rather than the format alone
+    isr: 50
+    isr_reasoning: |
+      - Friction reduction is mechanistically a major adherence driver, and [home-based exercise studies](https://pubmed.ncbi.nlm.nih.gov/28655559/) confirm equivalent or better long-term adherence than gym-based formats when comparing matched populations
+      - Direct evidence for calisthenics-specific multi-year adherence is limited; the resilience-of-practice argument extrapolates from home-based exercise research and the friction-reduction principle
+      - An estimated 45–55% of starters maintain meaningful practice past 12 months, modestly higher than the gym-based reference rate of 30–40%
+    uar: 45
+    confidence: low
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+  self-awareness.experiential:
+    pbs: 4
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 40th–45th percentile on experiential self-knowledge. Delta: ~5–10 percentile points. Calisthenics requires sustained attention to bodyweight, leverage, and proprioception in ways that weight training does not: practising handstands, levers, and complex bodyweight movements develops kinaesthetic awareness and an understanding of one's own physical capacities and limits through direct experience
+      - The skill-acquisition format generates specific experiential learning – about persistence, fear (e.g., learning to invert), patience, and the relationship between effort and progress – that most rep-counting exercise modalities do not provide as directly
+      - Score 4 represents the minimum scoreable threshold: the experiential self-knowledge gain is genuine but narrow (focused on physical capacities rather than psychological or relational self-understanding)
+    isr: 45
+    isr_reasoning: |
+      - The kinaesthetic awareness pathway is well-established in gymnastics and bodyweight skill literature, but transfer to broader experiential self-knowledge is variable and depends on the practitioner's reflective orientation
+      - Many adherents engage with calisthenics purely as exercise without the reflective component required for experiential self-knowledge gains
+      - Approximately 40–50% of dedicated practitioners report meaningful learning about their own physical/psychological capacities through the practice
+    uar: 45
+    confidence: low
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 50
+  upfront_cost_reasoning: "Doorway pull-up bar ($30-50) is the only essential equipment for most programmes. Many beginner routines need no equipment at all. Optional later additions: gymnastic rings ($35), parallettes ($30-40)."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No ongoing costs required. Free programmes are widely available (r/bodyweightfitness Recommended Routine, GMB free resources, Beastskills tutorials). Optional paid programming ($10-30/month) or coaching is available but not required."
+  upfront_time: 4
+  upfront_time_reasoning: "Selecting a programme, learning basic movement patterns and progression rules, and assessing starting variations for each pattern. Filming form to identify obvious issues. Less than weighted training because no gym orientation is required."
+  ongoing_time: 3
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective dose: 3 sessions of 30-45 minutes each per week. No travel time required for home-based practice."
+
+prerequisites:
+  - "Sufficient baseline strength and joint health to perform basic movement patterns (push-up from knees, bodyweight squat, dead hang) without acute pain"
+  - "Access to a doorway, sturdy beam, or pull-up bar for upper-body pulling work; a clear floor space of approximately 2x2 metres for movement"
+  - "Medical clearance for individuals over 50, with prior wrist/shoulder/elbow injuries, or with cardiovascular conditions"
+
+flagged_domains:
+  - domain: "habits"
+    rationale: "The minimal-friction, equipment-light format makes calisthenics unusually well-suited as a keystone habit that survives travel and schedule disruptions, plausibly supporting habits.consistency"
