@@ -1,0 +1,191 @@
+name: "Learning to Drive"
+what_it_is: |
+  A one-time learning investment in operating a private motor vehicle competently and acquiring a full driver's licence – typically 30–50 hours of professional instruction and supervised practice for a first-time adult learner ([UK average ~45 hours](https://www.uswitch.com/car-insurance/learner-driver-statistics/)). Unlike public transit or ride-hailing, the licence is a transferable, lifelong credential that unlocks discretionary access to a roughly 50-mile radius around any starting point, with high marginal value in suburban and rural settings where transit is sparse. The benefit is heavily context-dependent – modest in dense, transit-rich cities and large in low-density areas where roughly [a third of Americans do not drive](https://yaleclimateconnections.org/2025/01/american-transportation-revolves-around-cars-many-americans-dont-drive/) and a meaningful share of jobs lie outside walkable or transit-served distance.
+how_to_do_it: |
+  - Apply for a learner's permit (US) or provisional licence (UK) – this is the legal prerequisite for any supervised on-road practice
+  - Book a block of 10–20 hours of professional instruction with a qualified driving instructor; instructors front-load the curriculum (controls, mirrors, junctions, manoeuvres) more efficiently than a friend or relative can
+  - Pair every paid lesson with at least one hour of supervised private practice in a familiar vehicle to bed in skills; [DVSA guidance](https://www.uswitch.com/car-insurance/learner-driver-statistics/) recommends 22 hours of private practice on top of 45 lesson hours
+  - Sit the theory test (UK) or written knowledge exam (US) once you can pass mock tests reliably; sit the practical road test once your instructor signs off – the [UK first-time pass rate is 47–49%](https://www.rateddriving.com/news/londons-highest-lowest-passrate-driving-test-centres/), so plan for one resit
+  - In the first 6–12 months after passing, deliberately drive in conditions you avoided as a learner (motorways, night, rain) – novice crash risk drops sharply over the first year of solo driving but only with exposure
+success_looks_like: |
+  - You hold a full driver's licence and can comfortably make a 30-minute trip on unfamiliar roads, including motorway driving, without anxiety degrading your decision-making
+  - You drive at least monthly to maintain skill currency – low-frequency drivers who pass and then rarely drive lose practical competence within 1–2 years
+  - Job opportunities that require a driving licence are now genuinely open to you, and you can choose housing 20–40 minutes from work without the commute being structurally infeasible
+common_pitfalls: |
+  - Underestimating the post-licence cost step-change: insurance for a newly licenced driver is the highest of any cohort, and AAA's 2025 figures put total annual ownership of a new vehicle at $11,577 – budget for this before committing
+  - Stopping practice the moment the test is passed; [first-year drivers have markedly elevated crash rates](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813313) that decline sharply with miles driven, so the first year is exactly when continued exposure matters most
+  - Treating the licence as the goal rather than competence – passing the minimum-viable test and then never driving on motorways or in adverse conditions leaves you nominally licenced but functionally incapable of using the credential
+description: |
+  - A 30–50 hour learning programme combining professional driving instruction, supervised private practice, a theory or written exam, and a practical road test, ending in a full driver's licence
+  - [UK learners average 45 lesson hours plus 22 hours of supervised practice](https://www.uswitch.com/car-insurance/learner-driver-statistics/) at £30–£40 per hour, with average total cost ~£2,187; US learners typically pay $30–$60 per hour for in-car instruction with [comprehensive driver's-education programmes ranging $300–$800](https://www.thumbtack.com/p/how-much-do-driving-lessons-cost) and the [average overall driver-education spend at ~$937](https://www.thumbtack.com/p/how-much-do-driving-lessons-cost)
+  - Roughly [9% of US adults do not hold a valid driver's licence](https://hedgescompany.com/blog/2024/01/number-of-licensed-drivers-us/), and [a third of Americans overall do not drive](https://yaleclimateconnections.org/2025/01/american-transportation-revolves-around-cars-many-americans-dont-drive/); the intervention only applies to this population, but for those people the geographic and labour-market unlock is large
+  - [Driver's licence access is associated with a ~1 percentage point increase in employment, with larger effects in low-accessibility rural and suburban areas](https://www.sciencedirect.com/science/article/abs/pii/S0927537120300117)
+  - The safety dimension is genuinely double-edged: US road fatality rates run at [~1.14 deaths per 100 million vehicle miles travelled](https://injuryfacts.nsc.org/motor-vehicle/historical-fatality-trends/deaths-and-rates/), and [first-year drivers have crash rates several times those of experienced drivers](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813313), so the intervention adds an exposure to a non-trivially risky activity even as it reduces dependence on potentially less safe alternatives (walking on rural roads, riding with untrained drivers)
+applicable_domains: ["transportation", "life-skills", "current-work", "networks", "housing", "participatory-leisure", "emergency-preparedness", "behaviours"]
+
+values:
+  transportation.efficiency:
+    pbs: 5
+    isr: 60
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After acquiring a licence, a typical adopter in a low-transit area moves from very long, multi-leg transit commutes (or no access at all) to a sub-30-minute car commute. Endpoint: ~50th percentile. Delta: ~15 percentile points.
+      - The anchor is inverted (% income on transport), and adding a car typically increases dollar costs: [AAA puts total annual ownership of a new vehicle at $11,577](https://newsroom.aaa.com/2025/09/aaa-new-vehicle-costs-drop-to-11577/), often 15–20% of median household income. The efficiency gain is therefore primarily in time and route productivity, not dollar cost; a used car and minimum-coverage insurance soften the cost hit but do not eliminate it.
+      - PBS 5 reflects a real but moderate net efficiency improvement – the scale_levels at score 6 ("sub-20-minute commute or productively used; costs below 10% of income") are not generally reached by adding a car, since the cost ceiling is breached even when commute time falls.
+    isr_reasoning: |
+      - The efficiency benefit is conditional on context: in dense transit-rich cities, the time saving over existing options is small or negative once parking and traffic are factored in; in rural and suburban settings, the time saving is large.
+      - [Research on US licence reforms](https://www.sciencedirect.com/science/article/abs/pii/S0927537122000653) finds the largest accessibility gains in low-accessibility localities with longer transit times – these are the contexts where ISR is high; for urban adopters, ISR is much lower.
+      - ISR of 60% reflects this split: roughly that fraction of intended adopters live in contexts where adding a car genuinely improves the time-and-cost composite, while the remainder see flat or negative net efficiency.
+    uar_reasoning: |
+      - Once a learner books their first lesson, completion within 1–2 years is the norm; the dominant adherence problem is not starting at all. [Learner driver statistics](https://www.uswitch.com/car-insurance/learner-driver-statistics/) show typical completion timelines of 12–18 months once started.
+      - UAR of 70% accounts for the meaningful minority who book some lessons, fail the practical test multiple times, and disengage – [first-time UK pass rates of 47–49%](https://www.rateddriving.com/news/londons-highest-lowest-passrate-driving-test-centres/) imply a substantial resit cohort.
+      - Cost is the second-largest barrier: at [~£2,187 in the UK](https://www.uswitch.com/car-insurance/learner-driver-statistics/) or $500–$2,500 in the US, learners with constrained budgets stall mid-programme.
+
+  transportation.safety:
+    pbs: 4
+    isr: 55
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 50th percentile. Endpoint after becoming a competent licensed driver: ~60th percentile. Delta: ~10 percentile points.
+      - The marginal effect is genuinely double-edged. On the upside, a trained driver controls their own exposure: they can choose not to drive when fatigued, drugged, or in extreme weather, whereas a non-driver dependent on lifts is at the mercy of the driver's choices. On the downside, driving is one of the riskiest routine activities a typical adult does, with [US fatality rates of ~1.14 deaths per 100M vehicle miles travelled](https://injuryfacts.nsc.org/motor-vehicle/historical-fatality-trends/deaths-and-rates/) and ~40,000 annual deaths.
+      - PBS 4 (a "modest" gain on the subjective scale) reflects the small net positive: the user gains agency over their own road exposure, but absolute road risk is non-trivial and unlikely to fall below the population average until they accumulate years of experience.
+    isr_reasoning: |
+      - The risk-reduction benefit is fragile early on: [first-year drivers have crash rates several times those of experienced drivers](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813313), with the first six months especially elevated.
+      - For new adult learners (vs teens), risk is lower than the headline novice statistics imply – older novices show better hazard perception – but still meaningfully above experienced-driver baselines for 12–24 months.
+      - ISR of 55% reflects the fact that for roughly half of new drivers, the safety gain from agency is offset by elevated novice crash exposure during the first year or two; the net positive lands once driving experience accumulates.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+  life-skills.high:
+    pbs: 6
+    isr: 85
+    uar: 70
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A typical adult non-driver has 1–3 practical skills; adding driving brings them to 2–4. Delta: +1 skill. PBS = 10 + log₂(1/15) = 10 − 3.91 = 6.
+      - Driving is among the most universally recognised practical life skills in licensing societies, on par with first aid or basic repairs in the values.yml score-6 anchor band ("4–5 essential skills").
+      - The PBS represents the benefit of adding this single skill; users who already hold many practical skills would see the same +1 contribution, but personalisation handles diminishing returns at the display layer.
+    isr_reasoning: |
+      - Skill acquisition is reliable conditional on completing the programme: instructors front-load procedural training and adult learners reach test-passing competence in 30–50 hours per [UK learner statistics](https://www.uswitch.com/car-insurance/learner-driver-statistics/).
+      - [UK first-time pass rates of 47–49%](https://www.rateddriving.com/news/londons-highest-lowest-passrate-driving-test-centres/) understate eventual success: most learners pass within 1–3 attempts, so cumulative pass-among-completers is substantially higher.
+      - ISR of 85% reflects this: the small minority who never reach competence either have undiagnosed perceptual or cognitive limitations or stop persistent practice before fluency.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+  current-work.engagement:
+    pbs: 5
+    isr: 60
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A licence enlarges the practically reachable job market to a ~30-mile radius, allowing the user to choose roles with better fit rather than only geographically constrained ones. Endpoint: ~50th percentile. Delta: ~15 percentile points.
+      - [Licence access is associated with a ~1 percentage point increase in employment, with larger effects in low-accessibility rural and suburban areas](https://www.sciencedirect.com/science/article/abs/pii/S0927537120300117); the engagement gain is downstream of the better job-fit choices this enables.
+      - PBS 5 reflects a meaningful but indirect effect – the licence does not directly make work more engaging, but it removes the constraint that forces many non-drivers in suburban areas into the only roles within walking or transit distance.
+    isr_reasoning: |
+      - The engagement-via-better-job pathway only activates if the user actively uses the licence to expand their job search; many newly licenced drivers do not change jobs.
+      - ISR of 60% reflects that a meaningful subset of users see engagement gains because they take a role they previously would have ruled out, while many maintain their existing work.
+      - In dense urban contexts, the engagement gain is near-zero because the existing job market is already accessible; ISR is heterogeneous and context-bound.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+  networks.breadth:
+    pbs: 5
+    isr: 70
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After licensure, the user can reliably attend events, meet-ups, and visit friends across a 30–60 mile radius rather than being confined to walking or public-transit distance. Endpoint: ~50th–55th percentile. Delta: ~15–20 percentile points.
+      - The breadth gain is largest for adopters in suburban or rural areas where social events are spatially dispersed; in dense cities the effect is small because transit already provides this reach.
+      - PBS 5 ("modest gain in network breadth" on the subjective scale) reflects the geographic-reach unlock without overstating it – the licence creates the option, but breadth still requires the user to spend the effort attending events.
+    isr_reasoning: |
+      - The breadth benefit is contingent on the user actually using their licence socially; many newly licenced drivers use the car primarily for commute and errands.
+      - ISR of 70% reflects that roughly that fraction of new drivers in low-transit contexts genuinely expand their social radius; the remainder see breadth roughly unchanged.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+  housing.location:
+    pbs: 5
+    isr: 65
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 50th percentile (housing baseline is already average). Endpoint: ~60th–65th percentile after a drive-flexible move. Delta: ~10–15 percentile points.
+      - The anchor is inverted (commute minutes); a driver's licence enables a wider pool of acceptable housing because the practical commute radius expands. Reaching scale-level 6 ("Under 25-minute commute with convenient access to essentials") becomes feasible in many suburban contexts only with a car.
+      - PBS 5 reflects the option-value of a broader housing search rather than a guaranteed location upgrade – the licence enables the move but does not force it.
+    isr_reasoning: |
+      - The location benefit only materialises if the user moves house after licensure (or chose their current housing assuming licensure was coming); for stationary users, ISR is lower.
+      - ISR of 65% reflects the meaningful subset who exercise the option within 5 years – moving frequency among 25–40-year-olds is high enough that this is plausible for most newly licenced adopters.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+  participatory-leisure.adventure:
+    pbs: 5
+    isr: 70
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After licensure, the user can independently access national parks, hiking trails, scenic routes, and weekend trips that are infeasible by transit. Endpoint: ~50th–55th percentile. Delta: ~15–20 percentile points.
+      - The adventure unlock is most pronounced for outdoor, rural, or multi-stop itineraries where transit is unworkable – the day-trip and weekend-trip categories of leisure expand from "rare and effortful" to "spontaneous".
+      - PBS 5 ("modest gain in adventure and exploration") reflects a real but bounded effect – the licence creates the option, but realising it requires sustained leisure budgeting and motivation.
+    isr_reasoning: |
+      - The adventure benefit reliably activates for users who already had latent demand for outdoor or road-trip leisure; for those whose preferred leisure is urban or sedentary, ISR is much lower.
+      - ISR of 70% reflects this split – a clear majority of new drivers in suburban or rural contexts do at least occasionally use the car for leisure exploration.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+  emergency-preparedness.self-reliance:
+    pbs: 4
+    isr: 65
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The licence enables independent transport in emergencies – driving a family member to hospital, evacuating ahead of a hurricane, reaching a relative during a regional disruption. Endpoint: ~45th–50th percentile. Delta: ~10–15 percentile points.
+      - The anchor is days of household supply autonomy; driving capability is adjacent to this rather than directly mapped, since a car expands evacuation and resupply options rather than stockpile depth. PBS 4 ("modest gain") reflects this adjacency.
+      - The benefit compounds with vehicle ownership – a licence without car access provides a smaller fraction of this benefit.
+    isr_reasoning: |
+      - The emergency-preparedness benefit only activates in actual emergencies, which are rare at the individual level; among the subset who experience a relevant emergency, the licence reliably helps.
+      - ISR of 65% reflects the combined probability that the user (a) has access to a vehicle in the moment, (b) is fit to drive when the emergency arises, and (c) the emergency is one where driving is the relevant response.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+  behaviours.freedom:
+    pbs: 4
+    isr: 70
+    uar: 70
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The licence reduces dependence on others for transport – partners, parents, and friends previously called for lifts. Endpoint: ~50th percentile. Delta: ~15 percentile points.
+      - The autonomy gain is psychologically meaningful for non-drivers who have spent years coordinating around others' schedules or declining invitations because of transport friction; the freedom dimension targeted here is freedom from a constrained behavioural pattern, not freedom from compulsions in the addiction sense.
+      - PBS 4 ("modest gain") reflects that this is one autonomy domain among many, not a transformative gain in overall behavioural freedom.
+    isr_reasoning: |
+      - The autonomy benefit is mechanically reliable for licensed drivers with vehicle access – they can in fact go where they want, when they want, without coordination.
+      - ISR of 70% reflects the conditional access (vehicle ownership or reliable car-share access) and the minority for whom transport was never the binding autonomy constraint.
+    uar_reasoning: |
+      - See transportation.efficiency UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 800
+  upfront_cost_reasoning: "Lower-bound estimate covering ~20 hours of professional instruction at the lower end ($30–$40/hour US, £30/hour UK), test fees ($50–$150), and theory/permit fees. UK average is ~£2,187 per Uswitch; US ranges $500–$2,500. The conservative $800 represents a budget-conscious adult learner taking the minimum viable lesson hours."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Licence renewal fees are nominal (~$30 every 5–8 years). Vehicle ownership costs ($11,577/year per AAA) are not included – they are a separate decision, not a cost of holding a licence."
+  upfront_time: 50
+  upfront_time_reasoning: "30–50 hours of combined professional instruction and supervised private practice for a first-time adult learner (UK average is 45 lesson hours plus 22 practice hours; US varies). 50 hours is a reasonable upper-bound conservative estimate for the time to reach test-pass competence."
+  ongoing_time: 0
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Once licensed, no recurring time cost is required to maintain the credential beyond actually driving. Skill currency benefits from at least monthly driving but this is typically absorbed into normal use."
+
+prerequisites:
+  - "Physical capability sufficient for vehicle operation – adequate vision (correctable to the legal standard), motor function in both arms and at least one leg, and reaction time within normal range; modified vehicles are available for some disabilities but require additional setup"
+  - "Legal eligibility – minimum age (16–18 depending on jurisdiction), residency or visa status sufficient to obtain a learner's permit, and no disqualifying medical conditions (uncontrolled epilepsy, severe untreated sleep disorders)"
+  - "Access to a vehicle for supervised practice – either an instructor's dual-control car, a family member's vehicle with a qualified supervising driver, or a hire car; learners cannot legally practise alone"
+
+flagged_domains:
+  - domain: "friendship"
+    rationale: "Driving capability expands the geographic radius within which the user can sustain regular in-person contact with friends, particularly relevant in low-density areas where social ties otherwise attenuate with distance."
+  - domain: "mental-health"
+    rationale: "Reducing chronic transport friction and dependence on others for lifts plausibly lowers a low-grade source of stress and helplessness, particularly for adults who have lived as non-drivers in car-dependent areas."
+  - domain: "physical-safety"
+    rationale: "Net effect is ambiguous and likely close to zero or slightly negative for the user themselves – driving is one of the riskier routine activities a typical adult does, and novice exposure is elevated for the first 1–2 years; the agency benefit (avoiding rides with impaired or untrained drivers) partially but not fully offsets this."

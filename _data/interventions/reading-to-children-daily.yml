@@ -1,0 +1,165 @@
+name: "Reading to Children Daily"
+what_it_is: |
+  A sustained daily ritual of reading aloud to a child aged roughly 0–8 for 15–30 minutes, ideally in an interactive style known as dialogic reading – the adult asks open-ended questions, expands on the child's responses, and follows the child's interest rather than simply reciting text. The practice is one of the most evidence-rich interventions in early childhood development, with multiple meta-analyses documenting moderate effects (Cohen's d ≈ 0.4–0.6) on expressive vocabulary, emergent literacy, and language outcomes. Unlike sporadic reading or screen-based "read-along" apps, the value compounds through cumulative exposure: shared book reading exposes a child to roughly 50% more rare words than typical conversation, and the effect is strongest when sustained from infancy through early primary school.
+how_to_do_it: |
+  - Anchor the reading session to an existing daily routine – bedtime is the most reliable, but post-meal, post-bath, or first thing in the morning all work; the consistency matters more than the slot
+  - Use the dialogic technique: pause to ask "what do you think happens next?", "why did she do that?", or "have you ever felt like that?", and build on the child's answer with a one-sentence expansion before continuing
+  - Start with 10–15 minutes for younger children and stretch toward 25–30 minutes as attention spans grow; let the child choose the book at least half the time, even when this means the same book repeatedly
+  - Keep a rotating supply of new books – library visits every 2–3 weeks prevent the staleness that erodes engagement and gives access to roughly 20–30 new titles per visit at no cost
+  - Maintain the habit through resistance phases: many children push back periodically, especially around age 4–5; reduce session length rather than skipping, and resume normal duration once interest returns
+success_looks_like: |
+  - Your child requests reading time unprompted, brings books to you, and re-reads favourites with growing comprehension over months and years
+  - At kindergarten entry, your child recognises rhyme, follows multi-step narratives, and has a vocabulary clearly above peers without targeted instruction in those skills
+  - The reading session functions as a reliable connection ritual – when the day has otherwise been fractious, it resets the relationship without effort
+common_pitfalls: |
+  - Reading without interaction – passive recitation captures only a fraction of the language gain; without dialogic prompts the effect size on expressive vocabulary roughly halves
+  - Stopping when the child learns to read independently – the cognitive benefits persist well past the point where children can decode text themselves, because read-aloud books outpace independent reading level by 2–3 years
+  - Substituting audiobooks or screen-based stories for parent voice – these produce some literacy gains but lose the attachment, attunement, and dialogic components that drive the relationship and language effects
+  - Treating it as a chore to tick off rather than a shared experience – tone leaks through to the child, and a tense 20-minute session produces less than a relaxed 10-minute one
+description: |
+  - A daily 15–30 minute parent–child read-aloud habit, ideally interactive (dialogic reading: open-ended questions, expanding on child responses, following child interest), sustained from infancy through early primary school
+  - [Meta-analytic evidence](https://www.tandfonline.com/doi/abs/10.1080/10409280701838603) shows shared book reading produces a moderate effect on expressive vocabulary (Cohen's d ≈ 0.59), with [larger effects](https://pubs.asha.org/doi/10.1044/2020_JSLHR-19-00288) on caregiver book-sharing competence (d ≈ 1.01) and meaningful effects on receptive language (d ≈ 0.26)
+  - [Synthesis research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3319370/) finds significant positive effects of read-aloud instruction on language, phonological awareness, print concepts, comprehension, and vocabulary; combined parent-involvement effect size on reading acquisition is approximately d = 0.68
+  - Beyond literacy, [randomised controlled trial evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC7319866/) links shared reading to reduced parenting stress and stronger parent-child relational health, with parent–child reading at ages 1 and 3 predicting less harsh parenting at ages 3 and 5
+  - Distinct from independent child reading, audiobooks, or educational screen time in that the active ingredients are the parent's voice, the dialogic interaction, and the physical proximity – none of which are reproduced by passive media
+applicable_domains: ["children", "life-purpose", "self-awareness", "communication"]
+
+values:
+  children.development:
+    pbs: 8
+    isr: 70
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful daily adherence sustained over years, a child plausibly reaches the 70th–75th percentile for language, literacy readiness, and self-regulation skills. Delta: ~35–40 percentile points.
+      - [Mol and Bus meta-analytic work](https://www.tandfonline.com/doi/abs/10.1080/10409280701838603) reports Cohen's d ≈ 0.59 for expressive vocabulary from dialogic shared reading – a large effect for a low-cost behavioural intervention, mapping to a major gain (score 8) on the subjective anchor.
+      - [Shared book reading exposes children to 50% more rare words](https://www.frontiersin.org/journals/language-sciences/articles/10.3389/flang.2025.1540562/full) than typical conversation, providing the lexical input that distinguishes early language trajectories; the development gain extends to phonological awareness, print concepts, and narrative comprehension – all foundational developmental milestones.
+    isr_reasoning: |
+      - Among parents who actually read interactively and daily, language and literacy gains are observed in the majority of cases per [meta-analytic evidence](https://pubs.asha.org/doi/10.1044/2020_JSLHR-19-00288), with effects most reliable for typically developing children aged 2–4.
+      - The [effect size halves for at-risk children](https://eric.ed.gov/?id=EJ787378) (d ≈ 0.13 vs d ≈ 0.53), so children with language delays, hearing issues, or significant developmental risk see less benefit; this is the principal driver of non-response.
+      - ISR of 70% accounts for the proportion of children who reliably benefit, with the remainder showing smaller-than-expected gains due to age-of-onset effects, child-level moderators, or inconsistent dialogic technique despite daily reading.
+    uar_reasoning: |
+      - [Scholastic's Kids and Family Reading Report](https://www.scholastic.com/content/dam/KFRR/Downloads/KFRR_The%20Rise%20of%20Read%20Aloud.pdf) finds only 41% of 0–4-year-olds are read to frequently (down from 64% in 2012), with the rate dropping to 22% by ages 8–10 – sustained daily reading across the full 0–8 window is rare in practice.
+      - [Systematic review of barriers](https://pmc.ncbi.nlm.nih.gov/articles/PMC12326312/) identifies time pressure, parent fatigue, screen competition, and child resistance as recurring obstacles; many parents start strong in infancy and drop off by school age.
+      - UAR of 35% reflects realistic long-term adherence: among parents who set out to do this, roughly a third sustain near-daily reading through age 8; the remainder maintain the habit intermittently or drop it as the child becomes an independent reader.
+
+  children.achievement:
+    pbs: 7
+    isr: 65
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, the child plausibly reaches the 65th–75th percentile on early academic and skill markers (vocabulary at school entry, reading readiness, narrative comprehension). Delta: ~30–40 percentile points.
+      - [Combined intervention studies](https://lincs.ed.gov/publications/pdf/lit_interventions.pdf) representing over 1,000 families find parent involvement in literacy produces a moderately large effect on reading acquisition (effect size ≈ 0.68), translating into meaningful early academic advantage.
+      - Score 7 rather than 8 reflects that the achievement gain is bounded – early literacy advantages partly converge by mid-primary school as direct instruction takes over, though [longitudinal evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC6927670/) finds early shared reading still predicts 4th-grade internal motivation, which sustains achievement.
+    isr_reasoning: |
+      - [Meta-analytic findings](https://pmc.ncbi.nlm.nih.gov/articles/PMC8975167/) show shared book reading interventions produced moderate effects on emergent literacy for middle- and high-income children (d ≈ 0.39) but smaller effects for low-income children (d ≈ 0.14), reflecting confounding with broader home language environment.
+      - ISR of 65%: a clear majority of consistent readers see measurable academic readiness benefits, but a minority do not – particularly when reading is the only literacy-supportive practice in an otherwise low-stimulation environment.
+      - The achievement pathway is more attenuated than the development pathway because school outcomes depend on many other inputs (instruction quality, peer environment, child-level factors) that reading does not directly control.
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile. UAR = 35%.
+
+  children.relationship:
+    pbs: 6
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, parent-child relationship warmth plausibly reaches the 60th–65th percentile via the daily ritual of close physical contact, focused attention, and shared emotional experience. Delta: ~25–30 percentile points.
+      - [Randomised trial evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC6765415/) links shared reading and play interventions to reduced parenting stress and improvements in parent-child relational health.
+      - [Longitudinal evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC7319866/) shows parent–child reading at ages 1 and 3 predicts less harsh parenting at ages 3 and 5, partially mediated by reduced child disruptive behaviour – a real but bounded effect on the relationship.
+    isr_reasoning: |
+      - Among parents who genuinely read interactively, the daily ritual reliably produces moments of attuned closeness; ISR of 70% reflects that for most adherent families, the bonding effect is direct and observable.
+      - The benefit is contingent on tone – a tense or rushed session does not produce the bonding effect, which limits ISR for stressed or distracted parents who go through the motions.
+      - [Curling up with a good e-book research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5156694/) shows physical books support warmer embodied interaction than screens, so format choices also moderate the relationship effect.
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile. UAR = 35%.
+
+  children.wellbeing:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Effects on the child's overall wellbeing flow indirectly through three pathways: stronger language for self-regulation, more secure parent-child attachment, and reduced harsh parenting. Endpoint: ~55th–60th percentile. Delta: ~20–25 percentile points.
+      - [Brazilian cluster-randomised trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC5744270/) shows reading aloud produces measurable child development gains that translate into improved daily functioning and engagement.
+      - Score 5 reflects that wellbeing is downstream of the more direct development, achievement, and relationship pathways – the gain is real but mediated.
+    isr_reasoning: |
+      - The wellbeing pathway depends on whether the developmental, achievement, and relationship gains all materialise; ISR of 60% reflects the conjunction of these mediating effects.
+      - [Systematic meta-synthesis](https://pmc.ncbi.nlm.nih.gov/articles/PMC12326312/) finds reading is associated with improved child emotional regulation, but the effect varies substantially with home environment and child temperament.
+      - For at-risk children, the wellbeing benefit is harder to isolate from other concurrent supports the family typically provides, making the pure attribution to reading less reliable.
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile. UAR = 35%.
+
+  life-purpose.meaning:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. For a parent, the daily reading ritual is one of the most concrete, embodied expressions of the parenting role and produces a recurring sense of meaningful contribution. Endpoint: ~55th–60th percentile. Delta: ~20–25 percentile points.
+      - The pathway is direct: a 20-minute daily activity that is simultaneously a connection ritual and a developmental investment provides ongoing purpose-affirmation that less interactive caregiving (driving, supervising, feeding) does not.
+      - Score 5 reflects a meaningful but bounded effect – this is one channel among many through which parenting generates meaning, not a transformative source on its own.
+    isr_reasoning: |
+      - For parents who experience reading as a chore, the meaning-making effect attenuates significantly; ISR of 60% reflects that roughly two-thirds of adherent parents experience the practice as purpose-affirming rather than burdensome.
+      - The meaning effect is most reliable when paired with visible developmental progress in the child, which provides ongoing reinforcement; parents whose children show slower gains may experience less purpose-feedback.
+      - Common-sense evidence on the link between sustained daily rituals and felt meaning supports a moderate ISR even without direct measurement of this specific pairing.
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile. UAR = 35%.
+
+  self-awareness.relational:
+    pbs: 4
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Daily focused interaction in a low-distraction context surfaces patterns in how the parent responds to the child – when they interrupt, when they project, when they rush. Endpoint: ~50th–55th percentile. Delta: ~15–20 percentile points.
+      - The pathway is plausible but indirect: the practice creates repeated opportunities for relational self-observation, but realising this benefit requires the parent to actually reflect on their own behaviour during sessions rather than reading on autopilot.
+      - Score 4 conservatively captures a modest, indirect effect – most of the gain comes from incidental noticing rather than deliberate self-examination.
+    isr_reasoning: |
+      - ISR of 50%: only roughly half of adherent parents will use the reading time as a self-observation opportunity; the remainder will read attentively but without the meta-level reflection that produces relational self-awareness.
+      - The gain is concentrated among parents already inclined toward self-reflection; this is a multiplier effect on existing tendencies rather than a generator of new self-awareness.
+      - No direct studies measure this construct; the estimate is extrapolated from the broader observation that frequent attentive caregiving interactions provide more raw material for relational self-knowledge.
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile. UAR = 35%.
+
+  communication.connection:
+    pbs: 4
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Dialogic reading is sustained practice in attentive listening, expansion of partner contributions, and following another person's interest – core communication skills that generalise modestly outside the parent-child context. Endpoint: ~50th–55th percentile. Delta: ~15–20 percentile points.
+      - The pathway is plausible: skills practised daily for years tend to generalise, and dialogic technique (asking open questions, expanding on responses) is a transferable communication pattern.
+      - Score 4 reflects the modest cross-context transfer expected: most of the connection skill stays parent-child specific, with limited but real spillover to other relationships.
+    isr_reasoning: |
+      - ISR of 55%: the spillover effect on general connection skills is real but inconsistent; about half of dialogic readers report that techniques bleed into broader interactions.
+      - No direct studies measure cross-context transfer of dialogic technique to adult communication; the estimate is conservative and reflects general principles of skill generalisation.
+      - Parents with prior communication training (counsellors, teachers) see less marginal benefit because the techniques overlap with existing skills; new parents see more.
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile. UAR = 35%.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No upfront cost required – public libraries provide free access to thousands of children's books, and most households already own some children's books or receive them as gifts. Optional starter library of 10–15 well-chosen board and picture books costs $50–100 if desired."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Library borrowing is free and provides effectively unlimited variety. Households that prefer to buy may spend $10–30 per month on new books, but this is fully optional and does not affect the intervention's effectiveness."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 1 hour to learn dialogic reading technique from a free guide or short video, set up a small home book area or library membership, and choose an initial reading slot in the daily routine."
+  ongoing_time: 3.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 30 minutes per day, seven days per week (3.5 hours weekly), accounting for the upper end of the 15–30 minute session range plus occasional book selection time. Library trips add roughly 1 hour every 2–3 weeks."
+
+prerequisites:
+  - "Caregiving role with regular daily access to a child aged roughly 0–8 (parent, primary guardian, or full-time caregiver)"
+  - "Functional literacy in a language shared with the child – reading aloud requires fluent decoding to allow attention on dialogic interaction"
+  - "Access to age-appropriate books, whether through a public library, household collection, or low-cost purchase"
+
+flagged_domains:
+  - domain: "habits"
+    rationale: "A sustained daily ritual maintained over years strengthens the parent's general capacity for habit consistency, with spillover to other daily practices, but scoring this directly would be partly circular since the intervention is itself a habit."
+  - domain: "mental-health"
+    rationale: "Randomised trial evidence links shared reading to reduced parenting stress and improved parental psychosocial functioning, suggesting a real but unscored benefit to parental mental health stability and resilience."
+  - domain: "family-of-origin"
+    rationale: "For parents whose own childhood lacked read-aloud experiences, sustaining the practice with their own child is a form of generational pattern repair that may produce healing benefits not captured by the children-focused values."

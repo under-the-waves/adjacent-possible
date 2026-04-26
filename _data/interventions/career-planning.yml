@@ -1,0 +1,177 @@
+name: "Career Planning"
+what_it_is: |
+  A structured annual or biannual career planning session – typically 2–6 hours – in which you review your current trajectory, identify skill gaps, map plausible target roles 3–5 years out, and set concrete actions for the next 6–12 months. Distinct from passive drift, the process forces explicit reasoning about long-term direction. Common frameworks include the [80,000 Hours career planning template](https://80000hours.org/career-planning/), Designing Your Life prototyping, and ikigai-style mapping. The deliberate-vs-emergent debate – [Mintzberg & Waters (1985)](https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.4250060306) on emergent strategy and [Ibarra's Working Identity](https://herminiaibarra.com/working-identity-book/) on iterative career reinvention – cautions that overly rigid plans can crowd out serendipity, but the evidence base broadly supports structured planning as a complement to, not a substitute for, opportunistic action.
+how_to_do_it: |
+  - Block 2–6 hours of uninterrupted time annually (many people pair this with a New Year or birthday review); a lighter 60–90 minute check-in each quarter keeps the plan live
+  - Work through a structured template – [80,000 Hours](https://80000hours.org/career-planning/process/) offers the most rigorous publicly available process – covering long-term vision, skill audit, plausible role candidates, and a ranked shortlist
+  - Identify 3–5 candidate paths 3–5 years out, then for each list the skills, contacts, and credentials needed; cross-reference against your current position to surface concrete gaps
+  - Translate the plan into 3–6 specific actions for the next 6–12 months (e.g., "complete X course by June", "secure Y informational interviews by Q3"), with deadlines and a calendar reminder for the next review
+success_looks_like: |
+  - You can articulate, in two minutes, your top one or two target roles in 3–5 years, the specific skills or experiences you need to bridge there, and the actions you are taking this quarter to close the gap
+  - At the next annual review, you can point to concrete progress on most of last year's actions and adjust the plan in light of what you learned, rather than starting from a blank page
+  - When an unexpected opportunity arises, you can quickly evaluate it against your plan – accepting deviations that genuinely improve your position and declining ones that don't
+common_pitfalls: |
+  - Producing a polished plan and then never revisiting it – the plan's value comes from the quarterly check-ins that surface drift and trigger adjustment
+  - Over-specifying the destination at the expense of optionality; [Ibarra (2003)](https://herminiaibarra.com/working-identity-book/) documents that successful career changers iterate through small experiments rather than committing to a fixed endpoint
+  - Confusing planning with execution – a beautiful plan with no follow-through actions is worth less than a rough plan that drives weekly behaviour; this is the failure mode the [Latham & Locke goal-setting literature](https://med.stanford.edu/content/dam/sm/s-spire/documents/PD.locke-and-latham-retrospective_Paper.pdf) warns against most strongly
+description: |
+  - A structured 2–6 hour annual session, supplemented by lighter quarterly check-ins, in which you review your trajectory, map 3–5 plausible target roles 3–5 years out, identify skill gaps, and commit to concrete 6–12 month actions
+  - Typically uses an established framework such as the [80,000 Hours career planning template](https://80000hours.org/career-planning/), Designing Your Life, or ikigai-style mapping rather than free-form journaling
+  - [Whiston et al. (2017) meta-analysis](https://www.sciencedirect.com/science/article/abs/pii/S0001879117300283) of 57 career intervention studies (n=7,364) found a weighted mean effect size of 0.35, rising to 0.45 for career decision-making self-efficacy and to 0.99 for interventions combining three or more critical components (counsellor support, values clarification, psychoeducation, written exercises, individualised feedback)
+  - [Rudolph, Lavigne & Zacher (2017) meta-analysis](https://www.sciencedirect.com/science/article/abs/pii/S0001879116300604) of 90 studies linked career adaptability (which planning develops) to employability (r=.54), promotability (r=.42), work performance (r=.47), and income (r=.16)
+  - Distinct from passive drift or one-off goal-setting in that it explicitly reasons about long-term direction, surfaces alternatives, and builds in scheduled review cycles rather than treating the plan as a one-time artefact
+applicable_domains: ["career-planning", "life-purpose", "current-work", "networks", "goals"]
+
+values:
+  career-planning.clarity:
+    pbs: 8
+    isr: 75
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (vague career direction). After successful adherence to an annual planning cycle with quarterly reviews, a user could plausibly reach the 75th percentile (well-researched, articulate direction with named target roles). Delta: ~40 percentile points – a major gain, mapping to PBS 8.
+      - [Whiston et al. (2017) meta-analysis](https://www.sciencedirect.com/science/article/abs/pii/S0001879117300283) found that career interventions produced an average effect size of 0.45 on career decision-making self-efficacy, and 0.99 when three or more critical components (values clarification, psychoeducation, written exercises) were combined – a structured planning template hits all three.
+      - Career planning's central output is precisely the construct this value measures – a written, reasoned account of where you are going – so the ceiling is high for adherent users.
+    isr_reasoning: |
+      - Among adherent participants, [career planning courses](https://pmc.ncbi.nlm.nih.gov/articles/PMC7605208/) consistently show significant pre-post gains in career awareness and readiness, with most participants reporting clearer direction post-intervention.
+      - [Manualised individual career counselling](https://pmc.ncbi.nlm.nih.gov/articles/PMC11419945/) produced sustained reductions in career decision difficulties at 12-month follow-up for ~87% of clients, suggesting the clarity benefit holds for the large majority who complete the process.
+      - ISR of 75 reflects the residual minority who complete the planning exercise mechanically, without genuine reflection, and emerge with a written document but no internalised clarity – plus a smaller group whose situations are genuinely too uncertain (early career, major life transition) for one planning cycle to resolve.
+    uar_reasoning: |
+      - Annual planning has notoriously poor adherence: most people who attempt a career plan once do not return for the second annual cycle, and quarterly check-ins fall away faster still – similar attrition pattern to New Year's resolutions, where [research summarised by Norcross](https://www.scientificamerican.com/article/new-years-resolutions/) suggests <50% adherence at six months.
+      - [Kreemers et al. (2022)](https://doi.org/10.1016/j.jvb.2022.103781) found that proactive career behaviours decline sharply without external structural support such as accountability partners or coaching.
+      - UAR of 40 reflects this: most people who try once do not sustain the cycle, and the long horizons (3–5 years) plus delayed feedback make discipline hard. Calendar reminders and a coach or accountability partner can lift this materially, but the default behavioural baseline is low.
+
+  career-planning.advancement:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile on warm contacts in target field. After successful adherence – meaning the user actually executes the networking actions the plan prescribes – they plausibly reach the 60th–65th percentile, gaining roughly 3 warm contacts in target field. PBS = 6 maps to "3 warm contacts in target field" on the linear anchor, matching this delta.
+      - The plan does not itself create contacts; it identifies targets and prompts outreach. PBS reflects what a successful adherent achieves through plan-driven action, not the planning artefact alone.
+      - [Rudolph, Lavigne & Zacher (2017)](https://www.sciencedirect.com/science/article/abs/pii/S0001879116300604) found career planning correlates with promotability (r=.42) and income (r=.16) – modest but real effects on objective advancement, mediated by execution.
+    isr_reasoning: |
+      - The advancement effect is heavily mediated by follow-through: among users who both plan and execute the action items, ~60% see a meaningful uptick in network density and role progression within 12–18 months per [Whiston et al. (2017)](https://www.sciencedirect.com/science/article/abs/pii/S0001879117300283).
+      - The non-responder fraction includes users in saturated job markets, those whose plans target unrealistic roles, and those whose plans correctly identify needed actions but who hit external barriers (visa, family, geography).
+      - ISR is lower than for clarity because advancement requires successful real-world action by both the user and reciprocating gatekeepers, not just internal cognitive change.
+    uar_reasoning: |
+      - See career-planning.clarity UAR – same intervention, same adherence profile. Advancement is doubly exposed to attrition because it requires both that the user keep planning and that they execute the action items in the plan, which is where most plans die.
+
+  career-planning.security:
+    pbs: 7
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile on career adaptability and backup options. After successful adherence, a user who has explicitly mapped 3–5 plausible paths and built a deliberate skill portfolio could plausibly reach the 65th–70th percentile. Delta: ~30 percentile points – between meaningful and major gain, scoring 7.
+      - [Rudolph, Lavigne & Zacher (2017)](https://www.sciencedirect.com/science/article/abs/pii/S0001879116300604) found career adaptability correlates strongly with employability (r=.54) and inversely with turnover intentions (r=-.30), and that career planning is one of the four core "adapting responses" that produce adaptability.
+      - The structured exercise of generating multiple candidate paths is the primary mechanism: users who can name three viable next moves are demonstrably more resilient than users who cannot name any.
+    isr_reasoning: |
+      - Among adherent planners, the adaptability benefit is mechanically reliable: the act of mapping alternatives produces awareness of them. [Fugate, Kinicki & Ashforth (2004)](https://doi.org/10.1016/j.jvb.2003.10.005) define employability as a psycho-social construct including career identity and adaptability, both directly developed by planning.
+      - ISR of 70 reflects that some plans are too narrow (single-track) to build genuine optionality, and some users intellectualise alternatives without building the underlying skills.
+      - The latent nature of the security benefit – it pays out during disruption, not steady state – makes ISR harder to measure directly; estimate is partly extrapolated from career adaptability literature.
+    uar_reasoning: |
+      - See career-planning.clarity UAR – same intervention, same adherence profile.
+
+  life-purpose.clarity:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile on life direction clarity. Career planning frameworks like [80,000 Hours](https://80000hours.org/career-planning/) and Designing Your Life explicitly require users to reason about longer-term life vision, not just job choice. After successful adherence, a user could plausibly reach the 55th–60th percentile. Delta: ~20–25 percentile points – meaningful gain, mapping to PBS 6.
+      - The pathway is direct: thoughtful career planning forces engagement with "what kind of life am I building?" – a question most people otherwise avoid.
+      - Less than career-planning.clarity because career is one component of life direction; users may end planning with clear career direction but unresolved questions about family, location, or values.
+    isr_reasoning: |
+      - The mechanism – structured reflection on long-term direction – is reliable when frameworks include life-vision prompts (most modern career planning templates do).
+      - [Career planning courses](https://pmc.ncbi.nlm.nih.gov/articles/PMC7605208/) report consistent qualitative gains in broader life direction, though most studies measure career-specific outcomes.
+      - ISR of 65 is conservative because some users compartmentalise the exercise to job-and-skills only, missing the broader life-purpose surface area.
+    uar_reasoning: |
+      - See career-planning.clarity UAR – same intervention, same adherence profile.
+
+  life-purpose.integration:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile on integration of life purpose across domains. Career planning that includes values clarification and life-vision prompts produces modest integration gains – linking work choices to family, health, and contribution domains. Endpoint plausibly 45th–50th percentile. Delta: ~10–15 points – modest gain, scoring 4.
+      - The integration benefit is real but limited: most career planning frameworks centre work, with cross-domain integration as a secondary output.
+      - Stronger integration effects would come from a dedicated life-design exercise (e.g., full Designing Your Life curriculum) rather than career planning narrowly.
+    isr_reasoning: |
+      - [Whiston et al. (2017)](https://www.sciencedirect.com/science/article/abs/pii/S0001879117300283) found values-clarification components increased intervention effect sizes substantially, suggesting the integration mechanism works when present.
+      - Many career planning templates omit explicit cross-domain integration prompts, so the benefit varies by framework.
+      - ISR of 55 reflects high variability in framework choice and depth of engagement with cross-domain prompts.
+    uar_reasoning: |
+      - See career-planning.clarity UAR – same intervention, same adherence profile.
+
+  current-work.engagement:
+    pbs: 5
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile on work engagement. When planning reveals that the current role is a meaningful step toward target roles, engagement rises through renewed sense of purpose; when it reveals misalignment, engagement may fall pending a transition. On average across adherent users, expect a meaningful but bounded engagement uplift. Endpoint ~50th–55th percentile. Delta: ~15–20 points – modest-to-meaningful gain, scoring 5.
+      - Mechanism: [self-determination theory](https://psycnet.apa.org/record/2000-13324-007) and goal-setting research suggest that connecting daily tasks to longer-term goals increases intrinsic motivation and absorption.
+      - PBS is bounded because engagement is heavily determined by job content, manager, and team – planning can only modulate the meaning-frame, not the underlying conditions.
+    isr_reasoning: |
+      - The mechanism is plausible but evidence is indirect; most direct evidence comes from goal-setting research ([Latham & Locke, 2002](https://med.stanford.edu/content/dam/sm/s-spire/documents/PD.locke-and-latham-retrospective_Paper.pdf)) showing performance and motivation gains from clear goals.
+      - For users whose plan reveals their current role is a dead end, ISR cuts the other way: engagement may actually fall in the short term.
+      - ISR of 60 reflects this two-way variance: roughly 60% of adherent planners find a positive engagement effect through reframing, the rest are net flat or negative.
+    uar_reasoning: |
+      - See career-planning.clarity UAR – same intervention, same adherence profile.
+
+  networks.relevance:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile on network relevance to professional direction. Planning explicitly identifies which fields, roles, and people matter for target paths, redirecting subsequent networking effort toward higher-relevance contacts. Endpoint plausibly 55th–60th percentile. Delta: ~20–25 points – meaningful gain, scoring 6.
+      - The mechanism is a redirection of attention: a user with a clear plan filters LinkedIn requests, conferences, and informational interview targets through a sharper lens than an unfocused user.
+      - [Ibarra's Working Identity research](https://herminiaibarra.com/working-identity-book/) documents that successful career changers actively curate networks aligned with emerging directions rather than maintaining existing ties indiscriminately.
+    isr_reasoning: |
+      - Among adherent planners, the redirection effect is reliable when the plan names specific target fields and roles; less reliable when the plan stays at the level of generic skills.
+      - [Granovetter's weak-ties research](https://doi.org/10.1086/225469) and subsequent work establish that targeted network-building outperforms diffuse networking for career outcomes.
+      - ISR of 65 reflects that the planning exercise itself produces awareness of relevance gaps but does not guarantee follow-through on rebalancing actions (e.g., attending different events, reaching out to different people).
+    uar_reasoning: |
+      - See career-planning.clarity UAR – same intervention, same adherence profile.
+
+  goals.clarity:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile on percentage of goals completed on time. The career planning output – 3–6 concrete 6–12 month actions with deadlines – is precisely the kind of specific, written goal that [Latham & Locke goal-setting research](https://med.stanford.edu/content/dam/sm/s-spire/documents/PD.locke-and-latham-retrospective_Paper.pdf) shows produces large performance gains (specific goals correlate with performance r=.30). Endpoint plausibly the 60th percentile (~6% of goals completed on time on the anchor's strict definition). Delta calibrated against PBS 6.
+      - PBS = 6 maps to the anchor's "6% of goals completed on time" – this looks low but the anchor is calibrated such that PBS 8 (25%) is genuinely impressive on-time goal completion.
+      - [Matthews' Dominican University study](https://www.dominican.edu/sites/default/files/2020-02/gailmatthews-harvard-goals-researchsummary.pdf) (n=267) found that participants who wrote down goals and shared weekly progress with an accountability partner achieved roughly 78% more than those who only thought about goals.
+    isr_reasoning: |
+      - [Locke & Latham's meta-analysis](https://journals.aom.org/doi/10.5465/ambpp.1984.4978779) documented robust performance gains from specific goals across laboratory and field settings, generalising across tasks and populations.
+      - The on-time completion rate is heavily moderated by goal difficulty calibration – overambitious career goals (e.g., "promotion in 6 months") fail more often than well-calibrated ones.
+      - ISR of 65 reflects that career goals tend to be longer-horizon and harder to break into time-bound chunks than typical work goals, lowering the average completion rate observed in pure goal-setting studies.
+    uar_reasoning: |
+      - See career-planning.clarity UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "The [80,000 Hours career planning template](https://80000hours.org/career-planning/) and most equivalent frameworks are free. Optional purchase of a book (e.g., Designing Your Life, ~£12) or career coach session (£100–300) is genuinely optional, not required to begin."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing costs for the planning process itself. Optional coaching or workshops would add cost but are not required for the core intervention."
+  upfront_time: 4
+  upfront_time_reasoning: "First full planning session typically takes 2–6 hours; 4 hours is a reasonable minimum to work through a structured template thoroughly the first time, including skill audit, role mapping, and action setting."
+  ongoing_time: 8
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Approximately 4 hours for the annual review plus 1 hour each for three quarterly check-ins (4 + 3 = 7), rounded to 8 hours/year. Plan execution time is not counted here – that lives within the action items themselves."
+
+prerequisites:
+  - "Sufficient career self-awareness to identify current dissatisfactions, interests, and rough strengths – the planning frameworks scaffold this but do not generate it"
+  - "Access to a planning template or framework (e.g., 80,000 Hours, Designing Your Life, or equivalent) – freely available online but you must select one"
+  - "Basic literacy with research tools (job descriptions, salary data, LinkedIn) to populate the role-mapping and skill-gap sections of the plan"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Reduces career-related anxiety and rumination by replacing vague worry with concrete next actions; effect documented for goal-setting more broadly."
+  - domain: "time-management"
+    rationale: "Translating long-horizon career direction into 6–12 month actions sharpens prioritisation of weekly time allocation toward high-leverage activities."

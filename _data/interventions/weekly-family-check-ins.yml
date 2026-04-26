@@ -1,0 +1,200 @@
+name: "Weekly Family Check-ins"
+what_it_is: |
+  A scheduled, recurring meeting of the immediate household – spouse or partner, children, and/or housemates – held the same day and time each week for 15–30 minutes, with a light structure that almost always includes appreciations, calendar coordination, surfacing tensions, and shared planning. Often called a "family meeting", "family council", or "state of the union" depending on lineage. It differs from one-on-one deep conversations in that it is a group format with a recurring rhythm focused on coordinating the people you live with, not deepening relationships across a wider social circle. The mechanism is twofold: a fixed weekly slot prevents small frictions from compounding into resentment, and a predictable structure gives every household member a reliable channel to be heard before issues escalate.
+how_to_do_it: |
+  - Pick the same slot each week – Sunday evening is the most common choice because it lets the household look back on the week just gone and forward to the week ahead; protect it like any other recurring appointment
+  - Use a four-part agenda: appreciations (each person names something they value about another household member), calendar coordination (next week's commitments, conflicts, logistics), open floor (anything anyone wants to raise), and one-thing-each-person-needs from the rest of the household
+  - Keep it to 15–30 minutes – longer meetings drift, get skipped more often, and lose the lightweight character that makes them sustainable
+  - For couples, use the [Gottman State of the Union](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/) format: each partner answers what is going well, what they appreciate, what is not working, and what they each need – take turns with the floor and avoid problem-solving until both have spoken
+  - For households with children, follow the Adlerian convention of giving every member a vote on shared decisions and rotating who chairs the meeting; children as young as 5 can participate meaningfully
+success_looks_like: |
+  - Logistical surprises and missed handovers (school pickups, who is cooking, who is travelling) drop sharply because next week's plan is shared every Sunday
+  - Small irritations get raised when they are still small; the household stops accumulating unspoken grievances that surface during arguments
+  - Children begin raising their own agenda items mid-week ("can we talk about that on Sunday?"), indicating they have internalised the meeting as a real channel rather than a parental ritual
+  - The meeting becomes self-sustaining – missing it feels like a notable break rather than the default
+common_pitfalls: |
+  - Letting the meeting become a one-way parental briefing or grievance airing – without explicit appreciations and rotating speaking time, it collapses into top-down lecturing or one partner monopolising the floor
+  - Trying to solve everything in one session – if a tension surfaces that needs a longer conversation, schedule it separately rather than blowing through the 30-minute budget
+  - Skipping when life gets busy and never restarting – the cadence is the intervention; once it lapses for more than two weeks, most households need a deliberate restart conversation rather than passive resumption
+  - Holding it without genuine buy-in from a partner or older child – if anyone treats it as performative, it will be performative
+description: |
+  - A 15–30 minute weekly meeting with the immediate household, held the same day and time each week, with a light four-part structure: appreciations, calendar coordination, surfacing tensions, and shared planning
+  - [Couples research on the Gottman state of the union](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/) treats it as one of six "magic hours" per week shown to differentiate stable from distressed marriages; [reviews of family routines and rituals](https://journals.lww.com/iycjournal/fulltext/2007/10000/family_routines_and_rituals__a_context_for.2.aspx) find consistent positive associations with parent-child relationship quality, child adjustment, and marital satisfaction
+  - Family meetings with a [democratic Adlerian structure](https://www.davidsongifted.org/gifted-blog/family-meetings-why-they-are-important-and-how-to-do-them/) – every member speaks, decisions are made collectively – improve child compliance because children follow rules better when they helped set them
+  - Distinct from regular one-on-one conversations (which target depth across the broader social network) and from shared calendar tools alone (which solve coordination but not voice and tension surfacing) – the value is the combination of group format, fixed rhythm, and structured agenda
+  - Reach is bounded by household composition: solo dwellers cannot run this intervention, and households with one resistant member capture little of the benefit
+applicable_domains: ["romantic-relationships", "children", "family-of-origin", "communication", "organisation"]
+
+values:
+  romantic-relationships.connection:
+    pbs: 7
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple holding weekly state-of-the-union meetings can plausibly reach the 65th–70th percentile in emotional closeness. Delta: ~30 percentile points.
+      - The Gottman framework – which is among the strongest empirical bases for any relationship intervention – treats the weekly meeting as a [core "magic hour"](https://summitfamilytherapy.com/summit-family-therapy-peoria-illinois-blog/2025/11/9/the-gottman-concept-of-6-magic-hours-how-six-hours-a-week-can-transform-your-relationship) shown to differentiate stable from distressed couples in longitudinal research.
+      - PBS 7 (slightly higher than monthly 1:1s scored 6 for romantic connection) reflects that weekly cadence and explicit appreciation structure compound faster than monthly conversation – more frequent vulnerability and gratitude exchanges deepen the bond more reliably.
+    isr_reasoning: |
+      - [Gottman's research on couples therapy](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/) reports that couples who sustain the practice report substantial gains in feeling heard and connected, with most needing roughly five sessions before the format feels natural rather than forced.
+      - Among couples who actually complete the meeting weekly with both partners engaged, success rates are high; the main failure mode is the meeting drifting into logistics-only or grievance-only formats, which neutralises the connection benefit.
+      - [Routine and ritual research](https://journals.lww.com/iycjournal/fulltext/2007/10000/family_routines_and_rituals__a_context_for.2.aspx) finds consistent positive associations with marital satisfaction across 50 years of studies, but effect sizes are moderate not transformative.
+    uar_reasoning: |
+      - Couples already share a household so coordination friction is near zero – the only barrier is mutual commitment to the slot.
+      - [Couples following the Gottman protocol](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/) report it takes about five iterations to feel comfortable, meaning early dropout is the main attrition risk.
+      - UAR 55% reflects that one resistant partner kills the practice – this is bilateral by design, and many couples have asymmetric appetite for structured emotional check-ins.
+
+  romantic-relationships.harmony:
+    pbs: 7
+    isr: 70
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 65th–70th percentile in day-to-day partnership smoothness. Delta: ~30 percentile points.
+      - Harmony – defined as low day-to-day friction and constructive disagreement – is the most direct target of the intervention. Weekly surfacing of small tensions before they compound is the explicit mechanism; [research on shared calendars](https://www.researchgate.net/publication/200048015_The_Calendar_is_Crucial_Coordination_and_Awareness_through_the_Family_Calendar) found 34% fewer scheduling conflicts and 28% less coordination-related frustration in couples using joint planning routines.
+      - PBS 7 reflects that this is a strong but bounded fit – the meeting prevents accumulation of grievances but does not address structural value misalignment or entrenched conflict patterns that need professional facilitation.
+    isr_reasoning: |
+      - The conflict-prevention mechanism is mechanistically reliable: if you surface and discuss frictions weekly, fewer of them compound into arguments – this is observable within weeks of starting.
+      - [Couples communication research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/) consistently identifies intentional non-logistical exchange as a key differentiator between high- and low-satisfaction partnerships.
+      - ISR 70% reflects that high-conflict couples may find structured surfacing of tensions counterproductive without therapist scaffolding – the intervention works best as preventive maintenance on a functional partnership, not repair on a distressed one.
+    uar_reasoning: |
+      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+
+  children.relationship:
+    pbs: 6
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 60th percentile in parent-child warmth and trust. Delta: ~25 percentile points.
+      - The [Adlerian family meeting tradition](https://www.davidsongifted.org/gifted-blog/family-meetings-why-they-are-important-and-how-to-do-them/) is built on the premise that giving children a real vote and structured speaking time builds the warmth and trust dimension of the parent-child bond; [reviews of family rituals](https://journals.lww.com/iycjournal/fulltext/2007/10000/family_routines_and_rituals__a_context_for.2.aspx) find consistent associations with parent-child relationship quality across 50 years of studies.
+      - PBS 6 rather than higher because the meeting is a weekly anchor, not the totality of the parent-child relationship – daily interaction quality remains the dominant input.
+    isr_reasoning: |
+      - [Family rituals research](https://journals.lww.com/iycjournal/fulltext/2007/10000/family_routines_and_rituals__a_context_for.2.aspx) shows ritual meaning – not just frequency – correlates with relationship quality, so the meeting's structure must include genuine listening and shared decision-making to produce the bond effect.
+      - ISR 60% reflects that meetings often degenerate into parental announcements rather than dialogue, particularly when parents are unfamiliar with running consensus-style discussions with children.
+      - The benefit is most pronounced for school-age and teenage children who can articulate views; under-5s gain less from this format directly.
+    uar_reasoning: |
+      - Households with children carry higher logistical complexity – competing schedules, ages, attention spans – making weekly cadence harder to sustain than for couples alone.
+      - UAR 50% reflects that parent-only initiation without child buy-in often fails by month 3; children need to experience genuine influence over outcomes for the practice to feel real to them.
+      - [Research on family rituals](https://www.apa.org/news/press/releases/2002/12/rituals) shows households that establish rituals early sustain them well, but families bolting them onto a busy life mid-stream face higher dropout.
+
+  children.development:
+    pbs: 6
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 60th percentile in development of independence, voice, and self-direction. Delta: ~25 percentile points.
+      - [Adlerian research](https://www.davidsongifted.org/gifted-blog/family-meetings-why-they-are-important-and-how-to-do-them/) finds that children who participate in family decision-making develop stronger problem-solving skills, conflict-resolution capacity, and sense of agency – directly mapping to the development anchor.
+      - PBS 6 reflects meaningful but bounded gain – the meeting practises a narrow slice of development (voice, negotiation, listening) rather than the full set of independence-building activities.
+    isr_reasoning: |
+      - [Family rituals literature](https://journals.lww.com/iycjournal/fulltext/2007/10000/family_routines_and_rituals__a_context_for.2.aspx) finds variations in family rituals correlate with socioemotional and social skill development.
+      - ISR 60% reflects that benefits depend on children genuinely contributing rather than just attending – a meeting where children are present but not heard delivers little development gain.
+      - The skill-building effect compounds over years, so households that sustain the practice through adolescence see larger gains than short-term adopters.
+    uar_reasoning: |
+      - See children.relationship UAR – same intervention, same adherence profile.
+
+  children.wellbeing:
+    pbs: 5
+    isr: 60
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 55th–60th percentile in child wellbeing. Delta: ~20–25 percentile points.
+      - [Family rituals research](https://www.mdpi.com/2076-0760/14/6/371) finds family cohesion and meaningful rituals correlate with reduced child anxiety and depression; [routine research](https://www.apa.org/news/press/releases/2002/12/rituals) links predictable family practices to improved emotional regulation.
+      - PBS 5 reflects that wellbeing is downstream of the relationship and predictability effects rather than a direct target – the family meeting contributes one ingredient among many.
+    isr_reasoning: |
+      - Effect on wellbeing is mediated through relationship warmth, predictability, and voice – all moderately well-established but with smaller effect sizes than direct mental-health interventions.
+      - [Selman 2024 systematic review](https://onlinelibrary.wiley.com/doi/10.1111/jftr.12549) finds family routines support emotional wellbeing across many studies, with consistent direction but variable magnitude.
+      - ISR 60% reflects that children with existing wellbeing concerns may need additional intervention; family meetings are a contributor not a treatment.
+    uar_reasoning: |
+      - See children.relationship UAR – same intervention, same adherence profile.
+
+  family-of-origin.connection:
+    pbs: 5
+    isr: 50
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Applies only to users who currently cohabit with parents or adult siblings – a narrow subset. Within that subset, after successful adherence, plausibly reaching the 55th percentile in emotional closeness. Delta: ~20 percentile points.
+      - The mechanism is the same as for children and partners: weekly structured contact with rotating speaking time builds emotional connection and surfaces tensions before they compound.
+      - PBS 5 rather than higher because adult family-of-origin relationships carry more historical baggage and role-constraint than partnerships, making the meeting format more effortful and the upside ceiling lower.
+    isr_reasoning: |
+      - Family-of-origin relationships often resist register changes; introducing a structured emotional check-in into a household that has not previously had one can feel performative or contrived.
+      - ISR 50% reflects high variance: works well for households with latent willingness; fails quickly when one member treats it as imposition.
+      - [Holt-Lunstad's social connection research](https://onlinelibrary.wiley.com/doi/full/10.1002/wps.21224) confirms quality of family contact matters more than frequency – a poorly executed weekly meeting can be net negative.
+    uar_reasoning: |
+      - UAR 45% reflects the additional difficulty of negotiating a new household practice with adult family members who did not choose to live this way together (e.g., adult children living with parents, sibling cohabitation).
+      - Authority dynamics complicate adoption: who calls the meeting, whose agenda dominates.
+      - See romantic-relationships.connection UAR for general weekly-cadence adherence baseline.
+
+  communication.conflict:
+    pbs: 6
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 60th percentile in constructive conflict navigation. Delta: ~25 percentile points.
+      - The intervention provides repeated, low-stakes practice in surfacing and resolving small disagreements – exactly the skill the anchor measures. [Couples communication research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/) finds intentional non-logistical exchange differentiates high- and low-satisfaction partnerships, with conflict skill as a mediating mechanism.
+      - PBS 6 reflects that the skill transfer is real but partial – conflict navigation in the household generalises somewhat to workplace and friendship contexts but is not a comprehensive conflict-skills programme.
+    isr_reasoning: |
+      - The repetition is the mechanism: 50+ weekly micro-conflict-resolution reps per year is genuine deliberate practice on the skill.
+      - ISR 65% reflects that the practice only works if tensions are actually raised and processed; meetings dominated by appreciations and logistics deliver little conflict skill-building.
+      - Adlerian research on family meetings explicitly cites [problem-solving skill transfer](https://www.davidsongifted.org/gifted-blog/family-meetings-why-they-are-important-and-how-to-do-them/) as a core outcome.
+    uar_reasoning: |
+      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 5
+    isr: 65
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 55th–60th percentile in ability to build genuine relationships through conversation. Delta: ~20–25 percentile points.
+      - Weekly practice of structured appreciation, listening, and self-disclosure in a low-stakes home setting builds general communication-for-connection muscle that transfers beyond the household.
+      - PBS 5 reflects modest cross-context transfer – the practice is bounded to a known group, so the generalisation to new relationships is real but limited.
+    isr_reasoning: |
+      - The mechanism (deliberate weekly practice of disclosure and listening) is well-established in [communication research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/), but transfer across contexts is variable.
+      - ISR 65% reflects that some users develop generalisable skill while others compartmentalise the practice to the family setting only.
+      - Evidence base for the cross-context transfer specifically is thinner than for within-household effects, hence the lower confidence rating.
+    uar_reasoning: |
+      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+
+  organisation.tracking:
+    pbs: 5
+    isr: 75
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, plausibly reaching the 55th–60th percentile in household organisational efficiency. Delta: ~20–25 percentile points.
+      - Weekly calendar coordination directly addresses the friction the anchor measures: knowing what is happening, who is doing what, and resolving conflicts before they become Sunday-night-emergency reschedules. [Joint calendar research](https://www.researchgate.net/publication/200048015_The_Calendar_is_Crucial_Coordination_and_Awareness_through_the_Family_Calendar) found shared planning routines reduced scheduling conflicts by 34%.
+      - PBS 5 reflects that the meeting captures household coordination but does not address individual organisation systems, work flows, or longer-horizon planning.
+    isr_reasoning: |
+      - Calendar coordination is the most mechanically reliable component of the meeting – missed handovers, double-bookings, and forgotten commitments drop measurably and quickly once weekly review is in place.
+      - [Joint planning research](https://www.researchgate.net/publication/200048015_The_Calendar_is_Crucial_Coordination_and_Awareness_through_the_Family_Calendar) finds 30% reductions in missed deadlines for households using shared planning routines.
+      - ISR 75% (higher than other domains) because this is the most concrete, observable benefit – households see it within 2–3 weeks of starting.
+    uar_reasoning: |
+      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No purchases required. A shared paper calendar or any free shared digital calendar is sufficient. No tools needed beyond what most households already have."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The intervention is entirely free. No subscriptions, venues, or consumables required."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to agree on the slot with household members, decide on a basic agenda format, and run the first meeting. Adlerian and Gottman protocols are freely available online and require no formal training."
+  ongoing_time: 2
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Four 15–30 minute meetings per month, totalling roughly 1.5–2 hours per month. The agenda preparation overhead is minimal once the format is established."
+
+prerequisites:
+  - "A shared household with at least one other person – the intervention is undefined for solo dwellers"
+  - "At least minimal goodwill from all participating household members – one openly resistant member can collapse the practice"
+  - "A consistent weekly time slot when all household members can be present – households with split custody, shift work, or chronic travel may need to adapt the cadence"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Predictable household rituals and reduced unsurfaced tension lower chronic relational stress, which is a known driver of anxiety and low mood; effect is indirect but mechanistically supported by family routines literature."
+  - domain: "housework"
+    rationale: "Calendar coordination and explicit task allocation in the meeting often surface and rebalance domestic labour, reducing friction over division of housework."

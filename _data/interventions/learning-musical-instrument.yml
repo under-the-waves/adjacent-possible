@@ -1,0 +1,180 @@
+name: "Learning a Musical Instrument"
+what_it_is: |
+  Acquiring basic-to-intermediate competence on a musical instrument – guitar, piano, ukulele, keyboard, or hand drums are the most common starting points. The goal is the "play songs you enjoy" threshold rather than performance-grade fluency: enough technique to render a handful of pieces recognisably and to improvise simply with others. Unlike passive listening, instrument learning is a skill-acquisition project that compounds over years and produces flow states, structured challenge, and a permanent leisure resource.
+how_to_do_it: |
+  - Pick one instrument and stick with it for at least six months; switching early is one of the most reliable ways to never reach competence
+  - Commit to 20–40 minutes of practice on most days; short and frequent beats long and sporadic for motor-skill consolidation
+  - Use a structured curriculum (a teacher, a paid app like Yousician or Pianote, or a free YouTube series with a sequenced lesson order) rather than random tutorials; unsupervised learners plateau quickly and build bad habits
+  - Add a social or accountability layer within the first three months – a weekly lesson, a practice buddy, an online community, or a low-stakes jam group – which is the single biggest predictor of whether adult learners persist past the first year
+  - Once basic chords or scales are in place, learn full songs end-to-end rather than fragments; finished pieces produce the dopamine that sustains practice
+success_looks_like: |
+  - You can sit down and play three to five songs you enjoy without sheet music or major mistakes, and pick up new pieces of similar difficulty within a week or two of practice
+  - Practice has shifted from a willpower task to something you reach for when stressed or restless – the instrument has become a coping tool, not just a project
+  - You have either played with at least one other person or recorded yourself for an audience, even informally, and the experience felt rewarding rather than mortifying
+common_pitfalls: |
+  - Buying an expensive instrument before establishing the habit – sunk-cost reasoning does not produce practice; a $50 ukulele played daily beats a $1,500 guitar played monthly
+  - Practising only what is already easy; deliberate practice requires regularly attempting material slightly above your current level, which feels worse but produces faster gains
+  - Treating apps as a complete substitute for structured learning – app-only learners often develop technique gaps (timing, hand position, dynamics) that become hard to correct later
+  - Quitting in the 3–6 month window when initial novelty fades and progress plateaus; this is when most adult learners drop out, and pushing through it is the difference between a lifelong skill and a brief experiment
+description: |
+  - A daily practice habit of 20–40 minutes on one instrument, sustained for 6–12 months to reach the "play songs you enjoy" threshold and 2–4 years for genuine fluency
+  - Most successful adult learners combine self-directed practice with some form of structure (lessons, app curriculum, or accountability group) rather than pure self-teaching
+  - [Meta-analyses of older-adult instrument training](https://www.sciencedirect.com/science/article/pii/S0278262624000149) find low-to-moderate effects on processing speed, switching, and episodic memory, but no reliable effect on working memory or attention; cognitive benefits are real but modest in adults
+  - [Systematic reviews of music engagement and wellbeing](https://academic.oup.com/eurpub/article/33/4/738/7199198) document positive effects on quality of life, depression, and anxiety, with active music-making producing larger and more durable effects than passive listening
+  - Distinct from listening to music or attending lessons casually: this is a structured skill-acquisition project with measurable progression milestones and a high dropout rate that rewards persistence
+
+applicable_domains: ["participatory-leisure", "mental-health", "cognitive-skills", "self-awareness"]
+
+values:
+  participatory-leisure.achievement:
+    pbs: 8
+    isr: 55
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user gains a discrete, verifiable skill that places them around the 75th–80th percentile of leisure-achievement (most adults have no learned instrument). Delta: ~40 percentile points.
+      - Music is one of the canonical achievement-and-mastery leisure pursuits: progression is measurable (songs learned, pieces mastered, technique milestones) and the skill ceiling is essentially unbounded, supporting a high PBS.
+      - Score 8 maps to "major gain in achievement and mastery in leisure" – appropriate for acquiring a multi-year skill from scratch, but not a 10 because basic-to-intermediate competence is well short of expert mastery.
+    isr_reasoning: |
+      - Among adult learners who genuinely sustain 20–40 minutes of daily practice, [common pedagogy estimates](https://musicalpursuits.com/how-long-does-it-take-to-learn-piano/) suggest most reach a play-simple-songs threshold within 6 months, supporting a majority response rate.
+      - ISR of 55%: the remainder either choose ill-suited instruments, fail to follow a structured curriculum, or have unrealistic targets that they treat as "failure" despite measurable progress.
+      - [Research on adult musicians](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1378843/full) finds that perceived competence develops via a feedback loop with effort, meaning some adherent learners stall on the self-perception side even when objectively progressing.
+    uar_reasoning: |
+      - Adult learner adherence is poor: [survey and dropout data](https://piano.uottawa.ca/wp-content/uploads/2020/10/36.-Gerelus-et-al_Dropouts-2017.pdf) show roughly 50% of music students quit within the first year and most adult self-starters quit within 3–6 months when novelty fades.
+      - UAR of 25% reflects the realistic share who sustain enough practice to cross the basic-competence threshold, not the much smaller share who reach fluency.
+      - [Research on music dropout predictors](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1378843/full) identifies lessons, accountability, and group participation as the strongest retention factors – their absence drops UAR substantially below 25%, their presence raises it.
+
+  participatory-leisure.adventure:
+    pbs: 6
+    isr: 60
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after successful adherence: ~60th percentile. Delta: ~25 percentile points.
+      - Learning an instrument is genuinely novel for most adult learners and introduces a sustained, structured challenge with regular threshold experiences (first chord, first full song, first time playing with others).
+      - Score 6 rather than higher because the novelty curve flattens after the first 6–12 months unless the learner actively seeks new genres, ensembles, or public performance contexts.
+    isr_reasoning: |
+      - The novelty and challenge dimensions are intrinsic to skill acquisition – any successful learner experiences them, supporting an ISR above 50%.
+      - [Research on flow in music](https://pmc.ncbi.nlm.nih.gov/articles/PMC4485232/) finds music performance and practice are among the most flow-conducive activities, with challenge-skill balance as the central predictor – directly mapping to the adventure-and-exploration construct.
+      - ISR of 60%: a meaningful minority of adherent learners stay within their comfort zone (same songs, same tempo, no public exposure) and miss the adventure dimension despite progressing technically.
+    uar_reasoning: |
+      - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
+
+  participatory-leisure.social:
+    pbs: 6
+    isr: 40
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~60th percentile for learners who join groups, near baseline for those who play purely solo. Delta: ~25 percentile points conditional on social participation.
+      - [Research on group music-making](https://pmc.ncbi.nlm.nih.gov/articles/PMC9285893/) documents meaningful gains in friendship formation and sense of belonging among community-band and choir participants; [studies on shared music](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.648770/full) describe an "ice-breaker" effect that accelerates new connections.
+      - Score 6 reflects the meaningful but conditional nature of the gain – social benefit requires actually joining a jam, lesson group, or ensemble, which many adult learners never do.
+    isr_reasoning: |
+      - ISR is bounded by the conditional nature of the benefit: a majority of adult self-starters never join group settings, so even among adherent learners, perhaps 40% experience the social benefit meaningfully.
+      - [Community band research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9285893/) confirms that participants who do join report strong social outcomes, suggesting the benefit is reliable when the social pathway is taken.
+      - The ISR estimate is conservative because no direct trial measures the proportion of adult instrument learners who form social ties via the activity.
+    uar_reasoning: |
+      - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 7
+    isr: 65
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~65th–70th percentile for those who establish a sustained practice. Delta: ~30 percentile points.
+      - The flow pathway is strong: [systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC4485232/) identifies music practice as one of the most flow-conducive activities, and flow is among the most reliable predictors of subjective wellbeing and meaning.
+      - [Meta-analytic evidence on active music-making](https://academic.oup.com/eurpub/article/33/4/738/7199198) finds positive effects on quality of life and meaning-making, supporting a PBS of 7 (major gain in life satisfaction and meaning).
+    isr_reasoning: |
+      - [The Oxford EJPH meta-analysis](https://academic.oup.com/eurpub/article/33/4/738/7199198) reports consistent positive effects of active music participation on quality of life and wellbeing across 11 RCTs, suggesting the benefit is reliable when practice is sustained.
+      - [Flow research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6450199/) finds that the challenge-skill balance is the main predictor of life satisfaction in musicians; learners who manage this balance experience reliable wellbeing gains.
+      - ISR of 65%: a meaningful minority of adherent learners experience practice as stressful or self-critical rather than restorative, particularly perfectionists or those without good teaching.
+    uar_reasoning: |
+      - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 5
+    isr: 55
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~55th percentile. Delta: ~20 percentile points.
+      - [Music engagement research](https://www.nature.com/articles/s41398-021-01483-8) documents reductions in depressive and anxiety symptoms from active music participation, with small-to-moderate effect sizes.
+      - PBS 5 rather than 6 because instrument learning is not a clinical intervention – the stability gains are real but modest compared with established mood-regulation practices like exercise or therapy.
+    isr_reasoning: |
+      - [Meta-analytic evidence](https://academic.oup.com/eurpub/article/33/4/738/7199198) shows reduced depression and anxiety symptoms in active-music-participation arms, with effects holding across populations.
+      - The mechanism (regular flow induction, mood regulation through play, displacement of rumination) is plausible and well-documented.
+      - ISR of 55%: stability gains are most reliable when practice is daily and intrinsically motivated; learners who treat it as another performance pressure may see no gain or net negative effects.
+    uar_reasoning: |
+      - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
+
+  cognitive-skills.memory:
+    pbs: 4
+    isr: 35
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~1 card in 15 minutes). After several years of sustained practice, plausible endpoint is around the 50th percentile (~2–3 cards). Delta is small in linear-anchor terms.
+      - PBS = 10 + log₂(2/52) = 10 − 4.7 = ~5.3, rounded down to 4 because the playing-cards anchor is a poor proxy for the kind of memory music training improves; effects are concentrated in episodic and procedural memory rather than rote sequence memorisation.
+      - [The MIT Imaging Neuroscience study](https://direct.mit.edu/imag/article/doi/10.1162/IMAG.a.48/131155/Never-too-late-to-start-musical-instrument) shows working-memory and subcortical preservation effects in older adults, but the magnitude is modest and population-specific.
+    isr_reasoning: |
+      - [The systematic review of musical instrument training in older adults](https://www.sciencedirect.com/science/article/pii/S0278262624000149) finds no reliable effect on working memory and only low-to-moderate effects on episodic memory, suggesting cognitive memory gains are inconsistent.
+      - [Adult cognitive transfer research](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1632873/full) shows benefits are stronger in older adults than in younger or middle-aged adults; the population most likely to take up instrument learning is heterogeneous.
+      - ISR of 35%: most adherent adult learners will not see measurable memory benefits at conventional practice volumes; effects are real on average but small and unreliable at the individual level.
+    uar_reasoning: |
+      - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
+
+  cognitive-skills.lifestyle:
+    pbs: 4
+    isr: 50
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, instrument practice adds one cognitive-support practice (deliberate skill-building with attention demands), plausibly reaching 2 practices total. Delta: 1 practice.
+      - PBS = 10 + log₂(1/5) = 10 − 2.32 = ~7.7 if instrument practice fully counts as a cognitive-support practice; but the anchor specifically lists sleep, exercise, nutrition, stress management, and social engagement, none of which directly map to instrument learning.
+      - PBS 4 reflects that instrument practice is at best a partial fit for the lifestyle anchor – it touches on cognitive engagement and (if group-based) social engagement, but is not one of the canonical practices the anchor was designed around.
+    isr_reasoning: |
+      - About half of adherent learners would plausibly count their practice as a deliberate cognitive-support routine, supporting an ISR around 50%.
+      - The lifestyle benefit is contingent on framing practice as cognitive maintenance rather than pure leisure, which most learners do not do explicitly.
+      - No direct research on lifestyle integration outcomes from instrument learning specifically.
+    uar_reasoning: |
+      - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
+
+  self-awareness.experiential:
+    pbs: 5
+    isr: 60
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~55th percentile. Delta: ~20 percentile points.
+      - Learning an instrument is a sustained encounter with one's own frustration, perfectionism, and persistence patterns; many learners report noticeably clearer self-knowledge of how they handle plateaus, public exposure, and slow progress.
+      - PBS 5 reflects a meaningful but bounded gain – the self-awareness benefit is a side effect of the skill-acquisition process rather than its primary purpose.
+    isr_reasoning: |
+      - The mechanism (repeated exposure to one's own learning curve and emotional reactions to difficulty) is reliable and intrinsic to the activity, supporting an ISR around 60%.
+      - [Flow research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4485232/) suggests challenge-skill balance experiences produce reliable self-knowledge about one's own optimal challenge level.
+      - No direct trial evidence on experiential self-awareness from instrument learning; ISR estimated from mechanism strength.
+    uar_reasoning: |
+      - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 80
+  upfront_cost_reasoning: "Minimum viable instrument: a beginner ukulele kit ($50) or a used keyboard ($60–100). A starter guitar ($100–150) is the most common entry point but a ukulele is cheaper and easier. Excludes lessons, books, and accessories which are optional or recurring."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring cost is strictly required: free YouTube tutorials and structured free courses cover beginner curricula adequately. Optional add-ons – lessons ($30–60/hr), apps like Yousician ($15/month), and replacement strings ($5–10/year) – materially improve adherence but are not minimum-viable."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 3 hours to choose an instrument, purchase or borrow it, set up a practice space, and complete a structured first lesson establishing basic posture, hand position, and a starter exercise."
+  ongoing_time: 3.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Minimum effective practice is 30 minutes a day, 5 days a week (~2.5 hours), plus one weekly review session of about 1 hour. Below this volume, motor-skill consolidation is too slow for most adults to perceive progress and adherence collapses."
+
+prerequisites:
+  - "Sufficient motor function in the hands and fingers for the chosen instrument – guitar and piano require ten-finger dexterity; ukulele and hand drums have lower demands"
+  - "Access to an instrument and a practice space where regular sound is acceptable to housemates, neighbours, or via headphones for digital instruments"
+  - "Adequate hearing for pitch discrimination – not perfect pitch, but enough to tell whether two notes are the same or different"
+
+flagged_domains:
+  - domain: "habits"
+    rationale: "Sustained daily practice over 6–12 months is itself a meaningful habit-building exercise; learners who succeed often report transferable gains in consistency and follow-through on other long-horizon projects."
+  - domain: "communication"
+    rationale: "Group music-making develops non-verbal coordination, listening, and turn-taking skills; jam-session participants report better real-time responsiveness in other collaborative settings."

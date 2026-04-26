@@ -1,0 +1,145 @@
+name: "Giving Genuine Compliments"
+what_it_is: |
+  A deliberate practice of offering sincere, specific, and timely compliments to people you interact with – partners, family, colleagues, friends, and strangers. Unlike flattery, which is generic and instrumentally motivated, a genuine compliment requires noticing something real and articulating it clearly so the recipient understands what was seen. The intervention treats compliment-giving as a daily habit rather than a personality trait: a target of one to three sincere compliments per day, sustained for thirty days or more, reliably builds the noticing-and-articulating muscle.
+how_to_do_it: |
+  - Set a daily target of one to three genuine compliments. Track them on a habit app or paper for the first month so you notice on days when you have given none
+  - Make compliments specific and behaviour-focused – "the way you handled that question was patient and clear" lands harder than "you're great" because it shows you were actually paying attention
+  - Aim across contexts: include at least one compliment to a stranger or weak tie per week, since [research on weak-tie interactions](https://pmc.ncbi.nlm.nih.gov/articles/PMC12795328/) shows these produce meaningful positive affect for both parties
+  - Notice the anxiety reflex before giving a compliment to someone you don't know well; [evidence](https://pubmed.ncbi.nlm.nih.gov/32856538/) shows givers systematically overestimate how awkward recipients will feel and underestimate how positively they will respond
+success_looks_like: |
+  - You routinely catch yourself noticing things worth praising in others, even on days when you do not act on them, indicating the underlying attention shift has taken hold
+  - Recipients respond with visible warmth rather than confusion or deflection, suggesting your compliments are landing as sincere rather than performative
+  - People you compliment consistently begin reciprocating – sharing more, opening up faster, and offering their own appreciation in return
+common_pitfalls: |
+  - Defaulting to appearance-based compliments, which are less differentiating and can feel awkward or inappropriate in many contexts; effortful and behavioural praise carries more weight
+  - Giving compliments only when you want something, which trains observers (and yourself) to read praise as instrumental and erodes the signal
+  - Letting the daily target lapse for a week and then quietly abandoning the practice; the noticing skill decays without regular use
+description: |
+  - A daily practice of offering one to three sincere, specific compliments across the people you encounter, sustained for at least thirty days to establish the underlying noticing habit
+  - Compliments must be genuine and concrete – grounded in something actually observed – which distinguishes the practice from flattery and from generic positive remarks
+  - [Five-study research programme](https://pubmed.ncbi.nlm.nih.gov/32856538/) shows compliment givers systematically overestimate how awkward recipients feel and underestimate how positive they feel, creating a barrier that deliberate practice overcomes; givers' own mood improves after delivering compliments
+  - [Acts-of-kindness intervention research](https://greatergood.berkeley.edu/pdfs/acts_kindness_intervention.pdf) finds that performing five acts of kindness per week for six weeks increases happiness relative to controls, and [related work](https://pmc.ncbi.nlm.nih.gov/articles/PMC10104999/) shows kindness produces a greater sense of competence, self-confidence, and meaning than other positive activities
+  - Distinct from active listening, which is a receptive skill applied within ongoing conversations – compliment-giving is proactive positive social signalling that can be initiated even in fleeting interactions and does not require the other person to be talking
+applicable_domains: ["communication", "friendship", "networks", "mental-health", "self-awareness"]
+
+values:
+  communication.connection:
+    pbs: 6
+    isr: 70
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–63rd percentile – moving from below-average warmth signalling to consistently building rapport across casual and close interactions. Delta: ~25–28 percentile points.
+      - [Underestimating compliments research](https://pubmed.ncbi.nlm.nih.gov/32856538/) shows recipients feel substantially happier and more flattered than givers predict; the connection effect compounds when applied as a daily habit across weak and strong ties.
+      - Score 6 reflects a meaningful gain in conversational warmth and felt closeness; the technique is narrower than full active listening and works mostly in the opening or closing seconds of an interaction rather than restructuring the whole exchange.
+    isr_reasoning: |
+      - [Boothby and Bohns (2021)](https://pubmed.ncbi.nlm.nih.gov/32856538/) document positive recipient responses across five experiments with consistent direction; the effect on felt-connection is reliable across contexts.
+      - [Stranger-interaction research](https://pmc.ncbi.nlm.nih.gov/articles/PMC12795328/) confirms that brief positive social signals from strangers produce measurable positive affect and belonging in both parties.
+      - ISR set at 70%: a meaningful minority of compliments will land in contexts where the recipient is distracted, suspicious of the giver's motives, or socially uncomfortable receiving praise – particularly in cultures or relationships where compliments are atypical.
+    uar_reasoning: |
+      - The intervention has near-zero cost and no scheduled session, but unlike active listening it requires the user to actively initiate – a daily target of one to three compliments demands deliberate effort each day, which is a higher behavioural ask than reactively listening better in conversations that already happen.
+      - [Acts-of-kindness adherence data](https://www.tandfonline.com/doi/full/10.1080/17439760.2022.2154695) show kindness conditions retain participants better than cognitive interventions, but daily prosocial behaviour habits typically see meaningful drop-off after 4–8 weeks without external prompts.
+      - UAR of 50% reflects that compliment-giving requires overcoming the documented anxiety bias each time, and many users will revert to baseline frequency once the novelty wears off.
+
+  communication.influence:
+    pbs: 5
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–58th percentile in interpersonal influence – better at getting buy-in, easier to say yes to. Delta: ~20–23 percentile points.
+      - [Sincere praise research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9974641/) shows sincere praise produces greater activation in reward circuitry than flattery and reliably increases liking, which is one of the most robust persuasion levers.
+      - Score 5 reflects a real but modest influence gain; compliments shift baseline liking without addressing the substantive case-making that drives most consequential decisions.
+    isr_reasoning: |
+      - [Flattery and persuasion research](https://www.researchgate.net/publication/254900712_Insincere_Flattery_Actually_Works_A_Dual_Attitudes_Perspective) finds that even insincere flattery produces lasting positive effects on the recipient's attitude toward the flatterer; sincere compliments have a stronger effect through the same liking pathway.
+      - [Reward-circuit evidence for sincere praise](https://pmc.ncbi.nlm.nih.gov/articles/PMC9974641/) shows the effect is reliable across individuals at the neural level, but the influence translation depends on situational variables (whether a request is later made, whether the recipient already trusts the giver).
+      - ISR of 60%: influence gains are diluted by context – a colleague who feels appreciated is more amenable to a small ask, but compliments alone do not move stakeholders on consequential decisions.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+  friendship.depth:
+    pbs: 5
+    isr: 55
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly deepen existing friendships sufficiently to gain roughly 0.4–0.6 additional intimate friendship over months. Delta: ~0.5 intimate friendship gained.
+      - Using the linear anchor (anchor_max = 5): PBS = 10 + log₂(0.5/5) = 10 - 3.32 = 6.7, rounded to 7 at the upper end and 5 at a more conservative midpoint. Score 5 reflects that compliments are one input to friendship depth among several – they do not substitute for shared time, vulnerability, or mutual disclosure.
+      - [Kindness research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10104999/) shows prosocial acts produce meaning and competence for the giver and reciprocity from the recipient; sustained compliment-giving reliably signals investment in the relationship.
+    isr_reasoning: |
+      - The friendship-depth pathway depends on reciprocity: the giver improves their half of the equation, but depth requires the friend to invest back – not all friends will.
+      - Evidence linking compliments specifically to intimate-friendship count is indirect; the stronger evidence is for felt-closeness rather than friendship-tier transitions.
+      - ISR of 55% reflects that compliments are a real but partial lever; existing friendships with potential to deepen will benefit, but the technique cannot rescue friendships missing other foundations.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+  networks.depth:
+    pbs: 5
+    isr: 55
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~1 advocate). After successful adherence, a user could plausibly add 1–2 professional advocates over a year by consistently signalling appreciation to colleagues, mentors, and weak ties. Endpoint: ~50th–55th percentile (~3–4 advocates). Delta: ~1.5 advocates.
+      - Using the linear anchor (anchor_max = 50): PBS = 10 + log₂(1.5/50) = 10 - 5.06 = 4.94, rounded to 5.
+      - Sincere recognition is one of the most reliable behaviours for converting acquaintances into people who will speak up for you; the [gratitude-at-work literature](https://onlinelibrary.wiley.com/doi/full/10.1002/job.2624) documents this pathway.
+    isr_reasoning: |
+      - [Gratitude-expression research](https://journals.aom.org/doi/10.5465/amd.2021.0077) in workplace field experiments shows that recognition increases prosocial response from recipients, including subsequent advocacy and effort.
+      - The pathway from compliment to advocate requires repeated interaction and a substantive reason to advocate; compliments accelerate but cannot create the underlying professional credibility.
+      - ISR of 55% reflects that some compliment-receiving colleagues will reciprocate professionally and others will not, depending on their own network norms and the appropriateness of professional advocacy.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 5
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile in life-satisfaction and meaning – the giver-wellbeing literature documents real but moderate effects from sustained prosocial behaviour. Delta: ~15–20 percentile points.
+      - [Lyubomirsky's five-acts-of-kindness study](https://www.wiseinterventions.org/posters/performing-five-acts-of-kindness-per-day-over-six-weeks-increased-happiness-among-college-students-over-this-period) found six weeks of weekly kindness acts increased happiness above controls; [follow-up work](https://pmc.ncbi.nlm.nih.gov/articles/PMC10104999/) shows kindness produces greater competence, self-confidence, and meaning than other positive activities.
+      - Score 5 reflects a meaningful but bounded flourishing gain; compliments are one form of kindness rather than a comprehensive wellbeing protocol, and effects plateau.
+    isr_reasoning: |
+      - [Boothby and Bohns Study 4](https://pubmed.ncbi.nlm.nih.gov/32856538/) directly measured giver mood post-compliment and found a reliable lift; [acts-of-kindness intervention research](https://www.tandfonline.com/doi/full/10.1080/17439760.2022.2154695) shows kindness conditions outperform cognitive reappraisal on depression, anxiety, and life satisfaction.
+      - Effect sizes in kindness interventions are typically moderate, with substantial individual variation – some people are robust prosocial-affect responders and others get smaller lifts.
+      - ISR of 65%: most consistent practitioners experience some flourishing benefit, but a minority will not show measurable change, particularly those whose baseline wellbeing is constrained by structural rather than relational factors.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+  self-awareness.relational:
+    pbs: 4
+    isr: 55
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 48th–52nd percentile in awareness of their interpersonal patterns and impact. Delta: ~13–17 percentile points.
+      - The mechanism is direct: deliberately scanning for praiseworthy specifics in others trains the user to notice interpersonal dynamics, others' efforts, and emotional cues they would otherwise miss; this attentional shift carries over into reading their own impact more accurately.
+      - Score 4 reflects a modest gain – the intervention targets noticing-others rather than direct introspection on the self, so the relational self-awareness benefit is downstream of the primary skill.
+    isr_reasoning: |
+      - The causal pathway from giving sincere compliments to greater relational self-awareness is plausible but indirect; no studies directly test this transfer effect.
+      - General attention-training research suggests that deliberate noticing in one domain transfers partially to adjacent domains, but the transfer is variable.
+      - ISR of 55% reflects mechanistic plausibility with thin direct evidence; some users will gain meaningful relational insight from sustained compliment-giving and others will execute the behaviour mechanically without the attentional lift.
+    uar_reasoning: |
+      - See communication.connection UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment, materials, or paid training required. The practice can be adopted from a free article or a few minutes of reflection."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The intervention is applied within interactions that already occur; there is no recurring fee, subscription, or consumable. A free habit-tracking app is optional."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to read the underlying research, set a daily target, and decide how to track it for the first month."
+  ongoing_time: 0
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Each compliment takes seconds and is delivered within interactions that would happen anyway. The investment is attentional and intentional, not temporal."
+
+prerequisites:
+  - "Access to regular interpersonal interaction (in-person, phone, or video) – the habit cannot develop in purely text-based or asynchronous-only contexts, though it can be partially practised over messaging"
+  - "Basic ability to notice specific behaviours, choices, or qualities in others; users with severe alexithymia or social-cognition impairments may need a precursor intervention"
+  - "A working understanding of the difference between sincere praise (grounded in something specific you observed) and generic flattery, sufficient to self-correct when slipping"
+
+flagged_domains:
+  - domain: "current-work"
+    rationale: "Sustained compliment-giving to colleagues and reports plausibly improves day-to-day work engagement and team cohesion via reciprocal positive affect, which the work-engagement value would capture."
+  - domain: "behaviours"
+    rationale: "Successfully overcoming the documented compliment-anxiety bias builds generalised social courage and reduces avoidance around minor interpersonal risks."

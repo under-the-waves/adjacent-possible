@@ -1,6 +1,6 @@
 # Worthwhile – Remaining Work
 
-Last updated: 2026-04-25. This file captures all discussed-but-not-done work from recent sessions.
+Last updated: 2026-04-26. This file captures all discussed-but-not-done work from recent sessions.
 
 ---
 
@@ -35,21 +35,21 @@ Last updated: 2026-04-25. This file captures all discussed-but-not-done work fro
 
 ---
 
-## 2. Remaining Scoring Backlog (~10 Interventions)
+## 2. Scoring Backlog – COMPLETE
 
-**Status:** Mostly complete. 32 new interventions scored on 2026-04-25, bringing the total from 36 to 68. ~10 niche/context-dependent interventions remain.
+**Status:** Fully complete as of 2026-04-26. The remaining 10 interventions identified on 2026-04-25 have all been scored, bringing the total to 78.
 
-**Remaining unscored:**
-- Giving genuine compliments (overlaps with basic active listening)
-- Weekly family check-ins (overlaps with regular one-on-one conversations)
-- Reading to children daily (context-dependent – requires children)
+**Scored on 2026-04-26 (10 new):**
+- Giving genuine compliments
+- Weekly family check-ins
+- Reading to children daily
 - Asking for help/favours strategically
 - Career planning
 - Building a personal website/portfolio
 - Contact management system
 - Learning a musical instrument
-- Learning to drive (context-dependent)
-- Basic car maintenance (context-dependent)
+- Learning to drive
+- Basic car maintenance
 
 **Updated scoring prompt:** `.claude/prompts/intervention.md` now includes baseline framing rules and confidence field requirements.
 
@@ -59,7 +59,7 @@ Last updated: 2026-04-25. This file captures all discussed-but-not-done work fro
 
 **Status:** Not started.
 
-**What:** The 32 new intervention YAMLs have full scoring data, descriptions, and content fields (`what_it_is`, `how_to_do_it`, `success_looks_like`, `common_pitfalls`), but they do not yet have corresponding Markdown pages in `resources/intervention-database/`. Each needs a page at `resources/intervention-database/[intervention-name].md` using the `intervention` layout so they appear on the site.
+**What:** The 42 new intervention YAMLs (32 from 2026-04-25 plus 10 from 2026-04-26) have full scoring data, descriptions, and content fields (`what_it_is`, `how_to_do_it`, `success_looks_like`, `common_pitfalls`), but they do not yet have corresponding Markdown pages in `resources/intervention-database/`. Each needs a page at `resources/intervention-database/[intervention-name].md` using the `intervention` layout so they appear on the site.
 
 ---
 

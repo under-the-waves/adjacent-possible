@@ -1,0 +1,242 @@
+name: "Asking for Help Strategically"
+what_it_is: |
+  A deliberate practice of identifying situations where help, advice, introductions, or favours from other people would be valuable, formulating a clear and specific request, and actually making the ask – rather than defaulting to self-reliance, vague hints, or assumed refusal. The intervention is counterintuitive because the central barrier is psychological, not practical: research consistently finds that potential help-seekers underestimate compliance rates by roughly 50% across a wide range of requests, treating others' likely response as far more negative than it actually is. Done systematically – a sustained cadence of one to three genuine asks per week across work, friends, and professional contacts – it converts a chronically underused social mechanism into a default channel for accelerating progress and deepening relationships, while simultaneously triggering the well-documented Ben Franklin effect, in which the act of granting a request increases the helper's liking of the asker.
+how_to_do_it: |
+  - Set a weekly target of 1 – 3 genuine asks. Each ask should be something where help would actually move you forward – an introduction, a piece of advice, a review of work, a small favour, a reference – rather than manufactured asks for the sake of practice
+  - Make the request specific and easy to respond to: name the person you want introduced to, the question you want answered, the document you want reviewed, or the favour you need. Open-ended asks ("any chance you could help me with my career?") generate vague responses; precise asks generate action
+  - Default to direct, in-person, or one-to-one channels (a call, a personal email, a face-to-face conversation). [Research](https://journals.sagepub.com/doi/10.1177/0956797616677156) shows that asks made in person are roughly 34 times more likely to be agreed to than asks made by email, because non-verbal cues convey sincerity that text cannot
+  - Frame the ask cleanly: explain the context briefly, state what you are asking for, give the helper an explicit easy way to decline ("totally fine if this is not the right time"), and avoid over-apologising or stacking caveats that signal you expect refusal
+  - Close the loop afterwards: thank the helper, report back on what came of their input, and look for opportunities to reciprocate. This converts a one-off favour into a repeated relationship and strengthens the case for future asks
+success_looks_like: |
+  - You routinely make one or more substantive asks per week without prolonged hesitation, and the asks generate a stream of introductions, advice, and openings that materially shift your work and personal projects
+  - People you have asked for help volunteer further offers of help unprompted, because the relationship has been activated rather than depleted by the request
+  - You catch yourself noticing situations where an ask would be useful several times per week, where previously you would have struggled alone or assumed help was unavailable
+common_pitfalls: |
+  - Asking only your closest contacts repeatedly, exhausting a small core network rather than expanding into weak ties – [research on networking](https://journals.sagepub.com/doi/10.1177/0149206308328061) shows the largest career and information gains come from weak and bridging ties, not from the same handful of close contacts
+  - Hedging the ask so heavily that the helper cannot tell what is actually wanted, or pre-emptively offering excuses for refusal that signal you expect a no and make a yes feel awkward
+  - Asking without ever reciprocating or closing the loop, which trains contacts that helping you is a one-way drain and reduces willingness to help next time
+  - Treating the ask as transactional rather than relational – the [Ben Franklin effect](https://en.wikipedia.org/wiki/Ben_Franklin_effect) operates because the helper's identity-consistent reasoning ("I helped this person, so I must like them") is bypassed when the exchange feels purely instrumental
+description: |
+  - Deliberate, sustained practice of identifying where help would be valuable, formulating clear specific asks, and making them – at a cadence of 1 – 3 substantive requests per week across work, friends, and wider networks
+  - [Flynn and Lake (2008)](https://pubmed.ncbi.nlm.nih.gov/18605856/) found that help-seekers underestimate compliance rates by approximately 50% across a wide range of requests, both in laboratory and natural field settings; the bias persists because seekers focus on the cost of saying yes and ignore the social cost others bear in saying no
+  - [Subsequent research from Bohns and colleagues](https://journals.sagepub.com/doi/abs/10.1177/0963721415628011) extends the finding to harder asks (favours from strangers, ethically dubious requests) and confirms the underestimation is a robust, generalisable feature of how people predict others' responses
+  - The [Ben Franklin effect](https://en.wikipedia.org/wiki/Ben_Franklin_effect), supported by classic [experimental work](https://journals.sagepub.com/doi/10.1177/001872676902200302) and modern replications, shows that granting a request typically increases the helper's liking of the asker – meaning well-formed asks strengthen rather than deplete relationships
+  - The intervention requires no equipment or money; the binding constraint is a sustained willingness to tolerate the small ego cost of asking, and a network of sufficient depth and breadth for asks to land somewhere useful – which means the upside is meaningfully bounded for users with very sparse networks
+  - Distinct from generic "ask culture" advice in that it is grounded in measurable underestimation effects and specifies a cadence, channel, and feedback loop rather than encouraging vague openness to help
+applicable_domains: ["networks", "current-work", "behaviours", "friendship", "self-awareness", "communication", "career-planning", "mental-health", "life-skills"]
+
+values:
+  networks.depth:
+    pbs: 7
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~1 – 2 professional advocates). After sustained practice, a user could plausibly reach the 65th percentile, roughly 6 – 8 professional advocates. Delta: ~5 – 6 advocates on the 50-advocate anchor.
+      - PBS = 10 + log₂(5/50) = 10 - 3.32 = ~7. The Ben Franklin effect mechanism is well-supported: asks that are granted convert acquaintances into invested supporters, because the act of helping causes the helper to update toward liking and identification with the asker.
+      - The depth of network effect is bounded by the size of the existing acquaintance pool – a user can only convert contacts they already have, which is why this is a 7 rather than a higher score.
+    isr_reasoning: |
+      - [Flynn and Lake (2008)](https://pubmed.ncbi.nlm.nih.gov/18605856/) document compliance rates around 50% higher than askers predict across laboratory and field settings, meaning a substantial majority of well-formed asks are granted – the raw mechanism is reliable.
+      - [Roghanizad and Bohns (2017)](https://journals.sagepub.com/doi/10.1177/0956797616677156) find in-person asks are granted at roughly 34 times the rate of email asks, so ISR depends materially on channel choice and on the asker's willingness to make requests face-to-face.
+      - ISR of 60% reflects that the depth-conversion effect is reliable for users who make specific, in-person or warm-channel asks to people who already have minimal context on them, but degrades for cold or transactional requests.
+    uar_reasoning: |
+      - [Bohns (2016)](https://journals.sagepub.com/doi/abs/10.1177/0963721415628011) and [Bohns and colleagues' follow-up work](https://www.sciencedirect.com/science/article/abs/pii/S001429212400240X) show that the discomfort of asking is a pervasive psychological barrier – people systematically avoid asks even when they recognise the intervention is rational, because the anticipated ego cost is salient and immediate while the benefit is delayed.
+      - Sustained adherence requires overriding this aversion weekly for months. [Survey work on networking behaviours](https://homepages.se.edu/cvonbergen/files/2013/01/Effects-of-Networking-on-Career-Success_A-Longitudinal-Study.pdf) suggests most professionals network sporadically rather than systematically, consistent with low long-run adherence.
+      - UAR of 40% reflects that a meaningful minority of users will sustain the cadence beyond initial enthusiasm, but most will drift back toward sporadic asking under the dual pressure of mild social discomfort and competing time demands.
+
+  networks.breadth:
+    pbs: 6
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, a user could plausibly reach the 60th – 65th percentile through repeated activation of weak ties and introductions surfaced by asks. Delta: ~25 – 30 percentile points.
+      - Score 6 reflects a meaningful but not transformative gain in breadth: introductions are the fastest known route to new connections, and asks are the principal mechanism by which introductions are generated, but each ask only modestly expands the active network.
+      - Breadth gains are bounded by the geometric reality that each contact's reach is finite; growth saturates as a user's network approaches the natural ceiling of meaningful weekly contact (~150 – 300 active ties for most adults).
+    isr_reasoning: |
+      - [Longitudinal research on networking](https://homepages.se.edu/cvonbergen/files/2013/01/Effects-of-Networking-on-Career-Success_A-Longitudinal-Study.pdf) consistently links proactive networking behaviour to objective career outcomes including salary growth and promotions, with effect sizes that imply most consistent networkers do see measurable network growth.
+      - The mechanism is straightforward: asks for introductions or advice generate new contacts, which become weak ties that can be re-activated later. Failure modes are concentrated in users with very sparse starting networks, where there is no one to ask for introductions.
+      - ISR of 55% is moderately conservative because breadth gains depend on starting-network quality – users with no professional baseline will struggle to convert asks into a wider web.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  current-work.competence:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, a user could plausibly reach the 60th percentile by routinely soliciting advice, code reviews, document reviews, and tactical input from people more experienced than themselves. Delta: ~25 percentile points.
+      - The mechanism is the same as for the asking-for-feedback intervention but broader: asks for help unblock concrete tasks (debugging, writing, decisions) rather than only generating evaluative signal, and convert otherwise stuck hours into productive ones.
+      - Score 6 reflects a meaningful work-competence gain – help-seeking is one of the most efficient routes to skill acquisition because it routes around the slowest part of self-directed learning, which is identifying which question to ask next.
+    isr_reasoning: |
+      - [Lee (1997) and follow-up help-seeking research](https://psycnet.apa.org/record/2005-08436-005) show that proactive help-seeking in workplace settings predicts faster role mastery and stronger task performance, though the size of the effect varies with manager support and team norms.
+      - The reliability of the competence gain is highest when asks are directed to people with relevant expertise and lowest when asks are vague or directed to overstretched colleagues; environmental factors matter as much as the seeker's behaviour.
+      - ISR of 60% reflects that the competence pathway is reliable for users in environments with at least minimally helpful colleagues but fragile in environments where help-seeking is stigmatised or expertise is genuinely thin.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  current-work.engagement:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, a user could plausibly reach the 50th – 55th percentile, with engagement gains coming via reduced isolation, faster progress, and more relational texture in daily work. Delta: ~15 – 20 percentile points.
+      - Score 5 reflects a modest, indirect engagement effect – getting unstuck and feeling supported are real contributors to absorption and motivation, but the engagement pathway is secondary to the competence pathway.
+      - Low confidence because the direct link between strategic help-seeking and engagement is not well-studied as a distinct outcome; the inference rests on adjacent literature on social support and work engagement.
+    isr_reasoning: |
+      - [Daily diary research on networking](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.02179/full) finds that daily networking behaviours predict career optimism and job satisfaction via positive affect, supporting an engagement pathway when help-seeking is part of broader relational activity.
+      - For users in genuinely disengaging roles (poor management, misaligned work), asking for help will not meaningfully repair the underlying problem.
+      - ISR of 55% reflects a real but conditional engagement benefit, contingent on the work environment being at least moderately healthy.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  behaviours.social:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, a user could plausibly reach the 60th percentile by replacing avoidance and self-reliance with direct, boundaried, authentic requests across a range of social contexts. Delta: ~25 percentile points.
+      - The intervention directly targets the construct this value measures: making clear, specific asks is itself an authentic and boundaried social behaviour, and reduces the prevalence of indirect, hint-laden, or avoidant patterns.
+      - Score 6 reflects a meaningful gain in authentic social behaviour rather than a transformative one – asking for help is a single behavioural lever, not a comprehensive overhaul of social patterns.
+    isr_reasoning: |
+      - [Bohns's work on the discomfort of asking](https://www.sciencedirect.com/science/article/abs/pii/S001429212400240X) suggests repeated successful asks recalibrate the seeker's mental model of others' willingness, reducing the avoidance-and-hint pattern and supporting more direct social behaviour over time.
+      - The mechanism operates through belief update: each granted ask reduces the gap between predicted and actual compliance, and the weekly cadence provides enough data points to compress this update into months rather than years.
+      - ISR of 60% reflects that most adherent users will see a noticeable shift toward more direct social behaviour, with a meaningful minority remaining avoidant due to deeper anxiety or attachment patterns that asking alone does not address.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  friendship.depth:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~1 – 2 close friendships). After sustained practice, a user could plausibly reach the 55th percentile, gaining ~1 additional close friendship through deepened existing relationships. Delta: ~1 friendship on the 5-friendship anchor.
+      - PBS = 10 + log₂(1/5) = 10 - 2.32 = ~8 by the formula, but this overstates the effect: most asks are work- or task-oriented and only a fraction produce genuine intimacy gains. Capping at 5 reflects that asking for help is one of several routes to depth and not the dominant one.
+      - Asking for genuine help and being helped is one of the recognised mechanisms by which acquaintanceships convert into close friendships, supported by [closeness moderation research](https://www.sciencedirect.com/science/article/abs/pii/S0022103118301616) showing that compliance and closeness reinforce each other reciprocally.
+    isr_reasoning: |
+      - [Bohns and colleagues](https://www.sciencedirect.com/science/article/abs/pii/S0022103118301616) find that closeness moderates compliance: asks within closer relationships are granted at higher rates, and granting deepens closeness further – a positive feedback loop when asks are well-calibrated.
+      - The depth-of-friendship effect is not automatic; it depends on the asker reciprocating, being vulnerable in the asks, and choosing relationships that have latent capacity for intimacy.
+      - ISR of 55% reflects a modest, conditional friendship-depth gain – meaningful for users with existing relationships ready to deepen, weak for users with mostly transactional contacts.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  friendship.breadth:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile (friendship breadth has a higher baseline). After sustained practice, a user could plausibly reach the 60th percentile, gaining ~3 – 5 active friendships through introductions and reactivated weak ties. Delta: ~3 – 5 friendships on the 30-friendship anchor.
+      - PBS = 10 + log₂(4/30) = 10 - 2.91 = ~7 by formula, but this overstates: most asks are not friendship-generating and the conversion rate from network contact to active friendship is low. Score 4 reflects a real but modest breadth effect.
+      - The breadth-of-friendship gain is the weaker cousin of the network-breadth gain; many of the new contacts surfaced by asks remain professional acquaintances rather than becoming friends.
+    isr_reasoning: |
+      - The mechanism is plausible but indirect: asks generate introductions, and a small fraction of introductions develop into friendships through subsequent shared interests and contact.
+      - [Networking research](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.02179/full) supports modest social-relational gains from sustained networking activity but does not isolate friendship breadth as a distinct outcome.
+      - ISR of 55% reflects that the friendship-breadth gain is modestly reliable and contingent on the user investing follow-up time in promising new contacts.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  self-awareness.relational:
+    pbs: 5
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, a user could plausibly reach the 55th percentile by repeatedly testing predictions about others' willingness to help against actual responses, surfacing the gap between self-perceived likeability and actual social standing. Delta: ~20 percentile points.
+      - The mechanism is the [Flynn-Lake underestimation effect](https://pubmed.ncbi.nlm.nih.gov/18605856/) running in reverse as personal feedback: each ask is a calibration trial, and repeated asks teach the seeker how their requests actually land in the social world.
+      - Score 5 reflects a modest gain – asking for help reveals one specific dimension of relational reality (others' willingness to support) but does not provide the same depth of feedback as solicited evaluation of behaviour.
+    isr_reasoning: |
+      - The relational self-awareness gain is reasonably reliable when asks are diverse enough to provide a representative sample of one's social environment; it is less reliable when asks are confined to a small homogeneous group.
+      - The seeker's reflective capacity matters: granted asks update relational beliefs only if the seeker notices and integrates the data, rather than dismissing each as a one-off.
+      - ISR of 60% reflects a moderately reliable update in relational self-perception for users who treat asks as evidence rather than purely as transactions.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, a user could plausibly reach the 55th percentile through the relational signal carried by direct asks and the [Ben Franklin effect](https://en.wikipedia.org/wiki/Ben_Franklin_effect) operating across many relationships. Delta: ~20 percentile points.
+      - Asking for help is itself a connection-building communication act – it signals trust, treats the helper as a competent peer, and creates a small shared narrative that strengthens the relationship independent of the help received.
+      - Score 5 reflects a modest connection gain – asks open the door to deeper communication but do not by themselves substitute for sustained conversational investment.
+    isr_reasoning: |
+      - [Closeness-moderated compliance research](https://www.sciencedirect.com/science/article/abs/pii/S0022103118301616) supports a reciprocal pathway between asking and felt closeness, suggesting reasonably reliable connection effects for adherent users.
+      - The connection benefit is weaker for transactional or stranger asks and stronger for asks made within relationships that already have warmth and history.
+      - ISR of 55% reflects that the connection effect is real but contingent on the user choosing asks that have relational substance, not only practical utility.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  career-planning.advancement:
+    pbs: 6
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~1 warm contact in target field). After sustained practice, a user could plausibly reach the 55th – 60th percentile, moving toward 4 – 6 warm contacts via introductions and reactivated relationships. Delta: ~3 – 5 warm contacts on the 50-contact anchor.
+      - PBS = 10 + log₂(4/50) = 10 - 3.64 = ~6. [Longitudinal networking research](https://homepages.se.edu/cvonbergen/files/2013/01/Effects-of-Networking-on-Career-Success_A-Longitudinal-Study.pdf) directly links proactive networking behaviour, of which strategic asking is a core component, to advancement-relevant outcomes including salary growth and promotions.
+      - Score 6 reflects that warm-contact accumulation in a target field is genuinely accelerated by sustained asking, but is bounded by the user's existing field exposure and the receptivity of the target sector.
+    isr_reasoning: |
+      - [Effects of Networking on Career Success](https://homepages.se.edu/cvonbergen/files/2013/01/Effects-of-Networking-on-Career-Success_A-Longitudinal-Study.pdf) finds significant positive effects on salary trajectory, supporting a reasonably reliable advancement mechanism for users who sustain the behaviour.
+      - The reliability is conditional on the user actually directing asks at advancement-relevant targets rather than only convenient nearby contacts; many adherent users will misallocate asks toward easy rather than strategic targets.
+      - ISR of 55% reflects a moderate advancement gain for adherent users who direct asks strategically, with a meaningful minority of adherents seeing limited advancement benefit due to misallocation or industry-specific friction.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  mental-health.resilience:
+    pbs: 4
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained practice, a user could plausibly reach the 50th percentile through reduced isolation, an activated support network ready to be drawn on in crisis, and a recalibrated sense of how willing others are to be there. Delta: ~15 percentile points.
+      - The mechanism is the activation of latent social support: people who routinely ask have functional channels open when they need them, whereas non-askers face the dual cost of needing help and starting cold under stress.
+      - Score 4 reflects a modest resilience gain – the intervention does not directly treat mood or stress regulation, but it strengthens an upstream determinant of how setbacks are absorbed.
+    isr_reasoning: |
+      - The resilience pathway is plausible and supported by [social-support literature](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.02179/full) but not directly tested as an outcome of strategic asking; the inference rests on adjacent constructs.
+      - The benefit is most pronounced for users currently isolated and least pronounced for users already embedded in supportive networks where asking is normalised.
+      - ISR of 50% reflects genuine but variable resilience effects, conditional on the user actually drawing on the activated network during stress rather than reverting to self-reliance under pressure.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  life-skills.high:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~2 – 3 practical skills). After sustained practice, a user could plausibly reach the 50th percentile, picking up ~1 – 2 additional skills via expert advice surfaced through asks. Delta: ~1 – 2 skills on the 15-skill anchor.
+      - PBS = 10 + log₂(1.5/15) = 10 - 3.32 = ~7 by formula, but this overstates the effect: most asks do not produce skill acquisition, and the skills that do come from asks are often narrow (single tasks rather than competencies). Score 4 reflects the modest realistic gain.
+      - The pathway is real – knowing the right person to ask is itself a meta-skill that compounds over time – but the direct gain in measurable practical skills per the value's anchor is bounded.
+    isr_reasoning: |
+      - The skill-acquisition pathway is plausible but indirect: asks for advice unblock specific problems but rarely transfer full procedural competence in a single interaction.
+      - For users in environments with accessible experts (workplaces, friend groups with diverse skills), the benefit is more reliable; for users in homogeneous environments, asks rarely encounter relevant expertise.
+      - ISR of 55% reflects a modest, conditional skill-acquisition effect.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials, subscriptions, or services required. The intervention is a behavioural practice requiring only existing social or professional contacts and a willingness to make direct requests."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The intervention requires only time, attention, and reciprocity – none of which are monetary."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to map current contacts, identify an initial set of plausible asks, and draft the first one or two requests. No formal training or reading required to begin."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 30 – 60 minutes per week: identifying weekly asks, composing and sending requests, and following up to thank or update helpers. The marginal time cost is small; the binding constraint is psychological, not temporal."
+
+prerequisites:
+  - "At least a small existing social or professional network – the intervention's value is bounded by the pool of people available to ask"
+  - "Sufficient self-regulation to tolerate the small ego cost of asking and the occasional refusal without becoming defensive or withdrawing"
+  - "Basic clarity about what would actually help you – the ability to formulate a specific ask requires at least a rough sense of one's own goals or current obstacles"
+
+flagged_domains:
+  - domain: "personality"
+    rationale: "Sustained practice of direct, specific asking is a recognised mechanism for shifting personality patterns toward greater agency and assertiveness, and away from self-reliant or avoidant defaults."

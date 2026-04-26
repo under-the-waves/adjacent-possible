@@ -1,0 +1,211 @@
+name: "Contact Management System"
+what_it_is: |
+  A personal CRM – typically a spreadsheet, Notion database, Airtable base, or a dedicated tool such as Clay, Dex, Monica, or Cloze – that stores professional and personal contacts alongside structured metadata: where you met, shared interests, key dates (birthdays, work anniversaries, kids' names), last interaction, and a planned next follow-up. The system replaces ad hoc memory with a deliberate trigger mechanism so that relationships are maintained on a cadence rather than drifting until a need arises. The intervention is structurally trivial – setting up a spreadsheet takes an afternoon – but the value flows entirely from consistent use over months and years. Most adopters abandon their system within weeks; the small minority who sustain it accumulate a meaningful relational moat.
+how_to_do_it: |
+  - Pick a tool you will actually open: a Google Sheet or Airtable base is sufficient for most people; dedicated apps (Dex, Clay, Monica, Cloze) reduce friction but add a subscription
+  - Seed the database with 50 – 200 existing contacts in a single 2 – 5 hour session: name, where you met, interests, last contact, next planned follow-up; do not try to be exhaustive on first pass
+  - Tag contacts by tier (e.g. inner circle / active / dormant) and set differentiated cadences – monthly for inner circle, quarterly for active, annual for dormant
+  - Reserve 15 – 30 minutes weekly to log recent conversations and trigger one or two follow-ups; pair this with an existing weekly habit (Sunday review, Monday morning) so the slot does not float
+  - Treat birthdays and life events as automatic triggers: a one-line message on a meaningful date outperforms an elaborate annual catch-up that never happens
+success_looks_like: |
+  - You reach out to people not because you need something but because the system surfaces them at the right cadence – and the recipient notices
+  - When you change roles, move cities, or look for a new opportunity, you have 20+ warm contacts to draw on rather than starting from cold outreach
+  - You remember the names of people's partners and children, and the projects they were working on six months ago, because the database carries the load your memory cannot
+  - The system has been alive for 12+ months; you have edited it in the past week
+common_pitfalls: |
+  - Over-engineering the schema before any consistent use – elaborate field structures collapse within a month; start minimal and let the schema accrete only when missing fields cause real friction
+  - Confusing logging with relationship-building: a perfectly maintained database with no follow-ups produces nothing
+  - Setting cadences too aggressively (weekly for everyone) so that the system generates more obligations than you can sustain, then guilt-quitting
+  - Treating contacts transactionally – sending templated check-ins that read as networking spam erodes trust faster than no contact at all
+description: |
+  - A structured personal database tracking contacts, context (where you met, interests, family details), last interaction, and planned next follow-up – stored in a spreadsheet, Notion, Airtable, or a dedicated tool like Dex, Clay, Monica, or Cloze
+  - Setup takes 2 – 5 hours; ongoing investment is 15 – 30 minutes weekly to log interactions and trigger follow-ups on a tiered cadence
+  - [Granovetter's seminal study](https://snap.stanford.edu/class/cs224w-readings/granovetter73weakties.pdf) found weak ties produced 27.8% of professional job leads versus 16.7% for strong ties; [a large-scale causal test](https://www.science.org/doi/10.1126/science.abl4476) on 20 million LinkedIn users confirmed weaker ties causally increased job mobility
+  - [Burt's research on structural holes](https://www.bebr.ufl.edu/sites/default/files/Burt%20-%202004%20-%20Structural%20Holes%20and%20Good%20Ideas.pdf) shows networks spanning diverse groups predict promotions, compensation, and idea quality – the system's value lies in keeping such bridges from atrophying through neglect
+  - [Friendship maintenance research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) identifies consistent outreach as a primary predictor of relationship persistence; the system removes the "I should reach out" friction that causes even motivated people to lose contact
+  - Distinct from a phone contacts list (which is passive storage) and from generic productivity systems – this intervention specifically scaffolds relationship maintenance against memory decay and cadence drift
+applicable_domains: ["networks", "friendship", "career-planning", "family-of-origin", "extended-family", "organisation"]
+
+values:
+  networks.depth:
+    pbs: 6
+    isr: 50
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, approximately 3 professional advocates. After successful adherence over 2 – 3 years, a user converts dormant contacts into active advocates by maintaining warm cadence – plausibly reaching the 55th – 60th percentile (~6 – 8 advocates). Delta: ~4 advocates on a max-50 anchor. PBS = 10 + log₂(4/50) = 10 - 3.64 = 6.4, round to 6.
+      - The mechanism is reliable in principle: [research on professional advocacy](https://faculty.washington.edu/matsueda/courses/590/Readings/Burt%202000%20Networ%20structure%20ROB.pdf) shows advocacy depends on the contact remembering you favourably, which decays without contact – periodic warm touches keep memory fresh.
+      - The ceiling is bounded because depth (active advocacy) requires real prior collaboration, not just maintained contact; the system preserves rather than creates advocacy.
+    isr_reasoning: |
+      - Among adherent users, success depends on the quality of underlying interactions: tracked follow-ups still need to be substantive. [Stanford research on digital reminder systems](https://cs.stanford.edu/~merrie/papers/memory_imwut2017.pdf) found people use external memory aids to surface relationship details that build trust, but only when the resulting interaction is genuine.
+      - About half of consistent users will sustain advocate-level relationships; the rest will maintain contact frequency but fail to deepen any specific dyad to advocacy.
+      - [Networking studies](https://homepages.se.edu/cvonbergen/files/2013/01/Effects-of-Networking-on-Career-Success_A-Longitudinal-Study.pdf) confirm networking behaviour predicts career outcomes longitudinally, but with high variance across individuals.
+    uar_reasoning: |
+      - The system itself is trivial to set up but extraordinarily hard to sustain: most personal CRM adopters lapse within weeks. [Reviews of personal CRM tools](https://getdex.com/blog/monica-review/) acknowledge sustained use is the central challenge of the category.
+      - The intervention requires a recurring weekly slot indefinitely, with no acute reward signal – missing a week produces no immediate cost, which is precisely why most users drift.
+      - UAR of 18% reflects the dominant failure mode: setup completed, used for 4 – 8 weeks, then abandoned. Long-term users are a small minority with strong organisational tendencies.
+
+  networks.breadth:
+    pbs: 6
+    isr: 55
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user maintains an additional ~10 – 20 active professional connections that would otherwise lapse, plausibly reaching the 60th – 65th percentile. Delta: ~25 – 30 percentile points, mapping to a meaningful gain on a subjective scale.
+      - Breadth is the value most directly served by a CRM: the system explicitly counters the cognitive limit – [Dunbar's number layers](https://theconversation.com/dunbars-number-why-my-theory-that-humans-can-only-maintain-150-friendships-has-withstood-30-years-of-scrutiny-160676) suggest humans struggle to maintain more than ~150 stable relationships, and external memory aids extend that ceiling.
+      - PBS 6 (meaningful gain) rather than 8 because the system extends maintained breadth but does not generate new connections – it preserves what would otherwise decay.
+    isr_reasoning: |
+      - Reliable mechanism: a tracked contact who receives an annual touch persists; an untracked one fades. [Friendship maintenance research](https://www.sciencedirect.com/science/article/abs/pii/S0272494426000046) confirms more frequent interaction predicts preserved closeness, even at low intensity.
+      - Among consistent users, ~55% will achieve a meaningful expansion in maintained breadth; the rest log contacts but fail to convert logging into actual outreach.
+      - Effect is mechanically robust: minimal contact is dramatically better than no contact for maintaining breadth.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  networks.relevance:
+    pbs: 5
+    isr: 45
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user can deliberately tag and prioritise contacts in their target field, plausibly reaching the 50th – 55th percentile. Delta: ~15 – 20 percentile points – modest because the system organises an existing network rather than reshaping it.
+      - The CRM exposes which contacts are relevant to current direction, surfacing under-watered relationships in the target field – an [explicit benefit](https://greylock.com/reid-hoffman/reid-hoffman-abzplanning/) Reid Hoffman emphasises in deliberately diversified networks under ABZ planning.
+      - PBS 5 (between modest and meaningful) reflects that relevance gains are bounded by the user's existing contact pool; the system cannot conjure relevant contacts that do not exist.
+    isr_reasoning: |
+      - The relevance benefit is contingent on the user having any clarity about professional direction – without it, tagging by relevance is meaningless. [Career planning research](https://homepages.se.edu/cvonbergen/files/2013/01/Effects-of-Networking-on-Career-Success_A-Longitudinal-Study.pdf) finds networking predicts outcomes most strongly when paired with deliberate strategy.
+      - Roughly 45% of consistent users will translate the tagged structure into deliberate outreach to relevant contacts; the rest treat the tags as labels without action.
+      - Effect is weaker than for breadth because relevance is a strategic overlay, not a mechanical consequence of the system.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  career-planning.advancement:
+    pbs: 6
+    isr: 55
+    uar: 18
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, approximately 3 warm contacts in target field. After successful adherence, a user maintains warm follow-ups with target-field contacts and plausibly reaches 6 – 8 warm contacts. Delta: ~4 contacts on a max-50 anchor. PBS = 10 + log₂(4/50) = 10 - 3.64 = 6.4, round to 6.
+      - [The MIT/LinkedIn causal study](https://www.science.org/doi/10.1126/science.abl4476) of 20 million users found moderately weak ties produced the greatest gains in job mobility – exactly the kind of relationship a CRM helps maintain.
+      - [Networking statistics](https://www.apollotechnical.com/networking-statistics/) report referral candidates earn ~7% more at hire and are 4x more likely to be interviewed than cold applicants; a CRM systematically preserves the referral pool.
+    isr_reasoning: |
+      - Among consistent users, 55% will see meaningful advancement effects when the next career transition arrives; the rest maintain contacts but fail to activate them at the decisive moment.
+      - [Longitudinal research on networking](https://homepages.se.edu/cvonbergen/files/2013/01/Effects-of-Networking-on-Career-Success_A-Longitudinal-Study.pdf) confirms networking behaviour predicts salary growth and promotions over time, but effects materialise only when transitions occur.
+      - The benefit is lumpy: most years it produces nothing; the value concentrates around career transitions.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  career-planning.security:
+    pbs: 5
+    isr: 50
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user has a maintained network providing fallback options – plausibly reaching the 55th percentile in career adaptability. Delta: ~20 percentile points.
+      - [Reid Hoffman's ABZ planning](https://greylock.com/reid-hoffman/reid-hoffman-abzplanning/) frames a maintained network as the primary asset for Plan B activation – without warm contacts, pivoting becomes a cold-start problem.
+      - PBS 5 reflects that security is a downstream benefit of breadth and relevance rather than a separate effect.
+    isr_reasoning: |
+      - The security benefit only materialises during shocks (layoffs, role mismatch, industry decline); for users who never face such shocks, the value is latent.
+      - Roughly half of consistent users will experience a career transition where the network materially helps; the rest experience the value as insurance never claimed.
+      - [Career networking research](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.02179/full) confirms networking predicts career-related outcomes via positive affect and resource access.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  friendship.breadth:
+    pbs: 7
+    isr: 60
+    uar: 18
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile, ~8 active friendships. After successful adherence, a user maintains ~4 additional friendships that would otherwise lapse, plausibly reaching the 60th – 65th percentile (~12 – 14 active friends). Delta: ~4 friendships on a max-30 anchor. PBS = 10 + log₂(4/30) = 10 - 2.91 = 7.1, round to 7.
+      - [Friendship research](https://www.sciencedirect.com/science/article/abs/pii/S0272494426000046) confirms more frequent interaction preserves emotional closeness; the system mechanises low-frequency contact that prevents drift.
+      - The mechanism is most effective for the outer layers of [Dunbar's friendship structure](https://theconversation.com/dunbars-number-why-my-theory-that-humans-can-only-maintain-150-friendships-has-withstood-30-years-of-scrutiny-160676) – the 50-good-friends and 150-friends layers where memory and cadence fail without scaffolding.
+    isr_reasoning: |
+      - Mechanism is robust: triggered annual or quarterly contact reliably preserves outer-layer friendships. [Friendship maintenance research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) identifies consistent outreach as the highest-impact maintenance behaviour.
+      - About 60% of consistent users will see meaningful breadth preservation; failures involve the contact treating the messages as performative or the user defaulting to one-line reach-outs that do not actually maintain warmth.
+      - [Reciprocity research](https://par.nsf.gov/servlets/purl/10055620) finds friendship maintenance must be matched – unilateral CRM-driven outreach without reciprocation does not preserve relationship strength.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  friendship.depth:
+    pbs: 4
+    isr: 35
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, ~1 intimate friendship. After successful adherence, a user might add ~0.5 intimate friendships through more consistent contact with close friends, plausibly reaching the 45th percentile. Delta: ~10 percentile points on a max-5 anchor. PBS = 10 + log₂(0.5/5) = 10 - 3.32 = 6.7 in raw terms, but pulled down to 4 because depth requires emotional disclosure that the system does not generate.
+      - The CRM's primary contribution to depth is preventing existing intimate friendships from atrophying via missed contact – a real but bounded effect.
+      - PBS 4 (modest gain) reflects the mismatch between the system's mechanism (cadence and recall) and depth's mechanism (vulnerability and shared experience).
+    isr_reasoning: |
+      - Most users who use a CRM for friendships still default to logistical exchanges rather than substantive conversation – the system schedules contact but does not change its quality.
+      - [Friendship research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) shows depth depends on self-disclosure, which a contact log does not produce.
+      - Roughly a third of consistent users will see depth gains, typically by combining the CRM with a separate practice (regular substantive conversations).
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  family-of-origin.connection:
+    pbs: 5
+    isr: 50
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence – tracking parents' and siblings' birthdays, life events, recent worries – a user can plausibly reach the 50th – 55th percentile in emotional closeness. Delta: ~15 – 20 percentile points.
+      - The mechanism (remembering details, scheduling contact) addresses a real failure mode in adult family relationships, where logistical drift produces apparent neglect that erodes closeness.
+      - [Memory and relationships research](https://www.psychologytoday.com/us/blog/defining-memories/202210/10-ways-memory-sustains-relationships) shows remembering details signals care – a CRM operationalises this even when natural memory fails.
+    isr_reasoning: |
+      - Family relationships have higher pre-existing baseline contact than friendships, so the CRM's marginal effect is smaller – a parent who already calls weekly does not benefit from a tracking system.
+      - Roughly half of consistent users will see meaningful connection gains, typically those whose family relationships were drifting from low contact rather than active conflict.
+      - [Family social connection research](https://onlinelibrary.wiley.com/doi/full/10.1002/wps.21224) confirms quality of family contact predicts wellbeing, but quality cannot be tracked – only frequency and basic attentiveness.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  extended-family.closeness:
+    pbs: 5
+    isr: 55
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile. After successful adherence, a user tracks 5 – 10 extended family members with birthdays and key dates, plausibly reaching the 55th – 60th percentile. Delta: ~10 – 15 percentile points on a max-20 anchor.
+      - Extended family is the layer where memory aids matter most: [Dunbar's research](https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/nyas.15309?af=R) shows we struggle to maintain more than 15 close relationships; cousins, aunts, and uncles fall outside that ceiling for most adults.
+      - PBS 5 reflects a meaningful but bounded gain – the system enables annual touches, not weekly closeness.
+    isr_reasoning: |
+      - Mechanism is reliable: a birthday text or holiday note maintains baseline warmth at minimal cost; absence of contact across years erodes it.
+      - About 55% of consistent users will see closeness gains; the rest send the messages but receive only formulaic replies, indicating the relationship was already too distant for messages alone to revive.
+      - No direct studies on CRM-driven extended family contact; this is an extrapolation from general friendship maintenance research.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+  organisation.tracking:
+    pbs: 5
+    isr: 60
+    uar: 18
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user has a reliable system for moving from "I should reach out to X" to actually doing so – plausibly reaching the 50th – 55th percentile in this narrow slice of organisational efficiency. Delta: ~15 – 20 percentile points.
+      - The benefit is genuine but narrow: the system addresses relational follow-through, not general task management.
+      - PBS 5 reflects the bounded scope – this is a specialised organisational gain, not a transformative one.
+    isr_reasoning: |
+      - The system reliably reduces the "I forgot to follow up" failure mode for those who maintain it.
+      - Roughly 60% of consistent users will see meaningful efficiency gains in relational follow-through; the rest maintain the system but treat it as documentation rather than a trigger for action.
+      - [Stanford research on digital reminder systems](https://cs.stanford.edu/~merrie/papers/memory_imwut2017.pdf) confirms external memory aids reliably support recall of relationship details when consulted.
+    uar_reasoning: |
+      - See networks.depth UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "A spreadsheet (Google Sheets, free) or Notion (free tier) is sufficient for the intervention. Dedicated tools (Dex, Clay, Monica, Cloze) are optional and treated as ongoing rather than upfront costs."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The minimum viable version is free indefinitely. Dedicated personal CRM tools cost $5 – 30/month but are not required."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 2 – 5 hours to choose a tool, design a minimal schema, and seed 50 – 200 existing contacts with basic context and last-interaction dates. 3 hours is a reasonable minimum."
+  ongoing_time: 1.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 15 – 30 minutes per week for logging recent interactions and triggering 1 – 2 follow-ups. 1.5 hours per week (90 minutes) is the upper end; a sustainable minimum is closer to 60 minutes."
+
+prerequisites:
+  - "Access to a spreadsheet, database, or note-taking tool you will reliably check at least weekly"
+  - "An existing pool of contacts (professional or personal) substantial enough that memory alone is failing to maintain them – the system has marginal value below ~30 contacts"
+  - "Basic comfort with structured data: tagging, filtering, and consulting a list rather than free-form notes"
+
+flagged_domains:
+  - domain: "communication"
+    rationale: "Remembering a contact's interests, family details, and past conversations enables more substantive subsequent communication than starting from scratch each time, but the system itself does not change communication style or skill."

@@ -1,0 +1,167 @@
+name: "Basic Car Maintenance"
+what_it_is: |
+  A one-time learning investment in routine car-care skills – checking and topping up engine oil, monitoring tyre pressure and tread, replacing windscreen wipers, refilling washer fluid, jump-starting a flat battery, changing a flat tyre, checking lights, and inspecting the vehicle before long trips. Unlike service contracts or repeat trips to a mechanic for trivial issues, the skills are acquired once and applied periodically for the life of any car the user ever owns. [AAA analysis](https://newsroom.aaa.com/2015/10/roadside-breakdowns-preventable-with-proper-maintenance-finds-aaa/) shows that millions of breakdowns each year are preventable with basic maintenance, and [35% of US drivers admit](https://newsroom.aaa.com/2015/10/roadside-breakdowns-preventable-with-proper-maintenance-finds-aaa/) skipping service intervals altogether.
+how_to_do_it: |
+  - Work through each skill in a single dedicated session: watch two or three YouTube tutorials for that specific car, then practise immediately on your own vehicle while the information is fresh
+  - Assemble a basic tool kit before problems occur: digital tyre pressure gauge ($10–20), jump pack or jump leads ($40–80), tread depth gauge ($5), spare wiper blades ($20–40), microfibre cloths, and verify the factory jack and wrench in the boot are present and functional
+  - Treat tyre pressure checks as a scheduled monthly event (most cars lose roughly 1 psi per month plus 1 psi per 10°F temperature drop); pair with a quick walk-around for lights, wipers, and washer fluid
+  - Before any drive over two hours: oil dipstick check, tyre pressure on all five tyres including the spare, lights working, wipers clearing properly
+  - Know your limits: modern cars have far fewer DIY-serviceable points than older ones – transmission, electronics, emissions systems, and timing-belt jobs need a professional
+success_looks_like: |
+  - When a tyre pressure warning lights up, you check and inflate the tyre yourself in 10 minutes rather than driving to a garage
+  - You change wipers and refill washer fluid the moment performance drops, and your visibility in rain is consistently good
+  - When a battery dies in a car park, you jump-start it from a pack in the boot rather than waiting an hour for roadside assistance
+  - You catch a slow-leaking tyre, a misaligned headlight, or low oil before it becomes a breakdown or a crash
+common_pitfalls: |
+  - Buying tools but never practising – jump leads in the boot are useless if you have never connected them in daylight
+  - Confusing maintenance with repair: a strange engine noise or a check-engine light is diagnostic, not DIY
+  - Over-tightening lug nuts when changing a tyre, or forgetting to lower the jack onto a proper jacking point – these are the mistakes that cause real damage
+  - Ignoring the owner's manual: service intervals and recommended fluids are car-specific, and YouTube generalisations can mislead
+description: |
+  - A deliberate one-time learning programme covering eight foundational car-care tasks: oil and fluid checks, tyre pressure and tread monitoring, wiper and washer-fluid replacement, jump-starting a flat battery, changing a flat tyre, checking lights, and pre-trip inspections
+  - Each skill can be learned in 30–90 minutes via free resources and practised immediately; total upfront time is 4–8 hours plus a $50–150 starter tool kit
+  - [NHTSA research](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811617) shows vehicles with tyres underinflated by more than 25% are three times more likely to be in a tire-related crash, and [tyre problems contribute to roughly 82,000 crashes per year](https://newsroom.aaa.com/2015/10/roadside-breakdowns-preventable-with-proper-maintenance-finds-aaa/) in the US alone
+  - [AAA cost data](https://www.aaa.com/autorepair/articles/what-does-it-cost-to-own-and-operate-a-car) puts average annual maintenance and repair costs at roughly $1,475 per year per vehicle; a non-trivial fraction is recoverable through DIY oil top-ups, wiper changes, and avoiding the $75–$125 a non-member pays for a single jump-start callout per [Jerry's roadside data](https://jerry.ai/car-repair/what-is-the-price-for-aaa-to-jumpstart-my-car/)
+  - Distinct from full mechanical training in that these are inspection and consumable-replacement tasks – they preserve the manufacturer's maintenance schedule rather than replacing it, and explicitly defer transmission, electronics, and engine-internal work to professionals
+applicable_domains: ["transportation", "life-skills", "saving", "emergency-preparedness", "behaviours", "physical-safety"]
+
+values:
+  transportation.safety:
+    pbs: 6
+    isr: 65
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 50th percentile. After successful adherence, plausibly reaching the 65th–70th percentile through consistent tyre, wiper, and lighting checks. Delta: ~15–20 percentile points.
+      - Score 6 maps to "meaningful gain in transportation safety" – the user closes the gap on the most common preventable risk factors but is not adding active safety systems.
+      - [NHTSA crash statistics](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811617) show under-inflated tyres triple tire-related crash risk, and [worn wipers in poor weather](https://www.fhwa.dot.gov/) compound the visibility problem behind a substantial share of weather-related crashes.
+    isr_reasoning: |
+      - The mechanical reliability is high – properly inflated tyres and functioning wipers demonstrably reduce risk per [NHTSA data](https://www.nhtsa.gov/vehicle-safety/tires) – but most crashes have multiple contributors, so the marginal safety gain from maintenance alone is bounded.
+      - ISR of 65%: a meaningful safety improvement materialises for most adherents but a minority drive in low-risk conditions where the marginal benefit is small.
+      - [Only 19% of consumers](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811617) properly inflate their tyres, so the gap to close is genuinely large.
+    uar_reasoning: |
+      - UAR of 80%: monthly tyre checks and seasonal wiper swaps are simple but easy to skip; some users will lapse after the first few months.
+      - One-time learning is retained well, but the recurring inspection rhythm is the harder behavioural component.
+      - A small minority will lack secure parking, garage access, or physical capability to act on what they observe.
+
+  transportation.efficiency:
+    pbs: 4
+    isr: 70
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (transportation costs as % of income; lower is better). After adherence, plausibly improving by 1–2 percentage points of income via fuel savings and avoided callouts. Delta is small relative to total transport spend.
+      - Score 4 maps to "modest gain" – proper tyre inflation alone improves fuel economy by [up to 3% per fueleconomy.gov](https://www.fueleconomy.gov/feg/maintain.jsp), and DIY oil top-ups or wiper changes save $25–75 per occurrence per [20somethingfinance](https://20somethingfinance.com/diy-oil-change-cost-savings/).
+      - The benefit is real but bounded – fuel and maintenance are typically 15–25% of total transportation cost, and DIY only addresses a fraction of maintenance line items.
+    isr_reasoning: |
+      - The fuel-economy gain from proper inflation is mechanically reliable per [fueleconomy.gov](https://www.fueleconomy.gov/feg/maintain.jsp); the DIY savings on wipers, fluids, and jump-starts are likewise direct and recurring.
+      - ISR of 70%: gains compound only if the user actually checks pressure monthly and replaces consumables themselves rather than at the dealership.
+      - Some users (apartment dwellers without driveway access, lessees with bundled service plans) will see lower realised savings.
+    uar_reasoning: |
+      - See transportation.safety UAR – same intervention, same adherence profile.
+
+  life-skills.high:
+    pbs: 7
+    isr: 80
+    uar: 85
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~2–3 practical skills). After successful adherence, the user gains a coherent cluster of car-care competencies – plausibly counted as 2–3 discrete practical skills (tyre work, battery/electrical basics, fluids/inspection). Endpoint: ~5 skills. Delta: ~2–3 skills. PBS = 10 + log₂(2.5/15) = 10 − 2.58 = 7.4, rounded to 7.
+      - Score 7 sits between "4–5 essential skills" (anchor 6) and "8–10 skills including plumbing, electrical, intermediate cooking" (anchor 8). Car maintenance is one cluster within that broader basket.
+      - The skills are discrete and teachable – a person who completes the programme reliably possesses tyre-changing, jump-starting, and inspection competencies.
+    isr_reasoning: |
+      - These are procedural skills with low intrinsic difficulty: most adults can achieve competence with a single hands-on session per skill.
+      - ISR of 80%: a minority will encounter genuinely complex scenarios – seized lug nuts, modern start/stop battery systems, run-flat tyres – where the basic kit and skill set fall short.
+      - A small fraction will own vehicles (some EVs, some luxury cars) where DIY access points are deliberately restricted.
+    uar_reasoning: |
+      - UAR is high because this is primarily a one-time learning event: once skills are acquired and the kit is bought, the recurring effort is monthly inspection only.
+      - Most learners who complete a hands-on session retain the procedural skill – the dropout risk is never finishing the initial learning.
+      - A minority (~15%) will lack physical capability, garage access, or confidence to act when issues arise.
+
+  saving.security:
+    pbs: 5
+    isr: 65
+    uar: 85
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Avoided costs of $200–600/year (one or two avoided roadside callouts, DIY oil top-ups, wiper changes, modest fuel savings) free up capital. Over 3–5 years this accumulates to ~0.5–1 month of expenses at median US household income. Endpoint: ~45th percentile. Delta: ~10 percentile points.
+      - PBS = 10 + log₂(0.5/12) = 10 − 4.58 = 5.4, rounded to 5. The savings are real but smaller than home maintenance because many car expenses (insurance, registration, depreciation, scheduled major service) are unavoidable regardless of DIY skill.
+      - [AAA data](https://www.aaa.com/autorepair/articles/what-does-it-cost-to-own-and-operate-a-car) puts annual maintenance and repair costs at $1,475/vehicle; only a fraction is DIY-addressable but it is non-trivial.
+    isr_reasoning: |
+      - Savings materialise only when the user actually does the DIY work rather than defaulting to a shop: [oil change DIY savings](https://20somethingfinance.com/diy-oil-change-cost-savings/) of $25–75 per occurrence and [non-member jump-start fees](https://jerry.ai/car-repair/what-is-the-price-for-aaa-to-jumpstart-my-car/) of $75–125 are recurrent.
+      - ISR of 65%: many car owners under-utilise their skills because shop convenience trumps the dollar saving on a busy day.
+      - Some users live in arrangements where these savings don't apply (leased cars with bundled maintenance, fleet vehicles, fully managed company cars).
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  emergency-preparedness.self-reliance:
+    pbs: 5
+    isr: 70
+    uar: 85
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (under a day of household autonomy). The intervention specifically addresses roadside autonomy, not household supplies – it shifts the user from "stranded and waiting" to "self-recovering" for the most common failure modes.
+      - Endpoint: ~50th–55th percentile in a narrow autonomy slice (vehicle-related). Delta: ~15–20 percentile points within the narrow domain.
+      - Score 5: the benefit is genuine but bounded – car self-recovery is one component of overall household self-reliance, not the whole.
+    isr_reasoning: |
+      - [AAA data](https://newsroom.aaa.com/2015/10/roadside-breakdowns-preventable-with-proper-maintenance-finds-aaa/) shows battery issues, flat tyres, and lockouts dominate roadside calls – exactly the failures this intervention targets.
+      - ISR of 70%: most roadside failures are recoverable with basic skill and a jump pack/spare tyre, but some (transmission failure, severe collisions, unrecoverable tyre damage) still require professional help.
+      - Skill alone without the kit (jump pack, functional spare) is insufficient – the kit must be present and maintained.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  behaviours.resilience:
+    pbs: 4
+    isr: 55
+    uar: 85
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The relevant mechanism is generalised self-efficacy from successfully handling practical problems, which the [self-efficacy literature](https://psycnet.apa.org/record/1996-10063-000) links to broader behavioural persistence.
+      - Endpoint: plausibly ~45th–50th percentile via repeated small wins. Delta: ~10–15 percentile points.
+      - Score 4: a modest, indirect gain – car-maintenance competence is one input to general self-efficacy, not a dominant one.
+    isr_reasoning: |
+      - The self-efficacy pathway is plausible but indirect: successful completion of a few small repairs builds confidence, but the transfer to other domains is not automatic per [generalised self-efficacy meta-analyses](https://psycnet.apa.org/record/2012-32519-001).
+      - ISR of 55%: roughly half of users will experience meaningful spillover into other practical domains; the rest treat the skill as compartmentalised.
+      - Confidence is low because the link is theoretical rather than directly measured for this specific intervention.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+  physical-safety.risk:
+    pbs: 5
+    isr: 65
+    uar: 85
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile. After successful adherence, the user reduces preventable injury risk via tyre, wiper, and lighting maintenance. Endpoint: ~55th–60th percentile. Delta: ~10–15 percentile points.
+      - Score 5 maps between "modest" (anchor 4: ~50–70% reduction in common risks via basics like seat belts) and "meaningful" (anchor 6) – tyre and visibility maintenance reduce a specific subset of crash mechanisms but do not approach the breadth of CPR/first-aid certification.
+      - [NHTSA reports 646 tire-related fatalities in 2023](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811617) and roughly [40,000 crashes annually](https://www.fhwa.dot.gov/) in low-visibility weather; basic maintenance addresses both vectors.
+    isr_reasoning: |
+      - The mechanical pathway is reliable per [NHTSA tyre data](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811617) and visibility research – proper tyres and clear windscreens demonstrably reduce specific crash modes.
+      - ISR of 65%: realised mortality-risk reduction depends on how often the user encounters the relevant conditions (heavy rain, long highway drives, freezing temperatures).
+      - Crashes are multi-causal so attribution to maintenance alone is hard to isolate at the individual level.
+    uar_reasoning: |
+      - See life-skills.high UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 60
+  upfront_cost_reasoning: "Minimum tool kit: digital tyre pressure gauge ($10), jump leads ($25), tread depth gauge ($5), spare wiper blades ($20). Jump pack ($60–80) and torque wrench ($30) are optional upgrades."
+  ongoing_cost: 30
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Replacement wipers every 6–12 months ($20–30/year), occasional washer fluid and oil top-ups ($10/year). All other skills have negligible ongoing material costs beyond what every car owner pays anyway."
+  upfront_time: 6
+  upfront_time_reasoning: "Approximately 30–90 minutes per skill across eight skills: watching tutorials and completing first practice. Total 4–8 hours; 6 is a reasonable midpoint."
+  ongoing_time: 0.5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Monthly tyre pressure check and walk-around takes 10–15 minutes. Pre-trip inspections add 5 minutes per long journey. Most months require well under an hour."
+
+prerequisites:
+  - "Own or regularly drive a car where you are responsible for routine upkeep – not a leased vehicle with bundled maintenance or a managed company car"
+  - "Physical capability to lift roughly 15kg (a spare tyre) and to crouch beside the vehicle"
+  - "Access to a flat surface and basic tool storage (boot, garage, or shed)"
+  - "Ability to read the owner's manual and recognise when a problem exceeds DIY scope – distinguishing a slow puncture from sidewall damage, or a flat battery from a failing alternator"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Reduced anxiety from knowing how to handle common roadside problems – self-efficacy literature links practical competence to lower situational anxiety."
+  - domain: "time-management"
+    rationale: "Avoiding 1–3 hour roadside-assistance waits and unnecessary trips to a garage frees meaningful time across a year of driving."
