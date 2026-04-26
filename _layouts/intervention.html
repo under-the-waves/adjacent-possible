@@ -725,6 +725,20 @@ layout: default
 
 </details>
 
+{% if intervention.evaluated_at %}
+<hr class="evaluation-divider" style="margin-top: 40px; border: 0; border-top: 1px solid #e0e0e0;">
+<div class="evaluation-meta" style="margin-top: 16px; font-size: 0.85em; color: #666; line-height: 1.6;">
+    <p style="margin: 0;">
+        Evaluated on <strong>{{ intervention.evaluated_at }}</strong> by <strong>{{ intervention.evaluated_by }}</strong>
+        {% if intervention.prompt_sha %}
+            using <a href="https://github.com/under-the-waves/adjacent-possible/blob/{{ intervention.prompt_sha }}/methodology/intervention-scoring-prompt.md" target="_blank" rel="noopener">this scoring prompt</a>.
+        {% else %}
+            using the <a href="{{ site.baseurl }}/methodology/intervention-scoring-prompt/" target="_blank" rel="noopener">current scoring prompt</a>.
+        {% endif %}
+    </p>
+</div>
+{% endif %}
+
 <!-- Popup overlay -->
 <div class="popup-overlay" id="popupOverlay" onclick="hideReasoning()"></div>
 
