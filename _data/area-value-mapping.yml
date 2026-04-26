@@ -1,0 +1,176 @@
+# Mapping of 52 life areas to the Schwartz values they primarily express.
+# Binary (no weights). 3-5 values per area.
+# First-pass authoring – revise as needed.
+#
+# Schwartz values:
+# self-direction, power, universalism, achievement, security,
+# stimulation, conformity, hedonism, benevolence, tradition
+
+# ── Pillar 1: Expand Your Awareness ──
+
+self-awareness:
+  values: [self-direction, universalism, benevolence]
+
+value-system:
+  values: [self-direction, tradition, universalism]
+
+life-purpose:
+  values: [universalism, benevolence, self-direction, tradition]
+
+ethics:
+  values: [universalism, benevolence, tradition, conformity]
+
+media-diet:
+  values: [self-direction, security, universalism]
+
+information-management:
+  values: [self-direction, achievement, security]
+
+worldview:
+  values: [self-direction, universalism, tradition]
+
+rationality:
+  values: [self-direction, achievement, universalism]
+
+cognitive-skills:
+  values: [achievement, self-direction, stimulation]
+
+life-skills:
+  values: [achievement, self-direction, security]
+
+learning-methods:
+  values: [self-direction, achievement, stimulation]
+
+# ── Pillar 2: Look After Yourself ──
+
+fitness:
+  values: [security, achievement, hedonism, self-direction]
+
+nutrition:
+  values: [security, hedonism, self-direction]
+
+food-management:
+  values: [security, hedonism, self-direction]
+
+sleep:
+  values: [security, hedonism]
+
+health-management:
+  values: [security, achievement, self-direction]
+
+mindfulness:
+  values: [self-direction, universalism, hedonism]
+
+mental-health:
+  values: [security, self-direction, hedonism]
+
+behaviours:
+  values: [self-direction, achievement, security]
+
+physical-safety:
+  values: [security]
+
+emergency-preparedness:
+  values: [security]
+
+digital-safety:
+  values: [security, self-direction]
+
+legal-matters:
+  values: [security, conformity]
+
+# ── Pillar 3: Connect with Others ──
+
+body-image:
+  values: [hedonism, achievement, power]
+
+style:
+  values: [hedonism, power, self-direction, achievement]
+
+personality:
+  values: [self-direction, hedonism, benevolence]
+
+communication:
+  values: [benevolence, achievement, self-direction]
+
+family-of-origin:
+  values: [benevolence, tradition, security]
+
+extended-family:
+  values: [benevolence, tradition]
+
+children:
+  values: [benevolence, tradition, security]
+
+friendship:
+  values: [benevolence, hedonism, stimulation]
+
+relationship-status:
+  values: [benevolence, hedonism, security]
+
+romantic-relationships:
+  values: [benevolence, hedonism, security, stimulation]
+
+sex:
+  values: [hedonism, benevolence, stimulation]
+
+# ── Pillar 4: Organise Your Life ──
+
+housing:
+  values: [security, hedonism, power]
+
+possessions:
+  values: [power, hedonism, security]
+
+transportation:
+  values: [security, achievement, power]
+
+housework:
+  values: [conformity, security, hedonism]
+
+financial-planning-tracking:
+  values: [security, achievement]
+
+saving:
+  values: [security]
+
+investing:
+  values: [security, achievement, power]
+
+organisation:
+  values: [achievement, security, conformity]
+
+systems:
+  values: [achievement, security, self-direction]
+
+time-management:
+  values: [achievement, self-direction]
+
+goals:
+  values: [achievement, self-direction]
+
+habits:
+  values: [achievement, self-direction, conformity]
+
+# ── Pillar 5: Create & Contribute ──
+
+current-work:
+  values: [achievement, security, power, self-direction]
+
+career-planning:
+  values: [achievement, security, power, self-direction]
+
+networks:
+  values: [power, achievement, benevolence]
+
+participatory-leisure:
+  values: [hedonism, stimulation, self-direction]
+
+consumptive-leisure:
+  values: [hedonism, stimulation]
+
+global-impact:
+  values: [universalism, benevolence, self-direction]
+
+community-contribution:
+  values: [benevolence, universalism, tradition]

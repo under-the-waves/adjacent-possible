@@ -17,7 +17,18 @@
         'ap-level1-progress': 'level1Progress',
         'ap-level1-assess': 'level1Assess',
         'ap-level1-scores': 'level1Scores',
-        'ap-level-checklist': 'levelChecklist'
+        'ap-level-checklist': 'levelChecklist',
+        'ap-triage-responses': 'triageResponses',
+        'ap-triage-completed-at': 'triageCompletedAt',
+        'ap-triage-flags': 'triageFlags',
+        'ap-fundamentals-responses': 'fundamentalsResponses',
+        'ap-fundamentals-completed-at': 'fundamentalsCompletedAt',
+        'ap-fundamentals-flags': 'fundamentalsFlags',
+        'ap-prioritisation-demographics': 'prioritisationDemographics',
+        'ap-prioritisation-pvq': 'prioritisationPvq',
+        'ap-prioritisation-constraints': 'prioritisationConstraints',
+        'ap-prioritisation-flags': 'prioritisationFlags',
+        'ap-prioritisation-completed-at': 'prioritisationCompletedAt'
     };
 
     function load(key) {
