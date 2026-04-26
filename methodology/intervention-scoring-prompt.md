@@ -268,12 +268,18 @@ When in doubt, default to `medium`. Reserve `high` for cases where you genuinely
 Every intervention YAML must include three provenance fields at the top level so the rendered page can show when, by which model, and against which version of this prompt the scoring was produced.
 
 ```yaml
-evaluated_at: 2026-04-26       # ISO date (YYYY-MM-DD) when scoring was completed
-evaluated_by: claude-opus-4-7  # The model ID producing the scoring
-prompt_sha: abc1234            # Short commit SHA of this prompt at scoring time
+evaluated_at: [YYYY-MM-DD]     # Today's UTC date when scoring was completed
+evaluated_by: [model-id]       # Your own model ID, e.g. claude-opus-4-7
+prompt_sha: [short-sha]        # Short commit SHA of this prompt at scoring time
 ```
 
-To obtain the `prompt_sha` value, run:
+**To obtain `evaluated_at`**, run:
+
+    date -u +%Y-%m-%d
+
+Use whatever this command returns. **Do not copy the date from a prior version of the YAML if re-evaluating an existing intervention** – the field records *when this evaluation happened*, not when the original was written.
+
+**To obtain `prompt_sha`**, run:
 
     git log -1 --format=%h methodology/intervention-scoring-prompt.md
 
