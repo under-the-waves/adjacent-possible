@@ -387,7 +387,8 @@ body .main-content {
 
     <div class="acronym-legend">
         <p><strong>EBS</strong> = Expected Benefit Score (effectiveness after accounting for success and adherence rates).
-        <strong>Time EROI</strong> = Expected Return on Investment per hour of weekly time.
+        <strong>Time EROI</strong> = EBS per hour of weekly time.
+        <strong>Money EROI</strong> = EBS per dollar of weekly equivalent cost (upfront amortised over a year plus ongoing).
         <a href="{{ site.baseurl }}/resources/roi-calculation-explainer/">Full scoring methodology</a></p>
     </div>
 
@@ -399,17 +400,18 @@ body .main-content {
         <thead>
             <tr>
                 <th class="sortable" data-sort="name">Intervention <span class="sort-indicator"></span></th>
-                <th>Relevant Life Areas</th>
+                <th class="sortable" data-sort="life-areas">Relevant Life Areas <span class="sort-indicator"></span></th>
                 <th class="sortable active" data-sort="avg-ebs">Avg. EBS <span class="sort-indicator">&#8595;</span></th>
-                <th>Best Value</th>
+                <th class="sortable" data-sort="best-value">Best Value <span class="sort-indicator"></span></th>
                 <th class="sortable" data-sort="upfront-cost">Upfront Cost <span class="sort-indicator"></span></th>
                 <th class="sortable" data-sort="ongoing-cost">Ongoing Cost <span class="sort-indicator"></span></th>
                 <th class="sortable" data-sort="ongoing-time">Ongoing Time <span class="sort-indicator"></span></th>
                 <th class="sortable" data-sort="time-eroi">Time EROI <span class="sort-indicator"></span></th>
+                <th class="sortable" data-sort="money-eroi">Money EROI <span class="sort-indicator"></span></th>
             </tr>
         </thead>
         <tbody id="dbBody">
-            <tr><td colspan="8" class="no-results">Loading...</td></tr>
+            <tr><td colspan="9" class="no-results">Loading...</td></tr>
         </tbody>
     </table>
 </div>
@@ -453,6 +455,7 @@ const interventions = [
             upfront_cost: {{ idata.resources.upfront_cost | plus: 0 }},
             ongoing_cost: {{ idata.resources.ongoing_cost | plus: 0.0 }},
             ongoing_cost_period: {{ idata.resources.ongoing_cost_period | jsonify }},
+            ongoing_cost_weekly: {% if idata.resources.ongoing_cost_period == "week" %}{{ idata.resources.ongoing_cost | plus: 0.0 }}{% elsif idata.resources.ongoing_cost_period == "month" %}{{ idata.resources.ongoing_cost | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ idata.resources.ongoing_cost | plus: 0.0 | divided_by: 52.0 }}{% endif %},
             ongoing_time: {{ idata.resources.ongoing_time | plus: 0.0 }},
             ongoing_time_period: {{ idata.resources.ongoing_time_period | jsonify }},
             ongoing_time_weekly: {% if idata.resources.ongoing_time_period == "week" %}{{ idata.resources.ongoing_time | plus: 0.0 }}{% elsif idata.resources.ongoing_time_period == "month" %}{{ idata.resources.ongoing_time | plus: 0.0 | divided_by: 4.33 }}{% else %}{{ idata.resources.ongoing_time | plus: 0.0 | divided_by: 52.0 }}{% endif %}
@@ -529,7 +532,10 @@ interventions.forEach(function(i) {
     i.bestValueName = scores.bestValueName;
     i.bestValueEbs = scores.bestValueEbs;
     i.timeEroi = i.resources.ongoing_time_weekly > 0 ? i.avgEbs / i.resources.ongoing_time_weekly : Infinity;
+    var weeklyEquivCost = (i.resources.upfront_cost / 52) + i.resources.ongoing_cost_weekly;
+    i.moneyEroi = weeklyEquivCost > 0 ? i.avgEbs / weeklyEquivCost : Infinity;
     i.lifeAreaScores = computeLifeAreaScores(i);
+    i.primaryAreaName = lifeAreaNames[i.lifeAreaScores[0].area] || i.lifeAreaScores[0].area;
 });
 
 function getInterventionUrl(key) {
@@ -565,17 +571,20 @@ function applyFilters() {
         var cmp = 0;
         switch (currentSort) {
             case 'name': cmp = a.name.localeCompare(b.name); break;
+            case 'life-areas': cmp = a.primaryAreaName.localeCompare(b.primaryAreaName); break;
             case 'avg-ebs': cmp = a.avgEbs - b.avgEbs; break;
+            case 'best-value': cmp = a.bestValueEbs - b.bestValueEbs; break;
             case 'upfront-cost': cmp = a.resources.upfront_cost - b.resources.upfront_cost; break;
-            case 'ongoing-cost': cmp = a.resources.ongoing_cost - b.resources.ongoing_cost; break;
-            case 'ongoing-time': cmp = a.resources.ongoing_time - b.resources.ongoing_time; break;
+            case 'ongoing-cost': cmp = a.resources.ongoing_cost_weekly - b.resources.ongoing_cost_weekly; break;
+            case 'ongoing-time': cmp = a.resources.ongoing_time_weekly - b.resources.ongoing_time_weekly; break;
             case 'time-eroi': cmp = a.timeEroi - b.timeEroi; break;
+            case 'money-eroi': cmp = a.moneyEroi - b.moneyEroi; break;
         }
         return sortAsc ? cmp : -cmp;
     });
 
     if (filtered.length === 0) {
-        body.innerHTML = '<tr><td colspan="8" class="no-results">No interventions match your search.</td></tr>';
+        body.innerHTML = '<tr><td colspan="9" class="no-results">No interventions match your search.</td></tr>';
         return;
     }
 
@@ -608,6 +617,7 @@ function applyFilters() {
             '<td class="cost-cell">$' + i.resources.ongoing_cost + '/' + i.resources.ongoing_cost_period + '</td>' +
             '<td class="time-cell">' + i.resources.ongoing_time + 'h/' + i.resources.ongoing_time_period + '</td>' +
             '<td class="eroi-score">' + (i.timeEroi === Infinity ? '&ndash;' : i.timeEroi.toFixed(2)) + '</td>' +
+            '<td class="eroi-score">' + (i.moneyEroi === Infinity ? '&ndash;' : i.moneyEroi.toFixed(2)) + '</td>' +
         '</tr>';
     }).join('');
 }
@@ -622,7 +632,7 @@ document.querySelectorAll('th.sortable').forEach(function(header) {
             sortAsc = !sortAsc;
         } else {
             currentSort = sort;
-            sortAsc = ['name', 'upfront-cost', 'ongoing-cost', 'ongoing-time'].indexOf(sort) !== -1;
+            sortAsc = ['name', 'life-areas', 'upfront-cost', 'ongoing-cost', 'ongoing-time'].indexOf(sort) !== -1;
         }
         sortLastClicked = sort;
 
