@@ -2334,7 +2334,7 @@ relationship-status:
       -6: "Meaningful reduction in graceful navigation of romantic transitions"
       -8: "Major reduction in graceful navigation of romantic transitions"
       -10: "Severe damage to graceful navigation of romantic transitions"
-romantic-relationships:
+relationship-quality:
   connection:
     name: "Connection"
     user_description: "emotional closeness and trust with your partner"

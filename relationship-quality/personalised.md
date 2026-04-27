@@ -1,7 +1,7 @@
 ---
 layout: personalised
 title: Relationship Quality Personalised
-domain: romantic-relationships
+domain: relationship-quality
 domain_label: Relationship Quality
 values:
   - key: connection

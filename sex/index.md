@@ -130,7 +130,7 @@ life_area_slug: sex
 - Most people consider sexual health important to their quality of life, and sexual satisfaction is associated with improved cardiovascular health, lower rates of depression, and stronger relationship satisfaction. Open communication about sexual needs remains uncommon, creating a gap between desired and actual experience for many people.
 
 **Related life areas**
-- [Relationship Quality]({{ site.baseurl }}/romantic-relationships/) &ndash; the quality of your romantic partnership
+- [Relationship Quality]({{ site.baseurl }}/relationship-quality/) &ndash; the quality of your romantic partnership
 - [Mental health]({{ site.baseurl }}/mental-health/) &ndash; your psychological wellbeing and resilience
 - [Communication]({{ site.baseurl }}/communication/) &ndash; your ability to express yourself clearly and listen effectively
 - [Fitness]({{ site.baseurl }}/fitness/) &ndash; your physical exercise habits and overall activity level

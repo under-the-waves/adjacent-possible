@@ -92,7 +92,7 @@ Example (calorie tracking for fat loss):
 - What proportion of people who follow this intervention properly achieve meaningful results?
 - This is primarily a success rate: of everyone who does this correctly, what percentage actually gets the benefit?
 - ISR can be very low (even below 1%) for interventions with genuine but improbable benefits – e.g. lottery tickets, speculative investments, cold-approaching for sales
-- Evidence quality is a secondary factor: if the evidence is weak, we are less confident in our ISR estimate, which should widen our uncertainty and push toward more conservative values. But the ISR value itself represents our best estimate of the actual success rate, not a rating of evidence quality.
+- Evidence quality is a secondary factor: weak evidence widens the uncertainty around the ISR estimate and should push toward more conservative values. The ISR value itself represents the best estimate of the actual success rate, not a rating of evidence quality.
 - For subjective values, ISR should address the reliability of the benefit across the population – what proportion of adherent people actually experience it? This is where survey data, preference studies, and individual variation research belong.
 - Consider: "Out of 100 people who follow this intervention properly, how many achieve meaningful results?"
 
@@ -184,7 +184,7 @@ All 53 life areas are now scoreable. Full list in `_data/values.yml`. Use ONLY t
 | `possessions` | `functionality`, `simplicity`, `quality`, `meaning` |
 | `rationality` | `accurate-beliefs`, `decision-making`, `intellectual-honesty` |
 | `relationship-status` | `partner-selection`, `meeting-new-partners`, `independence`, `transition-navigation` |
-| `romantic-relationships` | `connection`, `harmony`, `alignment` |
+| `relationship-quality` | `connection`, `harmony`, `alignment` |
 | `saving` | `security`, `growth`, `lifestyle` |
 | `self-awareness` | `psychological`, `contemplative`, `relational`, `experiential` |
 | `sex` | `frequency`, `variety`, `pleasure`, `contentment` |
@@ -259,7 +259,7 @@ Each scoring triple must include a `confidence` field reflecting the strength of
 - `medium`: at least one good study directly on this intervention, or strong evidence on closely-related interventions
 - `low`: mechanism is plausible; evidence is indirect, observational, or extrapolated from adjacent research
 
-Confidence is shrinkage applied to the EBS at display time (high → factor 1.0, medium → 0.75, low → 0.5). It captures epistemic uncertainty (how well we know the numbers) and is distinct from ISR, which captures aleatoric uncertainty (variation between people).
+Confidence is shrinkage applied to the EBS at display time (high → factor 1.0, medium → 0.75, low → 0.5). It captures epistemic uncertainty (how well the numbers are known) and is distinct from ISR, which captures aleatoric uncertainty (variation between people).
 
 When in doubt, default to `medium`. Reserve `high` for cases where you genuinely have strong direct evidence; reserve `low` for cases where you are extrapolating significantly.
 

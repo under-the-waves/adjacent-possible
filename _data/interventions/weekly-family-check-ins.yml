@@ -25,10 +25,10 @@ description: |
   - Family meetings with a [democratic Adlerian structure](https://www.davidsongifted.org/gifted-blog/family-meetings-why-they-are-important-and-how-to-do-them/) – every member speaks, decisions are made collectively – improve child compliance because children follow rules better when they helped set them
   - Distinct from regular one-on-one conversations (which target depth across the broader social network) and from shared calendar tools alone (which solve coordination but not voice and tension surfacing) – the value is the combination of group format, fixed rhythm, and structured agenda
   - Reach is bounded by household composition: solo dwellers cannot run this intervention, and households with one resistant member capture little of the benefit
-applicable_domains: ["romantic-relationships", "children", "family-of-origin", "communication", "organisation"]
+applicable_domains: ["relationship-quality", "children", "family-of-origin", "communication", "organisation"]
 
 values:
-  romantic-relationships.connection:
+  relationship-quality.connection:
     pbs: 7
     isr: 65
     uar: 55
@@ -46,7 +46,7 @@ values:
       - [Couples following the Gottman protocol](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/) report it takes about five iterations to feel comfortable, meaning early dropout is the main attrition risk.
       - UAR 55% reflects that one resistant partner kills the practice – this is bilateral by design, and many couples have asymmetric appetite for structured emotional check-ins.
 
-  romantic-relationships.harmony:
+  relationship-quality.harmony:
     pbs: 7
     isr: 70
     uar: 55
@@ -60,7 +60,7 @@ values:
       - [Couples communication research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/) consistently identifies intentional non-logistical exchange as a key differentiator between high- and low-satisfaction partnerships.
       - ISR 70% reflects that high-conflict couples may find structured surfacing of tensions counterproductive without therapist scaffolding – the intervention works best as preventive maintenance on a functional partnership, not repair on a distressed one.
     uar_reasoning: |
-      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+      - See relationship-quality.connection UAR – same intervention, same adherence profile.
 
   children.relationship:
     pbs: 6
@@ -128,7 +128,7 @@ values:
     uar_reasoning: |
       - UAR 45% reflects the additional difficulty of negotiating a new household practice with adult family members who did not choose to live this way together (e.g., adult children living with parents, sibling cohabitation).
       - Authority dynamics complicate adoption: who calls the meeting, whose agenda dominates.
-      - See romantic-relationships.connection UAR for general weekly-cadence adherence baseline.
+      - See relationship-quality.connection UAR for general weekly-cadence adherence baseline.
 
   communication.conflict:
     pbs: 6
@@ -144,7 +144,7 @@ values:
       - ISR 65% reflects that the practice only works if tensions are actually raised and processed; meetings dominated by appreciations and logistics deliver little conflict skill-building.
       - Adlerian research on family meetings explicitly cites [problem-solving skill transfer](https://www.davidsongifted.org/gifted-blog/family-meetings-why-they-are-important-and-how-to-do-them/) as a core outcome.
     uar_reasoning: |
-      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+      - See relationship-quality.connection UAR – same intervention, same adherence profile.
 
   communication.connection:
     pbs: 5
@@ -160,7 +160,7 @@ values:
       - ISR 65% reflects that some users develop generalisable skill while others compartmentalise the practice to the family setting only.
       - Evidence base for the cross-context transfer specifically is thinner than for within-household effects, hence the lower confidence rating.
     uar_reasoning: |
-      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+      - See relationship-quality.connection UAR – same intervention, same adherence profile.
 
   organisation.tracking:
     pbs: 5
@@ -176,7 +176,7 @@ values:
       - [Joint planning research](https://www.researchgate.net/publication/200048015_The_Calendar_is_Crucial_Coordination_and_Awareness_through_the_Family_Calendar) finds 30% reductions in missed deadlines for households using shared planning routines.
       - ISR 75% (higher than other domains) because this is the most concrete, observable benefit – households see it within 2–3 weeks of starting.
     uar_reasoning: |
-      - See romantic-relationships.connection UAR – same intervention, same adherence profile.
+      - See relationship-quality.connection UAR – same intervention, same adherence profile.
 
 resources:
   upfront_cost: 0

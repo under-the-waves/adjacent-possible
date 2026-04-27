@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Relationship Quality
-life_area_slug: romantic-relationships
+life_area_slug: relationship-quality
 ---
 
 <style>
@@ -137,7 +137,7 @@ life_area_slug: romantic-relationships
 
 <div class="la-banner la-banner--start" id="level1Banner">
     <p><strong>You haven't completed Level 1 for Relationship Quality yet.</strong><br>It takes about 15 minutes and helps you understand what relationship quality means to you.</p>
-    <a href="{{ site.baseurl }}/romantic-relationships/level-1" class="btn-cta">Start Level 1</a>
+    <a href="{{ site.baseurl }}/relationship-quality/level-1" class="btn-cta">Start Level 1</a>
 </div>
 
 {% include level-progression.html %}
@@ -162,11 +162,11 @@ People pursue relationship quality for different reasons. This site scores every
 </div>
 
 <div class="la-paths">
-    <a href="{{ site.baseurl }}/romantic-relationships/level-1" class="path-level1">
+    <a href="{{ site.baseurl }}/relationship-quality/level-1" class="path-level1">
         Complete Level 1
         <div class="path-desc">Understand relationship quality, set your values, assess where you are</div>
     </a>
-    <a href="{{ site.baseurl }}/romantic-relationships/personalised" class="path-interventions">
+    <a href="{{ site.baseurl }}/relationship-quality/personalised" class="path-interventions">
         Browse Interventions
         <div class="path-desc">See personalised recommendations based on your priorities</div>
     </a>
@@ -180,22 +180,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!banner || typeof APStorage === 'undefined') return;
 
     var progress = APStorage.load('ap-level1-progress') || {};
-    var area = progress['romantic-relationships'] || {};
+    var area = progress['relationship-quality'] || {};
     var steps = ['why', 'values', 'achievable', 'assess'];
     var done = steps.every(function(s) { return area[s]; });
     var sliderWeights = APStorage.load('ap-slider-weights') || {};
-    var hasSliders = !!sliderWeights['romantic-relationships'];
+    var hasSliders = !!sliderWeights['relationship-quality'];
 
     if (done && hasSliders) {
         banner.className = 'la-banner la-banner--complete';
         banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Relationship Quality.</strong></p>' +
-            '<a href="{{ site.baseurl }}/romantic-relationships/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/romantic-relationships/level-1" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/relationship-quality/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/relationship-quality/level-1" class="btn-secondary">Redo Level 1</a>';
     } else if (Object.keys(area).length > 0) {
         var completed = steps.filter(function(s) { return area[s]; }).length;
         if (hasSliders) completed++;
         banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/romantic-relationships/level-1" class="btn-cta">Continue Level 1</a>';
+            '<a href="{{ site.baseurl }}/relationship-quality/level-1" class="btn-cta">Continue Level 1</a>';
     }
 });
 </script>

@@ -587,7 +587,7 @@ const PILLARS = [
             { name: "Friends and Relationships", areas: [
                 { slug: "friendship", label: "Friendship" },
                 { slug: "relationship-status", label: "Relationship Status" },
-                { slug: "romantic-relationships", label: "Relationship Quality" },
+                { slug: "relationship-quality", label: "Relationship Quality" },
                 { slug: "sex", label: "Sex" }
             ]}
         ]

@@ -22,7 +22,7 @@ description: |
   - [Meta-analysis across 269 meta-analytic studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC3584580/) confirms strong efficacy for depression, anxiety, PTSD, OCD, and related presentations, with effect sizes consistently in the moderate-to-large range versus control conditions
   - [Relapse prevention meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6389220/) shows CBT reduces depression relapse rates from ~41% to ~32% at follow-up, outperforming medication alone at 6–12 month post-treatment windows
   - Distinct from supportive counselling (non-directive) and psychodynamic therapy (focus on historical origins): CBT is present-focused, skill-based, and explicitly collaborative – therapist and client work as co-investigators testing beliefs against evidence
-applicable_domains: ["mental-health", "self-awareness", "romantic-relationships", "current-work"]
+applicable_domains: ["mental-health", "self-awareness", "relationship-quality", "current-work"]
 
 values:
   mental-health.stability:
@@ -108,7 +108,7 @@ values:
     uar_reasoning: |
       - See mental-health.stability UAR – same intervention, same adherence profile.
 
-  romantic-relationships.harmony:
+  relationship-quality.harmony:
     pbs: 6
     isr: 45
     uar: 55
@@ -124,7 +124,7 @@ values:
     uar_reasoning: |
       - See mental-health.stability UAR – same intervention, same adherence profile.
 
-  romantic-relationships.connection:
+  relationship-quality.connection:
     pbs: 5
     isr: 40
     uar: 55

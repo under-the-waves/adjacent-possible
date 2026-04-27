@@ -176,7 +176,7 @@ prerequisites:
 flagged_domains:
   - domain: "communication.conflict"
     rationale: "Precise emotional naming reduces the likelihood of reactive escalation during disagreements by giving the speaker accurate information about their own state before responding."
-  - domain: "romantic-relationships.harmony"
+  - domain: "relationship-quality.harmony"
     rationale: "Higher emotional granularity is associated with better empathic accuracy for a partner's emotions, reducing misattribution and conflict arising from emotional misreading."
   - domain: "mental-health.flourishing"
     rationale: "Positive emotional granularity – distinguishing among pleasant states (serene vs. elated vs. grateful) – has been linked to greater subjective wellbeing independent of negative affect regulation."

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Relationship Quality – Level 1: Awareness"
-life_area_slug: romantic-relationships
+life_area_slug: relationship-quality
 ---
 
 <style>
@@ -577,7 +577,7 @@ life_area_slug: romantic-relationships
 
 <p>On the interventions page, adjust the sliders to reflect how much you care about connection, harmony, and alignment. The table will re-rank interventions to match your priorities.</p>
 
-<p><a href="{{ site.baseurl }}/romantic-relationships/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Relationship Quality Interventions &rarr;</a></p>
+<p><a href="{{ site.baseurl }}/relationship-quality/personalised" class="l1-mark-done" style="text-decoration:none; text-align:center; display:inline-block;">Go to Relationship Quality Interventions &rarr;</a></p>
 
         </div>
     </div>
@@ -587,7 +587,7 @@ life_area_slug: romantic-relationships
 <div class="l1-complete" id="completeBanner">
     <h2>Level 1 Complete</h2>
     <p>You've built your foundation in Relationship Quality. Your self-assessment and value weightings are saved.</p>
-    <a href="{{ site.baseurl }}/romantic-relationships/personalised" class="btn-cta">View Your Interventions</a>
+    <a href="{{ site.baseurl }}/relationship-quality/personalised" class="btn-cta">View Your Interventions</a>
 </div>
 
 </div>
@@ -596,7 +596,7 @@ life_area_slug: romantic-relationships
 (function() {
     'use strict';
 
-    var AREA = 'romantic-relationships';
+    var AREA = 'relationship-quality';
     var STEPS = ['why', 'values', 'achievable', 'assess', 'interventions'];
     var ASSESS_IDS = [
         'a-attachment', 'a-vulnerability', 'a-quality-time',

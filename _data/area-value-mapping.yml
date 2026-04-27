@@ -108,7 +108,7 @@ friendship:
 relationship-status:
   values: [benevolence, hedonism, security]
 
-romantic-relationships:
+relationship-quality:
   values: [benevolence, hedonism, security, stimulation]
 
 sex:

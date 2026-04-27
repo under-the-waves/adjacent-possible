@@ -130,7 +130,7 @@ life_area_slug: relationship-status
 - Your relationship status is a foundational condition that shapes almost every other area of your life. The decisions around it – who to be with, whether to stay or leave, how to handle transitions, and whether you can thrive on your own – are among the highest-leverage choices you make.
 
 **Related life areas**
-- [Romantic Relationships]({{ site.baseurl }}/romantic-relationships/) – the quality and health of an existing partnership
+- [Relationship Quality]({{ site.baseurl }}/relationship-quality/) – the quality and health of an existing partnership
 - [Friendship]({{ site.baseurl }}/friendship/) – your close friendships, their depth, breadth, and capacity for mutual growth
 - [Sex]({{ site.baseurl }}/sex/) – your sexual wellbeing, satisfaction, and communication around intimacy
 

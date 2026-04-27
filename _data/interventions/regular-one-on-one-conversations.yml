@@ -22,7 +22,7 @@ description: |
   - [Evidence](https://www.apa.org/pubs/journals/releases/psp-pspa0000281.pdf) shows people systematically underestimate how satisfying deeper conversations will be and how well others will receive their disclosures – the main barrier is a miscalibrated expectation, not a real incompatibility
   - The scheduled cadence removes the coordination friction ("we should catch up") that causes even motivated friends to drift apart; [research on friendship maintenance](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) identifies consistent outreach and self-disclosure as the highest-impact maintenance behaviours
   - Unlike therapy or journalling, this intervention is bilateral – both parties benefit simultaneously, and the accountability of a recurring slot sustains the habit without requiring ongoing willpower
-applicable_domains: ["friendship", "family-of-origin", "romantic-relationships", "mental-health"]
+applicable_domains: ["friendship", "family-of-origin", "relationship-quality", "mental-health"]
 
 values:
   friendship.depth:
@@ -75,7 +75,7 @@ values:
     uar_reasoning: |
       - See friendship.depth UAR – same intervention, same adherence profile. Family relationships may have slightly lower adherence due to higher emotional stakes.
 
-  romantic-relationships.connection:
+  relationship-quality.connection:
     pbs: 6
     isr: 65
     uar: 60

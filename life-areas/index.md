@@ -68,7 +68,7 @@ The framework covers 52 life areas organised into five pillars, each following a
 <div class="domain-label">Friends and Relationships</div>
 {% assign a = site.data.life_areas["friendship"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/friendship/">Friendship</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["relationship-status"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/relationship-status/">Relationship Status</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
-{% assign a = site.data.life_areas["romantic-relationships"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/romantic-relationships/">Romantic Relationships</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
+{% assign a = site.data.life_areas["relationship-quality"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/relationship-quality/">Relationship Quality</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 {% assign a = site.data.life_areas["sex"] %}<div class="area-row"><span class="area-row__name"><a href="{{ site.baseurl }}/sex/">Sex</a></span><span class="area-row__desc">{{ a.survey_description }}</span></div>
 
 </div>

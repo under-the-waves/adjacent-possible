@@ -354,7 +354,7 @@
 
         {% assign friendship_page = site.pages | where: "url", "/friendship/" | first %}
         {% assign relationship_status_page = site.pages | where: "url", "/relationship-status/" | first %}
-        {% assign romantic_page = site.pages | where: "url", "/romantic-relationships/" | first %}
+        {% assign romantic_page = site.pages | where: "url", "/relationship-quality/" | first %}
         {% assign sex_page = site.pages | where: "url", "/sex/" | first %}
         <div class="mega-menu__domain{% unless friendship_page or relationship_status_page or romantic_page or sex_page %} all-unavailable{% endunless %}">
           <div class="mega-menu__domain-header" onclick="toggleMegaDomain(this)">
@@ -373,7 +373,7 @@
               <span class="unavailable-guide">Relationship Status</span>
             {% endif %}
             {% if romantic_page %}
-              <a href="{{ site.baseurl }}/romantic-relationships/">Relationship Quality</a>
+              <a href="{{ site.baseurl }}/relationship-quality/">Relationship Quality</a>
             {% else %}
               <span class="unavailable-guide">Relationship Quality</span>
             {% endif %}

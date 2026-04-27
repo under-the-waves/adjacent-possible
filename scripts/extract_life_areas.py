@@ -59,7 +59,7 @@ TAXONOMY = {
     "children":              {"domain": "Family",       "pillar": "Connect with Others", "domain_representative": False},
     "friendship":            {"domain": "Friends and Relationships", "pillar": "Connect with Others", "domain_representative": True},
     "relationship-status":   {"domain": "Friends and Relationships", "pillar": "Connect with Others", "domain_representative": False},
-    "romantic-relationships": {"domain": "Friends and Relationships", "pillar": "Connect with Others", "domain_representative": False},
+    "relationship-quality": {"domain": "Friends and Relationships", "pillar": "Connect with Others", "domain_representative": False},
     "sex":                   {"domain": "Friends and Relationships", "pillar": "Connect with Others", "domain_representative": False},
 
     # Organise Your Life
