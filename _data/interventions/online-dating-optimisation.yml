@@ -1,0 +1,102 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Online Dating Optimisation"
+what_it_is: |
+  Treating dating apps as a deliberate practice rather than a passive scroll – investing in professional or carefully composed photos, A/B-testing prompts and bios against real engagement data, applying intentional swipe filters that reflect actual partner-selection criteria rather than reflexive judgements, and using structured first-message and first-date protocols that maximise the conversion rate from match to meaningful conversation. The motivation is straightforward: dating apps now mediate a [substantial share of new relationships](https://www.pnas.org/doi/10.1073/pnas.1908630116) – roughly 39% of US heterosexual couples in 2017 met online, the single largest channel – yet most users invest very little effort in the levers that demonstrably move outcomes. The honest framing is that gains are real but bounded: the platforms are heavily skewed (the [Tyson et al. (2016)](https://arxiv.org/abs/1607.01952) Tinder study found large gender asymmetries in like rates and match volume), user dissatisfaction is widely reported, and even optimised profiles cannot overcome poor match-market fundamentals. What optimisation does is convert a noisy, demoralising channel into a tractable one – more matches, better matches, faster progression to in-person meetings.
+how_to_do_it: |
+  - Replace selfies with three to six photos taken in good light by another person, showing your full face (no sunglasses), one full-body shot, and at least one image with you doing something specific. [OkCupid's photo analysis](https://theblog.okcupid.com/the-4-big-myths-of-profile-pictures-1fcb696c0b53) found that direct eye-contact close-ups, candids of activities, and one full-body photo each meaningfully outperform alternatives.
+  - Write prompts and bios that contain concrete, specific hooks – named hobbies, a particular show, a recent trip – rather than generic adjectives like "fun-loving" or "easy-going". [Hinge's published data](https://hinge.co/press) on prompt response rates shows specific, story-prompting answers receive substantially more replies than vague ones. Run two versions for two weeks each and keep the one with higher reply quality.
+  - Apply intentional swipe filters: before opening the app, write down two or three traits that matter and two or three that you typically over-weight reflexively (e.g. immediate physical reaction to one photo). Swipe deliberately on the first set, not the second. This reduces low-value matches that consume conversation time without progressing toward dates.
+  - Use a structured first-message template that references something specific from their profile and asks one open question – not "hey" or a generic compliment. Aim to propose a concrete first meeting (short coffee or drink, defined time and place) within roughly five to ten exchanges; longer chat-only periods correlate with [match decay and ghosting](https://link.springer.com/article/10.1007/s10508-018-1265-9).
+  - Set a fixed weekly time-box (e.g. 30 minutes, three times per week) rather than scrolling whenever bored. App use is engineered to be open-ended; bounded sessions sustain the practice without burnout, which is the [primary documented reason](https://academic.oup.com/joc/article/70/3/322/5826588) users disengage.
+success_looks_like: |
+  - Match-to-conversation and conversation-to-first-date conversion rates rise meaningfully over the first one to three months, even if total match volume does not change dramatically
+  - The matches you do progress with are noticeably better aligned with what you actually want in a partner, because filters reflect real criteria rather than reflexive ones
+  - You spend less total time on the apps while generating more in-person meetings – the practice becomes time-bounded and outcome-focused rather than open-ended scrolling
+common_pitfalls: |
+  - Optimising photos and prompts indefinitely without ever sending messages or proposing dates – profile work is the easy, low-stakes part; the binding constraint is usually conversion to in-person meetings
+  - Ignoring base-rate platform asymmetries: men on most apps face structurally low like rates and high effort-to-match ratios, while women face overwhelming low-quality message volume. Optimisation helps both sides but does not reverse these dynamics, and treating poor outcomes as personal failure is both inaccurate and demoralising
+  - Letting the app become the social channel rather than a routing layer – successful users move conversations off-app to a date quickly. Maintaining indefinite text-only relationships with matches predicts ghosting and emotional fatigue
+  - Using the same profile and approach across all platforms without recognising that Hinge, Bumble, Tinder, and niche apps reward different content – what wins on one can underperform on another
+description: |
+  - Deliberate, evidence-informed practice on dating apps – professional or carefully composed photos, A/B-tested prompts and bios, intentional swipe filters that reflect actual criteria, and structured first-message and first-date protocols – distinct from passive use or generic profile-tweaking advice
+  - [The Tyson et al. (2016) Tinder study](https://arxiv.org/abs/1607.01952) documented large gender asymmetries in like and match rates, with most matches generating little conversation; the implication is that profile and message quality are leverage points where modest investment compounds across many interactions
+  - [OkCupid blog analyses](https://theblog.okcupid.com/the-4-big-myths-of-profile-pictures-1fcb696c0b53) of millions of profiles identified replicable photo features – direct eye contact, activity shots, full-body inclusion – that meaningfully shift response rates relative to baseline selfies
+  - [Hinge's published research](https://hinge.co/press) shows specific, story-prompting prompt answers and proactive first messages substantially outperform generic content, and that proposing a date within the first week of matching strongly predicts a meeting actually occurring
+  - Time investment is modest – roughly two to four hours of upfront profile work and 60–90 minutes per week of bounded app use – but [user dissatisfaction surveys](https://www.pewresearch.org/internet/2023/02/02/key-findings-about-online-dating-in-the-u-s/) consistently find dating apps frustrating, so honest framing matters: optimisation improves a difficult channel rather than transforming it
+applicable_domains: ["relationship-status", "style"]
+
+values:
+  relationship-status.meeting-new-partners:
+    pbs: 7
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – a typical non-adopter relies on chance encounters or a single passive method. After successful adherence (multiple optimised channels with deliberate practice), a user could plausibly reach the 70th percentile, where multiple active channels are systematically maintained and refined. Delta: ~35 percentile points.
+      - The anchor is linear (5 active channels for meeting partners). Successful online dating optimisation reliably adds 1–2 well-functioning channels (e.g. Hinge plus Bumble) where each generates regular in-person meetings; mapping this to the anchor with the log formula (effect ~1.5 channels of 5) gives PBS ≈ 10 + log₂(1.5/5) = 7.3, supporting score 7.
+      - [Rosenfeld et al. (PNAS 2019)](https://www.pnas.org/doi/10.1073/pnas.1908630116) shows online platforms are now the dominant channel for couple formation in the US (~39% of heterosexual couples in 2017), so a well-optimised online presence is one of the highest-leverage single-channel investments available.
+    isr_reasoning: |
+      - [Tyson et al. (2016)](https://arxiv.org/abs/1607.01952) found that even on a high-traffic platform, the typical user converts only a small fraction of matches into sustained conversations and far fewer into in-person meetings – meaning that among adherents who follow profile and messaging best practice, only a meaningful minority will see substantial improvement in actual partner-meeting volume.
+      - Platform asymmetries are large and well-documented: heterosexual men on Tinder receive likes from a much smaller share of swipes than women, and women receive overwhelming low-quality message volume. Optimisation lifts both groups from their respective baselines but cannot eliminate these dynamics, capping success rates.
+      - ISR of 55% reflects that for most adherents who execute the practice (good photos, specific prompts, prompt date proposals), there is a real and replicable lift in match-to-meeting conversion, but a meaningful share – particularly in unfavourable local markets or demographics – will see only marginal gains.
+    uar_reasoning: |
+      - [Pew Research (2023)](https://www.pewresearch.org/internet/2023/02/02/key-findings-about-online-dating-in-the-u-s/) finds roughly half of online dating users describe their experience as negative, and burnout-related disengagement is common within months – sustaining deliberate practice against this emotional headwind is structurally difficult.
+      - The intervention requires recurring upkeep (refreshing photos, rewriting prompts, sustaining message volume) that competes with the path of least resistance, which is to scroll passively or quit; [research on app retention](https://academic.oup.com/joc/article/70/3/322/5826588) shows most users cycle on and off rather than maintaining steady, deliberate use.
+      - UAR of 40% reflects that while initial setup (good photos, written bio) is a one-off effort that many users complete, the ongoing weekly practice of A/B testing prompts, applying deliberate swipe filters, and proposing prompt dates is sustained by a clear minority of users.
+
+  relationship-status.partner-selection:
+    pbs: 5
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – intentional swipe filters and structured early conversations surface deal-breakers earlier and reduce time spent on poorly matched prospects. Delta: ~20–25 percentile points.
+      - The mechanism is real but indirect: optimisation primarily increases volume and conversion, not the quality of the choice itself. Better selection comes from the secondary effect of having more options to choose between and faster filtering – which is meaningful but bounded. Score 5 reflects this modest, indirect contribution.
+      - [Online dating research](https://link.springer.com/article/10.1007/s10508-018-1265-9) shows extended online communication before meeting can lead to inflated expectations and poorer real-world fit, so the partner-selection benefit depends on getting to in-person meetings quickly – a discipline that is part of the optimisation protocol but easily skipped.
+    isr_reasoning: |
+      - [Finkel et al. (2012, Psychological Science in the Public Interest)](https://journals.sagepub.com/doi/10.1177/1529100612436522) reviewed online dating research and concluded that algorithmic matching and profile-based selection have not been shown to outperform conventional methods on relationship outcomes, suggesting that even good optimisation produces only modest gains in selection quality.
+      - The selection-quality benefit depends on the user having reasonably accurate self-knowledge of what they want in a partner; many users do not, and optimised volume can amplify mismatches as easily as good matches.
+      - ISR of 50% reflects that genuine selection improvements occur for adherents with clear criteria and discipline around early in-person meetings, but a roughly equal share will see no meaningful selection benefit from optimisation alone.
+    uar_reasoning: |
+      - See relationship-status.meeting-new-partners UAR – same intervention, same adherence profile. Selection-focused practices (deliberate swipe filters, screening conversations) are arguably the easiest sub-component to neglect under fatigue, since reflexive swiping is faster.
+
+  style.attractiveness:
+    pbs: 5
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in perceived attractiveness as represented online – better photos, lighting, grooming choices, and outfit selection driven by profile feedback often generalise to in-person presentation. Delta: ~20–25 percentile points.
+      - The mechanism is constrained: photo and presentation optimisation improves how the same person is perceived, not underlying attributes. Score 5 reflects a real but bounded gain – moving up a presentation tier rather than transforming attractiveness.
+      - [OkCupid photo analysis](https://theblog.okcupid.com/the-4-big-myths-of-profile-pictures-1fcb696c0b53) demonstrates that the same individuals receive substantially different response rates with different photos, indicating real headroom from presentation optimisation independent of underlying features.
+    isr_reasoning: |
+      - The mechanism is unusually direct: producing better photos under good lighting with another photographer reliably improves perceived attractiveness in those photos, and the lessons (eye contact, posture, framing) transfer to other contexts.
+      - The main failure mode is users who rely on selfies or low-quality images by default and cannot easily access a willing photographer or appropriate settings – a meaningful subgroup but not the majority.
+      - ISR of 65% reflects that for most adherents who actually execute the photo and presentation upgrade, the gain in perceived attractiveness in dating contexts is reliable and immediate.
+    uar_reasoning: |
+      - See relationship-status.meeting-new-partners UAR – same intervention, same adherence profile. Photo upgrades are a one-off effort with strong UAR for that sub-task, but sustained refresh and broader presentation discipline are subject to the same drift as the wider practice.
+
+resources:
+  upfront_cost: 50
+  upfront_cost_reasoning: "Conservative minimum covers a basic photo session – a friend with a decent phone camera and an hour of effort can suffice for free, but budgeting for an inexpensive haircut, a single new outfit element, or a low-cost photographer is realistic for many users. Professional dating photographers cost $200–$500 but are not required."
+  ongoing_cost: 15
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Free tiers of Hinge, Bumble, and Tinder are functional for most users. A single low-tier premium subscription on the primary platform (roughly $10–$20 per month) is the minimum viable spend for users who want match-volume features; multiple premium subscriptions are not required."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately four hours: one to two hours producing or selecting good photos, one hour writing and refining prompts and bios across one or two platforms, and one hour reading current platform-specific guidance and setting up filters."
+  ongoing_time: 1.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 90 minutes per week of bounded app use – three sessions of about 30 minutes for swiping, messaging, and arranging dates. Time spent on actual dates is separate and counted under the date itself, not the optimisation practice."
+
+prerequisites:
+  - "Access to a smartphone capable of running the major dating apps and a phone or camera capable of producing reasonable-quality photos"
+  - "Eligibility for the platforms used – most major apps require users to be 18 or older and to comply with their terms of service"
+  - "Sufficient self-knowledge of what you want in a partner to apply meaningful filters, rather than relying on reflexive swipe judgements alone"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Bounded, deliberate app use with realistic expectations may reduce the rumination and self-comparison cycles that unstructured app use tends to produce, but the sign of the effect varies across users."
+  - domain: "self-awareness"
+    rationale: "A/B testing prompts and observing what actually generates engagement gives users concrete external feedback on how their self-presentation lands, which can sharpen self-understanding of their interpersonal signal."

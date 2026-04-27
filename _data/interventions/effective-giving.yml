@@ -1,0 +1,201 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Effective Giving"
+what_it_is: |
+  Donating a meaningful percentage of income – typically between 1% and 10%, with the [Giving What We Can](https://www.givingwhatwecan.org/pledge) 10% pledge as a structured lifetime commitment – to charities identified as exceptionally cost-effective by independent evaluators such as [GiveWell](https://www.givewell.org/), [Animal Charity Evaluators](https://animalcharityevaluators.org/), and [Open Philanthropy](https://www.openphilanthropy.org/). The defining feature is that giving decisions are made on the basis of evidence about marginal impact per dollar, rather than on emotional salience, brand familiarity, or personal connection. This is what separates effective giving from ordinary charitable donation: the same dollars routed through evaluator-recommended interventions can produce substantially more measurable good than dollars given through default channels, because the [most effective health interventions are 100x more cost-effective than the average](https://forum.effectivealtruism.org/posts/bsE5t6qhGC65fEpzN/giving-what-we-can-2023-impact-evaluation) within their cause area.
+how_to_do_it: |
+  - Choose a percentage of pre-tax income that is meaningful but sustainable – common starting points are 1% (the [Trial Pledge](https://www.givingwhatwecan.org/get-involved/trial-pledge) for those new to giving), 3–5% as an intermediate level, or 10% as the standard Giving What We Can pledge. The amount should sting a little but not destabilise your finances; a public commitment, even informal, substantially increases follow-through
+  - Set up the donation as an automatic monthly transfer rather than an annual lump sum – automated giving removes the recurring decision point at which most donors quietly defer, and it smooths the cash-flow impact across the year
+  - Direct the money to charities recommended by independent evaluators rather than chosen ad hoc. [GiveWell's top charities](https://www.givewell.org/charities/top-charities) cover global health and poverty (e.g. Against Malaria Foundation, Helen Keller International's vitamin A supplementation, GiveDirectly); [Animal Charity Evaluators](https://animalcharityevaluators.org/recommended-charities/) covers animal welfare; [Founders Pledge](https://www.founderspledge.com/funds) and Open Philanthropy publish recommendations across longer-term causes. Tax-deductible giving vehicles are available in most jurisdictions (Giving What We Can in the UK, EA Funds in the US)
+  - Track giving annually rather than per donation – review at year-end whether the percentage held up against actual income, whether the recipient charities are still top-rated, and whether to increase the pledge percentage as income grows. A simple spreadsheet or the Giving What We Can dashboard is sufficient
+success_looks_like: |
+  - You give a consistent percentage of income each year – not a fluctuating dollar figure that quietly shrinks when expenses rise – and the percentage is large enough that you notice it in your budget
+  - The recipient charities are recommended by an independent evaluator with a published methodology, not chosen because of a personal request, news story, or workplace fundraiser
+  - Year-on-year, your giving keeps pace with income growth rather than staying frozen at the dollar amount you started with – the percentage is the constant
+common_pitfalls: |
+  - Giving sporadically in response to appeals or emotional triggers (disasters, viral campaigns, end-of-year guilt) – this typically routes money toward less cost-effective charities and produces a smaller, more variable total than a percentage commitment would
+  - Pledging a high percentage at a moment of enthusiasm and then quietly abandoning it when finances tighten – a 3% sustained pledge produces more impact and more identity reinforcement than a 10% pledge that lasts six months
+  - Conflating giving with virtue signalling – choosing visible local causes over evaluator-recommended ones because the former produces social credit, even when the impact differential is large; the discipline of effective giving is precisely to override this pull where evidence supports doing so
+description: |
+  - Donating a meaningful percentage of income (typically 1–10%) on a regular schedule to charities identified as exceptionally cost-effective by independent evaluators – distinct from ad hoc giving in that the percentage and the recipient list are decided in advance using published evidence, not chosen reactively
+  - [GiveWell's cost-effectiveness analyses](https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness) estimate their top charities save a life for roughly $5,000 (Against Malaria Foundation) or generate equivalent welfare gains – orders of magnitude more efficient than typical donations within global health
+  - [Research on charitable cost-effectiveness](https://forum.effectivealtruism.org/posts/bsE5t6qhGC65fEpzN/giving-what-we-can-2023-impact-evaluation) finds the best interventions in a cause area are commonly 100x more cost-effective than the median, meaning the choice of where to give matters at least as much as how much
+  - [Dunn, Aknin, and Norton (2008)](https://www.science.org/doi/10.1126/science.1150952) found that spending money on others rather than oneself produces measurable gains in self-reported happiness, with the effect replicating across cultures and income levels
+  - [Giving What We Can pledge data](https://www.givingwhatwecan.org/about-us/impact) shows over 9,000 active members have collectively donated more than $400 million; median lifetime adherence among multi-year pledgers exceeds 90%, indicating the structured commitment format produces durable behaviour change rather than short-lived bursts
+applicable_domains:
+  - "global-impact"
+  - "ethics"
+  - "value-system"
+  - "mental-health"
+  - "community-contribution"
+
+values:
+  global-impact.impartiality:
+    pbs: 8
+    isr: 80
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adoption of evidence-led giving, a user could plausibly reach the 85th–90th percentile – the practice almost definitionally moves the giver to the top decile on impartiality, since the value measures exactly the behaviour the intervention installs. Delta: ~50–55 percentile points. Subjective scale: PBS 8 = "Major gain in impartial, evidence-led giving."
+      - The intervention directly targets the construct: switching from emotionally-driven to evaluator-recommended giving converts a typical donor's portfolio from average cost-effectiveness to one [estimated to be roughly 100x more impactful](https://forum.effectivealtruism.org/posts/bsE5t6qhGC65fEpzN/giving-what-we-can-2023-impact-evaluation) within the chosen cause area – the largest plausible single-decision lever on this value
+      - Score 8 rather than 9 reflects that even committed effective givers retain some non-evaluator-driven giving (workplace appeals, family obligations) and that evaluator recommendations themselves carry epistemic uncertainty about which interventions are truly best
+    isr_reasoning: |
+      - [GiveWell's published cost-effectiveness analyses](https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness) and [Giving What We Can's 2023 impact evaluation](https://forum.effectivealtruism.org/posts/bsE5t6qhGC65fEpzN/giving-what-we-can-2023-impact-evaluation) document that money routed through top-rated charities reliably produces the claimed marginal impact – the mechanism is essentially an arithmetic certainty conditional on the donation being made
+      - The main failure mode is recipient choice drift over time – pledgers who stop following evaluator updates and continue giving to charities that have since dropped off the recommended list, or who allow workplace-default giving to dilute the portfolio
+      - ISR of 80% reflects that the great majority of people who follow the protocol – give regularly to evaluator-recommended charities – achieve the impartiality gain, with the remainder undermined by drift, dilution, or selection of weakly-rated recipients
+    uar_reasoning: |
+      - [Giving What We Can pledge retention data](https://www.givingwhatwecan.org/about-us/impact) shows median multi-year adherence above 90% among those who take the formal 10% pledge, but this is a self-selected and pre-screened population; broader uptake among casual considerers is far lower
+      - The intervention requires sustained financial commitment and ongoing identity maintenance against social and emotional pulls toward default giving patterns; the percentage of the general population who would adopt and maintain it is modest
+      - UAR of 35% reflects that among the population of people who would seriously consider this intervention (already filtered for some interest in giving), about a third sustain it as a durable practice; the remainder either never start a regular percentage commitment or revert to ad hoc giving within the first year or two
+
+  global-impact.sustainability:
+    pbs: 9
+    isr: 75
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The value's anchor is linear: percent of income given annually, with anchor_max = 10 and scale_levels mapping 10% → score 10 and 2.5% → score 8. Baseline behaviour is below 0.6% (sub-score-6) for most adults. A successful 10% Giving What We Can pledger reaches the maximum of the anchor; a 5% sustained giver reaches roughly score 9.
+      - PBS calculation (10% pledge case): delta from ~0.2% baseline to 10% sustained = 9.8 percentage points. PBS = 10 + log₂(9.8/10) = 10 – 0.03 = 9.97 → rounds to 10 for full pledgers. Average across the realistic distribution of adopters (mix of 1%, 3%, 5%, 10% pledgers, weighted toward the lower end) lands at PBS 9 – the intervention reliably produces a major, near-anchor-maximum gain on the linear scale.
+      - This is one of the few interventions in the database that directly maxes out a value's linear anchor – the value is literally "percentage of income donated", and the intervention is "donate a meaningful percentage of income"
+    isr_reasoning: |
+      - [Giving What We Can's published pledge data](https://www.givingwhatwecan.org/about-us/impact) shows the great majority of active pledgers report giving at or above the pledged percentage in any given year, with under-giving concentrated among recently-pledged members still adjusting their finances
+      - ISR is bounded by life events that reduce income (job loss, parental leave, retirement) which legitimately suspend giving even for committed pledgers; this affects a meaningful minority over a multi-year horizon
+      - ISR of 75% reflects that adherent pledgers consistently hit their target percentage in most years, with a substantial minority of years per pledger seeing under-payment due to financial shocks rather than abandonment
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile. The percentage-based commitment format is what produces UAR above the very low rates seen for ad hoc or one-off giving; structured pledges convert giving from an annual decision into a default state.
+
+  global-impact.fulfilment:
+    pbs: 6
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained effective giving, a user could plausibly reach the 65th–70th percentile in personal satisfaction from making a positive difference globally – the combination of measurable impact and a structured commitment produces a steady, identity-level sense of contribution. Delta: ~30–35 percentile points. Subjective scale: PBS 6 = "Meaningful gain in fulfilment from global impact."
+      - [Dunn, Aknin, and Norton (2008)](https://www.science.org/doi/10.1126/science.1150952) found that prosocial spending produces measurable happiness gains, with effects replicating cross-culturally; later [longitudinal work by Aknin et al. (2013)](https://psycnet.apa.org/record/2013-04522-001) confirmed the bidirectional relationship between giving and wellbeing
+      - The fulfilment ceiling is set by the abstraction gap: effective giving operates at distance from beneficiaries, so the felt fulfilment is typically narrower than the felt fulfilment of direct service – warranting "meaningful" rather than "major" on the subjective scale
+    isr_reasoning: |
+      - [Dunn et al. (2008)](https://www.science.org/doi/10.1126/science.1150952) experimental work shows the prosocial-spending happiness effect is reasonably consistent across induced and observational conditions, suggesting a high reliability of the wellbeing benefit when giving actually occurs
+      - The fulfilment gain is most reliable for givers who actively engage with the charity's reporting (annual updates, GiveWell research summaries) rather than treating the donation as a fire-and-forget transaction; engagement converts abstract giving into felt impact
+      - ISR of 70% reflects that the majority of regular effective givers report meaningful fulfilment from the practice, with a minority reporting it feels more like a tax than a meaningful contribution due to the lack of direct beneficiary contact
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile.
+
+  global-impact.passion:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Effective giving deepens engagement with chosen causes by requiring regular attention to evaluator updates and impact reports, but the engagement is more cerebral than the experiential engagement of direct involvement. Plausible endpoint: 55th percentile. Delta: ~20 percentile points. Subjective scale: PBS 5 sits between "Modest" (4) and "Meaningful" (6) gain.
+      - Sustained financial commitment to a cause typically deepens identification with that cause over time – pledgers report the act of giving 10% reshaping how they think about themselves and their priorities, which is a meaningful but not transformative passion effect
+      - The passion gain is bounded by distance: effective giving routes money to causes the giver may never directly encounter, limiting the visceral commitment that comes from frontline contact
+    isr_reasoning: |
+      - The passion-deepening effect is not universal: a meaningful minority of effective givers report that the practice feels procedural rather than passionate, particularly when it is automated and requires little active engagement
+      - For users new to the cause area, the structured exposure to GiveWell research and impact reports tends to produce real intellectual and emotional commitment over 12–18 months
+      - ISR of 55% reflects genuine but variable passion gains, conditional on the giver maintaining active engagement with the cause beyond the automatic transfer
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile.
+
+  ethics.practical:
+    pbs: 6
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Adopting a structured giving pledge installs a recurring, high-stakes ethical decision into one's financial life and forces consistent values-aligned behaviour at meaningful personal cost. Plausible endpoint: 65th percentile. Delta: ~30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in practical ethical decision-making."
+      - The intervention concretises an abstract ethical commitment (caring about others' welfare) into a measurable, recurring action – this is exactly the gap that practical ethics measures, between believed values and enacted behaviour
+      - Score 6 rather than 8 reflects that the gain is concentrated in one ethical domain (charitable giving) rather than generalising to the full breadth of ethical decision-making in daily life
+    isr_reasoning: |
+      - The translation from belief to consistent behaviour is the core difficulty in practical ethics; the structured commitment format directly addresses this by making the behaviour automatic and the deviation salient
+      - ISR is reduced by the narrowness of the domain: a regular giver may still display ethical inconsistency in non-financial dimensions (consumption, time use, interpersonal conduct) where the giving habit does not reach
+      - ISR of 65% reflects that the practical-ethics gain is reliably realised in the giving domain itself, with the wider generalisation effect being weaker and more variable
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile.
+
+  ethics.philosophical:
+    pbs: 4
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Active effective giving exposes the giver to underlying philosophical debates – impartiality, longtermism, utilitarian versus deontological framings, moral circle expansion – through the literature surrounding the practice. Plausible endpoint: 50th percentile. Delta: ~15 percentile points. Subjective scale: PBS 4 = "Modest gain in philosophical ethical understanding."
+      - The exposure is real but indirect: most effective givers engage with practical evaluator content rather than primary philosophical sources, so the philosophical-depth gain is bounded
+      - Score 4 reflects a modest but real broadening of ethical thinking through practice and adjacent reading, not a transformative philosophical education
+    isr_reasoning: |
+      - The philosophical gain depends on the giver's appetite for reading beyond the immediate giving decision; some pledgers engage deeply with [Effective Altruism Forum](https://forum.effectivealtruism.org/) discussions and primary philosophy, others stay narrowly focused on charity selection
+      - ISR of 55% reflects roughly half of regular givers experience meaningful broadening of ethical thinking through their engagement with the practice
+      - No direct evidence on philosophical-depth gains from giving practice; estimate is extrapolated from related research on practice-driven moral cognition
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile.
+
+  value-system.practical:
+    pbs: 5
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A regular percentage-of-income giving commitment turns an abstract value (caring about wellbeing beyond the self) into a concrete, recurring constraint on financial decision-making. Plausible endpoint: 60th percentile. Delta: ~25 percentile points. Subjective scale: PBS 5 sits between "Modest" (4) and "Meaningful" (6).
+      - The intervention is one of the cleanest examples of values-driven decision-making available – it forces an explicit, quantitative trade-off between personal consumption and external benefit, repeated monthly, which trains the broader habit of letting values guide financial choices
+      - Score 5 rather than 6 reflects that the gain is concentrated in one slice of decision-making (giving) rather than transforming the full pattern of values-guided choice
+    isr_reasoning: |
+      - The structured pledge format reliably produces values-aligned giving behaviour for those who maintain it – the intervention is practically self-executing once set up
+      - The wider generalisation to other values-driven decisions is more variable; some givers report the pledge changing their broader financial outlook, others compartmentalise the giving and behave conventionally elsewhere
+      - ISR of 65% reflects reliable gains in the giving domain itself with partial generalisation to broader values-driven decision-making
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Regular prosocial spending and a structured commitment to a cause beyond oneself contribute to felt meaning and life satisfaction. Plausible endpoint: 55th–60th percentile. Delta: ~20–25 percentile points. Subjective scale: PBS 5 sits between "Modest" (4) and "Meaningful" (6).
+      - [Dunn, Aknin, and Norton (2008)](https://www.science.org/doi/10.1126/science.1150952) found that prosocial spending produces measurable wellbeing gains, with the effect arising from how money is spent rather than how much
+      - [Aknin et al. (2013)](https://psycnet.apa.org/record/2013-04522-001) and subsequent replications support a stable causal relationship between giving and subjective wellbeing, though the effect size for sustained percentage giving (versus one-off prosocial spending) is less directly studied
+    isr_reasoning: |
+      - The wellbeing benefit of prosocial spending is reasonably reliable across induced and observational conditions, but the effect size is modest and the mechanism is sensitive to felt agency – automated giving may produce smaller wellbeing gains than active giving choices
+      - For some givers, the financial sting of a meaningful percentage commitment can produce mild stress that offsets part of the flourishing gain, particularly during income shocks
+      - ISR of 60% reflects that the majority of regular effective givers experience a meaningful flourishing benefit, with a minority finding the practice neutral or mildly stressful in tight financial periods
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile.
+
+  community-contribution.fulfilment:
+    pbs: 4
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Effective giving primarily routes resources to global rather than local causes, so the gain on community-contribution fulfilment is modest – it accrues mainly through the broader sense of being a contributor rather than through local-community impact specifically. Plausible endpoint: 50th percentile. Delta: ~15 percentile points. Subjective scale: PBS 4 = "Modest gain in fulfilment from community contribution."
+      - The mechanism is partial overlap: the underlying disposition (sustained contribution to others) is shared, but the value specifically targets local-community fulfilment whereas effective giving is typically directed elsewhere
+      - Score 4 reflects a real but secondary gain – effective giving is not the right primary lever for community-contribution fulfilment, but it does shift the giver toward a contributor identity that partially generalises
+    isr_reasoning: |
+      - The community-contribution fulfilment gain from effective giving is weaker than from local volunteering because the reference group for "community" in this value is local rather than global
+      - For givers who frame their pledge as "contribution to others" broadly, the fulfilment effect is more reliable; for those who sharply distinguish global and local, the effect is small or absent
+      - ISR of 55% reflects modest, conditional gains driven primarily by identity spillover rather than direct community impact
+    uar_reasoning: |
+      - See global-impact.impartiality UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No upfront cost to set up effective giving. Registering with Giving What We Can, GiveWell, or EA Funds is free; the donation accounts are operated as charities themselves and take no fee from donors. The 'cost' is the donation itself, which is recurring and counted in ongoing costs."
+  ongoing_cost: 100
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The intervention's defining feature is the donation. Conservative monthly figure assumes a 1% Trial Pledge on roughly $120,000 annual pre-tax household income (~$100/month); the median Giving What We Can pledger gives substantially more. The minimum viable amount is whatever percentage the user commits to – $10/month from a low income still qualifies. Tax-deductible giving in most jurisdictions reduces the post-tax cost by 15–40%."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 2–3 hours to read evaluator methodologies (GiveWell, Animal Charity Evaluators), choose a percentage and one or two recipient charities, set up an automated transfer or pledge account (Giving What We Can / EA Funds), and configure tax-receipt collection if applicable."
+  ongoing_time: 0.5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Roughly 30 minutes per month on average – mostly absorbed into an annual review of evaluator updates, pledge percentage versus actual income, and recipient charity ratings. Once automated, day-to-day time cost is near zero."
+
+prerequisites:
+  - "Sufficient and reasonably stable income to commit a meaningful percentage without compromising essential expenses or emergency savings – the intervention assumes basic financial security is in place first"
+  - "Access to online banking and a giving vehicle that operates in your jurisdiction (Giving What We Can in the UK, EA Funds or a donor-advised fund in the US, equivalent intermediaries in EU/AU/NZ); an internet connection for evaluator research"
+  - "Basic numeracy to calculate and track a percentage of income, and willingness to engage with cost-effectiveness evidence rather than choosing recipients on emotional grounds"
+
+flagged_domains:
+  - domain: "saving"
+    rationale: "A percentage-based giving commitment imposes a structured constraint on disposable income that often improves overall financial discipline, paralleling the budgeting effect of an automatic savings transfer; effects on saving rate are likely small and may go either way depending on whether giving displaces saving or shared discipline."
+  - domain: "life-purpose"
+    rationale: "Sustained commitment to a cause beyond oneself, formalised through a public pledge, is a recognised mechanism for consolidating a sense of life purpose and meaning beyond personal achievement."

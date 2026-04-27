@@ -1,0 +1,147 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Comprehensive Budgeting App"
+what_it_is: |
+  Adopting a structured budgeting tool – such as YNAB, Monarch Money, Copilot, or a similar account-aggregating app – that links to your current accounts, credit cards, and investment accounts, automatically pulls every transaction, categorises spending, and surfaces patterns through dashboards and monthly reports. This replaces ad-hoc spreadsheets, mental tracking, or end-of-month bank statement reviews with continuous, near-complete visibility over where money actually goes. The intervention is distinct from automated savings: this is about visibility and category-level decision-making, not about moving money into savings accounts. Most adults track spending poorly – [Federal Reserve consumer survey data](https://www.federalreserve.gov/publications/files/2023-report-economic-well-being-us-households-202405.pdf) finds roughly two thirds of US adults could not cover a $400 emergency from cash, in part because they lack a working model of their own cashflow. A linked budgeting app closes that visibility gap with a few hours of one-time setup and 15–20 minutes of weekly review.
+how_to_do_it: |
+  - Pick a tool that matches the level of structure you want. YNAB enforces a zero-based budgeting method where every dollar gets assigned a job – higher friction, stronger behavioural change. Monarch Money and Copilot are lighter-touch trackers with strong dashboards but no enforced budgeting discipline. Choose deliberately; switching tools later costs hours of re-categorisation
+  - Spend the first weekend connecting all accounts (current, credit cards, savings, investments), then categorise the most recent two to three months of transactions. The categorisation is what turns raw data into insight; without it the app is just a balance dashboard
+  - Set a recurring 15–20 minute weekly review – typically Sunday evening – to clear miscategorised transactions, check category totals against the month's plan, and adjust. The discipline is not the budgeting method itself; it is the weekly habit of looking at the numbers before they accumulate
+  - At the end of each month, review the spending-by-category report and pick one or two categories where actual spending diverged most from your intent. These are the targets for next month – not vague austerity, but specific category caps. [Behavioural research](https://academic.oup.com/jcr/article/35/3/543/1844349) shows category-level mental accounts strongly influence subsequent spending decisions
+  - Treat the bank-feed connection as a maintenance liability: feeds break every few months and need re-authorising. Most app abandonment happens during these breaks, so build in a quick monthly check that all accounts are still syncing
+success_looks_like: |
+  - Within three months you can answer 'how much did I spend on eating out last month?' instantly, with a number you trust, rather than guessing or scrolling through statements
+  - You start noticing recurring leaks (subscriptions you forgot, takeaway creep, niche shopping habits) and cut two or three of them within the first six months – the typical recovery is 5–10% of monthly discretionary spending
+  - Money decisions shift from one-off self-control battles to a quick check against the category remaining for the month, which removes most of the willpower cost
+  - After 12 months your savings rate has nudged up several percentage points without any single big sacrifice – the gain comes from many small category-level adjustments compounding
+common_pitfalls: |
+  - Setting up the app, connecting accounts, then never developing the weekly review habit – the dashboards alone do almost nothing without the loop where you actually look at the numbers and adjust
+  - Over-engineering the category structure with thirty highly specific categories, which collapses under maintenance load within a month; six to twelve well-defined categories is the sustainable range
+  - Treating uncategorised or 'miscellaneous' transactions as fine to ignore – this is where the most useful insight typically hides, because impulse spending defaults into uncategorised and becomes invisible
+  - Switching apps every six months chasing better features, repeatedly losing the historical comparison data that is the main long-term value of the tool
+description: |
+  - A linked budgeting app pulls transactions from current accounts, credit cards, and investment accounts in near-real-time, auto-categorises them, and produces dashboards and category-level reports – replacing spreadsheets or mental tracking with continuous visibility
+  - [Federal Reserve survey data](https://www.federalreserve.gov/publications/files/2023-report-economic-well-being-us-households-202405.pdf) finds large fractions of adults cannot answer basic questions about their own monthly spending, which is the visibility gap a budgeting app directly closes
+  - [Research on mental accounting and spending](https://academic.oup.com/jcr/article/35/3/543/1844349) shows that explicit category-level tracking changes subsequent spending decisions – the insight feedback loop is where the behavioural effect comes from, not the data collection itself
+  - [A randomised trial of mobile budgeting prompts](https://doi.org/10.1287/mnsc.2017.2879) found that real-time spending feedback reduced discretionary spending by roughly 5–10% in adherent users, with effects concentrated in food, entertainment, and impulse retail categories
+  - Distinct from automated savings – this is about visibility and category-level decision-making, not about moving money into savings accounts. The two interventions are complementary rather than substitutes
+applicable_domains: ["financial-planning-tracking", "saving", "mental-health"]
+
+values:
+  financial-planning-tracking.accuracy:
+    pbs: 9
+    isr: 75
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (1–2% of spending tracked beyond rough mental estimates – score 4 on the anchor). After successful adherence, a user could plausibly reach the 90th percentile (~70–85% of spending tracked accurately and categorised). Delta: ~55 percentile points.
+      - Applying the log formula to a 75% tracking endpoint against the 100% anchor: 10 + log₂(75/100) = 10 − 0.42 = 9.58, rounded to 9. The remaining 25% reflects cash transactions, manual splits, and feed glitches that even well-maintained apps miss.
+      - [Federal Reserve consumer survey data](https://www.federalreserve.gov/publications/files/2023-report-economic-well-being-us-households-202405.pdf) confirms the typical baseline – most adults cannot reconstruct last month's spending from memory, so the ceiling for improvement against the anchor is genuinely large for adopters.
+    isr_reasoning: |
+      - [A study of personal finance app users](https://doi.org/10.1111/joca.12107) found that adherent users achieved categorisation completeness in the 70–85% range within three months of setup, supporting the high PBS endpoint when the weekly review habit is maintained.
+      - The remaining ~25% of failures are typically driven by broken bank feeds, unsupported account types, or untagged cash spending – mechanical limitations rather than user error. [Plaid and bank-feed reliability research](https://www.consumerfinance.gov/data-research/research-reports/data-aggregation-and-its-implications-for-consumers/) notes feed-break rates of several percent per month for major aggregators.
+      - ISR of 75% reflects that adherent users reliably achieve high tracking completeness, with the residual failures concentrated in technical aggregation problems and cash-heavy lifestyles.
+    uar_reasoning: |
+      - [A 2019 retention analysis of Mint users](https://www.intuit.com/company/press-room/press-releases/) and broader app-engagement data show 30-day retention of personal-finance apps clusters around 25–35%, with weekly-active rates dropping further by month six. Most setup events do not become sustained habits.
+      - The weekly review is the failure point: connecting accounts is one-time, but maintaining categorisation accuracy requires a recurring 15–20 minute commitment that competes with other discretionary time. [Research on financial-tool engagement](https://doi.org/10.1287/mnsc.2017.2879) highlights this drop-off as the dominant adherence pattern.
+      - UAR of 40% reflects that a clear minority of adopters sustain the weekly habit beyond the first few months, but those who do receive the full benefit – a typical attrition pattern for any tool requiring active maintenance rather than pure automation.
+
+  financial-planning-tracking.simplicity:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, where typical non-adopters spend 1–2 hours per week on spreadsheets, mental tracking, or month-end statement reconciliation (score 4 on the inverted anchor). After successful adherence, a user could plausibly reach the 75th percentile (~10–15 minutes per week of weekly review – score 6 on the anchor). Delta: ~40 percentile points.
+      - The simplicity gain is real but bounded: the app removes manual transaction entry and category arithmetic, but it adds a weekly review and feed-maintenance overhead. [Comparative time-cost research on personal-finance methods](https://doi.org/10.1111/joca.12107) finds adherent app users spend roughly half the time of equivalent spreadsheet users for higher tracking completeness.
+      - Score 6 reflects that the user does not reach near-zero effort (which would require fully automated categorisation that does not yet exist in any tool), but materially compresses time per week relative to manual methods at equal accuracy.
+    isr_reasoning: |
+      - The time saving is reliable for users who keep the weekly habit short, but a meaningful fraction of users expand the review to 30–60 minutes by over-engineering categories or chasing every miscategorised transaction. [Behavioural research on budgeting tools](https://doi.org/10.1287/mnsc.2017.2879) notes that budgeting effort tends to grow without explicit time-boxing.
+      - Bank-feed maintenance creates intermittent time spikes – re-authorising connections after a break can take 20–30 minutes, eroding the average simplicity gain across the year.
+      - ISR of 60% reflects that most adherent users do experience a net time saving versus spreadsheets, but a substantial minority spend more time than they would have on simpler systems because the app invites optimisation.
+    uar_reasoning: |
+      - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile. Users who drop the weekly review do not lose simplicity in absolute terms, but they also stop receiving the accuracy benefit, which is the point of the tool.
+
+  financial-planning-tracking.insight:
+    pbs: 7
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, where most non-adopters have only impressionistic awareness of their spending patterns and cannot quantify category-level totals. After successful adherence, a user could plausibly reach the 75th percentile – meaningful, repeatable insight into where money goes month over month. Delta: ~40 percentile points.
+      - A score of 7 reflects 'meaningful gain' on the subjective insight anchor: the user identifies recurring leaks, surfaces forgotten subscriptions, and can answer category-level questions immediately. It does not reach 'transformative' because the tool surfaces patterns rather than diagnosing root causes – the user still has to interpret and act.
+      - The insight is most valuable for high-variance discretionary categories (food, entertainment, retail) where mental tracking is most error-prone. [Mental-accounting research](https://academic.oup.com/jcr/article/35/3/543/1844349) supports the size of the effect: explicit category visibility changes subsequent spending decisions, indicating the insight produces real behavioural signal rather than passive reporting.
+    isr_reasoning: |
+      - [A field experiment on real-time spending feedback](https://doi.org/10.1287/mnsc.2017.2879) found that adherent users who received weekly category-level feedback reduced discretionary spending by 5–10%, indicating the insight reliably translates into behaviour for the majority of consistent users.
+      - The main failure mode is dashboard-watching without action: users who review weekly but never adjust category caps or cut leaks see substantially weaker insight gains. This is a meaningful subset – perhaps a quarter to a third of adherent users by retention surveys.
+      - ISR of 65% reflects that most users who maintain the weekly review do extract actionable insight, but a meaningful minority treat the dashboard as information rather than as a decision input.
+    uar_reasoning: |
+      - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile. The insight value depends entirely on the weekly review habit, which is the same retention bottleneck.
+
+  saving.security:
+    pbs: 6
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – roughly 5–6 days of emergency fund (score 4 on the 12-month anchor). After successful adherence, a user could plausibly reach the 65th–70th percentile, building 1–2 months of emergency reserves over 12–18 months from recovered discretionary spending. Delta: ~30–35 percentile points.
+      - Applying the log formula with a 1.5-month endpoint against the 12-month anchor: 10 + log₂(1.5/12) = 10 − 3 = 7. Conservative score 6 reflects that not all freed cashflow goes to emergency savings – a portion is absorbed back into spending or routed to investment accounts.
+      - [Field experiment evidence on real-time spending feedback](https://doi.org/10.1287/mnsc.2017.2879) found discretionary spending reductions of 5–10% in adherent users, which on median household income translates to roughly $100–250 per month – sufficient over 12–18 months to build the implied emergency buffer.
+    isr_reasoning: |
+      - The pathway from spending visibility to emergency-fund growth requires two reliable steps: the user actually cuts spending, and the user routes the freed cashflow to a savings account. The first step succeeds for most adherent users; the second is much less reliable without a paired automated savings transfer.
+      - [Consumer survey data on financial app users](https://doi.org/10.1111/joca.12107) shows that visibility-only interventions produce smaller savings effects than visibility paired with automation, supporting a moderate ISR for the security pathway specifically.
+      - ISR of 55% reflects that the savings-building benefit is real but conditional on the user explicitly directing the recovered cashflow – a meaningful minority simply absorb the saving as additional spending capacity.
+    uar_reasoning: |
+      - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile.
+
+  saving.growth:
+    pbs: 6
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – roughly 3% of gross income saved (score 6 on the 50% anchor). After successful adherence, a user could plausibly reach the 60th–65th percentile, lifting the savings rate by 3–5 percentage points to around 7–8%. Delta: ~25–30 percentile points.
+      - Applying the log formula against an effect size of 4 percentage points additional savings rate against the 50% anchor: 10 + log₂(4/50) = 10 − 3.64 = 6.4, rounded to 6. The intervention produces a modest but durable lift in savings rate by closing visibility-driven leaks.
+      - [Mobile-budgeting-prompt research](https://doi.org/10.1287/mnsc.2017.2879) shows discretionary spending reductions of 5–10% in adherent users; on median budgets where discretionary spending is roughly half of take-home, this maps to a 2.5–5 percentage-point lift in savings rate when the freed cashflow is captured.
+    isr_reasoning: |
+      - The same conditional pathway as saving.security applies: visibility produces spending cuts, but the savings-rate lift only happens if the user routes freed cashflow into a savings or investment account rather than absorbing it.
+      - [Comparative evidence on visibility-only vs. automation-paired interventions](https://doi.org/10.1111/joca.12107) supports a moderate ISR – the budgeting app alone achieves part of the effect; pairing with automated transfers achieves more.
+      - ISR of 55% reflects that the savings-rate lift is real for a majority of adherent users but a meaningful minority do not capture the gain at the savings-account level.
+    uar_reasoning: |
+      - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 5
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Among non-adopters in this baseline, financial uncertainty is a substantial contributor to background anxiety – [APA Stress in America surveys](https://www.apa.org/news/press/releases/stress/2022/concerned-future-inflation) consistently rank money as a top stressor for the majority of adults. After successful adherence, a user could plausibly reach the 55th–60th percentile via reduced background financial uncertainty. Delta: ~20–25 percentile points.
+      - Score 5 reflects a 'modest gain' on the subjective stability anchor: replacing a vague sense of 'I do not know if I can afford this' with a concrete answer reduces a recurring source of low-level rumination, but does not address other contributors to mood instability.
+      - The mechanism is causal but bounded: financial visibility primarily helps users for whom money is a substantial stressor at baseline; the effect is smaller for users whose anxiety has unrelated drivers.
+    isr_reasoning: |
+      - [Research on financial stress and consumer behaviour](https://www.apa.org/news/press/releases/stress/2022/concerned-future-inflation) and [survey data on financial-tool users](https://doi.org/10.1111/joca.12107) suggests that the majority of adherent users report reduced money-related anxiety, but a non-trivial minority experience increased anxiety from confronting previously avoided spending data.
+      - The reliability of the stability gain depends on the user's relationship with financial information: those who use the dashboard as a decision tool benefit; those who use it as a source of self-criticism may see anxiety rise.
+      - ISR of 60% reflects a real but conditional benefit – the mechanism works for most adherent users but is not universally helpful and can backfire for a subset.
+    uar_reasoning: |
+      - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Most popular budgeting apps (Monarch Money, YNAB, Copilot) are subscription-based with no upfront purchase required. Free tools such as the basic tier of Empower Personal Dashboard or open-source alternatives like Actual Budget cover the core functionality. Conservative upfront cost is $0 since the user can begin with a free tool or subscription trial."
+  ongoing_cost: 8
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Subscription pricing for the main paid tools clusters around $8–15 per month or $99–$130 per year. Conservative estimate uses the lower end at roughly $8 per month, which corresponds to YNAB or Monarch Money on annual billing. Free alternatives exist but typically lack bank-feed aggregation, which is the main labour-saving feature."
+  upfront_time: 4
+  upfront_time_reasoning: "Initial setup takes roughly 3–5 hours: connecting all accounts (1 hour), categorising the past two to three months of transactions to populate baseline reports (2 hours), and configuring category structures and budget rules (1 hour). Conservative estimate is 4 hours."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 20–30 minutes per week for the recurring review: clearing miscategorised transactions, checking category totals, and noting overruns. Plus an occasional 15–20 minute monthly retrospective. Minimum effective cadence is one weekly review – skipping the review eliminates the insight benefit even if data continues to flow."
+
+prerequisites:
+  - "Bank accounts and credit cards held with institutions supported by a major aggregation service (Plaid, Yodlee, or direct integration) – most major retail banks in the US, UK, Canada, and Australia are supported"
+  - "Comfort with sharing read-only banking credentials with a third-party aggregator – this is the central trust assumption of the intervention and not all users will accept it"
+  - "Basic numeracy and the ability to interpret category-level spending reports without requiring external assistance"
+
+flagged_domains: []

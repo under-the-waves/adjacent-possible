@@ -1,0 +1,181 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Setting Boundaries With Extended Family"
+what_it_is: |
+  A deliberate practice of identifying, communicating, and maintaining limits with extended family members – aunts, uncles, cousins, in-laws, grandparents – on time, topics, involvement, and access. The work is concrete: deciding in advance how long visits last, which subjects are off-limits (politics, parenting choices, money, religion, fertility), how much unsolicited advice you absorb, and what consequences follow when limits are tested. Drawing on family-systems and assertiveness research, the practice replaces reactive friction – tense holidays, brittle phone calls, lingering resentment – with pre-planned scripts and calendar-level structure (visit length, frequency, who hosts) so that each interaction starts from a position the boundary-setter can sustain. It is distinct from estrangement: the goal is to keep contact possible by making it tolerable, not to cut family off.
+how_to_do_it: |
+  - Map the existing pattern before changing anything. Write down the specific behaviours that drain you (length of visits, topics raised, unsolicited input on your life, drop-ins, financial requests) and which relatives are involved. Without a concrete map you will end up reacting to whichever incident is most recent rather than addressing the underlying pattern.
+  - Decide each limit at the calendar level rather than in the moment. Examples: visits capped at three days, two trips per year not five, holidays alternated with your partner's family, no political discussion at the dinner table, advice on parenting only when explicitly requested. Decisions made in advance survive social pressure that decisions made on the spot do not.
+  - Write and rehearse short scripts for the predictable moments – arrival, a probing question, a request for an extended stay, a comment on your weight or relationship status. [Assertiveness training research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) finds explicit verbal templates significantly outperform improvisation under emotional load. Useful patterns include "That is not something I am discussing today", "We are leaving on Sunday morning – we have already booked the train", and "I appreciate the thought, but I have decided otherwise".
+  - Communicate limits once, calmly and ahead of time, then hold them through the test. Family systems predict that the first few enforcements will produce escalation – guilt, accusations of coldness, third-party recruitment. [Bowen family systems theory](https://thebowencenter.org/theory) frames this as the system attempting to restore its previous equilibrium; consistent, non-hostile follow-through is what allows a new equilibrium to settle. Two to three reinforcement cycles are typical before the new pattern stabilises.
+  - Pair each limit with what you are still offering. "I will not stay for two weeks, but I will come for four days twice a year and call every Sunday." Boundaries that only subtract are read as rejection; boundaries that redistribute access are easier to maintain because they do not force you into the role of pure refuser.
+success_looks_like: |
+  - Visits, calls, and family events end at times you actually chose, on terms you can sustain, rather than at the point you became too exhausted or angry to continue
+  - Probing or critical questions are met with a calm, brief redirect rather than a defensive reaction or capitulation, and the redirect is repeated without escalation when tested
+  - The dread you used to feel before family contact is meaningfully reduced, and the recovery time afterwards shortens because you are not processing accumulated breaches
+  - Other relationships – partner, children, close friendships – stop bearing the spillover from unbounded extended-family interactions
+common_pitfalls: |
+  - Announcing major new limits during a high-tension moment, which guarantees the limit is read as retaliation rather than policy. Communicate calmly, ahead of time, and in writing where possible
+  - Treating any pushback as evidence the boundary is wrong. Initial pushback is the predictable response of a system being asked to change; abandoning the limit at the first sign of resistance trains the family that limits are negotiable
+  - Over-explaining. Long justifications invite line-by-line rebuttal and signal that the limit is provisional. A short, repeated statement is harder to argue with than an essay
+  - Using boundaries punitively or in escalating waves – cold shoulder, sudden no-contact, cutting people off mid-visit. This is closer to estrangement than boundary-setting and tends to produce lasting rifts rather than stable new norms
+description: |
+  - A structured practice of deciding in advance, communicating, and enforcing limits with extended family on time (visit length, frequency), topics (politics, parenting, fertility, money), and involvement (drop-ins, unsolicited advice, financial requests) – distinct from estrangement, which severs the relationship rather than reshaping it
+  - [Assertiveness training research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) finds that brief, structured programmes produce moderate-to-large effects on assertive behaviour, anxiety, and self-esteem (pooled d ≈ 0.5 – 0.8 across reviewed trials), with gains most reliable when participants rehearse specific scripts rather than abstract principles
+  - [Family systems theory](https://thebowencenter.org/theory) describes the predictable pattern when one member changes their position: the system pushes back to restore equilibrium, then re-stabilises around the new pattern if the change is held consistently for several cycles. This explains why most boundary attempts fail in the second or third interaction rather than the first
+  - [Research on family conflict and mental health](https://pmc.ncbi.nlm.nih.gov/articles/PMC5961625/) shows chronic, unresolved family conflict is a robust predictor of depressive symptoms, anxiety, and relationship dissatisfaction in adulthood – the population the intervention is mainly aimed at
+  - Time and money costs are minimal: roughly an hour to map the pattern and draft scripts, then 15 – 30 minutes per anticipated interaction to prepare. The barrier is psychological – fear of conflict, guilt, and family pressure – which is why the practice is dramatically underused relative to its evidence base
+applicable_domains: ["extended-family", "family-of-origin", "mental-health", "relationship-quality", "time-management", "communication", "self-awareness"]
+
+values:
+  extended-family.balance:
+    pbs: 8
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th – 75th percentile – moving from a relationship governed by whichever relative pushes hardest to one governed by limits the user actually endorses. Delta: ~35 – 40 percentile points.
+      - Balance is the value this intervention most directly targets – the intervention is, by definition, the construction of healthy extended-family limits. [Assertiveness training research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) finds pooled effect sizes of d ≈ 0.5 – 0.8 on assertive behaviour, with the largest gains in domains where the trainee previously felt unable to refuse or set conditions.
+      - Score 8 reflects that the gain is large but bounded by what the family is willing to accept and what the user is willing to enforce – a small fraction of users move into territory where extended-family contact is genuinely on their own terms across all dimensions, but most reach a clearly improved equilibrium.
+    isr_reasoning: |
+      - [Family systems research](https://thebowencenter.org/theory) predicts initial pushback when one member changes position; whether the user holds through 2 – 3 reinforcement cycles is the single biggest determinant of whether limits stabilise or collapse. Most adherent users do hold, but a meaningful minority give way during the resistance phase.
+      - [Meta-analysis of assertiveness training](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) shows the protocol works reliably for the majority of motivated participants, with response rates broadly in the 60 – 75% range across outcome measures.
+      - ISR of 70% reflects that when the user follows the full sequence – mapping, calendar-level decisions, pre-rehearsed scripts, calm follow-through – the new equilibrium typically stabilises within a year, but a minority of cases involve relatives whose escalation patterns overwhelm any reasonable boundary practice.
+    uar_reasoning: |
+      - Boundary-setting with family is among the most ego-threatening assertiveness contexts, because the relationships are involuntary, lifelong, and often involve guilt-based pressure. [Research on family obligation](https://pmc.ncbi.nlm.nih.gov/articles/PMC2705930/) shows family-of-origin guilt strongly predicts difficulty enforcing limits, even when individuals identify the need for them.
+      - The intervention requires sustained behaviour change against decades of established interaction patterns, often with several relatives at once and against partner or sibling preferences for the status quo.
+      - UAR of 40% reflects that while the upfront effort is small, durable enforcement across multiple interactions is a meaningful behavioural lift that a clear majority of users start but do not fully sustain at the level required to reset the system.
+
+  extended-family.harmony:
+    pbs: 6
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 65th percentile – chronic friction is reduced because the predictable flashpoints (length of stay, recurring topics, unsolicited advice) are pre-empted rather than re-litigated each visit. Delta: ~25 – 30 percentile points.
+      - The harmony gain is meaningful but smaller than the balance gain because boundaries reliably reduce conflict over time, but the transition phase typically increases conflict before it decreases. [Family systems research](https://thebowencenter.org/theory) describes this as the resistance phase – the new harmony is on the far side of a temporary worsening.
+      - Score 6 reflects a real, durable improvement once the new equilibrium settles, while accounting for the fact that some relationships remain genuinely contentious regardless of how well the boundaries are constructed.
+    isr_reasoning: |
+      - [Conflict resolution research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5961625/) finds that structured limit-setting reduces recurrent family conflict in most cases, but a meaningful subset of relatives respond with sustained escalation rather than adaptation – producing worse harmony rather than better.
+      - The harmony pathway is more conditional than the balance pathway: a user can succeed at constructing and holding limits (high balance) while a particular relative refuses to accept them, leaving harmony lower than baseline at least temporarily.
+      - ISR of 55% reflects that durable harmony gains depend on both the user's execution and the relative's willingness to adapt – two conditions that are independently uncertain.
+    uar_reasoning: |
+      - See extended-family.balance UAR – same intervention, same adherence profile. Harmony-driven users may be slightly less inclined to push through the resistance phase because the short-term harmony cost is most visible to them.
+
+  family-of-origin.autonomy:
+    pbs: 7
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th – 70th percentile – the practice directly addresses the gap between living by one's own values and capitulating to family expectations on visit frequency, life choices, and acceptable topics of discussion. Delta: ~30 – 35 percentile points.
+      - [Differentiation-of-self research](https://pmc.ncbi.nlm.nih.gov/articles/PMC2705930/) – the construct most closely tied to family-of-origin autonomy – finds that the capacity to hold one's own position under family pressure is a primary driver of adult psychological independence. Boundary-setting is the operational expression of differentiation.
+      - Score 7 reflects a meaningful autonomy gain bounded by the fact that some family-of-origin pressure is internalised and persists even when external limits are well-enforced.
+    isr_reasoning: |
+      - The intervention works most reliably for autonomy because the autonomy gain accrues to the user's internal experience whenever a limit is held, regardless of whether the relative accepts it – making this less dependent on others than the harmony pathway.
+      - [Family systems research](https://thebowencenter.org/theory) treats successful boundary maintenance as itself the mechanism of differentiation, suggesting autonomy gains follow execution closely.
+      - ISR of 65% reflects high reliability when the practice is followed, with the residual failure rate driven mainly by users who set limits but cannot internally let go of guilt enough to feel autonomous even when externally protected.
+    uar_reasoning: |
+      - See extended-family.balance UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 65th percentile – removing a chronic stressor (unbounded family interaction) and the rumination that surrounds it produces meaningful day-to-day stability gains. Delta: ~25 – 30 percentile points.
+      - [Research on family conflict and mental health](https://pmc.ncbi.nlm.nih.gov/articles/PMC5961625/) finds chronic family conflict is a robust predictor of depressive and anxious symptoms, with effect sizes in the small-to-medium range. Reducing the conflict source reverses part of this load.
+      - Score 6 reflects a real but bounded stability gain – family is one stressor among many, and the intervention does not address other contributors to mood instability.
+    isr_reasoning: |
+      - [Assertiveness training trials](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) report consistent reductions in trait anxiety and depressive symptoms (d ≈ 0.4 – 0.6) when assertive behaviour is successfully acquired – the relevant mechanistic chain for stability gains here.
+      - The stability benefit can be temporarily inverted during the resistance phase, when conflict spikes before it declines, so users must traverse a worse-before-better arc.
+      - ISR of 60% reflects that durable stability gains accrue for most adherent users, with the failure cases mainly involving severe pre-existing mood conditions where family is one of several drivers and removing it does not move the needle.
+    uar_reasoning: |
+      - See extended-family.balance UAR – same intervention, same adherence profile.
+
+  relationship-quality.harmony:
+    pbs: 5
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 60th percentile – partnerships often absorb significant friction from extended-family overflow (in-law conflict, holiday planning, divided loyalty). Pre-planned, jointly held limits reduce this. Delta: ~20 – 25 percentile points.
+      - [Research on in-law conflict](https://pmc.ncbi.nlm.nih.gov/articles/PMC4194856/) finds in-law tension is a recurrent stressor in marital satisfaction across cultures, and that couples who present a unified front on limits report higher relationship quality than couples who relitigate each interaction.
+      - Score 5 reflects a modest, indirect harmony gain – the intervention helps when extended-family overflow is a real source of partnership strain, but does not address the many other drivers of partnership harmony.
+    isr_reasoning: |
+      - The harmony benefit is reliable when both partners agree on the limits and present a unified front; less reliable when partners disagree on what limits should be (e.g. one partner wants stricter limits than the other), which can introduce new conflict between them.
+      - [Couple research on in-law dynamics](https://pmc.ncbi.nlm.nih.gov/articles/PMC4194856/) confirms that the same boundary-setting that reduces in-law strain can become a source of partnership conflict if the boundary is set unilaterally by one partner.
+      - ISR of 60% reflects genuine but conditional gains – the intervention requires the user and partner to align on limits before approaching the family, and not all couples succeed at this alignment step.
+    uar_reasoning: |
+      - See extended-family.balance UAR – same intervention, same adherence profile.
+
+  time-management.balance:
+    pbs: 5
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 60th percentile – calendar-level limits on visit length, trip frequency, and ad-hoc availability free meaningful blocks of time previously absorbed by extended-family obligations. Delta: ~20 – 25 percentile points.
+      - For users with high family demands – frequent visits, expectations of weekly availability, drop-in culture – the time recovery is significant. For users with already-modest family demands, the time gain is small.
+      - Score 5 reflects an average benefit across the eligible population; users at the high-demand end of the distribution see substantially more.
+    isr_reasoning: |
+      - The time-balance gain is mechanically reliable: time not spent on family is time available for rest, health, work, and other relationships. The main failure mode is filling the recovered time with other obligations rather than rest.
+      - [Research on protected time and wellbeing](https://pmc.ncbi.nlm.nih.gov/articles/PMC7610170/) shows that recovered time only translates to balance gains when explicitly protected for restorative use rather than absorbed by the next demand.
+      - ISR of 65% reflects high mechanical reliability of the time recovery, with a meaningful share of users failing to convert it into actual balance because they do not protect the freed time.
+    uar_reasoning: |
+      - See extended-family.balance UAR – same intervention, same adherence profile.
+
+  communication.conflict:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 65th percentile – the practice is essentially repeated, deliberate practice in handling charged disagreements with sustained relationships at stake, in arguably the highest-pressure conflict context most adults face. Delta: ~25 – 30 percentile points.
+      - Skills built in extended-family conflict generalise – calm scripts, repetition without escalation, holding a position under guilt pressure are transferable to workplace and romantic conflict. [Assertiveness training research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) confirms cross-context transfer of assertive behaviour once acquired.
+      - Score 6 reflects a meaningful but secondary skill gain – the intervention is not primarily a conflict-skill course, but it produces real conflict-skill development as a by-product.
+    isr_reasoning: |
+      - The skill transfer is most reliable when the user explicitly notices and applies the patterns rather than treating each family interaction as isolated. Without this metacognitive step, gains stay localised to the family context.
+      - [Skill transfer research in assertiveness training](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) finds transfer is consistent in directionally similar contexts (other personal relationships) but weaker in dissimilar ones (formal workplace settings).
+      - ISR of 65% reflects that conflict-skill gains are a reliable by-product for adherent users but require some intentional integration to translate beyond family contexts.
+    uar_reasoning: |
+      - See extended-family.balance UAR – same intervention, same adherence profile.
+
+  self-awareness.relational:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th – 65th percentile – the mapping step alone forces explicit attention to which family dynamics drain you, which roles you have inherited, and how you typically capitulate. Delta: ~25 – 30 percentile points.
+      - [Differentiation-of-self research](https://pmc.ncbi.nlm.nih.gov/articles/PMC2705930/) finds that articulating one's position relative to family pressure is itself a primary mechanism for developing relational self-understanding – the act of writing down the pattern produces insight that decades of unbounded interaction did not.
+      - Score 6 reflects a meaningful self-awareness gain bounded by the fact that the intervention focuses on family specifically rather than relational patterns in general.
+    isr_reasoning: |
+      - Mapping and rehearsal force concrete reflection on patterns that are typically tolerated implicitly – this insight is reliably produced by the protocol regardless of whether external limits are then successfully maintained.
+      - [Family systems research](https://thebowencenter.org/theory) treats this kind of explicit self-positioning as foundational to relational self-knowledge, supporting reliable awareness gains.
+      - ISR of 65% reflects high reliability of the awareness component – it accrues from doing the mapping work even when downstream enforcement falters.
+    uar_reasoning: |
+      - See extended-family.balance UAR – same intervention, same adherence profile. The mapping step has higher completion rates than full enforcement, so awareness gains may accrue even to users who do not sustain the full protocol.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials, subscriptions, or services required. The practice is behavioural; optional reading on family-systems theory or assertiveness is freely available online."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. Some users elect therapy to support the work, but this is not required for the intervention itself."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately two hours to map the existing pattern, decide calendar-level limits, identify predictable flashpoints, and draft and rehearse short scripts for the most likely scenarios."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 20 – 30 minutes per week on average – more before anticipated interactions (preparation, partner alignment), little to none during quieter periods. The cost is concentrated around contact, not continuous."
+
+prerequisites:
+  - "An ongoing relationship with the extended family member or members in question – the intervention reshapes existing contact rather than initiating new contact"
+  - "Sufficient physical and financial independence from the family member to make limit-setting safe – users who are housing-, employment-, or care-dependent on a relative face risks the protocol cannot address"
+  - "Basic capacity to tolerate short-term conflict without disproportionate distress – not comfort, but enough self-regulation to hold a position through predictable pushback"
+
+flagged_domains:
+  - domain: "children"
+    rationale: "Parents who limit grandparent involvement on parenting choices, screen time, food, or discipline protect their parenting decisions from being chronically overridden, which improves both child outcomes and the parent's capacity to parent confidently."

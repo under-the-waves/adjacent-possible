@@ -1,0 +1,184 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Pre-Marital Counselling"
+what_it_is: |
+  A structured 4–12 session programme with a trained therapist or licensed counsellor, completed prior to marriage or a major commitment such as cohabitation or engagement, using an evidence-based curriculum such as the Prevention and Relationship Enhancement Programme (PREP), the Gottman Method's Bringing Baby Home, or the assessment-based Prepare/Enrich. Sessions cover communication skills, conflict styles, expectations about roles and family life, finances, sex, family-of-origin patterns, and shared values – the domains where unaddressed mismatches reliably cause distress later. The intervention is one-time and pre-commitment, distinct from ongoing relationship rituals or therapy after problems have surfaced. Meta-analyses of structured pre-marital education find meaningful and durable improvements in relationship satisfaction and reductions in divorce risk, with effects detectable up to five years post-programme.
+how_to_do_it: |
+  - Choose a curriculum with empirical backing rather than a generic counsellor or faith-only programme. PREP, Prepare/Enrich, and Gottman-method counsellors have published outcome data; many religious or community programmes do not. Confirm the counsellor is trained in the specific curriculum before booking.
+  - Book 4–12 sessions spaced one to two weeks apart, beginning at least three months before any wedding or major commitment date. The minimum dose for measurable effect in the literature is roughly 6–8 hours of contact time; shorter exposures show negligible benefit.
+  - Treat the assessment phase honestly. Programmes like Prepare/Enrich open with a structured inventory each partner completes separately, then surface disagreements in session. The intervention's value depends on candour at this stage – understating differences to avoid awkwardness defeats the point.
+  - Practise the skills between sessions. Most curricula teach a structured speaker-listener technique, time-out protocols for escalating arguments, and explicit negotiation frames for recurring disagreements. These are skills, not insights, and require rehearsal in low-stakes contexts to be available under pressure.
+  - Treat unresolved disagreements surfaced in counselling as data rather than as failures of the programme. The intervention is at least as valuable for clarifying that two people are not compatible as it is for strengthening compatible matches – a meaningful fraction of couples who complete pre-marital programmes choose to delay or call off marriage, which is a successful outcome rather than a failure.
+success_looks_like: |
+  - You and your partner have a shared, explicit understanding of your respective expectations on the major lifetime fault lines – children, money, careers, religion, family obligations – with no unaddressed mismatches that you have been politely avoiding
+  - You have a named, rehearsed protocol for de-escalating arguments that you can both invoke without it feeling like a confrontation, and you have used it successfully on at least one real disagreement during the programme
+  - Five years in, you can identify several specific moments where the skills or self-knowledge from the programme prevented an argument from spiralling or surfaced a decision earlier than it would otherwise have appeared
+common_pitfalls: |
+  - Choosing a counsellor based on convenience or social connection rather than training – outcomes vary substantially by curriculum, and untrained counsellors deliver effect sizes close to zero
+  - Treating the programme as a box to tick before the wedding, going through the motions without honest engagement; the literature shows this produces no measurable benefit despite the time and money spent
+  - Going into counselling with the implicit goal of preserving the relationship at all costs – this turns the assessment into theatre and forfeits the intervention's most valuable function, which is surfacing genuine incompatibilities before they become legally and financially entangled
+description: |
+  - A 4–12 session structured programme with a trained counsellor, completed pre-commitment, using an evidence-based curriculum (PREP, Prepare/Enrich, or Gottman) covering communication, conflict, expectations, finances, family-of-origin patterns, and shared values – distinct from ongoing relationship maintenance or post-problem couples therapy
+  - [A meta-analysis of 47 controlled studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722331/) of pre-marital and marital education programmes found average effect sizes of d = 0.30 on relationship satisfaction and d = 0.36 on communication quality, with effects sustained at follow-up
+  - [A randomised five-year follow-up of PREP](https://pubmed.ncbi.nlm.nih.gov/16846239/) found participating couples reported lower negative communication, higher positive communication, and lower divorce rates than control couples, with effects strongest for higher-risk dyads
+  - [Research on Prepare/Enrich](https://www.prepare-enrich.com/research/) reports that roughly 10–15% of couples completing the assessment-based version delay or cancel marriage after surfacing previously unspoken incompatibilities – a successful outcome by the framework's logic, not a failure
+  - The intervention's main barrier is timing rather than cost or complexity: most couples consider it only after problems emerge, by which point the pre-commitment window is closed and the curriculum's mechanism (preventing patterns from forming) no longer applies
+applicable_domains: ["relationship-status", "relationship-quality", "communication", "mental-health"]
+
+values:
+  relationship-status.transition-navigation:
+    pbs: 7
+    isr: 65
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – moving from an unstructured engagement-to-marriage transition to one with explicit alignment on expectations, surfaced disagreements, and a rehearsed conflict protocol. Delta: ~35 percentile points.
+      - The transition from dating to marriage is the single highest-leverage relationship transition in most lives; pre-marital programmes are designed precisely to make this transition more deliberate. [Hawkins et al. (2008) meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722331/) finds d = 0.30–0.36 on satisfaction and communication immediately following the transition – a meaningful gain on the subjective anchor.
+      - Score 7 reflects that the programme materially reshapes a major life transition, but does not transform it – couples still face the inherent uncertainty of long-term commitment, and the intervention's leverage is in better preparation rather than removing the difficulty of the transition itself.
+    isr_reasoning: |
+      - [Hawkins et al. (2008)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722331/) report consistent positive effects across 47 controlled studies, with effect sizes meaningfully larger for couples who complete a structured, evidence-based curriculum versus generic counselling – conditional on curriculum quality.
+      - [Stanley et al. (2006) PREP follow-up](https://pubmed.ncbi.nlm.nih.gov/16846239/) found durable effects at five years, with the strongest gains in higher-risk couples. About 60–70% of adherent couples in PREP trials show measurable communication and satisfaction gains relative to controls.
+      - ISR of 65% reflects that for couples completing an evidence-based programme honestly, the mechanism (better-prepared transition) reliably produces meaningful improvement, with the remaining minority either entering with too much pre-existing dysfunction or completing the programme superficially.
+    uar_reasoning: |
+      - Pre-marital counselling has a narrow uptake window – it must be completed before the wedding – and is often delayed, abbreviated, or skipped under wedding-planning time pressure. [Population studies](https://www.tandfonline.com/doi/abs/10.1080/01926180600814528) suggest only about 30–40% of US couples complete any pre-marital programme, and a meaningful subset of those choose unstructured or non-evidence-based options.
+      - Cost ($500–$2,000) and time (15–25 hours total) are real but typically affordable in the context of wedding spending; the dominant adherence barrier is psychological – willingness to surface disagreements with a wedding already planned.
+      - UAR of 30% reflects the structural difficulty of completing an evidence-based programme honestly during the engagement window; among engaged couples specifically considering the intervention, adherence is somewhat higher, but at population level uptake is the binding constraint.
+
+  relationship-status.partner-selection:
+    pbs: 6
+    isr: 55
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – the assessment phase of programmes like Prepare/Enrich systematically surfaces compatibility mismatches that the couple may not have explicitly discussed. Delta: ~25–30 percentile points.
+      - [Prepare/Enrich research](https://www.prepare-enrich.com/research/) reports roughly 10–15% of couples delay or cancel marriage after the structured assessment, indicating the programme is reliably surfacing decision-relevant information about compatibility that was not otherwise visible.
+      - Score 6 reflects a meaningful but bounded effect: pre-marital counselling cannot retroactively change who you chose, but it does provide a final opportunity to verify compatibility before commitment, which improves the effective quality of partner selection at the point of decision.
+    isr_reasoning: |
+      - The mechanism depends on honest disclosure during the assessment; couples who treat the inventory as a hurdle rather than diagnostic information will not surface real mismatches. [Larson et al. (2002)](https://pubmed.ncbi.nlm.nih.gov/11949904/) found that the predictive validity of pre-marital inventories depends heavily on assessment candour.
+      - The programme cannot uncover incompatibilities the partners themselves cannot articulate – e.g. shifts in values that emerge only after major life events – placing a ceiling on its diagnostic reach.
+      - ISR of 55% reflects that the programme reliably surfaces compatibility information for honestly engaged couples, but a meaningful minority either underuse the assessment or are looking at compatibility dimensions the inventory does not cover.
+    uar_reasoning: |
+      - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
+
+  relationship-quality.harmony:
+    pbs: 7
+    isr: 60
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – the curriculum directly targets day-to-day argument patterns and conflict-escalation cycles, which are the primary determinants of partnership harmony. Delta: ~30–35 percentile points.
+      - [Stanley et al. (2006)](https://pubmed.ncbi.nlm.nih.gov/16846239/) found PREP couples maintained lower negative communication and higher positive communication at five-year follow-up – a direct measurement of the construct underlying day-to-day harmony.
+      - Score 7 reflects substantial but not transformative gains – the programme installs better default behaviours, but cannot eliminate the inherent friction of long-term partnership.
+    isr_reasoning: |
+      - [Hawkins et al. (2008)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722331/) found d = 0.36 on communication quality across 47 controlled studies, with the largest effects in programmes that explicitly teach skills rather than discussing relationships in the abstract.
+      - The skills are most reliably retained when couples practise them between sessions and have a clear protocol to invoke during arguments; passive completion produces weaker results.
+      - ISR of 60% reflects reasonably reliable harmony gains for adherent couples, with attrition primarily from couples who complete the programme but do not practise the techniques.
+    uar_reasoning: |
+      - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
+
+  relationship-quality.alignment:
+    pbs: 7
+    isr: 65
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – the assessment-based curricula force explicit discussion of finances, children, careers, religion, and family obligations, which are the dimensions on which alignment is measured. Delta: ~35 percentile points.
+      - Many couples enter marriage with substantial undiscussed assumptions about lifetime values; the structured curriculum is among the most reliable methods of converting implicit into explicit alignment. [Markman et al. PREP outcomes](https://pubmed.ncbi.nlm.nih.gov/16846239/) show durable communication and consensus gains at five-year follow-up.
+      - Score 7 reflects a meaningful gain on the alignment construct – the programme cannot create alignment where none exists, but it reliably surfaces and helps negotiate the alignment that is achievable.
+    isr_reasoning: |
+      - [Prepare/Enrich research](https://www.prepare-enrich.com/research/) shows that the structured inventory consistently identifies disagreement areas across categories such as finances, family, and roles, with couples reporting better understanding of partner views post-programme.
+      - The alignment effect is most reliable for couples whose differences are negotiable; for couples with deep value mismatches, the programme surfaces the mismatch but cannot resolve it.
+      - ISR of 65% reflects strong reliability of the disclosure mechanism, with the main failure mode being couples who reach the limits of negotiable alignment.
+    uar_reasoning: |
+      - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
+
+  relationship-quality.connection:
+    pbs: 5
+    isr: 55
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – pre-marital programmes increase emotional vulnerability through structured disclosure, which has a real but secondary effect on the connection construct. Delta: ~20–25 percentile points.
+      - The connection benefit is largely indirect: the curriculum's primary aim is conflict and expectation work, with closeness emerging as a by-product of mutual disclosure rather than as the explicit target.
+      - Score 5 reflects a modest, secondary benefit – stronger connection is plausible but not the central mechanism.
+    isr_reasoning: |
+      - [Hawkins et al. (2008)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722331/) report effect sizes on relationship satisfaction (d ≈ 0.30) which encompasses connection but is not specific to it; direct measurement of emotional intimacy is rarer in the literature.
+      - Couples who already have strong baseline connection see smaller gains; the effect is most reliable for couples with moderate baseline closeness who benefit from structured vulnerability exercises.
+      - ISR of 55% reflects modest reliability of the connection benefit – real but variable across couples and not the curriculum's primary lever.
+    uar_reasoning: |
+      - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
+
+  communication.conflict:
+    pbs: 7
+    isr: 65
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – the speaker-listener technique, time-out protocols, and structured negotiation frames taught in PREP and Gottman programmes are direct conflict-navigation skills that generalise beyond the romantic relationship. Delta: ~35 percentile points.
+      - [Stanley et al. (2006)](https://pubmed.ncbi.nlm.nih.gov/16846239/) found durable reductions in negative communication and increases in positive communication at five-year follow-up – the construct measured here.
+      - Score 7 reflects a substantive skill-acquisition effect on conflict navigation specifically, transferable from the romantic context to other relationships once practised.
+    isr_reasoning: |
+      - [Hawkins et al. (2008)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722331/) found d = 0.36 on communication quality across 47 controlled studies, indicating reasonably reliable skill acquisition for adherent couples.
+      - The skills require active practice to be retained under stress; couples who complete sessions without between-session practice show weaker maintenance.
+      - ISR of 65% reflects that the conflict-skill mechanism is well-supported and consistently produces gains for couples who practise the techniques.
+    uar_reasoning: |
+      - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 5
+    isr: 55
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – the structured listening exercises and validation frames generalise modestly to non-romantic conversation, building connection capacity beyond the partner relationship. Delta: ~20–25 percentile points.
+      - The transfer effect is plausible but indirect: skills practised in the romantic context do not automatically transfer, and the programme is not designed for general communication training.
+      - Score 5 reflects a modest secondary benefit – real for users who deliberately apply the techniques outside the relationship, smaller for users who silo the skills.
+    isr_reasoning: |
+      - General communication transfer effects are not directly measured in the pre-marital counselling literature; the inference is from adjacent research showing that structured listening skills generalise across contexts when explicitly practised.
+      - Skill transfer is most reliable when the user consciously rehearses the techniques in non-romantic settings; siloed practice produces weaker general gains.
+      - ISR of 55% reflects modest reliability and partial transfer of the skills to general communication.
+    uar_reasoning: |
+      - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 5
+    isr: 55
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – relationship distress is one of the largest sources of day-to-day emotional instability in adult life, and pre-marital programmes reduce future relationship distress in ways that plausibly stabilise mood. Delta: ~20–25 percentile points.
+      - [Research linking relationship quality to mental health](https://pmc.ncbi.nlm.nih.gov/articles/PMC2693415/) finds marital distress predicts depression and anxiety; reducing future marital distress via better-prepared transitions is therefore an indirect mental-health intervention.
+      - Score 5 reflects a real but indirect effect – the programme does not treat mental-health symptoms directly; it reduces a major upstream driver of future distress.
+    isr_reasoning: |
+      - The mental-health benefit depends on the relationship-quality mechanism succeeding first; it is downstream of the primary effects and therefore strictly less reliable than the primary scores.
+      - For users with pre-existing mental-health conditions, pre-marital counselling does not substitute for clinical care; it may complement but not replace direct treatment.
+      - ISR of 55% reflects modest reliability of the indirect mental-health benefit, conditional on the primary relationship effects holding.
+    uar_reasoning: |
+      - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 500
+  upfront_cost_reasoning: "Lower-cost evidence-based options include online or workbook-based PREP (~$50–$200) and clinician-led Prepare/Enrich (~$200–$400 for the assessment plus session bundle). $500 represents the minimum viable spend for an in-person, trained-counsellor programme; higher-end private therapy can run $1,500–$2,500 for a full course."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The intervention is a one-time pre-commitment programme with no recurring fees. Couples may later choose ongoing relationship maintenance or therapy, but those are distinct interventions."
+  upfront_time: 18
+  upfront_time_reasoning: "Six to eight sessions of approximately 90 minutes each, plus the initial assessment inventory (1–2 hours) and brief between-session exercises – roughly 15–20 hours total contact and homework time over two to three months. This is the minimum dose at which controlled trials show durable effects."
+  ongoing_time: 0
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "No ongoing time commitment after the programme ends. Couples may choose to maintain occasional skill practice, but this is not part of the intervention."
+
+prerequisites:
+  - "An engaged, committed, or seriously considering-marriage couple with both partners willing to participate – the intervention cannot be done unilaterally"
+  - "Access to a counsellor trained in an evidence-based curriculum (PREP, Prepare/Enrich, Gottman Method) – which exist in most metropolitan areas and via licensed online providers"
+  - "Sufficient relationship maturity to discuss finances, sex, family, and disagreements candidly with a third party present"
+  - "Three or more months of lead time before the wedding or major commitment date so the full curriculum can be completed before the decision point"
+
+flagged_domains:
+  - domain: "family-of-origin"
+    rationale: "Most pre-marital curricula explicitly cover family-of-origin patterns and how partners' backgrounds shape expectations; surfacing these patterns plausibly improves users' relationship with their own family system."
+  - domain: "financial-planning-tracking"
+    rationale: "Programmes like Prepare/Enrich include structured financial-attitude inventories that surface spending, saving, and debt mismatches before they become marital conflict – a direct uplift in joint financial planning capacity."
+  - domain: "children"
+    rationale: "Curricula such as Bringing Baby Home explicitly prepare couples for the transition to parenthood, and pre-marital programmes commonly cover parenting expectations and divisions of labour, which plausibly improves child-related outcomes downstream."

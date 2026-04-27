@@ -1,0 +1,119 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Annual Rent Negotiation"
+what_it_is: |
+  A specific, repeatable annual practice of negotiating rent at lease renewal time – using comparable listings, vacancy data for the building and area, your own tenure as a paying tenant, and a credible willingness to walk away as leverage. Most renters accept whatever increase a landlord proposes (or is silently embedded in a renewal letter), even though landlords face substantial turnover costs that make retention pricing rational on their side. A typical vacancy costs the landlord one to three months of lost rent plus advertising, screening, and turnover work, which sets the rough size of the concession a tenant can credibly extract. Done once per year, on a 30–60 minute prep cycle, the intervention compounds: small annual reductions or freezes meaningfully shift the share of gross income going to housing over a tenancy of several years.
+how_to_do_it: |
+  - Begin 60–90 days before the lease end date – rental markets in most US metros price renewal letters relative to current asking rents, and you need the data before the landlord sends the letter
+  - Pull comparable listings from Zillow, Apartments.com, Realtor.com, Rent.com, and the local Craigslist or Facebook Marketplace board for units that match yours on bedrooms, square footage, and amenities; record at least 5–8 comps with current asking rent
+  - Check vacancy signals for your building and submarket: how many units in your building are listed, how long they have been on the market (Zillow's "days on market" field), and the latest census or BLS rental vacancy rate for your metro – higher vacancy means more landlord pain from a turnover and stronger leverage
+  - Write a one-page email to your landlord that anchors low: state your proposed renewal rent (typically 5–10% below their likely ask if comps justify it, or a freeze if they do not), cite two or three comparable listings with links, note your tenure and payment history, and explicitly mention you are deciding between staying and moving
+  - Be willing to walk – have at least one alternative unit you would actually take; the credibility of your BATNA is what makes the anchor work, not the wording of the email
+  - Repeat every year regardless of outcome; even in years where you cannot extract a reduction, you usually slow the increase, and skipping a year forfeits the leverage permanently
+success_looks_like: |
+  - You enter every lease renewal with a written offer rather than reacting to whatever the landlord proposes – the anchor is yours, not theirs
+  - Over a 3–5 year tenancy your rent grows materially slower than the local market index, recovering several months of gross rent in cumulative savings
+  - You have a clear, unemotional read on whether your current unit is still a good deal or whether moving is the rational choice; the negotiation forces an annual housing audit
+common_pitfalls: |
+  - Asking by phone or in person without written comps – landlords have no incentive to respond to vague pressure, and you lose the anchoring benefit of a specific written number with evidence
+  - Bluffing about leaving when you cannot or will not – sophisticated landlords (and most property managers) read this quickly, and an empty BATNA collapses the negotiation
+  - Negotiating only when desperate (after a job loss or rent shock) – the practice works because it is routine and unemotional; one-off appeals from distress have a much lower hit rate than calm annual asks
+  - Accepting a verbal concession without an addendum – the new rate must be in writing on the renewal lease or addendum, signed by both parties, before you assume the negotiation succeeded
+description: |
+  - A specific, repeatable annual practice of negotiating rent at lease renewal – using comparable listings, building and metro vacancy data, tenure, and a credible willingness to walk to extract concessions
+  - Distinct from one-off salary-style negotiation: the cadence is fixed (every renewal), the data sources are specific (rental comps, BLS or census vacancy rates), and the leverage source is the landlord's turnover cost rather than your own scarcity value
+  - [Rental industry analyses](https://innago.com/tenant-turnover-cost/) estimate landlord turnover costs at one to three months of lost rent plus several hundred to several thousand dollars in marketing, screening, and make-ready expenses – this is the size of the concession a tenant can credibly extract before the landlord prefers a vacancy
+  - Anchoring research from [Galinsky and Mussweiler (2001)](https://www.researchgate.net/publication/12041337_First_offers_as_anchors_The_role_of_perspective-taking_and_negotiator_focus) shows the side that makes the first specific offer typically captures 60–85% of the bargaining surplus on price-only negotiations; written, comp-backed renter offers exploit this directly
+  - [BLS Consumer Expenditure data](https://www.bls.gov/cex/) shows the average US renter household spends roughly 28–35% of after-tax income on housing, and even modest renewal concessions of 3–5% compound across multi-year tenancies into meaningful affordability gains
+applicable_domains: ["housing", "saving", "behaviours"]
+
+values:
+  housing.affordability:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 50th percentile (the typical renter spends ~30% of gross income on housing, the median for the housing.affordability anchor). After successful adherence over a 3–5 year tenancy, a user could plausibly reach the 65th–70th percentile by holding rent flat or extracting 3–6% concessions while market rents rise 4–7% annually. Delta: ~15–20 percentile points.
+      - Cumulative savings of 3–8% of annual rent compound: on a $24,000 annual rent that is $720–$1,920 per year, or roughly 1–3 percentage points of gross income for a median-income renter. PBS = 10 + log₂(2/30) = 10 − 3.91 = 6.
+      - Concession size is bounded by the landlord's turnover cost. [Industry data](https://www.landlordstudio.com/blog/the-actual-cost-of-apartment-turnover) suggests one to three months of lost rent plus marketing and make-ready – this caps the rational concession at roughly 8–25% of annual rent in extreme cases, but typical concessions are 3–8% because landlords also factor in retention discounts to market rent.
+    isr_reasoning: |
+      - [Industry landlord analyses](https://innago.com/tenant-turnover-cost/) find a meaningful share of landlords prefer retaining a paying tenant at flat or modestly reduced rent to facing turnover costs; survey-based estimates of successful tenant negotiation rates run 40–60% when the request is specific and comp-backed, lower when vague.
+      - [Apartment List 2023 renter survey](https://www.apartmentlist.com/research/2023-millennial-homeownership-report) data on lease negotiations indicates roughly 40% of renters who attempted a written renegotiation in the prior year extracted some concession (reduction, freeze, or non-monetary terms like a free month or upgraded appliance).
+      - ISR of 60% reflects that the mechanism works most reliably in moderate-vacancy markets and with private or small-portfolio landlords; large institutional landlords with revenue-management software (RealPage, Yardi) are less responsive and account for the failure tail.
+    uar_reasoning: |
+      - The intervention requires action only once per year and roughly 30–60 minutes of preparation, but most renters do not attempt it: [Zillow's 2022 Consumer Housing Trends Report](https://www.zillow.com/research/consumer-housing-trends-report-2022-31696/) and similar surveys consistently find that fewer than 25–30% of renters even ask about reducing or holding rent at renewal, despite high stated willingness when prompted.
+      - Annual cadence makes the habit fragile: with no weekly or monthly trigger, users forget the prep window, miss the lease deadline, or default to signing the renewal letter as offered. Calendar reminders mitigate but do not eliminate this drift.
+      - UAR of 40% reflects that roughly four in ten users will sustain the practice as a true annual ritual; the rest will do it once, succeed or fail, and revert to passive renewal acceptance within one or two cycles.
+
+  housing.comfort:
+    pbs: 5
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 50th percentile. After successful adherence, a user can sometimes trade negotiation leverage for non-monetary upgrades – new appliances, painted walls, fixed long-standing maintenance issues, or replaced flooring – moving them to roughly the 60th–65th percentile on comfort. Delta: ~10–15 percentile points.
+      - Landlords often prefer to grant capital upgrades over rent reductions because upgrades persist as building value while reductions hit cash flow permanently. A tenant who frames the negotiation as "freeze rent and replace the dishwasher and carpets" frequently gets both where a pure rent reduction would have failed.
+      - Score 5 reflects that comfort upgrades are a secondary, opportunistic outcome of the negotiation rather than its primary purpose; not every negotiation surfaces the right upgrade opportunity.
+    isr_reasoning: |
+      - No direct studies measure comfort gains from rent negotiation specifically; evidence is extrapolated from general retention-pricing literature and landlord trade publications.
+      - [BiggerPockets landlord guidance](https://www.biggerpockets.com/blog/raise-rent-without-losing-tenants) and [property management industry discussions](https://www.appfolio.com/blog/secret-resident-retention/) consistently report that capital upgrades are a common retention tool, but the pattern depends heavily on the landlord's portfolio strategy and the unit's existing condition.
+      - ISR of 50% reflects genuine but uncertain comfort benefits, conditional on the unit having upgrade-relevant deficits and the landlord being responsive to non-monetary trades.
+    uar_reasoning: |
+      - See housing.affordability UAR – same intervention, same adherence profile. Comfort gains require the user to actually identify upgrade opportunities and ask for them, which is a skill layer on top of basic rent negotiation that fewer practitioners reach.
+
+  saving.lifestyle:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Reduced rent or held-flat rent frees roughly $720–$1,920 per year for a median renter, which translates into a modest increment in liquid reserves if directed to savings rather than absorbed into spending. Plausible endpoint: ~45th percentile. Delta: ~10 percentile points.
+      - The lifestyle benefit depends on the user actually saving the difference rather than letting it dissipate into spending – a behavioural step the intervention itself does not enforce. PBS = 10 + log₂(0.5/12) = 10 − 4.58 = 5.4, rounded down to 4 to reflect leakage into consumption.
+      - Score 4 is conservative: most renters who win a rent negotiation do not earmark the savings for an emergency or liquid-reserve account, so the saving translation is partial.
+    isr_reasoning: |
+      - [Federal Reserve SHED 2023 data](https://www.federalreserve.gov/publications/2024-economic-well-being-of-us-households-in-2023-expenses.htm) shows roughly 37% of US adults could not cover a $400 emergency from cash; lifestyle savings improvements are most impactful at this margin but require the user to direct windfalls into liquid accounts rather than spending.
+      - [Thaler and Benartzi mental accounting research](https://www.jstor.org/stable/10.1086/380085) consistently finds that unanticipated savings (rent concessions) leak into consumption more readily than scheduled savings, reducing the share that reaches the lifestyle reserve.
+      - ISR of 55% reflects that roughly half of users who successfully negotiate will direct the saved amount to liquid reserves; the rest will absorb it into ordinary spending.
+    uar_reasoning: |
+      - See housing.affordability UAR – same intervention, same adherence profile.
+
+  behaviours.freedom:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The intervention directly counters the default-acceptance pattern most renters apply to housing costs – a small but real liberation from passive financial compliance. Plausible endpoint: ~50th percentile on a narrow slice of behaviour. Delta: ~15 points on the relevant subdomain.
+      - Annually exercising agency over a major recurring expense generalises modestly: users who negotiate rent often start questioning other recurring charges (insurance renewals, subscription pricing, contractor quotes). Score 4 reflects that the generalisation is real but narrow.
+      - The intervention is a once-per-year event rather than a daily practice, limiting the scope of behavioural rewiring; this is genuine freedom from a specific compulsion (passive renewal signing) rather than broad behavioural transformation.
+    isr_reasoning: |
+      - No direct studies measure compulsion reduction from rent negotiation specifically; evidence is mechanistic and extrapolated from [self-efficacy research on financial agency](https://pmc.ncbi.nlm.nih.gov/articles/PMC4302280/) showing that successful exercise of negotiation generalises modestly to adjacent financial decisions.
+      - The freedom benefit is most reliable when the user wins at least one negotiation – a defeat in the first attempt can entrench rather than dissolve passive patterns, accounting for the failure tail.
+      - ISR of 55% reflects that a majority of practitioners experience some increase in agency over recurring expenses, but generalisation beyond housing varies substantially.
+    uar_reasoning: |
+      - See housing.affordability UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials, subscriptions, or services required. Comp data is freely available on Zillow, Apartments.com, Realtor.com, Rent.com, Craigslist, and Facebook Marketplace; vacancy statistics are free from the BLS and Census Bureau."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No recurring costs. The intervention uses publicly available rental and vacancy data and standard email communication."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour for the first cycle: identifying comp sources, building a simple spreadsheet template, drafting an initial email template, and locating BLS or Census vacancy data for the relevant metro. Subsequent years reuse the template."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Roughly 30–60 minutes of preparation 60–90 days before lease renewal: pulling fresh comps, checking current building and metro vacancy, and updating the email template with the new anchor and evidence. Plus 15–30 minutes for any follow-up exchanges with the landlord."
+
+prerequisites:
+  - "An active residential lease in a market where rents are individually negotiated rather than rent-controlled or set by a centralised allocation system (most US private-market rentals qualify; most public housing and some rent-stabilised buildings do not)"
+  - "Internet access to pull current rental comps from public listing sites and vacancy data from the BLS or Census Bureau"
+  - "At least one credible alternative unit you could actually move to – without a real BATNA, the willingness-to-walk leverage that drives the negotiation does not exist"
+
+flagged_domains:
+  - domain: "rationality"
+    rationale: "Forces an annual quantitative comparison of the current unit against market alternatives, building a habit of evidence-based decision-making about a major recurring expense rather than defaulting to status-quo continuation."
+  - domain: "communication"
+    rationale: "The written, evidence-backed renewal request is a transferable template for other principal-agent negotiations (insurance renewals, contractor quotes, service pricing) and develops written persuasion skills."

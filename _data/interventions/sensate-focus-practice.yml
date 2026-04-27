@@ -1,0 +1,162 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Sensate Focus Practice"
+what_it_is: |
+  A staged, non-goal-oriented programme of partnered touch exercises developed by Masters and Johnson in the late 1960s and still the dominant behavioural backbone of modern psychosexual therapy. Couples agree to suspend intercourse and orgasm-seeking for a defined period and instead work through a graded sequence – non-genital touch, then genital touch, then sensual integration with intercourse – paying attention to physical sensation rather than performance. The mechanism is dual: it interrupts the spectator-and-anxiety loop that drives most non-organic sexual difficulties, and it rebuilds embodied attention to touch in partners whose sex has become routinised, avoidant, or symptom-focused. It is typically practised over 6–12 weeks, two to three sessions per week of 30–45 minutes, either self-directed via a structured workbook or guided by a sex therapist who reviews each stage. Unlike "spice up your sex life" advice, this is an evidence-based clinical protocol with a 50-year research base – and unlike most clinical protocols, drop-out is the dominant failure mode rather than ineffectiveness.
+how_to_do_it: |
+  - Read the protocol together first and explicitly agree the ground rules: no intercourse, no orgasm-seeking, and either partner can pause at any time. The temporary ban on intercourse is the active ingredient – it removes the performance frame that the rest of the exercise is trying to defuse. Plan for a minimum 6-week course, two to three 30–45 minute sessions per week.
+  - Start with stage one: non-genital sensate focus. Take turns being the toucher and the receiver. The toucher explores the partner's body – avoiding breasts and genitals – purely to notice texture, temperature, and contour, not to arouse. The receiver focuses on the sensation of being touched and gives only minimal feedback ("more pressure", "slower"). Run this stage for at least two weeks before progressing.
+  - Move to stage two (genital sensate focus) only when stage one is consistently calm and pleasurable. Touch now includes breasts and genitals but still without orgasm or intercourse as a goal – the same attentional discipline applies. Stage three reintroduces genital contact and eventually intercourse, but with the same mindful, sensation-focused stance rather than reverting to performance mode.
+  - Use a workbook or therapist guide to structure stage transitions and to debrief difficulties – avoidance, frustration, or symptom recurrence between sessions are the normal failure points and have known responses (slow down, return to an earlier stage, address the underlying anxiety with a clinician). [Linda Weiner and Constance Avery-Clark's Sensate Focus in Sex Therapy](https://www.routledge.com/Sensate-Focus-in-Sex-Therapy-The-Illustrated-Manual/Weiner-Avery-Clark/p/book/9781138642362) is the standard modern reference; the [original Masters and Johnson protocol](https://pubmed.ncbi.nlm.nih.gov/5530589/) is the source text but most users will find a workbook or therapist easier to follow.
+success_looks_like: |
+  - Touch becomes interesting in itself rather than a route to a destination, and both partners report reduced anticipatory anxiety in the bedroom over the course of the programme
+  - Specific symptoms that motivated the practice – performance anxiety, erectile concerns, orgasmic difficulty, low desire driven by avoidance – noticeably improve, even if not always fully resolve
+  - Communication about sex becomes routine rather than charged; the partners can pause, redirect, and request adjustments without it becoming a relational event
+common_pitfalls: |
+  - Treating the no-intercourse rule as optional and "cheating" within the first few weeks – this collapses the whole mechanism, because the protocol works precisely by removing the performance pressure that the ban creates
+  - Drop-out after one or two sessions because the early stages feel awkward, clinical, or unsexy – this is expected and the discomfort itself is diagnostic, not a sign the protocol is failing
+  - Attempting it without a clinician when there is an underlying medical cause (vascular erectile dysfunction, hormonal issues, untreated trauma) – sensate focus is a behavioural intervention and will not address organic causes; rule those out first
+  - Using the structured time as a relationship-issues conversation rather than the embodied attention exercise it is – relational conflict needs its own channel before sensate focus will land
+description: |
+  - A staged, non-goal-oriented protocol of partnered touch exercises developed by Masters and Johnson and still the dominant behavioural component of modern psychosexual therapy
+  - Couples agree to suspend intercourse and orgasm-seeking for a defined period (typically 6–12 weeks), then progress through stages of non-genital touch, genital touch, and sensual integration, attending to physical sensation rather than performance
+  - [Reviews of psychosexual therapy](https://pubmed.ncbi.nlm.nih.gov/22989293/) consistently identify sensate focus as a core component of effective treatment for sexual dysfunctions including performance anxiety, low desire, and orgasmic difficulty
+  - Practised two to three times per week in 30–45 minute sessions, either self-directed via a structured [workbook](https://www.routledge.com/Sensate-Focus-in-Sex-Therapy-The-Illustrated-Manual/Weiner-Avery-Clark/p/book/9781138642362) or guided by a [certified sex therapist](https://www.aasect.org/referral-directory)
+  - Distinct from generic "spice up your sex life" advice in two ways: the temporary ban on intercourse is the active ingredient (it removes the performance frame), and the attentional discipline targets the spectator-anxiety loop that underlies most non-organic sexual difficulties
+applicable_domains: ["sex", "relationship-quality", "mindfulness"]
+
+values:
+  sex.pleasure:
+    pbs: 7
+    isr: 60
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 70th–75th percentile of subjective sexual pleasure – moving from anxiety-coloured or routinised sex to embodied, sensation-led intimacy. Delta: ~35–40 percentile points, which maps to a meaningful-to-major gain on the subjective anchor.
+      - The mechanism directly targets pleasure: shifting attention from performance metrics to physical sensation is the textbook prescription for reducing the spectator effect that dampens arousal and orgasm, with [systematic reviews of psychosexual therapy](https://pubmed.ncbi.nlm.nih.gov/22989293/) reporting clinically meaningful improvement in sexual response among completers.
+      - Score 7 reflects a meaningful subjective gain that is bounded by the fact that the protocol removes a specific obstacle (anxiety, distraction, routinisation) rather than adding new sources of pleasure.
+    isr_reasoning: |
+      - Among completers, [meta-analysis of cognitive-behavioural sex therapy](https://pubmed.ncbi.nlm.nih.gov/23427893/) – of which sensate focus is a primary component – finds moderate-to-large effect sizes on sexual function and satisfaction, with response rates broadly in the 50–70% range across dysfunctions.
+      - Effectiveness is highest for psychogenic sexual difficulties (performance anxiety, situational erectile concerns, orgasmic difficulty) and lower where there is an unaddressed organic cause; this heterogeneity supports a moderate ISR rather than a high one.
+      - ISR of 60% reflects that most couples who complete the full programme will see meaningful pleasure gains, but a meaningful minority – particularly those with comorbid medical issues, untreated trauma, or significant relational conflict – will not.
+    uar_reasoning: |
+      - Adherence is the dominant failure mode for sensate focus. [Clinical reviews of sex therapy drop-out](https://pubmed.ncbi.nlm.nih.gov/30243480/) report attrition rates of 30–50% even within structured therapist-guided programmes; self-directed adherence is meaningfully lower.
+      - The protocol requires two coordinated adults to ringfence multiple weekly sessions for several weeks, abstain from intercourse, and tolerate awkwardness in the early stages – a stack of demands that few couples sustain without external accountability.
+      - UAR of 25% reflects that even among couples who start the protocol, a minority complete enough of it to receive the full benefit; for the wider population that might consider it, the rate is lower still.
+  sex.contentment:
+    pbs: 7
+    isr: 60
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 70th percentile of overall sexual contentment – moving from a state where sex is a source of anxiety, avoidance, or quiet dissatisfaction to one where it is integrated and untroubled. Delta: ~35 percentile points.
+      - Contentment with sex is closely tied to the absence of dysfunction-related distress, and [reviews of treatment outcomes for hypoactive sexual desire and arousal disorders](https://pubmed.ncbi.nlm.nih.gov/27114192/) report meaningful reductions in sex-related distress following sensate-focus-based therapy in completers.
+      - Score 7 reflects that the contentment gain comes through removing distress and shame rather than producing peak experiences – a meaningful but bounded effect on the subjective anchor.
+    isr_reasoning: |
+      - The contentment pathway is reasonably reliable when the difficulty is psychogenic and the couple completes the programme: [psychosexual therapy outcome data](https://pubmed.ncbi.nlm.nih.gov/22989293/) report sustained improvement in sexual satisfaction at 6–12 month follow-up among completers.
+      - Reliability drops where contentment is being undermined by factors outside the bedroom – unresolved relational conflict, mismatched values around sex, or untreated mental health conditions – which sensate focus is not designed to address.
+      - ISR of 60% reflects that the benefit is reliable for the population the protocol was designed for and modest for users whose dissatisfaction has non-sexual roots.
+    uar_reasoning: |
+      - See sex.pleasure UAR – same intervention, same adherence profile. UAR of 25% reflects high attrition through the multi-week protocol.
+  sex.variety:
+    pbs: 5
+    isr: 55
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 55th–60th percentile of subjective sexual variety – the staged exposure to non-goal-oriented touch, breast and genital exploration outside intercourse, and slowed-down integration introduces forms of sensual contact that many couples have not deliberately practised. Delta: ~20–25 percentile points.
+      - The variety gain is a side-effect rather than the primary aim – the protocol does not introduce new techniques or partners but does broaden the repertoire of attended-to sensation. [Clinical descriptions of sensate focus](https://www.routledge.com/Sensate-Focus-in-Sex-Therapy-The-Illustrated-Manual/Weiner-Avery-Clark/p/book/9781138642362) note that couples often report a richer sense of what counts as sex by the end of the programme.
+      - Score 5 reflects a modest gain bounded by the fact that the protocol expands attention to existing forms of contact rather than introducing genuinely novel activities.
+    isr_reasoning: |
+      - Variety gains follow naturally from completing the staged exposure for most couples, but they are smaller and less reliable than the pleasure and contentment gains because the protocol is not optimised for novelty.
+      - For couples whose baseline variety is already moderate, the marginal gain from sensate focus is small; for couples whose intimate repertoire has narrowed to perfunctory intercourse, the marginal gain is larger.
+      - ISR of 55% reflects modest reliability of the variety side-effect among completers, with substantial variation depending on starting repertoire.
+    uar_reasoning: |
+      - See sex.pleasure UAR – same intervention, same adherence profile.
+  sex.frequency:
+    pbs: 5
+    isr: 50
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 55th–60th percentile on the frequency anchor (4 mutually satisfying encounters per week) – sensate focus often paradoxically increases frequency by removing the anxiety that drives avoidance, even though the protocol bans intercourse during early stages. Delta: ~20–25 percentile points; in absolute terms this typically translates to roughly one additional encounter per week post-programme, mapping to score 5 on the linear anchor.
+      - The mechanism is indirect: by reducing performance anxiety and rebuilding positive associations with physical contact, the protocol addresses one of the main behavioural drivers of low frequency in distressed couples. [Clinical reviews](https://pubmed.ncbi.nlm.nih.gov/22989293/) report frequency gains as a common downstream effect of psychosexual therapy.
+      - Score 5 reflects a modest frequency gain that is real but bounded – the protocol is not designed to optimise frequency and is contraindicated for couples whose primary issue is desire-discrepancy without dysfunction.
+    isr_reasoning: |
+      - Frequency gains are less reliable than pleasure or contentment gains because they require the underlying anxiety reduction to translate into ongoing initiation behaviour after the structured programme ends.
+      - For couples where avoidance was the main frequency suppressor, gains are reasonably reliable; for couples with mismatched libidos or schedule constraints, the protocol does not address the limiting factor.
+      - ISR of 50% reflects that frequency gains are a probable but not dominant downstream effect among completers.
+    uar_reasoning: |
+      - See sex.pleasure UAR – same intervention, same adherence profile.
+  relationship-quality.connection:
+    pbs: 6
+    isr: 60
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 60th–65th percentile of romantic emotional connection – the protocol involves several weeks of sustained, vulnerable, non-goal-oriented physical attention to one another, which is itself a connection-building practice independent of the sexual outcome. Delta: ~25–30 percentile points.
+      - The structured practice creates regular, scheduled time in which both partners are deliberately attentive to each other's body and signals – a form of slow, embodied attention that closely resembles the affectionate touch protocols used in [couples-therapy outcome research](https://pubmed.ncbi.nlm.nih.gov/22988894/).
+      - Score 6 reflects a meaningful connection gain that is real but secondary to the primary sexual mechanism, and somewhat dependent on baseline relational quality.
+    isr_reasoning: |
+      - Connection gains are most reliable for couples whose disconnection has been driven by sexual avoidance and the secondary withdrawal that follows; for couples whose disconnection is rooted elsewhere (resentment, parenting load, life-stage mismatch) the protocol's effect on connection is smaller.
+      - [Couples therapy reviews](https://pubmed.ncbi.nlm.nih.gov/22988894/) note that interventions involving structured shared activity and physical affection consistently improve relational closeness in completers, supporting a moderate ISR.
+      - ISR of 60% reflects modest-to-good reliability of connection benefits among completers, conditional on baseline relational conditions.
+    uar_reasoning: |
+      - See sex.pleasure UAR – same intervention, same adherence profile.
+  relationship-quality.harmony:
+    pbs: 5
+    isr: 55
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 55th–60th percentile of day-to-day partnership harmony – sexual difficulties and the conflict-avoidance that surrounds them are a substantial driver of background relational tension, and resolving them tends to reduce that tension. Delta: ~20–25 percentile points.
+      - The harmony effect is indirect: by giving the couple a shared, structured, low-conflict project and a vocabulary for talking about touch and preferences without it becoming charged, the protocol reduces the friction that previously surrounded sexual topics.
+      - Score 5 reflects a modest harmony gain that is real but secondary, and that depends on the protocol going reasonably well rather than becoming a new source of conflict.
+    isr_reasoning: |
+      - For couples where sex was a recurring source of low-grade conflict or avoidance, harmony gains are reasonably reliable; for couples whose conflict is rooted in non-sexual domains, the effect is much smaller.
+      - There is a real failure mode where the protocol itself becomes a battleground if one partner is more committed than the other – this risk is non-trivial and reduces ISR.
+      - ISR of 55% reflects modest reliability of harmony gains, with meaningful variance depending on whether the couple uses the protocol cooperatively.
+    uar_reasoning: |
+      - See sex.pleasure UAR – same intervention, same adherence profile.
+  mindfulness.emotional:
+    pbs: 4
+    isr: 50
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile on the subjective anchor for mindfulness-related emotional wellbeing – sensate focus is, mechanically, a structured exercise in interoceptive attention and non-judgemental noticing, which overlaps with the core skills cultivated in mindfulness training. Delta: ~15–20 percentile points.
+      - The skill being practised – sustained attention to physical sensation without goal-orientation – is functionally the same as a body-scan practice, and the [interoceptive awareness mechanisms](https://pubmed.ncbi.nlm.nih.gov/26341630/) that mediate emotional regulation gains in mindfulness training are plausibly engaged here too, though not at the dose used in formal practice.
+      - Score 4 reflects a modest gain – the dose and duration are well below standard mindfulness training, and the application is narrow (partnered touch context only).
+    isr_reasoning: |
+      - The mindfulness benefit is a side-effect rather than the primary aim, and most users will not generalise the skill from the bedroom to other contexts without explicit effort.
+      - For users who already have some mindfulness practice, the cross-domain reinforcement is more reliable; for users with no contemplative background, the gain is more local.
+      - ISR of 50% reflects that the mindfulness side-benefit is real but not reliably generalisable.
+    uar_reasoning: |
+      - See sex.pleasure UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 30
+  upfront_cost_reasoning: "Approximately $30 for a structured workbook such as Weiner and Avery-Clark's Sensate Focus in Sex Therapy. Self-directed couples can begin with the workbook alone; therapist-guided couples will incur ongoing rather than upfront costs."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No ongoing cost for a self-directed course. Couples who choose therapist-guided sensate focus will incur $400–$1,200 per month for weekly sessions over the 6–12 week protocol, but this is a higher-intensity option rather than the minimum viable form."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 3 hours to read the protocol, agree the rules with a partner, and plan the first two weeks of sessions. No formal training is required for the self-directed version."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Two to three sessions of 30–45 minutes per week during the 6–12 week active phase, plus brief debrief time – roughly 2 hours per week. After the structured phase, the practice is integrated into normal intimate life and no longer requires dedicated time."
+
+prerequisites:
+  - "An existing committed romantic partnership in which both partners explicitly agree to undertake the protocol"
+  - "No untreated organic cause for the sexual difficulty being addressed (e.g. vascular, hormonal, or medication-driven dysfunction); a clinical evaluation should rule these out first"
+  - "Sufficient relational stability that a multi-week shared project will not become a vehicle for unresolved conflict; couples in active crisis should pursue couples therapy first"
+  - "Access to either a structured sensate focus workbook or a certified sex therapist to guide stage transitions"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Reduces sex-related anxiety, performance anxiety, and avoidance-driven distress, which are common comorbidities of and contributors to broader anxiety and mood symptoms."
+  - domain: "self-awareness"
+    rationale: "Sustained attention to one's own physical sensation and reactions during partnered touch surfaces patterns of avoidance, dissociation, and embodiment that are otherwise hard to access."
+  - domain: "communication"
+    rationale: "The protocol requires partners to make repeated, specific, low-stakes requests about physical preferences, which generalises into clearer sexual and relational communication after the structured phase ends."

@@ -1,0 +1,167 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Weekly Cooking Skill Practice"
+what_it_is: |
+  A deliberate, weekly practice of expanding cooking ability by working through a structured curriculum – one new technique, ingredient, or cuisine at a time – rather than rotating the same handful of dishes indefinitely. The practice borrows the logic of deliberate practice from skill-acquisition research: pick a focused target just beyond current capability, attempt it under conditions that surface mistakes, and revise based on the result. Over a 1–2 year arc, a beginner working through a curriculum such as Salt Fat Acid Heat, The Food Lab, or Mastering the Art of French Cooking can move from heating prepared ingredients to confidently improvising across multiple cuisines, building a repertoire of perhaps 40–60 reliable dishes. The mechanism converts cooking from a chore into a craft with visible progress, which both compounds skill over time and changes day-to-day eating patterns away from restaurant and ultra-processed alternatives.
+how_to_do_it: |
+  - Choose one structured curriculum and work through it sequentially rather than jumping between cookbooks. Salt Fat Acid Heat teaches the four variables that govern most cooking; The Food Lab emphasises technique and the science behind it; Mastering the Art of French Cooking provides a classical foundation. Pick one and commit for at least 6 months before adding a second.
+  - Each week, identify one target – a technique (emulsifying a vinaigrette, braising, lamination), an ingredient (a fish you have not cooked, a pulse, a fermented condiment), or a dish – that is one step beyond your current ability. Cook it once during the week. Cook it a second time within two weeks if it did not work, treating the failure as the learning event rather than an embarrassment.
+  - Keep a brief log: date, what you attempted, what worked, what failed, and one specific change to try next time. The log is the difference between cooking 50 meals and learning from 50 meals – without it, errors repeat invisibly.
+  - Eat what you cook with someone else when possible, and ask them what they actually thought rather than accepting reflexive politeness. External palate calibration is to cooking what feedback seeking is to other skills – self-assessment of one's own food is systematically generous.
+  - Roughly once a quarter, host or join a small meal where you cook something at the edge of your ability. The mild stakes accelerate learning by surfacing the gap between "works in private" and "works under time pressure".
+success_looks_like: |
+  - After 12 months, you can open a fridge with mixed ingredients and produce a competent meal without a recipe, because the underlying techniques and flavour principles transfer between dishes
+  - Your weekly mix has shifted measurably: more home-cooked meals, fewer takeaway and restaurant meals, and the home-cooked meals are ones you actually enjoy rather than tolerating
+  - You can host a small dinner without anxiety, because you have repertoire of dishes you have cooked enough times to trust under social pressure
+common_pitfalls: |
+  - Cooking the same five dishes repeatedly and counting it as practice. Repetition without progressive difficulty plateaus quickly and is what most home cooks already do – the gain comes specifically from working at the edge of capability.
+  - Treating one failed attempt as evidence that a technique is "not for me". Most techniques – pan sauces, bread, custards – take three to five attempts to internalise. Stopping after one creates a false ceiling on the repertoire.
+  - Over-investing in equipment before skill catches up. A sharp basic knife, a heavy pan, a sheet tray, and a digital scale will carry the first 18 months of practice; the sous-vide circulator and stand mixer can wait until you have specific dishes that require them.
+description: |
+  - A structured weekly practice of working through a cooking curriculum (Salt Fat Acid Heat, The Food Lab, Mastering the Art of French Cooking, or similar) one technique, ingredient, or cuisine at a time, with a brief log of what worked and what did not
+  - [Deliberate-practice research](https://psycnet.apa.org/doiLanding?doi=10.1037%2F0033-295X.100.3.363) consistently finds that focused, feedback-rich repetition at the edge of capability produces faster skill growth than unstructured time-on-task – the same logic that distinguishes serious musicians from casual ones applies to cooking
+  - [Home cooking research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863133/) shows people who cook dinner at home most nights consume fewer calories, less sugar, and less fat than those who rarely cook, even when not actively trying to eat more healthily; cooking ability is the gating constraint for many people
+  - [Cooking-intervention reviews](https://pubmed.ncbi.nlm.nih.gov/29248236/) find that programmes teaching practical cooking skills produce sustained increases in vegetable intake, dietary quality, and cooking confidence – effects that persist months after the intervention ends
+  - Distinct from generic "cook more at home" advice in that the unit of practice is a deliberately chosen skill, not a meal, and progress is tracked against a curriculum rather than measured by frequency alone
+applicable_domains: ["food-management", "nutrition", "life-skills", "saving"]
+
+values:
+  food-management.craft:
+    pbs: 8
+    isr: 75
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After 12–24 months of weekly deliberate practice from a structured curriculum, a user could plausibly reach the 80th–85th percentile of cooking craft and enjoyment – moving from a small fixed repertoire to confident improvisation across multiple cuisines. Delta: ~45–50 percentile points, mapping to a major gain on the subjective anchor.
+      - The craft value's anchor is subjective but the underlying skill curve is well-characterised: a beginner who spends roughly 60–80 hours per year on focused cooking practice over 18 months accumulates the ~100–150 hours that [skill-acquisition research](https://psycnet.apa.org/doiLanding?doi=10.1037%2F0033-295X.100.3.363) associates with movement from novice to functional competence in a complex motor-cognitive domain.
+      - Score 8 reflects a major rather than transformative gain – home cooks who follow this path do not reach professional craft, but the change in day-to-day food experience is large enough that successful adherents typically describe cooking as a source of pleasure rather than obligation.
+    isr_reasoning: |
+      - [Cooking-skill intervention reviews](https://pubmed.ncbi.nlm.nih.gov/29248236/) consistently report meaningful gains in cooking confidence and self-rated competence among participants who complete structured programmes, with effects sustained at 6–12 month follow-up.
+      - The craft outcome – satisfaction and skill from preparing food – is more reliable than diet-quality outcomes because it requires only that the practice produce visible improvement in the cook's own work, which a structured curriculum reliably does for adherent learners.
+      - ISR of 75% reflects that the small minority of failures come from poor curriculum choice, isolation from any feedback (cooking only for oneself), or systematic skipping of fundamentals in favour of showpiece dishes.
+    uar_reasoning: |
+      - [NHANES survey data on cooking dinner at home](https://pmc.ncbi.nlm.nih.gov/articles/PMC10282260/) show that roughly half of US adults always cook dinner at home and another 8% never do, with the proportion sustaining a deliberate weekly skill practice meaningfully smaller. Most home cooks settle into a fixed repertoire and stop progressing within a few months.
+      - Weekly practice requires a recurring 90–180 minute block that competes with takeaway, convenience meals, and other leisure – a real cost that erodes adherence over a 12-month horizon, particularly for users with young children, shift work, or long commutes.
+      - UAR of 35% reflects that a meaningful minority of users will sustain the practice through the first year, but most will drift toward repetition without progression within 3–6 months unless the curriculum is genuinely engaging.
+
+  food-management.competence:
+    pbs: 7
+    isr: 80
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~10–11 adequate meals per week). After successful adherence, a user could plausibly reach the 70th–75th percentile (~16–17 reliable meals per week) – the curriculum builds a repertoire of dishes that can be cooked from memory under time pressure. Delta: ~35–40 percentile points, mapping to roughly 5–6 additional adequate meals per week against an anchor of 21.
+      - Using the linear formula with a 6-meal delta against anchor_max 21: PBS = 10 + log₂(6/21) = 10 − 1.81 ≈ 8.2. Discounting to 7 acknowledges that competence requires not just skill but logistics (shopping, planning) which this intervention only partially addresses.
+      - [Home-cooking research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863133/) finds that people with greater cooking skill cook substantially more frequently, suggesting the skill-to-frequency pathway is reliable for those who reach competence.
+    isr_reasoning: |
+      - [Cooking-skill intervention reviews](https://pubmed.ncbi.nlm.nih.gov/29248236/) report sustained increases in cooking frequency and self-efficacy among programme completers, with most adherent participants reporting meaningful gains in their ability to provide regular meals.
+      - The competence pathway is more mechanically reliable than craft: once a learner can reliably produce 15–20 dishes from memory, week-to-week meal provision becomes substantially easier regardless of how much they enjoy the process.
+      - ISR of 80% reflects that the skill-to-meal-provision link is robust, with the small failure tail driven by users who learn dishes that are too complex for weeknight execution.
+    uar_reasoning: |
+      - See food-management.craft UAR – same intervention, same adherence profile.
+
+  food-management.waste_reduction:
+    pbs: 5
+    isr: 65
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~65–75% of food consumed). After successful adherence, a user could plausibly reach the 60th–65th percentile (~85% consumed) – improved skill expands the set of ingredients that can be salvaged into meals (wilting greens, leftover proteins, odd vegetables). Delta: ~10–15 percentile points of consumption rate.
+      - Using the linear formula with a 10-point delta against anchor_max 100: PBS = 10 + log₂(10/100) = 10 − 3.32 ≈ 6.7. Discounting to 5 reflects that this intervention does not directly target waste reduction – the gain is a side-effect of improvisational ability and is diluted by users whose curriculum focuses on shopping for specific dishes.
+      - [Cooking-skill research](https://pubmed.ncbi.nlm.nih.gov/29248236/) notes that food-literacy programmes typically include waste reduction as a measured outcome and find modest improvements, supporting the indirect pathway.
+    isr_reasoning: |
+      - The waste-reduction effect depends on whether the user develops improvisational ability or remains recipe-bound; curricula that emphasise technique (Salt Fat Acid Heat) deliver this more reliably than dish-by-dish curricula.
+      - Many adherent users will see waste reduction only modestly because they continue to shop per-recipe rather than working from on-hand ingredients.
+      - ISR of 65% reflects that the side-effect is real for most adherent users but smaller and more variable than the primary craft and competence gains.
+    uar_reasoning: |
+      - See food-management.craft UAR – same intervention, same adherence profile.
+
+  nutrition.physical_wellbeing:
+    pbs: 6
+    isr: 55
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile of nutritional quality – not because cooking is inherently healthier but because skilled home cooks substitute home-cooked meals for restaurant and ultra-processed alternatives at meaningful rates. Delta: ~25–30 percentile points.
+      - [Wolfson and Bleich (2015)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863133/) found that adults who cooked dinner most nights consumed about 150 fewer calories, 16 fewer grams of sugar, and 3 fewer grams of saturated fat per day than those who rarely cooked – effect sizes that, sustained, plausibly add ~9 months of healthy lifespan against the 12-year anchor.
+      - Score 6 reflects roughly 9 months of additional healthy lifespan per the anchor scale – meaningful but bounded, because the cooking-to-health pathway runs through habits (what is cooked, portion sizes, frequency) that improve probabilistically rather than mechanically.
+    isr_reasoning: |
+      - [Systematic reviews of cooking interventions](https://pubmed.ncbi.nlm.nih.gov/29248236/) find sustained increases in vegetable intake and dietary quality among programme completers, but with substantial heterogeneity – not all adherent learners shift their dietary pattern.
+      - Some users will develop high cooking skill while continuing to cook calorie-dense, low-vegetable food (rich pastry, deep-frying, classical French sauces); the skill itself does not guarantee the nutritional outcome.
+      - ISR of 55% reflects that roughly half of adherent learners shift their dietary pattern in a clinically meaningful direction, while the rest gain skill without major nutritional benefit.
+    uar_reasoning: |
+      - See food-management.craft UAR – same intervention, same adherence profile.
+
+  nutrition.pleasure_connection:
+    pbs: 7
+    isr: 70
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th–75th percentile of pleasure and connection from food – home-cooked meals from a developed repertoire are typically rated more pleasurable per dollar than restaurant equivalents, and the practice naturally creates social occasions (cooking for partners, friends, family). Delta: ~35–40 percentile points.
+      - This is a subjective value where common-sense reasoning carries weight: cooking for others is a recognised vehicle for relational care across cultures, and the intervention specifically encourages cooking for others as a calibration mechanism.
+      - Score 7 reflects a major gain in food-derived pleasure and connection – not transformative because the upper bound (food as a central organising principle of social life) requires more than a weekly practice, but well above the modest gain a fixed repertoire produces.
+    isr_reasoning: |
+      - [Research on shared meals](https://pubmed.ncbi.nlm.nih.gov/29248236/) and food-skill programmes consistently reports increased confidence cooking for others and increased frequency of shared meals as outcomes – the connection pathway is reliable for adherent learners.
+      - Pleasure gains are most reliable for users who eat with others regularly; solo cooks will see the pleasure gain but not the connection gain, capping the value's full realisation.
+      - ISR of 70% reflects that the pleasure-and-connection benefit is reasonably robust across adherent users, with the failure mode mostly being social isolation rather than inadequate skill.
+    uar_reasoning: |
+      - See food-management.craft UAR – same intervention, same adherence profile.
+
+  life-skills.high:
+    pbs: 5
+    isr: 80
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~2–3 basic skills). The anchor explicitly lists "cooking from scratch" as one of the 4–5 essential skills at level 6 (95th percentile). After successful adherence, the user reliably gains one of the named anchor skills – moving roughly 1 skill on a 15-skill anchor.
+      - Using the linear formula with a 1-skill delta against anchor_max 15: PBS = 10 + log₂(1/15) = 10 − 3.91 ≈ 6.1. Discounting to 5 reflects that the intervention only adds the cooking skill, not the broader skill portfolio that drives high anchor scores.
+      - The intervention takes a user from "can cook a few dishes from a recipe" to "can cook from scratch" – a skill the anchor description specifically names – which is a meaningful but bounded contribution to the broader life-skills value.
+    isr_reasoning: |
+      - The skill addition is mechanically reliable for adherent learners – completing a cooking curriculum reliably produces "cooking from scratch" competence by the anchor's definition.
+      - The main failure mode is users who acquire the skill but rarely practise it, which over time degrades competence; this is rarer for users who follow the weekly practice cadence.
+      - ISR of 80% reflects high mechanical reliability of the skill gain among adherent users.
+    uar_reasoning: |
+      - See food-management.craft UAR – same intervention, same adherence profile.
+
+  saving.lifestyle:
+    pbs: 4
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~5–6 days of liquid reserves). [Restaurant-versus-home-cooking cost data](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863133/) and household budget research indicate that substituting home-cooked meals for restaurant and takeaway meals saves roughly $2,000–4,000 per year for a household that previously ate out frequently – plausibly adding ~0.5–1 month of liquid reserves over 1–2 years if the savings are not redirected to other consumption.
+      - Using the linear formula with a 0.5-month delta against anchor_max 12: PBS = 10 + log₂(0.5/12) = 10 − 4.58 ≈ 5.4. Discounting to 4 acknowledges that the saving only materialises if the user actually banks the difference rather than reallocating it, which is the common pattern.
+      - Score 4 reflects a modest, conditional financial benefit that depends on both cooking substitution behaviour and disciplined saving of the difference.
+    isr_reasoning: |
+      - Most adherent learners will reduce restaurant spend, but only a minority will track the savings and redirect them to liquid reserves rather than absorbing the difference into other discretionary spending.
+      - Households with low baseline restaurant spending will see negligible savings; the effect is concentrated in users who previously ate out frequently.
+      - ISR of 50% reflects that for roughly half of adherent users with meaningful baseline restaurant spending, the financial benefit will materialise; for others, lifestyle creep absorbs the saving.
+    uar_reasoning: |
+      - See food-management.craft UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 60
+  upfront_cost_reasoning: "One curriculum cookbook (~$25–40 used or new) plus basic equipment most kitchens already have: a sharp 8-inch chef's knife, a heavy skillet, and a digital scale. Users with empty kitchens may spend up to $200; those with stocked kitchens may spend $0. Conservative minimum: $60 for the book and a digital scale."
+  ongoing_cost: 5
+  ongoing_cost_period: "week"
+  ongoing_cost_reasoning: "Marginal grocery cost over the user's existing food spend – primarily for new ingredients required by the week's target. Many weeks the cost is zero; budgeting $5/week covers the occasional speciality ingredient, spice, or pulse not already in stock. The intervention typically reduces total food spend by reducing restaurant meals."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately three hours to choose a curriculum, read the introductory chapters, and plan the first month's targets. No formal training required."
+  ongoing_time: 2.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 2–3 hours per week beyond baseline cooking time: reading the curriculum section, executing the focused practice meal (which usually takes longer than a familiar dish), and updating the brief log. This is incremental time, not total cooking time."
+
+prerequisites:
+  - "Access to a functional kitchen with stove, oven, basic cookware, and storage – not all rentals or temporary accommodations qualify"
+  - "Sufficient grocery access to source ingredients across multiple cuisines and ingredient categories, including some specialist items"
+  - "Basic literacy in following written recipes and converting between common units of measure"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Regular hands-on craft practice with a tangible end product is well-documented to support mood and reduce rumination; cooking specifically combines manual focus, sensory engagement, and a clear completion signal."
+  - domain: "habits"
+    rationale: "Building a sustained weekly skill practice from scratch develops the underlying capacity to design, run, and maintain other deliberate-practice habits, with transfer to skill domains beyond cooking."
+  - domain: "consumptive-leisure"
+    rationale: "For many adherent users, cooking practice gradually shifts from chore to leisure activity – an enrichment-leaning use of free time that competes with passive consumption."

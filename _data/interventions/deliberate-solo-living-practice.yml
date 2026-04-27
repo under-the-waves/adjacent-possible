@@ -1,0 +1,183 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Deliberate Solo Living Practice"
+what_it_is: |
+  For someone who is single, separated, widowed, or otherwise unattached, deliberately cultivating a satisfying solo life rather than treating singleness as a transitional waiting room until the next partner arrives. The practice combines intentional weekly solo activities (cinema, restaurants, travel, hobbies pursued alone), active investment in a robust friendship network, the development of one-person rituals, and the cultivation of productive solitude as a positive psychological state. It works against the cultural default – which treats singleness as a deficit to be solved – by reframing unpartnered life as a context where autonomy, self-knowledge, and chosen relationships can flourish on their own terms. [Schultz and DePaulo's "single at heart" research](https://onlinelibrary.wiley.com/doi/10.1111/jftr.12490) finds that a substantial minority of unpartnered adults thrive when they stop organising life around an absent partner; [Coplan and colleagues' work on solitude](https://psycnet.apa.org/record/2018-46716-001) shows that self-determined time alone is reliably associated with autonomy, creativity, and emotional self-regulation rather than loneliness.
+how_to_do_it: |
+  - Schedule one substantive solo activity per week that you would normally treat as a couple's or group activity – dinner at a real restaurant, a film, a museum, a day trip, a concert. Treat it as a non-negotiable appointment. The goal is to dismantle the internal script that says enjoyable activities require company.
+  - Invest deliberately in three to five friendships outside the romantic frame: regular standing meet-ups, group dinners hosted at home, weekend trips with friends. [Research on chosen kin](https://academic.oup.com/edited-volume/35922/chapter/308491466) finds that unpartnered people who maintain dense friendship networks report life satisfaction comparable to or exceeding that of married people, but only when those ties are actively maintained rather than left to drift.
+  - Build one-person rituals that mark time and create meaning – a Sunday breakfast routine, a Friday cinema night, an annual solo trip on a meaningful date. Rituals convert undifferentiated time into a structure that feels chosen rather than empty.
+  - Practise tolerating solitude as a neutral or positive state. When you notice the urge to fill silence with podcasts, calls, or passive scrolling, sit with it for ten minutes first. [Nguyen, Ryan, and Deci (2018)](https://journals.sagepub.com/doi/10.1177/0146167217733073) show that even brief periods of self-determined solitude reduce high-arousal negative affect and produce a calm, reflective state most people otherwise rarely access.
+  - Stop treating singleness as a problem to be narrated. Decline to apologise for it in conversation, decline to position it as temporary, and decline to organise plans around the imagined arrival of a future partner. Make decisions – about housing, career, geography, and time – on the assumption that your current life is the real one.
+success_looks_like: |
+  - You routinely do solo activities (eating out, travel, cinema) without the prior friction of "but I have no one to go with"
+  - Your friendship network is dense enough that you have multiple people to call for emotional support, weekend plans, or a crisis – not dependent on any single person
+  - You can spend a Saturday alone without it feeling like a failure or default state, and you have one-person rituals you actively look forward to
+  - Decisions about housing, career, and geography reflect what you actually want now, not what you might want once partnered
+common_pitfalls: |
+  - Confusing solo living with social withdrawal – the practice requires more relational investment than the average partnered life, not less, because friendships need active maintenance to substitute for the default companionship a partner provides
+  - Performing contentment for an audience – posting curated solo-travel photos while privately treating each Saturday as a countdown to coupledom defeats the mechanism; the practice is internal first
+  - Using solo living as a defence against intimacy – the goal is genuine flourishing while unpartnered, not avoidance of partnership; people who use it to insulate themselves from rejection or vulnerability tend to remain distressed
+  - Neglecting practical infrastructure – solo living without an emergency contact, a robust support network, or financial resilience is precarious in a way partnered life is not, and the gap needs to be filled deliberately
+description: |
+  - Deliberately cultivating a satisfying solo life through weekly solo activities, active friendship investment, one-person rituals, and tolerance of productive solitude – distinct from passive singleness or treating unpartnered life as a transitional waiting room
+  - [Longitudinal research on lifelong singles](https://onlinelibrary.wiley.com/doi/10.1111/jftr.12490) finds that a meaningful subset of unpartnered adults ("single at heart") report life satisfaction comparable to or exceeding partnered peers, with the difference attributable to active engagement with autonomy and chosen relationships rather than waiting for partnership
+  - [Studies on positive solitude](https://psycnet.apa.org/record/2018-46716-001) find that self-determined time alone is associated with autonomy, self-reflection, and emotional regulation, in contrast to loneliness which is involuntary and aversive – the distinction is whether the solitude is chosen
+  - [Self-determination theory research](https://journals.sagepub.com/doi/10.1177/0146167217733073) shows that brief solitude periods reliably reduce high-arousal affect (both positive and negative) and produce a calm, reflective state, which most people rarely access in highly social or stimulus-saturated lives
+  - Requires no equipment or cost beyond ordinary leisure spending; the primary barriers are cultural pressure ("when are you going to settle down?"), self-narrative ("I'm just waiting for the right person"), and the active relational work needed to maintain a friendship network without a partner as default companion
+applicable_domains: ["relationship-status", "mental-health", "self-awareness", "friendship", "value-system", "behaviours", "life-skills"]
+
+values:
+  relationship-status.independence:
+    pbs: 8
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile – moving from passive singleness organised around an absent partner to an actively chosen unpartnered life with stable contentment. Delta: ~40–45 percentile points.
+      - [Schultz and DePaulo (2022)](https://onlinelibrary.wiley.com/doi/10.1111/jftr.12490) document that "single at heart" individuals report life satisfaction equal to or exceeding partnered peers, with the differentiator being active engagement with autonomy and chosen ties rather than partnership avoidance.
+      - The intervention directly targets the construct this value measures – comfort and fulfilment without a romantic partner – making it one of the most natural primary effects available; score 8 reflects a major gain on the value's own anchor.
+    isr_reasoning: |
+      - [DePaulo's longitudinal review](https://belladepaulo.com/singles-research-writing/) finds that roughly a third of long-term singles reach high subjective wellbeing without partnership, while many others remain in a holding pattern; the active practice described here is what distinguishes the two groups.
+      - [Coplan et al. (2019)](https://psycnet.apa.org/record/2018-46716-001) note that the benefits of solitude depend critically on motivation – self-determined solitude is associated with wellbeing, while solitude experienced as imposed or as a substitute for failed partnering is associated with loneliness and lower wellbeing.
+      - ISR of 65% reflects that the mechanism works for the majority of adherent users but requires genuine reorientation rather than surface practice; users who execute the rituals while privately framing themselves as waiting will not see the wellbeing gains.
+    uar_reasoning: |
+      - [Cultural pressure on singles](https://onlinelibrary.wiley.com/doi/abs/10.1111/jftr.12349) – the "amatonormative" assumption that everyone wants and should pursue partnership – produces sustained external nudging away from this practice and back toward partner-seeking, which most adopters find difficult to resist over years.
+      - The active friendship maintenance component is the most failure-prone element; [research on adult friendship maintenance](https://journals.sagepub.com/doi/10.1177/02654075211037740) finds that ties decay rapidly without deliberate effort, and many adopters drop the relational scaffolding once initial novelty fades.
+      - UAR of 40% reflects that the full practice – solo activities plus friendship investment plus tolerating solitude plus narrative reframing – is a multi-component lifestyle change with strong cultural headwinds; many start, fewer sustain.
+
+  mental-health.flourishing:
+    pbs: 7
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – meaningful gains in life satisfaction and positive affect from chosen activities, dense friendships, and reduced rumination over partnership status. Delta: ~30–35 percentile points.
+      - [Research on relationship status and wellbeing](https://psycnet.apa.org/record/2017-44968-001) finds that the wellbeing gap between single and partnered adults shrinks substantially or disappears once friendship density and self-determined activity are controlled for; the gap is mostly mediated by what unpartnered people do or fail to do, not by partnership itself.
+      - Score 7 reflects a meaningful but bounded flourishing gain – partnership confers some genuine benefits (cohabitation efficiencies, default companionship) that solo living does not fully replace, but the bulk of the wellbeing gap is closeable through deliberate practice.
+    isr_reasoning: |
+      - [Coplan et al. (2019)](https://psycnet.apa.org/record/2018-46716-001) find that positive solitude is reliably associated with autonomy and life satisfaction across studies, but only when self-determined; when solitude is experienced as imposed, the effect reverses.
+      - Flourishing gains depend on the friendship-network component working – users who execute solo activities but neglect relational investment tend to drift toward isolation rather than flourishing.
+      - ISR of 60% reflects that adherent users see meaningful gains when both self-determined solitude and active relational ties are present; a meaningful minority experience flourishing as elusive when only one component is in place.
+    uar_reasoning: |
+      - See relationship-status.independence UAR – same intervention, same adherence profile.
+
+  self-awareness.psychological:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – sustained periods of unstimulated solitude reliably surface mental patterns and reactions that constant social input or partnered routines obscure. Delta: ~25 percentile points.
+      - [Research on solitude and self-reflection](https://journals.sagepub.com/doi/10.1177/0146167217733073) finds that brief self-determined solitude periods produce a calm, reflective state in which people report greater access to internal states and clearer sense of preferences; solo living provides this state at much higher dosage than typical partnered life.
+      - Score 6 reflects a meaningful but partial gain – solitude alone surfaces patterns but does not interpret them; deeper psychological self-knowledge typically requires complementary practices like journalling or therapy.
+    isr_reasoning: |
+      - The mechanism – unstimulated time enabling pattern recognition – is reliable in adherent users; [research on default-mode network activity during solitude](https://www.nature.com/articles/s41562-020-0944-4) supports the link to self-referential processing.
+      - The main failure mode is filling solitude with passive consumption (streaming, scrolling), which preserves stimulation and prevents the reflective state from emerging; users who tolerate genuine quiet see the gains, those who do not, do not.
+      - ISR of 65% reflects that the reflective benefit is reliable conditional on actually tolerating quiet rather than substituting another input source.
+    uar_reasoning: |
+      - See relationship-status.independence UAR – same intervention, same adherence profile.
+
+  self-awareness.experiential:
+    pbs: 6
+    isr: 70
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – solo travel, solo dining, and self-directed leisure surface preferences and capacities that partnered life often obscures because plans are constrained by joint preferences. Delta: ~25–30 percentile points.
+      - [Research on solo travel](https://www.sciencedirect.com/science/article/abs/pii/S0261517720301163) finds that solo travellers report greater self-discovery, autonomy, and willingness to take on novel challenges than group or paired travellers, with effects compounding over multiple trips.
+      - Score 6 reflects a meaningful experiential gain – solo activities reliably broaden the experience base from which self-knowledge is drawn, though the upper bound is set by the actual diversity of experiences pursued.
+    isr_reasoning: |
+      - The mechanism is mechanically reliable: doing more solo activities produces more unmediated experiences, which produces more data about own preferences. The link is direct.
+      - [Self-expansion research](https://onlinelibrary.wiley.com/doi/10.1111/pere.12273) confirms that novel experiences pursued alone are associated with self-concept clarity gains, providing supporting evidence on the construct.
+      - ISR of 70% reflects high reliability conditional on actual variety of solo activities pursued; users who repeat the same solo activities see less experiential gain.
+    uar_reasoning: |
+      - See relationship-status.independence UAR – same intervention, same adherence profile.
+
+  friendship.depth:
+    pbs: 7
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – moving from one or two friendships maintained passively to three to five friendships sustained through deliberate ritual and standing commitments, mapping to roughly 2–3 additional intimate friendships on the linear anchor. Delta: ~35 percentile points.
+      - [Research on adult friendship](https://journals.sagepub.com/doi/10.1177/02654075211037740) finds that intimate friendships require deliberate maintenance behaviours – regular contact, shared activities, vulnerability – that partnered adults often substitute with their partner, producing the well-documented decline in non-romantic intimacy after partnering.
+      - Score 7 reflects a meaningful gain on the linear anchor (~2 additional intimate friendships at competent depth); the practice substitutes deliberate friendship investment for the default companionship partnered life provides.
+    isr_reasoning: |
+      - [Friendship maintenance research](https://academic.oup.com/edited-volume/35922/chapter/308491466) finds that adults who deliberately schedule regular contact and shared activities reliably build deeper friendships; the practice is mechanistically reliable when sustained.
+      - Depth requires reciprocity – users whose chosen friends are themselves heavily partnered or time-constrained may invest unilaterally without depth gains.
+      - ISR of 65% reflects strong reliability when friends have comparable relational capacity, lower when the user's chosen network is structurally unable to reciprocate.
+    uar_reasoning: |
+      - See relationship-status.independence UAR – same intervention, same adherence profile.
+
+  value-system.authentic:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – declining to organise life around amatonormative cultural pressure is itself a sustained practice of values-driven action under social pressure, and discloses authentic preferences obscured by partnership-tracking. Delta: ~20–25 percentile points.
+      - [Vanhuysse and others on autonomy-supportive contexts](https://www.tandfonline.com/doi/full/10.1080/13510347.2021.1942849) find that environments which support autonomous choice rather than conformity produce stronger value–behaviour consistency; deliberate solo living constructs such an environment for the individual.
+      - Score 5 reflects a modest authenticity gain – the practice meaningfully tests value–behaviour consistency under sustained social pressure but is one practice among many that contribute to authentic expression.
+    isr_reasoning: |
+      - The authenticity mechanism is real but variable across users; some respond to social pressure by quietly conforming despite the formal practice (e.g. dating to satisfy family expectations while otherwise solo-living), undermining the value gain.
+      - [Self-determination theory work](https://psycnet.apa.org/record/2018-46716-001) supports the autonomy–authenticity link, but effects depend on the user's existing capacity for autonomous functioning.
+      - ISR of 55% reflects that authenticity gains are moderately reliable in adherent users but more variable than the more direct independence and friendship effects.
+    uar_reasoning: |
+      - See relationship-status.independence UAR – same intervention, same adherence profile.
+
+  behaviours.freedom:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – breaking the compulsive partner-seeking loop in which singleness triggers anxiety, dating-app use, or relationship pursuit at the expense of judgement. Delta: ~20–25 percentile points.
+      - For users whose unpartnered state currently drives compulsive app use, low-quality dating, or persistent rumination, deliberately constructing a satisfying solo life removes the felt urgency, restoring genuine choice over whether and when to date.
+      - Score 5 reflects a real but bounded gain – the practice addresses one specific compulsive pattern (partner-seeking driven by aversion to singleness) rather than compulsive behaviour broadly.
+    isr_reasoning: |
+      - The mechanism is reliable for users whose partner-seeking is driven by aversion to being single; for users whose dating activity is driven by genuine desire for partnership, the practice does not target a compulsion to remove.
+      - [Research on dating app use and wellbeing](https://www.sciencedirect.com/science/article/abs/pii/S0747563220302454) finds that compulsive dating app use is associated with anxiety and reduced wellbeing in unpartnered users, and that wellbeing-supporting alternatives reduce app dependency.
+      - ISR of 55% reflects that the freedom gain is reliable in the subset whose pattern is aversion-driven, less reliable in adherent users whose pattern is straightforwardly approach-motivated.
+    uar_reasoning: |
+      - See relationship-status.independence UAR – same intervention, same adherence profile.
+
+  life-skills.high:
+    pbs: 5
+    isr: 70
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – solo living forces the user to be the only person responsible for cooking, repairs, finances, scheduling, and household decisions, mapping to roughly 1–2 additional competent practical skills on the linear anchor. Delta: ~20–25 percentile points.
+      - [Research on division of household labour](https://journals.sagepub.com/doi/10.1177/0192513X19832941) documents that partnered adults frequently specialise, with each partner ceding a domain to the other; sustained solo living closes this gap by necessity.
+      - Score 5 reflects a modest gain – the practice produces skill breadth from necessity rather than excellence in any one domain, and the gain is bounded by the actual range of tasks encountered in the user's life.
+    isr_reasoning: |
+      - The mechanism is mechanically reliable: tasks that must be done get done by the only person available, building skill through repetition. The link is direct and unconditional.
+      - The failure mode is outsourcing rather than learning – users who pay for cleaning, food delivery, and repairs at scale capture the convenience but not the skill gains.
+      - ISR of 70% reflects high reliability for users who actually perform the tasks rather than outsourcing them.
+    uar_reasoning: |
+      - See relationship-status.independence UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials, subscriptions, or services required to begin. The practice is behavioural and reuses ordinary leisure infrastructure (cinemas, restaurants, travel) that the user would otherwise pay for in some form."
+  ongoing_cost: 50
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Approximately $50/month in additional discretionary leisure spending – one solo restaurant meal or cinema ticket per week, plus a higher contribution to friend-group activities to sustain network density. Could be lower for users whose existing leisure budget already absorbs solo activities, higher for users adding solo travel."
+  upfront_time: 2
+  upfront_time_reasoning: "Roughly two hours to identify three to five friendships worth deliberate investment, plan a recurring solo activity slot, and reflect on which areas of life are currently being deferred until partnership. No formal training required."
+  ongoing_time: 4
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately four hours per week: one solo activity (1–2 hours), one substantive friend interaction beyond what would otherwise occur (1–2 hours), and brief reflection or ritual maintenance time. This is incremental to ordinary life rather than additive, since most users would otherwise spend equivalent time on passive consumption or partner-seeking."
+
+prerequisites:
+  - "Currently unpartnered (single, separated, divorced, widowed, or in a long-distance arrangement that does not occupy daily life)"
+  - "Access to a viable friendship pool – at least three to five existing or potential friends with comparable relational capacity to invest in non-romantic ties"
+  - "Sufficient financial and logistical autonomy to make independent decisions about leisure, travel, and housing without requiring partnership-conditional resources"
+
+flagged_domains:
+  - domain: "consumptive-leisure"
+    rationale: "Solo dining, cinema, and travel directly expand the range of restorative and enriching leisure activities the user can access, since partnership-conditional norms no longer constrain timing or company."
+  - domain: "time-management"
+    rationale: "Solo living removes joint-scheduling overhead, freeing time previously spent coordinating with a partner for self-directed pursuits."

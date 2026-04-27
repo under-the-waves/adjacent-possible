@@ -1,0 +1,200 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Self-Defence Training"
+what_it_is: |
+  Regular training in an evidence-based self-defence system that includes live, resisting practice partners – most commonly Brazilian Jiu-Jitsu (BJJ), Krav Maga, or a structured women's resistance-based programme such as IMPACT or Rape Aggression Defence (RAD). The defining feature is the resistance component: practising techniques against a partner who is genuinely trying to prevent them from working. Demonstration-only or kata-style courses produce competence on a compliant partner but transfer poorly to actual assault, where the attacker is non-compliant and the defender is adrenalised. The aim is not to "win fights" but to acquire a calibrated sense of what works, recover access to behaviours people often restrict due to safety fears (walking alone after dark, travelling, using public transport, going to events alone), and reduce the probability of being seriously harmed in the rare event of an attempted assault. The freedom benefit is highly gendered – it is much larger for users who currently restrict their daily lives because of fear of male violence, which in practice means most of the population of women.
+how_to_do_it: |
+  - Pick a system matched to your goal. For general competence under resistance, BJJ is the most live-tested martial art and the only one with consistent, full-resistance rolling at every class. For empty-hand escape from common assault scenarios, Krav Maga or a structured women's resistance programme (IMPACT, RAD, [Senn et al.'s EAAA programme](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131)) is more directly targeted. Avoid traditional martial arts that rely solely on demonstration, forms, or compliant partner work – they have weak transfer to real assault.
+  - Train at a consistent cadence. Two sessions per week of around 60–90 minutes each is the typical floor for skill development; one session per week maintains familiarity but does not build new competence. For RAD/IMPACT-style programmes, the protocol is a fixed course of around 12–30 hours over several weeks rather than ongoing training.
+  - Visit two or three gyms before committing. Watch a class. Look for: live sparring or scenario work against resistance, instructors who tap out and take falls themselves rather than just demonstrating, a culture that controls intensity for new students, and basic safety practices (mats, clear tap-out conventions, injury reporting). Avoid gyms that emphasise rank ceremonies, weapon disarms without resistance, or dramatic claims about lethality – these are markers of poor calibration.
+  - Pair training with the rest of personal safety. Awareness, avoidance, de-escalation, and pre-emptive choices ("do not go to that party at that house") prevent vastly more harm than physical technique. Self-defence training is the last layer of a defensive stack, not the first; users who treat it as a substitute for the earlier layers tend to take more risk, not less.
+  - Manage injury risk explicitly. BJJ has meaningful injury rates – mostly minor joint and skin issues, but enough that training through pain or against partners who will not control their intensity causes problems. Tap early, train with people you trust, and treat any joint pain as a stop signal rather than a thing to push through.
+success_looks_like: |
+  - You move through previously avoided situations (walking home alone, travelling solo, going to events without a buddy) with materially less anticipatory anxiety, because the worst-case scenario has been at least partially trained for rather than only imagined.
+  - You have a calibrated, non-fantasised sense of what your physical defensive capability actually is – including its limits against larger, armed, or multiple attackers – and your behavioural choices reflect that calibration rather than either bravado or excessive fear.
+  - In the rare event of an attempted assault, you have a higher probability of escaping uninjured. The strongest direct evidence ([Senn et al. 2015 NEJM](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131)) found a 46% relative reduction in completed rape and a 63% reduction in attempted rape among university women trained in a 12-hour resistance-based programme over the following year.
+  - You have a regular physical practice that builds general fitness, conditioning, and grappling-specific strength as a side effect, plus a social environment of training partners – typically a strong source of friendships and community.
+common_pitfalls: |
+  - Choosing a system based on cinematic appeal or instructor charisma rather than evidence of resistance training. The single most useful question to ask before joining a gym is "do students regularly train against partners who are genuinely trying to stop the technique from working?" If the answer is no, the training will not transfer.
+  - Confusing competence on a compliant partner with competence under stress. Adrenaline narrows attention, degrades fine motor skill, and produces tunnel vision. Training that never simulates this gap leaves a dangerous overconfidence that techniques will be available in an actual assault.
+  - Treating self-defence training as a substitute for situational awareness, alcohol moderation, and risk-aware decision-making. The largest reductions in actual harm come from the earlier layers; physical defence is what runs when the earlier layers have already failed.
+  - Training through injuries or with partners who will not control their intensity. BJJ in particular has cumulative wear-and-tear risk; a year of training is excellent, but a chronic shoulder injury from an uncontrolled partner is a meaningful long-term cost.
+  - For men: assuming the freedom benefit is symmetric across genders. Most men do not restrict their daily behaviour due to fear of assault to anything like the same degree, so the lifestyle-freedom payoff is much smaller; the value is mostly in the fitness, social, and resilience side effects plus a lower-baseline reduction in injury risk during the rare bad encounter.
+description: |
+  - Regular training in an evidence-based, resistance-tested self-defence system – BJJ, Krav Maga, or a structured women's resistance programme such as RAD, IMPACT, or [EAAA](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) – distinguished from demonstration-only martial arts by the requirement that techniques are practised against partners who genuinely resist.
+  - The strongest direct evidence is a [randomised trial in the New England Journal of Medicine](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) of 893 university women, finding a 46% relative reduction in completed rape and a 63% reduction in attempted rape one year after a 12-hour resistance-based programme.
+  - [Hollander's research on assault-resistance programmes](https://journals.sagepub.com/doi/10.1177/1077801214526046) finds that women who completed comparable programmes were significantly less likely to experience completed sexual assault, with effects sustained at one-year follow-up; live, physical practice against resistance is the consistently identified active ingredient.
+  - The freedom benefit is strongly gendered: for users who currently restrict everyday behaviours (travelling alone, walking after dark, using public transport at night) due to fear of assault – overwhelmingly women – recovering access to those behaviours is the dominant payoff. For users who do not restrict their behaviour for safety reasons, the dominant payoffs are fitness, social, and resilience side effects rather than freedom recovery.
+  - Cadence is typically two 60–90 minute sessions per week for ongoing systems like BJJ, or a 12–30 hour course over several weeks for fixed-format resistance programmes. Injury risk is non-trivial – [BJJ injury research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5968975/) reports rates broadly comparable to other contact sports, dominated by minor joint and skin issues – and is the main offsetting cost on the fitness side.
+applicable_domains: ["physical-safety", "fitness", "behaviours", "mental-health", "participatory-leisure", "networks"]
+
+values:
+  physical-safety.freedom:
+    pbs: 8
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 50th percentile. After successful adherence, a user could plausibly reach the 80th–85th percentile, particularly if they begin by restricting daily behaviour due to safety fears. Delta: ~30–35 percentile points.
+      - The benefit is strongly gendered. For users who currently avoid solo travel, walking alone at night, or attending events unaccompanied because of fear of assault – mostly women – physical training that meaningfully reduces the worst-case probability ([Senn et al. 2015 NEJM](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131): 46% relative reduction in completed rape) directly recovers a large amount of restricted lifestyle. For users who do not restrict their behaviour for safety reasons, the freedom delta is much smaller because there is less restriction to recover from.
+      - Score 8 reflects a major gain in lifestyle freedom for the population that most needs it (typically women starting near the population baseline of restricted behaviour), and a modest gain for users who are already unrestricted. The averaged effect across both groups maps to score 8 on the subjective anchor.
+    isr_reasoning: |
+      - [Senn et al. (2015)](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) randomised 893 university women to a 12-hour resistance-based programme; a meaningful majority of trained participants reported greater confidence and behavioural willingness in scenarios they had previously avoided, alongside the headline assault-incidence findings.
+      - [Hollander (2014)](https://journals.sagepub.com/doi/10.1177/1077801214526046) found that women completing comparable resistance-based programmes reported sustained reductions in fear and avoidance behaviour one year on, indicating that the freedom-recovery effect is reasonably reliable when the training is genuinely resistance-based rather than demonstration-only.
+      - ISR of 60% reflects that the freedom benefit reliably appears for users in resistance-based programmes who complete the course and also do the cognitive work of updating their actual behaviour. A meaningful minority complete the training but continue to avoid the previously restricted situations through habit or residual fear.
+    uar_reasoning: |
+      - General martial-arts retention is poor: industry tracking suggests roughly half of new joiners drop out within the first three to six months, and only a small fraction reach blue belt in BJJ (around 10–15% of starters across two years).
+      - Fixed-duration programmes (RAD, IMPACT, EAAA) have substantially higher completion rates because they have a defined endpoint – [Senn et al.'s trial](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) reports completion rates well above typical gym retention, since 12 hours over a few weeks is achievable for most willing participants.
+      - UAR of 35% averages across these two delivery models. It is meaningfully higher (60%+) for users who choose a fixed-format resistance programme and lower (15–25%) for users who attempt to start ongoing martial-arts training with no prior physical practice.
+
+  physical-safety.risk:
+    pbs: 6
+    isr: 55
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile. After successful adherence, a user could plausibly reach the 70th–75th percentile on the risk-reduction anchor, by reducing the probability and severity of harm in the rare bad encounter and indirectly reducing exposure through better situational awareness. Delta: ~25–30 percentile points.
+      - [Senn et al. (2015)](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) reports a 46% relative reduction in completed rape over one year of follow-up. This is a meaningful absolute risk reduction in the population studied (university women), but the absolute baseline rate of preventable assault mortality across the broader population is low, which caps the contribution of self-defence training to the overall preventable-incident-mortality anchor.
+      - Score 6 reflects a meaningful but bounded risk-reduction effect. The benefit is large within the slice of risk that is interpersonal-violence-related, but interpersonal violence is a small share of preventable mortality overall (most preventable mortality comes from cardiovascular causes, road traffic, and accidents at home).
+    isr_reasoning: |
+      - [Senn et al. (2015)](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) finds the assault-reduction effect concentrated among trained participants who also reported using the trained behaviours during the year – the technique-acquisition step alone is necessary but not sufficient.
+      - [Hollander's review of resistance-training programmes](https://journals.sagepub.com/doi/10.1177/1077801214526046) notes that effect sizes are heterogeneous across programmes, with the resistance-and-scenario component identified as the consistently active ingredient – non-resistance courses do not produce the same effects.
+      - ISR of 55% reflects that risk reduction is reliably observed for users in resistance-based programmes but not for users in demonstration-only training; averaging across the realistic distribution of training choices produces a moderate ISR.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+  fitness.health:
+    pbs: 6
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile in cardiovascular and metabolic fitness, comparable to other moderate-intensity twice-weekly resistance and conditioning practices. Delta: ~30 percentile points.
+      - Two 60–90 minute BJJ or Krav Maga sessions per week deliver significant aerobic and strength stimulus comparable to the 150 minutes of moderate-intensity physical activity associated with [meaningful all-cause mortality reductions](https://www.bmj.com/content/375/bmj-2021-068047).
+      - Score 6 (around 1 year additional healthy lifespan on the fitness.health anchor) reflects the level of cardiovascular and strength stimulus achievable from twice-weekly grappling or striking practice, partially offset by the non-trivial injury rate. Users who train 4+ times per week achieve more, but most do not sustain that cadence.
+    isr_reasoning: |
+      - [Meta-analytic evidence on physical activity dose-response](https://www.bmj.com/content/375/bmj-2021-068047) shows that 150 minutes per week of moderate-vigorous activity reliably produces meaningful health gains across the majority of adults; BJJ and Krav Maga easily clear this threshold at a normal training cadence.
+      - [BJJ injury research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5968975/) reports injury rates broadly comparable to other contact sports, with most being minor joint and skin issues rather than chronic disability – a moderate offset to the headline fitness benefit.
+      - ISR of 65% reflects reliable cardiovascular and strength gains for the majority of consistent trainers, with a meaningful minority either failing to gain due to compensatory eating, undertraining, or losing fitness due to recurrent injury.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+  fitness.performance:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th–80th percentile on a general fitness test among age-matched peers, with particular strength in grip, core, and pulling strength. Delta: ~35–45 percentile points.
+      - BJJ in particular develops grip strength, core endurance, and isometric strength in patterns rarely trained by general gym work, producing measurable performance gains in tests that involve grappling, climbing, or load carry.
+      - Score 6 reflects a meaningful performance gain on the fitness percentile anchor, recognising that most regular practitioners reach intermediate (not elite) general fitness rather than a transformation of athletic capability.
+    isr_reasoning: |
+      - General resistance and conditioning research finds that twice-weekly progressive overload reliably produces meaningful strength gains in untrained adults – BJJ and Krav Maga both provide adequate stimulus, though it is less targeted than dedicated resistance training.
+      - Performance gains plateau without specific strength work; many practitioners stagnate in measurable strength after the first 6–12 months unless they supplement with targeted lifting.
+      - ISR of 60% reflects reliable initial gains followed by plateau for many users, plus the same injury-related disruption risk as fitness.health.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+  behaviours.resilience:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile on sustained behavioural change – training under physical and psychological stress builds a calibrated baseline for what stress feels like and how to act through it. Delta: ~30 percentile points.
+      - Repeated exposure to controlled physical stress (sparring, scenario drills) is a recognised mechanism for stress-inoculation. The mechanism is plausible: users train through discomfort, fear, and adrenaline weekly, which generalises modestly to non-training stressors.
+      - Score 6 reflects a meaningful but conservative behavioural-resilience effect, with low confidence because the link between martial-arts training and generalised behavioural resilience is plausible but underresearched as a direct outcome.
+    isr_reasoning: |
+      - [Stress inoculation research](https://psycnet.apa.org/record/2017-22737-008) supports the principle that graduated exposure to controlled stress builds tolerance; however, evidence specifically for martial-arts training as a stress-inoculation modality is mostly correlational.
+      - The benefit is strongly mediated by training culture: gyms that maintain controlled intensity and supportive coaching produce the resilience effect more reliably than gyms with chaotic or hazing-style cultures.
+      - ISR of 60% reflects genuine but variable behavioural-resilience gains, conditional on training culture and the user's reflective integration of training experiences.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+  behaviours.freedom:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in freedom from compulsive avoidance behaviours related to perceived physical threat – walking past groups of strangers, declining a route home that previously felt unavoidable, leaving an uncomfortable social situation. Delta: ~20–25 percentile points.
+      - The mechanism is overlapping with physical-safety.freedom but distinct: this value tracks freedom from compulsive or automatic avoidance patterns rather than safety-recovered lifestyle access. Self-defence training reduces freeze responses and replaces them with practised options, which is one specific mechanism for breaking compulsive avoidance.
+      - Score 5 reflects a modest but real effect, with low confidence because the link between physical training and compulsive-behaviour reduction is plausible mechanism but lacks direct evidence.
+    isr_reasoning: |
+      - [Research on exposure-based reduction of avoidance behaviours](https://pmc.ncbi.nlm.nih.gov/articles/PMC4396146/) finds that gradual confrontation of feared situations reliably reduces compulsive avoidance – self-defence training is one form of structured exposure for safety-related avoidance specifically.
+      - The effect is most reliable for users whose avoidance is centred on physical threat scenarios; users whose compulsive behaviours are driven by other causes (perfectionism, social anxiety unrelated to physical threat) will see little transfer.
+      - ISR of 55% reflects the conditional nature of the benefit – it works for the relevant subtype of avoidance but is not a general anti-compulsion intervention.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+  mental-health.resilience:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in stress recovery – the combination of physical exertion, controlled stress exposure, and a supportive training community produces moderate resilience gains that overlap with general exercise-based mental-health effects. Delta: ~20–25 percentile points.
+      - The mechanism stacks three pathways: aerobic exercise's known antidepressant and anxiolytic effect, stress inoculation through controlled adversity, and the social-support effect of a regular training community. None of these is specific to self-defence, but their combination is.
+      - Score 5 reflects a modest mental-health-resilience benefit beyond what generic exercise produces, with low confidence because the disentangled effect of self-defence specifically is not well-quantified.
+    isr_reasoning: |
+      - [Meta-analyses of exercise for depression and anxiety](https://bjsm.bmj.com/content/57/18/1203) find consistent moderate effect sizes (d ≈ 0.4–0.6) across modalities, with team or partner-based exercise often outperforming solitary exercise on social-support pathways.
+      - The community pathway is conditional – gyms with toxic or hyper-competitive cultures can produce neutral-to-negative mental-health effects; the gym choice matters substantially.
+      - ISR of 55% reflects the genuine but variable effect, conditional on gym culture and on users not pushing through injury or interpersonal conflict.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+  participatory-leisure.social:
+    pbs: 6
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile in friendships and community built through shared activity – BJJ and Krav Maga gyms are unusually strong sources of friendships because of the high vulnerability and physical intimacy of training, plus the longitudinal repeated contact. Delta: ~30–35 percentile points.
+      - Grappling gyms in particular develop close, durable friendships at a higher rate than most adult leisure activities, because partners spend hours physically wrestling each other in low-stakes settings, which creates trust and shared experience faster than most social contexts.
+      - Score 6 reflects a meaningful social-leisure benefit – not transformative, but well above the typical leisure-derived friendship rate.
+    isr_reasoning: |
+      - The repeated-contact, mutual-vulnerability structure of grappling training is a recognised mechanism for [accelerated friendship formation in adult contexts](https://psycnet.apa.org/record/2018-29486-001).
+      - The effect is contingent on training at one gym consistently rather than rotating between drop-in classes; users who never settle at a single gym do not develop the durable friendship network.
+      - ISR of 70% reflects that consistent trainees at a single gym reliably develop strong training-partner friendships; this is one of the most reliable secondary effects of the intervention.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+  networks.breadth:
+    pbs: 4
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile in network breadth – a martial-arts gym is a regular contact point with people from outside one's professional bubble, which modestly expands the diversity of one's network. Delta: ~15–20 percentile points.
+      - Gyms tend to be socioeconomically and professionally more mixed than most adult social environments – tradespeople, white-collar workers, students, and retirees train alongside each other – which is precisely the kind of network breadth that is hard to acquire through professional contexts alone.
+      - Score 4 reflects a modest network-breadth benefit; this is a real but secondary effect of the intervention.
+    isr_reasoning: |
+      - The breadth effect is conditional on the gym's specific demographic mix; some gyms (particularly upmarket urban BJJ schools) are demographically narrow and produce little breadth gain.
+      - Users who do not actively engage with training partners outside class do not realise the network benefit; mere co-attendance is insufficient.
+      - ISR of 55% reflects the conditional nature of the breadth effect – it depends on both gym selection and the user's social engagement.
+    uar_reasoning: |
+      - See physical-safety.freedom UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 150
+  upfront_cost_reasoning: "Basic kit: a gi (around $80–120 for BJJ entry-level) or appropriate workout clothing and a mouthguard for striking arts (around $15–30); a pair of training shoes or wrestling shoes is optional. RAD/IMPACT-style programmes typically include all required equipment in the course fee."
+  ongoing_cost: 150
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Typical metropolitan BJJ or Krav Maga gym membership runs $120–200 per month for unlimited classes; lower-cost community programmes and university clubs can be $30–60 per month. RAD/IMPACT programmes are often offered free or at nominal cost via universities, police departments, or community organisations and are not ongoing expenses."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately four hours to research and visit two to three gyms, attend a trial class, and complete the initial paperwork and equipment purchase. Fixed-format resistance programmes require effectively zero setup time beyond enrolment."
+  ongoing_time: 3
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Two 60–90 minute sessions per week including travel time. Fixed-format programmes (RAD, IMPACT, EAAA) require around 12–30 total hours over several weeks, after which ongoing time is zero."
+
+prerequisites:
+  - "Basic physical capability to engage in moderate-intensity contact sport – cardiovascular fitness sufficient for 60 minutes of intermittent exertion, no acute joint injuries that would be aggravated by grappling or impact"
+  - "Access to a gym running an evidence-based, resistance-tested system within reasonable travel distance, or to a fixed-format resistance programme such as RAD, IMPACT, or an EAAA-style course"
+  - "Medical clearance if you have any history of cardiac issues, recent concussion, or chronic joint instability – contact training carries non-trivial physical demands"
+
+flagged_domains:
+  - domain: "behaviours.emotional"
+    rationale: "Training under controlled adversity is a recognised mechanism for emotional regulation under stress, but the effect on the specific anchor (frequency of stress-driven reactive episodes) is plausible but underresearched as a direct outcome of self-defence training."
+  - domain: "self-awareness.experiential"
+    rationale: "Repeated exposure to one's own physical and psychological responses under controlled stress provides direct experiential self-knowledge that is hard to access through reflection alone."

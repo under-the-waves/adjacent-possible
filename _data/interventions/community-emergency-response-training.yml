@@ -1,0 +1,170 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Community Emergency Response Training"
+what_it_is: |
+  Joining a structured volunteer programme that trains residents to support themselves, their families, and their neighbours in the first hours and days of a disaster, before professional responders can reach everyone. In the United States this is the Community Emergency Response Team (CERT) programme, run nationally by FEMA and locally by fire departments and emergency management offices; equivalents include the Community Emergency Medical Response Team (CEMRT) in the UK, the State Emergency Service (SES) in Australia, and similar volunteer-responder schemes in Canada, New Zealand, and parts of Europe. Initial training is typically 20–30 hours delivered over six to eight weeks and covers disaster preparedness, fire safety, light search-and-rescue, basic disaster medical operations, team organisation, and disaster psychology. After certification, members participate in periodic drills, refresher sessions, and – where activated – real incident response. The intervention is distinct from a personal preparedness kit or a first-aid certificate because it is explicitly team-based and integrated with the local emergency management structure: trained members operate in coordinated squads under an incident command system rather than as isolated individuals.
+how_to_do_it: |
+  - Locate the nearest programme through the [FEMA CERT directory](https://community.fema.gov/PreparednessCommunity/s/cert-find-a-program) (US) or the equivalent national register for your country; most programmes are hosted by a city, county, or fire district and publish a calendar of upcoming basic-training cohorts
+  - Register for a basic course – typically eight weekly evening sessions or a compressed weekend format totalling 20–30 hours – and attend every session; the curriculum is sequential and missing modules limits certification
+  - Complete the disaster simulation exercise on the final day; this is what converts classroom knowledge into deployable team capability and is required for certification under the standard [FEMA CERT curriculum](https://www.fema.gov/emergency-managers/individuals-communities/preparedness-activities-webinars/community-emergency-response-team)
+  - Stay active after certification: most teams require a minimum of one drill or refresher per quarter to remain on the deployable roster; prioritise drills that practise team-based skills (triage, light search-and-rescue, traffic and crowd control) rather than solo skills you can revise from a manual
+  - Build the relationships – teams that train together for 12+ months function materially better in real incidents; turn up to social events, share equipment maintenance duties, and learn the names and capabilities of the other members on your squad
+success_looks_like: |
+  - You can perform the core CERT skill set without prompting: size up a scene, triage casualties using START, suppress a small fire with a portable extinguisher, and conduct a structured light search of a damaged single-storey structure as part of a two- or three-person team
+  - You are on a local team's deployable roster, attend at least one drill per quarter, and would be contacted by your local emergency manager if a real incident were declared in your area
+  - Your immediate neighbours know you are CERT-trained and have spoken to you about household preparedness in the last 12 months – the training has functioned as a hub for neighbourhood-level resilience, not just a personal credential
+common_pitfalls: |
+  - Completing basic training and never participating in another drill – skill decay in light search-and-rescue and disaster medical operations is rapid, and an inactive certification provides little real-world capability when an incident occurs
+  - Treating CERT as a personal skill collection rather than a team commitment – the programme's evidence base rests on coordinated team response, and a member who only ever trains solo loses most of the marginal value over a basic first-aid course
+  - Over-extending into freelance response – CERT members are explicitly trained to operate within the incident command system and to defer to professional responders once they arrive; volunteers who self-deploy outside this structure can obstruct response and put themselves at legal and physical risk
+description: |
+  - A structured volunteer programme – CERT in the United States, with national equivalents – that provides 20–30 hours of initial training in disaster preparedness, fire safety, light search-and-rescue, basic disaster medical operations, and team-based response, followed by ongoing drills and incident participation
+  - [FEMA's CERT programme overview](https://www.fema.gov/emergency-managers/individuals-communities/preparedness-activities-webinars/community-emergency-response-team) reports more than 2,700 local programmes and over 600,000 trained volunteers in the United States alone, making it the largest evidence-based community-resilience intervention currently in operation
+  - [Peer-reviewed evaluations of CERT programmes](https://egrove.olemiss.edu/jrss/vol22/iss2/7/) describe trained members applying their skills primarily in personal and neighbourhood-scale events rather than declared disasters, and document the programme's role in building community capacity, household preparedness, and stronger neighbourhood ties between citizens and emergency management
+  - [Post-disaster studies of community resilience](https://www.gao.gov/assets/gao-22-104560.pdf) consistently identify trained, organised community responders as a major determinant of survival in the first 72 hours, when professional capacity is overwhelmed; CERT teams operated extensively after Hurricane Katrina, the 2017 California wildfires, and the COVID-19 pandemic response, with after-action reports documenting their contribution to evacuation, sheltering, and welfare-check operations
+  - The intervention combines the personal-preparedness benefits of a survival kit with the team-based, civic-network benefits of structured volunteering – it is one of the few interventions in the framework that loads meaningfully on both emergency-preparedness and community-contribution domains
+applicable_domains:
+  - "emergency-preparedness"
+  - "community-contribution"
+  - "networks"
+  - "life-skills"
+
+values:
+  emergency-preparedness.community:
+    pbs: 8
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – roughly 1 household in active mutual aid relationships, plus basic neighbour contact information. Endpoint after sustained CERT participation: 8–12 households in active mutual aid coordination (CERT teammates plus immediate neighbours engaged through the team's outreach role). Delta: ~7–11 households in active mutual aid network.
+      - Applying the log formula with anchor_max = 20 households and a delta of ~10 households reaching the active network: PBS = 10 + log₂(10/20) = 10 − 1 = 9, conservatively rounded to 8 to reflect that the network is real but skewed toward team contacts in adjacent neighbourhoods rather than purely the immediate block.
+      - [Peer-reviewed CERT evaluations](https://digitalcommons.usu.edu/sswa_facpubs/474/) document that the programme deliberately structures neighbourhood preparedness outreach and non-emergency community engagement as core CERT functions, building resilience-relevant local networks alongside the emergency-response skill set
+    isr_reasoning: |
+      - Of CERT-certified volunteers who remain active on a team, the network gain is highly reliable: training cohorts of 20–30 members function as a ready-made community of practice, and the standard curriculum requires explicit neighbourhood outreach as a graded component
+      - [Community resilience reviews](https://www.gao.gov/assets/gao-22-104560.pdf) note that the strongest predictor of effective mutual-aid relationships is repeated, structured contact in a defined role – the precise design of CERT drills and deployments
+      - ISR of 70% reflects that the network benefit is reliable for active members but is degraded for the substantial minority who certify and then disengage, never building the team relationships the network outcome depends on
+    uar_reasoning: |
+      - The 20–30 hour upfront commitment is a meaningful filter that screens out low-motivation adopters before certification; this raises ISR among adherents but caps UAR because some otherwise-interested users never start the basic course
+      - [Peer-reviewed CERT evaluations](https://digitalcommons.usu.edu/sswa_facpubs/474/) describe substantial variation between CERT programmes in active-volunteer maintenance, with many certified members ceasing meaningful participation while others remain active responders – a pattern consistent with the broader [volunteer-retention literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC10078732/) on community-centred volunteer programmes
+      - UAR of 40% reflects sustained, drill-active participation rather than nominal certification
+
+  emergency-preparedness.self-reliance:
+    pbs: 6
+    isr: 80
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – roughly 0–1 days of household supply autonomy. Endpoint after CERT training: 14–28 days of supply autonomy plus the procedural knowledge to extend it (water purification, basic medical care, fire suppression, structural assessment). Delta: roughly 14–25 days of effective self-reliance.
+      - Applying the log formula with anchor_max = 365 days and a delta of ~20 days: PBS = 10 + log₂(20/365) = 10 − 4.19 = 5.8, rounded to 6, matching the anchor's score-6 description ("14–28 days with comprehensive supplies including food, water, and first aid")
+      - The training explicitly mandates household preparedness as a precondition for team deployment; [the FEMA basic CERT curriculum](https://www.fema.gov/emergency-managers/individuals-communities/preparedness-activities-webinars/community-emergency-response-team) includes a dedicated module on personal and family preparedness, and members are expected to maintain supplies sufficient to leave their household self-sufficient while they deploy elsewhere
+    isr_reasoning: |
+      - The mechanism is reliable: certification requires demonstrated household preparedness, and the operational logic of CERT (members deploy to support neighbours and therefore must not be drawing on community resources themselves) means active members maintain supplies as a programme requirement rather than a personal preference
+      - Skill components (water purification, basic disaster medical operations, fire suppression) are explicitly taught and practised, distinguishing this intervention from kit-only approaches where users may have supplies but lack the procedural knowledge to use them effectively
+      - ISR of 80% reflects high reliability for active members; the 20% discount accounts for members who certify but allow supplies to degrade between drills, replicating the maintenance-decay pattern documented in the [2024 systematic review of household preparedness interventions](https://pmc.ncbi.nlm.nih.gov/articles/PMC11003604/)
+    uar_reasoning: |
+      - See emergency-preparedness.community UAR – same intervention, same adherence profile
+
+  emergency-preparedness.baseline:
+    pbs: 8
+    isr: 85
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – a household with no kit, no plan, and no procedural knowledge. Endpoint after CERT certification and active participation: approximately 85th percentile – fully stocked supplies, household plan rehearsed, neighbourhood coordination, and trained skills across fire, medical, and search-and-rescue domains. Delta: major-to-transformative gain in baseline preparedness.
+      - PBS 8 ("Major gain in baseline emergency preparedness") reflects that CERT participation goes substantially beyond what a survival kit alone can achieve: the curriculum mandates household preparedness as a precondition for deployment, and [peer-reviewed CERT evaluations](https://digitalcommons.usu.edu/sswa_facpubs/474/) describe trained members applying their skills in real local incidents and serving as ongoing community-preparedness resources
+      - The score stops short of 10 because true transformative gain in baseline preparedness would require a multi-week supply, backup power, and household-level systems that CERT training encourages but does not directly provide
+    isr_reasoning: |
+      - For the subjective baseline-preparedness value, ISR addresses whether an active CERT member reliably experiences a major preparedness improvement; the mechanism is near-certain because preparedness is operationally defined by the same behaviours the programme trains and audits
+      - [Peer-reviewed CERT evaluations](https://digitalcommons.usu.edu/sswa_facpubs/474/) describe active members reporting increased confidence and capability in handling local emergencies after structured training and drills, supporting an ISR in the 80–90% range for the subjective-baseline measure
+      - The 15% discount captures members whose preparedness improvements lapse between drills, or whose certification was completed without genuine engagement with the personal-preparedness component
+    uar_reasoning: |
+      - See emergency-preparedness.community UAR – same intervention, same adherence profile
+
+  community-contribution.impact:
+    pbs: 7
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after sustained CERT participation: 65th–70th percentile in tangible community impact – members provide material assistance during real incidents (welfare checks, evacuation support, shelter operations) and serve as visible community-preparedness resources between events. Delta: ~30–35 percentile points. PBS 7 sits between "Meaningful" (6) and "Major" (8) on the subjective scale.
+      - [Peer-reviewed CERT evaluations](https://egrove.olemiss.edu/jrss/vol22/iss2/7/) document CERT members deploying their training in real local incidents and routine community functions (welfare checks, traffic management at community events, preparedness outreach to vulnerable residents), reflecting the practical, deployable nature of the curriculum
+      - The impact ceiling is set by activation frequency: most CERT members deploy in a small number of significant local incidents per year and contribute to ongoing community-preparedness outreach, falling short of the daily, sustained civic engagement that would warrant a score of 9 or above
+    isr_reasoning: |
+      - [After-action reports from major US disasters](https://www.gao.gov/assets/gao-22-104560.pdf) consistently document CERT contributions in evacuation, sheltering, welfare-check, and damage-assessment roles, supporting a meaningful-impact ISR for active members
+      - ISR is not universal: members in regions with low disaster frequency may train extensively without major incident deployment, limiting tangible impact to the preparedness-outreach channel
+      - ISR of 65% reflects that a clear majority of active members experience meaningful tangible impact, with the remainder contributing primarily through preparedness education rather than incident response
+    uar_reasoning: |
+      - See emergency-preparedness.community UAR – same intervention, same adherence profile
+
+  community-contribution.belonging:
+    pbs: 7
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after 12+ months of active team participation: 65th–72nd percentile – CERT teams meet regularly, train under physically and emotionally demanding conditions, and develop the kind of trust-rich relationships that produce strong felt belonging. Delta: ~30–37 percentile points. PBS 7 ("between meaningful and major").
+      - [Volunteering and social cohesion research](https://link.springer.com/article/10.1007/s11205-023-03268-6) identifies regular, role-defined participation in a community organisation as the strongest pathway to community belonging – CERT meets all of these conditions and adds the unusual element of shared training in challenging scenarios, which accelerates relational bonding
+      - Compared with general volunteering (where belonging PBS is typically 6), CERT scores higher because of the team-cohesion effect of shared difficult training and live-incident deployment
+    isr_reasoning: |
+      - [Belonging Network literature review (2024)](https://www.belongnetwork.co.uk/wp-content/uploads/2024/04/Social-cohesion-and-volunteering-lit-review_final-1-1.pdf) found that belonging gains are most reliable in volunteer contexts with regular face-to-face contact and clear role identity – CERT teams meet both criteria more strongly than the average volunteer programme
+      - The belonging benefit is not universal: members who certify but rarely attend drills miss the relational mechanism almost entirely, replicating the engagement-dependent pattern seen in other volunteer interventions
+      - ISR of 70% reflects that most active members experience meaningful belonging gains, with the minority of disengaged certified members not benefiting
+    uar_reasoning: |
+      - See emergency-preparedness.community UAR – same intervention, same adherence profile
+
+  networks.breadth:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after sustained CERT participation: 60th–65th percentile in the diversity and range of professional and civic connections – members meet emergency managers, fire officers, public-health officials, and a cross-section of local residents who would not otherwise overlap with their professional life. Delta: ~25–30 percentile points. PBS 6 ("Meaningful gain in network breadth").
+      - The networks built through CERT are unusually diverse relative to most professional volunteering: teams include retirees, public-sector workers, healthcare staff, tradespeople, and private-sector professionals from across the local area, providing exposure to fields and demographics the typical adopter rarely encounters in their day job
+      - The benefit is real but bounded; CERT contacts are typically civic and acquaintance-level rather than deep professional collaborators, limiting the depth of any individual connection while still expanding breadth meaningfully
+    isr_reasoning: |
+      - The breadth gain is reliable for active team members because cohort training and ongoing drills provide structured repeated contact with a heterogeneous group, but is not specifically evidenced in CERT outcome research – the pathway is plausible by mechanism rather than directly measured
+      - [General volunteering and social capital research](https://pmc.ncbi.nlm.nih.gov/articles/PMC11892048/) supports the network-breadth pathway across structured volunteer programmes; CERT's interagency contact (fire, police, EMS, emergency management) plausibly amplifies this above the volunteering baseline
+      - ISR of 65% reflects modest confidence that active members experience real breadth gains, with the remainder gaining only superficial contacts
+    uar_reasoning: |
+      - See emergency-preparedness.community UAR – same intervention, same adherence profile
+
+  life-skills.high:
+    pbs: 6
+    isr: 80
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile – 1–2 high-impact practical skills at competent level. Endpoint after CERT certification: roughly 5 additional skills at competent level (basic disaster medical operations, fire suppression, light search-and-rescue, triage, incident command basics) plus reinforcement of first-aid skills the member may already hold. Delta: ~4–5 high-impact skills.
+      - Applying the log formula with anchor_max = 15 skills and a delta of ~5 skills: PBS = 10 + log₂(5/15) = 10 − 1.58 = 8.4 in theoretical terms, conservatively scored at 6 to reflect that CERT skills are at competent rather than advanced level and skill decay between drills is significant
+      - The score sits comfortably above the survival-kit equivalent (PBS 4 on this value, since kit assembly is not itself a practical skill set) because CERT explicitly teaches and tests operational skills under simulated stress
+    isr_reasoning: |
+      - The basic-training curriculum is standardised and competency-tested via the disaster simulation exercise, so members who certify reliably possess the taught skills at the point of certification
+      - [Skill-decay research in emergency response](https://pubmed.ncbi.nlm.nih.gov/19594993/) shows meaningful degradation in technical first-aid skills within 6–12 months without practice; CERT mitigates this with quarterly drills, but inactive members lose competence quickly
+      - ISR of 80% reflects that active members reliably achieve competence across the taught skill set, with a minority losing skills between drills or never reaching full competence on the more physically demanding components
+    uar_reasoning: |
+      - See emergency-preparedness.community UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Basic CERT training is provided free of charge by FEMA and local partner agencies in the United States; equivalent programmes in the UK, Australia, Canada, and New Zealand are similarly funded by national or regional emergency management bodies. Some programmes provide a basic equipment kit (helmet, vest, gloves, torch) at no cost; where members must purchase their own gear, the upfront equipment cost is typically $50–100, but the minimum viable starting point is genuinely zero because training-issue equipment is provided during drills."
+  ongoing_cost: 30
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Periodic replacement of basic personal equipment (gloves, batteries, first-aid consumables) and incidental costs of attending drills (local travel). Estimated at $20–40 per year. Many programmes reimburse travel for activated deployments."
+  upfront_time: 25
+  upfront_time_reasoning: "20–30 hours of basic training delivered over six to eight weekly evening sessions or a compressed weekend format, plus the final day disaster simulation exercise. The upper end of the range applies to programmes that include additional optional modules (e.g. CPR certification, traffic management)."
+  ongoing_time: 5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Approximately one drill or refresher session per month (3–4 hours) plus minimal at-home maintenance of personal equipment and continuing-education materials. Members who deploy to live incidents will incur substantial additional time during those events but these are episodic rather than ongoing."
+
+prerequisites:
+  - "Sufficient physical capability to participate in light search-and-rescue, basic disaster medical operations, and fire suppression drills – most programmes accommodate a wide range of fitness levels but require the ability to walk over uneven ground, lift moderate weights, and wear basic personal protective equipment"
+  - "Access to a local CERT or equivalent programme – the [FEMA CERT directory](https://community.fema.gov/PreparednessCommunity/s/cert-find-a-program) lists US programmes; rural areas may have limited or no programme within reasonable travel distance"
+  - "Legal eligibility to volunteer in emergency response (typically 18+ in the US, with teen CERT variants for younger participants); some programmes require a basic background check for incident-deployment status"
+  - "Willingness to operate within the incident command system and defer to professional responders – this is a programme requirement, not a personal preference"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Trained, organised disaster preparedness reduces anticipatory anxiety about emergencies and provides a concrete sense of agency, with [post-disaster studies](https://www.gao.gov/assets/gao-22-104560.pdf) documenting lower psychological distress among trained responders compared with untrained community members"
+  - domain: "physical-safety"
+    rationale: "Light search-and-rescue and basic disaster medical operations training directly reduce mortality risk during the first 72 hours of a major incident, when professional response capacity is overwhelmed; the effect is concentrated on disaster-related risk rather than the broader physical-safety anchor"

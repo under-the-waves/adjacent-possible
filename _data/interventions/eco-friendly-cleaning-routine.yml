@@ -1,0 +1,115 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Eco-Friendly Cleaning Routine"
+what_it_is: |
+  Switching the household cleaning system from disposable, virgin-plastic, hot-wash, high-VOC products to a low-impact alternative – concentrated refillable cleaners (Splosh, Blueland, Method refills), microfibre cloths in place of paper towels, cold-water laundry, low-VOC or EU Ecolabel detergents, and white vinegar plus bicarbonate of soda for tasks where they actually work (limescale, drains, glass). The discipline of using less product than the label recommends is part of the routine: manufacturers are commercially incentivised to over-dose, and most surfaces, dishes, and laundry come clean with roughly half the suggested amount. The honest framing is that any single household's footprint is small in absolute terms – domestic cleaning accounts for a low single-digit percentage of household environmental impact – so the value comes from cumulative effect across many adopters and from the signalling and norm-shifting it produces, not from one home's footprint reduction.
+how_to_do_it: |
+  - Replace single-use plastic bottles with a refill system. Concentrated refills (Splosh, Blueland, Ocean Saver, Method refill pouches) cut packaging mass by 80–95% per use compared to ready-mixed bottles, because you are not shipping water in plastic. Buy the trigger bottles once and refill them indefinitely.
+  - Switch all routine laundry to a cold cycle (20–30°C). Around 75–90% of a washing machine's energy goes to heating the water rather than mechanical action, so cold-washing is the single largest energy reduction available in the routine. Modern enzyme detergents (Persil, Ariel, Ecover) are formulated to perform at low temperatures. Reserve hot washes for sheets after illness or visibly soiled whites.
+  - Replace paper towels and disposable wipes with microfibre cloths and washable cotton pads. One microfibre cloth typically displaces hundreds of paper towels over its lifetime and cleans most surfaces with only water, eliminating the cleaner-plus-towel combination for routine wipe-downs.
+  - Use vinegar and bicarbonate of soda where they genuinely work – descaling kettles, cleaning glass, deodorising drains, removing limescale on taps. Do not use them where they do not work (sanitising raw-meat surfaces, cutting heavy grease, disinfecting toilets). Buy proper EU Ecolabel or low-VOC products for those jobs rather than improvising.
+  - Dose down. Start at half the label amount for laundry detergent, dishwasher tablets, and surface sprays, and increase only if results are visibly worse. Most products are formulated for the dirtiest plausible use case, not your kitchen.
+success_looks_like: |
+  - Single-use plastic bottles entering the home for cleaning purposes drop to near zero – refills, concentrates, and reusable cloths cover the routine.
+  - Energy use from the washing machine falls noticeably (visible on the meter or smart-meter app), driven almost entirely by the cold-wash switch rather than by reduced load count.
+  - The routine becomes cheaper, not more expensive, once the upfront refill bottles and microfibre cloths are bought – concentrates and bulk refills are typically 20–40% cheaper per use than equivalent ready-mixed branded products.
+common_pitfalls: |
+  - Treating vinegar and bicarbonate of soda as universal cleaners. They are mildly acidic and mildly alkaline respectively, which makes them effective for limescale and grease loosening but poor for sanitising surfaces, killing pathogens, or cutting heavy grease. Greenwashing blogs routinely overstate their range.
+  - Buying every "eco" product at full price and assuming higher cost equals lower impact. Many premium green brands are only marginally better in lifecycle terms than supermarket EU Ecolabel products at half the price; the routine should optimise for refill-and-concentrate logic, not brand virtue.
+  - Believing the household-level impact is large. The cumulative environmental case for this routine is real but small per household, and the value comes mainly from signalling, norm-shifting, and the cost savings that make the routine sustainable long-term.
+description: |
+  - A whole-routine swap from disposable, hot-wash, high-VOC cleaning to refills, cold-water laundry, microfibre cloths, low-VOC detergents, and selective use of vinegar and bicarbonate of soda – combined with the discipline of dosing below the label recommendation
+  - [Lifecycle assessments of household cleaners](https://environment.ec.europa.eu/topics/circular-economy/eu-ecolabel-home/product-groups-and-criteria_en) under the EU Ecolabel scheme show that concentrated and refillable formats reduce packaging, transport, and per-wash chemical loadings by a meaningful margin compared to standard ready-mixed bottles
+  - [Energy Saving Trust analysis](https://energysavingtrust.org.uk/advice/at-home-with-energy/) indicates that washing at 30°C rather than 40°C cuts a wash cycle's energy use by roughly 40%, because heating water dominates the cycle's electricity demand; switching to 20°C extends the saving further
+  - [Indoor air quality research](https://www.epa.gov/indoor-air-quality-iaq/volatile-organic-compounds-impact-indoor-air-quality) on volatile organic compounds finds that conventional cleaning products are a meaningful contributor to indoor VOC concentrations, and EU Ecolabel and low-VOC products materially reduce that exposure
+  - The routine is distinct from generic "buy green products" advice in that it combines product substitution, cold-washing, dose reduction, and a clear-eyed acceptance that household-level impact is modest and the value lies in cumulative effect and signalling
+applicable_domains: ["housework", "global-impact", "possessions", "saving"]
+
+values:
+  housework.environmental:
+    pbs: 7
+    isr: 75
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence – refills, cold-wash, microfibre, low-VOC, dose reduction across the whole routine – a user could plausibly reach the 80th–85th percentile of households on environmental impact of home management. Delta: ~45–50 percentile points.
+      - The routine targets the largest line items in the cleaning footprint: packaging (refills cut packaging mass by 80–95% versus ready-mixed bottles), water-heating energy (cold-washing removes the dominant component of laundry energy use, see [Energy Saving Trust guidance](https://energysavingtrust.org.uk/advice/at-home-with-energy/)), and chemical loadings ([EU Ecolabel criteria](https://environment.ec.europa.eu/topics/circular-economy/eu-ecolabel-home/product-groups-and-criteria_en) document meaningful reductions in aquatic toxicity, biodegradability time, and VOC content for certified products).
+      - Score 7 reflects a major within-domain gain rather than a transformative one. The honest framing: domestic cleaning is a low single-digit share of household environmental impact in [comparative analyses](https://ourworldindata.org/environmental-impacts-of-food), so the per-household absolute impact is small. The PBS captures the size of the change within the housework-environmental construct, which is large; the cumulative and signalling value across many adopters is what makes it worth scoring at 7 rather than 5.
+    isr_reasoning: |
+      - The mechanism is mostly mechanical – swapping a disposable bottle for a refill, or a hot wash for a cold wash, produces the lifecycle benefit by virtue of the swap, not by any user skill. [EU Ecolabel verification](https://environment.ec.europa.eu/topics/circular-economy/eu-ecolabel-home/product-groups-and-criteria_en) and [Energy Saving Trust calculations](https://energysavingtrust.org.uk/advice/at-home-with-energy/) hold across households once the substitution is made.
+      - The main failure mode is partial substitution – cold-washing only some loads, using refills for some products but not others, or reverting to paper towels under time pressure. This shrinks the achieved benefit to a fraction of the available one for a meaningful minority of adherent users.
+      - ISR of 75% reflects that the substitutions reliably produce the lifecycle benefit when actually made, and that most users who adopt the routine in good faith make most of the substitutions most of the time. Vinegar-and-bicarbonate misuse on tasks they do not handle is a smaller secondary failure mode that does not undermine the routine's overall footprint reduction.
+    uar_reasoning: |
+      - [Behavioural research on green-product adoption](https://www.sciencedirect.com/science/article/abs/pii/S0959652620349465) finds that the strongest predictor of sustained adoption is convenience parity with the product being replaced, not environmental motivation – refill systems and cold-washing score well on convenience parity, microfibre and dose-down score moderately.
+      - [Energy Saving Trust survey data](https://energysavingtrust.org.uk/about-us/our-data/) suggests that cold-wash adoption is rising but still a minority practice, with hot-wash defaults persisting via habit and uncertainty about cleaning performance even when the detergent is rated for low temperature.
+      - UAR of 50% reflects that the routine is genuinely sustainable for around half of motivated adopters – low ongoing cost, no skill ceiling, and convenience parity – but a meaningful minority drift back to disposables, hot washes, or full-dose use under time pressure or social-norm pressure (e.g. household members who insist on traditional products).
+
+  global-impact.sustainability:
+    pbs: 4
+    isr: 60
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The anchor for global-impact.sustainability is percentage of income donated annually – an eco-cleaning routine does not move that anchor directly, but it can plausibly move a user from the 35th percentile to the 45th–50th percentile on the broader sustainability disposition the value tracks, by establishing one durable pro-environment behaviour. Delta: ~10–15 percentile points within the construct, mapping to score 4 on the anchor.
+      - The cumulative-and-signalling argument is the honest case here: one household's switch matters in aggregate with many others, and the routine often functions as an entry point to broader sustainability behaviours (energy, transport, diet) via foot-in-the-door dynamics ([behavioural spillover research](https://www.sciencedirect.com/science/article/pii/S0272494413000674)).
+      - Score 4 deliberately reflects that the per-household absolute impact is modest and the link to the anchor (income donated) is indirect.
+    isr_reasoning: |
+      - [Spillover research on pro-environmental behaviour](https://www.sciencedirect.com/science/article/pii/S0272494413000674) finds positive but inconsistent transfer from one green behaviour to another, with effect sizes that depend on whether the new behaviour is framed as part of an environmental identity rather than as a one-off swap.
+      - The cumulative-impact mechanism only delivers if many households adopt; from the individual user's perspective, the certainty that their action contributes to a meaningful aggregate is reasonable but not high.
+      - ISR of 60% reflects genuine but modest cross-domain sustainability gain conditional on the routine being framed and sustained as part of a broader environmental disposition.
+    uar_reasoning: |
+      - See housework.environmental UAR – same intervention, same adherence profile.
+
+  possessions.simplicity:
+    pbs: 4
+    isr: 70
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile on possessions.simplicity – the under-sink cupboard contains four to six refill bottles plus a small supply of concentrate rather than the typical 12–20 part-used branded bottles. Delta: ~15–20 percentile points.
+      - The mechanism is direct: refill systems consolidate cleaning inventory into a smaller number of repeatedly used containers, and the dose-down discipline reduces total volume held at any time. Microfibre cloths replace bulky paper-towel rolls.
+      - Score 4 reflects a modest gain – the simplicity benefit is real but narrow (cleaning cupboard only), not whole-home.
+    isr_reasoning: |
+      - The simplicity gain is mechanically reliable: if you commit to a refill system, the bottle count drops, full stop. The main failure mode is partial adoption that leaves both the old branded bottles and the new refills coexisting indefinitely.
+      - Survey evidence on minimalist and decluttering practices ([UK government waste research](https://www.gov.uk/government/publications/waste-prevention-programme-for-england-maximising-resources-minimising-waste/the-waste-prevention-programme-for-england-maximising-resources-minimising-waste)) suggests reduced packaging inflow correlates with reduced household clutter over time, supporting the simplicity pathway.
+      - ISR of 70% reflects that most adherent users will see a real reduction in cleaning-cupboard clutter, with a meaningful minority retaining legacy products alongside the new system.
+    uar_reasoning: |
+      - See housework.environmental UAR – same intervention, same adherence profile.
+
+  housework.health:
+    pbs: 5
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile on housework.health, driven by lower indoor VOC concentrations and reduced respiratory irritation from cleaning aerosols. Delta: ~20–25 percentile points.
+      - [US EPA indoor air quality research](https://www.epa.gov/indoor-air-quality-iaq/volatile-organic-compounds-impact-indoor-air-quality) identifies conventional cleaners, air fresheners, and disinfectants as significant contributors to indoor VOC levels, and [longitudinal occupational research](https://www.atsjournals.org/doi/10.1164/rccm.201706-1311OC) on regular cleaning-product use links it to measurable lung-function decline over decades.
+      - Score 5 reflects a meaningful but bounded health benefit – the effect is most relevant to people who clean frequently or have respiratory sensitivity, and the dose-response within typical home use is modest.
+    isr_reasoning: |
+      - [Indoor VOC measurement studies](https://pubmed.ncbi.nlm.nih.gov/30615908/) confirm that low-VOC and EU Ecolabel formulations produce meaningfully lower indoor concentrations than conventional products, so the substitution reliably produces the exposure reduction.
+      - The health benefit is most clearly demonstrated in occupational cleaners ([ATS research](https://www.atsjournals.org/doi/10.1164/rccm.201706-1311OC)) rather than in domestic users, so extrapolation to household exposure carries some uncertainty about effect size.
+      - ISR of 65% reflects that the exposure reduction is reliable, while the downstream health benefit is meaningful but variable across users depending on baseline ventilation, cleaning frequency, and individual sensitivity.
+    uar_reasoning: |
+      - See housework.environmental UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 50
+  upfront_cost_reasoning: "Roughly $30 for an initial refill kit (trigger bottles plus first concentrate from Splosh, Blueland, or equivalent) and $15–20 for a set of six to eight microfibre cloths and a few washable cotton pads. No specialised equipment is needed beyond what is already in a typical home."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The ongoing routine is typically cheaper than the conventional one it replaces – concentrates and bulk refills run 20–40% lower per use than ready-mixed branded products, and dose-down discipline cuts consumption further. Cold-washing reduces electricity use. Net ongoing cost is at or below the baseline cleaning spend."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately two hours to research a refill brand and order an initial kit, identify which household tasks vinegar and bicarbonate of soda actually handle (versus those needing proper detergent), and switch the washing machine default cycle to cold."
+  ongoing_time: 0
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "No additional time per week once established – refilling a bottle from a concentrate takes seconds, microfibre cloths go in the existing wash, and cold-washing has the same hands-on time as hot-washing. Ordering refills happens roughly monthly and takes a few minutes."
+
+prerequisites:
+  - "Access to a refill or concentrate brand, either online (Splosh, Blueland, Ocean Saver) or via a refill shop within reasonable distance"
+  - "A washing machine with adjustable temperature settings – any model from the last 20 years qualifies"
+  - "Storage space for a small set of microfibre cloths and concentrate refills (a single under-sink cupboard suffices)"
+
+flagged_domains:
+  - domain: "saving.lifestyle"
+    rationale: "The routine typically saves $50–150 per year via concentrates, bulk refills, and dose reduction, but this is too small relative to the saving.lifestyle anchor (months of liquid reserves) to clear the PBS >= 4 guardrail. Flagging rather than scoring."

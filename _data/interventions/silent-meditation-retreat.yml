@@ -1,0 +1,214 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Silent Meditation Retreat"
+what_it_is: |
+  An intensive residential silent meditation retreat – typically 5 to 10 days, most commonly the standard [Vipassana 10-day course](https://www.dhamma.org/en/about/code) taught in the S. N. Goenka tradition (offered worldwide on a free, dana-supported basis), a Zen sesshin, or a Christian contemplative retreat at a monastic centre. Participants observe noble silence, surrender phones and reading material, and meditate for roughly 10 hours per day under teacher guidance, following a fixed timetable from approximately 4:30 AM to 9:00 PM. Distinct from a [daily mindfulness practice](/resources/intervention-database/meditation) in dose, depth, and effect: the punctual, sustained immersion produces qualitatively different shifts that 10–20 minutes per day cannot – measurable changes in default mode network connectivity, sustained attention, and habitual emotional reactivity that show up in [longitudinal fMRI studies of long-term retreatants](https://pmc.ncbi.nlm.nih.gov/articles/PMC3855679/).
+how_to_do_it: |
+  - Choose a retreat format aligned with your disposition. The [Vipassana 10-day course](https://www.dhamma.org/en/courses/search) is the most accessible entry point – donation-based, structurally identical worldwide, and explicitly designed for newcomers. Zen sesshins (typically 5–7 days) emphasise seated meditation with kōan or shikantaza practice. Christian contemplative retreats (centring prayer, Ignatian) substitute the technique but preserve the silence and immersion structure.
+  - Apply 2–4 months in advance for first courses – Vipassana centres in particular are heavily oversubscribed. Arrange unbroken time off (12 days for a 10-day course, including travel and re-entry) and inform family that you will be uncontactable. Resist scheduling work or social commitments for the 2–3 days following return to allow for integration.
+  - Commit to the full duration once you begin. Leaving early is the most common failure mode and is associated with [poorer outcomes than completion](https://pubmed.ncbi.nlm.nih.gov/19341981/), since the difficult middle days (typically days 3–6) are when the practice's deepest restructuring tends to occur. Sit with discomfort, including boredom, restlessness, and emotional release, rather than treating these as signals to stop.
+  - After the retreat, establish a daily sitting practice immediately – ideally 1 hour per day for the first 2 weeks, tapering as needed. The retreat's effects [decay substantially without ongoing practice](https://pubmed.ncbi.nlm.nih.gov/23538911/); treating the retreat as a one-time event rather than a foundation for daily practice forfeits most of the long-term benefit.
+  - Be aware of and prepared for the possibility of meditation-related adverse effects. [Britton et al. (2021)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0259533) found that around 58% of regular meditators report at least one transient adverse effect, with intensive retreats elevating risk for a minority – including depersonalisation, anxiety spikes, and re-emergence of trauma. Choose a teacher with explicit competence in handling difficult experiences, and disclose any history of psychosis, severe trauma, or untreated mood disorder before applying.
+success_looks_like: |
+  - You leave the retreat with a felt sense of mental quiet that persists for days or weeks – a noticeable widening of the gap between stimulus and reaction in everyday situations
+  - You discover specific habitual patterns of thought or emotional reactivity that were invisible to you before, because daily life never provided a quiet enough background to see them against
+  - You return to a sustainable daily practice and continue it for at least 6–12 months, with the retreat experience functioning as a reference point that anchors and motivates the daily sit
+common_pitfalls: |
+  - Treating the retreat as a peak experience to chase rather than a foundation to build on – the resulting "retreat hangover" of trying to recapture the state through more retreats without a sustained daily practice tends to produce diminishing returns
+  - Underestimating the physical demands. Sitting cross-legged for 10 hours per day produces real knee, back, and hip pain for most beginners; arriving without basic seated meditation experience or any flexibility preparation makes the first 3 days substantially harder than they need to be
+  - Ignoring early warning signs of adverse effects – persistent dissociation, intrusive trauma material, or sleep disruption that does not resolve – out of a belief that the discomfort must be "the practice working". Talk to the teacher; leaving early is preferable to pushing through into a destabilising experience
+description: |
+  - An intensive residential silent meditation retreat of 5–10 days, most commonly the [Vipassana 10-day course](https://www.dhamma.org/en/about/code) (free, dana-based) or a Zen sesshin or Christian contemplative retreat of similar structure
+  - Participants observe noble silence, relinquish phones and reading material, and meditate for approximately 10 hours per day under teacher guidance on a fixed timetable
+  - [fMRI studies of long-term retreatants](https://pmc.ncbi.nlm.nih.gov/articles/PMC3855679/) show distinct changes in default mode network activity and amygdala reactivity, and [meta-analyses of intensive retreat outcomes](https://pubmed.ncbi.nlm.nih.gov/23796855/) report moderate-to-large effects on anxiety, depression, and wellbeing measures
+  - Distinct from [daily meditation](/resources/intervention-database/meditation) in dose and depth – the punctual, sustained immersion produces qualitatively different shifts that brief daily practice does not, particularly around dissolution of habitual reactivity
+  - Carries a non-trivial rate of [meditation-related adverse effects](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0259533), most transient but a minority lasting weeks or longer; preparation, teacher quality, and pre-existing mental health history all matter
+applicable_domains: ["mindfulness", "self-awareness", "mental-health", "value-system", "worldview"]
+
+values:
+  mindfulness.spiritual:
+    pbs: 8
+    isr: 70
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile – a sustained sense of connection to meaning and existential grounding that intermittent reflection rarely produces. Delta: ~40–45 percentile points.
+      - Intensive retreats are the historical and contemporary route to direct contemplative experience across virtually every major spiritual tradition; [phenomenological research on retreatants](https://link.springer.com/article/10.1007/s12671-016-0554-4) finds that participants reliably report shifts in self-construal, sense of unity, and felt connection to something larger – the explicit subject matter of this value.
+      - Score 8 reflects that the retreat directly targets and reliably produces what this value measures, in a way few other interventions can. Higher scores are reserved for sustained contemplative life, which a single retreat is a meaningful step toward but not a substitute for.
+    isr_reasoning: |
+      - [Khoury et al. (2017) meta-analysis of intensive retreat outcomes](https://pubmed.ncbi.nlm.nih.gov/28602515/) found large pre-post effects on spiritual wellbeing and self-transcendence (Hedges' g around 0.6–0.7), with effects sustained at follow-up among completers.
+      - The mechanism is unusually robust because the structural conditions of a retreat – silence, sustained attention, removal of distraction – directly produce the cognitive shifts that constitute this value, not via a long causal chain.
+      - ISR of 70% reflects that most completers report meaningful spiritual shifts; the remaining minority either disengage internally during the retreat or interpret their experience through a frame that does not register as spiritual development.
+    uar_reasoning: |
+      - Retreat completion rates among those who register are reasonably high (typically 80–90% at established Vipassana centres), but the population-level adherence is driven by the much lower rate of people who actually book and attend a retreat in the first place.
+      - The intervention requires 7–12 contiguous days off work, advance booking 2–4 months ahead, and tolerance for substantial physical and psychological discomfort – barriers that filter heavily.
+      - UAR of 25% reflects that perhaps one in four people who would benefit will actually navigate the logistical and psychological barriers to complete a retreat; among those who do, repeat attendance is common and the practice tends to stick.
+
+  mindfulness.clarity:
+    pbs: 7
+    isr: 75
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence (retreat plus sustained daily practice afterwards), a user could plausibly reach the 65th–70th percentile, equivalent to 20–30 minutes daily sustained consistently. Delta: ~30–35 percentile points.
+      - The retreat itself produces 60–80 hours of formal practice in a week, more than most daily meditators accumulate in 6 months, and it strongly conditions a return-to-practice habit. [Kral et al. (2018)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6193296/) found that long-term retreatants showed reduced amygdala reactivity even at rest, suggesting the attentional-regulation gains are durable rather than purely state-dependent.
+      - Score 7 reflects substantial gains in attentional clarity, capped because the highest scores on this anchor require not just retreat experience but sustained daily practice over years, of which the retreat is a strong precipitating but not sufficient condition.
+    isr_reasoning: |
+      - [Sumantry and Stewart (2021) meta-analysis of 111 RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC9381612/) found that intensive practice doses (above 30 hours) produced larger and more consistent attentional gains than short daily practice, supporting the retreat's mechanistic edge for this value.
+      - Among completers, the proportion who achieve and sustain measurable attentional improvements is high relative to brief interventions, because the dose itself crosses thresholds that brief practice does not reach.
+      - ISR of 75% reflects that completers reliably experience meaningful clarity gains during and shortly after the retreat; the remaining 25% lose the gains within months through failure to establish a daily practice.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  mindfulness.emotional:
+    pbs: 7
+    isr: 65
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – a meaningful and durable shift in emotional reactivity rather than a transient mood improvement. Delta: ~30–35 percentile points.
+      - [Khoury et al. (2013) meta-analysis](https://pubmed.ncbi.nlm.nih.gov/23796855/) of mindfulness-based therapy found pre-post effect sizes around g = 0.55 for psychological distress, with intensive formats showing larger effects than brief programmes; retreat-based interventions cluster at the upper end of this range.
+      - Score 7 reflects substantial emotional gains, capped because the highest anchor levels require integration of retreat insight into daily life over years, not just the retreat itself.
+    isr_reasoning: |
+      - [Chiesa and Serretti (2010) review](https://pubmed.ncbi.nlm.nih.gov/19341981/) of mindfulness retreats found consistent reductions in anxiety and depressive symptoms across heterogeneous samples, with effect sizes generally larger than for non-residential programmes.
+      - A meaningful minority of participants experience the opposite – [Britton et al. (2021)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0259533) report that around 6–14% of intensive retreatants experience transient adverse effects severe enough to impair daily functioning, with rare cases of more lasting destabilisation.
+      - ISR of 65% reflects that most completers achieve genuine emotional gains, while accounting for the non-trivial subset who experience adverse rather than beneficial effects on this value.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  mindfulness.knowledge:
+    pbs: 8
+    isr: 75
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile – sustained, accurate insight into one's habitual thought patterns and emotional dynamics through prolonged direct observation. Delta: ~40–45 percentile points.
+      - The retreat structure provides something almost no other intervention does: 60+ hours of uninterrupted attention turned inward, against a quiet enough background that subtle habitual patterns become visible. [Phenomenological research on retreatants](https://link.springer.com/article/10.1007/s12671-016-0554-4) consistently finds detailed and specific reports of newly identified mental patterns post-retreat.
+      - Score 8 reflects that the retreat is unusually well-targeted to this value – the methodology itself is essentially a form of structured self-observation. Higher scores are reserved for those who turn this into a sustained contemplative practice over years.
+    isr_reasoning: |
+      - The mechanism is highly direct: extended silent observation of one's mind reliably surfaces previously invisible patterns, making this one of the more reliable benefits of the intervention even relative to other meditation outcomes.
+      - [Goleman and Davidson (2017) review of intensive retreat research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3855679/) emphasises that contemplative insight is a comparatively reliable retreat outcome, with state-trait effects more durable than mood improvements.
+      - ISR of 75% reflects that most completers leave with genuinely new self-knowledge; the minority who do not are typically those who spend the retreat in distraction, sleep, or strong rumination rather than the trained attentional posture.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  self-awareness.contemplative:
+    pbs: 8
+    isr: 75
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile – a substantially deeper and more accurate awareness of internal states, body sensations, and present-moment experience than daily life cultivates. Delta: ~40–45 percentile points.
+      - The retreat's core methodology is exactly the construct this value measures: sustained, non-judgemental attention to internal experience. [Kral et al. (2018) fMRI findings](https://pmc.ncbi.nlm.nih.gov/articles/PMC6193296/) show that long-term retreat practice shifts default-mode and interoceptive network activity in directions consistent with enhanced contemplative-somatic awareness.
+      - Score 8 reflects that the retreat directly targets this value at unusually high dose; near-maximum scores require sustained contemplative life rather than a single retreat.
+    isr_reasoning: |
+      - The mechanism is structurally direct: completing the retreat protocol largely entails developing this skill, making ISR among the highest of any value scored here.
+      - [Body-scan and Vipassana technique research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3855679/) consistently finds enhanced interoceptive accuracy and somatic awareness following intensive practice, with effects largest for retreat participants.
+      - ISR of 75% reflects that completers reliably develop the targeted skill, with the minority who do not typically being those who failed to follow the technique as taught.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  self-awareness.psychological:
+    pbs: 7
+    isr: 65
+    uar: 25
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – meaningful insight into mental patterns, triggers, and emotional dynamics that daily life rarely surfaces. Delta: ~30–35 percentile points.
+      - The retreat creates conditions under which suppressed material reliably surfaces; participants commonly report identification of specific reactive patterns ("I always shut down when X") that had been operating invisibly. The mechanism is well-described in the [Vipassana outcome literature](https://pubmed.ncbi.nlm.nih.gov/19341981/).
+      - Score 7 reflects substantial psychological insight gains, slightly below contemplative-somatic awareness because translating raw observation into coherent psychological self-understanding requires reflective integration that not all retreatants do well.
+    isr_reasoning: |
+      - The translation from observed pattern to coherent psychological insight is more variable than the raw observation step – some retreatants leave with vivid experiences but no coherent narrative about what they mean.
+      - [Chiesa (2010) review](https://pubmed.ncbi.nlm.nih.gov/19341981/) finds consistent reports of self-knowledge gains in retreat samples, though measurement is largely self-report.
+      - ISR of 65% reflects that most completers gain genuine psychological insight, with a meaningful minority either losing it without integration practice or misinterpreting retreat experiences in ways that do not yield durable understanding.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 6
+    isr: 55
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – a meaningful gain in life satisfaction, sense of meaning, and frequency of positive affect, often experienced as a quieter and more grounded baseline. Delta: ~20–25 percentile points.
+      - [Khoury et al. (2017) meta-analysis](https://pubmed.ncbi.nlm.nih.gov/28602515/) found pre-post improvements in wellbeing with effect sizes in the moderate-to-large range across retreat samples; [dose-response research](https://pmc.ncbi.nlm.nih.gov/articles/PMC12336962/) suggests retreat-level practice clears the threshold associated with meaningful flourishing gains, which short daily practice often does not.
+      - Score 6 reflects a real but bounded effect – flourishing depends on factors beyond contemplative state (relationships, purpose, circumstances) that the retreat does not directly address, and gains decay without integration.
+    isr_reasoning: |
+      - Flourishing gains are less reliable than insight or attention gains because they depend on the retreatant translating contemplative experience into ongoing life changes – a step many do not complete.
+      - [Britton et al. (2021)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0259533) finds that a non-trivial minority experience worsening rather than improvement on wellbeing measures post-retreat, particularly those with prior trauma or mood disorder.
+      - ISR of 55% reflects genuine but conditional flourishing benefits – higher than daily meditation's flourishing ISR because the dose is higher, lower than retreat insight ISR because the causal chain is longer.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  value-system.insight:
+    pbs: 6
+    isr: 60
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – meaningful clarification of one's own actual values, hierarchies, and trade-offs through sustained quiet observation. Delta: ~20–25 percentile points.
+      - The retreat's silence and removal of distraction makes underlying preferences and motivations more visible than they are amid normal life noise; participants commonly report renewed clarity about what they actually want vs what they have been pursuing by default.
+      - Score 6 reflects a real but secondary effect – the retreat does not explicitly target values clarification, and the insight comes through the same mechanism as self-knowledge generally rather than as a direct training.
+    isr_reasoning: |
+      - The values insight benefit is real but variable across retreatants; some leave with vivid clarity about life direction while others process more procedural or emotional material without explicit values-level conclusions.
+      - [Phenomenological research on retreatants](https://link.springer.com/article/10.1007/s12671-016-0554-4) finds frequent reports of life-direction reorientation post-retreat, supporting the mechanism.
+      - ISR of 60% reflects that more than half of completers experience some values-level clarification, while a substantial minority do not.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  worldview.depth:
+    pbs: 6
+    isr: 60
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in depth of understanding within contemplative or philosophical knowledge domains. Delta: ~20–25 percentile points.
+      - Sustained direct experience of mental phenomena gives experiential depth to concepts (impermanence, conditioning, self-construction) that academic study alone treats abstractly; this can substantially deepen understanding of contemplative philosophy, psychology, and relevant religious traditions.
+      - Score 6 reflects a real but bounded depth gain confined to specific domains where contemplative experience is directly relevant; the retreat does not deepen worldview generally.
+    isr_reasoning: |
+      - The depth gain depends on the retreatant having or developing some intellectual engagement with the relevant traditions – it is more reliable for those who read or study around the practice.
+      - The mechanism is well-documented in contemplative scholarship but understudied empirically as a worldview-depth outcome.
+      - ISR of 60% reflects genuine but variable depth gains conditional on intellectual engagement with the practice's framework.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+  worldview.meaning:
+    pbs: 7
+    isr: 65
+    uar: 25
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile in psychological grounding and felt sense of purpose derived from worldview. Delta: ~30–35 percentile points.
+      - Retreats are historically the principal route to direct experiential grounding of worldview claims (about consciousness, self, suffering, transcendence); [phenomenological retreat research](https://link.springer.com/article/10.1007/s12671-016-0554-4) finds frequent reports of strengthened existential grounding post-retreat.
+      - Score 7 reflects that the retreat is unusually well-suited to this specific value – it provides experiential evidence that other interventions cannot, even if the metaphysical interpretation remains contested.
+    isr_reasoning: |
+      - The meaning gain is reasonably reliable because the mechanism (direct experience strengthening felt-sense conviction) operates across most completers regardless of which interpretive framework they apply afterwards.
+      - For some retreatants, the experience destabilises rather than grounds existing worldview – a known and not always positive outcome that needs to be set against the typical case.
+      - ISR of 65% reflects that most completers experience strengthened existential grounding, while accounting for the minority for whom the retreat is destabilising rather than grounding.
+    uar_reasoning: |
+      - See mindfulness.spiritual UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 100
+  upfront_cost_reasoning: "Vipassana 10-day courses operate on a dana (donation) basis – there is no required course fee, though donations from prior students fund subsequent courses. Travel costs to the retreat centre are typically the main expense and vary substantially by location. Allow $100 minimum for travel, basic comfortable clothing suitable for long sitting, and a meditation cushion if not provided. Zen sesshins and Christian contemplative retreats typically charge $400–$1,200 for room, board, and instruction over 5–7 days, but the donation-based Vipassana option keeps the minimum cost low."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No required ongoing cost. Daily home practice afterwards uses no equipment beyond what one already has. Some practitioners attend a follow-up retreat every 1–2 years, which is recommended but not required."
+  upfront_time: 200
+  upfront_time_reasoning: "10 days at the retreat (roughly 10 hours of formal practice per day plus structured rest, totalling ~150–170 hours on-site), plus 1–2 days for travel and re-entry, plus 5–10 hours for advance application, logistics, and basic preparation. Conservative total of 200 hours for the full intervention from application to return."
+  ongoing_time: 7
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Establishing and maintaining a daily sit of approximately 1 hour following the retreat is the standard recommendation – ~7 hours per week. This is the minimum effective dose to retain retreat gains; without it, most benefits decay within months."
+
+prerequisites:
+  - "No history of psychosis, untreated bipolar disorder, severe trauma, or active suicidal ideation – intensive retreats can destabilise these conditions and most centres screen for them on application"
+  - "Physical capacity to sit (on a chair, cushion, or floor) for extended periods – not pain-free, but able to cope with significant discomfort over 10 days without injury"
+  - "Ability to take 7–12 contiguous days off work or family responsibilities and to be uncontactable during that period"
+  - "Access to a residential retreat centre (Vipassana centres exist on every inhabited continent; Zen and Christian contemplative centres are concentrated in higher-income countries)"
+
+flagged_domains:
+  - domain: "behaviours"
+    rationale: "Reduced reactivity and increased noticing of mental patterns directly supports breaking habitual unwanted behaviours, with retreat-induced equanimity acting as a circuit-breaker for craving and aversion responses."
+  - domain: "ethics"
+    rationale: "Sustained reflection on conduct, intention, and the experience of others is a core component of most contemplative retreat curricula and frequently produces refined ethical commitments post-retreat."

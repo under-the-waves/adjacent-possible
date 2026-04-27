@@ -1,0 +1,175 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Feynman Technique for Teaching to Learn"
+what_it_is: |
+  A four-step protocol for converting passive study into active mastery by deliberately teaching what one is learning. The learner picks a single concept, then writes or speaks an explanation aimed at a non-expert audience – a child, a colleague outside the field, or simply an imagined listener – using only plain language. Wherever the explanation stalls, becomes vague, or relies on jargon, the learner has located a real gap in their understanding rather than the comfortable illusion of knowing. They return to the source material, fix the gap, and iterate until the explanation runs end-to-end in simple terms. The technique combines two of the most reliably evidenced mechanisms in the learning sciences – generative explanation and retrieval practice – into a routine that exposes shallow understanding faster than re-reading or highlighting ever can.
+how_to_do_it: |
+  - Choose one concept narrow enough to explain in five to ten minutes – a single principle, mechanism, or definition rather than a whole chapter. "How does compound interest work?" is the right size; "macroeconomics" is not.
+  - Explain it from memory in plain language to a real or imagined non-expert. Write it out longhand or speak it aloud and record yourself. Forbid jargon – every technical term must be defined or replaced. Use analogies, concrete examples, and a clear narrative arc.
+  - Mark every point at which the explanation stalls, becomes hand-wavy, depends on jargon you cannot unpack, or fails to answer an obvious follow-up question. These are your real knowledge gaps, distinct from what felt familiar during reading.
+  - Return to the source material – textbook, paper, lecture, expert – and study only the gaps you marked. Then redo the explanation from scratch. Iterate until the explanation runs cleanly without notes and survives sceptical follow-up questions
+  - Frequency: 15 -- 30 minutes per concept, applied to every important new topic during a course of study. Most learners see noticeable gains in retention and comprehension within two to four weeks of consistent use
+success_looks_like: |
+  - You can explain core concepts from your domain to a non-expert without jargon and without stalling, including the mechanism behind the result rather than just the result
+  - You catch your own knowledge gaps before exams, presentations, or conversations expose them, because the teaching attempt has already surfaced them
+  - Your retention of material weeks and months after first studying it is materially higher than when you relied on re-reading, highlighting, or passive review
+common_pitfalls: |
+  - Skipping the "explain in plain language" step and instead summarising in the source's own technical vocabulary – this preserves the illusion of understanding rather than testing it
+  - Picking concepts too broad to fit in a single explanation, which makes the technique feel exhausting and obscures which specific sub-points are weak
+  - Treating the first pass as the finished product. The protocol's power is in the iteration loop – identifying gaps, returning to sources, and re-explaining – not in the one-shot teaching attempt
+description: |
+  - A four-step protocol – choose concept, explain in simple language, identify gaps, refine – that converts passive study into active mastery by exposing the gap between what feels understood and what can actually be reconstructed without notes
+  - [Meta-analysis of generative learning strategies](https://psycnet.apa.org/record/2015-49431-001) finds that self-explanation and explanation to others reliably improve comprehension and transfer, with effect sizes consistently larger than re-reading or summarising in the source's vocabulary
+  - [Studies of the protégé effect](https://eric.ed.gov/?id=EJ782047) show that students preparing to teach others process material more deeply, organise it more coherently, and retain it longer than students preparing only for themselves – the act of teaching is itself the learning mechanism
+  - [Classic experiments on learning by teaching](https://psycnet.apa.org/record/1981-04886-001) demonstrate that participants told they would teach material learned it more thoroughly than those told they would be tested, even when the actual test was identical, indicating the teaching expectation alone restructures encoding
+  - The technique requires no equipment, no cost, and as little as 15 -- 30 minutes per concept; the only barrier is psychological – willingness to confront one's own gaps rather than retreating to the comfort of recognition-without-recall
+applicable_domains: ["life-skills", "learning-methods", "communication", "cognitive-skills", "self-awareness"]
+
+values:
+  life-skills.teaching:
+    pbs: 7
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – moving from someone who can perform a skill to someone who can articulate the underlying principles in plain language for a non-expert. Delta: ~35 percentile points.
+      - The technique's primary output is precisely the construct this value measures: a tested, refined explanation of a concept in jargon-free language that an actual non-expert can follow. Repeated application builds a library of such explanations across a learner's domain.
+      - Score 7 reflects a meaningful but bounded gain – the technique improves the verbal articulation and pedagogical structuring of skills, but full teaching mastery also depends on audience-reading and adaptive scaffolding that the protocol does not directly train.
+
+  learning-methods.depth:
+    pbs: 8
+    isr: 70
+    uar: 40
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th percentile – the protocol's iterative gap-finding loop is one of the more direct routes to deep, organised understanding rather than fluent recognition. Delta: ~40 percentile points.
+      - [Fiorella and Mayer's review of generative learning](https://psycnet.apa.org/record/2015-49431-001) finds that explaining material to others produces deeper conceptual integration than rehearsal or summarisation, with effects on transfer tasks – the strongest available proxy for genuine depth.
+      - Score 8 reflects that the technique targets depth through two complementary mechanisms simultaneously – generative explanation and gap-driven retrieval – which is unusually well-aligned with what the value measures.
+    isr_reasoning: |
+      - [Roscoe and Chi's analysis of tutor learning](https://eric.ed.gov/?id=EJ782047) finds that explaining produces depth gains for the majority of learners, but a meaningful minority deliver knowledge-telling explanations that simply restate source material without integration – these learners see weaker gains.
+      - The depth gain is most reliable when the learner genuinely confronts gaps rather than glossing over them; learners who treat the simple-language step as a stylistic exercise rather than a diagnostic one capture only a fraction of the available benefit.
+      - ISR of 70% reflects that the underlying mechanism is robustly evidenced and the protocol is well-targeted, but a meaningful share of adherent users will execute the gap-finding step too leniently to capture full depth gains.
+    uar_reasoning: |
+      - The technique requires sustained voluntary effort – sitting with the discomfort of stalled explanations and returning to source material – that re-reading and highlighting do not require, despite producing weaker results. [Survey research on study habits](https://onlinelibrary.wiley.com/doi/10.1002/acp.1537) consistently finds students prefer recognition-based methods that feel productive over generative methods that actually work.
+      - Time pressure during exam preparation pushes learners back to passive methods even when they know generative methods are superior, because the marginal cost of effort feels higher in the moment.
+      - UAR of 40% reflects that even motivated learners who have read about the technique tend to apply it sporadically rather than systematically across all important concepts in a course of study.
+
+  learning-methods.efficiency:
+    pbs: 7
+    isr: 65
+    uar: 40
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – the protocol surfaces real gaps faster than self-quizzing or re-reading because plain-language explanation forces engagement with mechanism rather than vocabulary. Delta: ~35 percentile points.
+      - [Generative learning meta-analyses](https://psycnet.apa.org/record/2015-49431-001) find that explanation-based study produces equivalent or better retention than re-reading in materially less total study time, because each session does diagnostic and consolidation work simultaneously.
+      - Score 7 reflects a meaningful efficiency gain – the technique compresses comprehension testing and gap-fixing into the same activity, replacing several separate study passes with one iterative loop.
+    isr_reasoning: |
+      - [Karpicke and Blunt's comparison of study methods](https://www.science.org/doi/10.1126/science.1199327) found generative methods (retrieval, explanation) outperformed concept mapping and re-reading on delayed comprehension tests for the majority of participants, with a minority of low-prior-knowledge learners showing weaker effects.
+      - Efficiency gains are most reliable when the learner has enough background to attempt a real explanation; for genuinely novel material with no prior scaffolding, the protocol may need supplementing with initial exposure passes before it becomes efficient.
+      - ISR of 65% reflects strong evidence for the mechanism with a real but bounded share of cases (very novel domains, learners with weak baseline) where the gain is smaller.
+    uar_reasoning: |
+      - See learning-methods.depth UAR – same intervention, same adherence profile.
+
+  communication.influence:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – sustained practice at jargon-free explanation directly trains the skill of making complex ideas land with non-expert audiences, which is the core mechanism of expert influence in mixed-expertise rooms. Delta: ~20 percentile points.
+      - The technique's iteration loop builds a personal stock of vetted analogies, examples, and narratives for each concept, which transfers directly to presentations, persuasive writing, and stakeholder conversations where audiences are not subject-matter peers.
+      - Score 5 reflects a modest, secondary benefit – influence depends on many factors beyond clarity, including credibility, framing, and audience-reading, that this technique does not directly train.
+    isr_reasoning: |
+      - [Research on expert-novice communication](https://psycnet.apa.org/record/2015-49431-001) suggests that explanation-trained communicators are systematically more comprehensible to mixed audiences, but the influence gain depends on whether the audience valued clarity in the first place.
+      - The benefit transfers most reliably to written and prepared verbal communication; spontaneous influence in adversarial or political contexts depends on additional skills the protocol does not train.
+      - ISR of 55% reflects a real but conditional benefit – the clarity gain is robust, but its translation into measurable influence varies with context.
+    uar_reasoning: |
+      - See learning-methods.depth UAR – same intervention, same adherence profile.
+
+  communication.performance:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – repeatedly rehearsing plain-language explanations builds verbal fluency and reduces the on-the-spot translation cost that drives anxiety in formal speaking situations. Delta: ~20 percentile points.
+      - The protocol's "explain aloud" variant doubles as low-stakes speaking rehearsal, which has documented benefits for confidence and fluency in subsequent higher-stakes performances.
+      - Score 5 reflects a modest gain – performance also depends on stagecraft, breath control, and exposure to audiences that the protocol alone does not provide.
+    isr_reasoning: |
+      - The performance benefit is most reliable for content-heavy speaking (technical talks, lectures, briefings) where mastery of material drives confidence; less reliable for performative or persuasive speaking where other skills dominate.
+      - Spoken-aloud iteration builds verbal motor fluency that silent writing does not, so the variant of the technique chosen matters for this outcome.
+      - ISR of 55% reflects a real but indirect benefit – the technique improves the substrate that performance draws on without training performance directly.
+    uar_reasoning: |
+      - See learning-methods.depth UAR – same intervention, same adherence profile.
+
+  cognitive-skills.reasoning:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile – the protocol forces the learner to reconstruct causal mechanisms in linear narrative form, which is the core skill underlying multi-step reasoning. Delta: ~30 percentile points.
+      - [Self-explanation research](https://eric.ed.gov/?id=EJ782047) finds generative explanation strengthens transfer to novel problems by building explicit causal models rather than memorised procedures, which is the form of understanding most useful for reasoning.
+      - Score 6 reflects a meaningful reasoning gain – the technique builds the well-organised conceptual schemas that distinguish strong reasoners from people with surface familiarity, but it does not directly train search heuristics or formal logic.
+    isr_reasoning: |
+      - The reasoning benefit depends on the learner attempting to explain the why and how rather than just the what. Knowledge-telling explanations that recite facts without integrating mechanism do not build reasoning capacity.
+      - [Research on schema construction](https://psycnet.apa.org/record/2015-49431-001) suggests generative learning produces more robust transfer than rote study for most learners, with a meaningful subset showing weaker schema integration.
+      - ISR of 60% reflects that the mechanism works when applied to causal and conceptual material with genuine effort, but is less reliable for purely procedural or definitional content.
+    uar_reasoning: |
+      - See learning-methods.depth UAR – same intervention, same adherence profile.
+
+  self-awareness.contemplative:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile – the protocol cultivates a specific kind of metacognitive awareness, noticing the difference between recognition and genuine understanding, which generalises to closer attention to one's own cognitive states. Delta: ~15 percentile points.
+      - The "identify gaps" step is fundamentally a metacognitive operation – attending to the felt sense of fluency versus stalling – and repeated practice trains the capacity to notice when one is operating on illusion of knowledge versus actual understanding.
+      - Score 4 reflects a modest, indirect benefit – the technique trains a narrow slice of metacognition rather than the broader contemplative awareness this value measures.
+    isr_reasoning: |
+      - The metacognitive benefit is most reliable for learners who reflect on the gap-finding experience itself rather than treating it instrumentally; many adherents capture the learning gain without the broader awareness gain.
+      - [Research on metacognitive monitoring](https://onlinelibrary.wiley.com/doi/10.1002/acp.1537) suggests practice with calibrated self-assessment improves judgements of learning, which is one component of contemplative awareness.
+      - ISR of 55% reflects a real but bounded transfer from the narrow metacognitive practice of the protocol to broader contemplative awareness.
+    uar_reasoning: |
+      - See learning-methods.depth UAR – same intervention, same adherence profile.
+
+  life-skills.systematic:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th percentile – maintaining a personal library of vetted plain-language explanations across one's domain is itself a form of systematic life-skill management, and the protocol's iteration discipline transfers to other domains where progressive refinement matters. Delta: ~15 percentile points.
+      - The protocol instils a habit of decomposing complex skills into teachable sub-units and refining them iteratively, which is a generally useful approach to life-skill acquisition beyond the original learning context.
+      - Score 4 reflects a modest, indirect benefit – the systematic gain is real but secondary to the primary learning effects.
+    isr_reasoning: |
+      - The systematic transfer is most reliable when the learner explicitly applies the protocol to practical skills (cooking techniques, repairs, financial procedures) rather than only academic content.
+      - The habit of decomposing-and-iterating is well-evidenced as a feature of expert learners but the causal contribution of any single technique to that broader habit is hard to isolate.
+      - ISR of 55% reflects a plausible but underevidenced transfer pathway from the specific technique to broader systematic competence.
+    uar_reasoning: |
+      - See learning-methods.depth UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials, subscriptions, or services required. The technique uses only paper, a notebook, or a basic recording app already on most phones."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The protocol is a behavioural practice that uses source materials the learner is already studying."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to read through the four-step protocol, choose a first target concept, and complete a full first iteration to internalise the loop. No formal training required."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 15 -- 30 minutes per concept, applied to four to six important concepts per week of active study. This replaces rather than adds to existing study time, since it substitutes for less effective re-reading and highlighting."
+
+prerequisites:
+  - "Access to source material on the topic being studied (textbook, paper, lecture, or expert) for the gap-filling step"
+  - "Sufficient baseline literacy and verbal fluency in the target language to compose plain-language explanations"
+  - "Foundational familiarity with the broad area of study – the technique tests and refines understanding rather than building it from zero, so some prior exposure is needed before the first pass"
+
+flagged_domains:
+  - domain: "current-work"
+    rationale: "Workers who routinely Feynman-test their domain knowledge produce clearer documentation, briefings, and stakeholder explanations, which is a direct competence multiplier in knowledge-work roles."
+  - domain: "children"
+    rationale: "Parents who practise the technique on their own learning develop stronger habits of plain-language explanation that transfer to teaching their children, particularly during homework and curiosity-driven questions."

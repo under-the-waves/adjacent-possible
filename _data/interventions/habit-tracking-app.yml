@@ -1,0 +1,145 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Habit Tracking App"
+what_it_is: |
+  Daily logging of target habits in a dedicated tracking app – Streaks, Habitica, Way of Life, Loop, or a Notion habit tracker – to convert otherwise invisible behaviour into a visible record. The app shows a streak counter, a calendar grid, or a checklist that makes the gap between intention and execution observable on a daily basis. The mechanism is measurement plus mild gamification: visible progress reinforces the behaviour, a broken streak triggers loss aversion, and the act of logging is itself a small commitment device. This is distinct from [habit stacking](/resources/intervention-database/habit-stacking), which anchors a new behaviour to an existing cue – tracking is about the *measurement and feedback loop* on a habit, not the trigger that initiates it. The two combine well, but they target different points in the habit-formation chain.
+how_to_do_it: |
+  - Pick a single tracking app and three to five habits to log – more than that is the most common failure mode, because each additional habit adds friction to the daily check-in. Free options (Loop on Android, the iOS Reminders or Health app, a Notion template) are sufficient; paid apps add polish but no documented adherence advantage
+  - Define each habit as a binary "did/did not" rather than a magnitude (write "exercised" rather than "exercised for 30 minutes") – binary tracking has lower logging friction and higher long-run completion rates
+  - Log every day at a fixed time, ideally stacked onto an existing anchor habit (after morning coffee, after brushing teeth at night). Log honestly – fudging "yes" days hollows out the streak's psychological force
+  - Review the calendar weekly: look at the longest streak, the longest gap, and any pattern by day of week. Adjust the habit list rather than the app every four to six weeks – drop habits that have hit auto-pilot or never started, add new ones into the freed slot
+success_looks_like: |
+  - Daily logging itself becomes automatic – you reach for the app at the same moment each day without a separate reminder
+  - Streaks of 30+ days emerge on at least one habit within the first two months, providing a visible record of consistency that survives motivation dips
+  - The act of logging acts as a brief end-of-day reflection, surfacing weekday patterns (e.g., always missing on Fridays) that you can then design around
+common_pitfalls: |
+  - Tracking too many habits simultaneously – the app becomes a chore, daily logging adherence collapses, and the entire system gets abandoned within weeks
+  - Treating the streak as the goal rather than the underlying behaviour – users sometimes optimise for not breaking the streak by reducing the habit to a token version (one push-up, one sentence written) that satisfies the app but stops producing the real-world benefit
+  - Catastrophising broken streaks – a single missed day triggers an "all-or-nothing" reaction and the user abandons the habit entirely. The evidence-supported response is the "never miss twice" rule: log the miss honestly and resume the next day
+description: |
+  - Daily logging of three to five target habits in a dedicated app (Streaks, Habitica, Way of Life, Loop, Notion) to create a visible streak record, leverage loss aversion, and add a mild gamification layer to consistency
+  - [A randomised trial of self-monitoring for behaviour change](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) found self-monitoring is one of the most reliably effective single behaviour-change techniques across diverse domains (diet, exercise, smoking), with effect sizes consistent across delivery method (paper, app, spreadsheet)
+  - [A meta-analysis of digital self-monitoring interventions](https://www.jmir.org/2019/3/e12053/) reports small-to-moderate but consistent improvements in adherence to target behaviours when users log daily, with no clear superiority of any one app modality over another
+  - Distinct from [habit stacking](/resources/intervention-database/habit-stacking) – stacking specifies *when* a habit happens by anchoring it to a cue; tracking measures *whether* it happened and feeds that signal back to the user. They target different stages of the habit-formation chain and combine well
+applicable_domains: ["habits", "goals", "behaviours", "mental-health"]
+
+values:
+  habits.consistency:
+    pbs: 6
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 65th percentile, moving from sporadic adherence (~20–30% of days) to consistent adherence (~55–65% of days) on tracked habits. Delta: ~25 percentile points of improvement.
+      - The anchor measures % daily adherence over six months. A successful tracker can plausibly lift adherence on a tracked habit from a baseline of ~30% to ~55–60%, mapping to the score 6 region of the anchor (60% adherence over 3+ months).
+      - [Harkin et al. (2016) meta-analysis of 138 progress-monitoring studies](https://pubmed.ncbi.nlm.nih.gov/26479070/) found prompting people to monitor goal progress had a moderate positive effect on goal attainment (d ≈ 0.40), with stronger effects when monitoring was frequent, recorded, and made physically observable – exactly the conditions a tracking app creates.
+    isr_reasoning: |
+      - [Compernolle et al. (2019) meta-analysis of digital self-monitoring](https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-019-0824-3) found self-monitoring as a behaviour change technique reliably improves target-behaviour frequency, with effects most consistent in the first 12 weeks and attenuating thereafter as logging fidelity drops.
+      - [Stawarz et al. (2015) on habit tracker design](https://dl.acm.org/doi/10.1145/2702123.2702230) found app-based tracking succeeds best for habits the user is already mildly motivated to perform; for low-motivation habits, the streak counter alone is rarely sufficient to bridge the gap.
+      - ISR of 55% reflects that among adherent loggers, roughly half achieve a meaningful (~20+ point) consistency gain on at least one tracked habit; the remainder either pick habits the app cannot meaningfully reinforce or game the streak rather than the behaviour.
+    uar_reasoning: |
+      - [Free-living app-usage research](https://dl.acm.org/doi/10.1145/2750858.2807544) finds median retention for self-tracking apps is roughly 5–10 days, with a long tail of committed users; sustained daily logging at six months is achieved by an estimated 20–30% of installers.
+      - However, users who deliberately adopt tracking as a behaviour-change strategy (rather than out of curiosity) sustain considerably longer; integrating logging into a fixed anchor habit further raises retention.
+      - UAR of 50% reflects the population of intentional adopters who log for the first month, of whom roughly half sustain to the six-month point – consistent with documented digital-intervention adherence curves.
+
+  habits.enjoyment:
+    pbs: 4
+    isr: 50
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th – 50th percentile – a modest improvement in how rewarding habit routines feel, driven by the visible-progress and gamification layer rather than any change to the habit itself. Delta: ~10 – 15 percentile points.
+      - The enjoyment gain is real but bounded: the underlying habit (running, journalling, meditating) is what it is; the app adds a satisfying tick, a streak count, and weekly visual feedback. This is a meaningful addition to mildly tedious habits but does little for habits that were already enjoyable or are fundamentally aversive.
+      - Score 4 reflects modest gain on a subjective anchor. Common-sense reasoning: a small dopamine hit from ticking a box and watching a streak grow is real but not transformative – it elevates routine compliance into a lightly rewarding micro-ritual.
+    isr_reasoning: |
+      - [Gamification research in behaviour-change apps](https://pmc.ncbi.nlm.nih.gov/articles/PMC5864505/) finds gamified elements (streaks, points, visual progress) reliably produce small positive effects on user enjoyment and engagement, with substantial individual variation in responsiveness.
+      - A meaningful minority of users find tracking apps stress-inducing rather than rewarding – broken streaks trigger guilt rather than motivation, especially in users with perfectionist tendencies. For this subgroup, the intervention reduces enjoyment.
+      - ISR of 50% reflects that roughly half of adherent users derive a meaningful enjoyment gain, with the remainder either neutral or experiencing streak-related anxiety that offsets the gamification benefit.
+    uar_reasoning: |
+      - See habits.consistency UAR – same intervention, same adherence profile.
+
+  habits.impact:
+    pbs: 5
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – moving from one or two life areas with maintained-habit benefit to two or three areas. Delta: ~20 percentile points, mapping to ~2–3 life areas measurably improved (score 6 territory on the anchor).
+      - The mechanism is direct: tracking raises adherence on multiple habits simultaneously, and adherent habits are by definition more likely to produce measurable downstream change. [Harkin et al. (2016)](https://pubmed.ncbi.nlm.nih.gov/26479070/) confirms monitoring effects scale with the number of behaviours being monitored, up to a friction ceiling.
+      - Score 5 (rather than 6) because each additional tracked habit adds logging friction; in practice users sustainably track three to five habits, capping the breadth of life-area impact.
+    isr_reasoning: |
+      - [Self-monitoring meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) finds the technique works most reliably for behaviours with a clear daily binary (took medication, exercised, did not smoke) and less reliably for diffuse behaviours (was kind, was patient).
+      - For users tracking three to five habits, the typical pattern is one or two habits succeed strongly, one or two fade, and one drops within the first month – yielding measurable life-area improvement on a subset rather than all tracked behaviours.
+      - ISR of 55% reflects that roughly half of adherent users produce measurable improvement in at least one new life area beyond their baseline, with the rest either producing only marginal gains or duplicating existing habits.
+    uar_reasoning: |
+      - See habits.consistency UAR – same intervention, same adherence profile.
+
+  goals.follow_through:
+    pbs: 5
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th – 60th percentile – moving from sporadic days with goal action to a higher floor of daily activity, by tracking goal-relevant habits. Delta: ~20 – 25 percentile points.
+      - The anchor measures % of days with at least one deliberate goal action. When at least one tracked habit is goal-relevant (writing, study, deliberate practice, outreach), tracking directly raises the proportion of days with goal action by the same mechanism that raises habit consistency.
+      - Score 5 (lower than the consistency PBS) because tracking lifts daily action only on the specific behaviours being tracked – goals requiring varied or non-routine actions (project work, networking, complex creative output) are not well served by a habit-tracker layer alone.
+    isr_reasoning: |
+      - [Implementation-intention and self-monitoring research](https://pubmed.ncbi.nlm.nih.gov/26479070/) finds combining specification of when/where with daily progress recording produces stronger goal attainment than either alone, supporting the goal-follow-through pathway.
+      - The pathway is indirect: tracked habits must actually be goal-relevant. Users who track only generic wellness habits (water intake, sleep) see little goal-follow-through benefit even with high logging adherence.
+      - ISR of 55% reflects that among adherent trackers who include at least one goal-relevant habit, roughly half achieve a meaningful (~15+ point) lift in days with goal action; the remainder either track only non-goal-relevant behaviours or fail to translate logged consistency into goal progress.
+    uar_reasoning: |
+      - See habits.consistency UAR – same intervention, same adherence profile.
+
+  behaviours.resilience:
+    pbs: 5
+    isr: 50
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – sustaining a behavioural change for six to twelve months rather than the typical one to three months. Delta: ~20 percentile points, mapping to the score 6 anchor region (6–12 months sustained through minor stressors).
+      - The mechanism: a streak record, especially when long, raises the perceived cost of breaking the chain (loss aversion), which carries the behaviour through low-motivation periods and minor disruptions that would otherwise terminate it.
+      - Score 5 reflects that the loss-aversion effect is real but not strong enough to survive major disruptions (illness, travel, schedule changes); streaks frequently break and are not always restarted.
+    isr_reasoning: |
+      - [Stawarz et al. (2015)](https://dl.acm.org/doi/10.1145/2702123.2702230) found that streak-based tracking apps reliably extended habit duration relative to no-tracking controls in the short term, but that broken streaks frequently triggered abandonment rather than restart in a meaningful minority of users.
+      - The "never miss twice" heuristic mitigates restart failure but is not built into most tracking apps and must be adopted intentionally by the user.
+      - ISR of 50% reflects that roughly half of adherent trackers achieve a meaningful sustained-duration gain on at least one tracked habit, while the remainder experience streak-loss-driven abandonment that offsets the loss-aversion benefit.
+    uar_reasoning: |
+      - See habits.consistency UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 4
+    isr: 45
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th – 50th percentile – a modest gain in emotional steadiness via two pathways: (i) the small daily ritual of logging itself acts as a brief structured check-in, and (ii) sustained beneficial habits (sleep regularity, exercise, mindfulness) downstream of higher adherence support mood stability. Delta: ~10 – 15 percentile points.
+      - Score 4 reflects a modest effect on a subjective anchor – the intervention is not a mental-health treatment but contributes indirectly through habit reliability. Users with significant clinical symptoms should not expect tracking apps alone to materially shift stability.
+      - The competing risk: streak-based gamification can amplify anxiety in users prone to perfectionism, where a broken streak triggers disproportionate distress. For this subgroup the effect on stability is negative.
+    isr_reasoning: |
+      - [Reviews of digital self-monitoring for mood-relevant behaviours](https://www.jmir.org/2019/3/e12053/) find small positive effects on wellbeing markers when self-monitoring is sustained, mediated through the underlying tracked behaviours rather than the act of logging itself.
+      - The mediation is the failure point: users who track behaviours unrelated to mood (e.g., work output, productivity) see little stability benefit; users who track sleep, movement, or contemplative practice see more.
+      - ISR of 45% reflects a mostly indirect benefit conditional on the tracked habits being mental-health-relevant – a meaningful minority of users do not select such habits.
+    uar_reasoning: |
+      - See habits.consistency UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Free apps (Loop Habit Tracker on Android, iOS Reminders, Notion templates, Google Sheets) are sufficient. Paid apps such as Streaks ($5 one-off) or Habitica (free with optional subscription) add polish but no documented effectiveness advantage."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring cost required. Premium tiers of paid apps run roughly $3–5 per month but are optional."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour to choose an app, install it, define three to five target habits as binary daily checks, and decide on the daily logging time and anchor."
+  ongoing_time: 0.25
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 1–2 minutes per day to log, plus a 5–10 minute weekly review of the calendar to spot patterns. Total of approximately 15 minutes per week at a sustainable cadence."
+
+prerequisites:
+  - "A smartphone, tablet, or computer with the chosen tracking app installed; if using paper, a dedicated logbook in a fixed location"
+  - "Identification of three to five specific, binary, daily habits to track – the user must know which behaviours they want to reinforce before the app can help"
+  - "Basic comfort with daily app interaction; users who avoid notification-driven apps may prefer a paper or spreadsheet equivalent"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "Daily logging functions as a brief structured self-check-in and the weekly review surfaces previously invisible patterns in one's own behaviour, supporting psychological self-knowledge."

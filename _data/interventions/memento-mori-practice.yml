@@ -1,0 +1,227 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Memento Mori Practice"
+what_it_is: |
+  A regular contemplative practice on one's own mortality – sustained over months or years rather than encountered as a single confronting moment – designed to convert the abstract fact of death into a usable orientation toward what actually matters. Common formats include the WeCroak app, which delivers five randomly timed reminders per day that "you are going to die"; weekly journaling prompted by questions such as "if I had a year left, what would matter?"; the Stoic premeditatio malorum or funeral-meditation visualisation; and Buddhist maranasati, the formal contemplation of the body's decomposition. The evidence base is genuinely mixed and the distinction matters: brief, isolated mortality salience can entrench worldview defence, in-group bias, and consumerist responses, whereas sustained, deliberate contemplation correlates with greater meaning, gratitude, prosociality, and prioritisation. The intervention works through the second mechanism, not the first, and is therefore a practice, not an exposure.
+how_to_do_it: |
+  - Choose one delivery format and stick with it for at least three months before evaluating. The three lowest-friction options are: (a) installing WeCroak or a comparable app for randomly timed daily reminders, (b) a fixed weekly journaling slot of 15–20 minutes prompted by questions like "if this were my last year, what would I be doing differently?", or (c) a once-monthly longer contemplation in the Stoic or Buddhist tradition (visualising your own funeral, or systematically considering bodily impermanence)
+  - When a reminder lands, pause for 10–30 seconds rather than dismissing it reflexively. The benefit is in the brief return of attention to finitude, not in the notification itself. If the reminder produces only annoyance, you are using it as a notification rather than a contemplation – slow down or reduce the frequency
+  - Pair the practice with a concrete prioritisation question rather than letting it float as pure existential affect. Useful prompts include "what am I doing today that I would regret on my deathbed?", "who haven't I contacted recently who matters to me?", and "what am I tolerating that I would not tolerate if I had a year left?" – these convert mortality awareness into action
+  - Acknowledge and manage the failure mode: brief, undirected mortality salience reliably produces defensive responses (greater in-group favouritism, materialism, and rigidity) in laboratory settings. Sustained practice with a contemplative or prioritisation frame appears to bypass this response, but if the practice is making you more anxious or reactive over weeks, scale back the frequency or change the frame
+success_looks_like: |
+  - You can identify specific decisions in the past 6–12 months – conversations had, projects taken on or declined, time allocated – that were noticeably shaped by the practice rather than by default momentum
+  - The salience of finitude no longer triggers reactive avoidance or denial; you can sit with the fact of your mortality for a sustained period without the defensive responses that brief mortality salience tends to produce
+  - You report greater appreciation for ordinary moments and a clearer sense of what you would not regret prioritising, particularly visible in how you respond to social invitations, work demands, and time with the people closest to you
+common_pitfalls: |
+  - Treating reminders as notifications to dismiss rather than prompts to pause – this collapses the practice into a brief mortality-salience exposure, which the evidence suggests can entrench bias rather than liberate prioritisation
+  - Adopting the practice during an acute grief episode, depressive episode, or unprocessed bereavement – sustained mortality contemplation has different effects on people with active mortality-related distress, and may amplify rather than relieve it
+  - Letting the practice float as pure existential affect without a prioritisation frame – feeling the weight of death without converting it into a question about what to do today produces rumination rather than orientation
+description: |
+  - A sustained contemplative practice that uses regular structured reminders of personal mortality – delivered via app, weekly journaling, or formal meditation – to support clearer prioritisation and a stronger sense of meaning
+  - [Terror Management Theory research](https://psycnet.apa.org/record/1986-97108-005) initiated by Greenberg, Pyszczynski, and Solomon showed that brief, unconscious mortality salience produces defensive responses including in-group favouritism, worldview defence, and increased materialism – an important caveat for any mortality-related intervention
+  - However, [Vail et al. (2012) – "When death is good for life"](https://journals.sagepub.com/doi/10.1177/1088868312440046) reviewed evidence that conscious, sustained mortality awareness produces a meaningfully different pattern: greater prosocial behaviour, intrinsic goal pursuit, gratitude, and meaning – the basis for treating regular practice differently from one-off exposure
+  - [Research on terminally ill patients and end-of-life reflection](https://pubmed.ncbi.nlm.nih.gov/16977425/) consistently finds that sustained engagement with mortality, when integrated rather than avoided, correlates with values reprioritisation, deeper relationships, and reports of clearer meaning – suggesting the intervention's mechanism is generalisable beyond clinical contexts
+  - Distinct from general meditation: the focus is specifically on finitude as an orientation device, not on present-moment awareness as an end in itself; distinct from anxiety-driven death rumination by virtue of the structured, prioritisation-linked frame
+applicable_domains: ["worldview", "life-purpose", "value-system", "mindfulness", "self-awareness", "mental-health"]
+
+values:
+  worldview.meaning:
+    pbs: 7
+    isr: 55
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from a worldview that mostly avoids the fact of mortality to one that integrates finitude as a source of meaning rather than dread. Delta: ~30–35 percentile points.
+      - [Vail et al. (2012)](https://journals.sagepub.com/doi/10.1177/1088868312440046) reviews evidence that conscious mortality awareness sustained over time correlates with increased meaning-making, intrinsic goal pursuit, and orientation toward what the person experiences as worth doing – the construct this value measures.
+      - Score 7 rather than 8 reflects that the intervention provides a meaningful but bounded gain – it sharpens an existing meaning structure but does not generate one from scratch; users without any meaning-relevant commitments derive less benefit.
+    isr_reasoning: |
+      - [Terror Management Theory work by Greenberg, Pyszczynski and Solomon](https://psycnet.apa.org/record/1986-97108-005) finds that brief, undirected mortality salience produces defensive rather than meaning-enhancing responses in roughly half of laboratory exposures – a real failure mode that sustained practice with a contemplative frame appears to mitigate but not eliminate.
+      - [Cozzolino et al. (2004) on death reflection](https://journals.sagepub.com/doi/10.1177/0146167203260716) shows that the form of mortality engagement matters: contemplative reflection produces intrinsic and prosocial responses where brief salience produces defensive ones, supporting an ISR around the middle range.
+      - ISR of 55% reflects that, of users who actually sustain a contemplative (not just notification-style) practice, a slim majority achieve meaningful gains in worldview meaning – a meaningful minority encounter the defensive failure mode or fail to convert mortality awareness into a usable orientation.
+    uar_reasoning: |
+      - The intervention requires sitting with material that most people actively avoid; baseline death-anxiety avoidance is high, and [research on terror management](https://psycnet.apa.org/record/1986-97108-005) shows people deploy substantial unconscious effort to keep mortality out of awareness.
+      - Apps like WeCroak have notification-fatigue dropout patterns similar to other reminder apps – meaningful churn within the first 4–8 weeks – and journaling-based variants have the standard adherence problem of any introspective weekly habit.
+      - UAR of 35% reflects that most users will either silence the reminders, drop the journaling habit, or convert the practice into background notification noise rather than sustained contemplation; this is the modal outcome, not the exception.
+
+  worldview.depth:
+    pbs: 6
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – the practice forces sustained engagement with one of the central facts shaping a coherent worldview, deepening rather than broadening understanding. Delta: ~25–30 percentile points.
+      - Confronting finitude is a structural input to many philosophical, religious, and ethical traditions; sustained engagement integrates these strands more deeply than incidental exposure does.
+      - Score 6 reflects a meaningful but secondary effect – depth of worldview depends on broader reading and reflection, with mortality contemplation as one important component rather than the whole picture.
+    isr_reasoning: |
+      - The depth gain depends on the user actively connecting mortality reflection to their broader worldview rather than treating it as a self-contained exercise; many users do not draw this connection without facilitation.
+      - [Vail et al. (2012)](https://journals.sagepub.com/doi/10.1177/1088868312440046) supports the existence of sustained-contemplation effects on meaning-related cognition, but worldview depth as a distinct outcome is not directly measured.
+      - ISR of 50% reflects modest evidence and a non-trivial failure mode where users derive meaning gains without corresponding depth gains.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  worldview.utility:
+    pbs: 5
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – the practice improves real-world decision-making by making the long-term cost of misallocated time more salient. Delta: ~20–25 percentile points.
+      - The "if I had a year left" frame is itself a decision-making heuristic that systematically reweights short-term comfort against long-term values – a useful corrective to hyperbolic discounting in life-shape decisions.
+      - Score 5 reflects a real but indirect effect; mortality contemplation does not improve domain-specific reasoning (probabilistic, technical, professional) and operates only on values-laden choices.
+    isr_reasoning: |
+      - The mechanism is plausible and shows up in [end-of-life reprioritisation research](https://pubmed.ncbi.nlm.nih.gov/16977425/), but generalising from terminal-illness reflection to non-terminal sustained practice is an inferential step, lowering ISR.
+      - Users vary substantially in whether they can translate mortality awareness into concrete decision changes; some experience it as pure affect with no behavioural change.
+      - ISR of 50% reflects that decision-making improvements are real but reach only about half of adherent users.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  life-purpose.meaning:
+    pbs: 7
+    isr: 55
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – the practice provides recurring contact with the question of what would feel worth having done, deepening fulfilment from working toward a chosen purpose. Delta: ~30–35 percentile points.
+      - [Research on end-of-life reflection](https://pubmed.ncbi.nlm.nih.gov/16977425/) and [Vail et al. (2012)](https://journals.sagepub.com/doi/10.1177/1088868312440046) both support the link between mortality salience handled contemplatively and increased experienced meaning in everyday activity – the construct this value measures.
+      - Score 7 reflects a strong but bounded gain; the practice sharpens fulfilment from purposes already held, more than it generates new ones.
+    isr_reasoning: |
+      - [Cozzolino et al. (2004)](https://journals.sagepub.com/doi/10.1177/0146167203260716) finds that death reflection (sustained, conscious) produces intrinsic and meaning-related shifts where mortality salience (brief, unconscious) produces defensive ones – framing matters.
+      - For users without a coherent purpose to begin with, mortality contemplation may surface the absence of one without generating it, producing distress rather than meaning.
+      - ISR of 55% reflects the proportion of adherent users who already have, or develop alongside the practice, a purpose structure that the contemplation can deepen.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  life-purpose.clarity:
+    pbs: 6
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – the recurring "if my time were short" prompt clarifies direction by stress-testing it against the constraint of finitude. Delta: ~25–30 percentile points.
+      - Mortality contemplation acts as a clarifying filter on competing purpose candidates – the ones that retain weight under the filter are more likely to be authentic.
+      - Score 6 reflects a real but secondary effect; clarity also requires generative work (exploring possibilities, articulating direction) that the practice does not provide.
+    isr_reasoning: |
+      - The mechanism reaches only those users who already have purpose candidates to filter; it provides a test, not a generator.
+      - Evidence is indirect; the intervention is best supported as a meaning-deepening practice rather than a clarity-generating one.
+      - ISR of 50% reflects that about half of adherent users experience the clarity-filter effect, with the rest gaining meaning without corresponding direction clarity.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  life-purpose.integration:
+    pbs: 5
+    isr: 45
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – consistent contact with finitude pulls disparate domains (work, relationships, leisure) into alignment around what would feel worth having done. Delta: ~20–25 percentile points.
+      - The intervention provides a unifying evaluative frame, which supports cross-domain coherence – but integration also requires structural changes to time and resource allocation that the practice does not directly produce.
+      - Score 5 reflects a modest, indirect effect.
+    isr_reasoning: |
+      - Integration outcomes are plausibly downstream of meaning and clarity gains but require additional implementation work that many users do not undertake.
+      - There is no direct evidence linking memento mori practice to cross-domain life integration as a measured outcome.
+      - ISR of 45% reflects the additional inferential step required between insight and structural integration.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  value-system.insight:
+    pbs: 6
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – sustained mortality reflection surfaces which values are doing real work and which are inherited or performative, by stress-testing them against the constraint of limited time. Delta: ~25–30 percentile points.
+      - The "what would matter if I had a year left" frame functions as an authenticity probe on existing values, distinguishing those that survive the constraint from those that do not.
+      - Score 6 reflects a real but secondary effect; structured values-clarification exercises target this construct more directly.
+    isr_reasoning: |
+      - [Cozzolino et al. (2004)](https://journals.sagepub.com/doi/10.1177/0146167203260716) finds that sustained death reflection shifts goal pursuit toward intrinsic and self-concordant values, consistent with insight gains.
+      - The mechanism is largely passive – the practice surfaces values rather than systematically auditing them – which limits ISR relative to active values-clarification work.
+      - ISR of 55% reflects the proportion of adherent users who actively interrogate their values in light of mortality, rather than letting the contemplation pass without integration.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  value-system.authentic:
+    pbs: 6
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – the recurring contrast between stated values and how time is actually spent generates pressure toward closing the gap. Delta: ~25–30 percentile points.
+      - [Vail et al. (2012)](https://journals.sagepub.com/doi/10.1177/1088868312440046) reports that sustained mortality awareness correlates with greater intrinsic and self-concordant behaviour – the construct this value measures.
+      - Score 6 reflects a real but bounded effect; authentic expression also depends on courage and structural capacity to change behaviour, which the practice supports but does not provide.
+    isr_reasoning: |
+      - Authenticity gains depend on the user converting mortality-driven insight into behavioural change against social pressure – a non-trivial step that many users do not take.
+      - The terror-management failure mode – where mortality salience produces defensive conformity rather than authentic deviation – remains a non-zero risk for unstructured practice.
+      - ISR of 50% reflects the proportion of adherent users who achieve meaningful behaviour change rather than just insight.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  mindfulness.spiritual:
+    pbs: 7
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – the practice is, in the Buddhist and Stoic traditions, an explicitly spiritual contemplation aimed at the user's relationship to existential questions. Delta: ~30–35 percentile points.
+      - This is one of the intervention's most direct primary effects; maranasati and Stoic premeditatio mortis are both classical spiritual practices, and the modern app or journaling variants preserve the core contemplative function.
+      - Score 7 reflects a strong gain on a construct that the intervention targets centrally; score 8 is held back by the variability across users in how they relate to the existential frame.
+    isr_reasoning: |
+      - Sustained mortality contemplation has a long track record across multiple contemplative traditions of producing the kind of orientation toward transcendence and existential questions this value measures.
+      - [Buddhist maranasati research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6238065/) and qualitative work on Stoic practice both support spiritual development outcomes from sustained practice, though direct quantitative measurement is sparse.
+      - ISR of 60% reflects the proportion of adherent users who engage with the contemplative rather than purely behavioural dimensions of the practice.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  self-awareness.contemplative:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – the pause-and-attend response to each reminder is itself a contemplative micro-practice that builds present-moment awareness. Delta: ~25–30 percentile points.
+      - Even brief, repeated pauses across the day (the WeCroak format) accumulate as mindfulness micro-doses; the journaling and meditation variants more directly cultivate sustained internal attention.
+      - Score 6 reflects a real but secondary effect; dedicated mindfulness practice produces stronger contemplative awareness gains than mortality contemplation alone.
+    isr_reasoning: |
+      - The contemplative-awareness gain depends on the user actually pausing rather than reflexively dismissing the reminder – the modal user does the latter, reducing ISR.
+      - Among users who engage contemplatively, the awareness gain is reasonably reliable based on general mindfulness research.
+      - ISR of 60% reflects the proportion of adherent users who maintain the contemplative rather than notification-style relationship to the practice.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 5
+    isr: 45
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – sustained mortality contemplation correlates with greater gratitude, prosocial orientation, and reported life satisfaction in non-clinical samples. Delta: ~20–25 percentile points.
+      - [Vail et al. (2012)](https://journals.sagepub.com/doi/10.1177/1088868312440046) reviews evidence linking conscious mortality awareness with flourishing-related outcomes including gratitude, intrinsic goal pursuit, and prosocial behaviour.
+      - Score 5 rather than higher reflects that flourishing has many inputs and mortality contemplation is one moderate contributor; it can also produce the opposite effect for users who become more death-anxious rather than meaning-enriched.
+    isr_reasoning: |
+      - The intervention has a meaningful failure mode for flourishing specifically: users with high baseline death anxiety or active depressive symptoms may experience worsened mood rather than flourishing gains.
+      - For users who successfully convert the practice into a gratitude-and-prioritisation orientation, flourishing gains are reasonably reliable; for those who get stuck in the affect of mortality without the orientation shift, gains are absent or negative.
+      - ISR of 45% reflects this bimodal response pattern – the average effect is positive but the variance is high.
+    uar_reasoning: |
+      - See worldview.meaning UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "The WeCroak app costs roughly $1 one-off, free alternatives exist (custom phone reminders, journal-based variants), and the Stoic and Buddhist variants require no purchase. A journal (~$5–10) is optional but not required to begin."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No recurring costs. The practice runs on free or one-off-cost tools and self-directed time."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 30–60 minutes to choose a format, install or set up the chosen tool, and read a brief introductory text on the intended frame (Stoic, Buddhist, or contemporary) so the practice does not collapse into bare mortality salience."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 20–30 minutes per week: cumulative pauses on app reminders (a few minutes total), or one weekly journaling session of 15–20 minutes, or a monthly longer contemplation amortised across weeks. The minimum effective dose is contact with the contemplation several times per week."
+prerequisites:
+  - "No active acute grief, recent bereavement, or untreated death-anxiety disorder; sustained mortality contemplation interacts unpredictably with active mortality-related distress and should be undertaken with professional support in those contexts"
+  - "Sufficient stability of mood and functioning to sit with confronting material; users with active suicidal ideation, severe depression, or unprocessed trauma should consult a clinician before starting"
+  - "Baseline familiarity with at least one contemplative or reflective practice (journaling, meditation, structured prayer, or similar) – the intervention works through contemplation rather than exposure, and prior contemplative experience improves the chance of converting reminders into meaningful pauses"
+
+flagged_domains:
+  - domain: "ethics"
+    rationale: "Sustained mortality awareness correlates with greater prosocial behaviour and intrinsic ethical motivation in the death-reflection literature, suggesting a real ethics effect not directly captured by the scored value domains."
+  - domain: "personality"
+    rationale: "Long-running mortality contemplation has been linked to shifts toward intrinsic value orientation and reduced materialism – plausible inputs to deliberate personality development."

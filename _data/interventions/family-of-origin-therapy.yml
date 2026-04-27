@@ -1,0 +1,235 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Family-of-Origin Therapy"
+what_it_is: |
+  Structured therapeutic work with a trained therapist that explicitly targets patterns rooted in the family you grew up in – attachment dynamics, intergenerational scripts, parental introjects, sibling positioning, and unresolved childhood material. Distinct from generic talk therapy or symptom-focused CBT, this is a longer, depth-oriented engagement built around specific modalities: Internal Family Systems (IFS), Bowen family-systems therapy, schema therapy, and EMDR for childhood-rooted trauma. A typical course runs 6–18 months of weekly 50-minute sessions, sometimes longer, and focuses on identifying parts (IFS), differentiating self from family fusion (Bowen), restructuring early-maladaptive schemas (schema therapy), or reprocessing specific childhood memories (EMDR). The goal is durable change in how a person relates to their family, themselves, and partners – not just symptom reduction.
+how_to_do_it: |
+  - Choose a modality that matches the presenting issue: IFS for internal conflict and inner-child work, schema therapy for stable maladaptive patterns in relationships, Bowen-trained therapists for cut-off / enmeshment dynamics, EMDR for specific traumatic memories. Verify training (e.g. IFS Institute Level 1+, Schema Therapy Society certification, EMDRIA-approved training); the modality matters less than the therapist's depth in it
+  - Expect a longer arc than CBT: most protocols target 6–18 months of weekly sessions, with schema therapy trials typically running 12–24 months and IFS courses commonly 9–18 months. Block a recurring weekly slot and budget for sustained engagement
+  - Engage between sessions – schema therapy uses imagery rescripting and behavioural pattern-breaking; IFS uses self-led "parts" dialogues; Bowen work involves deliberate family-of-origin contact experiments. Skipping the between-session work substantially blunts outcomes
+  - Be specific about goals from session one – "I want to stop replaying my mother's criticism in conflicts with my partner", "I shut down when my father calls", "I want to understand why I keep choosing emotionally unavailable people". Diffuse goals ("explore my childhood") produce diffuse results
+  - Anticipate temporary destabilisation in the first 2–4 months as defences soften; tell your therapist immediately if symptoms worsen sharply rather than dropping out. Schema and trauma work commonly produce a brief uptick in distress before improvement
+success_looks_like: |
+  - You can identify family-of-origin patterns as they activate in present relationships – noticing in real time that you are reacting to your partner as if they were a parent, then choosing differently
+  - Contact with parents and siblings shifts: less reactivity, fewer triggered states, clearer boundaries that hold under pressure rather than collapsing into either fusion or cut-off
+  - Schemas (e.g. abandonment, defectiveness, subjugation, emotional inhibition) lose their grip – not eliminated, but no longer organising your relational choices and self-image
+  - Romantic relationships either improve markedly or you can see clearly that the current partnership is not viable; either way, the choice becomes informed rather than driven by repetition compulsion
+common_pitfalls: |
+  - Choosing a generalist therapist who uses family-of-origin language but lacks specific training in IFS, schema therapy, or Bowen approaches – producing supportive but slow, untargeted work
+  - Stopping at insight without behavioural change: understanding why you do what you do is necessary but not sufficient; if you are not deliberately doing things differently with family or partner by month 6, the work has stalled
+  - Using therapy as a substitute for direct contact work – schema and Bowen approaches both require eventually engaging differently with actual family members, which is the point most clients delay
+  - Premature termination at the first wave of destabilisation (months 2–4) before the reorganisation phase begins; this is when most schema-therapy dropouts occur and the modal failure mode of long-form therapy
+description: |
+  - Weekly 50-minute sessions with a therapist trained specifically in IFS, schema therapy, Bowen family-systems therapy, or EMDR; standard course is 6–18 months, with schema therapy trials commonly running 12–24 months
+  - Targets intergenerational patterns, parent-child dynamics, attachment wounds, and unresolved childhood material – distinct from CBT, which is present-focused and symptom-targeted
+  - [Schema therapy meta-analysis (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) across 18 RCTs (n = 1,973) found large effect sizes versus treatment-as-usual on personality-disorder outcomes (g = 0.99) and on early-maladaptive schemas, with effects maintained at follow-up
+  - [IFS systematic review (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10444705/) identified consistent moderate-to-large effects on depression, PTSD, and trauma-related symptoms across pilot trials, with one randomised trial showing IFS produced clinically significant improvement in rheumatoid arthritis and depression outcomes
+  - [Ehring et al. meta-analysis (2014)](https://pubmed.ncbi.nlm.nih.gov/25455628/) of trauma-focused interventions including EMDR for adult survivors of childhood abuse found large pre–post effect sizes (g = 1.24), with trauma-focused approaches outperforming non-trauma-focused interventions
+applicable_domains: ["family-of-origin", "mental-health", "self-awareness", "relationship-quality", "behaviours"]
+
+values:
+  family-of-origin.healing:
+    pbs: 9
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A successful course explicitly targets the construct this value measures – progress working through family dysfunction and breaking harmful intergenerational patterns. Plausible endpoint: 80th–85th percentile. Delta: ~45–50 percentile points.
+      - [Schema therapy meta-analysis (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) finds large effects (g = 0.99 vs. TAU) on early-maladaptive schemas, which are the operational measure of internalised family-of-origin patterns; this magnitude of schema reduction maps to a major-to-transformative gain on the healing anchor.
+      - [IFS systematic review (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10444705/) reports moderate-to-large effects on trauma-related symptoms with explicit targeting of childhood-origin parts and burdens; the mechanism directly addresses what the healing anchor measures.
+      - Score 9 rather than 10 reflects that even successful long-form therapy rarely produces complete healing of severe family-of-origin wounds; it produces durable, major change but residual sensitivity often remains and integration continues post-therapy.
+    isr_reasoning: |
+      - [Schema therapy RCT meta-analysis (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) reports recovery rates of approximately 50–60% on personality-disorder remission among completers; non-responders cluster among those with severe comorbid trauma or insufficient session count.
+      - [IFS pilot trial data](https://pmc.ncbi.nlm.nih.gov/articles/PMC10444705/) shows clinically significant improvement in roughly 55–65% of completers, though sample sizes are small and the evidence base is thinner than for schema therapy or EMDR.
+      - ISR of 55% reflects the conservative midpoint: among adherent completers, just over half achieve substantive healing of family-of-origin patterns; the remainder show partial gains or stall on specific schemas resistant to first-line approaches.
+    uar_reasoning: |
+      - [Long-term psychotherapy dropout meta-analysis (2017)](https://pubmed.ncbi.nlm.nih.gov/28846450/) reports weighted dropout of approximately 32% across psychotherapy modalities; longer protocols (>20 sessions) show somewhat higher cumulative dropout because exposure to dropout risk extends across more sessions.
+      - Cost is a major barrier: schema and IFS therapists typically charge $150–250 per session privately, with limited insurance coverage for non-CBT modalities, and 12–18 months of weekly sessions runs $7,000–20,000 without insurance.
+      - Combining ~60–65% completion among initiators with significant initiation barriers (cost, finding a properly trained therapist, willingness to commit 12+ months), realistic population-level UAR is approximately 40% – meaningfully lower than CBT because the protocol is longer and the trained-therapist supply is thinner.
+
+  family-of-origin.autonomy:
+    pbs: 8
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Bowen family-systems therapy explicitly targets differentiation – the capacity to maintain one's own positions, values, and emotional regulation in contact with family. A successful course plausibly moves a person from the 35th to the 70th–75th percentile of autonomy from family expectations. Delta: ~35–40 percentile points.
+      - Schema therapy targets subjugation and self-sacrifice schemas directly, with [meta-analytic evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) showing large effects on these specific schemas in personality-disorder samples; reduction in these schemas is the mechanistic route to greater autonomy from family-of-origin pressure.
+      - Score 8 reflects a major gain: differentiation work produces durable change in the capacity to hold one's own ground in family interactions, but autonomy remains a process rather than a fixed achievement and continues to require deliberate practice post-therapy.
+    isr_reasoning: |
+      - Differentiation gains are among the more reliable outcomes of schema and Bowen-oriented work because they are operationalised in the protocol (limit-reentering exercises, schema-challenging behavioural experiments with family); among adherent completers, the success rate is comparable to overall schema-therapy response.
+      - [Bowen-informed differentiation research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4302794/) shows differentiation-of-self gains are positively associated with treatment dose and self-of-therapist work; ISR is moderate rather than high because gains are conditional on the therapist's own differentiation training.
+      - ISR of 55% reflects that roughly half of adherent completers achieve a major and durable gain in autonomy from family expectations, with the remainder showing partial or domain-specific improvement.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile. UAR of 40% reflects long-protocol completion rates combined with cost and access barriers.
+
+  family-of-origin.duty:
+    pbs: 5
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The relationship between family-of-origin therapy and duty is genuinely two-sided – healing reduces avoidance-based estrangement and improves capacity to show up consistently, but it also reduces over-functioning and obligation-driven contact. A net plausible endpoint after successful therapy is the 55th percentile of effective, sustainable duty. Delta: ~20 percentile points.
+      - The mechanism is indirect: therapy resolves the reactive patterns (avoidance, resentment, fusion) that previously degraded the quality of duty performance; resulting contact is less frequent for over-functioners but more sustainable and authentic for under-functioners. Score 5 reflects this modest, conditional gain.
+      - Confidence is low because no direct evidence measures family-duty performance as a therapy outcome; this is extrapolated from differentiation-of-self literature and clinical observation.
+    isr_reasoning: |
+      - For users who entered therapy from an over-functioning / enmeshment pattern, "successful duty" may mean less contact, which may not register as improvement against this anchor; the construct is genuinely ambiguous for this subgroup.
+      - Among adherent completers whose duty was previously degraded by reactivity, conflict avoidance, or estrangement, roughly half achieve meaningful improvement in sustainable family support – consistent with a 50% ISR.
+      - Evidence is indirect; no meta-analysis directly measures effective family obligation as a therapy outcome.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  family-of-origin.connection:
+    pbs: 6
+    isr: 45
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Successful family-of-origin therapy typically reduces reactive distance and enables genuinely chosen closeness with parents and siblings; plausible endpoint is the 60th percentile. Delta: ~25 percentile points.
+      - Connection gains are mediated by reduction in reactive states that previously sabotaged closeness – when a person stops collapsing into childhood roles in family contact, more authentic connection becomes possible; [Bowen differentiation research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4302794/) supports this mechanism.
+      - Score 6 reflects a meaningful but conditional gain: where family members are receptive and reasonably functional, improvement is substantial; where they remain entrenched in dysfunctional patterns, individual therapy can only do so much for the dyadic outcome.
+    isr_reasoning: |
+      - Connection is a dyadic outcome that depends partly on the family member's response to the user's changes; even with full schema/IFS recovery, an entrenched, abusive, or personality-disordered parent may not enable genuine connection.
+      - For users with non-toxic but dysfunctional family systems, ISR is approximately 50–55%; for users from severely abusive backgrounds, the appropriate "successful" outcome is often clear-eyed limited contact rather than restored closeness, which lowers the realised ISR on the connection anchor specifically.
+      - ISR of 45% reflects the population-weighted estimate that just under half of adherent completers achieve meaningful gains in felt closeness with family of origin, with confidence reduced by absence of direct outcome measurement.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 7
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. People who pursue family-of-origin therapy often present with depression, anxiety, or chronic dysregulation rooted in early relational patterns; successful treatment plausibly moves them from the 35th to the 65th–70th percentile of emotional stability. Delta: ~30–35 percentile points.
+      - [Schema therapy meta-analysis (2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) reports large effects on depression and general distress alongside schema reduction; [IFS systematic review (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10444705/) finds moderate-to-large effects on depression and PTSD outcomes.
+      - Score 7 reflects a major stability gain – slightly lower than CBT's stability score because family-of-origin therapy targets root-cause schemas rather than acute symptoms, with effects building over a longer arc and showing larger between-person variance in the stability domain specifically.
+    isr_reasoning: |
+      - [Schema therapy RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) report depression-symptom response rates of approximately 55–60% in completers, comparable to CBT for depression but with better durability of gains in patients with significant childhood-rooted material.
+      - [Ehring et al. meta-analysis (2014)](https://pubmed.ncbi.nlm.nih.gov/25455628/) finds large pre–post effects (g = 1.24) for trauma-focused treatments including EMDR in adult survivors of childhood abuse, with trauma-focused interventions outperforming non-trauma-focused approaches.
+      - ISR of 55% reflects responder rates among adherent completers, with non-responders concentrated in cases of severe complex trauma, ongoing family contact under stress, or insufficient dose.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  mental-health.resilience:
+    pbs: 7
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Schema and IFS work explicitly aim to build durable internal regulation capacity – self-led parts work in IFS, healthy-adult mode strengthening in schema therapy – which should outlast acute symptom remission. Plausible endpoint: 65th–70th percentile. Delta: ~30–35 percentile points.
+      - The mechanism is mode-of-action specific: where CBT teaches portable cognitive techniques, schema and IFS therapy aim to restructure the underlying organisation of the self so that resilience is structural rather than skill-based; [schema therapy long-term follow-up data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) supports durable resilience effects.
+      - Score 7 reflects major gains in capacity to weather adversity without collapsing into childhood reactive patterns, with the qualifier that severe disruption can still re-trigger schemas even after substantial therapy.
+    isr_reasoning: |
+      - Resilience gains are most reliable among completers who reach the consolidation phase (typically months 9+); those who stop earlier show acute response without the structural reorganisation that produces durable resilience.
+      - [Schema therapy follow-up data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) shows treatment effects largely maintained at 12–24 month follow-up, supporting durable resilience benefits in roughly 55% of adherent completers.
+      - ISR of 55% reflects that a clear majority of those who complete the full protocol see durable resilience gains, with non-responders attributable to insufficient dose or unaddressed complex trauma.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  self-awareness.psychological:
+    pbs: 9
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. IFS, schema therapy, and depth-oriented family-of-origin work produce explicit, articulable maps of internal psychological organisation – parts, schemas, modes, exiles, protectors, internalised parental voices – at a level of detail most people never approach. Plausible endpoint: 85th–90th percentile. Delta: ~50–55 percentile points.
+      - The structured nature of IFS parts mapping and schema-mode identification produces deep, domain-specific self-knowledge as a direct product of the work; this is one of the few interventions whose primary mechanism is structured psychological self-discovery.
+      - Score 9 is appropriate because the depth and specificity of self-knowledge gained – being able to name parts, map schemas, and predict one's own activations – represents a major-to-transformative gain that is well-documented as a signature outcome of these modalities.
+    isr_reasoning: |
+      - Psychological self-awareness gain is more universal among completers than symptom remission, because the parts-mapping and schema-identification work produces insight regardless of whether full therapeutic recovery occurs; [IFS literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC10444705/) consistently reports self-awareness as a near-universal outcome of adherent participation.
+      - The main failure mode is intellectualisation – mapping parts/schemas conceptually without genuine experiential contact – which produces shallower self-knowledge; therapist skill in facilitating felt experience moderates this substantially.
+      - ISR of 70% reflects high reliability of self-awareness gains among completers, with the ~30% non-responder fraction attributable primarily to intellectualisation and superficial engagement.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  self-awareness.relational:
+    pbs: 8
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Family-of-origin therapy's central premise is that relational patterns repeat – that current interpersonal difficulties echo childhood dynamics. A successful course produces a clear map of these repetitions and how the user's behaviour invites them. Plausible endpoint: 75th percentile. Delta: ~40 percentile points.
+      - Schema therapy explicitly maps interpersonal modes and the schemas that drive them; Bowen work surfaces triangulation patterns and emotional-cutoff dynamics; both produce relational self-knowledge as a core product, with [schema therapy evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) showing reductions in interpersonal-domain schemas (mistrust, abandonment, subjugation).
+      - Score 8 reflects a major relational self-awareness gain – slightly lower than psychological self-awareness because relational insight depends additionally on observation in actual relationships, which not all therapy contexts provide.
+    isr_reasoning: |
+      - Relational self-awareness gains are more reliable than relational behaviour change because awareness develops in session whereas behaviour change requires translation into real relationships; ISR of 60% reflects this relative breadth.
+      - The main failure mode is therapy that produces conceptual relational maps without genuine emotional engagement with the patterns, leaving the user able to describe their patterns without disrupting them.
+      - Evidence is indirect for this specific outcome; medium confidence reflects strong mechanistic basis but absence of meta-analyses directly measuring relational self-awareness as the primary outcome.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  relationship-quality.harmony:
+    pbs: 7
+    isr: 50
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. A central premise of schema and IFS work is that romantic conflict often re-enacts family-of-origin dynamics; reducing schema-driven reactivity in conflict should directly improve day-to-day partnership smoothness. Plausible endpoint: 65th–70th percentile. Delta: ~30–35 percentile points.
+      - [Schema therapy for couples](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) – and individual schema therapy applied with relational focus – shows reductions in reactive modes (vulnerable child, angry child, punitive parent) that drive romantic conflict; the mechanism directly targets the construct.
+      - Score 7 reflects a major harmony gain for users whose conflict patterns are schema-driven; for couples whose difficulties are structural (incompatible values, life-stage mismatch) rather than reactive, the gain is smaller.
+    isr_reasoning: |
+      - Harmony improvement depends on whether the partner is receptive to the user's changing patterns; in stable, reasonably healthy partnerships, gains are reliable, but in dyads where the partner has independent severe schemas the individual-level intervention may be insufficient.
+      - Approximately 50% of adherent completers in established relationships see meaningful harmony improvement; the remainder either have partners who do not adapt or discover their relationship was structurally misaligned.
+      - Evidence is indirect; no meta-analysis directly measures couple-level harmony as an outcome of individual family-of-origin therapy.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  relationship-quality.connection:
+    pbs: 7
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Reducing family-of-origin defensive patterns – emotional cutoff, fusion, fear of intimacy – directly enables greater vulnerability and emotional presence in romantic relationships. Plausible endpoint: 65th–70th percentile. Delta: ~30–35 percentile points.
+      - The mechanism is more direct than for CBT: family-of-origin therapy explicitly targets the attachment-related schemas (abandonment, emotional deprivation, defectiveness) that limit romantic connection, with [schema therapy data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) showing reductions in these specific schemas.
+      - Score 7 reflects a major connection gain for users whose connection difficulties are rooted in family-of-origin attachment patterns; for those whose romantic difficulties have other primary drivers, the gain is smaller.
+    isr_reasoning: |
+      - Connection gains are more reliable when the user has a partner willing to engage with the changes – schema therapy literature notes that partner engagement is a substantial moderator of dyadic outcomes.
+      - ISR of 50% reflects that approximately half of adherent completers in romantic relationships achieve meaningful connection improvement; the conditionality on partner response and on the user's success in translating insight into vulnerable behaviour both reduce the achieved rate.
+      - Confidence is low because no direct evidence measures romantic connection as a primary outcome of family-of-origin therapy.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+  behaviours.emotional:
+    pbs: 7
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, anchor maximum 7 reactive episodes per week (lower is better). Schema therapy and IFS directly target the emotional dysregulation that drives reactive episodes – schema modes, exiled parts, and parental introjects all produce dysregulated states. Plausible endpoint: 70th percentile, approximately 1–2 reactive episodes per week from a baseline closer to 4–5.
+      - Using the log formula on the inverted reactive-episode anchor: a reduction from approximately 4 to approximately 1.5 episodes per week represents substantial improvement on the regulation construct, mapping to score 7 on the anchor (corresponding to "1–2 reactive episodes per week with sophisticated regulation techniques").
+      - [Schema therapy evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) and [IFS data](https://pmc.ncbi.nlm.nih.gov/articles/PMC10444705/) both show reductions in dysregulated mode/part activation as primary outcomes, supporting score 7.
+    isr_reasoning: |
+      - Emotional regulation gains are among the more reliable outcomes of these modalities because mode-monitoring and parts-tracking are core protocol elements; among adherent completers, approximately 60% achieve sustained regulation improvement.
+      - Non-responders typically have severe complex-trauma presentations requiring longer-than-standard protocols, or insufficient between-session practice in real triggering contexts.
+      - [Schema therapy follow-up](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) shows regulation gains generally maintained at 12-month follow-up, supporting an ISR of approximately 60%.
+    uar_reasoning: |
+      - See family-of-origin.healing UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment or setup cost. The only upfront action is identifying and contacting an appropriately trained therapist – verifying IFS Institute, Schema Therapy Society, EMDRIA, or Bowen Center training is free."
+  ongoing_cost: 600
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Schema, IFS, EMDR, and Bowen-trained therapists typically charge $150–250 per session privately, with limited insurance coverage for non-CBT modalities. Weekly sessions therefore run approximately $600–1,000 per month. Sliding-scale community clinics, trainee therapists, and IFS-informed group programmes can reduce this to $200–400 per month; $600 represents a realistic minimum for properly trained private-pay access in most US markets. UK options are limited because NHS rarely funds long-form schema or IFS therapy."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately 3–5 hours to research modalities, verify therapist credentials in the chosen approach (IFS Institute Level 1+, Schema Therapy Society certification, EMDRIA-approved), make initial contact, and complete an assessment session."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "50-minute weekly session plus approximately 30–60 minutes of between-session work (parts-tracking journaling in IFS, mode-monitoring and imagery rescripting practice in schema therapy, processing notes after EMDR sessions). Total ~2 hours per week of active engagement."
+
+prerequisites:
+  - "Access to a therapist with verifiable training in the relevant modality – IFS Institute Level 1+, Schema Therapy Society certification, EMDRIA-approved EMDR training, or Bowen Center training; generalist therapists using the language are not equivalent"
+  - "Sufficient psychological stability to tolerate temporary destabilisation in the early months as defences soften; acute crisis states (active suicidality, severe dissociation requiring stabilisation) typically require phase-based treatment with stabilisation work first"
+  - "A presenting issue genuinely rooted in family-of-origin material – attachment patterns, intergenerational dynamics, repeated relational templates, childhood trauma; presentations driven primarily by current circumstances or biological factors are better served by CBT or other targeted approaches"
+  - "Capacity to commit to a longer treatment arc than CBT – schema therapy trials commonly run 12–24 months, IFS courses 9–18 months; users seeking a brief structured intervention should choose CBT instead"
+
+flagged_domains:
+  - domain: "communication"
+    rationale: "Reduction in family-of-origin reactive patterns directly improves capacity for non-defensive listening, conflict tolerance, and authentic expression in interpersonal communication."
+  - domain: "personality"
+    rationale: "Schema therapy explicitly targets early-maladaptive schemas that organise personality patterns; schema reduction is one of the few empirically supported routes to durable personality-level change in adulthood."
+  - domain: "relationship-status"
+    rationale: "Resolving family-of-origin attachment patterns is a recognised mechanism for shifting partner-selection criteria away from repetition compulsion toward genuine compatibility."

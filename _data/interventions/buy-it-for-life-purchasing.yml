@@ -1,0 +1,150 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Buy-It-For-Life Purchasing"
+what_it_is: |
+  A purchasing principle of selecting durable, repairable, high-quality goods designed and expected to last decades, rather than cheap items destined for replacement on shorter cycles. Each candidate purchase is evaluated on three criteria: cost-per-use over the realistic lifetime, repair-friendliness (availability of spare parts, modular construction, repair manuals, and third-party servicing), and material/build quality (full-metal frames, hardwood over composites, leather over coated synthetics, mechanical over disposable assemblies). The approach trades a higher upfront sticker price for a substantially lower total ownership cost and reduced replacement frequency. The economic logic is supported by [lifecycle cost analyses](https://www.sciencedirect.com/science/article/abs/pii/S0921344919303854) showing that product lifetime extension is one of the most cost-effective levers for reducing both household expenditure and environmental impact, and by research on [planned obsolescence](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/648767/IPOL_STU(2020)648767_EN.pdf) showing that average lifespans for many product categories have shortened materially over recent decades.
+how_to_do_it: |
+  - Before any non-trivial purchase, compute a cost-per-use estimate: divide the purchase price by the realistic number of years or use cycles you expect from the item. Compare against the cheaper alternative on the same basis – a $400 pair of resoleable boots used five times a week for fifteen years costs roughly $0.10 per use, while $80 boots replaced every two years cost roughly $0.15 per use, before counting the friction of repeated shopping
+  - Check repair-friendliness before buying: does the manufacturer publish repair manuals, sell spare parts directly, and use standard fasteners? Tools like [iFixit's repairability scores](https://www.ifixit.com/Right-to-Repair) and the [EU Energy Label repair index](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/energy-label-and-ecodesign/about_en) make this checkable for major categories
+  - Read failure-mode reviews rather than first-impressions reviews. Search "[product] review after 5 years", check user forums and r/BuyItForLife archives, and look for failure modes (which parts wear out, which materials fail) rather than aesthetic or unboxing impressions
+  - Prioritise the categories where durability premiums pay back fastest: footwear, kitchen equipment (cast iron, stainless steel cookware), tools, mattresses and furniture, outerwear, and white goods. Categories with rapid technological obsolescence (consumer electronics, software-dependent devices) reward this approach less, because the device may be functional but unsupported
+success_looks_like: |
+  - Replacement cycles for major categories extend by 3–10x compared to a baseline of cheap-and-replace consumption, with corresponding reductions in shopping time, decision fatigue, and disposal events
+  - Annual household spending on the targeted categories falls measurably over a 5–10 year horizon despite higher unit prices, because total purchases per category drop sharply
+  - The household builds a stable, low-friction stock of items that work reliably and can be repaired when they fail, reducing the steady drip of small frustrations from broken or underperforming possessions
+common_pitfalls: |
+  - Confusing premium pricing with durability – many luxury-priced goods are not built for longevity, and brand cachet does not equal repair-friendliness. The check is published lifespan data, repair-index scores, and long-term user reviews, not price or marketing
+  - Buying durable versions of things you do not actually need or use frequently. A $400 cast-iron Dutch oven used twice a year is not a buy-it-for-life purchase – it is an expensive ornament. The cost-per-use calculation only works if the use rate is real
+  - Falling into category-creep, where the philosophy becomes a justification for upgrading already-functional possessions to "better" versions. The intervention's gains depend on replacing items at end-of-life with durable equivalents, not on accelerating replacement cycles to acquire higher-quality variants
+description: |
+  - A purchasing rule that filters non-trivial purchases through three tests before buying: cost-per-use over expected lifetime, repair-friendliness, and material/build quality – distinct from frugality (which optimises for sticker price) and from luxury consumption (which optimises for status or aesthetics)
+  - [European Parliament research on premature obsolescence](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/648767/IPOL_STU(2020)648767_EN.pdf) documents that average product lifetimes have fallen across multiple categories over recent decades, with most consumers paying for replacements they could have avoided through better initial selection
+  - [Lifecycle cost analyses](https://www.sciencedirect.com/science/article/abs/pii/S0921344919303854) consistently find that lifetime extension is among the most cost-effective levers for reducing household spending and environmental footprint per service-year delivered
+  - Independent durability and repair indices ([iFixit](https://www.ifixit.com/Right-to-Repair), the [EU Energy Label repair score](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/energy-label-and-ecodesign/about_en)) make repair-friendliness a checkable property rather than a guess; communities such as r/BuyItForLife provide crowd-sourced long-horizon reviews
+  - No equipment or recurring cost; the intervention is a decision rule applied at point of purchase, with the trade-off being higher upfront cash outlay against materially lower total ownership cost
+applicable_domains: ["possessions", "housework", "saving"]
+
+values:
+  possessions.quality:
+    pbs: 8
+    isr: 75
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile in possessions quality – mostly mass-market items with mixed durability and unclear repair pathways. After sustained adherence, a user could plausibly reach the 80th–85th percentile, owning predominantly durable, repairable, well-built items across major categories. Delta: ~45–50 percentile points, mapping to a major gain on the subjective anchor.
+      - The mechanism is direct and definitional: a purchasing rule that explicitly filters for durability, repair-friendliness, and material quality moves the household stock toward those properties as old items are replaced. Within 5–10 years of consistent application, most major categories turn over.
+      - [European Parliament research](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/648767/IPOL_STU(2020)648767_EN.pdf) finds that durability and repairability vary by an order of magnitude across products in the same category at similar price points, so a deliberate selection rule captures most of the available quality gain.
+    isr_reasoning: |
+      - Among adherents who genuinely apply the three-criteria filter, the mechanism is near-deterministic – items selected for durability and repair-friendliness are demonstrably longer-lasting on average per [comparative product testing data](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/648767/IPOL_STU(2020)648767_EN.pdf).
+      - The main failure mode is information asymmetry: in some categories, durability is genuinely hard to assess from public information, and a minority of "buy-it-for-life" purchases turn out to be marketing-led rather than substantively durable. [Research on greenwashing in durable goods](https://www.sciencedirect.com/science/article/abs/pii/S0959652620348101) suggests durability claims are often overstated.
+      - ISR of 75% reflects that most adherent applications produce a meaningful quality gain, but a non-trivial minority misfire due to opaque product information or category-specific obsolescence (especially software-dependent goods).
+    uar_reasoning: |
+      - The rule requires sustained behavioural discipline against multiple counter-pressures: higher upfront prices that strain monthly cash flow, social and marketing pressure toward novelty, and the convenience of fast-fashion and same-day-delivery alternatives. [Survey research on durable-goods purchasing](https://www.sciencedirect.com/science/article/abs/pii/S0959652620348101) finds intent-behaviour gaps are large in this domain.
+      - [Consumer research on purchasing heuristics](https://academic.oup.com/jcr/article/52/2/393/7680547) shows that most households default to price- or convenience-anchored decisions even when stated preferences favour durability, suggesting the rule is hard to maintain consistently.
+      - UAR of 35% reflects that a meaningful but minority share of users will actually apply the rule across most non-trivial purchases over a multi-year horizon; many will adopt it for some categories (footwear, tools) and abandon it for others (clothing, electronics).
+
+  possessions.functionality:
+    pbs: 6
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding to roughly 50–60% of possessions regularly used and in working order. After sustained adherence, a user could plausibly reach the 70th–75th percentile – more items in working order at any given time, fewer broken-and-not-yet-replaced gaps. Delta: ~25–30 anchor-unit percentage points.
+      - PBS calculated as 10 + log₂(25/100) = 8, scaled down to 6 to reflect that buy-it-for-life raises functionality indirectly (via fewer breakdowns) rather than directly (which is what decluttering does); the gain shows up as a steadier proportion of working items over time, not as a higher peak.
+      - [Lifecycle cost analyses](https://www.sciencedirect.com/science/article/abs/pii/S0921344919303854) document materially lower failure rates and longer mean-time-between-failures for high-durability product variants, supporting a meaningful but bounded functionality gain.
+    isr_reasoning: |
+      - The mechanism – fewer broken items at any given time – follows mechanically from selecting more durable goods, with the same information-asymmetry caveat as for quality.
+      - [Comparative product testing](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/648767/IPOL_STU(2020)648767_EN.pdf) shows that in most categories, the most durable variants outlast the median by 2–5x, providing reliable functional gains for adherents who select well.
+      - ISR of 70% reflects a slightly weaker translation than for quality, because functionality also depends on use patterns, maintenance, and storage – not only on initial durability.
+    uar_reasoning: |
+      - See possessions.quality UAR – same intervention, same adherence profile.
+
+  possessions.simplicity:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user could plausibly reach the 55th–60th percentile – owning fewer items overall because each item lasts longer and replacement-cycle accumulation slows. Delta: ~20–25 percentile points, mapping to a modest-to-meaningful subjective gain.
+      - The mechanism is indirect: durable goods are replaced less often, which reduces the rate at which superseded versions accumulate in storage. [Research on consumer accumulation patterns](https://academic.oup.com/jcr/article/52/2/393/7680547) finds that frequent replacement cycles drive most household clutter growth, so slowing them compounds into simplicity gains.
+      - Score 5 reflects a modest-to-meaningful gain – buy-it-for-life reduces inflow over time but does not actively remove existing inventory the way decluttering does.
+    isr_reasoning: |
+      - [Voluntary simplicity research](https://www.tandfonline.com/doi/abs/10.1080/17439760.2021.1991450) finds that purchasing-side interventions reliably reduce inflow but often fail to translate into smaller total inventories without an outflow practice running alongside.
+      - In a meaningful minority of cases, buy-it-for-life users acquire premium versions of items they already own (tools, kitchenware, outerwear) without disposing of the predecessors, which can increase inventory rather than decrease it.
+      - ISR of 60% reflects that the simplicity benefit is genuine but conditional on not letting "upgrade" purchases sit alongside originals.
+    uar_reasoning: |
+      - See possessions.quality UAR – same intervention, same adherence profile.
+
+  housework.environmental:
+    pbs: 6
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile in environmental impact of home management. After sustained adherence, a user could plausibly reach the 65th–70th percentile – materially lower embodied-carbon and resource footprint in the household stock through extended product lifetimes. Delta: ~30 percentile points.
+      - [Lifecycle assessments](https://www.sciencedirect.com/science/article/abs/pii/S0921344919303854) consistently identify product-lifetime extension as one of the highest-leverage household interventions for reducing environmental footprint per service-year, often dominating use-phase efficiency gains for short-life products.
+      - [European Environment Agency research](https://www.eea.europa.eu/en/analysis/publications/conditions-and-pathways-for-sustainable) estimates that doubling product lifetimes in major categories would reduce associated emissions and resource use by 30–50%, bounding the upper edge of the achievable delta for a fully adherent household.
+    isr_reasoning: |
+      - The translation from durable purchasing to lower lifecycle footprint is well-supported in product-category lifecycle assessments – the [EEA circular economy briefing](https://www.eea.europa.eu/en/analysis/publications/conditions-and-pathways-for-sustainable) documents that production phase typically dominates lifecycle impacts for non-energy goods, so longer lifetimes compound directly into lower footprint per service-year.
+      - The main failure mode is rebound spending: savings from buying durable goods are sometimes redirected toward higher-footprint consumption (travel, additional acquisitions). [Rebound-effect research](https://www.sciencedirect.com/science/article/pii/S0921800914000871) finds rebound rates of 20–60% for household efficiency gains.
+      - ISR of 70% reflects a reliable mechanism with meaningful but bounded rebound risk.
+    uar_reasoning: |
+      - See possessions.quality UAR – same intervention, same adherence profile.
+
+  saving.lifestyle:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile in liquid lifestyle reserves. After sustained adherence, a user could plausibly add roughly 1–2 months of liquid reserves over a 5–10 year horizon, drawn from compounding savings on replacement cycles in major categories. Delta of 1.5 months on the 12-month anchor: PBS = 10 + log₂(1.5/12) = 10 − 3 = 7; scaled down to 5 to reflect that the benefit accrues slowly and partially offsets a higher initial outlay.
+      - [Household expenditure analyses](https://www.bls.gov/cex/) suggest that durable-goods replacement is a significant recurring expense category for most households; reducing replacement frequency by 50–70% in covered categories materially reduces annual spend on those categories over time.
+      - Score 5 reflects modest, slow-accruing gains – buy-it-for-life raises upfront outlay before delivering savings, so the lifestyle-reserve benefit is back-loaded.
+    isr_reasoning: |
+      - Whether the savings actually translate into higher reserves depends on the user routing them into savings rather than absorbing them through lifestyle inflation. [Behavioural research on windfall and savings](https://www.nber.org/papers/w15103) finds that intermittent or diffuse savings are particularly susceptible to absorption.
+      - For users with active savings systems (automated transfers, budgets), the translation is more reliable; for those without, the savings disappear into general spending.
+      - ISR of 60% reflects that a meaningful share of adherent users see real savings reach their reserves, but a substantial minority absorb the gains into other consumption.
+    uar_reasoning: |
+      - See possessions.quality UAR – same intervention, same adherence profile.
+
+  saving.security:
+    pbs: 4
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile in emergency-fund coverage. After sustained adherence, a user could plausibly add ~0.5–1 month of emergency reserves through compounded savings on replacement cycles routed into the emergency fund. Delta of ~0.75 months on the 12-month anchor: PBS = 10 + log₂(0.75/12) = 10 − 4 = 6; scaled down to 4 to reflect the slow, partial, and conditional nature of the gain.
+      - The mechanism overlaps substantially with saving.lifestyle but is more conservative because emergency funds are typically prioritised below day-to-day liquidity – durable-goods savings tend to flow into liquid reserves before topping up emergency funds.
+      - Score 4 reflects a modest secondary benefit conditional on the user maintaining a deliberate savings hierarchy.
+    isr_reasoning: |
+      - The translation depends on the user having a defined emergency-fund target and routing surplus savings to it; without this, durable-goods savings stop at general liquidity. [Research on household financial buffers](https://www.federalreserve.gov/publications/2023-economic-well-being-of-us-households-in-2022-expenses.htm) finds that most households without explicit savings architecture absorb windfalls rather than build reserves.
+      - For households already running a structured emergency-fund plan, the translation is more reliable but bounded by the size of available durable-goods savings.
+      - ISR of 55% reflects that the security benefit is real but conditional on adjacent financial behaviours that many adherents will not have in place.
+    uar_reasoning: |
+      - See possessions.quality UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials, services, or subscriptions required to adopt the rule. The intervention is a decision principle applied at point of purchase. Premium prices on individual items are part of the rule itself, not a setup cost."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring cost. Individual purchases are typically more expensive upfront than budget alternatives, but total cost of ownership over the realistic lifetime is generally lower; the rule does not impose its own ongoing fee."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 2 hours to learn the cost-per-use calculation, identify trustworthy durability and repair-index resources (iFixit, EU Energy Label, r/BuyItForLife), and decide which categories to apply the rule to first."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 30 minutes per week of additional research time on non-trivial purchases – reading long-horizon reviews, checking repair-index scores, and computing cost-per-use comparisons. Most weeks involve no purchases at all; the time concentrates around acquisition events."
+
+prerequisites:
+  - "Sufficient available cash flow or credit to absorb higher upfront prices on individual purchases, even when total cost of ownership is lower"
+  - "Internet access and basic comfort with consumer-research tools (independent reviews, repair-index databases, long-horizon user forums)"
+  - "Basic numeracy to compute and compare cost-per-use figures across alternatives"
+
+flagged_domains:
+  - domain: "global-impact"
+    rationale: "Sustained durable purchasing materially reduces lifecycle emissions and resource consumption per service-year, contributing to environmental impact at a scale beyond individual housework practices."
+  - domain: "time-management"
+    rationale: "Slower replacement cycles reduce time spent shopping for, comparing, and disposing of replacement items across categories, freeing modest amounts of recurring time over multi-year horizons."
+  - domain: "mental-health"
+    rationale: "Lower frequency of broken or failing possessions reduces low-grade background frustration and decision fatigue from repeated replacement events, with plausible but unmeasured stability benefits."

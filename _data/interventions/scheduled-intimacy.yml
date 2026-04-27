@@ -1,0 +1,131 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Scheduled Intimacy"
+what_it_is: |
+  Couples in established relationships deliberately reserving time on the calendar for sexual intimacy – typically a recurring weekly or fortnightly block – rather than waiting for desire to arise spontaneously. The practice addresses a structural problem in long-term partnerships: spontaneous desire becomes less reliable as familiarity, fatigue, and competing demands accumulate, and the partner with lower baseline desire rarely feels organic urges in the narrow windows when both are available, awake, and unstressed. Calendared intimacy reframes sex as a shared priority that warrants the same protected time as exercise or date night, removing the cumulative friction of nightly negotiation. It is distinct from sensate-focus protocols, which prescribe what happens during the encounter – this intervention is purely about prioritisation and protected time, leaving the content of the encounter to the couple.
+how_to_do_it: |
+  - Agree with your partner on a recurring slot – commonly Saturday morning or one or two weeknights – chosen for when both of you are reliably awake, unstressed, and child-free. Treat it like a standing appointment: visible on the calendar, defended against routine encroachment, but rescheduled rather than cancelled if a genuine conflict arises.
+  - Frame the slot as protected time for connection rather than a guaranteed performance commitment. The intent is to create reliable opportunity – conversation, physical affection, and intimacy that may or may not lead to sex – which removes the pressure that defeats arousal while still ensuring intimacy regularly occurs.
+  - Build a short transition ritual into the slot – showering, dimming lights, putting phones away, a few minutes of non-sexual touch – to bridge the gap between everyday mode and intimate mode. [Responsive desire research](https://pubmed.ncbi.nlm.nih.gov/26524653/) shows that for many people (particularly the lower-desire partner) arousal precedes desire rather than the reverse, so the ritual matters more than waiting to feel "in the mood".
+  - Review the arrangement every few months. Frequency, timing, and what happens in the slot should evolve as life circumstances change – a slot that worked before children may need to move; a slot that became routine may benefit from variation in setting or timing.
+success_looks_like: |
+  - The frequency gap between the higher- and lower-desire partner narrows, and conversations about sex become matter-of-fact logistical exchanges rather than charged negotiations
+  - Both partners report feeling sexually connected over weeks and months rather than only in the early phase of the relationship or on holidays
+  - The recurring slot becomes self-sustaining: cancelling it feels like a mild loss to both partners, which is the signal that intimacy has moved from a contested resource to a shared rhythm
+common_pitfalls: |
+  - Treating the slot as a non-negotiable performance demand rather than protected time – this turns scheduled intimacy into a source of obligation-anxiety, particularly for the lower-desire partner, and predictably backfires
+  - Choosing a slot that fails physiologically – late at night when both partners are exhausted, or first thing on a workday – and then concluding from low engagement that the intervention does not work, rather than that the slot was wrong
+  - Letting the schedule fossilise: the same time, place, and pattern indefinitely. Predictability of opportunity is the goal; predictability of content is the trap
+  - Using the slot as leverage in unrelated conflict ("we're not doing it tonight because of what you said earlier") – this couples the schedule to general relational health and removes its role as a stable container
+description: |
+  - Couples in long-term relationships deliberately calendaring a recurring intimate slot – usually weekly or fortnightly – rather than relying on spontaneous desire, which is structurally unreliable in established partnerships
+  - [Research on long-term relationships](https://pmc.ncbi.nlm.nih.gov/articles/PMC4286861/) shows that most established couples experience a gradual decline in spontaneous desire, with the lower-desire partner rarely experiencing organic urges in the windows when sex is logistically possible – making opportunity, not desire, the binding constraint
+  - [Sexual frequency and wellbeing data](https://journals.sagepub.com/doi/10.1177/1948550615616462) finds that sexual frequency predicts relationship satisfaction up to roughly weekly, with diminishing returns above that – making "weekly" a reasonable target for couples who have drifted below it
+  - Distinct from sensate-focus and other in-bed protocols: this intervention addresses prioritisation and protected time, not what happens during the encounter. The two stack well – sensate-focus content during a scheduled slot is a common combination
+  - Requires no equipment or cost; the primary barriers are the cultural belief that scheduled sex is "unromantic" and the awkwardness of explicitly negotiating frequency, both of which the intervention asks couples to override
+applicable_domains: ["sex", "relationship-quality"]
+
+values:
+  sex.frequency:
+    pbs: 7
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 65th–70th percentile – moving from sub-fortnightly to roughly weekly intimacy. Delta on the 4-times-per-week anchor: approximately +0.75 encounters per week, mapping via PBS = 10 + log₂(0.75/4) to score 7.
+      - [Research on sexual frequency in long-term relationships](https://link.springer.com/article/10.1007/s10508-016-0860-x) finds that married/cohabiting couples average roughly once per week, with substantial variance driven by whether sex is treated as a defended priority or a residual activity – consistent with a +0.5 to +1.0 weekly gain when the latter group adopts the former pattern.
+      - Score 7 reflects that the gain is real but bounded – scheduling primarily addresses opportunity scarcity, not underlying physiological or relational issues that suppress desire independently.
+    isr_reasoning: |
+      - [Studies of sexual desire discrepancy interventions](https://pubmed.ncbi.nlm.nih.gov/30096235/) find that planned-encounter approaches reliably increase frequency among couples whose primary issue is logistical rather than aversive, but produce little benefit when low frequency is driven by unaddressed conflict, untreated medical issues, or one partner's desire to avoid sex altogether.
+      - Among adherent couples, the most common failure mode is treating the slot as a performance test, which generates anticipatory anxiety and depresses arousal – particularly for partners with responsive rather than spontaneous desire patterns.
+      - ISR of 60% reflects that the mechanism works for the majority of couples whose decline is opportunity-driven, but a meaningful minority face deeper barriers that scheduling alone does not resolve.
+    uar_reasoning: |
+      - Adherence requires both partners to commit to a recurring calendar item over months, which is a higher bar than individual habit interventions – either partner can unilaterally erode the schedule by repeated cancellation.
+      - [Research on couples therapy homework adherence](https://onlinelibrary.wiley.com/doi/10.1111/jmft.12058) finds compliance rates of roughly 40–60% for between-session behavioural assignments, with sexual assignments typically at the lower end due to embarrassment and avoidance.
+      - UAR of 40% reflects that many couples will agree to the schedule in principle but allow it to lapse within a few months as work, parenting, or fatigue create successive "just this once" exceptions that compound.
+
+  sex.contentment:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 60th–65th percentile – the persistent low-grade tension that surrounds an unresolved frequency mismatch lifts, replaced by a steady rhythm both partners have explicitly endorsed. Delta: ~25–30 percentile points, mapping to score 6.
+      - [Research on sexual desire discrepancy](https://pmc.ncbi.nlm.nih.gov/articles/PMC4886824/) finds that the perception of an unaddressed gap between desired and actual frequency predicts lower sexual satisfaction more strongly than absolute frequency itself – meaning the explicit negotiation embedded in scheduling produces contentment gains independent of the frequency change.
+      - Score 6 reflects a meaningful gain – contentment improves both because frequency rises and because the issue stops being a chronic unspoken grievance, but it does not transform underlying compatibility or address pleasure quality.
+    isr_reasoning: |
+      - Contentment gains depend on both partners experiencing the new schedule as legitimate rather than coerced. [Research on sexual communal motivation](https://psycnet.apa.org/record/2013-08755-001) finds that engaging in sex out of obligation predicts lower satisfaction, while engaging out of mutual desire to maintain connection predicts higher satisfaction – the framing matters considerably.
+      - For couples where one partner agreed reluctantly, the schedule may produce frequency without contentment, and may even worsen contentment by formalising a felt obligation.
+      - ISR of 60% reflects that most couples who jointly endorse the approach achieve genuine contentment gains, while a meaningful minority experience the schedule as another source of pressure.
+    uar_reasoning: |
+      - See sex.frequency UAR – same intervention, same adherence profile.
+
+  relationship-quality.connection:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 55th–60th percentile – regular physical intimacy is one of the more reliable predictors of emotional closeness in long-term partnerships. Delta: ~20–25 percentile points, mapping to score 5.
+      - [Longitudinal research on married couples](https://journals.sagepub.com/doi/10.1177/0146167215616461) finds that sexual frequency and afterglow predict subsequent relationship satisfaction and emotional bonding, with effects persisting up to 48 hours after each encounter.
+      - Score 5 reflects a real but secondary effect – connection improves via the physical-emotional pathway, but scheduled intimacy does not address other major connection drivers like quality of conversation, shared activities, or unresolved conflict.
+    isr_reasoning: |
+      - The connection benefit depends on the encounters being experienced as genuine intimacy rather than logistical task completion – the same engagement-versus-obligation distinction that moderates contentment gains.
+      - [Research on physical affection and pair bonding](https://www.sciencedirect.com/science/article/abs/pii/S027858461930041X) supports the link between regular physical intimacy and felt closeness, but effect sizes are heterogeneous across couples.
+      - ISR of 55% reflects modestly lower reliability than the primary frequency outcome, since connection requires the encounters to carry emotional weight rather than just occurring.
+    uar_reasoning: |
+      - See sex.frequency UAR – same intervention, same adherence profile.
+
+  relationship-quality.harmony:
+    pbs: 5
+    isr: 60
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 55th–60th percentile – sexual frequency mismatch is one of the most commonly cited sources of recurrent conflict in established relationships, and explicit scheduling defuses the nightly micro-negotiation. Delta: ~20–25 percentile points, mapping to score 5.
+      - [Survey research on couples](https://www.tandfonline.com/doi/abs/10.1080/0092623X.2014.915904) finds desire discrepancy is among the top reasons couples seek therapy and a frequent precipitant of resentment, withdrawal, and rejection-avoidance dynamics – removing the implicit nightly question removes a recurring conflict trigger.
+      - Score 5 reflects a meaningful but partial harmony gain – scheduling addresses one recurring source of friction without touching others.
+    isr_reasoning: |
+      - The harmony benefit is reasonably reliable when the schedule is genuinely jointly agreed: the implicit nightly negotiation – "will we, won't we, who initiates" – simply stops happening.
+      - For couples where the schedule is contested or one-sided, it can become a new source of conflict rather than a resolution of an old one.
+      - ISR of 60% reflects that harmony gains are reliable when the agreement is mutual and modest when it is not.
+    uar_reasoning: |
+      - See sex.frequency UAR – same intervention, same adherence profile.
+
+  sex.variety:
+    pbs: 4
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple could plausibly reach the 45th–50th percentile – having a defended slot with planning lead-time creates the practical conditions under which couples can experiment with setting, timing, or activity. Delta: ~15 percentile points, mapping to score 4.
+      - The mechanism is indirect: scheduling does not create variety, but it removes the urgency that pushes couples toward the fastest, most familiar pattern when sex is a stolen-from-elsewhere activity.
+      - Score 4 reflects a modest, conditional benefit – the variety only materialises if couples actively use the planning lead-time, which many will not.
+    isr_reasoning: |
+      - [Research on sexual novelty in long-term relationships](https://www.tandfonline.com/doi/full/10.1080/00224499.2014.939506) finds that variety predicts satisfaction but is rarely pursued without deliberate intent – scheduling provides the opportunity but does not supply the intent.
+      - For couples who simply use the slot to repeat their habitual pattern, variety does not improve.
+      - ISR of 50% reflects that roughly half of adherent couples will use the planning lead-time to introduce some variation; the rest will not.
+    uar_reasoning: |
+      - See sex.frequency UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment, services, or materials required. Both partners need only a shared calendar, which most already have."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The intervention is a behavioural agreement and a recurring calendar entry."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately one hour for the initial conversation about timing, expectations, and framing, plus setting up the recurring calendar slot. No reading or training required to begin."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly one hour per week for the slot itself – the intervention does not add time beyond what intimacy already takes; it reallocates that time from contested or absent to scheduled and protected. Periodic 15-minute reviews every few months."
+
+prerequisites:
+  - "Both partners are willing to discuss sexual frequency openly and agree to a recurring schedule"
+  - "Absence of unresolved sexual aversion, untreated trauma, or active conflict that would make calendared intimacy itself harmful – these warrant therapeutic support before scheduling"
+  - "A shared calendar or equivalent system both partners can see and treat as authoritative"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Removing the chronic low-grade anxiety of unresolved frequency mismatch, and the rejection-anticipation dynamic associated with it, plausibly reduces background relational stress for both partners."

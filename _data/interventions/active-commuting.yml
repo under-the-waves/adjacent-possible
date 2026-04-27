@@ -1,0 +1,184 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Active Commuting"
+what_it_is: |
+  Replacing the daily motor-vehicle commute with cycling, walking, e-biking, or running for at least 3 round trips per week of 15+ minutes each way. Distinct from a deliberate exercise session because the activity displaces a journey you were going to make anyway – meaning the time cost is largely sunk and the cardiovascular load arrives without any extra calendar slot. The defining feature is the substitution: every active mile is one fewer mile of car or transit time, and the dose accumulates twice a day, five days a week, on autopilot. [UK Biobank cohort evidence](https://doi.org/10.1136/bmj.j1456) tracking 263,450 commuters over five years found cycle-commuters had 41% lower all-cause mortality and 46% lower cardiovascular incidence than car or transit commuters – effect sizes that even a deliberate gym programme rarely matches because gym sessions usually fail the adherence test that commuting passes by default.
+how_to_do_it: |
+  - Start by mapping a route you would actually use – residential streets, segregated cycle lanes, or canal/river paths beat shortest-distance routes for both safety and enjoyment. A 20–40 minute one-way distance is the realistic sweet spot for cycling; 15–30 minutes for walking/running; up to 60 minutes for e-bike, which flattens range constraints by ~3x.
+  - Equip once, properly: a reliable bike (used hybrid or e-bike, ~$300–1,500), lights, lock, helmet, and weather layers (waterproof jacket, gloves, overshoes). Skimping on rain gear is the most common reason commutes get abandoned in autumn.
+  - Schedule the substitution explicitly – pick 3 specific days per week to start, build to 4–5. Pure willpower fails; making it the default mode (parking the car keys, leaving the bike by the door) succeeds.
+  - Solve the arrival problem in advance: shower at work if available, or use baby wipes and a change of clothes for moderate-distance trips; e-bikes solve sweat at the cost of higher upfront price. Lock-up location and theft mitigation should be fixed before week one, not after the first scare.
+success_looks_like: |
+  - The commute happens by default – you notice the car or transit fare cost when you drive on a rainy day rather than choosing the bike each morning
+  - Resting heart rate drops 5–10 bpm within 8–12 weeks; aerobic fitness measurably improves without any other exercise programme; mood on arrival at work is reliably better than when you drove
+  - The trip becomes one of the better moments of the day – a transition with no email, no traffic stress, and predictable arrival time within ±2 minutes regardless of road conditions
+common_pitfalls: |
+  - Treating it as fair-weather only: people who don't pre-commit to wet/cold gear typically dropped to <20% of intended trips by November in temperate climates, then quit entirely
+  - Buying a bike that's too aggressive (drop-bar road bike) or too heavy (full-suspension mountain bike) for actual commuting – a hybrid or e-bike serves 90% of riders better
+  - Underestimating safety preparation – cycle-commuting injury rates fall sharply with route choice, lights, hi-vis, and not riding in motor traffic where alternatives exist; ignoring this is the single biggest avoidable risk
+  - Accidentally adding stress by leaving the same departure time as the car commute – active modes are usually only 5–15 minutes longer door-to-door, but require slightly earlier departure to feel relaxed rather than rushed
+description: |
+  - Replacing motor-vehicle commuting with cycling, walking, e-biking, or running for the daily commute (or a meaningful chunk of it – minimum ~3 trips per week of 15+ minutes each way), distinct from [daily walking](/resources/intervention-database/daily-walking) because the dose is bolted onto an existing trip rather than added as a separate session, which is why adherence is dramatically higher
+  - [UK Biobank prospective cohort of 263,450 adults](https://doi.org/10.1136/bmj.j1456) found cycle-commuters had 41% lower all-cause mortality, 52% lower cardiovascular mortality, 46% lower CVD incidence, and 45% lower cancer incidence vs. non-active commuters; walking commuters had 36% lower CVD incidence over the 5-year follow-up
+  - [Pooled cycling cohort meta-analysis](https://doi.org/10.1111/j.1600-0838.2011.01299.x) across 16 prospective studies confirms a dose-response of roughly 10% mortality reduction per ~11 MET-hours/week of cycling, with cycle-commuters consistently the best-evidenced subgroup
+  - [Avila-Palencia et al. (2018)](https://doi.org/10.1016/j.envint.2018.04.002) found cycling and walking commuters reported significantly better self-perceived general health, mental health, vitality, and lower stress than car commuters, with effects independent of leisure-time exercise – evidence that the *commuting mode* itself carries psychological benefits beyond aerobic load
+  - Cardiovascular and mood benefits emerge within 4–8 weeks; weight and body-composition changes take 12–24 weeks; cumulative mortality benefits accrue with sustained adherence over years
+applicable_domains: ["transportation", "fitness", "mental-health", "saving", "global-impact", "behaviours"]
+
+values:
+  transportation.comfort:
+    pbs: 5
+    isr: 60
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile. Delta: ~15–20 percentile points – meaningful but bounded because comfort gains and losses partly cancel out.
+      - Genuine comfort upsides are real and underweighted by non-cyclists: no traffic-jam frustration, no parking hassle, predictable arrival times, end-of-day decompression rather than rush-hour rage, and a daily dose of fresh air and sensory variety. [Avila-Palencia et al. (2018)](https://doi.org/10.1016/j.envint.2018.04.002) found active commuters report higher self-perceived vitality and lower stress than car commuters across seven European cities.
+      - Real downsides cap the score at 5: weather exposure (rain, cold, heat), sweat at arrival, perceived traffic-safety stress, and physical fatigue on hard-route days. The downside profile is heavily route- and climate-dependent, which is why this is "meaningful gain" rather than "major gain".
+    isr_reasoning: |
+      - [St-Louis et al. (2014)](https://doi.org/10.1016/j.tbs.2014.07.004) found that across six commuting modes, walkers and cyclists reported the highest commute satisfaction; drivers and transit users the lowest – consistent across nearly 4,000 respondents in Montreal.
+      - The ~40% who don't experience comfort gains tend to be those with hostile cycling infrastructure (no segregated lanes, high-speed traffic), extreme climate (very cold/wet/hot regions without shoulder seasons), or work environments without shower facilities for sweat management.
+      - ISR 60 reflects that comfort gains are reasonably reliable in well-supported environments but genuinely uncertain in car-centric cities or harsh climates where the downsides can outweigh the upsides.
+    uar_reasoning: |
+      - [European Cyclists' Federation modal-share data](https://ecf.com/) shows cycle-commuting modal share varies from <2% in car-dependent cities to >40% in Copenhagen/Amsterdam, indicating that environmental support is the dominant adherence factor, not individual motivation.
+      - Among adults who start an active commute, retention at 12 months is roughly 50–60% per [transport-mode-shift studies](https://doi.org/10.1016/j.tranpol.2015.12.006), with seasonal dropout in autumn the largest single failure mode in temperate climates.
+      - UAR 55 reflects the reality that even motivated users face real environmental headwinds – weather, infrastructure, theft risk – that the comfort-only motivation cannot always overcome.
+
+  transportation.efficiency:
+    pbs: 6
+    isr: 70
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~10–15% of income on transportation, including car payments, insurance, fuel, parking). After successful adherence: 60th–70th percentile (~5–8% of income). Delta: ~25–35 percentile points.
+      - [AAA's "Your Driving Costs" annual report](https://newsroom.aaa.com/auto/your-driving-costs/) puts average US car ownership at ~$12,000/year (2024). Cycling or e-bike commuting can eliminate a second car or substantially reduce one car's mileage, plausibly cutting transportation costs from ~15% to ~7% of a $60k income – a delta of ~8 percentage points on the 15-point inverted anchor, mapping to PBS 6.
+      - Time efficiency also improves for trips under ~5 km in urban areas, where cycling typically beats driving door-to-door once parking and traffic are factored in. [TfL's Analysis of Cycling Potential](https://content.tfl.gov.uk/analysis-of-cycling-potential.pdf) finds that a substantial share of central-London car trips are short enough (under 8 km) to be cyclable, with cycling competitive on door-to-door journey time once parking is factored in.
+    isr_reasoning: |
+      - The cost saving accrues mechanically once a household reduces miles driven or sheds a car – there is little behavioural variability once the substitution is made. The 30% who don't realise full savings tend to keep the second car "just in case" and pay fixed insurance/depreciation regardless of mileage.
+      - [de Kruijf et al. (2018)](https://doi.org/10.1016/j.jth.2018.06.003), evaluating a Dutch e-cycling incentive programme, found roughly half of e-bike trips substitute for prior car trips while the remainder substitute for conventional cycling or transit – indicating partial rather than full cost displacement is the typical outcome.
+      - ISR 70 reflects that meaningful savings are reliable but full elimination of a car is achieved by a minority of adopters; most see partial cost reduction.
+    uar_reasoning: |
+      - See transportation.comfort UAR – same intervention, same adherence profile.
+
+  fitness.health:
+    pbs: 7
+    isr: 80
+    uar: 65
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint after successful adherence: 70th–80th percentile on longevity markers. Delta: ~35–45 percentile points – larger than for daily walking because the cardiovascular load is higher and the volume more consistent.
+      - [Celis-Morales et al. (2017) BMJ UK Biobank study](https://doi.org/10.1136/bmj.j1456) found cycle-commuters had 41% lower all-cause mortality, 52% lower CVD mortality, and 45% lower cancer mortality vs. non-active commuters over 5 years (n = 263,450). Translated to the 15-year anchor, this maps to roughly 3–4 healthy years gained: 10 + log₂(3.5/15) = 7.9, rounding to PBS 7.
+      - [Oja et al. (2011) systematic review of cycling and health](https://doi.org/10.1111/j.1600-0838.2011.01299.x) confirms a clear dose-response across 16 cohorts: each ~11 MET-hours/week of cycling reduces all-cause mortality by ~10%. A typical 30-minute round-trip commute, 5 days/week, delivers ~20 MET-hours – capturing most of the available benefit.
+      - PBS 7 (rather than 8) reflects that even cycle-commuting plateaus the longevity gain at roughly 3–4 healthy years; further gains require resistance training, dietary improvement, and other modalities not delivered by commute substitution alone.
+    isr_reasoning: |
+      - Among adherent cycle-commuters in the [UK Biobank cohort](https://doi.org/10.1136/bmj.j1456), the mortality and CVD-incidence benefit appears across age, sex, BMI, and starting-fitness strata – mechanistic non-response is rare for any subgroup with sustained dose.
+      - The [pooled cycling cohort meta-analysis](https://doi.org/10.1111/j.1600-0838.2011.01299.x) replicates the dose-response across 16 independent prospective studies, confirming high reliability of the underlying biology.
+      - The ~20% who don't realise full health benefit tend to be sub-threshold adopters (1–2 trips/week) where the cardiovascular dose is too low for meaningful adaptation, or those with confounding health conditions that exercise alone cannot offset.
+    uar_reasoning: |
+      - Active commuting passes the adherence test that defeats most exercise programmes: the dose is bolted onto a journey you would make anyway, so the marginal cost of "going for a workout" is replaced by the marginal cost of choosing one mode over another.
+      - However, [transport-mode-shift studies](https://doi.org/10.1016/j.tranpol.2015.12.006) show 12-month retention of 50–60% among new active commuters, with seasonal weather and infrastructure quality as dominant predictors of dropout.
+      - UAR 65 reflects materially higher adherence than dedicated exercise (typically 20–40% at 12 months) but lower than daily walking (~85–90%) because of weather, route-safety, and equipment friction unique to cycling/running.
+
+  fitness.performance:
+    pbs: 6
+    isr: 80
+    uar: 65
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~50th–55th percentile on age-adjusted fitness tests. Delta: ~15–20 percentile points – larger than walking because cycling dose is at moderate-vigorous intensity.
+      - [Oja et al. (2011) review](https://doi.org/10.1111/j.1600-0838.2011.01299.x) reports VO2max gains of 12–22% in previously sedentary adults from cycle-commuting interventions of 6–12 months. A typical commute hits 60–80% of HRmax for the working portion, well above the threshold for cardiovascular adaptation.
+      - On the fitness-percentile anchor, lifting a sedentary adult from the 35th to the 55th percentile (a delta of 20 points where 6th percentile = score 6) maps directly to PBS 6. Higher gains (PBS 7–8) would require structured interval work or strength training that commuting alone doesn't deliver.
+    isr_reasoning: |
+      - The [Oja review](https://doi.org/10.1111/j.1600-0838.2011.01299.x) notes that essentially all consistent cycle-commuters show measurable VO2max gains within 6 months, with only the magnitude varying by starting fitness and intensity.
+      - Walking-pace commuters see smaller performance gains (~5–10% VO2max) because the intensity is sub-threshold for most adaptive stress; running commuters see the largest (~20–25%) but with much higher injury risk.
+      - The 20% non-response largely reflects e-bike commuters with low pedal-assist effort, and walking commuters at flat terrain – both of which deliver the health benefit but less of the performance gain.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 5
+    isr: 70
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: 55th–60th percentile on day-to-day emotional steadiness. Delta: ~20–25 percentile points.
+      - [Avila-Palencia et al. (2018)](https://doi.org/10.1016/j.envint.2018.04.002) found cycle and walking commuters reported significantly lower stress and better self-perceived mental health than car commuters across seven European cities, controlling for leisure-time exercise – evidence the commute mode itself carries an effect.
+      - The [BMJ 2024 network meta-analysis of exercise for depression](https://doi.org/10.1136/bmj-2023-075847) confirms walking, cycling, and running produce clinically meaningful symptom reductions (g ≈ -0.6 for moderate intensities). Active commuting delivers this dose by default rather than by added effort, which is why the chronic-mood pathway is more reliable than for sporadic gym attendance.
+    isr_reasoning: |
+      - [Brutus et al. (2017)](https://doi.org/10.1016/j.ergon.2017.04.003) found that switching from car to active commuting predicted measurable improvements in workplace performance and mood within 4 weeks, with effect sizes consistent across organisations.
+      - The 30% who don't experience stability gains tend to face genuinely stressful active commutes – hostile traffic, heavy luggage, time pressure, or infrastructure that turns the trip into a daily threat-vigilance exercise rather than decompression.
+      - Acute stress-recovery effects of moderate exercise replicate well across [exercise-and-mood meta-analyses](https://doi.org/10.2165/11590680-000000000-00000), so a meaningful share of the benefit accrues even to commuters who don't sustain large effect sizes longitudinally.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  saving.lifestyle:
+    pbs: 5
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (a few days of liquid reserves). Endpoint after sustained adherence: 50th–55th percentile (1–2 weeks of additional reserves redirected from saved transportation costs). Delta: ~15–20 percentile points.
+      - [AAA's average car-ownership cost](https://newsroom.aaa.com/auto/your-driving-costs/) of ~$12,000/year means substituting active commuting for half a vehicle's annual mileage, or shedding a second car entirely, redirects $3,000–10,000/year. On a $60k income, that's enough to add roughly 0.5–2 months of liquid reserves over time.
+      - On the 12-month-reserves anchor, a 1.5-month addition maps to 10 + log₂(1.5/12) = 7 (rounding); but cross-domain caution applies and most adopters redirect savings to other expenses rather than liquid reserves. PBS 5 is the realistic read for the savings-rate effect.
+    isr_reasoning: |
+      - The savings accrue mechanically when miles driven decrease, but [behavioural-economics research on windfall income](https://doi.org/10.1287/mksc.2018.1116) suggests roughly half of saved transportation costs are absorbed into other spending rather than savings unless explicit allocation is set up.
+      - [de Kruijf et al. (2018)](https://doi.org/10.1016/j.jth.2018.06.003) find that most active-commute adopters partially substitute (reduce driving) rather than fully eliminate vehicle ownership, which caps the achievable saving below the theoretical maximum.
+      - ISR 65 reflects that meaningful savings are realised by most adopters but full conversion to liquid reserves requires deliberate allocation that not all users implement.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  global-impact.sustainability:
+    pbs: 4
+    isr: 70
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (sporadic giving, no formal commitment). Endpoint after adherence: ~45th percentile via redirected transportation savings to charitable giving. Delta: ~10 percentile points.
+      - The pathway is indirect: active commuting saves money, which can be redirected to charitable giving, but most adopters don't make this allocation explicit. Score 4 reflects the modest, conditional nature of the effect.
+      - This is genuinely a savings-mediated cross-domain effect, not a direct sustainability mechanism. The carbon-emissions reduction (roughly 1–2 tonnes CO2e/year per adopter, per [Brand et al. 2021](https://doi.org/10.1016/j.gloenvcha.2021.102330)) is a real environmental impact but doesn't map onto the giving-rate anchor this value uses.
+    isr_reasoning: |
+      - The redirection from transportation savings to charitable giving requires explicit financial planning that most adopters don't do; only a minority of the saved capital reaches charitable causes without deliberate allocation.
+      - [Effective-giving research](https://www.givingwhatwecan.org/) suggests committed givers redirect roughly 10% of windfall savings to causes; for non-committed givers the rate is closer to 1–2%.
+      - ISR 70 reflects that for adopters who are already giving-oriented, the saved costs do meaningfully boost giving capacity; for the majority, the effect is diluted across other expenses.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+  behaviours.freedom:
+    pbs: 4
+    isr: 60
+    uar: 65
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Endpoint: ~50th percentile. Delta: ~15 percentile points – a modest but real gain in freedom from the car-dependence pattern that most car-commuters don't recognise as compulsive until they break it.
+      - The mechanism is twofold: physical decoupling from car-mode habits (ambient stress, road-rage triggers, auto-snacking on long drives) and broader autonomy from the financial and logistical constraints of car ownership ([Mattioli 2017](https://doi.org/10.1016/j.tbs.2017.04.001) on "forced car ownership" and material wellbeing).
+      - Score 4 ("modest gain") reflects that the behavioural pattern broken is real but narrower than addiction-style compulsions – car-dependence is a deeply normalised default rather than an acute compulsion, so the gain in subjective freedom is moderate.
+    isr_reasoning: |
+      - [Studies of car-free living transitions](https://doi.org/10.1016/j.trd.2019.07.014) report that most successful active-commute adopters describe a meaningful sense of freedom from car-related logistics (parking, fuel, traffic) within 2–3 months.
+      - The 40% who don't experience freedom gains tend to retain dual-mode flexibility (still driving for non-commute trips) where the compulsive-pattern displacement is partial rather than full.
+      - ISR 60 reflects genuine but uneven freedom gains, conditional on the user actually reducing rather than just diversifying their car use.
+    uar_reasoning: |
+      - See fitness.health UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 400
+  upfront_cost_reasoning: "A reliable used hybrid bike (~$250), helmet (~$50), lights ($30), lock ($40), and basic weather layers ($30). E-bikes raise the floor to ~$1,200–1,800 but extend viable commute distance roughly 3x. Walking or running commutes cost essentially nothing beyond decent shoes ($80) and weather gear ($50)."
+  ongoing_cost: 15
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Bicycle maintenance (tyres, brake pads, occasional service) averages ~$10–20/month for a daily commuter. Walking/running commutes have negligible ongoing cost beyond shoe replacement every 6–9 months."
+  upfront_time: 4
+  upfront_time_reasoning: "Time to test routes (2 hours), set up bike with lights/lock/fitting (1 hour), and arrange shower/storage logistics at work (1 hour). The first week of commuting itself adjusts pacing and timing."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 1 hour per week of net additional time vs. driving (5–15 minutes longer per trip, 5 days/week, minus parking and traffic time saved). For walking/running commutes the time delta can be larger, but the cardio session is now embedded rather than added."
+
+prerequisites:
+  - "Ability to walk/cycle continuously for 20+ minutes without significant pain or breathing difficulty; medical clearance for moderate exertion if over 50 or living with a cardiovascular or musculoskeletal condition"
+  - "Access to safe walking or cycling routes for the chosen commute distance, with reasonable infrastructure (sidewalks, bike lanes, or low-traffic streets)"
+  - "Secure storage at home and at work for bicycle and gear; access to a place to change or clean up at the work end (showers preferred for longer/faster commutes)"
+
+flagged_domains:
+  - domain: "physical-safety"
+    rationale: "Cycle commuting carries genuine traffic-injury risk that varies sharply with infrastructure quality – a meaningful negative effect in car-centric cities and meaningful positive (vs. driving fatality risk) in protected-lane environments."
+  - domain: "time-management"
+    rationale: "Active commuting consolidates exercise time with travel time, freeing 3–5 hours per week that would otherwise go to a separate gym session – a meaningful productivity gain for users who would otherwise struggle to find exercise time."

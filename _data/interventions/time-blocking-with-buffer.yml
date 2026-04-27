@@ -1,0 +1,164 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Time Blocking With Buffer"
+what_it_is: |
+  Pre-allocating each part of the day on a calendar to specific tasks – deep work, meetings, errands, rest – with deliberately scheduled buffer time and "white space" blocks between commitments. The buffer component is what distinguishes this from raw productivity scheduling: instead of packing the calendar wall-to-wall and treating disruption as failure, the user assumes that meetings will run over, requests will arrive unannounced, and tasks will take longer than expected, and reserves 15–30% of the day as unscheduled absorbent capacity. The mechanism draws on implementation-intention research, which shows that pre-committing to "when and where" a behaviour will happen substantially increases follow-through, and on knowledge-worker productivity studies showing that fragmented, reactive scheduling produces both lower throughput and worse subjective wellbeing than blocked scheduling with explicit transitions.
+how_to_do_it: |
+  - Before each week or each day, list the work that genuinely needs to happen and assign each item to a specific time block on a calendar (paper, digital, or both). Distinguish between deep-work blocks (90–120 minutes, single task, no notifications), shallow-work blocks (email, admin, 30–60 minutes), and recovery blocks (meals, walks, transitions).
+  - Build in explicit buffer blocks – ideally 15–30% of the working day – between commitments. A 10-minute buffer after each meeting and a 60–90 minute "white space" block in the afternoon prevents one overrunning task from collapsing the rest of the day.
+  - Use implementation-intention phrasing when scheduling: "From 09:00 to 10:30 in my home office, I will draft section 2 of the report." Specifying when, where, and what makes follow-through significantly more likely than a vague to-do list.
+  - When disruptions occur (and they will), treat the buffer as the first place to absorb them. If you finish ahead of schedule, leave the buffer alone rather than pulling forward more work – this is what protects evening boundaries and prevents cascading lateness. Review at week's end: which blocks held, which collapsed, where buffers were too thin.
+success_looks_like: |
+  - Most weeks end with the work you intended to do actually done, without consistently running over into evenings or weekends to absorb the overflow
+  - Unexpected requests, urgent meetings, and tasks that take longer than planned are absorbed by buffer time rather than displacing your priorities or compounding into late nights
+  - You have a clearer sense of how long things actually take, because you are continuously calibrating planned time against actual time across many blocks
+common_pitfalls: |
+  - Skipping the buffer step – packing the calendar wall-to-wall, then treating every disruption as a personal failure rather than a predictable feature of the day. This produces all of time blocking's rigidity with none of its flexibility benefit.
+  - Over-committing in deep-work blocks – scheduling four 90-minute deep-work sessions in a single day when sustained cognitive output is rarely possible for more than two to three. The result is missed blocks and erosion of trust in the system.
+  - Treating the calendar as binding rather than informative – refusing to renegotiate blocks when reality shifts, which produces resentment and abandonment of the practice within weeks. The schedule is a hypothesis, not a contract.
+description: |
+  - Pre-allocating each part of the day to specific tasks on a calendar, with explicit buffer and white-space blocks built in to absorb disruption – distinct from to-do lists or raw productivity scheduling, which assume work will fit the time available.
+  - [Implementation-intention research](https://kops.uni-konstanz.de/handle/123456789/10973) finds that specifying "when, where, and how" a task will be performed produces a medium-to-large effect on follow-through (d = 0.65 across 94 studies and 8,461 participants), which is the core mechanism behind blocked scheduling.
+  - [Workplace productivity studies](https://hbr.org/2019/03/the-case-for-finally-cleaning-your-desk) and [RescueTime data](https://blog.rescuetime.com/work-life-balance-study-2019/) show that knowledge workers spend roughly 40% of the day on email and meetings, with average uninterrupted focus blocks of only 1 hour 12 minutes per day – making deliberate block protection a meaningful structural change.
+  - The buffer component – reserving 15–30% of the day as unscheduled absorbent capacity – is what generates flexibility and balance benefits. Without buffers, time blocking degrades into rigid optimism that breaks on the first overrun.
+  - Requires no equipment beyond a calendar; the primary cost is the 10–20 minutes per day spent planning and the ongoing discipline of treating blocks as commitments rather than suggestions.
+applicable_domains: ["time-management", "current-work", "goals", "cognitive-skills", "mental-health"]
+
+values:
+  time-management.balance:
+    pbs: 7
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from reactive, overrun-prone days to a rhythm where rest, meals, and personal time are treated as scheduled commitments rather than residuals. Delta: ~30–35 percentile points.
+      - The buffer mechanism is what produces the balance gain: pre-allocating 15–30% of the day to absorbent white space means inevitable overruns land in buffer rather than displacing dinner, exercise, or sleep. [Knowledge-worker fragmentation studies](https://blog.rescuetime.com/work-life-balance-study-2019/) show that without explicit buffers, the average professional checks email or messaging every 6 minutes – a rhythm that structurally erodes protected time.
+      - Score 7 reflects a meaningful but bounded balance gain. Time blocking does not change underlying workload; it changes how predictably workload fits within the day. Users with structurally over-committed jobs will see the system surface the over-commitment but cannot conjure capacity that does not exist.
+    isr_reasoning: |
+      - [Implementation-intention meta-analysis (Gollwitzer & Sheeran, 2006)](https://kops.uni-konstanz.de/handle/123456789/10973) finds that pre-committing to specific when/where/how plans produces a medium-to-large effect on follow-through (d = 0.65), supporting the mechanism by which protected blocks actually hold.
+      - The reliability of the balance benefit depends on whether users genuinely defend buffer time. [Survey work on calendar discipline](https://hbr.org/2018/07/the-leaders-calendar) shows that managers who plan their calendars rigorously still find that ~30% of blocks get displaced; the buffer absorbs this slippage if it exists, but only if the user treats it as inviolable rather than a place to cram more work.
+      - ISR of 60% reflects that the balance benefit is reasonably reliable when the buffer rule is honoured, but a meaningful minority of adherent users undermine the mechanism by progressively shrinking buffers under pressure.
+    uar_reasoning: |
+      - Time blocking is among the higher-friction productivity systems – it requires daily or weekly planning sessions, calendar discipline, and willingness to renegotiate blocks when reality shifts. [Productivity habit research](https://www.sciencedirect.com/science/article/abs/pii/S0747563218304436) finds that fewer than 30% of users sustain calendar-based planning systems beyond three months without external accountability.
+      - The buffer-time component, while crucial, is psychologically counterintuitive – it feels wasteful to schedule "nothing" when there are tasks to do, so users tend to drop buffers first under deadline pressure.
+      - UAR of 35% reflects that genuine buffer-protected time blocking, sustained over months, is a minority practice even among people who initially adopt it. Many will partially adopt (block deep work but skip buffers, or vice versa), which dilutes the balance benefit specifically.
+
+  time-management.flexibility:
+    pbs: 7
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – the user can absorb a 30-minute urgent request, a meeting that runs over, or a task that takes longer than planned without the rest of the day collapsing. Delta: ~30–35 percentile points.
+      - The flexibility gain is counterintuitive: pre-scheduling the day appears to reduce flexibility, but explicit buffers create reserve capacity that an unscheduled day does not have. An unscheduled day is fully booked by default, because every minute is implicitly available for whatever shows up; a blocked day with buffers has named slack.
+      - Score 7 reflects a meaningful flexibility gain – the user moves from "every disruption cascades into a late night" to "most disruptions are absorbed by buffer." This is bounded because catastrophic disruptions (a half-day emergency) still overwhelm any reasonable buffer.
+    isr_reasoning: |
+      - [Implementation-intention research](https://kops.uni-konstanz.de/handle/123456789/10973) shows that pre-specifying response plans for predictable disruptions ("if X happens, then I will reassign block Y") substantially improves adaptive behaviour under pressure – supporting the mechanism by which buffers translate into actual flexibility rather than theoretical slack.
+      - The flexibility benefit is more reliable than the balance benefit because absorbing a disruption into buffer is a single, immediate decision rather than a sustained discipline. Users who maintain buffers at all tend to use them correctly when disruption arrives.
+      - ISR of 65% reflects that for users who genuinely protect buffer time, the flexibility benefit follows reasonably reliably; the failure mode is mainly that buffers get colonised by extra work in advance, leaving none available when disruption arrives.
+    uar_reasoning: |
+      - See time-management.balance UAR – same intervention, same adherence profile. UAR of 35% reflects the structural difficulty of sustaining buffer-protected time blocking long-term.
+
+  time-management.productivity:
+    pbs: 7
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~50% of planned tasks completed on time). After successful adherence, a user could plausibly reach the 70th–75th percentile (~80% of planned tasks completed on time). Delta: ~30 percentile points or roughly 30 absolute points on the on-time-completion anchor.
+      - [Implementation-intention meta-analysis](https://kops.uni-konstanz.de/handle/123456789/10973) finds d = 0.65 effects on goal attainment for plans that specify when, where, and how – consistent with the magnitude of productivity gain seen when calendar blocks replace open task lists.
+      - Score 7 reflects a meaningful productivity gain bounded by the fact that blocking improves allocation, not raw cognitive output. A user with a 4-hour effective focus ceiling cannot block 8 hours of deep work and expect 8 hours of output.
+    isr_reasoning: |
+      - [Workplace fragmentation data](https://blog.rescuetime.com/work-life-balance-study-2019/) shows knowledge workers average only 1 hour 12 minutes of uninterrupted focus per day; users who successfully implement deep-work blocks roughly double this, but only when they actually defend the block (close email, mute notifications, decline interruptions).
+      - [Research on calendar planning effectiveness](https://hbr.org/2018/07/the-leaders-calendar) finds that ~30% of planned blocks get displaced even by disciplined planners – the productivity gain is real but partial.
+      - ISR of 60% reflects that the productivity benefit is reasonably reliable for adherent users but bounded by the unavoidable slippage between planned and actual time use.
+    uar_reasoning: |
+      - See time-management.balance UAR – same intervention, same adherence profile.
+
+  current-work.competence:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – a meaningful gain in execution quality driven by more sustained deep-work time and lower context-switching costs. Delta: ~25–30 percentile points.
+      - Competence depends on the quality of the cognitive work produced, which is degraded by frequent interruption. [Research on attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399) shows that switching between tasks leaves performance-degrading residue that takes meaningful time to clear; protected deep-work blocks reduce this cost directly.
+      - Score 6 reflects a bounded competence gain – time blocking improves the conditions under which work is done, but does not change the underlying skill ceiling. Users still need the underlying competence; blocking lets more of it surface.
+    isr_reasoning: |
+      - [Knowledge-worker productivity studies](https://blog.rescuetime.com/work-life-balance-study-2019/) consistently find that protected focus time predicts higher-quality output, but the relationship is moderated by job structure – roles with high meeting load or high reactive demand see smaller gains.
+      - The competence benefit accrues most strongly to roles where output quality depends on sustained concentration (writing, analysis, design, code) and less to roles dominated by interpersonal coordination.
+      - ISR of 60% reflects that for adherent users in suitable roles, the competence benefit is reasonably reliable; for users whose work is structurally fragmentation-bound, the gains are smaller.
+    uar_reasoning: |
+      - See time-management.balance UAR – same intervention, same adherence profile.
+
+  goals.follow_through:
+    pbs: 6
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (roughly 1–2% of days with deliberate goal action under the linear anchor). After successful adherence, a user could plausibly reach the 70th percentile (~10–15% of days with goal action). Delta corresponds to roughly a 6–8x increase in days with goal action – mapping to score 6 on the log anchor.
+      - [Implementation-intention meta-analysis (Gollwitzer & Sheeran, 2006)](https://kops.uni-konstanz.de/handle/123456789/10973) directly studies this mechanism: specifying when and where a goal-directed action will happen produces a d = 0.65 effect on follow-through. Time blocking is essentially the operationalised form of this protocol applied to whole days.
+      - Score 6 reflects that blocking dramatically increases the frequency of goal-directed action by removing the "when will I do this?" decision from daily life, but the underlying goal must still be well-defined.
+    isr_reasoning: |
+      - [Implementation-intention research](https://kops.uni-konstanz.de/handle/123456789/10973) shows that the follow-through effect holds across diverse domains (exercise, study, health behaviours, work tasks) – a strong indicator that the mechanism is reliable when the protocol is applied.
+      - The main failure mode is poorly defined goals: blocking time for "work on the report" without specifying which section produces less follow-through than blocking for "draft section 2."
+      - ISR of 65% reflects reasonably reliable follow-through gains for adherent users, with the residual failure rate driven mostly by goal-specification quality rather than the blocking system itself.
+    uar_reasoning: |
+      - See time-management.balance UAR – same intervention, same adherence profile.
+
+  cognitive-skills.focus:
+    pbs: 6
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (roughly 2–8 minutes of sustained deep focus, per the linear anchor). After successful adherence in a deep-work block context, a user could plausibly reach 30–60 minutes of sustained focus per session – a meaningful jump on the log anchor.
+      - The mechanism is environmental: protected blocks remove the ambient interruption load (notifications, drop-ins, email checking) that fragments attention. [Research on attention residue](https://www.sciencedirect.com/science/article/abs/pii/S0749597809000399) shows that even brief interruptions impose recovery costs of several minutes, so eliminating them allows focus duration to extend.
+      - Score 6 reflects a meaningful focus gain – moving from the 35th to the 70th–75th percentile on sustained focus duration – while acknowledging that focus duration also depends on factors blocking does not address (sleep, stimulants, underlying attentional capacity).
+    isr_reasoning: |
+      - [RescueTime data](https://blog.rescuetime.com/work-life-balance-study-2019/) shows that users who actively manage their schedule sustain roughly 2x the deep-focus time of unmanaged peers, supporting the mechanism.
+      - The focus benefit is conditional on actually defending the block – closing communication channels, removing the phone, declining interruptions. Users who block deep-work time but leave Slack open see much smaller focus gains.
+      - ISR of 65% reflects reasonably reliable focus gains for users who properly defend deep-work blocks; the failure mode is mostly incomplete defence rather than the blocking concept itself.
+    uar_reasoning: |
+      - See time-management.balance UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – modest gains in emotional steadiness driven by reduced end-of-day overwhelm and clearer separation between work and rest. Delta: ~20 percentile points.
+      - The mechanism is indirect: blocked schedules with buffers reduce the cognitive load of "what am I supposed to be doing right now?" and prevent the cascading-lateness pattern that produces evening anxiety. [Workload-overload research](https://www.apa.org/news/press/releases/stress) consistently links time pressure with anxiety symptoms, so reducing perceived time pressure plausibly reduces stress-driven instability.
+      - Score 5 reflects a real but modest mental-health benefit – this is a secondary effect of the primary time-management mechanism, not a direct mood intervention. Users with clinically significant instability need targeted treatment, not better calendars.
+    isr_reasoning: |
+      - The stability benefit depends on the time-management mechanism actually working – if buffers collapse and days run over, the system increases rather than decreases stress, so ISR is conditional on adherence quality.
+      - [Meta-analytic research on time management and wellbeing (Aeon, Faber & Panaccio, 2021)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245066) finds a moderate negative association between time-management practice and psychological distress (r = -0.36), consistent with a small-to-moderate effect on stress.
+      - ISR of 55% reflects genuine but conditional stability benefits – meaningful for users whose distress is driven by overwhelm and time pressure, much smaller for users whose distress has other causes.
+    uar_reasoning: |
+      - See time-management.balance UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No materials required beyond an existing calendar – paper, phone, or computer. The intervention is a planning practice that uses tools most people already have."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. Optional digital calendar apps and time-tracking tools (Sunsama, Reclaim, Motion, RescueTime) typically cost $5–15 per month but are not required to begin."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately two hours to read through a primer on time blocking, design an initial daily template (deep-work blocks, shallow-work blocks, buffer windows), and set up the calendar structure."
+  ongoing_time: 2
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 15–20 minutes daily for the next-day plan plus a 30–45 minute weekly review – approximately two hours per week of pure planning overhead, distinct from the work itself."
+
+prerequisites:
+  - "Access to a calendar tool – paper planner, phone, or computer-based – that allows scheduling specific time blocks"
+  - "Sufficient autonomy over your daily schedule to actually block time, rather than having every hour assigned by external requests"
+  - "Basic ability to estimate how long tasks take – not perfect calibration, but enough to distinguish a 30-minute task from a 3-hour one"
+
+flagged_domains:
+  - domain: "habits"
+    rationale: "Time blocking creates predictable temporal anchors for habit cues, which is a well-documented mechanism for habit consistency."
+  - domain: "sleep"
+    rationale: "Buffer-protected schedules reduce evening work spillover, which preserves consistent bedtimes and total sleep duration."

@@ -1,0 +1,231 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Ethics Discussion Group"
+what_it_is: |
+  Regular participation in a small group whose explicit purpose is structured moral reflection – wrestling collectively with ethical dilemmas, theories, and the real choices members face in their lives and work. Concrete forms include a local effective altruism chapter, a Socrates Café, a philosophy reading circle working through Aristotle, Kant, Mill, or Parfit, a religious moral-formation small group, or a professional ethics committee that takes up live cases. The defining feature is that the conversation is oriented toward moral reasoning and its application, with members willing to challenge each other's positions rather than simply share opinions. The mechanism is well-grounded: [Kohlberg's foundational work](https://psycnet.apa.org/record/1985-98593-000) and [Gibbs's subsequent meta-analytic synthesis](https://www.taylorfrancis.com/books/mono/10.4324/9780203853078/moral-development-reality-john-gibbs) demonstrate that moral reasoning develops through exposure to perspectives one stage above one's own, which discussion with diverse interlocutors reliably supplies in a way that solitary reading does not.
+how_to_do_it: |
+  - Choose a group whose orientation matches what you most need – effective altruism chapters press you on impact and prioritisation, philosophy reading circles build conceptual range, religious or contemplative groups emphasise moral formation, professional ethics committees keep the focus on decisions you actually face. Visit two or three before committing; the quality of moderation and the willingness of members to disagree well varies enormously.
+  - Aim for a cadence of every two to four weeks for at least six months. Moral reasoning is built through cumulative exposure to disagreement, not through occasional events. Sessions of 90 minutes to two hours allow positions to be tested rather than just stated.
+  - Come prepared. Read or skim the assigned material, identify a specific point you find unconvincing or unresolved, and arrive with a position you are willing to defend. Groups that drift into open-ended sharing without a structured prompt generate warmth but minimal moral-reasoning gain – the developmental mechanism requires confronting arguments at the edge of your current thinking.
+  - Bring real choices to the group. Periodically use a session to discuss an actual ethical decision you or another member is facing – a career trade-off, a question of honesty under pressure, a giving decision. This is where reasoning translates into integrity and practice; without it, the intervention risks becoming armchair theorising.
+  - Stay long enough for trust to compound. The most useful sessions are typically those after the six-month mark, once members will say things they would not say to a stranger. Rotating in and out of groups every few months captures most of the breadth gain but loses most of the depth.
+success_looks_like: |
+  - You can articulate the strongest version of at least two ethical frameworks you previously dismissed, and you can name specific cases where applying them would change your actions
+  - You catch yourself in motivated reasoning more often in real-world decisions, partly because you have heard the group catch others (and yourself) in it
+  - Two or three members of the group have become people whose moral judgement you actively consult before significant choices, and at least one of those connections has the texture of friendship rather than just acquaintance
+common_pitfalls: |
+  - The group functions as an in-group rather than a reasoning community – members converge on a shared set of conclusions and stop pressure-testing each other, which produces the appearance of moral seriousness while erasing its developmental mechanism
+  - Discussion stays at the level of theory and never connects to live decisions, which means reasoning sophistication grows without integrity gains – the hallmark of the unproductive philosophy seminar
+  - One or two dominant voices crowd out quieter members, which both shrinks the perspectives available and trains attendees to hold positions strategically rather than honestly; good moderation is not optional
+description: |
+  - Regular structured participation – typically every two to four weeks – in a small group explicitly oriented toward moral reasoning and its application to real choices, with members willing to disagree substantively rather than simply share perspectives
+  - [Kohlberg's stage theory of moral development](https://psycnet.apa.org/record/1985-98593-000) and [Gibbs's modern synthesis](https://www.taylorfrancis.com/books/mono/10.4324/9780203853078/moral-development-reality-john-gibbs) show that moral reasoning advances through exposure to arguments one stage above one's current thinking, which structured group discussion supplies more reliably than solitary reading
+  - A [meta-analysis of moral-discussion interventions](https://psycnet.apa.org/record/1985-23507-001) found an average effect size of d = 0.41 on moral-reasoning measures, with the largest gains for sustained programmes using genuine dilemma discussion rather than lecture-based ethics instruction
+  - Distinct from a generic book club or social meet-up – the explicit purpose is moral reasoning and its application, including periodic discussion of real decisions members face, which is what produces integrity gains rather than just conceptual range
+  - Forms include effective altruism local chapters, Socrates Cafés, philosophy reading circles, religious moral-formation small groups, and professional ethics committees; quality of moderation and willingness of members to disagree well are larger drivers of benefit than the specific tradition
+applicable_domains: ["ethics", "value-system", "friendship", "networks", "worldview"]
+
+values:
+  ethics.community:
+    pbs: 7
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – moving from privately held ethical views to active participation in a community that holds members accountable to shared moral standards. Delta: ~35 percentile points.
+      - Belonging to a deliberative ethical community is itself most of what this value measures – the intervention targets the construct directly rather than producing it as a side effect.
+      - [Research on effective altruism community outcomes](https://forum.effectivealtruism.org/posts/Dhxg9BfBQEYvZETAD/ea-survey-2020-community-information) shows members report substantial increases in giving, career impact, and ethical engagement compared with their pre-involvement baselines, consistent with score 7 on the anchor.
+    isr_reasoning: |
+      - [Survey data on effective altruism community participation](https://forum.effectivealtruism.org/posts/Dhxg9BfBQEYvZETAD/ea-survey-2020-community-information) shows that the majority of sustained members report meaningful changes in donation, career, and ethical-engagement behaviour, but a substantial minority drop out without lasting change.
+      - Quality varies sharply by group: [organisational-ethics research](https://link.springer.com/article/10.1007/s10551-014-2173-0) finds that ethics discussion produces behaviour change reliably only when members confront disagreement and apply reasoning to concrete cases; groups that stay theoretical or converge prematurely produce weaker gains.
+      - ISR of 60% reflects that for adherent participants in a well-functioning group, community-ethics gains are reasonably reliable; the main failure modes are in-group drift and theory-only discussion.
+    uar_reasoning: |
+      - Sustained participation in voluntary discussion groups attrites heavily: [research on civic and discussion-group participation](https://www.bowlingalone.com/) documents long-term declines in associational membership, with most joiners failing to maintain attendance past the first year.
+      - The intervention requires regular evening or weekend time, in-person attendance for most groups, and the social effort of integrating into an existing community – a higher friction profile than solo interventions.
+      - UAR of 35% reflects that a meaningful minority of users will attend long enough to derive the cumulative benefits the mechanism requires; many will attend a handful of sessions and drift away.
+
+  ethics.philosophical:
+    pbs: 7
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th percentile – moving from a vague familiarity with ethical concepts to a working command of consequentialist, deontological, and virtue-ethics frameworks and their main objections. Delta: ~35 percentile points.
+      - [Kohlberg's longitudinal work](https://psycnet.apa.org/record/1985-98593-000) and [the Gibbs synthesis](https://www.taylorfrancis.com/books/mono/10.4324/9780203853078/moral-development-reality-john-gibbs) demonstrate that structured exposure to arguments at the next stage above one's current reasoning reliably advances moral-reasoning sophistication, which sustained group discussion supplies in a form solitary reading cannot.
+      - Score 7 reflects a meaningful but bounded gain – philosophical depth still requires reading and reflection beyond the group, which the group catalyses rather than replaces.
+    isr_reasoning: |
+      - [A meta-analysis of dilemma-discussion programmes](https://psycnet.apa.org/record/1985-23507-001) reported a mean effect of d = 0.41 on moral-reasoning measures, with sustained dilemma discussion outperforming lecture-based ethics instruction.
+      - Effects are heterogeneous: groups that structure disagreement and require members to defend positions show larger gains than open-ended sharing formats; participant pre-existing reasoning level also moderates how much they gain.
+      - ISR of 65% reflects that adherent participants in a reasonably structured group reliably gain philosophical depth, though a minority will plateau if the group lacks the diversity of perspectives needed to push them.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  ethics.practical:
+    pbs: 6
+    isr: 55
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – more reliable application of considered ethical reasoning to everyday choices, especially the kinds of choices the group has discussed. Delta: ~25 percentile points.
+      - [Research on ethics training in professional contexts](https://link.springer.com/article/10.1007/s10551-014-2173-0) finds that case-based, discussion-driven ethics interventions produce measurable improvements in ethical decision-making in workplace scenarios, with effects strongest when training includes real cases members face.
+      - Score 6 reflects a real but bounded gain – moving from theoretical reasoning to consistent practice depends on bridging exercises (real cases, follow-up) that not every group provides.
+    isr_reasoning: |
+      - [Meta-analyses of ethics-training programmes](https://link.springer.com/article/10.1007/s10551-014-2173-0) find that decision-making gains are reliable when training is case-based and applied, but considerably weaker for purely theoretical formats.
+      - The translation from reasoning to behaviour is moderated by self-control, situational pressure, and competing incentives that group discussion cannot fully address.
+      - ISR of 55% reflects that practical-ethics gains are modestly less reliable than philosophical gains – the group can sharpen reasoning, but acting on it depends on the individual's situational context.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  ethics.integrity:
+    pbs: 6
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – greater consistency between considered moral beliefs and behaviour under pressure, partly through clarified beliefs and partly through felt accountability to the group. Delta: ~25 percentile points.
+      - [Social-influence research](https://psycnet.apa.org/record/2010-15518-001) consistently finds that visible accountability to a moral reference group meaningfully shifts behaviour, especially in low-cost-to-the-actor situations; integrity gains are largest when the group is one whose judgement the member genuinely respects.
+      - Score 6 reflects a real but variable gain – the integrity effect depends on how much the group's judgement matters to the member, which is itself a function of how trusted the group has become.
+    isr_reasoning: |
+      - The integrity pathway works through clarified moral views plus felt accountability; both components are necessary, and groups that produce one without the other – the seminar that does not engage real decisions, or the friendly group that does not push back on poor behaviour – fail to deliver this benefit.
+      - [Research on moral-action consistency](https://psycnet.apa.org/record/2007-14892-002) finds that even sophisticated moral reasoners often fail to act on their reasoning under cost or peer pressure; group accountability narrows this gap but does not close it.
+      - ISR of 50% reflects substantial variability – integrity gains are real for participants whose group becomes a genuine moral reference point, weak for those whose group remains a mere intellectual exercise.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  value-system.insight:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – clearer articulation of one's own values, their origins, and their internal trade-offs, surfaced through having to defend them aloud against thoughtful disagreement. Delta: ~25 percentile points.
+      - Values become legible to oneself through articulation under challenge: positions one would never bother to formulate alone become explicit when a group asks why. This is the same mechanism as journalling but with the added pressure of having to convince an interlocutor, which raises the bar for clarity.
+      - Score 6 reflects a meaningful but secondary gain – insight into values is a by-product of moral discussion, not its primary aim.
+    isr_reasoning: |
+      - The mechanism is plausible and broadly consistent with [research on perspective-taking and values articulation](https://pmc.ncbi.nlm.nih.gov/articles/PMC4459311/), but direct evidence linking ethics discussion groups to values insight specifically is thin.
+      - For users who already have well-articulated values, additional insight gains are modest; for those who have never had to defend their positions, gains can be substantial.
+      - ISR of 60% reflects a reasonably reliable secondary effect for adherent participants, with low confidence because the direct evidence base is limited.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  value-system.evolution:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – greater capacity to update one's values intentionally, having seen one's own positions tested and watched others change theirs in response to argument. Delta: ~20 percentile points.
+      - Sustained exposure to thoughtful disagreement is one of the few reliable mechanisms for non-defensive values updating in adulthood; most adults rarely encounter sustained challenge to their moral views outside such groups.
+      - Score 5 reflects a modest but genuine effect – evolution of values is a slow process, and the group accelerates it but does not transform it.
+    isr_reasoning: |
+      - The effect depends on the seeker remaining open to revision; users who join a group to confirm pre-existing views will see weaker evolution than those who join to question them.
+      - [Research on belief updating in deliberative settings](https://www.pnas.org/doi/10.1073/pnas.1814429116) finds genuine but modest belief revision under structured disagreement, supporting the conservative ISR.
+      - ISR of 55% reflects a real but variable effect, conditional on participant openness and group disagreement quality.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  friendship.depth:
+    pbs: 6
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly add roughly 0.5 to 1 intimate friendships against an anchor maximum of 5, mapping to score 6 on the log scale (10 + log2(0.75/5) = 7.3, conservative round-down to 6 reflects that not all adherent users will form genuine close friendships from the group).
+      - Discussion of moral commitments is an unusually high-bandwidth context for relationship formation: members regularly disclose what they care about most, which is the substrate of close friendship. [Research on shared deep conversation](https://journals.sagepub.com/doi/10.1177/0146167210362790) finds that frequency of substantive conversation predicts wellbeing and relational depth more strongly than overall socialising frequency.
+      - Score 6 reflects a meaningful but bounded gain – the group surfaces candidates for close friendship; converting them depends on contact outside the group.
+    isr_reasoning: |
+      - Most groups produce one to three sustained meaningful connections for active members, but a non-trivial minority of participants form no close friendships – either due to mismatch or insufficient out-of-group contact.
+      - [Research on shared activity and friendship formation](https://journals.sagepub.com/doi/10.1177/0265407518761225) supports the pathway but shows substantial individual variation in willingness to convert acquaintance into friendship.
+      - ISR of 55% reflects a reasonably reliable but not guaranteed effect for adherent participants.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  friendship.growth:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – any friendships formed through the group are by construction with people willing to challenge views and discuss real choices, which is precisely what this value measures. Delta: ~25 percentile points.
+      - Selection effects do most of the work: people who attend ethics discussion groups for sustained periods are disproportionately reflective and willing to push back, so friendships formed there skew toward growth-promoting almost by default.
+      - Score 6 reflects a meaningful gain conditional on actually forming friendships in the group; for users who attend without converting acquaintances into friends, the gain is small.
+    isr_reasoning: |
+      - The growth-friendship effect is reliable conditional on friendship formation – the mechanism is built into how the group operates – but conditional on the friendship.depth ISR.
+      - For users who form at least one friendship, the growth quality of that friendship is reliably high; this is one of the more dependable secondary effects.
+      - ISR of 60% reflects modest reliability tied to whether close friendships form at all.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  networks.breadth:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – exposure to professionals from fields different from one's own, since ethics groups typically draw cross-disciplinary membership. Delta: ~20 percentile points.
+      - Effective altruism chapters in particular [draw members from a wide range of professional backgrounds](https://forum.effectivealtruism.org/posts/Dhxg9BfBQEYvZETAD/ea-survey-2020-community-information), and philosophy and Socrates Café groups similarly attract participants whose careers vary substantially.
+      - Score 5 reflects a modest but genuine breadth effect – the network gain is real but secondary; this is not a networking event, and some groups skew toward specific professional clusters.
+    isr_reasoning: |
+      - Breadth gains are reasonably reliable for participants in cross-disciplinary groups; in narrowly-recruited groups (e.g. workplace ethics committees) the breadth effect is weaker.
+      - [Research on weak-tie network formation through interest groups](https://www.science.org/doi/10.1126/science.aap9559) supports the pathway, showing that voluntary association membership reliably expands weak-tie networks.
+      - ISR of 60% reflects a moderately reliable secondary effect, conditional on group composition.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  worldview.breadth:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Against an anchor of 8 knowledge domains, sustained engagement with moral philosophy and applied ethics adds roughly half a domain of working knowledge in philosophy. PBS = 10 + log2(0.5/8) = 6 on the log scale, conservatively rounded to 5 because most participants will not gain a full half-domain of philosophy.
+      - Ethics groups expose participants not just to philosophy but to whatever applied domains the cases touch – bioethics involves biology, EA exposes members to global health and economics, professional ethics committees draw on law and organisational theory.
+      - Score 5 reflects modest breadth gains – the intervention is not optimised for breadth, but a side effect of sustained engagement with a non-trivial intellectual tradition.
+    isr_reasoning: |
+      - Breadth gains depend heavily on the group's reading list and case selection; structured reading-circle formats produce reliable gains, while purely conversational groups produce variable ones.
+      - For participants who do the assigned reading, exposure to moral philosophy is reasonably reliable; for those who only attend discussions, gains are weaker.
+      - ISR of 60% reflects moderate reliability tied to the structure of the specific group.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+  worldview.depth:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – sophisticated, nuanced understanding of one or two traditions of moral thought, including the strongest objections to each. Delta: ~25 percentile points.
+      - Depth in any tradition is built through engagement with disagreement; ethics groups supply this for moral philosophy specifically in a way that solitary reading rarely does, since reading does not require defending positions.
+      - Score 6 reflects a meaningful gain – moral philosophy is a substantial intellectual tradition, and sustained group engagement produces real depth in it.
+    isr_reasoning: |
+      - For adherent participants in a discussion-driven group, depth gains in moral philosophy are reasonably reliable; for those in lecture-style or unstructured formats, gains are weaker.
+      - The effect is amplified for participants who supplement group discussion with independent reading; those who do neither will plateau.
+      - ISR of 60% reflects moderate reliability conditional on group format and participant initiative.
+    uar_reasoning: |
+      - See ethics.community UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Most ethics discussion groups – effective altruism chapters, Socrates Cafés, religious moral-formation groups, philosophy meet-ups – are free to join. Some philosophy reading circles ask members to buy the assigned book, which is treated as ongoing cost. No equipment or registration fees required to begin."
+  ongoing_cost: 5
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Approximately $5 per month covering occasional shared book purchases for reading-circle formats, optional venue contributions, or modest membership dues for some groups. Most groups are entirely free; this estimate reflects a conservative average across formats."
+  upfront_time: 4
+  upfront_time_reasoning: "Roughly four hours to research available groups in your area or online, attend two to three trial sessions to find a good fit, and complete any initial reading required for the first substantive session."
+  ongoing_time: 3
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately three hours per week averaged across the cycle: a 90 to 120-minute session every two to four weeks plus one to two hours of preparation reading per session. Less prepared engagement is possible but materially reduces the developmental benefit."
+
+prerequisites:
+  - "Access to at least one ongoing discussion group, in person or online – most cities have effective altruism chapters, philosophy meet-ups, religious small groups, or Socrates Cafés, and several function entirely online"
+  - "Sufficient reading comprehension to engage with at least introductory-level philosophy or applied-ethics texts, since most groups assume members can follow written arguments"
+  - "Willingness to articulate and defend positions aloud in a small-group setting, including hearing one's views challenged – this is the developmental mechanism, not an incidental feature"
+
+flagged_domains:
+  - domain: "rationality"
+    rationale: "Sustained exposure to structured disagreement on contested questions builds tolerance for argument, awareness of motivated reasoning, and skill at distinguishing strong from weak versions of opposing positions."
+  - domain: "community-contribution"
+    rationale: "Ethics discussion groups – particularly effective altruism chapters and religious moral-formation groups – frequently translate into actual contribution behaviour through donation, volunteering, or career change, beyond what theoretical reasoning alone produces."
+  - domain: "life-purpose"
+    rationale: "Sustained reflection on what matters and why, in conversation with others doing the same, is among the more reliable adult routes to clarified life purpose and a sense of meaning grounded in considered commitments rather than default scripts."

@@ -1,0 +1,153 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Plant-Forward Diet"
+what_it_is: |
+  Substantially shifting the composition of your diet so that plants – vegetables, fruits, legumes, whole grains, nuts, and seeds – occupy roughly 80% of what you eat by weight or calories, with meat (especially red and processed meat) and dairy reduced rather than fully eliminated. This is the dietary pattern described by the EAT-Lancet planetary-health diet, the Mediterranean diet, and flexitarian frameworks: not vegetarianism or veganism, but a deliberate inversion of the typical Western plate so that animal products become accents rather than centrepieces. The intervention is framed primarily around environmental and ethical impact – food production drives roughly a quarter of global greenhouse gas emissions, and animal products account for a disproportionate share – with personal health benefits as a meaningful but secondary effect. Distinct from any specific health-focused diet because the design constraint is alignment with sustainability and animal-welfare values, not weight loss or a particular macro split.
+how_to_do_it: |
+  - Set a target ratio rather than a rigid rule – 80% plant calories or weekly meat allowances (e.g. red meat once a week, poultry or fish two to three times, plant-based the rest) work better than blanket bans because they are sustainable across social and travel contexts
+  - Replace red and processed meat first, since [these have by far the highest carbon and animal-welfare cost per gram of protein](https://ourworldindata.org/food-choice-vs-eating-local) – a pound of beef produces roughly 60 kg CO2e versus 1 kg for legumes; substitute lentils, beans, tofu, eggs, or chicken in dishes you already cook before attempting wholesale recipe changes
+  - Build a small repertoire of 8–12 default plant-forward meals you genuinely enjoy and can cook on autopilot (e.g. lentil dal, chickpea curry, bean chilli, grain bowls, vegetable stir-fries) – sustainable adherence depends much more on having defaults than on willpower
+  - Keep dairy in moderation rather than eliminating it – cheese has a meaningful footprint but milk and yogurt are roughly half the impact of beef per kg, and full elimination drops adherence sharply with limited additional environmental gain
+  - Track impact loosely using a calculator like [Our World in Data's food footprint figures](https://ourworldindata.org/food-choice-vs-eating-local) or a weekly meat-tally rather than calorie tracking – the relevant feedback signal is "how often did I eat red meat this week" not gram-level precision
+success_looks_like: |
+  - Plant-based meals become your default rather than a deliberate choice – you reach for lentils, beans, tofu, or vegetables first when planning, and meat becomes something you choose for specific occasions
+  - Your weekly meat consumption falls to roughly 100–300 g of red meat (down from a typical Western 500–700 g) and 1–3 fish or poultry meals, sustained over months without feeling deprived
+  - You notice secondary health markers improving over 6–12 months – modest weight stabilisation, better digestion from increased fibre, lower LDL cholesterol on routine bloods – without those being the primary motivation
+  - Your food spending stays flat or drops slightly, since legumes and grains cost considerably less per calorie than meat
+common_pitfalls: |
+  - Replacing meat with ultra-processed plant-based substitutes (vegan burgers, dairy-free cheeses) at every meal – these are usually no healthier than what they replace, more expensive, and only marginally better environmentally than chicken
+  - Treating plant-forward as all-or-nothing – people who attempt strict vegetarianism or veganism without preparation have very high recidivism rates ([roughly 84% of US vegetarians and vegans return to eating meat](https://faunalytics.org/a-summary-of-faunalytics-study-of-current-and-former-vegetarians-and-vegans/)), whereas a flexitarian pattern is far more durable
+  - Underestimating protein and B12 needs – plant-forward is compatible with adequate protein if legumes, tofu, eggs, and dairy feature regularly, but pure plant diets without supplementation will leave most people B12-deficient over 1–2 years
+  - Focusing on food miles and packaging rather than what you eat – [transport accounts for under 10% of food emissions for most products](https://ourworldindata.org/food-choice-vs-eating-local), while choice of food (beef vs lentils) drives the overwhelming share; obsessing over local sourcing is a poor use of attention compared with reducing red meat
+description: |
+  - Substantially reducing meat (especially red and processed) and dairy in favour of plants – vegetables, legumes, whole grains, nuts, and fruit – without eliminating animal products entirely; typical patterns include the EAT-Lancet planetary-health diet, the Mediterranean diet, or a flexitarian 80%-plant approach
+  - [Lifecycle analysis of 38,000 farms across 119 countries](https://www.science.org/doi/10.1126/science.aaq0216) finds that food production accounts for ~26% of global greenhouse gas emissions, and that animal products – especially beef and lamb – contribute disproportionately; shifting to a plant-forward diet typically cuts an individual's food-related emissions by 40–60%
+  - The [EAT-Lancet Commission](https://eatforum.org/eat-lancet-commission/) modelled a planetary-health diet (mostly plants, ~14 g red meat per day) and projected it could prevent ~11 million premature deaths annually while keeping food production within planetary boundaries for greenhouse gases, land, water, and biodiversity
+  - Distinct from health-focused diets because the design constraint is alignment with environmental and ethical values – health and longevity gains are real but secondary; reducing animal product consumption also avoids contributing to the [estimated ~70 billion land animals slaughtered for food annually](https://ourworldindata.org/how-many-animals-are-factory-farmed), the majority in factory-farm conditions
+applicable_domains: ["nutrition", "global-impact", "fitness"]
+
+values:
+  nutrition.ethical_environmental:
+    pbs: 8
+    isr: 80
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence to a sustained plant-forward pattern, a user could plausibly reach the 85th–90th percentile on alignment of food choices with environmental and ethical values – moving from a typical Western diet to one that materially cuts animal-product consumption and food-related emissions. Delta: ~50 percentile points.
+      - [Poore and Nemecek (2018)](https://www.science.org/doi/10.1126/science.aaq0216) find that moving from a typical Western diet to a plant-forward pattern reduces an individual's food-related greenhouse gas emissions by roughly half (and land use by ~76%), which is among the largest single dietary changes available short of full veganism.
+      - The intervention also avoids contributing to a meaningful share of the [~70 billion land animals slaughtered annually for food](https://ourworldindata.org/how-many-animals-are-factory-farmed) – an 80% reduction in animal-product consumption corresponds to a similar reduction in personal contribution to factory-farmed animal numbers, mapping to a major (score 8) gain on the subjective anchor.
+    isr_reasoning: |
+      - The mechanism is mechanical: every replaced beef or pork meal genuinely lowers the eater's footprint and animal-product demand. [Our World in Data's analysis of food carbon footprints](https://ourworldindata.org/food-choice-vs-eating-local) shows that the choice of what to eat dwarfs all other dietary impact factors (transport, packaging, organic vs conventional), so adherent users reliably achieve the alignment gain.
+      - The main reason ISR is not higher is that some self-described plant-forward eaters drift toward chicken and dairy over time – chicken has a much smaller footprint than beef but still ~6x that of legumes, and substituting one animal product for another captures only part of the available impact gain.
+      - ISR of 80% reflects that the large majority of adherent users will achieve a meaningful environmental and ethical alignment improvement, with a minority capturing only partial gains because they preferentially substitute toward chicken and dairy rather than plants.
+    uar_reasoning: |
+      - [Faunalytics' large survey of US vegetarians and vegans](https://faunalytics.org/a-summary-of-faunalytics-study-of-current-and-former-vegetarians-and-vegans/) found that 84% return to eating meat, with the majority lapsing within a year – evidence that strict elimination diets have very poor long-term adherence; flexitarian patterns are more durable but still face significant attrition.
+      - Cross-national survey data from [Our World in Data on meat consumption trends](https://ourworldindata.org/meat-production) shows that despite rising vegetarian and flexitarian identification, per-capita meat consumption in most rich countries has not fallen meaningfully – suggesting that stated adoption substantially outruns sustained behaviour change.
+      - Practical barriers include social dining (most restaurant menus and family meals centre on meat), habit and taste preferences for familiar dishes, and the cooking-skill investment required to make plants the centre of meals rather than a side. UAR of 35% reflects that roughly a third of people who attempt sustained plant-forward eating maintain a substantial reduction in animal products beyond 12 months.
+
+  global-impact.sustainability:
+    pbs: 5
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The sustainability anchor is calibrated to percentage of income donated annually, but it scores broader sustained contribution to global impact – here, the channel is reduced personal contribution to food-system emissions and animal-product demand. After successful adherence, a user reaches roughly the 60th percentile on this broader sustainability measure. Delta: ~25 percentile points.
+      - The aggregate environmental contribution is real but bounded in absolute terms: an individual switching to plant-forward eating reduces personal food emissions by ~1–1.5 tonnes CO2e per year ([Poore and Nemecek 2018](https://www.science.org/doi/10.1126/science.aaq0216)), which is meaningful at the individual level but small compared with what 10% income donation to effective causes can deliver.
+      - Score 5 reflects a meaningful but modest contribution to sustained global impact – this is a personal-footprint intervention rather than a leveraged one, and the impact does not compound the way charitable giving to effective causes can.
+    isr_reasoning: |
+      - The emissions reduction is mechanical and reliable: [Poore and Nemecek (2018)](https://www.science.org/doi/10.1126/science.aaq0216) data show that even partial substitution of beef and lamb with legumes or poultry produces predictable reductions in personal food-system emissions, with little individual variation.
+      - ISR is held below 80% because the magnitude of the reduction depends heavily on what the user substitutes toward – swapping beef for chicken delivers only ~20% of the available emissions reduction, whereas swapping beef for lentils delivers ~95%. Many adherent users land in the partial-reduction range.
+      - [Lifecycle analyses synthesised by Our World in Data](https://ourworldindata.org/food-choice-vs-eating-local) confirm that plant-forward eating reliably reduces food-related emissions for the median adherent user, supporting an ISR around 70%.
+    uar_reasoning: |
+      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile. UAR of 35% reflects the high attrition observed in long-term meat-reduction efforts.
+
+  nutrition.physical_wellbeing:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user could plausibly reach the 65th–70th percentile on healthy lifespan added through nutrition. Delta: ~30 percentile points, mapping to roughly 9 months to 1 year of additional healthy lifespan – PBS 6 on the 12-year anchor.
+      - The [EAT-Lancet Commission's modelling](https://eatforum.org/eat-lancet-commission/) projected that a global shift to a planetary-health diet could prevent ~11 million premature deaths annually – equivalent to a meaningful per-person extension of healthy lifespan, primarily through reductions in red-meat-related cardiovascular and colorectal cancer risk.
+      - [Cohort and meta-analytic evidence on Mediterranean and plant-forward diets](https://pubmed.ncbi.nlm.nih.gov/30575854/) finds reductions in cardiovascular disease incidence of ~20–25% and modest reductions in all-cause mortality, supporting a PBS of 6 (~9 months to 1 year added healthy lifespan) for adherent users.
+    isr_reasoning: |
+      - Health gains depend on what the diet actually consists of – plant-forward done well (whole grains, legumes, nuts, vegetables) reliably improves cardiovascular markers, but plant-forward done poorly (refined carbohydrates and ultra-processed plant foods) captures little of the available benefit.
+      - [Reviews of plant-based diet quality](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865) find that healthful plant-based diet indices reduce coronary heart disease incidence by ~25%, while unhealthful plant-based patterns slightly increase risk – meaning ISR is conditional on diet quality, not just animal-product reduction.
+      - ISR of 60% reflects that a majority of adherent users achieve meaningful health gains, with a substantial minority capturing little because they substitute toward refined carbohydrates rather than whole plant foods.
+    uar_reasoning: |
+      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+
+  fitness.health:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile on healthy lifespan from fitness-related health, primarily via reduced cardiovascular and metabolic disease risk. Delta: ~25–30 percentile points, mapping to roughly 6–9 months of added healthy lifespan – PBS 5 on the 15-year anchor.
+      - [Meta-analyses of Mediterranean and plant-forward dietary patterns](https://pubmed.ncbi.nlm.nih.gov/30575854/) find ~20–25% reductions in cardiovascular disease incidence – the same disease class targeted by aerobic fitness interventions, justifying scoring against fitness.health.
+      - The mechanism overlaps meaningfully with nutrition.physical_wellbeing but is scored separately because the fitness anchor is broader-spectrum (cardiovascular plus metabolic plus inflammatory pathways), and the diet-driven contribution to those pathways is a real but partial slice of the full anchor.
+    isr_reasoning: |
+      - As with nutrition.physical_wellbeing, health gains depend on diet quality – healthful plant-forward patterns deliver consistent cardiovascular benefits ([review evidence](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865)), while unhealthful plant-forward patterns deliver little.
+      - The cardiovascular benefit operates through multiple pathways (lower LDL, lower blood pressure, reduced inflammation) and is robust across populations, but the magnitude depends on baseline diet quality – someone shifting from a heavy red-meat diet sees larger gains than someone already eating moderately.
+      - ISR of 55% reflects that a slight majority of adherent users achieve meaningful cardiovascular gains, slightly below nutrition.physical_wellbeing because the fitness anchor includes performance and metabolic dimensions where plant-forward eating contributes less directly.
+    uar_reasoning: |
+      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+
+  global-impact.impartiality:
+    pbs: 4
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile on impartial, evidence-led contribution – framed via animal welfare, plant-forward eating represents a partially impartial response to evidence about factory-farm conditions and the scale of animal suffering. Delta: ~15–20 percentile points.
+      - The anchor is calibrated to evidence-led charitable giving, where plant-forward eating is a less natural fit – the contribution is modest because the channel is consumption choices rather than resource direction. Score 4 reflects this partial, indirect alignment.
+      - [Aggregate analyses of farmed animal numbers](https://ourworldindata.org/how-many-animals-are-factory-farmed) suggest that animal-product reduction has substantial expected impartial impact under plausible weights on animal welfare – but the effect is heavily contested and depends on contested moral premises, justifying a conservative PBS.
+    isr_reasoning: |
+      - The animal-welfare impact of reduced consumption is mechanical at the population level (lower demand reduces production), but the marginal effect of one person's reduction on industry production volumes is modest and slow.
+      - The impartial-giving framing applies cleanly only if the user subscribes to a moral framework that gives meaningful weight to animal welfare; for users who do not, the impartiality gain is near zero.
+      - ISR of 55% reflects genuine but uncertain impact – the mechanism is real for those who endorse it morally, but unreliable across the broader population of adherent users.
+    uar_reasoning: |
+      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+
+  global-impact.fulfilment:
+    pbs: 4
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile on personal fulfilment from making a global difference – sustained alignment between daily eating and ethical or environmental values produces a modest but real sense of integrity and contribution. Delta: ~20 percentile points.
+      - The fulfilment effect is driven by repeated daily action consistent with stated values, which research on values-aligned behaviour suggests reliably increases self-reported meaning and integrity. Score 4 reflects modest fulfilment gains – plant-forward eating is one of many smaller contributions to global impact rather than a defining one.
+      - The effect is bounded because food is one channel among many; users who derive their primary global-impact fulfilment from career or giving will see only marginal additional gains from dietary change.
+    isr_reasoning: |
+      - The fulfilment effect depends on the user attributing meaning to the intervention – those who frame plant-forward eating as values-aligned report sustained satisfaction, while those who frame it as deprivation often report the opposite.
+      - Sustained value alignment with daily behaviour reliably contributes to meaning, but the magnitude of that contribution depends on how central environmental and ethical values are to the user's broader self-concept.
+      - ISR of 55% reflects modest but variable fulfilment gains, conditional on the user's framing of and attachment to the underlying values.
+    uar_reasoning: |
+      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment or programme fees required. Optional purchases (a basic plant-forward cookbook, a few staple pantry items such as dried legumes and grains) could add $20–40 but are not strictly necessary."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Plant-forward eating typically costs the same as or slightly less than a meat-centred diet at the lowest viable end – legumes, grains, and seasonal vegetables are among the cheapest sources of calories and protein. There is no inherent recurring cost premium."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately 3–5 hours to learn the basic logic (which foods drive impact, what protein sources to substitute), build an initial repertoire of 8–12 plant-forward default meals, and stock a pantry with staples. No formal training required."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Plant-forward cooking takes broadly similar time to omnivorous cooking once a default repertoire is established; the marginal time cost is roughly 30–60 minutes per week of additional planning, ingredient prep, and recipe variation in the early months, dropping toward zero once defaults are habitual."
+
+prerequisites:
+  - "No medical contraindication to a plant-rich diet (most people have none; consult a GP if managing an existing condition such as IBS or diabetes that interacts with high-fibre or legume-heavy eating)"
+  - "Access to a grocery source stocking legumes, whole grains, vegetables, and basic plant-protein options (tofu, tempeh, or eggs/dairy if used)"
+  - "Basic cooking facilities and willingness to prepare meals from staples – plant-forward convenience options exist but are expensive and often nutritionally weak"
+  - "Awareness of B12 sourcing if dairy and eggs are also reduced – B12 supplementation or fortified foods become necessary toward the fully plant-based end of the spectrum"
+
+flagged_domains:
+  - domain: "ethics"
+    rationale: "Sustained alignment between daily eating and stated ethical commitments around animal welfare and environmental harm is a recognised mechanism for ethical practical integrity."
+  - domain: "food-management"
+    rationale: "A plant-forward repertoire builds cooking competence with legumes, grains, and vegetables – ingredient classes most home cooks underuse – which directly improves food-management craft and waste reduction."
+  - domain: "health-management"
+    rationale: "Reduced red-meat and processed-meat intake lowers cardiovascular and colorectal cancer risk, contributing to long-term health management beyond the nutrition-specific anchor."

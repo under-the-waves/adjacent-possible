@@ -1,0 +1,186 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Personality Stretch Plan"
+what_it_is: |
+  A structured volitional personality-change protocol that treats personality not as a fixed disposition but as a target for deliberate practice. The user takes a validated Big Five assessment (such as the IPIP-NEO or BFI-2), identifies one or two facets that are misaligned with the life they want – for example, low conscientiousness undermining their career, low extraversion limiting their social fulfilment, or high neuroticism amplifying everyday stress – and then commits to specific weekly behavioural challenges that exercise the targeted trait. The plan runs for 12 – 16 weeks because that is roughly the timeframe in which research finds personality genuinely shifts under deliberate intervention. Crucially, it works through behaviour, not aspiration: stating "I want to be more extraverted" predicts no change, while completing weekly challenges like "initiate a conversation with a stranger" reliably does. Personality is malleable – meta-analyses find lifetime trait shifts on the order of half a standard deviation, and recent volitional-change studies show that 3 – 4 months of structured behavioural practice can produce shifts approaching that magnitude.
+how_to_do_it: |
+  - Take a validated Big Five assessment to establish a baseline. The free [IPIP-NEO-120](https://www.personalitytest.net/ipip/ipipneo120.html) or the [BFI-2](https://www.colby.edu/psych/wp-content/uploads/sites/50/2013/08/bfi2-form.pdf) both report scores at the facet level (six facets per trait), which is the resolution you need – aiming at "extraversion" is too coarse, but aiming at "assertiveness" or "sociability" is actionable.
+  - Pick one or two specific facets to stretch, chosen by where the gap between current trait level and life demands is largest. Examples: someone whose career stalls due to missed follow-through targets conscientiousness facets (orderliness, self-discipline); someone lonely despite wanting connection targets extraversion facets (warmth, sociability); someone exhausted by everyday worry targets emotional-stability facets (anxiety reduction, even-temperedness).
+  - Each week, write down 3 – 5 specific, observable behavioural challenges that exercise the targeted facet. Challenges must be concrete and verifiable – "be more sociable" is too vague, while "introduce yourself to two new people at the office this week" or "host one dinner this month" can be ticked off. Hudson's protocols use a graduated difficulty system: easier challenges in the first weeks, harder ones as capacity grows. [Hudson and colleagues' studies](https://psycnet.apa.org/record/2018-22055-001) find that completing the challenges – not merely setting them – is what produces measurable trait change.
+  - Track completion weekly and re-take the personality assessment at weeks 8 and 16 to see whether the targeted facet has shifted. Apps such as [PEACH](https://www.nature.com/articles/s41562-020-01044-x) (used in Stieger et al.'s digital-coaching trial) automate the cycle of goal-setting, daily challenges, and reassessment, but a simple spreadsheet works.
+  - Continue or rotate: if a target facet has moved meaningfully, lock it in by maintaining the underlying habits and choose a new target. If it has not, diagnose – were the challenges too abstract, too infrequent, or simply not completed? Volitional change requires sustained behavioural practice rather than insight alone.
+success_looks_like: |
+  - Re-tested Big Five scores show a measurable shift on the targeted facet of roughly 0.2 – 0.5 standard deviations after 12 – 16 weeks – the kind of change documented in volitional personality-change trials.
+  - Daily life feels less like fighting your own grain on the dimension you targeted: the introvert who stretched towards sociability finds initiating contact noticeably less effortful than at baseline, even if it never becomes their natural default.
+  - You can identify specific situations – a meeting handled differently, a relationship deepened, a habit sustained through stress – where the new behavioural pattern produced an outcome the old pattern would not have.
+common_pitfalls: |
+  - Setting trait goals rather than behaviour goals. Wanting to be more extraverted does not change extraversion; introducing yourself to two new people each week does. Studies that compared aspiration-only conditions with behaviour-challenge conditions found change concentrated almost entirely in the latter group.
+  - Targeting too many facets at once. Stretching across three or four facets simultaneously dilutes the behavioural practice on each and tends to produce no measurable change anywhere; one or two targeted facets at a time is the protocol most consistently associated with success.
+  - Treating personality change as a self-improvement morality test. Some "low" trait positions are well-suited to specific lives; the goal is alignment between traits and the life you want, not movement toward an imagined ideal across every dimension.
+description: |
+  - A structured 12 – 16 week protocol for deliberate personality change: assess Big Five facets, pick one or two misaligned with current life goals, and complete weekly behavioural challenges that exercise the targeted trait.
+  - [Hudson and Fraley's foundational studies](https://psycnet.apa.org/record/2015-04949-001) showed that participants who set behavioural goals and tracked their completion experienced measurable trait change over 16 weeks, while participants who only stated aspirations did not.
+  - [A subsequent challenge-based protocol](https://psycnet.apa.org/record/2018-22055-001) found that personality change scales with the number of challenges actually completed, providing a dose-response relationship and ruling out simple expectancy effects.
+  - [The PEACH digital-coaching trial](https://www.nature.com/articles/s41562-020-01044-x) found that a smartphone-delivered version of this protocol produced trait changes that participants, their close informants, and re-tests all confirmed at three-month follow-up.
+  - [Roberts and colleagues' meta-analysis](https://pubmed.ncbi.nlm.nih.gov/27841449/) of clinical and non-clinical interventions concluded that personality traits can shift by roughly 0.3 standard deviations within 4 – 8 weeks of sustained intervention, and that change persists beyond the intervention period.
+  - Distinct from generic self-help or therapy: targets specific facets with a validated measurement instrument, uses behavioural rather than insight-based change mechanisms, and treats trait change as a quantifiable outcome rather than a vague developmental aspiration.
+applicable_domains: ["personality", "behaviours", "communication", "mental-health", "self-awareness"]
+
+values:
+  personality.growth:
+    pbs: 8
+    isr: 55
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th – 80th percentile – having actively and measurably modified at least one personality facet, which almost no one does deliberately. Delta: ~40 – 45 percentile points.
+      - [Roberts et al. (2017) meta-analysis](https://pubmed.ncbi.nlm.nih.gov/27841449/) found that intentional intervention produces trait shifts of roughly 0.3 standard deviations within 4 – 8 weeks – about a quarter of the lifetime trait range typically traversed without intervention. This maps to a major gain on the personality.growth anchor.
+      - [Hudson and Fraley (2015)](https://psycnet.apa.org/record/2015-04949-001) showed that participants enrolled in a 16-week change programme produced statistically significant facet-level shifts on Big Five domains they targeted, while controls did not – demonstrating that the magnitude is intervention-driven rather than developmental noise.
+      - Score 8 reflects that this is a major gain in the explicit construct the value measures (active development of personality characteristics) – few interventions are as directly aimed at this outcome as deliberate personality-change protocols.
+    isr_reasoning: |
+      - [Hudson, Briley, Chopik, and Derringer (2019)](https://psycnet.apa.org/record/2018-22055-001) found that participants who completed more behavioural challenges showed proportionally larger trait change, but a meaningful subset – those who set goals but rarely completed challenges – showed no change or even regressed.
+      - [Stieger et al.'s PEACH trial (2021)](https://www.nature.com/articles/s41562-020-01044-x) reported that around half of active users showed measurable trait change confirmed by informants at follow-up, with the other half showing self-reported change that informants did not corroborate – a meaningful failure mode.
+      - ISR of 55% reflects that the protocol works for most people who genuinely complete the behavioural challenges, but a substantial minority either stall on completion or experience self-perception change without underlying behavioural change.
+    uar_reasoning: |
+      - [Stieger et al. (2021)](https://www.nature.com/articles/s41562-020-01044-x) reported a sizeable drop-off between enrolment and three-month engagement, consistent with general digital-intervention adherence patterns – sustained 12 – 16 week behavioural protocols are demanding, and many participants disengage by week 6 – 8.
+      - The intervention requires weekly self-directed challenge-setting and execution against trait-incongruent behaviours – which by definition feel uncomfortable, since the trait gap is what makes them so. [Hudson and Fraley (2016)](https://www.sciencedirect.com/science/article/abs/pii/S0092656616300460) note that goal-pursuit difficulty predicts dropout in volitional change protocols.
+      - UAR of 30% reflects that, while the protocol is operationally simple (weekly challenges, periodic re-tests), the psychological cost of repeatedly acting against one's natural grain is high, and most users will lapse before the 12-week threshold needed for measurable change.
+
+  personality.alignment:
+    pbs: 6
+    isr: 50
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – having brought either their personality or their life choices into closer fit through the diagnostic step alone. Delta: ~25 percentile points.
+      - The intervention's first action – formally assessing facets and naming where life and personality misalign – produces alignment gains independently of whether trait change succeeds, because the user can also choose to redesign their life around their existing traits rather than only stretching the traits.
+      - Score 6 reflects a meaningful but secondary gain – alignment is downstream of the diagnostic and follow-up reflection rather than the core mechanism.
+    isr_reasoning: |
+      - The diagnostic component is reliable: validated Big Five assessments such as the [IPIP-NEO](https://ipip.ori.org/) and [BFI-2](https://psycnet.apa.org/record/2017-15506-001) have strong test-retest reliability, so users do come away with accurate trait information.
+      - However, translating accurate self-knowledge into life redesign – choosing roles, relationships, and routines that fit one's traits – is poorly supported by the protocol itself, which focuses on changing traits rather than accommodating them.
+      - ISR of 50% reflects that roughly half of users will use the assessment as a springboard for alignment thinking, while others will treat it as a one-off result and continue without acting on the gap.
+    uar_reasoning: |
+      - See personality.growth UAR – same intervention, same adherence profile.
+
+  behaviours.emotional:
+    pbs: 6
+    isr: 50
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence on a neuroticism-targeted plan, a user could plausibly reach the 60th – 65th percentile – moving from 3 – 4 reactive episodes per week to 1 – 2, mapping to roughly a 25 – 30 percentile gain on the anchor.
+      - [Roberts et al. (2017)](https://pubmed.ncbi.nlm.nih.gov/27841449/) found that neuroticism is among the most malleable traits under deliberate intervention, with effect sizes around 0.3 SD within 8 weeks – directly relevant to stress-driven reactive episode frequency.
+      - Score 6 reflects a meaningful gain when neuroticism is the targeted facet, with the caveat that not every user of this protocol will choose emotional regulation as their target.
+    isr_reasoning: |
+      - [Hudson et al. (2019)](https://psycnet.apa.org/record/2018-22055-001) report that emotional-stability gains are among the more reliable outcomes of behavioural personality protocols, partly because the targeted behaviours (pause-and-respond, reframing, scheduled de-escalation practice) overlap with established stress-regulation techniques.
+      - [Stieger et al. (2021)](https://www.nature.com/articles/s41562-020-01044-x) found that neuroticism-targeted users in PEACH showed informant-confirmed change at a rate similar to other targeted facets.
+      - ISR of 50% reflects that the gain materialises for about half of users who target this facet and complete challenges, with the rest either failing to complete or experiencing self-reported change that does not generalise to actual stress contexts.
+    uar_reasoning: |
+      - See personality.growth UAR – same intervention, same adherence profile.
+
+  behaviours.social:
+    pbs: 6
+    isr: 50
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence on an extraversion- or agreeableness-targeted plan, a user could plausibly reach the 60th percentile – behaving more authentically and with clearer social boundaries on the dimension targeted. Delta: ~25 percentile points.
+      - The challenge format directly trains social behaviours – initiating, asserting, refusing, expressing disagreement – which is exactly the behavioural substrate this value measures.
+      - Score 6 reflects a meaningful but partial gain: the protocol changes a few targeted social behaviours rather than the user's entire interpersonal repertoire.
+    isr_reasoning: |
+      - [Hudson and Fraley (2015)](https://psycnet.apa.org/record/2015-04949-001) found extraversion-targeted participants showed reliable facet shifts on assertiveness and sociability subscales over 16 weeks, with effect sizes comparable to those seen for conscientiousness.
+      - Behavioural challenges that involve other people add a coordination cost (someone has to be available, the situation has to permit) that makes some weekly challenges harder to complete on schedule, modestly reducing reliability.
+      - ISR of 50% reflects that social-behaviour change is reasonably reliable when challenges are completed, but completion rates on socially-loaded challenges run lower than for solo conscientiousness tasks.
+    uar_reasoning: |
+      - See personality.growth UAR – same intervention, same adherence profile.
+
+  behaviours.resilience:
+    pbs: 5
+    isr: 45
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – sustaining behavioural improvement for 6 – 12 months rather than 3 – 6 months on the anchor. Delta: ~20 percentile points.
+      - The protocol's structure – weekly cycles of challenge-setting, completion, and reassessment – itself trains the meta-skill of sustaining behavioural change through disruption, beyond the specific trait targeted. [Hudson et al. (2019)](https://psycnet.apa.org/record/2018-22055-001) found that participants who completed the full protocol showed maintained change at follow-up, suggesting sustained adaptation rather than transient compliance.
+      - Score 5 reflects a modest gain – resilience is a secondary effect of running the protocol, not its primary target.
+    isr_reasoning: |
+      - The persistence finding rests on a relatively small set of follow-up studies; [Roberts et al.'s (2017) meta-analysis](https://pubmed.ncbi.nlm.nih.gov/27841449/) found that intervention-driven trait change persists past intervention end, but follow-up windows are typically 6 – 12 months at most.
+      - For users who lapse before completing 12 weeks, behavioural-resilience gains are minimal because the underlying habit infrastructure is incomplete.
+      - ISR of 45% reflects that the resilience benefit accrues primarily to those who complete the full protocol, which is a smaller subset than those who experience direct trait change.
+    uar_reasoning: |
+      - See personality.growth UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 5
+    isr: 45
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence on an extraversion- or agreeableness-targeted plan, a user could plausibly reach the 55th percentile – improving conversational warmth, listening behaviour, or initiation patterns. Delta: ~20 percentile points.
+      - Many of the behavioural challenges used in extraversion- and agreeableness-targeted plans are direct communication practices – asking deeper questions, expressing appreciation, initiating conversations – that produce conversational improvement as a near-immediate side-effect of completion.
+      - Score 5 reflects a modest, conditional gain – present when the user targets traits with a strong communication component, absent when they target conscientiousness or openness.
+    isr_reasoning: |
+      - [Hudson and Fraley (2015)](https://psycnet.apa.org/record/2015-04949-001) and [Stieger et al. (2021)](https://www.nature.com/articles/s41562-020-01044-x) both find informant-confirmed changes in interpersonally-relevant behaviours among participants who target extraversion, suggesting the conversational benefit is real when targeted.
+      - The benefit fails to materialise if the user targets a trait with no communication component or if their challenges remain solo (e.g. journalling about extraversion rather than engaging with people).
+      - ISR of 45% reflects that connection gains are a frequent side-effect of well-targeted plans but absent for poorly-targeted ones.
+    uar_reasoning: |
+      - See personality.growth UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 5
+    isr: 45
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – experiencing modestly more frequent positive affect and sense of meaning, partly through reduced trait neuroticism and partly through the agency-effect of seeing oneself change. Delta: ~20 percentile points.
+      - [Soto (2021)](https://psycnet.apa.org/record/2021-49587-001) and related work find that volitional trait change in extraversion and emotional stability predicts measurable wellbeing gains over the same period, suggesting the link is causal rather than incidental.
+      - Score 5 reflects a modest gain – flourishing is downstream of the trait change rather than a direct target, so the effect size depends on which facet was targeted and how much it shifted.
+    isr_reasoning: |
+      - Wellbeing gains in [Stieger et al. (2021)](https://www.nature.com/articles/s41562-020-01044-x) were observed but smaller than the trait shifts themselves, and concentrated in users who targeted extraversion or neuroticism.
+      - For users targeting conscientiousness or openness, flourishing effects are weaker and less reliable in the literature.
+      - ISR of 45% reflects that wellbeing benefits are real but conditional on facet selection and on the trait change actually translating into changed daily experience.
+    uar_reasoning: |
+      - See personality.growth UAR – same intervention, same adherence profile.
+
+  self-awareness.psychological:
+    pbs: 6
+    isr: 60
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – having a structured, validated map of their own personality patterns, triggers, and trait-driven tendencies. Delta: ~25 percentile points.
+      - The diagnostic component (validated Big Five assessment) directly delivers psychological self-knowledge of a kind that most people do not access deliberately. Tracking weekly challenge completion against discomfort levels also reveals which trait-incongruent behaviours feel hardest, sharpening self-understanding further.
+      - Score 6 reflects a meaningful gain in psychological self-knowledge that materialises early in the protocol – the assessment alone produces it, and the behavioural tracking reinforces it.
+    isr_reasoning: |
+      - The Big Five framework has decades of construct-validity support – see the [BFI-2 validation paper (Soto and John, 2017)](https://psycnet.apa.org/record/2017-15506-001) – so the self-knowledge gained from a properly administered assessment is reasonably accurate for most people.
+      - The main failure mode is users completing the assessment defensively or aspirationally rather than honestly, which produces a distorted profile and undermines downstream insight.
+      - ISR of 60% reflects that the psychological-self-awareness benefit is more reliable than the trait-change benefit because it requires only honest assessment, not sustained behavioural execution.
+    uar_reasoning: |
+      - See personality.growth UAR – same intervention, same adherence profile. The self-awareness gain in particular accrues even to users who complete only the assessment phase, but the value's full potential requires the behavioural-tracking component, which most users abandon.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Validated Big Five assessments are freely available online (IPIP-NEO-120, BFI-2). Tracking can be done with a free spreadsheet or a notebook. Optional: a paid app such as PEACH or a coaching subscription, but neither is required."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs at the minimum-viable level. The protocol uses free assessments, self-directed weekly challenges, and self-tracking."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 30 – 45 minutes for the initial assessment, 30 minutes to read about facet-level interpretation of results, and 30 – 60 minutes to choose a target facet and design the first batch of behavioural challenges."
+  ongoing_time: 1.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 60 – 90 minutes per week: 15 – 30 minutes designing or refining challenges, the bulk of the time spent actually executing the challenges (which are by design embedded in normal life rather than additional appointments), and 10 – 15 minutes reviewing completion and updating the tracker. Reassessment at weeks 8 and 16 adds about 30 minutes each."
+
+prerequisites:
+  - "Access to a validated Big Five assessment instrument (free options such as IPIP-NEO-120 or BFI-2 are sufficient)"
+  - "Sufficient self-honesty to answer assessment items truthfully rather than aspirationally, so that the resulting profile reflects current personality rather than a desired self-image"
+  - "Basic literacy in interpreting facet-level scores – understanding that scores represent relative standing rather than diagnoses, and that facets within a trait can vary independently"
+  - "A life context that contains regular opportunities to enact the targeted behavioural challenges (e.g. some social contact for extraversion-targeted plans, some structured tasks for conscientiousness-targeted plans)"
+
+flagged_domains:
+  - domain: "current-work"
+    rationale: "Conscientiousness-targeted plans directly improve work execution, follow-through, and orderliness, which are central to current-work competence; this is supported by the well-documented conscientiousness – job-performance link but is not yet anchored in this framework as a primary effect of personality change."
+  - domain: "friendship"
+    rationale: "Extraversion-targeted plans increase initiation and social availability, which over months tends to increase the number and depth of active friendships; the causal pathway runs through changed social behaviour to changed relational outcomes."
+  - domain: "relationship-quality"
+    rationale: "Agreeableness- and emotional-stability-targeted plans plausibly improve conflict regulation and warmth in romantic partnerships, but the protocol does not directly train couple-level skills, so the effect is indirect."

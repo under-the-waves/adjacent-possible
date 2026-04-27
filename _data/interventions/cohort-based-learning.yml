@@ -1,0 +1,183 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Cohort-Based Learning"
+what_it_is: |
+  Enrolling in a structured, time-bound learning programme that progresses through a curriculum alongside a defined group of peers – instead of working through self-paced asynchronous content alone. Examples span Maven and Reforge for professional skills, Recurse Center and On Deck for software and entrepreneurship, Akimbo and Section for business and marketing, formal university classes, and local meetup-driven study groups. The defining features are a fixed start and end date, live sessions or scheduled milestones, and a stable peer group that progresses together. The combination of social accountability, live discussion, and visible peer progress addresses the dominant failure mode of online learning – non-completion – which independent studies of large MOOC platforms have repeatedly placed in the single digits, often around 5 -- 15% of registered learners.
+how_to_do_it: |
+  - Pick a topic that genuinely matters for your work or life direction in the next 6 -- 12 months. Cohort programmes cost more than self-paced courses, so the topic-selection bar should be higher: look for skills you have already tried to learn solo and abandoned, or skills where peer feedback is part of the actual practice (writing, design, leadership, software craft).
+  - Choose a programme with a real cohort, not just a "live" label. The signals to look for are a fixed start date, a maximum cohort size (typically 20 -- 200), scheduled live sessions, and either a small-group breakout structure or an active discussion channel that persists between sessions. Avoid programmes whose only "live" element is a weekly Q&A with the instructor.
+  - Block the cohort's live sessions in your calendar before the programme starts and treat them as non-negotiable for the duration. The completion premium of cohort programmes depends on showing up to the synchronous components – participants who attend all live sessions complete at dramatically higher rates than those who only consume recordings.
+  - Engage at least one peer beyond the surface level. Pair up for accountability, exchange work for review, or join a study sub-group. The single largest mechanistic driver of cohort completion and learning depth is reciprocal peer interaction, not exposure to the instructor.
+  - At the end of the programme, capture what you actually learned in writing and identify one concrete project or behaviour change you will carry forward. Without this step, the cohort experience can feel valuable in the moment but leave little durable change.
+success_looks_like: |
+  - You complete the programme to its scheduled end – including assignments, projects, or capstones – at a rate dramatically higher than your historical track record with self-paced courses.
+  - You leave the programme with two or three peers you would email for advice or feedback, and at least one would do the same toward you – a small but real expansion of your professional network.
+  - The skill you signed up to develop shows up in your actual work or life within three months: a project you could not have done before, a decision you make differently, or a deliberate practice you continue past the cohort's end date.
+common_pitfalls: |
+  - Choosing a cohort programme primarily because it is well-marketed or has a famous instructor, rather than because it has a real peer structure. Many premium-priced "cohort" programmes are effectively self-paced courses with a weekly group call, and lose most of the completion and engagement advantages of true cohort-based formats.
+  - Lurking through the live sessions and discussion channels rather than contributing. Passive cohort attendance produces outcomes closer to self-paced learning – the social-presence and accountability mechanisms only fire when you are visibly participating and being seen by peers.
+  - Stacking multiple cohort programmes simultaneously. The time and emotional bandwidth required to engage authentically with a single cohort is substantial; running two in parallel typically degrades both into passive consumption and wastes the price premium.
+description: |
+  - Joining a structured, time-bound learning programme with a defined group of peers progressing through the curriculum together – distinct from self-paced asynchronous courses (Udemy, Coursera-on-demand, MOOCs taken alone) where the learner sets their own pace and rarely encounters classmates.
+  - [Studies of major MOOC platforms](https://er.educause.edu/articles/2014/12/why-do-students-use-moocs) consistently find completion rates in the single digits, with [HarvardX and MITx data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2586847) showing that of 17 courses studied, only about 5% of registrants earned a certificate – the dominant failure mode the cohort format directly addresses.
+  - [Peer-learning meta-analyses](https://journals.sagepub.com/doi/10.3102/00346543073001053) find effect sizes on academic achievement around d = 0.55 across more than 40 controlled comparisons – a moderate-to-large gain attributed to social-cognitive mechanisms (peer explanation, accountability, observed effort) absent from solo asynchronous learning.
+  - [Research on social presence in online learning](https://www.sciencedirect.com/science/article/pii/S1096751600000166) finds that the perceived "realness" of other learners is the strongest single predictor of satisfaction and persistence in online courses, which cohort formats produce structurally and on-demand formats produce only by accident.
+  - Cohort programmes typically run 4 -- 12 weeks with 3 -- 8 hours of weekly time commitment, costing anywhere from $0 (university classes already paid for, or local meetups) to $2,000 -- $5,000 for premium professional programmes; the price premium over self-paced alternatives is substantial but is typically justified by the order-of-magnitude difference in completion.
+applicable_domains: ["learning-methods", "networks", "friendship", "current-work", "behaviours", "life-skills"]
+
+values:
+  learning-methods.enjoyment:
+    pbs: 7
+    isr: 70
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (typical adult sustains a few weeks of self-directed study before drift). After successful adherence to a cohort programme, a user could plausibly reach the 65th -- 70th percentile – a multi-month sustained learning routine, with the cohort acting as a scaffold for a habit that often persists past the programme's end date. Delta: ~30 percentile points.
+      - Enjoyment of learning is structurally tied to the social experience of progress. [Research on social presence](https://www.sciencedirect.com/science/article/pii/S1096751600000166) finds it is the strongest predictor of satisfaction in online courses; cohort formats produce social presence by design rather than relying on the learner to manufacture it from text on a screen.
+      - Score 7 reflects a meaningful gain in sustained engagement with learning – not transformative, because cohort programmes are time-bounded and the underlying enjoyment of any specific subject still depends on the subject itself and the learner's interests.
+    isr_reasoning: |
+      - [HarvardX and MITx course data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2586847) shows roughly 5% certificate-completion across 17 large open courses – the comparator. Independent reporting on cohort-based programmes such as [Maven and On Deck](https://future.com/cohort-based-courses/) places completion in the 60 -- 90% range, an order-of-magnitude gap on the same underlying activity.
+      - [Reich and Ruipérez-Valiente (2019)](https://www.science.org/doi/10.1126/science.aav7958) document that MOOC completion rates have remained low and stable over time, with strong selection effects: even motivated, paying learners stall without external structure. Cohort formats supply that structure.
+      - ISR of 70% reflects the realistic mid-range: most cohort programmes meaningfully accelerate sustained engagement compared with self-paced alternatives, but a meaningful minority of cohorts under-deliver on the peer experience or fail to sustain attendance through the full duration.
+    uar_reasoning: |
+      - Cohort programmes have fixed start dates, scheduled sessions, and explicit social commitment, which materially raises adherence above self-paced alternatives. Reported attendance rates at premium cohort programmes commonly exceed 70 -- 80% of sessions among enrolled participants.
+      - The main barriers to UAR are scheduling conflicts (live sessions at fixed times) and cost (premium programmes can run into the thousands of dollars), both of which screen out a portion of would-be users before they enrol.
+      - UAR of 55% reflects that, conditional on enrolling, most users complete a substantial portion of the cohort, but only about half of people who would benefit can or will commit to a fixed-schedule paid programme on any given attempt.
+
+  learning-methods.efficiency:
+    pbs: 6
+    isr: 60
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th percentile – cohort feedback loops surface misunderstandings faster than solo study, and peer explanation often unlocks concepts more quickly than re-reading material. Delta: ~25 percentile points.
+      - [Peer-learning meta-analyses](https://journals.sagepub.com/doi/10.3102/00346543073001053) report effect sizes around d = 0.55 on academic achievement – a moderate-to-large efficiency gain attributable to social-cognitive mechanisms, particularly peer explanation, that solo learners cannot replicate.
+      - Score 6 reflects a meaningful efficiency gain rather than a transformative one. Cohorts are not the most time-efficient way to ingest information at peak speed (a focused solo learner who actually completes the material can outpace cohort timelines), but they are dramatically more efficient on a realistic-completion basis.
+    isr_reasoning: |
+      - Efficiency gains depend on both completion and quality of peer interaction. [Research on cooperative-learning structures](https://psycnet.apa.org/record/2003-99971-007) finds the largest gains accrue to learners in groups with positive interdependence and individual accountability – which only some cohort programmes engineer.
+      - In cohorts where peer interaction is shallow (lurkers, low session attendance, no breakouts), efficiency gains over self-paced material shrink substantially.
+      - ISR of 60% reflects that most cohort participants who engage authentically achieve genuine efficiency gains relative to their solo baseline, while a meaningful fraction get cohort completion without the deeper peer-mediated efficiency benefits.
+    uar_reasoning: |
+      - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
+
+  learning-methods.depth:
+    pbs: 6
+    isr: 60
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th -- 65th percentile – peer explanation, project critique, and cohort discussion drive deeper integration of material than passive consumption. Delta: ~25 -- 30 percentile points.
+      - [Peer tutoring research](https://www.tandfonline.com/doi/abs/10.3102/00028312019002237) finds that explaining material to peers ("peer-as-teacher") is among the most reliable interventions for deep understanding, with effect sizes on conceptual learning consistently larger than for the recipient of the explanation. Cohort discussion structures this exchange systematically.
+      - Score 6 reflects meaningful depth gains – the structured peer interaction targets the integration step that solo learners often skip, but ultimate depth still depends on the curriculum and the learner's underlying engagement.
+    isr_reasoning: |
+      - [Vygotsky-derived social-learning research](https://link.springer.com/article/10.1007/s10648-008-9085-4) and follow-on work consistently find that depth gains are conditional on peers being slightly more advanced or differently informed than the learner – cohorts with very homogeneous skill levels see weaker depth effects.
+      - Cohorts that are run primarily as live lectures with minimal peer-to-peer exchange lose most of the depth advantage and converge toward the outcomes of well-produced asynchronous content.
+      - ISR of 60% reflects that most well-structured cohorts deliver meaningful depth gains for engaged participants, with the failure modes well-characterised.
+    uar_reasoning: |
+      - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
+
+  networks.breadth:
+    pbs: 6
+    isr: 65
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th -- 65th percentile – a typical cohort introduces 20 -- 200 new professional contacts in a shared-context setting that supports follow-up. Delta: ~25 -- 30 percentile points.
+      - [Research on weak ties and information diffusion](https://www.science.org/doi/10.1126/science.abl4476) finds that weak professional ties drive a disproportionate share of job moves and information flow; cohort programmes manufacture these ties efficiently and at scale.
+      - Score 6 reflects meaningful breadth gains. Most cohort relationships do not become deep, but the breadth value rewards range and diversity rather than depth, and a cohort delivers a step-change in both.
+    isr_reasoning: |
+      - [Studies of professional bootcamps and cohort programmes](https://www.coursereport.com/reports/2020-coding-bootcamp-market-size-study) report alumni network access as a primary perceived benefit and a meaningful predictor of post-programme career outcomes.
+      - Network breadth gains depend on the cohort having shared context (industry, function, geography) that gives interactions natural follow-up; cohorts with extreme heterogeneity sometimes fail to translate into durable contacts.
+      - ISR of 65% reflects that most engaged cohort participants come away with a meaningful breadth gain, while a minority – particularly those who lurk or whose cohort lacks topical coherence – do not.
+    uar_reasoning: |
+      - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
+
+  friendship.depth:
+    pbs: 4
+    isr: 45
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th percentile – occasionally a cohort produces one or two genuine close friendships of the high-trust, mutual-vulnerability kind the value tracks. Delta: ~10 percentile points.
+      - [Research on friendship formation in adulthood](https://journals.sagepub.com/doi/10.1177/0265407518761225) finds that repeated, scheduled, in-context interaction is among the strongest predictors of new close friendships – conditions cohort programmes engineer for the duration of the programme.
+      - Score 4 reflects a modest gain. Most cohort relationships stay at acquaintance or weak-tie level; close friendships are a low-base-rate outcome even in conditions favourable to forming them.
+    isr_reasoning: |
+      - The intimate-friendship outcome from a cohort is a low-base-rate event: most engaged participants leave with weak ties rather than close friends.
+      - Cohorts with longer durations, smaller breakout groups, and higher topical engagement produce close friendships more reliably than short or large-format programmes.
+      - ISR of 45% reflects that fewer than half of engaged cohort participants will form even one durable close friendship from any given cohort.
+    uar_reasoning: |
+      - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
+
+  current-work.competence:
+    pbs: 6
+    isr: 55
+    uar: 55
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence to a work-relevant cohort, a user could plausibly reach the 60th percentile – a focused 8 -- 12-week programme on a directly applicable skill (writing, leadership, design, software practice) typically produces a visible step-change in execution quality. Delta: ~25 percentile points.
+      - [Anseel et al. (2015)](https://journals.sagepub.com/doi/10.1177/0149206313484521) and adjacent feedback-and-performance research find that structured peer feedback is one of the most reliable mechanisms for translating learning into work performance – and cohort programmes systematically supply it.
+      - Score 6 reflects a meaningful but bounded competence gain – conditional on the cohort topic being well-chosen relative to the user's current work.
+    isr_reasoning: |
+      - Competence transfer depends on topic alignment: a cohort on writing for a writer-by-trade has high transfer probability, while a cohort on an unrelated topic produces minimal work-competence gain regardless of cohort quality.
+      - [Research on training transfer](https://psycnet.apa.org/record/2010-19259-006) finds that even effective programmes show wide variation in workplace application, mediated by manager support and the user's role autonomy.
+      - ISR of 55% reflects that a meaningful majority of well-targeted cohort participants see real work-competence gains, while a sizeable minority experience the cohort as enjoyable without translating it into role execution.
+    uar_reasoning: |
+      - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
+
+  behaviours.social:
+    pbs: 4
+    isr: 50
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th -- 50th percentile – repeated low-stakes peer interaction in a structured setting can be a useful rehearsal ground for authentic, boundaried social behaviour, particularly for users who default to passivity in professional groups. Delta: ~10 -- 15 percentile points.
+      - [Research on group participation and self-efficacy](https://psycnet.apa.org/record/1995-32985-001) finds that scheduled, structured group settings reliably build social confidence in domains the participant practises within the group.
+      - Score 4 reflects a modest gain – the effect is real for users who actively participate, smaller for lurkers, and largely absent for users who already participate authentically in professional groups.
+    isr_reasoning: |
+      - The social-behaviour benefit depends on the user actually engaging in the cohort rather than spectating; cohorts with strong breakout-room structure produce more reliable behaviour shifts than those without.
+      - The effect is bounded by the cohort's context – authentic participation in a learning cohort does not necessarily generalise to other social contexts (family, romantic, neighbourhood).
+      - ISR of 50% reflects mixed outcomes – the mechanism works for engaged participants but is unreliable across the full cohort population.
+    uar_reasoning: |
+      - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
+
+  life-skills.high:
+    pbs: 4
+    isr: 55
+    uar: 55
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence to a cohort directly targeting a practical life-skill domain (cooking class, first-aid certification course, financial-planning bootcamp, home-repair workshop), a user could plausibly reach the 50th percentile – moving up by roughly one practical skill on the anchor. Delta: ~15 percentile points; mapping to PBS via the linear formula PBS = 10 + log₂(1/15) ≈ 6.1, but the 4 -- 5 score reflects that most cohort programmes are aimed at professional or knowledge work rather than the practical-skill set the value measures.
+      - [Research on cooking-class outcomes](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863945/) and similar applied-skills education shows that structured group instruction reliably produces durable competence gains for the targeted skill.
+      - Score 4 reflects that the value-anchor match is partial – cohort-based learning is a strong format for a narrow subset of life-skill domains, weak or irrelevant for most.
+    isr_reasoning: |
+      - Conditional on a user enrolling in a practical-skills cohort (not a knowledge-work cohort), the ISR is comparable to other cohort domains: most engaged participants leave with the targeted skill at competent level.
+      - The dominant failure mode for life-skills cohorts is non-practice between sessions; the skill needs reinforcement in real-world conditions to consolidate.
+      - ISR of 55% reflects this real-practice gap.
+    uar_reasoning: |
+      - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No required equipment beyond what most professional or student users already have (computer, reliable internet). University courses already enrolled in or local free meetups have no incremental upfront cost."
+  ongoing_cost: 500
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Conservative estimate assuming one cohort programme per year. Pricing varies widely: free for university courses or local meetups, $200 -- $1,000 for typical Maven or independent cohorts, $2,000 -- $5,000 for premium programmes (Reforge, On Deck, Section). $500/year reflects a low-cost-viable option of one mid-priced programme annually."
+  upfront_time: 3
+  upfront_time_reasoning: "Roughly three hours to research candidate programmes, evaluate cohort structure (real cohort vs. dressed-up self-paced), check schedules, and complete enrolment."
+  ongoing_time: 5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Typical cohort programmes ask for 3 -- 8 hours per week (live sessions plus assignments and peer interaction) for the duration of the programme. Five hours per week is the realistic mid-range; programmes are time-bounded so the load is concentrated, not perpetual."
+
+prerequisites:
+  - "Reliable schedule access during the cohort's live-session times for the duration of the programme – cohort formats lose most of their advantage if you can only consume recordings."
+  - "Stable internet access and a device capable of supporting video calls and any programme-specific tooling."
+  - "Sufficient baseline knowledge for the cohort's stated entry level – cohorts typically assume some prior context and are less forgiving than self-paced material if you start far below the cohort's average level."
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Structured belonging in a peer cohort can reduce the social isolation associated with self-directed learning and provide a low-stakes social outlet, which may modestly improve mood and wellbeing during the programme."
+  - domain: "career-planning"
+    rationale: "A well-chosen cohort signals direction, builds visible expertise, and frequently surfaces career opportunities through peer and instructor connections, all of which inform career planning."
+  - domain: "personality"
+    rationale: "Repeated structured exposure to peers working on the same skill provides feedback on one's working style and presentation that can support intentional personality development."

@@ -1,0 +1,151 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Consolidated Personal Health Record"
+what_it_is: |
+  Maintaining a single, current, accessible record of one's own health information – medications and dosages, allergies and adverse reactions, immunisation history, family medical history, screening and test schedule, baseline lab values, surgical and hospitalisation history, and contact details for providers and preferred pharmacy. The format is incidental: a Notion page, a Google Doc, a printed binder, an Apple Health export, or a dedicated personal health record (PHR) app all qualify. The discipline is in keeping the record current, accurate, and retrievable in the moments it matters – a new specialist appointment, an emergency-department triage, a family member needing to advocate while the patient is incapacitated. It differs from preventive screening (which prescribes which tests to do) and from a clinician-held electronic record (which is fragmented across providers and frequently inaccessible during transitions of care). The intervention is purely organisational; its leverage comes from the well-documented gap between the information that exists about a patient and the information available at the point of decision.
+how_to_do_it: |
+  - Pick a single home for the record and commit to it. Common formats: a structured Notion or Google Doc page; a dedicated PHR app such as Apple Health, MyChart consolidating multiple portals via FHIR-based linking, or CommonHealth on Android; a one-page printed summary in a wallet plus a fuller binder at home. The choice matters less than the commitment to maintain only one canonical version.
+  - Populate the core sections at first setup: current medications with dose and indication, allergies and the specific reactions, chronic conditions, immunisation dates, surgical and hospitalisation history, family history of major conditions in first-degree relatives, baseline lab values from your most recent annual check-up, and provider and pharmacy contact details. Budget two to four hours for this and pull data from existing patient portals where possible.
+  - Add an emergency-access summary – a one-page distillation of the items a stranger would need in the first 30 minutes of an unconscious presentation: medications, allergies, conditions, emergency contacts, advance directive status. Store it both digitally (on the lock screen via medical ID, in a shared family folder) and physically (wallet card or fridge magnet for first responders).
+  - Update on a fixed cadence. Anchor it to a recurring event – the day after each medical appointment, on the day of every prescription change, and during a quarterly 15-minute review to reconcile against pharmacy records. Without a fixed trigger, the record drifts within months and becomes worse than no record because it conveys false confidence.
+  - Bring the record to every clinical encounter and share it explicitly. Hand the medication list to the intake nurse rather than reciting from memory. Forward the family history section to a new specialist in advance. The act of sharing is what converts a private document into a care-coordination instrument.
+success_looks_like: |
+  - Any clinician you see in a new context can be brought up to speed in under five minutes from a single document, rather than reconstructing your history from memory or fragmentary portal access
+  - In an emergency, a paramedic or family member can locate your medications, allergies, conditions, and emergency contacts within 60 seconds without your input
+  - Your medication list, allergy list, and active conditions have not been wrong on a clinical document in the last 12 months – discrepancies are caught and corrected at the point of care
+  - You can answer "when was your last X?" – tetanus shot, lipid panel, colonoscopy, eye exam – in seconds rather than guessing or assuming
+common_pitfalls: |
+  - Setting up the record once and never updating it. A stale record is worse than no record because it is treated as authoritative. Without a fixed update trigger, decay is the default.
+  - Maintaining several partial records – an app, a doc, and a wallet card that disagree. Pick one canonical version and have other surfaces derive from it.
+  - Over-engineering the format. The marginal value of a custom-built database over a Google Doc is near zero; the marginal cost in setup friction is large enough to derail the habit before it forms.
+  - Storing the record in a way that is inaccessible at the moment it is needed – behind a password the family does not know, in an app a paramedic cannot open, or in a binder at home when the emergency happens elsewhere. Solve for retrieval, not just for storage.
+description: |
+  - A single, maintained record of one's medications, allergies, immunisations, family history, baseline lab values, screening schedule, and provider contacts, kept current and accessible in the moments care decisions are made
+  - [Systematic reviews of personal health records](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000391/) find consistent benefits across care coordination, medication reconciliation, preventive-care adherence, and patient self-management – effects that strengthen for patients with multiple providers or chronic conditions
+  - Medication errors are a major source of preventable harm: [the Institute of Medicine estimated](https://nap.nationalacademies.org/catalog/11623/preventing-medication-errors) at least 1.5 million preventable adverse drug events per year in the United States, with the bulk traceable to incomplete medication histories during transitions of care – the precise gap a patient-held medication list closes
+  - [Care-coordination research](https://www.ahrq.gov/ncepcr/care/coordination.html) from the Agency for Healthcare Research and Quality identifies fragmented information transfer between providers as one of the largest sources of avoidable harm and inefficiency, and patient-held summaries as one of the few interventions that scale across any care setting
+  - Format is incidental – Notion, Google Doc, printed binder, or Apple Health all work; the discipline is in single-source canonicalisation and a fixed update trigger, which is what separates this from the more common pattern of partial, stale records held in several places at once
+applicable_domains: ["health-management", "organisation", "emergency-preparedness"]
+
+values:
+  health-management.simplicity:
+    pbs: 7
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – moving from scattered, partially-remembered health information to a single canonical record retrievable in under a minute. Delta: ~30–35 percentile points.
+      - The simplicity gain compounds across every clinical encounter: each appointment that previously required reconstructing medication lists, allergy histories, and dates from memory or multiple portals now resolves to a single hand-off. [AHRQ care-coordination evidence](https://www.ahrq.gov/ncepcr/care/coordination.html) frames this fragmentation as a major recurrent cost that patient-held summaries remove at source.
+      - Score 7 reflects a meaningful but bounded benefit – the record removes coordination overhead but does not eliminate the underlying complexity of having multiple conditions or providers; it only stops that complexity from compounding through repeated information loss.
+    isr_reasoning: |
+      - [Systematic reviews of personal health records](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000391/) find consistent improvements in self-management efficiency and reduced redundant data entry across studies, with the largest effects in patients who maintain the record actively rather than passively syncing from a portal.
+      - The mechanism is mechanically straightforward – information that exists in one canonical place is easier to retrieve than information distributed across portals, memory, and paper – so failure modes are mostly behavioural (record drift, format proliferation) rather than mechanistic.
+      - ISR of 70% reflects that for users who actually maintain the record, the simplicity benefit is highly reliable; the 30% non-success cases are mostly driven by partial maintenance leaving gaps that defeat the single-source promise.
+    uar_reasoning: |
+      - [Real-world PHR adoption studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC4960691/) find sustained-use rates well below initial uptake – many users set up a record, populate it once, and abandon active maintenance within months, particularly when there is no integrated update trigger.
+      - The intervention requires episodic but indefinite maintenance over a lifetime, with the value of any single update only realised at unpredictable future encounters – a structural mismatch with the immediate-feedback patterns that sustain habits.
+      - UAR of 35% reflects that a meaningful minority of motivated adopters will maintain the record adequately, particularly those who tie updates to existing appointment workflows; the majority will let it drift within a year.
+
+  health-management.control:
+    pbs: 7
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–70th percentile – having one's full health context in front of one transforms clinical encounters from passive recipients of provider summary to active participants in joint decision-making. Delta: ~30–35 percentile points.
+      - [PHR research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000391/) finds patient-held records consistently improve self-management capability, treatment adherence, and informed participation in care decisions – the core constructs of personal control over health.
+      - Score 7 reflects a real but bounded gain: the record gives the user the information substrate for control, but does not by itself confer the medical literacy needed to act on it. The benefit is largest at decision points where having one's own data in hand changes which questions get asked.
+    isr_reasoning: |
+      - [Systematic reviews](https://pmc.ncbi.nlm.nih.gov/articles/PMC4960691/) of PHR interventions find consistent positive effects on patient activation and engagement metrics for active users, though effect sizes vary with the depth of the record and the patient's underlying health literacy.
+      - The control gain is most reliable when patients use the record to prepare specific questions for visits and to reconcile clinician statements against their own data – a sub-behaviour that not all maintainers adopt.
+      - ISR of 70% reflects that adherent users who actively use (not just maintain) the record reliably gain in informed participation; non-success cases are mostly users who maintain but rarely consult the record at decision points.
+    uar_reasoning: |
+      - See health-management.simplicity UAR – same intervention, same adherence profile. UAR of 35% reflects the structural difficulty of sustaining indefinite low-frequency maintenance.
+
+  health-management.longterm:
+    pbs: 6
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile – the record makes the screening and immunisation calendar legible, surfaces overdue items, and preserves family-history signals that would otherwise be reconstructed unreliably each visit. Delta: ~25–30 percentile points.
+      - [Preventive-care adherence research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000391/) finds patient-held records modestly improve completion of recommended screenings, primarily by closing the gap between recommendation and recall – the patient who knows their last colonoscopy was eight years ago will book the next one sooner than the one who is uncertain.
+      - Score 6 reflects that the record is an enabler of preventive strategy, not the strategy itself. The actual screening tests are what move the underlying outcome; the record's contribution is ensuring they happen on schedule and the results are not lost between providers.
+    isr_reasoning: |
+      - [Systematic review evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000391/) shows mixed but generally positive effects on screening adherence among PHR users, with response rates higher in patients who use reminder features actively.
+      - The mechanism depends on the user actually consulting the record at the right moments – many maintainers populate immunisation history but never check it against current recommendations, dampening the preventive-care effect.
+      - ISR of 65% reflects that for the subset of users who use the record prospectively (checking for overdue items) the long-term-health benefit is reasonably reliable; passive maintainers see smaller effects.
+    uar_reasoning: |
+      - See health-management.simplicity UAR – same intervention, same adherence profile.
+
+  health-management.vitality:
+    pbs: 4
+    isr: 50
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–50th percentile – the pathway is indirect, working through faster issue identification and earlier intervention rather than any direct effect on energy. Delta: ~10–15 percentile points.
+      - The mechanism: a maintained record makes it easier to spot patterns (a new medication coinciding with fatigue, a lab value drifting over years) and to bring those patterns to a clinician with evidence rather than impression. [Care-coordination evidence](https://www.ahrq.gov/ncepcr/care/coordination.html) supports the general claim that better information flow reduces diagnostic delay, but the specific vitality effect is small and conditional.
+      - Score 4 reflects a modest secondary benefit – this is a cross-domain effect, not a primary mechanism, and is rightly scored well below the simplicity and control gains.
+    isr_reasoning: |
+      - The vitality pathway depends on a chain of contingent events – the user noticing a pattern, taking it to a clinician, the clinician acting on it, and the resulting intervention restoring energy – each of which has its own attrition.
+      - There is no direct trial evidence for PHR maintenance improving vitality as such; the effect is inferred from upstream improvements in care coordination and diagnostic timeliness.
+      - ISR of 50% reflects genuine uncertainty about how often the chain completes; the effect is plausible but not reliable enough to score higher.
+    uar_reasoning: |
+      - See health-management.simplicity UAR – same intervention, same adherence profile.
+
+  organisation.tracking:
+    pbs: 5
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th percentile – the health domain is one of several where moving from intention to action is dependent on having information ready, and the consolidated record removes a recurring source of friction. Delta: ~20 percentile points.
+      - The mechanism is the standard tracking-system mechanism: information centralisation reduces the time between deciding to act (book a follow-up, refill a prescription, share history with a new provider) and being able to act. The benefit is bounded to the health domain rather than spanning a user's full organisational system.
+      - Score 5 reflects a real but domain-limited tracking gain – a single life area's worth of organisational improvement, not a transformation of the broader organisational system.
+    isr_reasoning: |
+      - The tracking benefit accrues mechanically from centralisation – it does not depend on a downstream behavioural translation in the way that vitality does – so adherent users reliably see the friction reduction.
+      - [PHR research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000391/) consistently finds reduced redundant data entry and faster information retrieval among active users, confirming the tracking pathway empirically.
+      - ISR of 70% reflects high reliability of the tracking effect for users who maintain the record, with non-success cases driven by partial maintenance leaving gaps that defeat single-source retrieval.
+    uar_reasoning: |
+      - See health-management.simplicity UAR – same intervention, same adherence profile.
+
+  emergency-preparedness.self-reliance:
+    pbs: 4
+    isr: 65
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–50th percentile – the record contributes to medical preparedness specifically (medications, allergies, conditions immediately available in a crisis) rather than to broader household self-reliance. Delta: ~10–15 percentile points.
+      - The relevant evidence is the medical-error and emergency-care literature: [the Institute of Medicine](https://nap.nationalacademies.org/catalog/11623/preventing-medication-errors) traces a substantial share of preventable adverse drug events to incomplete medication histories at the point of acute care – exactly the gap an accessible patient-held record closes.
+      - Score 4 reflects that this is a slice of preparedness rather than the whole construct – the anchor measures days of household supply autonomy, which a health record does not directly affect, but the medical-emergency dimension of preparedness is genuinely improved.
+    isr_reasoning: |
+      - The emergency-access benefit is reliable when the record is actually retrievable in the relevant moment – on a phone lock screen, in a wallet card, or known to a family member – which is a smaller subset of overall maintainers.
+      - [Medical-error research](https://nap.nationalacademies.org/catalog/11623/preventing-medication-errors) supports the underlying claim that better-available medication and allergy information reduces adverse events at care transitions, though the specific magnitude for any given patient depends on circumstances that vary widely.
+      - ISR of 65% reflects that for users whose record is genuinely accessible in an emergency (not just maintained at home), the preparedness benefit is reliable; the others gain little because the record is not where it is needed.
+    uar_reasoning: |
+      - See health-management.simplicity UAR – same intervention, same adherence profile. The emergency-access dimension specifically requires an extra step (medical ID setup or wallet card) that a meaningful fraction of maintainers will skip.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "The minimum viable form of this intervention uses free tools – a Google Doc, a Notion free-tier page, the built-in Apple Health or Android medical ID, or a printed sheet. No paid software or services are required to begin."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "The free-tier digital options and printed alternatives all have zero ongoing cost. Paid PHR apps and cloud-storage upgrades exist but are not required for effective implementation."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately two to four hours to choose a format, populate the core sections (medications, allergies, immunisations, family history, providers, baseline labs), and produce an emergency-access summary. Most of this time is data gathering from existing patient portals and prescription bottles."
+  ongoing_time: 0.25
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Roughly 15 minutes per month on average – a brief update after each medical appointment or prescription change, plus a quarterly 15-minute reconciliation against pharmacy records. Months with no medical events require no work."
+
+prerequisites:
+  - "Access to one's existing medical information – patient portals, prescription bottles, vaccination records, or a primary-care provider who can supply a current summary"
+  - "A chosen storage medium that is reliably retrievable: a phone with medical ID set up, a cloud document with a known sharing path, or a physical binder kept in a known location"
+  - "Basic familiarity with one's own medications, conditions, and provider contacts sufficient to populate an initial record without each item requiring research"
+
+flagged_domains:
+  - domain: "mental-health"
+    rationale: "Reduces low-grade health-related anxiety by replacing uncertainty about what one would do or remember in a medical crisis with a concrete, retrievable record."
+  - domain: "extended-family"
+    rationale: "A shared or shareable health record materially eases the burden on adult children or partners acting as informal care coordinators or emergency proxies for a relative."

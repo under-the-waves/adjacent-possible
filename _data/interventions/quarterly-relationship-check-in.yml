@@ -1,0 +1,155 @@
+evaluated_at: 2026-04-26
+evaluated_by: claude-opus-4-7
+prompt_sha: 2798af5
+name: "Quarterly Relationship Check-In"
+what_it_is: |
+  A structured, recurring strategic conversation between romantic partners – typically held every three months, sometimes every six – using a defined agenda that explicitly covers shared values, life direction, finances, intimacy, surfaced frustrations, and goals for the next period. Distinct from the [weekly family check-in](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/), which is operational and logistical, the quarterly check-in is strategic – its purpose is to verify that two partners are still pulling toward the same destination and to catch drift in values, priorities, or unspoken expectations before it compounds. Scheduled away from daily life pressures (often a long walk, a dinner out, or a half-day at home with phones off), it gives partners protected time to discuss topics that the weekly cadence cannot reach: career trajectories, where to live, whether to have or expand a family, financial direction, ageing-parent planning, and frustrations that have not yet surfaced. The practice draws on relationship-research traditions including Gottman's longitudinal work on stable partnerships, the [PREP communication framework](https://www.prepinc.com/) developed by Markman and colleagues, and qualitative research on "executive couples" who treat their partnership as a co-managed enterprise.
+how_to_do_it: |
+  - Schedule the meeting on a fixed cadence – the first weekend of each quarter, or a recurring date on the calendar – and protect it like a non-negotiable appointment; both partners diary it and decline competing commitments
+  - Agree a standing agenda in advance and follow it: shared values check (are we still aligned on what matters?), life direction (where are we heading in 1, 3, 5 years?), finances (savings, big purchases, allocation), intimacy and connection (frequency, quality, what's missing), frustrations and resentments (anything that has not been said), and goals for the next quarter (what each partner wants to work on, individually and together)
+  - Hold it somewhere that creates psychological space away from operational concerns – a long walk, a quiet restaurant, a half-day at home with childcare arranged and phones off – not the kitchen between dishes
+  - Use the [Gottman "soft start-up" technique](https://www.gottman.com/blog/the-magic-relationship-ratio-according-science/) when raising frustrations: describe what you observe, name your feeling, state what you need – avoid "you always" and "you never"; the [PREP "speaker–listener" rule](https://www.prepinc.com/) is also useful: only one person speaks at a time, the listener paraphrases before responding
+  - Record three to five concrete actions or decisions before ending – financial moves, calendar commitments, behaviour changes, things to revisit – and review them at the start of the next quarterly meeting; without this loop the conversation becomes ritual without traction
+  - Treat the half-yearly cadence as a minimum acceptable variant for couples who genuinely cannot find quarterly time – the strategic mechanism still works at six-month intervals, just with more drift between sessions
+success_looks_like: |
+  - Both partners can articulate where the relationship is heading on the major dimensions (career, family, finances, location) and notice when their answers diverge before the divergence becomes a crisis
+  - Frustrations and unspoken expectations surface every three months while still small, rather than emerging during arguments or after months of accumulated resentment
+  - Big decisions (job changes, moves, financial commitments) feel jointly owned rather than negotiated under deadline pressure, because the conversation that should precede them has already happened
+  - The meeting becomes self-sustaining – missing it feels like a notable break, and either partner can call it without it being interpreted as a sign of crisis
+common_pitfalls: |
+  - Using the meeting to relitigate accumulated grievances rather than scan strategically for drift – the quarterly cadence is a poor substitute for surfacing frictions in real time, and partners who save up complaints for the meeting create a dreaded session that quickly gets cancelled
+  - Treating it as a status update without decisions – conversations that end without three to five concrete actions degrade into ritual, and partners stop preparing because nothing changes between sessions
+  - One partner driving the agenda – if one partner consistently raises topics and the other only responds, the practice quietly converts to a one-sided audit; both partners should arrive with at least one item they want to discuss
+  - Avoiding the hardest topics quarter after quarter – financial disagreements, intimacy concerns, or doubts about the relationship's direction get talked around rather than at, and the strategic value of the meeting evaporates while the form remains
+description: |
+  - A strategic 90 -- 180 minute conversation between romantic partners, held quarterly or half-yearly, with a defined agenda spanning shared values, life direction, finances, intimacy, surfaced frustrations, and goals for the next period – distinct from operational weekly check-ins, which target logistics and small-friction surfacing rather than long-horizon alignment
+  - [Gottman's longitudinal research on stable couples](https://www.gottman.com/blog/6-hours-a-week-to-a-better-relationship/) finds that partners who reserve dedicated, distraction-free time for substantive conversation are reliably differentiated from distressed couples; the quarterly check-in extends this principle to topics that exceed the weekly cadence
+  - The [PREP programme](https://www.prepinc.com/), developed across several decades by Markman and colleagues, is one of the most studied couple-communication interventions; a [meta-analysis of premarital and relationship education programmes](https://pubmed.ncbi.nlm.nih.gov/12931767/) found average effect sizes of d = 0.80 for communication skills and d = 0.30 for relationship satisfaction among programme completers, with structured conversation protocols a core mechanism
+  - [Research on long-horizon couple alignment](https://www.tandfonline.com/doi/full/10.1080/01926187.2018.1428128) finds that couples who explicitly negotiate shared goals show higher satisfaction and lower divorce risk than couples who assume alignment without checking it; alignment drift is one of the more common predictors of late-life separation
+  - The intervention requires no equipment and minimal cost; the primary barriers are scheduling discipline and willingness to raise harder topics in a structured rather than reactive setting
+applicable_domains: ["relationship-quality", "communication", "mental-health"]
+
+values:
+  relationship-quality.alignment:
+    pbs: 8
+    isr: 70
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple holding genuine quarterly strategic check-ins can plausibly reach the 70th–75th percentile in shared values and goal alignment. Delta: ~35–40 percentile points.
+      - Alignment is the most direct target of the intervention – the agenda is specifically constructed to surface and re-verify shared direction on values, finances, family, location, and life trajectory; [research on couple goal congruence](https://www.tandfonline.com/doi/full/10.1080/01926187.2018.1428128) finds explicitly negotiated shared goals predict higher satisfaction and lower late-life separation than assumed alignment.
+      - PBS 8 (higher than weekly check-ins on connection or harmony, which score 7) reflects that this is a precision-targeted intervention on a value where the baseline failure mode – silent divergence over years – is exactly what the quarterly cadence is designed to interrupt. The Gottman framework treats alignment-relevant conversations (the "love map" and "shared meaning" levels) as among the highest-leverage couple practices.
+    isr_reasoning: |
+      - The mechanism is mechanistically reliable when the conversation actually happens: forced articulation of where each partner is heading reveals divergence that would otherwise stay implicit. [Premarital and relationship education meta-analysis](https://pubmed.ncbi.nlm.nih.gov/12931767/) reports d = 0.30 for relationship satisfaction among completers of structured communication programmes, with alignment-discussion protocols a documented mechanism.
+      - The main failure mode is conversation that stays at the level of pleasantries or gets hijacked by tactical complaints rather than reaching the strategic alignment layer; [research on relationship education effectiveness](https://pubmed.ncbi.nlm.nih.gov/22070710/) finds outcomes depend heavily on whether couples engage with the structural agenda or revert to old patterns.
+      - ISR 70% reflects that couples who run the format substantively achieve meaningful alignment gains in most cases, but a meaningful minority either avoid the harder topics or use the time for grievance-airing rather than strategic verification.
+    uar_reasoning: |
+      - Quarterly cadence is easier to sustain than weekly cadence on the practical-friction dimension – four protected slots a year is a low time cost; [research on relationship maintenance behaviours](https://onlinelibrary.wiley.com/doi/10.1111/jftr.12176) finds infrequent but high-quality rituals are sustained more reliably than high-frequency ones for many couples.
+      - The main attrition risk is cancellation when life gets busy combined with the absence of the immediate-pain feedback that drives weekly meetings; couples drift to half-yearly or annual without noticing, and the strategic value degrades with the cadence.
+      - UAR 50% reflects that one resistant partner kills the practice (it is bilateral by design), and many couples lack the meta-relational habit of formal scheduled conversations – sustaining four sessions a year requires deliberate calendar discipline that some couples never establish.
+
+  relationship-quality.connection:
+    pbs: 6
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple can plausibly reach the 60th–65th percentile in emotional closeness and trust. Delta: ~25–30 percentile points.
+      - Strategic conversation that includes vulnerability about hopes, fears, and unspoken concerns is itself a connection-building mechanism – partners who hear each other on substantive topics report deepened trust. [Gottman's "magic six hours" research](https://www.gottman.com/blog/6-hours-a-week-to-a-better-relationship/) treats protected substantive time as a core differentiator of stable couples.
+      - PBS 6 rather than higher because the quarterly cadence is too sparse to be the dominant connection-building channel – daily and weekly micro-interactions remain the primary input, and the quarterly meeting is a complement, not a substitute, for ongoing emotional contact.
+    isr_reasoning: |
+      - Connection gains depend on both partners actually disclosing and listening rather than treating the meeting as an audit; [PREP outcome research](https://pubmed.ncbi.nlm.nih.gov/12931767/) reports communication-skill effect sizes of d = 0.80 for completers, with disclosure quality a key mediator.
+      - The connection benefit is most reliable in partnerships with sufficient existing warmth to support candid disclosure – distressed couples may need therapist scaffolding to convert the meeting into connection rather than conflict.
+      - ISR 65% reflects genuine but conditional gains: works well when partners arrive with goodwill and willingness to disclose, fails when one partner treats the meeting as a procedural box-tick.
+    uar_reasoning: |
+      - See relationship-quality.alignment UAR – same intervention, same adherence profile.
+
+  relationship-quality.harmony:
+    pbs: 6
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a couple can plausibly reach the 60th percentile in day-to-day partnership smoothness. Delta: ~25 percentile points.
+      - Harmony benefits indirectly: surfacing accumulated frustrations every three months prevents the slow build-up of grievances that destabilises day-to-day interaction, and clarified alignment reduces the friction caused by mismatched expectations on shared decisions.
+      - PBS 6 rather than higher because the harmony anchor is more directly addressed by weekly cadence – the quarterly meeting catches grievances later in the accumulation cycle, when they have already done some damage. [Couples research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/) finds intentional non-logistical exchange differentiates high- from low-satisfaction partnerships, but frequency matters.
+    isr_reasoning: |
+      - The accumulated-grievance-surfacing mechanism is reliable when the agenda includes a frustrations slot that both partners actually use; [research on conflict avoidance in couples](https://psycnet.apa.org/record/2014-08983-001) finds unsurfaced complaints predict relationship deterioration.
+      - The main failure mode for harmony specifically is when the quarterly meeting gets used to dump three months of grievances at once, producing a fight rather than constructive resolution – the [Gottman soft start-up](https://www.gottman.com/blog/the-magic-relationship-ratio-according-science/) and [PREP speaker–listener](https://www.prepinc.com/) techniques are designed to mitigate this.
+      - ISR 65% reflects that couples who use the protocols see harmony gains; couples who skip the structural scaffolding and try to wing it on hard topics often produce harmony losses.
+    uar_reasoning: |
+      - See relationship-quality.alignment UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 5
+    isr: 60
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user can plausibly reach the 55th–60th percentile in ability to build genuine relationships through conversation. Delta: ~20–25 percentile points.
+      - Quarterly practice of structured disclosure, listening, and substantive-topic conversation in a low-stakes home setting builds general communication-for-connection capacity that transfers beyond the relationship – partners learn to raise hard topics, paraphrase, and stay in dialogue under tension.
+      - PBS 5 reflects modest cross-context transfer – the practice is bounded to a known partner and a fixed format, so generalisation to friendships, family, and professional contexts is real but limited and depends on the user actively transferring the techniques.
+    isr_reasoning: |
+      - The skill-transfer mechanism is documented in [PREP outcome research](https://pubmed.ncbi.nlm.nih.gov/12931767/) – communication skills learned in couple format generalise partially to other relationships, with d = 0.80 for in-context skill but smaller transfer effects.
+      - ISR 60% reflects that some users develop generalisable skill while others compartmentalise the practice to the partnership setting only.
+      - Evidence base for cross-context transfer specifically is thinner than for within-relationship effects, hence the lower confidence rating.
+    uar_reasoning: |
+      - See relationship-quality.alignment UAR – same intervention, same adherence profile.
+
+  communication.conflict:
+    pbs: 6
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user can plausibly reach the 60th percentile in constructive conflict navigation. Delta: ~25 percentile points.
+      - The intervention provides repeated structured practice in raising frustrations, paraphrasing, and resolving disagreements with protocol scaffolding – exactly the skill the anchor measures. [PREP communication training](https://www.prepinc.com/), one of the most studied couple programmes, reports d = 0.80 for communication skill among completers in [meta-analysis](https://pubmed.ncbi.nlm.nih.gov/12931767/).
+      - PBS 6 reflects that the skill transfer is real but partial – conflict navigation under quarterly scaffolding generalises somewhat to workplace and family contexts but is a narrower training set than dedicated conflict-skills programmes.
+    isr_reasoning: |
+      - The repetition is the mechanism: 4 -- 8 high-stakes structured conflict-resolution reps per year (over multiple years) is meaningful deliberate practice on a skill most adults rarely train explicitly.
+      - ISR 65% reflects that the practice only works if difficult topics are actually raised and processed using the protocols; meetings that avoid hard topics deliver no conflict-skill gain.
+      - [Couples communication research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/) consistently identifies structured handling of disagreement as a key differentiator between high- and low-satisfaction partnerships, with skill transfer to other domains documented but variable.
+    uar_reasoning: |
+      - See relationship-quality.alignment UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 5
+    isr: 55
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user can plausibly reach the 55th percentile in day-to-day emotional steadiness. Delta: ~20 percentile points.
+      - Mechanism is indirect but well-supported: chronic relational uncertainty (about direction, finances, fidelity, fit) is a documented driver of anxiety and rumination; quarterly verification of alignment reduces ambient relational uncertainty, which lowers a meaningful baseline stressor for many people. [Research on relationship quality and mental health](https://pubmed.ncbi.nlm.nih.gov/29192754/) finds relationship satisfaction strongly predicts depression and anxiety symptoms.
+      - PBS 5 reflects modest, indirect benefit – the intervention is one input among many to mental-health stability, and the effect operates only for users for whom relational uncertainty is a meaningful stressor.
+    isr_reasoning: |
+      - The pathway from clarified alignment to reduced relational anxiety is mechanistically plausible but not directly studied; [research on perceived partner responsiveness](https://www.researchgate.net/publication/270742403_Perceived_Partner_Responsiveness_Scale) confirms relational predictability supports emotional regulation, but the specific contribution of quarterly check-ins is extrapolated.
+      - ISR 55% reflects that the benefit applies most reliably to users with moderate relational uncertainty as a stressor; for users whose mental-health stability is driven primarily by other factors (work, biology, isolation), the relational mechanism delivers little.
+      - For users whose relational uncertainty is severe (suspected infidelity, considering separation), the meeting may surface anxiety-provoking content faster than it resolves it – a meaningful failure mode.
+    uar_reasoning: |
+      - See relationship-quality.alignment UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No purchases required. Agenda templates from Gottman, PREP, and similar programmes are freely available online. No tools needed beyond a calendar and a notebook or shared document for recording decisions."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "The intervention is entirely free. Some couples choose to do quarterly meetings over a meal out or as part of a half-day getaway; this is a discretionary cost not required by the protocol."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately two hours: agreeing the cadence and slot with the partner, drafting a standing agenda using freely available templates, and reading at least one Gottman or PREP overview to learn the soft start-up and speaker–listener techniques."
+  ongoing_time: 1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Roughly 90 -- 180 minutes per quarter, plus 15 -- 30 minutes per partner of preparation – approximately one hour per month averaged over the year. The agenda preparation overhead is low once the format is established."
+
+prerequisites:
+  - "An ongoing romantic partnership – the intervention is undefined for single users; users in early dating may use a lighter variant, but the strategic-alignment mechanism requires shared decisions to align about"
+  - "Mutual buy-in from both partners – one openly resistant partner collapses the practice, since the conversation is bilateral by design"
+  - "Basic emotional self-regulation and willingness to tolerate hearing critical feedback or surfaced frustrations without immediate defensiveness; couples with severe communication breakdown may need therapist scaffolding before this format works"
+  - "A consistent quarterly time slot when both partners can be present and undistracted – partnerships with chronic split scheduling, severe caregiving load, or extended travel may need to adapt the cadence"
+
+flagged_domains:
+  - domain: "financial-planning-tracking"
+    rationale: "The standing agenda explicitly includes finances – savings, big purchases, allocation – so quarterly review surfaces and resolves financial misalignment that would otherwise drift; mechanism is direct but the effect operates through the partnership rather than individual financial behaviour."
+  - domain: "life-purpose"
+    rationale: "Quarterly articulation of life direction with a partner forces explicit reflection on personal purpose and trajectory; the relational forcing function often surfaces individual purpose questions that solo reflection avoids."
+  - domain: "goals"
+    rationale: "The closing agenda item – goals for the next quarter, individual and shared – creates a recurring goal-setting and review rhythm that scaffolds follow-through on personal as well as relational objectives."
