@@ -12,13 +12,15 @@ The [Prioritisation]({{ site.baseurl }}/prioritisation/) section recommends star
 
 The cutoffs follow four rules.
 
-**Use validated thresholds where they exist.** PHQ-2 ≥ 3 for depression, GAD-2 ≥ 3 for anxiety, WHO-5 ≤ 50% for poor wellbeing, and UCLA-3 ≥ 6 for loneliness are all established cutoffs from the underlying psychometric literature. Where a validated cutoff exists, we use it rather than inventing one.
+**Use validated thresholds where they exist.** PHQ-2 ≥ 3 for depression, GAD-2 ≥ 3 for anxiety, WHO-5 ≤ 50% for poor wellbeing, and UCLA-3 ≥ 6 for loneliness are all established cutoffs from the underlying psychometric literature. Where a validated cutoff exists, the framework uses it rather than inventing one.
 
 **Anchor to where the harm curve steepens.** Official guidelines often describe optimal targets, not the threshold at which lacking the behaviour starts to matter. The CDC sleep guideline is 7–9 hours, but mortality and cognitive harm rise sharply only below 6 hours. The WHO physical activity guideline is 150 minutes per week, but the largest absolute mortality gain is between zero and around 60 minutes per week. Flagging cutoffs target the steep part of the curve, not the optimum.
 
-**Prefer false positives to false negatives.** Flagging fundamentals to someone who did not strictly need it costs them an override click. Failing to flag someone who did need it defeats the purpose. Where a cutoff sits at the edge between two interpretations, we err on the side of surfacing.
+**Prefer false positives to false negatives.** Flagging fundamentals to someone who did not strictly need it costs them an override click. Failing to flag someone who did need it defeats the purpose. Where a cutoff sits at the edge between two interpretations, the system errs on the side of surfacing.
 
 **Use validated short forms on-site, point to fuller instruments off-site.** The first-touch screen uses two-to-five item validated short forms (PHQ-2, GAD-2, AUDIT-C, WHO-5, UCLA-3, Hunger Vital Sign). When something flags, the result links to the full instrument (PHQ-9, GAD-7, AUDIT, UCLA-20) for users who want a more thorough check. This keeps the on-site screen short while preserving access to validated long forms.
+
+
 
 ## Sleep
 
@@ -30,7 +32,7 @@ The cutoffs follow four rules.
 
 Cappuccio et al. (2010) pooled 16 prospective cohort studies covering 1.4 million participants. Sleeping under 6 hours per night was associated with a 12% increase in all-cause mortality, with the effect concentrated below 6 hours rather than between 6 and 7. Walker (2017) summarises the wider evidence on cognition, mood, metabolic, and immune effects, which follow a similar pattern: detectable but modest decrements between 6 and 7 hours, sharper below 6.
 
-The CDC and National Sleep Foundation recommend 7–9 hours for adults. We do not flag 6–7 hours because the marginal harm in that band is small relative to the volume of users it would surface. Below 6 hours, the harm is consistent enough across outcomes that flagging is worth it even allowing for some over-reporters who actually sleep 6.5.
+The CDC and National Sleep Foundation recommend 7–9 hours for adults. The screen does not flag 6–7 hours because the marginal harm in that band is small relative to the volume of users it would surface. Below 6 hours, the harm is consistent enough across outcomes that flagging is worth it even allowing for some over-reporters who actually sleep 6.5.
 
 ## Mental health (sub-clinical)
 
@@ -90,6 +92,6 @@ For diet, single-item cutoffs are more reductive than the underlying evidence su
 
 ## Calibration and future revision
 
-These cutoffs are stated with more precision than the underlying evidence supports. The harm curves are continuous; we have drawn discrete lines so that the system can flag or not flag. We will revise the cutoffs as the literature develops, as the screen accumulates response data, and as users push back on flags that they consider unwarranted.
+These cutoffs are stated with more precision than the underlying evidence supports. The harm curves are continuous; discrete lines are drawn so that the system can flag or not flag. The cutoffs will be revised as the literature develops, as the screen accumulates response data, and as users push back on flags that they consider unwarranted.
 
-Two specific revision triggers worth noting. First, if a substantial share of users flag on fundamentals but then dismiss the recommendation and report later that the flag was not useful, the cutoff is set too loose. Second, if users who reach later parts of the framework consistently report that an unflagged fundamentals issue was undermining their progress, the cutoff is set too tight. Both signals require dashboard data we do not yet have, so for Phase 1 the cutoffs above are best-evidence defaults, not calibrated to user behaviour.
+Two specific revision triggers worth noting. First, if a substantial share of users flag on fundamentals but then dismiss the recommendation and report later that the flag was not useful, the cutoff is set too loose. Second, if users who reach later parts of the framework consistently report that an unflagged fundamentals issue was undermining their progress, the cutoff is set too tight. Both signals require dashboard data not yet available, so for Phase 1 the cutoffs above are best-evidence defaults, not calibrated to user behaviour.
