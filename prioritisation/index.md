@@ -195,19 +195,47 @@ permalink: /prioritisation/
 /* Focus area constraint UI */
 .con-header {
     background: #fff; border: 1px solid #e0e0e0;
-    border-radius: 12px; padding: 20px 24px;
+    border-radius: 12px; padding: 18px 22px;
     margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: sticky; top: 0; z-index: 5;
 }
-.con-header h3 { margin: 0 0 8px; font-size: 1.15em; }
-.con-header .help { color: #555; font-size: 0.9em; margin: 0; }
+.con-header h3 { margin: 0 0 8px; font-size: 1.1em; color: #222; }
+.con-header .con-question {
+    margin: 0 0 8px; font-weight: 600; color: #222; font-size: 0.98em;
+}
+.con-header .help { color: #555; font-size: 0.88em; margin: 0; line-height: 1.45; }
 .pillar-block {
     margin-bottom: 24px; background: #fff;
     border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;
 }
 .pillar-head {
-    background: #f8f9fa; padding: 10px 16px;
-    font-weight: 600; font-size: 0.95em; color: #222;
+    background: #f0f4f8; padding: 10px 16px;
+    font-weight: 700; font-size: 0.95em; color: #222;
     border-bottom: 1px solid #e0e0e0;
+}
+.domain-block { background: #fff; }
+.domain-head {
+    background: #fafbfc; padding: 6px 16px 5px;
+    font-size: 0.78em; color: #666;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    font-weight: 600;
+    border-top: 1px solid #f0f0f0;
+}
+.domain-block:first-of-type .domain-head { border-top: none; }
+
+/* PVQ formatting */
+.pvq-intro {
+    background: #f8f9fa; border-radius: 8px;
+    padding: 14px 18px; margin-bottom: 16px;
+    color: #333; font-size: 0.95em; line-height: 1.5;
+}
+.q-portrait {
+    font-size: 1.1em; color: #222;
+    margin-bottom: 16px; line-height: 1.5;
+}
+.q-prompt-clean {
+    font-size: 1em; color: #222;
+    font-weight: 600; margin-bottom: 12px;
 }
 .area-row {
     display: grid; grid-template-columns: 1fr auto;
@@ -300,21 +328,19 @@ permalink: /prioritisation/
 <!-- ────────────────────────────────────────────────────────────────────── -->
 <!-- LANDING                                                                  -->
 <!-- ────────────────────────────────────────────────────────────────────── -->
-<div id="viewLanding">
+<div id="viewLanding" markdown="0">
 
-# Prioritisation
+<p>The framework covers around fifty life areas across five pillars. This screen helps you decide which to work on first.</p>
 
-The framework covers around fifty life areas across five pillars. This screen helps you decide which to work on first.
-
-It runs through three stages. You can take all three (about 22 minutes total), or skip ahead to the one you want.
+<p>It runs through three stages. You can take all three (about 22 minutes total), or skip ahead to the one you want.</p>
 
 <div class="stage-list">
   <div class="stage-row">
     <div class="stage-num">1</div>
     <div>
       <div class="stage-title">Triage</div>
-      <div class="stage-desc">Surfaces serious issues that warrant attention before broader optimisation: significant depression or anxiety symptoms, immediate safety concerns, financial or housing distress, substance use, food insecurity, acute carer strain.</div>
-      <div class="stage-meta">10 questions, about 5 minutes</div>
+      <div class="stage-desc">Surfaces serious issues that warrant attention before broader optimisation: depression or anxiety symptoms, intimate-partner violence, disordered eating, substance use, gambling, financial or housing distress, food insecurity, recent job loss, recent bereavement, and active legal proceedings.</div>
+      <div class="stage-meta">12 questions, about 5 minutes</div>
     </div>
     <button class="stage-skip" onclick="skipTo('triage')">Start triage</button>
   </div>
@@ -322,8 +348,8 @@ It runs through three stages. You can take all three (about 22 minutes total), o
     <div class="stage-num">2</div>
     <div>
       <div class="stage-title">Fundamentals</div>
-      <div class="stage-desc">Checks five upstream areas with broad cross-domain effects: sleep, mental wellbeing, foundational finances, social connection, physical activity and nutrition. Significant gaps here tend to undermine progress everywhere else.</div>
-      <div class="stage-meta">14 questions, about 5 minutes</div>
+      <div class="stage-desc">Checks six upstream areas with broad cross-domain effects: sleep, mental wellbeing, foundational finances, social connection, physical activity and nutrition, and care responsibilities. Significant gaps here tend to undermine progress everywhere else.</div>
+      <div class="stage-meta">15 questions, about 5 minutes</div>
     </div>
     <button class="stage-skip" onclick="skipTo('fund')">Skip to fundamentals</button>
   </div>
@@ -351,27 +377,29 @@ It runs through three stages. You can take all three (about 22 minutes total), o
   <span class="meta">Your responses stay on this device unless you sign in, in which case they sync via your account.</span>
 </div>
 
-## Where this fits with the rest of the site
+<h2>Where this fits with the rest of the site</h2>
 
-[Quick Wins](#) – high-impact, low-effort actions for momentum (in development).
+<p><a href="#">Quick Wins</a> – high-impact, low-effort actions for momentum (in development).</p>
 
-[Level assessment]({{ site.baseurl }}/prioritisation/dashboard/) – assesses your current level across all life areas.
+<p><a href="{{ site.baseurl }}/prioritisation/dashboard/">Level assessment</a> – assesses your current level across all life areas.</p>
 
-[Browse all life areas]({{ site.baseurl }}/life-areas/) – if you already know what you want to work on.
+<p><a href="{{ site.baseurl }}/life-areas/">Browse all life areas</a> – if you already know what you want to work on.</p>
 
 <details>
 <summary><strong>Where the prioritisation research stands</strong></summary>
 
-There is no single validated academic framework for prioritising across all of personal life. The closest analogues each capture part of the picture.
+<p>There is no single validated academic framework for prioritising across all of personal life. The closest analogues each capture part of the picture.</p>
 
-- **Maslow's hierarchy** (1943) is widely cited but empirically weak. [Tay and Diener (2011)](https://psycnet.apa.org/doi/10.1037/a0023779) showed across 123 countries that needs are pursued in parallel, not sequence. Not used here.
-- **Theory of Constraints** (Goldratt, 1984), drawn from operations management, holds that a system's output is gated by its weakest critical link. Applied to life, this means identifying and addressing the binding constraint before optimising elsewhere.
-- **Self-Determination Theory** ([Deci and Ryan, 2000](https://selfdeterminationtheory.org/)) identifies three core psychological needs – autonomy, competence, and relatedness – alongside physical needs. Better supported than Maslow.
-- **The Wheel of Life**, a coaching tool, asks you to self-rate eight to ten areas and work on the lowest. Intuitive but limited by poor self-assessment.
-- **ITN** (Importance, Tractability, Neglectedness), developed by effective altruists for cause selection, adapts reasonably to personal areas.
-- **Hedonic adaptation research** ([Lyubomirsky and others](https://lyubomirskylab.com/)) shows that relationships, autonomy, meaning, and mastery produce lasting wellbeing returns. Income beyond roughly $75,000–100,000 household and most possessions adapt away ([Killingsworth, 2021](https://www.pnas.org/doi/10.1073/pnas.2016976118)).
+<ul>
+<li><strong>Maslow's hierarchy</strong> (1943) is widely cited but empirically weak. <a href="https://psycnet.apa.org/doi/10.1037/a0023779">Tay and Diener (2011)</a> showed across 123 countries that needs are pursued in parallel, not sequence. Not used here.</li>
+<li><strong>Theory of Constraints</strong> (Goldratt, 1984), drawn from operations management, holds that a system's output is gated by its weakest critical link. Applied to life, this means identifying and addressing the binding constraint before optimising elsewhere.</li>
+<li><strong>Self-Determination Theory</strong> (<a href="https://selfdeterminationtheory.org/">Deci and Ryan, 2000</a>) identifies three core psychological needs – autonomy, competence, and relatedness – alongside physical needs. Better supported than Maslow.</li>
+<li><strong>The Wheel of Life</strong>, a coaching tool, asks you to self-rate eight to ten areas and work on the lowest. Intuitive but limited by poor self-assessment.</li>
+<li><strong>ITN</strong> (Importance, Tractability, Neglectedness), developed by effective altruists for cause selection, adapts reasonably to personal areas.</li>
+<li><strong>Hedonic adaptation research</strong> (<a href="https://lyubomirskylab.com/">Lyubomirsky and others</a>) shows that relationships, autonomy, meaning, and mastery produce lasting wellbeing returns. Income beyond roughly $75,000–100,000 household and most possessions adapt away (<a href="https://www.pnas.org/doi/10.1073/pnas.2016976118">Killingsworth, 2021</a>).</li>
+</ul>
 
-This screen combines these into the three-stage approach above: triage acute issues first, then fundamentals where there are significant gaps, then prioritise across remaining areas. The values input draws on [Schwartz's theory of basic human values](https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/) (validated across 80+ countries); the constraint identification draws on Theory of Constraints.
+<p>This screen combines these into the three-stage approach above: triage acute issues first, then fundamentals where there are significant gaps, then prioritise across remaining areas. The values input draws on <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/">Schwartz's theory of basic human values</a> (validated across 80+ countries); the constraint identification draws on Theory of Constraints.</p>
 
 </details>
 
@@ -384,7 +412,7 @@ This screen combines these into the three-stage approach above: triage acute iss
   <div class="progress-bar">
     <div class="progress-outer"><div class="progress-fill" id="triageProgressFill"></div></div>
     <div class="progress-info">
-      <span id="triageProgressText">Triage – question 1 of 10</span>
+      <span id="triageProgressText">Triage – question 1 of 12</span>
       <button class="btn-link" onclick="exitToLanding()" style="padding:0;">Exit</button>
     </div>
   </div>
@@ -416,7 +444,7 @@ This screen combines these into the three-stage approach above: triage acute iss
   <div class="progress-bar">
     <div class="progress-outer"><div class="progress-fill" id="fundProgressFill"></div></div>
     <div class="progress-info">
-      <span id="fundProgressText">Fundamentals – question 1 of 14</span>
+      <span id="fundProgressText">Fundamentals – question 1 of 15</span>
       <button class="btn-link" onclick="exitToLanding()" style="padding:0;">Exit</button>
     </div>
   </div>
@@ -476,6 +504,7 @@ This screen combines these into the three-stage approach above: triage acute iss
       <button class="btn-link" onclick="exitToLanding()" style="padding:0;">Exit</button>
     </div>
   </div>
+  <p class="pvq-intro">Below are short descriptions of 21 different people. For each one, indicate how much that person is or is not like you. Drawn from the <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/" target="_blank" rel="noopener">Schwartz Portrait Values Questionnaire</a>, a measure of basic human values validated across 80+ countries.</p>
   <div id="pvqMount"></div>
   <div class="nav-row">
     <button class="btn-secondary" id="pvqBack" onclick="pvqBack()">Back</button>
@@ -542,7 +571,6 @@ var LIFE_AREAS = [
 {% for area in sorted_areas %}{% assign d = area[1] %}  { slug: {{ area[0] | jsonify }}, name: {{ d.name | jsonify }}, pillar: {{ d.pillar | jsonify }}, domain: {{ d.domain | jsonify }}, desc: {{ d.survey_description | jsonify }} }{% unless forloop.last %},{% endunless %}
 {% endfor %}];
 
-var PILLAR_ORDER = ['Expand Your Awareness', 'Look After Yourself', 'Connect with Others', 'Organise Your Life', 'Create & Contribute'];
 var BASE = '{{ site.baseurl }}';
 
 // ════════════════════════════════════════════════════════════════════════
@@ -576,16 +604,18 @@ var SCALE_YN_NA = [
 ];
 
 var TRIAGE_Q = [
-    { id: 'phq2_1', section: 'Mood',     text: 'Over the last two weeks, how often have you been bothered by little interest or pleasure in doing things?', options: SCALE_PHQ },
-    { id: 'phq2_2', section: 'Mood',     text: 'Over the last two weeks, how often have you been bothered by feeling down, depressed, or hopeless?',         options: SCALE_PHQ },
-    { id: 'gad2_1', section: 'Anxiety',  text: 'Over the last two weeks, how often have you been bothered by feeling nervous, anxious, or on edge?',         options: SCALE_PHQ },
-    { id: 'gad2_2', section: 'Anxiety',  text: 'Over the last two weeks, how often have you been bothered by not being able to stop or control worrying?',   options: SCALE_PHQ },
-    { id: 'safety',    section: 'Safety',    text: 'In the last twelve months, has anyone made you feel physically unsafe – including a partner, family member, or someone in your home?', options: SCALE_YN_PNR },
-    { id: 'financial', section: 'Financial', text: 'In the last three months, have you had trouble paying for rent, mortgage, or essential bills, or worried about losing your housing?', options: SCALE_YN },
+    { id: 'phq_single', section: 'Mood',     text: 'Over the last two weeks, how often have you been bothered by feeling down, depressed, or hopeless?', options: SCALE_PHQ },
+    { id: 'gad_single', section: 'Anxiety',  text: 'Over the last two weeks, how often have you been bothered by feeling nervous, anxious, or on edge?', options: SCALE_PHQ },
+    { id: 'safety',    section: 'Safety',    text: 'In the past twelve months, has a current or former partner, family member, or someone you live with hit you, threatened you, or made you afraid for your safety?', options: SCALE_YN_PNR },
+    { id: 'eating',    section: 'Eating',    text: 'In the last twelve months, have you felt you have lost control over how much you eat, or used vomiting, laxatives, or fasting to control your weight?', options: SCALE_YN_PNR },
     { id: 'substance', section: 'Substance use', text: 'In the last twelve months, have you used alcohol, prescription medication, or other drugs in ways that caused problems for you, or more than you wanted to?', options: SCALE_YN_PNR },
-    { id: 'hunger_1', section: 'Food', text: 'Within the past twelve months, were you worried that your food would run out before you had money to buy more?', options: SCALE_HUNGER },
-    { id: 'hunger_2', section: 'Food', text: 'Within the past twelve months, did the food you bought just not last and you did not have money to get more?', options: SCALE_HUNGER },
-    { id: 'carer',    section: 'Caring responsibilities', text: 'Are you the main person responsible for the care of a child, adult, or dependent with high needs, with little or no respite?', options: SCALE_YN_NA }
+    { id: 'gambling',  section: 'Gambling',  text: 'In the last twelve months, has gambling caused you significant financial, work, or relationship problems?', options: SCALE_YN_PNR },
+    { id: 'financial', section: 'Financial', text: 'In the last three months, have you had trouble paying for rent, mortgage, or essential bills, or worried about losing your housing?', options: SCALE_YN },
+    { id: 'hunger_1',  section: 'Food',      text: 'Within the past twelve months, were you worried that your food would run out before you had money to buy more?', options: SCALE_HUNGER },
+    { id: 'hunger_2',  section: 'Food',      text: 'Within the past twelve months, did the food you bought just not last and you did not have money to get more?', options: SCALE_HUNGER },
+    { id: 'job_loss',  section: 'Work',      text: 'In the last three months, have you lost your main source of income through job loss, business failure, or benefits ending, and not yet replaced it?', options: SCALE_YN },
+    { id: 'bereavement', section: 'Bereavement', text: 'In the last six months, has someone close to you (partner, parent, child, close friend) died, and you are still actively grieving?', options: SCALE_YN },
+    { id: 'legal',     section: 'Legal',     text: 'Are you currently involved in serious criminal proceedings, custody or divorce litigation, or other legal action that is actively occupying your time and attention?', options: SCALE_YN }
 ];
 
 var TRIAGE_PHQ9_9 = {
@@ -612,8 +642,8 @@ var FLAG_CONTENT = {
     },
     depression: {
         title: function(level) { return 'Your responses suggest ' + (level === 'moderate' ? 'moderate or higher' : 'mild') + ' symptoms of depression.'; },
-        body: 'A PHQ-2 score of 3 or more is the validated cutoff at which a fuller depression assessment is warranted (<a href="https://pubmed.ncbi.nlm.nih.gov/14583691/" target="_blank" rel="noopener">Kroenke, Spitzer & Williams, 2003</a>, on a sample of 6,000 adults). Depression is among the most treatable mental health conditions, with strong evidence for cognitive behavioural therapy, behavioural activation, and medication.',
-        firstStep: 'A reasonable first step is taking the longer PHQ-9 to get a clearer picture, then booking a GP or primary care appointment.',
+        body: 'Feeling down, depressed, or hopeless more than half the days over the last two weeks is a validated indicator that a fuller assessment is warranted (<a href="https://pubmed.ncbi.nlm.nih.gov/14583691/" target="_blank" rel="noopener">Kroenke, Spitzer & Williams, 2003</a>, on a sample of 6,000 adults validating the PHQ-2, the Patient Health Questionnaire 2-item depression screen from which this question is drawn). Depression is among the most treatable mental health conditions, with strong evidence for cognitive behavioural therapy, behavioural activation, and medication.',
+        firstStep: 'A reasonable first step is taking the longer PHQ-9 (the 9-item version) to get a clearer picture, then booking a GP or primary care appointment.',
         resources: [
             { label: 'PHQ-9 self-screen and scoring (free)', href: 'https://www.phqscreeners.com/' },
             { label: 'NHS Talking Therapies – self-referral (UK)', href: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
@@ -622,8 +652,8 @@ var FLAG_CONTENT = {
     },
     anxiety: {
         title: function(level) { return 'Your responses suggest ' + (level === 'moderate' ? 'moderate or higher' : 'mild') + ' symptoms of anxiety.'; },
-        body: 'A GAD-2 score of 3 or more is the validated cutoff at which a fuller anxiety assessment is warranted (<a href="https://pubmed.ncbi.nlm.nih.gov/17339617/" target="_blank" rel="noopener">Kroenke et al., 2007</a>). Cognitive behavioural therapy is the best-evidenced treatment for generalised anxiety, panic, and social anxiety; some forms also respond well to medication.',
-        firstStep: 'A reasonable first step is taking the longer GAD-7 to get a clearer picture, then booking a GP or primary care appointment.',
+        body: 'Feeling nervous, anxious, or on edge more than half the days over the last two weeks is a validated indicator that a fuller assessment is warranted (<a href="https://pubmed.ncbi.nlm.nih.gov/17339617/" target="_blank" rel="noopener">Kroenke et al., 2007</a>, validating the GAD-2, the Generalised Anxiety Disorder 2-item screen from which this question is drawn). Cognitive behavioural therapy is the best-evidenced treatment for generalised anxiety, panic, and social anxiety; some forms also respond well to medication.',
+        firstStep: 'A reasonable first step is taking the longer GAD-7 (the 7-item version) to get a clearer picture, then booking a GP or primary care appointment.',
         resources: [
             { label: 'GAD-7 self-screen and scoring (free)', href: 'https://www.phqscreeners.com/' },
             { label: 'NHS Talking Therapies – self-referral (UK)', href: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
@@ -631,13 +661,23 @@ var FLAG_CONTENT = {
         ]
     },
     safety: {
-        title: 'You indicated that someone has made you feel physically unsafe.',
-        body: 'Safety planning matters before any other kind of self-improvement work. The services below are free and confidential. They can help you think through your situation and options without committing you to any specific course of action.',
+        title: 'You indicated violence, threats, or fear from a partner, family member, or someone in your home.',
+        body: 'Safety planning matters before any other kind of self-improvement work. The services below are free and confidential. They can help you think through your situation and options without committing you to any specific course of action. Domestic abuse is common (around 1 in 4 women and 1 in 6 men over a lifetime in the UK – <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/domesticabuseinenglandandwales/latest" target="_blank" rel="noopener">ONS data</a>) and reaching out to a specialist service does not commit you to any particular action.',
         firstStep: 'A reasonable first step is talking to a trained adviser, who can help you understand what support is available where you are.',
         resources: [
             { label: 'United States – National Domestic Violence Hotline, 1-800-799-7233', href: 'https://www.thehotline.org/' },
             { label: 'United Kingdom – Refuge, 0808 2000 247 (24 hours, free)', href: 'https://www.refuge.org.uk/' },
             { label: 'Other countries – findahelpline.com', href: 'https://findahelpline.com/' }
+        ]
+    },
+    eating: {
+        title: 'Your responses suggest disordered eating worth assessing.',
+        body: 'Eating disorders carry the highest mortality rate of any mental illness and respond well to early treatment, but typical delay to first care is 4–8 years (<a href="https://pubmed.ncbi.nlm.nih.gov/31278375/" target="_blank" rel="noopener">Treasure et al., 2020</a>, in <em>The Lancet</em>). The single-item screen here is sensitive but not diagnostic; the next step is a structured screen and, if it confirms, a primary care conversation.',
+        firstStep: 'A reasonable first step is taking the SCOFF (Sick, Control, One-stone, Fat, Food) self-screen and, if it confirms a concern, seeking a GP referral to specialist services.',
+        resources: [
+            { label: 'United Kingdom – Beat Eating Disorders, 0808 801 0677 (free)', href: 'https://www.beateatingdisorders.org.uk/' },
+            { label: 'United States – National Eating Disorders Association, 1-800-931-2237', href: 'https://www.nationaleatingdisorders.org/' },
+            { label: 'SCOFF self-screen (5 questions)', href: 'https://www.bmj.com/content/319/7223/1467' }
         ]
     },
     financial: {
@@ -652,17 +692,28 @@ var FLAG_CONTENT = {
     },
     substance: {
         title: 'You indicated using alcohol, medication, or other drugs in ways that caused problems.',
-        body: 'Self-screening with the longer <a href="https://auditscreen.org/" target="_blank" rel="noopener">AUDIT (alcohol)</a> or DAST-10 (drugs) tools gives a clearer picture of severity. For most people the most useful first conversation is with a GP, who can discuss options privately and connect you to specialist services.',
+        body: 'Self-screening with the longer <a href="https://auditscreen.org/" target="_blank" rel="noopener">AUDIT (Alcohol Use Disorders Identification Test, 10 items)</a> or DAST-10 (Drug Abuse Screening Test, 10 items) gives a clearer picture of severity. For most people the most useful first conversation is with a GP, who can discuss options privately and connect you to specialist services.',
         firstStep: 'A reasonable first step is taking the relevant self-screen and, if it confirms a concern, a GP appointment.',
         resources: [
             { label: 'United Kingdom – Drinkaware (alcohol education and self-assessment)', href: 'https://www.drinkaware.co.uk/' },
-            { label: 'United States – SAMHSA helpline 1-800-662-4357 (24 hours, free, confidential)', href: 'https://findtreatment.gov/' },
+            { label: 'United States – SAMHSA (Substance Abuse and Mental Health Services Administration) helpline 1-800-662-4357 (24 hours, free, confidential)', href: 'https://findtreatment.gov/' },
             { label: 'Other countries – findahelpline.com', href: 'https://findahelpline.com/' }
+        ]
+    },
+    gambling: {
+        title: 'You indicated that gambling has caused significant problems in the last year.',
+        body: 'Gambling disorder affects roughly 1% of adults at any given time, with substantially higher rates of co-occurring depression, anxiety, substance use, and suicidality (<a href="https://pubmed.ncbi.nlm.nih.gov/27786613/" target="_blank" rel="noopener">Yakovenko & Hodgins, 2018</a>). Free, confidential support exists in most countries; bank-level gambling blocks and self-exclusion software are immediately available and meaningfully reduce relapse risk.',
+        firstStep: 'A reasonable first step is enabling a gambling block on your bank account and devices, then contacting a free support service.',
+        resources: [
+            { label: 'United Kingdom – GamCare, 0808 8020 133 (24 hours, free)', href: 'https://www.gamcare.org.uk/' },
+            { label: 'United States – National Council on Problem Gambling, 1-800-GAMBLER', href: 'https://www.ncpgambling.org/' },
+            { label: 'Gamblers Anonymous (worldwide)', href: 'https://www.gamblersanonymous.org/' },
+            { label: 'GamBan – self-exclusion blocking software', href: 'https://www.gamban.com/' }
         ]
     },
     food: {
         title: 'You indicated worry about food running out or food not lasting.',
-        body: 'Food insecurity has measurable effects on physical and mental health independent of overall income (<a href="https://pubmed.ncbi.nlm.nih.gov/20595453/" target="_blank" rel="noopener">Hager et al., 2010</a>, validating the two-item Hunger Vital Sign in 30,000 households). Local food banks operate independently of any benefits process and can usually be accessed quickly.',
+        body: 'Food insecurity has measurable effects on physical and mental health independent of overall income (<a href="https://pubmed.ncbi.nlm.nih.gov/20595453/" target="_blank" rel="noopener">Hager et al., 2010</a>, validating the two-item Hunger Vital Sign – the brief food-insecurity screen these two questions are drawn from – in 30,000 households). Local food banks operate independently of any benefits process and can usually be accessed quickly.',
         firstStep: 'A reasonable first step is locating a nearby food bank and, separately, checking whether you are eligible for benefits or assistance you are not currently claiming.',
         resources: [
             { label: 'United Kingdom – Trussell food bank network', href: 'https://www.trussell.org.uk/' },
@@ -670,17 +721,38 @@ var FLAG_CONTENT = {
             { label: 'United States – call 211 for local food assistance', href: 'https://www.211.org/' }
         ]
     },
-    carer: {
-        title: 'You indicated being the main carer for someone with high needs and having little or no respite.',
-        body: 'Carer strain is one situation that broad self-improvement advice often does not address well. It affects what "starting with sleep" or "starting with exercise" even mean. The most useful first step is usually connecting with a service that knows the local respite, financial, and emotional support options.',
-        firstStep: 'A reasonable first step is reaching out to a carer support organisation in your country, which can help map the support that exists for your situation.',
+    job_loss: {
+        title: 'You indicated recent loss of your main source of income.',
+        body: 'Acute unemployment is one of the strongest known short-term predictors of distress, sleep disruption, and relationship strain – effects that resolve with re-employment but compound while persistent (<a href="https://pubmed.ncbi.nlm.nih.gov/19476349/" target="_blank" rel="noopener">Paul & Moser, 2009</a>, meta-analysis of 237 studies). Income replacement, benefits enrolment, and structured job-search dominate other priorities until resolved.',
+        firstStep: 'A reasonable first step is applying for any unemployment benefits you are eligible for and, separately, setting a structured weekly job-search routine.',
         resources: [
-            { label: 'United Kingdom – Carers UK', href: 'https://www.carersuk.org/' },
-            { label: 'United States – Family Caregiver Alliance', href: 'https://www.caregiver.org/' }
+            { label: 'United Kingdom – Citizens Advice (benefits and job-search)', href: 'https://www.citizensadvice.org.uk/' },
+            { label: 'United States – CareerOneStop (employment and benefits)', href: 'https://www.careeronestop.org/' },
+            { label: 'United States – call 211 for local assistance programmes', href: 'https://www.211.org/' }
+        ]
+    },
+    bereavement: {
+        title: 'You indicated recent active grief.',
+        body: 'Acute grief in the months after a major loss is a normal response, not a clinical condition – but it changes which interventions make sense. The mainline framework assumes a baseline of stable resources; in active grief the priority is supportive contact and basic functioning, not optimisation. Around 7–10% of bereaved adults develop prolonged grief disorder, where structured support is more effective than general advice (<a href="https://pubmed.ncbi.nlm.nih.gov/28854865/" target="_blank" rel="noopener">Lundorff et al., 2017</a>, meta-analysis).',
+        firstStep: 'A reasonable first step is connecting with a bereavement support service, which can help distinguish typical grief from prolonged grief disorder and signpost the right kind of support.',
+        resources: [
+            { label: 'United Kingdom – Cruse Bereavement Support, 0808 808 1677 (free)', href: 'https://www.cruse.org.uk/' },
+            { label: 'United States – GriefShare (peer support, in-person and online)', href: 'https://www.griefshare.org/' },
+            { label: 'Modern Loss (writing, community, and resources)', href: 'https://modernloss.com/' }
+        ]
+    },
+    legal: {
+        title: 'You indicated active involvement in serious legal proceedings.',
+        body: 'Active criminal, custody, or divorce proceedings are a known major drain on cognitive, emotional, and financial resources, with effects that persist for months after resolution (<a href="https://pubmed.ncbi.nlm.nih.gov/20496129/" target="_blank" rel="noopener">Sbarra et al., 2010</a>, on divorce-related distress trajectories). Free or low-cost legal advice services exist in most jurisdictions and tend to produce meaningfully better outcomes than self-representation in serious matters.',
+        firstStep: 'A reasonable first step is contacting a free or means-tested legal advice service to understand your options before key procedural deadlines.',
+        resources: [
+            { label: 'United Kingdom – Citizens Advice (free legal information)', href: 'https://www.citizensadvice.org.uk/law-and-courts/' },
+            { label: 'United Kingdom – Civil Legal Advice, 0345 345 4 345', href: 'https://www.gov.uk/civil-legal-advice' },
+            { label: 'United States – Legal Services Corporation, find local legal aid', href: 'https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help' }
         ]
     }
 };
-var FLAG_ORDER = ['suicidal', 'safety', 'depression', 'anxiety', 'substance', 'financial', 'food', 'carer'];
+var FLAG_ORDER = ['suicidal', 'safety', 'depression', 'anxiety', 'eating', 'substance', 'gambling', 'financial', 'food', 'job_loss', 'bereavement', 'legal'];
 
 // ════════════════════════════════════════════════════════════════════════
 // FUNDAMENTALS – question definitions and content
@@ -741,16 +813,17 @@ var FUND_Q = [
     { id: 'ucla_3', section: 'Social connection', text: 'How often do you feel isolated from others?',        options: SCALE_UCLA3 },
     { id: 'contact_freq', section: 'Social connection', text: 'How often do you have meaningful contact with close friends or family (in person, by phone, or video)?', options: SCALE_CONTACT },
     { id: 'activity_min', section: 'Activity', text: 'In a typical week, roughly how many minutes of activity that raises your heart rate noticeably do you do? (Brisk walking, cycling, sport, gym, manual work all count.)', options: SCALE_ACTIVITY },
-    { id: 'veg_servings', section: 'Nutrition', text: 'On a typical day, how many servings of vegetables or fruit do you eat? (One serving is roughly a fist-sized portion.)', options: SCALE_VEG }
+    { id: 'veg_servings', section: 'Nutrition', text: 'On a typical day, how many servings of vegetables or fruit do you eat? (One serving is roughly a fist-sized portion.)', options: SCALE_VEG },
+    { id: 'carer', section: 'Care responsibilities', text: 'Are you the main person responsible for the care of a child, adult, or dependent with high needs, with little or no respite from that responsibility?', options: SCALE_YN_NA }
 ];
 
 // Personalised fundamentals cards. Each contains a brief, hyperlinked
 // explanation of the supporting evidence rather than a bare citation.
-var FUND_ORDER = ['wellbeing', 'sleep', 'finances', 'social', 'activity'];
+var FUND_ORDER = ['wellbeing', 'sleep', 'finances', 'social', 'activity', 'carer'];
 var FUND_CONTENT = {
     wellbeing: {
         title: 'Mental health and wellbeing',
-        body: 'A WHO-5 score below 13 (52%) is the validated cutoff for poor wellbeing (<a href="https://pubmed.ncbi.nlm.nih.gov/25831962/" target="_blank" rel="noopener">Topp et al., 2015</a>, systematic review of 213 studies). Sub-clinical wellbeing impairment tends to undermine progress in every other area before it shows up as clinical depression or anxiety.',
+        body: 'A WHO-5 (the World Health Organization 5-item Wellbeing Index) score below 13 out of 25 (52%) is the validated cutoff for poor wellbeing (<a href="https://pubmed.ncbi.nlm.nih.gov/25831962/" target="_blank" rel="noopener">Topp et al., 2015</a>, systematic review of 213 studies). Sub-clinical wellbeing impairment tends to undermine progress in every other area before it shows up as clinical depression or anxiety.',
         links: [
             { label: 'Read the Mental Health guide', href: BASE + '/mental-health/' },
             { label: 'Read the Mindfulness guide', href: BASE + '/mindfulness/' },
@@ -776,7 +849,7 @@ var FUND_CONTENT = {
     },
     social: {
         title: 'Key relationships and social connection',
-        body: 'Loneliness and social isolation have mortality effects comparable to smoking 15 cigarettes per day (<a href="https://journals.sagepub.com/doi/10.1177/1745691614568352" target="_blank" rel="noopener">Holt-Lunstad et al., 2015</a>, meta-analysis of 70 studies covering 3.4 million participants). The cutoff flags either persistent loneliness on the UCLA-3 short scale or less-than-weekly meaningful contact.',
+        body: 'Loneliness and social isolation have mortality effects comparable to smoking 15 cigarettes per day (<a href="https://journals.sagepub.com/doi/10.1177/1745691614568352" target="_blank" rel="noopener">Holt-Lunstad et al., 2015</a>, meta-analysis of 70 studies covering 3.4 million participants). The cutoff flags either persistent loneliness on the UCLA-3 (the UCLA 3-item Loneliness Scale, the brief screen these three questions are drawn from) or less-than-weekly meaningful contact with people you feel close to.',
         links: [
             { label: 'Read the Friendship guide', href: BASE + '/friendship/' },
             { label: 'Read the Relationship Quality guide', href: BASE + '/relationship-quality/' },
@@ -785,11 +858,20 @@ var FUND_CONTENT = {
     },
     activity: {
         title: 'Physical activity and nutrition',
-        body: 'The largest absolute mortality gains come from going from zero to roughly 60 minutes of moderate activity per week (<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61031-9/fulltext" target="_blank" rel="noopener">Lee et al., 2012</a>, <em>Lancet</em>), and from the first two-to-three daily servings of vegetables or fruit (<a href="https://academic.oup.com/ije/article/46/3/1029/3039477" target="_blank" rel="noopener">Aune et al., 2017</a>). Hitting an optimal target is a separate, smaller-gain question.',
+        body: 'The largest absolute mortality gains come from going from zero to roughly 60 minutes of moderate activity per week (<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61031-9/fulltext" target="_blank" rel="noopener">Lee et al., 2012</a>, in <em>The Lancet</em>), and from the first two-to-three daily servings of vegetables or fruit (<a href="https://academic.oup.com/ije/article/46/3/1029/3039477" target="_blank" rel="noopener">Aune et al., 2017</a>). Hitting an optimal target is a separate, smaller-gain question.',
         links: [
             { label: 'Read the Fitness guide', href: BASE + '/fitness/' },
             { label: 'Read the Nutrition guide', href: BASE + '/nutrition/' },
             { label: 'Why this cutoff', href: BASE + '/methodology/fundamentals-cutoffs/#physical-activity-and-nutrition' }
+        ]
+    },
+    carer: {
+        title: 'Sustained care responsibilities with little respite',
+        body: 'Carer strain is a structural constraint, not a deficit – but it changes what other interventions are feasible. Generic advice ("walk for an hour a day", "spend more time with friends") often does not apply when most discretionary time is committed to the person you care for. Around 1 in 6 UK adults provide unpaid care, with the highest-intensity carers reporting clinical-range distress at roughly 2–3× the general-population rate (<a href="https://www.carersuk.org/policy-and-research/state-of-caring-survey/" target="_blank" rel="noopener">Carers UK State of Caring 2023</a>). Mapping local respite, financial, and emotional support typically does more for sustainable wellbeing than adding new commitments.',
+        links: [
+            { label: 'United Kingdom – Carers UK', href: 'https://www.carersuk.org/' },
+            { label: 'United States – Family Caregiver Alliance', href: 'https://www.caregiver.org/' },
+            { label: 'Read the Time Management guide', href: BASE + '/time-management/' }
         ]
     }
 };
@@ -802,27 +884,56 @@ var CONSTRAINT_QUESTIONS = [
     {
         id: 'cost',
         title: 'Disproportionate cost',
-        question: 'Which areas of your life feel like they are absorbing more time, energy, or money than they are returning to you?',
-        help: 'Leave at 0 anything that does not apply. Use 1–3 to indicate how strongly the area is over-costing you (1 = a bit, 2 = quite a lot, 3 = a major drain).'
+        question: 'Which areas of your life are absorbing more time, energy, or money than they are returning to you?',
+        help: 'Use 1–3 (1 = a bit, 2 = quite a lot, 3 = a major drain). Most areas should stay at 0 – only flag the few that genuinely stand out. People commonly flag work, close relationships, housing, or possessions here.'
     },
     {
         id: 'upside',
         title: 'Counterfactual upside',
         question: 'If one or two areas dramatically improved, where would the gains feel most transformative?',
-        help: 'Use 1–3 for areas where improvement would meaningfully change your life (1 = noticeable, 2 = significant, 3 = transformative).'
+        help: 'Use 1–3 (1 = noticeable, 2 = significant, 3 = transformative). Most areas should stay at 0. People commonly flag finances, fitness, mental health, or career here.'
     },
     {
         id: 'friction',
         title: 'Current friction',
         question: 'Where in your life do you most often feel stuck, frustrated, or held back?',
-        help: 'Use 1–3 for areas that frustrate you (1 = occasional, 2 = frequent, 3 = constant).'
+        help: 'Use 1–3 (1 = occasional, 2 = frequent, 3 = constant). Most areas should stay at 0. People commonly flag organisation, time management, communication, or housework here.'
     },
     {
         id: 'underinvest',
         title: 'Underinvestment',
-        question: 'Where do you feel you are putting in less than the area deserves, given how much it matters to you?',
-        help: 'Use 1–3 for areas that you are neglecting relative to their importance (1 = a little, 2 = significantly, 3 = severely).'
+        question: 'Where are you putting in less than the area deserves, given how much it matters to you?',
+        help: 'Use 1–3 (1 = a little, 2 = significantly, 3 = severely). Most areas should stay at 0. People commonly flag friendships, family, learning, or community contribution here.'
     }
+];
+
+var TAXONOMY = [
+    { pillar: 'Expand Your Awareness', domains: [
+        { name: 'Values', areas: ['self-awareness', 'value-system'] },
+        { name: 'Purpose', areas: ['life-purpose', 'ethics'] },
+        { name: 'Knowledge', areas: ['media-diet', 'information-management', 'worldview', 'rationality'] },
+        { name: 'Learning', areas: ['cognitive-skills', 'life-skills', 'learning-methods'] }
+    ]},
+    { pillar: 'Look After Yourself', domains: [
+        { name: 'Health', areas: ['fitness', 'nutrition', 'food-management', 'sleep', 'health-management'] },
+        { name: 'Wellbeing', areas: ['mindfulness', 'mental-health', 'behaviours'] },
+        { name: 'Security', areas: ['physical-safety', 'emergency-preparedness', 'digital-safety', 'legal-matters'] }
+    ]},
+    { pillar: 'Connect with Others', domains: [
+        { name: 'Expression', areas: ['body-image', 'style', 'personality', 'communication'] },
+        { name: 'Family', areas: ['family-of-origin', 'extended-family', 'children'] },
+        { name: 'Friends and Relationships', areas: ['friendship', 'relationship-status', 'relationship-quality', 'sex'] }
+    ]},
+    { pillar: 'Organise Your Life', domains: [
+        { name: 'Environment', areas: ['housing', 'possessions', 'transportation', 'housework'] },
+        { name: 'Finances', areas: ['financial-planning-tracking', 'saving', 'investing'] },
+        { name: 'Productivity', areas: ['organisation', 'systems', 'time-management', 'goals', 'habits'] }
+    ]},
+    { pillar: 'Create & Contribute', domains: [
+        { name: 'Career', areas: ['current-work', 'career-planning', 'networks'] },
+        { name: 'Leisure', areas: ['participatory-leisure', 'consumptive-leisure'] },
+        { name: 'Impact', areas: ['global-impact', 'community-contribution'] }
+    ]}
 ];
 var CONSTRAINT_LABELS = {
     cost: 'is costing more than it returns',
@@ -932,12 +1043,13 @@ function skipTo(stage) {
 // ════════════════════════════════════════════════════════════════════════
 
 function renderLanding() {
+    var signedIn = window.APStorage && window.APStorage.isSignedIn && window.APStorage.isSignedIn();
     var triageDone = load(KEY_TRIAGE_DONE);
     var fundDone = load(KEY_FUND_DONE);
     var focusDone = load(KEY_FOCUS_DONE);
     var anyDone = triageDone || fundDone || focusDone;
     var banner = document.getElementById('priorBanner');
-    if (anyDone) {
+    if (anyDone && signedIn) {
         var bits = [];
         if (triageDone) bits.push('triage');
         if (fundDone) bits.push('fundamentals');
@@ -959,7 +1071,7 @@ function renderLanding() {
 // TRIAGE
 // ════════════════════════════════════════════════════════════════════════
 
-function triagePhqPositive(a) { return ((a.phq2_1 || 0) + (a.phq2_2 || 0)) >= 3; }
+function triagePhqPositive(a) { return (a.phq_single || 0) >= 2; }
 
 function triageList() {
     var l = TRIAGE_Q.slice();
@@ -1018,17 +1130,21 @@ function triageBack() {
 
 function computeTriageFlags(a) {
     var f = {};
-    var phq = (a.phq2_1 || 0) + (a.phq2_2 || 0);
-    if (phq >= 3) f.depression = phq >= 4 ? 'moderate' : 'mild';
+    var phq = a.phq_single || 0;
+    if (phq >= 2) f.depression = phq === 3 ? 'moderate' : 'mild';
     if ((a.phq9_9 || 0) >= 1) f.suicidal = true;
-    var gad = (a.gad2_1 || 0) + (a.gad2_2 || 0);
-    if (gad >= 3) f.anxiety = gad >= 4 ? 'moderate' : 'mild';
+    var gad = a.gad_single || 0;
+    if (gad >= 2) f.anxiety = gad === 3 ? 'moderate' : 'mild';
     if (a.safety === 'yes') f.safety = true;
-    if (a.financial === 'yes') f.financial = true;
+    if (a.eating === 'yes') f.eating = true;
     if (a.substance === 'yes') f.substance = true;
+    if (a.gambling === 'yes') f.gambling = true;
+    if (a.financial === 'yes') f.financial = true;
     var hh = function(v) { return v === 'often' || v === 'sometimes'; };
     if (hh(a.hunger_1) || hh(a.hunger_2)) f.food = true;
-    if (a.carer === 'yes') f.carer = true;
+    if (a.job_loss === 'yes') f.job_loss = true;
+    if (a.bereavement === 'yes') f.bereavement = true;
+    if (a.legal === 'yes') f.legal = true;
     return f;
 }
 
@@ -1142,6 +1258,7 @@ function computeFundFlags(a) {
     var ucla = ['ucla_1','ucla_2','ucla_3'].reduce(function(s, k) { return s + (typeof a[k] === 'number' ? a[k] : 0); }, 0);
     if (ucla >= 6 || a.contact_freq === 'monthly' || a.contact_freq === 'less') f.social = true;
     if (a.activity_min === '0' || a.activity_min === 'under60' || a.veg_servings === '0-1' || a.veg_servings === '2') f.activity = true;
+    if (a.carer === 'yes') f.carer = true;
     return f;
 }
 
@@ -1159,7 +1276,7 @@ function fundFigure(flag, r) {
     switch (flag) {
         case 'wellbeing':
             var who5 = ['who5_1','who5_2','who5_3','who5_4','who5_5'].reduce(function(s, k) { return s + (typeof r[k] === 'number' ? r[k] : 0); }, 0);
-            return 'You scored ' + (who5 * 4) + '% on the WHO-5, below the 52% threshold for poor wellbeing.';
+            return 'You scored ' + (who5 * 4) + '% on the WHO-5 wellbeing index, below the 52% threshold for poor wellbeing.';
         case 'sleep':
             var lbl = r.sleep_hours === 'under5' ? 'under 5 hours' : '5 to 6 hours';
             return 'You reported sleeping ' + lbl + ' on a typical work night.';
@@ -1182,6 +1299,8 @@ function fundFigure(flag, r) {
             if (r.veg_servings === '0-1') bits.push('0 to 1 daily servings of vegetables or fruit');
             else if (r.veg_servings === '2') bits.push('2 daily servings of vegetables or fruit');
             return bits.length ? 'You reported ' + bits.join(' and ') + '.' : '';
+        case 'carer':
+            return 'You indicated being the main carer for someone with high needs and having little or no respite.';
     }
     return '';
 }
@@ -1200,7 +1319,7 @@ function renderFundR(flags) {
 
     var html = '';
     if (triggered.length === 0) {
-        html += '<div class="all-clear"><h3>All five fundamentals cleared.</h3><p>Sleep, wellbeing, foundational finances, social connection, and physical activity all came back above the cutoffs. Continue to the focus area stage to identify which of the remaining 50 life areas to work on next.</p></div>';
+        html += '<div class="all-clear"><h3>All fundamentals cleared.</h3><p>Sleep, wellbeing, foundational finances, social connection, physical activity, and care responsibilities all came back above the cutoffs. Continue to the focus area stage to identify which of the remaining life areas to work on next.</p></div>';
     } else {
         triggered.forEach(function(flag, i) { html += renderFundCard(flag, responses, i === 0); });
     }
@@ -1291,9 +1410,8 @@ function renderPvq() {
     document.getElementById('pvqProgressFill').style.width = (5 + 45 * pvqIdx / total) + '%';
 
     var html = '<div class="q-card">';
-    html += '<div class="q-section">' + escapeHtml(PVQ.intro) + '</div>';
-    html += '<div class="q-text">' + escapeHtml(portrait) + '</div>';
-    html += '<div class="q-prompt"><strong>' + escapeHtml(PVQ.prompt) + '</strong></div>';
+    html += '<div class="q-portrait">' + escapeHtml(portrait) + '</div>';
+    html += '<div class="q-prompt-clean">' + escapeHtml(PVQ.prompt) + '</div>';
     var current = pvqAnswers[item.id];
     PVQ.scale.forEach(function(s, i) {
         var checked = (current === s.value) ? 'checked' : '';
@@ -1335,15 +1453,6 @@ function pvqBack() {
 // FOCUS AREA – CONSTRAINTS
 // ════════════════════════════════════════════════════════════════════════
 
-function areasByPillar() {
-    var byP = {};
-    LIFE_AREAS.forEach(function(a) {
-        if (!byP[a.pillar]) byP[a.pillar] = [];
-        byP[a.pillar].push(a);
-    });
-    return byP;
-}
-
 function renderConstraints() {
     var q = CONSTRAINT_QUESTIONS[conPage];
     var totalP = CONSTRAINT_QUESTIONS.length;
@@ -1352,25 +1461,31 @@ function renderConstraints() {
 
     var html = '<div class="con-header">';
     html += '<h3>' + escapeHtml(q.title) + '</h3>';
-    html += '<p style="margin: 0 0 8px;"><strong>' + escapeHtml(q.question) + '</strong></p>';
+    html += '<p class="con-question">' + escapeHtml(q.question) + '</p>';
     html += '<p class="help">' + escapeHtml(q.help) + '</p></div>';
 
-    var byP = areasByPillar();
-    PILLAR_ORDER.forEach(function(pillar) {
-        var areas = byP[pillar] || [];
-        if (!areas.length) return;
-        html += '<div class="pillar-block"><div class="pillar-head">' + escapeHtml(pillar) + '</div>';
-        areas.forEach(function(a) {
-            var current = constraintAnswers[q.id][a.slug] || 0;
-            html += '<div class="area-row"><div>';
-            html += '<div class="area-name">' + escapeHtml(a.name) + '</div>';
-            html += '<div class="area-desc">' + escapeHtml(a.desc) + '</div></div>';
-            html += '<div class="rate-buttons">';
-            for (var i = 0; i <= 3; i++) {
-                var cls = 'rate-btn' + (i === 0 ? ' zero' : '') + (current === i ? ' active' : '');
-                html += '<button type="button" class="' + cls + '" data-area="' + a.slug + '" data-rating="' + i + '" onclick="setRating(\'' + q.id + '\', \'' + a.slug + '\', ' + i + ')">' + i + '</button>';
-            }
-            html += '</div></div>';
+    var areaMap = {};
+    LIFE_AREAS.forEach(function(a) { areaMap[a.slug] = a; });
+
+    TAXONOMY.forEach(function(p) {
+        html += '<div class="pillar-block"><div class="pillar-head">' + escapeHtml(p.pillar) + '</div>';
+        p.domains.forEach(function(d) {
+            html += '<div class="domain-block"><div class="domain-head">' + escapeHtml(d.name) + '</div>';
+            d.areas.forEach(function(slug) {
+                var a = areaMap[slug];
+                if (!a) return;
+                var current = constraintAnswers[q.id][a.slug] || 0;
+                html += '<div class="area-row"><div>';
+                html += '<div class="area-name">' + escapeHtml(a.name) + '</div>';
+                html += '<div class="area-desc">' + escapeHtml(a.desc) + '</div></div>';
+                html += '<div class="rate-buttons">';
+                for (var i = 0; i <= 3; i++) {
+                    var cls = 'rate-btn' + (i === 0 ? ' zero' : '') + (current === i ? ' active' : '');
+                    html += '<button type="button" class="' + cls + '" data-area="' + a.slug + '" data-rating="' + i + '" onclick="setRating(\'' + q.id + '\', \'' + a.slug + '\', ' + i + ')">' + i + '</button>';
+                }
+                html += '</div></div>';
+            });
+            html += '</div>';
         });
         html += '</div>';
     });
