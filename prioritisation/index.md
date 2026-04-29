@@ -601,7 +601,7 @@ permalink: /prioritisation/
   <div id="pvqMount"></div>
   <div class="nav-row">
     <button class="btn-secondary" id="pvqBack" onclick="pvqBack()">Back</button>
-    <button class="btn-primary" id="pvqNext" onclick="pvqNext()" disabled>Next</button>
+    <button class="btn-primary hidden" id="pvqNext" onclick="pvqNext()">Next</button>
   </div>
 </div>
 
@@ -1073,7 +1073,7 @@ function save(k, v) { window.APStorage.save(k, v); }
 var triageAnswers = {}, triageIdx = 0, triageAdvanceT = null;
 var fundAnswers = {}, fundIdx = 0, fundAdvanceT = null;
 var demographics = { age: null, gender: null };
-var pvqAnswers = {}, pvqIdx = 0;
+var pvqAnswers = {}, pvqIdx = 0, pvqAdvanceT = null;
 var constraintAnswers = { cost: {}, upside: {}, friction: {}, underinvest: {} };
 var conPage = 0;
 
@@ -1506,6 +1506,7 @@ function goToPvq() {
 // ════════════════════════════════════════════════════════════════════════
 
 function renderPvq() {
+    if (pvqAdvanceT) { clearTimeout(pvqAdvanceT); pvqAdvanceT = null; }
     var item = PVQ.items[pvqIdx];
     var portrait = item[demographics.gender] || item.male;
     var total = PVQ.items.length;
@@ -1527,9 +1528,8 @@ function renderPvq() {
     html += '</div>';
     document.getElementById('pvqMount').innerHTML = html;
 
-    document.getElementById('pvqBack').disabled = (pvqIdx === 0);
-    document.getElementById('pvqNext').disabled = (current === undefined);
-    document.getElementById('pvqNext').textContent = (pvqIdx === total - 1) ? 'Next: constraints' : 'Next';
+    document.getElementById('pvqBack').disabled = false;
+    document.getElementById('pvqBack').textContent = (pvqIdx === 0) ? 'Back to demographics' : 'Back';
 }
 
 function onPvqAnswer(value) {
@@ -1540,14 +1540,17 @@ function onPvqAnswer(value) {
     labels.forEach(function(l) { l.classList.remove('selected'); });
     var picked = document.querySelector('input[name="pvqOpt"][value="' + value + '"]');
     if (picked && picked.parentNode) picked.parentNode.classList.add('selected');
-    document.getElementById('pvqNext').disabled = false;
+    if (pvqAdvanceT) clearTimeout(pvqAdvanceT);
+    pvqAdvanceT = setTimeout(function() { pvqAdvanceT = null; pvqNext(); }, 220);
 }
 
 function pvqNext() {
+    if (pvqAdvanceT) { clearTimeout(pvqAdvanceT); pvqAdvanceT = null; }
     if (pvqIdx < PVQ.items.length - 1) { pvqIdx += 1; renderPvq(); }
     else { renderConstraints(); showView('FocusCon'); }
 }
 function pvqBack() {
+    if (pvqAdvanceT) { clearTimeout(pvqAdvanceT); pvqAdvanceT = null; }
     if (pvqIdx > 0) { pvqIdx -= 1; renderPvq(); }
     else { renderDemographics(); showView('FocusDemo'); }
 }
