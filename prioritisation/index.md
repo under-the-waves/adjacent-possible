@@ -8,6 +8,91 @@ permalink: /prioritisation/
 .prio { max-width: 880px; margin: 0 auto; }
 .hidden { display: none; }
 
+/* Landing page hero */
+.prio-hero h1 {
+    margin: 0 0 8px;
+    font-size: 1.9em; line-height: 1.2;
+    color: #111;
+}
+.prio-hero .lede {
+    margin: 0 0 18px;
+    font-size: 1.05em; line-height: 1.5;
+    color: #444;
+}
+
+/* Research disclosure (intro) */
+.research-note {
+    background: #f8f9fa; border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 0 0 28px;
+    font-size: 0.93em;
+}
+.research-note > summary {
+    cursor: pointer;
+    font-weight: 600; color: #155799;
+    list-style: none;
+    padding: 2px 0;
+    display: flex; align-items: center; gap: 8px;
+}
+.research-note > summary::-webkit-details-marker { display: none; }
+.research-note > summary::before {
+    content: "▸";
+    color: #888; font-size: 0.9em;
+    transition: transform 0.15s ease;
+    display: inline-block;
+}
+.research-note[open] > summary::before { transform: rotate(90deg); }
+.research-note > summary .summary-meta {
+    color: #666; font-weight: 400; margin-left: 6px;
+}
+.research-note .body {
+    color: #333; line-height: 1.55;
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid #e0e6ed;
+}
+.research-note .body p { margin: 0 0 12px; }
+.research-note .body ul { margin: 0 0 12px; padding-left: 22px; }
+.research-note .body li { margin-bottom: 6px; }
+
+/* Privacy note */
+.privacy-note {
+    margin: 10px 0 0;
+    font-size: 0.85em; color: #777;
+}
+
+/* Related cards */
+.related-h {
+    margin: 36px 0 14px;
+    font-size: 1.15em; font-weight: 600; color: #222;
+}
+.related-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+}
+.related-card {
+    display: block; text-decoration: none;
+    background: #fff; border: 1px solid #e0e0e0;
+    border-radius: 8px; padding: 14px 16px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.related-card:hover {
+    border-color: #155799;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.related-card .related-title {
+    font-weight: 600; color: #155799;
+    font-size: 0.98em; margin-bottom: 4px;
+}
+.related-card .related-desc {
+    color: #555; font-size: 0.88em; line-height: 1.4;
+}
+.related-card.disabled {
+    background: #fafafa;
+}
+.related-card.disabled .related-title { color: #888; }
+
 /* Buttons */
 .btn-primary {
     background: #155799; color: #fff; border: none;
@@ -330,16 +415,33 @@ permalink: /prioritisation/
 <!-- ────────────────────────────────────────────────────────────────────── -->
 <div id="viewLanding" markdown="0">
 
-<p>The framework covers around fifty life areas across five pillars. This screen helps you decide which to work on first.</p>
+<div class="prio-hero">
+  <h1>Decide what to work on first</h1>
+  <p class="lede">A short three-stage screen across roughly fifty life areas. About 22 minutes for all three, or skip ahead to the one you want.</p>
+</div>
 
-<p>It runs through three stages. You can take all three (about 22 minutes total), or skip ahead to the one you want.</p>
+<details class="research-note">
+  <summary>Why three stages – the research behind this screen</summary>
+  <div class="body">
+    <p>There is no single validated academic framework for prioritising across all of personal life. The closest analogues each capture part of the picture.</p>
+    <ul>
+      <li><strong>Maslow's hierarchy</strong> (1943) is widely cited but empirically weak. <a href="https://psycnet.apa.org/doi/10.1037/a0023779">Tay and Diener (2011)</a> showed across 123 countries that needs are pursued in parallel, not sequence. Not used here.</li>
+      <li><strong>Theory of Constraints</strong> (Goldratt, 1984), drawn from operations management, holds that a system's output is gated by its weakest critical link. Applied to life, this means identifying and addressing the binding constraint before optimising elsewhere.</li>
+      <li><strong>Self-Determination Theory</strong> (<a href="https://selfdeterminationtheory.org/">Deci and Ryan, 2000</a>) identifies three core psychological needs – autonomy, competence, and relatedness – alongside physical needs. Better supported than Maslow.</li>
+      <li><strong>The Wheel of Life</strong>, a coaching tool, asks you to self-rate eight to ten areas and work on the lowest. Intuitive but limited by poor self-assessment.</li>
+      <li><strong>ITN</strong> (Importance, Tractability, Neglectedness), developed by effective altruists for cause selection, adapts reasonably to personal areas.</li>
+      <li><strong>Hedonic adaptation research</strong> (<a href="https://lyubomirskylab.com/">Lyubomirsky and others</a>) shows that relationships, autonomy, meaning, and mastery produce lasting wellbeing returns. Income beyond roughly $75,000–100,000 household and most possessions adapt away (<a href="https://www.pnas.org/doi/10.1073/pnas.2016976118">Killingsworth, 2021</a>).</li>
+    </ul>
+    <p>This screen combines these into a three-stage approach: triage acute issues first, then fundamentals where there are significant gaps, then prioritise across remaining areas. The values input draws on <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/">Schwartz's theory of basic human values</a> (validated across 80+ countries); the constraint identification draws on Theory of Constraints.</p>
+  </div>
+</details>
 
 <div class="stage-list">
   <div class="stage-row">
     <div class="stage-num">1</div>
     <div>
       <div class="stage-title">Triage</div>
-      <div class="stage-desc">Surfaces serious issues that warrant attention before broader optimisation: depression or anxiety symptoms, intimate-partner violence, disordered eating, substance use, gambling, financial or housing distress, food insecurity, recent job loss, recent bereavement, and active legal proceedings.</div>
+      <div class="stage-desc">Checks for acute issues – mental health, safety, financial distress, addiction, recent loss, active legal action – that warrant attention before broader optimisation.</div>
       <div class="stage-meta">12 questions, about 5 minutes</div>
     </div>
     <button class="stage-skip" onclick="skipTo('triage')">Start triage</button>
@@ -348,19 +450,19 @@ permalink: /prioritisation/
     <div class="stage-num">2</div>
     <div>
       <div class="stage-title">Fundamentals</div>
-      <div class="stage-desc">Checks six upstream areas with broad cross-domain effects: sleep, mental wellbeing, foundational finances, social connection, physical activity and nutrition, and care responsibilities. Significant gaps here tend to undermine progress everywhere else.</div>
+      <div class="stage-desc">Checks six upstream areas with broad cross-domain effects: sleep, mental wellbeing, foundational finances, social connection, physical activity, and care responsibilities.</div>
       <div class="stage-meta">15 questions, about 5 minutes</div>
     </div>
-    <button class="stage-skip" onclick="skipTo('fund')">Skip to fundamentals</button>
+    <button class="stage-skip" onclick="skipTo('fund')">Start at fundamentals</button>
   </div>
   <div class="stage-row">
     <div class="stage-num">3</div>
     <div>
       <div class="stage-title">Focus area</div>
-      <div class="stage-desc">Identifies a single binding life area to focus on next, based on what you value (Schwartz PVQ-21) and where you currently feel constrained across the 52 life areas. Output is one focus area with a stated reason, plus two named successors.</div>
+      <div class="stage-desc">Identifies a single binding life area to focus on next, based on what you value and where you currently feel constrained. Outputs one focus area with a stated reason, plus two named successors.</div>
       <div class="stage-meta">21 values items + 4 constraint pages, about 12 minutes</div>
     </div>
-    <button class="stage-skip" onclick="skipTo('focus')">Skip to focus area</button>
+    <button class="stage-skip" onclick="skipTo('focus')">Start at focus area</button>
   </div>
 </div>
 
@@ -374,34 +476,25 @@ permalink: /prioritisation/
 
 <div class="start-row">
   <button class="btn-primary" onclick="skipTo('triage')">Start the screen</button>
-  <span class="meta">Your responses stay on this device unless you sign in, in which case they sync via your account.</span>
 </div>
+<p class="privacy-note">Your responses stay on this device unless you sign in, in which case they sync via your account.</p>
 
-<h2>Where this fits with the rest of the site</h2>
+<h2 class="related-h">Where this fits with the rest of the site</h2>
 
-<p><a href="#">Quick Wins</a> – high-impact, low-effort actions for momentum (in development).</p>
-
-<p><a href="{{ site.baseurl }}/prioritisation/dashboard/">Level assessment</a> – assesses your current level across all life areas.</p>
-
-<p><a href="{{ site.baseurl }}/life-areas/">Browse all life areas</a> – if you already know what you want to work on.</p>
-
-<details>
-<summary><strong>Where the prioritisation research stands</strong></summary>
-
-<p>There is no single validated academic framework for prioritising across all of personal life. The closest analogues each capture part of the picture.</p>
-
-<ul>
-<li><strong>Maslow's hierarchy</strong> (1943) is widely cited but empirically weak. <a href="https://psycnet.apa.org/doi/10.1037/a0023779">Tay and Diener (2011)</a> showed across 123 countries that needs are pursued in parallel, not sequence. Not used here.</li>
-<li><strong>Theory of Constraints</strong> (Goldratt, 1984), drawn from operations management, holds that a system's output is gated by its weakest critical link. Applied to life, this means identifying and addressing the binding constraint before optimising elsewhere.</li>
-<li><strong>Self-Determination Theory</strong> (<a href="https://selfdeterminationtheory.org/">Deci and Ryan, 2000</a>) identifies three core psychological needs – autonomy, competence, and relatedness – alongside physical needs. Better supported than Maslow.</li>
-<li><strong>The Wheel of Life</strong>, a coaching tool, asks you to self-rate eight to ten areas and work on the lowest. Intuitive but limited by poor self-assessment.</li>
-<li><strong>ITN</strong> (Importance, Tractability, Neglectedness), developed by effective altruists for cause selection, adapts reasonably to personal areas.</li>
-<li><strong>Hedonic adaptation research</strong> (<a href="https://lyubomirskylab.com/">Lyubomirsky and others</a>) shows that relationships, autonomy, meaning, and mastery produce lasting wellbeing returns. Income beyond roughly $75,000–100,000 household and most possessions adapt away (<a href="https://www.pnas.org/doi/10.1073/pnas.2016976118">Killingsworth, 2021</a>).</li>
-</ul>
-
-<p>This screen combines these into the three-stage approach above: triage acute issues first, then fundamentals where there are significant gaps, then prioritise across remaining areas. The values input draws on <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/">Schwartz's theory of basic human values</a> (validated across 80+ countries); the constraint identification draws on Theory of Constraints.</p>
-
-</details>
+<div class="related-cards">
+  <a href="#" class="related-card disabled">
+    <div class="related-title">Quick Wins</div>
+    <div class="related-desc">High-impact, low-effort actions for momentum (in development).</div>
+  </a>
+  <a href="{{ site.baseurl }}/prioritisation/dashboard/" class="related-card">
+    <div class="related-title">Level assessment</div>
+    <div class="related-desc">Assesses your current level across all life areas.</div>
+  </a>
+  <a href="{{ site.baseurl }}/life-areas/" class="related-card">
+    <div class="related-title">Browse all life areas</div>
+    <div class="related-desc">If you already know what you want to work on.</div>
+  </a>
+</div>
 
 </div>
 
@@ -419,7 +512,7 @@ permalink: /prioritisation/
   <div id="triageMount"></div>
   <div class="nav-row">
     <button class="btn-secondary" id="triageBack" onclick="triageBack()">Back</button>
-    <button class="btn-primary" id="triageNext" onclick="triageNext()" disabled>Next</button>
+    <button class="btn-primary hidden" id="triageNext" onclick="triageNext()">Next</button>
   </div>
 </div>
 
@@ -451,7 +544,7 @@ permalink: /prioritisation/
   <div id="fundMount"></div>
   <div class="nav-row">
     <button class="btn-secondary" id="fundBack" onclick="fundBack()">Back</button>
-    <button class="btn-primary" id="fundNext" onclick="fundNext()" disabled>Next</button>
+    <button class="btn-primary hidden" id="fundNext" onclick="fundNext()">Next</button>
   </div>
 </div>
 
@@ -977,8 +1070,8 @@ function save(k, v) { window.APStorage.save(k, v); }
 // STATE
 // ════════════════════════════════════════════════════════════════════════
 
-var triageAnswers = {}, triageIdx = 0;
-var fundAnswers = {}, fundIdx = 0;
+var triageAnswers = {}, triageIdx = 0, triageAdvanceT = null;
+var fundAnswers = {}, fundIdx = 0, fundAdvanceT = null;
 var demographics = { age: null, gender: null };
 var pvqAnswers = {}, pvqIdx = 0;
 var constraintAnswers = { cost: {}, upside: {}, friction: {}, underinvest: {} };
@@ -1080,6 +1173,7 @@ function triageList() {
 }
 
 function renderTriageQ() {
+    if (triageAdvanceT) { clearTimeout(triageAdvanceT); triageAdvanceT = null; }
     var list = triageList();
     if (triageIdx >= list.length) { finishTriage(); return; }
     var q = list[triageIdx];
@@ -1103,9 +1197,8 @@ function renderTriageQ() {
     html += '</div></div>';
     document.getElementById('triageMount').innerHTML = html;
 
-    document.getElementById('triageBack').disabled = (triageIdx === 0);
-    document.getElementById('triageNext').disabled = (current === undefined);
-    document.getElementById('triageNext').textContent = (triageIdx === list.length - 1) ? 'See triage results' : 'Next';
+    document.getElementById('triageBack').disabled = false;
+    document.getElementById('triageBack').textContent = (triageIdx === 0) ? 'Back to overview' : 'Back';
 }
 
 function onTriageAnswer(qid, i) {
@@ -1118,11 +1211,16 @@ function onTriageAnswer(qid, i) {
     labels.forEach(function(l) { l.classList.remove('selected'); });
     var picked = document.getElementById('tri_' + qid + '_' + i);
     if (picked && picked.parentNode) picked.parentNode.classList.add('selected');
-    document.getElementById('triageNext').disabled = false;
+    if (triageAdvanceT) clearTimeout(triageAdvanceT);
+    triageAdvanceT = setTimeout(function() { triageAdvanceT = null; triageNext(); }, 220);
 }
 
-function triageNext() { triageIdx += 1; renderTriageQ(); }
+function triageNext() {
+    if (triageAdvanceT) { clearTimeout(triageAdvanceT); triageAdvanceT = null; }
+    triageIdx += 1; renderTriageQ();
+}
 function triageBack() {
+    if (triageAdvanceT) { clearTimeout(triageAdvanceT); triageAdvanceT = null; }
     if (triageIdx === 0) { exitToLanding(); return; }
     triageIdx -= 1;
     renderTriageQ();
@@ -1203,6 +1301,7 @@ function renderFlagCard(key, val) {
 // ════════════════════════════════════════════════════════════════════════
 
 function renderFundQ() {
+    if (fundAdvanceT) { clearTimeout(fundAdvanceT); fundAdvanceT = null; }
     if (fundIdx >= FUND_Q.length) { finishFund(); return; }
     var q = FUND_Q[fundIdx];
     var total = FUND_Q.length;
@@ -1225,9 +1324,8 @@ function renderFundQ() {
     html += '</div></div>';
     document.getElementById('fundMount').innerHTML = html;
 
-    document.getElementById('fundBack').disabled = (fundIdx === 0);
-    document.getElementById('fundNext').disabled = (current === undefined);
-    document.getElementById('fundNext').textContent = (fundIdx === FUND_Q.length - 1) ? 'See fundamentals results' : 'Next';
+    document.getElementById('fundBack').disabled = false;
+    document.getElementById('fundBack').textContent = (fundIdx === 0) ? 'Back to overview' : 'Back';
 }
 
 function onFundAnswer(qid, i) {
@@ -1239,11 +1337,16 @@ function onFundAnswer(qid, i) {
     labels.forEach(function(l) { l.classList.remove('selected'); });
     var picked = document.getElementById('fund_' + qid + '_' + i);
     if (picked && picked.parentNode) picked.parentNode.classList.add('selected');
-    document.getElementById('fundNext').disabled = false;
+    if (fundAdvanceT) clearTimeout(fundAdvanceT);
+    fundAdvanceT = setTimeout(function() { fundAdvanceT = null; fundNext(); }, 220);
 }
 
-function fundNext() { fundIdx += 1; renderFundQ(); }
+function fundNext() {
+    if (fundAdvanceT) { clearTimeout(fundAdvanceT); fundAdvanceT = null; }
+    fundIdx += 1; renderFundQ();
+}
 function fundBack() {
+    if (fundAdvanceT) { clearTimeout(fundAdvanceT); fundAdvanceT = null; }
     if (fundIdx === 0) { exitToLanding(); return; }
     fundIdx -= 1;
     renderFundQ();
