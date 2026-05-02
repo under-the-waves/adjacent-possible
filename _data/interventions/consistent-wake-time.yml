@@ -41,7 +41,7 @@ values:
       - [Lunsford-Avery et al. (2018)](https://www.nature.com/articles/s41598-018-32402-5) reported that ~70–80% of adults with regularised sleep–wake patterns showed concurrent improvements in alertness and metabolic markers, supporting an ISR of roughly 75%.
     uar_reasoning: |
       - [Roenneberg et al. (2012)](https://doi.org/10.1016/j.cub.2012.03.038) found in a cohort of over 65,000 adults that the majority experience two or more hours of social jetlag between weekdays and weekends, indicating that fewer than half maintain wake-time variance under 30 minutes long-term.
-      - Weekend social pressure, late-night events, alcohol, and the temptation to recover after poor nights create persistent barriers; [CDC data](https://www.cdc.gov/sleep/data-and-statistics/adults.html) show only ~33% of US adults regularly meet basic sleep recommendations, of which a smaller fraction maintain timing consistency.
+      - Weekend social pressure, late-night events, alcohol, and the temptation to recover after poor nights create persistent barriers; [CDC data](https://www.cdc.gov/sleep/data-and-statistics/adults.html) show only ~33% of adults regularly meet basic sleep recommendations, of which a smaller fraction maintain timing consistency.
       - Adherence is the binding constraint here – the intervention is free and physically simple, but social rhythms work against it. Conservative estimate: 50% sustain it beyond six months.
 
   sleep.long_term_health:

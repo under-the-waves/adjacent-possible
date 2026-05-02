@@ -4,7 +4,7 @@ name: "GLP-1 Receptor Agonists"
 what_it_is: |
   Pharmaceutical weight management using injectable GLP-1 receptor agonists – primarily semaglutide (Wegovy) and the dual GIP/GLP-1 agonist tirzepatide (Mounjaro/Zepbound) – which mimic gut satiety hormones to reduce appetite, slow gastric emptying, and alter central reward signalling. The most effective non-surgical fat loss intervention available, producing 15–22% body weight loss in trials, but requiring indefinite use as weight regain occurs rapidly on cessation.
 how_to_do_it: |
-  - Obtain a prescription through a GP or weight management specialist after meeting eligibility criteria (typically BMI 30+, or 27+ with a weight-related comorbidity), including baseline blood work and medical history review
+  - Obtain a prescription through a primary care doctor or weight management specialist after meeting eligibility criteria (typically BMI 30+, or 27+ with a weight-related comorbidity), including baseline blood work and medical history review
   - Begin at the lowest dose and titrate up over 16–20 weeks following the prescribed schedule – rushing titration substantially increases nausea and gastrointestinal side effects
   - Many people find that eating slowly, choosing smaller meals, and keeping hydrated reduces the nausea that is most common during dose escalation
   - Combine with resistance training and adequate protein intake (1.6+ g/kg/day) to preserve lean mass – without this, a meaningful proportion of weight lost is muscle rather than fat
@@ -15,7 +15,7 @@ success_looks_like: |
 common_pitfalls: |
   - Stopping the medication after reaching a target weight – two-thirds of lost weight typically returns within 12 months of cessation, making this effectively a lifelong commitment
   - Neglecting resistance training and protein intake during rapid weight loss, resulting in significant muscle mass loss that worsens body composition and reduces metabolic rate
-  - Underestimating the financial burden: at £250–1,000+ per month without insurance coverage, cost is the single largest driver of discontinuation in real-world data
+  - Underestimating the financial burden: at $300–1,350+ per month without insurance coverage, cost is the single largest driver of discontinuation in real-world data
 description: |
   - Pharmaceutical weight management using injectable GLP-1 receptor agonists – primarily semaglutide 2.4 mg (Wegovy) and the dual GIP/GLP-1 agonist tirzepatide (Mounjaro/Zepbound) – which mimic gut satiety hormones to reduce appetite, slow gastric emptying, and alter central reward signalling
   - Administered as a weekly subcutaneous injection, with dose titration over 16-20 weeks to minimise gastrointestinal side effects; maintenance dosing is indefinite, as weight regain occurs rapidly on cessation
@@ -47,7 +47,7 @@ values:
 
 resources:
   upfront_cost: 250
-  upfront_cost_reasoning: "Initial GP or specialist consultation ($150-250) plus baseline blood work and BMI assessment. Some patients require multiple visits before receiving a prescription."
+  upfront_cost_reasoning: "Initial primary care or specialist consultation ($150–250) plus baseline blood work and BMI assessment. Some patients require multiple visits before receiving a prescription. Costs vary widely by country and healthcare system; users with different access should adjust via 'Personalise these costs'."
   ongoing_cost: 500
   ongoing_cost_period: "month"
   ongoing_cost_reasoning: "Semaglutide (Wegovy) lists at ~$1,350/month but manufacturer discount programmes reduce this to $199-349/month for eligible uninsured patients. With insurance copays or out-of-pocket, $300-600/month is typical. Tirzepatide (Zepbound) is similarly priced. Score uses $500 as a realistic midpoint given variable coverage."

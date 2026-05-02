@@ -58,7 +58,7 @@ resources:
   ongoing_time_reasoning: "Additional meal preparation time (batch cooking protein sources, portioning meals) and food tracking. High-protein meals often require more cooking than convenience carbohydrate-based options. Estimated at 15 – 20 minutes per day above baseline."
 
 prerequisites:
-  - "No kidney disease or other medical contraindication to increased protein intake (consult GP if uncertain)"
+  - "No kidney disease or other medical contraindication to increased protein intake (consult a primary care doctor if uncertain)"
   - "Access to affordable protein sources (grocery store with fresh or frozen meats, eggs, dairy, legumes, or protein supplements)"
   - "Basic nutrition literacy: ability to read food labels, estimate portion sizes, and track approximate daily protein intake"
   - "Cooking facilities and willingness to prepare meals, as high-protein convenience foods are limited and expensive"

@@ -4,7 +4,7 @@ name: "Learning First Aid and CPR"
 what_it_is: |
   Completing a certified first aid and cardiopulmonary resuscitation (CPR) course – typically delivered over a single weekend (~8 hours) by organisations such as the Red Cross or American Heart Association – to acquire the skills needed to respond to cardiac arrests, choking, severe bleeding, fractures, burns, and other medical emergencies. CPR is the technique of manually compressing the chest and, in full CPR, delivering rescue breaths to maintain circulation and oxygenation until emergency services arrive. The training is primarily a one-time upfront investment, with recertification recommended every two years to counteract the well-documented decay of practical skills. The benefit is asymmetric: the personal cost is one weekend, but the potential payoff is the ability to double or triple a cardiac arrest victim's chance of survival – most likely for someone the user knows, since the majority of out-of-hospital cardiac arrests occur in the home.
 how_to_do_it: |
-  - Book a combined first aid and CPR/AED course through the American Red Cross, American Heart Association, or St John Ambulance; look for courses that include hands-on manikin practice, as physical repetition is the single strongest predictor of skill retention
+  - Book a combined first aid and CPR/AED course through a recognised provider in your country (e.g. Red Cross, American Heart Association, St John Ambulance, or your national equivalent); look for courses that include hands-on manikin practice, as physical repetition is the single strongest predictor of skill retention
   - During the course, prioritise chest compression depth, rate (100–120 per minute), and recoil over rescue breaths – dispatcher-assisted hands-only CPR evidence suggests compressions alone are what saves most lives, so this is where to focus practice time
   - After certifying, schedule a 20–30 minute refresher using a phone app (e.g. PulsePoint Respond) or a brief manikin session every six months; this is not optional – [research](https://www.redcross.org/content/dam/redcross/Health-Safety-Services/scientific-advisory-council/Scientific%20Advisory%20Council%20SCIENTIFIC%20REVIEW%20-%20CPR%20Skill%20Retention.pdf) shows the majority of skill decay occurs within the first six months
   - Note the location of the nearest automated external defibrillator (AED) at your workplace, gym, and frequently visited public spaces; AED use is covered in certification and dramatically improves cardiac arrest survival when available
@@ -19,7 +19,7 @@ common_pitfalls: |
 description: |
   - An ~8-hour certified course covering CPR (chest compressions and rescue breaths), AED operation, choking response (Heimlich manoeuvre), severe bleeding control, fracture management, burns, and scene assessment; delivered with manikin and scenario-based practice
   - CPR works by manually maintaining circulation during cardiac arrest, buying time until a defibrillator or emergency services can restore a normal heart rhythm; AEDs deliver a controlled shock to correct ventricular fibrillation, the most treatable arrest rhythm
-  - [Bystander CPR doubles or triples out-of-hospital cardiac arrest survival](https://cpr.heart.org/en/resources/cpr-facts-and-stats) compared to no bystander action (13.0% vs 7.6% survival to discharge); 350,000 OHCAs occur annually in the US, with only 40.2% currently receiving bystander CPR
+  - [Bystander CPR doubles or triples out-of-hospital cardiac arrest survival](https://cpr.heart.org/en/resources/cpr-facts-and-stats) compared to no bystander action (13.0% vs 7.6% survival to discharge); roughly 350,000 OHCAs occur annually in the US alone, with only 40.2% currently receiving bystander CPR – a similar pattern is documented across other high-income countries
   - [CPR skill decay begins within six months](https://www.redcross.org/content/dam/redcross/Health-Safety-Services/scientific-advisory-council/Scientific%20Advisory%20Council%20SCIENTIFIC%20REVIEW%20-%20CPR%20Skill%20Retention.pdf) and is near-universal at two years without refresher practice; brief (<30 min) semi-annual manikin sessions substantially extend retention
   - [CPR training increases willingness to perform bystander CPR on strangers by 7.7x](https://pmc.ncbi.nlm.nih.gov/articles/PMC12118831/) (OR 7.67, 95% CI 5.01–11.73); lack of confidence is the primary cited barrier to bystander action, making training the most direct intervention available
 applicable_domains: ["life-skills", "emergency-preparedness", "physical-safety", "community-contribution"]
@@ -39,7 +39,7 @@ values:
       - The skill is binary in a useful sense: you either complete the course and can perform the techniques or you do not; there is no meaningful "partial success" category, which keeps ISR high for those who complete training.
       - ISR is discounted slightly from 95% to 85% to account for the minority who complete a course but do not retain enough practical skill to perform effectively, particularly those who take online-only courses without manikin access.
     uar_reasoning: |
-      - This is a one-time certification event (~8 hours) with a low completion barrier; [JAMA data](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1779728) shows 65% of US adults report having received CPR training at some point, indicating the barrier to initial training is surmountable for the majority.
+      - This is a one-time certification event (~8 hours) with a low completion barrier; [JAMA data](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1779728) shows roughly 65% of adults report having received CPR training at some point, indicating the barrier to initial training is surmountable for the majority.
       - The ongoing burden is minimal: recertification every two years and optional brief refreshers; this is categorically different from habit-based interventions and does not require sustained daily behaviour change.
       - UAR is set at 88% rather than higher to account for the ~12% of enrollees who book a course but do not attend or who fail to recertify within the two-year window.
 
@@ -109,7 +109,7 @@ values:
 
 resources:
   upfront_cost: 80
-  upfront_cost_reasoning: "American Red Cross and AHA Heartsaver First Aid CPR/AED courses are typically $70–$100 for a combined in-person certification. No equipment needs to be purchased."
+  upfront_cost_reasoning: "Combined first aid and CPR/AED certification courses (Red Cross, AHA Heartsaver, St John Ambulance, or equivalent) typically cost $70–$100 for a combined in-person certification, with similar pricing in most countries. No equipment needs to be purchased."
   ongoing_cost: 80
   ongoing_cost_period: "year"
   ongoing_cost_reasoning: "Recertification is recommended every two years (~$70–$100 per recertification), averaging ~$40–$50 per year. Optional: free or low-cost refresher apps can supplement between formal recertifications at no cost. Conservative estimate uses ~$80/year to account for periodic recertification."

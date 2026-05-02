@@ -139,7 +139,7 @@ resources:
   ongoing_time_reasoning: "Plant-forward cooking takes broadly similar time to omnivorous cooking once a default repertoire is established; the marginal time cost is roughly 30–60 minutes per week of additional planning, ingredient prep, and recipe variation in the early months, dropping toward zero once defaults are habitual."
 
 prerequisites:
-  - "No medical contraindication to a plant-rich diet (most people have none; consult a GP if managing an existing condition such as IBS or diabetes that interacts with high-fibre or legume-heavy eating)"
+  - "No medical contraindication to a plant-rich diet (most people have none; consult a primary care doctor if managing an existing condition such as IBS or diabetes that interacts with high-fibre or legume-heavy eating)"
   - "Access to a grocery source stocking legumes, whole grains, vegetables, and basic plant-protein options (tofu, tempeh, or eggs/dairy if used)"
   - "Basic cooking facilities and willingness to prepare meals from staples – plant-forward convenience options exist but are expensive and often nutritionally weak"
   - "Awareness of B12 sourcing if dairy and eggs are also reduced – B12 supplementation or fortified foods become necessary toward the fully plant-based end of the spectrum"

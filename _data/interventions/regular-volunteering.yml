@@ -4,7 +4,7 @@ name: "Regular Volunteering"
 what_it_is: |
   Committing to a structured, recurring volunteering role with a community organisation – typically 2–4 hours per month – rather than one-off or ad hoc participation. Structured volunteering means showing up on a regular schedule, building ongoing relationships with the people you serve and the team you work alongside, and taking on a defined role whose absence would be noticed. This regularity is what distinguishes it from occasional good deeds: it creates accountability, deepens familiarity with a cause, and generates the cumulative effects on belonging and fulfilment that episodic volunteering rarely achieves.
 how_to_do_it: |
-  - Identify an organisation whose cause aligns with an existing interest or value – food banks, mentoring programmes, conservation groups, hospices, and literacy charities all offer structured roles; browsing a local volunteer centre or a platform such as Do It (UK) or VolunteerMatch (US) narrows options quickly
+  - Identify an organisation whose cause aligns with an existing interest or value – food banks, mentoring programmes, conservation groups, hospices, and literacy charities all offer structured roles; browsing a local volunteer centre or a platform such as VolunteerMatch, Do It, or your country's equivalent narrows options quickly
   - Choose a role with a predictable schedule (e.g. every second Saturday morning) rather than an on-call or episodic arrangement – regularity is what produces the relationship and meaning benefits; commit to at least three months before evaluating fit
   - Treat the commitment as a fixed appointment: block it in your calendar, inform the coordinator if you cannot attend, and resist the temptation to downgrade it when work or social demands increase
   - After 3–6 months, reassess whether the role is using your skills well – volunteering in a capacity that draws on your competencies (teaching, logistics, care, fundraising) tends to generate more satisfaction and more durable retention than roles that feel arbitrary
@@ -39,10 +39,10 @@ values:
       - The ceiling is set by dose: 2–4 hours monthly is enough to move a needle locally (a person mentored, meals delivered, a child tutored) but falls well short of the sustained, high-hours commitment that would warrant a score of 8 or above
     isr_reasoning: |
       - Of volunteers who maintain a regular structured role, the majority report making a felt difference – [Do Good Institute research (2023)](https://dogood.umd.edu/news/new-research-reveals-linkages-between-volunteerism-social-connections-0) found volunteering in the prior year increased community group membership by 24.4 percentage points, indicating real embedding in community structures
-      - ISR is not universal: some roles are poorly managed, with volunteers left underutilised or without feedback – [Givebutter retention data](https://givebutter.com/blog/volunteer-retention) notes 26% of UK volunteers felt their role was too burdensome or ill-defined, which undermines felt impact
+      - ISR is not universal: some roles are poorly managed, with volunteers left underutilised or without feedback – [Givebutter retention data](https://givebutter.com/blog/volunteer-retention) notes 26% of volunteers felt their role was too burdensome or ill-defined, which undermines felt impact
       - A meaningful minority (~35%) do not sustain the role long enough to achieve the relational depth at which tangible impact is felt; ISR estimate of 65% reflects those who stay and are well-matched to their role
     uar_reasoning: |
-      - [National volunteer retention data](https://givebutter.com/blog/volunteer-retention) shows average annual retention of ~65%, with first-year dropout around 35% – broadly consistent with a UAR of 55% for the 2–4h/month target over 12+ months
+      - [Volunteer retention data](https://givebutter.com/blog/volunteer-retention) shows average annual retention of ~65%, with first-year dropout around 35% – broadly consistent with a UAR of 55% for the 2–4h/month target over 12+ months
       - Long-term retention is higher for volunteers who chose roles aligned to their skills and values; the 55% figure reflects the general population of starters, not those who have already been pre-screened for fit
       - [Forner et al. (2024) meta-analysis](https://onlinelibrary.wiley.com/doi/full/10.1002/job.2729) on volunteer turnover identifies role clarity, perceived organisational support, and personal fit as the strongest predictors of retention – all addressable but requiring active management
 
@@ -54,7 +54,7 @@ values:
     pbs_reasoning: |
       - Baseline (per values.yml): 35th percentile. Regular structured volunteering builds repeated contact with the same people in the same place, generating genuine rootedness. Plausible endpoint: 60th–65th percentile. Delta: ~25–30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in community belonging."
       - [Longitudinal cross-lagged analysis (2024)](https://link.springer.com/article/10.1007/s11205-023-03268-6) confirmed that volunteering causally increases social cohesion and community trust, not just the reverse – the belonging gain is real and directional
-      - NHS Volunteer Responders data cited in the belong network review showed that intermediate levels of volunteering (consistent with 2–4h/month) produced the highest reported neighbourhood belonging, supporting a PBS of 6 rather than 4 or 8
+      - Population-survey data cited in the [Belonging Network review](https://www.belongnetwork.co.uk/wp-content/uploads/2024/04/Social-cohesion-and-volunteering-lit-review_final-1-1.pdf) shows that intermediate levels of volunteering (consistent with 2–4h/month) produced the highest reported neighbourhood belonging, supporting a PBS of 6 rather than 4 or 8
     isr_reasoning: |
       - [Belonging Network literature review (2024)](https://www.belongnetwork.co.uk/wp-content/uploads/2024/04/Social-cohesion-and-volunteering-lit-review_final-1-1.pdf) found that belonging gains require regularity and relational investment – episodic volunteers showed weaker effects, implying structured roles are the relevant condition
       - The relationship is not guaranteed: belonging depends on organisational culture; volunteers in impersonal, high-turnover environments report lower gains than those in close-knit teams
@@ -144,20 +144,20 @@ values:
 
 resources:
   upfront_cost: 0
-  upfront_cost_reasoning: "Structured volunteering requires no financial outlay. Volunteer platforms (Do It, VolunteerMatch) are free. Some roles require a basic DBS check, which is free for volunteers in the UK."
+  upfront_cost_reasoning: "Structured volunteering requires no financial outlay. Volunteer platforms (Do It, VolunteerMatch, and country-specific equivalents) are free. Some roles require a basic background check, which is typically free for volunteers."
   ongoing_cost: 5
   ongoing_cost_period: "month"
   ongoing_cost_reasoning: "Minimal incidental costs – occasional travel to and from the volunteer site. Estimated at roughly $5–10/month assuming local travel; many organisations reimburse travel expenses, making the true cost zero for some."
   upfront_time: 3
-  upfront_time_reasoning: "Approximately 2–3 hours to research suitable organisations, attend an orientation or induction session, and complete any required onboarding (DBS check application, basic training)."
+  upfront_time_reasoning: "Approximately 2–3 hours to research suitable organisations, attend an orientation or induction session, and complete any required onboarding (background check application, basic training)."
   ongoing_time: 3
   ongoing_time_period: "month"
   ongoing_time_reasoning: "2–4 hours monthly for the volunteering sessions themselves, per the intervention specification. Travel time is additional but typically under 30 minutes each way for local roles."
 
 prerequisites:
   - "Physical or cognitive capacity to perform the chosen role (some roles – heavy lifting, driving, emotionally demanding care – require specific capability; desk-based and administrative roles are accessible to almost all)"
-  - "Access to a local organisation offering structured volunteer roles with a regular schedule – urban areas have substantially more options than rural; an internet connection for initial search via Do It or VolunteerMatch is sufficient"
-  - "Willingness to complete any required screening, such as a Disclosure and Barring Service (DBS) check for roles involving children or vulnerable adults – typically free for volunteers but requires 2–4 weeks processing time"
+  - "Access to a local organisation offering structured volunteer roles with a regular schedule – urban areas have substantially more options than rural; an internet connection for initial search via VolunteerMatch, Do It, or your country's equivalent platform is sufficient"
+  - "Willingness to complete any required screening, such as a background check for roles involving children or vulnerable adults – typically free for volunteers but can require 2–4 weeks of processing time"
   - "Sufficient baseline stability in schedule to commit to a recurring monthly time slot – those in highly irregular shift work or frequent travel may need to choose episodic rather than structured roles"
 
 flagged_domains:

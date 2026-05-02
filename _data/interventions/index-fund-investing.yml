@@ -4,9 +4,10 @@ name: "Index Fund Investing"
 what_it_is: |
   Regularly investing in broad-market index funds (such as a global equity tracker or S&P 500 fund) through a low-cost platform, using automated monthly contributions and a buy-and-hold approach over a 10+ year horizon. The strategy relies on market-rate returns and broad diversification rather than stock-picking or market timing, making it one of the simplest paths to long-term wealth accumulation. Complements [basic tax optimisation](/resources/intervention-database/basic-tax-optimisation) and [automated savings](/resources/intervention-database/automated-savings).
 how_to_do_it: |
-  - Many people start by opening a stocks and shares ISA or SIPP on a low-cost platform (e.g., Vanguard, iWeb, InvestEngine), selecting a single global equity index fund, and setting up an automated monthly contribution – even £25/month is enough to begin
+  - Many people start by opening a tax-advantaged investment account on a low-cost platform (e.g., Vanguard, Fidelity, or your local equivalent), selecting a single global equity index fund, and setting up an automated monthly contribution – even $25–$50 per month is enough to begin
   - You may find it helpful to define a target allocation before investing (e.g., 100% global equity for simplicity, or an age-based bond allocation), then automate contributions so the strategy runs without ongoing decisions
   - Most practitioners find that avoiding portfolio checks more than once a month reduces the temptation to react to short-term volatility – setting a calendar reminder for a brief quarterly review tends to work better than daily monitoring
+  - Use tax-advantaged accounts where available in your country (retirement accounts, ISA-equivalents, etc.) to shelter compound returns from tax drag over the long horizon
   - It helps to write down your investment thesis and time horizon before you start, so you have something concrete to return to during market downturns when the impulse to sell is strongest
 success_looks_like: |
   - Contributions run automatically each month without requiring willpower or decision-making, and you rarely think about the portfolio between quarterly reviews
@@ -18,7 +19,7 @@ common_pitfalls: |
   - Treating invested funds as accessible savings and withdrawing during non-emergencies, undermining the 10+ year horizon the strategy depends on
 description: |
   - Regularly investing in broad-market index funds (global equity trackers, S&P 500, or total world funds) through a low-cost platform
-  - Consistent contributions via pound-cost averaging, minimal trading, and a time horizon of 10+ years
+  - Consistent contributions via dollar- or pound-cost averaging, minimal trading, and a time horizon of 10+ years
   - [SPIVA data](https://www.spglobal.com/spdji/en/research-insights/spiva/) consistently shows 92-95% of actively managed funds fail to beat their benchmark over 15 years
   - Historical annualised returns for global equity indices average 7-10% nominal (5-7% real) over multi-decade periods, with significant short-term volatility
 applicable_domains: ["investing"]
@@ -80,18 +81,18 @@ values:
 
 resources:
   upfront_cost: 0
-  upfront_cost_reasoning: "Opening an investment account (stocks and shares ISA, SIPP, or general investment account) is free with most UK platforms. No minimum investment is required on many platforms (e.g., Vanguard UK minimum is £100 lump sum or £25/month). The money invested is an asset transfer, not a cost."
+  upfront_cost_reasoning: "Opening an investment account (tax-advantaged or general) is free with most low-cost platforms. Minimum investments are typically nil or trivial (e.g., $25–$100 to start a regular contribution). The money invested is an asset transfer, not a cost."
   ongoing_cost: 5
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Platform fees typically range from 0.15-0.45% of assets annually (e.g., Vanguard UK charges 0.15%, iWeb charges a flat annual fee). Fund OCFs (Ongoing Charges Figures) for index trackers are typically 0.05-0.25%. On a £10,000 portfolio, total annual costs would be approximately £20-70, or roughly £2-6 per month. The £5/month estimate assumes a moderate portfolio size."
+  ongoing_cost_reasoning: "Platform fees typically range from 0.15–0.45% of assets annually on low-cost providers, sometimes with a flat-fee option that becomes cheaper for larger balances. Fund expense ratios (Ongoing Charges Figures or equivalent) for index trackers are typically 0.05–0.25%. On a $10,000 portfolio, total annual costs of roughly $20–$70 imply $2–$6 per month; the $5/month estimate assumes a moderate portfolio size."
   upfront_time: 5
-  upfront_time_reasoning: "Approximately 3-5 hours to research platforms, understand different account types (ISA vs SIPP vs GIA), select an appropriate fund or funds, open accounts, complete identity verification, and set up initial contributions. This includes time spent on basic financial education to understand the strategy."
+  upfront_time_reasoning: "Approximately 3–5 hours to research platforms, understand the available account types in your country (tax-advantaged vs general taxable), select an appropriate fund or funds, open accounts, complete identity verification, and set up initial contributions. This includes time spent on basic financial education to understand the strategy."
   ongoing_time: 1
   ongoing_time_period: "month"
-  ongoing_time_reasoning: "Minimal ongoing time required for a passive strategy. Approximately 30-60 minutes per month to review portfolio performance, ensure contributions are processing, and rebalance if needed (most platforms offer automatic rebalancing). Annual tasks include ISA allowance management and tax-year planning."
+  ongoing_time_reasoning: "Minimal ongoing time required for a passive strategy. Approximately 30–60 minutes per month to review portfolio performance, ensure contributions are processing, and rebalance if needed (most platforms offer automatic rebalancing). Annual tasks include any tax-advantaged allowance management and tax-year planning relevant to your country."
 
 prerequisites:
   - "Emergency fund of at least 3 months' essential expenses in an accessible savings account before investing"
   - "Investment time horizon of at least 5 years, ideally 10+ years, for the money being invested"
   - "Basic understanding of investment risk, including the possibility of short-term losses of 30-50% during market downturns"
-  - "Access to a UK investment platform and eligibility to open a stocks and shares ISA or other investment account"
+  - "Access to a low-cost investment platform in your country and eligibility to open a tax-advantaged or general investment account"

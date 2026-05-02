@@ -7,7 +7,7 @@ what_it_is: |
 how_to_do_it: |
   - Choose a percentage of pre-tax income that is meaningful but sustainable – common starting points are 1% (the [Trial Pledge](https://www.givingwhatwecan.org/get-involved/trial-pledge) for those new to giving), 3–5% as an intermediate level, or 10% as the standard Giving What We Can pledge. The amount should sting a little but not destabilise your finances; a public commitment, even informal, substantially increases follow-through
   - Set up the donation as an automatic monthly transfer rather than an annual lump sum – automated giving removes the recurring decision point at which most donors quietly defer, and it smooths the cash-flow impact across the year
-  - Direct the money to charities recommended by independent evaluators rather than chosen ad hoc. [GiveWell's top charities](https://www.givewell.org/charities/top-charities) cover global health and poverty (e.g. Against Malaria Foundation, Helen Keller International's vitamin A supplementation, GiveDirectly); [Animal Charity Evaluators](https://animalcharityevaluators.org/recommended-charities/) covers animal welfare; [Founders Pledge](https://www.founderspledge.com/funds) and Open Philanthropy publish recommendations across longer-term causes. Tax-deductible giving vehicles are available in most jurisdictions (Giving What We Can in the UK, EA Funds in the US)
+  - Direct the money to charities recommended by independent evaluators rather than chosen ad hoc. [GiveWell's top charities](https://www.givewell.org/charities/top-charities) cover global health and poverty (e.g. Against Malaria Foundation, Helen Keller International's vitamin A supplementation, GiveDirectly); [Animal Charity Evaluators](https://animalcharityevaluators.org/recommended-charities/) covers animal welfare; [Founders Pledge](https://www.founderspledge.com/funds) and Open Philanthropy publish recommendations across longer-term causes. Tax-deductible giving vehicles are available in most jurisdictions through intermediaries such as Giving What We Can, EA Funds, or local donor-advised funds
   - Track giving annually rather than per donation – review at year-end whether the percentage held up against actual income, whether the recipient charities are still top-rated, and whether to increase the pledge percentage as income grows. A simple spreadsheet or the Giving What We Can dashboard is sufficient
 success_looks_like: |
   - You give a consistent percentage of income each year – not a fluctuating dollar figure that quietly shrinks when expenses rise – and the percentage is large enough that you notice it in your budget
@@ -191,7 +191,7 @@ resources:
 
 prerequisites:
   - "Sufficient and reasonably stable income to commit a meaningful percentage without compromising essential expenses or emergency savings – the intervention assumes basic financial security is in place first"
-  - "Access to online banking and a giving vehicle that operates in your jurisdiction (Giving What We Can in the UK, EA Funds or a donor-advised fund in the US, equivalent intermediaries in EU/AU/NZ); an internet connection for evaluator research"
+  - "Access to online banking and a giving vehicle that operates in your jurisdiction (Giving What We Can, EA Funds, donor-advised funds, or equivalent local intermediaries); an internet connection for evaluator research"
   - "Basic numeracy to calculate and track a percentage of income, and willingness to engage with cost-effectiveness evidence rather than choosing recipients on emotional grounds"
 
 flagged_domains:

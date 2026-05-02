@@ -4,7 +4,7 @@ name: "Therapy (CBT)"
 what_it_is: |
   Cognitive Behavioural Therapy (CBT) is a structured, time-limited psychotherapy in which a trained therapist helps you identify and restructure maladaptive thought patterns and behaviours that maintain psychological distress. Sessions typically run 50 minutes and are held weekly over a 12–20 week course. CBT rests on the premise that thoughts, feelings, and behaviours are mutually reinforcing: by systematically examining and challenging automatic negative thoughts – using techniques such as thought records, behavioural experiments, and graded exposure – a client can interrupt distress cycles and build more adaptive patterns that persist long after treatment ends. It is the most extensively researched form of psychotherapy, with strong meta-analytic support across depression, anxiety disorders, OCD, PTSD, and a range of other presentations.
 how_to_do_it: |
-  - Find a licensed CBT therapist (look for accreditation with the BABCP in the UK or APA-recognised CBT training in the US); many GPs can refer via IAPT in England, which offers free or subsidised sessions – private rates run $100–200/session without insurance
+  - Find a licensed CBT therapist with verifiable accreditation in your country (e.g. BABCP, APA-recognised training, or equivalent national body); a primary-care doctor can often refer via national health insurance pathways where these exist, and private rates typically run $100–200/session without insurance
   - Commit to the full course: research consistently shows that completing 12–20 sessions produces better outcomes than brief or interrupted contact; block a recurring weekly slot and treat it as a non-negotiable appointment
   - Engage actively between sessions – CBT assigns homework (thought records, behavioural experiments, exposure hierarchies) and the between-session practice accounts for a substantial share of the therapeutic gain; half-hearted homework substantially reduces outcomes
   - Be specific about your goals in the first session; CBT works best when targeting a defined problem (e.g. panic attacks, low mood, social anxiety) rather than vague general distress – this also allows you and your therapist to track progress against measurable benchmarks
@@ -158,10 +158,10 @@ values:
 
 resources:
   upfront_cost: 0
-  upfront_cost_reasoning: "No one-time equipment or setup cost is required. The only upfront action is identifying and contacting a therapist, which is free. In England, NHS IAPT referral (via GP) is free at the point of use."
+  upfront_cost_reasoning: "No one-time equipment or setup cost is required. The only upfront action is identifying and contacting a therapist, which is free. Where care is covered by national health insurance, referral via a primary-care doctor may be free at the point of use."
   ongoing_cost: 120
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Approximately $120–160/month at the lower end of private rates ($100–120/session weekly in lower-cost markets or trainee therapist settings). NHS IAPT in England is free; US sliding-scale community mental health clinics can reduce cost to $20–60/session. $120/month represents a realistic minimum for private-pay access."
+  ongoing_cost_reasoning: "Approximately $120–160/month at the lower end of private rates ($100–120/session weekly in lower-cost markets or trainee therapist settings). Costs vary widely by country and healthcare system: where care is covered by national health insurance, sessions may be free at the point of use; sliding-scale community mental health clinics can reduce cost to $20–60/session. $120/month represents a realistic minimum for private-pay access. Users with different healthcare access should adjust via 'Personalise these costs'."
   upfront_time: 2
   upfront_time_reasoning: "Approximately 1–2 hours to research therapists, verify credentials and CBT specialism, make contact, and attend an initial assessment session."
   ongoing_time: 2
@@ -169,7 +169,7 @@ resources:
   ongoing_time_reasoning: "50-minute weekly session plus approximately 30–60 minutes of between-session homework (thought records, behavioural experiments); total ~2 hours per week for active engagement."
 
 prerequisites:
-  - "Access to a licensed CBT therapist – either via NHS IAPT referral (England), insurance coverage, or ability to fund private sessions"
+  - "Access to a licensed CBT therapist – via national health insurance referral (where available), private insurance coverage, or ability to fund private sessions"
   - "Sufficient psychological stability to engage in active structured work; acute crisis states (active suicidality, severe dissociation) typically require stabilisation before standard CBT can begin"
   - "Basic literacy and willingness to complete written homework exercises (thought records, worksheets) between sessions"
   - "A presenting problem amenable to CBT – strong evidence base covers depression, GAD, panic disorder, social anxiety, OCD, PTSD, and health anxiety; less evidence for personality disorders or psychosis without adaptation"
