@@ -396,6 +396,64 @@ body .main-content {
     border-bottom: none;
 }
 
+.recommendations-table tbody tr.is-doing {
+    background: #f1f8f4;
+}
+
+.recommendations-table tbody tr.is-doing td {
+    color: #666;
+}
+
+.recommendations-table tbody tr.is-doing:hover {
+    background: #e8f5e9;
+}
+
+.habit-checkmark {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+    line-height: 16px;
+    margin-top: 2px;
+    transition: opacity 0.15s;
+}
+
+.habit-checkmark::before {
+    content: '\25CB';
+    color: #999;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.habit-checkmark.checked::before {
+    content: '\2713';
+    color: #4caf50;
+    font-size: 1.05em;
+}
+
+.habit-checkmark:hover {
+    opacity: 0.65;
+}
+
+.habits-summary {
+    margin: 0 0 14px 0;
+    padding: 10px 14px;
+    background: #f1f8f4;
+    border-left: 3px solid #4caf50;
+    border-radius: 4px;
+    font-size: 0.95em;
+    color: #2e7d32;
+    display: none;
+    text-align: left;
+}
+
+.habits-summary.visible {
+    display: block;
+}
+
 /* Intervention name column */
 .intervention-name {
     display: flex;
@@ -646,6 +704,8 @@ body .main-content {
                     <p>Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
                 </details>
 
+                <p class="habits-summary" id="habitsSummary"></p>
+
                 <table class="recommendations-table" id="recommendationsTable">
                     <thead>
                         <tr>
@@ -857,10 +917,17 @@ function updateRecommendations() {
         case 'ongoing-time': scored.sort((a, b) => dir * (a.resources.ongoing_time_weekly - b.resources.ongoing_time_weekly)); break;
     }
 
-    recommendationsBody.innerHTML = scored.map(i => `
-        <tr>
+    const habits = getCurrentHabits();
+    recommendationsBody.innerHTML = scored.map(i => {
+        const isDoing = !!habits[i.key];
+        const rowClass = isDoing ? ' class="is-doing"' : '';
+        const checkClass = isDoing ? ' checked' : '';
+        const checkTitle = isDoing ? 'You currently do this' : 'Mark as currently doing';
+        return `
+        <tr${rowClass}>
             <td>
                 <div class="intervention-name">
+                    <span class="habit-checkmark${checkClass}" onclick="toggleHabit('${i.key}')" title="${checkTitle}"></span>
                     <a href="${getInterventionUrl(i.key)}" class="intervention-link">${i.name}</a>
                     <span class="table-description-icon" onclick="showDescriptionPopup('${i.key}')">i</span>
                 </div>
@@ -873,7 +940,67 @@ function updateRecommendations() {
             <td class="eroi-score">${i.timeEROI.toFixed(2)}</td>
             <td class="eroi-score">${i.moneyEROI.toFixed(2)}</td>
         </tr>
-    `).join('');
+    `;
+    }).join('');
+
+    updateHabitsSummary(scored);
+}
+
+function magnitudeLabel(score) {
+    var abs = Math.abs(score);
+    if (abs < 1) return 'slight';
+    if (abs < 3) return 'modest';
+    if (abs < 5) return 'meaningful';
+    if (abs < 7) return 'strong';
+    return 'transformative';
+}
+
+function getCurrentHabits() {
+    if (typeof APStorage === 'undefined') return {};
+    return APStorage.load('ap-habits-current') || {};
+}
+
+function toggleHabit(key) {
+    const habits = getCurrentHabits();
+    if (habits[key]) {
+        delete habits[key];
+    } else {
+        habits[key] = true;
+    }
+    if (typeof APStorage !== 'undefined') {
+        APStorage.save('ap-habits-current', habits);
+    }
+    updateRecommendations();
+}
+
+function updateHabitsSummary(scored) {
+    const habits = getCurrentHabits();
+    const summaryEl = document.getElementById('habitsSummary');
+    if (!summaryEl) return;
+
+    const doing = scored.filter(s => habits[s.key]);
+
+    if (doing.length === 0) {
+        summaryEl.classList.remove('visible');
+        return;
+    }
+
+    // Aggregate via log-sum-exp across positive WBS contributions
+    const positives = doing.map(d => d.wbs).filter(w => w > 0);
+    let aggMagnitude = null;
+    if (positives.length > 0) {
+        const linearSum = positives.reduce((s, w) => s + Math.pow(2, w), 0);
+        aggMagnitude = magnitudeLabel(Math.log2(linearSum));
+    }
+
+    const habitWord = doing.length === 1 ? 'habit' : 'habits';
+    let msg = "You're already doing " + doing.length + ' ' + habitWord + ' in this area';
+    if (aggMagnitude) {
+        msg += ', providing a ' + aggMagnitude + ' benefit to your priorities';
+    }
+    msg += '.';
+    summaryEl.textContent = msg;
+    summaryEl.classList.add('visible');
 }
 
 // Event listeners for sliders
@@ -930,6 +1057,9 @@ window.addEventListener('ap-storage-sync', function() {
                 ? synced[domain][v.key] : v.defaultWeight;
         });
         updateAllControls();
+    } else {
+        // Sliders unchanged but habits may have synced – re-render to reflect
+        updateRecommendations();
     }
 });
 
