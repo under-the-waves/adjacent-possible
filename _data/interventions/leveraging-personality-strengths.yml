@@ -1,0 +1,166 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Leveraging Personality Strengths"
+what_it_is: |
+  A deliberate practice of designing daily life, work, and relationships around your strongest existing personality traits and natural tendencies, rather than working to change them. The user takes a validated trait or strengths assessment – such as the Big Five (IPIP-NEO, BFI-2) or the VIA Inventory of Strengths – identifies the two or three traits that score highest, and then systematically restructures roles, routines, and relationships so those traits get more daily expression. This is the structural counterpart to a personality-stretch plan: instead of using behavioural challenges to push against the grain of one's nature, leveraging strengths reshapes the environment so the grain runs with the work. The mechanism is well-supported – using one's signature strengths is one of the most reliable predictors of subjective wellbeing in the positive psychology literature, and person-environment fit research finds that congruence between personality and role demands strongly predicts engagement, performance, and longevity in jobs and relationships.
+how_to_do_it: |
+  - Take a validated assessment to surface your strongest traits at facet resolution. The free [IPIP-NEO-120](https://www.personalitytest.net/ipip/ipipneo120.html) gives Big Five facets; the free [VIA Survey](https://www.viacharacter.org/survey/account/register) returns a ranked list of 24 character strengths. Use both if uncertain – they complement each other.
+  - Identify your top two or three "signature" traits or strengths – the ones that feel most authentic, energise you when used, and where others have consistently given you positive feedback. Avoid simply picking the ones you wish you had.
+  - Audit your daily life by domain – work, social life, leisure, home environment – and rate each domain by how often it lets your signature strengths get expressed. Domains scoring low are leverage points: they are absorbing time without playing to what you are best at.
+  - Pick one redesign per quarter. Examples: someone high in curiosity reshapes their reading and project list around novel domains rather than depth in a single area; someone high in social warmth shifts work toward client-facing or team-coordination tasks; someone high in conscientiousness takes on the operations or planning role on a project rather than a creative one. The redesign must change a structural feature of life, not just an attitude.
+  - Re-evaluate every three months: which redesigns worked, which didn't, and what next domain needs to shift. The compounding gain comes from sequential redesigns over a year or two, not a single overhaul.
+success_looks_like: |
+  - Your daily and weekly tasks feel less effortful even though their objective difficulty has not decreased – you are using natural capacities rather than overriding them
+  - You consistently outperform on the kinds of work you have steered toward, while comfortably steering away from or delegating tasks that drain you
+  - The shape of your week, your role, and your social commitments visibly reflects your top traits to anyone who knows you well – not as performance but as fit
+common_pitfalls: |
+  - Picking aspirational rather than actual strengths – choosing the trait you wish you had instead of the one others actually rely on you for. The redesign produces no benefit if it leverages a strength you do not in fact possess.
+  - Using strength-leverage as a refusal to develop weaknesses that genuinely block important goals. Some weaknesses are alignable via redesign; others (e.g. very low conscientiousness for a self-employed worker) need a stretch plan or compensating system, not just avoidance.
+  - Limiting redesign to work while leaving social life, leisure, and home environment untouched. The biggest wellbeing gains in the strengths literature come from using signature traits across multiple life domains, not just optimising the workplace.
+  - Treating one assessment as definitive. Trait scores have measurement noise; if a result conflicts strongly with a decade of life experience, weight your historical evidence at least as heavily as the test.
+description: |
+  - A structural protocol for redesigning life around your strongest existing personality traits or character strengths, rather than working to change them – the alignment-side counterpart to a personality stretch plan
+  - The user assesses their personality at facet resolution, identifies two or three signature strengths, audits each life domain for how much expression those strengths get, and then redesigns one domain per quarter to increase fit
+  - [Person-job fit research](https://onlinelibrary.wiley.com/doi/10.1111/j.1744-6570.2005.00672.x) finds that congruence between personality traits and role demands robustly predicts job performance, engagement, and tenure across hundreds of studies – the effect size is meaningful and consistent across occupations
+  - [VIA strengths-use research](https://onlinelibrary.wiley.com/doi/10.1002/cpp.1920) shows that deliberately using one's signature strengths in new ways produces sustained increases in life satisfaction and reductions in depressive symptoms relative to controls, with effects persisting at six-month follow-up
+  - [Holland's career theory](https://psycnet.apa.org/record/1997-08980-000) provides the longest-running evidence base – decades of work showing that people in roles congruent with their personality and interests show higher satisfaction, performance, and stability than those in incongruent roles
+  - Distinct from the [Personality Stretch Plan](/resources/intervention-database/personality-stretch-plan): that intervention pushes traits toward where life demands them; this one shifts life toward where traits already are. They are complementary, and a fully calibrated user often runs both – stretching one or two facets while leveraging the rest
+applicable_domains: ["personality", "current-work", "mental-health", "self-awareness", "life-purpose"]
+
+values:
+  personality.alignment:
+    pbs: 8
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th–75th percentile – having actively redesigned multiple life domains around their measured signature traits. Delta: ~35–40 percentile points.
+      - This is the most direct intervention available for the personality.alignment construct: the value measures how well life is designed around natural tendencies, and the protocol's whole mechanism is iteratively redesigning life around assessed traits. [Holland's vocational congruence research](https://psycnet.apa.org/record/1997-08980-000) provides decades of evidence that person-environment fit produces large and durable wellbeing differences.
+      - Score 8 reflects a major gain in the explicit construct of the value; score 9 or 10 would require the redesign to be transformative across all life domains, which is unrealistic for most users within the protocol's scope.
+    isr_reasoning: |
+      - [Kristof-Brown et al. (2005) meta-analysis](https://onlinelibrary.wiley.com/doi/10.1111/j.1744-6570.2005.00672.x) of person-job and person-organisation fit found consistent positive associations with performance, satisfaction, and retention across ~170 studies, supporting the underlying mechanism reliability.
+      - The main failure mode is misidentification: users who pick aspirational rather than actual strengths produce redesigns that don't fit and so don't deliver. [Linley et al. (2010)](https://www.sciencedirect.com/science/article/pii/S0092656610000140) note that strengths-use benefits depend critically on the strengths being authentic, not aspirational.
+      - ISR of 65% reflects that the alignment gain is reliable for users who honestly assess and consistently apply – with a meaningful subset undermined by misidentification, half-completed redesigns, or environments that resist restructuring.
+
+  personality.growth:
+    pbs: 4
+    isr: 50
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–50th percentile in active personality development. Delta: ~10–15 percentile points.
+      - Strength-leveraging is primarily an alignment intervention, not a growth one – the goal is to use traits more, not to develop them further. However, deliberate cultivation of signature strengths can deepen them: someone high in curiosity who reshapes life around novel exploration is also amplifying that trait through use.
+      - Score 4 reflects a modest secondary gain; users seeking primary personality growth should pair this with a [stretch plan](/resources/intervention-database/personality-stretch-plan).
+    isr_reasoning: |
+      - [Strengths-use research](https://onlinelibrary.wiley.com/doi/10.1002/cpp.1920) shows that deliberately using strengths in new ways produces sustained wellbeing gains, but the trait deepening itself is harder to demonstrate reliably than the wellbeing effect.
+      - The mechanism for growth here is indirect: using a strength more often may strengthen it via deliberate practice, but the protocol does not specifically train trait expansion the way a stretch plan does.
+      - Conservative ISR of 50% reflects the indirect pathway and limited direct evidence on growth-as-an-outcome of strengths-use.
+    uar_reasoning: |
+      - See personality.alignment UAR – same intervention, same adherence profile.
+
+  current-work.engagement:
+    pbs: 7
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user who restructures their work role to leverage signature strengths could plausibly reach the 60th–70th percentile – moving from partial engagement to consistent absorption in daily work. Delta: ~25–35 percentile points.
+      - [Harzer and Ruch (2012)](https://www.tandfonline.com/doi/abs/10.1080/17439760.2012.702784) found that applying signature strengths at work predicts substantially higher meaning, engagement, and positive affect in role, with effect sizes large enough to differentiate adjacent quartiles of engagement.
+      - Score 7 reflects a meaningful but bounded gain – work engagement is co-determined by role design constraints, management quality, and organisational factors that the user often cannot fully control via personal redesign alone.
+    isr_reasoning: |
+      - [Harzer and Ruch (2013)](https://link.springer.com/article/10.1007/s10902-012-9364-0) found that the more signature strengths someone applies at work, the higher their job satisfaction and calling orientation, supporting a dose-response relationship that suggests a reliable mechanism.
+      - The benefit fails to materialise when the user lacks autonomy to restructure their role, when their workplace tightly defines tasks, or when their identified strengths have no natural outlet in their occupational context.
+      - ISR of 60% reflects the reliable mechanism moderated by structural job constraints faced by a meaningful subset of workers.
+    uar_reasoning: |
+      - See personality.alignment UAR – same intervention, same adherence profile.
+
+  current-work.competence:
+    pbs: 6
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile – outperforming on tasks that match their strengths while comfortably delegating or de-prioritising those that don't. Delta: ~20–25 percentile points.
+      - [Person-job fit meta-analysis](https://onlinelibrary.wiley.com/doi/10.1111/j.1744-6570.2005.00672.x) finds that congruence between personality and job demands predicts job performance with corrected correlations around 0.20 across hundreds of studies – a meaningful effect on the competence anchor.
+      - Score 6 rather than higher because strength-leverage improves performance on the parts of the role that already fit, but cannot transform performance on tasks that fundamentally require traits the user lacks.
+    isr_reasoning: |
+      - [Kristof-Brown et al. (2005)](https://onlinelibrary.wiley.com/doi/10.1111/j.1744-6570.2005.00672.x) document the performance association across diverse occupations, but emphasise that the effect is moderated by which fit dimension is measured (skills, values, personality) and the criterion used.
+      - Structural redesign of one's role is harder than personal redesign of one's daily routine. Users with limited role autonomy may identify strengths but be unable to translate the insight into changed task allocation.
+      - ISR of 55% reflects mechanism reliability moderated by the autonomy required to act on the insight.
+    uar_reasoning: |
+      - See personality.alignment UAR – same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 6
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in life satisfaction and meaning. Delta: ~20–25 percentile points.
+      - [Seligman et al. (2005)](https://psycnet.apa.org/record/2005-08033-003) found that the "using signature strengths in new ways" exercise produced sustained happiness increases and reduced depressive symptoms over six months – one of the more durable effects in the positive psychology intervention literature.
+      - Score 6 reflects a meaningful and durable gain that is bounded by the same factors limiting strengths-use research generally: effects are real but not transformative, and concentrate in users whose baseline strengths have been underused rather than already leveraged.
+    isr_reasoning: |
+      - [Schutte and Malouff (2019)](https://link.springer.com/article/10.1007/s10902-018-9990-2) meta-analysis of 14 strengths-use intervention studies found a small-to-moderate positive effect on subjective wellbeing (g = 0.46) and life satisfaction (g = 0.45), supporting reasonably reliable benefit.
+      - The main failure mode is users identifying strengths correctly but not actually changing their environment to use them more – the wellbeing benefit accrues to use, not to mere awareness.
+      - ISR of 60% reflects the reliable but moderate effect documented across multiple intervention studies.
+    uar_reasoning: |
+      - See personality.alignment UAR – same intervention, same adherence profile.
+
+  self-awareness.psychological:
+    pbs: 5
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in psychological self-knowledge. Delta: ~20–25 percentile points.
+      - The diagnostic component – a validated trait or strengths assessment plus a structured audit of life domains for fit – produces real psychological self-knowledge as a near-immediate outcome, independent of whether the redesign succeeds.
+      - Score 5 reflects a meaningful but secondary gain; users seeking deep psychological self-knowledge will get more from interventions that explicitly target it (e.g. therapy, structured journalling), but this protocol delivers a useful foundation.
+    isr_reasoning: |
+      - The Big Five and VIA assessments have decades of construct-validity evidence; properly administered, they yield reasonably accurate trait information for most users.
+      - The structured domain audit (rating life areas by strength expression) is a reflection task that reliably surfaces patterns visible in retrospect but easy to miss without prompting.
+      - ISR of 65% reflects that the self-knowledge benefit materialises for most users who complete the assessment honestly, even those who fail to act on the redesign step.
+    uar_reasoning: |
+      - See personality.alignment UAR – same intervention, same adherence profile.
+
+  life-purpose.integration:
+    pbs: 5
+    isr: 55
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile in how well their life domains cohere around a unifying thread. Delta: ~15–20 percentile points.
+      - Signature strengths function as an integrating thread across work, social life, leisure, and home: a user who consciously leverages, say, curiosity in all four domains experiences greater coherence than one who does so only at work.
+      - Score 5 reflects a modest cross-domain gain; integration around purpose is broader than integration around strengths, so the effect is real but partial.
+    isr_reasoning: |
+      - The integrative effect depends on the user actually applying the strengths-use lens across multiple domains rather than treating it as a work-only intervention; many users restrict the redesign scope.
+      - No direct studies measure life-domain integration as an outcome of strengths-use; the pathway is inferred from the broader strengths-and-coherence literature.
+      - Conservative ISR of 55% reflects mechanistic plausibility with limited direct evidence on this specific outcome.
+    uar_reasoning: |
+      - See personality.alignment UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Validated assessments are freely available online (IPIP-NEO-120 and VIA Survey are both free; the BFI-2 form is freely downloadable). Tracking can be done in a free spreadsheet or notebook. Optional paid coaching or in-depth strengths reports are not required for the protocol."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs at the minimum-viable level. The protocol uses free assessments and self-directed reflection; quarterly redesigns require time, not money."
+  upfront_time: 3
+  upfront_time_reasoning: "Approximately 30–45 minutes for the initial assessment, 30 minutes interpreting facet-level results, 60–90 minutes for the first life-domain audit, and 30–60 minutes designing the first redesign. Total roughly 2.5–3.5 hours."
+  ongoing_time: 2
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Roughly 1–3 hours per month: ongoing reflection on whether redesigns are working, light tracking of whether targeted strengths are being used more, and design work for the next quarterly redesign. Concentrates into ~4–6 hour blocks at quarterly review points."
+
+prerequisites:
+  - "Access to at least one validated trait or strengths assessment (free options such as IPIP-NEO-120, BFI-2, or the VIA Survey are sufficient)"
+  - "Sufficient self-honesty to answer assessment items based on actual rather than aspirational behaviour, so the resulting profile reflects current strengths"
+  - "At least some autonomy in shaping daily routines, work tasks, or social commitments – the protocol cannot deliver redesign benefits if every life domain is externally dictated"
+  - "Basic literacy in interpreting facet-level scores and ranked strength lists"
+
+flagged_domains:
+  - domain: "career-planning"
+    rationale: "Strengths-leveraging directly informs role choice, specialisation, and career direction by surfacing where natural fit produces highest engagement and performance"
+  - domain: "friendship"
+    rationale: "Awareness of one's signature strengths shapes which kinds of friendships are most energising to invest in and which interaction styles are most authentic, supporting better selection and depth"
+  - domain: "value-system"
+    rationale: "VIA character strengths overlap substantially with values; identifying signature strengths surfaces the practical-action side of one's value system and supports authentic expression"

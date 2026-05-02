@@ -1,0 +1,133 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Developing a Signature Style"
+what_it_is: |
+  A deliberate process of designing and committing to a recognisable personal aesthetic – a relatively narrow palette of colours, silhouettes, and signature elements that you consistently wear, rather than rotating through a wide range of looks. The classic examples are Steve Jobs in a black turtleneck and jeans, Frida Kahlo's flowers and embroidered dresses, or the unchanging architectural uniforms of figures like Tom Wolfe or Iris Apfel – but the principle scales down to anyone. The intervention has two distinct payoffs. First, it reduces the cognitive cost of getting dressed: a coherent palette and a few repeating templates eliminate dozens of micro-decisions per week. Second, it creates a memorable visual identity that makes the wearer easier to recognise, recall, and form an impression of – the perceptual equivalent of a strong personal logo. Done well, it is the opposite of buying more clothes: it is editing what you wear down to what you actually want to be seen in. Distinct from the basic grooming-and-style fundamentals, which target competence and error elimination; this is about identity and consistency at a level beyond the basics.
+how_to_do_it: |
+  - Spend a few hours auditing what you already wear most often and feel best in. Note recurring colours, silhouettes, fabric types, and any specific items you reach for repeatedly. The signature is usually latent in the wardrobe already – the goal is to surface it rather than invent it.
+  - Define your palette and templates explicitly. A simple working format: 2–4 base colours (the only shades you will buy from this point), 2–3 outfit "templates" (e.g. dark trousers + neutral knit + leather shoes; structured jacket + white t-shirt + jeans), and 1–2 signature elements (a particular accessory, a haircut, a kind of frame, a single strong colour). Write them down – an undocumented signature drifts.
+  - Edit the wardrobe to fit. Remove or set aside items that fall outside the palette and templates; over the next 6–12 months, replace worn-out staples only with items that match. The transformation is gradual, not a single overhaul, and works on any budget because it is exclusionary rather than additive.
+  - Test the signature at a high-stakes occasion (a presentation, a date, a conference) and at a low-stakes one (a coffee with a friend). Note what feels right and what doesn't – signature style needs to function across contexts, not only at the formal end. Adjust within the same template structure rather than abandoning it after a single uncomfortable outing.
+  - Hold the line for at least 12 months before reassessing. Trends will tempt edits; resist for the first year so the signature has time to take hold both internally (it stops feeling performative) and externally (others associate the look with you). After 12 months, refresh within the structure, not against it.
+success_looks_like: |
+  - Getting dressed takes under a minute on most days because the choice space has been narrowed by design rather than by accident
+  - People who know you can describe your "look" in a sentence – "always in dark blues and greys with that one watch" – and notice when you depart from it
+  - Your wardrobe gradually shrinks while your daily appearance becomes more intentional and consistent; you make fewer purchases but each one fits a coherent whole
+common_pitfalls: |
+  - Picking a signature based on someone else's identity rather than your own. Wholesale-importing another person's look feels costume-like and rarely settles into authenticity, no matter how well-executed.
+  - Confusing signature style with extreme uniformity. A signature is a recognisable thread, not literal repetition – Steve Jobs is the exception, not the model. Most successful signatures involve consistent palette and silhouette with substantial variation in detail.
+  - Building the signature before mastering the [grooming and style fundamentals](/resources/intervention-database/learning-basic-grooming-and-style-fundamentals). A strong signature with poor fit and grooming reads as eccentric rather than intentional; the basics need to be solid first.
+  - Overhauling in a single sweep. A wholesale wardrobe replacement is expensive, often regretted, and skips the iterative refinement that makes signatures actually fit. The protocol works best as gradual replacement of staples over 6–18 months.
+description: |
+  - A deliberate design process for a recognisable personal aesthetic: a constrained palette, a few repeating outfit templates, and one or two signature elements, applied consistently across daily life rather than rotating widely
+  - The protocol involves auditing existing favourites, defining palette and templates explicitly, editing the wardrobe to fit, and committing for at least 12 months before reassessing
+  - [Research on enclothed cognition](https://www.sciencedirect.com/science/article/abs/pii/S0022103112000200) shows clothing influences both wearer self-perception and observer judgements; a consistently held aesthetic compounds those effects over repeated exposure to the same audience
+  - [Decision-fatigue research](https://www.pnas.org/doi/10.1073/pnas.1018033108) finds that depleted decision-making capacity degrades subsequent judgement quality; capsule-style approaches reduce daily clothing decisions to near-zero, freeing cognitive bandwidth for higher-stakes choices
+  - [Mere-exposure research on visual identity](https://www.tandfonline.com/doi/abs/10.1080/00224545.1992.9924681) finds that recognisable, repeatedly-encountered visual signals are recalled and rated more favourably than unfamiliar or shifting ones – supporting the memorability mechanism behind signature looks
+  - Distinct from [basic grooming and style fundamentals](/resources/intervention-database/learning-basic-grooming-and-style-fundamentals): that intervention establishes baseline competence and error elimination; this one is the identity layer above the basics, targeting consistency and memorability rather than correctness
+applicable_domains: ["style", "communication", "behaviours"]
+
+values:
+  style.expression:
+    pbs: 7
+    isr: 60
+    uar: 60
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user with a clearly-defined and consistently-held signature could plausibly reach the 65th–70th percentile in how well their clothing communicates their identity. Delta: ~30–35 percentile points.
+      - This is a near-direct intervention on the construct: the value measures how well clothing communicates identity, and the protocol's whole mechanism is constructing and stabilising an identity-level visual signal.
+      - Score 7 reflects a major gain in self-expression; score 8 or higher would require an unusually distinctive and well-executed signature of the kind that becomes a public marker, which is a small subset of successful adopters.
+    isr_reasoning: |
+      - The mechanism is mostly tautological: a defined and consistently-applied signature is itself the expression outcome the value measures, so for users who genuinely complete the protocol, the expression benefit accrues with high reliability.
+      - The main failure mode is users defining a signature that does not actually reflect their identity (importing someone else's look, picking aspirationally) – which produces a coherent but inauthentic appearance.
+      - ISR of 60% reflects mechanism reliability discounted for the meaningful subset who pick a signature that does not fit them.
+
+  style.attractiveness:
+    pbs: 5
+    isr: 60
+    uar: 60
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile in rated attractiveness through deliberate presentation. Delta: ~15–20 percentile points.
+      - The attractiveness gain is secondary to the expression gain – consistency does not on its own make presentation more flattering, but a well-chosen palette aligned to skin tone and silhouette templates that suit body type both contribute. The bulk of the modifiable attractiveness benefit comes from the underlying [fundamentals](/resources/intervention-database/learning-basic-grooming-and-style-fundamentals); the signature layer adds polish and intentionality.
+      - Score 5 reflects a modest gain on top of competently-applied fundamentals; users without the fundamentals first will see less from this intervention.
+    isr_reasoning: |
+      - [Research on physical attractiveness and grooming](https://doi.org/10.1177/0146167206294907) shows the modifiable component of attractiveness is dominated by grooming, fit, and presentation rather than consistency per se – meaning the signature contributes a real but smaller marginal effect.
+      - The benefit is most reliable for users whose chosen palette and templates are flattering; a coherent but unflattering signature can reduce attractiveness compared to baseline.
+      - Conservative ISR of 60% reflects the dependence on choosing a signature that genuinely suits the wearer.
+    uar_reasoning: |
+      - See style.expression UAR – same intervention, same adherence profile.
+
+  style.status-professional:
+    pbs: 6
+    isr: 65
+    uar: 60
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile in how effectively their clothing signals professional credibility. Delta: ~20–25 percentile points.
+      - Consistency itself is a credibility signal in many professional contexts: a recognisable look reads as deliberate rather than accidental and supports an impression of self-command. [Research on first impressions](https://doi.org/10.1177/0146167206294907) shows appearance signals are processed in milliseconds and resist updating, so a consistently-held signature compounds across repeated encounters with colleagues and clients.
+      - Score 6 reflects a meaningful gain that is bounded by the requirement that the signature be appropriate to the professional context – signatures that clash with industry norms can produce the opposite of credibility.
+    isr_reasoning: |
+      - [Howlett et al. (2015)](https://doi.org/10.1177/0956797614559753) showed that fit-driven presentation differences produce reliable observer perception changes; a well-executed signature builds on that mechanism by making the presentation recognisable as well as well-fitting.
+      - The benefit fails to materialise in contexts with strict dress codes that prevent personal signature elements, or where the chosen signature reads as eccentric rather than intentional within that industry.
+      - ISR of 65% reflects mechanism reliability moderated by context-fit constraints.
+    uar_reasoning: |
+      - See style.expression UAR – same intervention, same adherence profile.
+
+  behaviours.freedom:
+    pbs: 5
+    isr: 65
+    uar: 60
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 50th–55th percentile in freedom from low-value daily decisions. Delta: ~15–20 percentile points.
+      - The protocol directly reduces the number of daily clothing decisions, which is one of the most common categories of low-value micro-decision. [Decision-fatigue research](https://www.pnas.org/doi/10.1073/pnas.1018033108) suggests that eliminating a recurring class of decisions frees finite decision-making capacity for higher-stakes choices.
+      - Score 5 reflects a modest gain – clothing decisions are one decision category among many, and the freedom benefit accrues most strongly to users who currently spend meaningful time and stress on outfit choice.
+    isr_reasoning: |
+      - The decision-reduction benefit is mechanistically reliable for users who genuinely narrow their wardrobe – the choice space is smaller by construction.
+      - The benefit fails when users define templates without editing the wardrobe to match, leaving the same daily choice space and only adding the new mental overhead of comparing against a template.
+      - ISR of 65% reflects the mechanistic reliability moderated by execution gaps.
+    uar_reasoning: |
+      - See style.expression UAR – same intervention, same adherence profile.
+
+  communication.connection:
+    pbs: 4
+    isr: 55
+    uar: 60
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 45th–50th percentile in conversational connection. Delta: ~10–15 percentile points.
+      - The mechanism is indirect but real: a memorable signature gives others a clear visual handle for the wearer, which supports recognition, recall after first meetings, and conversation-starter opportunities (others ask about a signature element). [Mere-exposure research](https://www.tandfonline.com/doi/abs/10.1080/00224545.1992.9924681) supports the recognition-and-favourability pathway.
+      - Score 4 reflects a modest cross-domain gain; connection is mostly built through conversational behaviour, not appearance, so the contribution is real but small.
+    isr_reasoning: |
+      - The connection effect is most reliable in contexts where the user is meeting many new people (conferences, professional events, dating) and benefits from being remembered; in long-standing relationships the signature contributes little to connection.
+      - No direct studies measure conversational connection as an outcome of style intervention; the pathway is inferred from recognition and first-impression literature.
+      - Conservative ISR of 55% reflects mechanistic plausibility with limited direct evidence and clear context-dependence.
+    uar_reasoning: |
+      - See style.expression UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "The audit and template-definition phase requires only existing wardrobe and a free notebook or spreadsheet. Strategic replacement purchases happen gradually over 6–18 months and replace items the user would have bought anyway; the protocol redirects those purchases rather than adding new ones. Users without the basic fundamentals first should budget for a haircut consultation and basic grooming setup (~$50) via the [fundamentals intervention](/resources/intervention-database/learning-basic-grooming-and-style-fundamentals)."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No ongoing cost beyond what the user would already spend on clothing. The protocol changes which items are purchased rather than how often; many users find their total clothing spend falls because the constrained palette eliminates impulse buys."
+  upfront_time: 5
+  upfront_time_reasoning: "Approximately 2 hours auditing existing wardrobe and identifying recurring favourites, 1 hour defining palette and templates explicitly, 1–2 hours doing the initial wardrobe edit (separating items inside vs outside the palette), and ongoing 30–60 minute sessions over the first month to test and refine."
+  ongoing_time: 0.5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Roughly 30 minutes per month for ongoing reflection, occasional refinement, and applying the signature filter at point of purchase. Daily-dressing time falls below baseline once the wardrobe is edited, so net ongoing time is often negative compared to pre-intervention."
+
+prerequisites:
+  - "Reasonable mastery of the underlying grooming and style fundamentals (fit, basic colour coordination, consistent grooming routine) – signature style built on poor fundamentals reads as eccentric rather than intentional"
+  - "Sufficient autonomy in dress – the protocol cannot deliver in contexts with prescriptive uniforms or rigidly enforced dress codes that override personal signature elements"
+  - "Access to a mirror, adequate lighting, and willingness to honestly assess what currently works in your wardrobe versus what does not"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "Defining a signature requires articulating which elements feel authentic versus aspirational, which surfaces identity content that often remains implicit"
+  - domain: "possessions"
+    rationale: "The protocol systematically reduces wardrobe size while increasing each item's fit-to-purpose, which directly improves the signal-to-noise ratio of clothing possessions"
+  - domain: "current-work"
+    rationale: "In client-facing or public-facing roles, a recognisable signature compounds over repeated encounters and contributes to professional reputation and recall"
