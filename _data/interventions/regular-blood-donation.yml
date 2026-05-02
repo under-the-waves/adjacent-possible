@@ -1,0 +1,103 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Regular Blood and Plasma Donation"
+what_it_is: |
+  Scheduling 2–6 blood or plasma donations per year as a recurring practice rather than one-off events. Whole blood donation typically takes ~45 minutes (donation itself ~10 minutes, plus screening, refreshment, and recovery), with eligibility intervals of approximately 8–12 weeks for whole blood and substantially shorter for plasma in countries that permit frequent plasma donation. The intervention has unusually high altruistic leverage: a single whole blood donation can contribute to treatment for up to three patients in surgery, trauma, cancer care, or chronic blood disorders, and blood remains a non-substitutable medical resource that depends entirely on volunteer donations to meet demand. The practice is country-neutral (every country with a healthcare system needs blood donors) and the screening process incidentally surfaces health information (haemoglobin, blood pressure, infectious disease markers) that some donors find independently valuable.
+how_to_do_it: |
+  - Check eligibility against the criteria of your country's blood service (typical baseline: weight above ~50 kg, age 17–66 for first-time donors, no recent travel to malaria zones, no high-risk-of-infection deferrals, generally good health). Most countries' criteria are summarised online and prospective donors can self-check in 5 minutes.
+  - Book the first appointment via your national or regional blood service. In most jurisdictions appointments can be scheduled online in advance, often weeks ahead; walk-in donation is also typically available but appointments reduce wait time.
+  - Prepare for the donation: hydrate well in the 24 hours before, eat a normal meal in the hours before, avoid heavy exercise immediately after. The first donation typically takes 60–90 minutes including screening; subsequent donations are faster.
+  - Schedule the next donation immediately after each one, while in the donation centre, at the earliest eligible date. The simplest cadence rule is "every 12 weeks" for whole blood (giving 4 donations per year), or roughly the country's stated minimum interval.
+  - Track donations in a simple log – date, type (whole blood, plasma, platelets), and any flagged values from the screening. Some blood services provide donor portals that do this automatically.
+success_looks_like: |
+  - You give blood (or plasma) on a regular cadence – 4 whole blood donations per year is the typical sustained pattern – without each one feeling like a major undertaking. The scheduling, attendance, and aftercare run on autopilot.
+  - Each donation contributes to the standing supply that hospitals depend on; over a decade of regular donation the cumulative impact is on the order of 100+ patient treatments enabled
+  - The practice becomes a small but durable part of how you think about your contribution – a low-cost, high-leverage form of practical altruism that fits alongside other forms of giving rather than competing with them
+common_pitfalls: |
+  - Donating once and never returning; first-time donors have high rates of single attendance, and the public health benefit comes from the *regular* return-donor population. Booking the next appointment at the centre, before leaving, is the simplest defence
+  - Attempting to donate when underprepared (dehydrated, hungry, recently exercised hard, recently slept poorly) and feeling unwell during or after the donation, which produces a negative reinforcement that reduces return rates
+  - Treating the practice as a self-care activity rather than an altruistic one; while the screening incidentally surfaces health information, the real value is the donation, and over-medicalising the act tends to crowd out the return motivation
+  - Becoming complacent about deferral conditions (recent tattoo, travel, illness) and showing up at appointments where you turn out to be ineligible; check the deferral criteria before each donation, not just for the first one
+description: |
+  - Scheduling 2–6 whole blood donations or more frequent plasma donations per year as a recurring altruistic practice, taking ~45 minutes per session at a country-specific blood service
+  - One of the highest-leverage altruistic acts available at a country-neutral level: blood is non-substitutable, demand is constant, and supply depends almost entirely on volunteer donors. [The WHO estimates](https://www.who.int/news-room/fact-sheets/detail/blood-safety-and-availability) that 118.5 million blood donations are collected globally each year, with shortages persistent particularly in low-and-middle-income countries
+  - Health risks for healthy donors are minimal; [systematic reviews](https://onlinelibrary.wiley.com/doi/10.1111/trf.14094) find no robust evidence of harm to regular donors at standard frequencies, with iron-status monitoring routinely included in screening to flag any donors approaching iron deficiency
+  - [Behavioural research on first-time donors](https://onlinelibrary.wiley.com/doi/10.1111/vox.12859) shows that converting a single donation into a regular pattern is the primary public-health challenge; the standing supply depends on return donors, with only a minority of first-time donors becoming regulars without active follow-up from the blood service
+  - Distinct from financial charitable giving (which can be optimised via [effective giving](/resources/intervention-database/effective-giving)) – the resource being donated (blood) cannot be substituted with money, making it complementary to rather than substitutable for cash giving
+applicable_domains: ["community-contribution", "global-impact", "life-purpose"]
+
+values:
+  community-contribution.impact:
+    pbs: 6
+    isr: 80
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Sustained regular donation (4 whole blood donations per year over 10+ years) plausibly produces a meaningful gain in tangible community impact, reaching the 60th–65th percentile. Delta: ~25–30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in community impact."
+      - The mechanism is direct and well-quantified: one whole blood donation can support treatment for up to three patients, so 4 donations per year over 10 years contributes to up to ~120 patient treatments – a substantial cumulative impact at very low individual cost.
+      - Score 6 reflects a meaningful gain bounded by the fact that the impact is statistical (one's specific donation may or may not be used, and the marginal counterfactual depends on supply conditions); transformative impact (PBS 8+) would require higher-leverage altruistic engagement.
+    isr_reasoning: |
+      - The mechanism is mechanically near-deterministic: a successfully completed donation enters the standing supply and contributes to patient treatment with high probability. The primary failure mode is donor deferral (medical reasons preventing donation on the day) rather than anything the donor controls.
+      - [Blood-system supply data](https://www.who.int/news-room/fact-sheets/detail/blood-safety-and-availability) confirms that regular donor populations are the standing infrastructure underpinning blood-supply adequacy in every functioning healthcare system.
+      - ISR of 80% reflects the strong mechanism with a meaningful failure rate from deferrals, donations the system did not need on a given day (rare but possible), and the small probability that any specific donation is discarded due to processing issues.
+    uar_reasoning: |
+      - [First-time donor research](https://onlinelibrary.wiley.com/doi/10.1111/vox.12859) consistently finds that only ~30–40% of first-time donors return for a second donation within 12 months, and a smaller fraction (typically 15–25%) become regulars donating multiple times per year over multi-year horizons.
+      - The drop-off is highest after the first donation; donors who reach 4+ donations show much higher long-term retention as the practice consolidates into routine.
+      - UAR of 30% reflects the realistic minority who sustain a regular cadence over 12+ months, drawn from population-level blood-service retention data.
+
+  global-impact.fulfilment:
+    pbs: 5
+    isr: 65
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Regular donation provides a tangible, repeated instance of practical altruism that for many donors connects to broader ethical commitments. Plausible endpoint: 55th–60th percentile. Delta: ~20–25 percentile points.
+      - The fulfilment pathway is meaning-driven – the donation is small in time cost and tangible in impact, which is a combination that many donors describe as unusually fulfilling per minute invested.
+      - Score 5 reflects a real but modest gain; the fulfilment effect is limited by the routine nature of the act (donation centres are typically clinical environments, not emotionally vivid), making the per-donation fulfilment effect smaller than for more relationally-engaged altruistic activities.
+    isr_reasoning: |
+      - The fulfilment benefit is reliable for donors who cognitively engage with the impact of their donation; donors who treat it as a chore see weaker effects.
+      - [Donor motivation research](https://www.sciencedirect.com/science/article/abs/pii/S1473050217301155) finds that altruistic and prosocial motivations are the dominant drivers of regular donation, and these motivations correlate with reported fulfilment from the practice.
+      - ISR of 65% reflects the strong mechanism conditional on the donor's framing of the act as a meaningful contribution rather than a transactional health task.
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention, same adherence profile.
+
+  life-purpose.meaning:
+    pbs: 4
+    isr: 55
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Regular blood donation provides a small but durable practical expression of ethical commitments, contributing modestly to the felt sense of meaning. Plausible endpoint: 45th–50th percentile. Delta: ~10–15 percentile points.
+      - Score 4 (modest) reflects that the meaning contribution is real but secondary; the practice is one component of a broader life-purpose ecosystem rather than a primary driver.
+      - The mechanism is similar to that of [effective giving](/resources/intervention-database/effective-giving) – low-cost altruism produces a small but consistent meaning return – with the difference that blood donation has a concrete physical and time cost that can feel more grounded than abstract financial giving.
+    isr_reasoning: |
+      - The meaning pathway is plausible and supported by the donor-motivation literature, but no direct studies measure life-purpose meaning as an outcome of regular blood donation specifically.
+      - Donors who already have strong life-purpose alignment may see negligible additional gain (the donation is consistent with existing meaning rather than additive); donors whose lives lack other expressions of contribution may see larger gains.
+      - ISR of 55% reflects the conditional and lightly-evidenced pathway from regular donation to felt meaning.
+    uar_reasoning: |
+      - See community-contribution.impact UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost. Blood donation is free to the donor in essentially all countries; in some jurisdictions modest compensation or expense reimbursement is available, making the cost zero or slightly negative."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring financial costs. Travel to and from the donation centre is the only ongoing expense, typically negligible for donors with reasonable geographic access. Some donors take a half-day annual leave for donations, an opportunity-cost consideration but not a direct expense."
+  upfront_time: 1.5
+  upfront_time_reasoning: "Approximately 1–2 hours for the first donation: ~30 minutes for travel, eligibility check, and registration; ~15 minutes for screening and pre-donation Q&A; ~10 minutes for the donation itself; ~15 minutes for post-donation rest and refreshment. Subsequent donations are faster."
+  ongoing_time: 3
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Approximately 3–4 hours per year for 4 whole blood donations: ~45 minutes per donation including travel and recovery. Plasma donors with more frequent donation cadences may invest 6–12 hours per year. Travel time varies with geographic proximity to donation centres."
+
+prerequisites:
+  - "Eligibility under the local blood service's criteria – typically weight above ~50 kg, age 17–66 for first-time donors, generally good health, no high-risk-of-infection deferral conditions, and no recent travel to malaria-endemic zones"
+  - "Geographic access to a blood donation centre or a mobile collection unit visiting nearby; urban donors have abundant access, rural donors may need to plan travel around mobile collection schedules"
+  - "Tolerance for needles and the venepuncture procedure; users with severe needle phobia may need to address that first via desensitisation before regular donation becomes sustainable"
+  - "Capacity to absorb a small physical recovery cost (mild fatigue, occasional lightheadedness in the hour after donation) without it disrupting work or care responsibilities"
+
+flagged_domains:
+  - domain: "ethics"
+    rationale: "Regular donation operationalises an altruistic commitment in a recurring, low-cost form, providing a practical expression of ethical principles that mostly remain abstract in daily life"
+  - domain: "physical-safety"
+    rationale: "Regular screening surfaces health information (haemoglobin, blood pressure, infectious disease markers) that may incidentally identify undiagnosed conditions, though the magnitude of this effect is small and dependent on local screening protocols"

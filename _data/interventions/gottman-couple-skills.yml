@@ -1,0 +1,153 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Gottman Couple Skills"
+what_it_is: |
+  A self-administered or workshop-based learning of the specific behavioural skills the [Gottman Institute](https://www.gottman.com/) has identified through forty years of longitudinal couple research as separating stable, satisfied partnerships from distressed and dissolving ones. The core curriculum includes maintaining a 5:1 positive-to-negative interaction ratio in conflict, recognising and replacing the "four horsemen" (criticism, contempt, defensiveness, stonewalling) with their antidotes, deploying repair attempts during arguments, building "love maps" through curiosity about the partner's inner world, and running a weekly state-of-the-union meeting. Distinct from [quarterly relationship check-ins](/resources/intervention-database/quarterly-relationship-check-in) (a strategic conversation cadence) and [pre-marital counselling](/resources/intervention-database/pre-marital-counselling) (a clinical intervention before marriage): this is a self-directed skill curriculum for couples already in established relationships, drawn from the same evidence base as Gottman couples therapy but delivered through book-and-workshop learning rather than clinical sessions. Lower cost than couples therapy and accessible at any relationship stage, including ones not in active distress.
+how_to_do_it: |
+  - Read [The Seven Principles for Making Marriage Work](https://www.gottman.com/product/the-seven-principles-for-making-marriage-work/) or [Eight Dates](https://www.gottman.com/product/eight-dates/) together. The principles framework is the simplest entry point and gives both partners a shared vocabulary for the techniques that follow
+  - Learn the four horsemen and their antidotes – this is the highest-leverage component because the four behaviours together predict dissolution with substantial accuracy in [Gottman's longitudinal research](https://www.gottman.com/blog/the-four-horsemen-recognizing-criticism-contempt-defensiveness-and-stonewalling/). The antidotes are: gentle start-up replaces criticism, building a culture of appreciation replaces contempt, taking responsibility replaces defensiveness, and physiological self-soothing replaces stonewalling
+  - Run a weekly 30 -- 45 minute state-of-the-union meeting using the structured agenda: what's going well, what each partner appreciates, what's not working, what each needs. The protocol explicitly separates appreciation from grievance and prevents either dimension from being skipped
+  - Practise repair attempts during arguments – any small gesture (a joke, an apology, naming what's happening, asking for a pause) that interrupts escalation. [Gottman's research](https://www.gottman.com/blog/the-magic-relationship-ratio-according-science/) finds the difference between "masters" and "disasters" of relationship is not the absence of conflict but the rate at which they accept each other's repair attempts
+  - Build love-map updates into normal conversation: ask open-ended questions about your partner's current internal world, current stresses, current hopes. This is the warmth side of the practice – without it, the conflict-skill side becomes a maintenance protocol on a relationship without depth
+  - Optionally: take a couple's weekend workshop ([Art and Science of Love](https://www.gottman.com/couples/workshops/), $700 -- 1,000 per couple) for accelerated learning of the same content with live coaching. Reading-only practice works but takes longer to internalise
+success_looks_like: |
+  - Conflicts feel recoverable: arguments end with both partners' positions understood and the relationship intact, even when the issue remains unresolved
+  - Both partners notice and name horsemen behaviours in real time and shift to the corresponding antidote without it feeling like therapy-speak
+  - The 5:1 ratio becomes self-maintaining: small daily expressions of appreciation, curiosity, and humour outweigh the irritations and corrections by enough margin that the relationship has positive momentum
+  - The weekly state-of-the-union meeting becomes a steady source of small course-corrections rather than a forum for occasional crises
+common_pitfalls: |
+  - Reading the books without practising the skills. The behavioural component is the active ingredient; couples who endorse the framework but do not run the weekly meeting or practise the antidotes see little benefit
+  - Using the four-horsemen vocabulary as a weapon. Naming a partner's contempt mid-argument escalates rather than de-escalates; the framework is for self-monitoring first, joint vocabulary second
+  - Treating it as a one-time course rather than a sustained practice. The skills decay without repetition – couples who learn the protocols and then drift back to old patterns over six to twelve months are the modal failure
+  - Substituting it for couples therapy when therapy is what's needed. Severe distress, infidelity, untreated mental-health conditions, or active contempt patterns benefit from clinical scaffolding; self-directed Gottman is preventive maintenance and mild-distress repair, not crisis treatment
+description: |
+  - A self-directed or workshop-based curriculum of the specific behavioural skills associated with stable, satisfied partnerships in [forty years of Gottman longitudinal research](https://www.gottman.com/about/research/) – maintaining a 5:1 positive-to-negative ratio, replacing the four horsemen with their antidotes, deploying repair attempts during conflict, building love maps, and running a weekly state-of-the-union meeting
+  - [Gottman's predictive research](https://psycnet.apa.org/record/1992-43492-001) identified the four horsemen (criticism, contempt, defensiveness, stonewalling) as substantial predictors of relationship dissolution; couples coached to recognise and replace these patterns show measurable improvement in subsequent satisfaction
+  - [Meta-analyses of Gottman-based interventions](https://onlinelibrary.wiley.com/doi/abs/10.1111/jmft.12063) report moderate effect sizes on relationship satisfaction (d ≈ 0.5) for couples completing the protocols, with effects sustained through one-year follow-ups
+  - [The Gottman Method couples therapy](https://www.gottman.com/about/the-gottman-method/) is one of the most-studied couple-therapy approaches with [substantial outcome evidence](https://www.gottman.com/about/research/clinical-trials/); the self-directed version uses the same skills in a lower-intensity format
+  - Distinct from quarterly check-ins (a different cadence and agenda) and pre-marital counselling (a clinical pre-commitment intervention): this is a sustained skill curriculum applicable to established couples at any relationship stage including those not in active distress
+applicable_domains: ["relationship-quality", "communication", "mental-health"]
+
+values:
+  relationship-quality.connection:
+    pbs: 7
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 65th--70th percentile in emotional closeness and trust. Delta: ~30--35 percentile points.
+      - The love-map and appreciation components directly target connection: deliberate curiosity about the partner's internal world and explicit appreciation are the building blocks of the warmth side of the relationship. [Gottman's research on the "magic six hours"](https://www.gottman.com/blog/6-hours-a-week-to-a-better-relationship/) treats sustained low-grade attention to the partner as a primary differentiator between stable and unstable couples
+      - Score 7 reflects a meaningful gain that is bounded by the fact that connection is also influenced by life-stage, baseline temperament fit, and external stressors that the protocol does not address
+    isr_reasoning: |
+      - [Meta-analyses of Gottman-based interventions](https://onlinelibrary.wiley.com/doi/abs/10.1111/jmft.12063) report moderate effect sizes (d ≈ 0.5) on relationship satisfaction for completing couples, with reasonable durability
+      - The connection benefit specifically depends on running the warmth components (love maps, appreciation) and not just the conflict components; couples who focus only on conflict skill see smaller connection gains
+      - ISR of 60% reflects that the connection benefit follows reliably for couples running the full curriculum but is more variable for those running it partially
+    uar_reasoning: |
+      - The curriculum is moderately demanding – sustained reading, weekly meetings, and ongoing skill practice rather than a single change in routine
+      - [Research on couples therapy homework adherence](https://onlinelibrary.wiley.com/doi/10.1111/jmft.12058) finds compliance rates of 40 -- 60% for between-session behavioural assignments; self-directed Gottman work has no clinical accountability and likely sits at the lower end
+      - UAR of 35% reflects realistic long-term adherence – a meaningful minority of couples who start the curriculum maintain the weekly meetings and active skill practice past six months
+
+  relationship-quality.harmony:
+    pbs: 8
+    isr: 70
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 70th--75th percentile in day-to-day partnership smoothness and constructive conflict. Delta: ~35--40 percentile points.
+      - Harmony is the most direct target of the curriculum: the four-horsemen antidotes, gentle start-up, soft-landing repair, and 5:1 ratio all target the constructive-conflict dimension that the anchor measures. [Gottman's longitudinal research](https://psycnet.apa.org/record/1992-43492-001) finds these patterns separate stable from dissolving couples in samples followed for over a decade
+      - Score 8 reflects that this is among the most precision-targeted interventions available for the harmony construct, drawing on a uniquely well-developed evidence base on which specific behaviours matter
+    isr_reasoning: |
+      - The conflict-skill mechanism is mechanistically clear and well-tested: couples who actually replace contempt with appreciation, defensiveness with responsibility, and stonewalling with self-soothing reliably experience reduced conflict severity within weeks
+      - [Outcome research on Gottman couples therapy](https://www.gottman.com/about/research/clinical-trials/) reports strong improvement on conflict measures for completing couples; the self-directed version inherits a meaningful portion of the effect
+      - ISR of 70% reflects high reliability when the protocols are run with reasonable fidelity, with the main failure mode being weaponising the framework rather than self-applying it
+    uar_reasoning: |
+      - See relationship-quality.connection UAR – same intervention, same adherence profile
+
+  relationship-quality.alignment:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 60th--65th percentile in shared values and goal alignment. Delta: ~25--30 percentile points.
+      - The "shared meaning" component of the seven principles and the love-maps practice both surface alignment-relevant material – values, hopes, family-of-origin scripts, life-direction preferences – more reliably than typical day-to-day conversation
+      - Score 6 rather than higher because alignment is more directly targeted by quarterly strategic check-ins (PBS 8); the Gottman curriculum addresses it as one component among several rather than as the primary aim
+    isr_reasoning: |
+      - The alignment benefit depends on the love-maps and shared-meaning practices being used substantively rather than as scripted exercises; couples who treat them as conversation prompts without genuine engagement see smaller benefit
+      - [Research on shared meaning practices](https://www.gottman.com/blog/the-sound-relationship-house-create-shared-meaning/) supports modest reliability of the alignment effect across diverse couples
+      - ISR of 60% reflects modest reliability of this secondary outcome relative to the primary harmony and connection effects
+    uar_reasoning: |
+      - See relationship-quality.connection UAR – same intervention, same adherence profile
+
+  communication.conflict:
+    pbs: 7
+    isr: 70
+    uar: 35
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 65th--70th percentile in constructive conflict navigation. Delta: ~30--35 percentile points.
+      - The four-horsemen-and-antidotes framework is one of the most studied behavioural conflict-skill curricula in psychology; the skills are specific, observable, and repeatedly practised in actual disagreements rather than role-played in workshops
+      - Score 7 reflects that the cross-context transfer to non-romantic relationships is real and meaningful – the same horsemen and antidotes apply to workplace, family, and friendship conflict – though most users do not deliberately transfer them
+    isr_reasoning: |
+      - [Meta-analytic evidence on Gottman-method outcomes](https://onlinelibrary.wiley.com/doi/abs/10.1111/jmft.12063) supports reliable conflict-skill improvement among adherent couples
+      - The skill transfer to relationships outside the partnership is variable – some users notice the pattern in workplace conflict and apply the antidotes; others compartmentalise the skill to the romantic context
+      - ISR of 70% reflects high reliability of the in-relationship conflict-skill gain, with somewhat lower reliability for cross-context transfer
+    uar_reasoning: |
+      - See relationship-quality.connection UAR – same intervention, same adherence profile
+
+  communication.connection:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 55th--60th percentile in ability to build genuine relationships through conversation. Delta: ~20--25 percentile points.
+      - Daily practice of curiosity-driven open-ended questioning, explicit appreciation, and gentle start-up generalises to friendship and professional contexts in users who notice the parallel
+      - Score 5 reflects modest cross-context transfer – the practice is bounded to a known partner and a fixed format, with limited but real spillover
+    isr_reasoning: |
+      - The cross-context transfer mechanism is plausible but not directly studied; most evidence is in-relationship
+      - For users who already have communication training, marginal benefit is small; for users without, the curriculum may be a meaningful first exposure to specific communication skills
+      - ISR of 60% reflects modest reliability with substantial individual variation
+    uar_reasoning: |
+      - See relationship-quality.connection UAR – same intervention, same adherence profile
+
+  mental-health.stability:
+    pbs: 5
+    isr: 55
+    uar: 35
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 55th percentile in day-to-day emotional steadiness. Delta: ~20 percentile points.
+      - Chronic relational conflict is a documented driver of anxiety and depressive symptoms; [research on relationship satisfaction and mental health](https://pubmed.ncbi.nlm.nih.gov/29192754/) finds substantial associations between relationship distress and mood symptoms in both partners
+      - Score 5 reflects modest, indirect benefit – the intervention reduces a meaningful baseline stressor for users in distressed relationships, with smaller marginal effect for users whose partnership is already functional
+    isr_reasoning: |
+      - The mental-health pathway operates through reduced relational stress, which is well-documented but heterogeneous across couples
+      - For users whose mental-health stability is driven primarily by non-relational factors (work, biology, isolation), the relational mechanism delivers little
+      - ISR of 55% reflects modest reliability across the adherent population, concentrated in users for whom relationship distress was a meaningful driver
+    uar_reasoning: |
+      - See relationship-quality.connection UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 30
+  upfront_cost_reasoning: "Approximately $20 -- 40 for the foundational books (e.g. The Seven Principles for Making Marriage Work, Eight Dates). Optional couples weekend workshops cost $700 -- 1,000 per couple but are not required for the self-directed minimum-viable form."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No ongoing cost for the self-directed practice. Optional resources (additional books, online courses) range $20 -- 200 per year but are discretionary."
+  upfront_time: 12
+  upfront_time_reasoning: "Approximately 10 -- 15 hours: reading the foundational books together (~6 -- 10 hours), discussing and agreeing the practices to adopt (2 -- 3 hours), running the first state-of-the-union meeting and reviewing what worked (1 -- 2 hours)."
+  ongoing_time: 1
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 30 -- 45 minutes per week for the state-of-the-union meeting, with the four-horsemen-and-antidotes practice integrated into existing conflict interactions rather than added as separate time. Periodic re-reading of one of the books or following up on a specific principle adds modest occasional time."
+
+prerequisites:
+  - "An ongoing romantic partnership – the curriculum is undefined for single users"
+  - "Mutual buy-in from both partners – one resistant partner collapses the practice, since the skill curriculum is bilateral by design"
+  - "Functional literacy and willingness to read or work through audiobook content together"
+  - "Sufficient relational stability that a sustained shared learning project will not become a vehicle for unresolved conflict; couples in active crisis (severe distress, recent infidelity, active contempt) benefit more from couples therapy than from self-directed work"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "The four-horsemen self-monitoring practice surfaces the user's own habitual reactive patterns (which horseman they default to under stress) more clearly than typical daily reflection; effect plausibly meaningful but unscored here"
+  - domain: "family-of-origin"
+    rationale: "The shared-meaning and love-map components surface inherited family-of-origin scripts about relationships, conflict, and emotional expression; effect operates as side-output of the deliberate practice"

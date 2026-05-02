@@ -1,0 +1,133 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Daily Home Reset Routine"
+what_it_is: |
+  A 10–20 minute daily routine in which every misplaced object in the active living areas is returned to a designated "home" – the specific, predetermined storage location that item belongs in. The active ingredient is the combination of (1) every category of object having a designated home that the household has agreed on and (2) a fixed daily time at which everything not in its home is returned to it. The routine is anchored to a consistent trigger (commonly after dinner, before bed, or first thing in the morning) so it runs without daily renegotiation. Distinct from [regular decluttering](/resources/intervention-database/regular-decluttering), which is quarterly and removes items entirely, the daily reset assumes the inventory is already curated and focuses on the placement-and-flow problem that produces 80% of the felt experience of clutter even in homes with reasonable totals of possessions.
+how_to_do_it: |
+  - Spend an initial weekend designating a specific home for each category of object in the household: keys, mail, bags, shoes, chargers, glasses, kitchen tools, remote controls, paperwork. Where an item has no obvious home, create one (a labelled drawer, a hook, a tray, a basket); the rule is that every item must have exactly one place it belongs.
+  - Write the homes down where the household can see them – a simple list on the fridge or a shared note – so anyone in the household can return an item to its home without asking. The protocol does not work if the homes live only in one person's head.
+  - Pick a daily anchor time of 10–20 minutes for the reset, attached to an existing routine. After-dinner is common because the kitchen and table reset can fold into the meal cleanup; bedtime reset suits night-owl households; morning reset suits households where the previous evening was rushed.
+  - During the reset, walk through the active living areas (kitchen counters, dining table, sofa area, hallway, bathroom counter) and return each out-of-place item to its designated home. Items whose home is clearly wrong get a temporary re-designation note for the next weekend audit.
+  - Once a month, walk through the homes-list and check whether the same items keep ending up out of place. Persistent misplacement usually means the home is wrong (too far from where the item is used) rather than the routine; revise the home rather than blaming the household.
+success_looks_like: |
+  - Active living areas (kitchen counters, dining table, hallway) reset to "ready for tomorrow" within a 10–20 minute window each evening, without an argument about whose turn it is and without anyone having to think about where anything goes
+  - Search time for everyday items (keys, glasses, the specific kitchen tool) drops noticeably, and the "where did I put...?" question becomes rare
+  - Background visual disorder declines, and the home reads as cared-for rather than chaotic, even when the underlying inventory of possessions has not changed
+common_pitfalls: |
+  - Assigning homes that don't reflect actual use patterns – the cookware home is in the cabinet far from the stove, the keys home is upstairs from the front door – which guarantees daily migration; designate homes near the use point, then revise relentlessly if items keep wandering
+  - Running the reset alone in a multi-person household and resenting it; the protocol works best when every household member resets a defined zone in the same 15-minute window, which converts the practice from a chore into a coordinated habit
+  - Letting the reset gradually lengthen (15 minutes becomes 45 minutes becomes "I'll do it Saturday"); the time bound is a feature – the reset is for placement, not for deep cleaning, organising, or decluttering, which belong to other practices
+  - Trying to reset a home that has too many possessions; if the reset routinely exceeds 20 minutes, the underlying inventory is too high and a [decluttering session](/resources/intervention-database/regular-decluttering) is needed before the reset can stabilise
+description: |
+  - A 10–20 minute daily routine in which every misplaced object in the active living areas is returned to a designated "home" – the predetermined location that item belongs in – anchored to a fixed daily trigger such as after dinner or before bed
+  - Active ingredient is the pairing of designated homes for every object category with a daily reset cadence, distinguishing this from [regular decluttering](/resources/intervention-database/regular-decluttering) (quarterly removal of items) and from generic tidying (no fixed cadence, no designated homes)
+  - [Saxbe and Repetti (2010)](https://pubmed.ncbi.nlm.nih.gov/19934011/) found that homes described as cluttered or unfinished correlated with flatter cortisol slopes – a marker of chronic stress – suggesting that visible domestic disorder generates a real physiological cost that daily reset directly counteracts
+  - [Time-use research on housework](https://www.sciencedirect.com/science/article/abs/pii/S0049089X2030104X) shows that distributed daily maintenance produces lower total weekly housework hours than weekend-concentrated cleaning, supporting the daily reset as more time-efficient than batched alternatives
+  - Distinct from Marie Kondo-style minimalism in that the active ingredient is *placement and flow*, not *aesthetic minimalism* – the routine works equally well in a maximalist household with strong placement discipline as in a minimal one
+applicable_domains: ["housework", "possessions", "time-management", "mental-health"]
+
+values:
+  housework.order:
+    pbs: 7
+    isr: 75
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained daily reset, a user could plausibly reach the 75th percentile in mental calm from an organised living space – not a transformatively pristine home, but reliably tidy active areas that don't generate background stress. Delta: ~40 percentile points. Subjective scale: PBS 7 sits between "Meaningful" (6) and "Major" (8) gain.
+      - The mechanism is direct: daily return-of-items-to-homes prevents the slow accumulation of out-of-place objects that produces the felt experience of disorder. By definition, items in their homes are not contributing to clutter.
+      - The delta is large because the baseline (35th percentile) describes meaningful clutter as a daily background, and the protocol's mechanism reaches into that exact failure mode rather than addressing it indirectly.
+    isr_reasoning: |
+      - Mechanistically, the practice is near-deterministic: returning out-of-place items to designated homes raises the proportion of items in their proper place by definition. The primary failure modes are designation problems (homes are wrong) or compliance problems (household member skips), not the mechanism itself.
+      - [Time-use research](https://www.sciencedirect.com/science/article/abs/pii/S0049089X2030104X) supports daily-distributed maintenance as more effective than batched cleaning at maintaining order, though the literature does not directly study designated-home protocols.
+      - ISR of 75% reflects the strong mechanism with a meaningful failure rate – households where homes are poorly designated, where multiple people work against the protocol, or where the inventory is too high for the reset to handle in 20 minutes.
+    uar_reasoning: |
+      - Daily routines face steeper adherence curves than weekly or monthly ones. [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) found median habit formation takes 66 days, with longer for behaviours requiring household coordination.
+      - The reset's strength – running in a fixed 10–20 minute window after a routine event – is also its weakness: when the anchor event shifts (late work, travel, illness), the reset slides and often fails to recover the next day.
+      - UAR of 40% reflects the realistic minority who sustain a daily household routine through 6–12 months; pairs working in coordinated zones tend to retain higher than solo practitioners.
+
+  housework.aesthetics:
+    pbs: 5
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Daily reset directly improves the aesthetic state of active living areas by removing visual noise from out-of-place items. Plausible endpoint: 55th–60th percentile. Delta: ~20–25 percentile points.
+      - Score 5 (modest-to-meaningful) reflects that the aesthetic gain is real but bounded – the underlying decor, lighting, and design quality of the space sets a ceiling that placement discipline cannot exceed.
+      - The mechanism is similar to that established in [decluttering research](https://pubmed.ncbi.nlm.nih.gov/19934011/) for visual order, applied at higher cadence and lower intensity.
+    isr_reasoning: |
+      - The aesthetic effect is reliable when active living areas are visible to the household; the reset has near-deterministic effect on those zones if executed.
+      - The benefit fails to materialise in households with chronically over-stuffed surfaces (built-up paperwork, accumulated decor, perpetual half-projects), where the reset routine cannot keep pace with the underlying accumulation.
+      - ISR of 65% reflects the strong-but-bounded mechanism conditional on the underlying inventory being manageable in a 20-minute window.
+    uar_reasoning: |
+      - See housework.order UAR – same intervention, same adherence profile.
+
+  possessions.functionality:
+    pbs: 5
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~50–60% of possessions in working order and regularly used). Daily reset doesn't add to the count of functional possessions, but it ensures items can be located when needed, raising effective functionality. Plausible endpoint: ~60–65% reliably locatable use, mapping to the 50th–55th percentile. Delta: ~15–20 percentile points.
+      - Score 5 reflects the modest gain in *effective* functionality from improved retrieval; the deeper functionality issues (broken items, duplicates) are addressed by [decluttering](/resources/intervention-database/regular-decluttering), not the reset.
+      - The retrieval benefit is real – an item in its home is a found item – and compounds across years as the household builds shared knowledge of where things live.
+    isr_reasoning: |
+      - The retrieval benefit is mechanistically reliable: items in designated homes are by definition findable. The failure mode is exclusively designation problems (homes that aren't where the item is needed) rather than reset execution.
+      - ISR of 70% reflects strong mechanism reliability, with the 30% gap attributable to homes designated incorrectly and to items that genuinely lack obvious homes.
+      - No direct studies on designated-home protocols, but the underlying retrieval mechanism is supported by [cognitive load theory](https://doi.org/10.1207/s15516709cog1202_4) – external memory in stable locations reduces internal search cost.
+    uar_reasoning: |
+      - See housework.order UAR – same intervention, same adherence profile.
+
+  time-management.productivity:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The time saved through reduced search-for-misplaced-items plausibly raises productivity modestly. Plausible endpoint: 45th–50th percentile. Delta: ~10–15 percentile points.
+      - The time-saving estimate: typical households lose 5–10 minutes daily searching for misplaced items; the reset costs 10–20 minutes daily but recovers most of that loss and reduces the cognitive cost of search throughout the day.
+      - Score 4 (modest) reflects that net time savings are real but small; the reset is more valuable for the felt-order benefit than for pure time arithmetic.
+    isr_reasoning: |
+      - No direct research on time savings from designated-home protocols. The mechanism is plausible but the magnitude is variable across households.
+      - For households with high search-time baseline (frequent "where are my keys" episodes), the productivity gain is meaningful; for households already reasonably organised, the gain is negligible.
+      - ISR of 55% reflects the conditional and lightly-evidenced productivity pathway.
+    uar_reasoning: |
+      - See housework.order UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 4
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The reduction in background visual disorder and decision fatigue from daily reset plausibly produces a modest gain in emotional stability. Plausible endpoint: 45th–50th percentile. Delta: ~10–15 percentile points.
+      - [Saxbe and Repetti (2010)](https://pubmed.ncbi.nlm.nih.gov/19934011/) found flatter cortisol slopes in homes described as cluttered or unfinished, supporting a stress-reduction pathway from improved domestic order.
+      - Score 4 reflects a real but modest secondary benefit; the intervention is not a mental-health treatment but reduces a specific source of background stress for users sensitive to domestic disorder.
+    isr_reasoning: |
+      - The pathway from improved domestic order to emotional stability is plausible but indirect; the [Saxbe & Repetti (2010)](https://pubmed.ncbi.nlm.nih.gov/19934011/) finding is observational, with reverse causation possible (anxious people perceive their homes as more cluttered).
+      - For users high in environmental sensitivity, the stability benefit is noticeable; for users low in environmental sensitivity, the benefit is negligible regardless of the reset's success.
+      - ISR of 50% reflects the conditional and lightly-evidenced mental-health pathway.
+    uar_reasoning: |
+      - See housework.order UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 50
+  upfront_cost_reasoning: "Approximately $30–80 for basic organisational supplies if the household lacks them: hooks for keys and bags, baskets or trays for landing zones, labels for shelves, a few drawer dividers. Many households already have most of what they need."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The protocol uses existing storage; minor replenishment of organisational supplies is rare and ad hoc."
+  upfront_time: 6
+  upfront_time_reasoning: "Approximately 4–8 hours over an initial weekend to walk through the home, designate a home for each category of object, install hooks/baskets/trays as needed, and write up the shared homes-list for the household."
+  ongoing_time: 1.75
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "10–20 minutes per day, 7 days per week = 70–140 minutes (~1–2.5 hours) per week. Estimate uses a midpoint of ~1.75 hours weekly for the reset itself, with negligible additional time for monthly homes-list audits."
+
+prerequisites:
+  - "Residential stability sufficient to make multi-month investment in designated homes worthwhile (a household moving in 3 months should defer until after the move)"
+  - "A household inventory low enough to be reset in 10–20 minutes; very over-stuffed households need a [decluttering session](/resources/intervention-database/regular-decluttering) first"
+  - "Agreement from all household members on the homes-list, since the protocol fails if one member places items where others cannot find them"
+  - "A consistent daily anchor event (after-dinner cleanup, before-bed routine, morning routine) that the reset can attach to"
+
+flagged_domains:
+  - domain: "relationship-quality"
+    rationale: "Reduces a frequent source of household friction (whose mess is whose, where things are, blame for lost items) by making placement an explicit shared agreement rather than an implicit expectation"

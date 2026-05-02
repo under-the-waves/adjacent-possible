@@ -1,0 +1,150 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Sexual Communication Script"
+what_it_is: |
+  A structured set of conversation protocols designed to make explicit communication about sex routine rather than rare in established partnerships. The core practices are: each partner independently completing a [yes/no/maybe list](https://bedsider.org/articles/yes-no-maybe-list) of sexual activities and preferences and then comparing notes; scheduling a brief desire conversation – typically monthly – to discuss frequency, what's been working, what each partner has been wanting; and a quarterly satisfaction check-in covering pleasure quality, sexual self-image, fantasies that have surfaced, and any concerns either partner has been carrying. The mechanism is straightforward: most long-term couples have substantial unsaid preferences, frustrations, and curiosities about sex, and the resulting silence narrows the relationship's sexual repertoire and accumulates resentment. Distinct from [sensate focus practice](/resources/intervention-database/sensate-focus-practice) (an embodied touch protocol that addresses dysfunction) and [scheduled intimacy](/resources/intervention-database/scheduled-intimacy) (a calendar-based prioritisation): this intervention is purely communicative, treating sex as something both partners can talk about with the same matter-of-fact directness as any other shared domain.
+how_to_do_it: |
+  - Each partner independently fills out a [yes/no/maybe list](https://bedsider.org/articles/yes-no-maybe-list) – a structured inventory of sexual activities, scenarios, and dynamics rated as enthusiastic yes, hard no, or open-to-discussing maybe. Free templates are widely available; the structure matters less than the act of articulating preferences
+  - Schedule a 60 -- 90 minute conversation outside the bedroom – not in bed, not directly before or after sex – to compare lists. The agenda is narrow: surface where you overlap, where you differ, and where one partner's maybe meets the other partner's yes (the most useful zone)
+  - Build a recurring monthly desire conversation, 15 -- 20 minutes, on a fixed slot. The agenda: how the last month felt, what each partner has been wanting more or less of, anything that surfaced as awkward or frustrating. Keep it brief – the cadence is the active ingredient, not the depth of any single session
+  - Run a quarterly satisfaction check-in (60 -- 90 minutes) covering broader topics: pleasure quality, sexual self-image, body changes, fantasies that have come up, anything either partner has been carrying silently. The structure of the four annual sessions prevents the pattern in which couples avoid the topic indefinitely until one partner explodes
+  - Use specific language: name body parts, name acts, name feelings, avoid euphemism. Concreteness is what produces the behaviour change; vague communication produces vague results. [Research on sexual self-disclosure](https://onlinelibrary.wiley.com/doi/10.1111/jsr.12211) finds direct sexual communication strongly predicts both partners' satisfaction
+  - Re-do the yes/no/maybe list every 18 -- 24 months. Preferences change with age, life-stage, hormonal shifts, and accumulated experience; the list is a snapshot rather than a permanent record
+success_looks_like: |
+  - Conversations about sex feel routine rather than charged; either partner can raise a topic, request, or concern without it becoming a relational event
+  - Both partners can name at least one preference that wasn't being met before the protocol started, and at least one that has been integrated into their shared repertoire since
+  - Frustrations and curiosities surface in the monthly conversation while still small, rather than emerging during arguments or after years of silence
+  - The pleasure quality and variety of the relationship visibly improve over 6 -- 12 months without any single dramatic intervention – the gain comes from many small disclosures and adjustments compounding
+common_pitfalls: |
+  - Treating the yes/no/maybe list as a one-time exercise. Without the recurring monthly and quarterly cadences, the initial conversation produces a flurry of insight that fades within months; the cadence is the intervention
+  - Using the conversations to deliver accumulated grievances rather than as forward-looking exchanges. Saving up complaints for the monthly slot creates a dreaded session that quickly gets cancelled
+  - Letting one partner drive the agenda. If one partner consistently raises topics and the other only responds, the practice quietly converts to a one-sided audit; both partners need to arrive with at least one item
+  - Avoiding euphemism but landing in clinical detachment. The practice works best when partners are concrete and warm at the same time – clinical accuracy without affection produces accurate communication that nobody wants to repeat
+  - Confusing this with sensate focus or scheduled intimacy. They stack well, but this intervention specifically addresses the communicative substrate, not the embodied practice or the calendar
+description: |
+  - A structured set of communication protocols treating sex as a discussable domain rather than one to be inferred from partner behaviour: yes/no/maybe lists, monthly desire conversations, and quarterly satisfaction check-ins
+  - [Research on sexual self-disclosure](https://onlinelibrary.wiley.com/doi/10.1111/jsr.12211) finds that direct, specific sexual communication strongly predicts sexual and relationship satisfaction in both partners, with the effect mediated through better preference matching and reduced unmet expectations
+  - [Meta-analytic evidence on sexual communication](https://www.tandfonline.com/doi/full/10.1080/00224499.2017.1374750) confirms moderate-to-large effect sizes (r ≈ 0.30 -- 0.40) linking communication quality to satisfaction outcomes, with effects observed across age groups and relationship lengths
+  - [Survey research on long-term couples](https://pubmed.ncbi.nlm.nih.gov/24127245/) finds that most established partners report significant unsaid preferences and frustrations about sex, with the silence accumulating into measurable satisfaction decline over years
+  - Distinct from sensate focus (embodied touch protocol for dysfunction) and scheduled intimacy (calendar-based prioritisation): purely communicative, addressing the substrate of sexual decision-making rather than the act itself
+applicable_domains: ["sex", "relationship-quality", "communication"]
+
+values:
+  sex.contentment:
+    pbs: 7
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 65th--70th percentile in overall sexual contentment. Delta: ~30--35 percentile points.
+      - Contentment is closely tied to the absence of unmet preferences and unspoken frustrations – exactly what the protocol surfaces. [Research on sexual desire discrepancy and communication](https://pmc.ncbi.nlm.nih.gov/articles/PMC4886824/) finds that the perception of an unaddressed gap predicts dissatisfaction more strongly than absolute frequency or activity does
+      - Score 7 reflects that the contentment gain comes through removing chronic dissatisfaction and unspoken concerns rather than through producing peak experiences – a meaningful but bounded effect
+    isr_reasoning: |
+      - The contentment pathway is reasonably reliable when both partners engage with the protocol substantively: surfacing and addressing previously silent preferences directly reduces the chronic dissatisfaction that drives low contentment
+      - [Meta-analytic evidence on sexual communication](https://www.tandfonline.com/doi/full/10.1080/00224499.2017.1374750) finds moderate-to-large effect sizes for satisfaction outcomes, with reliability moderated by whether couples actually disclose substantively rather than going through the form
+      - ISR of 60% reflects that genuine adherents see meaningful contentment gains in most cases, with a meaningful minority who run the protocol formally without genuine disclosure
+    uar_reasoning: |
+      - The protocol is moderately demanding – sustained recurring conversations rather than a single change in routine
+      - Sexual self-disclosure carries shame and embarrassment that drive avoidance even among committed couples; [research on sexual communication barriers](https://pubmed.ncbi.nlm.nih.gov/24127245/) finds many couples report wanting more direct conversations but cannot initiate them
+      - UAR of 40% reflects realistic long-term adherence – initial enthusiasm is common, but maintaining the monthly and quarterly cadences requires either partner deliberately defending the slots over months and years
+
+  sex.pleasure:
+    pbs: 6
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 60th--65th percentile in subjective pleasure. Delta: ~25--30 percentile points.
+      - Better pleasure follows from better preference-matching: when both partners know specifically what the other enjoys, encounters more often hit those preferences. [Research on sexual communication and orgasm](https://pubmed.ncbi.nlm.nih.gov/30196654/) finds direct communication about preferences predicts orgasm rates and pleasure ratings in long-term partners
+      - Score 6 reflects a real gain bounded by the fact that pleasure is also influenced by physiological factors, fatigue, life-stage, and partner attraction that the communicative protocol does not address
+    isr_reasoning: |
+      - The pleasure benefit follows reliably from the contentment benefit when partners actually integrate what they learn into their shared repertoire; couples who surface preferences but do not change behaviour see smaller pleasure gains
+      - ISR of 60% reflects modest reliability with the same fidelity-driven variance that affects contentment outcomes
+    uar_reasoning: |
+      - See sex.contentment UAR – same intervention, same adherence profile
+
+  sex.variety:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 60th--65th percentile in variety. Delta: ~25--30 percentile points.
+      - Variety is among the protocol's most direct outcomes: the yes/no/maybe list specifically surfaces the maybe-zone where one partner's interest meets the other partner's openness, which is exactly where new shared activities tend to emerge
+      - Score 6 reflects that variety improvements are reasonably reliable when the list is genuinely completed and discussed, but bounded by the actual overlap between partners' preferences
+    isr_reasoning: |
+      - The variety mechanism is reasonably mechanistic: a structured inventory plus open conversation reliably surfaces previously unexplored overlap zones
+      - ISR of 65% reflects that adherent couples typically introduce 2 -- 4 new activities or variations into their shared repertoire over the first year of practice, with the magnitude varying by baseline overlap
+    uar_reasoning: |
+      - See sex.contentment UAR – same intervention, same adherence profile
+
+  sex.frequency:
+    pbs: 5
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 55th--60th percentile in frequency. Delta on the 4-times-per-week anchor: approximately +0.5 encounters per week, mapping via PBS = 10 + log₂(0.5/4) = score 7 on the formula but bounded to 5 by the indirectness of the frequency mechanism
+      - The frequency gain is indirect – better communication can surface frequency-mismatch concerns and create the conditions for resolution, but the protocol does not directly address scheduling or initiation patterns the way [scheduled intimacy](/resources/intervention-database/scheduled-intimacy) does
+      - Score 5 reflects a modest, conditional benefit – frequency may rise as a side-effect of contentment and variety gains, or may stay flat if the underlying issue is not communicative
+    isr_reasoning: |
+      - The frequency benefit is the least reliable of the sex-related outcomes because the intervention does not directly target frequency
+      - For couples whose frequency mismatch was driven by unspoken preference differences (most common case), the protocol delivers gains; for couples with mismatched libidos or scheduling constraints, it does not address the limiting factor
+      - ISR of 50% reflects that frequency gains follow for roughly half of adherent couples
+    uar_reasoning: |
+      - See sex.contentment UAR – same intervention, same adherence profile
+
+  relationship-quality.connection:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a couple plausibly reaches the 55th--60th percentile in emotional closeness. Delta: ~20--25 percentile points.
+      - Sustained vulnerability about a high-shame topic is itself a connection-building practice independent of the sexual outcome – partners who can talk specifically about sex tend to develop the metacommunication skills that support intimacy more broadly
+      - Score 5 reflects a modest secondary effect – connection is not the primary aim of the protocol, but the practice reliably exercises vulnerability and disclosure muscles
+    isr_reasoning: |
+      - The connection benefit depends on the conversations going reasonably well rather than producing conflict or shame; couples with significant baseline communication issues may see smaller benefit
+      - ISR of 55% reflects modest reliability of the connection side-effect across the adherent population
+    uar_reasoning: |
+      - See sex.contentment UAR – same intervention, same adherence profile
+
+  communication.connection:
+    pbs: 4
+    isr: 55
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 50th percentile in ability to build genuine relationships through communication. Delta: ~15 percentile points.
+      - Practising direct, specific, vulnerable communication about a high-shame topic builds general metacommunication capacity that transfers modestly to other contexts – in particular the ability to raise difficult topics without first asking for permission to raise them
+      - Score 4 reflects modest cross-context transfer – the practice is bounded to a known partner and a specific topic, with limited but real spillover to other vulnerable conversations
+    isr_reasoning: |
+      - The cross-context transfer mechanism is plausible but not directly studied; most evidence on sexual communication focuses on within-relationship outcomes
+      - ISR of 55% reflects modest reliability with substantial individual variation in whether users notice and apply the parallels
+    uar_reasoning: |
+      - See sex.contentment UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No purchases required. Yes/no/maybe list templates are freely available online. Optional paid resources (sex-positive workbooks, online courses) range $20 -- 100 but are not required for the minimum-viable form."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The intervention is purely conversational and adds no ongoing financial expense."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately 4 hours: each partner independently completing the yes/no/maybe list (1 -- 2 hours each), plus a 60 -- 90 minute initial comparison conversation."
+  ongoing_time: 0.5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Approximately 15 -- 20 minutes monthly for the desire conversation plus 60 -- 90 minutes quarterly for the satisfaction check-in. Averaged across the year, roughly 30 -- 40 minutes per month, plus the 18 -- 24 month re-doing of the yes/no/maybe list."
+
+prerequisites:
+  - "An ongoing romantic partnership – the protocol is undefined for single users"
+  - "Mutual buy-in from both partners – one partner who refuses to engage in direct sexual communication collapses the practice"
+  - "Sufficient relational stability and goodwill that surfaced preferences will be received without contempt or shaming, even when partners disagree about specific items"
+  - "Absence of active sexual aversion, untreated trauma related to sexual disclosure, or active sexual dysfunction requiring clinical attention – these warrant therapeutic support before the conversational protocol works"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "The yes/no/maybe list and recurring desire conversations force the user to articulate preferences that often have not been internally examined; the practice produces sexual self-knowledge as a near-immediate outcome"
+  - domain: "mental-health"
+    rationale: "Reducing the chronic low-grade anxiety of unspoken sexual concerns and unmet preferences plausibly lowers a meaningful background stressor for users in long-term partnerships"

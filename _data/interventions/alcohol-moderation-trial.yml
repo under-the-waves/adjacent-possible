@@ -1,0 +1,155 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Alcohol Moderation or Abstinence Trial"
+what_it_is: |
+  A structured alcohol-free trial – typically 30 days (Dry January, Sober October) or 90 days for a deeper reset – followed by a deliberate decision about long-term consumption: continue abstinence, return to drinking with a specific moderation plan (e.g. weekend-only, two-drink-maximum, no drinking at home), or treat the trial as a periodic reset to be repeated annually. The intervention takes the [updated evidence base](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31571-X/fulltext) seriously: the 2018 Lancet meta-analysis of 195 countries concluded that the level of alcohol consumption that minimises health loss is zero, overturning earlier "moderate drinking is good for you" claims that were largely an artefact of comparison-group contamination. The trial is the operationalisation of this evidence at the individual level – using a bounded experiment to surface what alcohol is actually doing to the user's sleep, mood, weight, and finances, rather than relying on cultural assumption. Distinct from [quitting smoking](/resources/intervention-database/quitting-smoking) (a different addictive substance with different intervention protocols) and from clinical alcohol-use-disorder treatment (which addresses dependence requiring medical management): this is a behavioural trial appropriate for non-dependent moderate drinkers.
+how_to_do_it: |
+  - Pick a 30-day or 90-day period and tell at least one other person. [Research on public commitment](https://psycnet.apa.org/record/2002-04141-005) finds that announced commitments are sustained meaningfully more often than private ones; the social accountability is a non-trivial part of the intervention
+  - Plan around predictable triggers in advance: weekly social events at pubs, work drinks, family meals where wine is the default. Decide what you will drink instead (sparkling water with bitters, alcohol-free beer, decaf coffee), where you will be standing, and what you will say if asked. Pre-deciding removes the willpower cost
+  - Track the changes you notice: sleep quality, morning alertness, weight, mood, anxiety levels, weekly spending, weekend recovery time. These observations are the most important output of the trial – they replace cultural assumption with personal evidence about what alcohol was actually doing
+  - At the end of the trial, make a deliberate decision about going forward. Options include: continued abstinence; "drinking by choice not by default" (drinking on specific occasions you actively want to, with no drinking at home); a hard limit (e.g. two units, twice a week); or treating the trial as a recurring annual reset. The decision matters; without it, most people drift back to baseline within 2 -- 3 months
+  - For users with concerning patterns – daily drinking, dependence symptoms, withdrawal, or escalating consumption over years – speak to a primary-care doctor before starting. Severe alcohol dependence can produce dangerous withdrawal symptoms that require medical management; a self-directed trial is not appropriate
+  - If a moderation pattern is the chosen endpoint, structure it concretely: where you drink, with whom, on what occasions, and with what default replacement. Vague moderation reverts to baseline within months; specific moderation rules persist longer
+success_looks_like: |
+  - Sleep quality, mood, and morning alertness measurably improve during the trial – most non-dependent moderate drinkers notice within 2 -- 3 weeks
+  - Weekend recovery time shrinks substantially; the "lost Saturday" pattern that quietly absorbs much of the weekend stops happening
+  - Your relationship to alcohol is now intentional rather than default – you can drink or not drink without it being a recurring decision-cost or social negotiation
+  - Annual spend on alcohol becomes visible, often surprising, and either drops to zero or to a much smaller fraction of previous levels
+  - You can articulate, from personal observation, what alcohol does and does not do for you – information that was previously substituted by cultural narrative
+common_pitfalls: |
+  - Substituting other intoxicants (cannabis, increased caffeine, sugar) during the trial, which masks the signals the trial is designed to surface and reduces the evidentiary value of the experiment
+  - Not making a deliberate post-trial decision and drifting back to baseline by default. The decision is the long-term-leverage step; the 30-day trial alone produces transient awareness without lasting behaviour change
+  - Attempting a self-directed trial when the pattern is closer to dependence than moderate use. Daily drinking, drinking before noon, withdrawal symptoms (sweats, tremor, anxiety) on a missed day, or escalating consumption over years are red flags that warrant clinical support, not a self-help protocol
+  - Treating it as a willpower exercise rather than an information-gathering exercise. The point is to see what alcohol was doing; experiencing the trial as deprivation tends to reinforce the assumption that alcohol was providing something genuinely valuable, when usually the perceived loss is the absence of a familiar habit
+  - Underestimating the social difficulty. Many social environments treat non-drinking as a problem to be explained; rehearsing the social script ("I'm not drinking this month" or "I don't drink") reduces friction
+description: |
+  - A structured 30-day or 90-day alcohol-free trial followed by a deliberate decision about long-term consumption (abstinence, structured moderation, or recurring annual reset)
+  - [The 2018 Lancet meta-analysis](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31571-X/fulltext) of 195 countries concluded the level of alcohol consumption minimising health loss is zero, with the previously-claimed cardioprotective effects of moderate drinking largely artefactual once comparison-group contamination is corrected
+  - [Research on Dry January participants](https://www.tandfonline.com/doi/full/10.1080/16066359.2017.1411903) finds that 30-day abstinence trials produce sustained reductions in monthly drinking at 6-month follow-up, even among participants who resume drinking, with associated improvements in self-reported sleep, weight, and energy
+  - [Studies of moderate-drinker reductions](https://pubmed.ncbi.nlm.nih.gov/22587573/) document measurable improvements in liver markers, blood pressure, weight, and sleep quality within weeks of cessation among non-dependent drinkers
+  - Distinct from clinical alcohol-use-disorder treatment (for dependent users) and from quitting-smoking protocols (different substance, different mechanisms): this is a behavioural trial appropriate for non-dependent moderate drinkers, with a clear escalation path to clinical care for users whose pattern proves dependent rather than habitual
+applicable_domains: ["behaviours", "fitness", "sleep", "mental-health", "saving"]
+
+values:
+  behaviours.freedom:
+    pbs: 7
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 65th--70th percentile in liberation from the automatic, culturally-default drinking pattern. Delta: ~30--35 percentile points.
+      - The intervention's central output is converting alcohol consumption from an unreflective default into an intentional choice – which is precisely what the freedom-from-compulsive-behaviours anchor measures. For most moderate drinkers, this involves recognising substantial habit-driven consumption (the after-work glass, the dinner-default wine, the weekend drinking) and deciding deliberately whether each pattern earns its place
+      - Score 7 reflects a meaningful gain in genuine choice over a high-frequency consumption behaviour, bounded by the fact that alcohol is one of several behaviours the freedom anchor encompasses
+    isr_reasoning: |
+      - [Research on Dry January](https://www.tandfonline.com/doi/full/10.1080/16066359.2017.1411903) finds that ~70% of completers report greater control over their drinking and continued reductions at 6-month follow-up, supporting reasonable reliability of the freedom-restoration mechanism
+      - The benefit is most reliable for non-dependent moderate drinkers; for users with dependence patterns, self-directed trials have lower success rates and the freedom mechanism cannot operate without medical scaffolding
+      - ISR of 60% reflects modest-to-good reliability among the appropriate target population
+    uar_reasoning: |
+      - Adherence to the trial period itself is moderate – [Dry January survey data](https://www.alcoholchangeuk.org/about-us/our-research) finds approximately 60% completion rates among signed-up participants, with social pressure and lack of pre-planning the main attrition drivers
+      - Adherence to the post-trial moderation or abstinence decision over 12+ months is lower; the modal pattern is partial reduction rather than sustained adherence to the chosen rule
+      - UAR of 35% reflects realistic long-term adherence – completing the initial trial is achievable for most who attempt it, but maintaining the deliberate post-trial pattern requires sustained attention against cultural pressure
+
+  fitness.health:
+    pbs: 5
+    isr: 65
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly accumulates 6 -- 12 months of additional healthy lifespan via reduced cancer risk, blood pressure, liver burden, and weight. Delta: ~15--20 percentile points.
+      - [The Lancet 2018 meta-analysis](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31571-X/fulltext) found measurable but moderate health gains from reduced consumption in non-dependent drinkers; the magnitude depends substantially on baseline drinking level (heavier baseline drinkers see larger absolute gains)
+      - Using the log formula on the fitness.health anchor (10 = 15 years): ~9 months ≈ 0.75 years; PBS = 10 + log₂(0.75/15) = 5.7, rounded to 5. The benefit is meaningful but bounded, operating through several modest mechanisms rather than one large channel
+    isr_reasoning: |
+      - The health benefit is mechanistically reliable for users who actually reduce consumption; the alcohol-cancer, alcohol-liver, alcohol-cardiovascular pathways are well-documented in [WHO and Lancet evidence](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31571-X/fulltext)
+      - ISR of 65% reflects high confidence that adherent moderate-drinker reductions produce measurable health benefit; smaller for users whose baseline consumption was already low
+    uar_reasoning: |
+      - See behaviours.freedom UAR – same intervention, same adherence profile
+
+  sleep.daily_functioning:
+    pbs: 5
+    isr: 70
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 50th--55th percentile on productive hours per day. Delta: ~15--20 percentile points.
+      - Even moderate alcohol consumption substantially reduces sleep quality – [polysomnography research on alcohol and sleep architecture](https://pubmed.ncbi.nlm.nih.gov/23347102/) finds that alcohol increases sleep onset but suppresses REM sleep, increases nocturnal awakenings, and worsens overall sleep efficiency, with effects visible at one-to-two-drink doses. The downstream effect on next-day cognitive performance is substantial
+      - Score 5 (mapping to ~50 productive minutes per day on the anchor) reflects the recovery of 30 -- 60 minutes of next-day productive functioning that alcohol typically degrades, particularly the morning hours
+    isr_reasoning: |
+      - The sleep-recovery mechanism is mechanistically reliable: removing alcohol consistently improves sleep architecture in non-dependent drinkers, with most users noticing within a week
+      - [Sleep research](https://pubmed.ncbi.nlm.nih.gov/23347102/) supports high consistency of this effect across diverse populations
+      - ISR of 70% reflects high reliability of the sleep benefit among adherent users
+    uar_reasoning: |
+      - See behaviours.freedom UAR – same intervention, same adherence profile
+
+  sleep.long_term_health:
+    pbs: 5
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly accumulates 6 -- 12 months of additional healthy lifespan via the long-term cardiovascular, cognitive, and metabolic effects of better-quality sleep. Delta: ~15--20 percentile points.
+      - The pathway is indirect – alcohol-induced sleep architecture disruption compounds over years into cardiovascular and cognitive risk, [as documented in long-term research on sleep quality and health](https://www.ahajournals.org/doi/10.1161/CIR.0000000000001388). Removing alcohol restores normal sleep architecture and the associated long-term benefits
+      - Score 5 reflects a real but indirect long-term-health gain that compounds across the decades following sustained behaviour change
+    isr_reasoning: |
+      - The long-term-health pathway via sleep is well-supported but operates through multiple mediating steps, each introducing variability
+      - [Long-term sleep-quality research](https://www.ahajournals.org/doi/10.1161/CIR.0000000000001388) supports the underlying mechanism
+      - ISR of 60% reflects modest-to-good reliability across the adherent population
+    uar_reasoning: |
+      - See behaviours.freedom UAR – same intervention, same adherence profile
+
+  mental-health.stability:
+    pbs: 6
+    isr: 60
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 55th--65th percentile in day-to-day emotional steadiness via reduced anxiety, mood volatility, and depressive symptoms. Delta: ~25--30 percentile points.
+      - [Research on alcohol and anxiety](https://pubmed.ncbi.nlm.nih.gov/29405930/) finds moderate alcohol consumption produces rebound anxiety in the 12 -- 24 hours after drinking, contributing to baseline anxiety in regular drinkers; [research on alcohol and depression](https://pubmed.ncbi.nlm.nih.gov/29852279/) finds bidirectional associations with mood symptoms, with reduction producing measurable mood improvements in non-dependent drinkers
+      - Score 6 reflects a meaningful stability gain through both direct (alcohol-induced anxiety/mood disruption) and indirect (better sleep) mechanisms
+    isr_reasoning: |
+      - The mental-health benefit is reasonably reliable for users whose baseline anxiety or mood symptoms were partially alcohol-driven; substantially smaller for users with conditions independent of alcohol
+      - [Reviews of alcohol reduction and mental health](https://pubmed.ncbi.nlm.nih.gov/29852279/) find moderate effect sizes on anxiety and mood symptoms in non-dependent drinkers
+      - ISR of 60% reflects modest-to-good reliability concentrated in users for whom alcohol was a meaningful driver of background anxiety
+    uar_reasoning: |
+      - See behaviours.freedom UAR – same intervention, same adherence profile
+
+  saving.security:
+    pbs: 4
+    isr: 80
+    uar: 35
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 45th--50th percentile in months of emergency fund coverage – the redirected alcohol spend over a year accumulates to a meaningful fraction of typical monthly expenses. Delta: ~10--15 percentile points.
+      - For typical drinkers, 30 -- 60 USD per week of redirected spend over a year is 1500 -- 3000 USD; over 5 years, 7500 -- 15000 USD. This translates to roughly 1 month of emergency fund covered for a median household, mapping to ~score 4 on the 12-month-emergency-fund anchor
+      - Score 4 reflects a real but modest direct benefit on the security anchor specifically – the saving accumulates only if the user actually redirects the spend rather than reallocating it to other discretionary categories
+    isr_reasoning: |
+      - The financial benefit is mechanically straightforward when the redirected spend actually flows to savings rather than to other discretionary spending
+      - [Research on substituted spending](https://academic.oup.com/jcr/article/35/3/543/1844349) finds that money saved from one category often migrates to others rather than to net savings; deliberate redirection is needed for the security gain to materialise
+      - ISR of 80% reflects high reliability when users explicitly redirect the spend, lower when the saving is merely passive
+    uar_reasoning: |
+      - See behaviours.freedom UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost required. The trial may save money rather than cost any. Optional support apps (Try Dry, I Am Sober) are free; structured workbooks or group programmes cost $0 -- 50 but are not required for the minimum-viable trial."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring cost. Alcohol replacements (sparkling water, alcohol-free beer, kombucha) are typically lower cost than the alcoholic drinks they replace. Net effect on monthly spending is usually savings rather than expense."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 2 hours: planning the trial period (1 hour), identifying triggers and pre-planning replacement strategies (~30 minutes), setting up tracking for the changes you want to observe (~30 minutes)."
+  ongoing_time: 0.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Roughly 15 -- 30 minutes per week during the trial period for journaling observed changes and managing social situations; minimal ongoing time after the post-trial decision is made and the new pattern is established."
+
+prerequisites:
+  - "Non-dependent baseline drinking pattern – users with daily drinking, withdrawal symptoms (tremor, sweats, anxiety) on missed days, escalating consumption over years, or family history of alcohol-use disorder should consult a primary-care doctor before starting, as severe alcohol dependence can produce dangerous withdrawal that requires medical management"
+  - "No active comorbidities that contraindicate self-directed behaviour change (acute mental health crisis, severe medication interactions where alcohol modulation is involved)"
+  - "Sufficient social-context flexibility to manage drinking-default situations – users in extreme high-pressure drinking environments (some industries, some friend groups) may need to plan around or temporarily withdraw from those contexts"
+
+flagged_domains:
+  - domain: "fitness"
+    rationale: "Reduced alcohol intake supports both performance and weight loss for users at higher baseline consumption – via reduced caloric load, better recovery, and improved training capacity; effect on fitness.performance and on body-image/fat_loss plausibly meaningful but not scored here under the primary fitness.health anchor"
+  - domain: "self-awareness"
+    rationale: "The trial period typically surfaces patterns of habitual use that were previously invisible (after-work glass as default coping, drinking-as-social-script), producing self-knowledge as a near-immediate output independent of the post-trial decision"
+  - domain: "relationship-quality"
+    rationale: "Reduced alcohol use frequently improves relationship quality through reduced conflict, better presence, and improved sleep – effects partner-mediated and dependent on baseline consumption pattern"

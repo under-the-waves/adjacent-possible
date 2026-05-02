@@ -1,0 +1,102 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Smartphone Greyscale and Home-Screen Minimalism"
+what_it_is: |
+  A display-level intervention that reduces a smartphone's pull on attention by switching the screen to greyscale (eliminating colour cues that drive habitual checking and engagement) and stripping the home screen back to a minimal set of utility apps – clock, maps, camera, primary messaging – with all other apps removed from the home screen and accessible only via search or a separate app drawer. Most aggressively, social media, news, video, and other attention-grabbing apps are either deleted entirely or hidden behind explicit search-only access. The mechanism is upstream of [phone notification management](/resources/intervention-database/phone-notification-management): rather than only managing alerts, this intervention reduces the visual reward signals (colour, badges, prominent icons) that drive compulsive checking even in the absence of any notification, and removes the friction-free path from unlock to scrolling that habitual users develop. A more aggressive variant of digital-environment design.
+how_to_do_it: |
+  - Enable the phone's built-in greyscale display. On iOS this is Settings > Accessibility > Display & Text Size > Colour Filters > Greyscale; on Android this is Settings > Digital Wellbeing > Bedtime mode (or Greyscale shortcut). Most users find it useful to bind greyscale to the accessibility shortcut so it can be toggled with three button presses (e.g. for reading colour content on demand) but otherwise stays on by default.
+  - Remove every app from the home screen except a minimal utility set – typically clock, maps, camera, calendar, and a primary messaging app. Place all other apps in the App Library (iOS) or app drawer (Android), accessible only by deliberate search.
+  - Delete attention-fragmenting apps entirely from the phone where possible – social media in particular. Where the user genuinely needs the service (e.g. for work), use the browser version on a laptop rather than the optimised mobile app, which removes notifications and tracking by design.
+  - Set the lock screen wallpaper to a solid dark colour, and use a phone case in a muted colour. Visual quietness reduces the small dopamine signals that draw the eye to the device throughout the day.
+  - Audit weekly for "creep" – apps re-installed in a moment of need, social media re-added "just for the wedding", utility apps that quietly migrated back to the home screen. The protocol is sustained by re-running it briefly each week rather than treating it as a one-time setup.
+success_looks_like: |
+  - Daily screen time falls noticeably and sustainably (most users report 20–40% reductions), and the phone is checked when needed rather than as a default response to any pause in activity
+  - Compulsive unlock-and-scroll behaviour is replaced by deliberate, task-focused use; you reach for the phone to do something specific and put it down when the task is done
+  - The device feels less rewarding to look at, which is the intended effect – the colourful, app-rich phone was rewarding precisely because it was engineered to be, and the greyscale minimal phone is closer to the utility tool most users want in principle
+common_pitfalls: |
+  - Treating greyscale as an all-or-nothing switch and abandoning it after one frustrating moment with a photo or map; using the accessibility shortcut for momentary colour as needed (and turning it back off) preserves the daily benefit without the friction
+  - Removing apps from the home screen but leaving notifications enabled, so the phone still pulls attention via alerts; this intervention works best paired with [phone notification management](/resources/intervention-database/phone-notification-management) rather than as a substitute
+  - Re-adding social media apps "just for [event]" and never removing them again; the friction of accessing services via browser is a feature of the protocol, and removing that friction collapses the benefit within days
+  - Deleting work-essential communication apps and creating real professional friction; the protocol is meant to be sustainable, so apps that genuinely require fast response (work messaging, on-call systems) belong on the minimal home-screen set rather than buried in search
+description: |
+  - A display-level intervention that switches the phone to greyscale and strips the home screen back to a minimal utility set, removing the visual reward signals and frictionless paths that drive compulsive checking
+  - [The Center for Humane Technology](https://www.humanetech.com/take-control) and several digital-minimalism researchers recommend greyscale specifically because [colour cues drive habitual app-checking](https://www.nytimes.com/2018/01/12/technology/grayscale-phone.html) by activating reward salience pathways that drive intuitive engagement with notifications and content feeds
+  - [Time-use research on smartphone use](https://www.sciencedirect.com/science/article/abs/pii/S0747563218304618) shows that the majority of phone-checks occur without any notification trigger, driven instead by habitual unlock-and-scroll behaviour the home-screen environment reinforces
+  - More aggressive than [phone notification management](/resources/intervention-database/phone-notification-management) – which curates inputs and timing – in that this intervention reshapes the device's perceptual properties (colour, layout, app accessibility) to reduce checking even when no alert is present
+  - [An RCT (N = 467) blocking mobile internet for two weeks](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) found significant attention and wellbeing improvements; greyscale and home-screen minimalism are sustainable proxies that capture a meaningful fraction of these gains without the disruption of complete disconnection
+applicable_domains: ["information-management", "current-work", "mental-health"]
+
+values:
+  information-management.simplicity:
+    pbs: 6
+    isr: 65
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adoption, a user could plausibly reach the 60th–65th percentile in information environment simplicity. Delta: ~25–30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in information system simplicity."
+      - The mechanism is direct: greyscale plus home-screen minimalism removes most of the visual complexity and reward signalling from the user's most frequently consulted information surface. The phone moves from a multi-channel attention market to a quiet utility tool.
+      - Score 6 reflects a meaningful gain but not transformative – the simplification is bounded by the apps the user genuinely needs (work messaging, maps, calendar) and by the broader information ecosystem (laptop browsing, work email) which this intervention does not address.
+    isr_reasoning: |
+      - [Olson et al. (2022) review of digital self-control tools](https://dl.acm.org/doi/10.1145/3571810) found moderate effects of phone-environment interventions (d ≈ 0.5) on reducing compulsive use; greyscale plus home-screen minimalism captures most of the static-environment lever in that intervention class.
+      - The intervention reliably produces the perceptual change (the phone is in greyscale, the home screen is minimal) but the downstream effect on compulsive checking varies with the user's underlying pattern – heavy users see large changes, light users see modest ones.
+      - ISR of 65% reflects the reliable mechanism for moderate-to-heavy phone users (the typical adopter) with a meaningful minority for whom the intervention does not produce noticeable behavioural change.
+    uar_reasoning: |
+      - The greyscale toggle has a high "creep" risk – many users turn it off temporarily for a photo or video and then forget to turn it back on. [Anecdotal accounts in popular coverage](https://www.nytimes.com/2018/01/12/technology/grayscale-phone.html) suggest sustained adoption rates around 30–40% without external accountability.
+      - Home-screen minimalism is somewhat more durable than greyscale because the absence of icons is a passive state, but app re-installation in moments of social need (event signup, group chat, navigation tool) gradually erodes the minimal layout.
+      - UAR of 50% reflects realistic 6-month adherence – higher than greyscale alone, lower than persistent settings changes that require no ongoing re-application.
+
+  current-work.engagement:
+    pbs: 5
+    isr: 50
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained reduction in compulsive phone-checking, a user could plausibly reach the 50th–55th percentile in work engagement, with longer uninterrupted attention available for deep work. Delta: ~15–20 percentile points.
+      - Score 5 reflects a real but bounded gain – work engagement is co-determined by role design, autonomy, and meaning, and phone-environment changes can only address the attention-fragmentation portion.
+      - [Mark et al. (2008)](https://dl.acm.org/doi/10.1145/1357054.1357072) found it takes an average of 23 minutes to fully regain deep focus after an interruption; reducing self-initiated phone-checking interruptions plausibly recovers a meaningful fraction of fragmented work hours.
+    isr_reasoning: |
+      - The pathway from reduced phone-checking to higher work engagement is plausible but indirect; the [PNAS Nexus mobile internet RCT](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) found attention gains equivalent to 10 years of age-related cognitive decline reversal, but this came from full mobile internet blocking rather than the milder display-level intervention.
+      - The benefit fails to materialise for users whose attention fragmentation comes from sources other than the phone (laptop browsing, meetings, in-office interruptions), which is a meaningful subset.
+      - ISR of 50% reflects the indirect pathway and the conditional nature of the benefit.
+    uar_reasoning: |
+      - See information-management.simplicity UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 4
+    isr: 45
+    uar: 50
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adoption, a user could plausibly reach the 45th–50th percentile in emotional stability via reduced exposure to social comparison, news anxiety, and notification-induced micro-stressors. Delta: ~10–15 percentile points.
+      - Score 4 reflects a modest secondary benefit – the intervention is a display-level proxy for the larger digital-detox literature, and the partial dose plausibly produces a partial effect.
+      - [The PNAS Nexus mobile internet RCT (N = 467)](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) found significant mental-health improvements (dz = 0.57) from full mobile internet blocking; greyscale plus minimal home screen captures perhaps 30–50% of that effect, supporting a modest gain.
+    isr_reasoning: |
+      - The pathway from greyscale and home-screen minimalism to emotional stability is plausible but lightly evidenced; no direct RCTs measure mental-health outcomes from this specific configuration.
+      - Heavier users with social-comparison-driven distress (frequent Instagram or X consumption) plausibly see larger gains; lighter users may see negligible mental-health change.
+      - ISR of 45% reflects the indirect mechanism and the absence of direct outcome evidence.
+    uar_reasoning: |
+      - See information-management.simplicity UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost. All major smartphone operating systems include built-in greyscale and home-screen customisation features. No paid apps required."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The intervention uses native phone settings and free app removal; some users opt to use third-party launchers (Android) or accessibility shortcuts (iOS) but neither requires payment."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 1 hour for initial setup: 15 minutes to enable greyscale and bind it to the accessibility shortcut, 30 minutes to audit and reorganise apps off the home screen, and 15 minutes to delete or relocate attention-fragmenting apps."
+  ongoing_time: 0.25
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 10–15 minutes per week for a brief audit checking that greyscale is still active, the home screen has not been quietly repopulated, and no removed apps have crept back."
+
+prerequisites:
+  - "A smartphone with built-in greyscale display option (iOS 13+ or Android 8+, available on essentially all devices from 2018 onwards)"
+  - "Awareness of which apps are essential for personal or professional life and which are attention-fragmenting – the protocol depends on honest classification, not aspirational"
+  - "Agreement from key stakeholders (manager, partner, close contacts) on altered response time expectations if removing communication apps from the home screen meaningfully changes responsiveness"
+
+flagged_domains:
+  - domain: "behaviours"
+    rationale: "Reduces the compulsive checking pattern that meets criteria for behavioural addiction in heavy users, supporting greater behavioural self-regulation"
+  - domain: "sleep"
+    rationale: "Reduced evening phone engagement plausibly improves sleep quality via lower cognitive arousal pre-sleep, though the mechanism is similar to phone-notification-management's already-scored sleep effect"

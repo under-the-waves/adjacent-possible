@@ -1,0 +1,131 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Weekly Meal Planning and Batch Grocery Shop"
+what_it_is: |
+  A 30-minute weekly planning session that produces a 5–7 dinner plan for the upcoming week, plus a single grocery list pegged to those anchor meals, executed as one batched grocery shop. The mechanism is upstream of cooking itself: by deciding in advance what the household will eat each evening and buying exactly the ingredients those meals need, the user removes the daily decision-fatigue, the after-work "what's for dinner" stress, the small daily grocery runs that disproportionately drive food spend and waste, and the takeaway-default that emerges when no plan exists. Distinct from [weekly cooking skill practice](/resources/intervention-database/weekly-cooking-skill-practice) (which is about deliberate skill-building); meal planning is the planning behaviour that determines whether the household eats home-cooked meals at all, regardless of skill level. A planning intervention with downstream effects on nutrition, food spend, food waste, and time use.
+how_to_do_it: |
+  - Pick a fixed 30-minute weekly slot for the planning session – Saturday morning, Sunday evening, and Friday lunch are common choices. Anchor the session to an existing routine to protect it from getting skipped.
+  - Build a personal repertoire of 15–25 "anchor meals" the household reliably enjoys cooking and eating – one-pan dinners, soups, stir-fries, traybakes, salads, simple proteins with sides. The repertoire is the planning input; the weekly plan picks 5–7 from it rather than designing meals from scratch.
+  - Assemble the week's plan by picking 5–7 dinners from the anchor list, balancing across protein (fish, chicken, plant-based, batch-cooked), prep effort (1–2 quicker meals on the heaviest weekdays), and ingredient overlap (a roast chicken on Sunday becomes leftovers and a chicken soup base for Tuesday).
+  - Build the grocery list directly from the meal plan rather than from the kitchen audit alone. Add staples (eggs, milk, fruit, lunch components, snacks) as needed but pegged to the meal plan as the anchor.
+  - Execute one batched grocery shop per week – online delivery, a single supermarket trip, or split between a stock-up trip and one fresh-produce top-up – rather than daily shops. Track over time which meals worked, which were ignored, and which the household wants to repeat; the repertoire and plan refine quarterly.
+success_looks_like: |
+  - The "what are we eating tonight" question disappears from weekday evenings; the plan is on the fridge or in a shared note, and tonight's dinner is already known
+  - Weekly food spend declines noticeably (commonly 15–30% for households previously relying on daily grocery runs and frequent takeaway), and food waste declines because ingredients are bought to a plan rather than aspirationally
+  - Cooking happens 5–7 nights per week without it feeling like a sustained act of willpower – the upstream decision fatigue is removed, so the downstream cooking is just execution
+common_pitfalls: |
+  - Planning aspirational meals rather than meals the household will actually cook on a weeknight – the new technique tested on Wednesday after a long workday is a recipe for takeaway. The anchor repertoire should be roughly 80% reliable favourites and 20% experiments
+  - Skipping the grocery list-from-meal-plan step and shopping aspirationally – a fridge full of vegetables and no plan to use them produces the same waste as no planning at all
+  - Treating each week as a from-scratch plan rather than a rotation of the existing repertoire; the planning session takes 30 minutes only when it is selecting from a pre-built list, not generating one
+  - Over-engineering the system – elaborate spreadsheets, macro-tracked menus, complicated rotation rules – which collapses adherence when life gets busy. The simplest sustainable version is a paper list on the fridge
+description: |
+  - A 30-minute weekly planning session producing a 5–7 dinner plan and a single grocery list pegged to those anchor meals, executed as one batched grocery shop, removing daily decision fatigue and the takeaway-default that emerges when no plan exists
+  - [Cross-sectional research on meal planning (Ducrot et al., 2017, N = 40,554)](https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-017-0461-7) found meal-planners had higher dietary quality, greater diet variety, and lower obesity prevalence than non-planners, with effect sizes meaningful even after adjusting for income and education
+  - [Home cooking research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863133/) shows people who cook dinner at home most nights consume fewer calories, less sugar, and less fat than those who rarely cook; meal planning is a primary determinant of whether home cooking actually happens on weeknights
+  - [Food waste research](https://www.sciencedirect.com/science/article/abs/pii/S0959652618337363) finds meal planning and shopping list use significantly reduce household food waste, with an [Australian study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9952321/) finding planners report ~30% less food waste than non-planners
+  - Distinct from [weekly cooking skill practice](/resources/intervention-database/weekly-cooking-skill-practice) (deliberate skill-building); meal planning is the upstream planning behaviour that determines whether home cooking happens at all, regardless of skill level
+applicable_domains: ["food-management", "nutrition", "saving", "time-management"]
+
+values:
+  food-management.competence:
+    pbs: 7
+    isr: 70
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding to ~12 adequate meals per week. After sustained weekly planning, a user could plausibly reach 17–19 adequate meals per week (between scale levels 6 and 8). Delta on the 21-meal anchor: ~5–7 adequate meals per week.
+      - PBS = 10 + log₂(6/21) = 10 − 1.81 = 8.2, rounded down to 7 because the planning intervention reliably moves dinner from chaotic to consistent but breakfasts and lunches typically remain the responsibility of separate routines.
+      - The mechanism is well-established: [Ducrot et al. (2017)](https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-017-0461-7) found meal-planners had higher dietary variety and lower obesity prevalence, supporting the meal-adequacy gain.
+    isr_reasoning: |
+      - The mechanism is mostly deterministic: a household that follows a weekly plan executes home dinners 5–7 nights per week by definition. The primary failure mode is plan-but-not-execute (takeaway because the planned meal is unappealing on the night), which is a failure of repertoire choice rather than the planning protocol.
+      - [Ducrot et al. (2017)](https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-017-0461-7) found meal planners showed reliably better dietary outcomes across a population sample, supporting strong mechanism reliability.
+      - ISR of 70% reflects the strong mechanism with a meaningful failure rate from plan-but-not-execute scenarios and from households where the anchor repertoire is too small or too aspirational.
+    uar_reasoning: |
+      - The 30-minute weekly cost is moderate; the larger barrier is sustaining the practice through busy weeks when it would be easiest to skip the planning session and revert to daily decisions.
+      - [Cooking and meal-planning intervention reviews](https://pubmed.ncbi.nlm.nih.gov/29248236/) suggest practical kitchen behaviours show better long-term retention than dietary-change behaviours, but specific weekly-planning adoption is rarely tracked at 12 months.
+      - UAR of 45% reflects realistic 6–12 month adherence, with higher rates for households where the planning is shared between adults and lower rates for solo cooks.
+
+  food-management.waste_reduction:
+    pbs: 6
+    isr: 65
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The plan-driven shopping list directly reduces buying-without-purpose, the largest driver of household food waste. Plausible endpoint: 60th–65th percentile. Delta: ~25–30 percentile points.
+      - [Australian household food-waste research (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9952321/) found meal-planners reported ~30% less food waste than non-planners, supporting a meaningful gain on the waste reduction anchor.
+      - Score 6 reflects a meaningful gain bounded by the fact that not all household waste is purchase-driven; some is execution-driven (over-cooking, leftover neglect) which the planning protocol does not directly address.
+    isr_reasoning: |
+      - The pathway from plan-driven shopping to reduced waste is well-established in [systematic reviews of household waste reduction interventions](https://www.sciencedirect.com/science/article/abs/pii/S0959652618337363).
+      - The benefit fails to materialise when the household plans but shops outside the plan (impulse buys, daily top-ups), or when the plan changes mid-week and pre-purchased ingredients are wasted.
+      - ISR of 65% reflects the strong mechanism with a meaningful failure rate from incomplete adherence to the plan-list-shop chain.
+    uar_reasoning: |
+      - See food-management.competence UAR – same intervention, same adherence profile.
+
+  nutrition.physical_wellbeing:
+    pbs: 5
+    isr: 55
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The shift from frequent takeaway and convenience meals to home-planned cooking plausibly produces a meaningful nutrition improvement, mapping to ~6–9 months additional healthy lifespan over decades. Delta: between scale levels 4 (2-3 months) and 6 (9 months).
+      - [Wolfson and Bleich (2015)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863133/) found people who cook dinner at home 6–7 times per week consume on average 137 fewer calories, 16g less sugar, and 3g less fat per day than those who cook 1 time per week or less – differences that compound into meaningful long-term health effects.
+      - Score 5 reflects the plausible nutrition gain bounded by the fact that home-cooked food is not automatically nutritious; planning makes home cooking happen but does not guarantee its quality.
+    isr_reasoning: |
+      - The pathway from increased home cooking to better nutrition is well-supported by [Wolfson and Bleich (2015)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4863133/), but the effect varies with what the household plans to cook.
+      - Households whose anchor repertoire skews toward refined-carbohydrate, high-saturated-fat dishes will see smaller nutrition gains than those whose repertoire emphasises whole foods.
+      - ISR of 55% reflects the conditional pathway – the nutrition benefit accrues to half-or-more of adopters but depends on repertoire quality, not just planning execution.
+    uar_reasoning: |
+      - See food-management.competence UAR – same intervention, same adherence profile.
+
+  saving.security:
+    pbs: 4
+    isr: 60
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (~5–6 days of emergency fund). The food-spend reduction from planning typically frees $100–300 per month for a household previously relying on takeaway and daily grocery runs, plausibly adding 1–3 weeks of emergency fund coverage over a year of redirected savings. Delta: ~1–3 weeks of fund, mapping between anchor levels 4 and 6.
+      - PBS = 10 + log₂(0.5/12) = 10 − 4.58 = 5.4, rounded down to 4 because the savings effect requires the freed money to actually be redirected to savings rather than absorbed by other spend, which is a separate behaviour.
+      - [UK consumer research](https://www.bbc.co.uk/news/business-43977211) and [USDA research on food spend](https://www.ers.usda.gov/amber-waves/2024/may/food-spending-by-u-s-households-grew-faster-than-inflation-from-2013-to-2022) consistently find planned home cooking substantially cheaper per meal than takeaway or convenience options, supporting the cost-saving mechanism.
+    isr_reasoning: |
+      - The cost saving is mechanistically reliable when the planning is executed; takeaway and convenience meals cost roughly 3–5x the per-meal cost of home cooking.
+      - The conversion of cost saving into actual savings (rather than absorbed spend elsewhere) depends on the household having a savings system; without one, the freed money disappears into discretionary spend.
+      - ISR of 60% reflects the strong cost-saving mechanism conditional on the savings-redirection behaviour being separately enabled.
+    uar_reasoning: |
+      - See food-management.competence UAR – same intervention, same adherence profile.
+
+  time-management.productivity:
+    pbs: 4
+    isr: 55
+    uar: 45
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The reduction in daily "what's for dinner" decision time, daily grocery runs, and end-of-day meal-stress plausibly produces a modest time-management gain. Plausible endpoint: 45th–50th percentile. Delta: ~10–15 percentile points.
+      - The time arithmetic: the 30-minute weekly planning session and one batched shop replace ~3 daily grocery runs (15 minutes each, ~45 minutes weekly) and recurring daily decision overhead (~5 minutes per evening, ~35 minutes weekly), yielding net positive time savings of ~50 minutes per week even at the same total cooking volume.
+      - Score 4 reflects modest gains; the time-saving is real but not transformative for the productivity anchor, which measures planned-task on-time completion more broadly.
+    isr_reasoning: |
+      - The time-saving pathway is plausible and supported by general principles of batching, but no direct studies measure productivity gains from meal planning specifically.
+      - Households that previously had no meal-related time burden (e.g. always ate takeaway) may not see productivity gains; the benefit accrues primarily to households where dinner planning was previously a daily stress point.
+      - ISR of 55% reflects the conditional and lightly-evidenced productivity pathway.
+    uar_reasoning: |
+      - See food-management.competence UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost to start. The protocol uses any existing notebook, shared note, or spreadsheet for the meal plan and grocery list. Recipe books and meal-planning apps are optional enhancements."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs for the planning protocol itself. Some users opt for paid meal-planning apps (Mealime, Plan to Eat at $5–10/month) but a free shared note works equally well. The protocol typically reduces ongoing food spend rather than adding to it."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately 3–5 hours over an initial weekend to build the anchor repertoire (list 15–25 meals the household reliably enjoys), establish the weekly planning slot, and design the meal-plan-to-grocery-list workflow."
+  ongoing_time: 1.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 30 minutes per week for the planning session plus ~60 minutes per week for the batched grocery shop (online delivery saves time over in-person shopping), totalling ~1.5 hours per week. Excludes cooking time itself, which is independent of the planning protocol."
+
+prerequisites:
+  - "A working kitchen with basic equipment for cooking 5–7 home dinners per week (stove, oven, basic utensils, refrigerator with adequate storage)"
+  - "Sufficient cooking competence to execute the meals on the anchor repertoire reliably; if cooking skills are very limited, [weekly cooking skill practice](/resources/intervention-database/weekly-cooking-skill-practice) is a complementary upstream intervention"
+  - "A consistent weekly time slot of 30 minutes that the household will protect for the planning session"
+  - "Agreement from household members on the planning approach, since the protocol fails if one person plans but another shops outside the plan"
+
+flagged_domains: []

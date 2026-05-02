@@ -1,0 +1,151 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Weekly Third Place Attendance"
+what_it_is: |
+  Committing to weekly attendance at a recurring social gathering that is neither home (the "first place") nor work (the "second place") – a sports club, choir, religious congregation, hobbyist meetup, board-game group, volunteer crew, or community class – where the user encounters substantially the same group of people week after week. The active ingredient is repeated, low-stakes contact with the same set of people in a shared activity, which is the [Putnam-Holt-Lunstad-US Surgeon General loneliness literature's](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf) primary mechanism for community-scale belonging and the protective effects on mortality, mental health, and life satisfaction associated with social integration. Distinct from [regular volunteering](/resources/intervention-database/regular-volunteering) (monthly, impact-oriented, structured role) and from [ethics discussion group](/resources/intervention-database/ethics-discussion-group) (topic-specific, intellectual focus); the third place is about repeated incidental contact with the same people in any non-instrumental context, and frequency at weekly cadence is the threshold the loneliness research consistently identifies as producing the belonging and health benefits.
+how_to_do_it: |
+  - Identify a recurring weekly social activity that you would attend partly for its own sake (the activity is intrinsically interesting) and partly for the social side (you would meet the same people regularly). Examples: a five-a-side football team, a community choir, a Wednesday running club, a weekly church service, a board-games meetup, a regular volunteer shift, a community-garden working day, a hobbyist club for a craft you actually practise.
+  - Commit to attending for at least 12 weeks before evaluating fit. The belonging mechanism takes time – the first 4–6 weeks feel awkward and the friendships only form once you have crossed the threshold from "new person" to "regular".
+  - Treat the commitment as a fixed appointment in your calendar, not a flexible option. The third place benefit depends on attendance reliability; missing 1 week in 4 keeps you at the periphery, attending 4 in 4 makes you part of the group.
+  - Stay 15–30 minutes after the activity itself for the unstructured social time around it – the post-match drink, the post-rehearsal coffee, the after-service conversation. This is where loose acquaintances become friendships, and skipping it cuts most of the social benefit even with full attendance.
+  - After 12 weeks, evaluate fit. The right third place feels restorative and you look forward to it; the wrong one feels like a chore. If the latter, switch to a different gathering rather than abandoning the protocol – the active ingredient is the cadence and same-people contact, not any particular activity.
+success_looks_like: |
+  - You recognise the regulars by name, they recognise you, and your absence is noticed and asked about – the hallmark of being part of a group rather than peripheral
+  - The weekly slot becomes one of the most reliably restorative parts of the week; it raises baseline mood and provides a rhythm that the rest of life can hang from
+  - Over 6–12 months, several of the regulars have moved from "people I see at [activity]" to people you would meet outside the activity – the third place has functioned as the breadth-friendship infrastructure it is meant to be
+common_pitfalls: |
+  - Choosing a third place based on what you think you should enjoy rather than what you actually enjoy; the protocol depends on intrinsic motivation surviving 12 weeks, and a poor activity fit guarantees abandonment
+  - Attending the activity but skipping the unstructured social time around it; a person who shows up for the football match and leaves immediately afterwards captures perhaps 30% of the belonging benefit while paying 100% of the time cost
+  - Treating one-off events (a workshop, a class series) as the third place; the active ingredient is repeated weekly contact with the same people, which one-off events do not provide. A series of one-off events is networking; a single recurring gathering is community
+  - Giving up after 4–6 weeks because the social side has not "kicked in" yet; the friendship formation process is slow precisely because trust depends on demonstrated consistency, which requires the time the impatient adopter is unwilling to invest
+description: |
+  - Committing to weekly attendance at a recurring social gathering – sports club, choir, congregation, hobbyist meetup, volunteer crew – where the user encounters substantially the same group of people week after week, with at least 12 weeks of attendance before evaluating fit
+  - The "third place" framing originates with [sociologist Ray Oldenburg's work](https://www.cnu.org/publicsquare/2018/04/02/recovering-third-place) on community spaces; the loneliness research base since synthesises a substantial literature linking weekly social-group contact to reduced mortality, depression, and isolation
+  - [The 2023 US Surgeon General's Advisory on Social Connection](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf) cites a meta-analytic finding that lacking social connection has health risk equivalent to smoking 15 cigarettes a day, and identifies regular participation in community groups as a primary intervention pathway
+  - [Holt-Lunstad et al. (2010) meta-analysis of 148 studies](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316) found that strong social relationships were associated with a 50% increased likelihood of survival across follow-up, with the effect comparable to smoking cessation in magnitude
+  - Distinct from [regular volunteering](/resources/intervention-database/regular-volunteering) (monthly, impact-oriented) and from [ethics discussion group](/resources/intervention-database/ethics-discussion-group) (intellectual focus); the third place is about *frequency and same-people contact* in any non-instrumental shared activity – the loneliness literature's primary mechanism for community-scale belonging
+applicable_domains: ["community-contribution", "friendship", "mental-health", "participatory-leisure", "networks"]
+
+values:
+  community-contribution.belonging:
+    pbs: 7
+    isr: 65
+    uar: 45
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained weekly third-place attendance over 12+ months, a user could plausibly reach the 65th–70th percentile in community belonging – a meaningful, durable rootedness in a recurring social context. Delta: ~30–35 percentile points. Subjective scale: PBS 7 sits between "Meaningful" (6) and "Major" (8) gain.
+      - The mechanism is the most direct available for the belonging anchor: repeated weekly contact with the same people in a shared activity is the textbook condition for community formation, and the [US Surgeon General Advisory](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf) identifies it as a primary intervention pathway.
+      - Score 7 reflects a major gain bounded by the fact that one third place is one community context; transformative belonging would require multiple integrated contexts, which is beyond what a single weekly commitment delivers.
+    isr_reasoning: |
+      - The mechanism is reliably operative when attendance is consistent and the user engages in the unstructured social time. [Holt-Lunstad et al. (2010)](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316) meta-analysis on social relationships supports the underlying mechanism reliability.
+      - The ~35% who fail to capture the belonging benefit typically do so because they attend the activity but not the social periphery (post-event drinks, conversations, group chats), or because the group culture is unusually closed to newcomers.
+      - ISR of 65% reflects the strong mechanism with a meaningful failure rate from incomplete engagement and from poor activity-group culture fit.
+    uar_reasoning: |
+      - Weekly cadence is high commitment; the [Putnam Bowling Alone](https://www.simonandschuster.com/books/Bowling-Alone/Robert-D-Putnam/9780743203043) analysis documents the substantial decline in regular community-group attendance over decades, with sustained weekly attendance now a minority behaviour.
+      - The first 12 weeks are the highest-dropout period; users who survive that threshold show much higher long-term retention as the social bonds formed by then make continued attendance self-reinforcing.
+      - UAR of 45% reflects realistic 12-month adherence – the meaningful minority who form the regular cohort at any given third place – with the rest dropping out within the first few months.
+
+  community-contribution.fulfilment:
+    pbs: 6
+    isr: 65
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Sustained third-place attendance produces a felt sense of contribution and connection plausibly reaching the 60th–65th percentile. Delta: ~25–30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in community-contribution fulfilment."
+      - The fulfilment pathway here is connection-driven (belonging itself produces meaning) rather than impact-driven; the third place produces less tangible community impact than a structured volunteering role but more felt social contribution than solo activities.
+      - Score 6 reflects a meaningful but bounded gain; the deeper fulfilment of structured contribution (e.g. a teaching, mentoring, or care role) typically scores higher.
+    isr_reasoning: |
+      - The connection-fulfilment mechanism is supported by the [umbrella review of social participation interventions](https://pmc.ncbi.nlm.nih.gov/articles/PMC10159229/) which identifies community engagement as a robust pathway to wellbeing.
+      - The fulfilment benefit is conditional on the user experiencing the third place as part of their identity rather than a transactional arrangement; users who treat it instrumentally see weaker effects.
+      - ISR of 65% reflects the strong mechanism conditional on identification with the group, which most weekly attenders develop after 12+ weeks.
+    uar_reasoning: |
+      - See community-contribution.belonging UAR – same intervention, same adherence profile.
+
+  friendship.breadth:
+    pbs: 7
+    isr: 65
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 45th percentile. Anchor max: 30 active friendships. Someone at the 45th percentile maintains roughly 8–12 active friendships. Sustained weekly third-place attendance plausibly adds 4–8 active friendships over 12–18 months from the regular cohort. Delta: ~6 active friendships.
+      - PBS = 10 + log₂(6/30) = 10 − 2.32 = 7.7, rounded to 7. The mechanism is direct: repeated weekly contact with the same set of people produces relationships at exactly the "active friend" depth that the breadth anchor measures.
+      - The third place is one of the best-evidenced and most efficient ways to build active-friendship breadth in adulthood, when the school and university defaults that previously generated breadth have been removed.
+    isr_reasoning: |
+      - [Friendship formation research](https://psycnet.apa.org/doi/10.1177/0265407518761225) suggests it takes roughly 50 hours of contact to move from acquaintance to casual friend and 200 hours to move to friend; a weekly third place hits ~50–100 hours per year, comfortably in the friend-formation range.
+      - The benefit fails to materialise where group dynamics are closed (long-established cohorts unfriendly to newcomers) or where the activity itself prevents social engagement (very competitive sport, silent meditation).
+      - ISR of 65% reflects the strong mechanism conditional on group culture and activity-type compatibility with social engagement.
+    uar_reasoning: |
+      - See community-contribution.belonging UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 6
+    isr: 60
+    uar: 45
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained weekly third-place attendance, a user could plausibly reach the 60th–65th percentile in emotional stability via the well-evidenced protective effect of social integration on depression and anxiety. Delta: ~25–30 percentile points. Subjective scale: PBS 6 = "Meaningful gain in day-to-day emotional steadiness."
+      - [The Holt-Lunstad et al. (2010) meta-analysis](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316) of 148 studies found social relationships had a survival effect equivalent to smoking cessation; the depression and anxiety pathways are similarly robustly evidenced.
+      - Score 6 reflects a meaningful gain bounded by the fact that mental-health stability is co-determined by sleep, exercise, work conditions, and biological factors that this single intervention does not address.
+    isr_reasoning: |
+      - The protective effect of social integration on mental health is one of the most robust findings in social epidemiology, supported by [the US Surgeon General Advisory (2023)](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf).
+      - The benefit is most reliable for users whose pre-intervention isolation was a meaningful contributor to distress; users with already-strong social integration may see negligible additional gains.
+      - ISR of 60% reflects the strong mechanism conditional on the user's baseline isolation being a primary contributor to their distress, which is true for a meaningful but not universal subset of the adopter population.
+    uar_reasoning: |
+      - See community-contribution.belonging UAR – same intervention, same adherence profile.
+
+  participatory-leisure.social:
+    pbs: 7
+    isr: 70
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Weekly third-place attendance is, by construction, weekly social participatory leisure. The endpoint plausibly reaches the 65th–70th percentile in social leisure engagement. Delta: ~30–35 percentile points.
+      - The score is high because the intervention's primary mechanism *is* social participatory leisure – a sports team, choir, or hobbyist meetup is exactly what this value anchor measures.
+      - Score 7 reflects a major gain bounded by the fact that one weekly activity is a meaningful but not transformative addition to overall social leisure portfolio.
+    isr_reasoning: |
+      - The intervention's near-tautological match to the value anchor produces high ISR; users who attend a weekly social activity are by definition engaged in social participatory leisure.
+      - The 30% who fail to convert weekly attendance into perceived leisure benefit typically experience the activity as an obligation rather than a choice (e.g. attending church out of duty without enjoyment).
+      - ISR of 70% reflects the strong tautological link with allowance for poor activity-fit cases.
+    uar_reasoning: |
+      - See community-contribution.belonging UAR – same intervention, same adherence profile.
+
+  networks.depth:
+    pbs: 5
+    isr: 55
+    uar: 45
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Weekly third-place attendance generates a recurring set of contacts who, over 1–2 years, develop into a meaningful local network. Plausible endpoint: 55th–60th percentile. Delta: ~20–25 percentile points.
+      - The network depth gain is real but secondary to the friendship and belonging gains; third places are most valuable for social and emotional benefits, with professional and instrumental network value as a side effect.
+      - Score 5 (modest-to-meaningful) reflects the secondary nature of the networks benefit relative to the friendship and belonging primary effects.
+    isr_reasoning: |
+      - The mechanism is plausible but indirect; not all third-place contacts become network ties usable for instrumental purposes (career help, introductions, knowledge exchange).
+      - The network depth benefit is highest when the third place draws from a cross-section of professional backgrounds; very narrow third places (single-profession sports leagues) generate less networks-relevant contact.
+      - ISR of 55% reflects the conditional and indirect pathway from belonging-focused contact to network-relevant ties.
+    uar_reasoning: |
+      - See community-contribution.belonging UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 50
+  upfront_cost_reasoning: "Approximately $0–150 for activity-specific equipment, joining fees, or kit. Many third places (church, free volunteer shifts, public-space meetups) are free; others (sports leagues, gym classes, hobbyist supplies) require modest equipment or subscription."
+  ongoing_cost: 30
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Approximately $0–80 per month depending on activity – membership fees for clubs and gyms, subscription dues for leagues, donations for religious congregations, modest spend on post-activity socialising. Free third places exist (free fitness groups, public libraries, religious services) for users with budget constraints. Costs vary widely by country and activity."
+  upfront_time: 4
+  upfront_time_reasoning: "Approximately 3–5 hours to research and try 1–2 candidate third places, attend an initial trial session, and commit to a regular cadence. May take longer if the first activity is a poor fit and a switch is required."
+  ongoing_time: 3
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 2–4 hours per week including travel, the activity itself, and 15–30 minutes of unstructured social time around it. Estimate uses a midpoint of 3 hours weekly."
+
+prerequisites:
+  - "Physical or cognitive capacity to participate in the chosen activity for at least 12 consecutive weeks; some third places require specific capability, but accessible options exist for almost all populations"
+  - "Geographic access to at least one recurring weekly gathering – urban areas have abundant options, rural areas have fewer but typically still include religious congregations, sports leagues, and community groups; an internet connection helps for initial search via local listings"
+  - "Sufficient schedule stability to commit to a recurring weekly time slot; users in irregular shift work or with frequent travel may need to choose a more flexible activity (e.g. drop-in classes) or postpone until schedule stabilises"
+  - "Willingness to feel awkward for the first 4–6 weeks while moving from new face to regular member"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "Repeated low-stakes social contact in a non-work context surfaces interpersonal patterns and preferences that work and family contexts may not reveal"
+  - domain: "physical-safety"
+    rationale: "Population-level evidence linking social integration to lower all-cause mortality is one of the largest effect sizes in social epidemiology, but the mechanism is broad rather than safety-specific"

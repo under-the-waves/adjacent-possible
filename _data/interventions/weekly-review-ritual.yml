@@ -1,0 +1,132 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Weekly Review Ritual"
+what_it_is: |
+  A recurring weekly session – typically 30 to 90 minutes, anchored to a consistent time such as Friday afternoon or Sunday evening – in which the user systematically clears all incoming inboxes, reviews the calendar for the week just past and the week ahead, walks through every active project list, and sets explicit priorities for the coming week. The ritual is the cornerstone of [David Allen's Getting Things Done methodology](https://gettingthingsdone.com/) and similar productivity systems, and serves as the regular "rebalancing" step that prevents the rest of any task or project system from drifting out of trust over time. Distinct from [monthly goal review](/resources/intervention-database/monthly-goal-review), which operates at the strategic level (continue, modify, retire goals); the weekly review operates at the tactical level (clear the desk, capture commitments, set next week's priorities). A user benefits from running both at their respective cadences.
+how_to_do_it: |
+  - Block a recurring 60–90 minute window in your calendar at a time the rest of the week is unlikely to encroach on – common choices are late Friday afternoon, Sunday evening, or first thing Monday morning. Treat it as a fixed appointment with yourself.
+  - Process every inbox to zero: physical inbox, email, messages, voicemail, browser tabs left open, scattered notes. Each item gets one of four fates – do (under two minutes), defer (capture as a task with a clear next action), delegate (hand off with a clear ask), or delete.
+  - Review the calendar twice: looking back over the past week (capture any outstanding action items, follow-ups, or learnings the meetings generated) and forward over the coming week (note preparation needed, conflicts to resolve, energy demands to manage).
+  - Walk through every active project list. For each project, confirm there is at least one concrete next action defined; if not, generate one. Re-evaluate which projects are stalled or no longer relevant.
+  - Set 3–5 explicit priorities for the coming week, written down in the same place each time. The list functions as both a focus aid during the week and a feedback signal at the next weekly review when you compare planned-against-actual.
+success_looks_like: |
+  - You enter Monday with empty inboxes, a clear sense of the top 3–5 things that matter this week, and confidence that nothing important is silently slipping
+  - The mid-week sense of "what was I supposed to be doing again?" disappears – the system holds that for you, and the weekly review keeps the system trusted
+  - End-of-week stress associated with overlooked commitments declines, and the boundary between work and rest becomes cleaner because the open loops have been closed or captured
+common_pitfalls: |
+  - Skipping a single weekly review and never restarting; the practice compounds through consistency, and a missed week often becomes a permanent abandonment as inboxes balloon and the next session feels too painful to begin
+  - Letting the review session become a working session – using the review block to actually do tasks rather than process and plan, which expands time and crowds out the planning component that produces the main benefit
+  - Reviewing without writing down conclusions, so the priorities for the coming week are held vaguely in memory rather than being a concrete list to compare against; the planned-vs-actual comparison is what calibrates capacity over time
+  - Building a review template too elaborate to sustain – starting with 25 checklist items rather than 5 essential ones, then abandoning the practice when each session feels like a chore
+description: |
+  - A 30–90 minute weekly session in which the user clears all inboxes, reviews calendar and project lists, and sets explicit priorities for the coming week, providing the regular system maintenance that prevents personal task and project trackers from drifting out of trust
+  - [Field experiment evidence on weekly planning](https://pmc.ncbi.nlm.nih.gov/articles/PMC10952538/) found that engaging in structured weekly planning behaviour increased work engagement and reduced rumination compared with unstructured weeks, supporting both the productivity and wellbeing pathways
+  - [The progress-monitoring meta-analysis (Harkin et al., 2016)](https://doi.org/10.1037/bul0000025) of 138 studies (N = 19,951) found that monitoring progress toward goals significantly improves goal attainment (d = 0.40), with stronger effects when progress is recorded physically and reviewed at regular intervals – exactly the structure of the weekly review
+  - The cornerstone practice of [David Allen's Getting Things Done](https://gettingthingsdone.com/), with [an empirical study of GTD adopters](https://www.tandfonline.com/doi/abs/10.1080/00208825.2010.11657634) finding the weekly review specifically associated with reduced cognitive load and higher self-reported productivity among adopters who sustained the practice
+  - Distinct from [monthly goal review](/resources/intervention-database/monthly-goal-review), which is strategic (continue, modify, retire goals); the weekly review is tactical (clear the desk, capture, plan). The two cadences address different decision horizons and a fully calibrated user runs both
+applicable_domains: ["time-management", "organisation", "goals", "mental-health"]
+
+values:
+  time-management.productivity:
+    pbs: 7
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding to ~50% of planned tasks completed on time. After sustained adoption of the weekly review, a user could plausibly reach 75–85% on-time completion (between scale levels 6 and 8). Delta on the 100-point anchor: ~25–35 percentage points.
+      - PBS = 10 + log₂(30/100) = 10 − 1.74 = 8.3, rounded down to 7 because the productivity ceiling depends on capacity calibration (a separate skill) and on the quality of the underlying task system (the review can only be as good as what flows into it).
+      - The mechanism is direct: explicit weekly priority-setting plus inbox-zero processing closes the most common productivity failure modes (forgotten commitments, undefined next actions, drift between intention and execution).
+    isr_reasoning: |
+      - The [Harkin et al. (2016) meta-analysis](https://doi.org/10.1037/bul0000025) effect of d = 0.40 on goal attainment from regular progress monitoring is highly reliable across 138 studies, supporting the underlying mechanism reliability.
+      - [Allen, Henderson & Liu (2008)](https://www.tandfonline.com/doi/abs/10.1080/09585190802051303) found that GTD weekly review adopters reported lower stress and higher perceived control, but the productivity gains depended heavily on whether the user maintained inbox processing discipline between weekly sessions.
+      - ISR of 65% reflects the strong mechanism for users who execute the protocol completely, with the ~35% who fail typically processing only the easy inboxes (email) while skipping the harder ones (project list reassessment, calendar look-back).
+    uar_reasoning: |
+      - GTD-style weekly review adoption rates are notoriously low. [A study of GTD practitioners](https://link.springer.com/article/10.1007/s10869-007-9046-9) suggested fewer than 30% of trained adopters sustain the weekly review beyond 6 months without external accountability scaffolding.
+      - The 60–90 minute weekly time cost is the most common abandonment trigger – the practice is high-fixed-cost-per-session but low-marginal-cost across the rest of the week, making it easy to skip during high-demand weeks even though those are exactly when its value is highest.
+      - UAR of 40% reflects the realistic minority who sustain the practice across 6+ months; users who pair it with a fixed calendar block and explicit accountability (partner, coach, public commitment) achieve substantially higher rates.
+
+  time-management.balance:
+    pbs: 5
+    isr: 55
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained weekly review, a user could plausibly reach the 55th–60th percentile in time balance and protected rest. Delta: ~20–25 percentile points. Subjective scale: PBS 5 sits between "Modest" (4) and "Meaningful" (6) gain.
+      - The balance benefit comes from two mechanisms: (1) clearer separation between work and rest because open loops are closed or captured before the weekend, and (2) explicit visibility of the coming week's load, allowing earlier protection of recovery time.
+      - Score 5 reflects a real but bounded gain – the review surfaces overload but does not by itself reduce it; users still need to make the difficult choices the review makes visible.
+    isr_reasoning: |
+      - The [weekly planning field experiment](https://pmc.ncbi.nlm.nih.gov/articles/PMC10952538/) found reduced rumination as a primary effect of structured weekly planning, supporting the balance mechanism.
+      - The benefit fails to materialise for users whose work is genuinely overcommitted – the review makes the overload visible without resolving it, which can increase distress in the short term until the user makes structural changes.
+      - ISR of 55% reflects the moderate mechanism reliability conditional on the user being willing to act on what the review surfaces.
+    uar_reasoning: |
+      - See time-management.productivity UAR – same intervention, same adherence profile.
+
+  organisation.tracking:
+    pbs: 6
+    isr: 65
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained weekly review, a user could plausibly reach the 65th percentile in organisational tracking, with most commitments captured in a system rather than held in memory. Delta: ~30 percentile points.
+      - The weekly review is the maintenance layer that any task or project system requires to remain trustworthy; without it, the system accumulates stale entries and untracked commitments until users abandon it. With it, the system holds value over years rather than weeks.
+      - Score 6 reflects a meaningful gain in the explicit "captured commitments" anchor, bounded by the fact that the review supports an underlying organisational system rather than substituting for one.
+    isr_reasoning: |
+      - The [Harkin et al. (2016) meta-analysis](https://doi.org/10.1037/bul0000025) finding (d = 0.40) supports the structured-review mechanism's reliability across diverse outcomes.
+      - The tracking benefit is most reliable when users have an existing capture habit (notebook, task manager, email inbox) feeding into the review; users who try to combine weekly review with starting a capture system from scratch have lower success rates.
+      - ISR of 65% reflects strong mechanism reliability for users with an existing capture infrastructure, which is the typical adopter profile.
+    uar_reasoning: |
+      - See time-management.productivity UAR – same intervention, same adherence profile.
+
+  goals.follow_through:
+    pbs: 5
+    isr: 60
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The weekly review's explicit priority-setting for the coming week creates a near-daily reference point for goal-relevant action, plausibly raising follow-through to the 55th–60th percentile. Delta: ~20–25 percentile points.
+      - Score 5 because the weekly cadence is one step removed from daily action; tighter cadence interventions (daily decision review, habit stacking) produce larger follow-through gains, but at higher time cost.
+      - The [Harkin et al. (2016) meta-analysis](https://doi.org/10.1037/bul0000025) on progress monitoring (d = 0.40) supports the link from weekly priority-setting to goal attainment.
+    isr_reasoning: |
+      - The [weekly planning field experiment](https://pmc.ncbi.nlm.nih.gov/articles/PMC10952538/) found increased work engagement and reduced rumination from structured weekly planning, both of which mediate goal follow-through.
+      - The mechanism fails when users set the same priorities week after week without acting on them; the review must include comparison of last week's planned vs actual to surface the pattern and trigger correction.
+      - ISR of 60% reflects the strong but bounded mechanism conditional on the comparison-and-revision step being performed.
+    uar_reasoning: |
+      - See time-management.productivity UAR – same intervention, same adherence profile.
+
+  mental-health.stability:
+    pbs: 4
+    isr: 50
+    uar: 40
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The weekly review's reduction in open-loop cognitive load and end-of-week stress about overlooked commitments plausibly produces a modest gain in emotional stability. Delta: ~10–15 percentile points to reach the 45th–50th percentile.
+      - Score 4 reflects a real but secondary benefit; the weekly review is not a mental-health intervention but reduces a specific source of background stress (the "open loops" Allen describes) for users prone to rumination about uncompleted commitments.
+      - [GTD adopter research](https://www.tandfonline.com/doi/abs/10.1080/09585190802051303) found that adopters reported lower stress and higher perceived control, supporting the stability pathway as an indirect benefit.
+    isr_reasoning: |
+      - The mechanism is plausible and supported by the [weekly planning field experiment](https://pmc.ncbi.nlm.nih.gov/articles/PMC10952538/) finding of reduced rumination, but no RCT specifically measures emotional stability as an outcome of weekly review practice.
+      - Users for whom the review reveals genuine overcommitment may experience short-term distress increases before any stability benefit, depending on their capacity to act on the surfaced pattern.
+      - ISR of 50% reflects the inferred and somewhat conditional pathway from reduced cognitive load to emotional stability.
+    uar_reasoning: |
+      - See time-management.productivity UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost. The review can be done with any existing calendar, task manager, or notebook. Optional resources (the GTD book, productivity course materials) are common but not required."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring financial costs. Some users invest in dedicated planners (e.g. Full Focus Planner at ~$40/quarter) or task management software subscriptions, but these are optional and a free notebook works equally well."
+  upfront_time: 2
+  upfront_time_reasoning: "Approximately 2 hours to design the review template, identify the inboxes and project lists to include, choose a recurring time slot, and run the first session (which typically takes longer than steady-state sessions while the system is being established)."
+  ongoing_time: 1.5
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 60–90 minutes per week for a steady-state review session covering inbox processing, calendar review, project list walkthrough, and priority setting."
+
+prerequisites:
+  - "An existing system or systems that capture commitments throughout the week (calendar, task manager, notebook, email) – the review processes inputs that other systems generate"
+  - "A consistent weekly time slot of at least 60 minutes that can be reliably protected from other demands"
+  - "Basic literacy in articulating priorities and next actions in writing, since the review's value depends on written rather than mental processing"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "Comparing planned vs actual outcomes weekly progressively builds calibration about one's actual capacity, time use patterns, and recurrent obstacles"

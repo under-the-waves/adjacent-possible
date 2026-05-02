@@ -1,0 +1,123 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Daily Outdoor Play for Children"
+what_it_is: |
+  A daily commitment to at least 60 minutes of unstructured, screen-free outdoor play for each child, ideally with peers and ideally with declining adult supervision as age allows. The intervention pushes back against a documented multi-decade [decline in independent outdoor play](https://www.tandfonline.com/doi/full/10.1080/02568543.2022.2049936) – children today spend roughly half as much time outdoors as their parents did at the same age, with screen time having absorbed most of the displaced hours. The mechanism stacks several distinct benefits: physical activity (most easily reached through unstructured outdoor play), risk-taking practice that builds resilience, peer-driven social skill development, sunlight exposure for circadian and bone health, and reduced screen time. Distinct from organised sport (which provides exercise and structure but not autonomy practice) and from supervised park visits with parents (which provide outdoor time but not the executive-function benefits of running their own activity).
+how_to_do_it: |
+  - Carve a default outdoor block into the daily routine – after school, weekend mornings, a chunk of holiday afternoons – and treat the slot as the default rather than the negotiation. Most parents find the slot has to be defended against homework, screen pull, and parental fatigue
+  - Push toward independence as the child's age allows: a 4-year-old plays in a fenced garden under loose adult supervision; a 7-year-old roams the immediate street with peers; a 10-year-old goes to the local park alone or with friends. [Research on independent mobility](https://www.tandfonline.com/doi/full/10.1080/02568543.2022.2049936) finds that the age at which children gain unsupervised neighbourhood mobility has risen by roughly 4 -- 5 years over a generation; deliberately resisting this shift is part of the intervention
+  - Resist the pull to over-program the time. Unstructured play – inventing games, arguing about rules, building things, taking calculated risks – is the active ingredient. Coaching the activity removes the autonomy benefit
+  - Tolerate moderate risk and minor injury. [Research on risky play](https://pubmed.ncbi.nlm.nih.gov/26026526/) finds that children who engage in age-appropriate risky play (heights, speed, rough-and-tumble, exploration away from supervising adults) show better motor competence, risk assessment, and resilience than peers without it
+  - Lower the bar in poor weather. Daily outdoor play is a habit; insisting on perfect conditions collapses the cadence. Suitable clothing turns most weather into manageable weather
+  - Coordinate with neighbouring families to create a critical mass of children in shared outdoor space – peer availability is the main unlock, since one child outside alone is a different (and harder) thing from a small group
+success_looks_like: |
+  - Outdoor play is the default after-school activity rather than a negotiation – your child puts on shoes and goes out without prompting
+  - Your child can move through their immediate neighbourhood with growing competence and judgement, and can recover from minor scrapes and conflicts without crisis
+  - Screen time settles into a smaller share of the day without explicit rationing, because the outdoor slot has displaced its main competitor
+  - Your child sleeps faster and deeper than peers without the routine, and falls into the bedtime window rather than fighting it
+common_pitfalls: |
+  - Letting screens fill the slot when the child resists or weather is poor – the cadence is the intervention, and the screen alternative trains exactly the wrong defaults
+  - Continuing to over-supervise as the child ages – staying in line of sight long after age and maturity allow more independence removes the executive-function benefit and stunts the resilience effect
+  - Substituting structured sport for unstructured outdoor play. Sport is valuable for other reasons, but running the child's own play is what builds the autonomy and social skills the intervention targets
+  - Treating risk as binary rather than graduated – refusing all climbing, all roaming, all unsupervised time produces the safety theatre while losing the resilience benefit, and most acute risk evidence does not support the precaution
+description: |
+  - A daily commitment to at least 60 minutes of unstructured, screen-free outdoor play, with declining adult supervision as the child ages, ideally with peers
+  - [Reviews of children's outdoor time trends](https://www.tandfonline.com/doi/full/10.1080/02568543.2022.2049936) document a multi-decade decline in unstructured outdoor play and a concurrent rise in screen time, with the displaced hours associated with worse physical activity, social skill, and mental health outcomes
+  - [Research on risky play](https://pubmed.ncbi.nlm.nih.gov/26026526/) finds that age-appropriate risky play (heights, speed, exploration away from adults) is associated with better motor competence, risk assessment, resilience, and physical activity – not the safety hazard parents typically fear
+  - [Cross-sectional and longitudinal studies](https://pubmed.ncbi.nlm.nih.gov/23332329/) link daily outdoor play time to higher cardiorespiratory fitness, better sleep, lower screen time, and more peer interactions; the effect operates through several mechanisms simultaneously
+  - Distinct from organised sport (provides exercise but not autonomy) and supervised park time (provides outdoor exposure but not executive-function practice) – the active ingredients are unstructured play, peer interaction, and graduated independence
+applicable_domains: ["children", "fitness", "mental-health"]
+
+values:
+  children.development:
+    pbs: 7
+    isr: 65
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, the child plausibly reaches the 65th--70th percentile in self-direction, resilience, and independence. Delta: ~30--35 percentile points.
+      - Unstructured outdoor play with peers is one of the few daily contexts in which children practise self-organisation, conflict-resolution, risk-judgement, and independent decision-making at sufficient duration to build skill. [Research on independent mobility and child development](https://pubmed.ncbi.nlm.nih.gov/27214882/) links early independent outdoor experience to stronger executive function, autonomy, and self-confidence
+      - Score 7 reflects that the development pathway is direct and well-supported but bounded – the intervention targets a specific subset of developmental tasks (autonomy, self-regulation in peer contexts, embodied competence) rather than the full developmental envelope
+    isr_reasoning: |
+      - [Reviews of unstructured outdoor play](https://www.tandfonline.com/doi/full/10.1080/02568543.2022.2049936) consistently associate higher daily outdoor time with better self-regulation, social skill, and resilience outcomes, with effects observed across diverse settings
+      - The development effect requires sufficient peer availability – a child outside alone every day gets the physical and circadian benefits but not the social development benefits; ISR is moderated by neighbourhood conditions
+      - ISR of 65% reflects reliable benefit for adherent families with peer access; lower in isolated suburbs or rural settings where peers are not nearby
+    uar_reasoning: |
+      - Daily outdoor play faces multiple structural headwinds: school hours have lengthened, screen alternatives are highly competitive, parents fear traffic and stranger risk, and many neighbourhoods lack peer density
+      - [Survey research on parent-reported outdoor time](https://www.tandfonline.com/doi/full/10.1080/02568543.2022.2049936) finds that the share of children meeting daily outdoor activity guidelines has fallen below 30% in many developed countries, with sustained 60-minute daily adherence even rarer
+      - UAR of 30% reflects realistic long-term adherence for families who deliberately set out to maintain the practice across school years, weather, and competing pressures
+
+  children.wellbeing:
+    pbs: 6
+    isr: 65
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, child wellbeing plausibly reaches the 60th--65th percentile via stronger physical activity, better sleep, more peer connection, and reduced screen exposure. Delta: ~25--30 percentile points.
+      - [Reviews of green space and mental health in children](https://pubmed.ncbi.nlm.nih.gov/30308566/) find lower rates of attention difficulties, anxiety, and depression in children with higher outdoor exposure, with effects observed across socioeconomic strata
+      - Score 6 reflects a meaningful gain through several converging mechanisms (activity, sleep, social, sunlight, screen displacement) rather than one large channel
+    isr_reasoning: |
+      - The wellbeing benefit operates through multiple mediators, each independently supported but each introducing variability; the combined effect is reliable across most children but with substantial individual variation
+      - For children with significant mental-health conditions, outdoor play contributes but does not substitute for clinical care
+      - ISR of 65% reflects that most children in adherent families see noticeable wellbeing benefit, with the variance driven by neighbourhood, peer access, and child temperament
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile
+
+  fitness.health:
+    pbs: 5
+    isr: 60
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, the child plausibly accumulates 6 -- 12 months of additional healthy lifespan via improved childhood fitness, lower obesity risk, and stronger cardiometabolic foundations carried into adulthood. Delta: ~15--20 percentile points.
+      - [Cross-sectional research on children's outdoor time and physical activity](https://pubmed.ncbi.nlm.nih.gov/23332329/) finds that each additional outdoor hour translates to substantially more moderate-to-vigorous physical activity than indoor time, with effects on cardiorespiratory fitness, body composition, and bone health
+      - Using the log formula on the fitness.health anchor (10 = 15 years): ~9 months ≈ 0.75 years; PBS = 10 + log₂(0.75/15) = 5.7, rounded to 5. The benefit is real but bounded – childhood physical activity is one of several lifetime health inputs, not the dominant one
+    isr_reasoning: |
+      - The fitness benefit is mechanistically reliable when daily outdoor play actually produces moderate-to-vigorous activity; sedentary outdoor time (sitting in the garden) delivers less of the effect
+      - [Long-term tracking studies](https://pubmed.ncbi.nlm.nih.gov/24684783/) find that childhood fitness moderately predicts adult cardiometabolic health, but the carry-over depends on continued activity in adolescence and adulthood
+      - ISR of 60% reflects that most children accumulating outdoor activity see fitness gains, with a meaningful subset whose outdoor time is too sedentary to deliver the benefit
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile
+
+  mental-health.stability:
+    pbs: 5
+    isr: 55
+    uar: 30
+    confidence: low
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, child emotional stability plausibly reaches the 55th--60th percentile via daylight exposure, physical activity, peer interaction, and reduced screen time – all separately associated with mood and anxiety regulation in children. Delta: ~20--25 percentile points.
+      - [Reviews of green space and mental health](https://pubmed.ncbi.nlm.nih.gov/30308566/) find lower rates of attention difficulties, anxiety, and depression in children with higher outdoor exposure; [research on screen displacement](https://pubmed.ncbi.nlm.nih.gov/30595663/) finds dose-response relationships between screen time and mood symptoms in older children and adolescents
+      - Score 5 reflects a real but indirect effect – stability is a downstream beneficiary of the more direct development and wellbeing pathways
+    isr_reasoning: |
+      - The mental-health benefit operates through several mediators (sunlight, activity, peer connection, sleep), each separately supported but jointly variable
+      - For children with diagnosed mental-health conditions, outdoor play contributes alongside but does not replace clinical intervention
+      - ISR of 55% reflects modest reliability across the adherent population, with effects most visible in children whose baseline screen exposure was high
+    uar_reasoning: |
+      - See children.development UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost required. Most households already have sufficient outdoor clothing for the practice. Some families invest in better wet-weather gear ($30 -- 80 per child) to support adherence in poor weather, but this is optional."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The intervention uses public outdoor space (gardens, streets, parks) that does not charge per use. Some families choose to live in higher-walkability neighbourhoods to support the practice, but housing decisions are out of scope for this intervention."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 1 hour to map the available outdoor spaces near home, identify potential peer connections (neighbour children, school friends nearby), and decide on the daily slot and supervision policy by age."
+  ongoing_time: 0
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "The 60+ daily minutes are the child's time, not the parent's. For young children requiring some line-of-sight supervision, parental time involvement is roughly equal to the play duration but typically substitutes for indoor supervision time rather than adding to it. For school-age children with growing independence, parental time approaches zero."
+
+prerequisites:
+  - "Caregiving role with regular daily access to a child (parent, primary guardian, or full-time caregiver)"
+  - "Access to safe outdoor space – a garden, accessible park, or low-traffic street – within walking distance of home"
+  - "Reasonable peer availability for school-age children, since unstructured play depends substantially on having other children to play with"
+  - "Willingness to tolerate age-appropriate risk including minor scrapes, falls, and unsupervised time as the child ages"
+
+flagged_domains:
+  - domain: "sleep"
+    rationale: "Outdoor light exposure and physical activity reliably advance circadian rhythm and improve sleep onset and depth in children; effect mechanistically clear but unscored here"
+  - domain: "behaviours"
+    rationale: "Reduced screen exposure, especially for older children, is associated with reduced compulsive screen-checking patterns; outdoor play directly displaces the alternative"
+  - domain: "friendship"
+    rationale: "Unstructured peer play in outdoor settings is one of the highest-quality contexts for childhood friendship development; effect operates through repeated low-stakes peer interaction"

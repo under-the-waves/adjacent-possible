@@ -1,0 +1,101 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Implementation Intentions"
+what_it_is: |
+  A simple but heavily evidenced planning technique in which a person formulates explicit "if situation X arises, then I will do Y" plans in advance of the moment of action. The structure pairs a concrete cue (a time, a location, an internal state, an interrupting event) with a concrete response, so that the cue itself triggers the intended behaviour rather than relying on remembering or deciding in the moment. The technique was introduced and refined over three decades of laboratory and field work, with [a meta-analysis of 94 studies](https://psycnet.apa.org/doiLanding?doi=10.1016%2FS0065-2601%2806%2938002-1) finding a medium-to-large effect (d = 0.65) on goal attainment across diverse domains – exercise initiation, dietary change, screening behaviours, study habits, voting turnout, and more. Distinct from [habit stacking](/resources/intervention-database/habit-stacking) (which specifically anchors a new behaviour to an existing habit), from [eliminating micro-decisions](/resources/intervention-database/eliminating-micro-decisions) (which removes recurring low-stakes choices entirely), and from generic goal-setting (which specifies what but not when or where). Implementation intentions specify the where/when/how triggering condition for any goal-relevant action.
+how_to_do_it: |
+  - Pick one specific goal-relevant behaviour you keep meaning to do but often fail to enact at the right moment. Examples: "respond to emails within 24 hours", "take the medication", "go to the gym", "speak up in meetings when I disagree".
+  - Identify the precise critical situation in which that behaviour should occur. Specify time, location, or internal/external trigger as concretely as possible: "Monday and Thursday at 5:30pm", "as soon as I open my inbox", "the moment I notice my heart rate rise in a meeting", "when I finish brushing my teeth".
+  - Write the plan in the canonical "If [situation], then I will [behaviour]" form. The "if" half should be a single, recognisable cue; the "then" half should be a single, immediate, executable action. "If it is 7am on a weekday, then I will put on my running shoes" beats "I will exercise more often."
+  - For goals likely to face obstacles, add a coping plan in the same form: "If I feel too tired to run, then I will walk for 10 minutes instead." [Coping-plan research](https://www.tandfonline.com/doi/abs/10.1080/08870440902939852) finds these obstacle-paired plans further protect goal pursuit beyond the basic action plan.
+  - Rehearse the plan mentally a few times after writing it – several studies suggest the cognitive link between cue and response strengthens with brief mental simulation, contributing to the automaticity that gives the technique its power.
+success_looks_like: |
+  - When the trigger situation arises, the planned behaviour starts before deliberate decision – your hand reaches for the running shoes when the alarm goes off rather than weighing whether to run today
+  - Goal-relevant behaviours that previously depended on willpower or memory now happen reliably in the cued situations
+  - Failure modes shift from forgetting or deciding-not-to-act toward situations the plan didn't anticipate, which become input for revising the plan
+common_pitfalls: |
+  - Specifying the cue too vaguely ("when I have time", "when I feel like it") so no concrete situation reliably triggers the action; the cue must be something you would notice without trying
+  - Specifying the response too vaguely ("I will exercise") rather than the smallest immediately-executable first action ("I will put on my running shoes and walk to the door"); ambiguous responses leave room for delay
+  - Writing too many implementation intentions at once. The cue-response link strengthens through repetition, and competing plans dilute the effect; most evidence comes from studies plan one or two behaviours at a time
+  - Treating the plan as a one-off mental note. The protective effect depends on rehearsal and consistency; lapsed plans require re-articulation in the same form rather than vague recommitment
+description: |
+  - A simple, well-evidenced technique for closing the intention-behaviour gap by writing explicit "If situation X, then I will do Y" plans in advance, so the specified cue triggers the intended action without further deliberation
+  - [Meta-analysis of 94 studies](https://psycnet.apa.org/doiLanding?doi=10.1016%2FS0065-2601%2806%2938002-1) (N ≈ 8,000) found a medium-to-large effect on goal attainment (d = 0.65), one of the most robust effects in self-regulation research, replicated across health, academic, occupational, and prosocial behaviours
+  - Mechanism is well-characterised: the planning act creates a strong cognitive association between the situational cue and the intended response, making behaviour initiation more automatic and less dependent on conscious effort or motivation in the moment ([Gollwitzer & Oettingen, 2011](https://www.sciencedirect.com/science/article/abs/pii/B9780123750006000124))
+  - Distinct from [habit stacking](/resources/intervention-database/habit-stacking) (which specifically uses an existing habit as the cue, suiting routine micro-behaviours) and from [eliminating micro-decisions](/resources/intervention-database/eliminating-micro-decisions) (which removes the choice point entirely); implementation intentions cover the broader space of any if-then plan attached to any cue, including non-routine ones such as obstacles, opportunities, or emotional states
+applicable_domains: ["habits", "goals", "time-management"]
+
+values:
+  habits.consistency:
+    pbs: 7
+    isr: 60
+    uar: 50
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding to ~40% daily adherence. After successful adoption of implementation intentions, a user could plausibly reach 65–75% daily adherence over a 3-month window (between scale levels 6 and 8). Delta on the 100-point anchor: ~25–35 percentage points.
+      - PBS = 10 + log₂(30/100) = 10 − 1.74 = 8.3, which rounds toward 8 but is held to 7 because consistency gains plateau as competing demands and life disruptions absorb the planned cues.
+      - The [Gollwitzer & Sheeran (2006) meta-analysis](https://psycnet.apa.org/doiLanding?doi=10.1016%2FS0065-2601%2806%2938002-1) reports d = 0.65 across 94 studies on goal attainment, a substantial effect that translates into the order-of-magnitude consistency gains described above when applied to a maintained behaviour.
+    isr_reasoning: |
+      - Of users who properly formulate and rehearse if-then plans, the [meta-analytic effect](https://psycnet.apa.org/doiLanding?doi=10.1016%2FS0065-2601%2806%2938002-1) (d = 0.65) implies approximately 60% of correctly-formed plan-users achieve meaningful behavioural follow-through on the targeted action.
+      - The remaining ~40% fail because the cue specified does not arise as anticipated, the response specified turns out not to be executable in the cue context, or competing demands override the cued response. [Adriaanse et al. (2011) review](https://www.sciencedirect.com/science/article/abs/pii/S0195666310003533) notes that effects are weaker for behaviours requiring complex preparation than for self-regulation of simple actions.
+      - ISR of 60% reflects the strong but bounded mechanism reliability; well-formed plans for simple cued actions reliably produce the intended response, while plans for complex or context-sensitive actions have lower hit rates.
+    uar_reasoning: |
+      - Implementation intentions require minimal time investment per plan (under 5 minutes to formulate), but sustained use depends on continued plan articulation as new behaviours are targeted. A [field study on planning interventions](https://psycnet.apa.org/record/2008-09257-002) found that participants who continued to formulate plans across multiple goals showed sustained benefits, while those who tried it once and stopped reverted toward baseline.
+      - The technique is taught in many self-help and health-promotion contexts but rarely adopted as a standing personal practice. Realistic UAR for sustained use across multiple behaviours over 12 months is approximately 50%, reflecting the gap between trying it once and making it a default planning habit.
+      - Compared to ongoing tracking or coaching interventions, implementation intentions have very low ongoing cost, which raises adherence relative to higher-cost techniques but is not enough to push the rate above ~50% given the absence of any external accountability scaffolding.
+
+  goals.follow_through:
+    pbs: 7
+    isr: 60
+    uar: 50
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Implementation intentions act directly on the intention-behaviour gap, increasing the proportion of days on which a deliberate goal action occurs. Plausible endpoint: 60th–70th percentile, with users closing many of the small gaps where good intentions previously failed to translate into action. Delta: ~25–35 percentile points.
+      - The [Gollwitzer & Sheeran (2006) meta-analysis](https://psycnet.apa.org/doiLanding?doi=10.1016%2FS0065-2601%2806%2938002-1) finds the largest effects specifically on goal striving (d = 0.65 to d = 0.79 depending on subset), with the effect strongest where the intention-behaviour gap is widest – exactly the population this anchor is calibrated against.
+      - Score 7 rather than 8 because implementation intentions cover only the goal-action steps a user has thought to plan for; goals with shifting or unforeseen action requirements remain partially exposed to the gap.
+    isr_reasoning: |
+      - [Bélanger-Gravel et al. (2013) systematic review of physical activity](https://www.tandfonline.com/doi/abs/10.1080/17437199.2011.560095) found implementation intentions produced small-to-medium effects on action initiation (d ≈ 0.31) in real-world settings, somewhat below laboratory effect sizes – the gap reflects implementation quality, not mechanism failure.
+      - For goals with clear cues and simple responses (drink water, take a pill, send an email), success rates approach the upper end of the meta-analytic distribution; for goals with ambiguous cues (be more assertive, work harder), success rates drop substantially.
+      - ISR of 60% reflects the average across these regimes – reliable for well-cued behaviours, less so when cues are vague or responses complex.
+    uar_reasoning: |
+      - See habits.consistency UAR – same intervention, same adherence profile.
+
+  time-management.productivity:
+    pbs: 6
+    isr: 55
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile, corresponding to ~50% of planned tasks completed on time. After successful adoption, a user could plausibly reach 65–75% on-time completion (between scale levels 6 and 8). Delta on the 100-point anchor: ~15–25 percentage points.
+      - PBS = 10 + log₂(20/100) = 10 − 2.32 = 7.7 in raw form, but score 6 is more appropriate because implementation intentions reliably help with task initiation – the most common failure mode – without addressing estimation, prioritisation, or interruption management.
+      - [Studies on workplace planning interventions](https://psycnet.apa.org/record/2002-05273-007) find moderate effects of structured if-then plans on task completion in office settings, supporting a meaningful but bounded productivity gain.
+    isr_reasoning: |
+      - Effects on workplace task completion are smaller and noisier than on health behaviours, partly because office goals are more ambiguous and partly because task-context cues are less stable. [Bayer & Gollwitzer (2007)](https://psycnet.apa.org/record/2007-19115-008) found smaller effects in academic and occupational domains than in health.
+      - For productivity specifically, implementation intentions help most with task initiation and least with deep-work concentration; users whose primary failure is starting tasks see large gains, while those whose primary failure is sustaining attention see modest ones.
+      - ISR of 55% reflects the genuine but smaller and more variable effect on workplace productivity outcomes specifically.
+    uar_reasoning: |
+      - See habits.consistency UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost. Plans can be written in any existing notebook, document, or note-taking app. Optional reading (e.g. Gollwitzer's papers, popular books summarising the evidence) is freely available online."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The technique uses paper, pen, or any existing digital tool the user already owns."
+  upfront_time: 1
+  upfront_time_reasoning: "Approximately 1 hour to learn the technique from a primary source (a Gollwitzer & Sheeran summary or BJ Fogg-adjacent treatment), draft 3–5 initial if-then plans for high-priority behaviours, and rehearse them once."
+  ongoing_time: 0.25
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Approximately 10–15 minutes per week to articulate or revise plans for new or persisting goal behaviours. Once formed, individual plans require no ongoing time; the cost is in the articulation moment, not the execution."
+
+prerequisites:
+  - "Basic literacy and the ability to articulate a specific situational cue and a specific response in writing"
+  - "At least one identified goal-relevant behaviour that the user has previously failed to enact reliably despite intending to"
+  - "A consistent way to record plans (notebook, app, document) so they can be re-read or refined over time"
+
+flagged_domains:
+  - domain: "self-awareness"
+    rationale: "Articulating implementation intentions surfaces the specific situational triggers and obstacles that previously caused intentions to fail – a form of behavioural self-knowledge"
+  - domain: "behaviours"
+    rationale: "Once 'behaviours' as a life area has scoring anchors, implementation intentions will likely qualify across multiple sub-values given their broad behaviour-change effects"

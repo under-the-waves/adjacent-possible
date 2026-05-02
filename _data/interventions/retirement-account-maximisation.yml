@@ -1,0 +1,121 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Tax-Advantaged Retirement Account Maximisation"
+what_it_is: |
+  A specific, repeatable annual practice of maximising contributions to tax-advantaged retirement and savings accounts in a fixed priority order, year after year, until the highest-priority buckets are full before any taxable saving begins. The waterfall typically runs: capture the full employer match in workplace retirement plans first (a 100% immediate return on the matched portion), then max any health-savings vehicle that doubles as a long-term retirement account, then max core tax-advantaged retirement contributions, then taxable accounts. Distinct from [basic tax optimisation](/resources/intervention-database/basic-tax-optimisation) (broader principles for using tax wrappers across saving and investing) and [automated savings](/resources/intervention-database/automated-savings) (the mechanism for moving money): this is the specific habit of running the priority-stack annually so that the highest-leverage tax buckets fill before any dollar lands in lower-leverage ones. The compounding effect over a working career is large – the difference between an under-optimised and a fully optimised contribution pattern over 30 years is typically 30 -- 50% of terminal wealth, with the bulk of the gap coming from missed employer matches and unused early-career allowance.
+how_to_do_it: |
+  - Map the priority stack for your jurisdiction. In most systems with comparable instruments, the stack is: (1) workplace retirement plan up to the full employer match – this is "free money" with an immediate ~100% return; (2) any tax-advantaged health-savings vehicle that allows long-horizon investment; (3) core tax-advantaged retirement contributions to the annual limit; (4) taxable brokerage accounts for any saving beyond the limits
+  - Calculate the annual dollar figure required to max each bucket. Most contribution limits adjust annually with inflation, so re-check at the start of each tax year
+  - Set the contributions to flow automatically. For workplace retirement plans, this means a percentage of pay deducted pre-tax from each payslip; for self-directed retirement and health-savings accounts, set monthly automatic transfers timed so the full annual limit is hit before the deadline. Pair with [automated savings](/resources/intervention-database/automated-savings) for the mechanism
+  - Run a once-yearly review – ideally three months before the tax-year deadline – to confirm contributions are on track, increase percentages after pay rises, and use any catch-up provisions if eligible. Most working-age users find the review takes 30 -- 60 minutes once the system is set up
+  - On a pay rise, increase the workplace retirement contribution percentage immediately rather than letting the increase land in lifestyle. [Save More Tomorrow research](https://doi.org/10.1086/380085) found that pre-committing to escalate contributions on pay rises is one of the highest-leverage adjustments available, lifting savings rates from ~3% to ~14% over a few years
+  - Roll over old workplace retirement accounts when changing jobs. Stranded small accounts in former employers' plans accumulate fees and are easily forgotten; consolidating them into a self-directed retirement account every job change keeps the system legible and minimises drag
+success_looks_like: |
+  - Every year, you contribute the full employer match plus the full annual limits on your highest-priority tax-advantaged accounts before any dollar enters a taxable account
+  - Your contribution rate has automatically tracked pay rises so that lifestyle inflation has not eroded the savings rate
+  - You can quote, from memory, the priority order and current limits for your two or three highest-leverage accounts
+  - After 10+ years of consistent practice, you can see the compounding effect – the tax-advantaged balance compounding faster than your taxable balance per dollar contributed
+common_pitfalls: |
+  - Leaving the employer match unclaimed – the most common large mistake, since the match is typically a 50 -- 100% immediate return that compounds for the rest of working life
+  - Treating "saving for retirement" as one undifferentiated activity rather than as a priority stack. Every dollar that enters a taxable account before the highest-leverage tax wrappers are full is a structural inefficiency
+  - Letting contributions stay flat after pay rises. Without pre-commitment, the typical pattern is for the saving rate to drift toward the original starting percentage of a smaller salary, not the current percentage of a larger one
+  - Ignoring health-savings vehicles where they exist and double as retirement accounts. The triple-tax-advantaged structure of these accounts (deductible contributions, tax-free growth, tax-free qualified withdrawals) often makes them higher-leverage than core retirement accounts, and they are routinely under-used
+  - Missing the deadline. Most contribution limits cannot be carried forward; an unused year is permanently lost capacity
+description: |
+  - An annual habit of running a fixed priority order through tax-advantaged retirement and savings buckets – employer match, health-savings vehicles, core retirement contributions, taxable saving – maxing each in turn before moving to the next
+  - The structural difference between under-optimised and fully optimised contribution patterns is large: [Vanguard analysis of contribution decisions](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) finds many participants leave employer match on the table or under-contribute relative to limits, with substantial impact on terminal wealth
+  - [Save More Tomorrow research](https://doi.org/10.1086/380085) demonstrated that pre-committing to escalate contributions on pay rises lifted savings rates from ~3% to ~14% over a few years, with persistence rates above 80%
+  - The tax-advantaged wrappers themselves provide compounding benefits well documented in [pension and retirement-account research](https://ifs.org.uk/publications/who-gains-pensions-tax-relief): typical 30-year terminal-wealth uplifts of 20 -- 40% over identical taxable saving
+  - Distinct from broader basic tax optimisation (which covers all tax wrappers including non-retirement instruments) and from automated savings (which is the mechanism for moving money): this is the specific annual practice of running the priority-stack on retirement-flagged saving
+applicable_domains: ["investing", "saving"]
+
+values:
+  investing.growth:
+    pbs: 6
+    isr: 90
+    uar: 40
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 55th--65th percentile on the long-term-wealth anchor – the priority-stack discipline plus full annual contributions plus pay-rise escalation produces meaningfully higher terminal wealth than under-optimised patterns. Delta: ~20--30 percentile points.
+      - On a $10,000 starting basis growing for 30 years, the combination of (a) capturing employer match, (b) tax-free or tax-deferred compounding, and (c) escalating contributions via Save More Tomorrow-style pre-commitment pushes terminal wealth well above the $156k score-4 anchor toward the $625k score-6 territory for typical earners – the leverage compounds across all three components
+      - Score 6 reflects that the maximisation practice meaningfully accelerates wealth accumulation but is bounded by underlying market returns – it is a multiplier on the saving behaviour, not a substitute for sustained saving
+    isr_reasoning: |
+      - The mechanism is mathematically reliable when the contributions actually happen: tax relief, employer match, and tax-free compounding deliver their stated benefits with near-certainty for as long as the regimes persist. [IFS analysis of pension tax relief](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) confirms the compounding mathematics deliver consistently
+      - [Vanguard's How America Saves data](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) shows that participants who max contributions accumulate substantially more wealth than those who do not, with the gap widening over time
+      - ISR of 90% reflects near-certain benefit delivery for those who actually run the system, with small discounts for sequence-of-returns risk and long-term policy risk on retirement instruments
+    uar_reasoning: |
+      - The discipline of running the priority stack annually requires more active management than passive automation – allowance recalculations, percentage adjustments after pay rises, deadline awareness
+      - [Vanguard data](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) consistently shows that the majority of participants contribute below the maximum allowed and leave employer match partially unclaimed; sustained year-on-year maxing is a minority practice
+      - UAR of 40% reflects that initial setup is common but sustained annual maximisation across the priority stack is achieved by a meaningful but not dominant minority
+
+  investing.simplicity:
+    pbs: 5
+    isr: 80
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 50th--55th percentile in their progress toward financial independence. Delta: ~15--20 percentile points.
+      - The priority-stack discipline accelerates FI progress because every dollar saved compounds at a higher post-tax rate; the employer-match component is particularly large because it is essentially additional savings rate the user does not have to fund themselves
+      - Score 5 reflects that the practice meaningfully accelerates FI but adds modest administrative complexity (annual limit tracking, deadline awareness, occasional rollovers) that works against the simplicity anchor – the trade-off is favourable but not pure
+    isr_reasoning: |
+      - The FI-acceleration pathway is mathematically reliable for sustained adherents
+      - The retirement-account portion has access constraints (typically locked until mid-50s in most jurisdictions) that misalign with early-FI timelines, slightly reducing the simplicity-of-FI-path benefit for that subgroup
+      - ISR of 80% reflects high reliability of the acceleration mechanism with the access-timing caveat for early-FI seekers
+    uar_reasoning: |
+      - See investing.growth UAR – same intervention, same adherence profile
+
+  saving.growth:
+    pbs: 7
+    isr: 90
+    uar: 40
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 65th--75th percentile on the % of gross income saved anchor. Delta: ~30--40 percentile points.
+      - The combination of employer-matched contributions plus pre-tax retirement contributions plus pay-rise escalation typically lifts effective gross savings rate from ~3 -- 6% to ~12 -- 18% – mapping to the 12 -- 13% anchor at score 8 with room above. [Save More Tomorrow research](https://doi.org/10.1086/380085) documented exactly this trajectory in adherent populations
+      - Score 7 reflects a major gain in savings rate that is bounded by income level and personal commitment to actually use the available capacity – the system enables a high savings rate but does not enforce one
+    isr_reasoning: |
+      - The savings-rate mechanism is mechanically reliable when the system is run – tax relief and employer match raise the effective rate above the contributed rate with near-certainty
+      - [Vanguard data](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) shows consistent realisation of these benefits in plans that participants actually maximise
+      - ISR of 90% reflects near-certain benefit delivery for adherents
+    uar_reasoning: |
+      - See investing.growth UAR – same intervention, same adherence profile
+
+  saving.security:
+    pbs: 4
+    isr: 70
+    uar: 40
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 45th--50th percentile in months of emergency fund. Delta: ~10--15 percentile points.
+      - The intervention is not directly aimed at emergency-fund building – most retirement contributions are explicitly long-horizon and not accessible without penalty for emergency use. However, by raising effective savings rate it indirectly increases the user's overall capacity to also build accessible emergency reserves alongside
+      - Score 4 reflects a real but small indirect benefit on the emergency-fund anchor specifically, since the protocol prioritises long-horizon over accessible saving by design
+    isr_reasoning: |
+      - The indirect emergency-fund pathway depends on the user maintaining a separate accessible emergency-fund habit alongside retirement maximisation; this is not automatic and many high-earning maximisers neglect their accessible reserves
+      - ISR of 70% reflects modest reliability of the indirect pathway for users who deliberately maintain both flows
+    uar_reasoning: |
+      - See investing.growth UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost required. Opening the relevant tax-advantaged accounts is free with most providers, and standard retirement-plan enrollment is free through employers. Optional paid financial advice ($300 -- 1,500 for a one-time review) can be useful for users with complex situations but is not required for the minimum-viable practice."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No direct cost to maintaining the priority-stack discipline. Underlying account fees (typically 0.05 -- 0.5% of balance) exist but are attributable to the underlying investing activity, not to the maximisation practice itself."
+  upfront_time: 6
+  upfront_time_reasoning: "Approximately 4 -- 8 hours: researching the tax-advantaged instruments available in the user's jurisdiction (1 -- 2 hours), determining the priority stack and current limits (1 -- 2 hours), opening any missing accounts and configuring contributions (2 -- 3 hours), and setting calendar reminders for annual review (~30 minutes)."
+  ongoing_time: 1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Approximately 30 -- 60 minutes per month averaged across the year, with effort concentrated around the annual review (~1 -- 2 hours), pay-rise escalations (~30 minutes per event), and occasional account-rollover events when changing jobs (~2 -- 4 hours, infrequent)."
+
+prerequisites:
+  - "Tax residency in a jurisdiction with tax-advantaged retirement instruments (most developed economies qualify)"
+  - "Stable income sufficient to cover essential expenses with margin available for retirement-flagged saving above any employer match"
+  - "Access to online banking and investment platforms that offer the relevant tax-advantaged accounts in the user's country"
+  - "For employer-match capture: employment with an employer offering a retirement-plan match (an alternative pathway exists for self-employed users, but the priority-stack details differ)"
+
+flagged_domains:
+  - domain: "financial-planning-tracking"
+    rationale: "Running the priority-stack discipline requires routine tracking of contribution percentages, annual limits, and deadlines, which strengthens the user's overall financial-planning practice as a side-effect"
+  - domain: "mental-health"
+    rationale: "Confidence that long-term retirement saving is on track plausibly reduces background financial anxiety, particularly for users approaching mid-career when retirement-readiness becomes salient"

@@ -1,0 +1,121 @@
+evaluated_at: 2026-05-02
+evaluated_by: claude-opus-4-7
+prompt_sha: a48aaee
+name: "Sinking-Fund System"
+what_it_is: |
+  A budgeting practice of pre-funding predictable irregular expenses through named savings sub-accounts (or sub-categories within a single account), with each contributing a small monthly amount that accumulates between events. Typical sinking funds: car maintenance and repairs, holidays, annual insurance premiums, gifts, electronics replacement, home maintenance, professional development, medical or dental out-of-pocket costs, vehicle replacement. The mechanism converts irregular expense surprises – which most households experience as chronic financial stress and frequent emergency-fund raids – into a routine monthly outflow that matches the actual long-run cost of being a normal adult. Distinct from a [budgeting app](/resources/intervention-database/comprehensive-budgeting-app) (which provides visibility on past spending) and [automated savings](/resources/intervention-database/automated-savings) (which moves money but does not allocate it by purpose): this intervention is specifically about pre-allocating the saving against named upcoming expenses, so each predictable cost has a dedicated container that fills steadily and depletes as needed. The practice is the financial-planning side of the equation; the automated-transfers mechanism is its natural pairing.
+how_to_do_it: |
+  - List every irregular expense from the past 12 -- 24 months: car repairs, MOTs and registrations, holidays, gifts, insurance premiums, replacement appliances, dental and medical out-of-pocket, professional fees, subscriptions billed annually. Aim for completeness; missing categories are where the system breaks down later
+  - For each category, calculate the monthly equivalent: total expected annual spend ÷ 12. Anchor the figure to actual past spending plus a modest upward adjustment for inflation and surprises – under-funding is the most common error
+  - Open a dedicated savings sub-account for each major category, or use a single account with named sub-categories (most modern banking apps support this with "spaces", "pots", or "envelopes" features). The named separation is what makes the system work psychologically – an undifferentiated "savings" pool feels like rainy-day money and gets raided
+  - Set up automated monthly transfers into each sub-account on a fixed date – ideally the day after pay arrives, before discretionary spending begins. Pair with [automated savings](/resources/intervention-database/automated-savings) for the mechanism
+  - When an irregular expense arrives, draw from the relevant sinking fund. The car repair bill comes out of the car-maintenance pot; the holiday is paid from the holiday pot. The cash-flow shock is absorbed by the pre-funding rather than by the emergency fund or by debt
+  - Review and recalibrate every 6 -- 12 months. Categories that underspent can have monthly contributions reduced; categories that overspent need an increase. The first 12 -- 18 months tend to require the most adjustment as actual costs surface
+success_looks_like: |
+  - Annual surprises – car breakdowns, dental work, replacing the broken appliance – feel routine rather than catastrophic; the funds for them already exist in their named pots
+  - Your true emergency fund stops being depleted by predictable irregular expenses and is reserved for genuine emergencies (job loss, major medical events)
+  - You stop using credit cards or short-term debt to bridge irregular expenses, eliminating a meaningful interest cost over the year
+  - Your monthly cash flow looks more even because the predictable lumpy outflows have been smoothed into routine monthly transfers
+common_pitfalls: |
+  - Lumping everything into one "savings" account. The named separation is the active ingredient; an undifferentiated pool gets used as a slush fund and the discipline breaks down
+  - Under-funding the categories based on optimistic recall of past spending. Most people significantly under-estimate annual car, gift, and home-maintenance costs; the system fails when funds run dry mid-year
+  - Letting unused balances accumulate indefinitely without rebalancing. A holiday fund with three years of contributions sitting in it represents capital that should be working harder; review and rebalance annually
+  - Confusing sinking funds with the emergency fund. The emergency fund is for genuinely unpredictable shocks (job loss, major illness); sinking funds are for predictable irregular expenses. Combining them defeats both purposes
+  - Failing to actually draw from the relevant pot when the expense arrives, paying from current cash flow instead, and leaving the pot to accumulate. This is a soft form of the "lump sum savings" problem – the money is technically allocated but not actually buffering anything
+description: |
+  - A budgeting practice of pre-funding predictable irregular expenses through named savings sub-accounts, each contributing a fixed monthly amount that accumulates between events and depletes as the expense arrives
+  - [Behavioural research on mental accounting](https://academic.oup.com/jcr/article/35/3/543/1844349) finds that explicit category-level mental accounts strongly influence subsequent spending decisions and increase the probability of money being used for its intended purpose
+  - [Survey research on household financial fragility](https://www.federalreserve.gov/publications/files/2023-report-economic-well-being-us-households-202405.pdf) finds that a substantial fraction of adults cannot cover a $400 emergency expense from cash, with much of this fragility driven by predictable irregular expenses (car repairs, medical bills, school costs) consuming what would otherwise be emergency reserves
+  - [Research on envelope and bucket budgeting systems](https://onlinelibrary.wiley.com/doi/10.1111/joca.12283) finds that explicit category separation reduces overspending and increases savings accumulation in adherent users compared to undifferentiated saving
+  - Distinct from a budgeting app (which tracks past spending), automated savings (which moves money), and the emergency fund (which addresses unpredictable shocks): the sinking-fund system specifically pre-funds predictable irregular expenses by named purpose
+applicable_domains: ["financial-planning-tracking", "saving", "mental-health"]
+
+values:
+  financial-planning-tracking.insight:
+    pbs: 7
+    isr: 75
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 70th--75th percentile in actionable financial insight. Delta: ~35--40 percentile points.
+      - The act of building the system requires the user to surface and quantify every irregular expense category – which most households have only a vague mental model of. The system then produces ongoing insight as actual spend reveals which categories were under- or over-estimated
+      - Score 7 reflects a major gain in actionable financial insight – the user moves from "I have no idea what my real annual costs are" to "I know what my true cost-of-living is, including the lumpy categories", which is one of the most consequential financial-knowledge upgrades available
+    isr_reasoning: |
+      - The insight benefit is mechanistically direct: the setup process forces explicit calculation of category-level annual costs, and the recurring rebalancing surfaces deviations from forecast
+      - [Research on mental accounting](https://academic.oup.com/jcr/article/35/3/543/1844349) supports the reliability of category-level explicit tracking in changing financial decision-making
+      - ISR of 75% reflects high reliability of the insight outcome for adherent users
+    uar_reasoning: |
+      - The setup phase is moderately demanding – calculating monthly equivalents for 8 -- 15 categories, opening sub-accounts, configuring transfers – but the ongoing maintenance is low
+      - [Research on personal-finance-system adoption](https://onlinelibrary.wiley.com/doi/10.1111/joca.12283) finds that envelope and bucket systems have moderate sustained adherence (40 -- 60% at one year) when initial setup is completed
+      - UAR of 50% reflects realistic long-term adherence – the system is more sustainable than effortful continuous budgeting because the work is front-loaded into setup, but a meaningful subset of users let the system erode through skipped rebalancing or sub-account consolidation
+
+  saving.security:
+    pbs: 6
+    isr: 75
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 60th--65th percentile in months of emergency fund preserved. Delta: ~25--30 percentile points.
+      - The mechanism here is indirect but real: by pre-funding predictable irregular expenses, the user stops draining the emergency fund every time the car breaks or the dentist visits, which preserves the actual emergency-fund balance for genuine emergencies
+      - Score 6 reflects that the security gain comes through protecting the emergency fund rather than building it directly – meaningful but secondary to the financial-planning insight benefit
+    isr_reasoning: |
+      - The mechanism is mechanically reliable when the system is run: irregular expenses get paid from sinking funds, leaving the emergency fund intact for genuine emergencies
+      - [Research on household financial fragility](https://www.federalreserve.gov/publications/files/2023-report-economic-well-being-us-households-202405.pdf) supports the underlying claim that predictable irregular expenses are a major drain on emergency reserves in many households
+      - ISR of 75% reflects high reliability of the security-preservation effect for adherent users
+    uar_reasoning: |
+      - See financial-planning-tracking.insight UAR – same intervention, same adherence profile
+
+  saving.lifestyle:
+    pbs: 5
+    isr: 70
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 50th--55th percentile in months of liquid reserves. Delta: ~15--20 percentile points.
+      - The total liquid reserves (emergency fund + accumulated sinking-fund balances) is meaningfully higher than either component alone for users who would otherwise have left those amounts unsaved or in cash flow
+      - Score 5 reflects a modest but real improvement in liquid lifestyle reserves, bounded by the fact that the sinking-fund balances are pre-allocated to specific upcoming expenses rather than freely available
+    isr_reasoning: |
+      - The liquidity benefit is reasonably reliable for users who deliberately keep sinking funds in accessible accounts; locking them in fixed-term products would defeat the system
+      - ISR of 70% reflects modest reliability with the caveat that sinking-fund accumulation produces accessible-but-allocated reserves, not freely-deployable lifestyle capital
+    uar_reasoning: |
+      - See financial-planning-tracking.insight UAR – same intervention, same adherence profile
+
+  mental-health.stability:
+    pbs: 6
+    isr: 60
+    uar: 50
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After sustained adherence, a user plausibly reaches the 60th--65th percentile in day-to-day emotional steadiness via reduced financial-shock anxiety. Delta: ~25--30 percentile points.
+      - Predictable irregular expenses are a major driver of chronic financial stress in many households – the dread of the next car repair or annual insurance bill produces ambient anxiety even when the household can afford the expense. [Research on financial stress and mental health](https://pubmed.ncbi.nlm.nih.gov/30308566/) finds substantial associations between income volatility and anxiety symptoms
+      - Score 6 reflects a meaningful reduction in chronic background anxiety for adherent users, with effects most visible for users whose baseline financial worry was substantial rather than negligible
+    isr_reasoning: |
+      - The anxiety-reduction pathway operates through reduced surprise-financial-events, which is a well-documented stressor; ISR is bounded by individual variation in how much financial anxiety the user was carrying to begin with
+      - For users whose financial anxiety is driven primarily by inadequate income rather than irregular expense surprises, the protocol delivers limited benefit
+      - ISR of 60% reflects modest-to-good reliability concentrated in users for whom irregular expense unpredictability was a meaningful baseline stressor
+    uar_reasoning: |
+      - See financial-planning-tracking.insight UAR – same intervention, same adherence profile
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No financial cost required. Most modern banking apps offer named sub-accounts ('spaces', 'pots', 'envelopes', 'buckets') at no extra cost. Users without this banking feature can either open free additional savings accounts or use a budgeting app's category structure. Optional dedicated budgeting tools cost $0 -- 100 per year but are not required for the minimum-viable form."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring cost. The intervention is a budgeting structure imposed on existing accounts and transfers, not a service or subscription."
+  upfront_time: 5
+  upfront_time_reasoning: "Approximately 4 -- 6 hours: reviewing 12 -- 24 months of past spending to identify irregular expense categories (1 -- 2 hours), calculating monthly contribution amounts (1 hour), opening sub-accounts and naming them (1 hour), configuring automated transfers (1 -- 2 hours)."
+  ongoing_time: 0.5
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Approximately 15 -- 30 minutes per month for routine review of balances and any required adjustments, plus 1 -- 2 hours every 6 -- 12 months for the more substantive rebalancing review. The ongoing burden is low because most maintenance is automated."
+
+prerequisites:
+  - "Stable income sufficient to cover essential expenses with margin for sinking-fund contributions on top of any existing saving"
+  - "A bank account with online banking, ideally with sub-account or 'pots' functionality – or willingness to open additional free savings accounts to serve the same purpose"
+  - "Existing functional emergency fund or active plan to build one alongside – sinking funds complement rather than replace the emergency fund and the system relies on the distinction being maintained"
+  - "Sufficient knowledge of past spending to identify irregular expense categories – users with very limited transaction history may need to run a [budgeting app](/resources/intervention-database/comprehensive-budgeting-app) for several months first"
+
+flagged_domains:
+  - domain: "behaviours"
+    rationale: "Pre-funding predictable expenses reduces the impulse to use credit cards or short-term debt to bridge cash-flow gaps, which is a recurring low-grade compulsive behaviour pattern in some users; effect plausibly meaningful but unscored here"
+  - domain: "habits"
+    rationale: "The monthly automated contribution and 6 -- 12 month rebalancing cadence becomes a stable financial habit that complements other personal-finance routines"
