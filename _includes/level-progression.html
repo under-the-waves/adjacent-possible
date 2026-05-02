@@ -205,7 +205,7 @@ var LP_DATA = {
         var el = document.getElementById('levelProgression');
         el.style.display = '';
 
-        var h = '<h2>Level Progression</h2>';
+        var h = '<h2>Where You Sit</h2>';
 
         LP_DATA.values.forEach(function(v) {
             var cur = state[v.key] || 1;
@@ -254,7 +254,7 @@ var LP_DATA = {
         h += '<div class="lp-overall">';
         h += '<strong>Overall:</strong> ';
         h += '<span class="lp-badge" style="' + badgeStyle(overall) + '">' + LEVEL_NAMES[overall] + '</span>';
-        h += '<span class="lp-overall-note">(weighted average, rounded down)</span>';
+        h += '<span class="lp-overall-note">(weighted by your value priorities)</span>';
         h += '</div>';
 
         el.innerHTML = h;
