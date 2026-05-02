@@ -408,6 +408,16 @@ body .main-content {
     background: #e8f5e9;
 }
 
+.recommendations-table .is-edited {
+    font-style: italic;
+}
+
+.recommendations-table .is-edited::after {
+    content: ' *';
+    color: #c62828;
+    font-style: normal;
+}
+
 .habit-checkmark {
     display: inline-block;
     width: 18px;
@@ -917,14 +927,56 @@ function hideDescriptionPopup() {
     document.getElementById('descriptionPopup').classList.remove('visible');
 }
 
+function getInterventionOverrides(key) {
+    if (typeof APStorage === 'undefined') return {};
+    const all = APStorage.load('ap-intervention-overrides') || {};
+    return all[key] || {};
+}
+
+function periodToWeekly(value, period) {
+    switch (period) {
+        case 'day': return value * 7;
+        case 'week': return value;
+        case 'month': return value / 4.33;
+        case 'year': return value / 52.0;
+        default: return value;
+    }
+}
+
+function getEffectiveResources(key, base) {
+    const o = getInterventionOverrides(key);
+    const upfront_cost = o.upfront_cost != null ? o.upfront_cost : base.upfront_cost;
+    const ongoing_cost = o.ongoing_cost != null ? o.ongoing_cost : base.ongoing_cost;
+    const ongoing_cost_period = o.ongoing_cost_period || base.ongoing_cost_period;
+    const upfront_time = o.upfront_time != null ? o.upfront_time : base.upfront_time;
+    const ongoing_time = o.ongoing_time != null ? o.ongoing_time : base.ongoing_time;
+    const ongoing_time_period = o.ongoing_time_period || base.ongoing_time_period;
+
+    return {
+        upfront_cost,
+        ongoing_cost,
+        ongoing_cost_period,
+        ongoing_cost_weekly: periodToWeekly(ongoing_cost, ongoing_cost_period),
+        upfront_time,
+        ongoing_time,
+        ongoing_time_period,
+        ongoing_time_weekly: periodToWeekly(ongoing_time, ongoing_time_period),
+        upfront_cost_edited: o.upfront_cost != null,
+        ongoing_cost_edited: o.ongoing_cost != null || o.ongoing_cost_period != null,
+        upfront_time_edited: o.upfront_time != null,
+        ongoing_time_edited: o.ongoing_time != null || o.ongoing_time_period != null
+    };
+}
+
 function updateRecommendations() {
     const scored = Object.keys(interventions).map(key => {
         const i = interventions[key];
         const wbs = calculateWBS(i, currentValues);
+        const resources = getEffectiveResources(key, i.resources);
         return {
-            key, ...i, wbs,
-            timeEROI: calculateTimeEROI(wbs, i.resources.ongoing_time_weekly),
-            moneyEROI: calculateMoneyEROI(wbs, i.resources.upfront_cost, i.resources.ongoing_cost_weekly)
+            key, ...i, wbs, resources,
+            timeEROI: calculateTimeEROI(wbs, resources.ongoing_time_weekly),
+            moneyEROI: calculateMoneyEROI(wbs, resources.upfront_cost, resources.ongoing_cost_weekly)
         };
     });
 
@@ -959,10 +1011,10 @@ function updateRecommendations() {
                 </div>
             </td>
             <td class="wbs-score">${i.wbs.toFixed(1)}</td>
-            <td class="cost-cell">$${i.resources.upfront_cost}</td>
-            <td class="cost-cell">$${i.resources.ongoing_cost}/${i.resources.ongoing_cost_period}</td>
-            <td class="time-cell">${i.resources.upfront_time}h</td>
-            <td class="time-cell">${i.resources.ongoing_time}h/${i.resources.ongoing_time_period}</td>
+            <td class="cost-cell${i.resources.upfront_cost_edited ? ' is-edited' : ''}">$${i.resources.upfront_cost}</td>
+            <td class="cost-cell${i.resources.ongoing_cost_edited ? ' is-edited' : ''}">$${i.resources.ongoing_cost}/${i.resources.ongoing_cost_period}</td>
+            <td class="time-cell${i.resources.upfront_time_edited ? ' is-edited' : ''}">${i.resources.upfront_time}h</td>
+            <td class="time-cell${i.resources.ongoing_time_edited ? ' is-edited' : ''}">${i.resources.ongoing_time}h/${i.resources.ongoing_time_period}</td>
             <td class="eroi-score">${i.timeEROI.toFixed(2)}</td>
             <td class="eroi-score">${i.moneyEROI.toFixed(2)}</td>
         </tr>

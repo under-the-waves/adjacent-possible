@@ -560,6 +560,124 @@ layout: default
     font-size: 0.9em;
     color: #2e7d32;
 }
+
+.cost-edited-tag {
+    font-size: 0.78em;
+    color: #c62828;
+    font-style: italic;
+    margin-left: 4px;
+}
+
+.resource-list .cost-display.is-edited {
+    font-style: italic;
+}
+
+.cost-customise {
+    margin: -10px 0 25px 0;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.cost-customise summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: #155799;
+    list-style: none;
+    font-size: 0.95em;
+}
+
+.cost-customise summary::-webkit-details-marker {
+    display: none;
+}
+
+.cost-customise summary::before {
+    content: '\25B6 ';
+    font-size: 0.75em;
+    color: #666;
+    margin-right: 4px;
+}
+
+.cost-customise[open] summary::before {
+    content: '\25BC ';
+}
+
+.cost-form {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cost-form-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cost-form-row label {
+    min-width: 170px;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.cost-form-row input[type="number"] {
+    width: 90px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.cost-form-row select {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    background: white;
+}
+
+.cost-form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.cost-form-actions button {
+    padding: 7px 14px;
+    border: 1px solid #155799;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.cost-form-actions .cost-save-btn {
+    background: #155799;
+    color: white;
+}
+
+.cost-form-actions .cost-save-btn:hover {
+    background: #0d47a1;
+}
+
+.cost-form-actions .cost-reset-btn {
+    background: white;
+    color: #155799;
+}
+
+.cost-form-actions .cost-reset-btn:hover {
+    background: #e3f2fd;
+}
+
+.cost-form-status {
+    font-size: 0.85em;
+    color: #2e7d32;
+    margin-top: 6px;
+    min-height: 1.2em;
+}
 </style>
 
 <div class="breadcrumb">
@@ -592,11 +710,53 @@ layout: default
 
 <h2>Cost</h2>
 <ul class="resource-list">
-    <li><strong>Upfront cost:</strong> ${{ intervention.resources.upfront_cost }} <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span></li>
-    <li><strong>Ongoing cost:</strong> ${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }} <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span></li>
-    <li><strong>Upfront time:</strong> {{ intervention.resources.upfront_time }} {% if intervention.resources.upfront_time == 1 %}hour{% else %}hours{% endif %} <span class="info-icon" onclick="showReasoning('upfront-time')">i</span></li>
-    <li><strong>Ongoing time:</strong> {{ intervention.resources.ongoing_time }} {% if intervention.resources.ongoing_time == 1 %}hour{% else %}hours{% endif %}/{{ intervention.resources.ongoing_time_period }} <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span></li>
+    <li><strong>Upfront cost:</strong> <span class="cost-display" id="display-upfront-cost">${{ intervention.resources.upfront_cost }}</span><span class="cost-edited-tag" id="edited-upfront-cost" style="display:none;">(your estimate)</span> <span class="info-icon" onclick="showReasoning('upfront-cost')">i</span></li>
+    <li><strong>Ongoing cost:</strong> <span class="cost-display" id="display-ongoing-cost">${{ intervention.resources.ongoing_cost }}/{{ intervention.resources.ongoing_cost_period }}</span><span class="cost-edited-tag" id="edited-ongoing-cost" style="display:none;">(your estimate)</span> <span class="info-icon" onclick="showReasoning('ongoing-cost')">i</span></li>
+    <li><strong>Upfront time:</strong> <span class="cost-display" id="display-upfront-time">{{ intervention.resources.upfront_time }} {% if intervention.resources.upfront_time == 1 %}hour{% else %}hours{% endif %}</span><span class="cost-edited-tag" id="edited-upfront-time" style="display:none;">(your estimate)</span> <span class="info-icon" onclick="showReasoning('upfront-time')">i</span></li>
+    <li><strong>Ongoing time:</strong> <span class="cost-display" id="display-ongoing-time">{{ intervention.resources.ongoing_time }} {% if intervention.resources.ongoing_time == 1 %}hour{% else %}hours{% endif %}/{{ intervention.resources.ongoing_time_period }}</span><span class="cost-edited-tag" id="edited-ongoing-time" style="display:none;">(your estimate)</span> <span class="info-icon" onclick="showReasoning('ongoing-time')">i</span></li>
 </ul>
+
+<details class="cost-customise" id="costCustomise">
+    <summary>Personalise these costs</summary>
+    <div class="cost-form">
+        <p style="margin: 0 0 8px 0; font-size: 0.9em; color: #555;">Override the population estimates with your own. Saved to your profile and used to recalculate Time and Money EROIs.</p>
+        <div class="cost-form-row">
+            <label for="edit-upfront-cost">Upfront cost ($)</label>
+            <input type="number" id="edit-upfront-cost" min="0" step="1">
+        </div>
+        <div class="cost-form-row">
+            <label for="edit-ongoing-cost">Ongoing cost ($)</label>
+            <input type="number" id="edit-ongoing-cost" min="0" step="1">
+            <span>per</span>
+            <select id="edit-ongoing-cost-period">
+                <option value="day">day</option>
+                <option value="week">week</option>
+                <option value="month">month</option>
+                <option value="year">year</option>
+            </select>
+        </div>
+        <div class="cost-form-row">
+            <label for="edit-upfront-time">Upfront time (hours)</label>
+            <input type="number" id="edit-upfront-time" min="0" step="0.25">
+        </div>
+        <div class="cost-form-row">
+            <label for="edit-ongoing-time">Ongoing time (hours)</label>
+            <input type="number" id="edit-ongoing-time" min="0" step="0.25">
+            <span>per</span>
+            <select id="edit-ongoing-time-period">
+                <option value="day">day</option>
+                <option value="week">week</option>
+                <option value="month">month</option>
+                <option value="year">year</option>
+            </select>
+        </div>
+        <div class="cost-form-actions">
+            <button type="button" class="cost-save-btn" id="costSave">Save</button>
+            <button type="button" class="cost-reset-btn" id="costReset">Reset to defaults</button>
+        </div>
+        <div class="cost-form-status" id="costStatus"></div>
+    </div>
+</details>
 
 {% if intervention.how_to_do_it %}
 <h2>How to do it</h2>
@@ -1246,11 +1406,176 @@ function initHabitToggle() {
 // Re-read habit state when synced from cloud
 window.addEventListener('ap-storage-sync', function() {
     var checkbox = document.getElementById('habitCheckbox');
-    if (!checkbox || typeof APStorage === 'undefined') return;
-    var habits = APStorage.load('ap-habits-current') || {};
-    checkbox.checked = !!habits[habitInterventionKey];
-    refreshHabitToggle();
+    if (checkbox && typeof APStorage !== 'undefined') {
+        var habits = APStorage.load('ap-habits-current') || {};
+        checkbox.checked = !!habits[habitInterventionKey];
+        refreshHabitToggle();
+    }
+    // Also refresh cost overrides
+    populateCostForm();
+    refreshCostDisplay();
 });
+
+// Cost customisation: lets users override resource estimates per intervention
+const COST_OVERRIDES_KEY = 'ap-intervention-overrides';
+
+const populationCosts = {
+    upfront_cost: {{ intervention.resources.upfront_cost | default: 0 }},
+    ongoing_cost: {{ intervention.resources.ongoing_cost | default: 0 }},
+    ongoing_cost_period: {{ intervention.resources.ongoing_cost_period | default: 'month' | jsonify }},
+    upfront_time: {{ intervention.resources.upfront_time | default: 0 }},
+    ongoing_time: {{ intervention.resources.ongoing_time | default: 0 }},
+    ongoing_time_period: {{ intervention.resources.ongoing_time_period | default: 'week' | jsonify }}
+};
+
+function loadCostOverrides() {
+    if (typeof APStorage === 'undefined') return {};
+    var all = APStorage.load(COST_OVERRIDES_KEY) || {};
+    return all[habitInterventionKey] || {};
+}
+
+function saveCostOverridesForKey(overrides) {
+    if (typeof APStorage === 'undefined') return;
+    var all = APStorage.load(COST_OVERRIDES_KEY) || {};
+    if (Object.keys(overrides).length === 0) {
+        delete all[habitInterventionKey];
+    } else {
+        all[habitInterventionKey] = overrides;
+    }
+    APStorage.save(COST_OVERRIDES_KEY, all);
+}
+
+function getEffectiveCosts() {
+    var o = loadCostOverrides();
+    return {
+        upfront_cost: o.upfront_cost != null ? o.upfront_cost : populationCosts.upfront_cost,
+        ongoing_cost: o.ongoing_cost != null ? o.ongoing_cost : populationCosts.ongoing_cost,
+        ongoing_cost_period: o.ongoing_cost_period || populationCosts.ongoing_cost_period,
+        upfront_time: o.upfront_time != null ? o.upfront_time : populationCosts.upfront_time,
+        ongoing_time: o.ongoing_time != null ? o.ongoing_time : populationCosts.ongoing_time,
+        ongoing_time_period: o.ongoing_time_period || populationCosts.ongoing_time_period
+    };
+}
+
+function isCostOverridden(field) {
+    var o = loadCostOverrides();
+    return field in o;
+}
+
+function formatHours(n) {
+    return n + ' ' + (n === 1 ? 'hour' : 'hours');
+}
+
+function refreshCostDisplay() {
+    var c = getEffectiveCosts();
+
+    var pairs = [
+        ['display-upfront-cost', 'edited-upfront-cost', '$' + c.upfront_cost,
+         isCostOverridden('upfront_cost')],
+        ['display-ongoing-cost', 'edited-ongoing-cost',
+         '$' + c.ongoing_cost + '/' + c.ongoing_cost_period,
+         isCostOverridden('ongoing_cost') || isCostOverridden('ongoing_cost_period')],
+        ['display-upfront-time', 'edited-upfront-time', formatHours(c.upfront_time),
+         isCostOverridden('upfront_time')],
+        ['display-ongoing-time', 'edited-ongoing-time',
+         formatHours(c.ongoing_time) + '/' + c.ongoing_time_period,
+         isCostOverridden('ongoing_time') || isCostOverridden('ongoing_time_period')]
+    ];
+
+    pairs.forEach(function(p) {
+        var displayEl = document.getElementById(p[0]);
+        var tagEl = document.getElementById(p[1]);
+        if (displayEl) {
+            displayEl.textContent = p[2];
+            displayEl.classList.toggle('is-edited', p[3]);
+        }
+        if (tagEl) tagEl.style.display = p[3] ? '' : 'none';
+    });
+}
+
+function populateCostForm() {
+    var c = getEffectiveCosts();
+    var fields = [
+        ['edit-upfront-cost', c.upfront_cost],
+        ['edit-ongoing-cost', c.ongoing_cost],
+        ['edit-ongoing-cost-period', c.ongoing_cost_period],
+        ['edit-upfront-time', c.upfront_time],
+        ['edit-ongoing-time', c.ongoing_time],
+        ['edit-ongoing-time-period', c.ongoing_time_period]
+    ];
+    fields.forEach(function(f) {
+        var el = document.getElementById(f[0]);
+        if (el) el.value = f[1];
+    });
+}
+
+function readCostFormNum(id) {
+    var el = document.getElementById(id);
+    if (!el) return null;
+    var raw = (el.value || '').trim();
+    if (raw === '') return null;
+    var n = parseFloat(raw);
+    if (isNaN(n)) return null;
+    return Math.max(0, n);
+}
+
+function readCostFormSelect(id) {
+    var el = document.getElementById(id);
+    return el ? el.value : null;
+}
+
+function handleCostSave() {
+    var values = {
+        upfront_cost: readCostFormNum('edit-upfront-cost'),
+        ongoing_cost: readCostFormNum('edit-ongoing-cost'),
+        ongoing_cost_period: readCostFormSelect('edit-ongoing-cost-period'),
+        upfront_time: readCostFormNum('edit-upfront-time'),
+        ongoing_time: readCostFormNum('edit-ongoing-time'),
+        ongoing_time_period: readCostFormSelect('edit-ongoing-time-period')
+    };
+
+    // Only store fields that differ from population defaults
+    var overrides = {};
+    Object.keys(values).forEach(function(k) {
+        var v = values[k];
+        if (v != null && v !== '' && v !== populationCosts[k]) {
+            overrides[k] = v;
+        }
+    });
+
+    saveCostOverridesForKey(overrides);
+    refreshCostDisplay();
+
+    var status = document.getElementById('costStatus');
+    if (status) {
+        status.textContent = 'Saved.';
+        setTimeout(function() {
+            if (status.textContent === 'Saved.') status.textContent = '';
+        }, 2000);
+    }
+}
+
+function handleCostReset() {
+    saveCostOverridesForKey({});
+    populateCostForm();
+    refreshCostDisplay();
+    var status = document.getElementById('costStatus');
+    if (status) {
+        status.textContent = 'Reset to population defaults.';
+        setTimeout(function() {
+            if (status.textContent === 'Reset to population defaults.') status.textContent = '';
+        }, 2000);
+    }
+}
+
+function initCostCustomise() {
+    populateCostForm();
+    refreshCostDisplay();
+    var saveBtn = document.getElementById('costSave');
+    var resetBtn = document.getElementById('costReset');
+    if (saveBtn) saveBtn.addEventListener('click', handleCostSave);
+    if (resetBtn) resetBtn.addEventListener('click', handleCostReset);
+}
 
 function renderReasoning(text) {
     if (!text) return '';
@@ -1300,6 +1625,7 @@ function hideReasoning() {
 document.addEventListener('DOMContentLoaded', function() {
     calculateEBS();
     initHabitToggle();
+    initCostCustomise();
 });
 
 // Close popup with Escape key
