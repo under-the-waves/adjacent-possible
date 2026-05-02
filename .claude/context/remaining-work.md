@@ -74,13 +74,13 @@ Last updated: 2026-05-02 (after the country-neutral pass and 16-intervention cov
 
 ---
 
-## 11. Editorial decisions flagged by 2026-05-02 coverage expansion
+## 11. Editorial decisions flagged by 2026-05-02 coverage expansion – RESOLVED
 
-Three new interventions were scored as distinct from existing entries but with conceptual overlap. Worth a future editorial pass to decide whether to merge or maintain as complements:
+All three resolved 2026-05-02:
 
-1. **`retirement-account-maximisation` vs `basic-tax-optimisation`**: scored as priority-stack waterfall (employer match → HSA → retirement contributions → taxable). Shares ground with broader basic-tax-optimisation. Decide: merge into one richer entry, or keep as complementary?
-2. **`smartphone-greyscale-minimalism` vs `phone-notification-management`**: scored as distinct display-level intervention. Existing entry covers app removal, screen-time limits, phone-free zones. Decide: keep distinct, fold into one entry, or restructure as a parent-with-variants?
-3. **Light-anchored sleep schedule SKIPPED**: candidate from the research; existing `optimising-lighting.yml` already covers the same circadian-anchoring protocol substantively. No file written. Decide: rename `optimising-lighting` to be more explicit about circadian anchoring, or leave as-is.
+1. **`retirement-account-maximisation` vs `basic-tax-optimisation`**: kept distinct. They serve different jobs (foundational understanding of tax wrappers vs the operational annual maxing waterfall). Cross-references already present in both entries.
+2. **`smartphone-greyscale-minimalism` vs `phone-notification-management`**: kept distinct, cross-reference added in both directions. The two interventions address complementary failure modes (input curation vs perceptual pull) and stack cleanly.
+3. **`optimising-lighting` renamed**: now `light-anchored-sleep-schedule` (file, slug, stub title, YAML name, opening framing). The previous name undersold the intervention's purpose; new name is sleep-discoverable. Internal references checked: nothing else in the repo referenced the old slug.
 
 ---
 
