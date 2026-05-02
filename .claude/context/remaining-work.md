@@ -22,11 +22,7 @@ Last updated: 2026-05-02. This file captures all discussed-but-not-done work fro
 
 ## 3. Intervention Page Creation for New Interventions – COMPLETE
 
-**Status:** Complete as of 2026-04-26. All intervention YAMLs have corresponding pages in `resources/intervention-database/` using the `intervention` layout.
-
-**Pre-existing follow-ups (not addressed):**
-- `calisthenics.md` exists as a page but has no YAML in `_data/interventions/`. Either add the YAML or remove the page.
-- `hiit-training.md` page title ("High-Intensity Interval Training (HIIT)") differs from the YAML name ("High Intensity Interval Training"). Reconcile if the canonical name has shifted.
+**Status:** Complete as of 2026-04-26. All intervention YAMLs have corresponding pages in `resources/intervention-database/` using the `intervention` layout. Two pre-existing follow-ups (calisthenics missing YAML; hiit-training page/YAML name mismatch) verified resolved 2026-05-02 – calisthenics.yml exists and matches its page; hiit-training YAML name is now "High-Intensity Interval Training (HIIT)", matching the page title.
 
 ---
 
