@@ -16,7 +16,7 @@ Last updated: 2026-05-02. This file captures all discussed-but-not-done work fro
 
 **Status:** Fully complete as of 2026-04-26. Total scored: 78.
 
-**Updated scoring prompt:** `.claude/prompts/intervention.md` includes baseline framing rules and confidence field requirements.
+**Updated scoring prompt:** `methodology/intervention-scoring-prompt.md` includes baseline framing rules, confidence field requirements, and country-neutral framing rules.
 
 ---
 
@@ -114,6 +114,40 @@ Only fields differing from population are stored. Empty object removed entirely 
 
 ---
 
+## 10. Country-Neutral Framing – DONE FOR LAYER 1
+
+**Status:** Layer 1 (country-neutral body, US-aligned cost defaults) shipped 2026-05-02. Layer 2 (per-intervention `country_resources` YAML block) still pending.
+
+**Background:** Site originally mixed UK and US framing inconsistently. We agreed on a three-layer approach:
+- Layer 1 (DONE): Body prose goes country-neutral. Population data and cost defaults use US-aligned figures. Citations stay country-specific where attributed. British spelling stays.
+- Layer 2 (NOT DONE): Per-intervention `country_resources` YAML block for genuinely country-specific links and prices. User picks country once, layout shows the matching block.
+- Layer 3 (DONE): User cost overrides (Item 9) handle the long tail of individual variation.
+
+**What's been built (Layer 1):**
+- `methodology/intervention-scoring-prompt.md` has a "Country-Neutral Framing" section: term substitution table (GP/NHS/ISA/401k/etc), citation-vs-prescription distinction, cost-reasoning guidance for healthcare-system-variable interventions
+- 24 of 78 intervention YAMLs reworded for country-neutral prose (pilot 2 + sweep 22). Five files in the candidate list were already neutral.
+- US-aligned cost defaults applied to healthcare and driving interventions: getting-diagnosed ($25 → $300), therapy-cbt ($120 → $400/month), quitting-smoking ($30 → $80/month), learning-to-drive ($800 → $500). Other healthcare interventions (family-of-origin-therapy, glp1-agonists, dental-hygiene-optimisation, preventive-health-screening) already had US-aligned figures.
+
+**Layer 2 plan (when ready):**
+```yaml
+country_resources:
+  UK:
+    booking: "..."
+    typical_cost: "Free at point of use (NHS)"
+    references: ["..."]
+  US:
+    booking: "..."
+    typical_cost: "$200-400 self-pay or insurance copay"
+    references: ["..."]
+  default:
+    guidance: "..."
+```
+Layout reads `ap-user-country` from localStorage (set once at first visit or via a settings link), shows the matching block, falls back to `default`. Adding a new country = appending one section. Probably ~20-30% of the library actually needs this.
+
+**Country detection:** Don't auto-detect from IP. Add a one-time prompt at first visit; save to `ap-user-country` localStorage; settings link in the footer to change.
+
+---
+
 ## Quick Reference: What's Been Built
 
 For context on what's already in place (so you don't rebuild it):
@@ -128,7 +162,7 @@ For context on what's already in place (so you don't rebuild it):
 - **User descriptions:** `user_description` field on all 176 values for plain-English display
 - **Ordinal suffixes:** Fixed across all 53 level-1.md files
 - **Percentile rounding:** Displayed as "roughly Nth percentile" (rounded to nearest 10) with uncertainty caveat
-- **Scoring prompt:** `.claude/prompts/intervention.md` has baseline framing, confidence rules, and updated output format
+- **Scoring prompt:** `methodology/intervention-scoring-prompt.md` has baseline framing, confidence rules, country-neutral framing rules, and updated output format
 - **Split interventions:** Daily Reflection Writing split into Daily Decision Review (goals/work) and Expressive Journaling (mental health)
 - **PBS re-audit:** All original 169 scoring triples rewritten with baseline → endpoint → delta framing
 - **Confidence re-audit:** All original 169 triples individually assessed (15 high, 89 medium, 65 low)
@@ -138,3 +172,4 @@ For context on what's already in place (so you don't rebuild it):
 - **Level reframing (percentile bands):** Thematic level names (Foundation/Proficiency/Excellence/Mastery) replaced with percentile labels (Top 20% / Top 5% / Top 1% / Top 0.1%) on 2026-05-02. Level 1 stays as Awareness. Internal data structures (`level_1` keys, `level-N.md` filenames) unchanged. Canonical user-facing explainer at `other-resources/5-levels.md`.
 - **Legacy level subpage cleanup:** Orphaned `nutrition/level-{2-5}.md` and `housework/level-{2-5}.md` pages deleted on 2026-05-02. Their benchmarks were superseded by the per-value YAML structure; their action/habit/cost content was partially superseded by the intervention library. Original content also exists in `.claude/context/archived-level-pages/` (along with archived fitness pages and others).
 - **In-repo archive folder:** `.claude/context/archived-level-pages/` (gitignored) holds historic versions of life-area pages from before the new pattern – useful when content needs to be recovered or referenced.
+- **Country-neutral framing pass:** Body prose audited and rewritten across the intervention library (24/78 files modified, others already neutral). US-aligned cost defaults applied to healthcare and driving interventions. Citations stay country-specific where attributed; British spelling stays as a writing convention. Layer 2 (per-intervention `country_resources` YAML for explicit per-country links and prices) still pending.
