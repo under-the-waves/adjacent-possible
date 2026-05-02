@@ -125,6 +125,47 @@ Provide a description as a bulleted list (using `|` YAML multiline syntax with `
 
 When citing evidence in descriptions, embed hyperlinks inline without naming the source – e.g. write `[Research](url) shows that...` not `Research from Thaler and Benartzi (2004) shows that...`. The reader can click through for attribution; naming authors adds clutter.
 
+## Country-Neutral Framing
+
+The site is intended for users globally, mostly in the Global North. Population data and cost defaults use US-aligned figures (most data available, large population) and currency is USD throughout. The user can override individual time and money costs for their own context via the "Personalise these costs" affordance on each intervention page. **The framing of all prose fields, however, must be country-neutral** so a reader in any country recognises the guidance as applicable to them.
+
+### Term substitution table
+
+Apply these in prose fields (`what_it_is`, `how_to_do_it`, `success_looks_like`, `common_pitfalls`, `description`, `prerequisites`, and any `*_reasoning` field):
+
+| Avoid | Use instead |
+|---|---|
+| GP, GPs (UK/Australia) | primary care doctor, primary-care appointment, primary-care consultation |
+| NHS / NHS-eligible (prescriptive) | "your healthcare system", "national health insurance or insurer", or drop the qualifier |
+| ISA, 401(k), Roth IRA, RRSP, TFSA, pension (UK) | tax-advantaged savings, tax-advantaged retirement contributions, retirement plan |
+| current account (UK), checking account (US) | main bank account |
+| standing order, direct debit (UK terms) | scheduled bank transfer, automated payment |
+| salary sacrifice (UK) | pre-tax payroll deduction |
+| £, GBP, mixed-currency figures like "$32 (~£25)" | USD only, per site convention |
+| "in the UK", "in the US", "Britons", "Americans" | drop the qualifier; use global stats where possible |
+| Zocdoc, NHS app (prescriptive booking link) | "your local appointment-booking system" or drop |
+
+### Citations stay country-specific
+
+Attributed evidence sources (the NHS, NIMH, Vanguard's *How America Saves*, the CDC, the FSA, etc.) are fine to cite even when country-specific. The reader sees them as data sources, not prescriptions. Only change the *surrounding claim* if it's framed as country-specific. For example:
+
+- ✗ "GP appointments are free on the NHS" – prescriptive, country-specific
+- ✓ "[NHS appointment non-attendance rates](url) run at 15–20%, broadly consistent with attendance studies in other healthcare systems" – attributed evidence, country-neutral framing
+
+### Specific instruments
+
+Where an intervention depends on a country-specific tax or savings vehicle (e.g. ISA, 401k), use the generic label in the body and trust the reader to map it to their local equivalent. A separate per-intervention `country_resources` YAML block will eventually handle explicit per-country specifics (links, instrument names, exact prices) – not in scope for new intervention scoring.
+
+### Cost reasoning
+
+Cost figures in `upfront_cost` / `ongoing_cost` are USD and default to US-aligned figures. Where a cost varies dramatically by country or healthcare system (typical for medical care, dental work, therapy, etc.), say so in the cost reasoning field and direct the reader to the override:
+
+> Costs vary widely by country and healthcare system. Where care is covered by national health insurance, out-of-pocket cost may be near zero. Where care is paid privately or via insurance copay, costs may include [specific US-aligned figures]. Users with private-pay healthcare should adjust via 'Personalise these costs'.
+
+### British spelling stays
+
+British spelling is a project convention and unaffected by this section. Keep "optimisation", "behaviour", "coeliac", "optician", etc. These are writing-convention choices, not country-specific institutional terms.
+
 ## Value Domain Key Format
 
 **CRITICAL:** Use the exact format `[life_area].[value_name]` for all value domain keys. Examples:
