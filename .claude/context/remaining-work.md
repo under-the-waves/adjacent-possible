@@ -57,47 +57,27 @@ Last updated: 2026-05-02. This file captures all discussed-but-not-done work fro
 
 ---
 
-## 6. "Tick Off Existing Habits" – MVP SHIPPED
+## 6. "Tick Off Existing Habits" – MVP + FILTER SHIPPED
 
-**Status:** MVP shipped on 2026-05-02. Users can mark interventions they currently do; state persisted in `ap-habits-current` localStorage.
+**Status:** MVP shipped 2026-05-02. Phase 2 filter shipped 2026-05-02. Users can mark interventions they currently do (state in `ap-habits-current`) and optionally hide them from the personalised recommendations table (state in `ap-habits-hide-doing`).
 
 **What's built:**
 - Toggle row on intervention pages (below H1) with magnitude indicator that updates when "For you" / "Typical" view changes
 - Per-row checkmark on personalised pages; marked rows get a faded green background
 - Summary line above the personalised table: "You're already doing N habits in this area, providing a [magnitude] benefit to your priorities"
 - Aggregate magnitude uses log-sum-exp across positive WBS contributions (correct for log-scale benefits)
+- Filter checkbox: "Hide them from recommendations" appears below the summary when at least one habit is marked. Persisted in localStorage. Summary count remains accurate (uses unfiltered list).
 
-**Phase 2 candidates (not built):**
-- **Filter "hide already doing"** on personalised page – small (~1 hour)
-- **Dashboard integration** – show habit count + aggregate magnitude per life area on the dashboard
+**Phase 3 candidates (not built):**
+- **Dashboard integration** – show habit count + aggregate magnitude per life area on the prioritisation dashboard
 - **Counterfactual** – "If you stopped doing X, you'd lose Y" on intervention pages
 - **Graded intervention support** – currently binary doing/not-doing. Things like "I meditate 3 days/week" vs "daily" aren't reflected. Needs dose-response parameterisation per intervention.
 
 ---
 
-## 7. Confidence Factor Inconsistency Between Pages
+## 7. Confidence Factor Inconsistency Between Pages – FIXED
 
-**Status:** Identified 2026-05-02 while building habit toggle MVP. Not fixed.
-
-**What:** The personalised page's WBS calculation excludes the confidence factor:
-
-```liquid
-PBS + log2(ISR/100) + log2(UAR/100)
-```
-
-The intervention page's EBS calculation includes it:
-
-```javascript
-PBS + log2(ISR/100) + log2(UAR/100) + log2(confidence_factor)
-```
-
-Where `confidence_factor` is 1.0 / 0.75 / 0.5 for high / medium / low confidence.
-
-**Impact:** Low-confidence interventions are over-ranked on the personalised page (their WBS is roughly 1 point higher than the equivalent EBS shown on the intervention page). High-confidence interventions are scored equally. Sort order on personalised pages is therefore mildly biased toward low-confidence picks.
-
-**Fix:** Add `+ log2(confidence_factor)` to the WBS Liquid template in `_layouts/personalised.html`. Define a `CONFIDENCE_FACTORS` map mirroring the one in `intervention.html`. Estimate ~1 hour.
-
-**Why worth flagging:** Numbers should match across pages, otherwise users see inconsistent magnitudes.
+**Status:** Fixed 2026-05-02. The `_layouts/personalised.html` WBS Liquid template now includes `+ Math.log2(confidence_factor)` (1.0 / 0.75 / 0.5 for high / medium / low). Personalised-page WBS now matches intervention-page EBS exactly.
 
 ---
 
@@ -120,7 +100,7 @@ For context on what's already in place (so you don't rebuild it):
 - **Intervention scoring:** 78 interventions fully scored (PBS, ISR, UAR, confidence, resources, prerequisites) using baseline framing methodology
 - **Summary sentence:** Auto-generated at top of each intervention page using magnitude labels + user_description. Info popups for personalised data and effect size.
 - **Bidirectional anchor scales:** All 176 values have -10 to +10 scales (benefit magnitudes, not absolute states)
-- **Confidence system:** `confidence: low|medium|high` on every scoring triple, applied as shrinkage to EBS on intervention pages (note: not yet applied on personalised page – see Item 7)
+- **Confidence system:** `confidence: low|medium|high` on every scoring triple, applied as shrinkage to EBS on intervention pages and to WBS on personalised pages (matched as of 2026-05-02)
 - **Baseline + personalisation:** `baseline_percentile` on every value, sigmoid diminishing returns, "For you" / "Typical" toggle on intervention pages
 - **User descriptions:** `user_description` field on all 176 values for plain-English display
 - **Ordinal suffixes:** Fixed across all 53 level-1.md files
@@ -133,4 +113,5 @@ For context on what's already in place (so you don't rebuild it):
 - **Achievement checklist:** `_includes/level-progression.html` shipped to all 53 life-area index pages (per-value checklists, weighted overall level, dashboard sync)
 - **Tick-off-existing-habits MVP:** Toggle on intervention pages and per-row checkmarks on personalised pages, with aggregate-magnitude summary
 - **Level reframing (percentile bands):** Thematic level names (Foundation/Proficiency/Excellence/Mastery) replaced with percentile labels (Top 20% / Top 5% / Top 1% / Top 0.1%) on 2026-05-02. Level 1 stays as Awareness. Internal data structures (`level_1` keys, `level-N.md` filenames) unchanged. Canonical user-facing explainer at `other-resources/5-levels.md`.
-- **Legacy level subpage cleanup:** Orphaned `nutrition/level-{2-5}.md` and `housework/level-{2-5}.md` pages deleted on 2026-05-02. Their benchmarks were superseded by the per-value YAML structure; their action/habit/cost content was partially superseded by the intervention library. Original content recoverable from git history.
+- **Legacy level subpage cleanup:** Orphaned `nutrition/level-{2-5}.md` and `housework/level-{2-5}.md` pages deleted on 2026-05-02. Their benchmarks were superseded by the per-value YAML structure; their action/habit/cost content was partially superseded by the intervention library. Original content also exists in `.claude/context/archived-level-pages/` (along with archived fitness pages and others).
+- **In-repo archive folder:** `.claude/context/archived-level-pages/` (gitignored) holds historic versions of life-area pages from before the new pattern – useful when content needs to be recovered or referenced.
