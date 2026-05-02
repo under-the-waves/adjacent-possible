@@ -439,7 +439,7 @@ body .main-content {
 }
 
 .habits-summary {
-    margin: 0 0 14px 0;
+    margin: 0 0 6px 0;
     padding: 10px 14px;
     background: #f1f8f4;
     border-left: 3px solid #4caf50;
@@ -452,6 +452,25 @@ body .main-content {
 
 .habits-summary.visible {
     display: block;
+}
+
+.habit-filter {
+    display: none;
+    margin: 0 0 14px 14px;
+    font-size: 0.85em;
+    color: #555;
+    cursor: pointer;
+    align-items: center;
+    gap: 6px;
+}
+
+.habit-filter.visible {
+    display: inline-flex;
+}
+
+.habit-filter input {
+    margin: 0;
+    cursor: pointer;
 }
 
 /* Intervention name column */
@@ -705,6 +724,10 @@ body .main-content {
                 </details>
 
                 <p class="habits-summary" id="habitsSummary"></p>
+                <label class="habit-filter" id="habitFilter">
+                    <input type="checkbox" id="hideHabitsCheckbox">
+                    <span>Hide them from recommendations</span>
+                </label>
 
                 <table class="recommendations-table" id="recommendationsTable">
                     <thead>
@@ -767,7 +790,7 @@ const interventions = {
         description: {{ idata.description | jsonify }},
         values: {
             {% for value in page.values %}
-            {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{{ idata.values[vkey].pbs | plus: 0.0 }} + Math.log2({{ idata.values[vkey].isr | plus: 0.0 }}/100) + Math.log2({{ idata.values[vkey].uar | plus: 0.0 }}/100){% else %}0{% endif %}{% unless forloop.last %},{% endunless %}
+            {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{{ idata.values[vkey].pbs | plus: 0.0 }} + Math.log2({{ idata.values[vkey].isr | plus: 0.0 }}/100) + Math.log2({{ idata.values[vkey].uar | plus: 0.0 }}/100) + Math.log2({% if idata.values[vkey].confidence == 'high' %}1.0{% elsif idata.values[vkey].confidence == 'low' %}0.5{% else %}0.75{% endif %}){% else %}0{% endif %}{% unless forloop.last %},{% endunless %}
             {% endfor %}
         },
         resources: {
@@ -918,7 +941,10 @@ function updateRecommendations() {
     }
 
     const habits = getCurrentHabits();
-    recommendationsBody.innerHTML = scored.map(i => {
+    const hideMarked = getHideHabits();
+    const visibleScored = hideMarked ? scored.filter(s => !habits[s.key]) : scored;
+
+    recommendationsBody.innerHTML = visibleScored.map(i => {
         const isDoing = !!habits[i.key];
         const rowClass = isDoing ? ' class="is-doing"' : '';
         const checkClass = isDoing ? ' checked' : '';
@@ -960,6 +986,16 @@ function getCurrentHabits() {
     return APStorage.load('ap-habits-current') || {};
 }
 
+function getHideHabits() {
+    if (typeof APStorage === 'undefined') return false;
+    return !!APStorage.load('ap-habits-hide-doing');
+}
+
+function setHideHabits(val) {
+    if (typeof APStorage === 'undefined') return;
+    APStorage.save('ap-habits-hide-doing', !!val);
+}
+
 function toggleHabit(key) {
     const habits = getCurrentHabits();
     if (habits[key]) {
@@ -976,12 +1012,15 @@ function toggleHabit(key) {
 function updateHabitsSummary(scored) {
     const habits = getCurrentHabits();
     const summaryEl = document.getElementById('habitsSummary');
+    const filterEl = document.getElementById('habitFilter');
+    const filterCheckbox = document.getElementById('hideHabitsCheckbox');
     if (!summaryEl) return;
 
     const doing = scored.filter(s => habits[s.key]);
 
     if (doing.length === 0) {
         summaryEl.classList.remove('visible');
+        if (filterEl) filterEl.classList.remove('visible');
         return;
     }
 
@@ -1001,6 +1040,9 @@ function updateHabitsSummary(scored) {
     msg += '.';
     summaryEl.textContent = msg;
     summaryEl.classList.add('visible');
+
+    if (filterEl) filterEl.classList.add('visible');
+    if (filterCheckbox) filterCheckbox.checked = getHideHabits();
 }
 
 // Event listeners for sliders
@@ -1113,5 +1155,13 @@ function checkAlreadyComplete() {
 document.addEventListener('DOMContentLoaded', function() {
     updateAllControls();
     checkAlreadyComplete();
+
+    var hideCb = document.getElementById('hideHabitsCheckbox');
+    if (hideCb) {
+        hideCb.addEventListener('change', function() {
+            setHideHabits(hideCb.checked);
+            updateRecommendations();
+        });
+    }
 });
 </script>
