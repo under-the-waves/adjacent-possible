@@ -639,7 +639,7 @@ const PILLARS = [
     }
 ];
 
-const LEVEL_NAMES = ['Not assessed', 'Awareness', 'Foundation', 'Proficiency', 'Excellence', 'Mastery'];
+const LEVEL_NAMES = ['Not assessed', 'Awareness', 'Top 20%', 'Top 5%', 'Top 1%', 'Top 0.1%'];
 const LEVEL_COLORS = ['#bdbdbd', '#e53935', '#fb8c00', '#fdd835', '#43a047', '#1565c0'];
 
 // ── Storage (via APStorage abstraction) ──
@@ -860,13 +860,13 @@ function renderIntro() {
             <h3>What the levels mean</h3>
             <p>The five levels correspond to population percentiles among American adults:</p>
             <ul style="line-height:1.8;">
-                <li><strong>Level 1 &ndash; Awareness:</strong> You know this area exists and have basic awareness.</li>
-                <li><strong>Level 2 &ndash; Foundation:</strong> Top 20%. You have solid basics in place.</li>
-                <li><strong>Level 3 &ndash; Proficiency:</strong> Top 5%. You are notably better than most people.</li>
-                <li><strong>Level 4 &ndash; Excellence:</strong> Top 1%. Exceptional achievement.</li>
-                <li><strong>Level 5 &ndash; Mastery:</strong> Top 0.1%. Among the best in 1,000 people.</li>
+                <li><strong>Awareness:</strong> You know this area exists and have basic awareness.</li>
+                <li><strong>Top 20%:</strong> Solid basics in place.</li>
+                <li><strong>Top 5%:</strong> Notably more capable than most people.</li>
+                <li><strong>Top 1%:</strong> Exceptional capability.</li>
+                <li><strong>Top 0.1%:</strong> Roughly 1 in 1,000 people.</li>
             </ul>
-            <p style="color:#555;"><strong>Most people are at levels 1&ndash;2 in most areas.</strong> That is completely normal. No one is at level 5 for everything &ndash; there simply is not enough time in life to excel at everything. The purpose of this survey is not to score highly. It is to identify where you are now so you can decide where to focus.</p>
+            <p style="color:#555;"><strong>Most people sit in the lower bands across most life areas.</strong> That is completely normal &ndash; there simply is not enough time in life to excel at everything. The purpose of this survey is not to score highly. It is to identify where you are now so you can decide where to focus.</p>
             <div class="question-nav" style="margin-top:24px;">
                 <button onclick="renderLanding(); showView('landing');">Back</button>
                 <button class="btn-primary" onclick="renderQuestion()">Begin survey</button>
@@ -1110,11 +1110,11 @@ function renderResults() {
 
         <div class="level-legend">
             <div class="legend-item"><span class="legend-dot" style="background:#bdbdbd;"></span> Not assessed</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#e53935;"></span> 1 -- Awareness</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#fb8c00;"></span> 2 -- Foundation</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#fdd835;"></span> 3 -- Proficiency</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#43a047;"></span> 4 -- Excellence</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#1565c0;"></span> 5 -- Mastery</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#e53935;"></span> Awareness</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#fb8c00;"></span> Top 20%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#fdd835;"></span> Top 5%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#43a047;"></span> Top 1%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#1565c0;"></span> Top 0.1%</div>
         </div>
 
         <div class="summary-bar">

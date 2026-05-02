@@ -128,7 +128,7 @@ var LP_DATA = {
 
     var slug = LP_DATA.slug;
     var LEVEL_COLORS = {0:'#bdbdbd', 1:'#e53935', 2:'#fb8c00', 3:'#fdd835', 4:'#43a047', 5:'#1565c0'};
-    var LEVEL_NAMES = {0:'Not assessed', 1:'Awareness', 2:'Foundation', 3:'Proficiency', 4:'Excellence', 5:'Mastery'};
+    var LEVEL_NAMES = {0:'Not assessed', 1:'Awareness', 2:'Top 20%', 3:'Top 5%', 4:'Top 1%', 5:'Top 0.1%'};
 
     // Check Level 1 completion
     var progress = APStorage.load('ap-level1-progress') || {};
@@ -214,7 +214,7 @@ var LP_DATA = {
             h += '<div class="lp-value-card">';
             h += '<div class="lp-value-header">';
             h += '<span class="lp-value-name">' + escapeHtml(v.name) + '</span>';
-            h += '<span class="lp-badge" style="' + badgeStyle(cur) + '">Level ' + cur + ' \u2013 ' + LEVEL_NAMES[cur] + '</span>';
+            h += '<span class="lp-badge" style="' + badgeStyle(cur) + '">' + LEVEL_NAMES[cur] + '</span>';
             h += '</div>';
 
             // Completed levels (checked; Level 1 is disabled, others are uncheckable)
@@ -253,7 +253,7 @@ var LP_DATA = {
         var overall = computeOverall();
         h += '<div class="lp-overall">';
         h += '<strong>Overall:</strong> ';
-        h += '<span class="lp-badge" style="' + badgeStyle(overall) + '">Level ' + overall + ' \u2013 ' + LEVEL_NAMES[overall] + '</span>';
+        h += '<span class="lp-badge" style="' + badgeStyle(overall) + '">' + LEVEL_NAMES[overall] + '</span>';
         h += '<span class="lp-overall-note">(weighted average, rounded down)</span>';
         h += '</div>';
 
