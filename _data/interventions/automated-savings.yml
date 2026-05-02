@@ -2,11 +2,11 @@ evaluated_at: 2026-03-21
 evaluated_by: claude-opus-4-7
 name: "Automated Savings"
 what_it_is: |
-  Setting up automatic transfers from your current account to savings accounts on a fixed schedule – typically aligned with payday – so that saving happens by default without requiring a decision each time. This leverages the same status quo bias that usually works against good financial behaviour, turning it into an advantage. Pairs well with [Basic Tax Optimisation](/resources/intervention-database/basic-tax-optimisation) to ensure automated transfers land in tax-efficient wrappers.
+  Setting up automatic transfers from your main bank account to savings accounts on a fixed schedule – typically aligned with payday – so that saving happens by default without requiring a decision each time. This leverages the same status quo bias that usually works against good financial behaviour, turning it into an advantage. Pairs well with [Basic Tax Optimisation](/resources/intervention-database/basic-tax-optimisation) to ensure automated transfers land in tax-efficient wrappers.
 how_to_do_it: |
   - Many people find it most effective to set transfers for the day after payday, before discretionary spending begins – this reframes savings as a fixed expense rather than whatever is left over
   - You may want to start with a modest amount (e.g. 5–10% of take-home pay) and use an automatic escalation rule: increase the transfer by 1% each time you receive a pay rise
-  - Splitting transfers across multiple accounts (emergency fund, ISA, pension top-up) can help match savings to specific goals without requiring ongoing reallocation
+  - Splitting transfers across multiple accounts (emergency fund, tax-advantaged savings, retirement contributions) can help match savings to specific goals without requiring ongoing reallocation
   - Most people find that reviewing the transfer amounts quarterly – rather than monthly – strikes the right balance between staying current and avoiding the temptation to reduce contributions
 success_looks_like: |
   - Your savings balance grows steadily each month without any conscious effort or willpower expenditure on your part
@@ -17,8 +17,8 @@ common_pitfalls: |
   - Treating the savings account as a secondary current account, dipping into it for impulse purchases and negating the automation benefit
   - Automating transfers but never choosing an appropriate savings vehicle, leaving months of contributions in a near-zero-interest current account
 description: |
-  - Setting up automatic transfers from current accounts to savings accounts on a fixed schedule, typically aligned with payday
-  - Includes standing orders, direct debits into ISAs or savings accounts, and employer-based salary sacrifice schemes where available
+  - Setting up automatic transfers from your main bank account to savings or investment accounts on a fixed schedule, typically aligned with payday
+  - Includes scheduled bank transfers, automated payments into tax-advantaged savings vehicles, and employer-based pre-tax payroll deductions where available
   - Removes the decision point from each savings event, leveraging default bias and status quo effects from behavioural economics
   - [Auto-enrolment research](https://doi.org/10.1086/380085) shows participation rises from ~37% to ~94%, with high persistence due to the 'set and forget' nature
 applicable_domains: ["saving"]
@@ -80,17 +80,17 @@ values:
 
 resources:
   upfront_cost: 0
-  upfront_cost_reasoning: "Setting up standing orders and direct debits is free with all UK current accounts. No financial products need to be purchased. If opening a new savings account or ISA, this is also free."
+  upfront_cost_reasoning: "Setting up automated transfers is free with most current and checking accounts. No financial products need to be purchased. Opening a new savings account or tax-advantaged savings vehicle is generally free."
   ongoing_cost: 0
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "The savings themselves are not a cost -- they are a transfer of assets from one account to another. There are no fees for maintaining standing orders or basic savings accounts in the UK. The money saved remains the individual's asset."
+  ongoing_cost_reasoning: "The savings themselves are not a cost -- they are a transfer of assets from one account to another. There are typically no fees for maintaining automated transfers or basic savings accounts. The money saved remains the individual's asset."
   upfront_time: 2
-  upfront_time_reasoning: "Approximately 1-2 hours to review income and expenses, determine an appropriate savings rate, open any necessary accounts (savings account, ISA), and configure standing orders or direct debits. May take slightly longer if setting up salary sacrifice through an employer."
+  upfront_time_reasoning: "Approximately 1-2 hours to review income and expenses, determine an appropriate savings rate, open any necessary accounts (savings account, tax-advantaged savings vehicle), and configure automated transfers. May take slightly longer if setting up payroll-based contributions through an employer."
   ongoing_time: 0.5
   ongoing_time_period: "month"
   ongoing_time_reasoning: "Minimal ongoing time required -- perhaps 15-30 minutes per month to review balances, ensure transfers are processing correctly, and adjust amounts if income or expenses change. The entire point of automation is to minimise ongoing time investment."
 
 prerequisites:
   - "Stable income sufficient to cover essential expenses with a margin available for saving"
-  - "A current account with online banking and the ability to set up standing orders or direct debits"
-  - "Basic understanding of available savings vehicles (instant access accounts, ISAs, workplace pensions) and their trade-offs"
+  - "A bank account with online banking and the ability to set up automated transfers"
+  - "Basic understanding of available savings vehicles (instant access accounts, tax-advantaged savings, workplace retirement plans) and their trade-offs"
