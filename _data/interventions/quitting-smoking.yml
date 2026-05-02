@@ -159,9 +159,9 @@ values:
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Choosing a quit date and removing smoking materials costs nothing. NRT is available over the counter ($20–50 for a starter kit) but many national health services provide it free; varenicline requires a prescription but is often subsidised or covered by insurance. Minimum viable start (cold turkey or free quitline support) costs $0."
-  ongoing_cost: 30
+  ongoing_cost: 80
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "NRT patch plus short-acting NRT (gum or lozenge) costs approximately $60–120/month if self-funded; varenicline costs $150–300/month without insurance subsidy. Many health services subsidise or fully fund cessation pharmacotherapy. $30/month reflects a subsidised or partially covered NRT regimen – the minimum effective pharmacotherapy cost. Cold turkey costs $0 ongoing."
+  ongoing_cost_reasoning: "Default reflects typical US over-the-counter access: NRT patch plus short-acting NRT (gum or lozenge) costs approximately $60–120/month self-funded, with $80 a realistic midpoint. Varenicline costs $150–300/month without insurance subsidy; many insurance plans and national health services subsidise or fully fund cessation pharmacotherapy, in which case ongoing cost can be near zero. Cold turkey costs $0 ongoing. Users should adjust via 'Personalise these costs' to match their context."
   upfront_time: 2
   upfront_time_reasoning: "Approximately 1–2 hours to read cessation evidence, choose a method, set a quit date, remove smoking materials, identify personal triggers, and download a support app or register with a quitline."
   ongoing_time: 1

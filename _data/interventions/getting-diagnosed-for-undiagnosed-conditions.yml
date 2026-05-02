@@ -140,8 +140,8 @@ values:
       - See health-management.vitality UAR – same intervention, same adherence profile for the investigation phase.
 
 resources:
-  upfront_cost: 25
-  upfront_cost_reasoning: "Costs vary widely by country and healthcare system. Where care is covered by national health insurance, the primary-care appointment, blood panel, and audiologist referral may carry no out-of-pocket cost; an optician check is typically $25–50 privately. Where care is paid privately or via insurance copay, costs may include a $100–250 doctor visit, $100–300 for a comprehensive blood panel, $50–150 for a hearing assessment, plus the optician check. The $25 default reflects a minimum-viable scenario; users with private-pay healthcare should adjust via 'Personalise these costs'."
+  upfront_cost: 300
+  upfront_cost_reasoning: "Default reflects typical US private-pay or insurance-copay access: ~$150 for a primary-care visit, ~$100 for a comprehensive blood panel (thyroid, full blood count, B12, D, ferritin, coeliac antibodies), and ~$50 for an optician check. Audiologist referral is usually low or no cost on top. Costs vary widely by country and healthcare system: where care is covered by national health insurance, out-of-pocket may be near zero; where uninsured and self-paying, the panel alone can run $200–400. Users should adjust via 'Personalise these costs' to match their context."
   ongoing_cost: 0
   ongoing_cost_period: "month"
   ongoing_cost_reasoning: "The investigation itself has no ongoing cost – it is a time-limited process. Ongoing costs associated with any treatment pathway (medication, CPAP equipment, specialist monitoring) belong to subsequent treatment interventions, not to the diagnostic investigation."

@@ -168,8 +168,8 @@ values:
       - See transportation.efficiency UAR – same intervention, same adherence profile.
 
 resources:
-  upfront_cost: 800
-  upfront_cost_reasoning: "Lower-bound estimate covering roughly 20 hours of professional instruction at $30–$40 per hour, plus test and permit fees ($50–$150). Costs vary widely by country and city: typical first-time learners spend $500–$3,000 in total. The conservative $800 default represents a budget-conscious adult learner taking the minimum viable lesson hours; users should adjust via 'Personalise these costs'."
+  upfront_cost: 500
+  upfront_cost_reasoning: "Default reflects typical US learner profile: a basic driver-education course or 5–10 hours of professional instruction at $50–$80/hour (~$400), plus permit and licence fees ($50–$150). Most US learners supplement with free parent-supervised practice rather than paying for the full lesson programme, keeping total professional-instruction cost moderate. Costs vary widely by country: UK and Australian learners typically spend $1,500–$3,000 because parent-supervised practice is less common and per-lesson rates are higher. Users should adjust via 'Personalise these costs' to match their context."
   ongoing_cost: 0
   ongoing_cost_period: "year"
   ongoing_cost_reasoning: "Licence renewal fees are nominal (~$30 every 5–8 years). Vehicle ownership costs ($11,577/year per AAA) are not included – they are a separate decision, not a cost of holding a licence."

@@ -125,7 +125,7 @@ values:
 
 resources:
   upfront_cost: 0
-  upfront_cost_reasoning: "Free templates from national or regional bar associations and government-provided advance directive forms allow completion of all four core documents at no monetary cost. A paid online service ($50–150) or solicitor ($200–500) is optional and recommended for complex estates but not required."
+  upfront_cost_reasoning: "Free templates from national or regional bar associations and government-provided advance directive forms allow completion of all four core documents at no monetary cost. A paid online service ($80–200, e.g. Trust & Will, LegalZoom, Rocket Lawyer) or attorney ($300–1,000 for a simple estate package) is optional and recommended for complex estates but not required."
   ongoing_cost: 0
   ongoing_cost_period: "year"
   ongoing_cost_reasoning: "No ongoing cost once documents are executed. Periodic review (every 3–5 years or after major life events) can be done by re-reading existing documents; a solicitor update only becomes necessary when substantive changes are needed."

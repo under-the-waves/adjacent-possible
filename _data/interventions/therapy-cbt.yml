@@ -159,9 +159,9 @@ values:
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No one-time equipment or setup cost is required. The only upfront action is identifying and contacting a therapist, which is free. Where care is covered by national health insurance, referral via a primary-care doctor may be free at the point of use."
-  ongoing_cost: 120
+  ongoing_cost: 400
   ongoing_cost_period: "month"
-  ongoing_cost_reasoning: "Approximately $120–160/month at the lower end of private rates ($100–120/session weekly in lower-cost markets or trainee therapist settings). Costs vary widely by country and healthcare system: where care is covered by national health insurance, sessions may be free at the point of use; sliding-scale community mental health clinics can reduce cost to $20–60/session. $120/month represents a realistic minimum for private-pay access. Users with different healthcare access should adjust via 'Personalise these costs'."
+  ongoing_cost_reasoning: "Default reflects typical US private-pay or insurance-copay access: weekly CBT sessions run roughly $100/session with insurance copay (~$400/month) and $150–250/session self-pay (~$600–1,000/month). Costs vary widely by country and healthcare system: where care is covered by national health insurance, sessions may be free at the point of use; sliding-scale community mental health clinics and trainee therapists can reduce private-pay cost to $20–80/session. Users should adjust via 'Personalise these costs' to match their context."
   upfront_time: 2
   upfront_time_reasoning: "Approximately 1–2 hours to research therapists, verify credentials and CBT specialism, make contact, and attend an initial assessment session."
   ongoing_time: 2
