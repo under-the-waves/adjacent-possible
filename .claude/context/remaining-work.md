@@ -74,6 +74,34 @@ Last updated: 2026-05-02 (after the country-neutral pass and 16-intervention cov
 
 ---
 
+## 12. X-risk-focused interventions and worldview-relativity – DEFERRED
+
+**Status:** Discussed 2026-05-02. Not yet implemented; the framework needs to mature further before adding these. Capturing the design here so the thinking doesn't get lost.
+
+**The argument that surfaced this:** Many interventions implicitly assume civilisational continuity over decades (retirement-account-maximisation, long-term index investing, career planning). A user who assigns meaningful probability to existential catastrophe within a few years – particularly from AGI – should rationally weight these differently. More strongly: if catastrophe is genuinely imminent and the user has any leverage, x-risk reduction work plausibly dominates ordinary personal-flourishing interventions.
+
+**Where this lands philosophically:** The framework should accommodate this worldview without endorsing it. Build the interventions; let the slider-weight mechanism surface them for users who weight relevant values heavily.
+
+**Three candidate interventions:**
+
+1. **Donating to x-risk reduction organisations** – Long-Term Future Fund, Open Philanthropy longtermist grants, AI safety orgs (MIRI, Redwood, etc.), biosecurity orgs. Parallel to the existing `effective-giving` but cause-area-specific. Likely scoring: PBS 10 saturated on `global-impact.impartiality`, ISR ~20% (real uncertainty about which orgs reduce risk), UAR ~65% (automated donation).
+2. **Career pivot to x-risk reduction** – technical AI alignment, AI governance, biosecurity, evals work. PBS 10 on impartiality, 7-8 on `life-purpose.meaning` and `current-work.engagement`, negative on `saving.security`. ISR ~40%, UAR ~10% (career pivots are rare).
+3. **AI policy engagement** – public comments on AI regulation, writing to representatives, consultation participation. Lower PBS (~8), low ISR (~15%), moderate UAR (~30%).
+
+**Architectural notes:**
+- PBS saturates at 10 honestly rather than pretending the scale extends further. The longtermist case has unbounded value mathematically; the framework's scale doesn't.
+- ISR and UAR pull EBS back to realistic levels (estimated EBS roughly 4-8 across the three).
+- Cross-domain scoring is what surfaces these for the right users. Career pivot scored across `global-impact`, `life-purpose`, `current-work`, `saving` (negatively) – appears on multiple personalised pages.
+- Slider weights are the worldview input. A user with strong x-risk priors weights `global-impact.impartiality` heavily and sees x-risk interventions float to the top automatically. No parallel recommendation tracks needed.
+
+**Time-horizon discount interaction:** If the horizon-discount feature (Item 13 below, hypothetical) is built, x-risk interventions need a `time_horizon: continuity` tag exempting them from the discount. They're not "long-horizon payoff" interventions; they're "preserve the existence of the long horizon at all" interventions. Different category.
+
+**Why deferred:** The framework needs to mature in other dimensions first (Layer 2 country-resources, dashboard integration, UAR multiplier, larger user base). Adding x-risk interventions now risks looking partisan or specific to one subculture before the framework has enough breadth to absorb them as one set among many.
+
+**When to revisit:** When the library is broader, when the worldview-discount mechanism is built (or explicitly rejected), or when user feedback indicates demand. The architectural readiness is fine; the editorial readiness is not.
+
+---
+
 ## 11. Editorial decisions flagged by 2026-05-02 coverage expansion – RESOLVED
 
 All three resolved 2026-05-02:
