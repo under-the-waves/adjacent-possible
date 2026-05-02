@@ -1,6 +1,6 @@
 # Worthwhile – Remaining Work
 
-Last updated: 2026-05-02. This file captures all discussed-but-not-done work from recent sessions.
+Last updated: 2026-05-02 (after the country-neutral pass and 16-intervention coverage expansion). This file captures all discussed-but-not-done work from recent sessions.
 
 ---
 
@@ -71,6 +71,16 @@ Last updated: 2026-05-02. This file captures all discussed-but-not-done work fro
 ## 7. Confidence Factor Inconsistency Between Pages – FIXED
 
 **Status:** Fixed 2026-05-02. The `_layouts/personalised.html` WBS Liquid template now includes `+ Math.log2(confidence_factor)` (1.0 / 0.75 / 0.5 for high / medium / low). Personalised-page WBS now matches intervention-page EBS exactly.
+
+---
+
+## 11. Editorial decisions flagged by 2026-05-02 coverage expansion
+
+Three new interventions were scored as distinct from existing entries but with conceptual overlap. Worth a future editorial pass to decide whether to merge or maintain as complements:
+
+1. **`retirement-account-maximisation` vs `basic-tax-optimisation`**: scored as priority-stack waterfall (employer match → HSA → retirement contributions → taxable). Shares ground with broader basic-tax-optimisation. Decide: merge into one richer entry, or keep as complementary?
+2. **`smartphone-greyscale-minimalism` vs `phone-notification-management`**: scored as distinct display-level intervention. Existing entry covers app removal, screen-time limits, phone-free zones. Decide: keep distinct, fold into one entry, or restructure as a parent-with-variants?
+3. **Light-anchored sleep schedule SKIPPED**: candidate from the research; existing `optimising-lighting.yml` already covers the same circadian-anchoring protocol substantively. No file written. Decide: rename `optimising-lighting` to be more explicit about circadian anchoring, or leave as-is.
 
 ---
 
@@ -169,3 +179,4 @@ For context on what's already in place (so you don't rebuild it):
 - **Legacy level subpage cleanup:** Orphaned `nutrition/level-{2-5}.md` and `housework/level-{2-5}.md` pages deleted on 2026-05-02. Their benchmarks were superseded by the per-value YAML structure; their action/habit/cost content was partially superseded by the intervention library. Original content also exists in `.claude/context/archived-level-pages/` (along with archived fitness pages and others).
 - **In-repo archive folder:** `.claude/context/archived-level-pages/` (gitignored) holds historic versions of life-area pages from before the new pattern – useful when content needs to be recovered or referenced.
 - **Country-neutral framing pass:** Body prose audited and rewritten across the intervention library (24/78 files modified, others already neutral). US-aligned cost defaults applied to healthcare and driving interventions. Citations stay country-specific where attributed; British spelling stays as a writing convention. Layer 2 (per-intervention `country_resources` YAML for explicit per-country links and prices) still pending.
+- **Coverage expansion (2026-05-02):** Library grew from ~78 to ~92 scored interventions. 16 new interventions filled gaps in children, relationships, sex, finance behaviours, productivity habits, housework, food management, and community contribution. Filenames: `leveraging-personality-strengths`, `developing-signature-style`, `authoritative-parenting-routines`, `daily-outdoor-play-children`, `gottman-couple-skills`, `sexual-communication-script`, `retirement-account-maximisation`, `sinking-fund-system`, `alcohol-moderation-trial`, `implementation-intentions`, `weekly-review-ritual`, `smartphone-greyscale-minimalism`, `daily-home-reset-routine`, `weekly-meal-planning`, `weekly-third-place-attendance`, `regular-blood-donation`. Backlog file (`.claude/context/potential-interventions.md`) was pruned to remove items now scored.
