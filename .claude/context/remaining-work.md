@@ -30,18 +30,15 @@ Last updated: 2026-05-02. This file captures all discussed-but-not-done work fro
 
 ---
 
-## 4. Personalised UAR
+## 4. Personalised UAR – APPROACH CHANGED
 
-**Status:** Discussed, deferred. Likely the next big conceptual piece.
+**Status:** Earlier plan (infer UAR from Habits L1 assessment) replaced by a simpler explicit-edit approach. See Item 9 for the user-editable scoring discussion.
 
-**What:** UAR is currently per-intervention (same for everyone). A personalised UAR would estimate how likely THIS user is to stick with THIS intervention, based on:
-- User's habit consistency score (from Habits life area Level 1 assessment, which already exists)
-- Self-reported adherence tendency
-- Intervention complexity vs user's available time
+**Original idea:** Infer adherence from Habits life area assessment, calibrate per-intervention UAR adjustments. Substantial work requiring data-collection design and formula calibration.
 
-**Why this is the next big piece:** PBS is already personalised (via baseline percentile + sigmoid diminishing returns), and weights are already personalised (via slider weights). UAR is the remaining un-personalised variable. Closing this gap completes the personalisation triangle.
+**Replacement plan:** Add a single global UAR multiplier slider where the user self-rates their habit consistency. Scales all UARs by one factor. Less prone to motivated bias than per-intervention UAR overrides because users have to commit to one self-assessment, not 78 individual ones.
 
-**Requires:** New user data collection mechanism (probably extension of Habits life area Level 1) plus calibration of the UAR adjustment formula.
+**Status:** Not yet implemented. Plan was agreed on 2026-05-02 alongside the cost-override feature (Item 9).
 
 ---
 
@@ -78,6 +75,32 @@ Last updated: 2026-05-02. This file captures all discussed-but-not-done work fro
 ## 7. Confidence Factor Inconsistency Between Pages – FIXED
 
 **Status:** Fixed 2026-05-02. The `_layouts/personalised.html` WBS Liquid template now includes `+ Math.log2(confidence_factor)` (1.0 / 0.75 / 0.5 for high / medium / low). Personalised-page WBS now matches intervention-page EBS exactly.
+
+---
+
+## 9. User-Editable Resource Estimates – TIME AND MONEY SHIPPED
+
+**Status:** Time and money cost overrides shipped 2026-05-02. UAR multiplier still pending (see Item 4).
+
+**Concept:** PBS and ISR represent the science (locked, evidence-based). UAR and resource costs are population estimates that vary widely by user circumstances – worth letting users override.
+
+**What's built (cost overrides):**
+- Intervention page has a "Personalise these costs" expandable section under the Cost list
+- Four numeric inputs (upfront cost, ongoing cost, upfront time, ongoing time) plus period dropdowns (day/week/month/year)
+- Save and Reset buttons; Save persists via APStorage (`ap-intervention-overrides`) so values sync across devices when authenticated
+- Edited values shown in italic with "(your estimate)" tag in the cost list
+- Personalised page applies overrides to Time EROI and Money EROI calculations; edited cells in the table show italic with a red asterisk
+- Reasoning popups continue to show the original population breakdown – the override is the user's adjustment, not a replacement of the evidence
+
+**Storage shape:**
+```js
+{ "intervention-key": { upfront_cost: 0, ongoing_time: 0.5, ongoing_time_period: "day" } }
+```
+Only fields differing from population are stored. Empty object removed entirely on reset.
+
+**What's NOT in scope for cost overrides:**
+- PBS, ISR, confidence – locked
+- UAR – needs the global multiplier approach (Item 4)
 
 ---
 
