@@ -6,46 +6,46 @@ permalink: /start-here/key-terms/
 
 # Key Terms
 
-This glossary defines the key concepts and terminology used throughout the Worthwhile framework, organised to show how they relate to each other.
+A short glossary of the vocabulary used across the site.
 
-## Framework Structure
+## Framework structure
 
-**Life Domains** – The 14 broad categories covering every aspect of human flourishing: Values, Purpose, Knowledge, Learning, Environment, Finances, Career, Health, Relationships, Wellbeing, Identity, Productivity, Security, and Leisure.
+**Pillar** – One of the five top-level groupings: Expand Your Awareness, Look After Yourself, Connect with Others, Organise Your Life, and Create & Contribute.
 
-**Life Areas** – The subcategories within each life domain. For example, the Health domain includes Fitness, Nutrition, Sleep, and Preventative Health as separate life areas. See all [Life Areas]({{ site.baseurl }}/life-areas/).
+**Domain** – A subdivision of a pillar. The Look After Yourself pillar, for example, contains the Health, Wellbeing, and Security domains. Worthwhile has 14 domains.
 
-**Levels** – The five-stage progression system within each life area, from basic awareness to top 1% capabilities. See the [5-Level Framework]({{ site.baseurl }}/5-levels/) page for complete details.
+**Life area** – A specific area within a domain. Fitness, Sleep, and Nutrition are life areas within the Health domain. Worthwhile has 52 life areas. See all of them on the [Life Areas]({{ site.baseurl }}/life-areas/) page.
 
-**Benchmarks** – Specific, measurable indicators that define what each level looks like in practice. These help you assess your current position and understand what progress means in concrete terms.
+**Levels (or bands)** – Five percentile-anchored bands within each life area: Awareness, Top 20%, Top 5%, Top 1%, and Top 0.1%. Reference points for where you sit, not a ladder to climb. See the [5 Levels]({{ site.baseurl }}/5-levels/) page for details.
 
-## Values and Personalisation
+**Benchmarks** – Specific, observable indicators of what each band looks like in practice. They help you self-locate, but the underlying definition of a band is the percentile, not the benchmark.
 
-**Values** – The 3-5 core priorities that determine which interventions are most suitable for you within each life area. Values help personalise recommendations based on what matters most to you and how you prefer to work.
+## Personalisation
 
-**Outcome-Focused Values** – Values that describe what you want to achieve in a particular life area. For example, fitness values might focus on health, performance, or appearance goals.
+**Values** – The 3-5 priorities that determine which interventions are most suitable for you within a life area. You set how much each matters to you, which re-ranks the recommendations.
 
-**Approach-Focused Values** – Values that describe how you prefer to work on a particular area. For example, some people prefer detailed control and tracking while others want simple, automated systems.
+**Outcome-focused values** – Values that describe what you want to achieve in an area. Fitness values, for example, might focus on health, performance, or appearance.
 
-## Implementation and Practice
+**Approach-focused values** – Values that describe how you prefer to work in an area. Financial planning, for example, might use 'detailed control and tracking' versus 'simple, automated systems' as values.
 
-**Interventions** – The complete set of actions and habits recommended for each level, representing proven approaches for improvement in that life area based on evidence and practical experience. See the [Intervention Database]({{ site.baseurl }}/resources/intervention-database/) for detailed examples.
+**Dashboard** – Your personalised view across all life areas, showing your highest-leverage opportunities given the values and constraints you've set, plus the interventions you've ticked off and the areas you're actively levelling up. Works anonymously per-device; signing in syncs it across devices.
 
-**Tools** – Specific websites, books, podcasts, companies, and services that Worthwhile has evaluated and recommends for implementing interventions. While interventions describe general approaches to improvement, tools are particular products or resources that can help you put those approaches into practice.
+## What to do
 
-**Actions** – One-time tasks, projects, or learning activities that help you reach the benchmarks for a particular level. Examples include setting up systems, purchasing equipment, or acquiring new skills.
+**Interventions** – Evidence-based actions and habits recommended for improving in a life area. Each intervention is scored against the values for that area and shown with its expected benefit, time cost, and money cost. See examples in the [Intervention Database]({{ site.baseurl }}/resources/intervention-database/).
 
-**Habits** – Ongoing routines, practices, and behaviours that maintain your capabilities at each level and support continued progress. These become the sustainable foundation of improvement.
+**Actions** – One-off tasks within an intervention: setting up a system, buying equipment, learning a skill.
 
-**Benefits** – The expected improvements, advantages, and positive outcomes you gain by reaching each level, backed by research evidence and validated through practical application.
+**Habits** – Ongoing routines that maintain capability over time and form the sustainable foundation of improvement.
 
-**Constraints** – The limitations of time, money, and attention that influence which interventions are practical for your situation. The framework helps optimise recommendations within these constraints.
+**Tools** – Specific websites, books, podcasts, companies, and services that Worthwhile has evaluated and recommends for implementing interventions. Interventions describe general approaches; tools are particular products that can help you put them into practice.
 
-## Scoring and Evaluation
+## The prioritisation screen
 
-**Potential Benefit Score (PBS)** – The theoretical maximum benefit an intervention could provide for a specific domain (e.g., health, performance) under ideal conditions, scored from 0 to 10 on a logarithmic scale.
+**Triage** – Stage 1 of the [prioritisation screen]({{ site.baseurl }}/prioritisation/). Checks for acute issues – mental health, safety, financial distress, addiction, recent loss, active legal action – that warrant attention before broader optimisation.
 
-**Expected Benefit Score (EBS)** – The Potential Benefit Score adjusted for realistic probability of success, accounting for factors like adherence rates and individual circumstances.
+**Fundamentals** – Stage 2. Checks six upstream areas with broad cross-domain effects: sleep, mental wellbeing, foundational finances, social connection, physical activity, and care responsibilities.
 
-**Weighted Total Benefit (WTB)** – The final personalised score for an intervention, calculated by multiplying each Expected Benefit Score by the user's priority weightings and summing across all domains.
+**Focus area** – Stage 3. Identifies a single binding life area to focus on next, based on what you value and where you currently feel constrained.
 
-**ROI Approach** – Return on investment thinking applied to personal development. Given what's important to you in life, which actions can be expected to deliver the most value for the least expenditure of your time, money and attention?
+**Quick wins** – Separate from the level structure. High-impact, low-effort interventions that pay off across multiple domains regardless of where you currently sit. (In development.)

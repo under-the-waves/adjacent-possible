@@ -4,40 +4,48 @@ title: How to Use This Site
 permalink: /start-here/how-to-use/
 ---
 
-# How to Use This Site
+# How to use this site
 
-This guide explains different ways to navigate the content based on your goals.
+There are three ways in, depending on how much time you have and how much you want the site to remember about you. They build on each other – you don't have to pick one.
 
-For detailed definitions of terminology used throughout the framework, see the [Key Terms]({{ site.baseurl }}/start-here/key-terms) page.
+## 1. Browse a life area (about 5 minutes)
 
-## Understanding Values and Personalisation
+You already know what you want to work on – fitness, sleep, finances, relationships, something else.
 
-Each guide includes core values that help customise recommendations to what matters most to you. However, values work differently across life areas.
+Go straight to the [life area]({{ site.baseurl }}/life-areas/) you care about. Each one shows the [five percentile bands]({{ site.baseurl }}/5-levels/) of capability, the benchmarks that define them, and the interventions that move you between bands. You can adjust which values matter most to you (e.g. health vs. appearance for fitness) to re-rank the recommendations.
 
-Some areas use **outcome-focused values** describing what you want to achieve. For example, fitness values focus on results like health, performance, or appearance. People naturally think about fitness in terms of goals, so values reflect these motivations.
+## 2. Get a prioritisation read (about 20 minutes)
 
-Other areas use **approach-focused values** describing how you prefer to work. Financial planning might include "detailed control and tracking" versus "simple, automated systems." Here, people have strong preferences about method – some want to understand every transaction while others prefer set-and-forget approaches.
+You're not sure where the highest-leverage change is.
 
-This ensures recommendations align with both your goals and your preferred working style. The framework will eventually allow you to adjust value priority settings, automatically customising recommendations across all life areas.
+The [prioritisation screen]({{ site.baseurl }}/prioritisation/) walks you through three short stages:
 
-## Different Ways to Navigate
+- **Triage** – flags acute issues (mental health, safety, financial distress, addiction, recent loss, active legal action) that warrant attention before broader optimisation.
+- **Fundamentals** – checks six upstream areas with broad cross-domain effects: sleep, mental wellbeing, foundational finances, social connection, physical activity, and care responsibilities.
+- **Focus area** – identifies a single binding life area to focus on next, based on what you value and where you currently feel constrained.
 
-### For Beginners
+You can do all three or skip ahead.
 
-If you want a comprehensive approach to personal development:
+## 3. Track across all areas (ongoing)
 
-1. **Start with Values** to understand how your core priorities shape other decisions
-2. **Take the Assessment** to identify current levels across life areas and spot opportunities  
-3. **Review your Dashboard** for personalised recommendations based on your situation
-4. **Choose 1-2 life areas** where you have both high potential impact and genuine interest
-5. **Focus on Level 2** in chosen areas, as these typically provide the best return on investment
+You want personalised recommendations and a record of what you've already done.
 
-### For Targeted Changes
+Sign in (top right) and the dashboard becomes a single view across all 52 life areas: your highest-leverage opportunities given the values and constraints you've set, the interventions you've ticked off as already in place, and the areas you're actively working to level up.
 
-If you already know which areas need attention, navigate directly to [Life Areas]({{ site.baseurl }}/life-areas/) and explore the [5-Level Framework]({{ site.baseurl }}/5-levels/) to understand the progression system.
+Anonymous use works too – your assessment results, value priorities, and ticked-off interventions are saved on the device you're using. Signing in just syncs them across devices and keeps them safe if you clear your browser.
 
-## General Tips
+## What you'll see inside a life area
 
-Each level includes realistic estimates for time investment and financial costs to help you plan improvements within available resources and compare intervention efficiency.
+- **Values** – the 3-5 priorities people commonly weigh in this area; you set how much each matters to you, which re-ranks the recommendations. Some areas use outcome-focused values (what you want to achieve, like health or appearance for fitness); others use approach-focused values (how you prefer to work, like detailed control vs. set-and-forget for finances).
+- **Benchmarks** – what each percentile band actually looks like in practice, so you can self-locate.
+- **Interventions** – evidence-based actions and habits that move you up. Each one shows expected benefit, time cost, and money cost, and is scored against the values you've set.
 
-**Start small and build systematically** – focus on 1-2 life areas initially rather than attempting everything simultaneously. **Prioritise fundamentals** – Level 2 interventions typically provide 80% of available benefits for 20% of the effort. **Adapt to your context** – the framework provides evidence-based starting points, but adjust specifics based on your circumstances and constraints.
+A few terms worth knowing up front: **interventions** is the umbrella for both one-off **actions** (set up a system, buy equipment, learn a skill) and ongoing **habits** (routines that maintain capability). **Quick wins** is a separate category from the level structure – high-impact, low-effort interventions that pay off across multiple domains regardless of where you currently sit. The full glossary is on [Key Terms]({{ site.baseurl }}/start-here/key-terms/).
+
+## A few tips
+
+- **Start small.** Focus on one or two life areas initially rather than attempting everything simultaneously.
+- **Prioritise fundamentals.** Top 20% interventions typically deliver 80% of the available benefits for 20% of the effort.
+- **Adapt to your context.** The framework provides evidence-based starting points, but adjust specifics based on your circumstances and constraints.
+
+For more on why the framework is structured this way, see the [Overview]({{ site.baseurl }}/start-here/overview/).

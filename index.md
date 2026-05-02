@@ -12,17 +12,29 @@ title: Worthwhile
   </div>
 </div>
 
-We live in a remarkable time for human development. Never before have we had such understanding of what helps us thrive - from the science of sleep to the psychology of relationships. The internet has democratised this knowledge while technology has created countless tools to help us apply it.
+<style>
+.home-cta-row {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  margin: 32px 0 24px;
+}
+.home-cta-primary {
+  display: inline-block; padding: 14px 28px;
+  background: #155799; color: #fff; text-decoration: none;
+  border-radius: 6px; font-weight: 600; font-size: 1.05em;
+}
+.home-cta-primary:hover { background: #0f4373; color: #fff; }
+.home-cta-secondary { color: #155799; font-size: 0.95em; }
+</style>
 
-But this wealth of information brings its own challenge: how do we choose what's worthwhile? With an endless stream of books, courses, apps and expert advice, it's hard to know what to prioritise.
+Worthwhile aims to help you improve your life according to three principles:
 
-These guides aim to help improve our lives according to three foundational principles:
 - **Evidence-based** interventions
 - **Using the 80/20 rule** to get the most benefit for your time and money
 - **A holistic approach** ensuring important areas aren't neglected
 
-New to the site? [Start here]({{ site.baseurl }}/start-here/overview) to learn about the framework and how to use it effectively.
+<div class="home-cta-row">
+  <a href="{{ site.baseurl }}/start-here/how-to-use/" class="home-cta-primary">Start here</a>
+  <span class="home-cta-secondary">– new to the site? Three ways in, depending on what you're looking for.</span>
+</div>
 
-Looking for immediate improvements? Take a look at the [quick wins]({{ site.baseurl }}/prioritisation/quick-wins) page for high-impact, low-effort actions across all life domains.
-
-Ready to explore specific areas? [Browse the life areas]({{ site.baseurl }}/life-areas/) to find detailed guides for each domain.
+Already know your way around? [Browse the life areas]({{ site.baseurl }}/life-areas/), [run the prioritisation screen]({{ site.baseurl }}/prioritisation/), or [open your dashboard]({{ site.baseurl }}/prioritisation/dashboard/).
