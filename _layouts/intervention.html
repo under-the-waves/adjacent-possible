@@ -370,6 +370,58 @@ layout: default
     margin: 0;
 }
 
+.evidence-summary {
+    margin: -8px 0 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 4px 16px;
+    font-size: 0.95em;
+}
+
+.evidence-summary > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 10px 0;
+    color: #155799;
+    font-weight: 600;
+}
+
+.evidence-summary > summary::-webkit-details-marker {
+    display: none;
+}
+
+.evidence-summary > summary::before {
+    content: '▸ ';
+    font-size: 0.85em;
+    color: #888;
+    margin-right: 4px;
+}
+
+.evidence-summary[open] > summary::before {
+    content: '▾ ';
+}
+
+.evidence-summary[open] {
+    padding-bottom: 12px;
+}
+
+.evidence-summary .description {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    margin-top: 6px;
+}
+
+.evidence-summary .description ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.evidence-summary .description li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
 .value-section h3 a {
     color: #155799;
     text-decoration: none;
@@ -702,6 +754,14 @@ layout: default
 <div class="what-it-is">
     {{ intervention.what_it_is | markdownify }}
 </div>
+{% if intervention.description %}
+<details class="evidence-summary">
+    <summary>Sources and key statistics</summary>
+    <div class="description">
+        {{ intervention.description | markdownify }}
+    </div>
+</details>
+{% endif %}
 {% elsif intervention.description %}
 <div class="description">
     {{ intervention.description | markdownify }}
