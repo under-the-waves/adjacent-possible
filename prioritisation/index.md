@@ -61,6 +61,18 @@ permalink: /prioritisation/
     font-size: 0.85em; color: #777;
 }
 
+/* Heads-up note about triage content */
+.heads-up-note {
+    background: #fff8e1; border: 1px solid #f0d171;
+    border-left: 4px solid #c79100;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 18px 0 14px;
+    font-size: 0.92em; line-height: 1.5;
+    color: #4a3c00;
+}
+.heads-up-note strong { color: #2e2500; }
+
 /* Related cards */
 .related-h {
     margin: 36px 0 14px;
@@ -472,6 +484,10 @@ permalink: /prioritisation/
     <button class="btn-secondary" onclick="viewSummary()">View results</button>
     <button class="btn-link" onclick="restartAll()">Start over</button>
   </div>
+</div>
+
+<div class="heads-up-note">
+  <strong>Heads up:</strong> the screen starts with triage – brief screening questions about mental health, safety, finances, addiction, recent loss, and legal issues, drawn from validated short-form questionnaires (PHQ-2, GAD-2, and similar). If you'd rather skip those, use <em>Start at fundamentals</em> or <em>Start at focus area</em> above.
 </div>
 
 <div class="start-row">
