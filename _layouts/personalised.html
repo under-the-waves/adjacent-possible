@@ -356,6 +356,11 @@ body .main-content {
     color: white;
 }
 
+.recommendations-table th.active:hover {
+    background: #0d47a1;
+    color: white;
+}
+
 .recommendations-table td {
     padding: 8px 6px;
     border-bottom: 1px solid #e9ecef;
@@ -550,6 +555,10 @@ body .main-content {
     opacity: 1;
 }
 
+.recommendations-table th:not(.active) .sort-indicator {
+    opacity: 0.55;
+}
+
 /* Loading state */
 .loading {
     text-align: center;
@@ -742,14 +751,14 @@ body .main-content {
                 <table class="recommendations-table" id="recommendationsTable">
                     <thead>
                         <tr>
-                            <th data-sort="name">Intervention <span class="sort-indicator"></span></th>
+                            <th data-sort="name">Intervention <span class="sort-indicator">&#8597;</span></th>
                             <th data-sort="wbs" class="active">WBS <span class="sort-indicator">&#8595;</span></th>
-                            <th data-sort="upfront-cost">Upfront Cost (USD) <span class="sort-indicator"></span></th>
-                            <th data-sort="ongoing-cost">Ongoing Cost <span class="sort-indicator"></span></th>
-                            <th data-sort="upfront-time">Upfront Time <span class="sort-indicator"></span></th>
-                            <th data-sort="ongoing-time">Ongoing Time <span class="sort-indicator"></span></th>
-                            <th data-sort="time-eroi">Time EROI <span class="sort-indicator"></span></th>
-                            <th data-sort="money-eroi">Money EROI <span class="sort-indicator"></span></th>
+                            <th data-sort="upfront-cost">Upfront<br>Cost (USD) <span class="sort-indicator">&#8597;</span></th>
+                            <th data-sort="ongoing-cost">Ongoing<br>Cost <span class="sort-indicator">&#8597;</span></th>
+                            <th data-sort="upfront-time">Upfront<br>Time <span class="sort-indicator">&#8597;</span></th>
+                            <th data-sort="ongoing-time">Ongoing<br>Time <span class="sort-indicator">&#8597;</span></th>
+                            <th data-sort="time-eroi">Time<br>EROI <span class="sort-indicator">&#8597;</span></th>
+                            <th data-sort="money-eroi">Money<br>EROI <span class="sort-indicator">&#8597;</span></th>
                         </tr>
                     </thead>
                     <tbody id="recommendationsBody">
@@ -1119,7 +1128,7 @@ document.querySelectorAll('th[data-sort]').forEach(header => {
         }
         document.querySelectorAll('th[data-sort]').forEach(h => {
             h.classList.remove('active');
-            h.querySelector('.sort-indicator').textContent = '';
+            h.querySelector('.sort-indicator').innerHTML = '&#8597;';
         });
         this.classList.add('active');
         this.querySelector('.sort-indicator').innerHTML = sortAscending ? '&#8593;' : '&#8595;';
