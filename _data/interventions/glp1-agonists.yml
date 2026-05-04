@@ -2,25 +2,25 @@ evaluated_at: 2026-03-23
 evaluated_by: claude-opus-4-7
 name: "GLP-1 Receptor Agonists"
 what_it_is: |
-  Pharmaceutical weight management using injectable GLP-1 receptor agonists – primarily semaglutide (Wegovy) and the dual GIP/GLP-1 agonist tirzepatide (Mounjaro/Zepbound) – which mimic gut satiety hormones to reduce appetite, slow gastric emptying, and alter central reward signalling. The most effective non-surgical fat loss intervention available, producing 15–22% body weight loss in trials, but requiring indefinite use as weight regain occurs rapidly on cessation.
+  A weekly self-injection of a prescription drug that quiets your hunger signals. The two main options are Wegovy (semaglutide) and Mounjaro/Zepbound (tirzepatide). They imitate hormones your gut produces after a meal, so you feel full sooner, eat less, and stop thinking about food as often. Trial participants lost 15–22% of their starting body weight on average – the biggest weight loss available without surgery – but the weight comes back fast if you stop, so most people stay on the drug long-term.
 how_to_do_it: |
-  - Obtain a prescription through a primary care doctor or weight management specialist after meeting eligibility criteria (typically BMI 30+, or 27+ with a weight-related comorbidity), including baseline blood work and medical history review
-  - Begin at the lowest dose and titrate up over 16–20 weeks following the prescribed schedule – rushing titration substantially increases nausea and gastrointestinal side effects
-  - Many people find that eating slowly, choosing smaller meals, and keeping hydrated reduces the nausea that is most common during dose escalation
-  - Combine with resistance training and adequate protein intake (1.6+ g/kg/day) to preserve lean mass – without this, a meaningful proportion of weight lost is muscle rather than fat
+  - Get a prescription from your doctor or a weight-management clinic. You usually qualify if your BMI is 30 or above, or 27 with a weight-related condition like high blood pressure or type 2 diabetes. Expect a blood test and medical history review.
+  - Start on the lowest dose and step up gradually over four to five months. Going up faster means more nausea.
+  - Eat slowly, keep meals small, and drink plenty of water during the first weeks at each new dose. That is when stomach upset is at its worst.
+  - Lift weights and eat plenty of protein (around 100g a day for most adults). Without this, a chunk of the weight you lose will be muscle rather than fat, leaving you weaker and softer-looking than the scale suggests.
 success_looks_like: |
-  - Appetite feels genuinely reduced rather than suppressed by willpower – food noise quietens, portions naturally shrink, and cravings for calorie-dense foods diminish noticeably
-  - Sustained weight loss of 10–15% within 6–9 months, with body composition improving alongside scale weight as dietary quality shifts toward higher protein and lower volume
-  - Gastrointestinal side effects from dose escalation settle within the first 4–8 weeks at each dose level, and the weekly injection becomes a brief, unremarkable routine
+  - You stop thinking about food all the time. Smaller portions feel like enough. Cravings for sweet, fatty, or salty food quieten without you having to fight them.
+  - You lose around 10–15% of your starting weight over six to nine months, and most of that is fat rather than muscle if you have kept up the resistance training.
+  - The nausea fades within four to eight weeks at each dose, and the weekly injection becomes a quick, unremarkable habit.
 common_pitfalls: |
-  - Stopping the medication after reaching a target weight – two-thirds of lost weight typically returns within 12 months of cessation, making this effectively a lifelong commitment
-  - Neglecting resistance training and protein intake during rapid weight loss, resulting in significant muscle mass loss that worsens body composition and reduces metabolic rate
-  - Underestimating the financial burden: at $300–1,350+ per month without insurance coverage, cost is the single largest driver of discontinuation in real-world data
+  - Stopping the medication once you have hit your target weight. About two-thirds of the lost weight typically comes back within a year, which means this is effectively a lifelong commitment.
+  - Skipping the strength training and protein during rapid weight loss. Without them you lose a lot of muscle along with the fat, which leaves you weaker and burning fewer calories at rest.
+  - Underestimating the cost. Without insurance, it runs $300–1,350 a month – the single biggest reason people quit in practice.
 description: |
-  - Pharmaceutical weight management using injectable GLP-1 receptor agonists – primarily semaglutide 2.4 mg (Wegovy) and the dual GIP/GLP-1 agonist tirzepatide (Mounjaro/Zepbound) – which mimic gut satiety hormones to reduce appetite, slow gastric emptying, and alter central reward signalling
-  - Administered as a weekly subcutaneous injection, with dose titration over 16-20 weeks to minimise gastrointestinal side effects; maintenance dosing is indefinite, as weight regain occurs rapidly on cessation
-  - [Phase III trials](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) demonstrate 15-22% body weight loss sustained over 68-104 weeks, making these the most effective non-surgical obesity treatments currently available
-  - Key distinction: prescription-only pharmaceutical intervention with significant cost, side effect burden, and near-complete weight regain within one year of stopping – effectively requiring lifelong use to maintain benefit
+  - A weekly injection that copies a hormone your gut releases after eating, so you feel full sooner and think about food less. Main brands: Wegovy (semaglutide) and Mounjaro/Zepbound (tirzepatide).
+  - [Phase III trials](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) show 15–22% body weight loss sustained over 68–104 weeks – the largest weight loss available without surgery.
+  - Two-thirds of the lost weight typically returns within a year of stopping, so most users continue indefinitely.
+  - Cost without insurance: $300–1,350 a month. This is the single biggest reason people stop.
 applicable_domains: ["body-image"]
 
 values:

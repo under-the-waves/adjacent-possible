@@ -527,40 +527,6 @@
   overflow-y: auto;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .site-nav {
-    margin-left: 0;
-    margin-top: 10px;
-    width: 100%;
-  }
-  
-  .nav-button {
-    width: 100%;
-    text-align: left;
-  }
-  
-  .nav-menu {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .direct-links {
-    margin-top: 10px;
-    width: 100%;
-  }
-  
-  .direct-links a {
-    width: 100%;
-    text-align: center;
-  }
-}
-
 /* Pure CSS dropdown styles */
 .dropdown-toggle {
   display: none;
@@ -703,36 +669,8 @@
   color: #007bff !important;
 }
 
-/* Mobile responsiveness */
+/* Mobile auth nav positioning */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .site-nav {
-    width: 100%;
-    margin: 0;
-  }
-  
-  .nav-button {
-    width: 100%;
-    text-align: left;
-  }
-  
-  .nav-menu {
-    width: 100%;
-    position: static;
-    box-shadow: none;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    max-height: none;
-  }
-
-  .navbar {
-    padding-right: 0;
-  }
-
   #clerk-auth {
     position: static !important;
     transform: none !important;
@@ -1204,28 +1142,7 @@ a.completed-guide:hover,
   cursor: default;
 }
 
-@media (max-width: 768px) {
-  .mega-menu {
-    position: static;
-    box-shadow: none;
-    border-top: none;
-    border-bottom: 1px solid #ddd;
-    padding: 0.5rem 1rem;
-  }
-
-  .mega-menu__grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .mega-menu__column {
-    margin-bottom: 0.5rem;
-  }
-
-  .mega-menu__pillar-name {
-    padding: 8px 0 4px;
-  }
-}
+/* Mobile mega-menu rules live in the consolidated mobile nav block below. */
 
 /* ──────────────────────────────────────────────────────────── */
 /* Mobile UX: hamburger toggle, nav collapse, padding, headings */
@@ -1276,38 +1193,256 @@ a.completed-guide:hover,
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ──────────────────────────────────────────────────────────── */
+/* MOBILE NAV (≤768px) — consolidated drawer + accordion         */
+/* ──────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Override earlier rule that made .navbar flex-direction: column.
-     Keep navbar as a row so logo + hamburger sit side-by-side. */
+  /* Body scroll lock when drawer open */
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  /* Top bar: keep logo + hamburger on one row */
   .navbar {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0;
   }
 
+  .logo-container {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Hamburger visible */
   .nav-toggle {
     display: flex;
   }
 
-  /* Collapse container: hidden by default on mobile */
+  /* Drawer container */
   .nav-collapse {
     display: none;
     width: 100%;
     flex-basis: 100%;
     flex-direction: column;
     align-items: stretch;
+    background: #000;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
+    max-height: calc(100vh - 65px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .navbar.is-open .nav-collapse {
     display: flex;
   }
 
-  /* Stop the previous rules forcing each .site-nav to width:100% — let
-     the nav-collapse container handle stacking. The existing mobile
-     rules that targeted .site-nav directly still produce the right look. */
   .navbar.is-open .site-nav {
     width: 100%;
+    margin: 0;
+    position: static;
+    display: block;
+  }
+
+  /* Top-level rows: full-width, label left, chevron right */
+  .nav-collapse .nav-button {
+    width: 100%;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 48px;
+    text-decoration: none;
+  }
+
+  .nav-collapse .nav-button:hover,
+  .nav-collapse .nav-button:focus {
+    background: #1a1a1a;
+  }
+
+  .nav-collapse .nav-button__chevron {
+    color: #888;
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+
+  .nav-collapse .site-nav.is-open > .nav-button .nav-button__chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Submenus (Start Here, Prioritisation, Resources): inline accordion */
+  .nav-collapse .nav-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    max-height: none;
+    background: #0a0a0a;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .nav-collapse .nav-menu.visible {
+    display: block;
+  }
+
+  .nav-collapse .nav-menu .dropdown-item {
+    display: block;
+    padding: 0;
+  }
+
+  .nav-collapse .nav-menu a {
+    display: block;
+    padding: 14px 20px 14px 36px;
+    color: #ddd !important;
+    background: transparent;
+    font-size: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-collapse .nav-menu a:hover {
+    background: #1a1a1a;
+    color: #fff !important;
+  }
+
+  .nav-collapse .nav-menu a.unavailable-guide {
+    color: #f48c92 !important;
+  }
+
+  /* Mega menu: inline accordion with pillar > domain > area nesting */
+  .nav-collapse .mega-menu {
+    position: static;
+    display: none;
+    background: #0a0a0a;
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .nav-collapse .mega-menu.visible {
+    display: block;
+  }
+
+  .nav-collapse .mega-menu__grid {
+    display: block;
+    grid-template-columns: none;
+    gap: 0;
+  }
+
+  .nav-collapse .mega-menu__column {
+    min-width: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Pillar header is a tappable row on mobile */
+  .nav-collapse .mega-menu__pillar-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 20px 14px 36px;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .nav-collapse .mega-menu__pillar-name:hover {
+    background: #1a1a1a;
+  }
+
+  .nav-collapse .mega-menu__pillar-icon {
+    display: inline-block;
+    color: #888;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.2s;
+  }
+
+  .nav-collapse .mega-menu__column.is-open .mega-menu__pillar-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Domains hidden until pillar is open */
+  .nav-collapse .mega-menu__domain {
+    display: none;
+    margin: 0;
+  }
+
+  .nav-collapse .mega-menu__column.is-open .mega-menu__domain {
+    display: block;
+  }
+
+  .nav-collapse .mega-menu__domain-header {
+    padding: 12px 20px 12px 52px;
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-collapse .mega-menu__domain-header:hover {
+    background: #1a1a1a;
+  }
+
+  .nav-collapse .mega-menu__domain-label {
+    font-size: 14px;
+    color: #ccc;
+  }
+
+  .nav-collapse .mega-menu__expand-icon {
+    color: #888;
+    font-size: 16px;
+  }
+
+  .nav-collapse .mega-menu__domain-items {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: #050505;
+  }
+
+  .nav-collapse .mega-menu__domain-items a,
+  .nav-collapse .mega-menu__domain-items span.unavailable-guide {
+    display: block;
+    padding: 10px 20px 10px 68px;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  /* Footer "View All Life Areas" */
+  .nav-collapse .mega-menu__footer {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+  }
+
+  .nav-collapse .mega-menu__footer .all-areas-link {
+    display: block;
+    padding: 14px 20px 14px 36px !important;
+    text-align: left !important;
+    color: #4CAF50 !important;
+    font-size: 15px;
   }
 }
 
