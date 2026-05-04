@@ -510,24 +510,30 @@ body .main-content {
 }
 
 .table-description-icon {
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #4CAF50;
+    background: transparent;
+    color: #4CAF50;
+    border-radius: 50%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 1;
     cursor: pointer;
-    transition: background-color 0.3s;
     user-select: none;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 3px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .table-description-icon:hover {
-    background-color: #2e7d32;
+    background: #4CAF50;
+    color: white;
 }
 
 /* Score columns */
@@ -540,6 +546,13 @@ body .main-content {
 .eroi-score {
     font-weight: 600;
     color: #4CAF50;
+}
+
+/* Driver column – the value contributing most to the user's WBS for this row */
+.driver-cell {
+    font-size: 0.9em;
+    color: #155799;
+    font-weight: 500;
 }
 
 /* Cost and time columns */
@@ -741,7 +754,8 @@ body .main-content {
 
                 <details class="methodology-note">
                     <summary><strong>How scoring works</strong></summary>
-                    <p>Each intervention is scored using a logarithmic scale where each point represents roughly 2x the impact. Expected benefit scores account for realistic success rates, then these are combined using your personal weightings to calculate Weighted Benefit Scores (WBS). Time and Money EROI show efficiency per hour and per dollar respectively.</p>
+                    <p>Each intervention is scored on a logarithmic scale per value, where each point represents roughly 2&times; the impact. Per-value scores combine the magnitude of benefit, the success rate, and adherence; positive values mean the intervention helps, negative values mean it harms. The Weighted Benefit Score (WBS) sums these per-value scores using your slider weights to rank interventions for your priorities.</p>
+                    <p>The <strong>Driver</strong> column shows which value is contributing most to each intervention&rsquo;s ranking for you. If you weight wealth highly but an intervention&rsquo;s biggest effect for you is on wellbeing, that&rsquo;s reflected here. Time and Money EROI show efficiency – higher means more benefit per hour or dollar invested.</p>
                 </details>
 
                 <p class="habits-summary" id="habitsSummary"></p>
@@ -755,6 +769,7 @@ body .main-content {
                         <tr>
                             <th data-sort="name">Intervention <span class="sort-indicator">&#8597;</span></th>
                             <th data-sort="wbs" class="active">WBS <span class="sort-indicator">&#8595;</span></th>
+                            <th data-sort="driver">Driver <span class="sort-indicator">&#8597;</span></th>
                             <th data-sort="upfront-cost">Upfront<br>Cost (USD) <span class="sort-indicator">&#8597;</span></th>
                             <th data-sort="ongoing-cost">Ongoing<br>Cost <span class="sort-indicator">&#8597;</span></th>
                             <th data-sort="upfront-time">Upfront<br>Time <span class="sort-indicator">&#8597;</span></th>
@@ -765,7 +780,7 @@ body .main-content {
                     </thead>
                     <tbody id="recommendationsBody">
                         <tr>
-                            <td colspan="8" class="loading">Loading recommendations...</td>
+                            <td colspan="9" class="loading">Loading recommendations...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -800,7 +815,9 @@ const valueConfig = [
 
 const domain = {{ page.domain | jsonify }};
 
-// Build interventions data from Jekyll data files
+// Build interventions data from Jekyll data files. Pass raw PBS/ISR/UAR
+// /confidence per value so JS can apply the redesigned EBS formula at
+// render time (matches intervention.html's computeEbs).
 const interventions = {
 {% for intervention_file in site.data.interventions %}
     {% assign ikey = intervention_file[0] %}
@@ -811,7 +828,7 @@ const interventions = {
         description: {{ idata.what_it_is | jsonify }},
         values: {
             {% for value in page.values %}
-            {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{{ idata.values[vkey].pbs | plus: 0.0 }} + Math.log2({{ idata.values[vkey].isr | plus: 0.0 }}/100) + Math.log2({{ idata.values[vkey].uar | plus: 0.0 }}/100) + Math.log2({% if idata.values[vkey].confidence == 'high' %}1.0{% elsif idata.values[vkey].confidence == 'low' %}0.5{% else %}0.75{% endif %}){% else %}0{% endif %}{% unless forloop.last %},{% endunless %}
+            {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{ pbs: {{ idata.values[vkey].pbs | plus: 0.0 }}, isr: {{ idata.values[vkey].isr | plus: 0.0 }}, uar: {{ idata.values[vkey].uar | plus: 0.0 }}, conf: {% if idata.values[vkey].confidence == 'high' %}1.0{% elsif idata.values[vkey].confidence == 'low' %}0.5{% else %}0.75{% endif %} }{% else %}null{% endif %}{% unless forloop.last %},{% endunless %}
             {% endfor %}
         },
         resources: {
@@ -906,12 +923,48 @@ function getInterventionUrl(key) {
     return '{{ site.baseurl }}/resources/intervention-database/' + urlKey;
 }
 
-function calculateWBS(intervention, userValues) {
-    return Object.keys(userValues).reduce((sum, k) => {
-        return sum + (intervention.values[k] * userValues[k] / 100);
-    }, 0);
+// EBS formula – matches _layouts/intervention.html. Linear EV is in units of
+// (max_anchor / 1024); EBS = sign(EV) × log₂(1 + |EV|). Always positive for
+// positive expected value, always negative for negative; smooths near zero.
+function computeEbs(pbs, isr, uar, confFactor, drFactor) {
+    drFactor = drFactor != null ? drFactor : 1.0;
+    var sign = Math.sign(pbs);
+    if (sign === 0) return 0;
+    var pbsMagnitude = Math.pow(2, Math.abs(pbs)) - 1;
+    var linearEv = sign * pbsMagnitude * (isr / 100) * (uar / 100) * confFactor * drFactor;
+    return Math.sign(linearEv) * Math.log2(1 + Math.abs(linearEv));
 }
 
+// Compute WBS as the user-weighted sum of per-value EBSes, and identify the
+// Driver: the value whose weighted contribution has the largest absolute
+// magnitude. The Driver indicates which value is making this intervention
+// rank where it does for the current user, and the per-row EROI displayed
+// is that value's EROI (lives on its own scale).
+function computeWbsAndDriver(intervention, userValues) {
+    var wbs = 0;
+    var topAbs = 0;
+    var driverKey = null;
+    var driverEbs = 0;
+    Object.keys(userValues).forEach(function(k) {
+        var v = intervention.values[k];
+        if (!v) return;
+        var weight = userValues[k] / 100;
+        var ebs = computeEbs(v.pbs, v.isr, v.uar, v.conf, 1.0);
+        var contribution = ebs * weight;
+        wbs += contribution;
+        if (Math.abs(contribution) > topAbs) {
+            topAbs = Math.abs(contribution);
+            driverKey = k;
+            driverEbs = ebs;
+        }
+    });
+    return { wbs: wbs, driverKey: driverKey, driverEbs: driverEbs };
+}
+
+// Time and Money EROI – linear divide for now. The redesigned signed-log
+// formula with per-value scale_factor is pending values.yml calibration.
+// Sign of EROI follows sign of WBS so harmful interventions still surface
+// negative numbers in the existing table.
 function calculateTimeEROI(wbs, timeWeekly) {
     return wbs / Math.max(1, timeWeekly);
 }
@@ -986,13 +1039,22 @@ function getEffectiveResources(key, base) {
     };
 }
 
+// Map a value key to its display label using valueConfig.
+function valueLabelFor(key) {
+    var v = valueConfig.find(function(x) { return x.key === key; });
+    return v ? v.label : key;
+}
+
 function updateRecommendations() {
     const scored = Object.keys(interventions).map(key => {
         const i = interventions[key];
-        const wbs = calculateWBS(i, currentValues);
+        const wbsResult = computeWbsAndDriver(i, currentValues);
+        const wbs = wbsResult.wbs;
         const resources = getEffectiveResources(key, i.resources);
         return {
             key, ...i, wbs, resources,
+            driverKey: wbsResult.driverKey,
+            driverLabel: wbsResult.driverKey ? valueLabelFor(wbsResult.driverKey) : '',
             timeEROI: calculateTimeEROI(wbs, resources.ongoing_time_weekly),
             moneyEROI: calculateMoneyEROI(wbs, resources.upfront_cost, resources.ongoing_cost_weekly)
         };
@@ -1004,6 +1066,7 @@ function updateRecommendations() {
         case 'time-eroi': scored.sort((a, b) => dir * (a.timeEROI - b.timeEROI)); break;
         case 'money-eroi': scored.sort((a, b) => dir * (a.moneyEROI - b.moneyEROI)); break;
         case 'name': scored.sort((a, b) => dir * a.name.localeCompare(b.name)); break;
+        case 'driver': scored.sort((a, b) => dir * a.driverLabel.localeCompare(b.driverLabel)); break;
         case 'upfront-cost': scored.sort((a, b) => dir * (a.resources.upfront_cost - b.resources.upfront_cost)); break;
         case 'ongoing-cost': scored.sort((a, b) => dir * (a.resources.ongoing_cost_weekly - b.resources.ongoing_cost_weekly)); break;
         case 'upfront-time': scored.sort((a, b) => dir * (a.resources.upfront_time - b.resources.upfront_time)); break;
@@ -1012,7 +1075,10 @@ function updateRecommendations() {
 
     const habits = getCurrentHabits();
     const hideMarked = getHideHabits();
-    const visibleScored = hideMarked ? scored.filter(s => !habits[s.key]) : scored;
+    // Hide interventions whose WBS rounds to zero – they have no positive or
+    // negative weighted contribution under the user's current sliders.
+    const wbsFiltered = scored.filter(s => Math.abs(s.wbs) >= 0.05);
+    const visibleScored = hideMarked ? wbsFiltered.filter(s => !habits[s.key]) : wbsFiltered;
 
     recommendationsBody.innerHTML = visibleScored.map(i => {
         const isDoing = !!habits[i.key];
@@ -1029,6 +1095,7 @@ function updateRecommendations() {
                 </div>
             </td>
             <td class="wbs-score">${i.wbs.toFixed(1)}</td>
+            <td class="driver-cell">${i.driverLabel}</td>
             <td class="cost-cell${i.resources.upfront_cost_edited ? ' is-edited' : ''}">$${i.resources.upfront_cost}</td>
             <td class="cost-cell${i.resources.ongoing_cost_edited ? ' is-edited' : ''}">$${i.resources.ongoing_cost}/${i.resources.ongoing_cost_period}</td>
             <td class="time-cell${i.resources.upfront_time_edited ? ' is-edited' : ''}">${i.resources.upfront_time}h</td>
@@ -1174,6 +1241,12 @@ window.addEventListener('ap-storage-sync', function() {
         updateRecommendations();
     }
 });
+
+// Re-render once Clerk reports auth state and on subsequent sign-in changes –
+// matches the pattern used in intervention.html. Without this, the table
+// renders before Clerk has loaded, missing any Clerk-synced sliders/habits.
+window.addEventListener('ap-clerk-ready', function() { updateRecommendations(); });
+window.addEventListener('ap-auth-change', function() { updateRecommendations(); });
 
 // Level 1 completion tracking
 let slidersModified = false;
