@@ -291,6 +291,8 @@ body .main-content {
     padding: 20px;
     max-width: 500px;
     width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     z-index: 1000;
 }
@@ -469,7 +471,7 @@ const interventions = [
     {
         key: {{ ikey | jsonify }},
         name: {{ idata.name | jsonify }},
-        description: {{ idata.description | jsonify }},
+        description: {{ idata.what_it_is | jsonify }},
         domains: {{ idata.applicable_domains | jsonify }},
         values: {
             {% for value_pair in idata.values %}
@@ -679,8 +681,11 @@ function renderDescription(text) {
     var div = document.createElement('div');
     div.textContent = text;
     var escaped = div.innerHTML;
-    escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
-        '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    escaped = escaped.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function(match, label, url) {
+        var external = /^https?:\/\//.test(url);
+        var attrs = external ? ' target="_blank" rel="noopener"' : '';
+        return '<a href="' + url + '"' + attrs + '>' + label + '</a>';
+    });
     var lines = escaped.split('\n');
     var inList = false;
     var result = [];

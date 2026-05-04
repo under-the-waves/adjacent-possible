@@ -594,6 +594,8 @@ body .main-content {
     padding: 20px;
     max-width: 500px;
     width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     z-index: 1000;
 }
@@ -806,7 +808,7 @@ const interventions = {
     {% if idata.applicable_domains contains page.domain %}
     {{ ikey | jsonify }}: {
         name: {{ idata.name | jsonify }},
-        description: {{ idata.description | jsonify }},
+        description: {{ idata.what_it_is | jsonify }},
         values: {
             {% for value in page.values %}
             {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{{ idata.values[vkey].pbs | plus: 0.0 }} + Math.log2({{ idata.values[vkey].isr | plus: 0.0 }}/100) + Math.log2({{ idata.values[vkey].uar | plus: 0.0 }}/100) + Math.log2({% if idata.values[vkey].confidence == 'high' %}1.0{% elsif idata.values[vkey].confidence == 'low' %}0.5{% else %}0.75{% endif %}){% else %}0{% endif %}{% unless forloop.last %},{% endunless %}
@@ -923,7 +925,14 @@ function showDescriptionPopup(key) {
     const i = interventions[key];
     if (!i) return;
     document.getElementById('popupTitle').textContent = i.name;
-    const html = i.description
+    var div = document.createElement('div');
+    div.textContent = i.description || '';
+    const html = div.innerHTML
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, function(match, label, url) {
+            var external = /^https?:\/\//.test(url);
+            var attrs = external ? ' target="_blank" rel="noopener"' : '';
+            return '<a href="' + url + '"' + attrs + '>' + label + '</a>';
+        })
         .replace(/^- /gm, '&bull; ')
         .replace(/\n/g, '<br>');
     document.getElementById('popupContent').innerHTML = html;
