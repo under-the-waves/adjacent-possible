@@ -429,11 +429,11 @@ permalink: /prioritisation-survey/
 
 <div class="prio-hero">
   <h1>Decide what to work on first</h1>
-  <p class="lede">A short three-stage screen across roughly fifty life areas. About 22 minutes for all three, or skip ahead to the one you want.</p>
+  <p class="lede">A short three-stage screen across roughly fifty life areas. About 30 minutes for all three, or skip ahead to the one you want.</p>
 </div>
 
 <details class="research-note">
-  <summary>Why three stages – the research behind this screen</summary>
+  <summary>Why three stages – the research and thinking behind this survey</summary>
   <div class="body">
     <p>There is no single validated academic framework for prioritising across all of personal life. The closest analogues each capture part of the picture.</p>
     <ul>
@@ -444,9 +444,24 @@ permalink: /prioritisation-survey/
       <li><strong>ITN</strong> (Importance, Tractability, Neglectedness), developed by effective altruists for cause selection, adapts reasonably to personal areas.</li>
       <li><strong>Hedonic adaptation research</strong> (<a href="https://lyubomirskylab.com/">Lyubomirsky and others</a>) shows that relationships, autonomy, meaning, and mastery produce lasting wellbeing returns. Income beyond roughly $75,000–100,000 household and most possessions adapt away (<a href="https://www.pnas.org/doi/10.1073/pnas.2016976118">Killingsworth, 2021</a>).</li>
     </ul>
-    <p>This screen combines these into a three-stage approach: triage acute issues first, then fundamentals where there are significant gaps, then prioritise across remaining areas. The values input draws on <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/">Schwartz's theory of basic human values</a> (validated across 80+ countries); the constraint identification draws on Theory of Constraints.</p>
+    <p>This survey combines these into a three-stage approach: triage acute issues first, then fundamentals where there are significant gaps, then prioritise across remaining areas. The values input draws on <a href="https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/">Schwartz's theory of basic human values</a> (validated across 80+ countries); the constraint identification draws on Theory of Constraints.</p>
   </div>
 </details>
+
+<div class="start-row">
+  <button class="btn-primary" onclick="skipTo('triage')">Start the full survey</button>
+</div>
+<p class="privacy-note">Your responses stay on this device unless you sign in, in which case they sync via your account.</p>
+
+<div id="priorBanner" class="prior-banner hidden">
+  <div id="priorBannerText"></div>
+  <div class="actions">
+    <button class="btn-secondary" onclick="viewSummary()">View results</button>
+    <button class="btn-link" onclick="restartAll()">Start over</button>
+  </div>
+</div>
+
+<p>This survey contains three components. You can do them all together, or skip to the survey most relevant for you.</p>
 
 <div class="stage-list">
   <div class="stage-row">
@@ -472,28 +487,15 @@ permalink: /prioritisation-survey/
     <div>
       <div class="stage-title">Focus area</div>
       <div class="stage-desc">Identifies a single binding life area to focus on next, based on what you value and where you currently feel constrained. Outputs one focus area with a stated reason, plus two named successors.</div>
-      <div class="stage-meta">21 values items + 4 constraint pages, about 12 minutes</div>
+      <div class="stage-meta">21 values items + 4 constraint pages, about 20 minutes</div>
     </div>
     <button class="stage-skip" onclick="skipTo('focus')">Start at focus area</button>
   </div>
 </div>
 
-<div id="priorBanner" class="prior-banner hidden">
-  <div id="priorBannerText"></div>
-  <div class="actions">
-    <button class="btn-secondary" onclick="viewSummary()">View results</button>
-    <button class="btn-link" onclick="restartAll()">Start over</button>
-  </div>
-</div>
-
 <div class="heads-up-note">
-  <strong>Heads up:</strong> the screen starts with triage – brief screening questions about mental health, safety, finances, addiction, recent loss, and legal issues, drawn from validated short-form questionnaires (PHQ-2, GAD-2, and similar). If you'd rather skip those, use <em>Start at fundamentals</em> or <em>Start at focus area</em> above.
+  <strong>Heads up:</strong> the survey starts with triage – brief screening questions about mental health, safety, finances, addiction, recent loss, and legal issues, drawn from validated short-form questionnaires (PHQ-2, GAD-2, and similar). If you'd rather skip those, use <em>Start at fundamentals</em> or <em>Start at focus area</em> above.
 </div>
-
-<div class="start-row">
-  <button class="btn-primary" onclick="skipTo('triage')">Start the screen</button>
-</div>
-<p class="privacy-note">Your responses stay on this device unless you sign in, in which case they sync via your account.</p>
 
 <h2 class="related-h">Where this fits with the rest of the site</h2>
 
@@ -503,8 +505,8 @@ permalink: /prioritisation-survey/
     <div class="related-desc">High-impact, low-effort actions for momentum (in development).</div>
   </a>
   <a href="{{ site.baseurl }}/prioritisation/dashboard/" class="related-card">
-    <div class="related-title">Level assessment</div>
-    <div class="related-desc">Assesses your current level across all life areas.</div>
+    <div class="related-title">Band assessment</div>
+    <div class="related-desc">Assesses your current band across all life areas.</div>
   </a>
   <a href="{{ site.baseurl }}/life-areas/" class="related-card">
     <div class="related-title">Browse all life areas</div>
