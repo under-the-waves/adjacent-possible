@@ -23,18 +23,14 @@ title: Worthwhile
   border-radius: 6px; font-weight: 600; font-size: 1.05em;
 }
 .home-cta-primary:hover { background: #0f4373; color: #fff; }
-.home-cta-secondary { color: #155799; font-size: 0.95em; }
+.home-cta-secondary { font-size: 0.95em; }
 </style>
 
-Worthwhile aims to help you improve your life according to three principles:
+Worthwhile provides personal development recommendations across 52 areas of life – from health and finances to friends and relationships to learning and purpose.
 
-- **Evidence-based** interventions
-- **Using the 80/20 rule** to get the most benefit for your time and money
-- **A holistic approach** ensuring important areas aren't neglected
+For each area, you can see how you compare with the general population, learn what's possible to achieve, and find actions and habits ranked by expected benefit for your time and money. Recommendations are personalised to what you value within that area.
 
 <div class="home-cta-row">
+  <span class="home-cta-secondary">New to the site?</span>
   <a href="{{ site.baseurl }}/start-here/how-to-use/" class="home-cta-primary">Start here</a>
-  <span class="home-cta-secondary">– new to the site? Three ways in, depending on what you're looking for.</span>
 </div>
-
-Already know your way around? [Browse the life areas]({{ site.baseurl }}/life-areas/), [run the prioritisation screen]({{ site.baseurl }}/prioritisation/), or [open your dashboard]({{ site.baseurl }}/prioritisation/dashboard/).
