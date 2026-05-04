@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Learning Methods – Level 1: Awareness"
+title: "Learning Methods – Awareness assessment"
 life_area_slug: learning-methods
 ---
 
@@ -296,7 +296,7 @@ life_area_slug: learning-methods
 
 <div class="l1-container">
 
-<h1>Learning Methods: Level 1</h1>
+<h1>Learning Methods: Awareness</h1>
 
 <p class="l1-subtitle">Understand what learning methods means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -375,20 +375,20 @@ life_area_slug: learning-methods
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each learning methods value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each learning methods value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Efficiency & Speed &ndash; Level 5</div>
+    <div class="exemplar-value">Efficiency & Speed</div>
     <p><a href="https://en.wikipedia.org/wiki/Scott_Young_(author)" target="_blank">Scott Young</a> completed MIT's four-year computer science curriculum in 12 months using structured self-study, then learned four languages in a year by living in each country and applying targeted immersion techniques. His approach centres on identifying the highest-leverage study methods for each domain and eliminating low-return activity.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Depth & Mastery &ndash; Level 5</div>
+    <div class="exemplar-value">Depth & Mastery</div>
     <p><a href="https://en.wikipedia.org/wiki/Josh_Waitzkin" target="_blank">Josh Waitzkin</a> became a national chess champion as a child, then switched to tai chi push hands and won a world championship in that discipline too. His book <em>The Art of Learning</em> describes a deliberate practice methodology built around identifying and internalising core principles deeply enough to transfer them across unrelated domains.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Enjoyment & Motivation &ndash; Level 5</div>
+    <div class="exemplar-value">Enjoyment & Motivation</div>
     <p><a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank">Richard Feynman</a> maintained a lifelong habit of learning for its own sake &ndash; picking locks, studying biology, learning to draw, playing bongo drums, and deciphering Mayan hieroglyphs alongside his physics work. He sustained deep curiosity across dozens of fields for over 40 years, driven almost entirely by the pleasure of figuring things out.</p>
 </div>
 
@@ -600,7 +600,7 @@ life_area_slug: learning-methods
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Learning Methods. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/learning-methods/personalised" class="btn-cta">View Your Interventions</a>
 </div>

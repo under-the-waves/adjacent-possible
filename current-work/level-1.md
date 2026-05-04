@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Current Work – Level 1: Awareness"
+title: "Current Work – Awareness assessment"
 life_area_slug: current-work
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: current-work
 
 <div class="l1-container">
 
-<h1>Current Work: Level 1</h1>
+<h1>Current Work: Awareness</h1>
 
 <p class="l1-subtitle">Understand what current work means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -360,25 +360,25 @@ life_area_slug: current-work
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each current work value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each current work value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Rewards &ndash; Level 5</div>
+    <div class="exemplar-value">Rewards</div>
     <p><a href="https://www.crunchbase.com/person/stewart-butterfield" target="_blank">Stewart Butterfield</a> co-founded Flickr and Slack, both of which emerged from failed video game projects. He sold Flickr to Yahoo for an estimated $25 million and built Slack into a company valued at $27.7 billion when Salesforce acquired it in 2021. His career demonstrates how exceptional rewards follow from building things people genuinely need.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Competence &ndash; Level 5</div>
+    <div class="exemplar-value">Competence</div>
     <p><a href="https://jvns.ca/" target="_blank">Julia Evans</a> is a software engineer known for explaining complex systems concepts with unusual clarity. Her zines, blog posts, and tools have become widely used learning resources across the industry. She exemplifies competence that goes beyond performing a role well – she advances how others understand and practise their craft.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Engagement &ndash; Level 5</div>
+    <div class="exemplar-value">Engagement</div>
     <p><a href="https://en.wikipedia.org/wiki/John_Carmack" target="_blank">John Carmack</a> has spent decades working at the frontier of real-time graphics and virtual reality, from Doom to Oculus. He is known for sustained, deep focus – often working 60+ hour weeks by choice – and has described programming as the activity he would do regardless of compensation. His engagement is inseparable from his identity.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Balance &ndash; Level 5</div>
+    <div class="exemplar-value">Balance</div>
     <p><a href="https://basecamp.com/about/jason-fried" target="_blank">Jason Fried</a>, co-founder of Basecamp, built a profitable technology company while publicly advocating for 40-hour weeks, no meetings on certain days, and company-wide sabbaticals. He has sustained high performance over two decades while deliberately protecting personal time, and his writing on work-life integration has influenced how thousands of companies operate.</p>
 </div>
 
@@ -641,7 +641,7 @@ life_area_slug: current-work
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Current Work. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/current-work/personalised" class="btn-cta">View Your Interventions</a>
 </div>

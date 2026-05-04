@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Body Image – Level 1: Awareness"
+title: "Body Image – Awareness assessment"
 life_area_slug: body-image
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: body-image
 
 <div class="l1-container">
 
-<h1>Body Image: Level 1</h1>
+<h1>Body Image: Awareness</h1>
 
 <p class="l1-subtitle">Understand what body image means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: body-image
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each body image value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each body image value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Youthfulness & Vitality &ndash; Level 5</div>
+    <div class="exemplar-value">Youthfulness & Vitality</div>
     <p><a href="https://en.wikipedia.org/wiki/Cate_Blanchett" target="_blank">Cate Blanchett</a> has maintained a notably youthful appearance and high energy through her 50s whilst sustaining a demanding career. She is frequently cited for her skin quality, posture, and vitality, and has spoken publicly about prioritising sleep, sun protection, and consistent skincare over cosmetic procedures.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Romantic Appeal &ndash; Level 5</div>
+    <div class="exemplar-value">Romantic Appeal</div>
     <p><a href="https://en.wikipedia.org/wiki/David_Beckham" target="_blank">David Beckham</a> has maintained strong physical presence and grooming standards from his 20s into his late 40s, adapting his presentation across decades whilst remaining widely regarded as physically attractive. His attention to body composition, grooming, and confident body language has remained consistent through major life transitions.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Weight Management &ndash; Level 5</div>
+    <div class="exemplar-value">Weight Management</div>
     <p><a href="https://en.wikipedia.org/wiki/Hugh_Jackman" target="_blank">Hugh Jackman</a> has demonstrated precise body composition control over two decades of film roles, repeatedly transforming his physique for specific demands and returning to a healthy baseline. He has maintained this capacity into his mid-50s, adjusting his approach as he ages.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Body Confidence &ndash; Level 5</div>
+    <div class="exemplar-value">Body Confidence</div>
     <p><a href="https://en.wikipedia.org/wiki/Lizzo" target="_blank">Lizzo</a> has built a career around genuine body acceptance and physical confidence, performing demanding choreography in body-exposing outfits and speaking openly about maintaining positive body image through public scrutiny. Her confidence appears authentic and consistent across contexts.</p>
 </div>
 
@@ -629,7 +629,7 @@ life_area_slug: body-image
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Body Image. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/body-image/personalised" class="btn-cta">View Your Interventions</a>
 </div>

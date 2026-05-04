@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Career Planning – Level 1: Awareness"
+title: "Career Planning – Awareness assessment"
 life_area_slug: career-planning
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: career-planning
 
 <div class="l1-container">
 
-<h1>Career Planning: Level 1</h1>
+<h1>Career Planning: Awareness</h1>
 
 <p class="l1-subtitle">Understand what career planning means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -360,25 +360,25 @@ life_area_slug: career-planning
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each career planning value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each career planning value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Clarity &ndash; Level 5</div>
+    <div class="exemplar-value">Clarity</div>
     <p><a href="https://80000hours.org/about/#702" target="_blank">Benjamin Todd</a> co-founded 80,000 Hours, an organisation dedicated to helping people find careers that do the most good. He has spent over a decade researching career strategy and impact, developing frameworks for career decision-making that have influenced thousands of professionals. His career is itself a multi-decade thesis on how to choose professional direction deliberately.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Advancement &ndash; Level 5</div>
+    <div class="exemplar-value">Advancement</div>
     <p><a href="https://www.linkedin.com/in/indranooyi/" target="_blank">Indra Nooyi</a> moved from India to the United States for graduate school and rose to become CEO of PepsiCo, a position she held for 12 years. She navigated multiple industries and geographies, building skills and reputation at each stage. Her trajectory from management consultant to Fortune 50 CEO exemplifies deliberate, sustained career advancement over decades.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Security &ndash; Level 5</div>
+    <div class="exemplar-value">Security</div>
     <p><a href="https://tferriss.com/about/" target="_blank">Tim Ferriss</a> built a career structure that is genuinely antifragile – spanning bestselling books, a top-ranked podcast, angel investing, and public speaking. He has navigated multiple career transitions and income streams, ensuring that no single disruption could threaten his professional standing. His approach to career design emphasises optionality and redundancy.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &ndash; Level 5</div>
+    <div class="exemplar-value">Meaning</div>
     <p><a href="https://paulgraham.com/bio.html" target="_blank">Paul Graham</a> co-founded Y Combinator after careers as a programmer, writer, and painter. His professional choices have consistently reflected a personal philosophy about what kind of work matters – from writing influential essays on startups and technology to funding early-stage founders. His career legacy is inseparable from his intellectual convictions.</p>
 </div>
 
@@ -559,7 +559,7 @@ life_area_slug: career-planning
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Career Planning. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/career-planning/personalised" class="btn-cta">View Your Interventions</a>
 </div>

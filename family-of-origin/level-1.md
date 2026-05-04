@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Family of Origin – Level 1: Awareness"
+title: "Family of Origin – Awareness assessment"
 life_area_slug: family-of-origin
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: family-of-origin
 
 <div class="l1-container">
 
-<h1>Family of Origin: Level 1</h1>
+<h1>Family of Origin: Awareness</h1>
 
 <p class="l1-subtitle">Understand what family of origin means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -361,25 +361,25 @@ life_area_slug: family-of-origin
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each family of origin value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each family of origin value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Personal Autonomy &ndash; Level 5</div>
+    <div class="exemplar-value">Personal Autonomy</div>
     <p><a href="https://en.wikipedia.org/wiki/Tara_Westover" target="_blank">Tara Westover</a> grew up in a survivalist family in rural Idaho with no formal schooling, facing intense pressure to conform to her family's beliefs and way of life. She taught herself enough to gain university admission at 17, eventually earning a PhD from Cambridge. She maintained her own values and identity despite sustained family opposition, estrangement, and attempts to pull her back, documenting the process in her memoir <em>Educated</em>.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Emotional Connection &ndash; Level 5</div>
+    <div class="exemplar-value">Emotional Connection</div>
     <p><a href="https://en.wikipedia.org/wiki/Andre_Agassi" target="_blank">Andre Agassi</a> grew up under a domineering father who pushed him relentlessly into professional tennis from early childhood. In his memoir <em>Open</em>, he described years of resentment and emotional distance. As an adult, he gradually rebuilt the relationship on his own terms, eventually developing genuine closeness with his father while setting clear boundaries. He has spoken about the process as one of the most meaningful things he has done outside of tennis.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Active Healing &ndash; Level 5</div>
+    <div class="exemplar-value">Active Healing</div>
     <p><a href="https://en.wikipedia.org/wiki/Edith_Eger" target="_blank">Edith Eger</a> survived Auschwitz as a teenager, losing both parents in the Holocaust. She spent decades working through the trauma of her family's destruction, eventually becoming a clinical psychologist specialising in trauma recovery. In her 90s, she published <em>The Choice</em>, describing how she transformed her relationship with her family's history from one of paralysing grief into a source of meaning and purpose. She continued treating patients past the age of 90.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Family Duty &ndash; Level 5</div>
+    <div class="exemplar-value">Family Duty</div>
     <p><a href="https://en.wikipedia.org/wiki/Malala_Yousafzai" target="_blank">Ziauddin Yousafzai</a>, Malala's father, dedicated his career to providing educational opportunities in Pakistan's Swat Valley, founding schools despite Taliban threats. He publicly championed his daughter's right to education at great personal risk, and after the family was forced into exile, he continued working to support extended family members in Pakistan while building a foundation to educate girls worldwide. His approach to family duty extended from immediate care for his children to sustained support across generations.</p>
 </div>
 
@@ -641,7 +641,7 @@ life_area_slug: family-of-origin
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Family of Origin. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/family-of-origin/personalised" class="btn-cta">View Your Interventions</a>
 </div>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Health Management – Level 1: Awareness"
+title: "Health Management – Awareness assessment"
 life_area_slug: health-management
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: health-management
 
 <div class="l1-container">
 
-<h1>Health Management: Level 1</h1>
+<h1>Health Management: Awareness</h1>
 
 <p class="l1-subtitle">Understand what health management means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -355,25 +355,25 @@ life_area_slug: health-management
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each health management value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each health management value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Long-term Health &ndash; Level 5</div>
+    <div class="exemplar-value">Long-term Health</div>
     <p><a href="https://peterattiamd.com/about/" target="_blank">Peter Attia</a> is a physician who structures his entire life around longevity optimisation. He undergoes quarterly blood panels, annual full-body MRI and DEXA scans, continuous glucose monitoring, and regular cardiovascular stress testing. He has spoken publicly about adjusting his exercise, nutrition, and sleep protocols based on biomarker trends tracked over more than a decade. His practice centres on what he calls "Medicine 3.0" &ndash; a preventive approach that aims to extend healthspan.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Present Vitality &ndash; Level 5</div>
+    <div class="exemplar-value">Present Vitality</div>
     <p><a href="https://www.foundmyfitness.com/about" target="_blank">Rhonda Patrick</a> holds a PhD in biomedical science and applies detailed self-experimentation to optimise her daily energy and cognitive performance. She has documented her use of sauna protocols, cold exposure, micronutrient tracking, and time-restricted eating, adjusting each based on how they affect her day-to-day function. She appears to maintain consistently high output across research, public communication, and parenting.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Personal Control &ndash; Level 5</div>
+    <div class="exemplar-value">Personal Control</div>
     <p><a href="https://epatientdave.com/about-dave/" target="_blank">Dave deBronkart</a> ("e-Patient Dave") was diagnosed with stage IV kidney cancer in 2007. He researched his condition extensively, identified a clinical trial through an online patient community, and worked with his oncologists to secure access to a treatment that contributed to his full remission. He went on to co-found the Society for Participatory Medicine and has <a href="https://www.bmj.com/content/346/bmj.f1990" target="_blank">published in the BMJ</a> on patient engagement.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Simplicity &ndash; Level 5</div>
+    <div class="exemplar-value">Simplicity</div>
     <p><a href="https://www.atulawande.org/" target="_blank">Atul Gawande</a> is a surgeon and public health researcher whose work focuses on making complex healthcare processes more reliable and efficient. His <a href="https://www.nejm.org/doi/full/10.1056/NEJMsa0810119" target="_blank">surgical checklist research</a> reduced post-operative deaths by 47% across eight hospitals. He applies systems-level thinking to his own health management and has written extensively about building simple, effective protocols for complex problems.</p>
 </div>
 
@@ -612,7 +612,7 @@ life_area_slug: health-management
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Health Management. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/health-management/personalised" class="btn-cta">View Your Interventions</a>
 </div>

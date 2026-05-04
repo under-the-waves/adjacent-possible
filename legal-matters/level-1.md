@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Legal Matters – Level 1: Awareness"
+title: "Legal Matters – Awareness assessment"
 life_area_slug: legal-matters
 ---
 
@@ -296,7 +296,7 @@ life_area_slug: legal-matters
 
 <div class="l1-container">
 
-<h1>Legal Matters: Level 1</h1>
+<h1>Legal Matters: Awareness</h1>
 
 <p class="l1-subtitle">Understand what legal matters means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -378,25 +378,25 @@ life_area_slug: legal-matters
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each legal matters value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each legal matters value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comprehensive Protection &ndash; Level 5</div>
+    <div class="exemplar-value">Comprehensive Protection</div>
     <p><a href="https://www.nolo.com/legal-encyclopedia/about-nolo" target="_blank">Ralph Warner</a> co-founded Nolo, a legal self-help publisher, in 1971 after working as a legal aid lawyer. Over five decades he developed and maintained comprehensive personal legal structures while writing extensively about estate planning, small business law, and consumer rights. His own legal affairs reportedly serve as a working model of the layered protection strategies his books describe.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Simplicity & Peace of Mind &ndash; Level 5</div>
+    <div class="exemplar-value">Simplicity & Peace of Mind</div>
     <p><a href="https://www.suzeorman.com/about" target="_blank">Suze Orman</a> is a financial adviser and author who has spent decades advocating for straightforward legal and financial arrangements. She consistently emphasises basic documents &ndash; wills, revocable living trusts, advance directives &ndash; over complex structures, and has spoken publicly about maintaining her own legal affairs in a simple, well-organised system that requires minimal ongoing attention.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Strategic Advantage &ndash; Level 5</div>
+    <div class="exemplar-value">Strategic Advantage</div>
     <p><a href="https://www.wealthcounsel.com/about" target="_blank">Robert Esperti</a> co-founded WealthCounsel, a network of estate planning solicitors, and co-authored multiple books on asset protection and estate planning strategy. His practice focused on advanced legal structures &ndash; family limited partnerships, irrevocable trusts, and multi-entity arrangements &ndash; designed to optimise tax treatment and protect wealth across generations.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Access & Empowerment &ndash; Level 5</div>
+    <div class="exemplar-value">Access & Empowerment</div>
     <p><a href="https://www.law.georgetown.edu/faculty/peter-edelman/" target="_blank">Peter Edelman</a> is a Georgetown law professor and former senior government official who has spent his career working on access to justice. He served as legislative director to Robert Kennedy and later held positions at the Department of Health and Human Services. His writing and teaching focus on empowering individuals to understand and exercise their legal rights effectively.</p>
 </div>
 
@@ -645,7 +645,7 @@ life_area_slug: legal-matters
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Legal Matters. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/legal-matters/personalised" class="btn-cta">View Your Interventions</a>
 </div>

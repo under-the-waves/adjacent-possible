@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Transportation – Level 1: Awareness"
+title: "Transportation – Awareness assessment"
 life_area_slug: transportation
 ---
 
@@ -296,7 +296,7 @@ life_area_slug: transportation
 
 <div class="l1-container">
 
-<h1>Transportation: Level 1</h1>
+<h1>Transportation: Awareness</h1>
 
 <p class="l1-subtitle">Understand what transportation means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -375,20 +375,20 @@ life_area_slug: transportation
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each transportation value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each transportation value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Efficiency &ndash; Level 5</div>
+    <div class="exemplar-value">Efficiency</div>
     <p><a href="https://en.wikipedia.org/wiki/Chris_Boardman" target="_blank">Chris Boardman</a> is an Olympic gold medallist cyclist who became Greater Manchester's cycling and walking commissioner. He commutes by bike, uses public transport, and has structured his own daily travel around efficiency rather than speed. His advocacy for active transport infrastructure is grounded in his personal practice &ndash; he has said he does not own a car and designs his life around not needing one.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comfort &ndash; Level 5</div>
+    <div class="exemplar-value">Comfort</div>
     <p><a href="https://en.wikipedia.org/wiki/Doug_DeMuro" target="_blank">Doug DeMuro</a> has built a career around evaluating the comfort and experience of vehicles across every price range. He owns and has personally tested hundreds of cars, and his detailed reviews focus heavily on ride quality, cabin environment, and the day-to-day experience of living with a vehicle. His approach treats every journey as an experience worth optimising.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Safety &ndash; Level 5</div>
+    <div class="exemplar-value">Safety</div>
     <p><a href="https://en.wikipedia.org/wiki/Tiff_Needell" target="_blank">Tiff Needell</a> is a former racing driver and long-time motoring presenter who has spent decades teaching advanced driving techniques to the public. His work on defensive and high-performance driving combines professional-level vehicle control with an emphasis on hazard anticipation and safe road behaviour, demonstrated across thousands of hours of on-road instruction.</p>
 </div>
 
@@ -600,7 +600,7 @@ life_area_slug: transportation
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Transportation. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/transportation/personalised" class="btn-cta">View Your Interventions</a>
 </div>

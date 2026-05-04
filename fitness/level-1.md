@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fitness – Level 1: Awareness"
+title: "Fitness – Awareness assessment"
 life_area_slug: fitness
 ---
 
@@ -286,7 +286,7 @@ life_area_slug: fitness
 
 <div class="l1-container">
 
-<h1>Fitness: Level 1</h1>
+<h1>Fitness: Awareness</h1>
 
 <p class="l1-subtitle">Understand what fitness means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -365,20 +365,20 @@ life_area_slug: fitness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each fitness value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each fitness value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Health & Longevity &ndash; Level 5</div>
+    <div class="exemplar-value">Health & Longevity</div>
     <p><a href="https://richroll.com/bio/" target="_blank">Rich Roll</a> was sedentary and overweight at 39. He overhauled his lifestyle and went on to complete five Ironman-distance triathlons on five Hawaiian islands in under a week. His writing and podcast focus almost entirely on healthspan and longevity rather than competition, and he seems to maintain very high cardiovascular fitness into his late 50s.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Physical Performance &ndash; Level 5</div>
+    <div class="exemplar-value">Physical Performance</div>
     <p><a href="https://games.crossfit.com/athlete/32551" target="_blank">Adam Klink</a> is a CrossFit coach and former Division 1 college soccer goalkeeper. In 2020, at a bodyweight of 97 kg, he ran a sub-5-minute mile and back squatted 500 lb in the same day, finishing with 50 unbroken pull-ups. Few people combine that level of strength and endurance simultaneously.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Enjoyment & Psychological Benefits &ndash; Level 5</div>
+    <div class="exemplar-value">Enjoyment & Psychological Benefits</div>
     <p><a href="https://themirnavator.com/" target="_blank">Mirna Valerio</a> has completed over 14 ultramarathons and was named 2018 National Geographic Adventurer of the Year. She talks and writes primarily about joy, inclusion, and community in running rather than times or podium finishes. She has been running consistently for over 15 years and leads a visible community around it.</p>
 </div>
 
@@ -566,7 +566,7 @@ life_area_slug: fitness
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Fitness. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/fitness/personalised" class="btn-cta">View Your Interventions</a>
 </div>

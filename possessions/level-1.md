@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Possessions – Level 1: Awareness"
+title: "Possessions – Awareness assessment"
 life_area_slug: possessions
 ---
 
@@ -296,7 +296,7 @@ life_area_slug: possessions
 
 <div class="l1-container">
 
-<h1>Possessions: Level 1</h1>
+<h1>Possessions: Awareness</h1>
 
 <p class="l1-subtitle">Understand what possessions mean, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -376,25 +376,25 @@ life_area_slug: possessions
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each possessions value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each possessions value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Functionality &ndash; Level 5</div>
+    <div class="exemplar-value">Functionality</div>
     <p><a href="https://en.wikipedia.org/wiki/Alton_Brown" target="_blank">Alton Brown</a> is known for insisting that every kitchen tool must serve multiple functions &ndash; he famously refuses to own any single-purpose gadget except a fire extinguisher. This principle extends to his broader approach to possessions: each item earns its place by being genuinely useful. His long-running show <em>Good Eats</em> consistently demonstrated how a small, well-chosen set of tools can outperform a cluttered kitchen full of specialised equipment.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Simplicity &ndash; Level 5</div>
+    <div class="exemplar-value">Simplicity</div>
     <p><a href="https://mnmlist.com/" target="_blank">Leo Babauta</a> is the author of Zen Habits and mnmlist. He moved his family from Guam to San Francisco with minimal possessions, and has written about reducing his belongings to the point where he can inventory them from memory. His approach focuses on eliminating everything that does not directly support the life he wants to live.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Quality &ndash; Level 5</div>
+    <div class="exemplar-value">Quality</div>
     <p><a href="https://www.buymeonce.com/" target="_blank">Tara Button</a> founded BuyMeOnce, a platform dedicated to identifying and recommending the most durable consumer goods available. She has spent years researching materials, construction methods, and product lifespans, and wrote <em>A Life Less Throwaway</em> on building a life around fewer, better-made possessions.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &ndash; Level 5</div>
+    <div class="exemplar-value">Meaning</div>
     <p><a href="https://www.significantobjects.com/" target="_blank">Rob Walker</a> is a journalist and author of <em>The Art of Noticing</em> who co-created the Significant Objects project, demonstrating how narrative and personal meaning transform the perceived value of ordinary items. His work explores how the stories we attach to objects shape our relationship with them and, by extension, our sense of identity.</p>
 </div>
 
@@ -657,7 +657,7 @@ life_area_slug: possessions
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Possessions. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/possessions/personalised" class="btn-cta">View Your Interventions</a>
 </div>

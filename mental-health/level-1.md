@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Mental Health – Level 1: Awareness"
+title: "Mental Health – Awareness assessment"
 life_area_slug: mental-health
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: mental-health
 
 <div class="l1-container">
 
-<h1>Mental Health: Level 1</h1>
+<h1>Mental Health: Awareness</h1>
 
 <p class="l1-subtitle">Understand what mental health means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -345,20 +345,20 @@ life_area_slug: mental-health
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each mental health value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each mental health value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Professional Treatment & Support &ndash; Level 5</div>
+    <div class="exemplar-value">Professional Treatment & Support</div>
     <p><a href="https://www.stephenfry.com/" target="_blank">Stephen Fry</a> has spoken and written extensively about living with bipolar disorder over several decades, including periods of hospitalisation and suicidal ideation. He has maintained ongoing professional treatment throughout, and his documentary <em>The Secret Life of the Manic Depressive</em> documented his relationship with psychiatry in detail. He appears to use professional support as a sustained foundation for functioning at a high level across multiple careers.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Self-Management & Independence &ndash; Level 5</div>
+    <div class="exemplar-value">Self-Management & Independence</div>
     <p><a href="https://www.thetoolsbook.com/phil-stutz.html" target="_blank">Phil Stutz</a>, the psychotherapist featured in the Netflix documentary <em>Stutz</em>, has managed Parkinson's disease, chronic pain, and depression throughout his career using a structured set of self-directed practices he developed over decades. His approach centres on daily internal exercises &ndash; visualisation, body awareness, and emotional regulation routines &ndash; which he reportedly practises himself, making him an unusually visible example of a practitioner who lives his own methods.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Integration & Holistic Approach &ndash; Level 5</div>
+    <div class="exemplar-value">Integration & Holistic Approach</div>
     <p><a href="https://johannhari.com/" target="_blank">Johann Hari</a>, after researching and writing <em>Lost Connections</em>, restructured his own life around the social and environmental contributors to depression he had identified &ndash; changing his work patterns, investing in community, and redesigning his daily routines around connection and purpose. He has discussed publicly how these lifestyle changes, alongside professional treatment, produced more lasting improvements than medication alone had done for him.</p>
 </div>
 
@@ -561,7 +561,7 @@ life_area_slug: mental-health
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Mental Health. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/mental-health/personalised" class="btn-cta">View Your Interventions</a>
 </div>

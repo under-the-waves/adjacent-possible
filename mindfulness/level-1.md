@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Mindfulness – Level 1: Awareness"
+title: "Mindfulness – Awareness assessment"
 life_area_slug: mindfulness
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: mindfulness
 
 <div class="l1-container">
 
-<h1>Mindfulness: Level 1</h1>
+<h1>Mindfulness: Awareness</h1>
 
 <p class="l1-subtitle">Understand what mindfulness means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: mindfulness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each mindfulness value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each mindfulness value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Mental Clarity &ndash; Level 5</div>
+    <div class="exemplar-value">Mental Clarity</div>
     <p><a href="https://www.alanwallace.org/about" target="_blank">B. Alan Wallace</a> has practised meditation for over 40 years, including multiple solitary retreats lasting up to five months. He trained for over a decade under the Dalai Lama and other Tibetan teachers. His work centres on <a href="https://www.sbinstitute.com/about" target="_blank">shamatha</a> &ndash; the sustained, deliberate cultivation of attentional stability &ndash; and he appears to maintain exceptionally focused attention well into his seventies.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Emotional Wellbeing &ndash; Level 5</div>
+    <div class="exemplar-value">Emotional Wellbeing</div>
     <p><a href="https://www.richardjdavidson.com/" target="_blank">Matthieu Ricard</a>, a former molecular biologist who became a Tibetan Buddhist monk, has logged over 50,000 hours of meditation practice across four decades. Neuroscientist Richard Davidson's lab at the University of Wisconsin found that Ricard's brain showed <a href="https://www.pnas.org/doi/10.1073/pnas.0407401101" target="_blank">unusually high levels of gamma wave activity</a> associated with positive emotions, leading to widespread coverage describing him as one of the calmest people ever measured in a laboratory setting.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Self-Knowledge &ndash; Level 5</div>
+    <div class="exemplar-value">Self-Knowledge</div>
     <p><a href="https://www.tarabrach.com/about/" target="_blank">Tara Brach</a> has maintained a daily meditation practice for over 40 years and holds a PhD in clinical psychology. She combines deep contemplative experience with psychological expertise, and her teaching focuses specifically on recognising and understanding one's own patterns of emotional reactivity, self-judgment, and habitual avoidance.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Spiritual Development &ndash; Level 5</div>
+    <div class="exemplar-value">Spiritual Development</div>
     <p><a href="https://jackkornfield.com/teachers-biography/" target="_blank">Jack Kornfield</a> trained as a Buddhist monk in Thailand, Burma, and India for several years before returning to the West, where he has practised and taught meditation for over five decades. He co-founded two major retreat centres and his teaching integrates intensive contemplative practice with psychological insight, emphasising compassion, interconnectedness, and the direct investigation of consciousness.</p>
 </div>
 
@@ -625,7 +625,7 @@ life_area_slug: mindfulness
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Mindfulness. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/mindfulness/personalised" class="btn-cta">View Your Interventions</a>
 </div>

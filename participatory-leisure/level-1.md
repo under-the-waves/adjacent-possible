@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Participatory Leisure – Level 1: Awareness"
+title: "Participatory Leisure – Awareness assessment"
 life_area_slug: participatory-leisure
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: participatory-leisure
 
 <div class="l1-container">
 
-<h1>Participatory Leisure: Level 1</h1>
+<h1>Participatory Leisure: Awareness</h1>
 
 <p class="l1-subtitle">Understand what participatory leisure means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -355,20 +355,20 @@ life_area_slug: participatory-leisure
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each participatory leisure value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each participatory leisure value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Social Connection &ndash; Level 5</div>
+    <div class="exemplar-value">Social Connection</div>
     <p><a href="https://www.parkrun.com/about/" target="_blank">Paul Sinton-Hewitt</a> founded parkrun in 2004 as a free, weekly 5 km community running event in a London park with 13 runners. By 2025 it had grown to over 2,500 events in 22 countries with more than 10 million registered participants. He built one of the largest leisure-based communities in the world, centred entirely on inclusive social connection through a shared activity.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Achievement & Mastery &ndash; Level 5</div>
+    <div class="exemplar-value">Achievement & Mastery</div>
     <p><a href="https://en.wikipedia.org/wiki/Simone_Biles" target="_blank">Simone Biles</a> began gymnastics at age 6 and has won 37 World Championship and Olympic medals, making her the most decorated gymnast in history. She has four skills named after her &ndash; moves so difficult that no one else had performed them in competition. She exemplifies the outer reaches of skill mastery through a leisure pursuit that became a vocation.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Adventure & Exploration &ndash; Level 5</div>
+    <div class="exemplar-value">Adventure & Exploration</div>
     <p><a href="https://www.alastairhumphreys.com/" target="_blank">Alastair Humphreys</a> cycled around the world over four years, rowed the Atlantic, and walked across southern India. He then coined the concept of "microadventures" &ndash; overnight outdoor adventures accessible to anyone with a sleeping bag and a free evening &ndash; making adventure a regular practice rather than an occasional expedition. He was named a National Geographic Adventurer of the Year in 2012.</p>
 </div>
 
@@ -519,7 +519,7 @@ life_area_slug: participatory-leisure
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Participatory Leisure. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/participatory-leisure/personalised" class="btn-cta">View Your Interventions</a>
 </div>

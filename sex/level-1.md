@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Sex – Level 1: Awareness"
+title: "Sex – Awareness assessment"
 life_area_slug: sex
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: sex
 
 <div class="l1-container">
 
-<h1>Sex: Level 1</h1>
+<h1>Sex: Awareness</h1>
 
 <p class="l1-subtitle">Understand what sexual wellbeing means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -361,20 +361,20 @@ life_area_slug: sex
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each sexual wellbeing value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each sexual wellbeing value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Frequency &amp; Variety &ndash; Level 5</div>
+    <div class="exemplar-value">Frequency &amp; Variety</div>
     <p><a href="https://en.wikipedia.org/wiki/Dan_Savage" target="_blank">Dan Savage</a> has written the syndicated sex advice column <em>Savage Love</em> since 1991 and hosts the <em>Savage Lovecast</em> podcast. Over more than three decades, he has publicly discussed and modelled how long-term couples can sustain sexual frequency and novelty through open communication, negotiation, and willingness to explore. He coined the concept of being "GGG" (good, giving, and game) as a practical framework for maintaining sexual generosity in committed relationships, and has been with his husband Terry Miller since 1995.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Pleasure &ndash; Level 5</div>
+    <div class="exemplar-value">Pleasure</div>
     <p><a href="https://en.wikipedia.org/wiki/Emily_Nagoski" target="_blank">Emily Nagoski</a> is a sex educator and researcher whose book <em>Come As You Are</em> synthesises decades of sexual response research into a practical framework for understanding arousal, desire, and pleasure. Her work on the dual control model of sexual response &ndash; distinguishing between sexual "accelerators" and "brakes" &ndash; has helped hundreds of thousands of people understand their own patterns of desire and expand their capacity for enjoyment. She holds a PhD from Indiana University's Kinsey Institute.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Contentment &ndash; Level 5</div>
+    <div class="exemplar-value">Contentment</div>
     <p><a href="https://en.wikipedia.org/wiki/Peggy_Kleinplatz" target="_blank">Peggy Kleinplatz</a> is a clinical psychologist and sex therapist at the University of Ottawa who has spent over 20 years researching what she calls "optimal sexual experiences." Her studies of people who report extraordinary sexual satisfaction &ndash; including couples in their 70s and 80s &ndash; found that the common thread was not technique or frequency but presence, authenticity, and deep interpersonal connection. Her research provides some of the strongest evidence that sexual fulfilment can be sustained and even deepen across the lifespan.</p>
 </div>
 
@@ -611,7 +611,7 @@ life_area_slug: sex
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Sex. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/sex/personalised" class="btn-cta">View Your Interventions</a>
 </div>

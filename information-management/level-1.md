@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Information Management – Level 1: Awareness"
+title: "Information Management – Awareness assessment"
 life_area_slug: information-management
 ---
 
@@ -296,7 +296,7 @@ life_area_slug: information-management
 
 <div class="l1-container">
 
-<h1>Information Management: Level 1</h1>
+<h1>Information Management: Awareness</h1>
 
 <p class="l1-subtitle">Understand what information management is, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -378,25 +378,25 @@ life_area_slug: information-management
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each information management value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each information management value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Information Retention &ndash; Level 5</div>
+    <div class="exemplar-value">Information Retention</div>
     <p><a href="https://en.wikipedia.org/wiki/Niklas_Luhmann" target="_blank">Niklas Luhmann</a> was a German sociologist who maintained a Zettelkasten (slip-box) of roughly 90,000 index cards over three decades. Each card captured a single idea with cross-references to related cards, allowing him to preserve and connect insights across his entire reading life. He published over 70 books and 400 articles, and attributed much of his productivity to the system's ability to retain and surface ideas that would otherwise have been forgotten. The archive is now <a href="https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_1_NB_1_1_V" target="_blank">digitised and publicly accessible</a>.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Retrieval Efficiency &ndash; Level 5</div>
+    <div class="exemplar-value">Retrieval Efficiency</div>
     <p><a href="https://www.gwern.net/About" target="_blank">Gwern Branwen</a> maintains an extensive personal website covering statistics, psychology, technology, and philosophy, with a sophisticated tagging and cross-linking system. His pages are heavily annotated with sources, and he has described his workflow for rapidly locating prior research across thousands of notes and references. The site functions as a public demonstration of a retrieval system that makes years of accumulated knowledge accessible within seconds.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Insight Generation &ndash; Level 5</div>
+    <div class="exemplar-value">Insight Generation</div>
     <p><a href="https://en.wikipedia.org/wiki/Vannevar_Bush" target="_blank">Vannevar Bush</a> was a scientist and engineer who directed the U.S. Office of Scientific Research and Development during the Second World War. His 1945 essay <a href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/" target="_blank">"As We May Think"</a> described the Memex, a hypothetical device for storing and cross-referencing personal knowledge &ndash; effectively anticipating hypertext and personal knowledge management systems decades before they existed. Bush's ability to synthesise insights across electrical engineering, analogue computing, and library science into a coherent vision exemplifies cross-domain insight generation at an exceptional level.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">System Simplicity &ndash; Level 5</div>
+    <div class="exemplar-value">System Simplicity</div>
     <p><a href="https://rfrfrfr.substack.com/" target="_blank">Robert Greene</a> has described a consistent, low-tech research system he has used across all of his books, including <em>The 48 Laws of Power</em> and <em>Mastery</em>. He reads widely, writes notes on index cards with thematic labels, and sorts them into categories by hand. The system involves no specialised software and has remained essentially unchanged for over 25 years, yet it has supported the synthesis of hundreds of sources per book. Its longevity and simplicity, given the volume of material it handles, make it a strong example of sustainable system design.</p>
 </div>
 
@@ -659,7 +659,7 @@ life_area_slug: information-management
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Information Management. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/information-management/personalised" class="btn-cta">View Your Interventions</a>
 </div>

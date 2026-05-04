@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Time Management – Level 1: Awareness"
+title: "Time Management – Awareness assessment"
 life_area_slug: time-management
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: time-management
 
 <div class="l1-container">
 
-<h1>Time Management: Level 1</h1>
+<h1>Time Management: Awareness</h1>
 
 <p class="l1-subtitle">Understand what time management means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -352,20 +352,20 @@ life_area_slug: time-management
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each time management value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each time management value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Productivity & Achievement &ndash; Level 5</div>
+    <div class="exemplar-value">Productivity & Achievement</div>
     <p><a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank">Elon Musk</a> runs multiple companies simultaneously by scheduling his day in five-minute blocks and batching similar tasks together. Whatever one thinks of his other attributes, his time management output is verifiable: he has sustained CEO-level involvement across Tesla, SpaceX, and other ventures for over a decade. His system appears to be built around extreme scheduling discipline rather than delegation.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Balance & Wellbeing &ndash; Level 5</div>
+    <div class="exemplar-value">Balance & Wellbeing</div>
     <p><a href="https://www.sarahknightbooks.com/" target="_blank">Sarah Knight</a> left a high-pressure publishing career in New York to redesign her life around sustainable work rhythms. She went on to write multiple bestselling books about prioritisation and boundary-setting while living in the Dominican Republic, maintaining what she describes as a deliberately structured schedule that protects time for relationships, rest, and enjoyment. Her work focuses specifically on the intersection of productivity and personal wellbeing.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Flexibility & Responsiveness &ndash; Level 5</div>
+    <div class="exemplar-value">Flexibility & Responsiveness</div>
     <p><a href="https://www.oliverburkeman.com/" target="_blank">Oliver Burkeman</a> spent years as a productivity journalist before writing <em>Four Thousand Weeks</em>, a book that reframes time management around embracing finitude rather than maximising output. He maintains a writing career, family life, and speaking schedule while openly practising a flexible approach to planning that accommodates uncertainty. His system explicitly rejects rigid scheduling in favour of adaptable structures that work across changing circumstances.</p>
 </div>
 
@@ -561,7 +561,7 @@ life_area_slug: time-management
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Time Management. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/time-management/personalised" class="btn-cta">View Your Interventions</a>
 </div>

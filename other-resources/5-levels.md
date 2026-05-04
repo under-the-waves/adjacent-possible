@@ -1,10 +1,10 @@
 ---
 layout: default
-title: The 5 Levels
+title: The Five Bands
 permalink: /5-levels/
 ---
 
-# The Five Levels
+# The Five Bands
 
 Each life area is broken into five bands, anchored to population percentiles. They're reference points for where you sit, not a ladder to climb. Your values determine which areas are worth pushing further in.
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Relationship Quality – Level 1: Awareness"
+title: "Relationship Quality – Awareness assessment"
 life_area_slug: relationship-quality
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: relationship-quality
 
 <div class="l1-container">
 
-<h1>Relationship Quality: Level 1</h1>
+<h1>Relationship Quality: Awareness</h1>
 
 <p class="l1-subtitle">Understand what relationship quality means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -358,20 +358,20 @@ life_area_slug: relationship-quality
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each relationship quality value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each relationship quality value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Connection &ndash; Level 5</div>
+    <div class="exemplar-value">Connection</div>
     <p><a href="https://en.wikipedia.org/wiki/Esther_Perel" target="_blank">Esther Perel</a> has spent over 35 years studying and practising what sustains emotional and erotic connection in long-term partnerships. Her clinical work, books, and podcast <em>Where Should We Begin?</em> demonstrate an unusually deep understanding of vulnerability, desire, and intimacy. She and her husband have maintained their own partnership across decades while she has helped thousands of couples rebuild emotional closeness after betrayal, stagnation, or loss.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Harmony &ndash; Level 5</div>
+    <div class="exemplar-value">Harmony</div>
     <p><a href="https://en.wikipedia.org/wiki/Julie_Schwartz_Gottman" target="_blank">Julie Schwartz Gottman</a> co-founded the Gottman Institute with her husband John, and the two have built one of the most cited bodies of research on what makes marriages succeed or fail. Their own partnership &ndash; running a business, raising a daughter, and maintaining a marriage across four decades &ndash; serves as a working example of the conflict resolution and daily collaboration principles they teach. Julie developed the Gottman Couples Therapy method and has trained thousands of therapists worldwide.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Alignment &ndash; Level 5</div>
+    <div class="exemplar-value">Alignment</div>
     <p><a href="https://en.wikipedia.org/wiki/Barack_Obama" target="_blank">Barack and Michelle Obama</a> have described their marriage as built on explicit shared values &ndash; public service, family priority, and intellectual partnership &ndash; negotiated and renegotiated over more than 30 years. They navigated career sacrifices (Michelle leaving her legal career for his political ambitions), eight years of intense public scrutiny in the White House, and the pressures of raising children under constant observation. Both have spoken candidly about the work involved, including marriage counselling, suggesting a relationship sustained by deliberate alignment rather than effortless compatibility.</p>
 </div>
 
@@ -585,7 +585,7 @@ life_area_slug: relationship-quality
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Relationship Quality. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/relationship-quality/personalised" class="btn-cta">View Your Interventions</a>
 </div>

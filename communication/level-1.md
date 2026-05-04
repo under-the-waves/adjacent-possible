@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Communication – Level 1: Awareness"
+title: "Communication – Awareness assessment"
 life_area_slug: communication
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: communication
 
 <div class="l1-container">
 
-<h1>Communication: Level 1</h1>
+<h1>Communication: Awareness</h1>
 
 <p class="l1-subtitle">Understand what communication means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: communication
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each communication value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each communication value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Influence &ndash; Level 5</div>
+    <div class="exemplar-value">Influence</div>
     <p><a href="https://en.wikipedia.org/wiki/William_Ury" target="_blank">William Ury</a> co-founded the Harvard Program on Negotiation and co-authored <em>Getting to Yes</em>, one of the most widely read books on negotiation. He has mediated conflicts between corporations, governments, and ethnic groups on five continents, and his frameworks for principled negotiation have shaped how millions of people approach persuasion and deal-making.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Connection &ndash; Level 5</div>
+    <div class="exemplar-value">Connection</div>
     <p><a href="https://en.wikipedia.org/wiki/Terry_Gross" target="_blank">Terry Gross</a> has hosted <em>Fresh Air</em> on NPR since 1975, conducting thousands of interviews across nearly five decades. She is widely regarded as one of the most skilled interviewers alive – guests routinely disclose things to her they have never shared publicly, citing her deep listening and genuine curiosity as the reason.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Performance &ndash; Level 5</div>
+    <div class="exemplar-value">Performance</div>
     <p><a href="https://en.wikipedia.org/wiki/Hans_Rosling" target="_blank">Hans Rosling</a> was a Swedish physician and statistician whose TED talks have been viewed over 35 million times. He used animated data visualisations and physical props to make global health statistics compelling and memorable. His presentations consistently changed audience beliefs about world poverty and development &ndash; measurably, as he tested audiences before and after. He maintained this level of public communication for over a decade until his death in 2017.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Conflict Navigation &ndash; Level 5</div>
+    <div class="exemplar-value">Conflict Navigation</div>
     <p><a href="https://en.wikipedia.org/wiki/George_J._Mitchell" target="_blank">George Mitchell</a> chaired the Northern Ireland peace negotiations that produced the 1998 Good Friday Agreement, ending three decades of sectarian violence. Participants on all sides credited his patience, impartiality, and skill at finding common ground in situations where others saw none. He later served as US special envoy for Middle East peace.</p>
 </div>
 
@@ -596,7 +596,7 @@ life_area_slug: communication
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Communication. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/communication/personalised" class="btn-cta">View Your Interventions</a>
 </div>

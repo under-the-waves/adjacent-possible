@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Physical Safety – Level 1: Awareness"
+title: "Physical Safety – Awareness assessment"
 life_area_slug: physical-safety
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: physical-safety
 
 <div class="l1-container">
 
-<h1>Physical Safety: Level 1</h1>
+<h1>Physical Safety: Awareness</h1>
 
 <p class="l1-subtitle">Understand what physical safety means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -342,15 +342,15 @@ life_area_slug: physical-safety
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each physical safety value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each physical safety value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Risk Reduction &ndash; Level 5</div>
+    <div class="exemplar-value">Risk Reduction</div>
     <p><a href="https://www.gavindebecker.com/about/" target="_blank">Gavin de Becker</a> is a security specialist who has advised three US presidents and numerous public figures on threat assessment. His book <em>The Gift of Fear</em> popularised evidence-based approaches to personal safety, emphasising intuitive threat recognition and systematic risk reduction. He maintains advanced training across multiple security domains and has built protective systems used by thousands of organisations worldwide.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Freedom and Convenience &ndash; Level 5</div>
+    <div class="exemplar-value">Freedom and Convenience</div>
     <p><a href="https://www.levison-wood.com/about" target="_blank">Levison Wood</a> is a British explorer and former army officer who has walked the length of the Nile, traversed the Himalayas, and crossed Central America on foot. He operates confidently in environments that most people would avoid entirely, relying on a combination of military training, situational awareness, and local knowledge. His approach to safety is characterised by thorough preparation that enables freedom of movement in high-risk settings.</p>
 </div>
 
@@ -509,7 +509,7 @@ life_area_slug: physical-safety
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Physical Safety. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/physical-safety/personalised" class="btn-cta">View Your Interventions</a>
 </div>

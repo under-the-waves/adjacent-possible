@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Habits – Level 1: Awareness"
+title: "Habits – Awareness assessment"
 life_area_slug: habits
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: habits
 
 <div class="l1-container">
 
-<h1>Habits: Level 1</h1>
+<h1>Habits: Awareness</h1>
 
 <p class="l1-subtitle">Understand what habit formation means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -345,20 +345,20 @@ life_area_slug: habits
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each habits value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each habits value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Impact &ndash; Level 5</div>
+    <div class="exemplar-value">Impact</div>
     <p><a href="https://jamesclear.com/about" target="_blank">James Clear</a> spent years studying and practising habit formation before writing <em>Atomic Habits</em>, which has sold over 15 million copies. His personal system centres on identifying and stacking keystone habits &ndash; small behaviours that cascade into larger life improvements. He has maintained a consistent writing, fitness, and photography practice for over a decade, each habit deliberately chosen for its compound returns across multiple life areas.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Consistency &ndash; Level 5</div>
+    <div class="exemplar-value">Consistency</div>
     <p><a href="https://www.jerryeinfeld.com/" target="_blank">Jerry Seinfeld</a> famously maintained a "don't break the chain" practice for joke-writing, marking a red X on a wall calendar every day he wrote new material. He sustained this daily writing habit across decades, through career changes, touring schedules, and life transitions. His consistency methodology has become one of the most widely cited examples of habit maintenance in popular psychology.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Enjoyment &ndash; Level 5</div>
+    <div class="exemplar-value">Enjoyment</div>
     <p><a href="https://www.bfrb.org/storage/documents/Expert_consensus_guidelines2016w.pdf" target="_blank">BJ Fogg</a>, founder of the <a href="https://behaviordesign.stanford.edu/" target="_blank">Behavior Design Lab</a> at Stanford, developed the Tiny Habits method after two decades of research into what makes behaviours stick. His system emphasises celebration and positive emotion as the core mechanism of habit formation &ndash; deliberately engineering feelings of success and satisfaction after each repetition. He has personally maintained dozens of "tiny habits" for years, each designed to feel rewarding from the first day.</p>
 </div>
 
@@ -570,7 +570,7 @@ life_area_slug: habits
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Habits. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/habits/personalised" class="btn-cta">View Your Interventions</a>
 </div>

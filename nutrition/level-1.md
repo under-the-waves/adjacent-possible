@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Nutrition – Level 1: Awareness"
+title: "Nutrition – Awareness assessment"
 life_area_slug: nutrition
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: nutrition
 
 <div class="l1-container">
 
-<h1>Nutrition: Level 1</h1>
+<h1>Nutrition: Awareness</h1>
 
 <p class="l1-subtitle">Understand what nutrition means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -350,20 +350,20 @@ life_area_slug: nutrition
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each nutrition value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each nutrition value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Health & Longevity &ndash; Level 5</div>
+    <div class="exemplar-value">Health & Longevity</div>
     <p><a href="https://en.wikipedia.org/wiki/Bryan_Johnson_(entrepreneur)" target="_blank">Bryan Johnson</a> eats a precisely measured, plant-heavy diet of around 1,950 calories per day as part of his Blueprint protocol. Every meal is designed around specific nutrient targets and tracked against regular blood panels, organ scans, and dozens of biomarkers. His biological age markers appear to have reversed measurably since he started in 2021. Whether or not the overall programme is replicable, his dietary discipline and the level of evidence-based optimisation behind it seem to be genuinely in the top fraction of the population.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Enjoyment & Culture &ndash; Level 5</div>
+    <div class="exemplar-value">Enjoyment & Culture</div>
     <p><a href="https://ottolenghi.co.uk/pages/about" target="_blank">Yotam Ottolenghi</a> seems to maintain an extraordinarily diverse and joyful relationship with food. He draws on Middle Eastern, Mediterranean, and Asian culinary traditions, regularly develops original recipes, and has built a visible community around shared meals and cultural exchange through food. His cooking repertoire spans hundreds of dishes across many cuisines, and his public work centres on the pleasure and connection that food creates.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Ethical & Environmental Impact &ndash; Level 5</div>
+    <div class="exemplar-value">Ethical & Environmental Impact</div>
     <p><a href="https://www.riverford.co.uk/ethics-and-environment" target="_blank">Guy Singh-Watson</a>, founder of Riverford Organic Farmers, by all accounts eats a diet closely tied to what his farm produces seasonally. He grows organic produce, runs a veg box scheme with minimal packaging and food waste, pays workers above industry standard, and has structured his business as an employee-owned trust. His dietary footprint is unusually low because most of what he eats is local, seasonal, and organically grown.</p>
 </div>
 
@@ -538,7 +538,7 @@ life_area_slug: nutrition
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Nutrition. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/nutrition/personalised" class="btn-cta">View Your Interventions</a>
 </div>

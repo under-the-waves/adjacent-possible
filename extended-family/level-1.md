@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Extended Family – Level 1: Awareness"
+title: "Extended Family – Awareness assessment"
 life_area_slug: extended-family
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: extended-family
 
 <div class="l1-container">
 
-<h1>Extended Family: Level 1</h1>
+<h1>Extended Family: Awareness</h1>
 
 <p class="l1-subtitle">Understand what extended family means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -358,20 +358,20 @@ life_area_slug: extended-family
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each extended family value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each extended family value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Harmony &ndash; Level 5</div>
+    <div class="exemplar-value">Harmony</div>
     <p><a href="https://en.wikipedia.org/wiki/Desmond_Tutu" target="_blank">Desmond Tutu</a> built his life around reconciliation &ndash; first within South Africa's fractured communities and consistently within his own large, multi-generational family. He and his wife Leah maintained warm relationships across an extended network of children, grandchildren, and in-laws spanning multiple countries and decades, navigating political, cultural, and generational differences without fracturing family cohesion.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Closeness &ndash; Level 5</div>
+    <div class="exemplar-value">Closeness</div>
     <p><a href="https://en.wikipedia.org/wiki/Dolly_Parton" target="_blank">Dolly Parton</a> grew up as one of twelve children in rural Tennessee and has maintained close, emotionally substantive relationships across her extended family of dozens of nieces, nephews, and their children throughout a six-decade career. She funded the Imagination Library partly to connect with family literacy needs, employs several relatives, and consistently describes her extended family as her primary source of meaning.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Balance &ndash; Level 5</div>
+    <div class="exemplar-value">Balance</div>
     <p><a href="https://en.wikipedia.org/wiki/Michelle_Obama" target="_blank">Michelle Obama</a> has written and spoken extensively about maintaining close ties with her extended family on Chicago's South Side while setting clear boundaries around her own family's needs &ndash; first during her legal career, then through eight years in the White House. She managed to stay deeply connected to her roots without allowing family expectations to override her personal and professional decisions.</p>
 </div>
 
@@ -582,7 +582,7 @@ life_area_slug: extended-family
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Extended Family. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/extended-family/personalised" class="btn-cta">View Your Interventions</a>
 </div>

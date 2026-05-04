@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Children – Level 1: Awareness"
+title: "Children – Awareness assessment"
 life_area_slug: children
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: children
 
 <div class="l1-container">
 
-<h1>Children: Level 1</h1>
+<h1>Children: Awareness</h1>
 
 <p class="l1-subtitle">Understand what parenting involves, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -361,25 +361,25 @@ life_area_slug: children
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each parenting value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each parenting value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Wellbeing &ndash; Level 5</div>
+    <div class="exemplar-value">Wellbeing</div>
     <p><a href="https://en.wikipedia.org/wiki/Magda_Gerber" target="_blank">Magda Gerber</a> developed the Resources for Infant Educarers (RIE) approach, built around deep observation and respect for children's emotional states from birth. She raised her own three children using these principles before formalising them into a teaching methodology. Her approach &ndash; treating even very young children as full people whose emotional experiences deserve attention &ndash; produced measurably more secure attachment outcomes in the children of parents she trained, and her methods are now used in early childhood programmes across the world.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Relationship &ndash; Level 5</div>
+    <div class="exemplar-value">Relationship</div>
     <p><a href="https://en.wikipedia.org/wiki/Barack_Obama" target="_blank">Barack Obama</a> maintained nightly family dinners throughout his presidency, rarely missing them even during major crises. He has spoken extensively about structuring his schedule around his daughters' school events, sports fixtures, and everyday conversations. Both Sasha and Malia Obama have described their father as deeply present and emotionally available despite the pressures of his role, and the family's closeness has remained visibly strong through their adult years.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Achievement &ndash; Level 5</div>
+    <div class="exemplar-value">Achievement</div>
     <p><a href="https://en.wikipedia.org/wiki/L%C3%A1szl%C3%B3_Polg%C3%A1r" target="_blank">L&aacute;szl&oacute; Polg&aacute;r</a> set out to test his theory that any child could reach exceptional levels in a chosen field with early, deliberate training. He and his wife Klara raised their three daughters &ndash; Susan, Sofia, and Judit &ndash; to become chess prodigies. All three became among the strongest female players in history, with Judit widely regarded as the greatest female chess player of all time. Polg&aacute;r documented his methods and the children's development in detail, and all three daughters have spoken positively about their upbringing.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Development &ndash; Level 5</div>
+    <div class="exemplar-value">Development</div>
     <p><a href="https://letgrow.org/about/" target="_blank">Lenore Skenazy</a> became known as "America's worst mom" after writing about letting her nine-year-old son ride the New York subway alone. She went on to found the Let Grow movement, advocating for age-appropriate independence and unsupervised play. Her own children grew up with progressively expanded freedoms &ndash; navigating public transport, managing their own schedules, and solving problems without parental rescue &ndash; and she has documented how this approach built their confidence and self-direction over years.</p>
 </div>
 
@@ -644,7 +644,7 @@ life_area_slug: children
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Children. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/children/personalised" class="btn-cta">View Your Interventions</a>
 </div>

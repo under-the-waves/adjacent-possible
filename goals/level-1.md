@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Goals – Level 1: Awareness"
+title: "Goals – Awareness assessment"
 life_area_slug: goals
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: goals
 
 <div class="l1-container">
 
-<h1>Goals: Level 1</h1>
+<h1>Goals: Awareness</h1>
 
 <p class="l1-subtitle">Understand what goal-setting means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -345,20 +345,20 @@ life_area_slug: goals
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each goals value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each goals value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Follow-through &ndash; Level 5</div>
+    <div class="exemplar-value">Follow-through</div>
     <p><a href="https://www.chrisclear.com/" target="_blank">Chris Nikic</a> became the first person with Down syndrome to complete an Ironman triathlon in 2020, at age 21. He trained for over a year using a system he calls "1% better every day" &ndash; small, trackable daily improvements toward an audacious goal. He has since completed multiple Ironmans and a marathon, each time following the same methodical, incremental approach to follow-through across multi-month timescales.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Clarity &ndash; Level 5</div>
+    <div class="exemplar-value">Clarity</div>
     <p><a href="https://www.samuelthomasdavies.com/" target="_blank">Samuel Thomas Davies</a> is a behavioural scientist and author who publicly documents his goal-setting methodology, including specific measurable targets, weekly progress reviews, and annual retrospectives published in detail. His system treats goal clarity as a discipline &ndash; every goal has explicit success criteria, a deadline, and a tracking mechanism. He has maintained this practice consistently for over a decade.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Adaptability &ndash; Level 5</div>
+    <div class="exemplar-value">Adaptability</div>
     <p><a href="https://en.wikipedia.org/wiki/Sara_Blakely" target="_blank">Sara Blakely</a> spent two years developing Spanx while working full-time as a door-to-door fax machine salesperson. When her initial patent strategy failed, she rewrote the patent herself. When major retailers rejected her, she demonstrated the product in person at Neiman Marcus. She has spoken about treating each setback as information rather than failure, adjusting her approach without abandoning the goal. Spanx reached $400 million in revenue with no outside funding.</p>
 </div>
 
@@ -570,7 +570,7 @@ life_area_slug: goals
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Goals. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/goals/personalised" class="btn-cta">View Your Interventions</a>
 </div>

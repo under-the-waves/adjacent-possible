@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Behaviours – Level 1: Awareness"
+title: "Behaviours – Awareness assessment"
 life_area_slug: behaviours
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: behaviours
 
 <div class="l1-container">
 
-<h1>Behaviours: Level 1</h1>
+<h1>Behaviours: Awareness</h1>
 
 <p class="l1-subtitle">Understand what behavioural change means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -346,25 +346,25 @@ life_area_slug: behaviours
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each behaviours value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each behaviours value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Freedom & Control &ndash; Level 5</div>
+    <div class="exemplar-value">Freedom & Control</div>
     <p><a href="https://en.wikipedia.org/wiki/Anthony_Hopkins" target="_blank">Anthony Hopkins</a> stopped drinking on 29 December 1975 after what he has described as years of destructive alcoholism. He has maintained sobriety for over 50 years while working continuously in one of the most high-pressure industries in the world. He credits daily discipline and a complete change in daily habits for his sustained recovery, and by all accounts has not relapsed despite decades of public life and professional stress.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Emotional Regulation &ndash; Level 5</div>
+    <div class="exemplar-value">Emotional Regulation</div>
     <p><a href="https://en.wikipedia.org/wiki/Marsha_M._Linehan" target="_blank">Marsha Linehan</a> developed Dialectical Behaviour Therapy after her own experience of severe emotional dysregulation and psychiatric hospitalisation as a young woman. She publicly disclosed in 2011 that she had been a patient at the Institute of Living, where she was diagnosed with schizophrenia and subjected to electroshock treatment. She went on to build a daily practice of the emotional regulation skills she later formalised into DBT, and has maintained that practice for over 40 years.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Social & Relational Patterns &ndash; Level 5</div>
+    <div class="exemplar-value">Social & Relational Patterns</div>
     <p><a href="https://www.gottman.com/about/john-julie-gottman/" target="_blank">John Gottman</a> has spent over 40 years researching couple interactions and can predict relationship outcomes with roughly 90% accuracy based on behavioural patterns. Beyond his research, he practises what he studies – maintaining a long-term partnership while navigating the pressures of public intellectual life. His work on repairing conflict patterns and maintaining authentic connection under pressure reflects mastery-level relational skill.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Resilience & Adaptability &ndash; Level 5</div>
+    <div class="exemplar-value">Resilience & Adaptability</div>
     <p><a href="https://en.wikipedia.org/wiki/Nelson_Mandela" target="_blank">Nelson Mandela</a> spent 27 years in prison, including 18 on Robben Island, and emerged without evident bitterness towards his captors. He maintained daily exercise routines, studied by correspondence, and cultivated relationships with guards throughout his imprisonment. After his release in 1990 he led South Africa's transition away from apartheid through negotiation, demonstrating a capacity to adapt his behaviour to radically different circumstances while sustaining purpose across decades.</p>
 </div>
 
@@ -621,7 +621,7 @@ life_area_slug: behaviours
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Behaviours. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/behaviours/personalised" class="btn-cta">View Your Interventions</a>
 </div>

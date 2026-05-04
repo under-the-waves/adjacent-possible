@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Networks – Level 1: Awareness"
+title: "Networks – Awareness assessment"
 life_area_slug: networks
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: networks
 
 <div class="l1-container">
 
-<h1>Networks: Level 1</h1>
+<h1>Networks: Awareness</h1>
 
 <p class="l1-subtitle">Understand what professional networks mean, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -355,20 +355,20 @@ life_area_slug: networks
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each networks value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each networks value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Depth &ndash; Level 5</div>
+    <div class="exemplar-value">Depth</div>
     <p><a href="https://en.wikipedia.org/wiki/Esther_Dyson" target="_blank">Esther Dyson</a> has maintained deep professional relationships with technology founders, investors, and policymakers for over 40 years. She was an early investor in Flickr, del.icio.us, and 23andMe, in each case building on years of genuine relationships with the founders. She is known for maintaining a small number of close professional ties that she invests in deeply over decades rather than collecting contacts.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Breadth &ndash; Level 5</div>
+    <div class="exemplar-value">Breadth</div>
     <p><a href="https://rfreedman.org/" target="_blank">Reid Hoffman</a> co-founded LinkedIn and built a professional network spanning technology, venture capital, politics, media, and academia. He is known for connecting people across industries and geographies, and his network routinely surfaces emerging opportunities, talent, and ideas before they become widely known. His book <em>The Start-up of You</em> codified his approach to network building.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Relevance &ndash; Level 5</div>
+    <div class="exemplar-value">Relevance</div>
     <p><a href="https://www.ycombinator.com/people/michael-seibel" target="_blank">Michael Seibel</a>, CEO of Y Combinator, has built a network that evolves in precise alignment with his professional direction. As he moved from founding Justin.tv (later Twitch) to leading YC, his network shifted from media and gaming to early-stage startups, ensuring that his connections anticipate where he is heading and proactively surface relevant founders and opportunities.</p>
 </div>
 
@@ -519,7 +519,7 @@ life_area_slug: networks
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Networks. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/networks/personalised" class="btn-cta">View Your Interventions</a>
 </div>

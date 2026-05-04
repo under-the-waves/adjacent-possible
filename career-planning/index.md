@@ -136,8 +136,8 @@ life_area_slug: career-planning
 - [Goals]({{ site.baseurl }}/goals) – how you set, track, and achieve personal and professional objectives
 
 <div class="la-banner la-banner--start" id="level1Banner">
-    <p><strong>You haven't completed Level 1 for Career Planning yet.</strong><br>It takes about 15 minutes and helps you understand what career planning means to you.</p>
-    <a href="{{ site.baseurl }}/career-planning/level-1" class="btn-cta">Start Level 1</a>
+    <p><strong>You haven't started the Awareness assessment for Career Planning yet.</strong><br>It takes about 15 minutes and helps you understand what career planning means to you.</p>
+    <a href="{{ site.baseurl }}/career-planning/level-1" class="btn-cta">Begin assessment</a>
 </div>
 
 {% include level-progression.html %}
@@ -168,7 +168,7 @@ People approach career planning for different reasons. This site scores every ca
 
 <div class="la-paths">
     <a href="{{ site.baseurl }}/career-planning/level-1" class="path-level1">
-        Complete Level 1
+        Begin assessment
         <div class="path-desc">Understand career planning, set your values, assess where you are</div>
     </a>
     <a href="{{ site.baseurl }}/career-planning/personalised" class="path-interventions">
@@ -193,14 +193,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (done && hasSliders) {
         banner.className = 'la-banner la-banner--complete';
-        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Career Planning.</strong></p>' +
+        banner.innerHTML = '<p><strong>You have completed Awareness assessment for Career Planning.</strong></p>' +
             '<a href="{{ site.baseurl }}/career-planning/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/career-planning/level-1" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/career-planning/level-1" class="btn-secondary">Redo assessment</a>';
     } else if (Object.keys(area).length > 0) {
         var completed = steps.filter(function(s) { return area[s]; }).length;
         if (hasSliders) completed++;
-        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/career-planning/level-1" class="btn-cta">Continue Level 1</a>';
+        banner.innerHTML = '<p><strong>Awareness assessment in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/career-planning/level-1" class="btn-cta">Continue assessment</a>';
     }
 });
 </script>

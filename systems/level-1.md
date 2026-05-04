@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Systems – Level 1: Awareness"
+title: "Systems – Awareness assessment"
 life_area_slug: systems
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: systems
 
 <div class="l1-container">
 
-<h1>Systems: Level 1</h1>
+<h1>Systems: Awareness</h1>
 
 <p class="l1-subtitle">Understand what personal systems are, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -345,20 +345,20 @@ life_area_slug: systems
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each systems value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each systems value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Power &ndash; Level 5</div>
+    <div class="exemplar-value">Power</div>
     <p><a href="https://www.youtube.com/@NetworkChuck" target="_blank">Chuck Keith</a> (NetworkChuck) is a network engineer and content creator who has built comprehensive personal infrastructure including self-hosted servers, automated backups, network monitoring, smart home integrations, and custom dashboards that manage nearly every aspect of his digital life. He documents these builds publicly, demonstrating systems that handle complex conditional logic across personal and professional domains whilst remaining maintainable by a single person.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Simplicity &ndash; Level 5</div>
+    <div class="exemplar-value">Simplicity</div>
     <p><a href="https://dereksivers.com/" target="_blank">Derek Sivers</a> is a programmer, author, and former founder of CD Baby (which he sold for $22 million). He runs his entire life from a small set of plain-text files, a custom-built personal database, and minimal tooling he wrote himself. His systems handle contacts, projects, finances, and media &ndash; all designed to be so simple that they survive moves between countries and decades of use without needing redesign.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Reliability &ndash; Level 5</div>
+    <div class="exemplar-value">Reliability</div>
     <p><a href="https://www.hanselman.com/about" target="_blank">Scott Hanselman</a> is a software engineer, podcaster, and speaker who has maintained the same core personal productivity systems for over 20 years. He has published extensively about his setup, which prioritises proven tools, redundant backups, and graceful degradation. His systems have survived multiple job changes, technology migrations, and a Type 1 diabetes diagnosis that required integrating medical device data into his daily workflow without disrupting everything else.</p>
 </div>
 
@@ -570,7 +570,7 @@ life_area_slug: systems
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Systems. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/systems/personalised" class="btn-cta">View Your Interventions</a>
 </div>

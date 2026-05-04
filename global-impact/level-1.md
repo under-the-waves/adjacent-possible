@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Global Impact – Level 1: Awareness"
+title: "Global Impact – Awareness assessment"
 life_area_slug: global-impact
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: global-impact
 
 <div class="l1-container">
 
-<h1>Global Impact: Level 1</h1>
+<h1>Global Impact: Awareness</h1>
 
 <p class="l1-subtitle">Understand what global impact means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -358,25 +358,25 @@ life_area_slug: global-impact
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each global impact value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each global impact value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Impartiality &ndash; Level 5</div>
+    <div class="exemplar-value">Impartiality</div>
     <p><a href="https://www.thelifeyoucansave.org/about-us/" target="_blank">Toby Ord</a> is a moral philosopher at Oxford who co-founded Giving What We Can and wrote <em>The Precipice</em> on existential risk. He has pledged to give everything he earns above &pound;18,000 to the most effective charities he can find, and his research on cause prioritisation has influenced billions of pounds in philanthropic allocation. His approach treats global impact as a rigorous intellectual and moral project.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Passion &ndash; Level 5</div>
+    <div class="exemplar-value">Passion</div>
     <p><a href="https://www.womenonwaves.org/en/page/2591/about-women-on-waves" target="_blank">Rebecca Gomperts</a> is a Dutch physician who founded Women on Waves and Women on Web, providing reproductive healthcare access to women in countries with restrictive laws. Her work stems from direct clinical experience treating women harmed by unsafe procedures. Over two decades, her organisations have assisted hundreds of thousands of women, driven entirely by personal conviction about a cause she witnessed first-hand.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Sustainability &ndash; Level 5</div>
+    <div class="exemplar-value">Sustainability</div>
     <p><a href="https://founderspledge.com/about" target="_blank">David Goldberg</a> co-founded Founders Pledge, through which technology entrepreneurs commit to donating a percentage of their proceeds from company exits to effective charities. The organisation has facilitated over $10 billion in pledges from more than 1,800 founders. It demonstrates how building giving into the structure of a career creates sustained, compounding impact over a lifetime.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Fulfilment &ndash; Level 5</div>
+    <div class="exemplar-value">Fulfilment</div>
     <p><a href="https://www.roomtoread.org/about/our-story/" target="_blank">John Wood</a> left a senior role at Microsoft after visiting schools in Nepal and seeing empty library shelves. He founded Room to Read, which has benefited over 40 million children across 23 countries with literacy and gender equality programmes. He frequently speaks about how leaving a lucrative career for philanthropic work was the most fulfilling decision of his life.</p>
 </div>
 
@@ -555,7 +555,7 @@ life_area_slug: global-impact
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Global Impact. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/global-impact/personalised" class="btn-cta">View Your Interventions</a>
 </div>

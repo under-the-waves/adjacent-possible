@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Community Contribution – Level 1: Awareness"
+title: "Community Contribution – Awareness assessment"
 life_area_slug: community-contribution
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: community-contribution
 
 <div class="l1-container">
 
-<h1>Community Contribution: Level 1</h1>
+<h1>Community Contribution: Awareness</h1>
 
 <p class="l1-subtitle">Understand what community contribution means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -355,20 +355,20 @@ life_area_slug: community-contribution
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each community contribution value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each community contribution value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Impact &ndash; Level 5</div>
+    <div class="exemplar-value">Impact</div>
     <p><a href="https://www.habitat.org/about/history" target="_blank">Millard Fuller</a> co-founded Habitat for Humanity in 1976, which has since built or repaired over 800,000 homes worldwide, providing shelter for more than 4 million people. He pioneered the "economics of Jesus" model &ndash; no-interest mortgage loans funded by donations and volunteer labour &ndash; proving that community-led housing construction could be scaled globally. His measurable impact on housing security transformed the volunteer construction sector.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Belonging &ndash; Level 5</div>
+    <div class="exemplar-value">Belonging</div>
     <p><a href="https://www.incredibleedible.org.uk/what-we-do/" target="_blank">Pam Warhurst</a> co-founded Incredible Edible Todmorden in 2008, transforming unused public spaces in a small West Yorkshire town into community food-growing plots. The initiative spread to over 100 groups worldwide. By inviting anyone to plant, tend, and harvest food in shared spaces, she turned food growing into a vehicle for neighbourhood connection, making Todmorden measurably more cohesive according to local surveys.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Fulfilment &ndash; Level 5</div>
+    <div class="exemplar-value">Fulfilment</div>
     <p><a href="https://www.maggiescentres.org/about-us/how-maggies-started/" target="_blank">Maggie Keswick Jencks</a> was diagnosed with cancer in 1988 and spent her remaining years designing a new model of cancer care based on her own experience of what patients need &ndash; not just treatment but warmth, information, and human connection. The first Maggie's Centre opened in Edinburgh in 1996, and there are now over 20 centres across the UK. She described the work as the most meaningful thing she had ever done.</p>
 </div>
 
@@ -514,7 +514,7 @@ life_area_slug: community-contribution
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Community Contribution. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/community-contribution/personalised" class="btn-cta">View Your Interventions</a>
 </div>

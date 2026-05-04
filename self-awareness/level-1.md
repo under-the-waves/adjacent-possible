@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Self-Awareness – Level 1: Awareness"
+title: "Self-Awareness – Awareness assessment"
 life_area_slug: self-awareness
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: self-awareness
 
 <div class="l1-container">
 
-<h1>Self-Awareness: Level 1</h1>
+<h1>Self-Awareness: Awareness</h1>
 
 <p class="l1-subtitle">Understand what self-awareness means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: self-awareness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each self-awareness value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each self-awareness value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Psychological &ndash; Level 5</div>
+    <div class="exemplar-value">Psychological</div>
     <p><a href="https://en.wikipedia.org/wiki/Carl_Jung" target="_blank">Carl Jung</a> pioneered analytical psychology and the concept of individuation &ndash; a lifelong process of integrating conscious and unconscious aspects of the psyche. He spent decades systematically analysing his own dreams, fantasies, and emotional reactions, documenting the process in his <em>Red Book</em>. His personal self-exploration became the foundation for widely used frameworks including psychological types and the concept of the shadow.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Contemplative/Somatic &ndash; Level 5</div>
+    <div class="exemplar-value">Contemplative/Somatic</div>
     <p><a href="https://en.wikipedia.org/wiki/Thich_Nhat_Hanh" target="_blank">Thich Nhat Hanh</a> was a Vietnamese Zen Buddhist monk who maintained a daily mindfulness practice for over 60 years. He developed the concept of "engaged Buddhism", applying contemplative awareness to social action, and founded the Plum Village monastic community in France. His teaching emphasised awareness of breathing, walking, and ordinary daily activities as a path to deep self-knowledge.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Relational &ndash; Level 5</div>
+    <div class="exemplar-value">Relational</div>
     <p><a href="https://brenebrown.com/" target="_blank">Bren&eacute; Brown</a> has described in detail how her own research into vulnerability forced a personal reckoning &ndash; she sought therapy, confronted her patterns of emotional armour, and began deliberately practising the vulnerability she studied. Her 2010 TED talk, one of the most viewed of all time, was itself an act of public relational exposure. She appears to actively solicit feedback from colleagues, family, and audiences about how she comes across, and has spoken openly about the gap between how she sees herself and how others experience her.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Experiential &ndash; Level 5</div>
+    <div class="exemplar-value">Experiential</div>
     <p><a href="https://en.wikipedia.org/wiki/Viktor_Frankl" target="_blank">Viktor Frankl</a> was an Austrian psychiatrist who survived three years in Nazi concentration camps, including Auschwitz. He drew on this direct experience of extreme suffering to develop logotherapy, a therapeutic approach built on the idea that meaning can be found in any circumstances. His book <em>Man's Search for Meaning</em> documented how lived experience &ndash; including the most harrowing kind &ndash; can become a source of profound self-understanding.</p>
 </div>
 
@@ -622,7 +622,7 @@ life_area_slug: self-awareness
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Self-Awareness. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/self-awareness/personalised" class="btn-cta">View Your Interventions</a>
 </div>

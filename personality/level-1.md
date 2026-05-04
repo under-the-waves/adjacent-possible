@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Personality – Level 1: Awareness"
+title: "Personality – Awareness assessment"
 life_area_slug: personality
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: personality
 
 <div class="l1-container">
 
-<h1>Personality: Level 1</h1>
+<h1>Personality: Awareness</h1>
 
 <p class="l1-subtitle">Understand what personality means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -342,15 +342,15 @@ life_area_slug: personality
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each personality value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each personality value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Personality Alignment &ndash; Level 5</div>
+    <div class="exemplar-value">Personality Alignment</div>
     <p><a href="https://gretchenrubin.com/about/" target="_blank">Gretchen Rubin</a> spent years systematically studying how personality tendencies shape habits, happiness, and daily life. She developed the Four Tendencies framework from this research and restructured her career, relationships, and routines around her findings. Her work demonstrates what it looks like to build an entire life architecture around deep personality self-knowledge.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Personality Growth &ndash; Level 5</div>
+    <div class="exemplar-value">Personality Growth</div>
     <p><a href="https://en.wikipedia.org/wiki/Eleanor_Roosevelt" target="_blank">Eleanor Roosevelt</a> was by her own account painfully shy and insecure as a young woman. Over several decades she deliberately pushed herself into public speaking, political advocacy, and diplomatic work, eventually becoming one of the most prominent public figures of the 20th century. She chaired the UN committee that drafted the Universal Declaration of Human Rights and maintained a syndicated newspaper column for 27 years. Her transformation from a reserved, self-doubting young woman into a confident global leader appears to have been largely intentional.</p>
 </div>
 
@@ -506,7 +506,7 @@ life_area_slug: personality
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Personality. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/personality/personalised" class="btn-cta">View Your Interventions</a>
 </div>

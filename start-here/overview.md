@@ -25,7 +25,7 @@ Worthwhile covers [52 life areas]({{ site.baseurl }}/life-areas/) organised into
 Each life area has:
 
 - **Values** – the 3-5 priorities people commonly weigh in that area, which you can rank to personalise recommendations. Someone who values health gets different fitness guidance than someone focused on appearance; someone preferring simple systems gets different advice than someone wanting detailed control.
-- **[Five percentile bands]({{ site.baseurl }}/5-levels/)** – Awareness, Top 20%, Top 5%, Top 1%, and Top 0.1% – with benchmarks describing what each band looks like in practice.
+- **[Five bands]({{ site.baseurl }}/5-levels/)** – Awareness, Top 20%, Top 5%, Top 1%, and Top 0.1% – with benchmarks describing what each band looks like in practice.
 - **Interventions** – evidence-based actions and habits that move you up, each with expected benefit, time cost, and money cost.
 
 The framework is comprehensive by design. Most people naturally focus on areas they find interesting while neglecting others that might provide greater returns; covering all major life areas systematically helps surface what you'd otherwise miss.
@@ -36,7 +36,7 @@ Recommendations adjust to two things: what you value within an area, and what yo
 
 Value sliders on each life area page change which interventions get surfaced. The [prioritisation screen]({{ site.baseurl }}/prioritisation/) extends this across areas – combining a triage step (any acute issues to address first?), a fundamentals check (any major upstream gaps?), and a values-and-constraints stage that identifies a single binding focus area.
 
-Signing in lets these inputs sync across devices and persist over time, so the dashboard can track which interventions you've put in place and which areas you're actively working to level up.
+Signing in lets these inputs sync across devices and persist over time, so the dashboard can track which interventions you've put in place and which areas you're actively working on.
 
 ## Where it's heading
 

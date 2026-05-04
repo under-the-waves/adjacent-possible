@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Emergency Preparedness – Level 1: Awareness"
+title: "Emergency Preparedness – Awareness assessment"
 life_area_slug: emergency-preparedness
 ---
 
@@ -308,7 +308,7 @@ life_area_slug: emergency-preparedness
 
 <div class="l1-container">
 
-<h1>Emergency Preparedness: Level 1</h1>
+<h1>Emergency Preparedness: Awareness</h1>
 
 <p class="l1-subtitle">Understand what emergency preparedness means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -390,25 +390,25 @@ life_area_slug: emergency-preparedness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each preparedness value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each preparedness value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Self-Reliance &ndash; Level 5</div>
+    <div class="exemplar-value">Self-Reliance</div>
     <p><a href="https://www.chelseagreen.com/writer/ben-falk/" target="_blank">Ben Falk</a> is a designer, builder, and land steward who has spent over two decades developing a 10-acre homestead in Vermont designed for long-term self-sufficiency. His property includes year-round food production, multiple water systems, renewable energy infrastructure, and perennial agriculture – all documented in his book <em>The Resilient Farm and Homestead</em>. He maintains the capacity to sustain his household independently for extended periods through integrated systems he has built and refined over years.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Community Resilience &ndash; Level 5</div>
+    <div class="exemplar-value">Community Resilience</div>
     <p><a href="https://www.intoresilience.net/" target="_blank">Daniel Aldrich</a> is a political scientist who studies disaster recovery and social capital. His research across multiple disaster contexts – including the 2004 Indian Ocean tsunami, Hurricane Katrina, and the 2011 Fukushima disaster – has consistently found that community social networks are the strongest predictor of post-disaster recovery. He practises what he studies, maintaining deep mutual-aid networks across multiple communities and advising governments worldwide on community resilience strategies.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Baseline Resilience &ndash; Level 5</div>
+    <div class="exemplar-value">Baseline Resilience</div>
     <p><a href="https://www.buildingscience.com/about-us" target="_blank">Joseph Lstiburek</a> is a building scientist and engineer who has spent decades designing homes and structures that withstand regional hazards – hurricanes, floods, extreme temperatures, and wildfire – whilst remaining energy-efficient and comfortable. His work with the Building Science Corporation has shaped building codes across North America, and his own properties serve as demonstrations of professional-grade resilience against the specific regional threats they face.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Catastrophic Resilience &ndash; Level 5</div>
+    <div class="exemplar-value">Catastrophic Resilience</div>
     <p><a href="https://www.garrettonbain.com/" target="_blank">Garrett M. Bain</a> is a former nuclear weapons designer turned security consultant who advises on worst-case scenario preparedness. He has developed comprehensive frameworks for preparing individuals and organisations for civilisation-level disruptions, including nuclear events, pandemic collapse, and infrastructure failure. His approach combines military-grade planning methodology with practical household implementation across multiple contingency locations.</p>
 </div>
 
@@ -671,7 +671,7 @@ life_area_slug: emergency-preparedness
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Emergency Preparedness. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/emergency-preparedness/personalised" class="btn-cta">View Your Interventions</a>
 </div>

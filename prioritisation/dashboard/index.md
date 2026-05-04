@@ -856,9 +856,9 @@ function renderIntro() {
     el.innerHTML = `<div class="survey-container">
         <div class="question-card">
             <h2 style="margin-top:0;">Before you begin</h2>
-            <p>This survey assesses your current level across ${scopeLabel}. For each area, pick the description that best matches where you are right now.</p>
-            <h3>What the levels mean</h3>
-            <p>The five levels correspond to population percentiles among American adults:</p>
+            <p>This survey assesses your current band across ${scopeLabel}. For each area, pick the description that best matches where you are right now.</p>
+            <h3>What the bands mean</h3>
+            <p>The five bands correspond to population percentiles among American adults:</p>
             <ul style="line-height:1.8;">
                 <li><strong>Awareness:</strong> You know this area exists and have basic awareness.</li>
                 <li><strong>Top 20%:</strong> Solid basics in place.</li>
@@ -936,7 +936,7 @@ function renderQuestion() {
             const sel = currentAnswer === lvl ? ' selected' : '';
             html += `<label class="radio-option${sel}" onclick="selectAnswer('${answerKey}', ${lvl})">
                 <input type="radio" name="q-${surveyIndex}" value="${lvl}" ${currentAnswer === lvl ? 'checked' : ''}>
-                <span class="level-label">Level ${lvl}: ${LEVEL_NAMES[lvl]}</span>
+                <span class="level-label">${LEVEL_NAMES[lvl]}</span>
                 ${bench.text}
             </label>`;
         }

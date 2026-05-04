@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Life Purpose – Level 1: Awareness"
+title: "Life Purpose – Awareness assessment"
 life_area_slug: life-purpose
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: life-purpose
 
 <div class="l1-container">
 
-<h1>Life Purpose: Level 1</h1>
+<h1>Life Purpose: Awareness</h1>
 
 <p class="l1-subtitle">Understand what life purpose means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -358,20 +358,20 @@ life_area_slug: life-purpose
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each life purpose value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each life purpose value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Clarity &amp; Direction &ndash; Level 5</div>
+    <div class="exemplar-value">Clarity &amp; Direction</div>
     <p><a href="https://en.wikipedia.org/wiki/Greta_Thunberg" target="_blank">Greta Thunberg</a> identified climate activism as her purpose at age 15 and has maintained that direction with unusual consistency. She started by sitting alone outside the Swedish parliament in 2018 and sustained the commitment through global fame, intense criticism, and political pressure. Her clarity of purpose &ndash; and her refusal to be deflected from it &ndash; has been documented extensively in interviews, speeches, and her own writing.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &amp; Fulfilment &ndash; Level 5</div>
+    <div class="exemplar-value">Meaning &amp; Fulfilment</div>
     <p><a href="https://www.nobelprize.org/prizes/peace/2014/satyarthi/biographical/" target="_blank">Kailash Satyarthi</a> has worked to end child labour since the early 1980s, directly participating in the rescue of over 80,000 children from forced labour. He continued this work for decades before receiving the Nobel Peace Prize in 2014, sustaining motivation through legal battles, physical attacks, and the deaths of colleagues. His purpose appears to have been the primary organising force of his adult life.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Integration &amp; Coherence &ndash; Level 5</div>
+    <div class="exemplar-value">Integration &amp; Coherence</div>
     <p><a href="https://en.wikipedia.org/wiki/Yo-Yo_Ma" target="_blank">Yo-Yo Ma</a> has spent over 50 years as a cellist, but his career consistently reflects a broader purpose &ndash; using music to build connection across cultures. His Silk Road Ensemble brings together musicians from dozens of countries, his community concerts take place in settings from prisons to refugee camps, and his public statements frame music as a tool for empathy. His concert schedule, teaching, and advocacy all appear to serve a single coherent vision rather than separate professional tracks.</p>
 </div>
 
@@ -585,7 +585,7 @@ life_area_slug: life-purpose
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Life Purpose. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/life-purpose/personalised" class="btn-cta">View Your Interventions</a>
 </div>

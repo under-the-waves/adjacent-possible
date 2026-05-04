@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Style – Level 1: Awareness"
+title: "Style – Awareness assessment"
 life_area_slug: style
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: style
 
 <div class="l1-container">
 
-<h1>Style: Level 1</h1>
+<h1>Style: Awareness</h1>
 
 <p class="l1-subtitle">Understand what style means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: style
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each style value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each style value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Attractiveness &ndash; Level 5</div>
+    <div class="exemplar-value">Attractiveness</div>
     <p><a href="https://en.wikipedia.org/wiki/Zendaya" target="_blank">Zendaya</a> has become one of the most closely watched figures in contemporary fashion, consistently appearing on best-dressed lists since her early twenties. She works closely with stylist Law Roach to curate looks that reference fashion history while remaining distinctive. Her red carpet appearances regularly generate significant media coverage, and she was the youngest person to receive the CFDA Fashion Icon Award in 2021.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Status & Professional &ndash; Level 5</div>
+    <div class="exemplar-value">Status & Professional</div>
     <p><a href="https://en.wikipedia.org/wiki/Christine_Lagarde" target="_blank">Christine Lagarde</a>, President of the European Central Bank, is widely noted for projecting authority and credibility through her wardrobe choices. She consistently dresses at executive standards across formal, diplomatic, and media settings, demonstrating how strategic clothing choices can reinforce leadership presence at the highest levels.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Self-Expression &ndash; Level 5</div>
+    <div class="exemplar-value">Self-Expression</div>
     <p><a href="https://en.wikipedia.org/wiki/Iris_Apfel" target="_blank">Iris Apfel</a> developed one of the most recognisable personal aesthetics of anyone in the public eye. Her bold, layered style combined vintage, couture, and flea-market finds into a signature look that was entirely her own. She became a style icon in her 80s and remained one into her 100s, demonstrating that distinctive self-expression through clothing can be sustained across a lifetime.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comfort & Function &ndash; Level 5</div>
+    <div class="exemplar-value">Comfort & Function</div>
     <p><a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a> famously wore the same black turtleneck, jeans, and trainers combination daily, eliminating decision fatigue entirely whilst maintaining a polished, recognisable appearance. His approach demonstrated that a fully systematised wardrobe can simultaneously achieve comfort, consistency, and a distinctive professional image.</p>
 </div>
 
@@ -624,7 +624,7 @@ life_area_slug: style
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Style. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/style/personalised" class="btn-cta">View Your Interventions</a>
 </div>

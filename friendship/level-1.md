@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Friendship – Level 1: Awareness"
+title: "Friendship – Awareness assessment"
 life_area_slug: friendship
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: friendship
 
 <div class="l1-container">
 
-<h1>Friendship: Level 1</h1>
+<h1>Friendship: Awareness</h1>
 
 <p class="l1-subtitle">Understand what friendship means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -357,20 +357,20 @@ life_area_slug: friendship
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each friendship value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each friendship value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Depth &ndash; Level 5</div>
+    <div class="exemplar-value">Depth</div>
     <p><a href="https://www.cs-lewis.com/biography/" target="_blank">C.S. Lewis</a> and <a href="https://www.tolkiensociety.org/author/biography/" target="_blank">J.R.R. Tolkien</a> met at Oxford in 1926 and remained close friends for over 30 years through the Inklings, a literary group that met weekly to read and critique each other's work. Tolkien was instrumental in Lewis's conversion to Christianity &ndash; a pivotal moment in Lewis's life. Lewis, in turn, provided years of encouragement that kept Tolkien working on <em>The Lord of the Rings</em> during long periods of doubt. Their friendship weathered significant disagreements, including over Lewis's marriage and theological differences, and both men described it as one of the most important relationships of their lives.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Breadth &ndash; Level 5</div>
+    <div class="exemplar-value">Breadth</div>
     <p><a href="https://keithferrazzi.com/" target="_blank">Keith Ferrazzi</a> built a career around the deliberate practice of relationship-building. His book <em>Never Eat Alone</em> describes his system for maintaining genuine connections with thousands of people across industries and countries. Ferrazzi appears to treat relationship maintenance as a structured discipline &ndash; tracking contacts, reaching out regularly, and actively looking for ways to help people in his network before asking for anything in return. He is widely cited as an example of someone who combines very large social networks with authentic personal investment in each connection.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Growth &ndash; Level 5</div>
+    <div class="exemplar-value">Growth</div>
     <p><a href="https://www.fi.edu/en/benjamin-franklin" target="_blank">Benjamin Franklin</a> founded the Junto in 1727, a mutual improvement club of 12 friends drawn from different trades in Philadelphia. Members met weekly to discuss questions of morals, politics, and natural philosophy, and held each other accountable to personal development goals. The group ran for over 30 years and generated several lasting civic institutions, including a lending library that became the Library Company of Philadelphia and an academy that eventually became the University of Pennsylvania. Franklin credited the Junto with shaping much of his intellectual development.</p>
 </div>
 
@@ -576,7 +576,7 @@ life_area_slug: friendship
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Friendship. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/friendship/personalised" class="btn-cta">View Your Interventions</a>
 </div>

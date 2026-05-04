@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cognitive Skills – Level 1: Awareness"
+title: "Cognitive Skills – Awareness assessment"
 life_area_slug: cognitive-skills
 ---
 
@@ -308,7 +308,7 @@ life_area_slug: cognitive-skills
 
 <div class="l1-container">
 
-<h1>Cognitive Skills: Level 1</h1>
+<h1>Cognitive Skills: Awareness</h1>
 
 <p class="l1-subtitle">Understand what cognitive skills are, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -390,25 +390,25 @@ life_area_slug: cognitive-skills
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each cognitive skills value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each cognitive skills value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Memory &ndash; Level 5</div>
+    <div class="exemplar-value">Memory</div>
     <p><a href="https://www.mullen.memory/" target="_blank">Alex Mullen</a> is a three-time World Memory Champion who memorised a shuffled deck of cards in 15.61 seconds and over 3,000 digits in an hour. He trained using the method of loci and spaced repetition while completing medical school, demonstrating that exceptional memory performance is compatible with a demanding professional career. He now teaches memory techniques through his platform Mullen Memory.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Focus &ndash; Level 5</div>
+    <div class="exemplar-value">Focus</div>
     <p><a href="https://en.wikipedia.org/wiki/Mihaly_Csikszentmihalyi" target="_blank">Mihaly Csikszentmihalyi</a> spent over 40 years researching the psychology of optimal experience and coined the concept of "flow." He reportedly structured his own working life around the conditions he studied &ndash; long uninterrupted blocks, intrinsic motivation, and clear goals &ndash; and maintained a prolific research output across psychology, creativity, and education until his death in 2021 at age 87.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Reasoning & Problem-Solving &ndash; Level 5</div>
+    <div class="exemplar-value">Reasoning & Problem-Solving</div>
     <p><a href="https://en.wikipedia.org/wiki/Terence_Tao" target="_blank">Terence Tao</a> is a mathematician at UCLA who has published over 300 research papers across multiple subfields and won the Fields Medal in 2006. His ability to identify patterns and generate novel approaches across diverse areas of mathematics – from harmonic analysis to combinatorics to partial differential equations – reflects extraordinary reasoning ability sustained at the highest level for decades.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Lifestyle Integration &ndash; Level 5</div>
+    <div class="exemplar-value">Lifestyle Integration</div>
     <p><a href="https://en.wikipedia.org/wiki/Sanjay_Gupta" target="_blank">Sanjay Gupta</a> is a practising neurosurgeon and CNN's chief medical correspondent who wrote <em>Keep Sharp</em> based on his clinical experience with cognitive decline. He maintains a personal regimen of daily exercise, sleep discipline, and continuous learning that he describes as non-negotiable for his own cognitive performance. He has sustained demanding parallel careers in surgery and broadcasting for over 20 years, suggesting the lifestyle integration he advocates is one he genuinely practises.</p>
 </div>
 
@@ -668,7 +668,7 @@ life_area_slug: cognitive-skills
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Cognitive Skills. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/cognitive-skills/personalised" class="btn-cta">View Your Interventions</a>
 </div>

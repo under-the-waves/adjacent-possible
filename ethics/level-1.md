@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Ethics – Level 1: Awareness"
+title: "Ethics – Awareness assessment"
 life_area_slug: ethics
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: ethics
 
 <div class="l1-container">
 
-<h1>Ethics: Level 1</h1>
+<h1>Ethics: Awareness</h1>
 
 <p class="l1-subtitle">Understand what ethics means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: ethics
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each ethics value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each ethics value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Philosophical Depth &ndash; Level 5</div>
+    <div class="exemplar-value">Philosophical Depth</div>
     <p><a href="https://www.utilitarianism.net/utilitarian-thinker/peter-singer" target="_blank">Peter Singer</a> has spent over five decades developing and refining utilitarian arguments on animal welfare, global poverty, and effective altruism. His 1975 book <em>Animal Liberation</em> provided the philosophical foundation for the modern animal rights movement. He has consistently revised his positions in response to counter-arguments &ndash; a rarity among public intellectuals &ndash; and his practical ethics framework is taught in most university philosophy programmes worldwide.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Practical Guidance &ndash; Level 5</div>
+    <div class="exemplar-value">Practical Guidance</div>
     <p><a href="https://en.wikipedia.org/wiki/Bryan_Stevenson" target="_blank">Bryan Stevenson</a> founded the Equal Justice Initiative in 1989 and has since won relief for over 140 wrongly condemned prisoners on death row. His ethical framework &ndash; centred on proximity to suffering as a prerequisite for moral understanding &ndash; translates directly into legal strategy, organisational decisions, and public advocacy. His approach has been adopted by law schools, public defenders' offices, and criminal justice organisations across the United States.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Moral Integrity &ndash; Level 5</div>
+    <div class="exemplar-value">Moral Integrity</div>
     <p><a href="https://en.wikipedia.org/wiki/Dietrich_Bonhoeffer" target="_blank">Dietrich Bonhoeffer</a> was a German theologian who returned to Nazi Germany from the safety of the United States in 1939 because he believed he could not participate in rebuilding German moral life after the war if he had not shared the trials of his countrymen. He joined the resistance, was arrested in 1943, and was executed in April 1945. His theological writings on the cost of moral conviction, composed largely in prison, continue to influence ethical thought eight decades later.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Community Ethics &amp; Belonging &ndash; Level 5</div>
+    <div class="exemplar-value">Community Ethics &amp; Belonging</div>
     <p><a href="https://en.wikipedia.org/wiki/Ela_Bhatt" target="_blank">Ela Bhatt</a> founded the Self-Employed Women's Association (SEWA) in India in 1972, building it into a union of over 2 million members. She developed ethical frameworks for economic cooperation rooted in Gandhian principles and applied them at scale, creating banking, insurance, and housing cooperatives that transformed the lives of some of the poorest women in the world. Her model of community-centred ethics has been replicated across dozens of countries.</p>
 </div>
 
@@ -624,7 +624,7 @@ life_area_slug: ethics
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Ethics. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/ethics/personalised" class="btn-cta">View Your Interventions</a>
 </div>

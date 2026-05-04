@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Worldview – Level 1: Awareness"
+title: "Worldview – Awareness assessment"
 life_area_slug: worldview
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: worldview
 
 <div class="l1-container">
 
-<h1>Worldview: Level 1</h1>
+<h1>Worldview: Awareness</h1>
 
 <p class="l1-subtitle">Understand what worldview means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: worldview
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each worldview value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each worldview value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Breadth &ndash; Level 5</div>
+    <div class="exemplar-value">Breadth</div>
     <p><a href="https://en.wikipedia.org/wiki/Vaclav_Smil" target="_blank">Vaclav Smil</a> has published over 40 books spanning energy, food production, environmental change, economics, demographics, and technical innovation. His writing regularly integrates data from half a dozen disciplines in a single argument. Bill Gates has called him his favourite author, largely because Smil's analyses draw on a range of domains that few specialists can match. He holds no public office and runs no institute &ndash; the breadth of his published work is itself the evidence.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Depth &ndash; Level 5</div>
+    <div class="exemplar-value">Depth</div>
     <p><a href="https://en.wikipedia.org/wiki/David_Deutsch" target="_blank">David Deutsch</a> is a physicist at Oxford who developed the quantum theory of computation and has written two books &ndash; <em>The Fabric of Reality</em> and <em>The Beginning of Infinity</em> &ndash; that attempt to unify physics, epistemology, evolution, and computation into a single explanatory framework. His work demonstrates an unusual depth of engagement with fundamental questions across multiple disciplines, sustained over several decades.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Utility &ndash; Level 5</div>
+    <div class="exemplar-value">Utility</div>
     <p><a href="https://en.wikipedia.org/wiki/Philip_Tetlock" target="_blank">Philip Tetlock</a> spent over 20 years tracking the accuracy of expert predictions and demonstrated that most experts performed barely better than chance. He then developed the Good Judgment Project, which identified ordinary people whose forecasting accuracy consistently exceeded that of intelligence analysts. His work on superforecasting has been adopted by intelligence agencies and investment firms as a practical framework for decision-making under uncertainty.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meaning &ndash; Level 5</div>
+    <div class="exemplar-value">Meaning</div>
     <p><a href="https://en.wikipedia.org/wiki/Wendell_Berry" target="_blank">Wendell Berry</a> has spent over 60 years farming, writing, and teaching from the same small farm in Henry County, Kentucky. His novels, essays, and poetry articulate a worldview built around land stewardship, community, and the limits of industrial progress &ndash; and he has lived according to those principles consistently, farming without a tractor for decades and refusing to own a computer. His worldview appears to be genuinely load-bearing in his daily decisions rather than a theoretical position.</p>
 </div>
 
@@ -629,7 +629,7 @@ life_area_slug: worldview
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Worldview. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/worldview/personalised" class="btn-cta">View Your Interventions</a>
 </div>

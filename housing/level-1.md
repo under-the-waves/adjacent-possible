@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Housing – Level 1: Awareness"
+title: "Housing – Awareness assessment"
 life_area_slug: housing
 ---
 
@@ -308,7 +308,7 @@ life_area_slug: housing
 
 <div class="l1-container">
 
-<h1>Housing: Level 1</h1>
+<h1>Housing: Awareness</h1>
 
 <p class="l1-subtitle">Understand what housing means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -387,20 +387,20 @@ life_area_slug: housing
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each housing value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each housing value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comfort &ndash; Level 5</div>
+    <div class="exemplar-value">Comfort</div>
     <p><a href="https://www.christophlowell.com/" target="_blank">Christopher Lowell</a> is an interior designer who has spent decades demonstrating how to create exceptionally comfortable living environments without excessive budgets. His approach centres on spatial flow, natural light maximisation, and designing rooms around daily rhythms. His own homes have consistently reflected these principles &ndash; purpose-designed spaces for work, rest, and socialising with no deferred maintenance or unresolved friction points.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Affordability &ndash; Level 5</div>
+    <div class="exemplar-value">Affordability</div>
     <p><a href="https://en.wikipedia.org/wiki/Jay_Shafer" target="_blank">Jay Shafer</a> pioneered the tiny house movement by designing and living in homes under 10 square metres. He founded the Tumbleweed Tiny House Company and has lived in his own small-footprint houses since the late 1990s, consistently keeping his housing costs to a fraction of the national average. His approach demonstrates that deliberate downsizing can free up both money and time without sacrificing comfort.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Location &ndash; Level 5</div>
+    <div class="exemplar-value">Location</div>
     <p><a href="https://www.strongtowns.org/charles-marohn" target="_blank">Charles Marohn</a> is an urban planner and author who has written extensively about what makes neighbourhoods work. He lives in a walkable small-town setting that he chose specifically for its combination of community connection, access to daily needs, natural environment, and manageable scale &ndash; a deliberate alignment between location and lifestyle priorities that he has maintained for decades.</p>
 </div>
 
@@ -612,7 +612,7 @@ life_area_slug: housing
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Housing. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/housing/personalised" class="btn-cta">View Your Interventions</a>
 </div>

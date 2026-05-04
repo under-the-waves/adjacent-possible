@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Digital Safety – Level 1: Awareness"
+title: "Digital Safety – Awareness assessment"
 life_area_slug: digital-safety
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: digital-safety
 
 <div class="l1-container">
 
-<h1>Digital Safety: Level 1</h1>
+<h1>Digital Safety: Awareness</h1>
 
 <p class="l1-subtitle">Understand what digital safety means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -349,15 +349,15 @@ life_area_slug: digital-safety
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each digital safety value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each digital safety value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comprehensive Security &ndash; Level 5</div>
+    <div class="exemplar-value">Comprehensive Security</div>
     <p><a href="https://micahflee.com/" target="_blank">Micah Lee</a> is a technologist and journalist who served as a technical adviser to Edward Snowden and helped establish <a href="https://theintercept.com/" target="_blank">The Intercept's</a> secure communication infrastructure. He develops and maintains open-source security tools including <a href="https://onionshare.org/" target="_blank">OnionShare</a>, practises rigorous operational security in his own digital life, and has written extensively about practical threat modelling for non-experts. His work demonstrates that comprehensive personal security can be maintained consistently over many years.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Usability and Convenience &ndash; Level 5</div>
+    <div class="exemplar-value">Usability and Convenience</div>
     <p><a href="https://troyhunt.com/" target="_blank">Troy Hunt</a> is the creator of <a href="https://haveibeenpwned.com/" target="_blank">Have I Been Pwned</a> and a long-time advocate for making security accessible to ordinary users. He uses and publicly documents a streamlined personal security setup &ndash; password manager, hardware security keys, automated monitoring &ndash; that provides strong protection with minimal daily friction. His writing consistently emphasises practical, low-effort security measures over comprehensive but burdensome approaches.</p>
 </div>
 
@@ -553,7 +553,7 @@ life_area_slug: digital-safety
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Digital Safety. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/digital-safety/personalised" class="btn-cta">View Your Interventions</a>
 </div>

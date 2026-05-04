@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Organisation – Level 1: Awareness"
+title: "Organisation – Awareness assessment"
 life_area_slug: organisation
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: organisation
 
 <div class="l1-container">
 
-<h1>Organisation: Level 1</h1>
+<h1>Organisation: Awareness</h1>
 
 <p class="l1-subtitle">Understand what organisation means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -345,20 +345,20 @@ life_area_slug: organisation
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each organisation value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each organisation value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Tracking &ndash; Level 5</div>
+    <div class="exemplar-value">Tracking</div>
     <p><a href="https://en.wikipedia.org/wiki/David_Allen_(author)" target="_blank">David Allen</a> developed Getting Things Done (GTD), one of the most widely adopted personal productivity systems in the world. His methodology centres on comprehensive capture and regular review of all commitments, and he has practised and refined it for over 30 years. His concept of "mind like water" &ndash; a state of zero open loops in your head &ndash; has become the benchmark for what thoroughness in personal organisation looks like.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Order &ndash; Level 5</div>
+    <div class="exemplar-value">Order</div>
     <p><a href="https://en.wikipedia.org/wiki/Martha_Stewart" target="_blank">Martha Stewart</a> built a media empire around the systematic organisation of domestic life. Her approach to household management treats every domain &ndash; from kitchen storage to seasonal maintenance schedules &ndash; as a system to be designed, documented, and maintained. She has practised and publicly demonstrated this level of domestic order for over 40 years across multiple homes.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Speed &ndash; Level 5</div>
+    <div class="exemplar-value">Speed</div>
     <p><a href="https://en.wikipedia.org/wiki/Tiago_Forte" target="_blank">Tiago Forte</a> developed the "Building a Second Brain" methodology for organising digital information and projects. He practises what he teaches &ndash; maintaining a personal knowledge management system that he uses daily to run a company, write, and teach. His approach prioritises speed of retrieval over comprehensiveness, and he has refined it through over a decade of personal use.</p>
 </div>
 
@@ -570,7 +570,7 @@ life_area_slug: organisation
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Organisation. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/organisation/personalised" class="btn-cta">View Your Interventions</a>
 </div>

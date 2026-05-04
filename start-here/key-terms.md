@@ -16,7 +16,7 @@ A short glossary of the vocabulary used across the site.
 
 **Life area** – A specific area within a domain. Fitness, Sleep, and Nutrition are life areas within the Health domain. Worthwhile has 52 life areas. See all of them on the [Life Areas]({{ site.baseurl }}/life-areas/) page.
 
-**Levels (or bands)** – Five percentile-anchored bands within each life area: Awareness, Top 20%, Top 5%, Top 1%, and Top 0.1%. Reference points for where you sit, not a ladder to climb. See the [5 Levels]({{ site.baseurl }}/5-levels/) page for details.
+**Bands** – Five percentile-anchored bands within each life area: Awareness, Top 20%, Top 5%, Top 1%, and Top 0.1%. Reference points for where you sit, not a ladder to climb. See [The Five Bands]({{ site.baseurl }}/5-levels/) for details.
 
 **Benchmarks** – Specific, observable indicators of what each band looks like in practice. They help you self-locate, but the underlying definition of a band is the percentile, not the benchmark.
 
@@ -28,7 +28,7 @@ A short glossary of the vocabulary used across the site.
 
 **Approach-focused values** – Values that describe how you prefer to work in an area. Financial planning, for example, might use 'detailed control and tracking' versus 'simple, automated systems' as values.
 
-**Dashboard** – Your personalised view across all life areas, showing your highest-leverage opportunities given the values and constraints you've set, plus the interventions you've ticked off and the areas you're actively levelling up. Works anonymously per-device; signing in syncs it across devices.
+**Dashboard** – Your personalised view across all life areas, showing your highest-leverage opportunities given the values and constraints you've set, plus the interventions you've ticked off and the areas you're actively working on. Works anonymously per-device; signing in syncs it across devices.
 
 ## What to do
 
@@ -48,4 +48,4 @@ A short glossary of the vocabulary used across the site.
 
 **Focus area** – Stage 3. Identifies a single binding life area to focus on next, based on what you value and where you currently feel constrained.
 
-**Quick wins** – Separate from the level structure. High-impact, low-effort interventions that pay off across multiple domains regardless of where you currently sit. (In development.)
+**Quick wins** – Separate from the band structure. High-impact, low-effort interventions that pay off across multiple domains regardless of where you currently sit. (In development.)

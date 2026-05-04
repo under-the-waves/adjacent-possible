@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Life Skills – Level 1: Awareness"
+title: "Life Skills – Awareness assessment"
 life_area_slug: life-skills
 ---
 
@@ -296,7 +296,7 @@ life_area_slug: life-skills
 
 <div class="l1-container">
 
-<h1>Life Skills: Level 1</h1>
+<h1>Life Skills: Awareness</h1>
 
 <p class="l1-subtitle">Understand what life skills means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -375,20 +375,20 @@ life_area_slug: life-skills
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each life skills value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each life skills value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">High-Impact Capabilities &ndash; Level 5</div>
+    <div class="exemplar-value">High-Impact Capabilities</div>
     <p><a href="https://en.wikipedia.org/wiki/Larry_Haun" target="_blank">Larry Haun</a> was a carpenter who spent over 50 years building houses and could frame an entire wall in minutes. He wrote multiple books on efficient building techniques, could handle plumbing, electrical, roofing, and finishing work to professional standards, and remained actively competent across virtually every practical domain relevant to residential construction well into his 70s.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Systematic Competence &ndash; Level 5</div>
+    <div class="exemplar-value">Systematic Competence</div>
     <p><a href="https://en.wikipedia.org/wiki/Adam_Savage" target="_blank">Adam Savage</a> is a maker, fabricator, and former MythBusters host whose workshop organisation and systematic approach to practical problem-solving are widely documented. He maintains comprehensive tool systems, applies methodical processes to unfamiliar challenges, and has demonstrated professional-level competence across metalworking, woodworking, electronics, sewing, and model-making.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Teaching & Sharing &ndash; Level 5</div>
+    <div class="exemplar-value">Teaching & Sharing</div>
     <p><a href="https://en.wikipedia.org/wiki/Norm_Abram" target="_blank">Norm Abram</a> hosted <em>The New Yankee Workshop</em> and <em>This Old House</em> for decades, teaching millions of viewers to tackle home improvement projects. His clear, patient instruction style made complex woodworking and renovation techniques accessible to beginners, and he is widely credited with inspiring a generation of DIY practitioners.</p>
 </div>
 
@@ -600,7 +600,7 @@ life_area_slug: life-skills
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Life Skills. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/life-skills/personalised" class="btn-cta">View Your Interventions</a>
 </div>

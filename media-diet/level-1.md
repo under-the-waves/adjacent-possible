@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Media Diet – Level 1: Awareness"
+title: "Media Diet – Awareness assessment"
 life_area_slug: media-diet
 ---
 
@@ -308,7 +308,7 @@ life_area_slug: media-diet
 
 <div class="l1-container">
 
-<h1>Media Diet: Level 1</h1>
+<h1>Media Diet: Awareness</h1>
 
 <p class="l1-subtitle">Understand what a media diet is, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -390,25 +390,25 @@ life_area_slug: media-diet
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each media diet value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each media diet value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Information Quality & Depth &ndash; Level 5</div>
+    <div class="exemplar-value">Information Quality & Depth</div>
     <p><a href="https://tylercowen.com/" target="_blank">Tyler Cowen</a> is an economics professor at George Mason University who reads roughly 50 &ndash; 80 books per year across economics, history, fiction, science, and philosophy. He maintains <a href="https://marginalrevolution.com/" target="_blank">Marginal Revolution</a>, where he has published daily posts synthesising academic papers, policy documents, and primary sources for over twenty years. His reading method &ndash; skimming aggressively, abandoning books quickly, and focusing retention on what changes his thinking &ndash; reflects an unusually disciplined approach to information quality.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Actionable Relevance &ndash; Level 5</div>
+    <div class="exemplar-value">Actionable Relevance</div>
     <p><a href="https://patrickcollison.com/" target="_blank">Patrick Collison</a>, co-founder of Stripe, maintains a public bookshelf and has spoken extensively about how his reading directly informs business and policy decisions. His information diet spans economic history, infrastructure development, and scientific progress, and he has described specific cases where insights from these domains shaped Stripe's strategy. His reading appears tightly integrated with his decision-making rather than pursued as a separate activity.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Breadth & Discovery &ndash; Level 5</div>
+    <div class="exemplar-value">Breadth & Discovery</div>
     <p><a href="https://www.mariapopova.com/" target="_blank">Maria Popova</a> created <a href="https://www.themarginalian.org/" target="_blank">The Marginalian</a> (formerly Brain Pickings), where she has published daily essays connecting ideas across philosophy, science, art, literature, and psychology for over fifteen years. Her work draws on sources spanning centuries and disciplines, and she reads in multiple languages. The site is a public record of an exceptionally broad and sustained information diet.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Cognitive Efficiency &ndash; Level 5</div>
+    <div class="exemplar-value">Cognitive Efficiency</div>
     <p><a href="https://calnewport.com/" target="_blank">Cal Newport</a> is a computer science professor at Georgetown who has written extensively about attention management and deep work. He does not use social media, limits his news consumption to a small number of curated sources, and has described specific systems for batching information processing and protecting cognitive resources. His academic output &ndash; multiple books and a consistent research programme &ndash; suggests these practices translate into measurable productivity.</p>
 </div>
 
@@ -668,7 +668,7 @@ life_area_slug: media-diet
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Media Diet. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/media-diet/personalised" class="btn-cta">View Your Interventions</a>
 </div>

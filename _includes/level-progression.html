@@ -227,23 +227,23 @@ var LP_DATA = {
                 } else {
                     h += '<input type="checkbox" checked data-vkey="' + v.key + '" data-lvl="' + l + '">';
                 }
-                h += '<span class="lp-lvl-num">L' + l + '</span> ';
+                h += '<span class="lp-lvl-num">B' + l + '</span> ';
                 h += '<span>' + escapeHtml(v.benchmarks[l]) + '</span>';
                 h += '</label>';
                 h += '</div>';
             }
 
-            // Next level (unchecked, prominent)
+            // Next band (unchecked, prominent)
             if (next && v.benchmarks[next]) {
                 h += '<div class="lp-benchmark lp-next">';
                 h += '<label>';
                 h += '<input type="checkbox" data-vkey="' + v.key + '" data-lvl="' + next + '">';
-                h += '<span class="lp-lvl-num">L' + next + '</span> ';
+                h += '<span class="lp-lvl-num">B' + next + '</span> ';
                 h += '<span>' + escapeHtml(v.benchmarks[next]) + '</span>';
                 h += '</label>';
                 h += '</div>';
             } else if (cur === 5) {
-                h += '<div class="lp-mastered">\u2713 All levels complete</div>';
+                h += '<div class="lp-mastered">\u2713 All bands complete</div>';
             }
 
             h += '</div>';

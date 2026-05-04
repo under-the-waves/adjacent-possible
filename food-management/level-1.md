@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Food Management – Level 1: Awareness"
+title: "Food Management – Awareness assessment"
 life_area_slug: food-management
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: food-management
 
 <div class="l1-container">
 
-<h1>Food Management: Level 1</h1>
+<h1>Food Management: Awareness</h1>
 
 <p class="l1-subtitle">Understand what food management involves, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -352,20 +352,20 @@ life_area_slug: food-management
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each food management value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each food management value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Competence &ndash; Level 5</div>
+    <div class="exemplar-value">Competence</div>
     <p><a href="https://www.instagram.com/maboroshikitchen/" target="_blank">Samin Nosrat</a>, author of <em>Salt, Fat, Acid, Heat</em>, learned to cook professionally at Chez Panisse and then spent years teaching home cooks to develop reliable instincts. She appears to plan, shop, and cook with the kind of fluency where improvising a meal from whatever is in the fridge is effortless. Her public cooking demonstrates consistent adaptability across cuisines, seasons, and available ingredients.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Craft &ndash; Level 5</div>
+    <div class="exemplar-value">Craft</div>
     <p><a href="https://www.binging-with-babish.com/" target="_blank">Andrew Rea</a> (Babish Culinary Universe) taught himself to cook as an adult and has spent over a decade documenting his progression from basic techniques to advanced pastry, fermentation, and multi-day projects. His channel catalogues thousands of hours of deliberate skill development, and he regularly attempts dishes well outside his comfort zone on camera.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Waste Reduction &ndash; Level 5</div>
+    <div class="exemplar-value">Waste Reduction</div>
     <p><a href="https://en.wikipedia.org/wiki/Bea_Johnson" target="_blank">Bea Johnson</a> fits her family of four's entire annual non-recyclable waste into a single quart-sized jar. Her food management system &ndash; buying in bulk, composting, planning meals around what needs using up &ndash; is central to how she achieves this. She has maintained the practice since 2008 and documented it in her book <em>Zero Waste Home</em>.</p>
 </div>
 
@@ -562,7 +562,7 @@ life_area_slug: food-management
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Food Management. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/food-management/personalised" class="btn-cta">View Your Interventions</a>
 </div>

@@ -136,8 +136,8 @@ life_area_slug: participatory-leisure
 - [Mental health]({{ site.baseurl }}/mental-health) – your psychological wellbeing, emotional regulation, and resilience
 
 <div class="la-banner la-banner--start" id="level1Banner">
-    <p><strong>You haven't completed Level 1 for Participatory Leisure yet.</strong><br>It takes about 15 minutes and helps you understand what participatory leisure means to you.</p>
-    <a href="{{ site.baseurl }}/participatory-leisure/level-1" class="btn-cta">Start Level 1</a>
+    <p><strong>You haven't started the Awareness assessment for Participatory Leisure yet.</strong><br>It takes about 15 minutes and helps you understand what participatory leisure means to you.</p>
+    <a href="{{ site.baseurl }}/participatory-leisure/level-1" class="btn-cta">Begin assessment</a>
 </div>
 
 {% include level-progression.html %}
@@ -163,7 +163,7 @@ People pursue active leisure for different reasons. This site scores every parti
 
 <div class="la-paths">
     <a href="{{ site.baseurl }}/participatory-leisure/level-1" class="path-level1">
-        Complete Level 1
+        Begin assessment
         <div class="path-desc">Understand participatory leisure, set your values, assess where you are</div>
     </a>
     <a href="{{ site.baseurl }}/participatory-leisure/personalised" class="path-interventions">
@@ -188,14 +188,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (done && hasSliders) {
         banner.className = 'la-banner la-banner--complete';
-        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Participatory Leisure.</strong></p>' +
+        banner.innerHTML = '<p><strong>You have completed Awareness assessment for Participatory Leisure.</strong></p>' +
             '<a href="{{ site.baseurl }}/participatory-leisure/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/participatory-leisure/level-1" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/participatory-leisure/level-1" class="btn-secondary">Redo assessment</a>';
     } else if (Object.keys(area).length > 0) {
         var completed = steps.filter(function(s) { return area[s]; }).length;
         if (hasSliders) completed++;
-        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/participatory-leisure/level-1" class="btn-cta">Continue Level 1</a>';
+        banner.innerHTML = '<p><strong>Awareness assessment in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/participatory-leisure/level-1" class="btn-cta">Continue assessment</a>';
     }
 });
 </script>

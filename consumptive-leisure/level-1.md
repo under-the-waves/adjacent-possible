@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Consumptive Leisure – Level 1: Awareness"
+title: "Consumptive Leisure – Awareness assessment"
 life_area_slug: consumptive-leisure
 ---
 
@@ -278,7 +278,7 @@ life_area_slug: consumptive-leisure
 
 <div class="l1-container">
 
-<h1>Consumptive Leisure: Level 1</h1>
+<h1>Consumptive Leisure: Awareness</h1>
 
 <p class="l1-subtitle">Understand what consumptive leisure means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -355,20 +355,20 @@ life_area_slug: consumptive-leisure
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each consumptive leisure value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each consumptive leisure value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Restoration &ndash; Level 5</div>
+    <div class="exemplar-value">Restoration</div>
     <p><a href="https://www.nytimes.com/by/jenny-odell" target="_blank">Jenny Odell</a> is an artist and author whose book <em>How to Do Nothing</em> became a bestseller on the art of resisting the attention economy. She practises and teaches deliberate disengagement from productivity-driven media consumption, using birdwatching, deep observation, and curated reading as restorative practices. Her work demonstrates mastery of using consumptive leisure for genuine recovery rather than mere distraction.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Enrichment &ndash; Level 5</div>
+    <div class="exemplar-value">Enrichment</div>
     <p><a href="https://en.wikipedia.org/wiki/Susan_Sontag" target="_blank">Susan Sontag</a> was one of the 20th century's most voracious and deliberate consumers of culture &ndash; film, literature, philosophy, theatre, and visual art. Her journals, published posthumously, reveal someone who treated cultural consumption as a serious practice, maintaining detailed reading lists and viewing schedules from her teenage years until her death in 2004. Her critical essays consistently drew connections across domains in ways that reflected genuinely deep engagement with what she consumed.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Enjoyment &ndash; Level 5</div>
+    <div class="exemplar-value">Enjoyment</div>
     <p><a href="https://letterboxd.com/about/" target="_blank">Matthew Buchanan</a> co-founded Letterboxd, a social platform for film lovers with over 15 million members. His deep, lifelong love of cinema &ndash; not just watching films but savouring, discussing, and curating them &ndash; led him to build a platform that helps millions of others develop their own relationship with film. He exemplifies how genuine enjoyment of a consumptive medium can become a defining source of meaning.</p>
 </div>
 
@@ -514,7 +514,7 @@ life_area_slug: consumptive-leisure
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Consumptive Leisure. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/consumptive-leisure/personalised" class="btn-cta">View Your Interventions</a>
 </div>

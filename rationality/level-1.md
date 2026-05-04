@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Rationality – Level 1: Awareness"
+title: "Rationality – Awareness assessment"
 life_area_slug: rationality
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: rationality
 
 <div class="l1-container">
 
-<h1>Rationality: Level 1</h1>
+<h1>Rationality: Awareness</h1>
 
 <p class="l1-subtitle">Understand what rationality means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -345,20 +345,20 @@ life_area_slug: rationality
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each rationality value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each rationality value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Accurate Beliefs &ndash; Level 5</div>
+    <div class="exemplar-value">Accurate Beliefs</div>
     <p><a href="https://www.gjopen.com/" target="_blank">The top superforecasters</a> from the Good Judgment Project consistently outperformed professional intelligence analysts by 30% or more, despite having no access to classified information. These individuals &ndash; ordinary people with no special credentials &ndash; achieved this through disciplined calibration, granular probability estimates, and systematic belief updating. Over four years of geopolitical forecasting tournaments funded by IARPA, the best of them maintained Brier scores that placed them in the top fraction of a percent of all participants.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Effective Decision-Making &ndash; Level 5</div>
+    <div class="exemplar-value">Effective Decision-Making</div>
     <p><a href="https://fs.blog/annie-duke/" target="_blank">Annie Duke</a> was one of the top female poker players in history, winning a World Series of Poker bracelet and over $4 million in tournament earnings. She later applied the same structured decision-making frameworks &ndash; expected value calculations, separating decision quality from outcome quality, pre-mortems &ndash; to advising organisations and writing on decision science. Her track record spans thousands of high-stakes decisions under genuine uncertainty, with verifiable outcomes.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Intellectual Honesty &ndash; Level 5</div>
+    <div class="exemplar-value">Intellectual Honesty</div>
     <p><a href="https://en.wikipedia.org/wiki/Douglas_Hofstadter" target="_blank">Douglas Hofstadter</a> has spent decades publicly grappling with questions about consciousness, cognition, and artificial intelligence, consistently revising his positions as evidence and arguments demanded. Despite his strong initial scepticism about AI systems replicating aspects of human thought, he has openly acknowledged being shaken by recent developments and has discussed the discomfort of confronting evidence that challenges his life's work. This willingness to sit with uncertainty on questions central to his identity is unusual among prominent intellectuals.</p>
 </div>
 
@@ -570,7 +570,7 @@ life_area_slug: rationality
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Rationality. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/rationality/personalised" class="btn-cta">View Your Interventions</a>
 </div>

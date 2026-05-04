@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Investing – Level 1: Awareness"
+title: "Investing – Awareness assessment"
 life_area_slug: investing
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: investing
 
 <div class="l1-container">
 
-<h1>Investing: Level 1</h1>
+<h1>Investing: Awareness</h1>
 
 <p class="l1-subtitle">Understand what investing means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -352,20 +352,20 @@ life_area_slug: investing
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each investing value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each investing value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Growth &ndash; Level 5</div>
+    <div class="exemplar-value">Growth</div>
     <p><a href="https://en.wikipedia.org/wiki/Warren_Buffett" target="_blank">Warren Buffett</a> compounded Berkshire Hathaway's book value at roughly 20% annually for over 58 years, turning an initial investment in a struggling textile company into one of the world's largest conglomerates. His approach relies on buying businesses with durable competitive advantages and holding them indefinitely. That rate of compounding, sustained over that duration, appears to be without precedent in public markets.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Safety &ndash; Level 5</div>
+    <div class="exemplar-value">Safety</div>
     <p><a href="https://en.wikipedia.org/wiki/Ray_Dalio" target="_blank">Ray Dalio</a> built Bridgewater Associates into the world's largest hedge fund, managing over $150 billion at its peak. His All Weather portfolio strategy, designed in the 1990s, allocates across asset classes to perform acceptably in any economic regime &ndash; growth, recession, rising inflation, or falling inflation. The approach has likely influenced a generation of institutional and retail portfolio construction, and variations of it are now widely used by individual investors.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Simplicity &ndash; Level 5</div>
+    <div class="exemplar-value">Simplicity</div>
     <p><a href="https://en.wikipedia.org/wiki/John_C._Bogle" target="_blank">John C. Bogle</a> founded Vanguard in 1975 and launched the first retail index fund the following year. He spent decades arguing that most investors would do better with a low-cost, broadly diversified index fund than with any actively managed alternative &ndash; a claim that subsequent data has strongly supported. By the time of his death in 2019, index funds held trillions of dollars and had become the default recommendation for most individual investors.</p>
 </div>
 
@@ -564,7 +564,7 @@ life_area_slug: investing
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Investing. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/investing/personalised" class="btn-cta">View Your Interventions</a>
 </div>

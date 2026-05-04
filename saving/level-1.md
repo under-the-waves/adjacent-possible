@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Saving – Level 1: Awareness"
+title: "Saving – Awareness assessment"
 life_area_slug: saving
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: saving
 
 <div class="l1-container">
 
-<h1>Saving: Level 1</h1>
+<h1>Saving: Awareness</h1>
 
 <p class="l1-subtitle">Understand what saving means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -352,20 +352,20 @@ life_area_slug: saving
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each saving value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each saving value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Security &ndash; Level 5</div>
+    <div class="exemplar-value">Security</div>
     <p><a href="https://www.mrmoneymustache.com/about/" target="_blank">Pete Adeney</a> (Mr. Money Mustache) retired at 30 after saving aggressively on a moderate software engineering salary. He accumulated enough invested assets to cover his family's living expenses indefinitely without earned income, achieving complete financial security through disciplined saving and frugal living. His detailed public accounting of household expenses demonstrates sustained annual spending well below the median, funded entirely by investment returns.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Lifestyle &ndash; Level 5</div>
+    <div class="exemplar-value">Lifestyle</div>
     <p><a href="https://affordanything.com/about/" target="_blank">Paula Pant</a> built a savings system designed explicitly around lifestyle goals. She saved enough to buy multiple rental properties in her 20s, then used the income to fund extended international travel and eventual full financial independence. Her approach treats saving as the mechanism for buying freedom and experiences, maintaining full liquidity and access to capital at all times while funding a deliberately chosen lifestyle.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Growth &ndash; Level 5</div>
+    <div class="exemplar-value">Growth</div>
     <p><a href="https://earlyretirementextreme.com/about" target="_blank">Jacob Lund Fisker</a> (Early Retirement Extreme) sustained a savings rate above 75% for five years on a postdoctoral researcher's salary, accumulating 25 times his annual expenses and reaching full financial independence by age 33. His meticulous documentation of the process shows how extreme savings rates compress the timeline to financial independence from decades to years.</p>
 </div>
 
@@ -540,7 +540,7 @@ life_area_slug: saving
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Saving. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/saving/personalised" class="btn-cta">View Your Interventions</a>
 </div>

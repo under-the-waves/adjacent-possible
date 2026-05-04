@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Value System – Level 1: Awareness"
+title: "Value System – Awareness assessment"
 life_area_slug: value-system
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: value-system
 
 <div class="l1-container">
 
-<h1>Value System: Level 1</h1>
+<h1>Value System: Awareness</h1>
 
 <p class="l1-subtitle">Understand what a value system is, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -361,25 +361,25 @@ life_area_slug: value-system
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each value system value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each value system value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Practical Decision-Making &ndash; Level 5</div>
+    <div class="exemplar-value">Practical Decision-Making</div>
     <p><a href="https://en.wikipedia.org/wiki/Charlie_Munger" target="_blank">Charlie Munger</a> built his investment career around a set of explicit mental models and decision-making principles that he maintained for over 60 years. He kept a checklist of cognitive biases to guard against, publicly turned down investments that violated his principles regardless of profit potential, and repeatedly described his approach as "invert, always invert" &ndash; testing every decision against what could go wrong. His partnership with Warren Buffett appears to have been grounded in shared values more than shared strategy.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comprehensive Insight &ndash; Level 5</div>
+    <div class="exemplar-value">Comprehensive Insight</div>
     <p><a href="https://en.wikipedia.org/wiki/Derek_Parfit" target="_blank">Derek Parfit</a> spent his career at Oxford examining the foundations of ethics and personal identity. His book <em>Reasons and Persons</em> (1984) systematically dismantled common assumptions about self-interest, rationality, and what makes a life go well. Colleagues consistently described him as someone whose philosophical conclusions visibly shaped his daily conduct &ndash; he lived with unusual frugality, gave away a large share of his income, and appeared to treat the examined life as a genuine practice rather than an academic exercise.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Authentic Expression &ndash; Level 5</div>
+    <div class="exemplar-value">Authentic Expression</div>
     <p><a href="https://en.wikipedia.org/wiki/Václav_Havel" target="_blank">V&aacute;clav Havel</a> spent two decades as a dissident playwright in communist Czechoslovakia, repeatedly imprisoned for writing and speaking according to his values. His 1978 essay "The Power of the Powerless" argued that living authentically &ndash; refusing to participate in official lies &ndash; was itself a political act. When the regime fell in 1989, he became president, applying the same principles to governance. His consistency between private conviction and public action across dramatically different circumstances is well documented.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Values Evolution &ndash; Level 5</div>
+    <div class="exemplar-value">Values Evolution</div>
     <p><a href="https://en.wikipedia.org/wiki/Mahatma_Gandhi" target="_blank">Mahatma Gandhi</a> revised his values publicly and repeatedly over a 50-year period. He started as a conventional lawyer seeking acceptance within the British Empire, adopted nonviolent resistance after experiences in South Africa, and later evolved his views on caste, religion, and economic organisation as his understanding deepened. His autobiography, <em>The Story of My Experiments with Truth</em>, frames his life explicitly as a process of testing and revising values through lived experience.</p>
 </div>
 
@@ -599,7 +599,7 @@ life_area_slug: value-system
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Value System. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/value-system/personalised" class="btn-cta">View Your Interventions</a>
 </div>

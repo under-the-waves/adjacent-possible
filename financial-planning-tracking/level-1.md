@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Financial Planning and Tracking – Level 1: Awareness"
+title: "Financial Planning and Tracking – Awareness assessment"
 life_area_slug: financial-planning-tracking
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: financial-planning-tracking
 
 <div class="l1-container">
 
-<h1>Financial Planning and Tracking: Level 1</h1>
+<h1>Financial Planning and Tracking: Awareness</h1>
 
 <p class="l1-subtitle">Understand what financial planning means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -345,20 +345,20 @@ life_area_slug: financial-planning-tracking
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each financial planning value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each financial planning value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Accuracy & Control &ndash; Level 5</div>
+    <div class="exemplar-value">Accuracy & Control</div>
     <p><a href="https://www.youneedabudget.com/the-four-rules/" target="_blank">Jesse Mecham</a> founded YNAB (You Need A Budget) in 2004 after developing a meticulous envelope-based budgeting system as a newly married university student. He built it into a company used by millions of people worldwide, all grounded in the principle that every pound should be assigned a specific purpose before it is spent. His personal financial tracking system accounts for every transaction across all accounts in real time, and his methodology has demonstrably changed the financial behaviour of hundreds of thousands of users.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Simplicity & Convenience &ndash; Level 5</div>
+    <div class="exemplar-value">Simplicity & Convenience</div>
     <p><a href="https://jlcollinsnh.com/about/" target="_blank">JL Collins</a> spent decades refining his personal finances into the simplest possible system &ndash; a single index fund, automated contributions, and minimal ongoing management. His approach, documented in <em>The Simple Path to Wealth</em>, deliberately rejects complexity in favour of systems that require almost no maintenance while delivering strong long-term outcomes. He manages his own portfolio in under an hour per year.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Insight & Optimisation &ndash; Level 5</div>
+    <div class="exemplar-value">Insight & Optimisation</div>
     <p><a href="https://www.madfientist.com/about/" target="_blank">Brandon Ganch</a> (the Mad Fientist) built detailed analytical models of his own finances, systematically optimising tax strategies, account structures, and spending patterns. His spreadsheets and calculators, published freely online, helped him retire at 34 by identifying and eliminating financial inefficiencies that most people never notice. He treats personal finance as an engineering problem, quantifying the impact of every decision.</p>
 </div>
 
@@ -566,7 +566,7 @@ life_area_slug: financial-planning-tracking
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Financial Planning and Tracking. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/financial-planning-tracking/personalised" class="btn-cta">View Your Interventions</a>
 </div>

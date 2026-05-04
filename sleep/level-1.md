@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Sleep – Level 1: Awareness"
+title: "Sleep – Awareness assessment"
 life_area_slug: sleep
 ---
 
@@ -273,7 +273,7 @@ life_area_slug: sleep
 
 <div class="l1-container">
 
-<h1>Sleep: Level 1</h1>
+<h1>Sleep: Awareness</h1>
 
 <p class="l1-subtitle">Understand what sleep does, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -352,20 +352,20 @@ life_area_slug: sleep
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each sleep value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each sleep value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Daily Functioning &ndash; Level 5</div>
+    <div class="exemplar-value">Daily Functioning</div>
     <p><a href="https://en.wikipedia.org/wiki/LeBron_James" target="_blank">LeBron James</a> averages around 10 &ndash; 12 hours of sleep per day, split between 8 &ndash; 9 hours at night and a 2 &ndash; 3 hour afternoon nap. He keeps his bedroom at 20 &ndash; 21&deg;C, completely dark, and avoids screens for 45 minutes before bed. He has called sleep "the best way for your body to physically and emotionally recover and get back to 100 percent." He seems to have maintained this routine throughout a 21-season NBA career, playing at a high level into his early 40s.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Long-term Health &ndash; Level 5</div>
+    <div class="exemplar-value">Long-term Health</div>
     <p><a href="https://en.wikipedia.org/wiki/Tom_Brady" target="_blank">Tom Brady</a> went to bed at 8:30 pm and slept at least 9 hours a night for most of his professional career, treating sleep as a central pillar of his TB12 Method alongside nutrition and training. He played in the NFL until age 45, winning his seventh Super Bowl at 43 &ndash; an age at which most players have been retired for over a decade. By all accounts, his sleep discipline was non-negotiable rather than aspirational.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Comfort &amp; Experience &ndash; Level 5</div>
+    <div class="exemplar-value">Comfort &amp; Experience</div>
     <p><a href="https://en.wikipedia.org/wiki/Arianna_Huffington" target="_blank">Arianna Huffington</a> treats her transition to sleep as what she calls a "sacrosanct ritual." She takes a hot bath with epsom salts and a candle, changes into dedicated sleepwear, bans all electronic devices from her bedroom, and reads only physical books in bed. She reportedly gets eight hours of sleep 95% of nights. After collapsing from exhaustion in 2007, she redesigned her entire relationship with sleep around comfort and enjoyment rather than treating it as a necessary inconvenience.</p>
 </div>
 
@@ -544,7 +544,7 @@ life_area_slug: sleep
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Sleep. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/sleep/personalised" class="btn-cta">View Your Interventions</a>
 </div>

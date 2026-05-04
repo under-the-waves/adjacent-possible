@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Relationship Status – Level 1: Awareness"
+title: "Relationship Status – Awareness assessment"
 life_area_slug: relationship-status
 ---
 
@@ -279,7 +279,7 @@ life_area_slug: relationship-status
 
 <div class="l1-container">
 
-<h1>Relationship Status: Level 1</h1>
+<h1>Relationship Status: Awareness</h1>
 
 <p class="l1-subtitle">Understand what relationship status means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -361,25 +361,25 @@ life_area_slug: relationship-status
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each relationship-status value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each relationship-status value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Partner Selection &ndash; Level 5</div>
+    <div class="exemplar-value">Partner Selection</div>
     <p><a href="https://www.obamalibrary.gov/obamas/michelle-obama" target="_blank">Michelle Robinson</a> has spoken extensively about her deliberate approach to choosing a partner. When she met Barack Obama, she was his mentor at a law firm and initially resisted dating him. She assessed their compatibility across values, ambition, and family orientation over months before committing. In interviews and in her memoir <em>Becoming</em>, she describes evaluating whether he would be a genuine partner in domestic life and parenting &ndash; not just a charismatic match &ndash; and negotiating expectations before marriage. The result was a partnership that has weathered extraordinary public pressure for over 30 years.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Meeting New Partners &ndash; Level 5</div>
+    <div class="exemplar-value">Meeting New Partners</div>
     <p><a href="https://amywebb.io/" target="_blank">Amy Webb</a>, a futurist and author, describes in her book <em>Data, a Love Story</em> how she reverse-engineered online dating after years of unsuccessful approaches. She created detailed profiles of who she was looking for, analysed what made profiles successful, systematically tested different approaches, and expanded her search beyond her usual social circles. The method was unconventional but effective &ndash; she met her husband through the optimised process and has been married since 2008. Her approach demonstrates what treating partner search as a skill to be refined, rather than a matter of luck, can achieve.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Independence &ndash; Level 5</div>
+    <div class="exemplar-value">Independence</div>
     <p><a href="https://dfranceschi.medium.com/" target="_blank">Diane Franceschi</a>, a retired NYPD detective, spent decades living alone by choice while building one of the most distinguished investigative careers in the department's history. She has spoken and written about constructing a rich life around deep friendships, professional purpose, and personal interests without treating singleness as a gap to fill. Her life demonstrates that relationship status can be fully decoupled from identity and fulfilment.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Transition Navigation &ndash; Level 5</div>
+    <div class="exemplar-value">Transition Navigation</div>
     <p><a href="https://terrycrews.com/" target="_blank">Terry Crews</a> and his wife Rebecca separated after he disclosed a pornography addiction that had damaged their marriage. Rather than letting the relationship end in acrimony or pretending nothing was wrong, Crews publicly took responsibility, entered intensive therapy, and the couple spent over a year in structured separation before reconciling. His account of that period &ndash; in his book <em>Manhood</em> and in interviews &ndash; describes navigating the transition with unusual emotional honesty, minimal blame, and genuine self-examination.</p>
 </div>
 
@@ -644,7 +644,7 @@ life_area_slug: relationship-status
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Relationship Status. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/relationship-status/personalised" class="btn-cta">View Your Interventions</a>
 </div>

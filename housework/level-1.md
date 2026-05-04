@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Housework – Level 1: Awareness"
+title: "Housework – Awareness assessment"
 life_area_slug: housework
 ---
 
@@ -266,7 +266,7 @@ life_area_slug: housework
 
 <div class="l1-container">
 
-<h1>Housework: Level 1</h1>
+<h1>Housework: Awareness</h1>
 
 <p class="l1-subtitle">Understand what housework means, what's possible, and where you stand. About 15 minutes.</p>
 
@@ -348,25 +348,25 @@ life_area_slug: housework
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<p>Level 5 in this framework represents the top 0.1% &ndash; roughly 1 in 1,000 people. To give you a sense of what that looks like for each housework value:</p>
+<p>The Top 0.1% band represents roughly 1 in 1,000 people. To give you a sense of what that looks like for each housework value:</p>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Health & Hygiene &ndash; Level 5</div>
+    <div class="exemplar-value">Health & Hygiene</div>
     <p><a href="https://www.youtube.com/@CleanMySpace" target="_blank">Melissa Maker</a> runs a cleaning company and has spent over a decade documenting evidence-based cleaning methods across hundreds of videos and a bestselling book. She appears to maintain clinical-grade hygiene standards in her own home, with systematic protocols for air quality, surface sanitisation, and allergen management that go well beyond standard domestic cleaning.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Order &ndash; Level 5</div>
+    <div class="exemplar-value">Order</div>
     <p><a href="https://konmari.com/" target="_blank">Marie Kondo</a> developed the KonMari method and has reportedly maintained a highly organised living environment since childhood. Her approach &ndash; keeping only items that serve a purpose or bring satisfaction, with every object having a designated place &ndash; seems to produce homes that stay orderly with minimal ongoing effort. Clients who complete her full process report sustained results years later.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Aesthetics &ndash; Level 5</div>
+    <div class="exemplar-value">Aesthetics</div>
     <p><a href="https://www.instagram.com/mikiashdesign/" target="_blank">Mike Mikish</a> is known for transforming everyday living spaces into multi-sensory environments with cohesive colour palettes, layered lighting, and curated objects. His own home appears to function as a gallery-quality space where every material, finish, and decorative element is chosen with intention &ndash; the kind of residential environment that could feature in a design publication.</p>
 </div>
 
 <div class="exemplar-card">
-    <div class="exemplar-value">Environmental Impact &ndash; Level 5</div>
+    <div class="exemplar-value">Environmental Impact</div>
     <p><a href="https://www.goingzerowaste.com/" target="_blank">Kathryn Kellogg</a> reportedly fits two years of landfill waste into a single jar while maintaining a clean, functional home. She uses exclusively non-toxic, biodegradable cleaning products &ndash; many homemade &ndash; and has eliminated single-use items from her household. Her approach demonstrates that near-zero-waste home management is achievable without sacrificing cleanliness or comfort.</p>
 </div>
 
@@ -624,7 +624,7 @@ life_area_slug: housework
 
 <!-- Completion banner (shown when all steps done) -->
 <div class="l1-complete" id="completeBanner">
-    <h2>Level 1 Complete</h2>
+    <h2>Awareness assessment complete</h2>
     <p>You've built your foundation in Housework. Your self-assessment and value weightings are saved.</p>
     <a href="{{ site.baseurl }}/housework/personalised" class="btn-cta">View Your Interventions</a>
 </div>

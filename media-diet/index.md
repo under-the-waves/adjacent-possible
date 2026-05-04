@@ -135,8 +135,8 @@ life_area_slug: media-diet
 - [Worldview]({{ site.baseurl }}/worldview/) &ndash; the beliefs and mental models built from your information consumption
 
 <div class="la-banner la-banner--start" id="level1Banner">
-    <p><strong>You haven't completed Level 1 for Media Diet yet.</strong><br>It takes about 15 minutes and helps you understand what a media diet means to you.</p>
-    <a href="{{ site.baseurl }}/media-diet/level-1" class="btn-cta">Start Level 1</a>
+    <p><strong>You haven't started the Awareness assessment for Media Diet yet.</strong><br>It takes about 15 minutes and helps you understand what a media diet means to you.</p>
+    <a href="{{ site.baseurl }}/media-diet/level-1" class="btn-cta">Begin assessment</a>
 </div>
 
 {% include level-progression.html %}
@@ -167,7 +167,7 @@ People pursue better information consumption for different reasons. This site sc
 
 <div class="la-paths">
     <a href="{{ site.baseurl }}/media-diet/level-1" class="path-level1">
-        Complete Level 1
+        Begin assessment
         <div class="path-desc">Understand media diet, set your values, assess where you are</div>
     </a>
     <a href="{{ site.baseurl }}/media-diet/personalised" class="path-interventions">
@@ -192,14 +192,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (done && hasSliders) {
         banner.className = 'la-banner la-banner--complete';
-        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Media Diet.</strong></p>' +
+        banner.innerHTML = '<p><strong>You have completed Awareness assessment for Media Diet.</strong></p>' +
             '<a href="{{ site.baseurl }}/media-diet/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/media-diet/level-1" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/media-diet/level-1" class="btn-secondary">Redo assessment</a>';
     } else if (Object.keys(mediaDiet).length > 0) {
         var completed = steps.filter(function(s) { return mediaDiet[s]; }).length;
         if (hasSliders) completed++;
-        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/media-diet/level-1" class="btn-cta">Continue Level 1</a>';
+        banner.innerHTML = '<p><strong>Awareness assessment in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/media-diet/level-1" class="btn-cta">Continue assessment</a>';
     }
 });
 </script>

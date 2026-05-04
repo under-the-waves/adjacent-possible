@@ -134,8 +134,8 @@ life_area_slug: children
 - [Family of Origin]({{ site.baseurl }}/family-of-origin/) &ndash; your relationship with the family you grew up in
 
 <div class="la-banner la-banner--start" id="level1Banner">
-    <p><strong>You haven't completed Level 1 for Children yet.</strong><br>It takes about 15 minutes and helps you understand what parenting means to you.</p>
-    <a href="{{ site.baseurl }}/children/level-1" class="btn-cta">Start Level 1</a>
+    <p><strong>You haven't started the Awareness assessment for Children yet.</strong><br>It takes about 15 minutes and helps you understand what parenting means to you.</p>
+    <a href="{{ site.baseurl }}/children/level-1" class="btn-cta">Begin assessment</a>
 </div>
 
 {% include level-progression.html %}
@@ -166,7 +166,7 @@ People approach parenting for different reasons. This site scores every parentin
 
 <div class="la-paths">
     <a href="{{ site.baseurl }}/children/level-1" class="path-level1">
-        Complete Level 1
+        Begin assessment
         <div class="path-desc">Understand parenting, set your values, assess where you are</div>
     </a>
     <a href="{{ site.baseurl }}/children/personalised" class="path-interventions">
@@ -191,14 +191,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (done && hasSliders) {
         banner.className = 'la-banner la-banner--complete';
-        banner.innerHTML = '<p><strong>You have completed Level 1: Awareness in Children.</strong></p>' +
+        banner.innerHTML = '<p><strong>You have completed Awareness assessment for Children.</strong></p>' +
             '<a href="{{ site.baseurl }}/children/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
-            '<a href="{{ site.baseurl }}/children/level-1" class="btn-secondary">Redo Level 1</a>';
+            '<a href="{{ site.baseurl }}/children/level-1" class="btn-secondary">Redo assessment</a>';
     } else if (Object.keys(children).length > 0) {
         var completed = steps.filter(function(s) { return children[s]; }).length;
         if (hasSliders) completed++;
-        banner.innerHTML = '<p><strong>Level 1 in progress (' + completed + '/5 steps complete).</strong></p>' +
-            '<a href="{{ site.baseurl }}/children/level-1" class="btn-cta">Continue Level 1</a>';
+        banner.innerHTML = '<p><strong>Awareness assessment in progress (' + completed + '/5 steps complete).</strong></p>' +
+            '<a href="{{ site.baseurl }}/children/level-1" class="btn-cta">Continue assessment</a>';
     }
 });
 </script>
