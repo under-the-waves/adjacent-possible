@@ -14,23 +14,21 @@ body {
   color: #1f2937;
 }
 
-.main-content a,
-.main-content a:visited {
+/* Body links: green with always-on underline. Scoped to typical text
+   contexts (p, li, td, headings, blockquote, etc.) so that button-styled
+   anchors and per-page overrides such as the dashboard's .area-name a
+   keep their own colours. :where() forces the inner selector list to 0
+   specificity, leaving the overall selector at (0,1,1) -- the same as
+   plain '.main-content a' -- so context-specific rules can still win
+   by cascade order or higher specificity. */
+.main-content :where(p, li, td, th, blockquote, summary, figcaption, dt, dd, h1, h2, h3, h4, h5, h6) a {
   color: #2e7d32;
+  text-decoration: underline;
 }
 
-.main-content a:hover,
-.main-content a:focus {
+.main-content :where(p, li, td, th, blockquote, summary, figcaption, dt, dd, h1, h2, h3, h4, h5, h6) a:hover,
+.main-content :where(p, li, td, th, blockquote, summary, figcaption, dt, dd, h1, h2, h3, h4, h5, h6) a:focus {
   color: #4CAF50;
-}
-
-/* Keep nav and dropdown links unaffected by the body link override.
-   The navbar a rules earlier in this file already win on specificity,
-   but mega-menu links need their own protection. */
-.mega-menu a,
-.nav-menu a,
-.mega-menu__footer a {
-  /* colour set by their own rules, do not inherit body-link green */
 }
 
 /* Navigation Bar Styles */
