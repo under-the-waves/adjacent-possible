@@ -16,7 +16,7 @@ Start here if you already know which life area you want to work on – fitness, 
 
 Start here if you're not sure which life area to focus on first.
 
-The [prioritisation survey]({{ site.baseurl }}/prioritisation/) has three short stages. You can do all three or pick whichever ones suit you.
+The [prioritisation survey]({{ site.baseurl }}/prioritisation-survey/) has three short stages. You can do all three or pick whichever ones suit you.
 
 - **Triage** (5 mins) – flags acute issues that warrant attention before broader optimisation.
 - **Fundamentals** (5 mins) – checks six upstream areas with broad cross-domain effects.

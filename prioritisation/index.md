@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Prioritisation
-permalink: /prioritisation/
+title: Prioritisation survey
+permalink: /prioritisation-survey/
 ---
 
 <style>

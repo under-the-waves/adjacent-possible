@@ -34,7 +34,7 @@ The framework is comprehensive by design. Most people naturally focus on areas t
 
 Recommendations adjust to two things: what you value within an area, and what you can afford in time and money.
 
-Value sliders on each life area page change which interventions get surfaced. The [prioritisation screen]({{ site.baseurl }}/prioritisation/) extends this across areas – combining a triage step (any acute issues to address first?), a fundamentals check (any major upstream gaps?), and a values-and-constraints stage that identifies a single binding focus area.
+Value sliders on each life area page change which interventions get surfaced. The [prioritisation survey]({{ site.baseurl }}/prioritisation-survey/) extends this across areas – combining a triage step (any acute issues to address first?), a fundamentals check (any major upstream gaps?), and a values-and-constraints stage that identifies a single binding focus area.
 
 Signing in lets these inputs sync across devices and persist over time, so the dashboard can track which interventions you've put in place and which areas you're actively working on.
 

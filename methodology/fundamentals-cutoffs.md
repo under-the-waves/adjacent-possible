@@ -6,7 +6,7 @@ permalink: /methodology/fundamentals-cutoffs/
 
 # Fundamentals Cutoffs
 
-The [Prioritisation]({{ site.baseurl }}/prioritisation/) section recommends starting with the five upstream areas where evidence supports broad cross-domain effects: sleep, mental health, foundational finances, key relationships and social connection, and physical activity and nutrition. This document defines the cutoff at which the system flags a "significant gap" in each of these areas, along with the screening item used and the underlying evidence.
+The [prioritisation survey]({{ site.baseurl }}/prioritisation-survey/) recommends starting with the five upstream areas where evidence supports broad cross-domain effects: sleep, mental health, foundational finances, key relationships and social connection, and physical activity and nutrition. This document defines the cutoff at which the system flags a "significant gap" in each of these areas, along with the screening item used and the underlying evidence.
 
 ## Principles for cutoff design
 

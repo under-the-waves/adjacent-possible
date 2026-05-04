@@ -40,9 +40,9 @@ A short glossary of the vocabulary used across the site.
 
 **Tools** – Specific websites, books, podcasts, companies, and services that Worthwhile has evaluated and recommends for implementing interventions. Interventions describe general approaches; tools are particular products that can help you put them into practice.
 
-## The prioritisation screen
+## The prioritisation survey
 
-**Triage** – Stage 1 of the [prioritisation screen]({{ site.baseurl }}/prioritisation/). Checks for acute issues – mental health, safety, financial distress, addiction, recent loss, active legal action – that warrant attention before broader optimisation.
+**Triage** – Stage 1 of the [prioritisation survey]({{ site.baseurl }}/prioritisation-survey/). Checks for acute issues – mental health, safety, financial distress, addiction, recent loss, active legal action – that warrant attention before broader optimisation.
 
 **Fundamentals** – Stage 2. Checks six upstream areas with broad cross-domain effects: sleep, mental wellbeing, foundational finances, social connection, physical activity, and care responsibilities.
 
