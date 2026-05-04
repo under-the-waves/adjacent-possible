@@ -1059,12 +1059,23 @@ a.completed-guide:hover,
 }
 
 .mega-menu__pillar-name {
+  display: block;
+  width: 100%;
+  font-family: inherit;
   font-weight: 600;
   font-size: 0.95em;
   color: #fff;
-  padding-bottom: 0.4rem;
+  padding: 0 0 0.4rem;
   margin: 0 0 0.5rem 0;
+  border: none;
   border-bottom: 1px solid #555;
+  background: transparent;
+  text-align: left;
+  cursor: default;
+}
+
+.mega-menu__pillar-icon {
+  display: none;
 }
 
 .mega-menu__domain {

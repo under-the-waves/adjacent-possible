@@ -41,7 +41,7 @@
 
 <!-- Start Here Dropdown -->
 <div class="site-nav">
-  <button id="startHereButton" class="nav-button">Start Here ▾</button>
+  <button id="startHereButton" class="nav-button"><span class="nav-button__label">Start Here</span><span class="nav-button__chevron" aria-hidden="true">▾</span></button>
   <div id="startHereMenu" class="nav-menu">
     <div class="dropdown-item">
       <a href="{{ site.baseurl }}/start-here/how-to-use/">How to Use This Site</a>
@@ -57,7 +57,7 @@
 
 <!-- Prioritisation Dropdown -->
 <div class="site-nav">
-  <button id="prioritisationButton" class="nav-button">Prioritisation ▾</button>
+  <button id="prioritisationButton" class="nav-button"><span class="nav-button__label">Prioritisation</span><span class="nav-button__chevron" aria-hidden="true">▾</span></button>
   <div id="prioritisationMenu" class="nav-menu">
     <div class="dropdown-item">
       <a href="{{ site.baseurl }}/prioritisation-survey/">Prioritisation survey</a>
@@ -70,16 +70,16 @@
     </div>
   </div>
 </div>
-  
+
 <!-- Life Areas Mega Menu -->
 <div class="site-nav site-nav--mega">
-  <button id="lifeAreasButton" class="nav-button">Life Areas ▾</button>
+  <button id="lifeAreasButton" class="nav-button"><span class="nav-button__label">Life Areas</span><span class="nav-button__chevron" aria-hidden="true">▾</span></button>
   <div id="lifeAreasMenu" class="mega-menu">
     <div class="mega-menu__grid">
 
       <!-- Pillar 1: Expand Your Awareness -->
       <div class="mega-menu__column">
-        <h3 class="mega-menu__pillar-name">Expand Your Awareness</h3>
+        <button type="button" class="mega-menu__pillar-name" onclick="toggleMegaPillar(this)"><span>Expand Your Awareness</span><span class="mega-menu__pillar-icon" aria-hidden="true">+</span></button>
 
         {% assign self_awareness_page = site.pages | where: "url", "/self-awareness/" | first %}
         {% assign value_system_page = site.pages | where: "url", "/value-system/" | first %}
@@ -186,7 +186,7 @@
 
       <!-- Pillar 2: Look After Yourself -->
       <div class="mega-menu__column">
-        <h3 class="mega-menu__pillar-name">Look After Yourself</h3>
+        <button type="button" class="mega-menu__pillar-name" onclick="toggleMegaPillar(this)"><span>Look After Yourself</span><span class="mega-menu__pillar-icon" aria-hidden="true">+</span></button>
 
         {% assign fitness_page = site.pages | where: "url", "/fitness/" | first %}
         {% assign nutrition_page = site.pages | where: "url", "/nutrition/" | first %}
@@ -290,7 +290,7 @@
 
       <!-- Pillar 3: Connect with Others -->
       <div class="mega-menu__column">
-        <h3 class="mega-menu__pillar-name">Connect with Others</h3>
+        <button type="button" class="mega-menu__pillar-name" onclick="toggleMegaPillar(this)"><span>Connect with Others</span><span class="mega-menu__pillar-icon" aria-hidden="true">+</span></button>
 
         {% assign body_image_page = site.pages | where: "url", "/body-image/" | first %}
         {% assign style_page = site.pages | where: "url", "/style/" | first %}
@@ -388,7 +388,7 @@
 
       <!-- Pillar 4: Organise Your Life -->
       <div class="mega-menu__column">
-        <h3 class="mega-menu__pillar-name">Organise Your Life</h3>
+        <button type="button" class="mega-menu__pillar-name" onclick="toggleMegaPillar(this)"><span>Organise Your Life</span><span class="mega-menu__pillar-icon" aria-hidden="true">+</span></button>
 
         {% assign housing_page = site.pages | where: "url", "/housing/" | first %}
         {% assign possessions_page = site.pages | where: "url", "/possessions/" | first %}
@@ -492,7 +492,7 @@
 
       <!-- Pillar 5: Create & Contribute -->
       <div class="mega-menu__column">
-        <h3 class="mega-menu__pillar-name">Create & Contribute</h3>
+        <button type="button" class="mega-menu__pillar-name" onclick="toggleMegaPillar(this)"><span>Create & Contribute</span><span class="mega-menu__pillar-icon" aria-hidden="true">+</span></button>
 
         {% assign current_work_page = site.pages | where: "url", "/current-work/" | first %}
         {% assign career_planning_page = site.pages | where: "url", "/career-planning/" | first %}
@@ -573,17 +573,17 @@
 
   <!-- Resources Dropdown -->
   <div class="site-nav">
-    <button id="resourcesButton" class="nav-button">Resources ▾</button>
+    <button id="resourcesButton" class="nav-button"><span class="nav-button__label">Resources</span><span class="nav-button__chevron" aria-hidden="true">▾</span></button>
     <div id="resourcesMenu" class="nav-menu">
       <div class="dropdown-item">
         <a href="{{ site.baseurl }}/resources/intervention-database/">Intervention Database</a>
       </div>
     </div>
   </div>
-  
+
   <!-- About Link -->
 <div class="site-nav">
-  <a href="{{ site.baseurl }}/about/" class="nav-button">About</a>
+  <a href="{{ site.baseurl }}/about/" class="nav-button"><span class="nav-button__label">About</span></a>
 </div>
 
 <!-- Auth -->
@@ -666,6 +666,17 @@ function toggleMegaDomain(headerElement) {
     if (icon) icon.textContent = wasActive ? '+' : '−';
 }
 
+// Mobile-only: pillar accordion in the Life Areas mega menu.
+// On desktop the .is-open class has no styling effect (CSS shows all domains anyway).
+function toggleMegaPillar(headerElement) {
+    var col = headerElement.closest('.mega-menu__column');
+    if (!col) return;
+    var willOpen = !col.classList.contains('is-open');
+    var icon = headerElement.querySelector('.mega-menu__pillar-icon');
+    if (icon) icon.textContent = willOpen ? '−' : '+';
+    col.classList.toggle('is-open', willOpen);
+}
+
   document.addEventListener('DOMContentLoaded', function() {
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
@@ -676,6 +687,7 @@ function toggleMegaDomain(headerElement) {
       e.stopPropagation();
       const willOpen = !navbar.classList.contains('is-open');
       navbar.classList.toggle('is-open', willOpen);
+      document.body.classList.toggle('nav-open', willOpen);
       navToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
       navToggle.setAttribute('aria-label', willOpen ? 'Close menu' : 'Open menu');
     });
@@ -684,6 +696,7 @@ function toggleMegaDomain(headerElement) {
       navCollapse.addEventListener('click', function(e) {
         if (e.target.tagName === 'A' && navbar.classList.contains('is-open')) {
           navbar.classList.remove('is-open');
+          document.body.classList.remove('nav-open');
           navToggle.setAttribute('aria-expanded', 'false');
           navToggle.setAttribute('aria-label', 'Open menu');
         }
@@ -698,43 +711,52 @@ function toggleMegaDomain(headerElement) {
   // Setup for each main dropdown
   dropdownButtons.forEach(button => {
     if (!button.id) return; // Skip if no id (like simple links)
-    
+
     const menu = document.getElementById(button.id.replace('Button', 'Menu'));
     if (!menu) return;
-    
+
+    const parentNav = button.closest('.site-nav');
+
     // Toggle menu visibility when button is clicked
     button.addEventListener('click', function(event) {
       event.preventDefault();
       event.stopPropagation();
-      
-      // Close all other menus first
+
+      const willOpen = !menu.classList.contains('visible');
+
+      // Close all other menus and reset chevron state on their parent .site-nav
       dropdownMenus.forEach(m => {
         if (m !== menu) m.classList.remove('visible');
       });
-      
-      // Toggle this menu
-      menu.classList.toggle('visible');
+      document.querySelectorAll('.site-nav.is-open').forEach(n => {
+        if (n !== parentNav) n.classList.remove('is-open');
+      });
+
+      // Toggle this menu and parent state
+      menu.classList.toggle('visible', willOpen);
+      if (parentNav) parentNav.classList.toggle('is-open', willOpen);
     });
   });
-    
+
   // Close all menus when clicking outside
   document.addEventListener('click', function(event) {
     let clickedInsideNav = false;
-    
+
     // Check if click was inside any button or menu
     dropdownButtons.forEach(button => {
       if (button.contains(event.target)) clickedInsideNav = true;
     });
-    
+
     dropdownMenus.forEach(menu => {
       if (menu.contains(event.target)) clickedInsideNav = true;
     });
-    
+
     // If clicked outside, close all menus
     if (!clickedInsideNav) {
       dropdownMenus.forEach(menu => {
         menu.classList.remove('visible');
       });
+      document.querySelectorAll('.site-nav.is-open').forEach(n => n.classList.remove('is-open'));
     }
   });
 });
