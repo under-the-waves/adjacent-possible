@@ -1,8 +1,6 @@
 evaluated_at: 2026-05-04
 evaluated_by: claude-opus-4-7
 name: "Set Beneficiary Designations"
-quick_win: true
-quick_win_cadence: setup
 what_it_is: |
   Logging into each financial institution and explicitly naming the people who should receive the assets in each account if you die. Beneficiary designations apply to retirement accounts (401k, IRA, pension), life insurance policies, payable-on-death bank accounts, and many brokerage accounts. They override the will – if a will leaves everything to your spouse but a retirement account has an ex-partner listed as beneficiary, the ex-partner receives the funds. This is a 30–60-minute task with no monetary cost that prevents some of the most expensive and emotionally painful estate-planning failures. Carved out as a standalone Quick Win from [creating basic legal documents](/resources/intervention-database/creating-basic-legal-documents); a full estate plan also needs a will, durable POA, and healthcare directive.
 how_to_do_it: |

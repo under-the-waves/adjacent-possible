@@ -1,6 +1,8 @@
 evaluated_at: 2026-05-04
 evaluated_by: claude-opus-4-7
 name: "Fire Extinguisher and CO Detector Check"
+quick_win: true
+quick_win_cadence: rare_check
 what_it_is: |
   Verifying that the household has at least one accessible fire extinguisher and at least one carbon-monoxide (CO) detector, and that both are functional. Fire extinguishers should be unexpired, fully charged (gauge in the green zone), and stored where someone can reach them within seconds of a small kitchen or electrical fire. CO detectors should be tested monthly and replaced every 5–10 years per manufacturer recommendations, and placed near sleeping areas where occupants would be exposed if CO levels rose during sleep. Together with [smoke alarms](/resources/intervention-database/ensuring-smoke-alarms-are-working), these are the three core household fire-and-air-safety devices; this intervention covers the two that smoke alarms don't.
 how_to_do_it: |

@@ -2,7 +2,7 @@ evaluated_at: 2026-05-04
 evaluated_by: claude-opus-4-7
 name: "Enable Two-Factor Authentication"
 quick_win: true
-quick_win_cadence: setup
+quick_win_cadence: routine
 what_it_is: |
   Turning on two-factor authentication (2FA) – ideally via an authenticator app such as Aegis, Authy, or a built-in OS authenticator – on the most consequential accounts: email, banking, financial brokerages, password manager, cloud storage, and primary social media. Once enabled, signing in requires both the password and a short code from the second-factor device, structurally blocking account takeover from credential leaks. This is the single highest-leverage security intervention after a [password manager](/resources/intervention-database/password-manager-setup), and the only one that protects against the credential breaches that happen to third-party sites you don't control.
 how_to_do_it: |

@@ -2,6 +2,8 @@ evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
 prompt_sha: 2798af5
 name: "Quarterly Relationship Check-In"
+quick_win: true
+quick_win_cadence: rare_check
 what_it_is: |
   A structured, recurring strategic conversation between romantic partners – typically held every three months, sometimes every six – using a defined agenda that explicitly covers shared values, life direction, finances, intimacy, surfaced frustrations, and goals for the next period. Distinct from the [weekly family check-in](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/), which is operational and logistical, the quarterly check-in is strategic – its purpose is to verify that two partners are still pulling toward the same destination and to catch drift in values, priorities, or unspoken expectations before it compounds. Scheduled away from daily life pressures (often a long walk, a dinner out, or a half-day at home with phones off), it gives partners protected time to discuss topics that the weekly cadence cannot reach: career trajectories, where to live, whether to have or expand a family, financial direction, ageing-parent planning, and frustrations that have not yet surfaced. The practice draws on relationship-research traditions including Gottman's longitudinal work on stable partnerships, the [PREP communication framework](https://www.prepinc.com/) developed by Markman and colleagues, and qualitative research on "executive couples" who treat their partnership as a co-managed enterprise.
 how_to_do_it: |

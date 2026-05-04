@@ -1,8 +1,6 @@
 evaluated_at: 2026-05-04
 evaluated_by: claude-opus-4-7
 name: "Claim Employer Retirement Match"
-quick_win: true
-quick_win_cadence: setup
 what_it_is: |
   Setting your workplace retirement contribution to at least the level required to capture the full employer match. Employers commonly match 50–100% of employee contributions up to 3–6% of salary; failing to hit the match threshold leaves what is effectively a guaranteed 50–100% return on the marginal dollar on the table. The action is one-time: a 5–15-minute change in the workplace retirement plan portal raises the contribution percentage to the match threshold and the higher rate persists indefinitely. Carved out as a Quick Win from [tax-advantaged retirement account maximisation](/resources/intervention-database/retirement-account-maximisation), where capturing the match is identified as the single highest-leverage retirement-saving action.
 how_to_do_it: |

@@ -1,6 +1,8 @@
 evaluated_at: 2026-05-04
 evaluated_by: claude-opus-4-7
 name: "Set Phone Medical ID and Emergency Contacts"
+quick_win: true
+quick_win_cadence: rare_check
 what_it_is: |
   Configuring the Medical ID and emergency contact features built into modern smartphones (iOS Health app's Medical ID, Android's Emergency Information / Personal safety apps) so that critical information – allergies, medications, blood type, organ-donor status, and emergency contacts – is accessible from the lock screen without unlocking the phone. Used by paramedics, emergency room staff, and bystanders during accidents or medical emergencies to identify the patient, contact next of kin, and avoid medication interactions. Setup takes 5–10 minutes once and runs invisibly thereafter; review annually or after any change to medications or contacts.
 how_to_do_it: |

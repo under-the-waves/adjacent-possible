@@ -2,6 +2,8 @@ evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
 prompt_sha: 2798af5
 name: "Habit Tracking App"
+quick_win: true
+quick_win_cadence: routine
 what_it_is: |
   Daily logging of target habits in a dedicated tracking app – Streaks, Habitica, Way of Life, Loop, or a Notion habit tracker – to convert otherwise invisible behaviour into a visible record. The app shows a streak counter, a calendar grid, or a checklist that makes the gap between intention and execution observable on a daily basis. The mechanism is measurement plus mild gamification: visible progress reinforces the behaviour, a broken streak triggers loss aversion, and the act of logging is itself a small commitment device. This is distinct from [habit stacking](/resources/intervention-database/habit-stacking), which anchors a new behaviour to an existing cue – tracking is about the *measurement and feedback loop* on a habit, not the trigger that initiates it. The two combine well, but they target different points in the habit-formation chain.
 how_to_do_it: |

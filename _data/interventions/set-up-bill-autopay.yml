@@ -1,6 +1,8 @@
 evaluated_at: 2026-05-04
 evaluated_by: claude-opus-4-7
 name: "Set Up Bill Autopay"
+quick_win: true
+quick_win_cadence: rare_check
 what_it_is: |
   Configuring automatic payment for recurring bills – utilities, credit cards, insurance, subscriptions, mortgage or rent – so each bill is paid in full on or before the due date without manual intervention. Removes the late-payment failure mode (which costs ~$25–40 per missed bill plus credit-score damage) and eliminates the recurring time cost of bill-tracking. Setup takes 15–30 minutes per provider, completed once, and runs automatically thereafter. The intervention is distinct from [automated savings](/resources/intervention-database/automated-savings) (transfers into your own accounts) – this is automated outflow to bill providers.
 how_to_do_it: |

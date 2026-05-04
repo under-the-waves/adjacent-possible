@@ -2,6 +2,8 @@ evaluated_at: 2026-05-02
 evaluated_by: claude-opus-4-7
 prompt_sha: a48aaee
 name: "Smartphone Greyscale and Home-Screen Minimalism"
+quick_win: true
+quick_win_cadence: routine
 what_it_is: |
   A display-level intervention that reduces a smartphone's pull on attention by switching the screen to greyscale (eliminating colour cues that drive habitual checking and engagement) and stripping the home screen back to a minimal set of utility apps – clock, maps, camera, primary messaging – with all other apps removed from the home screen and accessible only via search or a separate app drawer. Most aggressively, social media, news, video, and other attention-grabbing apps are either deleted entirely or hidden behind explicit search-only access. The mechanism is upstream of [phone notification management](/resources/intervention-database/phone-notification-management): rather than only managing alerts, this intervention reduces the visual reward signals (colour, badges, prominent icons) that drive compulsive checking even in the absence of any notification, and removes the friction-free path from unlock to scrolling that habitual users develop. A more aggressive variant of digital-environment design.
 how_to_do_it: |
