@@ -54,7 +54,7 @@ body .main-content {
 }
 
 .tier-card:hover:not(.disabled) {
-    border-color: #155799;
+    border-color: #4CAF50;
     box-shadow: 0 4px 12px rgba(21,87,153,0.15);
 }
 
@@ -70,7 +70,7 @@ body .main-content {
 }
 
 .tier-card .tier-time {
-    color: #155799;
+    color: #4CAF50;
     font-size: 0.95em;
     margin-bottom: 10px;
 }
@@ -91,8 +91,8 @@ body .main-content {
 }
 
 .tier-card .tier-badge.recommended {
-    background: #e3f2fd;
-    color: #155799;
+    background: #e8f5e9;
+    color: #4CAF50;
 }
 
 .tier-card .tier-badge.coming-soon {
@@ -197,13 +197,13 @@ body .main-content {
 }
 
 .radio-option:hover {
-    border-color: #155799;
+    border-color: #4CAF50;
     background: #f8fbff;
 }
 
 .radio-option.selected {
-    border-color: #155799;
-    background: #e3f2fd;
+    border-color: #4CAF50;
+    background: #e8f5e9;
 }
 
 .radio-option input[type="radio"] {
@@ -212,7 +212,7 @@ body .main-content {
 
 .radio-option .level-label {
     font-weight: 600;
-    color: #155799;
+    color: #4CAF50;
     display: block;
     margin-bottom: 2px;
     font-size: 0.85em;
@@ -240,13 +240,13 @@ body .main-content {
 }
 
 .question-nav button.btn-primary {
-    background: #155799;
+    background: #4CAF50;
     color: white;
-    border-color: #155799;
+    border-color: #4CAF50;
 }
 
 .question-nav button.btn-primary:hover {
-    background: #0d47a1;
+    background: #2e7d32;
 }
 
 
@@ -275,9 +275,9 @@ body .main-content {
 }
 
 .dashboard-controls button.active {
-    background: #155799;
+    background: #4CAF50;
     color: white;
-    border-color: #155799;
+    border-color: #4CAF50;
 }
 
 .dashboard-controls button.btn-danger {
@@ -310,7 +310,7 @@ body .main-content {
 .summary-stat .stat-value {
     font-size: 1.8em;
     font-weight: bold;
-    color: #155799;
+    color: #4CAF50;
 }
 
 .summary-stat .stat-value.stat-text {
@@ -411,7 +411,7 @@ body .main-content {
 .area-card.level-2 { border-left-color: #fb8c00; }
 .area-card.level-3 { border-left-color: #fdd835; }
 .area-card.level-4 { border-left-color: #43a047; }
-.area-card.level-5 { border-left-color: #1565c0; }
+.area-card.level-5 { border-left-color: #388e3c; }
 
 .area-name {
     font-size: 0.9em;
@@ -424,7 +424,7 @@ body .main-content {
 }
 
 .area-name a:hover {
-    color: #155799;
+    color: #4CAF50;
     text-decoration: underline;
 }
 
@@ -445,7 +445,7 @@ body .main-content {
 .area-level-badge.lb-2 { background: #fb8c00; }
 .area-level-badge.lb-3 { background: #fdd835; color: #333; }
 .area-level-badge.lb-4 { background: #43a047; }
-.area-level-badge.lb-5 { background: #1565c0; }
+.area-level-badge.lb-5 { background: #388e3c; }
 
 .area-level-badge.propagated {
     font-style: italic;
@@ -547,7 +547,7 @@ const PILLARS = [
     {
         name: "Look After Yourself",
         class: "pillar-2",
-        color: "#1565c0",
+        color: "#388e3c",
         domains: [
             { name: "Health", areas: [
                 { slug: "fitness", label: "Fitness" },
@@ -640,7 +640,7 @@ const PILLARS = [
 ];
 
 const LEVEL_NAMES = ['Not assessed', 'Awareness', 'Top 20%', 'Top 5%', 'Top 1%', 'Top 0.1%'];
-const LEVEL_COLORS = ['#bdbdbd', '#e53935', '#fb8c00', '#fdd835', '#43a047', '#1565c0'];
+const LEVEL_COLORS = ['#bdbdbd', '#e53935', '#fb8c00', '#fdd835', '#43a047', '#388e3c'];
 
 // ── Storage (via APStorage abstraction) ──
 function loadLevels() { return APStorage.load('ap-dashboard-levels') || {}; }
@@ -893,7 +893,7 @@ function renderQuestion() {
     const pct = totalQ > 0 ? Math.round((answeredQ / totalQ) * 100) : 0;
     html += `<div class="progress-bar-container">
         <div class="progress-bar-outer">
-            <div class="progress-bar-fill" style="width:${pct}%; background:#155799;"></div>
+            <div class="progress-bar-fill" style="width:${pct}%; background:#4CAF50;"></div>
         </div>
         <div class="progress-info">
             <span>${answeredQ} of ${totalQ}</span>
@@ -1114,7 +1114,7 @@ function renderResults() {
             <div class="legend-item"><span class="legend-dot" style="background:#fb8c00;"></span> Top 20%</div>
             <div class="legend-item"><span class="legend-dot" style="background:#fdd835;"></span> Top 5%</div>
             <div class="legend-item"><span class="legend-dot" style="background:#43a047;"></span> Top 1%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#1565c0;"></span> Top 0.1%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#388e3c;"></span> Top 0.1%</div>
         </div>
 
         <div class="summary-bar">
@@ -1185,7 +1185,7 @@ function renderSignInGate() {
             <p>Sign in to see your personalised dashboard across all {{ site.data.life_areas | size }} life areas.</p>
         </div>
         <div style="text-align: center; margin-top: 32px;">
-            <button onclick="window.Clerk && window.Clerk.openSignIn({ afterSignInUrl: window.location.href, afterSignUpUrl: window.location.href })" style="padding: 8px 20px; background: #155799; color: white; border: none; border-radius: 4px; font-size: 0.95em; font-weight: 500; cursor: pointer;">Sign in</button>
+            <button onclick="window.Clerk && window.Clerk.openSignIn({ afterSignInUrl: window.location.href, afterSignUpUrl: window.location.href })" style="padding: 8px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 0.95em; font-weight: 500; cursor: pointer;">Sign in</button>
         </div>
     `;
     showView('landing');

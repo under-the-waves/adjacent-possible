@@ -19,10 +19,10 @@ title: Worthwhile
 }
 .home-cta-primary {
   display: inline-block; padding: 6px 16px;
-  background: #155799; color: #fff; text-decoration: none;
+  background: #4CAF50; color: #fff; text-decoration: none;
   border-radius: 4px; font-weight: 500; font-size: 0.95em;
 }
-.home-cta-primary:hover { background: #0f4373; color: #fff; }
+.home-cta-primary:hover { background: #3a8c3f; color: #fff; }
 .home-cta-secondary { font-size: 0.95em; }
 </style>
 

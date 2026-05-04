@@ -30,7 +30,7 @@ permalink: /prioritisation-survey/
 }
 .research-note > summary {
     cursor: pointer;
-    font-weight: 600; color: #155799;
+    font-weight: 600; color: #4CAF50;
     list-style: none;
     padding: 2px 0;
     display: flex; align-items: center; gap: 8px;
@@ -78,11 +78,11 @@ permalink: /prioritisation-survey/
     transition: border-color 0.15s, box-shadow 0.15s;
 }
 .related-card:hover {
-    border-color: #155799;
+    border-color: #4CAF50;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 .related-card .related-title {
-    font-weight: 600; color: #155799;
+    font-weight: 600; color: #4CAF50;
     font-size: 0.98em; margin-bottom: 4px;
 }
 .related-card .related-desc {
@@ -95,22 +95,22 @@ permalink: /prioritisation-survey/
 
 /* Buttons */
 .btn-primary {
-    background: #155799; color: #fff; border: none;
+    background: #4CAF50; color: #fff; border: none;
     border-radius: 6px; padding: 12px 22px; font-size: 1em;
     cursor: pointer; font-weight: 600;
 }
-.btn-primary:hover { background: #0f4373; }
+.btn-primary:hover { background: #3a8c3f; }
 .btn-primary:disabled { background: #bdbdbd; cursor: not-allowed; }
 .btn-secondary {
-    background: #fff; color: #155799;
-    border: 1px solid #155799; border-radius: 6px;
+    background: #fff; color: #4CAF50;
+    border: 1px solid #4CAF50; border-radius: 6px;
     padding: 10px 18px; font-size: 0.9em;
     cursor: pointer; font-weight: 600;
     text-decoration: none; display: inline-block;
 }
-.btn-secondary:hover { background: #f0f6fc; }
+.btn-secondary:hover { background: #e8f5e9; }
 .btn-link {
-    background: none; border: none; color: #155799;
+    background: none; border: none; color: #4CAF50;
     cursor: pointer; text-decoration: underline;
     padding: 4px 8px; font-size: 0.9em;
 }
@@ -126,7 +126,7 @@ permalink: /prioritisation-survey/
 }
 .stage-row:last-child { border-bottom: none; }
 .stage-num {
-    background: #155799; color: #fff;
+    background: #4CAF50; color: #fff;
     width: 26px; height: 26px;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
@@ -137,7 +137,7 @@ permalink: /prioritisation-survey/
 .stage-meta { color: #888; font-size: 0.82em; margin-top: 4px; }
 .stage-skip {
     background: none; border: none;
-    color: #155799; font-size: 0.85em;
+    color: #4CAF50; font-size: 0.85em;
     text-decoration: underline; cursor: pointer;
     padding: 4px 0; white-space: nowrap;
 }
@@ -160,7 +160,7 @@ permalink: /prioritisation-survey/
     margin-bottom: 6px;
 }
 .progress-fill {
-    height: 100%; background: #155799;
+    height: 100%; background: #4CAF50;
     border-radius: 4px; transition: width 0.3s ease;
 }
 .progress-info {
@@ -195,9 +195,9 @@ permalink: /prioritisation-survey/
     cursor: pointer; transition: all 0.12s;
     font-size: 0.95em; background: #fff;
 }
-.radio-option:hover { border-color: #155799; background: #f7fbff; }
-.radio-option input[type="radio"] { margin-right: 10px; accent-color: #155799; }
-.radio-option.selected { border-color: #155799; background: #e3f2fd; }
+.radio-option:hover { border-color: #4CAF50; background: #f7fbff; }
+.radio-option input[type="radio"] { margin-right: 10px; accent-color: #4CAF50; }
+.radio-option.selected { border-color: #4CAF50; background: #e8f5e9; }
 
 .input-text {
     padding: 10px 12px; border: 1px solid #c0c0c0;
@@ -234,11 +234,11 @@ permalink: /prioritisation-survey/
     border-radius: 8px; padding: 18px 20px;
     margin-bottom: 14px;
 }
-.fund-card.start-here { border-left: 4px solid #155799; }
+.fund-card.start-here { border-left: 4px solid #4CAF50; }
 .fund-card h3 { font-size: 1.05em; color: #222; margin: 0 0 4px; }
 .fund-card .pretitle {
     text-transform: uppercase; letter-spacing: 0.5px;
-    font-size: 0.72em; color: #155799;
+    font-size: 0.72em; color: #4CAF50;
     font-weight: 600; margin-bottom: 4px;
 }
 .fund-card .figure {
@@ -338,18 +338,18 @@ permalink: /prioritisation-survey/
     cursor: pointer; font-size: 0.9em; font-weight: 600;
     transition: all 0.1s;
 }
-.rate-btn:hover { border-color: #155799; color: #155799; }
-.rate-btn.active { background: #155799; color: #fff; border-color: #155799; }
+.rate-btn:hover { border-color: #4CAF50; color: #4CAF50; }
+.rate-btn.active { background: #4CAF50; color: #fff; border-color: #4CAF50; }
 .rate-btn.zero.active { background: #888; border-color: #888; }
 
 .binding-card {
-    border: 2px solid #155799; background: #f0f7ff;
+    border: 2px solid #4CAF50; background: #f0f7ff;
     border-radius: 12px; padding: 24px 28px;
     margin-bottom: 20px;
 }
 .binding-card .pretitle {
     text-transform: uppercase; letter-spacing: 0.5px;
-    font-size: 0.75em; color: #155799;
+    font-size: 0.75em; color: #4CAF50;
     font-weight: 600; margin-bottom: 6px;
 }
 .binding-card h2 {
@@ -394,11 +394,11 @@ permalink: /prioritisation-survey/
 }
 .override-row:last-child { border-bottom: none; }
 .override-row .pin-btn {
-    background: none; border: 1px solid #155799;
-    color: #155799; border-radius: 4px;
+    background: none; border: 1px solid #4CAF50;
+    color: #4CAF50; border-radius: 4px;
     padding: 3px 10px; font-size: 0.82em; cursor: pointer;
 }
-.override-row.pinned { background: #e3f2fd; }
+.override-row.pinned { background: #e8f5e9; }
 
 @media (max-width: 600px) {
     .area-row { grid-template-columns: 1fr; gap: 8px; }

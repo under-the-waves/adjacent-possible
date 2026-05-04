@@ -13,7 +13,7 @@ life_area_slug: nutrition
     margin-bottom: 8px;
 }
 .breadcrumb-nav a {
-    color: #155799;
+    color: #4CAF50;
     text-decoration: none;
 }
 .breadcrumb-nav a:hover {
@@ -32,7 +32,7 @@ life_area_slug: nutrition
 }
 .la-banner--complete {
     background: #f0f4ff;
-    border: 2px solid #155799;
+    border: 2px solid #4CAF50;
 }
 .la-banner p { margin: 0 0 12px 0; }
 .la-banner .btn-cta {
@@ -52,9 +52,9 @@ life_area_slug: nutrition
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    color: #155799;
+    color: #4CAF50;
     background: white;
-    border: 1px solid #155799;
+    border: 1px solid #4CAF50;
     margin-left: 12px;
     transition: background 0.2s;
 }
@@ -95,8 +95,8 @@ life_area_slug: nutrition
 .la-paths .path-level1:hover { background: #e0f0e0; box-shadow: 0 2px 8px rgba(40,167,69,0.2); }
 .la-paths .path-interventions {
     background: #f0f4ff;
-    border: 2px solid #155799;
-    color: #155799;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
 }
 .la-paths .path-interventions:hover { background: #e0eaff; box-shadow: 0 2px 8px rgba(21,87,153,0.2); }
 .la-paths .path-desc {
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (done && hasSliders) {
         banner.className = 'la-banner la-banner--complete';
         banner.innerHTML = '<p><strong>You have completed Awareness assessment for Nutrition.</strong></p>' +
-            '<a href="{{ site.baseurl }}/nutrition/personalised" class="btn-cta" style="background:#155799;">View Your Interventions</a>' +
+            '<a href="{{ site.baseurl }}/nutrition/personalised" class="btn-cta" style="background:#4CAF50;">View Your Interventions</a>' +
             '<a href="{{ site.baseurl }}/nutrition/level-1" class="btn-secondary">Redo assessment</a>';
     } else if (Object.keys(nutrition).length > 0) {
         var completed = steps.filter(function(s) { return nutrition[s]; }).length;

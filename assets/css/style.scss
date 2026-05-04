@@ -3,6 +3,36 @@
 
 @import "{{ site.theme }}";
 
+/* Override Cayman defaults. Body copy darkened from #606c71 (medium
+   grey) to #1f2937 for better contrast and readability. Body links
+   shifted from Cayman's default blue (#1e6bb8) to brand green. */
+body {
+  color: #1f2937;
+}
+
+.main-content {
+  color: #1f2937;
+}
+
+.main-content a,
+.main-content a:visited {
+  color: #2e7d32;
+}
+
+.main-content a:hover,
+.main-content a:focus {
+  color: #4CAF50;
+}
+
+/* Keep nav and dropdown links unaffected by the body link override.
+   The navbar a rules earlier in this file already win on specificity,
+   but mega-menu links need their own protection. */
+.mega-menu a,
+.nav-menu a,
+.mega-menu__footer a {
+  /* colour set by their own rules, do not inherit body-link green */
+}
+
 /* Navigation Bar Styles */
 .navbar {
   background-color: #000000;
@@ -101,12 +131,13 @@
   background-color: #333333;
 }
 
-/* Restore Cayman styling */
+/* Restore Cayman styling. Page-header is hidden site-wide below;
+   colours kept on-brand in case it is ever re-enabled. */
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957);
+  background-color: #000000;
+  background-image: linear-gradient(120deg, #000000, #1a3d20);
   padding: 1.5rem 6rem;
 }
 .page-header .btn {
@@ -342,8 +373,7 @@
 
 /* Hero section with logo on left and text on right */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              linear-gradient(120deg, #082B45, #0D4D56);
+  background: #000000;
   padding: 1.5rem 2rem;
   margin-bottom: 3rem;
   position: relative;

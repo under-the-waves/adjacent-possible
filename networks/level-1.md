@@ -23,7 +23,7 @@ life_area_slug: networks
     transition: background 0.3s;
 }
 .l1-progress-segment.done { background: #28a745; }
-.l1-progress-segment.active { background: #155799; }
+.l1-progress-segment.active { background: #4CAF50; }
 .l1-progress-label {
     text-align: center;
     font-size: 0.85em;
@@ -38,7 +38,7 @@ life_area_slug: networks
     overflow: hidden;
     transition: border-color 0.3s;
 }
-.l1-step.active { border-color: #155799; }
+.l1-step.active { border-color: #4CAF50; }
 .l1-step.done { border-color: #28a745; }
 
 .l1-step-header {
@@ -67,7 +67,7 @@ life_area_slug: networks
     color: #666;
     transition: background 0.3s, color 0.3s;
 }
-.l1-step.active .l1-step-number { background: #155799; color: white; }
+.l1-step.active .l1-step-number { background: #4CAF50; color: white; }
 .l1-step.done .l1-step-number { background: #28a745; color: white; }
 
 .l1-step-title {
@@ -108,7 +108,7 @@ life_area_slug: networks
 .l1-mark-done {
     display: inline-block;
     padding: 10px 24px;
-    background: #155799;
+    background: #4CAF50;
     color: white;
     border: none;
     border-radius: 6px;
@@ -118,7 +118,7 @@ life_area_slug: networks
     margin-top: 12px;
     transition: background 0.2s;
 }
-.l1-mark-done:hover { background: #0d47a1; }
+.l1-mark-done:hover { background: #2e7d32; }
 .l1-mark-done:disabled { background: #ccc; cursor: default; }
 
 /* Exemplar cards */
@@ -127,16 +127,16 @@ life_area_slug: networks
     border-radius: 8px;
     padding: 16px 20px;
     margin-bottom: 12px;
-    border-left: 4px solid #155799;
+    border-left: 4px solid #4CAF50;
 }
 .exemplar-card h4 { margin: 0 0 4px 0; font-size: 1em; }
-.exemplar-card .exemplar-value { font-size: 0.85em; color: #155799; font-weight: 600; margin-bottom: 6px; }
+.exemplar-card .exemplar-value { font-size: 0.85em; color: #4CAF50; font-weight: 600; margin-bottom: 6px; }
 .exemplar-card p { margin: 0 0 6px 0; font-size: 0.93em; color: #444; }
 
 /* Assessment inputs */
 .assess-privacy {
     background: #f0f4ff;
-    border-left: 4px solid #155799;
+    border-left: 4px solid #4CAF50;
     border-radius: 6px;
     padding: 14px 18px;
     margin-bottom: 24px;
@@ -205,14 +205,14 @@ life_area_slug: networks
 }
 .assess-summary {
     background: #f8f9fa;
-    border: 2px solid #155799;
+    border: 2px solid #4CAF50;
     border-radius: 8px;
     padding: 20px 24px;
     margin-top: 24px;
     display: none;
 }
 .assess-summary.visible { display: block; }
-.assess-summary h4 { margin: 0 0 14px 0; color: #155799; }
+.assess-summary h4 { margin: 0 0 14px 0; color: #4CAF50; }
 .assess-summary-row {
     display: flex;
     align-items: center;
@@ -238,7 +238,7 @@ life_area_slug: networks
     flex: 0 0 60px;
     text-align: right;
     font-weight: 600;
-    color: #155799;
+    color: #4CAF50;
 }
 .assess-summary-text {
     font-size: 0.88em;
