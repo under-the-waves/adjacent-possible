@@ -379,7 +379,14 @@ body .main-content {
         flex-wrap: wrap;
     }
     .intervention-link {
-        overflow-wrap: anywhere;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    /* Give the name column more breathing room on mobile to avoid
+       mid-word breaks on names like "Implementation Intentions". */
+    .db-table th:first-child,
+    .db-table td:first-child {
+        min-width: 130px;
     }
 }
 </style>
