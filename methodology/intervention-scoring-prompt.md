@@ -179,7 +179,7 @@ Do NOT create new top-level categories like `health.longevity` or `performance.a
 
 The following domains and values are defined in `_data/values.yml`. Use ONLY these keys — do not invent new ones. If the intervention requires a value domain not listed here, flag it rather than creating a new key.
 
-All 53 life areas are now scoreable. Full list in `_data/values.yml`. Use ONLY these keys — do not invent new ones. If the intervention requires a value domain not listed here, flag it rather than creating a new key.
+All {{ site.data.life_areas | size }} life areas are now scoreable. Full list in `_data/values.yml`. Use ONLY these keys — do not invent new ones. If the intervention requires a value domain not listed here, flag it rather than creating a new key.
 
 | Domain | Values |
 |---|---|

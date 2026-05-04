@@ -24,7 +24,7 @@ The [prioritisation survey]({{ site.baseurl }}/prioritisation/) has three short 
 
 ## 3. Track across all areas (ongoing)
 
-Start here if you want personalised recommendations and a record of what you've already done. Sign in (top right) and the dashboard pulls together a single view across all 52 life areas: your highest-leverage opportunities given the values and constraints you've set, the interventions you've ticked off as already in place, and the areas you're actively working on.
+Start here if you want personalised recommendations and a record of what you've already done. Sign in (top right) and the dashboard pulls together a single view across all {{ site.data.life_areas | size }} life areas: your highest-leverage opportunities given the values and constraints you've set, the interventions you've ticked off as already in place, and the areas you're actively working on.
 
 Worthwhile uses Clerk for sign-in. When you're signed in, your inputs (assessment results, value priorities, and ticked-off interventions) are held on your Clerk account so they're available across devices. Without signing in, your inputs stay only on the device you're using.
 

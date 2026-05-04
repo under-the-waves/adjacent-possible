@@ -1182,7 +1182,7 @@ function renderSignInGate() {
     el.innerHTML = `
         <div class="dashboard-header">
             <h1>Your dashboard</h1>
-            <p>Sign in to see your personalised dashboard across all 52 life areas.</p>
+            <p>Sign in to see your personalised dashboard across all {{ site.data.life_areas | size }} life areas.</p>
         </div>
         <div style="text-align: center; margin-top: 32px;">
             <button onclick="window.Clerk && window.Clerk.openSignIn()" style="padding: 8px 20px; background: #155799; color: white; border: none; border-radius: 4px; font-size: 0.95em; font-weight: 500; cursor: pointer;">Sign in</button>

@@ -4,7 +4,7 @@ title: Life Areas
 ---
 # Life Areas
 
-The framework covers 52 life areas organised into five pillars, each following a systematic [five-band framework]({{ site.baseurl }}/5-levels/) with clear benchmarks and evidence-based recommendations.
+The framework covers {{ site.data.life_areas | size }} life areas organised into five pillars, each following a systematic [five-band framework]({{ site.baseurl }}/5-levels/) with clear benchmarks and evidence-based recommendations.
 
 <div class="pillar-hierarchy">
 

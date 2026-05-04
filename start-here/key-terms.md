@@ -14,7 +14,7 @@ A short glossary of the vocabulary used across the site.
 
 **Domain** – A subdivision of a pillar. The Look After Yourself pillar, for example, contains the Health, Wellbeing, and Security domains. Worthwhile has 14 domains.
 
-**Life area** – A specific area within a domain. Fitness, Sleep, and Nutrition are life areas within the Health domain. Worthwhile has 52 life areas. See all of them on the [Life Areas]({{ site.baseurl }}/life-areas/) page.
+**Life area** – A specific area within a domain. Fitness, Sleep, and Nutrition are life areas within the Health domain. Worthwhile has {{ site.data.life_areas | size }} life areas. See all of them on the [Life Areas]({{ site.baseurl }}/life-areas/) page.
 
 **Bands** – Five percentile-anchored bands within each life area: Awareness, Top 20%, Top 5%, Top 1%, and Top 0.1%. Reference points for where you sit, not a ladder to climb. See [The Five Bands]({{ site.baseurl }}/5-levels/) for details.
 

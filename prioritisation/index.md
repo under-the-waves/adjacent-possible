@@ -1711,7 +1711,7 @@ function determineFocusFlags(ranked) {
         successors: [ranked[1] ? ranked[1].slug : null, ranked[2] ? ranked[2].slug : null].filter(Boolean),
         balanced: balanced,
         pinned: prev.pinned || null,
-        ranked: ranked.slice(0, 52).map(function(r) {
+        ranked: ranked.slice(0, {{ site.data.life_areas | size }}).map(function(r) {
             return { slug: r.slug, score: Math.round(r.score * 10) / 10, importance: Math.round(r.importance * 10) / 10, constraint: r.constraint };
         })
     };
@@ -1759,7 +1759,7 @@ function renderFocusR() {
 
     html += '<div class="override">';
     html += '<h3>Pick a different focus area</h3>';
-    html += '<p style="font-size: 0.9em; color: #555;">All 52 areas ranked by combined score. Click a row to pin that as your focus area instead.</p>';
+    html += '<p style="font-size: 0.9em; color: #555;">All {{ site.data.life_areas | size }} areas ranked by combined score. Click a row to pin that as your focus area instead.</p>';
     html += '<div class="override-list">';
     flags.ranked.forEach(function(r) {
         var area = findArea(r.slug);

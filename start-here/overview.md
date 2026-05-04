@@ -20,7 +20,7 @@ Now that AI systems can reason and synthesise information, they can help you ass
 
 ## What's in it
 
-Worthwhile covers [52 life areas]({{ site.baseurl }}/life-areas/) organised into 14 domains and five pillars: Expand Your Awareness, Look After Yourself, Connect with Others, Organise Your Life, and Create & Contribute.
+Worthwhile covers [{{ site.data.life_areas | size }} life areas]({{ site.baseurl }}/life-areas/) organised into fourteen domains and five pillars: Expand Your Awareness, Look After Yourself, Connect with Others, Organise Your Life, and Create & Contribute.
 
 Each life area has:
 

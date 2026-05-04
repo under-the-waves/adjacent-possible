@@ -26,7 +26,7 @@ title: Worthwhile
 .home-cta-secondary { font-size: 0.95em; }
 </style>
 
-Worthwhile provides personal development recommendations across 52 areas of life – from health and finances to friends and relationships to learning and purpose.
+Worthwhile provides personal development recommendations across {{ site.data.life_areas | size }} areas of life – from health and finances to friends and relationships to learning and purpose.
 
 For each area, you can see how you compare with the general population, learn what's possible to achieve, and find actions and habits ranked by expected benefit for your time and money. Recommendations are personalised to what you value within that area.
 
