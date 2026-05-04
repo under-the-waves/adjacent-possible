@@ -142,6 +142,10 @@ body .main-content {
     font-size: 1em;
 }
 
+.db-table th.sortable:not(.active) .sort-indicator {
+    opacity: 0.35;
+}
+
 /* Intervention name */
 .intervention-name {
     display: flex;
@@ -417,15 +421,15 @@ body .main-content {
     <table class="db-table" id="dbTable">
         <thead>
             <tr>
-                <th class="sortable" data-sort="name">Intervention <span class="sort-indicator"></span></th>
-                <th class="sortable" data-sort="life-areas">Relevant<br>Life Areas <span class="sort-indicator"></span></th>
+                <th class="sortable" data-sort="name">Intervention <span class="sort-indicator">&#8597;</span></th>
+                <th class="sortable" data-sort="life-areas">Relevant<br>Life Areas <span class="sort-indicator">&#8597;</span></th>
                 <th class="sortable active" data-sort="avg-ebs">Avg.<br>EBS <span class="sort-indicator">&#8595;</span></th>
-                <th class="sortable" data-sort="best-value">Best<br>Value <span class="sort-indicator"></span></th>
-                <th class="sortable" data-sort="upfront-cost">Upfront<br>Cost <span class="sort-indicator"></span></th>
-                <th class="sortable" data-sort="ongoing-cost">Ongoing<br>Cost <span class="sort-indicator"></span></th>
-                <th class="sortable" data-sort="ongoing-time">Ongoing<br>Time <span class="sort-indicator"></span></th>
-                <th class="sortable" data-sort="time-eroi">Time<br>EROI <span class="sort-indicator"></span></th>
-                <th class="sortable" data-sort="money-eroi">Money<br>EROI <span class="sort-indicator"></span></th>
+                <th class="sortable" data-sort="best-value">Best<br>Value <span class="sort-indicator">&#8597;</span></th>
+                <th class="sortable" data-sort="upfront-cost">Upfront<br>Cost <span class="sort-indicator">&#8597;</span></th>
+                <th class="sortable" data-sort="ongoing-cost">Ongoing<br>Cost <span class="sort-indicator">&#8597;</span></th>
+                <th class="sortable" data-sort="ongoing-time">Ongoing<br>Time <span class="sort-indicator">&#8597;</span></th>
+                <th class="sortable" data-sort="time-eroi">Time<br>EROI <span class="sort-indicator">&#8597;</span></th>
+                <th class="sortable" data-sort="money-eroi">Money<br>EROI <span class="sort-indicator">&#8597;</span></th>
             </tr>
         </thead>
         <tbody id="dbBody">
@@ -656,7 +660,7 @@ document.querySelectorAll('th.sortable').forEach(function(header) {
 
         document.querySelectorAll('th.sortable').forEach(function(h) {
             h.classList.remove('active');
-            h.querySelector('.sort-indicator').textContent = '';
+            h.querySelector('.sort-indicator').innerHTML = '&#8597;';
         });
         this.classList.add('active');
         this.querySelector('.sort-indicator').innerHTML = sortAsc ? '&#8593;' : '&#8595;';
