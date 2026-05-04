@@ -2,6 +2,8 @@ evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
 prompt_sha: bcfbcf8
 name: "Consistent Wake Time"
+quick_win: true
+quick_win_cadence: routine
 what_it_is: |
   Waking up at the same time every day – within roughly a 30-minute window, including weekends and days off – regardless of when you fell asleep. The fixed wake point is the strongest single anchor for the circadian system because, unlike bedtime, it can be enforced with an alarm; bedtime then self-regulates as homeostatic sleep pressure builds at predictable times. Often described in the sleep literature as the keystone of sleep hygiene.
 how_to_do_it: |

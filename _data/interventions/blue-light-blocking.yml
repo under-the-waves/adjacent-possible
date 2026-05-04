@@ -2,6 +2,8 @@ evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
 prompt_sha: bcfbcf8
 name: "Blue Light Blocking"
+quick_win: true
+quick_win_cadence: setup
 what_it_is: |
   Reducing exposure to short-wavelength (~400–490nm) light in the 2–3 hours before bed by wearing amber-tinted glasses, enabling screen filters (Night Shift, f.lux), or simply dimming screens and overhead LEDs. The mechanistic case is solid – blue light suppresses melatonin via melanopsin-containing retinal ganglion cells – but in healthy adults the downstream effect on objective sleep is small or null. A [2025 meta-analysis of three crossover RCTs](https://pmc.ncbi.nlm.nih.gov/articles/PMC12668929/) found non-significant changes in sleep onset latency (−4.9 min), total sleep time (+8.8 min), and sleep efficiency (−0.6 pp), and the [2023 Cochrane review](https://www.cochrane.org/about-us/news/blue-light-filtering-spectacles-probably-make-no-difference-eye-strain-eye-health-or-sleep) (17 RCTs) concluded the evidence is inconclusive.
 how_to_do_it: |
