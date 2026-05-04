@@ -773,7 +773,10 @@ function mountClerkUI() {
         var btn = document.createElement('button');
         btn.className = 'nav-button auth-button';
         btn.textContent = 'Sign In';
-        btn.onclick = function() { window.Clerk.openSignIn(); };
+        btn.onclick = function() {
+            var here = window.location.href;
+            window.Clerk.openSignIn({ afterSignInUrl: here, afterSignUpUrl: here });
+        };
         el.appendChild(btn);
     }
 }

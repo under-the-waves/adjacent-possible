@@ -466,6 +466,45 @@ layout: default
     line-height: 1.5;
 }
 
+.top-effects-summary .signin-cta {
+    display: block;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #bbdefb;
+    font-size: 0.92em;
+    color: #555;
+}
+
+.top-effects-summary .signin-cta a {
+    color: #155799;
+}
+
+.signin-prompt {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-left: 3px solid #155799;
+    border-radius: 3px;
+}
+
+.signin-prompt a {
+    color: #155799;
+}
+
+.effects-table .baseline-cell {
+    color: #555;
+    white-space: nowrap;
+    font-size: 0.95em;
+}
+
+.effects-table .baseline-cell .user-pct {
+    color: #155799;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
 .effects-table {
     width: 100%;
     border-collapse: collapse;
@@ -862,6 +901,8 @@ layout: default
     <span class="toggle-note">Personalised using your <a href="#" id="toggle-assess-link">Awareness assessment data</a></span>
 </div>
 
+<div class="signin-prompt" id="signin-prompt" style="display:none;"></div>
+
 <table class="effects-table">
     <thead>
         <tr>
@@ -871,6 +912,7 @@ layout: default
             <th>ISR</th>
             <th>UAR</th>
             <th>Confidence</th>
+            <th>Baseline</th>
             <th>EBS</th>
         </tr>
     </thead>
@@ -901,6 +943,7 @@ layout: default
             <td>{{ value_data.isr }}%</td>
             <td>{{ value_data.uar }}%</td>
             <td><span class="confidence-badge confidence-{{ value_confidence }}">{{ value_confidence }}</span></td>
+            <td class="baseline-cell" id="baseline-{{ value_key }}">{{ value_def.baseline_percentile | default: 35 }}th</td>
             <td class="ebs-cell" id="table-ebs-{{ value_key }}">…</td>
         </tr>
     {% endfor %}
@@ -1095,6 +1138,13 @@ const valueDefinitions = {
 // Confidence factors – shrinkage applied to EBS in log form
 const CONFIDENCE_FACTORS = { high: 1.0, medium: 0.75, low: 0.5 };
 
+// Personalisation is only active when the user is actually signed in.
+// Local-only data (e.g. assessment progress kept in localStorage before sign-in)
+// must not be displayed as personalised results.
+function isUserSignedIn() {
+    return typeof APStorage !== 'undefined' && APStorage.isSignedIn();
+}
+
 // Read user percentile data from Level 1 assessments
 function loadUserPercentiles() {
     try {
@@ -1170,7 +1220,9 @@ function calculateEBS() {
         const userPct = getUserPercentileForValue(domain, valueKey);
         const baselinePct = (def && def.baseline_percentile != null) ? def.baseline_percentile : 35;
         const drFactor = diminishingReturnsFactor(userPct, baselinePct);
-        const hasPersonalisation = userPct != null;
+        // Personalisation only counts if the user is signed in. localStorage data
+        // alone is not enough – treat anonymous data as transient.
+        const hasPersonalisation = userPct != null && isUserSignedIn();
         if (hasPersonalisation) hasAnyPersonalisation = true;
         // Floor drFactor to avoid log(0)
         const drLog = Math.log2(Math.max(drFactor, 0.001));
@@ -1263,6 +1315,17 @@ function renderTable() {
         if (tableCell) {
             tableCell.innerHTML = displayText + wasHint;
             tableCell.classList.toggle('negative', ebsForDisplay < 0);
+        }
+
+        // Baseline cell: always shows population baseline; appends user percentile
+        // when signed in with assessment data so users can see how they differ.
+        var baselineCell = document.getElementById('baseline-' + key);
+        if (baselineCell) {
+            var baselineHtml = result.baselinePct + 'th';
+            if (result.hasPersonalisation && result.userPct != null) {
+                baselineHtml += ' <span class="user-pct">(you: ' + result.userPct + 'th)</span>';
+            }
+            baselineCell.innerHTML = baselineHtml;
         }
     }
 }
@@ -1388,20 +1451,43 @@ function renderTopEffectsSummary() {
     if (otherCount > 0) {
         mainClause += ', with smaller effects across ' + otherCount + ' other area' + (otherCount === 1 ? '' : 's');
     }
-    summaryEl.innerHTML = mainClause + '.';
+    var html = mainClause + '.';
+    if (!isPersonalised) {
+        var assessUrl = '{{ site.baseurl }}/life-areas/';
+        var ctaText = isUserSignedIn()
+            ? 'Get more personalised results by completing an <a href="' + assessUrl + '">Awareness assessment</a> for the relevant life areas.'
+            : 'Get more personalised results by completing an <a href="' + assessUrl + '">Awareness assessment</a> (requires sign-in).';
+        html += '<span class="signin-cta">' + ctaText + '</span>';
+    }
+    summaryEl.innerHTML = html;
 }
 
 function renderViewToggle() {
     var toggleEl = document.getElementById('view-toggle');
+    var promptEl = document.getElementById('signin-prompt');
     if (!toggleEl) return;
+
+    var assessUrl = '{{ site.baseurl }}/life-areas/';
+
     if (hasAnyPersonalisation) {
+        // Signed in with assessment data – show the For you / Typical toggle.
         toggleEl.style.display = 'flex';
+        if (promptEl) promptEl.style.display = 'none';
         var btns = toggleEl.querySelectorAll('.toggle-btn');
         btns.forEach(function(btn) {
             btn.classList.toggle('active', btn.getAttribute('data-view') === currentView);
         });
     } else {
+        // Either signed out, or signed in without assessment data.
+        // Hide the toggle and surface the relevant call to action instead.
         toggleEl.style.display = 'none';
+        if (promptEl) {
+            var msg = isUserSignedIn()
+                ? 'Complete an <a href="' + assessUrl + '">Awareness assessment</a> to see how this intervention applies to your current baseline.'
+                : 'Sign in and complete an <a href="' + assessUrl + '">Awareness assessment</a> to see how this intervention applies to your current baseline.';
+            promptEl.innerHTML = msg;
+            promptEl.style.display = 'block';
+        }
     }
 }
 
@@ -1474,7 +1560,30 @@ window.addEventListener('ap-storage-sync', function() {
     // Also refresh cost overrides
     populateCostForm();
     refreshCostDisplay();
+    // Re-run scoring in case new percentile data arrived from Clerk
+    calculateEBS();
 });
+
+// Wait for Clerk to load so we can re-render when sign-in state becomes known.
+// The initial calculateEBS() runs before Clerk has loaded (so isUserSignedIn()
+// is false), which means we render the typical view. Once Clerk loads we need
+// to re-render to switch into personalised view if the user is signed in with
+// assessment data.
+function setupClerkAuthListener() {
+    if (window.Clerk && typeof window.Clerk.addListener === 'function') {
+        window.Clerk.addListener(function() {
+            calculateEBS();
+        });
+        // Re-run once now: Clerk may have already determined auth state.
+        calculateEBS();
+    } else {
+        // Clerk not yet available – try again shortly. Give up after ~5 seconds.
+        setupClerkAuthListener._attempts = (setupClerkAuthListener._attempts || 0) + 1;
+        if (setupClerkAuthListener._attempts < 50) {
+            setTimeout(setupClerkAuthListener, 100);
+        }
+    }
+}
 
 // Cost customisation: lets users override resource estimates per intervention
 const COST_OVERRIDES_KEY = 'ap-intervention-overrides';
@@ -1686,6 +1795,7 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateEBS();
     initHabitToggle();
     initCostCustomise();
+    setupClerkAuthListener();
 });
 
 // Close popup with Escape key

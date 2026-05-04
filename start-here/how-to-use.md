@@ -22,7 +22,7 @@ The prioritisation survey has three short stages. You can do all three or pick w
 - **Fundamentals** (5 mins) – checks six upstream areas with broad cross-domain effects.
 - **Focus area** (20 mins) – identifies a single life area to focus on first, based on what you value and where you currently feel constrained.
 
-## 3. <a href="#" onclick="event.preventDefault(); if (window.Clerk) window.Clerk.openSignIn();">Track across all areas</a> (ongoing)
+## 3. <a href="#" onclick="event.preventDefault(); if (window.Clerk) window.Clerk.openSignIn({ afterSignInUrl: window.location.href, afterSignUpUrl: window.location.href });">Track across all areas</a> (ongoing)
 
 Start here if you want personalised recommendations and a record of what you've already done. Sign in (top right) and the dashboard pulls together a single view across all {{ site.data.life_areas | size }} life areas: your highest-leverage opportunities given the values and constraints you've set, the interventions you've ticked off as already in place, and the areas you're actively working on.
 
