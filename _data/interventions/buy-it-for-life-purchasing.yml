@@ -2,6 +2,8 @@ evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
 prompt_sha: 2798af5
 name: "Buy-It-For-Life Purchasing"
+quick_win: true
+quick_win_cadence: routine
 what_it_is: |
   A purchasing principle of selecting durable, repairable, high-quality goods designed and expected to last decades, rather than cheap items destined for replacement on shorter cycles. Each candidate purchase is evaluated on three criteria: cost-per-use over the realistic lifetime, repair-friendliness (availability of spare parts, modular construction, repair manuals, and third-party servicing), and material/build quality (full-metal frames, hardwood over composites, leather over coated synthetics, mechanical over disposable assemblies). The approach trades a higher upfront sticker price for a substantially lower total ownership cost and reduced replacement frequency. The economic logic is supported by [lifecycle cost analyses](https://www.sciencedirect.com/science/article/abs/pii/S0921344919303854) showing that product lifetime extension is one of the most cost-effective levers for reducing both household expenditure and environmental impact, and by research on [planned obsolescence](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/648767/IPOL_STU(2020)648767_EN.pdf) showing that average lifespans for many product categories have shortened materially over recent decades.
 how_to_do_it: |
