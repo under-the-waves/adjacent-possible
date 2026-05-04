@@ -114,12 +114,17 @@
         if (window.Clerk && window.Clerk.user) {
             syncFromClerk();
         }
-        // Listen for sign-in events
+        // Always notify pages that Clerk has finished loading, even if there
+        // was no data to sync. Pages can use this to re-render auth-gated UI
+        // (e.g. switch from "typical" to "for you" once sign-in state is known).
+        window.dispatchEvent(new CustomEvent('ap-clerk-ready'));
+        // Listen for sign-in / sign-out events
         if (window.Clerk) {
             window.Clerk.addListener(function(evt) {
                 if (window.Clerk.user) {
                     syncFromClerk();
                 }
+                window.dispatchEvent(new CustomEvent('ap-auth-change'));
             });
         }
     }

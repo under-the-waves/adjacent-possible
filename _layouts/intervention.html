@@ -1621,26 +1621,15 @@ window.addEventListener('ap-storage-sync', function() {
     calculateEBS();
 });
 
-// Wait for Clerk to load so we can re-render when sign-in state becomes known.
-// The initial calculateEBS() runs before Clerk has loaded (so isUserSignedIn()
-// is false), which means we render the typical view. Once Clerk loads we need
-// to re-render to switch into personalised view if the user is signed in with
-// assessment data.
-function setupClerkAuthListener() {
-    if (window.Clerk && typeof window.Clerk.addListener === 'function') {
-        window.Clerk.addListener(function() {
-            calculateEBS();
-        });
-        // Re-run once now: Clerk may have already determined auth state.
-        calculateEBS();
-    } else {
-        // Clerk not yet available – try again shortly. Give up after ~5 seconds.
-        setupClerkAuthListener._attempts = (setupClerkAuthListener._attempts || 0) + 1;
-        if (setupClerkAuthListener._attempts < 50) {
-            setTimeout(setupClerkAuthListener, 100);
-        }
-    }
-}
+// Re-render once Clerk has finished loading (sign-in state becomes known) and
+// whenever the auth state changes thereafter. The initial calculateEBS() runs
+// before Clerk has loaded, so the page first paints in typical view. These
+// events flip it into personalised view as soon as Clerk reports auth state.
+//
+// `ap-clerk-ready` fires once when Clerk finishes loading on page load.
+// `ap-auth-change` fires on sign-in / sign-out after that.
+window.addEventListener('ap-clerk-ready', calculateEBS);
+window.addEventListener('ap-auth-change', calculateEBS);
 
 // Cost customisation: lets users override resource estimates per intervention
 const COST_OVERRIDES_KEY = 'ap-intervention-overrides';
@@ -1852,7 +1841,11 @@ document.addEventListener('DOMContentLoaded', function() {
     calculateEBS();
     initHabitToggle();
     initCostCustomise();
-    setupClerkAuthListener();
+    // Belt and braces: if Clerk happened to finish loading before we registered
+    // the ap-clerk-ready listener (rare but possible), the event will have been
+    // missed. Re-running calculateEBS once we know APStorage reports signed in
+    // ensures the personalised view paints without waiting for a state change.
+    if (isUserSignedIn()) calculateEBS();
 });
 
 // Close popup with Escape key
