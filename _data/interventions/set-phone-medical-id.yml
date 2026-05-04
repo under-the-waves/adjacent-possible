@@ -1,0 +1,71 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Set Phone Medical ID and Emergency Contacts"
+quick_win: true
+quick_win_cadence: setup
+what_it_is: |
+  Configuring the Medical ID and emergency contact features built into modern smartphones (iOS Health app's Medical ID, Android's Emergency Information / Personal safety apps) so that critical information – allergies, medications, blood type, organ-donor status, and emergency contacts – is accessible from the lock screen without unlocking the phone. Used by paramedics, emergency room staff, and bystanders during accidents or medical emergencies to identify the patient, contact next of kin, and avoid medication interactions. Setup takes 5–10 minutes once and runs invisibly thereafter; review annually or after any change to medications or contacts.
+how_to_do_it: |
+  - **iPhone:** Open the Health app → tap your profile picture → Medical ID → Edit. Enter date of birth, allergies, medications, conditions, blood type, organ-donor status, weight, height, and primary language. Toggle "Show When Locked" and "Share During Emergency Call" to on
+  - **Android:** Open Settings → Safety & emergency (or Personal Safety app on Pixel / Galaxy phones) → Medical information and Emergency contacts. Enter the same information; verify it appears on the lock-screen emergency dialler
+  - Add 2–3 emergency contacts marked as "ICE" (in case of emergency) so first responders can reach next of kin via the lock-screen interface
+  - Print a wallet-sized card with the same information as a low-tech backup; phones can be damaged, dead, or out of reach in serious accidents
+success_looks_like: |
+  - Pressing the lock-screen "Emergency" or "Medical ID" button on your phone displays your medical information without unlocking
+  - Your emergency contacts can be reached directly from the lock-screen interface
+  - Information is reviewed annually and after any medication or contact change
+common_pitfalls: |
+  - Setting up Medical ID without enabling "Show When Locked" – the information then requires the phone to be unlocked, which defeats the purpose
+  - Listing outdated medications or allergies; emergency staff may avoid a useful drug because the Medical ID still lists a long-resolved allergy
+  - Relying solely on the phone; a serious accident can damage or separate the user from the device. A paper wallet card or medical alert bracelet/necklace is a useful backup, especially for severe allergies or chronic conditions
+description: |
+  - Modern smartphones have built-in Medical ID features designed for first responders to access critical information from the lock screen without unlocking the device
+  - iOS Health app (Medical ID), Android Emergency information, and dedicated Personal Safety apps on Pixel and Galaxy devices all support this functionality at no cost
+  - First-responder organisations including the [American Red Cross](https://www.redcross.org/take-a-class/medical-id-cards) and emergency-medicine literature consistently recommend medical-ID configuration as a basic preparedness step for every adult, especially those with allergies, chronic conditions, or anticoagulant medications
+  - Setup is a one-time 5–10 minute action; benefits are conditional on a serious accident or medical emergency where you cannot communicate – low probability per year but high consequence
+applicable_domains: ["emergency-preparedness", "physical-safety"]
+
+values:
+  emergency-preparedness.baseline:
+    pbs: 4
+    isr: 70
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Medical ID closes a specific preparedness gap (the unconscious-or-incapacitated identification problem) that other preparedness steps don't address. Endpoint: 50th–55th percentile.
+      - PBS 4 ("modest gain in baseline emergency preparedness") fits: this is a narrow but real preparedness improvement, and it composes with broader preparedness behaviours (kit assembly, contact lists, ICE cards) rather than replacing them.
+    isr_reasoning: |
+      - Conditional on the Medical ID being correctly configured and visible on the lock screen, first responders trained on the protocol can access it. ISR is bounded by responder familiarity (most are now trained on it but adoption isn't universal), correct configuration ("Show When Locked" enabled), and information being current.
+      - 70% reflects that the mechanism is reliable when invoked but isn't always invoked – first responders sometimes don't check the device, especially when the patient is conscious.
+    uar_reasoning: |
+      - One-time setup with low ongoing maintenance. UAR of 80% reflects the share who complete the full setup (Medical ID + emergency contacts + "Show When Locked" toggle) in one session.
+
+  physical-safety.risk:
+    pbs: 7
+    isr: 0.05
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Conditional on success (Medical ID prevents a serious medication error or speeds critical care during incapacity), the user has avoided a meaningfully bad outcome – this can range from "ER staff give a useful drug despite the unconfirmed allergy ER staff would otherwise have avoided" to "anaphylaxis avoided because the allergy was visible on the lock screen". By the lottery-precedent rule, PBS captures the conditional benefit; ISR captures lifetime probability of the relevant scenario.
+      - PBS 7 reflects that the conditional benefit is large but bounded – Medical ID typically informs a treatment decision rather than directly preventing death. The intervention sits below smoke alarms (PBS 10) on the conditional-benefit scale because the affected scenarios are usually less binary than "fire fatality avoided".
+    isr_reasoning: |
+      - ISR is the lifetime probability of the Medical ID being consulted and producing a meaningfully better outcome. Lifetime probability of an emergency-room visit while incapacitated or unable to communicate: ~5–10% per CDC ED utilisation data. Conditional on that scenario, probability that the Medical ID was consulted, current, and altered care: roughly 5–10%.
+      - Net: ~0.5% lifetime probability of the intervention producing a meaningful clinical benefit; rounded to 0.05% for the high-impact scenarios (severe allergy, anticoagulant interaction, organ-donor status). Acknowledging the low confidence in this estimate.
+    uar_reasoning: |
+      - See emergency-preparedness.baseline UAR.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No cost. Medical ID functionality is built into iOS and Android at no charge. Optional medical-alert jewellery (~$10–30) is a useful backup but not required."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost."
+  upfront_time: 0.2
+  upfront_time_reasoning: "About 5–10 minutes to enter the information, configure 'Show When Locked', and verify the lock-screen interface displays the Medical ID. Optionally another 5 minutes to print and laminate a wallet card."
+  ongoing_time: 0.25
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Roughly 10–15 minutes per year to review and update medications, allergies, and emergency contacts."
+
+prerequisites:
+  - "An iPhone (iOS 8+) or Android phone (Android 7+) with the Medical ID / Emergency Information feature available"
+  - "Awareness of your own medical conditions, allergies, current medications, and 2–3 trusted emergency contacts willing to be listed"

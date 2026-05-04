@@ -1,0 +1,59 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Set Beneficiary Designations"
+quick_win: true
+quick_win_cadence: setup
+what_it_is: |
+  Logging into each financial institution and explicitly naming the people who should receive the assets in each account if you die. Beneficiary designations apply to retirement accounts (401k, IRA, pension), life insurance policies, payable-on-death bank accounts, and many brokerage accounts. They override the will – if a will leaves everything to your spouse but a retirement account has an ex-partner listed as beneficiary, the ex-partner receives the funds. This is a 30–60-minute task with no monetary cost that prevents some of the most expensive and emotionally painful estate-planning failures. Carved out as a standalone Quick Win from [creating basic legal documents](/resources/intervention-database/creating-basic-legal-documents); a full estate plan also needs a will, durable POA, and healthcare directive.
+how_to_do_it: |
+  - Make a list of every account that holds money or insurance proceeds: retirement accounts, brokerage accounts, life insurance policies, bank accounts that allow payable-on-death (POD) or transfer-on-death (TOD) registration
+  - Log into each institution's web portal, find the "Beneficiaries" section (sometimes under Profile, Account Settings, or Estate Planning), and either confirm the named beneficiary is correct or update it
+  - For retirement accounts and life insurance, name a primary beneficiary plus one or two contingent beneficiaries in case the primary predeceases you – many accounts default to "estate" if all named beneficiaries are dead, which forces the assets through probate
+  - Re-check beneficiary designations after every major life event: marriage, divorce, birth or adoption of a child, death of a named beneficiary
+success_looks_like: |
+  - Every financial account and insurance policy has an up-to-date primary and contingent beneficiary on file, matching your current intentions
+  - Your family can locate the relevant accounts and would receive the proceeds without probate court involvement, in weeks rather than months
+  - You re-check designations annually or after any major life event, with a calendar reminder
+common_pitfalls: |
+  - Assuming that a will or trust covers beneficiary-designated accounts; it doesn't – the designation on file with the institution wins, even if the will says otherwise
+  - Leaving stale designations from before a divorce, the death of a parent, or the birth of a child – this is the most common cause of financial assets going to the "wrong" person on death
+  - Naming a minor as beneficiary without a guardian-of-property arrangement; many institutions cannot pay directly to a minor and the resulting court process delays distribution by months
+description: |
+  - Beneficiary designations are the simplest and highest-leverage component of an estate plan; they bypass probate entirely for designated accounts and override the will
+  - [Caring.com's 2025 will survey](https://www.caring.com/resources/wills-survey) found 76% of US adults lack a will, and beneficiary designations are similarly under-maintained – many adults set them once at account opening and never review them
+  - Stale beneficiary designations are a common cause of assets going to ex-spouses or other unintended recipients, with [estate-planning case-law literature](https://legacyassuranceplan.com/articles/intestacy/the-hidden-costs-of-intestacy-clearly-appear-when-it-is-too-late) documenting frequent disputes
+  - Free of monetary cost; takes 30–60 minutes to complete across a typical household's account portfolio
+applicable_domains: ["legal-matters"]
+
+values:
+  legal-matters.protection:
+    pbs: 6
+    isr: 92
+    uar: 80
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 40th percentile. Most adults have either no beneficiary designations (because the institution doesn't require them) or stale ones from account-opening. After this intervention, the user reaches roughly the 70th percentile on legal protection of their financial assets – probate is bypassed for the largest accounts and assets reach intended recipients quickly.
+      - PBS 6 reflects that beneficiary designations cover only one component of estate planning (asset distribution at death). They don't address incapacity (POA), medical wishes (advance directive), or guardianship of minors (will). A user with only beneficiary designations is meaningfully better protected than a user with nothing, but still missing the broader protective stack.
+      - Score 6 ("meaningful gain") rather than 8+ reflects the bounded scope. Combined with the rest of [creating basic legal documents](/resources/intervention-database/creating-basic-legal-documents), the user reaches PBS 9 territory.
+    isr_reasoning: |
+      - Beneficiary designations are legally binding once filed; the institutional process is reliable and well-tested. Among adults who actually complete designations, the assets reliably pass to the named beneficiary at death.
+      - ISR is below ceiling because some completed designations contain errors: minor named without guardian arrangement, stale designation not updated after divorce, or contingent beneficiary missing.
+    uar_reasoning: |
+      - This is a one-time setup with very low ongoing maintenance (review annually or after major life events). UAR captures the share of users who, once started, complete the designations across all relevant accounts rather than doing one and stopping.
+      - 80% reflects high completion rates for users who block out time for the task (the main barrier is procrastination, not friction within the task itself). Annual re-check adherence is somewhat lower.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No monetary cost. Beneficiary designations are free with every financial institution that offers them."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost. Annual re-check is also free."
+  upfront_time: 1
+  upfront_time_reasoning: "About 30–60 minutes to log into 4–8 financial institutions, find the beneficiary section, and update or confirm designations. Banking and retirement accounts are typically the most time-consuming because of identity-verification flows."
+  ongoing_time: 0.5
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Roughly 30 minutes per year to review designations, plus extra time after major life events (marriage, divorce, birth, death) to update affected accounts."
+
+prerequisites:
+  - "A list of financial accounts and insurance policies you hold (or willingness to enumerate them as part of the task)"
+  - "Identified primary and contingent beneficiaries who you want to receive the assets, with their full legal names, dates of birth, and contact details"

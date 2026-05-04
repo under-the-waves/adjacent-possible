@@ -2,6 +2,8 @@ evaluated_at: 2026-05-02
 evaluated_by: claude-opus-4-7
 prompt_sha: a48aaee
 name: "Weekly Review Ritual"
+quick_win: true
+quick_win_cadence: routine
 what_it_is: |
   A recurring weekly session – typically 30 to 90 minutes, anchored to a consistent time such as Friday afternoon or Sunday evening – in which the user systematically clears all incoming inboxes, reviews the calendar for the week just past and the week ahead, walks through every active project list, and sets explicit priorities for the coming week. The ritual is the cornerstone of [David Allen's Getting Things Done methodology](https://gettingthingsdone.com/) and similar productivity systems, and serves as the regular "rebalancing" step that prevents the rest of any task or project system from drifting out of trust over time. Distinct from [monthly goal review](/resources/intervention-database/monthly-goal-review), which operates at the strategic level (continue, modify, retire goals); the weekly review operates at the tactical level (clear the desk, capture commitments, set next week's priorities). A user benefits from running both at their respective cadences.
 how_to_do_it: |

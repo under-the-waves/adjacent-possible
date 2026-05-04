@@ -484,9 +484,9 @@ permalink: /prioritisation-survey/
 <h2 class="related-h">Where this fits with the rest of the site</h2>
 
 <div class="related-cards">
-  <a href="#" class="related-card disabled">
+  <a href="{{ site.baseurl }}/prioritisation/quick-wins/" class="related-card">
     <div class="related-title">Quick Wins</div>
-    <div class="related-desc">High-impact, low-effort actions for momentum (in development).</div>
+    <div class="related-desc">High-impact, low-effort actions you can do today: one-time setups, annual checks, and built-in routines.</div>
   </a>
   <a href="{{ site.baseurl }}/prioritisation/dashboard/" class="related-card">
     <div class="related-title">Band assessment</div>

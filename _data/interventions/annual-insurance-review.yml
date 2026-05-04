@@ -1,0 +1,70 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Annual Insurance Review"
+quick_win: true
+quick_win_cadence: rare_check
+what_it_is: |
+  Reviewing your insurance coverage – health, auto, home or renters, life, disability, umbrella – once per year to confirm that coverage still matches your current life circumstances and that you're not paying for over-coverage or under-insured for likely scenarios. The review takes 30–90 minutes and typically surfaces one or both of: (a) coverage gaps where a meaningful loss would not be reimbursed, (b) over-coverage where premium dollars could be redirected to higher-leverage uses. Insurance products in particular drift from their original fit because life events (marriage, children, home purchase, career change) shift the risk landscape; insurance premiums also drift upward over time, so re-shopping at renewal can yield meaningful savings.
+how_to_do_it: |
+  - Inventory your current policies: health, auto, home or renters, life, disability, umbrella, and any specialty coverage (jewellery, electronics, professional liability)
+  - For each policy, check: deductibles relative to your emergency fund, coverage limits relative to current asset levels, beneficiary designations on life insurance (see [Set Beneficiary Designations](/resources/intervention-database/set-beneficiary-designations)), and whether bundling discounts have been applied
+  - Get fresh quotes at renewal time on commodity insurance (auto, home/renters): premiums typically drift upward at renewal even with no claim history, and competitor quotes give leverage to renegotiate or switch
+  - Specifically check life and disability coverage against your current dependents and income; under-insurance here is the most common gap and the consequences are severe
+success_looks_like: |
+  - Every active policy has been reviewed in the last 12 months and matches your current life circumstances
+  - You have a written record of coverage limits, deductibles, and renewal dates
+  - You haven't paid for an obviously redundant policy (e.g. car-rental insurance from the rental company when your auto policy or credit card already covers it)
+common_pitfalls: |
+  - Reviewing existing policies but not getting competitor quotes; renewal premiums often drift up substantially without any change in coverage and re-shopping can save 10–30%
+  - Over-correcting toward minimum coverage; deductibles too high relative to your emergency fund, or coverage limits too low relative to asset value, can create catastrophic-loss exposure that the savings don't justify
+  - Skipping life and disability insurance review; under-insurance here is the most common and most consequential gap, and the right amount changes meaningfully with each major life event
+description: |
+  - Annual review of all active insurance policies, with renewal-time competitor quotes on commodity policies (auto, home/renters); the review takes 30–90 minutes and typically yields both better fit and lower premium
+  - [J.D. Power and Consumer Reports research](https://www.jdpower.com/business/press-releases/2024-us-auto-insurance-shopping-report) consistently finds that adults who shop at renewal save substantially more on premiums than adults who renew passively, with median savings reported in the 10–20% range for auto insurance
+  - The review also catches under-insurance: [LIMRA research](https://www.limra.com/en/research/research-abstracts-public/2024/2024-insurance-barometer-study-key-findings/) finds that ~40% of US adults are under-insured on life insurance relative to their dependents' financial needs
+  - Best done at policy renewal time when you have leverage to switch; for users with multiple policies, batching them all in the same month makes the annual review easier
+applicable_domains: ["financial-planning-tracking", "emergency-preparedness"]
+
+values:
+  financial-planning-tracking.accuracy:
+    pbs: 5
+    isr: 90
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Annual review surfaces premium drift, gaps, and over-coverage; the user moves from a stale snapshot of insurance fit to a current one. Endpoint: 60th percentile.
+      - PBS 5 ("meaningful gain") reflects that insurance is a substantial fraction of household financial planning – correctly fit insurance is one of the larger line items most adults track. Score not higher because the absolute premium savings are typically a few hundred dollars/year; the larger value is in correct fit, which only matters in the rare scenarios where insurance pays out.
+    isr_reasoning: |
+      - The mechanism is direct: review surfaces the gaps and over-coverage; competitor quotes surface premium-shopping savings. Reliable when the review is actually done thoroughly.
+    uar_reasoning: |
+      - Annual repeat. UAR of 70% reflects that users start the review but often don't complete the competitor-quote step (which is the most time-consuming and unfamiliar) and revert to passive renewal.
+
+  emergency-preparedness.catastrophic:
+    pbs: 7
+    isr: 5
+    uar: 70
+    confidence: medium
+    pbs_reasoning: |
+      - Conditional on success (the review catches under-insurance and the user resolves the gap before a catastrophic event occurs), the user has avoided one of the most expensive financial outcomes – uninsured loss of a home, uninsured medical emergency, uninsured death without dependents covered.
+      - PBS 7 reflects substantial conditional protective uplift on rare-but-catastrophic outcomes. Score not higher because the conditional outcome depends on which gap was closed (life insurance vs auto vs home all have different conditional severities).
+    isr_reasoning: |
+      - ISR is the lifetime probability that the review identifies a real gap that, were it not closed, would have produced an uninsured catastrophic loss. Compounded across the user's lifetime: typical adult experiences ~1–3 events that test their insurance coverage substantially; gap probability per review is high (~30–40% of reviews identify something), but probability that the gap would have actually mattered is much lower.
+      - 5% lifetime probability of a "the review caught a gap that prevented catastrophic loss" outcome; lower-confidence estimate. The vast majority of reviews don't have this outcome – they confirm fit or yield modest premium savings.
+    uar_reasoning: |
+      - See financial-planning-tracking.accuracy UAR.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No cost for the review itself. Competitor-quote requests are free. Any policy changes the review prompts may have associated costs (higher premium for additional coverage, lower premium for switched policies)."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost. Net effect on premium spending is typically a small saving; net effect on coverage is typically a small upgrade in fit."
+  upfront_time: 1.5
+  upfront_time_reasoning: "About 30–90 minutes for the first review: 30 minutes to inventory current policies and assess fit, 30–60 minutes to get competitor quotes on commodity policies, and time to review specific gaps with an agent or independent broker if needed."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Roughly 60 minutes per year for repeat review. Subsequent reviews are faster than the first because the inventory is already documented."
+
+prerequisites:
+  - "Active insurance policies – at minimum the user has health and either auto or rental insurance, plus optionally home, life, disability, and umbrella policies"
+  - "Access to current policy documents and renewal dates"

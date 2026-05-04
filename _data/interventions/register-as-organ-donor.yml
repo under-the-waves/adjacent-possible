@@ -1,0 +1,71 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Register as Organ Donor"
+quick_win: true
+quick_win_cadence: setup
+what_it_is: |
+  Registering with the relevant national or regional organ donor registry so that your organs and tissues can be used for transplantation if you die in circumstances that allow donation. Registration takes 5–10 minutes via a government website (or in some jurisdictions, a tick on a driver's licence application) and is entirely revocable. One donor can save up to 8 lives via solid-organ donation and improve life for many more via tissue donation. Discussing the decision with family is more important than the registration paperwork itself; even a registered donor's wishes can be overridden by family at the point of donation if family is unaware of the decision.
+how_to_do_it: |
+  - Find your country or region's organ donor registry: in the US, [organdonor.gov](https://www.organdonor.gov/sign-up); in the UK, the [NHS Organ Donor Register](https://www.organdonation.nhs.uk/register-your-decision/); other jurisdictions have equivalent national registries
+  - Complete the online registration form (typically requires basic identification, contact info, and your decision on which organs and tissues you're willing to donate); registration is revocable and updatable at any time
+  - Tell your family or next of kin about your decision; this is the single most important step because next of kin are usually consulted at the point of donation, and unaware family members frequently override the donor's registered wishes during grief
+  - Note your decision in your phone's Medical ID (see [Set Phone Medical ID](/resources/intervention-database/set-phone-medical-id)) and any healthcare directive documents
+success_looks_like: |
+  - You are registered with the relevant national donor registry and have a record of registration
+  - Your immediate family members know your decision and would not override it during the donation conversation
+  - The decision is reflected in your phone's Medical ID and any advance-directive documents
+common_pitfalls: |
+  - Registering but not telling family; in many systems, family override is the most common reason registered donors don't end up donating
+  - Assuming a tick on a driver's licence is enough; in some jurisdictions it is, in others it isn't legally binding without a separate registry entry
+  - Confusing organ donation with whole-body donation to medical schools; these are separate processes with different paperwork
+description: |
+  - Registering with a national or regional organ donor registry; the action takes 5–10 minutes online and is entirely revocable at any time
+  - One deceased donor can save up to 8 lives through solid-organ transplantation and improve life for many more through tissue and cornea donation, per [HRSA / OPTN](https://www.organdonor.gov/learn/process/death) data
+  - Family conversation is more important than the registration paperwork; in the US, [UNOS data](https://unos.org/news/in-focus/the-importance-of-discussing-organ-donation-with-family/) shows that family override is a leading cause of registered donors not donating, primarily because the family was unaware of the decision
+  - This is a low-cost, high-externality intervention: the user accrues no direct benefit (and in fact gives up nothing during life), but the expected benefit to others is substantial conditional on the rare scenario where donation is feasible
+applicable_domains: ["global-impact", "emergency-preparedness"]
+
+values:
+  global-impact.impartiality:
+    pbs: 7
+    isr: 0.5
+    uar: 90
+    confidence: medium
+    pbs_reasoning: |
+      - Conditional on success (the user dies in circumstances allowing donation, and the donation actually proceeds), one donor can save up to 8 lives and improve dozens more. The conditional impartial-impact value is large – per QALY counting, ~30–80 QALYs preserved across recipients per donor.
+      - PBS 7 reflects the substantial cross-recipient impact, anchored on impartial benefit (lives outside the user's immediate circle). Acknowledges that not all 8 organs are typically used and that recipient outcomes vary widely.
+    isr_reasoning: |
+      - ISR is the lifetime probability that the registered donor actually donates. [HRSA data](https://www.organdonor.gov/learn/process/death) indicates only ~1–2% of all deaths occur in circumstances medically suitable for solid-organ donation (typically brain death in ICU). Of registered donors who die in such circumstances, family-override and procedural failures further reduce the realised donation rate.
+      - Lifetime probability of registered donor producing solid-organ donation: ~0.5%. Tissue donation is more common (eligible from a much wider range of deaths) but with smaller per-donor recipient benefit. The overall ISR captures both pathways combined but heavily weighted by the rare-but-high-impact solid-organ scenario.
+    uar_reasoning: |
+      - One-time setup with no ongoing user effort. UAR of 90% reflects users who complete registration once decided; the family conversation and Medical ID notation steps are sometimes skipped, which reduces realised donation but doesn't affect the registration itself.
+
+  emergency-preparedness.baseline:
+    pbs: 2
+    isr: 80
+    uar: 90
+    confidence: low
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Donor registration is one small component of a broader emergency-preparedness picture (alongside Medical ID, advance directive, will). Endpoint: 38th–42nd percentile. Delta: small.
+      - PBS 2 ("slight gain in baseline emergency preparedness") reflects that registration mainly informs end-of-life decision-making rather than affecting any during-life emergency response.
+    isr_reasoning: |
+      - The preparedness benefit is realised when end-of-life decisions are needed; conditional on that, the registration unambiguously communicates the user's choice. ISR 80% reflects family-override risk, which can negate the registration even when the situation is otherwise clear.
+    uar_reasoning: |
+      - See global-impact.impartiality UAR.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No cost. Donor registration is free in every major national system."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost."
+  upfront_time: 0.25
+  upfront_time_reasoning: "About 10–15 minutes: 5 minutes for the online registration form, plus a 5–10-minute conversation with family members. The conversation is the more time-sensitive component for ensuring the registration's intent is honoured."
+  ongoing_time: 0
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "No ongoing time required after registration. Updating registration after major life changes (jurisdiction change, change of mind on tissue/organ specifics) takes a few minutes when needed."
+
+prerequisites:
+  - "Adult age and legal capacity in the relevant jurisdiction (typically 18+)"
+  - "Willingness to discuss the decision with immediate family members"
+  - "Consideration of the decision; donation is a personal choice and not appropriate for everyone (some religious traditions, for example, have specific guidance worth consulting)"

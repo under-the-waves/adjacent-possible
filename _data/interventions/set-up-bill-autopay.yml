@@ -1,0 +1,69 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Set Up Bill Autopay"
+quick_win: true
+quick_win_cadence: setup
+what_it_is: |
+  Configuring automatic payment for recurring bills – utilities, credit cards, insurance, subscriptions, mortgage or rent – so each bill is paid in full on or before the due date without manual intervention. Removes the late-payment failure mode (which costs ~$25–40 per missed bill plus credit-score damage) and eliminates the recurring time cost of bill-tracking. Setup takes 15–30 minutes per provider, completed once, and runs automatically thereafter. The intervention is distinct from [automated savings](/resources/intervention-database/automated-savings) (transfers into your own accounts) – this is automated outflow to bill providers.
+how_to_do_it: |
+  - List every recurring bill: utilities (electricity, gas, water, internet, mobile), credit cards, insurance premiums, mortgage or rent, subscription services, and any loan payments
+  - For each provider, log into their portal and enable autopay; prefer "pay full balance" rather than "minimum payment" for credit cards (avoiding interest); confirm the payment date sits a few days before the actual due date to leave a buffer
+  - Set up alerts for failed payments – most providers email or text on autopay failures, but not all do; configure your bank account to alert on returned payments as a backstop
+  - Maintain a small buffer in the bill-paying account (typically one month of bills) so the autopay never bounces during a temporary cash-flow squeeze
+success_looks_like: |
+  - Every recurring bill is paid in full on or before the due date without your manual involvement
+  - You haven't paid a late fee in the last 12 months and your credit utilisation is stable
+  - The buffer in your bill-paying account is sufficient to absorb a 10–20% cash-flow shock without an autopay bounce
+common_pitfalls: |
+  - Setting credit-card autopay to "minimum payment" rather than "full balance" – the autopay protects against late fees but leaves interest accumulating on the unpaid portion, which is much more expensive than the late fees would have been
+  - Failing to maintain a buffer in the bill-paying account; an autopay bounce typically costs $30–35 plus a missed-payment hit on the credit report, undoing the benefit
+  - Not reviewing autopay charges – providers occasionally raise prices or add fees, and a fully automated payment can mask price increases that you'd otherwise have noticed and pushed back on
+description: |
+  - Enabling autopay for utilities, credit cards, insurance, subscriptions, and major recurring obligations; pay full balance on credit cards rather than minimum payment
+  - [Federal Reserve research](https://www.federalreserve.gov/publications/2024-economic-well-being-of-us-households-in-2023.htm) finds that ~20% of US adults pay at least one late fee per year on credit cards alone; autopay structurally eliminates this failure mode
+  - Setup is one-time per provider (~5–15 minutes each); ongoing time is negligible once configured beyond a periodic review of charges
+  - Distinct from [automated savings](/resources/intervention-database/automated-savings) which moves money into the user's own savings; this moves money out to bill providers, addressing a different failure mode
+applicable_domains: ["financial-planning-tracking", "saving"]
+
+values:
+  financial-planning-tracking.accuracy:
+    pbs: 5
+    isr: 95
+    uar: 85
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. The user moves from manual bill-tracking (often error-prone, with occasional late fees) to fully automated payment with periodic review – a substantial improvement in cash-flow accuracy. Endpoint: 60th–65th percentile.
+      - PBS 5 ("meaningful gain") reflects that autopay removes a recurring source of friction and small financial leakage, but doesn't address the broader budgeting and cash-flow management questions that fuller financial planning interventions cover.
+    isr_reasoning: |
+      - Once configured, autopay reliably executes; failure rates are well under 5% in normal cash-flow conditions. The intervention's impact on cash-flow accuracy is essentially deterministic.
+    uar_reasoning: |
+      - One-time setup per provider with minimal ongoing user effort. UAR of 85% reflects users who, having decided to enable autopay, work through their bill portfolio in one or two sessions; the remaining 15% set up some bills but not others.
+
+  saving.security:
+    pbs: 4
+    isr: 80
+    uar: 85
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Avoiding late fees and bounce charges adds up: 6–10 missed payments per year averted at $25–35 each ≈ $150–350/year in saved fees, plus avoided credit-score damage that could otherwise cost ~$50–200/year in higher interest rates on future borrowing.
+      - PBS 4 reflects a modest but tangible gain in financial security – a few hundred dollars per year of preserved cash plus reduced volatility in financial life. Not transformative but durable.
+    isr_reasoning: |
+      - The fee-avoidance benefit is reliable but contingent on maintaining the buffer in the bill-paying account; users who run accounts close to zero see autopay bounces that recreate the cost they were trying to avoid. ISR 80% reflects this dependency.
+    uar_reasoning: |
+      - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No cost. Autopay is free with every major utility, credit card, and subscription provider."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost beyond the bills themselves, which the user owes regardless. Autopay typically saves money via avoided late fees."
+  upfront_time: 1.5
+  upfront_time_reasoning: "About 1–2 hours total: 5–15 minutes per provider × 8–12 typical recurring bills, plus time to make a list and verify each works after the first billing cycle."
+  ongoing_time: 0.1
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "Roughly 5–10 minutes per month to skim payment confirmations and check for unexpected charges. The 'review charges quarterly' habit takes ~30 minutes per quarter."
+
+prerequisites:
+  - "A bank account with sufficient funds plus buffer to cover recurring bills, OR a credit card eligible for autopay with full-balance payment"
+  - "List of recurring bills and the provider portals to log into for each"

@@ -2,6 +2,8 @@ evaluated_at: 2026-05-02
 evaluated_by: claude-opus-4-7
 prompt_sha: a48aaee
 name: "Sinking-Fund System"
+quick_win: true
+quick_win_cadence: setup
 what_it_is: |
   A budgeting practice of pre-funding predictable irregular expenses through named savings sub-accounts (or sub-categories within a single account), with each contributing a small monthly amount that accumulates between events. Typical sinking funds: car maintenance and repairs, holidays, annual insurance premiums, gifts, electronics replacement, home maintenance, professional development, medical or dental out-of-pocket costs, vehicle replacement. The mechanism converts irregular expense surprises – which most households experience as chronic financial stress and frequent emergency-fund raids – into a routine monthly outflow that matches the actual long-run cost of being a normal adult. Distinct from a [budgeting app](/resources/intervention-database/comprehensive-budgeting-app) (which provides visibility on past spending) and [automated savings](/resources/intervention-database/automated-savings) (which moves money but does not allocate it by purpose): this intervention is specifically about pre-allocating the saving against named upcoming expenses, so each predictable cost has a dedicated container that fills steadily and depletes as needed. The practice is the financial-planning side of the equation; the automated-transfers mechanism is its natural pairing.
 how_to_do_it: |

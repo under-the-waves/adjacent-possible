@@ -1,0 +1,69 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Review and Cancel Unused Subscriptions"
+quick_win: true
+quick_win_cadence: rare_check
+what_it_is: |
+  Auditing recurring subscriptions – streaming services, software-as-a-service, gym memberships, magazine and newspaper subscriptions, app subscriptions, mobile-data add-ons, cloud storage – and cancelling those you don't actively use. Most adults accumulate 5–15 active subscriptions over time, of which 3–8 are unused or under-used. The audit takes 30–60 minutes once and typically saves $200–600 per year (more for households with multiple users on different platforms). Repeat annually because new subscriptions accumulate over time.
+how_to_do_it: |
+  - Pull the last 3 months of bank and credit-card statements (most banking apps have search-by-merchant) and list every recurring charge you see; supplement with App Store / Play Store subscription menus, which catch app-based subscriptions that bank statements alone may miss
+  - For each subscription, ask: have I used it in the last 30 days? Will I miss it if it stops? If both are no, cancel; if you're unsure, downgrade to a free tier (where available) or pause for 1–3 months
+  - For services you do use but pay full price for, check whether a cheaper plan, annual prepay discount, or family/group rate would lower the cost without reducing usage
+  - Set a calendar reminder for an annual repeat review; subscription drift accumulates faster than people expect
+success_looks_like: |
+  - Every active recurring charge corresponds to a service you used in the last 30 days
+  - Your monthly subscription bill is materially lower than it was before the audit, with the saved amount redirected to either savings (see [automated savings](/resources/intervention-database/automated-savings)) or other priorities
+  - You repeat the audit annually, catching new drift
+common_pitfalls: |
+  - Only auditing obvious subscriptions (streaming, software) and missing app-based subscriptions, in-app subscriptions, and quasi-subscriptions like recurring "donations" or auto-renewed memberships
+  - Cancelling and immediately re-subscribing to a competitor service that doesn't actually offer different content – often the better move is to pause first and see if the gap matters
+  - Forgetting to cancel a free trial; many "free trials" auto-convert to paid subscriptions, which is the start of the next year's drift
+description: |
+  - Auditing recurring subscriptions and cancelling those that aren't being actively used; typical adult subscription bills include 5–15 active services, with 30–50% under-used or unused
+  - [Bank of America research (2023)](https://newsroom.bankofamerica.com/content/newsroom/press-releases.html) and [C+R Research's 2022 subscription survey](https://www.crresearch.com/blog/2022-subscription-service-statistics-and-costs) report that the average US adult underestimates monthly subscription spending by 60–80% on first reckoning – the actual total is typically 2–3× the user's mental estimate
+  - Annual savings from a one-time audit typically $200–600 for a single user, $500–1,500 for a household with multiple subscribers across overlapping services
+  - Subscription drift accumulates faster than people expect; an annual repeat is necessary because new services and price increases regularly appear
+applicable_domains: ["saving", "financial-planning-tracking"]
+
+values:
+  saving.growth:
+    pbs: 4
+    isr: 90
+    uar: 75
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. Cancelling unused subscriptions yields $200–600/year for a typical single user. Over 30 years invested at 5% real return, this compounds to roughly $13K–$40K – a modest but durable saving-rate uplift. Endpoint: ~50th percentile.
+      - PBS 4 reflects a real, persistent improvement in savings rate from a one-time action. Score not higher because the absolute amount is small relative to interventions like [retirement match capture](/resources/intervention-database/claim-employer-retirement-match) or [automated savings](/resources/intervention-database/automated-savings).
+    isr_reasoning: |
+      - The mechanism is direct and reliable: cancelled subscriptions stop billing. ISR 90% reflects that users sometimes accidentally re-subscribe (free trials, "limited time" offers from cancelled providers) which partially undoes the saving.
+    uar_reasoning: |
+      - One-time audit per cycle. UAR of 75% reflects users who complete the full audit (statements + app stores) rather than partial; the second-year repeat has lower adherence than the first because the visible saving feels smaller after the bulk has already been cancelled.
+
+  financial-planning-tracking.accuracy:
+    pbs: 3
+    isr: 90
+    uar: 75
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. The audit improves cash-flow accuracy by aligning reported recurring spending with actual consumption. Endpoint: 45th percentile.
+      - PBS 3 ("modest gain") reflects narrow scope – the audit doesn't address broader budgeting, just the specific subscription-drift failure mode.
+    isr_reasoning: |
+      - Mechanism is reliable; cancelled subscriptions clean up cash-flow tracking immediately.
+    uar_reasoning: |
+      - See saving.growth UAR.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No cost. The audit and cancellations are free; cancellation flows are sometimes friction-heavy but never financially gated."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost. Net effect is a saving."
+  upfront_time: 1
+  upfront_time_reasoning: "About 30–60 minutes for the first audit: 15–30 minutes to compile the list from bank statements and app stores, 15–30 minutes to work through cancellation flows. Some providers (gyms, traditional cable, magazines) deliberately make cancellation difficult and add time."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Roughly 30–60 minutes per year for the repeat audit. Less than the first round because the user has the methodology and a baseline list."
+
+prerequisites:
+  - "Access to bank and credit-card statements (paper or online)"
+  - "Access to App Store / Play Store subscription menus and any app-specific subscription portals"

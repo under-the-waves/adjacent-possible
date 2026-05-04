@@ -2,6 +2,8 @@ evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
 prompt_sha: 2798af5
 name: "Comprehensive Budgeting App"
+quick_win: true
+quick_win_cadence: setup
 what_it_is: |
   Adopting a structured budgeting tool – such as YNAB, Monarch Money, Copilot, or a similar account-aggregating app – that links to your main bank account, credit cards, and investment accounts, automatically pulls every transaction, categorises spending, and surfaces patterns through dashboards and monthly reports. This replaces ad-hoc spreadsheets, mental tracking, or end-of-month bank statement reviews with continuous, near-complete visibility over where money actually goes. The intervention is distinct from automated savings: this is about visibility and category-level decision-making, not about moving money into savings accounts. Most adults track spending poorly – [Federal Reserve consumer survey data](https://www.federalreserve.gov/publications/files/2023-report-economic-well-being-us-households-202405.pdf) finds roughly two thirds of adults could not cover a $400 emergency from cash, in part because they lack a working model of their own cashflow. A linked budgeting app closes that visibility gap with a few hours of one-time setup and 15–20 minutes of weekly review.
 how_to_do_it: |

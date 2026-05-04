@@ -1,6 +1,8 @@
 evaluated_at: 2026-03-21
 evaluated_by: claude-opus-4-7
 name: "Basic Tax Optimisation"
+quick_win: true
+quick_win_cadence: rare_check
 what_it_is: |
   Using the tax-efficient wrappers your government already provides – tax-advantaged savings accounts (ISAs in the UK, Roth/traditional IRAs and 401(k)s in the US, RRSPs and TFSAs in Canada, and equivalents elsewhere), pre-tax retirement contributions, employer pension matches, and capital gains and dividend allowances – to ensure your savings and investments are held in the most favourable structures available in your jurisdiction. This is not aggressive tax planning; it is simply making sure you are not paying tax you do not need to pay. Specific instruments and limits vary substantially by country, so the principles described here should be mapped to your local equivalents. Works best when combined with [Automated Savings](/resources/intervention-database/automated-savings) to direct transfers into the right accounts from the start.
 how_to_do_it: |

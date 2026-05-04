@@ -1,0 +1,71 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Annual Credit Report Check"
+quick_win: true
+quick_win_cadence: rare_check
+what_it_is: |
+  Pulling a free copy of your credit report from each major credit bureau once per year and reviewing it for errors and signs of identity theft – unauthorised accounts, hard inquiries you don't recognise, addresses that aren't yours. In the US, the three major bureaus (Equifax, Experian, TransUnion) are required by federal law to provide a free report annually via [annualcreditreport.com](https://www.annualcreditreport.com); equivalent statutory access exists in many other jurisdictions. Identity theft caught early via report review costs the user 5–20 hours of remediation time; identity theft caught late (after a fraudulent loan or rental application) typically costs hundreds of hours and meaningful financial damage.
+how_to_do_it: |
+  - Visit [annualcreditreport.com](https://www.annualcreditreport.com) (US) or your local equivalent and request reports from all three bureaus; consider staggering them across the year (one every four months) to maintain coverage rather than all at once
+  - Review each report carefully for: accounts you don't recognise, addresses that aren't yours, hard inquiries you didn't authorise, and personal-information fields that look wrong
+  - For any disputed item, follow the bureau's online dispute process; bureaus must investigate and respond within 30 days under the Fair Credit Reporting Act
+  - Consider freezing your credit at all three bureaus if you don't expect to apply for new credit soon – this is free and prevents most types of identity-theft account opening; unfreeze temporarily when you do need new credit
+success_looks_like: |
+  - You have reviewed credit reports from all three major bureaus in the last 12 months
+  - Every account, address, and inquiry on each report is accounted for
+  - You know how to dispute errors and have done so for any you found, OR you have no errors to dispute
+common_pitfalls: |
+  - Using third-party "free credit score" services as a substitute for the actual report; these show the score but typically don't show the full account list, addresses, and inquiry history that's required to spot identity theft
+  - Reviewing the report quickly and missing minor errors (an inquiry from a creditor you don't remember) – these are sometimes the first indication of identity theft
+  - Assuming credit-monitoring service alerts replace the manual review; monitoring catches new activity but doesn't catch errors that pre-date the monitoring start
+description: |
+  - Free annual credit report access via [annualcreditreport.com](https://www.annualcreditreport.com) (US, mandated by the Fair Credit Reporting Act) or equivalent in other jurisdictions; the action takes 30–60 minutes for a thorough review
+  - [Federal Trade Commission identity-theft data](https://www.consumer.ftc.gov/articles/0270-identity-theft) consistently identifies credit-report review as one of the most effective early-detection mechanisms; the FTC reports ~1.4 million identity-theft cases annually in the US
+  - Average financial loss from identity theft varies by type but the [Bureau of Justice Statistics](https://bjs.ojp.gov/library/publications/victims-identity-theft-2018) reports out-of-pocket losses average several hundred dollars per incident, with much higher costs (lost time, denied credit) when discovery is delayed
+  - Distinct from broader credit-monitoring services: this is the free, statutory annual review, sufficient for most users who don't have specific reason to suspect ongoing identity theft
+applicable_domains: ["digital-safety", "financial-planning-tracking"]
+
+values:
+  digital-safety.security:
+    pbs: 7
+    isr: 0.5
+    uar: 75
+    confidence: medium
+    pbs_reasoning: |
+      - Conditional on success (the review catches identity theft early), the user has avoided substantial damage – typical late-discovery identity theft costs 100+ hours of remediation, denied credit applications, fraudulent debt assigned to the user, and sometimes thousands of dollars of out-of-pocket loss before insurance recovers it.
+      - PBS 7 reflects substantial conditional benefit; not at the top because the most severe identity-theft scenarios (synthetic identity, full takeover with bank-account drain) have other mitigations (2FA, password managers) that reduce the marginal contribution of a credit-report review.
+    isr_reasoning: |
+      - ISR is the lifetime probability that the annual review catches identity theft early enough to prevent meaningful damage, conditional on doing the review and theft occurring.
+      - US identity-theft incidence is ~5–6% per year per [BJS data](https://bjs.ojp.gov/library/publications/victims-identity-theft-2018); over a 70-year adult life, lifetime probability of being affected at some point is high (40–50%+), but the annual review specifically catches early-stage account-opening identity theft that the user hasn't otherwise noticed. Conditional on a review and a relevant theft event in that year, probability of useful early detection ≈ 50%.
+      - Combined: ~0.5% lifetime probability of the review producing a meaningfully better outcome than not reviewing (most identity theft is caught some other way; the review catches the slow-burning fraud cases that otherwise compound over months or years).
+    uar_reasoning: |
+      - UAR captures whether users complete the annual review; many start (request the report) but skim or skip the line-by-line review. 75% reflects users who complete a thorough review when they begin.
+
+  financial-planning-tracking.accuracy:
+    pbs: 3
+    isr: 90
+    uar: 75
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. The review surfaces all open accounts and credit obligations in one place, improving the user's mental model of their financial obligations. Endpoint: 45th percentile.
+      - PBS 3 ("modest gain") reflects narrow scope – the review's main value is identity-theft detection, not broader financial planning.
+    isr_reasoning: |
+      - The accuracy benefit is reliable; reviewing the report unambiguously surfaces the user's full credit-account list.
+    uar_reasoning: |
+      - See digital-safety.security UAR.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No cost. The statutory annual report from each bureau is free in the US (under the Fair Credit Reporting Act) and similarly free in many other jurisdictions."
+  ongoing_cost: 0
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "No ongoing cost beyond the user's time. Optional credit-monitoring services cost $10–30/month but are not required for the annual-review intervention."
+  upfront_time: 1
+  upfront_time_reasoning: "About 30–60 minutes for the first review: 10–15 minutes to request reports from all three bureaus, 30–45 minutes to review each carefully. Disputes (if found) add 15–30 minutes per dispute filed."
+  ongoing_time: 1
+  ongoing_time_period: "year"
+  ongoing_time_reasoning: "Roughly 30–60 minutes per year for the repeat review. Time spent on disputes varies with what you find."
+
+prerequisites:
+  - "Access to credit history; the intervention applies to adults with established credit (typically 6+ months of credit history)"
+  - "Identity-verification information: SSN, address history, prior account details that the bureaus use to authenticate the request"

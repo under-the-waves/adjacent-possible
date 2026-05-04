@@ -1,0 +1,76 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Enable Two-Factor Authentication"
+quick_win: true
+quick_win_cadence: setup
+what_it_is: |
+  Turning on two-factor authentication (2FA) – ideally via an authenticator app such as Aegis, Authy, or a built-in OS authenticator – on the most consequential accounts: email, banking, financial brokerages, password manager, cloud storage, and primary social media. Once enabled, signing in requires both the password and a short code from the second-factor device, structurally blocking account takeover from credential leaks. This is the single highest-leverage security intervention after a [password manager](/resources/intervention-database/password-manager-setup), and the only one that protects against the credential breaches that happen to third-party sites you don't control.
+how_to_do_it: |
+  - Install an authenticator app (Aegis on Android, the built-in Passwords / Settings app on iOS, or 1Password / Bitwarden if you use a password manager that supports TOTP)
+  - Work through accounts in order of sensitivity: email first (because email controls password resets for everything else), then banking and brokerage, then cloud storage, then social media; allow about 2–3 minutes per account
+  - Prefer authenticator-app codes over SMS where both are offered – SMS is vulnerable to SIM-swap attacks and is meaningfully less secure than TOTP codes
+  - Save the backup recovery codes provided during setup somewhere durable (a printed copy in a safe, or stored in your password manager) – losing the second-factor device without backup codes can lock you out permanently
+success_looks_like: |
+  - Every account holding money, identity, or sensitive data prompts for a second factor at sign-in, with backup codes stored somewhere you can reach if your phone is lost
+  - You no longer worry about a third-party data breach exposing one of your reused passwords because that wouldn't be enough to access your accounts
+  - Setup is done once and then runs invisibly – the per-login friction is roughly 5 seconds and the protection is continuous
+common_pitfalls: |
+  - Enabling 2FA only on the most prominent account (email) and leaving banking, brokerage, and cloud storage exposed – attackers target the weakest link
+  - Setting up SMS-based 2FA without realising that SIM-swap attacks bypass it; an authenticator app is meaningfully more secure
+  - Failing to save backup codes; losing the phone without them can permanently lock you out, especially for accounts with no human support channel
+description: |
+  - Enable 2FA on email, banking, brokerage, cloud storage, password manager, and primary social media accounts; prefer an authenticator app over SMS
+  - [Microsoft research (2019)](https://www.microsoft.com/en-us/security/blog/2019/08/20/one-simple-action-you-can-take-to-prevent-99-9-percent-of-attacks-on-your-accounts/) found that 2FA blocks over 99.9% of automated account compromise attempts; the figure has been confirmed in multiple subsequent industry reports
+  - [Google Project Zero (2019)](https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html) found device-bound second factors prevented 100% of automated bot attacks and 96% of bulk phishing attempts in a multi-year audit of Google account compromises
+  - The intervention is a one-time setup costing ~30–60 minutes total; ongoing per-login friction is negligible (5 seconds per sign-in, less if using a hardware key or passkey)
+  - Distinct from [password manager setup](/resources/intervention-database/password-manager-setup) and [learning basic cybersecurity practices](/resources/intervention-database/learning-basic-cybersecurity-practices): both of those are broader bundles; this is the specific 2FA component, isolated as a fast, high-impact one-time action
+applicable_domains: ["digital-safety"]
+
+values:
+  digital-safety.security:
+    pbs: 8
+    isr: 95
+    uar: 75
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. After enabling 2FA on key accounts, the user reaches roughly the 80th–85th percentile on digital security – credential-stuffing and basic phishing are structurally blocked across the user's entire account surface. Delta: ~45 percentile points.
+      - The mechanism is structurally hard to bypass: even with the password, an attacker needs either the user's authenticator device or to defeat the second-factor flow, which is feasible only via targeted attacks (adversary-in-the-middle, sophisticated phishing). For commodity attacks, [Microsoft (2019)](https://www.microsoft.com/en-us/security/blog/2019/08/20/one-simple-action-you-can-take-to-prevent-99-9-percent-of-attacks-on-your-accounts/) and [Google (2019)](https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html) both report 99%+ blocking rates.
+      - Score 8 rather than 9 reflects residual exposure: SMS-based 2FA is bypassable via SIM-swap, AitM phishing kits can intercept TOTP codes, and account recovery flows sometimes circumvent 2FA. A user using authenticator-app codes on all sensitive accounts captures the upper end of this PBS range.
+    isr_reasoning: |
+      - Once 2FA is enabled and the second-factor device is in use, the protection mechanism is near-deterministic for commodity credential-stuffing and basic phishing. [Google Project Zero](https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html) measured 100% blocking of automated bot attacks for device-bound factors.
+      - Small ISR discount captures: SMS-based 2FA with SIM-swap exposure (~5–10% bypass rate per industry incident reporting), AitM phishing kits that defeat TOTP (limited deployment but rising), and the small share of users who configure 2FA but later disable it on a sensitive account during a friction-driven login flow.
+    uar_reasoning: |
+      - This is a one-time setup with minimal ongoing friction – once configured, 2FA runs continuously without further user effort. The UAR question is whether users actually finish setup across all sensitive accounts rather than enabling on email and stopping.
+      - [Security.org's 2024 password manager and 2FA survey](https://www.security.org/digital-safety/password-manager-annual-report/) found 52% of US adults use 2FA on at least one account but coverage drops sharply across the sensitive-account portfolio. UAR of 75% reflects users who, having decided to enable 2FA, work through their key accounts within a single session – a substantial majority but not all.
+
+  digital-safety.convenience:
+    pbs: -3
+    isr: 95
+    uar: 75
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile. 2FA introduces a recurring friction at every sign-in to a protected account – usually 5–10 seconds and a phone interaction. Endpoint: ~25th percentile on convenience. Delta: ~−10 percentile points.
+      - Score −3 reflects modest but real ongoing convenience cost: mostly invisible thanks to "remember this device" options, but visibly worse on shared or new devices, and intermittently disruptive when the second-factor device is unavailable (flat battery, lost phone, switched to a new device without migrating tokens).
+      - The convenience cost is bounded because most accounts allow trusted-device persistence; a fully bypass-by-default setup would be PBS −5 to −7. Most users land at PBS −3 with sensible trusted-device configuration.
+    isr_reasoning: |
+      - The convenience cost reliably materialises – it is a direct mechanical consequence of enabling the second factor. Users who keep 2FA on consistently see the friction at every fresh login.
+      - Small ISR discount because some users skip the friction in practice via aggressive trusted-device persistence, hardware keys with seamless tap-to-confirm flows, or passkey-based sign-ins, all of which substantially reduce the per-login overhead.
+    uar_reasoning: |
+      - See digital-safety.security UAR – same intervention, same adherence profile.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "Authenticator apps (Aegis, the built-in iOS/macOS Passwords app, Bitwarden's TOTP feature) are free. No paid hardware key required for the core intervention; users wanting hardware-key 2FA can spend $25–60 on a YubiKey or equivalent, but that's optional."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No ongoing cost. Authenticator apps and built-in OS support are free indefinitely."
+  upfront_time: 1
+  upfront_time_reasoning: "About 30–60 minutes to install an authenticator app, work through 8–12 sensitive accounts, save backup codes, and verify each works on a test login. Some accounts (banking) take longer because of identity-verification re-checks; others (most consumer apps) take 1–2 minutes each."
+  ongoing_time: 0.05
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "Negligible ongoing time once configured – ~3 minutes per week averaged across the per-login second-factor confirmations on protected accounts. Trusted-device persistence eliminates the friction on most regular logins."
+
+prerequisites:
+  - "A smartphone or computer that can run an authenticator app, plus accounts that support 2FA (most major email, banking, social, and cloud-storage providers do)"
+  - "A password manager already in use, or unique strong passwords on the accounts you're enabling 2FA on – 2FA only protects accounts that aren't already compromised by a reused password"
+  - "Somewhere durable to store recovery codes (printed in a safe, or stored in the password manager) so device loss doesn't lock you out permanently"

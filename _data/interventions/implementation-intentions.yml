@@ -2,6 +2,8 @@ evaluated_at: 2026-05-02
 evaluated_by: claude-opus-4-7
 prompt_sha: a48aaee
 name: "Implementation Intentions"
+quick_win: true
+quick_win_cadence: routine
 what_it_is: |
   A simple but heavily evidenced planning technique in which a person formulates explicit "if situation X arises, then I will do Y" plans in advance of the moment of action. The structure pairs a concrete cue (a time, a location, an internal state, an interrupting event) with a concrete response, so that the cue itself triggers the intended behaviour rather than relying on remembering or deciding in the moment. The technique was introduced and refined over three decades of laboratory and field work, with [a meta-analysis of 94 studies](https://psycnet.apa.org/doiLanding?doi=10.1016%2FS0065-2601%2806%2938002-1) finding a medium-to-large effect (d = 0.65) on goal attainment across diverse domains – exercise initiation, dietary change, screening behaviours, study habits, voting turnout, and more. Distinct from [habit stacking](/resources/intervention-database/habit-stacking) (which specifically anchors a new behaviour to an existing habit), from [eliminating micro-decisions](/resources/intervention-database/eliminating-micro-decisions) (which removes recurring low-stakes choices entirely), and from generic goal-setting (which specifies what but not when or where). Implementation intentions specify the where/when/how triggering condition for any goal-relevant action.
 how_to_do_it: |

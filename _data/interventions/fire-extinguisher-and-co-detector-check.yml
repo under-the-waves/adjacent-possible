@@ -1,0 +1,70 @@
+evaluated_at: 2026-05-04
+evaluated_by: claude-opus-4-7
+name: "Fire Extinguisher and CO Detector Check"
+quick_win: true
+quick_win_cadence: rare_check
+what_it_is: |
+  Verifying that the household has at least one accessible fire extinguisher and at least one carbon-monoxide (CO) detector, and that both are functional. Fire extinguishers should be unexpired, fully charged (gauge in the green zone), and stored where someone can reach them within seconds of a small kitchen or electrical fire. CO detectors should be tested monthly and replaced every 5–10 years per manufacturer recommendations, and placed near sleeping areas where occupants would be exposed if CO levels rose during sleep. Together with [smoke alarms](/resources/intervention-database/ensuring-smoke-alarms-are-working), these are the three core household fire-and-air-safety devices; this intervention covers the two that smoke alarms don't.
+how_to_do_it: |
+  - Confirm at least one fire extinguisher is on each floor and within reach of the kitchen (the most common location of small household fires); type ABC ("multipurpose") covers most household fire types; check the gauge is in the green zone and the inspection tag is current
+  - Replace any fire extinguisher older than 12 years (or the manufacturer's stated lifespan), or any with the gauge in the red zone, or any that's been partially discharged
+  - Confirm at least one CO detector outside each sleeping area; battery-powered or hardwired both work, but hardwired with battery backup is most reliable; test monthly using the test button
+  - Replace any CO detector older than its manufacturer-rated lifespan (5–10 years – check the date on the back of the unit); the sensing element degrades silently and an old detector may fail to alert even when the test button still works
+success_looks_like: |
+  - At least one functional ABC fire extinguisher per floor, within reach of the kitchen, with current inspection tag
+  - At least one functional CO detector outside each sleeping area, tested in the last month, replaced within manufacturer's stated lifespan
+  - You and other adult household members know where the extinguishers are and how to use them (PASS technique: Pull pin, Aim at base, Squeeze handle, Sweep side to side)
+common_pitfalls: |
+  - Storing the fire extinguisher in a difficult-to-reach location (back of a cupboard, in the garage); the most common small kitchen fires require access in seconds, not minutes
+  - Replacing the battery in a CO detector but not the unit itself; CO sensing elements have a finite lifespan and a beeping low-battery is sometimes confused with end-of-life signal
+  - Confusing CO detectors with smoke alarms; some combination units exist but many homes have only smoke alarms and assume those cover both, which they don't
+description: |
+  - Verifying functional fire extinguisher and CO detector coverage; both are required by housing codes in most jurisdictions but compliance is regularly under-maintained
+  - [NFPA fire-extinguisher research](https://www.nfpa.org/education-and-research/research/nfpa-research/fire-statistical-reports/portable-fire-extinguishers) and [CDC CO-poisoning surveillance](https://www.cdc.gov/co/risks.htm) consistently identify under-coverage and stale equipment as primary contributors to preventable fire and CO deaths; the CDC reports ~430 CO deaths per year and tens of thousands of ER visits in the US, with detector absence as a major risk factor
+  - Equipment costs ~$30–60 for a household of fire extinguishers and CO detectors; ongoing maintenance is monthly testing and 5–12 year replacement
+  - Distinct from [smoke alarms](/resources/intervention-database/ensuring-smoke-alarms-are-working) which detect smoke, and [emergency survival kit](/resources/intervention-database/preparing-an-emergency-survival-kit) which addresses post-emergency self-sufficiency
+applicable_domains: ["physical-safety", "emergency-preparedness"]
+
+values:
+  physical-safety.risk:
+    pbs: 9
+    isr: 0.15
+    uar: 65
+    confidence: medium
+    pbs_reasoning: |
+      - Conditional on success (the extinguisher catches a fire before it spreads, OR the CO detector alerts before CO levels become incapacitating), the user has avoided either a structure fire (with substantial mortality risk) or CO poisoning (which can kill an entire sleeping household). The conditional benefit is large – on the same scale as smoke alarms.
+      - PBS 9 reflects the substantial conditional benefit, slightly below smoke alarms (PBS 10) because some of the avoided scenarios (small contained fire) are less consistently lethal than the smoke-alarm scenarios.
+    isr_reasoning: |
+      - ISR is the lifetime probability that the equipment delivers a meaningful safety outcome. CO poisoning lifetime probability is ~0.05–0.1% in homes without working detectors; small kitchen-fire incidence is higher but most are extinguished without serious harm even without dedicated equipment.
+      - Combined ~0.15% lifetime probability of the equipment producing a clearly different (better) outcome than nothing.
+    uar_reasoning: |
+      - One-time setup with monthly-test maintenance. UAR 65% reflects users who maintain the equipment over time; many install once and let it drift to expired, which substantially reduces realised effectiveness.
+
+  emergency-preparedness.baseline:
+    pbs: 4
+    isr: 85
+    uar: 65
+    confidence: high
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Adding fire-extinguisher and CO-detector coverage to the household closes two specific gaps in baseline preparedness. Endpoint: 50th percentile.
+      - PBS 4 ("modest gain") reflects narrow scope – important but bounded contribution to overall preparedness.
+    isr_reasoning: |
+      - The preparedness benefit is reliable when equipment is maintained; the equipment itself is well-tested and standardised.
+    uar_reasoning: |
+      - See physical-safety.risk UAR.
+
+resources:
+  upfront_cost: 60
+  upfront_cost_reasoning: "Approximately $30–60 for a household: ABC fire extinguisher ~$25–40, CO detector ~$20–40 for battery-operated; more for combo smoke/CO units or interconnected hardwired systems. If installing from scratch with multiple of each, upfront cost can reach $100–150."
+  ongoing_cost: 15
+  ongoing_cost_period: "year"
+  ongoing_cost_reasoning: "Roughly $15/year: amortised replacement of fire extinguishers every 12 years (~$3/year) and CO detectors every 5–10 years (~$3–8/year for one unit, more for multiple), plus battery replacement (~$3–5/year)."
+  upfront_time: 0.5
+  upfront_time_reasoning: "About 20–30 minutes to inventory existing equipment, identify gaps, and purchase replacements if needed. Installation of a battery-operated CO detector takes ~5 minutes per unit."
+  ongoing_time: 0.08
+  ongoing_time_period: "month"
+  ongoing_time_reasoning: "About 5 minutes per month to test the CO detector(s) using the test button, plus an annual visual check on the fire extinguisher gauge."
+
+prerequisites:
+  - "A permanent residence (owned or rented) where you can install or maintain detectors and store fire extinguishers"
+  - "Basic familiarity with the PASS technique for fire-extinguisher use; brief videos from local fire departments are widely available"
