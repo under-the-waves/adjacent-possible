@@ -1226,3 +1226,109 @@ a.completed-guide:hover,
     padding: 8px 0 4px;
   }
 }
+
+/* ──────────────────────────────────────────────────────────── */
+/* Mobile UX: hamburger toggle, nav collapse, padding, headings */
+/* ──────────────────────────────────────────────────────────── */
+
+/* Desktop layout: collapse container is just a flex row of nav items */
+.nav-collapse {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+/* Hamburger toggle: hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 12px;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-toggle__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.navbar.is-open .nav-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar.is-open .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+.navbar.is-open .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  /* Override earlier rule that made .navbar flex-direction: column.
+     Keep navbar as a row so logo + hamburger sit side-by-side. */
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Collapse container: hidden by default on mobile */
+  .nav-collapse {
+    display: none;
+    width: 100%;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .navbar.is-open .nav-collapse {
+    display: flex;
+  }
+
+  /* Stop the previous rules forcing each .site-nav to width:100% — let
+     the nav-collapse container handle stacking. The existing mobile
+     rules that targeted .site-nav directly still produce the right look. */
+  .navbar.is-open .site-nav {
+    width: 100%;
+  }
+}
+
+/* Mobile: tighten Cayman theme's heavy main-content side padding
+   (default is 2rem 6rem — 6rem on phones leaves almost no room).
+   Also reduce h1 size so titles don't wrap onto 3 lines. */
+@media (max-width: 768px) {
+  .main-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .main-content h1,
+  h1 {
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+
+  .main-content h2,
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}

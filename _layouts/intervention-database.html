@@ -364,11 +364,22 @@ body .main-content {
     .db-table {
         display: block;
         overflow-x: auto;
-        white-space: nowrap;
         font-size: 0.8em;
     }
     .db-table th, .db-table td {
         padding: 8px 4px;
+        white-space: nowrap;
+    }
+    /* Let intervention names wrap so they don't run off the screen */
+    .db-table td:first-child {
+        white-space: normal;
+    }
+    .intervention-name {
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+    .intervention-link {
+        word-break: break-word;
     }
 }
 </style>
