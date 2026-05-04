@@ -669,14 +669,15 @@
   color: #007bff !important;
 }
 
-/* Mobile auth nav positioning */
+/* Mobile auth nav positioning. Padding is 0 here so the inner button
+   (.nav-button) supplies the same 20px left padding as the other rows. */
 @media (max-width: 768px) {
   #clerk-auth {
     position: static !important;
     transform: none !important;
     width: 100% !important;
     justify-content: flex-start !important;
-    padding: 10px 16px !important;
+    padding: 0 !important;
   }
 }
 
@@ -1256,8 +1257,11 @@ a.completed-guide:hover,
     display: block;
   }
 
-  /* Top-level rows: full-width, label left, chevron right */
-  .nav-collapse .nav-button {
+  /* Top-level rows: full-width, label left, chevron right.
+     Listing button and a.nav-button explicitly so the selector beats the
+     desktop .site-nav a.nav-button rule on specificity. */
+  .nav-collapse button.nav-button,
+  .nav-collapse a.nav-button {
     width: 100%;
     text-align: left;
     padding: 16px 20px;
@@ -1266,6 +1270,7 @@ a.completed-guide:hover,
     color: #fff;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1273,8 +1278,10 @@ a.completed-guide:hover,
     text-decoration: none;
   }
 
-  .nav-collapse .nav-button:hover,
-  .nav-collapse .nav-button:focus {
+  .nav-collapse button.nav-button:hover,
+  .nav-collapse button.nav-button:focus,
+  .nav-collapse a.nav-button:hover,
+  .nav-collapse a.nav-button:focus {
     background: #1a1a1a;
   }
 
