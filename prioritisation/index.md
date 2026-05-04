@@ -899,7 +899,7 @@ var FUND_Q = [
     { id: 'who5_2', section: 'Wellbeing',  text: WHO5_LEAD + 'I have felt calm and relaxed.',                                   options: SCALE_WHO5 },
     { id: 'who5_3', section: 'Wellbeing',  text: WHO5_LEAD + 'I have felt active and vigorous.',                                options: SCALE_WHO5 },
     { id: 'who5_4', section: 'Wellbeing',  text: WHO5_LEAD + 'I woke up feeling fresh and rested.',                             options: SCALE_WHO5 },
-    { id: 'who5_5', section: 'Wellbeing',  text: WHO5_LEAD + 'My daily life has been filled with things that interest me.',    options: SCALE_WHO5 },
+    { id: 'who5_5', section: 'Wellbeing',  text: WHO5_LEAD + 'my daily life has been filled with things that interest me.',    options: SCALE_WHO5 },
     { id: 'sleep_hours',        section: 'Sleep',     text: 'On a typical work night, roughly how many hours of sleep do you get?', options: SCALE_SLEEP },
     { id: 'emergency',          section: 'Finances',  text: 'If you had an unexpected $400 expense, could you cover it from cash or savings without borrowing?', options: SCALE_YN },
     { id: 'high_interest_debt', section: 'Finances',  text: 'Are you currently carrying balances on credit cards, payday loans, or overdrafts that charge interest?', options: SCALE_YN },
@@ -1418,7 +1418,8 @@ function renderFundR(flags) {
     if (triggered.length === 0) {
         lede = 'Your fundamentals look in good shape – no cutoffs flagged.';
     } else {
-        lede = 'Based on your responses, ' + (triggered.length === 1 ? 'one area was' : triggered.length + ' areas were') + ' below the cutoff worth flagging.';
+        var nWord = ['', 'one', 'two', 'three', 'four', 'five', 'six'][triggered.length] || triggered.length;
+        lede = 'Based on your responses, ' + nWord + (triggered.length === 1 ? ' area is' : ' areas are') + ' worth flagging.';
     }
     document.getElementById('fundResultsLede').textContent = lede;
 
