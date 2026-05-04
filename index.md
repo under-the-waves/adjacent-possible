@@ -14,13 +14,13 @@ title: Worthwhile
 
 <style>
 .home-cta-row {
-  display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
-  margin: 32px 0 24px;
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline;
+  margin: 28px 0 24px;
 }
 .home-cta-primary {
-  display: inline-block; padding: 14px 28px;
+  display: inline-block; padding: 6px 16px;
   background: #155799; color: #fff; text-decoration: none;
-  border-radius: 6px; font-weight: 600; font-size: 1.05em;
+  border-radius: 4px; font-weight: 500; font-size: 0.95em;
 }
 .home-cta-primary:hover { background: #0f4373; color: #fff; }
 .home-cta-secondary { font-size: 0.95em; }

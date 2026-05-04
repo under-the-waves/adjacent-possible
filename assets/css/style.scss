@@ -277,24 +277,18 @@
 }
 
 .pillar-section .domain-label {
-  font-size: 0.85em;
+  font-size: 1.15em;
   font-weight: 600;
-  color: #819198;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin: 1.2rem 0 0.3rem;
+  color: #333;
+  margin: 1.6rem 0 0.5rem;
 }
 
 .area-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 240px 1fr;
   align-items: baseline;
   padding: 4px 0;
   gap: 16px;
-}
-
-.area-row__name {
-  flex-shrink: 0;
-  min-width: 200px;
 }
 
 .area-row__desc {
@@ -303,13 +297,9 @@
 
 @media (max-width: 768px) {
   .area-row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 2px;
     padding: 6px 0;
-  }
-
-  .area-row__name {
-    min-width: 0;
   }
 }
 

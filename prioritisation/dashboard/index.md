@@ -1175,9 +1175,57 @@ function togglePillar(header) {
     header.parentElement.classList.toggle('collapsed');
 }
 
-// ── Init ──
-document.addEventListener('DOMContentLoaded', renderLanding);
+// ── Sign-in gate ──
 
-// Re-render if data syncs from Clerk
-window.addEventListener('ap-storage-sync', renderLanding);
+function renderSignInGate() {
+    const el = document.getElementById('viewLanding');
+    el.innerHTML = `
+        <div class="dashboard-header">
+            <h1>Your dashboard</h1>
+            <p>Sign in to see your personalised dashboard across all 52 life areas.</p>
+        </div>
+        <div style="text-align: center; margin-top: 32px;">
+            <button onclick="window.Clerk && window.Clerk.openSignIn()" style="padding: 8px 20px; background: #155799; color: white; border: none; border-radius: 4px; font-size: 0.95em; font-weight: 500; cursor: pointer;">Sign in</button>
+        </div>
+    `;
+    showView('landing');
+}
+
+function routeBasedOnAuth() {
+    if (window.Clerk && window.Clerk.user) {
+        renderLanding();
+    } else {
+        renderSignInGate();
+    }
+}
+
+// ── Init ──
+document.addEventListener('DOMContentLoaded', function() {
+    // Show empty container immediately to avoid flash of stale data
+    document.getElementById('viewLanding').innerHTML = '';
+    showView('landing');
+
+    if (window.Clerk && window.Clerk.user !== undefined) {
+        routeBasedOnAuth();
+        return;
+    }
+
+    var checkClerk = setInterval(function() {
+        if (window.Clerk && window.Clerk.user !== undefined) {
+            clearInterval(checkClerk);
+            routeBasedOnAuth();
+        }
+    }, 100);
+
+    // Timeout fallback after 5s -- if Clerk hasn't loaded, treat as not signed in
+    setTimeout(function() {
+        clearInterval(checkClerk);
+        if (!window.Clerk || !window.Clerk.user) {
+            renderSignInGate();
+        }
+    }, 5000);
+});
+
+// Re-render if data syncs from Clerk (fires on sign-in)
+window.addEventListener('ap-storage-sync', routeBasedOnAuth);
 </script>
