@@ -810,10 +810,19 @@ body .main-content {
 </div>
 
 <script>
-// Build values config from frontmatter
+// Build values config from frontmatter; scale factors come from values.yml
+// and are used for the redesigned signed-log EROI formula.
 const valueConfig = [
 {% for value in page.values %}
-    { key: {{ value.key | jsonify }}, label: {{ value.label | jsonify }}, color: {{ value.color | jsonify }}, defaultWeight: {{ value.default_weight }} }{% unless forloop.last %},{% endunless %}
+    {% assign vdef = site.data.values[page.domain][value.key] %}
+    {
+        key: {{ value.key | jsonify }},
+        label: {{ value.label | jsonify }},
+        color: {{ value.color | jsonify }},
+        defaultWeight: {{ value.default_weight }},
+        scaleFactorMoney: {% if vdef.scale_factor_money %}{{ vdef.scale_factor_money }}{% else %}1.0{% endif %},
+        scaleFactorTime: {% if vdef.scale_factor_time %}{{ vdef.scale_factor_time }}{% else %}1.0{% endif %}
+    }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ];
 
@@ -942,13 +951,16 @@ function computeEbs(pbs, isr, uar, confFactor, drFactor) {
 // Compute WBS as the user-weighted sum of per-value EBSes, and identify the
 // Driver: the value whose weighted contribution has the largest absolute
 // magnitude. The Driver indicates which value is making this intervention
-// rank where it does for the current user, and the per-row EROI displayed
-// is that value's EROI (lives on its own scale).
+// rank where it does for the current user; the per-row EROIs are computed
+// against the Driver value's scale factors so EROI lives on a value-specific
+// log scale calibrated against the existing intervention distribution.
 function computeWbsAndDriver(intervention, userValues) {
     var wbs = 0;
     var topAbs = 0;
     var driverKey = null;
     var driverEbs = 0;
+    var driverSfMoney = 1.0;
+    var driverSfTime = 1.0;
     Object.keys(userValues).forEach(function(k) {
         var v = intervention.values[k];
         if (!v) return;
@@ -960,22 +972,41 @@ function computeWbsAndDriver(intervention, userValues) {
             topAbs = Math.abs(contribution);
             driverKey = k;
             driverEbs = ebs;
+            var vc = valueConfig.find(function(x) { return x.key === k; });
+            if (vc) {
+                driverSfMoney = vc.scaleFactorMoney || 1.0;
+                driverSfTime = vc.scaleFactorTime || 1.0;
+            }
         }
     });
-    return { wbs: wbs, driverKey: driverKey, driverEbs: driverEbs };
+    return {
+        wbs: wbs,
+        driverKey: driverKey,
+        driverEbs: driverEbs,
+        driverSfMoney: driverSfMoney,
+        driverSfTime: driverSfTime
+    };
 }
 
-// Time and Money EROI – linear divide for now. The redesigned signed-log
-// formula with per-value scale_factor is pending values.yml calibration.
-// Sign of EROI follows sign of WBS so harmful interventions still surface
-// negative numbers in the existing table.
-function calculateTimeEROI(wbs, timeWeekly) {
-    return wbs / Math.max(1, timeWeekly);
+// Redesigned signed-log EROI: sign(EBS) × log₂(1 + (linear EV / cost) / scale_factor).
+// Linear EV = 2^|EBS| − 1 (the inverse of the EBS formula); cost is per-week or
+// money-equivalent; scale_factor calibrated empirically per value so the median
+// intervention sits at EROI ≈ 5 within the value.
+function calculateTimeEROI(driverEbs, scaleFactorTime, timeWeekly) {
+    if (driverEbs === 0) return 0;
+    var sign = Math.sign(driverEbs);
+    var linearEv = (Math.pow(2, Math.abs(driverEbs)) - 1) * sign;
+    var ratio = Math.abs(linearEv) / Math.max(timeWeekly, 0.001);
+    return sign * Math.log2(1 + ratio / Math.max(scaleFactorTime, 0.0001));
 }
 
-function calculateMoneyEROI(wbs, upfrontCost, ongoingCostWeekly) {
-    const weeklyEquivalentCost = (upfrontCost / 52) + ongoingCostWeekly;
-    return wbs / Math.max(1, weeklyEquivalentCost);
+function calculateMoneyEROI(driverEbs, scaleFactorMoney, upfrontCost, ongoingCostWeekly) {
+    if (driverEbs === 0) return 0;
+    var sign = Math.sign(driverEbs);
+    var linearEv = (Math.pow(2, Math.abs(driverEbs)) - 1) * sign;
+    var weeklyEquivalentCost = (upfrontCost / 52) + ongoingCostWeekly;
+    var ratio = Math.abs(linearEv) / Math.max(weeklyEquivalentCost, 0.001);
+    return sign * Math.log2(1 + ratio / Math.max(scaleFactorMoney, 0.0001));
 }
 
 function showDescriptionPopup(key) {
@@ -1059,8 +1090,8 @@ function updateRecommendations() {
             key, ...i, wbs, resources,
             driverKey: wbsResult.driverKey,
             driverLabel: wbsResult.driverKey ? valueLabelFor(wbsResult.driverKey) : '',
-            timeEROI: calculateTimeEROI(wbs, resources.ongoing_time_weekly),
-            moneyEROI: calculateMoneyEROI(wbs, resources.upfront_cost, resources.ongoing_cost_weekly)
+            timeEROI: calculateTimeEROI(wbsResult.driverEbs, wbsResult.driverSfTime, resources.ongoing_time_weekly),
+            moneyEROI: calculateMoneyEROI(wbsResult.driverEbs, wbsResult.driverSfMoney, resources.upfront_cost, resources.ongoing_cost_weekly)
         };
     });
 

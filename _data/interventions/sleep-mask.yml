@@ -2,8 +2,6 @@ evaluated_at: 2026-04-26
 evaluated_by: claude-opus-4-7
 prompt_sha: bcfbcf8
 name: "Sleep Mask"
-quick_win: true
-quick_win_cadence: setup
 what_it_is: |
   Wearing a contoured, light-blocking eye mask during sleep to eliminate ambient light that suppresses melatonin and disrupts circadian signalling. A well-fitted mask blocks the great majority of light from streetlamps, early sunrise, and device indicators. The intervention is most useful for people whose sleeping environment is not already very dark – urban dwellers, people whose partner keeps a different schedule, shift workers, and frequent travellers. For someone who already sleeps in a black-out bedroom, the marginal benefit is modest.
 how_to_do_it: |

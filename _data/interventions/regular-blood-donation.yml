@@ -2,8 +2,6 @@ evaluated_at: 2026-05-02
 evaluated_by: claude-opus-4-7
 prompt_sha: a48aaee
 name: "Regular Blood and Plasma Donation"
-quick_win: true
-quick_win_cadence: rare_check
 what_it_is: |
   Scheduling 2–6 blood or plasma donations per year as a recurring practice rather than one-off events. Whole blood donation typically takes ~45 minutes (donation itself ~10 minutes, plus screening, refreshment, and recovery), with eligibility intervals of approximately 8–12 weeks for whole blood and substantially shorter for plasma in countries that permit frequent plasma donation. The intervention has unusually high altruistic leverage: a single whole blood donation can contribute to treatment for up to three patients in surgery, trauma, cancer care, or chronic blood disorders, and blood remains a non-substitutable medical resource that depends entirely on volunteer donations to meet demand. The practice is country-neutral (every country with a healthcare system needs blood donors) and the screening process incidentally surfaces health information (haemoglobin, blood pressure, infectious disease markers) that some donors find independently valuable.
 how_to_do_it: |
