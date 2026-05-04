@@ -3,26 +3,26 @@ evaluated_by: claude-opus-4-7
 prompt_sha: bcfbcf8
 name: "Progressive Strength Training"
 what_it_is: |
-  Resistance training using barbells, dumbbells, machines, or cables, organised around compound movements (squat, bench press, deadlift, row, overhead press) and key accessories, with progressive overload applied through gradual increases in load, reps, or sets. Sessions typically run 45–60 minutes, two to four times per week. Distinguished from [calisthenics](/resources/intervention-database/calisthenics) by its use of external load (which raises the ceiling for raw maximal strength and hypertrophy but adds gym dependency), and from [functional training](/resources/intervention-database/functional-training) by its narrower focus on hypertrophy and absolute strength rather than movement variety and metabolic conditioning.
+  Strength training in a gym (or home setup) using barbells, dumbbells, machines, or cables. The programme is built around the big multi-joint lifts – squat, bench press, deadlift, row, overhead press – plus a handful of supporting exercises. The key principle is gradual progress: each session you try to add a little weight, an extra rep, or another set, so the muscles always have something new to adapt to. Sessions typically run 45–60 minutes, two to four times a week. Differs from [calisthenics](/resources/intervention-database/calisthenics) because of the external weight – which lets you keep getting stronger past what your bodyweight can challenge, but means you usually need a gym. Differs from [functional training](/resources/intervention-database/functional-training) in being focused on building muscle and absolute strength, with less emphasis on movement variety or general conditioning.
 how_to_do_it: |
-  - Many people start with a proven beginner programme (Starting Strength, StrongLifts 5x5, GZCLP, or 5/3/1 for Beginners) that prescribes specific compound lifts with clear progression rules, removing the burden of session design
-  - You may find it worthwhile to invest two or three sessions with a qualified coach – or to film and review your form against reputable cues – before adding meaningful load on the squat, deadlift, and bench press, as early form errors compound under heavier weights
-  - Most practitioners log every session (sets, reps, weight) in a notebook or app so progressive overload is tracked explicitly rather than guessed; the data also surfaces stalls early so deload weeks or programme changes happen on time
-  - Starting conservatively (lighter than feels challenging) and adding small increments – 1–2.5 kg per session for upper body, 2.5–5 kg for lower body – builds a long runway of progress and limits the early soreness that drives many beginners to quit
+  - Start with a proven beginner programme like Starting Strength, StrongLifts 5x5, GZCLP, or 5/3/1 for Beginners. Each prescribes specific lifts and clear progression rules, so you do not have to design sessions yourself.
+  - Spend two or three sessions with a coach, or film and review your form against reputable cues, before adding serious weight to the squat, deadlift, and bench press. Form errors at light weight become injuries at heavy weight.
+  - Log every session – sets, reps, weight – in a notebook or app. Tracking makes the gradual progress real, surfaces stalls early, and tells you when to deload or change the programme.
+  - Start lighter than feels challenging and add small amounts each session: roughly 1–2.5kg per session for upper-body lifts, 2.5–5kg for lower-body lifts. Small consistent increases compound faster than irregular jumps and reduce the early soreness that makes a lot of beginners quit.
 success_looks_like: |
-  - You are consistently adding weight or reps to the main lifts over a period of months, with a clear training log showing the progression and sensible deloads when stalls happen
-  - The compound movements feel technically confident: you can set up and execute a squat, deadlift, or bench press with good form without needing to think through each cue
-  - After three to four months, functional differences appear outside the gym – carrying heavy items, climbing stairs, pushing furniture, and resisting injury during awkward movements all feel noticeably easier
+  - You are reliably adding weight or reps to the main lifts month after month, with a training log that shows clear progress and sensible easing-off weeks when you stall.
+  - The big lifts feel technically confident. You can set up and execute a squat, deadlift, or bench press with good form without thinking through each cue.
+  - After three or four months, life outside the gym gets easier – carrying heavy items, climbing stairs, pushing furniture, catching yourself in awkward positions all take less effort and produce fewer injuries.
 common_pitfalls: |
-  - Increasing weight too quickly to hit an ego target, leading to form breakdown and either acute injury or a forced reset – small, consistent increments compound faster than irregular jumps
-  - Programme-hopping every few weeks chasing the 'optimal' routine, which prevents the consistent progressive overload any reasonable programme provides – sticking to one plan for 12+ weeks matters more than which plan
-  - Skipping sessions after the initial muscle soreness of the first one to two weeks, not realising soreness diminishes rapidly with consistent training and is not a damage signal
-  - Neglecting recovery (sleep, protein, deloads) and treating training volume as the only lever, which leads to stalled progress and overuse injuries that no amount of harder training can fix
+  - Adding weight too fast to hit an ego target. Form breaks down, and either you injure yourself or you have to reset and start over. Small consistent jumps actually compound faster than irregular big ones.
+  - Switching programmes every few weeks chasing the 'optimal' one. Sticking to a reasonable plan for twelve weeks or more matters far more than which plan it is.
+  - Skipping sessions because of muscle soreness in the first week or two. Soreness drops sharply with consistency once you are past the initial weeks.
+  - Neglecting recovery (sleep, protein, easing-off weeks) and treating training volume as the only lever. Stalled progress and overuse injuries follow, and no amount of harder training will fix what only recovery can fix.
 description: |
-  - Resistance training using barbells, dumbbells, machines, or cables organised around compound movements (squat, bench press, deadlift, row, overhead press) and accessories, with progressive overload applied via gradual increases in load, reps, or sets
-  - Sessions typically last 45–60 minutes, two to four times per week, with [meta-analytic evidence](https://doi.org/10.1136/bjsports-2017-097608) supporting roughly 10 sets per muscle group per week as the dose for near-maximal hypertrophy in trained populations
-  - [Cohort evidence](https://doi.org/10.1136/bjsports-2021-105099) links muscle-strengthening activity to a 15–20% reduction in all-cause mortality, with maximum benefit at 30–60 minutes per week and additional benefit when combined with aerobic work
-  - Distinct from calisthenics in its use of external load – which raises the ceiling for raw maximal strength and hypertrophy at the cost of gym dependency – and from functional training in its narrower focus on hypertrophy and absolute strength rather than movement variety
+  - Resistance training using barbells, dumbbells, machines, or cables, organised around compound lifts (squat, bench press, deadlift, row, overhead press) with progressive overload – gradually increasing weight, reps, or sets.
+  - Sessions typically last 45–60 minutes, two to four times a week. [Meta-analytic evidence](https://doi.org/10.1136/bjsports-2017-097608) supports roughly ten sets per muscle group per week as the dose for near-maximal muscle growth in trained populations.
+  - [Cohort evidence](https://doi.org/10.1136/bjsports-2021-105099) links muscle-strengthening activity to a 15–20% reduction in death from any cause, with the maximum benefit at 30–60 minutes per week and additional benefit when combined with cardio.
+  - Distinct from calisthenics in using external weight – which raises the strength and muscle-growth ceiling at the cost of needing a gym – and from functional training in being narrowly focused on building muscle and absolute strength.
 applicable_domains: ["fitness", "body-image", "mental-health", "behaviours"]
 
 values:

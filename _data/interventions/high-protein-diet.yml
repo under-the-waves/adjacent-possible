@@ -2,25 +2,25 @@ evaluated_at: 2026-03-23
 evaluated_by: claude-opus-4-7
 name: "High-Protein Diet"
 what_it_is: |
-  Increasing daily protein intake to 1.2–2.2 g/kg body weight (roughly 25–35% of total energy), structured around at least 25–30 g protein per meal using lean meats, fish, eggs, dairy, legumes, and whey protein. Works through higher thermic effect of food, increased satiety, and preservation of lean mass during caloric restriction – improving body composition rather than just reducing scale weight. Pairs naturally with [Functional Training](/resources/intervention-database/functional-training) or [Progressive Strength Training](/resources/intervention-database/progressive-strength-training) for lean mass development.
+  Eating around 100–150g of protein a day – the higher end if you are heavier or strength-training – spread across three or four meals of roughly 25–30g each. Protein sources are the usual suspects: lean meats, fish, eggs, dairy, lentils and other legumes, plus whey powder if you need a top-up. The reasons it works: protein keeps you full longer, costs more energy to digest than carbs or fat, and protects muscle when you are losing weight – so you lose more fat and less muscle than on a typical lower-protein diet. Pairs naturally with [Functional Training](/resources/intervention-database/functional-training) or [Progressive Strength Training](/resources/intervention-database/progressive-strength-training) if you want to build muscle as well.
 how_to_do_it: |
-  - Calculate your target protein intake (1.6 g/kg is a practical starting point for most people) and divide it across 3–4 meals of at least 25–30 g each, rather than loading it all into one meal
-  - Many people find that anchoring protein sources first when planning meals – choose the protein, then build the rest around it – simplifies the process considerably
-  - Batch-cook protein sources (grilled chicken, boiled eggs, cooked lentils) at the start of the week so high-protein options are always available without daily cooking effort
-  - You may find a food-tracking app helpful for the first 2–3 weeks to calibrate your sense of portion sizes, then shift to intuitive estimation once you can reliably eyeball 30 g of protein
+  - Work out a daily target. A practical starting point for most people is 1.6 grams of protein per kilogram of bodyweight, or roughly 100g a day for someone around 70kg, 130g for someone around 80kg. Spread it across three or four meals of at least 25–30g each, instead of loading one meal.
+  - When you plan a meal, pick the protein first and build the rest of the plate around it. Much simpler than trying to add protein to existing meals after the fact.
+  - Batch-cook protein at the start of the week (grilled chicken, boiled eggs, cooked lentils) so a high-protein option is always available without daily cooking.
+  - A food-tracking app can help for the first two or three weeks to calibrate your sense of portion sizes. Most people can then eyeball 30g of protein and stop tracking.
 success_looks_like: |
-  - Hunger between meals diminishes noticeably – you feel satisfied for 3–4 hours after eating rather than reaching for snacks within 90 minutes
-  - Body composition shifts visibly over 8–12 weeks: clothes fit differently even if scale weight has not changed dramatically, reflecting fat loss with lean mass preservation
-  - Protein-rich meals become the default rather than requiring constant planning – your go-to breakfasts, lunches, and dinners all hit 25+ g without deliberate effort
+  - Hunger between meals drops noticeably. You feel satisfied for three to four hours after eating, instead of reaching for a snack within ninety minutes.
+  - Body shape changes visibly over eight to twelve weeks, even if the scale has not moved much – clothes fit differently. You are losing fat while keeping muscle.
+  - Protein-rich meals become your defaults. Your go-to breakfast, lunch, and dinner all hit 25g or more without you having to think about it.
 common_pitfalls: |
-  - Focusing on protein supplements (shakes, bars) at the expense of whole food sources, which provide micronutrients and fibre that supplements lack and tend to be more satiating per calorie
-  - Assuming high protein alone will produce fat loss without an energy deficit – protein increases satiety, which makes a deficit easier, but does not guarantee one
-  - Letting the grocery bill become a barrier: protein-rich foods cost more per calorie than starches, and without budget-conscious sourcing (eggs, tinned fish, frozen chicken, legumes) the approach becomes unsustainable
+  - Leaning on protein shakes and bars at the expense of whole foods. Whole foods carry vitamins, minerals, and fibre that supplements miss, and they keep you full for longer per calorie.
+  - Assuming high protein alone produces fat loss. Higher protein makes a calorie deficit easier to maintain, but you still need the deficit. If you eat more calories than you burn, the protein helps protect muscle but does not produce weight loss on its own.
+  - Letting cost become a barrier. Protein-rich foods cost more per calorie than starches. Without budget-friendly choices (eggs, tinned fish, frozen chicken, lentils, beans), the approach gets unsustainable fast.
 description: |
-  - Increasing daily protein intake to 1.2 – 2.2 g/kg body weight (typically 25 – 35% of total energy), prioritising lean meats, fish, eggs, dairy, legumes, and whey protein, structured around at least 25 – 30 g protein per meal
-  - Works through three reinforcing mechanisms: higher thermic effect of food (protein costs ~20 – 30% of its energy to digest vs ~5 – 10% for carbohydrates), increased satiety via GLP-1 and reduced ghrelin secretion, and preservation of lean mass during caloric restriction which sustains resting metabolic rate
-  - [Meta-analytic evidence](https://doi.org/10.3945/ajcn.112.044321) from 24 RCTs confirms that energy-restricted high-protein diets produce greater fat mass loss and better lean mass retention than standard-protein diets at equivalent calorie intakes
-  - What makes this distinct from general caloric restriction: body composition improves (better fat-to-muscle loss ratio), not just scale weight, and [review evidence](https://doi.org/10.3945/ajcn.114.084038) suggests the satiety effect reduces voluntary energy intake by 441 kcal/day, making adherence to a deficit easier
+  - Daily protein intake of 1.2–2.2 grams per kilogram of bodyweight (roughly 100–150g for most adults), centred on lean meats, fish, eggs, dairy, legumes, and whey, with at least 25–30g per meal.
+  - Three reinforcing mechanisms: protein costs roughly 20–30% of its energy to digest (carbs cost only 5–10%), it makes you fuller per calorie, and it protects muscle when you are eating less – which keeps your metabolism higher than it would be on a standard-protein diet.
+  - [Meta-analysis of 24 trials](https://doi.org/10.3945/ajcn.112.044321) confirms that calorie-restricted high-protein diets produce more fat loss and better muscle retention than standard-protein diets at the same total calorie intake.
+  - The body composition advantage – a better ratio of fat lost to muscle lost – is what makes this distinct from generic dieting. [Review evidence](https://doi.org/10.3945/ajcn.114.084038) suggests the fullness effect reduces voluntary calorie intake by around 441 kcal a day, making a deficit easier to stick to.
 applicable_domains: ["body-image"]
 
 values:
