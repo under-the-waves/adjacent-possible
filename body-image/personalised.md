@@ -7,6 +7,11 @@ values:
   - key: fat_loss
     label: "Fat Loss"
     description: "Reducing body fat percentage through dietary and exercise interventions."
-    default_weight: 100
+    default_weight: 60
     color: "#e83e8c"
+  - key: muscle_gain
+    label: "Muscle Gain"
+    description: "Building and sustaining lean muscle mass through resistance training and supportive nutrition."
+    default_weight: 40
+    color: "#6f42c1"
 ---
