@@ -147,18 +147,18 @@ life_area_slug: mental-health
 People pursue mental health for different reasons. This site scores every mental health intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
 <div class="value-card">
-<h3>Professional Treatment & Support</h3>
-<p>Working with qualified mental health professionals and building strong support networks. Therapy, counselling, medication when appropriate, and leveraging relationships for mental health support.</p>
+<h3>Stability</h3>
+<p>Emotional steadiness day to day and freedom from distressing symptoms. A reliable baseline mood that holds up under ordinary pressures.</p>
 </div>
 
 <div class="value-card">
-<h3>Self-Management & Independence</h3>
-<p>Developing personal skills and practices to manage your own mental health independently. Mindfulness, journalling, exercise, and other self-directed interventions that build internal capabilities and self-reliance.</p>
+<h3>Resilience</h3>
+<p>Capacity to handle stress and recover from setbacks. Bouncing back from adversity and maintaining functioning when life gets hard.</p>
 </div>
 
 <div class="value-card">
-<h3>Integration & Holistic Approach</h3>
-<p>Viewing mental health as interconnected with all other life areas and addressing it through lifestyle, relationships, purpose, and environment. Mental wellness as emerging from overall life balance and meaning.</p>
+<h3>Flourishing</h3>
+<p>Depth and frequency of joy, meaning, and life satisfaction. The active presence of positive experience, not just the absence of distress.</p>
 </div>
 
 <div class="la-paths">

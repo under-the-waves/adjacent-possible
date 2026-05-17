@@ -4,19 +4,24 @@ title: Housework Personalised
 domain: housework
 domain_label: Housework
 values:
-  - key: cleanliness
-    label: "Cleanliness"
-    description: "Maintaining a hygienic and visually clean living environment."
-    default_weight: 40
+  - key: health
+    label: "Health & Hygiene"
+    description: "How well your living environment supports physical health and hygiene."
+    default_weight: 30
     color: "#28a745"
-  - key: efficiency
-    label: "Efficiency"
-    description: "Minimising time and effort spent on household tasks."
-    default_weight: 35
+  - key: order
+    label: "Order"
+    description: "Mental calm from an organised, uncluttered living space."
+    default_weight: 30
     color: "#dc3545"
-  - key: satisfaction
-    label: "Satisfaction"
-    description: "The sense of accomplishment and comfort from a well-maintained home."
-    default_weight: 25
+  - key: aesthetics
+    label: "Aesthetics"
+    description: "Visual appeal and sensory pleasure of your living space."
+    default_weight: 20
+    color: "#ffc107"
+  - key: environmental
+    label: "Environmental Impact"
+    description: "Ecological footprint of your home management practices."
+    default_weight: 20
     color: "#007bff"
 ---

@@ -144,7 +144,7 @@ life_area_slug: career-planning
 
 ## What people value about career planning
 
-People approach career planning for different reasons. This site scores every career planning intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
+People approach career planning for different reasons. This site scores every career planning intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
 <div class="value-card">
 <h3>Clarity</h3>
@@ -159,11 +159,6 @@ People approach career planning for different reasons. This site scores every ca
 <div class="value-card">
 <h3>Security</h3>
 <p>Protecting yourself against career disruption through financial runway, transferable skills, and professional optionality.</p>
-</div>
-
-<div class="value-card">
-<h3>Meaning</h3>
-<p>Finding genuine purpose and significance in your professional life – work that aligns with your values and contributes to something you care about.</p>
 </div>
 
 <div class="la-paths">

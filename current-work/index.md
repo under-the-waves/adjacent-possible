@@ -144,7 +144,7 @@ life_area_slug: current-work
 
 ## What people value about current work
 
-People approach their working lives for different reasons. This site scores every current work intervention across four core values, and ranks them by how well they deliver on the things you actually care about.
+People approach their working lives for different reasons. This site scores every current work intervention across three core values, and ranks them by how well they deliver on the things you actually care about.
 
 <div class="value-card">
 <h3>Rewards</h3>
@@ -159,11 +159,6 @@ People approach their working lives for different reasons. This site scores ever
 <div class="value-card">
 <h3>Engagement</h3>
 <p>Psychological investment, motivation, and meaning found in daily work. Flow states, intrinsic motivation, and genuine interest in problems.</p>
-</div>
-
-<div class="value-card">
-<h3>Balance</h3>
-<p>Sustainable boundaries between work and the rest of life. Manageable hours, predictable schedules, and the ability to disconnect.</p>
 </div>
 
 <div class="la-paths">

@@ -4,19 +4,19 @@ title: Mental Health Personalised
 domain: mental-health
 domain_label: Mental Health
 values:
-  - key: professional
-    label: "Professional Treatment & Support"
-    description: "Working with qualified mental health professionals and building strong support networks."
+  - key: stability
+    label: "Stability"
+    description: "Emotional steadiness day to day and freedom from distressing symptoms."
     default_weight: 40
     color: "#28a745"
-  - key: self-management
-    label: "Self-Management & Independence"
-    description: "Developing personal skills and practices to manage your own mental health independently."
+  - key: resilience
+    label: "Resilience"
+    description: "Capacity to handle stress and recover from setbacks."
     default_weight: 35
     color: "#dc3545"
-  - key: integration
-    label: "Integration & Holistic Approach"
-    description: "Viewing mental health as interconnected with all other life areas and addressing it through lifestyle, relationships, purpose, and environment."
+  - key: flourishing
+    label: "Flourishing"
+    description: "Depth and frequency of joy, meaning, and life satisfaction."
     default_weight: 25
     color: "#007bff"
 ---
