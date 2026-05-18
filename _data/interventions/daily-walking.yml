@@ -192,6 +192,45 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: steps_per_day_average
+  metric_label: "Average daily steps"
+  metric_help: "Mean steps across a typical week, including all walking (commute, errands, deliberate walks). Use phone or pedometer data if you have it, otherwise estimate."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Sedentary"
+      criterion: "Under 3,000 steps/day"
+    - level: 1
+      label: "Light"
+      criterion: "3,000–5,000 steps/day"
+    - level: 2
+      label: "Moderate"
+      criterion: "5,000–7,000 steps/day"
+    - level: 3
+      label: "Active"
+      criterion: "7,000+ steps/day"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: steep_diminishing
+    fitness.enjoyment: mild_diminishing
+    body-image.fat_loss: near_linear
+    mental-health.stability: steep_diminishing
+    mental-health.flourishing: mild_diminishing
+    sleep.daily_functioning: mild_diminishing
+    health-management.vitality: steep_diminishing
+    habits.impact: mild_diminishing
+    cognitive-skills.lifestyle: steep_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [Paluch 2022 Lancet Public Health meta-analysis of 15 cohorts](https://doi.org/10.1016/S2468-2667(21)00302-9): mortality risk falls steeply between 2,000 and ~7,500 steps/day, then flattens. The intervention's scored PBS values assume the tier-3 endpoint (7,000+ steps, the curve-flattening point).
+    - Template choices reflect each value's mechanism:
+      - `steep_diminishing` for mortality-linked and biological-saturation outcomes (fitness.health, mental-health.stability via [BMJ 2024 network meta-analysis](https://doi.org/10.1136/bmj-2023-075847), health-management.vitality, fitness.performance which plateaus even faster per [Crowley 2022](https://doi.org/10.1155/2022/9310710), cognitive-skills.lifestyle).
+      - `near_linear` for body-image.fat_loss because caloric expenditure scales roughly linearly with step count ([Richardson 2008](https://doi.org/10.1370/afm.761)), tempered but not eliminated by compensation ([Pontzer 2016](https://doi.org/10.1016/j.cub.2015.12.046)).
+      - `mild_diminishing` for fitness.enjoyment, mental-health.flourishing, sleep.daily_functioning, and habits.impact – these accumulate with practice volume without a sharp plateau, and the evidence base is noisier than the mortality curve.
+
 resources:
   upfront_cost: 60
   upfront_cost_reasoning: "Decent walking shoes ($50) and basic weather-appropriate clothing ($10). The most accessible structured exercise intervention; no gym, equipment, or membership required."

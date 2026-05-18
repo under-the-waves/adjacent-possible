@@ -182,6 +182,53 @@ Layout reads `ap-user-country` from localStorage (set once at first visit or via
 
 ---
 
+## 13. Graded Interventions / Dose-Response – IN DESIGN
+
+**Status:** In design as of 2026-05-18. Replaces the binary "doing / not doing" model from Item 6 (Phase 3) with per-tier adherence tracking. One test intervention authored (`daily-walking.yml`); template library created; scoring prompt updated.
+
+**Design decisions made:**
+- Every intervention defines its own 4-tier scale (level 0 = not doing, level 3 = the dose PBS was scored against) with intervention-specific labels and concrete criteria in the metric's natural units. See `daily-walking.yml` for the reference implementation.
+- A shared template library at `_data/dose_response_templates.yml` defines five named curve shapes via multiplier arrays: `steep_diminishing` (front-loaded biological saturation), `mild_diminishing` (default for noisy subjective outcomes), `near_linear` (proportional outcomes), `threshold` (back-loaded with cutoff), `binary` (escape hatch).
+- Each (intervention, value) pair in `dose_response.value_templates` names one of these templates. Explicit per-pair, no intervention-level default.
+- Default to graded even for nominally on/off interventions – most have quality or consistency dimensions (an ill-fitting sleep mask, an outdated will) that justify grading.
+- Scoring prompt updated with a new `## Dose-Response` section and the `dose_response` YAML block in the output-format template, so future scoring runs include it automatically.
+
+**Open design questions:**
+- **Current adherence vs. likely future adherence** must be distinguished clearly in the UI. Two cases:
+  - Interventions the user is *already doing* at some tier: UAR was a prediction; now they've demonstrated adherence at the current tier. Question becomes "how much benefit does upgrading add", and UAR(current → target) is plausibly higher than UAR(0 → 3). Show captured benefit (no UAR), plus upgrade-potential benefit (with UAR for the transition).
+  - Interventions the user *hasn't tried*: UAR fully applies. Show "maximum benefit if achieved" alongside "expected benefit on attempt (× UAR)". The smoking-quit case is the canonical illustration – very high full EBS, low expected EBS because most attempts fail.
+- Storage migration from `ap-habits-current` (currently `{key: true}`) to `{key: tier_index}`. Treat absence/false as tier 0.
+- Dashboard rollup design: "you're capturing X across your top 5; potential Y more if you progress" – per life area and possibly per pillar. Whether to UAR-discount the "potential Y" or show it raw is part of the framing question above.
+- T3-vs-original framing: at tier 3, the graded EBS exceeds the original EBS because UAR drops out (user has demonstrated adherence). UI shows both numbers side by side with explanatory copy: "Typical" includes adherence uncertainty; "For you at [tier label]" is conditional on continuing the reported practice.
+
+**Files touched so far:**
+- `_data/interventions/daily-walking.yml` – `dose_response` block added with 10 value-template assignments
+- `_data/dose_response_templates.yml` – new file, five curve templates with multipliers
+- `methodology/intervention-scoring-prompt.md` – new `## Dose-Response` section, updated output-format template
+
+**Not yet done:**
+- Apply dose_response block to the other 133 intervention YAMLs. This is authoring work – tier criteria require thinking about the intervention's natural unit, and template assignments require thinking about mechanism shape per value. Will need a Claude pass with the updated scoring prompt.
+- UI rendering: intervention page tier picker, personalised page graded WBS recalculation, dashboard rollup.
+- Storage migration from binary to graded state.
+- Copy work to make the captured-vs-available-vs-expected distinction land for users without being overwhelming.
+
+---
+
+## 14. Baseline Percentile Audit – DEFERRED
+
+**Status:** Discussed 2026-05-18, deferred.
+
+**What:** The `baseline_percentile` field on each of 176 values in `_data/values.yml` defaults to 35 (the calibration point against which PBS represents its scored value). The default is reasonable for most subjective wellness outcomes, but is plausibly wrong for three categories:
+- **Completeness / one-off values** ("has an up-to-date will", "has an emergency fund") – non-adopters are at ~5–10th percentile, not 35. Current default makes user discounts too aggressive.
+- **Universally average values** – most people sit near the middle (housing.affordability already overrides to 50). Default may understate baseline elsewhere too.
+- **High-floor subjective values** – e.g. life satisfaction tends to cluster at 40–50 even for non-adopters. Default may understate.
+
+**Suggested approach when revisited:** Targeted audit of the ~30 values that plausibly fall in one of the three patterns, rather than full pass over all 176. Most values can stay at 35.
+
+**Why deferred:** Recommendations are mostly defensible at the current defaults; cost of being wrong is "slightly mis-calibrated", not "system breaks". Lower priority than the dose-response work and dashboard integration.
+
+---
+
 ## Quick Reference: What's Been Built
 
 For context on what's already in place (so you don't rebuild it):

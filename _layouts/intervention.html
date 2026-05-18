@@ -625,6 +625,91 @@ layout: default
     color: #4CAF50;
 }
 
+.tier-block {
+    background: #f0f7f0;
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 18px 0 22px;
+}
+.tier-block .tier-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.tier-block .tier-row label {
+    font-weight: 600;
+    color: #2a5a32;
+}
+.tier-block select {
+    padding: 6px 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 0.95em;
+    background: white;
+}
+.tier-block .tier-badge {
+    display: inline-block;
+    padding: 3px 9px;
+    background: #4CAF50;
+    color: white;
+    font-size: 0.78em;
+    border-radius: 10px;
+    cursor: help;
+    font-weight: 600;
+}
+.tier-block .tier-context {
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+    margin: 4px 0 12px 0;
+}
+.tier-block .tier-current {
+    margin: 12px 0 8px 0;
+    font-size: 1.0em;
+}
+.tier-block .tier-progress-heading {
+    margin: 14px 0 8px 0;
+    font-weight: 600;
+    color: #333;
+}
+.tier-block .tier-progress-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.tier-block .tier-progress-list li {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: white;
+    border-left: 3px solid #81c784;
+    border-radius: 3px;
+}
+.tier-block .tier-progress-list .tier-name {
+    font-weight: 600;
+    color: #2a5a32;
+}
+.tier-block .tier-progress-list .tier-crit {
+    font-size: 0.88em;
+    color: #666;
+    margin-left: 6px;
+}
+.tier-block .tier-progress-list .tier-summary {
+    margin-top: 4px;
+    color: #333;
+    line-height: 1.4;
+}
+.tier-block .tier-sustainability {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #c8e6c9;
+    font-size: 0.92em;
+    color: #444;
+    line-height: 1.5;
+}
+
 .habit-toggle {
     display: flex;
     align-items: center;
@@ -791,6 +876,24 @@ layout: default
 
 <h1>{{ intervention.name }}</h1>
 
+{% if intervention.dose_response %}
+<div class="tier-block" id="tierBlock">
+    <div class="tier-row">
+        <label for="tierSelect">Your current adherence:</label>
+        <select id="tierSelect">
+            {% for tier in intervention.dose_response.tiers %}
+            <option value="{{ tier.level }}">{{ tier.label }} ({{ tier.criterion }})</option>
+            {% endfor %}
+        </select>
+        <span class="tier-badge" id="tierBadge" title="You've captured most of the available benefit at this tier." style="display:none;">Going strong</span>
+    </div>
+    <div class="tier-context" id="tierContext"></div>
+    <div class="tier-current" id="tierCurrent">Loading…</div>
+    <div class="tier-progress-heading" id="tierProgressHeading" style="display:none;">What you'd gain by progressing:</div>
+    <ul class="tier-progress-list" id="tierProgressList"></ul>
+    <div class="tier-sustainability" id="tierSustainability"></div>
+</div>
+{% else %}
 <div class="habit-toggle" id="habitToggle">
     <input type="checkbox" id="habitCheckbox">
     <label for="habitCheckbox">I currently do this</label>
@@ -798,6 +901,7 @@ layout: default
 </div>
 
 <p id="top-effects-summary" class="top-effects-summary">Loading expected effects…</p>
+{% endif %}
 
 {% if intervention.what_it_is %}
 <h2>What it is</h2>
@@ -1148,6 +1252,30 @@ const valueDefinitions = {
 
 // Confidence factors – shrinkage applied to expected value before EBS log
 const CONFIDENCE_FACTORS = { high: 1.0, medium: 0.75, low: 0.5 };
+
+// Dose-response template multipliers (shared library at _data/dose_response_templates.yml)
+const doseResponseTemplates = {
+{% for entry in site.data.dose_response_templates %}
+    {{ entry[0] | jsonify }}: [{{ entry[1].multipliers | join: ", " }}]{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
+
+// Dose-response config for this intervention (null if it's an ungraded intervention)
+const doseResponseConfig = {% if intervention.dose_response %}{
+    metric: {{ intervention.dose_response.metric | jsonify }},
+    metric_label: {{ intervention.dose_response.metric_label | jsonify }},
+    scored_at_tier: {{ intervention.dose_response.scored_at_tier | default: 3 }},
+    tiers: [
+        {% for tier in intervention.dose_response.tiers %}
+        { level: {{ tier.level }}, label: {{ tier.label | jsonify }}, criterion: {{ tier.criterion | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ],
+    value_templates: {
+        {% for vt in intervention.dose_response.value_templates %}
+        {{ vt[0] | jsonify }}: {{ vt[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    }
+}{% else %}null{% endif %};
 
 // EBS anchor convention: each value's PBS scale is anchored at PBS 10 = max
 // conditional benefit in the value's native units, with PBS 0 = 1/1024 of
@@ -1874,11 +2002,211 @@ function hideReasoning() {
     document.getElementById('reasoningPopup').classList.remove('visible');
 }
 
+// ===== Graded intervention (dose-response) rendering =====
+
+const TIER_STORAGE_KEY = 'ap-habits-tier';
+const INTERVENTION_KEY = {{ page.intervention_key | jsonify }};
+
+function loadTierState() {
+    try {
+        var raw = localStorage.getItem(TIER_STORAGE_KEY);
+        var map = raw ? JSON.parse(raw) : {};
+        var v = map[INTERVENTION_KEY];
+        return (typeof v === 'number' && v >= 0 && v <= 3) ? v : 0;
+    } catch (e) { return 0; }
+}
+
+function saveTierState(tier) {
+    try {
+        var raw = localStorage.getItem(TIER_STORAGE_KEY);
+        var map = raw ? JSON.parse(raw) : {};
+        map[INTERVENTION_KEY] = tier;
+        localStorage.setItem(TIER_STORAGE_KEY, JSON.stringify(map));
+    } catch (e) {}
+}
+
+// Captured EBS at a given tier (no UAR – user is reporting actual practice).
+function computeCapturedEbs(vkey, tier) {
+    var data = interventionData[vkey];
+    if (!data) return 0;
+    var templateName = doseResponseConfig.value_templates[vkey];
+    var multipliers = doseResponseTemplates[templateName] || doseResponseTemplates.mild_diminishing;
+    var mult = multipliers[tier] != null ? multipliers[tier] : 0;
+    var conf = CONFIDENCE_FACTORS[data.confidence] || 0.75;
+    // UAR = 100 (treated as 1.0) because the user reports they are already at this tier.
+    return computeEbs(data.pbs, data.isr, 100, conf, mult);
+}
+
+// Group value keys by magnitude bucket at a given tier; positive values only,
+// sorted within group by absolute EBS, descending.
+function valuesByMagnitudeAtTier(tier) {
+    var groups = { transformative: [], strong: [], meaningful: [], modest: [], slight: [] };
+    Object.keys(interventionData).forEach(function(vkey) {
+        var ebs = computeCapturedEbs(vkey, tier);
+        if (ebs <= 0) return;
+        var bucket = ebsMagnitudeLabel(ebs);
+        var def = valueDefinitions[vkey];
+        var label = (def && def.user_description) || vkey;
+        groups[bucket].push({ vkey: vkey, ebs: ebs, label: label });
+    });
+    Object.keys(groups).forEach(function(b) {
+        groups[b].sort(function(a, b) { return b.ebs - a.ebs; });
+    });
+    return groups;
+}
+
+function joinList(items) {
+    if (items.length === 0) return '';
+    if (items.length === 1) return items[0];
+    if (items.length === 2) return items[0] + ' and ' + items[1];
+    return items.slice(0, -1).join(', ') + ', and ' + items[items.length - 1];
+}
+
+// Build a single-sentence summary describing the top effects at a tier.
+function describeTier(tier) {
+    var groups = valuesByMagnitudeAtTier(tier);
+    var order = ['transformative', 'strong', 'meaningful', 'modest', 'slight'];
+    var firstBucket = null;
+    var firstLabels = [];
+    var secondBucket = null;
+    var secondLabels = [];
+    for (var i = 0; i < order.length; i++) {
+        var b = order[i];
+        if (groups[b].length === 0) continue;
+        if (!firstBucket) {
+            firstBucket = b;
+            firstLabels = groups[b].slice(0, 3).map(function(x) { return x.label; });
+        } else if (!secondBucket && b !== 'slight') {
+            secondBucket = b;
+            secondLabels = groups[b].slice(0, 3).map(function(x) { return x.label; });
+            break;
+        }
+    }
+    if (!firstBucket) return 'Essentially no benefit captured at this tier.';
+    var article = (firstBucket === 'meaningful' || firstBucket === 'modest') ? 'A ' : 'A ';
+    var sentence = article + firstBucket + ' improvement in ' + joinList(firstLabels);
+    if (secondBucket) {
+        sentence += ', with ' + secondBucket + ' gains in ' + joinList(secondLabels);
+    }
+    sentence += '.';
+    return sentence;
+}
+
+// Top-value magnitude at a tier – used to decide whether the "Going strong" badge fires.
+function topMagnitudeAtTier(tier) {
+    var top = 'slight';
+    var order = ['transformative', 'strong', 'meaningful', 'modest', 'slight'];
+    var groups = valuesByMagnitudeAtTier(tier);
+    for (var i = 0; i < order.length; i++) {
+        if (groups[order[i]].length > 0) { top = order[i]; break; }
+    }
+    return top;
+}
+
+function renderTierBlock() {
+    if (!doseResponseConfig) return;
+    var sel = document.getElementById('tierSelect');
+    if (!sel) return;
+    var currentTier = parseInt(sel.value, 10);
+    if (isNaN(currentTier)) currentTier = 0;
+    var tiers = doseResponseConfig.tiers;
+    var scoredAt = doseResponseConfig.scored_at_tier;
+
+    // Context line under the picker (only for tier 0 right now).
+    var ctxEl = document.getElementById('tierContext');
+    if (ctxEl) {
+        if (currentTier === 0) {
+            ctxEl.textContent = "Tier 0 is the reference baseline – the intervention's benefits are measured against starting here.";
+        } else {
+            ctxEl.textContent = '';
+        }
+    }
+
+    // "Right now" line.
+    var currentEl = document.getElementById('tierCurrent');
+    if (currentEl) {
+        if (currentTier === 0) {
+            currentEl.innerHTML = '<strong>Right now:</strong> essentially no benefit captured from this intervention.';
+        } else {
+            currentEl.innerHTML = '<strong>Right now:</strong> ' + describeTier(currentTier).replace(/^A /, 'a ');
+        }
+    }
+
+    // Progression list.
+    var headingEl = document.getElementById('tierProgressHeading');
+    var listEl = document.getElementById('tierProgressList');
+    if (listEl) {
+        listEl.innerHTML = '';
+        var higherTiers = tiers.filter(function(t) { return t.level > currentTier; });
+        if (higherTiers.length > 0) {
+            if (headingEl) headingEl.style.display = '';
+            higherTiers.forEach(function(t) {
+                var li = document.createElement('li');
+                li.innerHTML =
+                    '<span class="tier-name">' + t.label + '</span>' +
+                    '<span class="tier-crit">(' + t.criterion + ')</span>' +
+                    '<div class="tier-summary">' + describeTier(t.level) + '</div>';
+                listEl.appendChild(li);
+            });
+        } else if (headingEl) {
+            headingEl.style.display = 'none';
+        }
+    }
+
+    // Sustainability paragraph.
+    var sustainEl = document.getElementById('tierSustainability');
+    if (sustainEl) {
+        // Use the median UAR across all scored values as a single intervention-level number.
+        var uars = Object.values(interventionData).map(function(v) { return v.uar; });
+        uars.sort(function(a, b) { return a - b; });
+        var medianUar = uars.length ? uars[Math.floor(uars.length / 2)] : 80;
+        var rounded = Math.round(medianUar / 10) * 10;
+        var inTen = Math.round(rounded / 10);
+        var sentence = 'About ' + inTen + ' in 10 people who try this sustain it.';
+        if (currentTier < scoredAt) {
+            if (rounded >= 80) {
+                sentence += ' Realistically, you would still see most of these gains if you committed.';
+            } else if (rounded >= 50) {
+                sentence += ' Realistically, your expected outcome on an attempt is somewhat lower than the best case.';
+            } else {
+                sentence += ' Realistically, most attempts fall short, so the expected outcome is substantially below the best case.';
+            }
+        } else {
+            sentence = "You're already at the dose this intervention was scored against. Maintaining is what matters now.";
+        }
+        sustainEl.textContent = sentence;
+    }
+
+    // "Going strong" badge: top-value magnitude at current tier matches top-value magnitude at scored_at_tier.
+    var badge = document.getElementById('tierBadge');
+    if (badge) {
+        if (currentTier > 0 && topMagnitudeAtTier(currentTier) === topMagnitudeAtTier(scoredAt)) {
+            badge.style.display = '';
+        } else {
+            badge.style.display = 'none';
+        }
+    }
+}
+
+function initTierBlock() {
+    if (!doseResponseConfig) return;
+    var sel = document.getElementById('tierSelect');
+    if (!sel) return;
+    sel.value = String(loadTierState());
+    sel.addEventListener('change', function() {
+        var t = parseInt(sel.value, 10);
+        if (!isNaN(t)) saveTierState(t);
+        renderTierBlock();
+    });
+    renderTierBlock();
+}
+
 // Initialize calculations when page loads
 document.addEventListener('DOMContentLoaded', function() {
     calculateEBS();
     initHabitToggle();
     initCostCustomise();
+    initTierBlock();
     // Belt and braces: if Clerk happened to finish loading before we registered
     // the ap-clerk-ready listener (rare but possible), the event will have been
     // missed. Re-running calculateEBS once we know APStorage reports signed in

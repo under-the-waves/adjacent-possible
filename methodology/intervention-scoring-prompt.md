@@ -306,6 +306,32 @@ Confidence is shrinkage applied to the EBS at display time (high → factor 1.0,
 
 When in doubt, default to `medium`. Reserve `high` for cases where you genuinely have strong direct evidence; reserve `low` for cases where you are extrapolating significantly.
 
+## Dose-Response
+
+Every intervention must include a `dose_response` block defining how the benefit scales with the user's level of engagement. The block has three parts: the metric and tier criteria (specific to the intervention), and a `value_templates` map naming a shared curve template for each scored (intervention, value) pair.
+
+### Tier criteria
+
+Define four tiers (0–3), each with a `level`, `label`, and `criterion`. The criterion describes a concrete user state in the intervention's natural unit (steps per day, minutes per session, nights per week, etc.). Tier 0 must represent "not doing the intervention". Tier 3 must represent the dose the PBS values are scored against (set `scored_at_tier: 3`). Tiers 1 and 2 are intermediate stages where most users live.
+
+Labels should be intervention-specific and human-readable in context (e.g. "Sedentary / Light / Moderate / Active" for walking, "Never / Occasional / Most nights / Every night" for a sleep mask). Don't try to impose a shared vocabulary across interventions – the labels carry meaning the multipliers can't.
+
+Default to graded tiers even for nominally on/off interventions. Most have quality and consistency dimensions that justify grading: a sleep mask can be ill-fitting or worn only some nights; a will can be outdated, incomplete, or never professionally reviewed. Reserve `binary` for genuinely one-off events.
+
+### Choosing a template
+
+For each scored value, pick one of the templates in `_data/dose_response_templates.yml`:
+
+- `steep_diminishing` – biological saturation outcomes (mortality, cardiovascular events, depression symptom reduction). Half the full benefit comes from tier 1 alone; the rest from sustaining and increasing dose. Most physiological outcomes have this shape.
+- `mild_diminishing` – subjective wellbeing, habit consolidation, sleep quality, enjoyment, and other outcomes that accrue with practice volume but lack a sharp plateau or have noisy evidence. **Safe default when uncertain.**
+- `near_linear` – outcomes proportional to dose itself (caloric burn, time-based outcomes, financial savings, raw practice hours). Equal benefit per tier.
+- `threshold` – outcomes with a clear biological minimum below which the mechanism doesn't fire (minimum sleep duration, minimum protein dose for muscle protein synthesis). No benefit until tier 2, then most of the rest there.
+- `binary` – escape hatch. Only when degrees genuinely don't apply.
+
+### Authoring rationale
+
+Include a `rationale` field explaining (i) why the tier cuts fall where they do, anchored to the specific evidence base, and (ii) why each value got the template it did. The template choice is a judgment call about mechanism shape; make the reasoning legible so future audits can interrogate it.
+
 ## Provenance Fields (REQUIRED)
 
 Every intervention YAML must include three provenance fields at the top level so the rendered page can show when, by which model, and against which version of this prompt the scoring was produced.
@@ -362,6 +388,31 @@ values:
       - [Specific finding with source link]
       - [Specific finding with source link]
       - [Specific finding with source link]
+
+dose_response:
+  metric: [snake_case_metric_id] # e.g. steps_per_day_average, minutes_per_session, nights_per_week
+  metric_label: "[Human-readable label]"
+  metric_help: "[Brief help text shown to user when reporting their tier]"
+  scored_at_tier: 3 # The PBS values above assume this tier; almost always 3
+  tiers:
+    - level: 0
+      label: "[Intervention-specific label]"
+      criterion: "[Concrete criterion in intervention's natural unit]"
+    - level: 1
+      label: "[Intervention-specific label]"
+      criterion: "[Concrete criterion]"
+    - level: 2
+      label: "[Intervention-specific label]"
+      criterion: "[Concrete criterion]"
+    - level: 3
+      label: "[Intervention-specific label]"
+      criterion: "[Concrete criterion]"
+  value_templates:
+    [life_area].[value_name]: [steep_diminishing|mild_diminishing|near_linear|threshold|binary]
+    # ...one entry per scored value
+  rationale: |
+    - [Why the tier cuts fall where they do, with citations to the evidence base]
+    - [Why each value got the template it did, grouped by template choice]
 
 resources:
   upfront_cost: [USD]

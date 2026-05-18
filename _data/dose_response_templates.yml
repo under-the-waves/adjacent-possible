@@ -1,0 +1,33 @@
+# Shared dose-response curve templates.
+#
+# Each (intervention, value) pair in `_data/interventions/*.yml` names one of
+# these templates via its `dose_response.value_templates` map. The template
+# supplies the multiplier array – the fraction of full intervention benefit
+# captured at each tier (0 through 3). Tier criteria are intervention-specific
+# and defined in the intervention YAML.
+#
+# Authors should default to graded shapes (steep_diminishing / mild_diminishing /
+# near_linear / threshold) and reserve `binary` for the rare case where degrees
+# genuinely don't apply (one-off vaccinations, single genetic tests). Even
+# nominally on/off interventions (sleep masks, wills) usually have quality and
+# consistency dimensions that justify graded treatment.
+
+steep_diminishing:
+  description: "Heavy front-loading: half the benefit comes from just starting (tier 1), the rest from sustaining and increasing dose. Typical of biological-saturation curves (mortality, cardiovascular events, antidepressant effect of exercise)."
+  multipliers: [0.00, 0.50, 0.80, 1.00]
+
+mild_diminishing:
+  description: "Gently front-loaded: early adoption gives slightly more benefit per tier than later increases, but the curve is not steep. Suits subjective outcomes with noisy evidence and no sharp plateau. Safe default when uncertain."
+  multipliers: [0.00, 0.40, 0.70, 1.00]
+
+near_linear:
+  description: "Equal benefit per tier. Use when output scales proportionally with dose itself – caloric burn, time-based outcomes, financial savings, raw practice hours."
+  multipliers: [0.00, 0.33, 0.67, 1.00]
+
+threshold:
+  description: "Back-loaded with cutoff: no benefit until the threshold is crossed, then most of the benefit at the next tier, with a smaller top-end gain. Use for interventions with a clear biological minimum below which the mechanism doesn't fire (e.g. minimum sleep duration, minimum protein dose for muscle protein synthesis)."
+  multipliers: [0.00, 0.00, 0.70, 1.00]
+
+binary:
+  description: "On/off intervention where degrees genuinely don't apply. Escape hatch for one-off events (one-time vaccinations, single genetic tests). Default to graded shapes wherever defensible."
+  multipliers: [0.00, 0.00, 0.00, 1.00]
