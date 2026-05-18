@@ -2119,15 +2119,10 @@ function renderTierBlock() {
     var tiers = doseResponseConfig.tiers;
     var scoredAt = doseResponseConfig.scored_at_tier;
 
-    // Context line under the picker (only for tier 0 right now).
+    // Context line removed – the tier label and the "current benefits"
+    // sentence below already carry this information without ambiguity.
     var ctxEl = document.getElementById('tierContext');
-    if (ctxEl) {
-        if (currentTier === 0) {
-            ctxEl.textContent = "Tier 0 is the reference baseline – the intervention's benefits are measured against starting here.";
-        } else {
-            ctxEl.textContent = '';
-        }
-    }
+    if (ctxEl) ctxEl.textContent = '';
 
     // Your current benefits line.
     var currentEl = document.getElementById('tierCurrent');
