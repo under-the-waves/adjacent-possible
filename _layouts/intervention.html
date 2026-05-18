@@ -1523,13 +1523,20 @@ function renderTable() {
         // when signed in with assessment data so users can see how they differ.
         var baselineCell = document.getElementById('baseline-' + key);
         if (baselineCell) {
-            var baselineHtml = result.baselinePct + 'th';
+            var baselineHtml = ordinalSuffix(result.baselinePct);
             if (result.hasPersonalisation && result.userPct != null) {
-                baselineHtml += ' <span class="user-pct">(you: ' + result.userPct + 'th)</span>';
+                baselineHtml += ' <span class="user-pct">(you: ' + ordinalSuffix(result.userPct) + ')</span>';
             }
             baselineCell.innerHTML = baselineHtml;
         }
     }
+}
+
+// Ordinal suffix helper: 1 -> 1st, 2 -> 2nd, 21 -> 21st, 71 -> 71st, etc.
+function ordinalSuffix(n) {
+    var s = ['th', 'st', 'nd', 'rd'];
+    var v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
 // Map EBS score to a magnitude word
@@ -1616,7 +1623,7 @@ function renderTopEffectsSummary() {
             var r = item.result;
             if (r.hasPersonalisation) {
                 pdLines += '<p>Your estimated percentile for <strong>' + item.userDesc +
-                    '</strong> is <strong>' + r.userPct + 'th</strong>.</p>';
+                    '</strong> is <strong>' + ordinalSuffix(r.userPct) + '</strong>.</p>';
             }
         });
         if (!pdLines) {
@@ -2122,13 +2129,13 @@ function renderTierBlock() {
         }
     }
 
-    // "Right now" line.
+    // Your current benefits line.
     var currentEl = document.getElementById('tierCurrent');
     if (currentEl) {
         if (currentTier === 0) {
-            currentEl.innerHTML = '<strong>Right now:</strong> essentially no benefit captured from this intervention.';
+            currentEl.innerHTML = '<strong>Your current benefits:</strong> essentially nothing captured from this intervention.';
         } else {
-            currentEl.innerHTML = '<strong>Right now:</strong> ' + describeTier(currentTier).replace(/^A /, 'a ');
+            currentEl.innerHTML = '<strong>Your current benefits:</strong> ' + describeTier(currentTier).replace(/^A /, 'a ');
         }
     }
 
@@ -2153,38 +2160,38 @@ function renderTierBlock() {
         }
     }
 
-    // Sustainability paragraph.
+    // Sustainability sentence – only shown when the rate is low enough to be
+    // worth flagging, or when the user is already at the scored tier.
     var sustainEl = document.getElementById('tierSustainability');
     if (sustainEl) {
-        // Use the median UAR across all scored values as a single intervention-level number.
         var uars = Object.values(interventionData).map(function(v) { return v.uar; });
         uars.sort(function(a, b) { return a - b; });
         var medianUar = uars.length ? uars[Math.floor(uars.length / 2)] : 80;
         var rounded = Math.round(medianUar / 10) * 10;
         var inTen = Math.round(rounded / 10);
-        var sentence = 'About ' + inTen + ' in 10 people who try this sustain it.';
-        if (currentTier < scoredAt) {
-            if (rounded >= 80) {
-                sentence += ' Realistically, you would still see most of these gains if you committed.';
-            } else if (rounded >= 50) {
-                sentence += ' Realistically, your expected outcome on an attempt is somewhat lower than the best case.';
-            } else {
-                sentence += ' Realistically, most attempts fall short, so the expected outcome is substantially below the best case.';
-            }
+        if (currentTier >= scoredAt) {
+            sustainEl.textContent = "You're already at the dose this intervention was scored against. Maintaining is what matters now.";
+            sustainEl.style.display = '';
+        } else if (rounded < 70) {
+            // Low-adherence interventions: surface this prominently because it
+            // changes the realistic outcome materially (think smoking-cessation).
+            sustainEl.textContent =
+                'About ' + inTen + ' in 10 people who try this sustain it. ' +
+                'Most attempts fall short, so the realistic outcome is well below the best case here.';
+            sustainEl.style.display = '';
         } else {
-            sentence = "You're already at the dose this intervention was scored against. Maintaining is what matters now.";
+            // For high-adherence interventions (walking, sleep, etc.) the rate
+            // alone doesn't change the recommendation – omit the line entirely.
+            sustainEl.textContent = '';
+            sustainEl.style.display = 'none';
         }
-        sustainEl.textContent = sentence;
     }
 
-    // "Going strong" badge: top-value magnitude at current tier matches top-value magnitude at scored_at_tier.
+    // "Going strong" badge: only appears when the user has reached the tier
+    // the intervention was scored against (typically tier 3).
     var badge = document.getElementById('tierBadge');
     if (badge) {
-        if (currentTier > 0 && topMagnitudeAtTier(currentTier) === topMagnitudeAtTier(scoredAt)) {
-            badge.style.display = '';
-        } else {
-            badge.style.display = 'none';
-        }
+        badge.style.display = (currentTier >= scoredAt) ? '' : 'none';
     }
 }
 
