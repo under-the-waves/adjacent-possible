@@ -64,6 +64,21 @@ When writing PBS reasoning, follow this pattern explicitly:
 
 The PBS represents step 4 – the size of the change, not where you end up. A user who is already at the 80th percentile would see less benefit because there is less room to improve; that's handled by the personalisation layer at display time, not in the PBS itself.
 
+### `baseline_percentile` vs. Tier 0 – do not conflate
+
+These two concepts describe different axes and are easy to muddle when both appear on the same page.
+
+- **`baseline_percentile`** lives on the **outcome axis**: the value's percentile (fitness.health percentile, mental-health.stability percentile, etc.). It calibrates *where on the outcome the typical non-adopter sits* and is the implicit subject of the PBS delta.
+- **Tier 0** in the intervention's `dose_response` block lives on the **intervention-adherence axis**: how much of *this specific intervention* the user is currently doing. Tier 0 means "not deliberately doing it" – e.g., walking under 3,000 steps a day from incidental movement only.
+
+The two correlate for some interventions but decouple frequently. A marathon runner can be at Tier 0 on walking (zero deliberate walks) while sitting at the 90th percentile on fitness.health (because their running makes them fit). A user who has never done meditation can be at Tier 0 on it while still having an 80th-percentile mental-health.stability score (because they have a steady job, supportive partner, and good sleep).
+
+The system treats them as orthogonal:
+- The tier multiplier scales the *captured benefit* of the intervention based on adherence (Tier 0 = 0% captured).
+- The sigmoid personalisation discounts EBS based on the gap between the user's outcome percentile (from Level 1) and `baseline_percentile` – independent of which tier they report.
+
+When you write a PBS reasoning that says "baseline 35th percentile, endpoint 65th, delta 30 points", you are speaking about the outcome axis – the typical non-adopter at the 35th percentile on the value. You are *also* implicitly speaking about a Tier 0 starting point on the intervention (they're not doing it yet), but that's not the same statement. The PBS captures the *delta achievable by progressing from Tier 0 to Tier 3*, for someone who starts at the value's baseline percentile.
+
 ### Critical Reasoning Requirements
 
 For each score, you must provide reasoning that directly justifies the specific number. Consider:
