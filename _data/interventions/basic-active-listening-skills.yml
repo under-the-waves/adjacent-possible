@@ -107,6 +107,37 @@ values:
     uar_reasoning: |
       - See communication.connection UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: application_skill
+  metric_label: "How well you apply the techniques"
+  metric_help: "This intervention is a skill applied within conversations rather than a frequency practice. Tiers describe how often and how naturally the three core techniques (paraphrasing, open follow-up questions, reflecting feelings before advising) appear in your everyday interactions."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Default mode"
+      criterion: "Not deliberately using the techniques; you mostly wait to respond"
+    - level: 1
+      label: "Trying it sometimes"
+      criterion: "Applying techniques in scheduled or formal conversations, often mechanically; default mode returns under stress"
+    - level: 2
+      label: "Most conversations"
+      criterion: "Techniques appear in most everyday interactions and feel increasingly natural; you still slip in emotionally charged moments"
+    - level: 3
+      label: "Habitual"
+      criterion: "The techniques have become how you converse; deployed automatically, including under stress, with genuine intent rather than performance"
+
+  value_templates:
+    communication.connection: mild_diminishing
+    communication.conflict: mild_diminishing
+    friendship.depth: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+
+  rationale: |
+    - Unlike most interventions, this one is graded by **skill quality** rather than frequency. The dose isn't time-per-day; it's how reliably the techniques actually appear in real conversations, including the high-stress ones where they're hardest to maintain. The [Itzchakov 2023 listening-training RCT](https://onlinelibrary.wiley.com/doi/full/10.1002/hrm.22103) notes effects persist post-training but require periodic reinforcement – the tier-3 "habitual" state corresponds to the consolidated practice in which the trained behaviour survives stress and emotion.
+    - Template choices: all five values use `mild_diminishing`. The relational benefits accrue gradually as the user's social network reciprocates increased communal motivation ([Lemay 2023](https://labsites.rochester.edu/lelab/wp-content/uploads/2023/06/Lemay-et-al.-2023-Listening-and-the-pursuit-of-communal-relationships.pdf)). There is no biological saturation curve here, no proportional caloric expenditure, no clear threshold below which nothing happens – it's the safe-default subjective-with-noisy-evidence shape across the board.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment, materials, or paid training required. The techniques can be learned from freely available articles or a single library book."

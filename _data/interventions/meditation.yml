@@ -171,6 +171,43 @@ values:
     uar_reasoning: |
       - See sleep.daily_functioning UAR - same intervention, same adherence profile
 
+dose_response:
+  metric: minutes_per_day_average
+  metric_label: "Average daily practice"
+  metric_help: "Total weekly minutes spent meditating, divided by 7. A daily 10-minute habit counts as 10 min/day; three 20-minute sessions per week counts as ~8.5 min/day."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not practising"
+      criterion: "Under 1 min/day average"
+    - level: 1
+      label: "Sporadic"
+      criterion: "1–9 min/day average"
+    - level: 2
+      label: "Standard daily"
+      criterion: "10–19 min/day average"
+    - level: 3
+      label: "Extended"
+      criterion: "20+ min/day average"
+
+  value_templates:
+    sleep.daily_functioning: mild_diminishing
+    sleep.long_term_health: mild_diminishing
+    sleep.comfort_experience: steep_diminishing
+    fitness.health: mild_diminishing
+    goals.follow_through: mild_diminishing
+    current-work.engagement: mild_diminishing
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+
+  rationale: |
+    - Tier criteria use daily-average minutes because the meditation evidence base measures dose in time, not session count. The scored 10–20 min/day "standard daily" range (tier 2) is the dose used in most RCTs cited in the YAML; the [dose-response research](https://pmc.ncbi.nlm.nih.gov/articles/PMC12336962/) noting 25–41 hours/month for meaningful wellbeing gains corresponds to roughly 50–80 min/day, placing the extended-practice tier 3 well into that range. Tier 1 captures the common pattern of sporadic short sessions that produce modest benefit but fall well below the dosing threshold for most outcomes.
+    - Template choices:
+      - `steep_diminishing` for `sleep.comfort_experience` and `mental-health.stability`. Subjective pre-sleep calm and core symptom-reduction effects emerge at modest doses ([Rusch 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6557693/), [Goyal 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC4142584/)) and plateau before the high-dose threshold.
+      - `mild_diminishing` for everything else. Sleep architecture changes, cardiovascular markers, executive-function gains, engagement, resilience, and flourishing all need sustained practice volume and have noisier evidence – including the dose-response work suggesting flourishing specifically needs much more than the standard daily dose to fully manifest.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment or purchases required to begin. A quiet place to sit is the only requirement, and any chair or floor space suffices."

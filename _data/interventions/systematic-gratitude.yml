@@ -130,6 +130,40 @@ values:
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
       - Flourishing benefits emerge from the same evening practice; adherence constraints are identical.
 
+dose_response:
+  metric: days_per_week
+  metric_label: "Evenings per week with a structured entry"
+  metric_help: "Number of evenings in an average week where you write a structured gratitude entry with the causal-analysis prompts (why did this matter, who contributed, what made it possible) – not just listing items."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Rarely"
+      criterion: "0–1 days/week"
+    - level: 1
+      label: "Occasional"
+      criterion: "2–3 days/week"
+    - level: 2
+      label: "Most evenings"
+      criterion: "4–5 days/week"
+    - level: 3
+      label: "Daily"
+      criterion: "6–7 days/week"
+
+  value_templates:
+    sleep.daily_functioning: mild_diminishing
+    sleep.long_term_health: mild_diminishing
+    sleep.comfort_experience: steep_diminishing
+    current-work.engagement: mild_diminishing
+    mental-health.stability: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+
+  rationale: |
+    - Tier criteria are weekly frequency rather than minutes-per-session because the practice is short (5–10 min) and uniform in duration; what matters is whether the evening routine actually fires. The scored cadence in the source studies ([Wood 2009](https://doi.org/10.1016/j.jpsychores.2008.09.002), [Emmons & McCullough 2003](https://doi.org/10.1037/0022-3514.84.2.377)) is daily, placing the full PBS at tier 3.
+    - Template choices:
+      - `steep_diminishing` for `sleep.comfort_experience`. The pre-sleep cognition mechanism produces noticeable subjective sleep-comfort benefit within the first week of practice (the YAML's UAR reasoning explicitly notes immediate experiential reinforcement) – most of the benefit appears at modest frequency.
+      - `mild_diminishing` for the rest. Sleep architecture effects, long-term cardiovascular pathway, work engagement, and mental-health outcomes accrue gradually with sustained practice; the [Cregg & Cheavens 2021 meta-analysis](https://doi.org/10.1007/s10902-020-00236-6) found small effect sizes that diminished at follow-up, supporting the noisy-evidence safe-default shape.
+
 resources:
   upfront_cost: 5
   upfront_cost_reasoning: "A basic notebook or journal for structured gratitude entries. Digital alternatives (phone notes app) cost nothing, but a dedicated physical journal supports the ritual element."

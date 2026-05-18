@@ -175,6 +175,44 @@ values:
     uar_reasoning: |
       - See fitness.performance UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: sessions_per_week
+  metric_label: "Training sessions per week"
+  metric_help: "Number of full strength-training sessions (typically 45–60 minutes each) you complete in an average week. Count only sessions where you actually trained the main lifts with progressive overload."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not training"
+      criterion: "0 sessions/week"
+    - level: 1
+      label: "Occasional"
+      criterion: "1 session/week"
+    - level: 2
+      label: "Regular"
+      criterion: "2 sessions/week"
+    - level: 3
+      label: "Programmed"
+      criterion: "3+ sessions/week"
+
+  value_templates:
+    fitness.performance: near_linear
+    body-image.muscle_gain: near_linear
+    fitness.health: steep_diminishing
+    body-image.fat_loss: near_linear
+    fitness.enjoyment: mild_diminishing
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+    behaviours.resilience: mild_diminishing
+
+  rationale: |
+    - Tier criteria use session count rather than weekly volume in sets because sessions are easier for users to self-report accurately. Three sessions per week corresponds to roughly 10+ sets per muscle group, the volume-dose plateau identified in [Schoenfeld 2017](https://doi.org/10.1136/bjsports-2017-097608). One session per week sits just above the Momma 2022 health-benefit threshold of 30–60 min/week.
+    - Template choices reflect the different dose-response shapes across values:
+      - `near_linear` for `fitness.performance`, `body-image.muscle_gain`, and `body-image.fat_loss`. Strength gains and hypertrophy scale roughly proportionally with weekly volume up to the 10-set plateau ([Schoenfeld 2017](https://doi.org/10.1080/02640414.2016.1210197)); caloric expenditure scales linearly with sessions.
+      - `steep_diminishing` for `fitness.health` and `mental-health.stability`. The [Momma 2022 meta-analysis](https://doi.org/10.1136/bjsports-2021-105099) shows mortality and cardiovascular-event benefits plateau at 30–60 min/week (roughly tier 1), and [Gordon 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) found mood-stabilising effects regardless of training volume.
+      - `mild_diminishing` for the subjective values with noisier evidence (`fitness.enjoyment`, `mental-health.resilience`, `mental-health.flourishing`, `behaviours.resilience`). These accrue with sustained practice volume but lack a sharp plateau.
+
 resources:
   upfront_cost: 100
   upfront_cost_reasoning: "Athletic shoes suitable for lifting ($60–100) and basic workout clothing ($30–50). Optional but useful: lifting belt ($30–50), wrist wraps ($15), notebook or app for logging ($0–10). Home-gym setup is substantially more expensive (barbell, plates, rack: $800–1,500) but not required to begin."

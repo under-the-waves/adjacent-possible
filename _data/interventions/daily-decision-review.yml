@@ -123,6 +123,40 @@ values:
     uar_reasoning: |
       - See goals.clarity UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: days_per_week
+  metric_label: "Days per week with a written review"
+  metric_help: "Number of evenings (or other consistent slots) in an average week where you actually complete a structured 10-minute review – what was planned, what happened, what you learnt, what to adjust."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Rarely"
+      criterion: "0–1 days/week"
+    - level: 1
+      label: "Sometimes"
+      criterion: "2–3 days/week"
+    - level: 2
+      label: "Most days"
+      criterion: "4–5 days/week"
+    - level: 3
+      label: "Daily"
+      criterion: "6–7 days/week"
+
+  value_templates:
+    goals.clarity: mild_diminishing
+    goals.follow_through: near_linear
+    goals.adaptability: mild_diminishing
+    organisation.tracking: mild_diminishing
+    current-work.competence: mild_diminishing
+    current-work.engagement: mild_diminishing
+
+  rationale: |
+    - Tier criteria use weekly frequency because the active ingredient is the recurrence of the feedback loop. Below 2 days/week the practice can't establish, hence tier 0 absorbs both "never" and "tried it a couple of times." The [Di Stefano 2014 field experiment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2414478) cadence was daily, and [Lally 2010 on habit formation](https://doi.org/10.1002/ejsp.674) suggests near-daily repetition is required for the practice to become automatic.
+    - Template choices:
+      - `near_linear` for `goals.follow_through`. The daily-cadence accountability operates at the same frequency as the outcome metric (days with goal action), so each additional day of review directly contributes a proportional amount of next-day follow-through.
+      - `mild_diminishing` for the remaining values. Goal clarity, adaptability, organisational tracking, work competence, and work engagement all accrue with practice volume but the evidence base is mostly observational and effects emerge gradually – there's no sharp plateau and noisy individual variation, matching the safe-default `mild_diminishing` shape.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. Daily reflection can be done with any existing notebook, text editor, or note-taking app. No special equipment or materials needed."
