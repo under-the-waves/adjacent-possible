@@ -121,6 +121,39 @@ values:
     uar_reasoning: |
       - See information-management.retrieval UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: pkm_practice_completeness
+  metric_label: "PKM practice depth and consistency"
+  metric_help: "How fully you implement the three defining practices (atomic notes, explicit linking, weekly review) and how long you sustain them. Capture-only is a partial implementation."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No system"
+      criterion: "No structured PKM; notes scattered across email, browser bookmarks, and miscellaneous documents"
+    - level: 1
+      label: "Capture only"
+      criterion: "PKM tool installed and used for capture, but no atomic-note discipline, linking, or weekly review; inbox accumulates unprocessed"
+    - level: 2
+      label: "Partial discipline"
+      criterion: "Inbox processed most weeks with some atomic notes and linking, but inconsistent review; system in active use for under 6 months"
+    - level: 3
+      label: "Mature system"
+      criterion: "All three practices (atomic notes, explicit linking, weekly review) sustained for 12+ months; system contains hundreds of linked notes and is the user's default reference store"
+
+  value_templates:
+    information-management.retrieval: mild_diminishing
+    information-management.simplicity: threshold
+    information-management.retention: threshold
+    information-management.insight: threshold
+    learning-methods.depth: threshold
+    organisation.tracking: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [PKM abandonment research](https://dl.acm.org/doi/10.1145/3411764.3445648) showing most users churn within 6–12 months, with capture-only mode being the dominant failure pattern. Tier 3 captures the mature multi-year system the PBS values were scored against; the insight benefit per Ahrens/Luhmann requires a critical mass of notes that only accrues with sustained practice.
+    - `threshold` for information-management.simplicity, .retention, .insight, and learning-methods.depth: per [note-taking research](https://psycnet.apa.org/record/2014-15511-001), retention and depth gains require the active rephrasing-and-linking step. Capture-only mode (tier 1) produces no encoding benefit and arguably worsens simplicity by adding an unprocessed tool to existing systems. Insight gains depend on note-graph density only available at tier 3.
+    - `mild_diminishing` for information-management.retrieval and organisation.tracking: even capture-only mode provides some retrieval benefit via full-text search, with returns improving as the system matures.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Obsidian and Logseq are free for personal use; local Markdown files require no subscription. Notion has a free tier sufficient for personal PKM. The intervention can be started with no spend; paid sync plans are optional."

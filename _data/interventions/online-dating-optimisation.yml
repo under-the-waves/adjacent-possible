@@ -78,6 +78,36 @@ values:
     uar_reasoning: |
       - See relationship-status.meeting-new-partners UAR – same intervention, same adherence profile. Photo upgrades are a one-off effort with strong UAR for that sub-task, but sustained refresh and broader presentation discipline are subject to the same drift as the wider practice.
 
+dose_response:
+  metric: optimisation_completeness
+  metric_label: "Optimisation practices implemented and sustained"
+  metric_help: "How many of the four optimisation levers (good photos, specific prompts/bios, intentional swipe filters, structured first-message and date-proposal cadence) you implement, and whether you sustain weekly bounded sessions."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Passive use"
+      criterion: "On dating apps but using default selfies, generic bios, reflexive swipes, and 'hey' or no first messages – or not on apps at all"
+    - level: 1
+      label: "Profile polished"
+      criterion: "Upgraded photos and bio to meet best practice, but swipe and message behaviour remains reflexive and unstructured"
+    - level: 2
+      label: "Most levers"
+      criterion: "Profile optimised, intentional swipe filters applied, and structured first messages used, but no consistent weekly time-boxing or date-proposal cadence"
+    - level: 3
+      label: "Full deliberate practice"
+      criterion: "All four levers running: optimised profile, intentional filters, structured first messages, and consistent weekly time-boxed sessions with prompt in-person date proposals"
+
+  value_templates:
+    relationship-status.meeting-new-partners: mild_diminishing
+    relationship-status.partner-selection: threshold
+    style.attractiveness: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the modular structure of the practice and [OkCupid photo analysis](https://theblog.okcupid.com/the-4-big-myths-of-profile-pictures-1fcb696c0b53) and [Hinge data](https://hinge.co/press): photo and prompt upgrades alone produce measurable lift, but the conversion-to-meeting benefit requires the messaging and date-proposal discipline added at tiers 2 and 3.
+    - `mild_diminishing` for relationship-status.meeting-new-partners and style.attractiveness: each additional lever compounds on the previous one, with the photo upgrade alone capturing a disproportionate share of profile-perception benefit per [OkCupid analysis](https://theblog.okcupid.com/the-4-big-myths-of-profile-pictures-1fcb696c0b53).
+    - `threshold` for relationship-status.partner-selection: per [the online dating research](https://link.springer.com/article/10.1007/s10508-018-1265-9), selection-quality benefits depend specifically on the intentional swipe filters and the get-to-in-person-meeting discipline – earlier tiers without the filter discipline don't deliver the selection benefit and can amplify mismatches.
+
 resources:
   upfront_cost: 50
   upfront_cost_reasoning: "Conservative minimum covers a basic photo session – a friend with a decent phone camera and an hour of effort can suffice for free, but budgeting for an inexpensive haircut, a single new outfit element, or a low-cost photographer is realistic for many users. Professional dating photographers cost $200–$500 but are not required."

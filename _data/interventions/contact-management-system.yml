@@ -191,6 +191,44 @@ values:
     uar_reasoning: |
       - See networks.depth UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_logging_and_followups
+  metric_label: "Weekly logging and follow-ups"
+  metric_help: "Tiers describe how reliably you maintain the weekly 15–30 minute slot for logging recent conversations and triggering follow-ups – the active ingredient, not just the populated database."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No system"
+      criterion: "Phone contacts list only; no structured database or scheduled follow-ups"
+    - level: 1
+      label: "Set up, dormant"
+      criterion: "Database created and seeded but no weekly review; no follow-ups triggered"
+    - level: 2
+      label: "Intermittent"
+      criterion: "Logging interactions occasionally; 1–2 follow-ups per month; cadence drifts"
+    - level: 3
+      label: "Sustained cadence"
+      criterion: "Weekly 15–30 minute slot held; tiered cadences (inner/active/dormant) actually run; 12+ months of consistent use"
+
+  value_templates:
+    networks.depth: mild_diminishing
+    networks.breadth: near_linear
+    networks.relevance: mild_diminishing
+    career-planning.advancement: mild_diminishing
+    career-planning.security: mild_diminishing
+    friendship.breadth: near_linear
+    friendship.depth: mild_diminishing
+    family-of-origin.connection: mild_diminishing
+    extended-family.closeness: mild_diminishing
+    organisation.tracking: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [Dex/Monica reviews](https://getdex.com/blog/monica-review/) observation that sustained use is the dominant adherence challenge for personal CRMs, and [friendship-maintenance research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9902704/) showing consistent outreach is the primary predictor of relationship persistence. PBS values assume tier 3 (sustained cadence).
+    - Template choices:
+      - `near_linear` for networks.breadth and friendship.breadth – maintained contacts are roughly proportional to the share of the database that actually receives periodic touches.
+      - `mild_diminishing` for depth, relevance, advancement, security, family, and tracking values – relational benefits accrue gradually with sustained warm cadence, with the largest payoff during career transitions and life events that are unpredictable.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "A spreadsheet (Google Sheets, free) or Notion (free tier) is sufficient for the intervention. Dedicated tools (Dex, Clay, Monica, Cloze) are optional and treated as ongoing rather than upfront costs."

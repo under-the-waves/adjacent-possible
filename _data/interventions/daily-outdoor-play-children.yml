@@ -96,6 +96,38 @@ values:
     uar_reasoning: |
       - See children.development UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: outdoor_minutes_per_day_average
+  metric_label: "Average daily outdoor play minutes per child"
+  metric_help: "Average daily minutes per child of unstructured, screen-free outdoor play. Time in organised sport or supervised park visits with parents counts at half value because the autonomy ingredient is reduced."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Indoor default"
+      criterion: "Under 15 minutes/day of outdoor play; screens fill the after-school slot"
+    - level: 1
+      label: "Some outdoor"
+      criterion: "15–30 minutes/day, often supervised and structured; little peer interaction"
+    - level: 2
+      label: "Regular outdoor"
+      criterion: "30–60 minutes/day on most days, with some peer interaction and growing independence"
+    - level: 3
+      label: "Default outdoor"
+      criterion: "60+ minutes/day on most days, unstructured, with peers, age-appropriate independence, sustained across weather and school terms"
+
+  value_templates:
+    children.development: mild_diminishing
+    children.wellbeing: mild_diminishing
+    fitness.health: steep_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [reviews of children's outdoor time](https://www.tandfonline.com/doi/full/10.1080/02568543.2022.2049936) documenting that fewer than 30% of children in developed countries meet daily outdoor activity guidelines, and [research on independent mobility](https://pubmed.ncbi.nlm.nih.gov/27214882/) on the developmental importance of unsupervised peer play. PBS values assume tier 3 (60+ minutes/day default).
+    - Template choices:
+      - `steep_diminishing` for fitness.health – the largest gain in moderate-to-vigorous physical activity per [outdoor-time research](https://pubmed.ncbi.nlm.nih.gov/23332329/) comes from moving the child off the indoor default; further increases yield smaller cardiometabolic gains.
+      - `mild_diminishing` for development, wellbeing, and mental-health.stability – self-regulation, peer skill, and mood benefits accrue gradually with sustained daily exposure without a sharp threshold.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. Most households already have sufficient outdoor clothing for the practice. Some families invest in better wet-weather gear ($30 -- 80 per child) to support adherence in poor weather, but this is optional."

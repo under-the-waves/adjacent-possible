@@ -140,6 +140,39 @@ values:
     uar_reasoning: |
       - See time-management.balance UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: practice_consolidation
+  metric_label: "Time blocking practice consolidation"
+  metric_help: "How reliably you pre-allocate the day to specific blocks with explicit buffers, treat blocks as honoured commitments, and run the daily and weekly review cadence. Buffer-protection discipline is the active ingredient – packing the calendar wall-to-wall sits at lower tiers."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Reactive"
+      criterion: "No structured time blocking; days run on to-do list and incoming requests"
+    - level: 1
+      label: "Blocking without buffers"
+      criterion: "Days planned in blocks but packed wall-to-wall; disruptions cascade into evenings"
+    - level: 2
+      label: "Buffers mostly held"
+      criterion: "15–30% buffer time scheduled and honoured most days; daily plan and weekly review running"
+    - level: 3
+      label: "Sustained with buffers"
+      criterion: "Time blocking with protected buffers sustained 6+ months; blocks treated as informative-not-rigid; buffers genuinely defended under pressure"
+
+  value_templates:
+    time-management.balance: mild_diminishing
+    time-management.flexibility: mild_diminishing
+    time-management.productivity: mild_diminishing
+    current-work.competence: mild_diminishing
+    goals.follow_through: mild_diminishing
+    cognitive-skills.focus: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the buffer-discipline distinction the intervention emphasises: blocking without buffers (tier 1) collapses on the first overrun and produces the rigidity-without-flexibility failure mode. The 6-month sustained-with-buffers state (tier 3) is what PBS values are scored against, consistent with the [productivity habit research](https://www.sciencedirect.com/science/article/abs/pii/S0747563218304436) showing fewer than 30% of users sustain calendar-based planning beyond three months without accountability.
+    - All values use `mild_diminishing`. The benefits across balance, flexibility, productivity, competence, follow-through, focus, and stability all accumulate gradually as the practice consolidates and the buffer-protection habit holds against pressure. [Implementation-intention research](https://kops.uni-konstanz.de/handle/123456789/10973) (d ≈ 0.65) supports a moderate effect size that scales with reliable application – the safe-default subjective shape across the value set.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials required beyond an existing calendar – paper, phone, or computer. The intervention is a planning practice that uses tools most people already have."

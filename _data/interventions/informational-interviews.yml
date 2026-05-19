@@ -78,6 +78,36 @@ values:
       - Without immediate payoff, many people deprioritise this activity in favour of more urgent career tasks. [Klehe et al. (2011)](https://doi.org/10.1037/a0024914) found that proactive career behaviours are most common during active job search, not during stable employment when resilience-building would be most strategic.
       - The motivational challenge is compounded by the difficulty of conducting interviews across diverse fields (rather than concentrating on a single target area), which is necessary for the security benefit but feels less focused and productive.
 
+dose_response:
+  metric: total_interviews_conducted
+  metric_help: "Cumulative number of structured 20–30 minute informational interviews you've conducted with professionals in target fields, with follow-up notes and a thank-you message sent within 24 hours. Failed outreach and casual chats don't count."
+  metric_label: "Total informational interviews conducted"
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not started"
+      criterion: "No outreach; career intelligence from desk research only"
+    - level: 1
+      label: "First attempts"
+      criterion: "1–3 interviews completed; outreach feels effortful; no clear patterns yet"
+    - level: 2
+      label: "Building momentum"
+      criterion: "4–9 interviews completed across multiple fields; questions sharpening; first warm contacts emerging"
+    - level: 3
+      label: "Sustained programme"
+      criterion: "10+ interviews over several months at 2–4 per month; multiple warm contacts; clear field-by-field comparisons possible"
+
+  value_templates:
+    career-planning.clarity: mild_diminishing
+    career-planning.advancement: near_linear
+    career-planning.security: near_linear
+
+  rationale: |
+    - Tier criteria anchor on the description's stated practice of 2–4 interviews per month over several months and the observation that "after 8–10 interviews, you can articulate specific differences between the fields you have explored" – tier 3 captures the consolidated programme that produces the documented [career clarity gains](https://doi.org/10.1177/10690727221150185).
+    - `mild_diminishing` for career-planning.clarity because pattern recognition front-loads – the first several interviews produce the biggest jumps in clarity as completely new information arrives, with diminishing marginal information per interview as patterns become familiar.
+    - `near_linear` for career-planning.advancement and career-planning.security because these are count-based outcomes – professional advocates and network breadth scale roughly with the number of meaningful conversations conducted, with each successful interview converting roughly one acquaintance into a warm contact.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Informational interviews are free. They are typically conducted over coffee (which you might buy, but this is optional and negligible) or via video call. No equipment, courses, or subscriptions are required to begin."

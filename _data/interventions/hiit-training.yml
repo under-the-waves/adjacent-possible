@@ -123,6 +123,40 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: weekly_sessions
+  metric_label: "HIIT sessions per week"
+  metric_help: "Number of 15–30 minute interval sessions per week at 80–95% HRmax intensity. Casual 'circuit-style' sessions that don't reach prescribed intensity don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "None"
+      criterion: "No interval or high-intensity training"
+    - level: 1
+      label: "Trying it"
+      criterion: "1 session/week or sporadic sessions; intensity often below prescribed range"
+    - level: 2
+      label: "Regular"
+      criterion: "2 sessions/week at proper intensity; 48-hour recovery respected"
+    - level: 3
+      label: "Full programme"
+      criterion: "2–3 sessions/week of 15–30 minutes at 80–95% HRmax (e.g., 4x4 Norwegian or sprint-interval format), sustained for 12+ weeks"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: steep_diminishing
+    fitness.enjoyment: mild_diminishing
+    body-image.fat_loss: near_linear
+    mental-health.stability: mild_diminishing
+    mental-health.resilience: mild_diminishing
+
+  rationale: |
+    - Tier criteria anchor on the intervention's stated practical ceiling of 2–3 sessions/week for non-athletes, with additional sessions producing diminishing returns and overtraining risk. Tier 1 captures the common sub-threshold intensity failure mode noted in the pitfalls section.
+    - `steep_diminishing` for fitness.health and fitness.performance because VO2max gains and the mortality dose-response curve plateau quickly: the [Milanović 2015 meta-analysis](https://doi.org/10.1007/s40279-015-0365-0) shows most of the available VO2max benefit appears with 2 sessions per week, and the CRF-mortality relationship per [Kodama et al.](https://doi.org/10.1001/jama.2009.681) flattens at moderate fitness gains.
+    - `near_linear` for body-image.fat_loss because per-session caloric expenditure and EPOC contribution scale roughly linearly with session count.
+    - `mild_diminishing` for fitness.enjoyment, mental-health.stability, and mental-health.resilience because these are subjective outcomes accruing with practice volume; the discomfort-tolerance and mood mechanisms have noisy evidence.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "HIIT can be performed with bodyweight exercises, running, stair climbing, or basic equipment. No mandatory equipment purchases required to begin effective implementation. An interval timer app is free."

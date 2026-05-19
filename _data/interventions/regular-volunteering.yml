@@ -142,6 +142,39 @@ values:
     uar_reasoning: |
       - See community-contribution.impact UAR – same intervention and adherence profile.
 
+dose_response:
+  metric: monthly_volunteer_hours
+  metric_label: "Hours per month in a structured role"
+  metric_help: "Average hours per month spent in a recurring, named volunteering role with the same organisation. Episodic or one-off events do not count – the dose-response curve assumes regular contact with the same people in the same place."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not volunteering"
+      criterion: "No regular volunteering role, or only ad hoc one-off participation"
+    - level: 1
+      label: "Trying it"
+      criterion: "Under 2 hours/month, or recently started a recurring role"
+    - level: 2
+      label: "Established"
+      criterion: "2–4 hours/month sustained for 3+ months in a defined role"
+    - level: 3
+      label: "Embedded"
+      criterion: "2–4+ hours/month sustained for 12+ months, with named relationships and felt-absence if missed"
+
+  value_templates:
+    community-contribution.impact: mild_diminishing
+    community-contribution.belonging: mild_diminishing
+    community-contribution.fulfilment: mild_diminishing
+    friendship.breadth: mild_diminishing
+    friendship.depth: mild_diminishing
+    global-impact.passion: mild_diminishing
+    global-impact.fulfilment: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [Belonging Network review](https://www.belongnetwork.co.uk/wp-content/uploads/2024/04/Social-cohesion-and-volunteering-lit-review_final-1-1.pdf) finding that intermediate, regular volunteering (consistent with 2–4h/month) produced the highest reported neighbourhood belonging, and the [Givebutter retention data](https://givebutter.com/blog/volunteer-retention) showing that durability past 12 months is the threshold at which felt-impact and named relationships consolidate.
+    - All values use `mild_diminishing`. The relational benefits (belonging, fulfilment, friendship breadth/depth) accumulate gradually through repeated contact without a sharp plateau; impact and passion follow a similar slow-accrual pattern as familiarity with the cause deepens. There is no biological saturation curve, no proportional dollar-saved outcome, and no clear threshold below which nothing happens – the safe-default subjective shape across the board.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Structured volunteering requires no financial outlay. Volunteer platforms (Do It, VolunteerMatch, and country-specific equivalents) are free. Some roles require a basic background check, which is typically free for volunteers."

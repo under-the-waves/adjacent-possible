@@ -80,6 +80,37 @@ values:
       - The instant-access nature of the savings reduces the psychological friction that causes some people to cancel automated transfers to locked-in products.
       - [Vanguard (2024)](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) data on non-pension automated savings shows similarly high retention rates to pension auto-enrolment, supporting a UAR of 90%.
 
+dose_response:
+  metric: automated_savings_rate
+  metric_label: "Automated savings rate"
+  metric_help: "Percentage of take-home pay moved automatically into savings or investment accounts each pay period. Include employer match and pre-tax retirement contributions where applicable."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Manual or zero"
+      criterion: "No automated transfers; saving (if any) is whatever is left over each month"
+    - level: 1
+      label: "Modest auto"
+      criterion: "Automated transfers covering 1–5% of take-home pay"
+    - level: 2
+      label: "Solid auto"
+      criterion: "Automated transfers covering 6–10% of take-home pay, ideally split across emergency and longer-term accounts"
+    - level: 3
+      label: "Robust auto"
+      criterion: "Automated transfers covering 10%+ of take-home pay, split across emergency, tax-advantaged, and lifestyle accounts, with annual or pay-rise escalation"
+
+  value_templates:
+    saving.security: steep_diminishing
+    saving.growth: near_linear
+    saving.lifestyle: steep_diminishing
+
+  rationale: |
+    - Tier criteria reflect [Thaler and Benartzi's Save More Tomorrow research](https://doi.org/10.1086/380085) and [Vanguard auto-enrolment data](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf): the largest welfare gains come from moving any positive savings into automated form; further gains scale with the percentage automated. PBS values assume tier 3 (10%+ automated).
+    - Template choices:
+      - `steep_diminishing` for saving.security and saving.lifestyle – emergency-fund and liquid-reserve gains saturate once 3–6 months of expenses are accumulated; most of the security benefit comes from the first several months of buffer per [CFPB Financial Well-Being research](https://www.consumerfinance.gov/data-research/research-reports/financial-well-being-scale/).
+      - `near_linear` for saving.growth – terminal wealth at retirement scales roughly proportionally with the savings rate over decades.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Setting up automated transfers is free with most current and checking accounts. No financial products need to be purchased. Opening a new savings account or tax-advantaged savings vehicle is generally free."

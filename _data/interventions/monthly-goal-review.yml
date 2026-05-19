@@ -80,6 +80,36 @@ values:
       - [Arkes & Blumer (1985)](https://doi.org/10.1016/0749-5978(85)90049-4) demonstrated that sunk-cost bias makes people persist with failing goals; monthly reviews must overcome this bias each session, adding psychological friction.
       - Those with growth mindsets and lower sunk-cost sensitivity tend to sustain the practice longer. Estimated 50-60% sustained at 6 months.
 
+dose_response:
+  metric: review_sessions_per_year
+  metric_label: "Monthly review sessions completed and quality"
+  metric_help: "How regularly you complete a structured monthly review and whether you make written, strategic decisions (continue / modify / retire each goal) rather than just updating task lists."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No review"
+      criterion: "No structured goal review; goals drift unmonitored or are tracked only as ongoing task lists"
+    - level: 1
+      label: "Sporadic"
+      criterion: "Conducts a review every few months when prompted by external events; sessions focus on task lists rather than strategic decisions"
+    - level: 2
+      label: "Most months"
+      criterion: "Completes a review in 7–10 months of the year; written assessment of progress with some continue/modify/retire decisions"
+    - level: 3
+      label: "Disciplined practice"
+      criterion: "Reviews every month (10–12 per year) at a calendar-blocked anchor; written strategic decisions, recorded log, retires or modifies at least one goal per quarter"
+
+  value_templates:
+    goals.follow_through: mild_diminishing
+    goals.clarity: mild_diminishing
+    goals.adaptability: threshold
+
+  rationale: |
+    - Tier cuts reflect the [Harkin et al. (2016) meta-analysis](https://doi.org/10.1037/bul0000025) finding d = 0.40 for progress monitoring, with physically recording progress and structured intervals producing stronger effects. Tier 3 is the consistent recorded monthly cadence the PBS values were scored against; tier 1 (sporadic, task-list-only) doesn't deliver the recalibration mechanism.
+    - `mild_diminishing` for goals.follow_through and goals.clarity: each completed review adds a feedback-loop iteration per [Locke & Latham (2002) goal-setting theory](https://doi.org/10.1037/0003-066X.57.9.705), but the first few reviews capture most of the calibration value as users learn realistic capacity estimates.
+    - `threshold` for goals.adaptability: per [Brandstatter & Rothermund (2002)](https://doi.org/10.1016/S0065-2601(02)80009-2), deliberate goal disengagement requires the structured decision point; sporadic reviews don't reliably overcome sunk-cost bias documented by [Arkes & Blumer (1985)](https://doi.org/10.1016/0749-5978(85)90049-4) – the adaptability benefit only fires with consistent recurrence.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. A monthly review can be conducted with any existing note-taking tool, journal, or even pen and paper. Template design takes time but no money."

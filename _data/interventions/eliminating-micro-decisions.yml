@@ -78,6 +78,36 @@ values:
       - No additional maintenance burden for the speed dimension specifically, since it is the same set of defaults and decision rules being sustained.
       - Estimated 70-80% sustained at 6 months, consistent with tracking and order dimensions.
 
+dose_response:
+  metric: decisions_eliminated
+  metric_label: "Recurring micro-decisions converted to defaults"
+  metric_help: "Approximate count of recurring low-stakes daily decisions you've replaced with permanent defaults or 'if X, then always Y' rules – meal choices, outfit choices, route choices, scheduling defaults, and similar."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "All ad hoc"
+      criterion: "Most daily routine choices are made fresh each day; no documented defaults"
+    - level: 1
+      label: "A few defaults"
+      criterion: "1–5 recurring decisions converted to defaults (e.g., a fixed breakfast or commute)"
+    - level: 2
+      label: "Partial system"
+      criterion: "6–15 recurring decisions converted; covers one or two domains (e.g., meals and morning routine)"
+    - level: 3
+      label: "Systematic"
+      criterion: "15–30 recurring decisions converted across multiple domains; monthly review keeps defaults current"
+
+  value_templates:
+    organisation.tracking: mild_diminishing
+    organisation.order: mild_diminishing
+    organisation.speed: near_linear
+
+  rationale: |
+    - Tier criteria are anchored to the intervention's own stated outcome: "most practitioners eliminating 15-30 micro-decisions per day within 2-3 weeks". Tier 3 maps to that consolidated state; intermediate tiers capture the partial-adoption arc most users actually travel.
+    - `mild_diminishing` for organisation.tracking and organisation.order because the first few defaults converted address the highest-frequency or highest-friction decisions (clothing, meals, recurring meetings), capturing most of the deliberation-reduction benefit; additional defaults add diminishing returns. This matches the mixed empirical picture for decision fatigue noted in the existing ISR reasoning.
+    - `near_linear` for organisation.speed because the system-minimalism construct scales roughly with how many active choice points have been removed from the user's tools and rules – more defaults converted, simpler the experienced system.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. The intervention is a cognitive restructuring exercise that uses existing infrastructure. Some practitioners invest in tools that support automation (e.g., meal planning apps, capsule wardrobe services), but these are optional enhancements rather than prerequisites."

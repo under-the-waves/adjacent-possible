@@ -52,6 +52,34 @@ values:
     uar_reasoning: |
       - See saving.growth UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: match_capture_percentage
+  metric_label: "Share of available employer match captured"
+  metric_help: "What fraction of your employer's full match are you currently capturing each pay period? Most employers match 50–100% on the first 3–6% of salary."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No contribution"
+      criterion: "Contributing below the level required for any employer match (often the case for opted-out employees)"
+    - level: 1
+      label: "Auto-enrolment default"
+      criterion: "Contributing at the auto-enrolment default (often 3%), which captures a partial match in plans with higher match caps"
+    - level: 2
+      label: "Most of match"
+      criterion: "Contributing enough to capture 50–80% of the available match"
+    - level: 3
+      label: "Full match"
+      criterion: "Contributing at or above the match-cap percentage every pay period; re-checked after each salary change"
+
+  value_templates:
+    saving.growth: near_linear
+    investing.growth: near_linear
+
+  rationale: |
+    - Tier criteria reflect [Vanguard's How America Saves (2024)](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) finding that auto-enrolment defaults frequently sit below match caps, leaving guaranteed return on the table. PBS values assume tier 3 (full match captured).
+    - Template choices: both values use `near_linear`. The captured match is a fixed percentage of salary that compounds in tax-advantaged accounts over decades – every additional percentage point of match captured produces a roughly proportional uplift to terminal wealth. There is no biological saturation or noisy subjective outcome; this is a financial-mechanical relationship.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No cost. The contribution change is free to make in the workplace retirement portal."

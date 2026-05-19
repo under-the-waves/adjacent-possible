@@ -176,6 +176,42 @@ values:
     uar_reasoning: |
       - See physical-safety.freedom UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: training_engagement
+  metric_label: "Training engagement"
+  metric_help: "How much resistance-tested self-defence training you have actually done and are currently doing. Counts ongoing systems (BJJ, Krav Maga) at sessions per week, or completion of fixed-format resistance programmes (RAD, IMPACT, EAAA)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No training"
+      criterion: "No self-defence training, or only non-resistance demonstration courses"
+    - level: 1
+      label: "Started"
+      criterion: "1 session/week of resistance-based training, or partial completion of a fixed-format programme"
+    - level: 2
+      label: "Consolidating"
+      criterion: "2 sessions/week sustained for 3–6 months, or completion of a 12–30 hour resistance programme"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "2+ sessions/week sustained for 12+ months, or fixed-format completion plus annual refresher"
+
+  value_templates:
+    physical-safety.freedom: steep_diminishing
+    physical-safety.risk: steep_diminishing
+    fitness.health: steep_diminishing
+    fitness.performance: mild_diminishing
+    behaviours.resilience: mild_diminishing
+    behaviours.freedom: mild_diminishing
+    mental-health.resilience: mild_diminishing
+    participatory-leisure.social: mild_diminishing
+    networks.breadth: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the dual delivery model: ongoing martial-arts training where 2 sessions/week is the typical floor for skill acquisition, and fixed-format programmes where 12–30 hours produces the [Senn et al. 2015 NEJM](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) effects (46% rape reduction). Either path reaches tier 3 once consolidated; partial completion of a fixed-format programme or single weekly drop-in sits at tier 1.
+    - `steep_diminishing` for physical-safety.freedom, physical-safety.risk, and fitness.health: the [Senn et al.](https://www.nejm.org/doi/full/10.1056/NEJMsa1411131) and [Hollander](https://journals.sagepub.com/doi/10.1177/1077801214526046) data show most of the assault-resistance effect comes from completing a structured resistance programme – the first dose of resistance-tested skill captures most of the freedom and risk benefits, with later training consolidating rather than transforming. Fitness benefits saturate similarly per [BMJ 2021](https://www.bmj.com/content/375/bmj-2021-068047).
+    - `mild_diminishing` for fitness.performance, behaviours.resilience, behaviours.freedom, mental-health.resilience, participatory-leisure.social, and networks.breadth: skill development, social embedding, and stress-inoculation accrue gradually with sustained training – no sharp plateau, no clear threshold.
+
 resources:
   upfront_cost: 150
   upfront_cost_reasoning: "Basic kit: a gi (around $80–120 for BJJ entry-level) or appropriate workout clothing and a mouthguard for striking arts (around $15–30); a pair of training shoes or wrestling shoes is optional. RAD/IMPACT-style programmes typically include all required equipment in the course fee."

@@ -155,6 +155,42 @@ values:
     uar_reasoning: |
       - See consumptive-leisure.restoration UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_screen_free_hours
+  metric_label: "Weekly hours genuinely screen-free"
+  metric_help: "Total hours per week spent in pre-committed, calendar-bound blocks during which all personal screens are put away. Brief 'emergency check' exceptions break the block and don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No blocks"
+      criterion: "No deliberate screen-free time; phone reflexively checked during all leisure"
+    - level: 1
+      label: "Token block"
+      criterion: "One short (~1 hour) screen-free block per week, frequently broken by emergency exceptions"
+    - level: 2
+      label: "Established"
+      criterion: "One 2–3 hour block per week, mostly held without exceptions for 4+ weeks"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "1–2 blocks per week totalling 4–6+ hours, held consistently for 8+ weeks including evenings before sleep"
+
+  value_templates:
+    consumptive-leisure.restoration: mild_diminishing
+    consumptive-leisure.enjoyment: mild_diminishing
+    consumptive-leisure.enrichment: near_linear
+    mindfulness.clarity: mild_diminishing
+    mindfulness.emotional: mild_diminishing
+    participatory-leisure.social: near_linear
+    participatory-leisure.achievement: near_linear
+    sleep.daily_functioning: threshold
+
+  rationale: |
+    - Tier criteria reflect the structural-constraint mechanism the intervention relies on: a single token block frequently broken by emergency checks (tier 1) provides little restoration because the moment-by-moment temptation isn't sidestepped, while sustained 2–3 hour blocks held without exception (tier 2+) start to produce the documented effects from the [BMC Medicine 2025 RCT](https://link.springer.com/article/10.1186/s12916-025-03944-z).
+    - `mild_diminishing` for restoration, enjoyment, mindfulness clarity, and mindfulness emotional because attention-restoration and hedonic-recalibration benefits build gradually with practice volume but lack a sharp plateau; the [scoping review](https://pmc.ncbi.nlm.nih.gov/articles/PMC11871965/) shows variable outcomes consistent with a noisy gradual curve.
+    - `near_linear` for enrichment, social, and achievement because these depend on what fills the screen-free time – more hours protected means proportionally more opportunity for reading, conversation, or craft.
+    - `threshold` for sleep.daily_functioning because the documented sleep benefit specifically requires the block to include the 1–2 hours before bed (per [National Sleep Foundation consensus](https://www.sleephealthjournal.org/article/S2352-7218%2824%2900090-1/fulltext)); blocks earlier in the day produce little sleep effect.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment or purchases required. The intervention uses absence of devices rather than any product."

@@ -81,6 +81,35 @@ values:
       - Physical-comfort attrition (mask shift, eyelash contact, elastic pressure) still removes around 35–40% of starters within the first few months.
       - Travel use cases (hotels, planes) provide reinforcement that pulls some users back to nightly home use after experiencing the contrast.
 
+dose_response:
+  metric: mask_use_frequency
+  metric_label: "Mask quality and nightly use"
+  metric_help: "How many nights per week you wear a well-fitted contoured mask that blocks light effectively. A flat mask that leaks light, or a contoured mask worn occasionally, sits in lower tiers."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Never"
+      criterion: "No sleep mask used"
+    - level: 1
+      label: "Occasional or poor fit"
+      criterion: "Worn occasionally (travel only, or 1–2 nights/week), or a flat mask that leaks light around the nose"
+    - level: 2
+      label: "Most nights"
+      criterion: "Contoured, well-fitting mask worn most nights (4–6 nights/week)"
+    - level: 3
+      label: "Every night, well-fitted"
+      criterion: "Contoured, well-fitting mask worn every night including travel; spare available; replaced as elastic degrades"
+
+  value_templates:
+    sleep.daily_functioning: mild_diminishing
+    sleep.long_term_health: mild_diminishing
+    sleep.comfort_experience: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the mechanism only fires when light is actually blocked: a flat mask that leaks at the nose bridge, or a mask worn only occasionally, produces a fraction of the benefit. The PBS values assume nightly use of a well-fitted mask (tier 3), per the [ICU eye-mask trials](https://doi.org/10.1186/s13054-015-0855-3) which used consistent nightly application.
+    - `mild_diminishing` for all three values: sleep quality and downstream health outcomes accrue with consistency without a sharp plateau, and the benefits are noisy subjective outcomes that the safe-default template fits well. The benefit is also bounded by the user's baseline ambient light – the intervention has minimal effect in already-dark bedrooms regardless of dose. Not `binary` because partial nightly use still delivers partial benefit (e.g. blocking summer dawn light part of the year).
+
 resources:
   upfront_cost: 15
   upfront_cost_reasoning: "A basic effective contoured sleep mask costs $10–20. Cheaper flat masks ($5) tend to leak light and rarely justify the saving. $15 represents the minimum to get a mask that actually blocks light reliably."

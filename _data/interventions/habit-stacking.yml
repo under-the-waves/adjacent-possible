@@ -80,6 +80,37 @@ values:
       - Flexibility benefits would only emerge if the user also has a separate review practice, making this dimension dependent on complementary interventions.
       - Estimated 60-70% sustained at 6 months, consistent with other dimensions.
 
+dose_response:
+  metric: stacks_in_use
+  metric_label: "Active habit stacks holding consistently"
+  metric_help: "Number of habit stacks ('After I [anchor], I will [new habit]') currently active and producing the new behaviour automatically. A stack only counts if the new behaviour is occurring at least 5 days per week off the anchor."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "None"
+      criterion: "No deliberate habit stacks in use"
+    - level: 1
+      label: "One stack"
+      criterion: "One stack active and holding (often a simple morning addition); other anchors not yet used"
+    - level: 2
+      label: "Two stacks"
+      criterion: "2 active stacks holding consistently for at least a month"
+    - level: 3
+      label: "Full set"
+      criterion: "3–5 active stacks across multiple anchors, all holding consistently for at least 2 months with the new behaviours feeling automatic"
+
+  value_templates:
+    goals.follow_through: near_linear
+    goals.clarity: mild_diminishing
+    goals.adaptability: mild_diminishing
+
+  rationale: |
+    - Tier criteria anchor on the intervention's stated range of 3–5 stacks and the [Lally et al. (2010)](https://doi.org/10.1002/ejsp.674) finding that contextual repetition produces automaticity within 4–8 weeks. Tier 3 captures the consolidated multi-stack practice the PBS scored.
+    - `near_linear` for goals.follow_through because the daily-action metric (% of days with at least one deliberate goal action) scales roughly proportionally with how many goal-relevant stacks are running – each additional stack adds another behaviour that occurs on most days.
+    - `mild_diminishing` for goals.clarity because the on-time completion improvement is bounded by upstream capacity-estimation skills that stacking doesn't address; the first stack captures the easy execution-consistency gains.
+    - `mild_diminishing` for goals.adaptability because, as the existing reasoning notes, "strong habits resist change and persist even when goals shift" – additional stacks beyond a couple don't add adaptability and may modestly reduce it.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. Habit stacking is a purely behavioural technique that requires only knowledge of the method and reflection on existing routines."

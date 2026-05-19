@@ -159,6 +159,41 @@ values:
     uar_reasoning: |
       - See personality.growth UAR – same intervention, same adherence profile. The self-awareness gain in particular accrues even to users who complete only the assessment phase, but the value's full potential requires the behavioural-tracking component, which most users abandon.
 
+dose_response:
+  metric: challenges_completed
+  metric_label: "Challenges completed across the protocol"
+  metric_help: "How far through the 12–16 week stretch protocol you progress and what share of the weekly behavioural challenges you actually complete (not just set)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No plan"
+      criterion: "No personality assessment or stretch protocol underway"
+    - level: 1
+      label: "Assessment only"
+      criterion: "Completed Big Five assessment and identified a target facet, but few or no weekly behavioural challenges completed"
+    - level: 2
+      label: "Partial protocol"
+      criterion: "4–8 weeks of weekly challenges with most challenges completed, then lapsed before the 12-week threshold"
+    - level: 3
+      label: "Full 12–16 week run"
+      criterion: "Completed 12–16 weeks of weekly behavioural challenges with most challenges actually executed, plus reassessment at weeks 8 and 16"
+
+  value_templates:
+    personality.growth: threshold
+    personality.alignment: mild_diminishing
+    behaviours.emotional: threshold
+    behaviours.social: threshold
+    behaviours.resilience: threshold
+    communication.connection: threshold
+    mental-health.flourishing: threshold
+    self-awareness.psychological: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [Hudson, Briley, Chopik, and Derringer (2019)](https://psycnet.apa.org/record/2018-22055-001) finding a dose-response between challenges completed and trait change, and [Roberts et al. (2017) meta-analysis](https://pubmed.ncbi.nlm.nih.gov/27841449/) finding that trait shifts of ~0.3 SD typically require 4–8+ weeks of sustained intervention. Tier 2 captures the lapsed-mid-protocol state, tier 3 the full programme the PBS values were scored against.
+    - `threshold` for all the behavioural and trait-change values (personality.growth, behaviours.emotional/social/resilience, communication.connection, mental-health.flourishing): per [Hudson and Fraley (2015)](https://psycnet.apa.org/record/2015-04949-001), aspiration without sustained behavioural practice produces no measurable change – the mechanism only fires at tier 2+ when challenges are actually completed at scale.
+    - `mild_diminishing` for personality.alignment and self-awareness.psychological: the diagnostic component alone (validated assessment) produces meaningful alignment and self-knowledge gains independent of whether the behavioural protocol succeeds, so these values accrue gradually from tier 1 onwards.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Validated Big Five assessments are freely available online (IPIP-NEO-120, BFI-2). Tracking can be done with a free spreadsheet or a notebook. Optional: a paid app such as PEACH or a coaching subscription, but neither is required."

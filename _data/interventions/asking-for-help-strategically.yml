@@ -222,6 +222,47 @@ values:
     uar_reasoning: |
       - See networks.depth UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: substantive_asks_per_week
+  metric_label: "Substantive asks per week"
+  metric_help: "Count specific, well-formed requests for help, advice, introductions, or favours where help would actually move you forward. Manufactured asks and routine logistical questions don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Self-reliant default"
+      criterion: "Defaulting to self-reliance, vague hints, or assumed refusal; under 1 ask per month"
+    - level: 1
+      label: "Occasional"
+      criterion: "Roughly 1 substantive ask per fortnight, often only to closest contacts"
+    - level: 2
+      label: "Regular"
+      criterion: "1–2 substantive asks per week across mixed sources (close ties and weak ties)"
+    - level: 3
+      label: "Sustained cadence"
+      criterion: "3+ substantive asks per week across work, friends, and wider networks, with consistent loop-closing and reciprocation"
+
+  value_templates:
+    networks.depth: mild_diminishing
+    networks.breadth: near_linear
+    current-work.competence: mild_diminishing
+    current-work.engagement: mild_diminishing
+    behaviours.social: steep_diminishing
+    friendship.depth: mild_diminishing
+    friendship.breadth: near_linear
+    self-awareness.relational: steep_diminishing
+    communication.connection: mild_diminishing
+    career-planning.advancement: near_linear
+    mental-health.resilience: mild_diminishing
+    life-skills.high: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [Flynn and Lake (2008)](https://pubmed.ncbi.nlm.nih.gov/18605856/) on persistent compliance-rate underestimation: belief recalibration and Ben Franklin effects require a sustained cadence of granted asks, not isolated events. PBS values assume tier 3 (3+ asks/week).
+    - Template choices:
+      - `steep_diminishing` for behaviours.social and self-awareness.relational – the calibration shock from the first dozen successful asks recalibrates priors about others' willingness; further asks refine rather than overturn the belief update.
+      - `near_linear` for networks.breadth, friendship.breadth, and career-planning.advancement – each ask is an independent chance to surface an introduction or warm contact, so coverage scales roughly proportionally with ask volume.
+      - `mild_diminishing` for the relational and competence values – benefits accrue with practice volume without a sharp ceiling.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials, subscriptions, or services required. The intervention is a behavioural practice requiring only existing social or professional contacts and a willingness to make direct requests."

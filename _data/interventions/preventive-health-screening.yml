@@ -78,6 +78,36 @@ values:
     uar_reasoning: |
       - See health-management.longterm UAR – same intervention, same adherence profile. The mental-health benefit accrues automatically if the screens are completed; no additional adherence burden beyond the primary intervention.
 
+dose_response:
+  metric: guideline_adherence_completeness
+  metric_help: "What share of guideline-recommended screens (for your age, sex, and family history) you have completed within their recommended intervals, including completing diagnostic follow-up for any positive results."
+  metric_label: "Screening guideline adherence"
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Unscreened"
+      criterion: "No guideline-based screens completed; no personal screening calendar"
+    - level: 1
+      label: "Partial"
+      criterion: "Some screens completed but multiple gaps relative to age-appropriate guidelines; reactive rather than scheduled"
+    - level: 2
+      label: "Mostly current"
+      criterion: "Most age-appropriate screens up to date within their intervals; some screens overdue; ad hoc tracking"
+    - level: 3
+      label: "Fully current"
+      criterion: "All age-appropriate screens up to date; recurring calendar reminders for each; all positive results have completed diagnostic follow-up; personal health record maintained"
+
+  value_templates:
+    health-management.longterm: mild_diminishing
+    health-management.control: mild_diminishing
+    mental-health.stability: threshold
+
+  rationale: |
+    - Tier cuts reflect [CDC BRFSS data](https://www.cdc.gov/pcd/issues/2023/23_0071.htm) showing that only 40–55% of US adults are simultaneously up to date on all relevant screens; partial coverage is the modal state. Tier 3 captures the fully current, follow-up-closed programme the PBS values were scored against.
+    - `mild_diminishing` for health-management.longterm and health-management.control: each completed screen independently reduces mortality risk on its own pathway. [The European colonoscopy RCT](https://www.nejm.org/doi/full/10.1056/NEJMoa2208375), [mammography meta-analysis](https://jamanetwork.com/journals/jama/fullarticle/2818284), and cervical screening evidence each operate independently, so accumulating screens compounds benefit – with the highest-yield ones (colonoscopy, cervical, mammography for at-risk age groups) producing disproportionate early gains.
+    - `threshold` for mental-health.stability: the reassurance benefit and the resolution-of-uncertainty benefit require completing the diagnostic loop – partial screening can leave unresolved findings that increase rather than decrease anxiety per [false-positive research](https://pmc.ncbi.nlm.nih.gov/articles/PMC5507224/). The mechanism only fires reliably at tier 3 when follow-up is closed.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No one-time purchases are required to begin preventive screening. Screens are accessed through a primary care clinician or directly through health services. Where care is covered by national health insurance or a comprehensive private plan, most guideline-recommended screens carry no out-of-pocket cost; users with different healthcare access should adjust via 'Personalise these costs'."

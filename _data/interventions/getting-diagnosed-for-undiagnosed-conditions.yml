@@ -139,6 +139,41 @@ values:
     uar_reasoning: |
       - See health-management.vitality UAR – same intervention, same adherence profile for the investigation phase.
 
+dose_response:
+  metric: investigation_breadth
+  metric_label: "Breadth of diagnostic investigation completed"
+  metric_help: "How many of the high-yield investigation pathways have you completed: comprehensive blood panel (thyroid, B12, D, ferritin, coeliac antibodies), sleep study, adult ADHD assessment, optician check, audiologist check. Tiers describe progressively more of the bundle covered."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not investigated"
+      criterion: "No proactive investigation; relying on routine GP visits to surface conditions"
+    - level: 1
+      label: "Partial blood panel"
+      criterion: "Basic GP appointment plus partial blood work (e.g., thyroid only); other pathways not pursued"
+    - level: 2
+      label: "Comprehensive panel"
+      criterion: "Full blood panel covering thyroid, B12, D, ferritin, and coeliac antibodies, plus optician check; sleep study or ADHD assessment not yet pursued"
+    - level: 3
+      label: "Full investigation"
+      criterion: "Comprehensive blood panel, optician and audiologist checks, plus advocacy for a sleep study and/or adult ADHD assessment where symptoms warrant"
+
+  value_templates:
+    health-management.vitality: threshold
+    health-management.longterm: mild_diminishing
+    health-management.control: near_linear
+    cognitive-skills.focus: threshold
+    mental-health.stability: threshold
+    current-work.competence: threshold
+    current-work.engagement: threshold
+
+  rationale: |
+    - Tier criteria reflect the description's framing that "sleep study and adult ADHD assessment are systematically under-referred relative to their prevalence and often require patient-initiated prompting" – tier 3 specifically captures the advocacy step that distinguishes a thorough investigation from a standard GP workup.
+    - `threshold` for the outcomes that depend on finding a specific condition (vitality, focus, mental-health stability, current-work competence and engagement) because the benefit is largely binary at the per-condition level: if the relevant pathway isn't pursued, the condition stays undiagnosed and the outcome is unchanged. Tier 2 captures partial investigation that misses the high-yield sleep and ADHD pathways; tier 3 is required for the full diagnostic reach.
+    - `mild_diminishing` for health-management.longterm because the comprehensiveness-of-prevention construct is partly served even by tier 1 partial investigation (you've ruled some things in or out), with the full diagnostic picture only reached at tier 3.
+    - `near_linear` for health-management.control because each completed pathway adds a discrete piece of health-system navigation knowledge and confidence.
+
 resources:
   upfront_cost: 300
   upfront_cost_reasoning: "Default reflects typical US private-pay or insurance-copay access: ~$150 for a primary-care visit, ~$100 for a comprehensive blood panel (thyroid, full blood count, B12, D, ferritin, coeliac antibodies), and ~$50 for an optician check. Audiologist referral is usually low or no cost on top. Costs vary widely by country and healthcare system: where care is covered by national health insurance, out-of-pocket may be near zero; where uninsured and self-paying, the panel alone can run $200–400. Users should adjust via 'Personalise these costs' to match their context."

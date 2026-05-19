@@ -96,6 +96,37 @@ values:
     uar_reasoning: |
       - See financial-planning-tracking.insight UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: system_completeness
+  metric_label: "Sinking-fund system completeness"
+  metric_help: "How comprehensively your sinking-fund system covers the predictable irregular expenses in your life, with automated monthly contributions and a periodic rebalancing habit."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No system"
+      criterion: "No pre-funding of irregular expenses; cash-flow shocks absorbed ad hoc or by the emergency fund"
+    - level: 1
+      label: "Ad hoc savings"
+      criterion: "A few categories pre-funded (holiday, gifts) but most irregular expenses still hit cash flow or emergency fund"
+    - level: 2
+      label: "Most categories covered"
+      criterion: "Named sub-accounts for most irregular expense categories with automated monthly transfers; rebalancing not yet routine"
+    - level: 3
+      label: "Full system + rebalancing"
+      criterion: "All major irregular expense categories funded via named sub-accounts and automated transfers, with 6–12 monthly rebalancing routine"
+
+  value_templates:
+    financial-planning-tracking.insight: mild_diminishing
+    saving.security: mild_diminishing
+    saving.lifestyle: near_linear
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the named-separation mechanism: an undifferentiated savings pool fails to deliver the [mental-accounting effect](https://academic.oup.com/jcr/article/35/3/543/1844349), so partial systems lacking dedicated sub-accounts sit at tier 1 rather than tier 2. PBS values are scored against the full system with rebalancing (tier 3) per the protocol described.
+    - `mild_diminishing` for financial-planning-tracking.insight, saving.security, and mental-health.stability: the insight gain accrues steadily as more categories are surfaced and quantified; the security and stability gains follow a gradual curve as more cash-flow shocks are absorbed by the system rather than the emergency fund.
+    - `near_linear` for saving.lifestyle: the total liquid reserves scale roughly proportionally with the number of funded categories – each new sub-account that fills with monthly contributions adds approximately equal accessible reserves.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. Most modern banking apps offer named sub-accounts ('spaces', 'pots', 'envelopes', 'buckets') at no extra cost. Users without this banking feature can either open free additional savings accounts or use a budgeting app's category structure. Optional dedicated budgeting tools cost $0 -- 100 per year but are not required for the minimum-viable form."

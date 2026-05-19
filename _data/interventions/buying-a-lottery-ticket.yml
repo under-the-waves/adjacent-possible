@@ -42,6 +42,33 @@ values:
       - [Griffiths & Wood (2001)](https://doi.org/10.1080/14459790108732861) found lottery play is among the most persistent gambling forms due to social acceptability, low per-transaction cost, and intermittent reinforcement from small wins.
       - The 'set and forget' option (direct debit subscriptions) further boosts retention by removing the active purchase decision.
 
+dose_response:
+  metric: tickets_per_week
+  metric_label: "Tickets purchased per week"
+  metric_help: "Count tickets purchased in a typical week across all games, including subscription auto-buys."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Non-player"
+      criterion: "No tickets purchased"
+    - level: 1
+      label: "Occasional"
+      criterion: "Roughly 1 ticket per month or only during major rollover events"
+    - level: 2
+      label: "Regular"
+      criterion: "1 ticket per week across one game"
+    - level: 3
+      label: "Habitual"
+      criterion: "2+ tickets per week across one or more games"
+
+  value_templates:
+    investing.growth: near_linear
+
+  rationale: |
+    - Tier criteria reflect typical play patterns documented in [Camelot annual reports](https://www.national-lottery.co.uk/life-changing) and [gambling persistence research](https://doi.org/10.1080/14459790108732861). PBS values assume tier 3 (2+ tickets/week).
+    - Template choice: `near_linear` for investing.growth – each independent ticket purchase provides an independent (and tiny) probability of jackpot per [Powerball odds](https://www.powerball.com/about). The expected-value relationship between tickets and conditional-success magnitude scales roughly proportionally; the probability of any win at all scales linearly with tickets bought, which is the dimension the dose-response curve captures (independent of the wildly negative EV).
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No setup costs. Lottery tickets are available at any newsagent, supermarket, or online. No account, equipment, or training required."

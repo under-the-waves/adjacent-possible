@@ -139,6 +139,41 @@ values:
     uar_reasoning: |
       - See personality.alignment UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: domains_redesigned
+  metric_label: "Life domains redesigned around strengths"
+  metric_help: "How many life domains (work, social life, leisure, home environment) have been structurally redesigned to give your signature strengths more daily expression."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No assessment"
+      criterion: "No validated strengths assessment taken; life designed by default, circumstance, or external demand"
+    - level: 1
+      label: "Self-aware only"
+      criterion: "Has completed an assessment (Big Five or VIA) and identified signature strengths but has not redesigned any domain structurally"
+    - level: 2
+      label: "One redesign"
+      criterion: "Has restructured one life domain (typically work or routine) around signature strengths and reviewed results after a quarter"
+    - level: 3
+      label: "Multi-domain fit"
+      criterion: "Has redesigned three or four domains (work, social, leisure, home) over multiple quarterly cycles; signature strengths are visibly expressed across daily life"
+
+  value_templates:
+    personality.alignment: mild_diminishing
+    personality.growth: near_linear
+    current-work.engagement: threshold
+    current-work.competence: threshold
+    mental-health.flourishing: mild_diminishing
+    self-awareness.psychological: mild_diminishing
+    life-purpose.integration: near_linear
+
+  rationale: |
+    - Tier cuts reflect the protocol's design: it explicitly recommends one redesign per quarter, with [Seligman et al. (2005)](https://psycnet.apa.org/record/2005-08033-003) and [Schutte and Malouff (2019)](https://link.springer.com/article/10.1007/s10902-018-9990-2) showing wellbeing effects depend on actual strength application, not mere awareness. Tier 1 captures the assessment-only state where wellbeing gains are minimal; tier 3 captures the multi-domain redesign the PBS values were scored against.
+    - `mild_diminishing` for personality.alignment, mental-health.flourishing, and self-awareness.psychological: the first redesign produces the biggest alignment gain because it targets the most misaligned domain; subsequent redesigns add value with diminishing returns.
+    - `threshold` for the two current-work values: per [Harzer and Ruch (2013)](https://link.springer.com/article/10.1007/s10902-012-9364-0), work engagement and competence gains require an actual restructuring of work tasks – the mechanism doesn't fire from assessment alone.
+    - `near_linear` for personality.growth and life-purpose.integration: each additional redesigned domain proportionally deepens strength expression and integrative coherence across life.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Validated assessments are freely available online (IPIP-NEO-120 and VIA Survey are both free; the BFI-2 form is freely downloadable). Tracking can be done in a free spreadsheet or notebook. Optional paid coaching or in-depth strengths reports are not required for the protocol."

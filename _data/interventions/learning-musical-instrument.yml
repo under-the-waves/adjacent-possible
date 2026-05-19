@@ -158,6 +158,41 @@ values:
     uar_reasoning: |
       - See participatory-leisure.achievement UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: practice_minutes_per_week
+  metric_label: "Weekly practice time"
+  metric_help: "Average minutes spent in deliberate instrument practice across a typical week, including lessons. Excludes passive listening or background noodling."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No practice"
+      criterion: "No deliberate instrument practice; instrument either not owned or unused for more than a month"
+    - level: 1
+      label: "Sporadic"
+      criterion: "Under 60 minutes/week of practice, often skipping multiple days in a row"
+    - level: 2
+      label: "Regular"
+      criterion: "60–150 minutes/week (roughly 15–25 minutes most days), with some sequenced curriculum or accountability"
+    - level: 3
+      label: "Sustained"
+      criterion: "150+ minutes/week (20–40 minutes on most days, 5+ days a week), sustained over 6+ months with structured learning"
+
+  value_templates:
+    participatory-leisure.achievement: threshold
+    participatory-leisure.adventure: mild_diminishing
+    participatory-leisure.social: threshold
+    mental-health.flourishing: mild_diminishing
+    mental-health.stability: mild_diminishing
+    cognitive-skills.memory: threshold
+    cognitive-skills.lifestyle: mild_diminishing
+    self-awareness.experiential: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [pedagogy estimates](https://musicalpursuits.com/how-long-does-it-take-to-learn-piano/) and [dropout research](https://piano.uottawa.ca/wp-content/uploads/2020/10/36.-Gerelus-et-al_Dropouts-2017.pdf): motor-skill consolidation requires roughly daily short practice. Tier 1 (sporadic) is the most common adult-learner state and fails to consolidate motor memory; tier 2 begins meaningful progression; tier 3 is the 20–40 min daily volume the PBS values were scored against.
+    - `threshold` for participatory-leisure.achievement, participatory-leisure.social, and cognitive-skills.memory: the play-songs-you-enjoy threshold, the readiness to join group music-making, and the [cognitive effects per the older-adult meta-analysis](https://www.sciencedirect.com/science/article/pii/S0278262624000149) all require crossing a consolidation cutoff – sporadic practice doesn't fire these mechanisms.
+    - `mild_diminishing` for the wellbeing, flow, and self-awareness values (participatory-leisure.adventure, mental-health.flourishing, mental-health.stability, cognitive-skills.lifestyle, self-awareness.experiential): per [flow research](https://pmc.ncbi.nlm.nih.gov/articles/PMC4485232/), even modest regular engagement produces some flow and mood-regulation benefit, with diminishing additional return at higher volumes.
+
 resources:
   upfront_cost: 80
   upfront_cost_reasoning: "Minimum viable instrument: a beginner ukulele kit ($50) or a used keyboard ($60–100). A starter guitar ($100–150) is the most common entry point but a ukulele is cheaper and easier. Excludes lessons, books, and accessories which are optional or recurring."

@@ -167,6 +167,42 @@ values:
     uar_reasoning: |
       - See transportation.efficiency UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: licence_and_proficiency
+  metric_label: "Licence status and driving proficiency"
+  metric_help: "Tiers describe progress through the learning programme and post-licence skill consolidation. Even after passing the test, real-world competence continues to develop with miles driven and exposure to varied conditions."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No licence"
+      criterion: "No learner's permit or driver's licence; no road-driving experience"
+    - level: 1
+      label: "Learning"
+      criterion: "Holds learner's permit; some professional or supervised practice but not yet test-ready"
+    - level: 2
+      label: "Newly licensed"
+      criterion: "Holds full licence but under 12 months of solo driving, or avoids motorways, night driving, or adverse conditions"
+    - level: 3
+      label: "Confident driver"
+      criterion: "Full licence with 12+ months of regular driving across motorways, night, and varied conditions; drives at least monthly to maintain currency"
+
+  value_templates:
+    transportation.efficiency: threshold
+    transportation.safety: threshold
+    life-skills.high: threshold
+    current-work.engagement: threshold
+    networks.breadth: threshold
+    housing.location: threshold
+    participatory-leisure.adventure: threshold
+    emergency-preparedness.self-reliance: threshold
+    behaviours.freedom: threshold
+
+  rationale: |
+    - Tier cuts reflect the binary nature of legal driving rights combined with the well-documented [novice-driver crash-risk reduction over the first year](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813313): tier 2 (newly licensed) captures the legally able but still high-risk and condition-limited state; tier 3 captures the experienced, condition-flexible driver the PBS values were scored against.
+    - `threshold` for all values: nearly every benefit of this intervention is gated on holding a valid licence. A learner's permit alone unlocks essentially no transport, employment, housing, or social benefit – the mechanism only fires once the user passes the practical test (tier 2). Tier 3 captures the additional but smaller increment from condition-flexibility and skill consolidation. This is the clearest example in the batch of a legitimate threshold curve – the credential is the cutoff.
+    - The safety value also follows threshold but for the opposite reason: tier 2's elevated novice crash risk partially offsets the agency gain, with the net positive only fully emerging at tier 3 once experience accumulates.
+
 resources:
   upfront_cost: 500
   upfront_cost_reasoning: "Default reflects typical US learner profile: a basic driver-education course or 5–10 hours of professional instruction at $50–$80/hour (~$400), plus permit and licence fees ($50–$150). Most US learners supplement with free parent-supervised practice rather than paying for the full lesson programme, keeping total professional-instruction cost moderate. Costs vary widely by country: UK and Australian learners typically spend $1,500–$3,000 because parent-supervised practice is less common and per-lesson rates are higher. Users should adjust via 'Personalise these costs' to match their context."

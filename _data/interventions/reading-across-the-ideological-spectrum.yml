@@ -155,6 +155,42 @@ values:
     uar_reasoning: |
       - See worldview.breadth UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: cross_ideological_engagement
+  metric_label: "Cross-ideological reading and steelmanning practice"
+  metric_help: "How regularly you read substantive content from ideological traditions different from your own and whether you apply structured steelmanning and reflection (versus passive exposure)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "In-group only"
+      criterion: "Media diet drawn entirely from aligned sources; no deliberate consumption of opposing perspectives"
+    - level: 1
+      label: "Incidental exposure"
+      criterion: "Occasional encounters with opposing views via social media or algorithmic feeds; no deliberate selection or reflection"
+    - level: 2
+      label: "Deliberate but unstructured"
+      criterion: "Deliberately reads one or two opposing-perspective pieces per month from credible sources, but without steelmanning or written reflection"
+    - level: 3
+      label: "Structured practice"
+      criterion: "Weekly long-form opposing-perspective reading from credible sources, with steelman summaries and reflection entries in a reading journal, sustained over 6+ months"
+
+  value_templates:
+    worldview.breadth: mild_diminishing
+    worldview.depth: threshold
+    worldview.utility: threshold
+    rationality.accurate-beliefs: threshold
+    rationality.intellectual-honesty: threshold
+    ethics.philosophical: mild_diminishing
+    media-diet.breadth: near_linear
+    cognitive-skills.reasoning: threshold
+
+  rationale: |
+    - Tier cuts reflect the critical [PNAS (2018)](https://www.pnas.org/doi/10.1073/pnas.1804840115) finding that passive social-media exposure to opposing views (tier 1) can increase polarisation rather than reduce it. Tier 2 marks deliberate source selection; tier 3 marks the structured steelmanning practice the PBS values were scored against per [Knochelmann et al. (2025)](https://onlinelibrary.wiley.com/doi/10.1002/ejsp.3177).
+    - `threshold` for worldview.depth, worldview.utility, rationality.accurate-beliefs, rationality.intellectual-honesty, and cognitive-skills.reasoning: per [the steelmanning research](https://mentalimmunityproject.org/wp-content/uploads/2024/07/Steelmanning_What-Works-Series_MIMIC.pdf), the depth and reasoning benefits depend specifically on actively reconstructing opposing arguments – passive exposure without the steelmanning step doesn't fire the mechanism and can be net negative for polarisation.
+    - `mild_diminishing` for worldview.breadth and ethics.philosophical: even occasional deliberate cross-reading expands the user's mental map of competing positions, with the first one or two traditions producing disproportionate breadth gain.
+    - `near_linear` for media-diet.breadth: this is mechanically a count of distinct credible perspectives consumed, so it scales roughly proportionally with reading volume across the spectrum.
+
 resources:
   upfront_cost: 20
   upfront_cost_reasoning: "Minimum cost: one book from an opposing tradition. Most content is available free (online essays, podcasts, public libraries); $20 covers a single book to get started."

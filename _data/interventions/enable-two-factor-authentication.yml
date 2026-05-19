@@ -58,6 +58,35 @@ values:
     uar_reasoning: |
       - See digital-safety.security UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: sensitive_accounts_with_2fa
+  metric_label: "Sensitive accounts with authenticator-app 2FA enabled"
+  metric_help: "Count of high-value accounts (email, banking, brokerage, password manager, cloud storage, primary social media) protected by authenticator-app or hardware-key 2FA – not SMS, which is meaningfully weaker. Backup codes saved counts toward full completion."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "None"
+      criterion: "Password-only access on all accounts; no 2FA anywhere"
+    - level: 1
+      label: "Email only"
+      criterion: "2FA on primary email account, often via SMS; other sensitive accounts still password-only"
+    - level: 2
+      label: "Partial coverage"
+      criterion: "Authenticator-app 2FA on email plus 2–4 other sensitive accounts; some sensitive accounts (e.g., brokerage, cloud storage) still uncovered"
+    - level: 3
+      label: "Full coverage"
+      criterion: "Authenticator-app or hardware-key 2FA on all 8–12 sensitive accounts, with backup codes stored durably"
+
+  value_templates:
+    digital-safety.security: steep_diminishing
+    digital-safety.convenience: near_linear
+
+  rationale: |
+    - Tier criteria capture the breadth-of-coverage failure mode flagged as a common pitfall: enabling 2FA only on email while leaving banking, brokerage, and cloud storage exposed defeats the structural protection because attackers target the weakest link. Tiers also distinguish SMS-based 2FA (tier 1) from authenticator-app or hardware-key 2FA (tier 2+) per the [Google Project Zero](https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html) finding that device-bound factors block essentially all bot attacks.
+    - `steep_diminishing` for digital-safety.security because protecting the primary email (which controls password resets for everything else) captures most of the available account-takeover protection – the 99.9% block rate from [Microsoft (2019)](https://www.microsoft.com/en-us/security/blog/2019/08/20/one-simple-action-you-can-take-to-prevent-99-9-percent-of-attacks-on-your-accounts/) applies per-account but the security topology means email is the keystone.
+    - `near_linear` for digital-safety.convenience because the per-login friction cost scales roughly proportionally with how many accounts have 2FA – each additional protected account adds its own occasional friction, with no plateau.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Authenticator apps (Aegis, the built-in iOS/macOS Passwords app, Bitwarden's TOTP feature) are free. No paid hardware key required for the core intervention; users wanting hardware-key 2FA can spend $25–60 on a YubiKey or equivalent, but that's optional."

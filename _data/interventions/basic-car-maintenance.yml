@@ -144,6 +144,41 @@ values:
     uar_reasoning: |
       - See life-skills.high UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: skills_acquired_and_maintained
+  metric_label: "Car-care skills acquired and applied"
+  metric_help: "Tiers describe how many of the eight foundational tasks (oil/fluid checks, tyre pressure, tread monitoring, wiper replacement, washer fluid, jump-start, tyre change, light inspection) you can perform unaided and apply on a regular cadence."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Hands-off"
+      criterion: "Defer all checks to a garage or roadside assistance; no monthly inspection rhythm"
+    - level: 1
+      label: "Basic checks"
+      criterion: "Can check tyre pressure and washer fluid; haven't practised jump-start or tyre change"
+    - level: 2
+      label: "Most skills"
+      criterion: "Comfortable with 5–6 of the eight tasks; monthly inspection happens most months"
+    - level: 3
+      label: "Full competence"
+      criterion: "Can perform all eight tasks unaided, kit assembled and maintained, monthly inspection routine, pre-trip checks before long drives"
+
+  value_templates:
+    transportation.safety: mild_diminishing
+    transportation.efficiency: near_linear
+    life-skills.high: near_linear
+    saving.security: near_linear
+    emergency-preparedness.self-reliance: mild_diminishing
+    behaviours.resilience: mild_diminishing
+    physical-safety.risk: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect that the skills are discrete and acquired one at a time per [AAA breakdown data](https://newsroom.aaa.com/2015/10/roadside-breakdowns-preventable-with-proper-maintenance-finds-aaa/) on the most common preventable failures. PBS values assume tier 3 (full skill set plus monthly cadence).
+    - Template choices:
+      - `near_linear` for life-skills.high, transportation.efficiency, and saving.security – each skill is a discrete capability and each avoided callout/DIY saving accrues independently.
+      - `mild_diminishing` for transportation.safety, emergency-preparedness.self-reliance, physical-safety.risk, and behaviours.resilience – the most important safety and resilience tasks (tyre pressure, jump-start) capture most of the gain; later skills refine rather than transform.
+
 resources:
   upfront_cost: 60
   upfront_cost_reasoning: "Minimum tool kit: digital tyre pressure gauge ($10), jump leads ($25), tread depth gauge ($5), spare wiper blades ($20). Jump pack ($60–80) and torque wrench ($30) are optional upgrades."

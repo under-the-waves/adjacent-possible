@@ -125,6 +125,38 @@ values:
     uar_reasoning: |
       - See sex.contentment UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: protocol_consolidation
+  metric_label: "Protocol consolidation"
+  metric_help: "This intervention is graded by how reliably the three components (yes/no/maybe list, monthly desire conversation, quarterly satisfaction check-in) actually happen in your partnership, with concrete and warm language rather than euphemism or grievance delivery."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Implicit"
+      criterion: "No structured sexual communication; preferences inferred from partner behaviour"
+    - level: 1
+      label: "List completed"
+      criterion: "Yes/no/maybe list completed by both partners and discussed once; no recurring cadence established"
+    - level: 2
+      label: "Cadence holding"
+      criterion: "Monthly desire conversations happening most months and quarterly check-ins mostly run, with some skipped sessions"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "All three components running on cadence for 12+ months; list refreshed every 18–24 months; conversations feel routine rather than charged"
+
+  value_templates:
+    sex.contentment: mild_diminishing
+    sex.pleasure: mild_diminishing
+    sex.variety: mild_diminishing
+    sex.frequency: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    communication.connection: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the cadence is the active ingredient – the initial yes/no/maybe list produces a flurry of insight that fades within months without the recurring monthly and quarterly conversations. PBS values are scored against the consolidated practice (tier 3) where conversations have become routine and the list is periodically refreshed.
+    - All values use `mild_diminishing`. The benefits accrue gradually as preferences are surfaced, integrated, and refreshed over months and years – there is no biological saturation curve, no proportional outcome, and no sharp threshold below which the mechanism fails. The [meta-analytic correlation](https://www.tandfonline.com/doi/full/10.1080/00224499.2017.1374750) between sexual communication quality and satisfaction (r ≈ 0.30–0.40) reflects a smooth accrual pattern across the relevant population. Communication.connection accrues most slowly because cross-context transfer is conditional on user metacognition.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No purchases required. Yes/no/maybe list templates are freely available online. Optional paid resources (sex-positive workbooks, online courses) range $20 -- 100 but are not required for the minimum-viable form."

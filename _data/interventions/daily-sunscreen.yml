@@ -62,6 +62,35 @@ values:
     uar_reasoning: |
       - See health-management.longterm UAR – same intervention, same adherence profile. Daily face-application adherence in the general population is ~18–31%; UAR = 40% reflects the upper range for people who have specifically adopted this as a morning habit.
 
+dose_response:
+  metric: weekly_application_days
+  metric_label: "Days per week with adequate morning sunscreen"
+  metric_help: "Number of days each week you apply broad-spectrum SPF 30+ to face, neck, and hands in the morning at the recommended ~2 mg/cm² dose. Count only days with adequate-amount application; under-dosed days don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Beach-only"
+      criterion: "No routine morning use; sunscreen reserved for beach or obvious sun exposure"
+    - level: 1
+      label: "Occasional"
+      criterion: "1–3 days/week, typically when outdoor time is planned"
+    - level: 2
+      label: "Most days"
+      criterion: "4–6 days/week, with weather-based or weekend gaps"
+    - level: 3
+      label: "Daily routine"
+      criterion: "7 days/week at adequate dose, regardless of weather"
+
+  value_templates:
+    health-management.longterm: near_linear
+    style.attractiveness: near_linear
+
+  rationale: |
+    - Tier criteria reflect the cumulative-exposure mechanism of UV damage. The [Nambour trial](https://pubmed.ncbi.nlm.nih.gov/10475183/) randomised daily versus discretionary use and found 40% SCC reduction and 24% photoageing reduction across the daily-use group; intermediate frequencies were not separately quantified, so tier 1 and tier 2 are interpolated based on a near-linear cumulative-dose assumption.
+    - Both values use `near_linear` because the underlying mechanism (cumulative UV blocked over years) scales roughly linearly with the fraction of days protected – each unprotected day adds proportional photo-damage and SCC risk. Unlike biological-saturation outcomes, there is no plateau within typical adherence ranges; missing two days per week loses roughly two-sevenths of the protective effect.
+    - Under-dosing (using ~25% of the recommended amount, a common pitfall) sharply reduces realised SPF and is reflected in the metric_help requiring adequate-amount application to count.
+
 resources:
   upfront_cost: 15
   upfront_cost_reasoning: "A single tube of broad-spectrum SPF 30+ sunscreen (50 ml) costs $10–20 at a pharmacy or supermarket. No other equipment is required."

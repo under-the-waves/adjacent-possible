@@ -54,6 +54,34 @@ values:
     uar_reasoning: |
       - See emergency-preparedness.baseline UAR.
 
+dose_response:
+  metric: configuration_completeness
+  metric_label: "Configuration completeness and currency"
+  metric_help: "How fully your phone's Medical ID and emergency contacts are configured to be accessible from the lock screen, and whether the information is current."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not configured"
+      criterion: "Medical ID and emergency contacts not set, or not accessible from the lock screen"
+    - level: 1
+      label: "Basic setup"
+      criterion: "Some fields entered (name, contact) but not visible from lock screen, or missing key medical information (allergies, medications, conditions)"
+    - level: 2
+      label: "Mostly complete"
+      criterion: "Medical ID configured with key information and lock-screen access enabled, but no annual review or paper backup"
+    - level: 3
+      label: "Complete and current"
+      criterion: "Full Medical ID with allergies, medications, conditions, blood type, organ-donor status, and 2–3 emergency contacts; lock-screen access enabled; reviewed annually and after medication changes"
+
+  value_templates:
+    emergency-preparedness.baseline: mild_diminishing
+    physical-safety.risk: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the active ingredient is lock-screen accessibility plus information currency. A partial setup (tier 1) with key fields missing or "Show When Locked" disabled does not fire for first responders, who depend on accessing the information without unlocking the device. The annual-review step (tier 3) prevents the stale-allergy or outdated-medication failure mode that the intervention's common pitfalls flag.
+    - `mild_diminishing` for both values: each populated field and each enabled access path adds incremental preparedness, with the largest gains coming from the first critical pieces (severe allergies, anticoagulant medications, lock-screen toggle). Not `binary` because partial setup genuinely delivers partial benefit – an emergency contact alone helps even without medical information, and stale info still helps for some scenarios (blood type, organ-donor status). The risk-reduction value also gradates because the conditional benefit is larger when the information is current and comprehensive.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No cost. Medical ID functionality is built into iOS and Android at no charge. Optional medical-alert jewellery (~$10–30) is a useful backup but not required."

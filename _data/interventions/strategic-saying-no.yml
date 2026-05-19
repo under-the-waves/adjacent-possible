@@ -138,6 +138,39 @@ values:
     uar_reasoning: |
       - See goals.follow_through UAR  –  same intervention, same adherence profile.
 
+dose_response:
+  metric: practice_consolidation
+  metric_label: "Strategic decline practice consolidation"
+  metric_help: "This intervention is graded by skill and habit consolidation: how reliably explicit acceptance criteria, refusal templates, and the weekly commitment review appear in your decision-making, including under social pressure."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Default"
+      criterion: "Accepting most requests by default; no explicit criteria or templates"
+    - level: 1
+      label: "Criteria drafted"
+      criterion: "Acceptance criteria and refusal templates drafted; applied unevenly and often abandoned under social pressure"
+    - level: 2
+      label: "Mostly holding"
+      criterion: "Criteria applied to most incoming requests; weekly review running with occasional skipped weeks"
+    - level: 3
+      label: "Consolidated"
+      criterion: "Strategic decline routine for 6+ months; criteria refined through feedback; weekly review reliable; freed capacity actively protected rather than backfilled"
+
+  value_templates:
+    goals.follow_through: mild_diminishing
+    goals.clarity: mild_diminishing
+    goals.adaptability: mild_diminishing
+    current-work.competence: mild_diminishing
+    organisation.speed: mild_diminishing
+    mental-health.stability: mild_diminishing
+    mental-health.resilience: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the active ingredients are the criteria-quality (vague "important things" criteria fail) and the sustained ability to hold limits under social pressure. [Gollwitzer & Sheeran 2006](https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0065260106380021) finds implementation intentions produce d ≈ 0.65 for goal attainment when reliably applied – the consolidated tier-3 state corresponds to this reliability.
+    - All values use `mild_diminishing`. Goal follow-through, clarity, work competence, organisation speed, and mental-health benefits all accumulate gradually as the practice consolidates and freed capacity is actually protected rather than backfilled with new commitments. The benefits are noisy subjective outcomes contingent on criteria quality and social context – the safe-default subjective shape applies. There is no biological saturation curve, no proportional outcome, and no sharp threshold below which the mechanism fails entirely (partial application still removes some commitments).
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. The intervention involves cognitive restructuring and template creation using existing tools (notes app, email client). Optional reading on assertiveness or boundary-setting may help but is not required."

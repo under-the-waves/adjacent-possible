@@ -126,6 +126,42 @@ values:
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: routine_consistency_nights_per_week
+  metric_label: "Nights per week with full routine"
+  metric_help: "Count nights you completed the same 3–4 step wind-down sequence in the same order at roughly the same time. Include weekends; partial completion doesn't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No routine"
+      criterion: "Variable wind-down (often screens until lights-out); 0–1 nights per week"
+    - level: 1
+      label: "Ad hoc"
+      criterion: "Some kind of wind-down on 2–3 nights per week, often skipped at weekends"
+    - level: 2
+      label: "Most weeknights"
+      criterion: "Full routine on 4–5 nights per week, typically weekdays only"
+    - level: 3
+      label: "Embedded"
+      criterion: "Full routine on 6–7 nights per week including weekends, with the sequence automatic"
+
+  value_templates:
+    sleep.daily_functioning: mild_diminishing
+    sleep.long_term_health: near_linear
+    sleep.comfort_experience: steep_diminishing
+    mental-health.stability: mild_diminishing
+    cognitive-skills.lifestyle: threshold
+    cognitive-skills.focus: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect that sleep regularity itself is the active ingredient per [Windred et al. (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10782501/) – weekend disruption substantially erodes the regularity benefit. [Habit-formation research](https://pmc.ncbi.nlm.nih.gov/articles/PMC11641623/) puts median time-to-automaticity at 59 days of consistent repetition. PBS values assume tier 3 (6–7 nights/week).
+    - Template choices:
+      - `steep_diminishing` for sleep.comfort_experience – subjective wind-down comfort improvements appear quickly once the routine starts and saturate per [stimulus-control meta-analysis](https://onlinelibrary.wiley.com/doi/10.1111/jsr.14002).
+      - `threshold` for cognitive-skills.lifestyle – the anchor counts maintained practices, which requires sustained adherence above a minimum frequency to count as a "maintained" practice rather than ad hoc.
+      - `near_linear` for sleep.long_term_health – cumulative regularity exposure scales with nights of compliance.
+      - `mild_diminishing` for the rest – daily functioning, stability, and focus accrue gradually with consistency without a sharp plateau.
+
 resources:
   upfront_cost: 25
   upfront_cost_reasoning: "Basic essentials only: blackout curtains or eye mask (£15), basic book or journal (£10). Most routine activities require no additional purchases – existing dimmable lights, basic stretching, hygiene supplies."

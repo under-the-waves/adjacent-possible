@@ -107,6 +107,38 @@ values:
     uar_reasoning: |
       - See style.attractiveness UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: fundamentals_applied
+  metric_label: "Fundamentals learned and applied"
+  metric_help: "Tiers describe how many of the four core areas (clothing fit, colour coordination, haircut, grooming routine) you have learned and consistently apply to daily presentation."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Default presentation"
+      criterion: "No deliberate study of fit, colour, or grooming; clothing chosen by price or convenience"
+    - level: 1
+      label: "One area"
+      criterion: "Learned and applying one of the four areas (e.g. a consistent skincare routine, or basic fit knowledge for new purchases)"
+    - level: 2
+      label: "Most areas"
+      criterion: "Learned and applying two or three of the four areas; some inconsistency across contexts"
+    - level: 3
+      label: "Full fundamentals"
+      criterion: "Learned and consistently applying all four (fit, colour, haircut, grooming routine); daily presentation reads as deliberate"
+
+  value_templates:
+    style.attractiveness: mild_diminishing
+    style.status-professional: mild_diminishing
+    style.expression: mild_diminishing
+    style.comfort: near_linear
+    communication.influence: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the modular structure of the intervention: the four areas (fit, colour, haircut, grooming) can be adopted independently. [Howlett et al. (2015)](https://doi.org/10.1177/0956797614559753) shows fit alone produces measurable observer-perception gains, so even one area unlocks meaningful benefit; the full bundle is what the PBS values were scored against.
+    - `mild_diminishing` for attractiveness, professional status, expression, and influence: these are subjective observer judgements with no sharp plateau – early gains are large because they eliminate clear errors, but additional polish continues to compound.
+    - `near_linear` for style.comfort because comfort improvements scale roughly proportionally with the share of garments that fit well – each additional fit-correct item in rotation reduces a discrete daily friction.
+
 resources:
   upfront_cost: 50
   upfront_cost_reasoning: "One professional haircut consultation ($40–75 at a mid-range salon) to identify a flattering cut. A basic skincare starter kit (cleanser, moisturiser, SPF) can be assembled for $15–30. Clothing fit knowledge itself is free via online resources and books. No new wardrobe purchases are required to begin."

@@ -125,6 +125,41 @@ values:
     uar_reasoning: |
       - See sleep.daily_functioning UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: wake_time_variance_minutes
+  metric_label: "Wake-time variance across the week"
+  metric_help: "Across a typical week, how much does your wake time vary between the earliest and latest days (including weekends)?"
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Highly variable"
+      criterion: "Wake time varies by 2+ hours across the week; weekends shift substantially later"
+    - level: 1
+      label: "Weekend drift"
+      criterion: "Weekday wake time is consistent but weekends drift 60–120 minutes later"
+    - level: 2
+      label: "Mostly consistent"
+      criterion: "Wake time varies by 30–60 minutes across the full week"
+    - level: 3
+      label: "Stable anchor"
+      criterion: "Wake time varies by under 30 minutes across all 7 days, sustained for 4+ weeks; alarm not snoozed"
+
+  value_templates:
+    sleep.daily_functioning: steep_diminishing
+    sleep.long_term_health: near_linear
+    sleep.comfort_experience: mild_diminishing
+    cognitive-skills.focus: mild_diminishing
+    health-management.vitality: steep_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [Roenneberg et al. (2012)](https://doi.org/10.1016/j.cub.2012.03.038) finding most adults experience 2+ hours of social jetlag and [Windred et al. (2024)](https://academic.oup.com/sleep/article/47/1/zsad253/7280269) showing the Sleep Regularity Index dose-response on mortality. PBS values assume tier 3 (under 30 minutes variance).
+    - Template choices:
+      - `steep_diminishing` for sleep.daily_functioning and health-management.vitality – cortisol awakening response and circadian alignment normalise within weeks once variance drops below ~30 minutes per [Phillips et al. (2017)](https://www.nature.com/articles/s41598-017-03171-4); most of the alertness benefit is captured at tier 2+.
+      - `near_linear` for sleep.long_term_health – cumulative SRI exposure scales monotonically with sustained adherence per [Windred 2024](https://academic.oup.com/sleep/article/47/1/zsad253/7280269).
+      - `mild_diminishing` for comfort, focus, and mental-health.stability – subjective gains accrue gradually as the circadian anchor strengthens.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No required equipment beyond an alarm clock or smartphone, which most adopters already own. Optional sunrise lamps ($25–60) modestly accelerate the cortisol awakening response but are not necessary."

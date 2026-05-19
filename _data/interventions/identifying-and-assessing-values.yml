@@ -190,6 +190,43 @@ values:
     uar_reasoning: |
       - See value-system.insight UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: protocol_completion
+  metric_label: "Stage of the values clarification protocol completed"
+  metric_help: "How far through the three-phase protocol you've gone: elicitation (card sort or survey), critical examination (origins, authenticity, alignment with calendar/spending), and pairwise trade-off. Plus whether the hierarchy is being consulted at real decision points and reviewed periodically."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not done"
+      criterion: "No structured values clarification has been completed"
+    - level: 1
+      label: "Elicitation only"
+      criterion: "Card sort or survey completed; top values identified but not critically examined or applied"
+    - level: 2
+      label: "Full one-time exercise"
+      criterion: "All three phases completed once (elicitation, authenticity reflection, pairwise trade-offs); hierarchy documented but not yet consulted at decision points"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "Full protocol completed and actively consulted at major decisions; reviewed every 6–12 months with documented updates"
+
+  value_templates:
+    value-system.insight: mild_diminishing
+    value-system.practical: threshold
+    value-system.authentic: mild_diminishing
+    value-system.evolution: threshold
+    self-awareness.psychological: mild_diminishing
+    self-awareness.relational: mild_diminishing
+    life-purpose.clarity: mild_diminishing
+    goals.clarity: mild_diminishing
+    rationality.decision-making: threshold
+    personality.alignment: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the protocol's three explicit phases plus the application-and-review step that the description emphasises is what produces durable benefit: "values clarification only improves decision-making if the ranked list is actively consulted during real choices."
+    - `threshold` for value-system.practical, value-system.evolution, and rationality.decision-making because each requires the application/review step at tier 3 – knowing your values without consulting them under pressure does not produce values-congruent decisions, and a one-time exercise without periodic review produces no evolution.
+    - `mild_diminishing` for the insight, authentic, self-awareness, life-purpose, goals, and personality-alignment values because these accrue partly from the elicitation and reflection phases themselves; even a one-time full exercise produces meaningful insight, with additional gains from sustained practice.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "All core instruments are freely available – the ACT Personal Values Card Sort is free at psychwire.com, the Schwartz Values Survey is available as a short-form instrument in the public domain. No purchase is required to begin."

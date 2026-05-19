@@ -146,6 +146,41 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_minutes
+  metric_label: "Weekly minutes in Zone 2"
+  metric_help: "Total weekly minutes spent in Zone 2 heart rate range (60–70% of maximum). Heart rate monitor verification matters – training above zone shifts the session into harder-effort territory and removes the Zone 2-specific stimulus."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Sedentary"
+      criterion: "No regular Zone 2 cardio"
+    - level: 1
+      label: "Light"
+      criterion: "Under 90 minutes/week, or sessions drifting above Zone 2 most of the time"
+    - level: 2
+      label: "Building"
+      criterion: "90–180 minutes/week verified in Zone 2 across 2–3 sessions"
+    - level: 3
+      label: "Trained"
+      criterion: "180–360 minutes/week verified in Zone 2 across 3–4 sessions, sustained for 12+ weeks"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: mild_diminishing
+    fitness.enjoyment: mild_diminishing
+    body-image.fat_loss: near_linear
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [Ross et al. 2016 CRF-mortality dose-response](https://doi.org/10.1249/MSS.0000000000000892) showing meaningful CRF gains accrue from moderate weekly aerobic volume, with the curve flattening past ~300 min/week. The 180–360 min/week target at tier 3 corresponds to the dose at which PBS values are scored.
+    - `steep_diminishing` for fitness.health and mental-health.stability: biological-saturation outcomes (CRF-mortality, mood effects per the [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/)) front-load benefit at first regular minutes in Zone 2.
+    - `mild_diminishing` for fitness.performance, fitness.enjoyment, mental-health.resilience, and mental-health.flourishing: aerobic base, in-session enjoyment, stress recovery, and positive affect all accrue gradually with sustained volume.
+    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with Zone 2 minutes, with [Bellicha et al. 2021](https://doi.org/10.1111/obr.13256) showing the linear ~0.52 kg/30 min/week increment, attenuated but not broken by compensation.
+
 resources:
   upfront_cost: 100
   upfront_cost_reasoning: "Heart rate monitor (chest strap preferred for accuracy, $50–80) and basic appropriate footwear or equipment for chosen modality ($50). HR monitor is effectively required at this intensity because perceived exertion is unreliable. If cycling indoors, an existing bike or gym access materially shifts the cost; the estimate assumes running or outdoor cycling on owned equipment."

@@ -111,6 +111,39 @@ values:
     uar_reasoning: |
       - See friendship.depth UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: conversations_per_month_and_depth
+  metric_label: "Substantive one-on-ones per month and depth"
+  metric_help: "How many close relationships you maintain a monthly substantive one-on-one with, and whether the conversations actually go beyond logistics into self-disclosure and substantive prompts."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No structured one-on-ones"
+      criterion: "No scheduled deeper one-on-ones; close-relationship contact is ad hoc and mostly logistical"
+    - level: 1
+      label: "Occasional catch-ups"
+      criterion: "Ad hoc deeper conversations every couple of months with one or two relationships; no fixed cadence"
+    - level: 2
+      label: "One relationship, monthly"
+      criterion: "Monthly substantive one-on-one with one close relationship, calendar-anchored, with intent to go beyond logistics"
+    - level: 3
+      label: "Multiple relationships, monthly"
+      criterion: "Monthly 60–90 minute substantive one-on-ones with 2–3 close relationships, sustained over 6+ months, using substantive prompts and turn-taking"
+
+  value_templates:
+    friendship.depth: near_linear
+    friendship.growth: near_linear
+    family-of-origin.connection: threshold
+    relationship-quality.connection: threshold
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [Mehl et al. (2010)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2861779/) findings that happiness correlates with substantive conversation volume, plus [Kardas, Kumar and Epley (2021)](https://www.apa.org/pubs/journals/releases/psp-pspa0000281.pdf) showing that depth requires intent beyond logistical exchange. Tier 1 captures the modal ad-hoc state; tier 3 captures the sustained multi-relationship cadence the PBS values were scored against.
+    - `near_linear` for friendship.depth and friendship.growth: each additional close relationship maintained at this depth adds discrete value, with the anchor for friendship.depth being a linear count of intimate friendships.
+    - `threshold` for family-of-origin.connection and relationship-quality.connection: per [the couples communication research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6125010/), the depth benefit only fires when sessions consistently move beyond logistics – which requires the calendared cadence and substantive prompts at tier 2+. Occasional ad hoc deeper conversations in family or partner relationships tend to be derailed by the existing logistical patterns.
+    - `mild_diminishing` for mental-health.stability: per [Holt-Lunstad et al. (2015)](https://pubmed.ncbi.nlm.nih.gov/25910392/), even one regular substantive relationship provides meaningful protective effect against loneliness, with additional relationships adding diminishing returns to stability.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No purchases required. A calendar app (free) and a phone or video call capability are the only tools needed."

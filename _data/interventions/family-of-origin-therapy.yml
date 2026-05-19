@@ -208,6 +208,44 @@ values:
     uar_reasoning: |
       - See family-of-origin.healing UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: course_progress
+  metric_label: "Progress through a family-of-origin therapy course"
+  metric_help: "Tiers track how far you are into a course of weekly therapy with a properly trained schema, IFS, EMDR, or Bowen therapist – including the between-session work that determines whether insight translates into change."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not in therapy"
+      criterion: "Not currently working with a properly trained family-of-origin therapist"
+    - level: 1
+      label: "Early phase"
+      criterion: "0–4 months in: foundational work, identifying patterns, often the temporary symptom-worsening phase"
+    - level: 2
+      label: "Middle phase"
+      criterion: "5–9 months in: active schema/parts/EMDR work; some between-session practice with real family or partner; insight starting to translate to behaviour"
+    - level: 3
+      label: "Completed course"
+      criterion: "12–18+ months completed (schema therapy often 12–24 months) with substantial between-session work and consolidated change"
+
+  value_templates:
+    family-of-origin.healing: mild_diminishing
+    family-of-origin.autonomy: mild_diminishing
+    family-of-origin.duty: mild_diminishing
+    family-of-origin.connection: mild_diminishing
+    mental-health.stability: mild_diminishing
+    mental-health.resilience: threshold
+    self-awareness.psychological: mild_diminishing
+    self-awareness.relational: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    behaviours.emotional: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the explicit phase structure described in the intervention: months 0–4 carry a temporary dip as defences soften (the modal dropout point), months 5–9 are the active reorganisation phase, and the consolidation that produces durable change comes from the full 12–18+ month arc per the [schema therapy meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/).
+    - `mild_diminishing` for most values because depth-oriented therapy produces gradual cumulative change without a sharp plateau; the [Schema therapy follow-up data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9669454/) shows continuing gains over the full course. Self-awareness gains in particular are reported as a near-universal early outcome ([IFS literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC10444705/)) but deepen meaningfully through the middle and late phases.
+    - `threshold` for mental-health.resilience because the existing reasoning explicitly notes that "resilience gains are most reliable among completers who reach the consolidation phase (typically months 9+); those who stop earlier show acute response without the structural reorganisation that produces durable resilience" – tier 2 is roughly the threshold where structural resilience starts to emerge.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment or setup cost. The only upfront action is identifying and contacting an appropriately trained therapist – verifying IFS Institute, Schema Therapy Society, EMDRIA, or Bowen Center training is free."

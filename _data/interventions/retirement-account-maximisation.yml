@@ -96,6 +96,37 @@ values:
     uar_reasoning: |
       - See investing.growth UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: contribution_completeness
+  metric_label: "How fully you run the priority stack"
+  metric_help: "How much of the available tax-advantaged contribution capacity you use each year, in priority order: employer match, then health-savings vehicles, then core retirement contributions, then taxable. Tier 3 is full annual maxing across all available buckets plus pay-rise escalation."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Unclaimed"
+      criterion: "No retirement contributions, or contributions below the level needed to capture the full employer match"
+    - level: 1
+      label: "Match captured"
+      criterion: "Capturing the full employer match but not maxing further tax-advantaged buckets"
+    - level: 2
+      label: "Partial maxing"
+      criterion: "Match plus partial use of additional tax-advantaged buckets (e.g. some health-savings or retirement allowance used), without full annual maxing"
+    - level: 3
+      label: "Full priority stack"
+      criterion: "Full match plus full annual maxing across all available tax-advantaged buckets in priority order, with pay-rise escalation"
+
+  value_templates:
+    investing.growth: steep_diminishing
+    investing.simplicity: mild_diminishing
+    saving.growth: steep_diminishing
+    saving.security: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the priority-stack structure described in the intervention. The employer match is the single highest-leverage component (~100% immediate return), so capturing it alone produces a disproportionate share of the benefit – consistent with the [Vanguard How America Saves data](https://institutional.vanguard.com/content/dam/inst/iig-transformation/has/2024/pdf/has-insights/how-america-saves-report-2024.pdf) showing match capture as the largest single driver of terminal-wealth differences.
+    - `steep_diminishing` for investing.growth and saving.growth: the match-capture step delivers most of the relative benefit; further bucket-maxing adds tax-relief compounding but at declining marginal leverage per dollar contributed.
+    - `mild_diminishing` for investing.simplicity (FI progress accrues smoothly with contribution completeness) and saving.security (the indirect emergency-fund effect builds gradually with overall savings rate).
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. Opening the relevant tax-advantaged accounts is free with most providers, and standard retirement-plan enrollment is free through employers. Optional paid financial advice ($300 -- 1,500 for a one-time review) can be useful for users with complex situations but is not required for the minimum-viable practice."

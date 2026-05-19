@@ -109,6 +109,38 @@ values:
     uar_reasoning: |
       - See sex.frequency UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: slot_adherence
+  metric_label: "How reliably the scheduled slot is honoured"
+  metric_help: "How often the agreed recurring slot is actually used as protected intimacy time over a typical month. Cancellations rescheduled within the week still count; cancellations without rescheduling do not."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No schedule"
+      criterion: "Intimacy left to spontaneity; no agreed recurring slot"
+    - level: 1
+      label: "Slot agreed"
+      criterion: "Recurring slot named but honoured less than half the time; frequent cancellations without reschedule"
+    - level: 2
+      label: "Mostly held"
+      criterion: "Slot honoured most weeks, with occasional missed weeks and reasonable reschedule discipline"
+    - level: 3
+      label: "Sustained rhythm"
+      criterion: "Slot reliably honoured weekly or fortnightly for 6+ months; cancelling feels like a loss to both partners"
+
+  value_templates:
+    sex.frequency: near_linear
+    sex.contentment: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    sex.variety: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the active ingredient is sustained, mutually endorsed adherence – [research on couples therapy homework](https://onlinelibrary.wiley.com/doi/10.1111/jmft.12058) finds compliance of roughly 40–60% for between-session sexual assignments, so the move from "slot agreed" to "mostly held" to "sustained rhythm" tracks the natural attrition curve. PBS values are scored against the tier-3 endpoint where the rhythm is self-sustaining.
+    - `near_linear` for sex.frequency: encounters scale roughly proportionally with how reliably the slot is honoured – every honoured slot is approximately one encounter.
+    - `mild_diminishing` for sex.contentment, relationship-quality.connection, relationship-quality.harmony, and sex.variety: these subjective outcomes accrue with practice as the schedule shifts from contested to shared rhythm, but without a sharp biological saturation curve. The contentment and harmony gains particularly depend on the schedule being experienced as mutual rather than coerced – consistent with the [sexual communal motivation research](https://psycnet.apa.org/record/2013-08755-001).
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment, services, or materials required. Both partners need only a shared calendar, which most already have."

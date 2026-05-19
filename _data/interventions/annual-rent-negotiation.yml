@@ -97,6 +97,38 @@ values:
     uar_reasoning: |
       - See housing.affordability UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: negotiation_quality_per_cycle
+  metric_help: "How well you executed rent negotiation at your most recent lease renewal cycle. Score yourself based on preparation, anchoring, and willingness to walk."
+  metric_label: "Negotiation quality per renewal cycle"
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Accept the renewal"
+      criterion: "Signed the renewal letter as offered with no attempt to negotiate"
+    - level: 1
+      label: "Vague ask"
+      criterion: "Asked verbally or by email without comparable listings, vacancy data, or a specific counter-anchor"
+    - level: 2
+      label: "Written counter"
+      criterion: "Sent a written email with a specific counter-rent and 2–3 comps, but without a credible BATNA"
+    - level: 3
+      label: "Full anchoring play"
+      criterion: "Written, comp-backed email 60–90 days before lease end with a specific counter-anchor, vacancy data, and a real alternative unit you would actually move to"
+
+  value_templates:
+    housing.affordability: near_linear
+    housing.comfort: mild_diminishing
+    saving.lifestyle: near_linear
+    behaviours.freedom: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [Galinsky and Mussweiler (2001)](https://www.researchgate.net/publication/12041337_First_offers_as_anchors_The_role_of_perspective-taking_and_negotiator_focus) on first-offer anchoring: the size of the captured surplus scales with the specificity of the anchor and the credibility of the walk-away. The PBS values assume tier 3 (full anchoring play).
+    - Template choices:
+      - `near_linear` for housing.affordability and saving.lifestyle – the size of the rent concession scales roughly with the strength of the anchor and BATNA, and the dollar savings flow directly through to affordability and lifestyle reserves.
+      - `mild_diminishing` for housing.comfort and behaviours.freedom – non-monetary trades (upgrades) and the felt sense of agency arrive even with partial-quality negotiation, with diminishing returns on intensity.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials, subscriptions, or services required. Comp data is freely available on Zillow, Apartments.com, Realtor.com, Rent.com, Craigslist, and Facebook Marketplace; vacancy statistics are free from the BLS and Census Bureau."

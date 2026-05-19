@@ -107,6 +107,38 @@ values:
     uar_reasoning: |
       - See style.expression UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: signature_consolidation
+  metric_label: "How consolidated your signature style is"
+  metric_help: "Tiers describe how clearly your daily appearance reflects a deliberate, consistent personal aesthetic – from no signature to a defined-and-edited wardrobe held consistently across contexts for a year or more."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Ad hoc"
+      criterion: "No deliberate signature; wardrobe accumulated by occasion or impulse; daily appearance varies widely"
+    - level: 1
+      label: "Aware"
+      criterion: "Have identified favourite colours and silhouettes but wardrobe still mixed; no explicit palette or templates documented"
+    - level: 2
+      label: "Defined"
+      criterion: "Palette and 2–3 templates explicitly defined; wardrobe partially edited; signature visible most days but not all"
+    - level: 3
+      label: "Consolidated"
+      criterion: "Defined signature held consistently for 12+ months; wardrobe edited to fit; appearance recognisably yours across contexts"
+
+  value_templates:
+    style.expression: mild_diminishing
+    style.attractiveness: mild_diminishing
+    style.status-professional: mild_diminishing
+    behaviours.freedom: near_linear
+    communication.connection: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the consolidation arc described in the protocol: identifying favourites (tier 1), explicit definition and partial editing (tier 2), and sustained consistency long enough for both internal authenticity and external recognition to develop (tier 3). The 12-month threshold reflects the protocol's own guidance against premature reassessment.
+    - `mild_diminishing` for the three style values and for communication.connection because the recognition-and-memorability mechanism ([mere-exposure research](https://www.tandfonline.com/doi/abs/10.1080/00224545.1992.9924681)) compounds gradually with repeated consistent encounters; early adoption gives a noticeable lift, but the full benefit requires sustained consistency over many social repetitions.
+    - `near_linear` for behaviours.freedom because the decision-elimination mechanism scales roughly proportionally with the size of the choice space removed – a half-edited wardrobe eliminates half the daily decisions, a fully edited one eliminates most.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "The audit and template-definition phase requires only existing wardrobe and a free notebook or spreadsheet. Strategic replacement purchases happen gradually over 6–18 months and replace items the user would have bought anyway; the protocol redirects those purchases rather than adding new ones. Users without the basic fundamentals first should budget for a haircut consultation and basic grooming setup (~$50) via the [fundamentals intervention](/resources/intervention-database/learning-basic-grooming-and-style-fundamentals)."

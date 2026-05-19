@@ -160,6 +160,43 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: active_commute_trips_per_week
+  metric_label: "Active commute trips per week"
+  metric_help: "Count one-way trips of 15+ minutes done by bike, e-bike, walking, or running in a typical week. A return commute counts as two trips."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Car-only"
+      criterion: "0 active-commute trips/week"
+    - level: 1
+      label: "Occasional"
+      criterion: "1–3 trips/week"
+    - level: 2
+      label: "Regular"
+      criterion: "4–7 trips/week"
+    - level: 3
+      label: "Default mode"
+      criterion: "8+ trips/week (most or all commutes active)"
+
+  value_templates:
+    transportation.comfort: mild_diminishing
+    transportation.efficiency: near_linear
+    fitness.health: steep_diminishing
+    fitness.performance: steep_diminishing
+    mental-health.stability: steep_diminishing
+    saving.lifestyle: near_linear
+    global-impact.sustainability: near_linear
+    behaviours.freedom: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [Celis-Morales 2017 UK Biobank cohort](https://doi.org/10.1136/bmj.j1456): mortality and cardiovascular benefits scale strongly with trips per week, with most of the dose captured by ~5+ trips. The scored PBS values assume tier 3 (default-mode active commuting).
+    - Template choices reflect each value's mechanism:
+      - `steep_diminishing` for fitness.health, fitness.performance, and mental-health.stability – the cardiovascular and antidepressant pathways saturate, with most benefit captured by sustained moderate dose per [Oja 2011](https://doi.org/10.1111/j.1600-0838.2011.01299.x) and [BMJ 2024](https://doi.org/10.1136/bmj-2023-075847).
+      - `near_linear` for transportation.efficiency, saving.lifestyle, and global-impact.sustainability – cost savings, capital reduction, and emissions displacement scale roughly proportionally with miles substituted.
+      - `mild_diminishing` for transportation.comfort and behaviours.freedom – subjective comfort and felt liberation from car-dependence accrue with practice volume but have no sharp plateau.
+
 resources:
   upfront_cost: 400
   upfront_cost_reasoning: "A reliable used hybrid bike (~$250), helmet (~$50), lights ($30), lock ($40), and basic weather layers ($30). E-bikes raise the floor to ~$1,200–1,800 but extend viable commute distance roughly 3x. Walking or running commutes cost essentially nothing beyond decent shoes ($80) and weather gear ($50)."

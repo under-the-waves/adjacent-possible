@@ -45,6 +45,33 @@ values:
       - [Self-reported dietary adherence data](https://pubmed.ncbi.nlm.nih.gov/19828901/) shows complete adherence dropping from 81% at month 1 to 57% at month 24, but these figures measure diet adherence broadly – adherence to the specific act of daily food logging is substantially lower
       - The time burden of manual entry, database inaccuracies, and psychological fatigue from constant food vigilance are [well-documented barriers](https://pmc.ncbi.nlm.nih.gov/articles/PMC8409150/) that drive high attrition; 15% reflects the realistic proportion who maintain consistent calorie tracking beyond 12 months without external accountability
 
+dose_response:
+  metric: tracking_days_per_week
+  metric_label: "Tracking days per week"
+  metric_help: "Count days you logged all food and drink in real time or shortly after eating. Partial logging or post-hoc reconstruction doesn't count as a full tracked day."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Untracked"
+      criterion: "No tracking; intake estimated mentally if at all"
+    - level: 1
+      label: "Sporadic"
+      criterion: "1–2 logged days per week, often missing weekends or evening intake"
+    - level: 2
+      label: "Most days"
+      criterion: "4–5 logged days per week, with some gaps"
+    - level: 3
+      label: "Consistent"
+      criterion: "6–7 logged days per week with portion calibration via kitchen scale during initial weeks"
+
+  value_templates:
+    body-image.fat_loss: threshold
+
+  rationale: |
+    - Tier criteria reflect [the systematic review of self-monitoring](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) finding adherence is the strongest behavioural correlate of weight loss; [app-based trial data](https://link.springer.com/article/10.1007/s10865-019-00091-8) defines "consistent" as 6+ days logged per week. PBS values assume tier 3 (6–7 days/week).
+    - Template choice: `threshold` for body-image.fat_loss – the [Pontzer compensation literature](https://doi.org/10.1016/j.cub.2015.12.046) and [dietary self-monitoring research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6543803/) consistently find that sporadic tracking fails to produce a real deficit because the unlogged meals are typically the most caloric. The mechanism only fires when tracking is comprehensive enough to expose true intake; below ~5 days/week the awareness illusion produces little behaviour change.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Free calorie tracking apps (MyFitnessPal, Cronometer free tier, Lose It) provide sufficient functionality. A basic kitchen scale ($10-15) is helpful but not strictly required."

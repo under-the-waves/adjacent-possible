@@ -107,6 +107,38 @@ values:
     uar_reasoning: |
       - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: label_use_consistency
+  metric_label: "Label reading skill and consistency"
+  metric_help: "How well you understand nutrition panels and ingredient lists, and how consistently you apply that knowledge at the point of grocery purchase."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not reading"
+      criterion: "Doesn't check nutrition labels; food choices driven by front-of-pack marketing, brand, or price"
+    - level: 1
+      label: "Calorie skim"
+      criterion: "Glances at calories or one front-of-pack figure; no awareness of %DV thresholds, serving sizes, or ingredient ordering"
+    - level: 2
+      label: "Trained but occasional"
+      criterion: "Knows %DV thresholds, ingredient ordering, and added-sugar synonyms; applies the skill to some categories but not consistently across the shop"
+    - level: 3
+      label: "Habitual reader"
+      criterion: "Routinely reads panels and ingredient lists at the point of purchase across all packaged categories; corrects for serving size as a matter of course"
+
+  value_templates:
+    nutrition.physical_wellbeing: mild_diminishing
+    food-management.competence: mild_diminishing
+    food-management.waste_reduction: near_linear
+    health-management.control: mild_diminishing
+    health-management.longterm: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [PMC6213388 review](https://pmc.ncbi.nlm.nih.gov/articles/PMC6213388/) showing that label-comprehension training produces statistically significant knowledge gains, but [PMC10560412](https://pmc.ncbi.nlm.nih.gov/articles/PMC10560412/) shows dietary impact depends on frequency of use at point of purchase. Tier 2 captures trained-but-inconsistent users; tier 3 captures habitual application that the PBS values were scored against.
+    - `mild_diminishing` for the wellbeing, competence, control, and long-term health values: early application to high-impact categories (cereals, snacks, beverages) captures a disproportionate share of the benefit, with diminishing returns from extending to all categories.
+    - `near_linear` for food-management.waste_reduction: the serving-size pathway scales roughly proportionally with the number of purchases where the skill is applied – each correctly-sized purchase avoids a discrete bit of waste.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No purchases required. The FDA label guide and comparable resources are free online. Practise occurs on products already in the home."

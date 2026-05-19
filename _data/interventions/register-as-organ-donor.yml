@@ -51,6 +51,35 @@ values:
     uar_reasoning: |
       - See global-impact.impartiality UAR.
 
+dose_response:
+  metric: registration_and_family_alignment
+  metric_label: "Registration completeness and family alignment"
+  metric_help: "Tiers describe whether you are registered with the relevant donor registry and whether your immediate family knows your decision (which is the binding factor on whether registration translates into actual donation)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not registered"
+      criterion: "Not registered with any donor registry; family unaware of any preference"
+    - level: 1
+      label: "Implicit only"
+      criterion: "Tick on driver's licence or verbal preference expressed, but no entry in the binding national registry; family unaware"
+    - level: 2
+      label: "Registered, family unaware"
+      criterion: "Registered with national donor registry but family has not been told; high family-override risk"
+    - level: 3
+      label: "Registered and aligned"
+      criterion: "Registered with national donor registry, family informed and supportive, decision recorded in phone Medical ID and any advance-directive documents"
+
+  value_templates:
+    global-impact.impartiality: threshold
+    emergency-preparedness.baseline: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [UNOS data](https://unos.org/news/in-focus/the-importance-of-discussing-organ-donation-with-family/) finding that family override is the leading cause of registered donors not donating. Registration alone (tier 2) is structurally vulnerable to override; only the registration-plus-family-alignment state (tier 3) reliably translates into the impartial impact the PBS was scored against.
+    - `threshold` for global-impact.impartiality: per [UNOS](https://unos.org/news/in-focus/the-importance-of-discussing-organ-donation-with-family/), the impact only fires reliably when both registration and family alignment are in place. Implicit preferences (tier 1) are typically not legally binding, and registration without family knowledge (tier 2) carries high override risk – the mechanism doesn't reliably produce the donation outcome until tier 3.
+    - `mild_diminishing` for emergency-preparedness.baseline: even partial steps (an explicit verbal preference) contribute incrementally to the broader end-of-life preparedness picture, accumulating with each additional layer of documentation.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No cost. Donor registration is free in every major national system."

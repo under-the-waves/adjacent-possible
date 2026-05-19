@@ -140,6 +140,41 @@ values:
     uar_reasoning: |
       - See rationality.decision-making UAR – same intervention and same adherence profile.
 
+dose_response:
+  metric: study_and_practice_depth
+  metric_label: "Depth of bias study and active application"
+  metric_help: "Tiers describe how far you've gone from passive knowledge of bias names to active application of corrective strategies during real decisions, including pre-mortems and bias-checks before major choices."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not studied"
+      criterion: "Casual familiarity with terms like 'confirmation bias' from general culture; no structured study"
+    - level: 1
+      label: "Studied"
+      criterion: "Worked through a structured source covering at least 6 major biases; can name and define them; no active corrective practice"
+    - level: 2
+      label: "Recognising"
+      criterion: "Catches biases in own recent decisions retrospectively; has personal reference notes; applies corrective strategies inconsistently"
+    - level: 3
+      label: "Applying"
+      criterion: "Regularly conducts pre-mortems or bias-checks before major decisions; applies corrective strategies (consider-the-opposite, reference-class, perspective-taking) in real time"
+
+  value_templates:
+    rationality.decision-making: threshold
+    rationality.accurate-beliefs: threshold
+    rationality.intellectual-honesty: mild_diminishing
+    cognitive-skills.reasoning: mild_diminishing
+    goals.follow_through: threshold
+    value-system.insight: mild_diminishing
+    worldview.depth: near_linear
+
+  rationale: |
+    - Tier criteria reflect the central finding from [Vries et al. (2021)](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.629354/full) and the description's explicit statement that "knowing a bias exists is insufficient to reduce it – structured countermeasures are required". Tier 1 (declarative knowledge only) reliably fails to change behaviour; the active-application step at tier 3 is what produces the [Sellier et al. (2019)](https://journals.sagepub.com/doi/10.1177/0956797619861429) 19–29% field-transfer effect.
+    - `threshold` for rationality.decision-making, rationality.accurate-beliefs, and goals.follow_through because the descriptive-only state at tier 1 demonstrably doesn't change real-world decisions; the corrective-strategy mechanism only activates with active application (tier 2+).
+    - `mild_diminishing` for rationality.intellectual-honesty, cognitive-skills.reasoning, and value-system.insight because these accrue partly from the study itself (recognising that one's own beliefs are systematically biased) before active application produces additional gains.
+    - `near_linear` for worldview.depth because the engagement with cognitive science as a domain produces depth roughly proportional to how seriously the material is studied; this is the one outcome where reading itself directly produces the benefit.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "High-quality free resources exist: the Clearer Thinking platform, the You Are Not So Smart podcast, and Daniel Kahneman's foundational work is available via most public libraries. No purchase is required."

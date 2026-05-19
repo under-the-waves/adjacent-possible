@@ -125,6 +125,39 @@ values:
     uar_reasoning: |
       - See habits.consistency UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: logging_consistency
+  metric_label: "Daily logging consistency"
+  metric_help: "How reliably you log 3–5 tracked habits each day in your chosen app. Tiers describe both how many habits you're tracking and how consistently the daily check-in actually happens."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not tracking"
+      criterion: "No habit tracker in use"
+    - level: 1
+      label: "Inconsistent logging"
+      criterion: "App installed and 1–3 habits defined but logging skipped on most days; longest streak under 7 days"
+    - level: 2
+      label: "Mostly logging"
+      criterion: "3–5 habits tracked; logging on most days (~80%+) but with occasional multi-day gaps"
+    - level: 3
+      label: "Daily logging sustained"
+      criterion: "3–5 habits logged daily for 2+ months, with weekly calendar review; 30+ day streaks emerge on at least one habit"
+
+  value_templates:
+    habits.consistency: mild_diminishing
+    habits.enjoyment: mild_diminishing
+    habits.impact: near_linear
+    goals.follow_through: mild_diminishing
+    behaviours.resilience: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [free-living app retention data](https://dl.acm.org/doi/10.1145/2750858.2807544) showing median 5–10 day retention, with sustained daily logging at six months a much narrower achievement. Tier 1 maps to the modal install-and-drift pattern; tier 3 captures the consolidated practice the [Harkin et al. (2016)](https://pubmed.ncbi.nlm.nih.gov/26479070/) progress-monitoring effects are conditioned on.
+    - `mild_diminishing` for habits.consistency, habits.enjoyment, goals.follow_through, behaviours.resilience, and mental-health.stability because the visible-progress and gamification mechanisms front-load – getting some logging happening captures most of the feedback-loop benefit, with diminishing returns from going from 80% to 100% logging fidelity.
+    - `near_linear` for habits.impact because the breadth-of-life-areas-improved outcome scales roughly with how many distinct behaviours are being tracked and reinforced – tracking 5 habits across 5 domains has roughly 5x the potential reach of tracking 1.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Free apps (Loop Habit Tracker on Android, iOS Reminders, Notion templates, Google Sheets) are sufficient. Paid apps such as Streaks ($5 one-off) or Habitica (free with optional subscription) add polish but no documented effectiveness advantage."

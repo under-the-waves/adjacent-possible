@@ -127,6 +127,41 @@ values:
     uar_reasoning: |
       - See health-management.simplicity UAR – same intervention, same adherence profile. The emergency-access dimension specifically requires an extra step (medical ID setup or wallet card) that a meaningful fraction of maintainers will skip.
 
+dose_response:
+  metric: record_completeness_and_currency
+  metric_label: "Record completeness and currency"
+  metric_help: "Tiers describe how complete and current your personal health record is across the core sections (medications, allergies, immunisations, family history, baseline labs, providers, emergency-access summary)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No record"
+      criterion: "No consolidated record; information scattered across portals, memory, and prescription bottles"
+    - level: 1
+      label: "Partial setup"
+      criterion: "Record exists but missing major sections (e.g. no allergies list, no family history) or hasn't been updated in 12+ months"
+    - level: 2
+      label: "Mostly current"
+      criterion: "All core sections populated but updates lag behind appointments; no emergency-access summary on phone lock screen or wallet card"
+    - level: 3
+      label: "Fully current"
+      criterion: "All core sections populated, updated within a week of each appointment or prescription change, quarterly pharmacy reconciliation, emergency-access summary on phone/wallet, agents know location"
+
+  value_templates:
+    health-management.simplicity: steep_diminishing
+    health-management.control: mild_diminishing
+    health-management.longterm: mild_diminishing
+    health-management.vitality: mild_diminishing
+    organisation.tracking: mild_diminishing
+    emergency-preparedness.self-reliance: threshold
+
+  rationale: |
+    - Tier criteria reflect [PHR research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000391/) findings that the maintenance discipline is what separates effective from nominal records, and [Institute of Medicine medication-error data](https://nap.nationalacademies.org/catalog/11623/preventing-medication-errors) showing that emergency-accessibility is a distinct dimension. PBS values assume tier 3 (fully current).
+    - Template choices:
+      - `steep_diminishing` for health-management.simplicity – the first complete consolidation captures most of the coordination-overhead reduction; further updates maintain rather than expand the benefit.
+      - `threshold` for emergency-preparedness.self-reliance – the emergency benefit only fires when the record is genuinely accessible by a paramedic or family member in the first 30 minutes; below tier 2 the record is functionally absent during the crisis.
+      - `mild_diminishing` for the rest – control, long-term health, vitality, and tracking benefits accrue gradually with currency and completeness.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "The minimum viable form of this intervention uses free tools – a Google Doc, a Notion free-tier page, the built-in Apple Health or Android medical ID, or a printed sheet. No paid software or services are required to begin."

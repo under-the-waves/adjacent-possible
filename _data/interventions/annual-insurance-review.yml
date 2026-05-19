@@ -53,6 +53,36 @@ values:
     uar_reasoning: |
       - See financial-planning-tracking.accuracy UAR.
 
+dose_response:
+  metric: review_completeness
+  metric_label: "Annual review completeness"
+  metric_help: "How thoroughly you reviewed all active insurance policies (health, auto, home/renters, life, disability, umbrella) in the past 12 months, including competitor quotes on commodity policies."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Auto-renew"
+      criterion: "Passive renewal of all policies with no review in the past 12 months"
+    - level: 1
+      label: "Glance review"
+      criterion: "Looked at one or two policies (typically auto or home) without competitor quotes or gap analysis"
+    - level: 2
+      label: "Partial review"
+      criterion: "Reviewed most policies for coverage fit but skipped life/disability gap check or competitor quoting"
+    - level: 3
+      label: "Full annual review"
+      criterion: "Reviewed all active policies for fit, obtained competitor quotes on commodity policies, and explicitly checked life and disability coverage against current dependents and income"
+
+  value_templates:
+    financial-planning-tracking.accuracy: mild_diminishing
+    emergency-preparedness.catastrophic: threshold
+
+  rationale: |
+    - Tier criteria reflect that the highest-value review steps (competitor quoting, life/disability gap check) are precisely the ones casual reviewers skip per [J.D. Power shopping research](https://www.jdpower.com/business/press-releases/2024-us-auto-insurance-shopping-report) and [LIMRA underinsurance data](https://www.limra.com/en/research/research-abstracts-public/2024/2024-insurance-barometer-study-key-findings/). PBS values assume tier 3.
+    - Template choices:
+      - `mild_diminishing` for financial-planning-tracking.accuracy – each policy reviewed reduces the uncertainty stock, with mild diminishing returns as the easier commodity policies tend to be reviewed first.
+      - `threshold` for emergency-preparedness.catastrophic – the catastrophic-loss protection benefit requires actually identifying and closing the underinsurance gap, which typically only happens at tier 2+ (most reviews) and gains its full force at tier 3 (life/disability check explicitly done).
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No cost for the review itself. Competitor-quote requests are free. Any policy changes the review prompts may have associated costs (higher premium for additional coverage, lower premium for switched policies)."

@@ -151,6 +151,40 @@ values:
     uar_reasoning: |
       - See learning-methods.depth UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_concepts_explained
+  metric_label: "Concepts taken through the full Feynman loop per week"
+  metric_help: "Number of concepts per active week of study that you take through the full four-step loop (explain in plain language, identify gaps, return to source, re-explain until clean). Half-finished attempts that skip the iteration step don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Passive study"
+      criterion: "No use of the technique; study consists of re-reading, highlighting, or note-taking only"
+    - level: 1
+      label: "Occasional"
+      criterion: "1 concept per week or sporadic use on hard topics; gap-finding step often skipped"
+    - level: 2
+      label: "Regular"
+      criterion: "2–3 concepts per week taken through the full loop; iteration loop completed for most"
+    - level: 3
+      label: "Systematic"
+      criterion: "4–6 concepts per week applied to every important new topic during active study, sustained across a course of study"
+
+  value_templates:
+    life-skills.teaching: mild_diminishing
+    learning-methods.depth: mild_diminishing
+    learning-methods.efficiency: mild_diminishing
+    communication.influence: mild_diminishing
+    communication.performance: mild_diminishing
+    cognitive-skills.reasoning: mild_diminishing
+    self-awareness.contemplative: mild_diminishing
+    life-skills.systematic: mild_diminishing
+
+  rationale: |
+    - Tier criteria anchor on the intervention's stated practice of "15–30 minutes per concept, applied to every important new topic during a course of study", with tier 3 capturing the systematic application that produces the documented [generative-learning effects](https://psycnet.apa.org/record/2015-49431-001) and tier 1 capturing the common partial-application failure mode (skipping the gap-finding step, which preserves the illusion of understanding).
+    - All values use `mild_diminishing`. The mechanism is cumulative-skill: each concept taken through the full loop builds the gap-recognising metacognition and the personal stock of explanations, but with no biological saturation or sharp plateau. The [Roscoe and Chi](https://eric.ed.gov/?id=EJ782047) finding that depth gains depend on genuine confrontation with gaps – not just stylistic restatement – means the curve is gradual rather than steep: more practice produces more skill consolidation.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials, subscriptions, or services required. The technique uses only paper, a notebook, or a basic recording app already on most phones."

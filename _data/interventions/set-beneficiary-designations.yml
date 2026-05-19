@@ -40,6 +40,33 @@ values:
       - This is a one-time setup with very low ongoing maintenance (review annually or after major life events). UAR captures the share of users who, once started, complete the designations across all relevant accounts rather than doing one and stopping.
       - 80% reflects high completion rates for users who block out time for the task (the main barrier is procrastination, not friction within the task itself). Annual re-check adherence is somewhat lower.
 
+dose_response:
+  metric: account_coverage
+  metric_label: "Coverage and currency of designations"
+  metric_help: "What share of your beneficiary-eligible accounts (retirement, life insurance, POD/TOD bank, brokerage) have current, accurate primary and contingent beneficiaries on file."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No designations"
+      criterion: "No beneficiary designations on file, or unsure which accounts have them"
+    - level: 1
+      label: "Partial / stale"
+      criterion: "Some accounts have designations, but coverage is incomplete or designations predate major life events (marriage, divorce, births)"
+    - level: 2
+      label: "Most accounts current"
+      criterion: "Primary beneficiaries set and current on most major accounts; contingent beneficiaries missing or annual review not scheduled"
+    - level: 3
+      label: "Fully current"
+      criterion: "Primary and contingent beneficiaries set on every eligible account, reviewed annually and after major life events"
+
+  value_templates:
+    legal-matters.protection: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that protection is graded by account coverage and currency, not a binary yes/no. A stale designation from before a divorce is worse than no designation in some cases; partial coverage leaves the largest accounts protected but smaller ones exposed to probate. The annual-review habit (tier 3) is what prevents drift back toward stale designations as life circumstances change.
+    - `mild_diminishing` for legal-matters.protection: each additional covered account and each currency update adds incremental protection, with the largest gains coming from the first designations on the highest-balance retirement and insurance accounts. The curve is not steep because the next covered account still adds meaningful protection, but the marginal benefit declines as the major buckets get covered first. Not `binary` because partial coverage genuinely delivers partial protection – stale designations differ from absent ones, and contingent beneficiaries differ from primary alone.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No monetary cost. Beneficiary designations are free with every financial institution that offers them."

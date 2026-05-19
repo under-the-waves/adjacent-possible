@@ -188,6 +188,45 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: sessions_per_week
+  metric_label: "Sessions per week"
+  metric_help: "Count progressive bodyweight training sessions of 30–60 minutes that meaningfully approach failure on key movement patterns. Casual mobility work doesn't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Inactive"
+      criterion: "0 structured calisthenics sessions per week"
+    - level: 1
+      label: "Light"
+      criterion: "1 session per week, often sub-failure intensity"
+    - level: 2
+      label: "Moderate"
+      criterion: "2 sessions per week with progressive overload via variations"
+    - level: 3
+      label: "Programmed"
+      criterion: "3–4 sessions per week, structured around movement patterns with documented progressions"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: steep_diminishing
+    fitness.enjoyment: mild_diminishing
+    body-image.muscle_gain: near_linear
+    body-image.fat_loss: near_linear
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+    behaviours.resilience: mild_diminishing
+    self-awareness.experiential: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [muscle-strengthening meta-analyses](https://doi.org/10.1136/bjsports-2021-105099) showing maximum mortality benefit at 30–60 minutes/week (roughly 1–2 sessions for the median trainee), with strength and hypertrophy adaptations requiring 2–4 sessions per [Kotarsky et al. (2018)](https://pubmed.ncbi.nlm.nih.gov/29466268/). PBS values assume tier 3 (3–4 sessions/week).
+    - Template choices:
+      - `steep_diminishing` for fitness.health, fitness.performance, and mental-health.stability – mortality reduction and antidepressant effects largely saturate with 1–2 sessions/week per [BMJ 2024 meta-analysis](https://doi.org/10.1136/bmj-2023-075847); additional sessions refine.
+      - `near_linear` for body-image.muscle_gain and body-image.fat_loss – hypertrophy and caloric expenditure scale roughly with training volume.
+      - `mild_diminishing` for enjoyment, resilience, flourishing, and experiential self-awareness – subjective and skill-acquisition gains accrue gradually with practice volume.
+
 resources:
   upfront_cost: 50
   upfront_cost_reasoning: "Doorway pull-up bar ($30-50) is the only essential equipment for most programmes. Many beginner routines need no equipment at all. Optional later additions: gymnastic rings ($35), parallettes ($30-40)."

@@ -93,6 +93,37 @@ values:
     uar_reasoning: |
       - See digital-safety.security UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: backup_coverage
+  metric_label: "Backup coverage versus the 3-2-1 rule"
+  metric_help: "How fully your backup setup meets the 3-2-1 standard (three copies, two media types, one off-site) for your critical data, and whether restores have been tested."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Unprotected"
+      criterion: "No systematic backups; data lives only on the primary device or in sync services that propagate deletions"
+    - level: 1
+      label: "Sync only"
+      criterion: "Files in a sync service (Dropbox, Google Drive, OneDrive) treated as backup, but no independent off-site backup that survives ransomware or sync errors"
+    - level: 2
+      label: "One real backup"
+      criterion: "One automated backup configured (either cloud backup or local external drive), but not both; restore never tested"
+    - level: 3
+      label: "Full 3-2-1"
+      criterion: "Automated cloud backup plus automated local backup (external drive), covering all critical folders, with annual restore tests confirming the backups work"
+
+  value_templates:
+    digital-safety.security: threshold
+    systems.reliability: threshold
+    systems.power: mild_diminishing
+    organisation.tracking: threshold
+
+  rationale: |
+    - Tier cuts reflect the [Backblaze 3-2-1 guidance](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) and [CISA tier-1 control classification](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf). The critical distinction is between sync (tier 1) which propagates deletions and ransomware, and true backup (tier 2+) which preserves recovery points. Tier 3 captures the full 3-2-1 setup with tested restores that the PBS values were scored against.
+    - `threshold` for digital-safety.security, systems.reliability, and organisation.tracking: per [HandyRecovery data](https://www.handyrecovery.com/data-loss-statistics/), 70%+ of users experience data loss eventually. Single backup (tier 2) fails to recover from scenarios where both local device and backup are destroyed simultaneously (theft, fire, flood) – the mechanism only fully fires at tier 3 with both local and off-site copies plus tested restores.
+    - `mild_diminishing` for systems.power: each automated backup process adds incremental process-coverage benefit, with the first automation (cloud backup) producing most of the systems-power gain.
+
 resources:
   upfront_cost: 60
   upfront_cost_reasoning: "A 1 TB external hard drive for local backup costs $50–80. Cloud backup services such as Backblaze Personal Backup cost $99/year but offer a free trial; Google One and iCloud storage upgrades start at $2.99/month. $60 covers the external drive; the cloud component is included in ongoing costs."

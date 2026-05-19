@@ -62,6 +62,35 @@ values:
     uar_reasoning: |
       - See physical-safety.risk UAR – same intervention, same adherence profile. UAR of 70% reflects the gap between intention and consistent monthly testing, driven by inertia and absence of feedback when the alarm functions correctly.
 
+dose_response:
+  metric: coverage_and_maintenance
+  metric_label: "Smoke alarm coverage and maintenance state"
+  metric_help: "Tiers describe both the breadth of alarm coverage (per floor, inside and outside sleeping areas) and the depth of maintenance (monthly testing, annual battery replacement, replacement of units over 10 years old)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "None or non-functional"
+      criterion: "No alarms, or alarms present but never tested and likely non-functional (dead batteries, expired units)"
+    - level: 1
+      label: "Some coverage"
+      criterion: "Alarms on at least one floor but gaps in sleeping-area coverage; tested only occasionally; battery state unknown"
+    - level: 2
+      label: "Good coverage"
+      criterion: "Alarms on every floor and outside sleeping areas; tested 1–3 times a year; batteries replaced when chirping; no unit verified as under 10 years old"
+    - level: 3
+      label: "Full NFPA-compliant routine"
+      criterion: "Alarms on every floor, inside each bedroom, and outside each sleeping area; tested monthly; batteries replaced annually on a fixed date; no unit older than 10 years"
+
+  value_templates:
+    physical-safety.risk: threshold
+    emergency-preparedness.baseline: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect that smoke alarms have both coverage and maintenance dimensions, both of which can silently fail. [NFPA data](https://www.nfpa.org/education-and-research/home-fire-safety/smoke-alarms) shows that of alarms present but non-operating in actual fires, 47% had missing or disconnected batteries and 24% had dead batteries – so an installed-but-unmaintained alarm (tier 0 in mortality-protection terms) provides little benefit.
+    - `threshold` for physical-safety.risk because the alarm-based mortality reduction mechanism only activates when an alarm actually sounds during a fire, which requires both coverage in the relevant area and a functioning unit. The [NFPA 55–60% conditional mortality reduction](https://www.nfpa.org/education-and-research/research/nfpa-research/fire-statistical-reports/smoke-alarms-in-us-home-fires) is largely binary at the per-fire level – the alarm either alerts in time or doesn't – so tier 2 captures most of the available protection and tier 3 adds modest additional reliability via monthly verification.
+    - `mild_diminishing` for emergency-preparedness.baseline because the preparedness construct is broader (covers multiple safety domains beyond fire detection) – having any working alarms captures most of the within-domain preparedness gain, with marginal additional benefit from monthly testing discipline.
+
 resources:
   upfront_cost: 20
   upfront_cost_reasoning: "Assumes the home already has some alarms installed. $20 covers a single replacement alarm if one is missing or expired (basic ionisation units cost $10–15 at hardware retailers). If installing from scratch across a typical home (3–4 alarms), upfront cost rises to $30–60."

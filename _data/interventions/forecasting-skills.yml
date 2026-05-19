@@ -124,6 +124,38 @@ values:
     uar_reasoning: |
       - See rationality.accurate-beliefs UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_forecasts
+  metric_label: "Forecasts made per week with feedback loop closed"
+  metric_help: "Number of forecasts you make each week on a structured platform (Good Judgment Open, Metaculus, Manifold), with active updating as new information arrives and post-resolution calibration review. Set-and-forget forecasts that you never revisit don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No practice"
+      criterion: "Beliefs held as vague hedges ('probably', 'likely'); no numerical probability assignment; no platform participation"
+    - level: 1
+      label: "Trained but inactive"
+      criterion: "Completed introductory training; 1–2 forecasts per week, often without revisiting or reviewing resolved questions"
+    - level: 2
+      label: "Regular forecaster"
+      criterion: "5–10 forecasts per week with some active updating; reviews own calibration curve quarterly"
+    - level: 3
+      label: "Systematic practice"
+      criterion: "10+ forecasts per week with regular updating, calibration review, and deliberate transfer to personal and professional decisions"
+
+  value_templates:
+    rationality.accurate-beliefs: mild_diminishing
+    rationality.decision-making: mild_diminishing
+    rationality.intellectual-honesty: mild_diminishing
+    cognitive-skills.reasoning: mild_diminishing
+    goals.clarity: mild_diminishing
+    goals.adaptability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the description's observation that "training effects are strongest for participants who actively update forecasts as new information arrives; passive participants who set-and-forget see substantially smaller gains" ([AI Impacts review](https://aiimpacts.org/evidence-on-good-forecasting-practices-from-the-good-judgment-project/)). Tier 1 captures the trained-but-passive state; tier 3 captures the systematic practice that produces the [Mellers et al. (2015)](https://web.stanford.edu/~knutson/jdm/mellers15.pdf) 6–12% Brier-score improvements.
+    - All values use `mild_diminishing` because calibration is a skill that improves through cumulative practice without a sharp plateau. The first regular forecasts and post-resolution reviews establish the feedback loop that drives most improvement, but reaching superforecaster-level calibration requires sustained volume across months. Transfer to personal decisions (goals.clarity, goals.adaptability) is itself a separate behaviour that grows gradually with practice.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "All major forecasting platforms (Good Judgment Open, Metaculus, Manifold Markets) are free to join. No software purchase required."

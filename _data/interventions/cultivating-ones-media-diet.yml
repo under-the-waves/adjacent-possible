@@ -203,6 +203,46 @@ values:
     uar_reasoning: |
       - See media-diet.quality UAR – same intervention, same adherence profile. UAR = 45%.
 
+dose_response:
+  metric: curation_and_limits_sustained
+  metric_label: "Curation discipline sustained"
+  metric_help: "Tiers describe how thoroughly you have audited and curated your information sources, whether time limits are enforced, and whether you have actively added diverse high-quality sources."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Algorithmic default"
+      criterion: "Information inputs driven by social algorithms and headline news; no audit performed; no time limits"
+    - level: 1
+      label: "Some unsubscribes"
+      criterion: "Removed some low-quality sources but no replacements added, no time limits, no breadth mandate"
+    - level: 2
+      label: "Curated, partial limits"
+      criterion: "Sources audited and replaced with higher-quality alternatives; time limits set on some apps but routinely overridden; diverse sources only partially added"
+    - level: 3
+      label: "Sustained curation"
+      criterion: "Source audit completed with active replacements; time limits enforced across devices (typically 30–45 min daily cap); 2+ deliberately diverse sources added; monthly review prevents reversion"
+
+  value_templates:
+    media-diet.quality: steep_diminishing
+    media-diet.relevance: mild_diminishing
+    media-diet.breadth: near_linear
+    media-diet.efficiency: near_linear
+    worldview.breadth: mild_diminishing
+    worldview.depth: mild_diminishing
+    worldview.utility: mild_diminishing
+    rationality.accurate-beliefs: mild_diminishing
+    rationality.decision-making: mild_diminishing
+    information-management.insight: mild_diminishing
+    cognitive-skills.focus: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [news-restriction research during COVID-19](https://www.tandfonline.com/doi/full/10.1080/1461670X.2021.2021105) finding that partial reversion within 2–3 months is the modal pattern, and [doomscrolling research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9580444/) on the centrality of enforced time limits. PBS values assume tier 3 (sustained curation).
+    - Template choices:
+      - `steep_diminishing` for media-diet.quality – pruning the worst sources captures most of the signal-to-noise improvement; further refinement adds polish.
+      - `near_linear` for media-diet.breadth and media-diet.efficiency – diverse-source count and time recaptured scale roughly proportionally with curation thoroughness.
+      - `mild_diminishing` for the rest – the worldview, rationality, and cognitive-skill benefits are indirect, noisy, and accrue gradually as better inputs translate (or fail to translate) into better thinking.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "The source audit and restructuring process costs nothing – unfollowing, muting, and subscribing to free newsletters and RSS feeds requires no financial outlay. Basic screen-time apps are built into iOS and Android at no cost."

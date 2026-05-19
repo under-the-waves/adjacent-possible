@@ -110,6 +110,39 @@ values:
     uar_reasoning: |
       - See housework.order UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: reset_nights_per_week
+  metric_label: "Reset days per week"
+  metric_help: "Count days you completed a 10–20 minute reset returning out-of-place items to their designated homes across active living areas. Partial cleanups without designated homes don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No reset"
+      criterion: "No daily reset; tidying happens reactively when areas become unmanageable"
+    - level: 1
+      label: "Occasional"
+      criterion: "Reset happens 1–2 days per week, often without designated homes"
+    - level: 2
+      label: "Most days"
+      criterion: "Reset on 4–5 days per week with designated homes for most categories; weekend skips common"
+    - level: 3
+      label: "Daily"
+      criterion: "Reset on 6–7 days per week within a 10–20 minute window; designated homes for all categories with monthly homes-list audit"
+
+  value_templates:
+    housework.order: mild_diminishing
+    housework.aesthetics: mild_diminishing
+    possessions.functionality: mild_diminishing
+    time-management.productivity: near_linear
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [time-use research on housework](https://www.sciencedirect.com/science/article/abs/pii/S0049089X2030104X) showing that daily-distributed maintenance outperforms batched weekend cleaning, and the practical reality that one missed day is recoverable while three missed days require a longer catch-up reset. PBS values assume tier 3 (daily).
+    - Template choices:
+      - `near_linear` for time-management.productivity – search-time savings and reduced household friction scale roughly proportionally with reset frequency.
+      - `mild_diminishing` for order, aesthetics, functionality, and stability – the felt sense of household order and the [Saxbe & Repetti (2010)](https://pubmed.ncbi.nlm.nih.gov/19934011/) cortisol-slope benefit accrue gradually with sustained cadence, with most of the benefit captured by tier 2.
+
 resources:
   upfront_cost: 50
   upfront_cost_reasoning: "Approximately $30–80 for basic organisational supplies if the household lacks them: hooks for keys and bags, baskets or trays for landing zones, labels for shelves, a few drawer dividers. Many households already have most of what they need."

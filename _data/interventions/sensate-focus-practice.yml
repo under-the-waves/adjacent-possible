@@ -135,6 +135,39 @@ values:
     uar_reasoning: |
       - See sex.pleasure UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: protocol_completion
+  metric_label: "Protocol completion and integration"
+  metric_help: "How much of the staged 6–12 week sensate focus protocol you and your partner have actually completed, holding the no-intercourse and attentional rules through the early stages."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not attempted"
+      criterion: "Protocol not started; no agreement to suspend intercourse or run staged exercises"
+    - level: 1
+      label: "Started"
+      criterion: "First 1–2 sessions of stage one completed; rules not yet consistently held"
+    - level: 2
+      label: "Stage one consolidated"
+      criterion: "Stage one (non-genital sensate focus) reliably practised for 2–3 weeks; progression to stage two begun"
+    - level: 3
+      label: "Full programme integrated"
+      criterion: "All three stages completed across 6–12 weeks with rules held; sensate-focus stance integrated into ongoing intimate life"
+
+  value_templates:
+    sex.pleasure: mild_diminishing
+    sex.contentment: mild_diminishing
+    sex.variety: mild_diminishing
+    sex.frequency: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    mindfulness.emotional: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that drop-out is the dominant failure mode for sensate focus per [clinical reviews](https://pubmed.ncbi.nlm.nih.gov/30243480/) (30–50% attrition even in therapist-guided programmes), and that the mechanism requires sustained adherence to the staged sequence. The active ingredient – removing the performance frame – only fully fires once stage one is consolidated and the no-intercourse rule has been held through the initial awkwardness. PBS values are scored against full completion (tier 3).
+    - All values use `mild_diminishing`. The pleasure, contentment, variety, and frequency outcomes accrue gradually as the spectator-anxiety loop disengages and embodied attention rebuilds – there is no sharp threshold where the protocol "fires" but partial completion does deliver partial benefit, and continued integration past the structured phase consolidates gains. Relational and mindfulness side-effects follow the same shape: gradual accrual with practice rather than biological saturation. This matches the safe-default subjective-with-noisy-evidence template, consistent with the [meta-analytic CBT-sex-therapy effect sizes](https://pubmed.ncbi.nlm.nih.gov/23427893/) being moderate-to-large among completers.
+
 resources:
   upfront_cost: 30
   upfront_cost_reasoning: "Approximately $30 for a structured workbook such as Weiner and Avery-Clark's Sensate Focus in Sex Therapy. Self-directed couples can begin with the workbook alone; therapist-guided couples will incur ongoing rather than upfront costs."

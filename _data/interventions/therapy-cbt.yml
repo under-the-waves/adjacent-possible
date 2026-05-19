@@ -156,6 +156,41 @@ values:
     uar_reasoning: |
       - See mental-health.stability UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: course_progression
+  metric_label: "CBT course progression and homework engagement"
+  metric_help: "How far through a structured 12–20 week CBT course you have progressed, and whether you have been completing the between-session homework (thought records, behavioural experiments, exposure work) that drives most of the change."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not started"
+      criterion: "No CBT initiated; perhaps general talking therapy without CBT structure"
+    - level: 1
+      label: "Early sessions"
+      criterion: "1–4 sessions completed; homework intermittent; techniques not yet applied to presenting problem"
+    - level: 2
+      label: "Mid-course"
+      criterion: "5–11 sessions completed with regular homework engagement; thought records and behavioural experiments running between sessions"
+    - level: 3
+      label: "Full course completed"
+      criterion: "Full 12–20 session course completed with consistent homework; techniques internalised and applied independently after termination"
+
+  value_templates:
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: steep_diminishing
+    mental-health.flourishing: mild_diminishing
+    self-awareness.psychological: mild_diminishing
+    self-awareness.relational: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    current-work.engagement: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [Swift & Greenberg 2015](https://pubmed.ncbi.nlm.nih.gov/26302248/) finding that ~26% drop out during treatment, with completion strongly predicting response. PBS values are scored against full course completion (tier 3); partial completion delivers partial benefit but with substantially lower response rates.
+    - `steep_diminishing` for mental-health.stability and mental-health.resilience: per [Cuijpers et al. 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC9840507/), the bulk of symptom-response gains accumulate in the first half of treatment as core techniques become available, with later sessions consolidating durability ([10-year follow-up](https://www.sciencedirect.com/science/article/pii/S0165032724007511)).
+    - `mild_diminishing` for self-awareness.psychological, self-awareness.relational, mental-health.flourishing, relationship-quality.harmony, relationship-quality.connection, and current-work.engagement: these secondary outcomes accumulate gradually with sustained engagement and homework practice. Self-awareness gains in particular accrue from doing the thought-record work itself, so they build steadily across sessions rather than saturating early.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No one-time equipment or setup cost is required. The only upfront action is identifying and contacting a therapist, which is free. Where care is covered by national health insurance, referral via a primary-care doctor may be free at the point of use."

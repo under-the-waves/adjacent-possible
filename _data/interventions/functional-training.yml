@@ -181,6 +181,43 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: weekly_sessions
+  metric_label: "Functional training sessions per week"
+  metric_help: "Number of 30–60 minute structured sessions per week covering the core movement patterns (squat, hinge, push, pull, carry, rotate, single-leg) with progressive overload. Random hard-work workouts without programming don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Sedentary"
+      criterion: "No regular resistance or functional training"
+    - level: 1
+      label: "Sporadic"
+      criterion: "1 session/week or irregular sessions; movement-pattern coverage incomplete"
+    - level: 2
+      label: "Regular"
+      criterion: "2 sessions/week covering the main movement patterns; some progressive overload"
+    - level: 3
+      label: "Full programme"
+      criterion: "2–4 sessions/week of 30–60 minutes each, full movement-pattern coverage with progressive overload via load, distance, or unilateral/asymmetric variation"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: steep_diminishing
+    fitness.enjoyment: mild_diminishing
+    physical-safety.risk: steep_diminishing
+    body-image.fat_loss: near_linear
+    behaviours.resilience: mild_diminishing
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the dose-response in [muscle-strengthening meta-analyses](https://doi.org/10.1136/bjsports-2021-105099): mortality benefit appears at 30–60 min/week (tier 2 territory) and plateaus around 60 min/week, with diminishing returns thereafter. Tier 3 captures the full 2–4 session week the PBS values were scored against.
+    - `steep_diminishing` for fitness.health, fitness.performance, physical-safety.risk, and mental-health.stability because each follows a biological-saturation curve – mortality and depression effect sizes plateau at modest weekly volumes, and the [Cochrane fall-prevention evidence](https://doi.org/10.1002/14651858.CD012424.pub2) shows the balance/fall-prevention effect requires only 2 sessions/week to capture most of the available benefit.
+    - `near_linear` for body-image.fat_loss because per-session caloric expenditure scales roughly linearly with session count, with compensatory eating moderating but not eliminating the relationship.
+    - `mild_diminishing` for fitness.enjoyment, behaviours.resilience, mental-health.resilience, and mental-health.flourishing – subjective and self-efficacy outcomes that build with practice volume but have noisy evidence and no sharp plateau.
+
 resources:
   upfront_cost: 150
   upfront_cost_reasoning: "A single moderate kettlebell ($40-80), a sandbag with filler ($60-100), and basic training shoes if not already owned ($40-80). Many programmes can begin with just the kettlebell. Optional later additions: heavier kettlebell, farmer-carry handles ($80), sled ($150-300)."

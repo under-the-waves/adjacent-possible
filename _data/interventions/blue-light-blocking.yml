@@ -66,6 +66,34 @@ flagged_domains:
   - domain: "mental-health"
     rationale: "Some [trial evidence](https://academic.oup.com/sleepadvances/article/1/1/zpaa002/5851240) suggests larger effects in patients with insomnia, bipolar disorder, or delayed sleep phase, with plausible knock-on effects on mood stability via improved circadian alignment."
 
+dose_response:
+  metric: pre_bed_blue_light_blocking_nights
+  metric_label: "Nights per week with consistent blocking"
+  metric_help: "Count nights you used amber-tinted glasses or comprehensive filtering (covering both screens and ambient LEDs) for at least 2 hours before bed."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Unfiltered"
+      criterion: "No glasses, no filters, no dimming in the wind-down window"
+    - level: 1
+      label: "Software only"
+      criterion: "Night Shift or f.lux enabled on screens, but no glasses and no control over ambient LED lighting"
+    - level: 2
+      label: "Most nights"
+      criterion: "Glasses or comprehensive filtering on 4–5 nights per week, often skipped during social viewing"
+    - level: 3
+      label: "Consistent"
+      criterion: "Glasses or full filtering for 2+ hours before bed on 6–7 nights per week including ambient lighting"
+
+  value_templates:
+    sleep.daily_functioning: mild_diminishing
+    sleep.comfort_experience: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [2024 Rabiei survey](https://pubmed.ncbi.nlm.nih.gov/38461462/) finding that only ~10% of users regularly use blue-light filters and that software-only approaches leave ambient LED exposure unaddressed. PBS values assume tier 3 (consistent comprehensive blocking).
+    - Template choices: both values use `mild_diminishing`. The [2025 Frontiers meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC12668929/) and the [2023 Cochrane review](https://www.cochrane.org/about-us/news/blue-light-filtering-spectacles-probably-make-no-difference-eye-strain-eye-health-or-sleep) both find small, noisy, mostly subjective effects in healthy adults; no biological saturation, no threshold, no proportional-dose mechanism. Subjective wind-down comfort accrues gradually with practice volume.
+
 resources:
   upfront_cost: 20
   upfront_cost_reasoning: "Basic amber-tinted blue-blocking glasses cost £15–25 from reputable manufacturers. Software alternatives (f.lux, Night Shift) are free, so $0 is also viable; $20 reflects the recommended minimum for glasses that block a meaningful portion of short-wavelength light."

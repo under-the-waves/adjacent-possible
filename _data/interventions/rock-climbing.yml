@@ -200,6 +200,44 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: sessions_per_week
+  metric_label: "Climbing sessions per week"
+  metric_help: "Average climbing sessions per week of 60–120 minutes each. Count both bouldering and roped climbing; partial sessions under 45 minutes count as half."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not climbing"
+      criterion: "No regular climbing; perhaps tried once or never"
+    - level: 1
+      label: "Casual"
+      criterion: "About 1 session per week, or 2–3 sessions per month"
+    - level: 2
+      label: "Regular"
+      criterion: "2 sessions per week of 60–120 minutes"
+    - level: 3
+      label: "Committed"
+      criterion: "2–3 sessions per week sustained for 6+ months, with deliberate progression"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: mild_diminishing
+    fitness.enjoyment: mild_diminishing
+    body-image.fat_loss: near_linear
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+    participatory-leisure.social: mild_diminishing
+    participatory-leisure.achievement: mild_diminishing
+    participatory-leisure.adventure: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the 2–3 sessions/week dose against which PBS values are scored, with the learning-phase cutoff at 6 months that the intervention identifies as the threshold past which retention and benefits consolidate ([Schoffl et al. 2011](https://doi.org/10.1016/j.wem.2011.06.001), [Llewellyn & Sanchez 2008](https://doi.org/10.1348/000712607X183614)).
+    - `steep_diminishing` for fitness.health and mental-health.stability: biological-saturation outcomes (cardiovascular, depressive-symptom reduction per [Buechter & Fechtelpeter 2015](https://pmc.ncbi.nlm.nih.gov/articles/PMC4548691/)) front-load benefit at first regular sessions.
+    - `mild_diminishing` for fitness.performance, fitness.enjoyment, mental-health.resilience, mental-health.flourishing, and the participatory-leisure values: skill consolidation, flow access, mastery experience, and community embedding accrue with practice volume without a sharp plateau ([Orth et al. 2016](https://doi.org/10.1080/02640414.2016.1151924), [Stelzer et al. 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/)).
+    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with session count, tempered but not eliminated by compensation.
+
 resources:
   upfront_cost: 150
   upfront_cost_reasoning: "Climbing shoes ($80–150) and chalk bag with chalk ($20–30) are the only essential gear for indoor bouldering. Gym rental shoes ($5/session) reduce upfront cost to under $30. Roped climbing requires a harness ($50–80) and belay device ($20–30), and a belay certification course ($20–50) at the gym. Outdoor climbing requires substantial additional gear (rope, draws, helmet) but this can be deferred."

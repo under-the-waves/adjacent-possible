@@ -75,6 +75,37 @@ values:
     uar_reasoning: |
       - See digital-safety.security UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: practices_in_place
+  metric_label: "Cybersecurity practices in place"
+  metric_help: "Count how many of the four core practices you've adopted: authenticator-app 2FA on important accounts, phishing recognition (active vigilance, not just one-time training), auto-updates on OS/browser/apps, and encrypted-connection habits (HTTPS, no banking on public Wi-Fi)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "None"
+      criterion: "Passwords only; no 2FA; no auto-updates; no phishing awareness; sensitive activity on any network"
+    - level: 1
+      label: "Partial"
+      criterion: "One practice in place (often auto-updates or 2FA on email only); other vectors still exposed"
+    - level: 2
+      label: "Mostly covered"
+      criterion: "3 of the 4 practices in place; one common gap remains (often phishing vigilance or encrypted-connection discipline)"
+    - level: 3
+      label: "Full bundle"
+      criterion: "All 4 practices in place: authenticator-app 2FA on key accounts, sustained phishing vigilance with periodic refreshing, auto-updates everywhere, HTTPS-and-VPN discipline"
+
+  value_templates:
+    digital-safety.security: near_linear
+    digital-safety.convenience: near_linear
+    cognitive-skills.lifestyle: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the description's defence-in-depth framing: each of the four practices targets a distinct attack vector (credential takeover, social engineering, unpatched vulnerabilities, network interception), so partial adoption leaves whole vectors exposed. The 86% phishing-reduction figure from [KnowBe4](https://www.knowbe4.com/press/knowbe4-report-reveals-security-training-reduces-global-phishing-click-rates-by-86) and the 60% breach-attribution to unpatched vulnerabilities from [Automox](https://www.automox.com/blog/bad-cyber-hygiene-breaches-tied-to-unpatched-vulnerabilities) each apply to distinct vectors.
+    - `near_linear` for digital-safety.security because each practice closes a different attack vector – having three of four leaves about a quarter of the addressable risk surface uncovered. The benefits stack roughly additively rather than substituting for each other.
+    - `near_linear` for digital-safety.convenience because each practice adds its own ongoing friction (2FA login steps, phishing-check pauses, occasional VPN latency); more practices in place means proportionally more total friction.
+    - `mild_diminishing` for cognitive-skills.lifestyle because the practical-reasoning skill of digital threat recognition builds early – the first practice or two establish the threat-model mindset, with diminishing additional skill gain from the remaining additions.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Authenticator apps (Aegis on Android, built-in on iOS) are free. All four practices require no paid software to begin; a VPN is optional."

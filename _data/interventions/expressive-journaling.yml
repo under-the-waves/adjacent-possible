@@ -73,6 +73,35 @@ values:
     uar_reasoning: |
       - See mental-health.stability UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_sessions
+  metric_label: "15–20 minute expressive writing sessions per week"
+  metric_help: "Number of 15–20 minute sessions per week spent writing freely about emotionally significant experiences, focusing on both facts and feelings. Sessions that drift into to-do lists or surface-level summary don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not practising"
+      criterion: "No deliberate expressive writing"
+    - level: 1
+      label: "Trying"
+      criterion: "1 session/week, or sporadic sessions on emotionally pressing topics"
+    - level: 2
+      label: "Established"
+      criterion: "2 sessions/week sustained for at least a month"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "3–4 sessions/week sustained for 3+ months, often returning to the same topic across multiple sessions"
+
+  value_templates:
+    mental-health.stability: mild_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [Frattaroli (2006) meta-analysis](https://bpb-us-e2.wpmucdn.com/faculty.sites.uci.edu/dist/c/602/files/2019/08/Frattaroli-psych-bulletin-2006.pdf) finding of stronger effects with three or more sessions of at least 15 minutes – tier 3 hits that threshold and adds the multi-session-same-topic pattern that produces the largest effects.
+    - All three values use `mild_diminishing` because expressive writing produces subjective wellbeing outcomes with noisy evidence (small but consistent effect size of r=.075 across 146 studies). The first regular session per week starts the externalising-and-organising mechanism, but the full benefit requires repetition across weeks for emotional consolidation. The risk of writing becoming ruminative rather than processing (noted in pitfalls) caps the upper end and supports the gradual rather than steep curve.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. Any notebook, text editor, or note-taking app works. No special equipment needed."

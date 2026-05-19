@@ -45,6 +45,33 @@ values:
       - Practical barriers include higher grocery costs (protein-rich foods cost more per calorie than carbohydrate staples), meal planning burden, social dining constraints, and taste monotony; [consumer surveys](https://www.empower.com/the-currency/life/protein-spending-research) show 52% report noticeably increased grocery spending when prioritising protein
       - Scored at 40% reflecting that roughly 4 in 10 people who attempt a sustained high-protein approach maintain meaningful adherence beyond 12 months, accounting for partial compliance and the self-selection effect in motivated populations
 
+dose_response:
+  metric: daily_protein_intake
+  metric_label: "Daily protein intake in g/kg bodyweight"
+  metric_help: "Average daily protein intake relative to bodyweight (g/kg), sustained across most days of the week. Variable intake (high one day, low the next) counts as the weekly average rather than the high point."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Standard intake"
+      criterion: "Under 1.0 g/kg/day on average (typical Western diet for someone not focused on protein)"
+    - level: 1
+      label: "Moderate"
+      criterion: "1.0–1.3 g/kg/day sustained, with one or two meals hitting ~25g protein"
+    - level: 2
+      label: "Higher"
+      criterion: "1.3–1.6 g/kg/day sustained, with most meals hitting 25g+ protein"
+    - level: 3
+      label: "High-protein"
+      criterion: "1.6+ g/kg/day sustained (roughly 100g+ for a 70kg adult), spread across three to four meals of 25–30g each"
+
+  value_templates:
+    body-image.fat_loss: threshold
+
+  rationale: |
+    - Tier criteria anchor on the [meta-analysis dose-response evidence](https://doi.org/10.3945/ajcn.112.044321): the body-composition advantage (more fat lost, more lean mass retained) appears reliably at ~1.6 g/kg/day with at least 25–30g per meal for maximal muscle protein synthesis stimulation. The 1.0 g/kg threshold is roughly the minimum at which any protein-related satiety effect appears.
+    - `threshold` for body-image.fat_loss because the muscle-protein-synthesis mechanism has a known biological minimum (~20–25g per meal to maximally stimulate MPS) and the body-composition advantage over standard-protein diets only emerges at ~1.6 g/kg/day per the [Wycherley meta-analysis](https://doi.org/10.3945/ajcn.112.044321). Below tier 2, the intervention provides little benefit beyond a generic calorie deficit; the distinctive fat-loss-with-lean-mass-retention pattern that justifies PBS 8 is a tier-3 outcome.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment or programme fees required. Optional purchases (food scale, meal prep containers, protein powder starter supply) could add $30 – 60 but are not strictly necessary."

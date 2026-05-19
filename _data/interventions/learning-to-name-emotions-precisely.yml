@@ -157,6 +157,41 @@ values:
     uar_reasoning: |
       - See self-awareness.psychological UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: labelling_practice_consistency
+  metric_help: "How often you pause to name what you're feeling with a precise term, and whether you maintain a structured log over time."
+  metric_label: "Labelling practice and log consistency"
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Coarse labels"
+      criterion: "No deliberate practice; relies on basic labels (happy, sad, angry, fine) without distinction"
+    - level: 1
+      label: "Occasional"
+      criterion: "Reaches for precise terms ad hoc during major emotions; no daily log or vocabulary reference in use"
+    - level: 2
+      label: "Daily log"
+      criterion: "Logs emotions at two or three fixed points most days using a vocabulary reference, for a sustained period of at least four weeks"
+    - level: 3
+      label: "Granular and pattern-aware"
+      criterion: "Daily log sustained for 8+ weeks, including weekly pattern review; precise labels deployed in real time during stress and conflict without referring to a reference"
+
+  value_templates:
+    self-awareness.psychological: mild_diminishing
+    self-awareness.contemplative: mild_diminishing
+    behaviours.emotional: mild_diminishing
+    mental-health.stability: mild_diminishing
+    mental-health.resilience: mild_diminishing
+    mindfulness.emotional: mild_diminishing
+    mindfulness.knowledge: threshold
+    communication.connection: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [Frontiers in Psychology (2021) granularity training review](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.703658/full) finding that emotion-differentiation scores improve with sustained labelling practice, and [Barrett's work](https://pmc.ncbi.nlm.nih.gov/articles/PMC1201429/) showing that pattern recognition emerges only after weeks of cumulative observation. Tier 2 (daily log for 4+ weeks) captures the vocabulary-and-acute-regulation benefit; tier 3 adds the metacognitive pattern-awareness layer that the PBS values were scored against.
+    - `mild_diminishing` for most values: per [Lieberman (2007)](https://pubmed.ncbi.nlm.nih.gov/17576282/), even a single labelling event produces amygdala suppression, so partial practice yields partial regulation benefit – there is no sharp threshold for the acute mechanism.
+    - `threshold` for mindfulness.knowledge: the pattern-recognition benefit specifically requires accumulated log data; without 4+ weeks of consistent logging, patterns are not visible and the knowledge gain does not fire.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Free vocabulary resources are widely available online (e.g. Junto Emotion Wheel, Feelings Inventory). A paid reference such as Atlas of the Heart costs approximately $18–25 but is optional."

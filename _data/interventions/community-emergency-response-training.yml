@@ -145,6 +145,42 @@ values:
     uar_reasoning: |
       - See emergency-preparedness.community UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: cert_engagement_level
+  metric_label: "CERT engagement level"
+  metric_help: "Tiers describe whether you completed basic training, whether you remain on a deployable team roster, and how active you are at drills and incidents."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Untrained"
+      criterion: "No CERT or equivalent training"
+    - level: 1
+      label: "Completed basic course"
+      criterion: "Finished basic 20–30 hour training and simulation; not on an active roster or attending drills"
+    - level: 2
+      label: "Active member"
+      criterion: "On a local team roster; attending some drills but inconsistent"
+    - level: 3
+      label: "Sustained participant"
+      criterion: "12+ months on roster; quarterly drill or refresher attendance; participates in local incidents and neighbourhood preparedness outreach"
+
+  value_templates:
+    emergency-preparedness.community: mild_diminishing
+    emergency-preparedness.self-reliance: steep_diminishing
+    emergency-preparedness.baseline: steep_diminishing
+    community-contribution.impact: near_linear
+    community-contribution.belonging: mild_diminishing
+    networks.breadth: mild_diminishing
+    life-skills.high: steep_diminishing
+
+  rationale: |
+    - Tier criteria reflect [skill-decay research in emergency response](https://pubmed.ncbi.nlm.nih.gov/19594993/) showing meaningful technical degradation within 6–12 months without practice, and [CERT outcome evaluations](https://digitalcommons.usu.edu/sswa_facpubs/474/) describing the difference between certified-but-inactive members and sustained participants. PBS values assume tier 3 (sustained participant).
+    - Template choices:
+      - `steep_diminishing` for emergency-preparedness.self-reliance, emergency-preparedness.baseline, and life-skills.high – the basic training itself delivers most of the skill and household-preparedness uplift; drill participation maintains rather than expands the gain.
+      - `near_linear` for community-contribution.impact – tangible impact (welfare checks, deployments, preparedness outreach) scales roughly with active engagement hours.
+      - `mild_diminishing` for emergency-preparedness.community, community-contribution.belonging, and networks.breadth – relational and network benefits accrue gradually with sustained team participation.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Basic CERT training is provided free of charge by FEMA and local partner agencies; equivalent programmes in other countries are similarly funded by national or regional emergency management bodies. Some programmes provide a basic equipment kit (helmet, vest, gloves, torch) at no cost; where members must purchase their own gear, the upfront equipment cost is typically $50–100, but the minimum viable starting point is genuinely zero because training-issue equipment is provided during drills."

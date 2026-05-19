@@ -107,6 +107,38 @@ values:
     uar_reasoning: |
       - See life-skills.high UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: certification_currency
+  metric_label: "Certification status and skill currency"
+  metric_help: "Tiers describe whether you hold current first aid and CPR certification and whether you maintain practical skill through brief refresher practice between recertifications."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Untrained"
+      criterion: "No first aid or CPR training, or any prior training is more than five years stale"
+    - level: 1
+      label: "Online or lapsed"
+      criterion: "Online-only course completed without manikin practice, or certification more than two years out of date"
+    - level: 2
+      label: "Currently certified"
+      criterion: "Currently certified (combined first aid and CPR/AED) with hands-on manikin practice, but no interim refresher between two-yearly recerts"
+    - level: 3
+      label: "Certified plus refreshers"
+      criterion: "Currently certified with manikin practice, plus a 20–30 minute refresher every six months"
+
+  value_templates:
+    life-skills.high: threshold
+    emergency-preparedness.baseline: threshold
+    emergency-preparedness.catastrophic: threshold
+    physical-safety.risk: mild_diminishing
+    community-contribution.impact: threshold
+
+  rationale: |
+    - Tier cuts reflect [Red Cross skill-retention research](https://www.redcross.org/content/dam/redcross/Health-Safety-Services/scientific-advisory-council/Scientific%20Advisory%20Council%20SCIENTIFIC%20REVIEW%20-%20CPR%20Skill%20Retention.pdf) showing skill decay begins within six months and is near-universal at two years without refresher practice. Tier 2 is current certification with the standard two-year cycle; tier 3 adds the semi-annual refresher that the PBS values are scored against.
+    - `threshold` for life-skills.high, both emergency-preparedness values, and community-contribution.impact: these all depend on the trained-and-current binary state firing in a real emergency. Online-only or lapsed training does not reliably translate to performance under stress per [PMC skill-retention research](https://pmc.ncbi.nlm.nih.gov/articles/PMC3044091/) – the mechanism doesn't fire until the learner reaches tier 2 with hands-on manikin practice.
+    - `mild_diminishing` for physical-safety.risk: this is the broadest of the values and captures the general risk-reduction effect across many possible scenarios, some of which (e.g. simple bleeding control or basic choking response) benefit even from imperfect knowledge.
+
 resources:
   upfront_cost: 80
   upfront_cost_reasoning: "Combined first aid and CPR/AED certification courses (Red Cross, AHA Heartsaver, St John Ambulance, or equivalent) typically cost $70–$100 for a combined in-person certification, with similar pricing in most countries. No equipment needs to be purchased."

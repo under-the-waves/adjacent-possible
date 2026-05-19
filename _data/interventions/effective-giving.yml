@@ -177,6 +177,43 @@ values:
     uar_reasoning: |
       - See global-impact.impartiality UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: pledge_percentage
+  metric_label: "Annual income given to evaluator-recommended charities"
+  metric_help: "Percentage of annual pre-tax income donated to charities recommended by independent evaluators (GiveWell, Animal Charity Evaluators, Founders Pledge, Open Philanthropy, EA Funds). Sporadic ad-hoc giving to non-evaluator-recommended causes does not count toward the percentage."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No structured giving"
+      criterion: "No regular percentage commitment; any giving is ad hoc and to non-evaluator-recommended causes"
+    - level: 1
+      label: "Trial pledge"
+      criterion: "~1% of income sustained annually to evaluator-recommended charities, ideally via automated transfer"
+    - level: 2
+      label: "Intermediate pledge"
+      criterion: "3–5% of income sustained annually to evaluator-recommended charities"
+    - level: 3
+      label: "Full pledge"
+      criterion: "10% of income sustained annually (Giving What We Can pledge level) to evaluator-recommended charities"
+
+  value_templates:
+    global-impact.impartiality: mild_diminishing
+    global-impact.sustainability: near_linear
+    global-impact.fulfilment: mild_diminishing
+    global-impact.passion: mild_diminishing
+    ethics.practical: mild_diminishing
+    ethics.philosophical: mild_diminishing
+    value-system.practical: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+    community-contribution.fulfilment: mild_diminishing
+
+  rationale: |
+    - Tier percentages anchor on the [Giving What We Can pledge structure](https://www.givingwhatwecan.org/get-involved/trial-pledge): tier 1 maps to the Trial Pledge (1%), tier 2 to a substantial intermediate commitment, and tier 3 to the full 10% pledge that the global-impact.sustainability anchor (linear, anchor_max=10) treats as the maximum.
+    - `near_linear` for global-impact.sustainability because the value's anchor is literally percentage of income donated – the relationship is mathematically near-linear by construction, with each tier contributing roughly proportional global-health impact ([GiveWell cost-effectiveness analyses](https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness)).
+    - `mild_diminishing` for global-impact.impartiality because the switch from emotionally-driven to evaluator-recommended giving captures most of the impartiality benefit at tier 1 (the orientation change is the key step); additional percentage scales total impact but the impartiality construct is mostly about *how* you give, not how much.
+    - `mild_diminishing` for the wellbeing, ethics, value-system, and community-contribution values because the [Dunn et al. (2008)](https://www.science.org/doi/10.1126/science.1150952) prosocial-spending research shows fulfilment gains arise from regular giving rather than scaling proportionally with amount, and the identity-formation effects of taking a pledge front-load at the trial-pledge step.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No upfront cost to set up effective giving. Registering with Giving What We Can, GiveWell, or EA Funds is free; the donation accounts are operated as charities themselves and take no fee from donors. The 'cost' is the donation itself, which is recurring and counted in ongoing costs."

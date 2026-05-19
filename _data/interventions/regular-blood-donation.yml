@@ -80,6 +80,36 @@ values:
     uar_reasoning: |
       - See community-contribution.impact UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: donations_per_year
+  metric_label: "Donations completed per year"
+  metric_help: "How many whole blood or plasma donations you complete in a typical year, sustained over multiple years rather than as one-offs."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Never donated"
+      criterion: "No blood or plasma donations on record, or never returned after a single donation"
+    - level: 1
+      label: "One-off"
+      criterion: "1 donation in the past year, with no scheduled next appointment"
+    - level: 2
+      label: "Occasional regular"
+      criterion: "2–3 donations per year sustained over multiple years"
+    - level: 3
+      label: "Full regular cadence"
+      criterion: "4+ whole blood donations per year (or country-equivalent plasma cadence) sustained over multiple years, with next appointment booked at each donation"
+
+  value_templates:
+    community-contribution.impact: near_linear
+    global-impact.fulfilment: mild_diminishing
+    life-purpose.meaning: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [first-time donor research](https://onlinelibrary.wiley.com/doi/10.1111/vox.12859) showing that only 30–40% of first-time donors return for a second donation – tier 1 (one-off) is the modal failure pattern. Tier 3 captures the standing-supply regular donor at the country-recommended cadence the PBS values were scored against.
+    - `near_linear` for community-contribution.impact: each donation independently contributes to up to three patient treatments per [WHO data](https://www.who.int/news-room/fact-sheets/detail/blood-safety-and-availability), so the impact scales roughly proportionally with donations completed.
+    - `mild_diminishing` for global-impact.fulfilment and life-purpose.meaning: the first regular cadence-pattern donations consolidate the identity and meaning benefit, with diminishing additional return per donation as the practice becomes routine.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost. Blood donation is free to the donor in essentially all countries; in some jurisdictions modest compensation or expense reimbursement is available, making the cost zero or slightly negative."

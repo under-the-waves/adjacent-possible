@@ -123,6 +123,41 @@ values:
     uar_reasoning: |
       - UAR slightly lower (80%): painting is the only skill with meaningful physical demands and consumable costs creating recurring friction.
 
+dose_response:
+  metric: skills_learned_and_applied
+  metric_label: "Core skills learned and applied"
+  metric_help: "Tiers describe how many of the five core skills (drain unclogging, HVAC filter replacement, running toilet repair, basic interior painting, circuit breaker resets) you have learned and routinely apply when issues arise."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Reliant on trades"
+      criterion: "None of the five skills learned; default response to any household issue is to call a professional"
+    - level: 1
+      label: "One or two skills"
+      criterion: "Learned 1–2 of the five skills with hands-on practice; basic tool kit acquired"
+    - level: 2
+      label: "Most skills"
+      criterion: "Learned 3–4 of the five skills and applied at least one in a real situation"
+    - level: 3
+      label: "Full kit with rhythm"
+      criterion: "All five skills learned and practised, with a scheduled quarterly maintenance walkthrough (filters, toilets, taps)"
+
+  value_templates:
+    life-skills.high: near_linear
+    life-skills.systematic: threshold
+    housing.comfort: mild_diminishing
+    saving.security: near_linear
+    housework.health: threshold
+    housework.aesthetics: threshold
+
+  rationale: |
+    - Tier cuts reflect the additive structure of the skill set: each of the five skills is independently useful, so dose scales roughly with skill count. The scheduled quarterly rhythm at tier 3 is what shifts the practice from reactive to systematic.
+    - `near_linear` for life-skills.high and saving.security: each skill independently avoids ~$100–275 per incident per [HomeGuide](https://homeguide.com/costs/cost-to-unclog-snake-a-drain), so monetary savings scale roughly proportionally with skills mastered.
+    - `threshold` for life-skills.systematic and housework.health: the systematic-thinking benefit and the HVAC-filter-driven air quality improvement both require the scheduled-maintenance rhythm to fire – isolated reactive skills don't deliver the systematic gain or the consistent filter swaps that drive air-quality benefit per [EPA guidance](https://www.epa.gov/indoor-air-quality-iaq).
+    - `mild_diminishing` for housing.comfort: deferred-maintenance friction (clogs, running toilets, dirty filters) is removed cumulatively as skills are added.
+    - `threshold` for housework.aesthetics: interior painting is the only one of the five skills with an aesthetic dimension, so the value only meaningfully fires once the learner has progressed far enough to include painting in their repertoire (tier 2 or above); the other four skills produce no aesthetic gain.
+
 resources:
   upfront_cost: 60
   upfront_cost_reasoning: "Minimum tool kit: plunger ($10), drain snake ($25), toilet flapper kit ($8), first HVAC filter ($15), circuit breaker labels and torch ($5). Paint and rollers excluded as task-specific consumables."

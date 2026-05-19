@@ -128,6 +128,38 @@ values:
     uar_reasoning: |
       - See relationship-quality.connection UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: practice_depth
+  metric_label: "Depth of sustained Gottman practice"
+  metric_help: "Tiers describe how much of the curriculum is actually being practised by both partners: book knowledge, the weekly state-of-the-union meeting, deliberate use of the four-horsemen antidotes in real conflict, and love-map and appreciation practices."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not practising"
+      criterion: "Neither partner has engaged with the framework"
+    - level: 1
+      label: "Read but inactive"
+      criterion: "One or both partners have read the books but are not running the weekly meeting or deliberately using the antidotes; behaviour largely unchanged"
+    - level: 2
+      label: "Partial practice"
+      criterion: "Weekly meeting running for 1–3 months OR antidotes used in some conflicts, but not both consistently"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "Weekly state-of-the-union meeting, deliberate antidote use, and love-map/appreciation practices all running consistently for 6+ months by both partners"
+
+  value_templates:
+    relationship-quality.connection: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    relationship-quality.alignment: mild_diminishing
+    communication.conflict: mild_diminishing
+    communication.connection: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the description's flagged failure mode that "reading the books without practising the skills" produces little benefit – tier 1 captures this knowledge-only state, which is the modal outcome of self-directed curricula. Tier 3 captures the consolidated bilateral practice the [Gottman meta-analyses](https://onlinelibrary.wiley.com/doi/abs/10.1111/jmft.12063) scored.
+    - All values use `mild_diminishing` because relationship-quality and communication outcomes are subjective with noisy evidence – early practice produces noticeable changes in conflict patterns and warmth, but the full reorganisation of relational dynamics requires sustained practice over many cycles. The d=0.5 effect sizes typical in the [meta-analytic literature](https://onlinelibrary.wiley.com/doi/abs/10.1111/jmft.12063) accumulate gradually rather than plateauing sharply.
+
 resources:
   upfront_cost: 30
   upfront_cost_reasoning: "Approximately $20 -- 40 for the foundational books (e.g. The Seven Principles for Making Marriage Work, Eight Dates). Optional couples weekend workshops cost $700 -- 1,000 per couple but are not required for the self-directed minimum-viable form."

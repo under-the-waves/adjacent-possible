@@ -123,6 +123,40 @@ values:
     uar_reasoning: |
       - See legal-matters.protection UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: documents_completed_and_current
+  metric_label: "Documents completed and current"
+  metric_help: "Tiers describe how many of the four core documents (will, durable POA, healthcare directive, beneficiary designations) are signed, legally valid, current after major life events, and known to your named agents."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "None in place"
+      criterion: "No will, no POA, no healthcare directive, beneficiary designations untouched"
+    - level: 1
+      label: "One or two documents"
+      criterion: "One or two of the four documents completed (often beneficiary designations and a will), others outstanding"
+    - level: 2
+      label: "Most documents"
+      criterion: "Three of four documents completed and legally valid, but at least one is outdated relative to current life circumstances or unknown to the named agent"
+    - level: 3
+      label: "Complete and current"
+      criterion: "All four documents signed and legally valid; beneficiary designations match current intent; agents know their roles and where originals are stored; reviewed within last 3 years or after each major life event"
+
+  value_templates:
+    legal-matters.protection: near_linear
+    legal-matters.simplicity: mild_diminishing
+    legal-matters.strategic: mild_diminishing
+    legal-matters.access: mild_diminishing
+    emergency-preparedness.catastrophic: near_linear
+    emergency-preparedness.baseline: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [Caring.com survey data](https://www.caring.com/resources/wills-survey) showing that procrastination and partial completion are the dominant failure modes, and that an outdated document can be worse than none because it conveys false confidence. PBS values assume tier 3 (complete and current).
+    - Template choices:
+      - `near_linear` for legal-matters.protection and emergency-preparedness.catastrophic – each document closes a distinct legal vulnerability (intestacy, guardianship, medical proxy disputes), so protection scales roughly with the count of valid documents.
+      - `mild_diminishing` for simplicity, strategic, access, and baseline – the peace-of-mind and legal-literacy benefits accrue gradually as more documents come into place, with most felt benefit captured by tier 2.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Free templates from national or regional bar associations and government-provided advance directive forms allow completion of all four core documents at no monetary cost. A paid online service ($80–200, e.g. Trust & Will, LegalZoom, Rocket Lawyer) or attorney ($300–1,000 for a simple estate package) is optional and recommended for complex estates but not required."

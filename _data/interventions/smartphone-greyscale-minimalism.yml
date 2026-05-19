@@ -80,6 +80,35 @@ values:
     uar_reasoning: |
       - See information-management.simplicity UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: configuration_depth
+  metric_label: "Configuration depth and durability"
+  metric_help: "How much of the phone's perceptual-environment design you have actually implemented – greyscale, home-screen minimalism, app deletion, weekly creep audit – and how durably it has been sustained against re-installation drift."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Default"
+      criterion: "Phone in default colour mode with full home screen of apps including social media and news"
+    - level: 1
+      label: "Partial setup"
+      criterion: "Some changes made (e.g. greyscale enabled but home screen unchanged, or home screen minimised but greyscale off)"
+    - level: 2
+      label: "Full setup"
+      criterion: "Greyscale enabled, home screen minimised to utility apps, attention-fragmenting apps deleted; but creep drifts back over weeks"
+    - level: 3
+      label: "Sustained minimal phone"
+      criterion: "Full setup sustained 6+ months with weekly creep audit; greyscale stays on by default, home screen stays minimal, deleted apps don't return"
+
+  value_templates:
+    information-management.simplicity: mild_diminishing
+    current-work.engagement: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the durability problem flagged in the intervention's common pitfalls: greyscale that gets toggled off "just for a photo" and never re-enabled, or home screens that quietly repopulate after a wedding signup, collapse the benefit within days. The weekly creep audit at tier 3 is what distinguishes sustained adoption from setup-then-drift.
+    - All values use `mild_diminishing`. The simplicity, work-engagement, and mental-health gains accrue gradually with sustained adoption – [Olson et al. 2022](https://dl.acm.org/doi/10.1145/3571810) finds moderate effect sizes for digital self-control tools without a sharp threshold or saturation curve. The PNAS Nexus mobile internet RCT found large effects from full disconnection, but the present intervention is a milder display-level proxy that captures a fraction of those gains – a gradual benefit shape rather than a binary fire.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost. All major smartphone operating systems include built-in greyscale and home-screen customisation features. No paid apps required."

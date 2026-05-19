@@ -91,6 +91,38 @@ values:
     uar_reasoning: |
       - See emergency-preparedness.self-reliance UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: kit_completeness_and_maintenance
+  metric_label: "Kit completeness and currency"
+  metric_help: "How many of the core 72-hour kit components you have assembled, whether all household members know its location, and whether you maintain it on a biannual rotation."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No kit"
+      criterion: "No assembled emergency kit; emergency supplies scattered, incomplete, or absent"
+    - level: 1
+      label: "Partial kit"
+      criterion: "Some components assembled (e.g. torch, water, first aid) but missing core items (radio, food, documents); not centralised; never maintained"
+    - level: 2
+      label: "Mostly complete"
+      criterion: "Most checklist components in a single labelled container in an accessible location; one or two gaps or stale items; ad hoc maintenance"
+    - level: 3
+      label: "Full kit, maintained"
+      criterion: "Complete 72-hour kit per FEMA checklist (3-day water, food, first aid, radio, torch, documents, cash, medications); all household members know location; biannual rotation of consumables"
+
+  value_templates:
+    emergency-preparedness.self-reliance: near_linear
+    emergency-preparedness.baseline: mild_diminishing
+    emergency-preparedness.catastrophic: threshold
+    physical-safety.risk: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [FEMA's 2023 National Household Survey](https://preparede.org/wp-content/uploads/2024/08/fema_national_household_survey_2023.pdf) data showing only 48% of US adults assembled or updated supplies in the prior year and [SafeHome.org (2025)](https://www.safehome.org/research/home-emergency-preparedness-study/) finding only 5% of homes have a fully stocked kit – tier 1 (partial) is the realistic intermediate state. Tier 3 is the fully stocked, maintained, household-known kit the PBS values were scored against.
+    - `near_linear` for emergency-preparedness.self-reliance: each additional component or day of supply adds roughly proportional autonomy, since the anchor is days-of-supply.
+    - `mild_diminishing` for emergency-preparedness.baseline and physical-safety.risk: even a partial kit captures meaningful baseline preparedness, with diminishing returns as items are added beyond the high-impact essentials (water, first aid).
+    - `threshold` for emergency-preparedness.catastrophic: per [the 2024 preparedness systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC11003604/) finding no significant effect on supplies outcomes and only small effects on behaviours, partial kits provide essentially no catastrophic-scenario benefit – the document-securing and full-stock components at tier 3 are what enable any meaningful response to longer disruptions.
+
 resources:
   upfront_cost: 75
   upfront_cost_reasoning: "Minimum viable kit for a one-to-two person household assembling from scratch: water storage containers ($10–15), three days of non-perishable food ($20–30), basic first aid kit ($15–25), torch and batteries ($10–15), battery-powered radio ($15–20). Most households will have partial inventories already, reducing actual cost."

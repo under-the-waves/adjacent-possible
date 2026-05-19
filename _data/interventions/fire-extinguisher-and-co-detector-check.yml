@@ -53,6 +53,35 @@ values:
     uar_reasoning: |
       - See physical-safety.risk UAR.
 
+dose_response:
+  metric: coverage_and_maintenance
+  metric_label: "Fire extinguisher and CO detector coverage and maintenance"
+  metric_help: "Tiers describe both coverage (extinguishers per floor, CO detectors outside each sleeping area) and maintenance state (current inspection tag, gauge in green, CO detector tested monthly and within manufacturer's lifespan)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Missing or expired"
+      criterion: "No fire extinguisher in the home, or no CO detector; or equipment present but expired or non-functional"
+    - level: 1
+      label: "Partial"
+      criterion: "One of the two devices present and functional (often a fire extinguisher in the kitchen, no CO detector) – or both present but neither tested in the past year"
+    - level: 2
+      label: "Both covered"
+      criterion: "At least one functional ABC extinguisher within reach of the kitchen and a CO detector outside the sleeping area; tested at least once in the last 6 months"
+    - level: 3
+      label: "Full coverage and routine"
+      criterion: "Extinguisher per floor near the kitchen with current inspection tag; CO detector outside each sleeping area tested monthly; no unit past manufacturer's lifespan; household members know PASS technique"
+
+  value_templates:
+    physical-safety.risk: threshold
+    emergency-preparedness.baseline: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect both coverage and maintenance dimensions. As with smoke alarms, an expired extinguisher or a CO detector with a degraded sensing element provides little protection even though it looks present.
+    - `threshold` for physical-safety.risk because the protection mechanism is largely binary at the per-incident level – the extinguisher or detector either functions when needed or doesn't. Having no equipment (tier 0) and having token equipment that may not work (tier 1) both expose the household to nearly the full residual risk; meaningful protection requires functional equipment with current maintenance (tier 2+).
+    - `mild_diminishing` for emergency-preparedness.baseline because the preparedness construct is broader and even partial coverage closes a meaningful share of the within-domain gap; additional discipline (monthly testing, PASS-technique knowledge) adds incremental but smaller preparedness gains.
+
 resources:
   upfront_cost: 60
   upfront_cost_reasoning: "Approximately $30–60 for a household: ABC fire extinguisher ~$25–40, CO detector ~$20–40 for battery-operated; more for combo smoke/CO units or interconnected hardwired systems. If installing from scratch with multiple of each, upfront cost can reach $100–150."

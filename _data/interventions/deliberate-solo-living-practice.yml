@@ -159,6 +159,41 @@ values:
     uar_reasoning: |
       - See relationship-status.independence UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: solo_practice_components
+  metric_label: "Components of the solo-living practice in active use"
+  metric_help: "How many of the four core components – weekly solo activity, deliberate friendship investment, one-person rituals, and narrative reframing of singleness – are you currently sustaining? Tiers describe both breadth (components covered) and depth (how reliably they hold under cultural pressure)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Waiting room"
+      criterion: "Singleness experienced as a deficit; no deliberate solo activities; friendships drifted; life decisions deferred 'until partnered'"
+    - level: 1
+      label: "Tentative"
+      criterion: "Occasional solo activity tried (cinema, dinner); one or two friendships maintained; narrative still organised around future partnership"
+    - level: 2
+      label: "Engaged"
+      criterion: "Weekly solo activity holds; 2–3 friendships in deliberate investment; some one-person rituals; narrative reframing partially internalised"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "All four components active – weekly solo activities, 3–5 invested friendships, established rituals, and life decisions made on current-life-as-real assumption"
+
+  value_templates:
+    relationship-status.independence: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+    self-awareness.psychological: mild_diminishing
+    self-awareness.experiential: near_linear
+    friendship.depth: near_linear
+    value-system.authentic: mild_diminishing
+    behaviours.freedom: mild_diminishing
+    life-skills.high: near_linear
+
+  rationale: |
+    - Tier criteria are graded by breadth-and-depth of the multi-component practice rather than by frequency of a single behaviour. [Schultz and DePaulo (2022)](https://onlinelibrary.wiley.com/doi/10.1111/jftr.12490) and [Coplan et al. (2019)](https://psycnet.apa.org/record/2018-46716-001) both find that benefits depend on self-determined engagement; tier 1 captures users still organising life around an absent partner (the practice present in form but not substance), while tier 3 captures the consolidated lifestyle the PBS values were scored against.
+    - `mild_diminishing` for the wellbeing and identity values (independence, flourishing, psychological self-awareness, authenticity, freedom) reflects that the first component adopted gives a noticeable lift but the full benefit accrues only when reinforced by the other components; the curve is gradual without a sharp plateau.
+    - `near_linear` for experiential self-awareness, friendship depth, and life-skills high because these scale roughly proportionally with practice volume – more solo activities produce more diverse experiences, more invested friendships add proportionally to depth count, and more domains taken on independently produce more skills built.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials, subscriptions, or services required to begin. The practice is behavioural and reuses ordinary leisure infrastructure (cinemas, restaurants, travel) that the user would otherwise pay for in some form."

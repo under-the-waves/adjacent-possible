@@ -110,6 +110,37 @@ values:
     uar_reasoning: |
       - See time-management.productivity UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: review_consistency
+  metric_label: "Weekly review consistency and completeness"
+  metric_help: "How reliably you run the full weekly review (inbox processing, calendar look-back and look-ahead, project walkthrough, written priorities) on a fixed slot. Skipping the harder components (project list reassessment, calendar look-back) shrinks the benefit even when email is processed."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not running"
+      criterion: "No weekly review; inboxes and projects accumulate untriaged"
+    - level: 1
+      label: "Partial / sporadic"
+      criterion: "Some weeks done, some not; or only processing email without project list and calendar review"
+    - level: 2
+      label: "Mostly weekly"
+      criterion: "Weekly review running most weeks (3 in 4) with all four components, but priorities sometimes held mentally rather than written"
+    - level: 3
+      label: "Sustained ritual"
+      criterion: "Full weekly review (all four components plus written priorities) sustained 6+ months on fixed slot"
+
+  value_templates:
+    time-management.productivity: mild_diminishing
+    time-management.balance: mild_diminishing
+    organisation.tracking: mild_diminishing
+    goals.follow_through: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the practice compounds through consistency – [GTD adopter research](https://link.springer.com/article/10.1007/s10869-007-9046-9) shows fewer than 30% sustain the weekly review beyond 6 months. PBS values are scored against the sustained ritual (tier 3); partial completion (only email inbox, no project list) is the common failure mode that delivers a fraction of the benefit.
+    - All values use `mild_diminishing`. Productivity, balance, organisational tracking, goal follow-through, and mental-health stability all accrue gradually with sustained practice and the planned-vs-actual feedback loop. [Harkin et al. 2016](https://doi.org/10.1037/bul0000025) finds progress-monitoring effects (d ≈ 0.40) scale smoothly with consistency rather than threshold-firing – the safe-default subjective shape applies across the value set.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost. The review can be done with any existing calendar, task manager, or notebook. Optional resources (the GTD book, productivity course materials) are common but not required."

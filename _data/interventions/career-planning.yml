@@ -155,6 +155,43 @@ values:
     uar_reasoning: |
       - See career-planning.clarity UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: planning_cycle_completeness
+  metric_label: "Annual planning cycle completeness"
+  metric_help: "Tiers describe how thoroughly you ran an annual planning cycle in the past 12 months and whether quarterly check-ins kept the plan live."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Drift"
+      criterion: "No structured planning; trajectory set by inertia and external opportunities"
+    - level: 1
+      label: "One-off plan"
+      criterion: "Wrote some kind of plan once but no quarterly review and no concrete actions executed"
+    - level: 2
+      label: "Annual with drift"
+      criterion: "Completed an annual planning session with concrete actions, but quarterly check-ins lapsed and execution drifted"
+    - level: 3
+      label: "Live cycle"
+      criterion: "Full 2–6 hour annual session plus quarterly check-ins maintained for 12+ months, with concrete 6–12 month actions executed and reviewed"
+
+  value_templates:
+    career-planning.clarity: steep_diminishing
+    career-planning.advancement: near_linear
+    career-planning.security: mild_diminishing
+    life-purpose.clarity: mild_diminishing
+    life-purpose.integration: mild_diminishing
+    current-work.engagement: mild_diminishing
+    networks.relevance: mild_diminishing
+    goals.clarity: near_linear
+
+  rationale: |
+    - Tier criteria reflect [Whiston et al. (2017)](https://www.sciencedirect.com/science/article/abs/pii/S0001879117300283) finding effect size 0.99 for interventions with three or more critical components and [Kreemers et al. (2022)](https://doi.org/10.1016/j.jvb.2022.103781) on the decay of proactive career behaviours without structural support. PBS values assume tier 3 (live cycle with execution).
+    - Template choices:
+      - `steep_diminishing` for career-planning.clarity – the largest cognitive gain comes from the first full planning session, since the construct is precisely what the exercise produces; quarterly refinement is incremental.
+      - `near_linear` for career-planning.advancement and goals.clarity – warm contacts gained and on-time goal completions scale with execution cadence over the year.
+      - `mild_diminishing` for the rest – security, life-purpose, engagement, and network-relevance benefits accrue gradually as plan-driven actions accumulate.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "The [80,000 Hours career planning template](https://80000hours.org/career-planning/) and most equivalent frameworks are free. Optional purchase of a book (e.g., Designing Your Life, ~£12) or career coach session (£100–300) is genuinely optional, not required to begin."

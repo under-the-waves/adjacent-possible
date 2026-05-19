@@ -45,6 +45,33 @@ values:
       - [Clinical trial data](https://pmc.ncbi.nlm.nih.gov/articles/PMC9821052/) reports gastrointestinal adverse events in 40-70% of patients during dose escalation (nausea, vomiting, diarrhoea), with 6.5% discontinuing due to adverse events in trials – real-world rates are substantially higher
       - Additional barriers include injection aversion, prescription access requirements, supply constraints, and the psychological burden of indefinite pharmaceutical dependence for weight maintenance
 
+dose_response:
+  metric: dose_and_adherence
+  metric_label: "Dose tier and adherence state"
+  metric_help: "Tiers describe the combination of where you are in dose titration and how reliably you're injecting each week, including resistance-training and protein-intake co-treatments that protect lean mass during weight loss."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not on medication"
+      criterion: "Not currently prescribed or taking a GLP-1 agonist"
+    - level: 1
+      label: "Titrating"
+      criterion: "On medication but still in the initial 4–5 month dose-escalation phase; below therapeutic dose; managing early side effects"
+    - level: 2
+      label: "Therapeutic dose, partial co-treatment"
+      criterion: "At therapeutic dose with consistent weekly injections; minimal resistance training or protein intake, so a meaningful share of weight loss is lean mass"
+    - level: 3
+      label: "Full regimen"
+      criterion: "Sustained therapeutic dose, weekly injections without gaps, plus resistance training and adequate protein intake to preserve lean mass"
+
+  value_templates:
+    body-image.fat_loss: threshold
+
+  rationale: |
+    - Tier criteria reflect the dose-titration arc and the description's emphasis that "without resistance training and protein, a chunk of the weight you lose will be muscle rather than fat, leaving you weaker and softer-looking than the scale suggests" – tier 2 captures pharmacological compliance without lean-mass protection (still delivers most scale weight loss but lower body-composition quality); tier 3 captures the full regimen the PBS was scored against.
+    - `threshold` for body-image.fat_loss because the appetite-suppression mechanism only activates at therapeutic dose – the [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) and [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) both show the bulk of weight loss occurring after full dose escalation. Tier 1 (titrating) produces minimal weight change; meaningful fat loss requires tier 2+, and the body-composition quality that PBS 9 reflects requires tier 3.
+
 resources:
   upfront_cost: 250
   upfront_cost_reasoning: "Initial primary care or specialist consultation ($150–250) plus baseline blood work and BMI assessment. Some patients require multiple visits before receiving a prescription. Costs vary widely by country and healthcare system; users with different access should adjust via 'Personalise these costs'."

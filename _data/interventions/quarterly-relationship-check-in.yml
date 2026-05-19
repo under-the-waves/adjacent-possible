@@ -130,6 +130,38 @@ values:
     uar_reasoning: |
       - See relationship-quality.alignment UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: checkins_per_year_and_depth
+  metric_label: "Check-ins completed and substantive depth"
+  metric_help: "How often you complete a structured strategic check-in with your partner across a year, and whether you use the full agenda (values, direction, finances, intimacy, frustrations, goals) versus a lighter or abbreviated version."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No structured check-ins"
+      criterion: "No scheduled strategic check-ins; alignment, finances, and direction discussed only reactively"
+    - level: 1
+      label: "Annual or less"
+      criterion: "One strategic conversation per year or less; ad hoc rather than scheduled; agenda absent or shallow"
+    - level: 2
+      label: "Half-yearly"
+      criterion: "Two sessions a year on a recurring slot, using most of the standing agenda but skipping the hardest topics"
+    - level: 3
+      label: "Full quarterly cadence"
+      criterion: "Four 90–180 minute sessions a year on a fixed recurring slot, covering the full agenda (values, direction, finances, intimacy, frustrations, goals) with three to five concrete actions recorded and reviewed"
+
+  value_templates:
+    relationship-quality.alignment: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    communication.connection: mild_diminishing
+    communication.conflict: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the protocol's design and the [research on quarterly versus less frequent strategic alignment](https://www.tandfonline.com/doi/full/10.1080/01926187.2018.1428128) showing that quarterly cadence catches alignment drift while annual cadence often surfaces issues only after they have compounded. Tier 2 (half-yearly) is explicitly acknowledged as a viable minimum in the protocol; tier 3 is the full cadence the PBS values were scored against.
+    - `mild_diminishing` for all values: each successive check-in builds on the previous one as accumulated actions and decisions create continuity, but the first one or two sessions per year capture much of the alignment-drift-prevention benefit; additional sessions add value with diminishing returns. The [PREP meta-analysis](https://pubmed.ncbi.nlm.nih.gov/12931767/) supports this through its dose-related effect sizes for structured couple communication.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No purchases required. Agenda templates from Gottman, PREP, and similar programmes are freely available online. No tools needed beyond a calendar and a notebook or shared document for recording decisions."

@@ -95,6 +95,38 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: cold_shower_sessions_per_week
+  metric_label: "Cold shower sessions per week"
+  metric_help: "Count sessions ending with at least 30 seconds of cold water (≤15°C). Brief lukewarm rinses don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Warm only"
+      criterion: "0 cold-exposure sessions per week"
+    - level: 1
+      label: "Occasional"
+      criterion: "1–2 sessions per week, often short duration (under 30s)"
+    - level: 2
+      label: "Most days"
+      criterion: "4–5 sessions per week of 30–60 seconds of cold at the end of a normal shower"
+    - level: 3
+      label: "Daily"
+      criterion: "6–7 sessions per week of 30–90 seconds of cold, timed to avoid post-resistance-training windows"
+
+  value_templates:
+    fitness.health: mild_diminishing
+    fitness.performance: near_linear
+    fitness.enjoyment: mild_diminishing
+    mental-health.resilience: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the [Buijze 2016 RCT](https://doi.org/10.1371/journal.pone.0161749) 30-day protocol that achieved 79% short-term completion, and the documented quality-of-life fade between 30 and 90 days. PBS values assume tier 3 (daily).
+    - Template choices:
+      - `near_linear` for fitness.performance – the modest recovery benefit (when timed correctly) scales roughly with frequency.
+      - `mild_diminishing` for the rest – health, enjoyment, and resilience benefits are subjective, noisy, and small; they accrue gradually with practice volume without a sharp plateau. The evidence base for cold showers specifically (as opposed to longer immersion) is thin enough that the safe-default mild-diminishing shape is appropriate.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment or setup costs required. Cold showers use existing bathroom infrastructure. A thermometer to verify water temperature is optional but not essential."

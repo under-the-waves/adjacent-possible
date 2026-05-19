@@ -144,6 +144,39 @@ values:
     uar_reasoning: |
       - See children.development UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: practice_consistency
+  metric_label: "Consistency of warmth-and-structure practice"
+  metric_help: "Tiers describe how reliably the three core routines (daily 1:1 special time, calm rule-with-reason limit-setting, explicit relational repair) appear across your weekly parenting, including under stress."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Reactive default"
+      criterion: "Discipline runs on inherited patterns (escalation, permissiveness, or both); no scheduled 1:1 time and no explicit repair"
+    - level: 1
+      label: "Some routines"
+      criterion: "1:1 time happens occasionally; rule-with-reason and repair appear in calm moments but collapse under stress"
+    - level: 2
+      label: "Most days"
+      criterion: "Daily 1:1 time happens 4–6 days per week; calm limit-setting and repair are the norm but inconsistent in high-stress moments"
+    - level: 3
+      label: "Embedded practice"
+      criterion: "Daily 1:1 time, rule-with-reason limit-setting, and explicit repair are the default across all parenting contexts including high-stress moments; quarterly self-audit run"
+
+  value_templates:
+    children.development: mild_diminishing
+    children.relationship: mild_diminishing
+    children.wellbeing: mild_diminishing
+    children.achievement: mild_diminishing
+    self-awareness.relational: mild_diminishing
+    communication.connection: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the fidelity-drift problem documented in [parenting-programme adherence research](https://pubmed.ncbi.nlm.nih.gov/24015824/) and [PCIT outcome studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC2730547/): the benefit depends on the practice actually surviving the high-stress moments that previously triggered reactive patterns. PBS values assume tier 3 (embedded practice).
+    - Template choices: all values use `mild_diminishing`. The developmental, relational, and wellbeing pathways accrue gradually as the child experiences predictability and warmth across many small interactions; there is no biological threshold or proportional-quantity outcome here. [Five decades of typology research](https://psycnet.apa.org/record/1991-15512-001) supports a graduated-not-stepped dose-response.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. The protocol is fully implementable from freely available descriptions of authoritative parenting and child-led play. Optional paid resources (parenting books, PCIT-style courses) range $20 -- 200 but are not required for the minimum-viable practice."

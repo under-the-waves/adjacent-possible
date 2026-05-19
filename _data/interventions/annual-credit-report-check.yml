@@ -52,6 +52,36 @@ values:
     uar_reasoning: |
       - See digital-safety.security UAR.
 
+dose_response:
+  metric: bureau_review_coverage
+  metric_label: "Annual bureau review coverage"
+  metric_help: "Number of major credit bureaus whose reports you have reviewed thoroughly in the past 12 months (line-by-line, not just a credit score check)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Never review"
+      criterion: "No bureau reviews in the past 12 months"
+    - level: 1
+      label: "Score-only check"
+      criterion: "Checking credit score via a free service but not reviewing the full report from any bureau"
+    - level: 2
+      label: "Partial review"
+      criterion: "Thorough review of 1–2 of the three major bureau reports in the past 12 months"
+    - level: 3
+      label: "Full annual review"
+      criterion: "Thorough review of all three major bureau reports in the past 12 months (typically staggered every four months)"
+
+  value_templates:
+    digital-safety.security: mild_diminishing
+    financial-planning-tracking.accuracy: near_linear
+
+  rationale: |
+    - Tier criteria reflect that identity theft can appear on any one of the three US bureaus independently per [FTC identity-theft data](https://www.consumer.ftc.gov/articles/0270-identity-theft); covering all three is necessary for full detection. The PBS values assume tier 3 (full annual review of all three).
+    - Template choices:
+      - `mild_diminishing` for digital-safety.security – reviewing any one bureau captures a substantial share of detection probability, with marginal gains from adding the second and third; the curve is noisy and probabilistic rather than biologically saturating.
+      - `near_linear` for financial-planning-tracking.accuracy – the visibility into open accounts and inquiries scales roughly proportionally with the number of bureaus reviewed.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No cost. The statutory annual report from each bureau is free in the US (under the Fair Credit Reporting Act) and similarly free in many other jurisdictions."

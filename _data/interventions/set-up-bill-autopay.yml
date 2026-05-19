@@ -52,6 +52,34 @@ values:
     uar_reasoning: |
       - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: autopay_coverage
+  metric_label: "Autopay coverage and configuration quality"
+  metric_help: "What share of your recurring bills are on autopay, configured correctly (full-balance for credit cards), with adequate buffer in the bill-paying account."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Manual payment"
+      criterion: "All bills paid manually, or autopay not deliberately set up"
+    - level: 1
+      label: "Some bills"
+      criterion: "Autopay enabled on a few bills (typically streaming, basic subscriptions); major bills still manual or set to minimum payment"
+    - level: 2
+      label: "Most bills"
+      criterion: "Most recurring bills on autopay including credit cards (full balance) and utilities; buffer occasionally tight"
+    - level: 3
+      label: "Full coverage"
+      criterion: "All recurring bills on autopay with full-balance settings, dedicated buffer in bill-paying account, failure alerts configured, and periodic charge review"
+
+  value_templates:
+    financial-planning-tracking.accuracy: mild_diminishing
+    saving.security: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the credit-card-on-full-balance configuration is the highest-leverage component (avoiding both late fees and interest), and that buffer maintenance is what prevents the autopay-bounce failure mode that recreates the costs the intervention is designed to avoid. PBS values are scored against full coverage plus buffer plus alerts (tier 3).
+    - `mild_diminishing` for both values: each additional bill on autopay reduces another failure point, with the largest gains from the first major bills (credit cards, mortgage/rent, utilities) where late fees and credit-score impact are highest. Cash-flow accuracy and saving security both accumulate gradually as coverage broadens; no biological saturation, no clear threshold below which nothing fires, and no proportional outcome that would justify near-linear.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No cost. Autopay is free with every major utility, credit card, and subscription provider."

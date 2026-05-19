@@ -141,6 +141,39 @@ values:
     uar_reasoning: |
       - See communication.performance UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: attendance_and_role_engagement
+  metric_label: "Attendance and role engagement"
+  metric_help: "How regularly you attend club meetings and how fully you engage with prepared speeches, table topics, and evaluator roles. Sustained 12+ months of consistent attendance is when the bulk of skill and anxiety gains accrue."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not attending"
+      criterion: "No Toastmasters or equivalent group involvement"
+    - level: 1
+      label: "Visitor / early"
+      criterion: "Attending sporadically (< 50% of meetings) or in first 1–3 months without yet delivering a prepared speech"
+    - level: 2
+      label: "Regular member"
+      criterion: "80%+ attendance for 3–11 months; delivering prepared speeches and taking on roles"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "80%+ attendance for 12+ months with regular prepared speeches, table topics, evaluator roles, and self-review of recordings"
+
+  value_templates:
+    communication.performance: mild_diminishing
+    communication.influence: mild_diminishing
+    communication.connection: mild_diminishing
+    current-work.competence: mild_diminishing
+    networks.breadth: mild_diminishing
+    behaviours.resilience: mild_diminishing
+    self-awareness.relational: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [longitudinal communication-apprehension research](https://www.tandfonline.com/doi/abs/10.1080/03634528909378758) showing that anxiety reductions and skill gains develop over months rather than weeks. The 12-month threshold (tier 3) corresponds to the dose against which PBS values are scored – consistent with the Toastmasters [renewal data](https://www.toastmasters.org/resources/statistics-and-data-hub) showing first-year non-renewal is around 60% and sustained 12+ month engagement is a minority practice.
+    - All values use `mild_diminishing`. Communication skill, anxiety reduction, work competence, network breadth, behavioural resilience, and self-awareness all accrue gradually with practice volume and feedback. [Ericsson's deliberate practice framework](https://psycnet.apa.org/record/1993-40718-001) predicts skill development as a smooth function of evaluated practice hours – the safe-default subjective shape applies across the value set. Not `steep_diminishing` because partial engagement (visiting only, or attending without taking roles) delivers meaningfully less than the full programme rather than capturing half the benefit from showing up alone.
+
 resources:
   upfront_cost: 45
   upfront_cost_reasoning: "Approximately $20 new-member fee plus the first $25 six-month membership dues for Toastmasters International. Some local equivalent groups (e.g. university clubs, Speaking Circles) charge nothing or only a per-meeting fee."

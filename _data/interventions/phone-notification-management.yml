@@ -159,6 +159,42 @@ values:
     uar_reasoning: |
       - See organisation.tracking UAR -- same intervention, same adherence profile.
 
+dose_response:
+  metric: notification_curation_completeness
+  metric_help: "How many of the core practices (notification audit, batching, phone-free zones, social media app removal) you implement and sustain. The intervention has multiple modular components that compound."
+  metric_label: "Notification curation practices in place"
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Default settings"
+      criterion: "All notifications enabled by default; phone present and unmuted across work, social, and sleep contexts"
+    - level: 1
+      label: "Light curation"
+      criterion: "Disabled some intrusive notifications (e.g. social media); no batching, no phone-free zones"
+    - level: 2
+      label: "Most practices"
+      criterion: "Comprehensive notification audit done, phone-free during deep work or in bedroom, but not both; some social media apps still on phone"
+    - level: 3
+      label: "Full curation"
+      criterion: "Whitelist of permitted notifications, batched delivery windows, phone-free during deep work and in bedroom, social media apps removed from phone; monthly re-audit"
+
+  value_templates:
+    organisation.tracking: mild_diminishing
+    organisation.order: mild_diminishing
+    organisation.speed: mild_diminishing
+    current-work.competence: threshold
+    goals.follow_through: mild_diminishing
+    sleep.daily_functioning: threshold
+    mental-health.stability: mild_diminishing
+    mental-health.flourishing: threshold
+
+  rationale: |
+    - Tier cuts reflect the modular structure of the intervention. [Fitz et al. (2019)](https://www.sciencedirect.com/science/article/abs/pii/S0747563219302596) shows batching produces gains beyond simple suppression; the [PNAS Nexus RCT](https://academic.oup.com/pnasnexus/article/4/2/pgaf017/8016017) on mobile-internet blocking shows the largest effects come from removing apps from the phone entirely; the bedroom-phone-free practice operates on a separate pathway (sleep). Tier 3 captures the full stack the PBS values were scored against.
+    - `mild_diminishing` for the organisation, goals, and mental-health.stability values: each curation step removes a category of interruptions, with gains accruing gradually as more interruption sources are eliminated.
+    - `threshold` for current-work.competence: deep-work productivity benefits require the protected attention block to actually be uninterrupted – per [Gloria Mark's research](https://tctecinnovation.com/blogs/daily-blog/every-distraction-costs-you-23-minutes), any breach of the deep-work window resets focus. Light curation that still permits notifications during work doesn't fire the mechanism.
+    - `threshold` for sleep.daily_functioning and mental-health.flourishing: per [the BMC Medicine RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC11846175/) and [JMIR sleep meta-analysis](https://www.jmir.org/2024/1/e48356), the sleep and flourishing benefits depend specifically on bedroom-phone-free and social-media-app-removal practices – they don't accrue from partial daytime curation alone.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. All major smartphone operating systems include built-in notification controls, Do Not Disturb modes, and screen time management tools. Third-party apps exist but are optional enhancements."

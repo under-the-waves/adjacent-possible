@@ -157,6 +157,42 @@ values:
     uar_reasoning: |
       - See learning-methods.enjoyment UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: cohort_completion_and_engagement
+  metric_label: "Cohort completion and engagement"
+  metric_help: "Tiers describe how completely you participated in a cohort programme (live attendance, peer engagement, assignment completion) and whether the practice or skill carried forward after the cohort ended."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Self-paced only"
+      criterion: "Defaulting to self-paced courses or no structured learning; no cohort enrolment"
+    - level: 1
+      label: "Enrolled, lurking"
+      criterion: "Enrolled in a cohort but attended <50% of live sessions and minimal peer engagement"
+    - level: 2
+      label: "Engaged participant"
+      criterion: "Attended most live sessions, completed most assignments, some peer engagement"
+    - level: 3
+      label: "Full participant"
+      criterion: "Attended virtually all live sessions, actively engaged with peers, completed assignments, and applied the skill or practice within 3 months of programme end"
+
+  value_templates:
+    learning-methods.enjoyment: mild_diminishing
+    learning-methods.efficiency: mild_diminishing
+    learning-methods.depth: mild_diminishing
+    networks.breadth: near_linear
+    friendship.depth: mild_diminishing
+    current-work.competence: mild_diminishing
+    behaviours.social: mild_diminishing
+    life-skills.high: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [HarvardX/MITx completion data](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2586847) and [social-presence research](https://www.sciencedirect.com/science/article/pii/S1096751600000166): lurking and partial completion deliver outcomes close to self-paced alternatives; full peer engagement is where the cohort premium lives. PBS values assume tier 3 (full participant).
+    - Template choices:
+      - `near_linear` for networks.breadth – contacts gained scale roughly proportionally with active session attendance and peer interaction.
+      - `mild_diminishing` for the rest – enjoyment, efficiency, depth, friendship, competence, and skill gains accrue gradually with engagement level without a sharp ceiling.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No required equipment beyond what most professional or student users already have (computer, reliable internet). University courses already enrolled in or local free meetups have no incremental upfront cost."

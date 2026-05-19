@@ -79,6 +79,37 @@ values:
       - [Vanguard's behavioural coaching research](https://advisors.vanguard.com/insights/article/IWE_ReijssFTAQPF) estimates that without guidance, roughly 40% of investors deviate significantly from their original FI-oriented investment plan over a 10+ year period.
       - Score 60 reflects that while a majority persist, the long timeframes involved mean a substantial minority deviate from their plan through impatience, lifestyle inflation, or panic selling during market volatility.
 
+dose_response:
+  metric: contribution_consistency
+  metric_label: "Years of sustained, automated index fund contributions"
+  metric_help: "Cumulative years contributing consistently to broad-market index funds via automated monthly transfers, held through drawdowns. Years where you stopped contributing or sold during downturns don't count toward sustained practice."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not investing"
+      criterion: "No regular index fund investing; savings sit in cash or are spent"
+    - level: 1
+      label: "Just starting"
+      criterion: "Account opened and automated monthly contribution running for under 2 years; first drawdown not yet experienced"
+    - level: 2
+      label: "Established"
+      criterion: "Automated contributions sustained for 2–5 years across at least one significant market movement, with no panic selling"
+    - level: 3
+      label: "Long-horizon"
+      criterion: "10+ years of automated contributions held through at least one major drawdown (20%+) without selling; compounding visibly underway"
+
+  value_templates:
+    investing.growth: near_linear
+    investing.safety: steep_diminishing
+    investing.simplicity: steep_diminishing
+
+  rationale: |
+    - Tier criteria reflect that the strategy's value depends crucially on time horizon and holding through drawdowns. The [Dimson, Marsh & Staunton](https://www.credit-suisse.com/about-us/en/reports-research/studies-publications.html) finding of positive real returns over every rolling 20-year period since 1900 is the long-horizon benchmark; tier 1 captures the pre-drawdown stage where the strategy hasn't yet been tested, and tier 2 captures the critical "held through at least one downturn" milestone that [Dalbar](https://www.dalbar.com/QAIB/Index) shows ~30% of investors fail.
+    - `near_linear` for investing.growth because compounding produces roughly proportional accumulation over time – each additional year of contributions adds another tranche plus the compounded prior tranches; the relationship is closer to exponential but linearly increasing on a per-tier basis at this resolution.
+    - `steep_diminishing` for investing.safety because the diversification benefit is delivered essentially in full as soon as a broad index fund is held – switching from concentrated holdings to a broad index captures the entire idiosyncratic-risk-elimination effect at tier 1; additional years add reliability but not new diversification.
+    - `steep_diminishing` for investing.simplicity because the simplicity construct is delivered by the strategy itself, not by time – once automated contributions are running, the simplicity benefit is largely captured at tier 1 with marginal additional gains from sustained execution.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Opening an investment account (tax-advantaged or general) is free with most low-cost platforms. Minimum investments are typically nil or trivial (e.g., $25–$100 to start a regular contribution). The money invested is an asset transfer, not a cost."

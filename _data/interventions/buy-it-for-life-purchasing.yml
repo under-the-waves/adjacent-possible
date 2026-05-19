@@ -126,6 +126,40 @@ values:
     uar_reasoning: |
       - See possessions.quality UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: category_coverage
+  metric_label: "Category coverage of the purchasing rule"
+  metric_help: "Tiers describe across how many of the major durable-goods categories (footwear, kitchen, tools, mattresses/furniture, outerwear, white goods) you apply the three-criteria filter (cost-per-use, repair-friendliness, build quality)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Price-led"
+      criterion: "Defaulting to sticker price or convenience; no deliberate filter on durability or repairability"
+    - level: 1
+      label: "One or two categories"
+      criterion: "Applying the rule to one or two categories (often footwear or tools); rest of household stock chosen on other criteria"
+    - level: 2
+      label: "Most categories"
+      criterion: "Applying the rule to 3–4 major categories; some categories still default to cheap-and-replace"
+    - level: 3
+      label: "Whole household"
+      criterion: "Applying the rule to all major durable-goods categories with documented cost-per-use and repair-index checks on non-trivial purchases"
+
+  value_templates:
+    possessions.quality: mild_diminishing
+    possessions.functionality: mild_diminishing
+    possessions.simplicity: mild_diminishing
+    housework.environmental: near_linear
+    saving.lifestyle: near_linear
+    saving.security: near_linear
+
+  rationale: |
+    - Tier criteria reflect the [European Parliament obsolescence research](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/648767/IPOL_STU(2020)648767_EN.pdf) finding that durability variation is greatest in the categories where most replacement spending happens. PBS values assume tier 3 (whole-household coverage).
+    - Template choices:
+      - `near_linear` for housework.environmental, saving.lifestyle, and saving.security – emissions saved and replacement spend avoided scale roughly proportionally with the share of categories covered.
+      - `mild_diminishing` for the possessions values – the first few high-impact categories (footwear, tools, kitchen) capture most of the felt quality and functionality benefit per [lifecycle cost analyses](https://www.sciencedirect.com/science/article/abs/pii/S0921344919303854); marginal categories add less.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials, services, or subscriptions required to adopt the rule. The intervention is a decision principle applied at point of purchase. Premium prices on individual items are part of the rule itself, not a setup cost."

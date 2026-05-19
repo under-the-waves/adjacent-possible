@@ -52,6 +52,34 @@ values:
     uar_reasoning: |
       - See saving.growth UAR.
 
+dose_response:
+  metric: audit_completeness
+  metric_label: "Audit completeness and repeat cadence"
+  metric_help: "How thoroughly you have audited recurring charges (bank statements plus app/Play store subscription menus) and whether the audit is repeated annually to catch new drift."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No audit"
+      criterion: "Subscriptions paid without deliberate review; unsure of total monthly outflow"
+    - level: 1
+      label: "Partial sweep"
+      criterion: "One-time scan of obvious subscriptions (streaming, software) only; app-based and quasi-subscriptions missed"
+    - level: 2
+      label: "Full one-time audit"
+      criterion: "Comprehensive audit across bank statements and app stores; cancellations completed but no scheduled repeat"
+    - level: 3
+      label: "Annual audit habit"
+      criterion: "Full audit completed and repeated each year via calendar reminder, with new drift caught annually"
+
+  value_templates:
+    saving.growth: mild_diminishing
+    financial-planning-tracking.accuracy: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the bulk of saving (typical $200–600/year) comes from the first full audit, with the annual repeat catching new drift at lower marginal yield. Most adults' subscription bills include 5–15 active services with 30–50% under-used per [C+R Research](https://www.crresearch.com/blog/2022-subscription-service-statistics-and-costs), so a partial sweep misses the app-based portion that contributes a meaningful share of drift.
+    - `mild_diminishing` for both values: the savings outcome is noisy and subjective in magnitude (depends on user's baseline spending pattern), and the cash-flow accuracy benefit is similarly gradual. There is no biological saturation, no proportional time-based outcome, and no clear threshold below which nothing fires – the safe-default subjective shape applies.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No cost. The audit and cancellations are free; cancellation flows are sometimes friction-heavy but never financially gated."

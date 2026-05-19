@@ -141,6 +141,39 @@ values:
     uar_reasoning: |
       - See children.development UAR – same intervention, same adherence profile. UAR = 35%.
 
+dose_response:
+  metric: reading_frequency_and_quality
+  metric_label: "Reading frequency and dialogic quality"
+  metric_help: "Tiers describe how often you read aloud to a child aged 0–8 and whether you apply dialogic technique (open questions, expansions, following the child's interest) versus passive recitation."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No reading"
+      criterion: "Not reading aloud to the child; child's exposure to books is incidental or screen-based"
+    - level: 1
+      label: "Occasional"
+      criterion: "Reading aloud 1–3 times per week, mostly passive recitation without dialogic prompts"
+    - level: 2
+      label: "Most days, passive"
+      criterion: "Reading aloud 5+ days per week for 10–20 minutes, but mostly reciting text rather than using dialogic technique"
+    - level: 3
+      label: "Daily dialogic"
+      criterion: "Reading aloud daily for 15–30 minutes using dialogic technique (open questions, expansions, following the child's interest), sustained over years from infancy through age 8"
+
+  value_templates:
+    children.development: mild_diminishing
+    children.achievement: mild_diminishing
+    children.relationship: mild_diminishing
+    children.wellbeing: mild_diminishing
+    life-purpose.meaning: mild_diminishing
+    self-awareness.relational: mild_diminishing
+    communication.connection: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [Mol and Bus meta-analytic work](https://www.tandfonline.com/doi/abs/10.1080/10409280701838603) showing dialogic reading roughly doubles the expressive vocabulary effect size compared to passive recitation. Tier 2 captures the most common adherent state (daily but passive); tier 3 captures the dialogic daily practice the PBS values were scored against.
+    - `mild_diminishing` for all values: per [the synthesis evidence](https://pmc.ncbi.nlm.nih.gov/articles/PMC3319370/), language, vocabulary, and bonding benefits accrue cumulatively from any regular shared reading, with the steepest gains early and continued but diminishing returns as frequency and dialogic quality increase. None of the values has a sharp threshold below which the mechanism fails entirely – even passive occasional reading produces measurable vocabulary exposure given that books contain 50% more rare words than typical conversation.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No upfront cost required – public libraries provide free access to thousands of children's books, and most households already own some children's books or receive them as gifts. Optional starter library of 10–15 well-chosen board and picture books costs $50–100 if desired."

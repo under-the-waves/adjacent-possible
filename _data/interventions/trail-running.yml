@@ -196,6 +196,44 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: sessions_per_week
+  metric_label: "Trail running sessions per week"
+  metric_help: "Average trail running sessions per week of 30–90 minutes each on natural trail terrain. Road running and treadmill sessions don't count toward the trail dose."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not running"
+      criterion: "No regular running on trails"
+    - level: 1
+      label: "Light"
+      criterion: "1 session per week, or 2–3 sessions per month"
+    - level: 2
+      label: "Regular"
+      criterion: "2 sessions per week of 30–75 minutes on trails"
+    - level: 3
+      label: "Trained"
+      criterion: "3–4 sessions per week sustained for 3+ months with progressive terrain and distance"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: mild_diminishing
+    fitness.enjoyment: mild_diminishing
+    body-image.fat_loss: near_linear
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+    participatory-leisure.adventure: mild_diminishing
+    participatory-leisure.achievement: mild_diminishing
+    participatory-leisure.social: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [running cohort meta-analyses](https://doi.org/10.1016/j.jacc.2014.04.058) finding that even modest doses (50 min/week) capture most of the mortality benefit, with the curve flattening at higher volumes – mapped onto session counts where 2 sessions/week (tier 2) crosses into meaningful CRF-mortality territory and 3–4 sessions (tier 3) is where PBS values are scored.
+    - `steep_diminishing` for fitness.health and mental-health.stability: biological-saturation outcomes (mortality per [Lee et al. 2014](https://doi.org/10.1016/j.jacc.2014.04.058), depression per the [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/)) front-load benefit at the first regular sessions.
+    - `mild_diminishing` for fitness.performance, fitness.enjoyment, mental-health.resilience, mental-health.flourishing, and the participatory-leisure values: skill consolidation, flow access, mastery experience, and community embedding accrue gradually with practice volume.
+    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with running volume, with [dietary compensation](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) attenuating but not breaking the proportionality.
+
 resources:
   upfront_cost: 150
   upfront_cost_reasoning: "Trail running shoes with appropriate lugs (~$120) and moisture-wicking trail-appropriate clothing (~$30). Trail shoes are functionally required for safety and grip on uneven, potentially slippery terrain; road shoes are inadequate. A basic hydration vest ($40–80) is recommended for runs longer than ~75 minutes but not strictly required to begin."

@@ -205,6 +205,44 @@ values:
     uar_reasoning: |
       - See ethics.community UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: monthly_engagement
+  metric_label: "Months of sustained engagement with prepared discussion"
+  metric_help: "Tiers describe how deeply you're engaged with an ethics discussion group – not just attending, but reading the material, defending positions, and bringing real choices into the discussion."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not participating"
+      criterion: "Not part of an ethics-oriented discussion group"
+    - level: 1
+      label: "Trying it out"
+      criterion: "Attended 1–3 sessions of one group; minimal preparation; positions not yet defended"
+    - level: 2
+      label: "Regular but shallow"
+      criterion: "Attending sessions every 2–4 weeks for 3–6 months; some preparation; discussion mostly theoretical"
+    - level: 3
+      label: "Sustained and applied"
+      criterion: "6+ months of fortnightly or monthly attendance with prepared reading, defended positions, and periodic discussion of real ethical decisions"
+
+  value_templates:
+    ethics.community: mild_diminishing
+    ethics.philosophical: mild_diminishing
+    ethics.practical: mild_diminishing
+    ethics.integrity: threshold
+    value-system.insight: mild_diminishing
+    value-system.evolution: mild_diminishing
+    friendship.depth: threshold
+    friendship.growth: threshold
+    networks.breadth: mild_diminishing
+    worldview.breadth: mild_diminishing
+    worldview.depth: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the description's own observation that "the most useful sessions are typically those after the six-month mark" – tier 3 captures the consolidated practice where trust has compounded and real decisions are being brought into the room, while tier 2 captures the more common "regular attendance without depth" mode.
+    - `mild_diminishing` for most ethics, value-system, network, and worldview values because moral-reasoning development per [Kohlberg](https://psycnet.apa.org/record/1985-98593-000) and [Gibbs](https://www.taylorfrancis.com/books/mono/10.4324/9780203853078/moral-development-reality-john-gibbs) builds cumulatively through repeated exposure to stage-above-self arguments without a sharp plateau; the [d=0.41 meta-analytic effect](https://psycnet.apa.org/record/1985-23507-001) accrues with practice volume.
+    - `threshold` for ethics.integrity, friendship.depth, and friendship.growth because each requires the group to become a genuine moral reference point and members to convert into actual friends – these effects largely activate only at tier 2+ when sustained attendance produces the trust and accountability needed; the first one or two sessions produce little of these benefits.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Most ethics discussion groups – effective altruism chapters, Socrates Cafés, religious moral-formation groups, philosophy meet-ups – are free to join. Some philosophy reading circles ask members to buy the assigned book, which is treated as ongoing cost. No equipment or registration fees required to begin."

@@ -109,6 +109,38 @@ values:
     uar_reasoning: |
       - See career-planning.advancement UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: portfolio_completeness_and_currency
+  metric_label: "Portfolio completeness, currency, and linking"
+  metric_help: "How developed the portfolio is (bio, work samples, contact path), how recently it has been refreshed, and how widely it is linked from your other surfaces (CV, LinkedIn, email signature)."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No site"
+      criterion: "No personal website or portfolio; online presence limited to scattered profiles you don't control"
+    - level: 1
+      label: "Placeholder"
+      criterion: "Domain registered and basic page published, but missing content (no work samples, generic bio), or stale by more than two years"
+    - level: 2
+      label: "Solid but unlinked"
+      criterion: "Site has bio, 3–5 work samples with context, and contact path; updated within the last 12 months, but linked from few other surfaces (limited inbound traffic)"
+    - level: 3
+      label: "Living shopfront"
+      criterion: "Complete site refreshed within 6–12 months, linked from CV, LinkedIn, email signature, talk bios; ranks at top of Google search for your name"
+
+  value_templates:
+    career-planning.advancement: threshold
+    networks.breadth: threshold
+    current-work.engagement: mild_diminishing
+    current-work.rewards: threshold
+    self-awareness.psychological: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [website maintenance data](https://www.claytonncwebdesign.com/83-of-websites-are-abandoned-why-ongoing-maintenance-matters-more-than-ever-for-clayton-triangle-businesses/) showing 80%+ of personal sites are inactive and effectively invisible. Tier 1 (placeholder) is the modal abandoned-build state; tier 2 is solid content without traffic; tier 3 is the living, linked, ranked shopfront the PBS values were scored against.
+    - `threshold` for career-planning.advancement, networks.breadth, and current-work.rewards: these outcomes depend on the site actually receiving traffic, which per [recruiter survey data](https://www.careerbuilder.com/advice/blog/social-media-survey-2017) requires being linked from CV/LinkedIn/talk bios and ranking on Google. A site that nobody finds delivers near-zero opportunity value – the conversion mechanism doesn't fire until tier 2/3.
+    - `mild_diminishing` for current-work.engagement and self-awareness.psychological: these gains come from the act of building and curating the site itself (writing your bio, choosing work to feature), so they accrue gradually from tier 1 onwards – the user gets meaningful benefit even from a placeholder build because the reflective work has happened.
+
 resources:
   upfront_cost: 15
   upfront_cost_reasoning: "Domain registration ($10–15/year for the first year). Free hosting is widely available via GitHub Pages, Netlify, Cloudflare Pages, or the free tier of Carrd. Optional paid platforms (Squarespace at $16/month, custom themes at $30–60) are not required to begin effectively."

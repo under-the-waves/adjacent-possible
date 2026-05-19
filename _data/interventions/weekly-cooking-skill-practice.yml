@@ -141,6 +141,39 @@ values:
     uar_reasoning: |
       - See food-management.craft UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: practice_consolidation
+  metric_label: "Weekly skill practice consolidation"
+  metric_help: "How reliably you run the weekly deliberate-practice cycle (curriculum target one step beyond current ability, focused attempt, brief log, external feedback) over months and years. Repetition of dishes you already do well doesn't count as deliberate practice."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Fixed repertoire"
+      criterion: "Cooking the same handful of dishes; no progression or curriculum"
+    - level: 1
+      label: "Trying new things"
+      criterion: "Occasionally attempting new dishes or techniques but without curriculum structure, log, or external feedback"
+    - level: 2
+      label: "Structured practice"
+      criterion: "Following a curriculum with weekly focused attempts and brief log; 3–6 months in"
+    - level: 3
+      label: "Sustained craft"
+      criterion: "Weekly deliberate practice with curriculum, log, external feedback, and quarterly stakes for 12–24 months; 40–60 reliable dishes in repertoire"
+
+  value_templates:
+    food-management.craft: mild_diminishing
+    food-management.competence: mild_diminishing
+    food-management.waste_reduction: mild_diminishing
+    nutrition.physical_wellbeing: mild_diminishing
+    nutrition.pleasure_connection: mild_diminishing
+    life-skills.high: mild_diminishing
+    saving.lifestyle: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [deliberate-practice research](https://psycnet.apa.org/doiLanding?doi=10.1037%2F0033-295X.100.3.363) on focused, feedback-rich repetition at the edge of capability. The 12–24 month threshold (tier 3) corresponds to the ~100–150 hours of focused practice associated with novice-to-competence movement in complex motor-cognitive domains. Fixed repertoire (tier 0) is what most home cooks already do – the dose-response curve has no lift until deliberate progression begins.
+    - All values use `mild_diminishing`. Craft, competence, waste reduction, nutrition, pleasure-connection, life-skills, and savings all accrue gradually with skill consolidation and dish-repertoire expansion. The [cooking-skill intervention reviews](https://pubmed.ncbi.nlm.nih.gov/29248236/) report sustained moderate gains in confidence and competence rather than sharp threshold or saturation effects – the safe-default subjective shape applies across the value set.
+
 resources:
   upfront_cost: 60
   upfront_cost_reasoning: "One curriculum cookbook (~$25–40 used or new) plus basic equipment most kitchens already have: a sharp 8-inch chef's knife, a heavy skillet, and a digital scale. Users with empty kitchens may spend up to $200; those with stocked kitchens may spend $0. Conservative minimum: $60 for the book and a digital scale."

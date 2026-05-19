@@ -190,6 +190,44 @@ values:
     uar_reasoning: |
       - See fitness.health UAR. The sleep benefit emerges as a side effect of normal practice rather than requiring extra effort, so adherence is shared with the primary domains.
 
+dose_response:
+  metric: sessions_per_week
+  metric_label: "Yoga sessions per week"
+  metric_help: "Average yoga sessions per week of 30–90 minutes each, with breath and attention components engaged rather than treating it as purely physical exercise. Style match (Yin vs Vinyasa vs Hatha) matters for outcomes; the count is sessions regardless of style."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not practising"
+      criterion: "No regular yoga; perhaps occasional class but no weekly pattern"
+    - level: 1
+      label: "Occasional"
+      criterion: "1 session per week, or shorter daily sessions of under 20 minutes"
+    - level: 2
+      label: "Regular"
+      criterion: "2 sessions per week of 30–60 minutes, with breath and attention engaged"
+    - level: 3
+      label: "Established practice"
+      criterion: "2–4 sessions per week sustained for 6+ months, style matched to temperament, breath and attention as core components"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: mild_diminishing
+    fitness.enjoyment: mild_diminishing
+    body-image.fat_loss: near_linear
+    mental-health.stability: steep_diminishing
+    mental-health.resilience: mild_diminishing
+    mental-health.flourishing: mild_diminishing
+    mindfulness.clarity: mild_diminishing
+    mindfulness.emotional: mild_diminishing
+    sleep.comfort_experience: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the 2–4 sessions/week dose against which PBS values are scored. The [Cramer 2016 review of 168 RCTs](https://doi.org/10.1371/journal.pone.0159665) shows that adherence past 12 weeks is when style-fit and habit consolidation occur; the 6-month threshold at tier 3 corresponds to sustained practice where breath and attention have become integrated.
+    - `steep_diminishing` for fitness.health and mental-health.stability: cardiometabolic adaptations ([Cramer 2014](https://doi.org/10.1177/2047487314523132)) and anxiolytic effects ([Cramer 2018](https://onlinelibrary.wiley.com/doi/10.1002/da.22762)) front-load benefit at first regular sessions.
+    - `mild_diminishing` for fitness.performance, fitness.enjoyment, mental-health.resilience, mental-health.flourishing, mindfulness.clarity, mindfulness.emotional, and sleep.comfort_experience: flexibility, balance, mindful attention skill, and subjective wellbeing all accrue gradually with practice volume without a sharp plateau.
+    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with session count and style intensity, though [Thind 2017](https://doi.org/10.1016/j.ypmed.2016.03.013) shows the absolute effect is modest.
+
 resources:
   upfront_cost: 30
   upfront_cost_reasoning: "A basic yoga mat ($20–30) is the only essential purchase. Comfortable existing clothing suffices. Optional blocks, straps, and bolsters ($20–40 total) help in some poses but are not required for beginners; many practitioners begin with no mat at all on carpet or a towel."

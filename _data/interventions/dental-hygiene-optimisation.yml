@@ -93,6 +93,39 @@ values:
     uar_reasoning: |
       - See health-management.longterm UAR – same intervention, same adherence profile. Only ~32% of adults sustain daily flossing per [NHANES (2009–2020)](https://pubmed.ncbi.nlm.nih.gov/38752966/).
 
+dose_response:
+  metric: routine_components
+  metric_label: "Components of the dental routine sustained"
+  metric_help: "How much of the full routine are you sustaining: twice-daily 2-minute brushing with correct technique, daily flossing, and 6–12 monthly professional check-ups? Tiers describe progressively more of the routine in place."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Minimal"
+      criterion: "Brushing only when remembered (often under 1 minute), no flossing, no regular dentist"
+    - level: 1
+      label: "Brushing only"
+      criterion: "Twice-daily 2-minute brushing with fluoride toothpaste; rare or no flossing; dentist visits only when symptomatic"
+    - level: 2
+      label: "Brushing plus partial flossing"
+      criterion: "Twice-daily correct brushing plus flossing 3–5 days/week; one dental visit in the past year"
+    - level: 3
+      label: "Full routine"
+      criterion: "Twice-daily correct-technique brushing, daily flossing, and a check-up plus clean every 6–12 months"
+
+  value_templates:
+    health-management.longterm: mild_diminishing
+    health-management.vitality: threshold
+    health-management.control: near_linear
+    saving.security: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the cumulative-protection mechanism documented in the [Cochrane review](https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012018.pub2/full): brushing alone reduces gingivitis but flossing closes the interproximal gap that brushing cannot reach, and professional check-ups catch early caries before they become irreversible. Each tier adds a distinct mechanism rather than just intensifying frequency.
+    - `mild_diminishing` for health-management.longterm because the gingivitis-prevention benefit accrues steeply from brushing onset but periodontitis prevention requires the flossing and check-up components stacked; the gradual curve reflects compound mechanisms without a sharp plateau.
+    - `threshold` for health-management.vitality because the systemic-inflammation reduction pathway only activates when periodontal disease is actually being prevented or treated – sub-optimal brushing-only routines leave gum inflammation in place, so vitality gains effectively require the flossing component (tier 2) before any meaningful effect.
+    - `near_linear` for health-management.control because each routine component adds a discrete piece of health-decision-making knowledge (technique, dentist relationship, monitoring familiarity).
+    - `mild_diminishing` for saving.security because the largest avoided costs (root canals, periodontal scaling) are prevented by the basic combination, with diminishing additional savings from full-routine completeness.
+
 resources:
   upfront_cost: 15
   upfront_cost_reasoning: "A standard manual toothbrush ($3–5) and a pack of dental floss ($3–5) are the only required purchases. An electric toothbrush is optional but not necessary to begin effectively; it can be introduced later if desired."

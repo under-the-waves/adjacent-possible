@@ -206,6 +206,44 @@ values:
     uar_reasoning: |
       - See worldview.meaning UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: contemplative_frequency
+  metric_label: "Sustained contemplative contact"
+  metric_help: "How frequently and contemplatively (not as dismissed notifications) you engage with mortality reminders, plus whether you pair them with a prioritisation frame."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Avoided"
+      criterion: "No structured contact with mortality; the fact of finitude actively kept out of awareness"
+    - level: 1
+      label: "Dismissed reminders"
+      criterion: "Receives app or journaling reminders but treats them as notifications to dismiss; no sustained pause or prioritisation frame"
+    - level: 2
+      label: "Occasional contemplation"
+      criterion: "Pauses for 10–30 seconds on most reminders or maintains a weekly journaling slot; some prioritisation prompts but not consistent"
+    - level: 3
+      label: "Sustained practice"
+      criterion: "Multi-month practice (3+ months) of regular contemplative pauses or weekly 15–20 minute journaling, paired with explicit prioritisation prompts that translate awareness into decisions"
+
+  value_templates:
+    worldview.meaning: threshold
+    worldview.depth: mild_diminishing
+    worldview.utility: threshold
+    life-purpose.meaning: threshold
+    life-purpose.clarity: threshold
+    life-purpose.integration: threshold
+    value-system.insight: mild_diminishing
+    value-system.authentic: threshold
+    mindfulness.spiritual: mild_diminishing
+    self-awareness.contemplative: mild_diminishing
+    mental-health.flourishing: threshold
+
+  rationale: |
+    - Tier cuts reflect the critical [Cozzolino et al. (2004)](https://journals.sagepub.com/doi/10.1177/0146167203260716) and [Vail et al. (2012)](https://journals.sagepub.com/doi/10.1177/1088868312440046) finding that brief mortality salience produces defensive responses while sustained, contemplative engagement produces meaning and prosocial gains. Tier 1 is explicitly the failure mode (dismissed reminders) that can entrench bias; tier 3 is the sustained contemplation that the PBS values were scored against.
+    - `threshold` for most values (worldview.meaning, worldview.utility, both life-purpose values, value-system.authentic, mental-health.flourishing, life-purpose.integration): the [terror management theory literature](https://psycnet.apa.org/record/1986-97108-005) is explicit that the contemplative frame is the mechanism – without sustained contemplation the value either doesn't fire or fires negatively. This is one of the rare interventions where partial engagement is genuinely worse than none.
+    - `mild_diminishing` for the more passive constructs (worldview.depth, value-system.insight, mindfulness.spiritual, self-awareness.contemplative): these accrue gradually with cumulative contact even before the full sustained-practice threshold is reached.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "The WeCroak app costs roughly $1 one-off, free alternatives exist (custom phone reminders, journal-based variants), and the Stoic and Buddhist variants require no purchase. A journal (~$5–10) is optional but not required to begin."

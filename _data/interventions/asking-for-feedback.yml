@@ -141,6 +141,41 @@ values:
     uar_reasoning: |
       - See learning-methods.efficiency UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: substantive_feedback_requests_per_week
+  metric_label: "Substantive feedback requests per week"
+  metric_help: "Count specific, ego-tolerant requests for honest evaluation of a named behaviour or output from someone with genuine observational access. Vague 'how am I doing?' check-ins and pure validation-seeking don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Passive"
+      criterion: "Waiting for feedback to arrive; no deliberate solicitation"
+    - level: 1
+      label: "Occasional"
+      criterion: "Roughly one substantive request per month, often during scheduled reviews"
+    - level: 2
+      label: "Regular"
+      criterion: "1–2 substantive requests per fortnight, with at least one closing-the-loop follow-up"
+    - level: 3
+      label: "Habitual"
+      criterion: "1+ substantive request per week from rotating sources, with consistent loop-closing and visible action on what is heard"
+
+  value_templates:
+    learning-methods.efficiency: mild_diminishing
+    learning-methods.depth: mild_diminishing
+    current-work.competence: mild_diminishing
+    current-work.engagement: mild_diminishing
+    self-awareness.relational: steep_diminishing
+    self-awareness.psychological: mild_diminishing
+    communication.connection: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [Anseel et al. (2015)](https://journals.sagepub.com/doi/10.1177/0149206313484521) and [Ashford et al. (2003)](https://journals.sagepub.com/doi/10.1016/S0149-2063_03_00079-5): the diagnostic value of feedback-seeking depends on cadence, source rotation, and loop-closing, not on volume alone. PBS values assume tier 3 (habitual practice).
+    - Template choices:
+      - `steep_diminishing` for self-awareness.relational – the largest calibration gain comes from the first substantial dose of honest external observation, since baseline self-other correlations are near zero per [Eurich review](https://pmc.ncbi.nlm.nih.gov/articles/PMC6041499/); additional requests refine rather than transform.
+      - `mild_diminishing` for the rest – competence, depth, engagement, and connection accrue gradually with practice volume and source diversity, without a sharp saturation point.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials, subscriptions, or services required. The intervention is a behavioural practice requiring only an existing relationship with at least one person willing to give honest feedback."

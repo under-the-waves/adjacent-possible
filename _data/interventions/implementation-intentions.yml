@@ -79,6 +79,35 @@ values:
     uar_reasoning: |
       - See habits.consistency UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: active_if_then_plans
+  metric_label: "Active if-then plans formulated and rehearsed"
+  metric_help: "Number of well-formed implementation intentions you've articulated in canonical 'If [specific cue], then I will [specific action]' form and rehearsed. Vague intentions or recommitments without re-articulation don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No plans"
+      criterion: "Goals held as vague intentions; no written if-then plans"
+    - level: 1
+      label: "One plan"
+      criterion: "One if-then plan written and rehearsed for a single high-priority behaviour"
+    - level: 2
+      label: "Two plans plus coping"
+      criterion: "2 plans active; at least one paired with an obstacle/coping plan in the same form"
+    - level: 3
+      label: "Standing practice"
+      criterion: "3–5 well-formed plans active; regular re-articulation of plans for new goals as they arise"
+
+  value_templates:
+    habits.consistency: mild_diminishing
+    goals.follow_through: mild_diminishing
+    time-management.productivity: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the description's observation that "most evidence comes from studies plan one or two behaviours at a time" and the [Gollwitzer & Sheeran (2006) meta-analysis](https://psycnet.apa.org/doiLanding?doi=10.1016%2FS0065-2601%2806%2938002-1) effect sizes are strongest with focused application. Tier 3 captures the standing practice rather than an excessive number of competing plans, which the description warns dilutes the effect.
+    - All values use `mild_diminishing` because the cue-response automaticity benefit applies per-plan – the first plan captures the value of closing one intention-behaviour gap, with additional plans adding incremental but diminishing benefit as competing cues and finite attention dilute the per-plan strength. The d=0.65 meta-analytic effect accumulates with practice but without a sharp plateau or proportional scaling.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost. Plans can be written in any existing notebook, document, or note-taking app. Optional reading (e.g. Gollwitzer's papers, popular books summarising the evidence) is freely available online."

@@ -161,6 +161,40 @@ values:
     uar_reasoning: |
       - See extended-family.balance UAR – same intervention, same adherence profile. The mapping step has higher completion rates than full enforcement, so awareness gains may accrue even to users who do not sustain the full protocol.
 
+dose_response:
+  metric: practice_consolidation
+  metric_label: "How consolidated the boundary practice is"
+  metric_help: "This intervention is graded by skill consolidation rather than frequency. Tiers describe how reliably the mapping, calendar-level decisions, pre-rehearsed scripts, and calm follow-through actually appear in interactions with extended family, including the high-pressure ones."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Reactive"
+      criterion: "No explicit limits; reacting to whichever incident is most recent rather than addressing patterns"
+    - level: 1
+      label: "Mapped"
+      criterion: "Pattern mapped and calendar-level limits decided; scripts drafted but not yet held under pressure"
+    - level: 2
+      label: "Holding most limits"
+      criterion: "Limits communicated and held in most interactions; occasional capitulation during resistance phase or with the most pressuring relatives"
+    - level: 3
+      label: "Stable equilibrium"
+      criterion: "Limits held consistently through the predictable 2–3 reinforcement cycles; new equilibrium has settled, with calm scripts deployed reliably"
+
+  value_templates:
+    extended-family.balance: mild_diminishing
+    extended-family.harmony: mild_diminishing
+    family-of-origin.autonomy: mild_diminishing
+    mental-health.stability: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    time-management.balance: mild_diminishing
+    communication.conflict: mild_diminishing
+    self-awareness.relational: mild_diminishing
+
+  rationale: |
+    - Tier cuts follow the [family systems theory](https://thebowencenter.org/theory) prediction that the system pushes back during the first 2–3 enforcement cycles, then re-stabilises if limits are held consistently. The active ingredient is sustained, non-hostile follow-through across the resistance phase – tier 2 captures users who hold most limits but capitulate during peak pressure; tier 3 captures the consolidated equilibrium past which limits become self-sustaining. Awareness gains (self-awareness.relational) accrue from the mapping step alone, which is why even tier 1 produces meaningful insight even when downstream enforcement falters.
+    - All values use `mild_diminishing`. The benefits accumulate as the practice consolidates and the system re-stabilises – there is no biological saturation curve, no proportional outcome, and no clear threshold below which the mechanism fails entirely. [Assertiveness training effect sizes](https://pmc.ncbi.nlm.nih.gov/articles/PMC5897664/) are moderate (d ≈ 0.5–0.8) across the population with reliability that scales with practice consolidation – the safe-default subjective shape applies across the value set.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials, subscriptions, or services required. The practice is behavioural; optional reading on family-systems theory or assertiveness is freely available online."

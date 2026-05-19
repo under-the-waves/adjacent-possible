@@ -131,6 +131,41 @@ values:
     uar_reasoning: |
       - See behaviours.freedom UAR – same intervention, same adherence profile
 
+dose_response:
+  metric: trial_completion_and_adherence
+  metric_label: "Trial completion and post-trial adherence"
+  metric_help: "Tiers describe how far you got through a structured 30–90 day trial and how well the post-trial pattern (abstinence or specified moderation rule) held over the following 6–12 months."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No trial"
+      criterion: "Continuing usual drinking pattern with no structured trial period"
+    - level: 1
+      label: "Partial trial"
+      criterion: "Started a 30–90 day trial but did not complete the full period; reverted within weeks of stopping"
+    - level: 2
+      label: "Completed trial, drift back"
+      criterion: "Completed the full trial period but no deliberate post-trial decision; drifted toward baseline within 3–6 months"
+    - level: 3
+      label: "Sustained pattern"
+      criterion: "Completed the trial and maintained a deliberate post-trial pattern (abstinence, structured moderation, or recurring annual reset) for 6–12+ months"
+
+  value_templates:
+    behaviours.freedom: mild_diminishing
+    fitness.health: near_linear
+    sleep.daily_functioning: steep_diminishing
+    sleep.long_term_health: near_linear
+    mental-health.stability: mild_diminishing
+    saving.security: near_linear
+
+  rationale: |
+    - Tier criteria follow [Dry January research](https://www.tandfonline.com/doi/full/10.1080/16066359.2017.1411903): completion alone produces transient awareness, but the durable behaviour change requires a deliberate post-trial decision sustained over months. The PBS values assume tier 3 (sustained pattern).
+    - Template choices:
+      - `steep_diminishing` for sleep.daily_functioning – sleep architecture improvements appear within 1–2 weeks of cessation per [polysomnography research](https://pubmed.ncbi.nlm.nih.gov/23347102/) and saturate quickly once consumption drops.
+      - `near_linear` for fitness.health, sleep.long_term_health, and saving.security – cumulative cancer risk, cardiovascular risk, and redirected spend scale roughly with months of sustained reduction.
+      - `mild_diminishing` for behaviours.freedom and mental-health.stability – subjective liberation from default drinking and mood gains build with practice but have no sharp plateau.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. The trial may save money rather than cost any. Optional support apps (Try Dry, I Am Sober) are free; structured workbooks or group programmes cost $0 -- 50 but are not required for the minimum-viable trial."

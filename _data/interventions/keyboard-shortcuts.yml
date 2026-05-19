@@ -78,6 +78,36 @@ values:
       - The additional challenge for rewards is that the connection between shortcuts and meaningful outcomes is so indirect that it provides even less motivational reinforcement – people rarely attribute career recognition to input method efficiency.
       - Without visible connection between the effort (learning shortcuts) and the desired outcome (greater impact and recognition), sustained motivation is harder to maintain than for the more directly felt competence and engagement benefits.
 
+dose_response:
+  metric: shortcuts_automatic
+  metric_label: "Number of shortcuts used automatically"
+  metric_help: "Approximate number of keyboard shortcuts you reach for without conscious thought across your most-used applications. Shortcuts you sometimes remember but often miss don't count as automatic."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Mouse-driven"
+      criterion: "Few or no shortcuts in use; menus and toolbars used for most actions"
+    - level: 1
+      label: "Basics only"
+      criterion: "5–8 basic shortcuts automatic (Ctrl+C, V, Z, F, switch app); most other actions still mouse-driven"
+    - level: 2
+      label: "Application-fluent"
+      criterion: "15–20 shortcuts automatic across your two most-used applications; mouse used mainly for navigation and selection"
+    - level: 3
+      label: "Cross-application fluent"
+      criterion: "25–30+ shortcuts automatic across core applications (IDE/editor, browser, email, OS); first instinct on new tools is to look up their shortcuts"
+
+  value_templates:
+    current-work.competence: steep_diminishing
+    current-work.engagement: mild_diminishing
+    current-work.rewards: mild_diminishing
+
+  rationale: |
+    - Tier criteria anchor on the intervention's stated 20–30 highest-impact shortcuts that account for most of the cumulative time savings. Tier 1 captures the [Tak et al. (2013)](https://doi.org/10.1016/j.intcom.2013.07.004) finding that most users plateau at a handful of basics – this is the modal endpoint without deliberate practice.
+    - `steep_diminishing` for current-work.competence because the high-frequency basics (copy/paste, undo, switch app, find) account for most of the time-saving benefit per the [Card, Moran & Newell keystroke-level model](https://doi.org/10.1201/9780203736166); each additional shortcut beyond the top handful contributes diminishing marginal time savings.
+    - `mild_diminishing` for current-work.engagement and current-work.rewards because the flow-state and impact effects are subjective and indirect; some lift appears at tier 1 but the full benefit needs the cross-application fluency that produces smooth, low-friction workflow.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost to begin learning keyboard shortcuts. All major applications publish their shortcut lists for free. Optional tools like shortcut trainers or cheat sheet posters are available but not required."

@@ -95,6 +95,38 @@ values:
     uar_reasoning: |
       - See housework.environmental UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: substitutions_in_place
+  metric_label: "Substitutions in the routine"
+  metric_help: "Count how many of the five substitutions you've adopted: refill-bottle system, cold-water default laundry, microfibre cloths replacing paper towels, low-VOC or eco-certified detergents for the jobs vinegar can't do, and the dose-down discipline. Tiers describe how much of the routine is converted."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Conventional"
+      criterion: "Disposable plastic bottles, hot-wash default, paper towels, full-label dosing"
+    - level: 1
+      label: "Token swap"
+      criterion: "One substitution adopted (often microfibre cloths or one refill bottle) while most of the routine remains conventional"
+    - level: 2
+      label: "Mostly converted"
+      criterion: "3–4 of the five substitutions in place; partial dose reduction; occasional fallback to disposables"
+    - level: 3
+      label: "Full routine"
+      criterion: "All five substitutions sustained: refills, cold-wash default, microfibre, low-VOC products for residual jobs, and dose-down discipline"
+
+  value_templates:
+    housework.environmental: near_linear
+    global-impact.sustainability: mild_diminishing
+    possessions.simplicity: near_linear
+    housework.health: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect the partial-adoption failure mode flagged in the routine description: most users substitute some elements while leaving others conventional. The [Energy Saving Trust guidance](https://energysavingtrust.org.uk/advice/at-home-with-energy/) shows that cold-washing alone captures the single largest energy reduction, while [EU Ecolabel evidence](https://environment.ec.europa.eu/topics/circular-economy/eu-ecolabel-home/product-groups-and-criteria_en) shows packaging and chemical-loading reductions come specifically from refills and certified products – tiers cumulate these distinct mechanisms.
+    - `near_linear` for housework.environmental because each substitution contributes a roughly distinct slice of the cleaning footprint (packaging, water-heating energy, paper-towel waste, chemical loading); the lifecycle benefit scales with how many of the five are in place rather than plateauing early.
+    - `near_linear` for possessions.simplicity because cupboard-clutter reduction is mechanically tied to the refill-versus-bottle ratio – more substitutions completed, fewer legacy bottles retained.
+    - `mild_diminishing` for global-impact.sustainability because the spillover-and-signalling mechanism front-loads (any sustained green behaviour starts the identity shift) and `mild_diminishing` for housework.health because indoor-VOC reduction shows a noisy individual-level effect with no sharp plateau.
+
 resources:
   upfront_cost: 50
   upfront_cost_reasoning: "Roughly $30 for an initial refill kit (trigger bottles plus first concentrate from Blueland or any equivalent local refill brand) and $15–20 for a set of six to eight microfibre cloths and a few washable cotton pads. No specialised equipment is needed beyond what is already in a typical home."

@@ -132,6 +132,40 @@ values:
       - The tension between retirement-account lock-in and early FI goals can reduce motivation to maximise retirement contributions, leading to suboptimal tax structuring.
       - Score 45 reflects that fewer than half of FI-oriented investors sustain rigorous annual attention to changing allowances and thresholds over the multi-decade periods required.
 
+dose_response:
+  metric: tax_optimisation_coverage
+  metric_label: "Tax-optimisation coverage"
+  metric_help: "Tiers describe how systematically you use the tax-efficient wrappers available in your jurisdiction (tax-advantaged savings, pre-tax retirement contributions, capital gains/dividend allowances), and whether annual allowance use is sustained."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Taxable only"
+      criterion: "All saving and investing held in taxable accounts; no tax-advantaged wrappers used"
+    - level: 1
+      label: "One wrapper"
+      criterion: "One tax-advantaged account opened (e.g. an ISA or a default workplace pension at the auto-enrolment minimum) but allowances are mostly unused"
+    - level: 2
+      label: "Multiple wrappers"
+      criterion: "Using two or more wrappers (e.g. workplace pension above auto-enrolment plus an ISA), but not maximising annual allowances or reviewing yearly"
+    - level: 3
+      label: "Annual maximisation"
+      criterion: "All eligible wrappers in active use; annual allowance maximisation reviewed each tax year; pre-tax payroll contributions set to capture full benefit"
+
+  value_templates:
+    saving.security: mild_diminishing
+    saving.growth: near_linear
+    saving.lifestyle: mild_diminishing
+    investing.growth: near_linear
+    investing.safety: mild_diminishing
+    investing.simplicity: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [IFS analysis of tax relief](https://ifs.org.uk/publications/who-gains-pensions-tax-relief) and [HMRC ISA usage data](https://www.gov.uk/government/statistics/annual-savings-statistics): most under-claiming happens at the annual-allowance margin rather than at the basic-wrapper margin. PBS values assume tier 3 (annual maximisation).
+    - Template choices:
+      - `near_linear` for saving.growth and investing.growth – the tax-drag eliminated and effective uplift on contributions scales roughly proportionally with the share of saving routed through tax-advantaged wrappers.
+      - `mild_diminishing` for the security, lifestyle, safety, and simplicity values – the first wrapper captures most of the visibility, structural, and protective benefit; additional optimisation produces smaller marginal gains.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Opening tax-advantaged accounts (ISAs, SIPPs, IRAs, 401(k)s, RRSPs, TFSAs, and equivalents) is free with most low-cost providers. There are no direct costs to claiming retirement tax relief through standard payroll or annual filing. Some people choose to pay for financial advice (typically $700–$2,800 for initial advice in major markets), but this is optional and basic tax optimisation can be self-directed using free resources."

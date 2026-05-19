@@ -126,6 +126,39 @@ values:
     uar_reasoning: |
       - See community-contribution.belonging UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_attendance
+  metric_label: "Weekly attendance and engagement"
+  metric_help: "How regularly you attend the same recurring weekly gathering, and whether you stay for the unstructured social time around it. The active ingredient is repeated contact with the same set of people over months."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No third place"
+      criterion: "No regular weekly social gathering with a stable cohort"
+    - level: 1
+      label: "Trying it"
+      criterion: "Recently started attending, or attending sporadically (less than half the weeks); still at the periphery"
+    - level: 2
+      label: "Regular attender"
+      criterion: "Attending 80%+ of weeks for 3–11 months; staying for some unstructured social time"
+    - level: 3
+      label: "Embedded regular"
+      criterion: "12+ months of consistent weekly attendance with the unstructured social time; recognised by name; absence noticed; loose acquaintances becoming friendships"
+
+  value_templates:
+    community-contribution.belonging: mild_diminishing
+    community-contribution.fulfilment: mild_diminishing
+    friendship.breadth: mild_diminishing
+    mental-health.stability: steep_diminishing
+    participatory-leisure.social: mild_diminishing
+    networks.depth: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the first 12 weeks are when newcomers cross from "new face" to "regular" – the friendship-formation literature [(roughly 50 hours of contact)](https://psycnet.apa.org/doi/10.1177/0265407518761225) maps the tier-2 threshold (3+ months) to the move from acquaintance to casual friend, and tier 3 (12+ months) to deeper embedding. The unstructured social time around the activity is the active ingredient – attending without staying captures perhaps 30% of the benefit.
+    - `steep_diminishing` for mental-health.stability: the [Holt-Lunstad meta-analysis](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316) shows the largest mortality and mental-health benefits accrue from moving from social isolation to any regular community contact – the curve is heavily front-loaded with subsequent attendance consolidating rather than transforming.
+    - `mild_diminishing` for community-contribution.belonging, community-contribution.fulfilment, friendship.breadth, participatory-leisure.social, and networks.depth: belonging, friendship breadth, and network ties accumulate gradually with weeks of repeated contact, without a sharp plateau or biological saturation curve.
+
 resources:
   upfront_cost: 50
   upfront_cost_reasoning: "Approximately $0–150 for activity-specific equipment, joining fees, or kit. Many third places (church, free volunteer shifts, public-space meetups) are free; others (sports leagues, gym classes, hobbyist supplies) require modest equipment or subscription."

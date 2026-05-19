@@ -107,6 +107,37 @@ values:
     uar_reasoning: |
       - See learning-methods.efficiency UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: strategic_reading_use
+  metric_label: "Strategic reading application"
+  metric_help: "This intervention is graded by skill consolidation – how reliably the three techniques (previewing, fixation-span widening, selective subvocalisation management) and the match-technique-to-purpose habit appear in your reading, with comprehension tested rather than just speed."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Default"
+      criterion: "No deliberate strategic reading; same approach for all material"
+    - level: 1
+      label: "Trying it"
+      criterion: "Occasionally previewing or skimming on specific material; not yet habitual or comprehension-tested"
+    - level: 2
+      label: "Mostly applied"
+      criterion: "Previewing routine on non-fiction; skim/scan/read-fully heuristic mostly applied; comprehension self-tested on practice material"
+    - level: 3
+      label: "Habitual"
+      criterion: "Strategic reading habits internalised across material types; 20–35% speed gain on appropriate material without comprehension loss"
+
+  value_templates:
+    learning-methods.efficiency: mild_diminishing
+    learning-methods.depth: mild_diminishing
+    media-diet.efficiency: mild_diminishing
+    media-diet.quality: mild_diminishing
+    information-management.retention: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the active ingredient is metacognitive ([Klimovich et al. 2023](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9817.12417)) – matching technique to purpose, with comprehension self-testing to avoid the speed-without-comprehension trap [Rayner et al. (2016)](https://journals.sagepub.com/doi/10.1177/1529100615623267) warn against. Tier 2 captures users who apply the techniques but have not yet internalised them; tier 3 is consolidated habit.
+    - All values use `mild_diminishing`. Reading efficiency, depth, retention, and media-diet outcomes accrue gradually with practice consolidation without a sharp plateau or biological saturation. The benefits are bounded by the biological reading ceiling but partial habit acquisition still delivers partial benefit – the safe-default subjective shape applies across the value set.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "The core techniques require no purchases. A free resource such as the Rayner et al. 2016 paper or a library book on reading strategy is sufficient."

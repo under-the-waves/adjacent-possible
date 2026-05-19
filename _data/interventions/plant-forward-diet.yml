@@ -126,6 +126,39 @@ values:
     uar_reasoning: |
       - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: plant_share_of_diet
+  metric_label: "Plant share of typical weekly diet"
+  metric_help: "Approximate share of your weekly calories or food weight coming from plant sources (vegetables, fruits, legumes, whole grains, nuts, seeds) rather than meat, fish, or dairy. Use a rough weekly meat-tally rather than precise tracking."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Typical omnivore"
+      criterion: "Plants under 40% of diet; red meat 4+ times/week; animal products at most meals"
+    - level: 1
+      label: "Light reduction"
+      criterion: "Plants 40–60% of diet; red meat reduced to 2–3 times/week; some deliberate meat-free meals"
+    - level: 2
+      label: "Mostly plant"
+      criterion: "Plants 60–75% of diet; red meat once a week or less; chicken/fish 2–4 times/week; legumes feature regularly"
+    - level: 3
+      label: "Plant-forward"
+      criterion: "Plants 80%+ of diet (EAT-Lancet pattern); red meat once a week or less, totalling 100–300 g/week; small dairy portion"
+
+  value_templates:
+    nutrition.ethical_environmental: near_linear
+    global-impact.sustainability: near_linear
+    nutrition.physical_wellbeing: mild_diminishing
+    fitness.health: mild_diminishing
+    global-impact.impartiality: near_linear
+    global-impact.fulfilment: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the EAT-Lancet planetary-health diet target (80% plant) and [Poore and Nemecek (2018)](https://www.science.org/doi/10.1126/science.aaq0216) data showing emissions reduction scales smoothly with red-meat reduction. Tier 3 is the full plant-forward pattern the PBS values were scored against; tier 1 is light reduction that still captures partial benefit.
+    - `near_linear` for nutrition.ethical_environmental, global-impact.sustainability, and global-impact.impartiality: per [Poore and Nemecek](https://www.science.org/doi/10.1126/science.aaq0216), each replaced beef meal reduces personal emissions by a roughly equal increment, and the avoided-animal-suffering pathway scales proportionally with consumption reduction.
+    - `mild_diminishing` for nutrition.physical_wellbeing, fitness.health, and global-impact.fulfilment: the cardiovascular and longevity benefits per [the AHA review](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865) and [the Mediterranean diet meta-analysis](https://pubmed.ncbi.nlm.nih.gov/30575854/) front-load: the first reductions in red and processed meat capture most of the available health gain, with diminishing returns at higher plant shares. Fulfilment also accrues gradually with values-aligned practice.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No equipment or programme fees required. Optional purchases (a basic plant-forward cookbook, a few staple pantry items such as dried legumes and grains) could add $20–40 but are not strictly necessary."

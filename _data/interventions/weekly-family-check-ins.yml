@@ -180,6 +180,41 @@ values:
     uar_reasoning: |
       - See relationship-quality.connection UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: meeting_consistency
+  metric_label: "Meeting consistency and structure quality"
+  metric_help: "How reliably the 15–30 minute weekly household meeting happens on a fixed slot with the four-part agenda (appreciations, calendar, open floor, needs), with genuine engagement from all members rather than top-down briefing."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not running"
+      criterion: "No structured weekly household meeting; coordination happens ad hoc"
+    - level: 1
+      label: "Sporadic"
+      criterion: "Meeting attempted but inconsistent (fewer than half the weeks), or unilateral parental briefing without rotation and appreciations"
+    - level: 2
+      label: "Mostly weekly"
+      criterion: "Meeting happening most weeks with the four-part agenda; occasional missed weeks"
+    - level: 3
+      label: "Self-sustaining ritual"
+      criterion: "Weekly meeting sustained 6+ months with consistent agenda, rotating speaking time, and genuine engagement; children raise their own agenda items"
+
+  value_templates:
+    relationship-quality.connection: mild_diminishing
+    relationship-quality.harmony: mild_diminishing
+    children.relationship: mild_diminishing
+    children.development: mild_diminishing
+    children.wellbeing: mild_diminishing
+    family-of-origin.connection: mild_diminishing
+    communication.conflict: mild_diminishing
+    communication.connection: mild_diminishing
+    organisation.tracking: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the cadence is the intervention – [Gottman's research](https://www.gottman.com/blog/how-to-have-a-state-of-the-union-meeting/) finds couples need ~5 sessions before the format feels natural, and the practice must be self-sustaining (tier 3) for the relationship benefits to compound. PBS values are scored against the sustained ritual.
+    - All values use `mild_diminishing`. Connection, harmony, child development, conflict skill, and coordination tracking all accrue gradually with sustained weekly practice. [Family rituals research](https://journals.lww.com/iycjournal/fulltext/2007/10000/family_routines_and_rituals__a_context_for.2.aspx) shows benefits compound over years rather than triggering at a sharp threshold – the safe-default subjective shape applies. Organisation tracking accrues fastest because calendar coordination is the most mechanically observable benefit (visible within 2–3 weeks), but it still shows gradual rather than threshold accrual.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No purchases required. A shared paper calendar or any free shared digital calendar is sufficient. No tools needed beyond what most households already have."

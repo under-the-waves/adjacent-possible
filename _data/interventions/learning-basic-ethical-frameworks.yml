@@ -202,6 +202,44 @@ values:
     uar_reasoning: |
       - See ethics.philosophical UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: framework_literacy_depth
+  metric_label: "Framework literacy and applied practice"
+  metric_help: "This is a bounded one-time intervention, but it has clear quality gradations. Tiers describe how deeply you engaged with the three frameworks (utilitarianism, deontology, virtue ethics) and whether you completed the applied-practice step of testing them against real decisions."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Folk morality"
+      criterion: "No structured study of ethical frameworks; moral judgements driven by intuition alone"
+    - level: 1
+      label: "Cursory exposure"
+      criterion: "Read a short summary of one or two frameworks (under 3 hours); no applied practice"
+    - level: 2
+      label: "Solid reading"
+      criterion: "Read introductory material on all three frameworks (6–8 hours), with at least one critique each, but did not apply them to personal decisions"
+    - level: 3
+      label: "Full weekend with application"
+      criterion: "10–14 hours covering all three frameworks plus one critique each, with applied-practice exercises on two or three personal decisions"
+
+  value_templates:
+    ethics.philosophical: mild_diminishing
+    ethics.practical: threshold
+    ethics.integrity: threshold
+    rationality.decision-making: threshold
+    rationality.intellectual-honesty: mild_diminishing
+    worldview.breadth: mild_diminishing
+    worldview.depth: threshold
+    worldview.utility: threshold
+    value-system.insight: threshold
+    value-system.evolution: threshold
+    life-purpose.clarity: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [2019 ethics-training meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6368181/) finding that knowledge gains (d = 0.78) accrue with structured reading but decision-making and behavioural gains (d = 0.51) depend on active application exercises. Tier 2 captures readers who acquire vocabulary but skip the application step; tier 3 captures the full weekend with applied practice that the PBS values were scored against.
+    - `threshold` for the practical and decision-making values (ethics.practical, ethics.integrity, rationality.decision-making, worldview.depth, worldview.utility, value-system.insight, value-system.evolution): [Rest and Thoma's DIT work](https://onlineethics.org/cases/evaluation-tools/defining-issues-test-dit-and-dit-2) and [PMC4578657](https://pmc.ncbi.nlm.nih.gov/articles/PMC4578657/) show passive reading without application fails to convert into decision-making improvements – the mechanism doesn't fire until applied practice begins.
+    - `mild_diminishing` for the knowledge-style values (ethics.philosophical, rationality.intellectual-honesty, worldview.breadth, life-purpose.clarity): conceptual literacy accrues steadily with reading volume even before applied practice begins, so partial reading still captures some benefit.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "All three frameworks can be studied using free resources: Stanford Encyclopedia of Philosophy covers utilitarianism, Kantian ethics, and virtue ethics comprehensively at no cost. MIT OpenCourseWare 24.231 provides free lecture notes."

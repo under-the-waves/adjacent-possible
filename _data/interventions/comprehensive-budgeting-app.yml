@@ -127,6 +127,41 @@ values:
     uar_reasoning: |
       - See financial-planning-tracking.accuracy UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: weekly_review_consistency
+  metric_label: "Weekly review consistency"
+  metric_help: "Tiers describe how reliably you maintain the weekly 15–30 minute review loop (clearing miscategorisations, checking category totals, adjusting) – the active ingredient, not just the connected dashboard."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Not using"
+      criterion: "No budgeting app or only ad hoc statement reviews"
+    - level: 1
+      label: "Connected, dormant"
+      criterion: "App set up and accounts connected but no regular review; dashboards mostly ignored"
+    - level: 2
+      label: "Intermittent"
+      criterion: "Reviewing 1–2 times per month; categorisation drifts between reviews; bank-feed breaks not always re-authorised promptly"
+    - level: 3
+      label: "Weekly habit"
+      criterion: "15–30 minute weekly review sustained, monthly retrospective with one or two category adjustments, feed maintenance kept current"
+
+  value_templates:
+    financial-planning-tracking.accuracy: steep_diminishing
+    financial-planning-tracking.simplicity: mild_diminishing
+    financial-planning-tracking.insight: steep_diminishing
+    saving.security: near_linear
+    saving.growth: near_linear
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect [Plaid bank-feed reliability research](https://www.consumerfinance.gov/data-research/research-reports/data-aggregation-and-its-implications-for-consumers/) showing feed breaks of several percent per month, and [retention analyses of personal-finance apps](https://www.intuit.com/company/press-room/press-releases/) showing weekly-active rates well below initial signup. The weekly review is the failure point. PBS values assume tier 3 (weekly habit).
+    - Template choices:
+      - `steep_diminishing` for accuracy and insight – the first sustained month of weekly review delivers most of the visibility gain; further reviews refine rather than transform.
+      - `near_linear` for saving.security and saving.growth – freed cashflow accumulates linearly over months of sustained spending discipline per [mobile-budgeting-prompt research](https://doi.org/10.1287/mnsc.2017.2879).
+      - `mild_diminishing` for simplicity and mental-health.stability – subjective gains accrue gradually with consistency.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Most popular budgeting apps (Monarch Money, YNAB, Copilot) are subscription-based with no upfront purchase required. Free tools such as the basic tier of Empower Personal Dashboard or open-source alternatives like Actual Budget cover the core functionality. Conservative upfront cost is $0 since the user can begin with a free tool or subscription trial."

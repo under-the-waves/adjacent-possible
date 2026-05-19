@@ -127,6 +127,40 @@ values:
     uar_reasoning: |
       - See life-skills.high UAR – same intervention and adherence profile. Influence is exercised frequently enough that skills may be reinforced naturally, but the specific negotiation-derived techniques (BATNA, anchoring) are most salient in formal or high-stakes settings.
 
+dose_response:
+  metric: negotiation_practice
+  metric_label: "Framework learned and applied"
+  metric_help: "Tiers describe how deeply you have studied the Getting to Yes framework and how consistently you apply it (preparation, BATNA, anchoring, interest-based reframing) in real negotiation situations."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Default acceptance"
+      criterion: "No structured negotiation training; default behaviour is to accept first offers or avoid haggling"
+    - level: 1
+      label: "Cursory reading"
+      criterion: "Read about negotiation but no role-play practice; framework not applied to real situations"
+    - level: 2
+      label: "Studied and rehearsed"
+      criterion: "Completed full weekend study (8–16 hours) with role-play practice; applied at one or two real situations (e.g. a salary review or major purchase)"
+    - level: 3
+      label: "Habitual application"
+      criterion: "Routinely prepares BATNA and anchors before every salary, contract, or large-purchase decision; applies principled framework to workplace conflicts too"
+
+  value_templates:
+    life-skills.high: threshold
+    current-work.rewards: threshold
+    career-planning.security: threshold
+    saving.growth: near_linear
+    communication.conflict: mild_diminishing
+    communication.influence: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect [Movius (2008)](https://www.cbi.org/assets/files/CBI_Effectiveness_Negotiation_Training.pdf) finding that real-world transfer of negotiation training requires rehearsal and repeated application; reading alone fails to convert into competent application under pressure. Tier 2 captures the trained but situationally applied learner; tier 3 captures habitual, prepared application that the PBS values were scored against.
+    - `threshold` for life-skills.high, current-work.rewards, and career-planning.security: the practical and financial gains depend on actually negotiating real high-stakes situations – knowledge alone doesn't fire the mechanism. [CareerBuilder data](https://resources.careerbuilder.com/news-research/73-of-employers-would-negotiate-salary-55-of-workers-don-t-ask) shows the 19% pay uplift only materialises when learners ask.
+    - `near_linear` for saving.growth: cumulative purchase negotiations produce roughly proportional savings, so each additional applied negotiation adds discrete dollar value.
+    - `mild_diminishing` for communication.conflict and communication.influence: interest-based reframing produces gradual transfer to non-negotiation contexts as the framework becomes more habitual; the gains accrue noisily across many ordinary conversations.
+
 resources:
   upfront_cost: 15
   upfront_cost_reasoning: "Getting to Yes (Fisher and Ury) costs approximately $10–15 new or $3–8 used. No other materials are required to begin."

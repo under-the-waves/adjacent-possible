@@ -138,6 +138,39 @@ values:
     uar_reasoning: |
       - See life-purpose.clarity UAR – same intervention, same adherence profile. UAR of 70%.
 
+dose_response:
+  metric: statement_completion_and_use
+  metric_label: "Statement completion, quality, and ongoing use"
+  metric_help: "Whether you have produced a personal mission statement, whether it's in your own voice rather than aspirational generic prose, and whether you consult it at significant decision points and review it annually."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No statement"
+      criterion: "No written mission statement; values held only implicitly"
+    - level: 1
+      label: "Drafted"
+      criterion: "Statement drafted in one session but never revisited, or aspirational rather than honest to actual values"
+    - level: 2
+      label: "Living document"
+      criterion: "Honest, voice-authentic statement used to inform some significant decisions but reviewed inconsistently"
+    - level: 3
+      label: "Integrated reference"
+      criterion: "Statement consulted at significant decision points and reviewed annually; has demonstrably influenced at least one major decision; aligned with actual calendar and spending"
+
+  value_templates:
+    life-purpose.clarity: mild_diminishing
+    life-purpose.meaning: mild_diminishing
+    life-purpose.integration: mild_diminishing
+    value-system.insight: mild_diminishing
+    value-system.practical: mild_diminishing
+    goals.clarity: mild_diminishing
+    goals.adaptability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the statement's value comes from sustained use as a decision heuristic, not from one-time production. [Matthews 2015](https://scholar.dominican.edu/cgi/viewcontent.cgi?article=1002&context=psychology-faculty-conference-presentations) found written goal externalisation increases follow-through, and [life crafting research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6923189/) finds the structured reflection effect persists when integrated into ongoing planning. PBS values are scored against the tier-3 state where the statement is genuinely informing decisions.
+    - All values use `mild_diminishing`. The clarity, meaning, integration, insight, and goal-related benefits accrue gradually as the statement is consulted across more decision points and refined annually. The [values clarification meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482297/) shows moderate effects on insight with smaller and more variable downstream behaviour-change effects – consistent with smooth accrual rather than sharp threshold firing. The mission statement is not `binary` because partial completion (drafting without using) still produces partial insight, and not `steep_diminishing` because writing a statement without ongoing reference yields meaningfully less than the integrated tier-3 use.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No materials required beyond pen and paper or a word processor. Optional: a book or workbook on personal mission statements, available for under $15 used but not necessary."

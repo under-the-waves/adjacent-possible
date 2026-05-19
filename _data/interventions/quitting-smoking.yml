@@ -156,6 +156,44 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: abstinence_level
+  metric_label: "Smoking status and abstinence duration"
+  metric_help: "Tiers describe how much abstinence you have actually achieved, independent of how likely you are to sustain it. The dose is the abstinence dose, not the difficulty of getting there."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "Still smoking"
+      criterion: "Smoking at typical baseline (5+ cigarettes/day) with no current cessation attempt"
+    - level: 1
+      label: "Cut down"
+      criterion: "Reduced consumption by 50%+ but still smoking daily, or oscillating between attempts and relapses"
+    - level: 2
+      label: "Mostly quit"
+      criterion: "Currently smoke-free for between 1 and 12 months, including those quit-and-slip cycles where the current run is at least 4 weeks"
+    - level: 3
+      label: "Fully smoke-free"
+      criterion: "Sustained abstinence of 12+ months from the quit date, with no return to daily smoking"
+
+  value_templates:
+    fitness.health: steep_diminishing
+    fitness.performance: mild_diminishing
+    health-management.longterm: steep_diminishing
+    health-management.vitality: mild_diminishing
+    health-management.control: threshold
+    saving.security: near_linear
+    saving.growth: near_linear
+    nutrition.pleasure_connection: threshold
+
+  rationale: |
+    - Tier cuts capture the cessation dose-response independent of UAR. Per [NEJM Evidence (2023)](https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272) and [the Doll British Doctors Study](https://pmc.ncbi.nlm.nih.gov/articles/PMC1447499/), the mortality benefit grows substantially with sustained abstinence – the 12-month mark is the standard cessation benchmark and corresponds to roughly half the cardiovascular excess risk being recovered. Tier 1 (cut down) captures the well-documented partial benefit of reduction without cessation: meaningful but far smaller than full quitting.
+    - `steep_diminishing` for fitness.health and health-management.longterm: per [NEJM Evidence (2023)](https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272), most of the lifespan and cardiovascular benefit accrues within the first 1–5 years of abstinence, with the curve flattening thereafter. Cutting down alone captures a small share of available benefit because cardiovascular risk reduction is non-linear in cigarettes per day.
+    - `near_linear` for saving.security and saving.growth: the financial benefit scales roughly proportionally with cigarettes not smoked – every avoided pack is dollars retained.
+    - `mild_diminishing` for fitness.performance and health-management.vitality: VO2max and energy recovery accrue gradually as abstinence sustains, with the largest gains in the first months.
+    - `threshold` for health-management.control: the self-efficacy benefit of having quit only fires once a sustained run is achieved – ongoing cut-down or oscillation arguably damages rather than builds health agency. Per [the cessation self-efficacy literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC1764891/), the control benefit is concentrated in those who have demonstrated sustained abstinence.
+    - `threshold` for nutrition.pleasure_connection: olfactory epithelium regeneration requires sustained nicotine clearance over weeks-to-months; cutting down doesn't reach the threshold for taste/smell recovery.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "Choosing a quit date and removing smoking materials costs nothing. NRT is available over the counter ($20–50 for a starter kit) but many national health services provide it free; varenicline requires a prescription but is often subsidised or covered by insurance. Minimum viable start (cold turkey or free quitline support) costs $0."

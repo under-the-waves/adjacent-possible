@@ -110,6 +110,37 @@ values:
     uar_reasoning: |
       - See food-management.competence UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: planning_consistency
+  metric_label: "Weekly planning and batched-shop consistency"
+  metric_help: "How reliably the 30-minute weekly planning session plus single batched grocery shop replaces daily decision-making and daily grocery runs. PBS values assume sustained adherence with an established anchor repertoire."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No plan"
+      criterion: "Daily decision-making about dinner; frequent takeaway or last-minute grocery runs"
+    - level: 1
+      label: "Loose planning"
+      criterion: "Some weeks planned, some not; plan often abandoned mid-week or shopping done outside the plan"
+    - level: 2
+      label: "Most weeks"
+      criterion: "Weekly plan plus batched shop running most weeks (3 in 4); anchor repertoire of 10+ meals established"
+    - level: 3
+      label: "Sustained system"
+      criterion: "Weekly plan plus single batched shop sustained 6+ months; anchor repertoire of 15–25 meals refined quarterly"
+
+  value_templates:
+    food-management.competence: mild_diminishing
+    food-management.waste_reduction: mild_diminishing
+    nutrition.physical_wellbeing: mild_diminishing
+    saving.security: mild_diminishing
+    time-management.productivity: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect that the active ingredient is the plan-list-shop chain operating consistently. The anchor-repertoire size matters: a small repertoire (under 10 meals) drives planning back to aspirational meal selection that fails mid-week. PBS values are scored against the sustained 6+ month system (tier 3) per the [Ducrot et al. 2017 cross-sectional research](https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-017-0461-7) on meal planners.
+    - All values use `mild_diminishing`. Competence, waste reduction, nutrition, savings, and productivity all accrue gradually with consistency and repertoire refinement. The [household food-waste research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9952321/) shows ~30% waste reduction in adherent planners – a meaningful but smooth-curve effect rather than a sharp threshold. The safe-default subjective shape applies across the value set.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost to start. The protocol uses any existing notebook, shared note, or spreadsheet for the meal plan and grocery list. Recipe books and meal-planning apps are optional enhancements."

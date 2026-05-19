@@ -106,6 +106,39 @@ values:
     uar_reasoning: |
       - See organisation.tracking UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: sops_in_active_use
+  metric_label: "SOPs in active use"
+  metric_help: "Count documented standard operating procedures you actually consult at the point of use for recurring tasks (not stored and forgotten). Procedures that have drifted out of date with the underlying process don't count."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "No SOPs"
+      criterion: "All recurring tasks run from memory or improvisation"
+    - level: 1
+      label: "1–2 SOPs"
+      criterion: "1–2 SOPs in active use (often a packing list or shopping list)"
+    - level: 2
+      label: "Several SOPs"
+      criterion: "3–5 SOPs in active use, consulted reliably; monthly maintenance review happens most months"
+    - level: 3
+      label: "Systematised"
+      criterion: "5–10 SOPs in active use across the highest-friction recurring tasks; documents stored in a single accessible location; consulted reliably; monthly maintenance review sustained"
+
+  value_templates:
+    organisation.tracking: mild_diminishing
+    organisation.order: mild_diminishing
+    organisation.speed: mild_diminishing
+    goals.follow_through: near_linear
+    current-work.competence: mild_diminishing
+
+  rationale: |
+    - Tier criteria reflect that the friction-reduction benefit only materialises when SOPs are actually consulted at the point of use per [WHO surgical checklist evidence](https://www.nejm.org/doi/full/10.1056/NEJMsa0810119), and [adherence research](https://journals.lww.com/journalacs/fulltext/2021/12000/impact_of_the_who_surgical_safety_checklist.20.aspx) showing that even institutional checklists decay without active reinforcement. PBS values assume tier 3 (5–10 SOPs systematised).
+    - Template choices:
+      - `near_linear` for goals.follow_through – each SOP unblocks one category of recurring task, so daily-action gains scale roughly with SOP count.
+      - `mild_diminishing` for the organisation and competence values – the first few high-impact SOPs capture most of the cognitive-load reduction; later SOPs cover lower-friction tasks.
+
 resources:
   upfront_cost: 0
   upfront_cost_reasoning: "No financial cost required. SOPs can be written in any existing note-taking tool (paper notebook, digital notes app, word processor). No specialised software or equipment is needed."

@@ -157,6 +157,41 @@ values:
     uar_reasoning: |
       - See relationship-status.transition-navigation UAR – same intervention, same adherence profile.
 
+dose_response:
+  metric: sessions_completed_and_curriculum_quality
+  metric_label: "Sessions completed and curriculum quality"
+  metric_help: "How many sessions of an evidence-based curriculum you complete with honest engagement, including between-session skill practice."
+  scored_at_tier: 3
+
+  tiers:
+    - level: 0
+      label: "None"
+      criterion: "No pre-marital counselling or relationship education before the major commitment"
+    - level: 1
+      label: "Token programme"
+      criterion: "1–3 sessions or a non-evidence-based programme (faith-only or generic counsellor); minimal honest disclosure"
+    - level: 2
+      label: "Short evidence-based"
+      criterion: "4–5 sessions of an evidence-based curriculum (PREP, Prepare/Enrich, or Gottman) with honest assessment but limited between-session practice"
+    - level: 3
+      label: "Full curriculum"
+      criterion: "6–12 sessions of an evidence-based curriculum with completed inventory, honest disclosure, and between-session skill practice over 2–3 months"
+
+  value_templates:
+    relationship-status.transition-navigation: threshold
+    relationship-status.partner-selection: threshold
+    relationship-quality.harmony: mild_diminishing
+    relationship-quality.alignment: mild_diminishing
+    relationship-quality.connection: mild_diminishing
+    communication.conflict: mild_diminishing
+    communication.connection: mild_diminishing
+    mental-health.stability: mild_diminishing
+
+  rationale: |
+    - Tier cuts reflect the [Hawkins et al. (2008) meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722331/) finding that effect sizes depend strongly on curriculum quality and dose – ad-hoc or under-6-hour exposures show negligible benefit, while full evidence-based curricula reach d = 0.30–0.36. Tier 3 captures the full 6–12 session evidence-based curriculum the PBS values were scored against.
+    - `threshold` for relationship-status.transition-navigation and relationship-status.partner-selection: the assessment-driven mismatch surfacing (per [Prepare/Enrich data](https://www.prepare-enrich.com/research/) on 10–15% delay/cancel rates) requires the structured inventory, which only fires at tier 2+. Token programmes don't generate this diagnostic information.
+    - `mild_diminishing` for the relationship-quality, communication, and mental-health values: skill acquisition compounds with sessions, with [Stanley et al. (2006) PREP follow-up](https://pubmed.ncbi.nlm.nih.gov/16846239/) showing that even partial completion captures some communication benefit that grows with full programme exposure and between-session practice.
+
 resources:
   upfront_cost: 500
   upfront_cost_reasoning: "Lower-cost evidence-based options include online or workbook-based PREP (~$50–$200) and clinician-led Prepare/Enrich (~$200–$400 for the assessment plus session bundle). $500 represents the minimum viable spend for an in-person, trained-counsellor programme; higher-end private therapy can run $1,500–$2,500 for a full course."
