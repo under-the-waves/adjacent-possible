@@ -61,10 +61,10 @@ Last updated: 2026-05-02 (after the country-neutral pass and 16-intervention cov
 - Aggregate magnitude uses log-sum-exp across positive WBS contributions (correct for log-scale benefits)
 - Filter checkbox: "Hide them from recommendations" appears below the summary when at least one habit is marked. Persisted in localStorage. Summary count remains accurate (uses unfiltered list).
 
-**Phase 3 candidates (not built):**
-- **Dashboard integration** – show habit count + aggregate magnitude per life area on the prioritisation dashboard
-- **Counterfactual** – "If you stopped doing X, you'd lose Y" on intervention pages
-- **Graded intervention support** – currently binary doing/not-doing. Things like "I meditate 3 days/week" vs "daily" aren't reflected. Needs dose-response parameterisation per intervention.
+**Phase 3 status:**
+- **Dashboard integration** – SHIPPED 2026-05-19. Dashboard cards show "Doing X of 5" per life area, using priority-weighted WBS ranking and the new graded tier data. See Item 13.
+- **Graded intervention support** – SHIPPED 2026-05-18 to 2026-05-19 via Item 13. Binary doing/not-doing is now replaced by the four-tier dose-response model across all 134 interventions.
+- **Counterfactual** – not built. "If you stopped doing X, you'd lose Y" on intervention pages. Now naturally expressible as the captured benefit at the current tier; the framing copy is the remaining work.
 
 ---
 
@@ -182,35 +182,33 @@ Layout reads `ap-user-country` from localStorage (set once at first visit or via
 
 ---
 
-## 13. Graded Interventions / Dose-Response – IN DESIGN
+## 13. Graded Interventions / Dose-Response – AUTHORING + DASHBOARD SHIPPED
 
-**Status:** In design as of 2026-05-18. Replaces the binary "doing / not doing" model from Item 6 (Phase 3) with per-tier adherence tracking. One test intervention authored (`daily-walking.yml`); template library created; scoring prompt updated.
+**Status:** Major chunks shipped on 2026-05-18 and 2026-05-19. Authoring complete across all 134 interventions. Intervention-page UX and dashboard rollup live. Personalised-page table integration still to do.
 
-**Design decisions made:**
-- Every intervention defines its own 4-tier scale (level 0 = not doing, level 3 = the dose PBS was scored against) with intervention-specific labels and concrete criteria in the metric's natural units. See `daily-walking.yml` for the reference implementation.
-- A shared template library at `_data/dose_response_templates.yml` defines five named curve shapes via multiplier arrays: `steep_diminishing` (front-loaded biological saturation), `mild_diminishing` (default for noisy subjective outcomes), `near_linear` (proportional outcomes), `threshold` (back-loaded with cutoff), `binary` (escape hatch).
-- Each (intervention, value) pair in `dose_response.value_templates` names one of these templates. Explicit per-pair, no intervention-level default.
-- Default to graded even for nominally on/off interventions – most have quality or consistency dimensions (an ill-fitting sleep mask, an outdated will) that justify grading.
-- Scoring prompt updated with a new `## Dose-Response` section and the `dose_response` YAML block in the output-format template, so future scoring runs include it automatically.
+**Design decisions (locked):**
+- Every intervention defines its own 4-tier scale (level 0 = not doing, level 3 = the dose PBS was scored against) with intervention-specific labels and concrete criteria in the metric's natural units. See `daily-walking.yml` as the reference.
+- A shared template library at `_data/dose_response_templates.yml` defines five named curve shapes via multiplier arrays: `steep_diminishing`, `mild_diminishing` (default for noisy subjective outcomes), `near_linear`, `threshold`, `binary` (escape hatch, rarely used).
+- Each (intervention, value) pair in `dose_response.value_templates` names one template. Explicit per-pair, no intervention-level default. Tier labels are intervention-specific (no shared vocabulary).
+- Default to graded even for nominally on/off interventions – most have quality or consistency dimensions (sleep-mask fit, will currency, 2FA account coverage) that justify grading.
+- `baseline_percentile` (outcome calibration) and Tier 0 (intervention adherence) are orthogonal axes; the methodology subsection in the scoring prompt explains the distinction.
+- UAR represents future adherence and applies to the *remaining-tier* portion when the user reports being partially adherent. We do not model per-transition UAR – sticking with one intervention-level UAR avoids over-crediting users at higher tiers due to incidental factors (a marathon runner with 2,000 commute steps hasn't demonstrated walking adherence).
+- T3-vs-original framing is preserved: at tier 3, graded EBS exceeds the original UAR-weighted EBS because the user has demonstrated adherence. Copy on the intervention page distinguishes "Your current benefits" (no UAR) from population averages.
+- Dashboard ranking is priority-weighted WBS (matching the personalised page); "Doing" threshold is tier ≥ 2.
 
-**Open design questions:**
-- **Current adherence vs. likely future adherence** must be distinguished clearly in the UI. Two cases:
-  - Interventions the user is *already doing* at some tier: UAR was a prediction; now they've demonstrated adherence at the current tier. Question becomes "how much benefit does upgrading add", and UAR(current → target) is plausibly higher than UAR(0 → 3). Show captured benefit (no UAR), plus upgrade-potential benefit (with UAR for the transition).
-  - Interventions the user *hasn't tried*: UAR fully applies. Show "maximum benefit if achieved" alongside "expected benefit on attempt (× UAR)". The smoking-quit case is the canonical illustration – very high full EBS, low expected EBS because most attempts fail.
-- Storage migration from `ap-habits-current` (currently `{key: true}`) to `{key: tier_index}`. Treat absence/false as tier 0.
-- Dashboard rollup design: "you're capturing X across your top 5; potential Y more if you progress" – per life area and possibly per pillar. Whether to UAR-discount the "potential Y" or show it raw is part of the framing question above.
-- T3-vs-original framing: at tier 3, the graded EBS exceeds the original EBS because UAR drops out (user has demonstrated adherence). UI shows both numbers side by side with explanatory copy: "Typical" includes adherence uncertainty; "For you at [tier label]" is conditional on continuing the reported practice.
-
-**Files touched so far:**
-- `_data/interventions/daily-walking.yml` – `dose_response` block added with 10 value-template assignments
-- `_data/dose_response_templates.yml` – new file, five curve templates with multipliers
-- `methodology/intervention-scoring-prompt.md` – new `## Dose-Response` section, updated output-format template
+**What shipped:**
+- `_data/dose_response_templates.yml` – five curve shapes with corrected (front-loaded) multipliers.
+- `_data/interventions/*.yml` – all 134 interventions now declare a `dose_response` block with metric, tier criteria, value_templates, and rationale.
+- `methodology/intervention-scoring-prompt.md` – new `## Dose-Response` section, `dose_response` YAML block in the output-format template, and the `baseline_percentile` vs. Tier 0 distinction subsection. Future scoring runs include it automatically.
+- `_layouts/intervention.html` – tier picker, "Your current benefits" summary, progression list with magnitude-language descriptions, sustainability paragraph (conditional on low UAR), "Going strong" badge at the scored tier, ordinal-suffix bug fix (71st rather than 71th). Hidden when an intervention lacks `dose_response` (no current cases since all 134 are authored).
+- `prioritisation/dashboard/index.md` – every life-area card on the dashboard shows "Doing X of 5" alongside its level badge. Ranking inlines all interventions plus the EBS/WBS computation and reads `ap-habits-tier` localStorage.
 
 **Not yet done:**
-- Apply dose_response block to the other 133 intervention YAMLs. This is authoring work – tier criteria require thinking about the intervention's natural unit, and template assignments require thinking about mechanism shape per value. Will need a Claude pass with the updated scoring prompt.
-- UI rendering: intervention page tier picker, personalised page graded WBS recalculation, dashboard rollup.
-- Storage migration from binary to graded state.
-- Copy work to make the captured-vs-available-vs-expected distinction land for users without being overwhelming.
+- **Personalised-page table integration.** The per-area `_layouts/personalised.html` table still uses the pre-graded EBS for every row. It should switch to showing each intervention's current captured value (or full-tier value if the user is at tier 0) and reflect tier changes interactively, in line with the intervention page.
+- **Storage migration / cleanup.** Old `ap-habits-current` (binary `{key: true}`) still exists alongside the new `ap-habits-tier` (`{key: tier_index}`). Either migrate `ap-habits-current` to `ap-habits-tier` at sign-in (treating `true` as tier 3 or tier 2, defensible either way) or accept both keys long-term. The intervention page only writes to `ap-habits-tier` now.
+- **Magnitude-language extension to the dashboard and personalised table.** The dashboard currently shows a count ("Doing 2 of 5"). It could also surface aggregate magnitude ("a strong benefit captured so far") using log-sum-exp across the user's tier-weighted EBS for the area, matching the existing intervention-page summary sentence style.
+- **Rationale-block audit for stretched templates.** Several authoring agents used `threshold` for behavioural all-or-nothing mechanisms (calorie-tracking, accessible health records, memento-mori brief vs. sustained engagement). Methodology currently describes `threshold` as a biological-minimum cutoff. Either broaden the methodology subsection or revisit those template assignments.
+- **Copy refinement.** The "Sustainability" sentence is only shown when median UAR < 70%; works for walking and smoking. Other low-UAR interventions (gym-based training, journaling) should be spot-checked to confirm the copy lands.
 
 ---
 
