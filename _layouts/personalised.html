@@ -453,6 +453,25 @@ body .main-content {
     opacity: 0.65;
 }
 
+.tier-badge {
+    display: inline-block;
+    min-width: 22px;
+    padding: 1px 5px;
+    margin-right: 6px;
+    border-radius: 10px;
+    background: #e8f5e9;
+    color: #2a5a32;
+    font-size: 0.72em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.4;
+    flex-shrink: 0;
+    cursor: help;
+}
+.tier-badge.t1 { background: #e3f2fd; color: #1565c0; }
+.tier-badge.t2 { background: #e8f5e9; color: #2a5a32; }
+.tier-badge.t3 { background: #c8e6c9; color: #1b5e20; }
+
 .habits-summary {
     margin: 0 0 6px 0;
     padding: 10px 14px;
@@ -844,6 +863,13 @@ const interventions = {
             {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{ pbs: {{ idata.values[vkey].pbs | plus: 0.0 }}, isr: {{ idata.values[vkey].isr | plus: 0.0 }}, uar: {{ idata.values[vkey].uar | plus: 0.0 }}, conf: {% if idata.values[vkey].confidence == 'high' %}1.0{% elsif idata.values[vkey].confidence == 'low' %}0.5{% else %}0.75{% endif %} }{% else %}null{% endif %}{% unless forloop.last %},{% endunless %}
             {% endfor %}
         },
+        templates: {
+            {% for value in page.values %}
+            {% assign vkey = page.domain | append: "." | append: value.key %}
+            {{ value.key | jsonify }}: {% if idata.dose_response.value_templates[vkey] %}{{ idata.dose_response.value_templates[vkey] | jsonify }}{% else %}null{% endif %}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        },
+        scoredAtTier: {{ idata.dose_response.scored_at_tier | default: 3 }},
         resources: {
             upfront_cost: {{ idata.resources.upfront_cost | plus: 0 }},
             ongoing_cost: {{ idata.resources.ongoing_cost | plus: 0.0 }},
@@ -936,6 +962,26 @@ function getInterventionUrl(key) {
     return '{{ site.baseurl }}/resources/intervention-database/' + urlKey;
 }
 
+// Dose-response template multipliers, mirroring _data/dose_response_templates.yml.
+const DR_TEMPLATES = {
+{% for entry in site.data.dose_response_templates %}
+    {{ entry[0] | jsonify }}: [{{ entry[1].multipliers | join: ", " }}]{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
+
+// Read the user's tier for an intervention. Falls back to the old binary
+// ap-habits-current key (treated as tier 2, the "doing" threshold) for users
+// whose data predates the graded model.
+function getUserTier(key) {
+    if (typeof APStorage === 'undefined') return 0;
+    var tiers = APStorage.load('ap-habits-tier') || {};
+    if (typeof tiers[key] === 'number' && tiers[key] >= 0 && tiers[key] <= 3) {
+        return tiers[key];
+    }
+    var legacy = APStorage.load('ap-habits-current') || {};
+    return legacy[key] ? 2 : 0;
+}
+
 // EBS formula – matches _layouts/intervention.html. Linear EV is in units of
 // (max_anchor / 1024); EBS = sign(EV) × log₂(1 + |EV|). Always positive for
 // positive expected value, always negative for negative; smooths near zero.
@@ -948,24 +994,41 @@ function computeEbs(pbs, isr, uar, confFactor, drFactor) {
     return Math.sign(linearEv) * Math.log2(1 + Math.abs(linearEv));
 }
 
+// Tier-aware EBS for a per-value scoring triple. For tier 0 returns the
+// "expected on attempt" EBS (PBS × ISR × UAR × confidence × full-tier multiplier),
+// which is the population-average value. For tier > 0 returns the captured
+// EBS at that tier: PBS × ISR × confidence × tier multiplier, no UAR, because
+// the user has reported they are already at this dose.
+function computeEbsForTier(v, templateName, tier) {
+    if (!v) return 0;
+    var multipliers = DR_TEMPLATES[templateName] || [0, 1, 1, 1];
+    if (tier <= 0) {
+        return computeEbs(v.pbs, v.isr, v.uar, v.conf, multipliers[3]);
+    }
+    var mult = multipliers[Math.min(tier, 3)] != null ? multipliers[Math.min(tier, 3)] : 1.0;
+    return computeEbs(v.pbs, v.isr, 100, v.conf, mult);
+}
+
 // Compute WBS as the user-weighted sum of per-value EBSes, and identify the
 // Driver: the value whose weighted contribution has the largest absolute
 // magnitude. The Driver indicates which value is making this intervention
 // rank where it does for the current user; the per-row EROIs are computed
 // against the Driver value's scale factors so EROI lives on a value-specific
 // log scale calibrated against the existing intervention distribution.
-function computeWbsAndDriver(intervention, userValues) {
+function computeWbsAndDriver(intervention, userValues, tier) {
     var wbs = 0;
     var topAbs = 0;
     var driverKey = null;
     var driverEbs = 0;
     var driverSfMoney = 1.0;
     var driverSfTime = 1.0;
+    var t = (typeof tier === 'number') ? tier : 0;
+    var templates = intervention.templates || {};
     Object.keys(userValues).forEach(function(k) {
         var v = intervention.values[k];
         if (!v) return;
         var weight = userValues[k] / 100;
-        var ebs = computeEbs(v.pbs, v.isr, v.uar, v.conf, 1.0);
+        var ebs = computeEbsForTier(v, templates[k] || 'mild_diminishing', t);
         var contribution = ebs * weight;
         wbs += contribution;
         if (Math.abs(contribution) > topAbs) {
@@ -1083,11 +1146,12 @@ function valueLabelFor(key) {
 function updateRecommendations() {
     const scored = Object.keys(interventions).map(key => {
         const i = interventions[key];
-        const wbsResult = computeWbsAndDriver(i, currentValues);
+        const tier = getUserTier(key);
+        const wbsResult = computeWbsAndDriver(i, currentValues, tier);
         const wbs = wbsResult.wbs;
         const resources = getEffectiveResources(key, i.resources);
         return {
-            key, ...i, wbs, resources,
+            key, ...i, wbs, tier, resources,
             driverKey: wbsResult.driverKey,
             driverLabel: wbsResult.driverKey ? valueLabelFor(wbsResult.driverKey) : '',
             timeEROI: calculateTimeEROI(wbsResult.driverEbs, wbsResult.driverSfTime, resources.ongoing_time_weekly),
@@ -1108,23 +1172,24 @@ function updateRecommendations() {
         case 'ongoing-time': scored.sort((a, b) => dir * (a.resources.ongoing_time_weekly - b.resources.ongoing_time_weekly)); break;
     }
 
-    const habits = getCurrentHabits();
     const hideMarked = getHideHabits();
     // Hide interventions whose WBS rounds to zero – they have no positive or
     // negative weighted contribution under the user's current sliders.
     const wbsFiltered = scored.filter(s => Math.abs(s.wbs) >= 0.05);
-    const visibleScored = hideMarked ? wbsFiltered.filter(s => !habits[s.key]) : wbsFiltered;
+    // "Doing" threshold matches the dashboard: tier >= 2.
+    const visibleScored = hideMarked ? wbsFiltered.filter(s => s.tier < 2) : wbsFiltered;
 
     recommendationsBody.innerHTML = visibleScored.map(i => {
-        const isDoing = !!habits[i.key];
+        const isDoing = i.tier >= 2;
         const rowClass = isDoing ? ' class="is-doing"' : '';
-        const checkClass = isDoing ? ' checked' : '';
-        const checkTitle = isDoing ? 'You currently do this' : 'Mark as currently doing';
+        const tierBadge = i.tier > 0
+            ? `<span class="tier-badge t${i.tier}" title="You're at tier ${i.tier} on this intervention (set on the intervention page).">T${i.tier}</span>`
+            : '';
         return `
         <tr${rowClass}>
             <td>
                 <div class="intervention-name">
-                    <span class="habit-checkmark${checkClass}" onclick="toggleHabit('${i.key}')" title="${checkTitle}"></span>
+                    ${tierBadge}
                     <a href="${getInterventionUrl(i.key)}" class="intervention-link">${i.name}</a>
                     <span class="table-description-icon" onclick="showDescriptionPopup('${i.key}')">i</span>
                 </div>
@@ -1182,13 +1247,13 @@ function toggleHabit(key) {
 }
 
 function updateHabitsSummary(scored) {
-    const habits = getCurrentHabits();
     const summaryEl = document.getElementById('habitsSummary');
     const filterEl = document.getElementById('habitFilter');
     const filterCheckbox = document.getElementById('hideHabitsCheckbox');
     if (!summaryEl) return;
 
-    const doing = scored.filter(s => habits[s.key]);
+    // "Doing" matches the dashboard's threshold (tier >= 2).
+    const doing = scored.filter(s => s.tier >= 2);
 
     if (doing.length === 0) {
         summaryEl.classList.remove('visible');
@@ -1196,7 +1261,8 @@ function updateHabitsSummary(scored) {
         return;
     }
 
-    // Aggregate via log-sum-exp across positive WBS contributions
+    // Aggregate via log-sum-exp across the user's currently captured WBS
+    // contributions (the WBS field is already tier-aware – see updateRecommendations).
     const positives = doing.map(d => d.wbs).filter(w => w > 0);
     let aggMagnitude = null;
     if (positives.length > 0) {
@@ -1207,7 +1273,7 @@ function updateHabitsSummary(scored) {
     const habitWord = doing.length === 1 ? 'habit' : 'habits';
     let msg = "You're already doing " + doing.length + ' ' + habitWord + ' in this area';
     if (aggMagnitude) {
-        msg += ', providing a ' + aggMagnitude + ' benefit to your priorities';
+        msg += ', capturing a ' + aggMagnitude + ' benefit on your priorities';
     }
     msg += '.';
     summaryEl.textContent = msg;
