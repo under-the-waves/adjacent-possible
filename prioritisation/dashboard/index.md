@@ -416,6 +416,19 @@ body .main-content {
 .area-name {
     font-size: 0.9em;
     color: #333;
+    flex: 1;
+}
+
+.area-doing {
+    font-size: 0.78em;
+    color: #666;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+.area-doing.has-progress {
+    color: #2a5a32;
+    font-weight: 600;
 }
 
 .area-name a {
@@ -515,6 +528,112 @@ const SURVEY_DATA = {
     '{{ area[0] }}': {{ area[1] | jsonify }},
 {% endfor %}
 };
+
+// Intervention data – only the fields needed to compute personalised top-5 per
+// life area. Keys are intervention slugs; values: applicable_domains list and
+// per-value PBS/ISR/UAR/confidence triples.
+const INTERVENTIONS = {
+{% for entry in site.data.interventions %}
+    {% assign slug = entry[0] %}
+    {% assign data = entry[1] %}
+    '{{ slug }}': {
+        name: {{ data.name | jsonify }},
+        applicable_domains: {{ data.applicable_domains | default: '' | jsonify }},
+        values: {
+            {% for vp in data.values %}
+            '{{ vp[0] }}': { pbs: {{ vp[1].pbs }}, isr: {{ vp[1].isr }}, uar: {{ vp[1].uar }}, conf: {{ vp[1].confidence | default: 'medium' | jsonify }} }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        }
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
+
+// Confidence factors and the EBS / WBS formulas, mirroring _layouts/personalised.html
+// exactly so the dashboard ranking matches what users see on each personalised page.
+const CONF_FACTORS = { high: 1.0, medium: 0.75, low: 0.5 };
+
+function computeEbsForRanking(pbs, isr, uar, conf) {
+    var sign = Math.sign(pbs);
+    if (sign === 0) return 0;
+    var pbsMag = Math.pow(2, Math.abs(pbs)) - 1;
+    var linearEv = sign * pbsMag * (isr / 100) * (uar / 100) * (CONF_FACTORS[conf] || 0.75);
+    return Math.sign(linearEv) * Math.log2(1 + Math.abs(linearEv));
+}
+
+// Read slider weights for an area; if none, fall back to equal weights across
+// the area's scored values. Output is a {fullKey: weight_percent} map.
+function userValuesForArea(areaSlug) {
+    var sliderWeights = (typeof APStorage !== 'undefined')
+        ? APStorage.load('ap-slider-weights') : null;
+    if (!sliderWeights) sliderWeights = {};
+    var areaSliders = sliderWeights[areaSlug] || {};
+
+    // Discover the area's value keys by scanning the interventions library.
+    var valueKeys = new Set();
+    Object.values(INTERVENTIONS).forEach(function(itv) {
+        Object.keys(itv.values).forEach(function(fk) {
+            if (fk.indexOf(areaSlug + '.') === 0) valueKeys.add(fk);
+        });
+    });
+    var keys = Array.from(valueKeys);
+    if (keys.length === 0) return {};
+
+    var map = {};
+    var hasAnySliderForArea = keys.some(function(k) {
+        var vName = k.substring(areaSlug.length + 1);
+        return typeof areaSliders[vName] === 'number';
+    });
+    if (hasAnySliderForArea) {
+        keys.forEach(function(k) {
+            var vName = k.substring(areaSlug.length + 1);
+            map[k] = (typeof areaSliders[vName] === 'number') ? areaSliders[vName] : 0;
+        });
+    } else {
+        var eq = 100 / keys.length;
+        keys.forEach(function(k) { map[k] = eq; });
+    }
+    return map;
+}
+
+// Weighted Benefit Score for an intervention against an area's user weights.
+function computeWbsForArea(intervention, userValues) {
+    var wbs = 0;
+    Object.keys(userValues).forEach(function(k) {
+        var v = intervention.values[k];
+        if (!v) return;
+        var weight = userValues[k] / 100;
+        wbs += computeEbsForRanking(v.pbs, v.isr, v.uar, v.conf) * weight;
+    });
+    return wbs;
+}
+
+// Top 5 intervention slugs for a life area, ranked by user-weighted WBS.
+function topInterventionsForArea(areaSlug) {
+    var userValues = userValuesForArea(areaSlug);
+    var candidates = [];
+    Object.keys(INTERVENTIONS).forEach(function(slug) {
+        var itv = INTERVENTIONS[slug];
+        var domains = itv.applicable_domains || [];
+        if (domains.indexOf(areaSlug) === -1) return;
+        var wbs = computeWbsForArea(itv, userValues);
+        if (wbs > 0) candidates.push({ slug: slug, wbs: wbs });
+    });
+    candidates.sort(function(a, b) { return b.wbs - a.wbs; });
+    return candidates.slice(0, 5).map(function(c) { return c.slug; });
+}
+
+// Count how many of a slug list the user is doing at tier >= 2.
+function countDoingFromList(slugs) {
+    var tierMap = {};
+    try {
+        var raw = localStorage.getItem('ap-habits-tier');
+        if (raw) tierMap = JSON.parse(raw);
+    } catch (e) {}
+    return slugs.reduce(function(acc, slug) {
+        var t = tierMap[slug];
+        return acc + ((typeof t === 'number' && t >= 2) ? 1 : 0);
+    }, 0);
+}
 
 // ── Layout ordering ──
 const PILLARS = [
@@ -1083,8 +1202,19 @@ function renderResults() {
                     ? `<span class="area-level-badge lb-${level}${propClass}" title="${LEVEL_NAMES[level]}${propagated ? ' (estimated)' : ''}">${level}</span>`
                     : `<span class="area-level-badge lb-0">-</span>`;
 
+                const top5 = topInterventionsForArea(area.slug);
+                const doingCount = countDoingFromList(top5);
+                const doingClass = doingCount > 0 ? 'area-doing has-progress' : 'area-doing';
+                const doingTitle = top5.length === 0
+                    ? 'No scored interventions found for this life area.'
+                    : 'Top 5 interventions for this life area, weighted by your priorities: ' + top5.map(s => INTERVENTIONS[s].name).join('; ');
+                const doingLabel = top5.length === 0
+                    ? ''
+                    : `<span class="${doingClass}" title="${doingTitle}">Doing ${doingCount} of ${top5.length}</span>`;
+
                 bodyHTML += `<div class="area-card level-${level}">
                     <span class="area-name"><a href="${baseUrl}/${area.slug}/">${area.label}</a></span>
+                    ${doingLabel}
                     ${badge}
                 </div>`;
             });
