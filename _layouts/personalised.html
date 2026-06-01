@@ -547,6 +547,24 @@ body .main-content {
 .tier-badge.t2 { background: #e8f5e9; color: #2a5a32; }
 .tier-badge.t3 { background: #c8e6c9; color: #1b5e20; }
 
+.cross-domain-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+    background: #fff3e0;
+    color: #b35900;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.4;
+    flex-shrink: 0;
+    cursor: help;
+    border: 1px solid #ffe0b2;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
 .habits-summary {
     margin: 0 0 6px 0;
     padding: 10px 14px;
@@ -945,6 +963,8 @@ const interventions = {
     {{ ikey | jsonify }}: {
         name: {{ idata.name | jsonify }},
         description: {{ idata.what_it_is | jsonify }},
+        primaryDomain: {{ idata.applicable_domains[0] | jsonify }},
+        applicableDomains: {{ idata.applicable_domains | jsonify }},
         values: {
             {% for value in page.values %}
             {{ value.key | jsonify }}: {% assign vkey = page.domain | append: "." | append: value.key %}{% if idata.values[vkey] %}{ pbs: {{ idata.values[vkey].pbs | plus: 0.0 }}, isr: {{ idata.values[vkey].isr | plus: 0.0 }}, uar: {{ idata.values[vkey].uar | plus: 0.0 }}, conf: {% if idata.values[vkey].confidence == 'high' %}1.0{% elsif idata.values[vkey].confidence == 'low' %}0.5{% else %}0.75{% endif %} }{% else %}null{% endif %}{% unless forloop.last %},{% endunless %}
@@ -1147,6 +1167,12 @@ function updateWeightBar() {
 function getInterventionUrl(key) {
     const urlKey = key.replace(/_/g, '-');
     return '{{ site.baseurl }}/resources/intervention-database/' + urlKey;
+}
+
+// snake-or-kebab-case domain key → "Title Case" display label.
+function formatDomainLabel(key) {
+    if (!key) return '';
+    return key.replace(/[-_]/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
 }
 
 // Dose-response template multipliers, mirroring _data/dose_response_templates.yml.
@@ -1465,11 +1491,15 @@ function updateRecommendations() {
         const tierBadge = i.tier > 0
             ? `<span class="tier-badge t${i.tier}" title="You're at tier ${i.tier} on this intervention (set on the intervention page).">T${i.tier}</span>`
             : '';
+        const isCrossDomain = i.primaryDomain && i.primaryDomain !== domain;
+        const crossDomainBadge = isCrossDomain
+            ? `<span class="cross-domain-badge" title="This intervention's main area is ${formatDomainLabel(i.primaryDomain)}. It appears here because it also contributes to ${formatDomainLabel(domain)} via cross-domain scoring.">cross-domain</span>`
+            : '';
         return `
         <tr${rowClass}>
             <td>
                 <div class="intervention-name">
-                    ${tierBadge}
+                    ${tierBadge}${crossDomainBadge}
                     <a href="${getInterventionUrl(i.key)}" class="intervention-link">${i.name}</a>
                     <span class="table-description-icon" onclick="showDescriptionPopup('${i.key}')">i</span>
                 </div>
