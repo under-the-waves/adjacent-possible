@@ -1,0 +1,57 @@
+{% comment %}
+Assessment privacy note + signed-out save warning. Shown above the Level 1
+question groups on every life-area Awareness assessment. The signed-out banner
+auto-shows when Clerk reports no user; it hides on sign-in via the ap-auth-change
+event already emitted by the APStorage layer.
+{% endcomment %}
+<style>
+.assess-signed-out {
+    display: none;
+    background: #fff8e1;
+    border-left: 4px solid #ffa726;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    color: #6d4c1a;
+    font-size: 0.92em;
+    line-height: 1.5;
+}
+.assess-signed-out.visible { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.assess-signed-out .assess-signed-out-text { flex: 1; min-width: 220px; }
+.assess-signed-out strong { color: #5a3e10; }
+.assess-signin-btn {
+    padding: 6px 14px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.assess-signin-btn:hover { background: #2e7d32; }
+</style>
+
+<div class="assess-signed-out" id="assess-signed-out">
+    <span class="assess-signed-out-text"><strong>You're not signed in.</strong> Your answers will save on this device only and won't follow you to other devices.</span>
+    <button type="button" class="assess-signin-btn" onclick="window.Clerk &amp;&amp; window.Clerk.openSignIn({ afterSignInUrl: window.location.href, afterSignUpUrl: window.location.href })">Sign in to save</button>
+</div>
+<div class="assess-privacy">Your individual answers stay on your device &ndash; they're never sent to our servers. When you're signed in, only the resulting percentile scores (single numbers, not the answers themselves) sync to your account so they're available across devices. Percentile estimates are approximate: they position you roughly relative to the general population based on your self-report, but could easily be off by 10&ndash;15 points.</div>
+
+<script>
+(function() {
+    function refreshSignedOutBanner() {
+        var el = document.getElementById('assess-signed-out');
+        if (!el) return;
+        var signedIn = typeof APStorage !== 'undefined' && APStorage.isSignedIn();
+        el.classList.toggle('visible', !signedIn);
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', refreshSignedOutBanner);
+    } else {
+        refreshSignedOutBanner();
+    }
+    window.addEventListener('ap-clerk-ready', refreshSignedOutBanner);
+    window.addEventListener('ap-auth-change', refreshSignedOutBanner);
+})();
+</script>

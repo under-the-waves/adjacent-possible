@@ -387,7 +387,7 @@ life_area_slug: self-awareness
     <div class="l1-step-body">
         <div class="l1-step-content">
 
-<div class="assess-privacy">Your answers are stored only on your device and are never sent to our servers. Only your estimated percentile scores (single numbers, not your answers) may be synced if you create an account. Percentile estimates are approximate – they position you roughly relative to the general population based on your self-report, but could easily be off by 10–15 points.</div>
+{% include assess-privacy.html %}
 
 <div class="assess-group">
 <h4>Psychological</h4>

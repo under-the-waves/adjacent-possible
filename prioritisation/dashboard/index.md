@@ -431,6 +431,44 @@ body .main-content {
     font-weight: 600;
 }
 
+.area-pct {
+    font-size: 0.78em;
+    color: #555;
+    margin: 0 6px 0 0;
+    white-space: nowrap;
+    cursor: help;
+}
+
+.dashboard-tip {
+    background: #e8f5e9;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 0.92em;
+    color: #2a5a32;
+    line-height: 1.55;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+.dashboard-tip .dashboard-tip-text { flex: 1; min-width: 240px; }
+.dashboard-tip strong { color: #1b5e20; }
+.dashboard-tip-dismiss {
+    padding: 5px 12px;
+    background: transparent;
+    color: #2a5a32;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+.dashboard-tip-dismiss:hover {
+    background: #4CAF50;
+    color: white;
+}
+
 .area-name a {
     color: #333;
     text-decoration: none;
@@ -620,6 +658,31 @@ function topInterventionsForArea(areaSlug) {
     });
     candidates.sort(function(a, b) { return b.wbs - a.wbs; });
     return candidates.slice(0, 5).map(function(c) { return c.slug; });
+}
+
+// Load per-area, per-value percentile estimates from the Awareness assessment.
+// Shape: { areaSlug: { valueKey: percentile } }. Returns {} when the user hasn't
+// completed any per-area assessments yet.
+function loadPercentileScores() {
+    try {
+        var raw = localStorage.getItem('ap-level1-scores');
+        return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+}
+
+// Mean percentile for an area, treating "answered" values only. Returns null
+// when the user has no assessment data for the area, so callers can decide how
+// to handle the absence (sort neutrally vs. hide).
+function averagePercentileForArea(slug, allScores) {
+    var scores = allScores && allScores[slug];
+    if (!scores) return null;
+    var nums = [];
+    Object.keys(scores).forEach(function(k) {
+        var n = scores[k];
+        if (typeof n === 'number' && !isNaN(n)) nums.push(n);
+    });
+    if (nums.length === 0) return null;
+    return nums.reduce(function(s, n) { return s + n; }, 0) / nums.length;
 }
 
 // Count how many of a slug list the user is doing at tier >= 2.
@@ -1170,12 +1233,16 @@ function finishSurvey() {
 
 function renderResults() {
     const levels = loadLevels();
+    const percentileScores = loadPercentileScores();
     const el = document.getElementById('viewResults');
     const baseUrl = '{{ site.baseurl }}';
 
     let totalAssessed = 0, totalLevel = 0;
-    let lowest = { name: '', level: 6 };
-    let highest = { name: '', level: 0 };
+    // Track assessed areas to compute lowest/highest with percentile tiebreaks.
+    // Plain level comparison ties when multiple areas share a band, which is
+    // common after the Quick survey or after only completing per-area
+    // Awareness assessments (which always land at band 1).
+    const assessedAreas = [];
 
     let gridHTML = '';
     PILLARS.forEach(pillar => {
@@ -1187,19 +1254,23 @@ function renderResults() {
             domain.areas.forEach(area => {
                 const level = levels[area.slug] || 0;
                 const propagated = levels['_propagated_' + area.slug];
+                const pct = averagePercentileForArea(area.slug, percentileScores);
 
                 if (level > 0) {
                     totalAssessed++;
                     totalLevel += level;
                     pillarTotal += level;
                     pillarCount++;
-                    if (level < lowest.level) lowest = { name: area.label, level };
-                    if (level > highest.level) highest = { name: area.label, level };
+                    assessedAreas.push({ name: area.label, level: level, pct: pct });
                 }
 
                 const propClass = propagated ? ' propagated' : '';
+                const pctLabel = pct != null ? `<span class="area-pct" title="Average percentile across your Awareness assessment answers for this area.">~${Math.round(pct)}th</span>` : '';
+                const badgeTitle = level > 0
+                    ? LEVEL_NAMES[level] + (propagated ? ' (estimated)' : '') + (pct != null ? ' &middot; ~' + Math.round(pct) + 'th percentile' : '')
+                    : '';
                 const badge = level > 0
-                    ? `<span class="area-level-badge lb-${level}${propClass}" title="${LEVEL_NAMES[level]}${propagated ? ' (estimated)' : ''}">${level}</span>`
+                    ? `<span class="area-level-badge lb-${level}${propClass}" title="${badgeTitle}">${level}</span>`
                     : `<span class="area-level-badge lb-0">-</span>`;
 
                 const top5 = topInterventionsForArea(area.slug);
@@ -1215,6 +1286,7 @@ function renderResults() {
                 bodyHTML += `<div class="area-card level-${level}">
                     <span class="area-name"><a href="${baseUrl}/${area.slug}/">${area.label}</a></span>
                     ${doingLabel}
+                    ${pctLabel}
                     ${badge}
                 </div>`;
             });
@@ -1229,6 +1301,22 @@ function renderResults() {
                 <span class="pillar-avg">Avg: ${avg}</span>
             </div>${bodyHTML}</div>`;
     });
+
+    // Sort ascending by (level, percentile) so lowest is first and highest is
+    // last. Missing percentile is treated as the band's midpoint (50) so areas
+    // without assessment data fall neutrally rather than sinking to the floor.
+    assessedAreas.sort(function(a, b) {
+        if (a.level !== b.level) return a.level - b.level;
+        var ap = a.pct == null ? 50 : a.pct;
+        var bp = b.pct == null ? 50 : b.pct;
+        return ap - bp;
+    });
+    const lowest = assessedAreas.length > 0
+        ? { name: assessedAreas[0].name, level: assessedAreas[0].level }
+        : { name: '', level: 6 };
+    const highest = assessedAreas.length > 0
+        ? { name: assessedAreas[assessedAreas.length - 1].name, level: assessedAreas[assessedAreas.length - 1].level }
+        : { name: '', level: 0 };
 
     const totalAreas = getAllAreas().length;
 
@@ -1262,6 +1350,11 @@ function renderResults() {
             </div>
         </div>
 
+        ${levelUpTipDismissed() ? '' : `<div class="dashboard-tip" id="dashboardLevelUpTip">
+            <span class="dashboard-tip-text"><strong>How do I advance a band?</strong> Bands reflect assessed habits and outcomes, not the survey alone. To move beyond Awareness: retake the survey at <strong>Standard</strong> or <strong>Detailed</strong> depth and pick a higher band when it genuinely describes you, or open a life-area page and check off achievements as you build the underlying habits.</span>
+            <button class="dashboard-tip-dismiss" onclick="dismissLevelUpTip()">Got it</button>
+        </div>`}
+
         <div class="dashboard-controls">
             <button onclick="retakeSurvey()">Retake Survey</button>
             <button onclick="exportData()">Export CSV</button>
@@ -1269,6 +1362,17 @@ function renderResults() {
 
         <div id="dashboardGrid">${gridHTML}</div>
     `;
+}
+
+function levelUpTipDismissed() {
+    try { return !!localStorage.getItem('ap-dashboard-levelup-dismissed'); }
+    catch (e) { return false; }
+}
+
+function dismissLevelUpTip() {
+    try { localStorage.setItem('ap-dashboard-levelup-dismissed', '1'); } catch (e) {}
+    var el = document.getElementById('dashboardLevelUpTip');
+    if (el) el.style.display = 'none';
 }
 
 function retakeSurvey() {
