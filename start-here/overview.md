@@ -2,6 +2,7 @@
 layout: default
 title: Overview
 permalink: /start-here/overview/
+human_written: true
 ---
 
 # What is Worthwhile?
