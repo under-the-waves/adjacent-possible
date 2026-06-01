@@ -395,6 +395,7 @@ body .main-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
     padding: 8px 12px;
     background: #f8f9fa;
     border-radius: 6px;
@@ -404,6 +405,31 @@ body .main-content {
 
 .area-card:hover {
     background: #e9ecef;
+}
+
+.area-card-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.area-next-row {
+    font-size: 0.75em;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.area-next-row a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.area-next-row a:hover {
+    text-decoration: underline;
 }
 
 .area-card.level-0 { border-left-color: #bdbdbd; }
@@ -658,6 +684,35 @@ function topInterventionsForArea(areaSlug) {
     });
     candidates.sort(function(a, b) { return b.wbs - a.wbs; });
     return candidates.slice(0, 5).map(function(c) { return c.slug; });
+}
+
+// Highest-WBS intervention for an area that the user isn't already doing
+// (tier < 2). Returns { slug, name } or null when nothing qualifies.
+// Surfaces a concrete next action on the dashboard so band+percentile data
+// translates into an actual click target.
+function topNotDoingForArea(areaSlug) {
+    var userValues = userValuesForArea(areaSlug);
+    var tierMap = {};
+    try {
+        var raw = localStorage.getItem('ap-habits-tier');
+        if (raw) tierMap = JSON.parse(raw);
+    } catch (e) {}
+    var best = null;
+    Object.keys(INTERVENTIONS).forEach(function(slug) {
+        var itv = INTERVENTIONS[slug];
+        var domains = itv.applicable_domains || [];
+        if (domains.indexOf(areaSlug) === -1) return;
+        var t = tierMap[slug];
+        if (typeof t === 'number' && t >= 2) return;
+        var wbs = computeWbsForArea(itv, userValues);
+        if (wbs <= 0) return;
+        if (!best || wbs > best.wbs) best = { slug: slug, name: itv.name, wbs: wbs };
+    });
+    return best;
+}
+
+function interventionUrl(slug) {
+    return '{{ site.baseurl }}/resources/intervention-database/' + slug.replace(/_/g, '-');
 }
 
 // Load per-area, per-value percentile estimates from the Awareness assessment.
@@ -1283,8 +1338,16 @@ function renderResults() {
                     ? ''
                     : `<span class="${doingClass}" title="${doingTitle}">Doing ${doingCount} of ${top5.length}</span>`;
 
+                const nextItv = topNotDoingForArea(area.slug);
+                const nextRow = nextItv
+                    ? `<div class="area-next-row" title="Highest-WBS intervention you're not yet doing for this area.">Try next: <a href="${interventionUrl(nextItv.slug)}">${nextItv.name}</a></div>`
+                    : '';
+
                 bodyHTML += `<div class="area-card level-${level}">
-                    <span class="area-name"><a href="${baseUrl}/${area.slug}/">${area.label}</a></span>
+                    <div class="area-card-main">
+                        <span class="area-name"><a href="${baseUrl}/${area.slug}/">${area.label}</a></span>
+                        ${nextRow}
+                    </div>
                     ${doingLabel}
                     ${pctLabel}
                     ${badge}

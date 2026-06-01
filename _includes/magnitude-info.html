@@ -1,0 +1,193 @@
+{% comment %}
+Shared magnitude glossary: coloured spans for slight/modest/meaningful/strong/transformative
+plus a single popover that explains what each label means in EBS terms.
+Drop this include once per page; call `magnitudeSpan(label)` from inline JS
+to render a clickable, colour-coded magnitude word.
+
+EBS scale (matches _layouts/intervention.html ebsMagnitudeLabel):
+  slight        |EBS| < 1
+  modest        1 ≤ |EBS| < 3
+  meaningful    3 ≤ |EBS| < 5
+  strong        5 ≤ |EBS| < 7
+  transformative |EBS| ≥ 7
+
+Each EBS point ≈ 2× the impact of the previous, so the gap between
+'slight' and 'transformative' is roughly 128× in absolute benefit.
+{% endcomment %}
+<style>
+.mag-word {
+    cursor: pointer;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    border-bottom: 1px dashed currentColor;
+    transition: opacity 0.15s;
+}
+.mag-word:hover { opacity: 0.8; }
+.mag-slight        { color: #757575; background: #f5f5f5; }
+.mag-modest        { color: #546e7a; background: #eceff1; }
+.mag-meaningful    { color: #00796b; background: #e0f2f1; }
+.mag-strong        { color: #2e7d32; background: #e8f5e9; }
+.mag-transformative { color: #1b5e20; background: #c8e6c9; }
+
+.mag-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1099;
+}
+.mag-popup-overlay.visible { display: block; }
+.mag-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    padding: 22px 26px;
+    max-width: 460px;
+    width: 92%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    z-index: 1100;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+.mag-popup.visible { display: block; }
+.mag-popup .mag-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+.mag-popup .mag-popup-close:hover { color: #333; }
+.mag-popup h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.05em;
+    text-transform: capitalize;
+}
+.mag-popup .mag-popup-sub {
+    color: #666;
+    font-size: 0.85em;
+    margin-bottom: 14px;
+}
+.mag-popup ul {
+    margin: 0 0 14px 0;
+    padding-left: 20px;
+    font-size: 0.92em;
+}
+.mag-popup li { margin-bottom: 6px; }
+.mag-popup .mag-popup-footnote {
+    font-size: 0.82em;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 6px;
+}
+</style>
+
+<div class="mag-popup-overlay" id="magPopupOverlay" onclick="hideMagnitudeInfo()"></div>
+<div class="mag-popup" id="magPopup" role="dialog" aria-modal="true" aria-labelledby="magPopupTitle">
+    <button type="button" class="mag-popup-close" onclick="hideMagnitudeInfo()" aria-label="Close">&times;</button>
+    <h3 id="magPopupTitle"></h3>
+    <div class="mag-popup-sub" id="magPopupSub"></div>
+    <ul id="magPopupBullets"></ul>
+    <div class="mag-popup-footnote">Magnitude labels come from the Expected Benefit Score (EBS), which combines magnitude of benefit, success rate, adherence, and confidence on a logarithmic scale. Each EBS point ≈ 2&times; the previous step's impact.</div>
+</div>
+
+<script>
+(function() {
+    var MAG_INFO = {
+        slight: {
+            range: 'EBS under 1',
+            sub: 'Barely noticeable in real terms.',
+            bullets: [
+                'A small fraction of the value\'s native unit (e.g. ~0.06 kg lean mass gained for body composition, or a brief subjective uplift).',
+                'Useful only if the cost is essentially zero – otherwise other interventions will dominate it.'
+            ]
+        },
+        modest: {
+            range: 'EBS between 1 and 3',
+            sub: 'A real but small benefit – noticeable on reflection rather than in the moment.',
+            bullets: [
+                'Roughly 2× to 8× greater than a slight effect.',
+                'For a linear-anchored value, around the bottom quartile of the scale (e.g. ~0.25 kg lean mass, 0.4% body weight lost).',
+                'Worth pursuing when the cost is low or it stacks with other small wins.'
+            ]
+        },
+        meaningful: {
+            range: 'EBS between 3 and 5',
+            sub: 'A clearly worthwhile improvement you would notice over a year.',
+            bullets: [
+                'Roughly 8× to 32× greater than a slight effect.',
+                'For a linear-anchored value, mid-scale (e.g. ~0.9 kg lean mass, 1.5% body weight lost, ~1 year of healthy life expectancy added).',
+                'The threshold at which an intervention usually earns its place in a long-term routine.'
+            ]
+        },
+        strong: {
+            range: 'EBS between 5 and 7',
+            sub: 'A substantial change you and people around you would notice within months.',
+            bullets: [
+                'Roughly 32× to 128× greater than a slight effect.',
+                'For a linear-anchored value, upper-mid-scale (e.g. ~3 kg lean mass gained, ~3 years of healthy life expectancy, 6% body weight lost).',
+                'Usually one of the top few interventions in its life area.'
+            ]
+        },
+        transformative: {
+            range: 'EBS 7 or higher',
+            sub: 'A major life change that reshapes the trajectory of this value.',
+            bullets: [
+                'More than 128× the impact of a slight effect.',
+                'Near the top of the scale (e.g. 15+ kg lean mass gained, 25%+ body weight lost, 8+ years of healthy life expectancy, sustained mastery on a subjective value).',
+                'Rare. The interventions that reach this band typically require sustained behaviour change or a high-cost commitment that pays off over years.'
+            ]
+        }
+    };
+
+    window.showMagnitudeInfo = function(label) {
+        var info = MAG_INFO[label];
+        if (!info) return;
+        var title = document.getElementById('magPopupTitle');
+        var sub = document.getElementById('magPopupSub');
+        var bullets = document.getElementById('magPopupBullets');
+        if (!title || !sub || !bullets) return;
+        title.textContent = label + ' benefit';
+        title.className = 'mag-' + label;
+        sub.innerHTML = '<strong>' + info.range + '.</strong> ' + info.sub;
+        bullets.innerHTML = info.bullets.map(function(b) { return '<li>' + b + '</li>'; }).join('');
+        document.getElementById('magPopupOverlay').classList.add('visible');
+        document.getElementById('magPopup').classList.add('visible');
+    };
+
+    window.hideMagnitudeInfo = function() {
+        var ov = document.getElementById('magPopupOverlay');
+        var p = document.getElementById('magPopup');
+        if (ov) ov.classList.remove('visible');
+        if (p) p.classList.remove('visible');
+    };
+
+    // Render a coloured, clickable magnitude word for inline HTML. Safe to
+    // call from any layout's templating because the resulting span is
+    // self-contained and the popover lives at the document root.
+    window.magnitudeSpan = function(label) {
+        if (!MAG_INFO[label]) return label;
+        return '<span class="mag-word mag-' + label +
+            '" onclick="showMagnitudeInfo(\'' + label + '\')" ' +
+            'title="Click for what \'' + label + '\' means">' + label + '</span>';
+    };
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') hideMagnitudeInfo();
+    });
+})();
+</script>

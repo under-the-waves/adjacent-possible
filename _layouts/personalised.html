@@ -165,12 +165,67 @@ body .main-content {
     margin: 0;
 }
 
+.slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .slider-percentage {
     font-weight: bold;
     font-size: 1em;
     color: #4CAF50;
     min-width: 40px;
     text-align: right;
+    cursor: text;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+.slider-percentage:hover {
+    background: rgba(76, 175, 80, 0.12);
+}
+
+.slider-percentage-input {
+    width: 56px;
+    padding: 1px 4px;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1em;
+    text-align: right;
+    background: white;
+    outline: none;
+}
+
+.slider-lock-btn {
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 2px 6px;
+    color: #999;
+    font-size: 0.95em;
+    border-radius: 4px;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    line-height: 1;
+}
+
+.slider-lock-btn:hover {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.08);
+}
+
+.slider-lock-btn.locked {
+    color: #4CAF50;
+    border-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.value-slider.is-locked {
+    background: #ecf6ec;
 }
 
 .slider-track {
@@ -738,6 +793,8 @@ body .main-content {
 }
 </style>
 
+{% include magnitude-info.html %}
+
 <div class="personalised-container">
     <div class="breadcrumb-nav">
         <a href="{{ site.baseurl }}/">Home</a> >
@@ -776,7 +833,10 @@ body .main-content {
                     <div class="value-slider" id="slider-wrapper-{{ value.key }}">
                         <div class="slider-header">
                             <label class="slider-label">{{ value.label }}</label>
-                            <span class="slider-percentage" id="percent-{{ value.key }}">{{ value.default_weight }}%</span>
+                            <div class="slider-controls">
+                                <span class="slider-percentage" id="percent-{{ value.key }}" data-key="{{ value.key }}" title="Click to set a precise value">{{ value.default_weight }}%</span>
+                                <button type="button" class="slider-lock-btn" id="lock-{{ value.key }}" data-key="{{ value.key }}" aria-label="Lock {{ value.label }} slider" title="Lock so this value stays fixed when you adjust others">&#x1F513;</button>
+                            </div>
                         </div>
                         <input type="range" min="0" max="100" value="{{ value.default_weight }}" class="slider-track" id="slider-{{ value.key }}" style="background: {{ value.color }};">
                         <p class="slider-description">{{ value.description }}</p>
@@ -926,35 +986,74 @@ if (savedSliderWeights[domain]) {
 let currentSort = 'wbs';
 let sortAscending = false;
 
+// Locked slider keys for this domain. Persisted alongside slider weights so a
+// user's "vitality stays at 40%" pin survives reloads and Clerk sync.
+const lockedSliders = new Set();
+const savedSliderLocks = (typeof APStorage !== 'undefined') ? APStorage.load('ap-slider-locks') || {} : {};
+if (Array.isArray(savedSliderLocks[domain])) {
+    savedSliderLocks[domain].forEach(k => {
+        if (currentValues.hasOwnProperty(k)) lockedSliders.add(k);
+    });
+}
+
+function persistLocks() {
+    if (typeof APStorage === 'undefined') return;
+    const all = APStorage.load('ap-slider-locks') || {};
+    if (lockedSliders.size === 0) delete all[domain];
+    else all[domain] = Array.from(lockedSliders);
+    APStorage.save('ap-slider-locks', all);
+}
+
 // Get DOM elements
 const sliders = {};
 const percentLabels = {};
+const lockButtons = {};
 valueConfig.forEach(v => {
     sliders[v.key] = document.getElementById('slider-' + v.key);
     percentLabels[v.key] = document.getElementById('percent-' + v.key);
+    lockButtons[v.key] = document.getElementById('lock-' + v.key);
 });
 
 const recommendationsBody = document.getElementById('recommendationsBody');
 
-// Smart slider adjustment
+// Smart slider adjustment. Locked sliders are treated as fixed alongside the
+// changedSlider – only unlocked sliders absorb the rebalancing so a user can
+// pin a value (e.g. vitality at 40%) and adjust others without disturbing it.
 function adjustSliders(changedSlider, newValue) {
+    const allKeys = Object.keys(currentValues);
+    const lockedFixed = allKeys.filter(k => k !== changedSlider && lockedSliders.has(k));
+    const unlockedOthers = allKeys.filter(k => k !== changedSlider && !lockedSliders.has(k));
+    const lockedTotal = lockedFixed.reduce((s, k) => s + currentValues[k], 0);
+
+    // Clamp newValue so it leaves room for the locked sliders. Without this,
+    // dragging the active slider past (100 − lockedTotal) would silently push
+    // some unlocked siblings negative.
+    const maxAllowed = Math.max(0, 100 - lockedTotal);
+    newValue = Math.max(0, Math.min(maxAllowed, newValue));
     currentValues[changedSlider] = newValue;
 
-    const otherKeys = Object.keys(currentValues).filter(k => k !== changedSlider);
-    const otherTotal = otherKeys.reduce((sum, k) => sum + currentValues[k], 0);
-
-    if (otherTotal === 0) {
-        const remaining = 100 - newValue;
-        const per = remaining / otherKeys.length;
-        otherKeys.forEach(k => { currentValues[k] = per; });
+    if (unlockedOthers.length === 0) {
+        // Nothing left to rebalance against. The changed slider already absorbed
+        // everything available; locked sliders stay pinned.
     } else {
-        const remaining = 100 - newValue;
-        const scale = remaining / otherTotal;
-        otherKeys.forEach(k => { currentValues[k] = Math.max(0, currentValues[k] * scale); });
+        const unlockedTotal = unlockedOthers.reduce((sum, k) => sum + currentValues[k], 0);
+        const remaining = 100 - newValue - lockedTotal;
+        if (unlockedTotal === 0) {
+            const per = remaining / unlockedOthers.length;
+            unlockedOthers.forEach(k => { currentValues[k] = per; });
+        } else {
+            const scale = remaining / unlockedTotal;
+            unlockedOthers.forEach(k => { currentValues[k] = Math.max(0, currentValues[k] * scale); });
+        }
     }
 
+    // Rounding correction: route any residual to the first unlocked sibling, or
+    // back into the changed slider if every other slider is locked.
     const total = Object.values(currentValues).reduce((s, v) => s + v, 0);
-    if (total !== 100) { currentValues[changedSlider] += 100 - total; }
+    if (Math.abs(total - 100) > 0.001) {
+        const target = unlockedOthers[0] || changedSlider;
+        currentValues[target] += 100 - total;
+    }
 
     // Persist slider weights
     if (typeof APStorage !== 'undefined') {
@@ -966,11 +1065,72 @@ function adjustSliders(changedSlider, newValue) {
     updateAllControls();
 }
 
+function toggleSliderLock(key) {
+    if (!currentValues.hasOwnProperty(key)) return;
+    if (lockedSliders.has(key)) lockedSliders.delete(key);
+    else lockedSliders.add(key);
+    persistLocks();
+    updateLockVisuals();
+}
+
+function updateLockVisuals() {
+    valueConfig.forEach(v => {
+        const wrapper = document.getElementById('slider-wrapper-' + v.key);
+        const btn = lockButtons[v.key];
+        const locked = lockedSliders.has(v.key);
+        if (wrapper) wrapper.classList.toggle('is-locked', locked);
+        if (btn) {
+            btn.classList.toggle('locked', locked);
+            btn.innerHTML = locked ? '&#x1F512;' : '&#x1F513;';
+            btn.setAttribute('title', locked ? 'Unlock so this value can rebalance again' : 'Lock so this value stays fixed when you adjust others');
+        }
+    });
+}
+
+// Inline edit on the percentage label: click to type, Enter or blur to apply.
+function enterPercentageEdit(key) {
+    const label = percentLabels[key];
+    if (!label || label.classList.contains('editing')) return;
+    label.classList.add('editing');
+    const current = Math.round(currentValues[key]);
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.min = '0';
+    input.max = '100';
+    input.value = current;
+    input.className = 'slider-percentage-input';
+    label.textContent = '';
+    label.appendChild(input);
+    input.focus();
+    input.select();
+    let committed = false;
+    function commit() {
+        if (committed) return;
+        committed = true;
+        const raw = parseFloat(input.value);
+        label.classList.remove('editing');
+        if (!isNaN(raw)) {
+            adjustSliders(key, Math.max(0, Math.min(100, raw)));
+        } else {
+            label.textContent = Math.round(currentValues[key]) + '% ';
+        }
+    }
+    input.addEventListener('blur', commit);
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); commit(); }
+        else if (e.key === 'Escape') { e.preventDefault(); committed = true; label.classList.remove('editing'); label.textContent = Math.round(currentValues[key]) + '% '; }
+    });
+}
+
 function updateAllControls() {
     Object.keys(sliders).forEach(k => { sliders[k].value = currentValues[k]; });
     Object.keys(percentLabels).forEach(k => {
-        percentLabels[k].textContent = Math.round(currentValues[k]) + '% ';
+        const label = percentLabels[k];
+        if (label && !label.classList.contains('editing')) {
+            label.textContent = Math.round(currentValues[k]) + '% ';
+        }
     });
+    updateLockVisuals();
     updateWeightBar();
     updateRecommendations();
 }
@@ -1394,10 +1554,11 @@ function updateHabitsSummary(scored) {
     const habitWord = doing.length === 1 ? 'habit' : 'habits';
     let msg = "You're already doing " + doing.length + ' ' + habitWord + ' in this area';
     if (aggMagnitude) {
-        msg += ', capturing a ' + aggMagnitude + ' benefit on your priorities';
+        const magWord = window.magnitudeSpan ? window.magnitudeSpan(aggMagnitude) : aggMagnitude;
+        msg += ', capturing a ' + magWord + ' benefit on your priorities';
     }
     msg += '.';
-    summaryEl.textContent = msg;
+    summaryEl.innerHTML = msg;
     summaryEl.classList.add('visible');
 
     if (filterEl) filterEl.classList.add('visible');
@@ -1408,6 +1569,24 @@ function updateHabitsSummary(scored) {
 Object.keys(sliders).forEach(k => {
     sliders[k].addEventListener('input', function() {
         adjustSliders(k, parseFloat(this.value));
+        slidersModified = true;
+        checkLevel1Completion();
+    });
+});
+
+// Lock toggle and click-to-edit on the percentage label.
+Object.keys(lockButtons).forEach(k => {
+    const btn = lockButtons[k];
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+        toggleSliderLock(k);
+    });
+});
+Object.keys(percentLabels).forEach(k => {
+    const label = percentLabels[k];
+    if (!label) return;
+    label.addEventListener('click', function() {
+        enterPercentageEdit(k);
         slidersModified = true;
         checkLevel1Completion();
     });
@@ -1438,13 +1617,17 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') { hideDescriptionPopup(); }
 });
 
-// Reset sliders to defaults
+// Reset sliders to defaults – also clears any locks.
 document.getElementById('resetSliders').addEventListener('click', function() {
     valueConfig.forEach(v => { currentValues[v.key] = v.defaultWeight; });
+    lockedSliders.clear();
     if (typeof APStorage !== 'undefined') {
         const allWeights = APStorage.load('ap-slider-weights') || {};
         delete allWeights[domain];
         APStorage.save('ap-slider-weights', allWeights);
+        const allLocks = APStorage.load('ap-slider-locks') || {};
+        delete allLocks[domain];
+        APStorage.save('ap-slider-locks', allLocks);
     }
     updateAllControls();
 });
@@ -1457,11 +1640,17 @@ window.addEventListener('ap-storage-sync', function() {
             currentValues[v.key] = synced[domain][v.key] !== undefined
                 ? synced[domain][v.key] : v.defaultWeight;
         });
-        updateAllControls();
-    } else {
-        // Sliders unchanged but habits may have synced – re-render to reflect
-        updateRecommendations();
     }
+    // Locks sync independently of weights – reload them too so a lock set on
+    // another device shows up here without a page refresh.
+    const syncedLocks = (typeof APStorage !== 'undefined') ? APStorage.load('ap-slider-locks') || {} : {};
+    lockedSliders.clear();
+    if (Array.isArray(syncedLocks[domain])) {
+        syncedLocks[domain].forEach(k => {
+            if (currentValues.hasOwnProperty(k)) lockedSliders.add(k);
+        });
+    }
+    updateAllControls();
 });
 
 // Re-render once Clerk reports auth state and on subsequent sign-in changes –
