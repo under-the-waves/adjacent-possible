@@ -709,7 +709,7 @@ life_area_slug: emergency-preparedness
         ],
         'a-neighbours': [
             // Urban areas: ~35% don't know neighbours; close relationships are uncommon
-            {v:'dont-know',p:12},{v:'recognise',p:30},{v:'greet',p:50},{v:'friendly',p:72},{v:'close',p:92}
+            {v:'dont-know',p:25},{v:'recognise',p:30},{v:'greet',p:50},{v:'friendly',p:72},{v:'close',p:92}
         ],
         'a-local-resources': [
             // Most people know the nearest hospital; comprehensive knowledge is rare

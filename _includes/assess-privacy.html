@@ -36,7 +36,7 @@ event already emitted by the APStorage layer.
     <span class="assess-signed-out-text"><strong>You're not signed in.</strong> Your answers will save on this device only and won't follow you to other devices.</span>
     <button type="button" class="assess-signin-btn" onclick="window.Clerk &amp;&amp; window.Clerk.openSignIn({ afterSignInUrl: window.location.href, afterSignUpUrl: window.location.href })">Sign in to save</button>
 </div>
-<div class="assess-privacy">Your individual answers stay on your device &ndash; they're never sent to our servers. When you're signed in, only the resulting percentile scores (single numbers, not the answers themselves) sync to your account so they're available across devices. Percentile estimates are approximate: they position you roughly relative to the general population based on your self-report, but could easily be off by 10&ndash;15 points.</div>
+<div class="assess-privacy">Your individual answers stay on your device &ndash; they're never sent to our servers. When you're signed in, only the resulting percentile scores (single numbers, not the answers themselves) sync to your account so they're available across devices. Percentiles position you roughly relative to the general adult population based on your self-report; they could easily be off by 10&ndash;15 points. <a href="{{ site.baseurl }}/methodology/percentile-calibration/">How these estimates are calibrated</a>.</div>
 
 <script>
 (function() {

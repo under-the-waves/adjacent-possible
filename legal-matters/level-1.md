@@ -679,7 +679,7 @@ life_area_slug: legal-matters
         ],
         'a-insurance': [
             // ~80% have never formally assessed their legal exposure
-            {v:'dont-know',p:10},{v:'probably-gaps',p:30},{v:'some-awareness',p:55},{v:'mostly-covered',p:78},{v:'fully-assessed',p:95}
+            {v:'dont-know',p:25},{v:'probably-gaps',p:30},{v:'some-awareness',p:55},{v:'mostly-covered',p:78},{v:'fully-assessed',p:95}
         ],
         'a-organised': [
             // ~70% of families would struggle to locate key documents in an emergency
@@ -695,7 +695,7 @@ life_area_slug: legal-matters
         ],
         'a-tax': [
             // Most people use basic tax-efficient structures at best; professional optimisation is rare
-            {v:'dont-know',p:10},{v:'probably-not',p:25},{v:'basic',p:50},{v:'good',p:78},{v:'optimised',p:95}
+            {v:'dont-know',p:25},{v:'probably-not',p:25},{v:'basic',p:50},{v:'good',p:78},{v:'optimised',p:95}
         ],
         'a-contracts': [
             // Most people never read their key contracts properly

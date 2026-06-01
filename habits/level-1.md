@@ -595,7 +595,7 @@ life_area_slug: habits
     var THRESHOLDS = {
         'a-current-habits': [
             // Most people have not identified deliberate habits; a structured routine of 10+ is very rare
-            {v:'dont-know',p:10},{v:'few',p:30},{v:'several',p:55},{v:'many',p:78},{v:'comprehensive',p:95}
+            {v:'dont-know',p:25},{v:'few',p:30},{v:'several',p:55},{v:'many',p:78},{v:'comprehensive',p:95}
         ],
         'a-keystone': [
             // The concept of keystone habits is relatively niche; mapping habit interactions is very rare
@@ -607,7 +607,7 @@ life_area_slug: habits
         ],
         'a-formation-time': [
             // Most people rarely succeed at forming habits; quick formation indicates strong skill
-            {v:'dont-know',p:10},{v:'months',p:30},{v:'six-to-eight-weeks',p:55},{v:'three-to-four-weeks',p:78},{v:'two-weeks-or-less',p:93}
+            {v:'dont-know',p:25},{v:'months',p:30},{v:'six-to-eight-weeks',p:55},{v:'three-to-four-weeks',p:78},{v:'two-weeks-or-less',p:93}
         ],
         'a-disruption': [
             // Most people lose habits to routine disruptions; maintaining through most disruptions is rare

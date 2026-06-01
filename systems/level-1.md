@@ -630,7 +630,7 @@ life_area_slug: systems
         ],
         'a-single-points': [
             // Most people haven't thought about single points of failure; full redundancy is rare
-            {v:'dont-know',p:10},{v:'yes-many',p:20},{v:'yes-some',p:45},{v:'mostly-covered',p:75},{v:'fully-redundant',p:95}
+            {v:'dont-know',p:25},{v:'yes-many',p:20},{v:'yes-some',p:45},{v:'mostly-covered',p:75},{v:'fully-redundant',p:95}
         ]
     };
 

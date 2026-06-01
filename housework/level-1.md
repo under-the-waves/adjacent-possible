@@ -654,7 +654,7 @@ life_area_slug: housework
         ],
         'a-fridge-temp': [
             // ~60% have never checked; regularly monitoring is very rare
-            {v:'dont-know',p:10},{v:'probably-not',p:25},{v:'think-so',p:50},{v:'yes-checked',p:75},{v:'monitored',p:95}
+            {v:'dont-know',p:25},{v:'probably-not',p:25},{v:'think-so',p:50},{v:'yes-checked',p:75},{v:'monitored',p:95}
         ],
         'a-mould': [
             // ~25% of UK homes have visible mould; active prevention is uncommon
@@ -674,15 +674,15 @@ life_area_slug: housework
         ],
         'a-waste': [
             // ~45% recycle regularly; active waste minimisation with composting is rare
-            {v:'dont-know',p:10},{v:'high',p:20},{v:'average',p:45},{v:'low',p:72},{v:'minimal',p:93}
+            {v:'dont-know',p:25},{v:'high',p:20},{v:'average',p:45},{v:'low',p:72},{v:'minimal',p:93}
         ],
         'a-products': [
             // ~20% use any eco-friendly cleaning products; all-eco is very rare
-            {v:'dont-know',p:10},{v:'none',p:25},{v:'a-few',p:50},{v:'mostly',p:78},{v:'all',p:95}
+            {v:'dont-know',p:25},{v:'none',p:25},{v:'a-few',p:50},{v:'mostly',p:78},{v:'all',p:95}
         ],
         'a-wash-temp': [
             // ~60% wash at 40C; cold washing is uncommon
-            {v:'dont-know',p:15},{v:'hot',p:20},{v:'warm',p:45},{v:'cool',p:72},{v:'cold',p:93}
+            {v:'dont-know',p:25},{v:'hot',p:20},{v:'warm',p:45},{v:'cool',p:72},{v:'cold',p:93}
         ]
     };
 

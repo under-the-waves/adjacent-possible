@@ -212,6 +212,29 @@ Layout reads `ap-user-country` from localStorage (set once at first visit or via
 
 ---
 
+## 15. Per-question percentile threshold audit – ONGOING
+
+**Status:** Methodology committed and `dont-know`-pattern sweep shipped 2026-06-01. Per-question audit against published survey data is a tracked ongoing task.
+
+**What's locked in:**
+- `methodology/percentile-calibration.md` documents Methodology A (population frequency) as the canonical rule. The bands and the per-answer percentiles both position the user against the general adult population rather than against a best-practice ceiling.
+- The `assess-privacy` include now links to the methodology page so users can see how percentiles are derived.
+- One sweep applied 2026-06-01: across all 53 level-1 pages, any `dont-know` answer previously assigned `p ≤ 15` was bumped to `p = 25` to remove the most flagrant Methodology-B residue (treating "I don't know" as bottom-decile when it's typically the majority position). 10 entries across 5 files changed.
+
+**What's still loose:**
+- Most threshold mappings are best guesses with JS-comment justifications but no documented sources. The audit should walk each question and either:
+  1. Cite a published survey (BRFSS, NHANES, Gallup, OECD, national time-use, sector industry data) that supports the threshold, or
+  2. Replace with a credible proxy + uncertainty note, or
+  3. Mark as "best guess based on X" with the rationale recorded inline.
+- Some non-`dont-know` entries are still calibrated to Methodology B logic. The fridge-temp question is the canonical example: `think-so` is currently at p=50 but if ~25% of people actively check, `think-so` is closer to p=70 (above the silent majority but below the verifiers).
+- Bimodal-distribution questions need explicit acknowledgement of the cliff between non-engagement and engagement. The smooth percentile interpolation can mislead at the threshold.
+
+**Scope:** ~53 pages × 6-8 questions = ~300+ mappings. Best done one life area at a time alongside other content audits for that area.
+
+**Why this matters:** Methodology A only works if the numbers feeding it are honest. Without per-question calibration, the framework can promise "Top 20%" while landing users in a band whose threshold doesn't actually correspond to being better than 80% of the population.
+
+---
+
 ## 14. Baseline Percentile Audit – DEFERRED
 
 **Status:** Discussed 2026-05-18, deferred.
