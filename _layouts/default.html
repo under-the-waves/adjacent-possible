@@ -608,6 +608,9 @@
     </header>
 
     <main id="content" class="main-content" role="main">
+      {% if page.human_written %}
+      <div class="page-author-badge" title="This page is hand-written. By default, intervention copy and scoring on this site is drafted by Claude (Anthropic's AI), with editorial review.">Human-written</div>
+      {% endif %}
       {{ content }}
 
       <footer class="site-footer">
