@@ -261,6 +261,26 @@ body .main-content {
     background: #e9ecef;
 }
 
+.personalisation-note {
+    margin: 0 0 10px 0;
+    padding: 10px 14px;
+    background: #e8f5e9;
+    border-left: 3px solid #4CAF50;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #2e7d32;
+    text-align: left;
+    display: none;
+}
+.personalisation-note.visible { display: block; }
+.personalisation-note a { color: #2e7d32; text-decoration: underline; }
+.personalisation-note.cta {
+    background: #fff8e1;
+    border-left-color: #ffa726;
+    color: #6d4c1a;
+}
+.personalisation-note.cta a { color: #6d4c1a; }
+
 .methodology-note {
     background: #f8f9fa;
     padding: 15px;
@@ -775,10 +795,13 @@ body .main-content {
                     <p>Ranked by your priorities. Click column headers to re-sort.</p>
                 </div>
 
+                <p class="personalisation-note" id="personalisationNote"></p>
+
                 <details class="methodology-note">
                     <summary><strong>How scoring works</strong></summary>
                     <p>Each intervention is scored on a logarithmic scale per value, where each point represents roughly 2&times; the impact. Per-value scores combine the magnitude of benefit, the success rate, and adherence; positive values mean the intervention helps, negative values mean it harms. The Weighted Benefit Score (WBS) sums these per-value scores using your slider weights to rank interventions for your priorities.</p>
                     <p>The <strong>Driver</strong> column shows which value is contributing most to each intervention&rsquo;s ranking for you. If you weight wealth highly but an intervention&rsquo;s biggest effect for you is on wellbeing, that&rsquo;s reflected here. Time and Money EROI show efficiency – higher means more benefit per hour or dollar invested.</p>
+                    <p>When you complete the {{ page.domain_label | default: page.domain | capitalize }} Awareness assessment while signed in, rankings shrink for values where you&rsquo;re already well above the population baseline – there&rsquo;s less room to improve, so interventions targeting those values score lower for you.</p>
                 </details>
 
                 <p class="habits-summary" id="habitsSummary"></p>
@@ -829,8 +852,11 @@ body .main-content {
 </div>
 
 <script>
-// Build values config from frontmatter; scale factors come from values.yml
-// and are used for the redesigned signed-log EROI formula.
+// Build values config from frontmatter; scale factors and baseline percentile
+// come from values.yml. Scale factors feed the redesigned signed-log EROI
+// formula; baseline_percentile is the calibration point against which PBS was
+// scored and is used to compute the per-user diminishing-returns factor when
+// the user has signed in and completed the Awareness assessment.
 const valueConfig = [
 {% for value in page.values %}
     {% assign vdef = site.data.values[page.domain][value.key] %}
@@ -840,7 +866,8 @@ const valueConfig = [
         color: {{ value.color | jsonify }},
         defaultWeight: {{ value.default_weight }},
         scaleFactorMoney: {% if vdef.scale_factor_money %}{{ vdef.scale_factor_money }}{% else %}1.0{% endif %},
-        scaleFactorTime: {% if vdef.scale_factor_time %}{{ vdef.scale_factor_time }}{% else %}1.0{% endif %}
+        scaleFactorTime: {% if vdef.scale_factor_time %}{{ vdef.scale_factor_time }}{% else %}1.0{% endif %},
+        baselinePercentile: {% if vdef.baseline_percentile %}{{ vdef.baseline_percentile }}{% else %}35{% endif %}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ];
@@ -982,6 +1009,63 @@ function getUserTier(key) {
     return legacy[key] ? 2 : 0;
 }
 
+// User-percentile personalisation: when a signed-in user has completed the
+// Awareness assessment for this life area, their per-value percentile shrinks
+// PBS via the same sigmoid diminishing-returns factor used on intervention.html.
+// Local-only data (i.e. anonymous localStorage) is treated as transient and
+// does not affect WBS – consistent with the sign-in gating already applied to
+// the intervention-page personalised view.
+function isUserSignedIn() {
+    return typeof APStorage !== 'undefined' && APStorage.isSignedIn();
+}
+
+function loadUserPercentiles() {
+    try {
+        var raw = localStorage.getItem('ap-level1-scores');
+        return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+}
+
+function getUserPercentileForValue(valueKey) {
+    var scores = loadUserPercentiles();
+    if (!scores[domain]) return null;
+    return scores[domain][valueKey] != null ? scores[domain][valueKey] : null;
+}
+
+// Sigmoid diminishing returns: at the baseline percentile, factor ≈ 0.95
+// (almost full effect); 30 points above baseline, factor = 0.5; 50 points
+// above, factor ≈ 0.12. Returns 1.0 when the user has no percentile data,
+// preserving the previous behaviour for that case.
+function diminishingReturnsFactor(userPercentile, baselinePercentile) {
+    if (userPercentile == null || baselinePercentile == null) return 1.0;
+    var delta = userPercentile - baselinePercentile - 30;
+    var sig = 1 / (1 + Math.exp(-0.1 * delta));
+    return 1 - sig;
+}
+
+// Per-value drFactor, gated on sign-in. Returns 1.0 (no adjustment) when the
+// user is signed out or has no assessment data for this value.
+function getDrFactorForValue(valueKey) {
+    if (!isUserSignedIn()) return 1.0;
+    var userPct = getUserPercentileForValue(valueKey);
+    if (userPct == null) return 1.0;
+    var vc = valueConfig.find(function(x) { return x.key === valueKey; });
+    var baseline = vc ? vc.baselinePercentile : 35;
+    return diminishingReturnsFactor(userPct, baseline);
+}
+
+// Returns true when at least one of the page's values has signed-in
+// assessment data driving the drFactor – used to surface the personalisation
+// indicator above the table.
+function hasAnyPersonalisation() {
+    if (!isUserSignedIn()) return false;
+    var scores = loadUserPercentiles();
+    if (!scores[domain]) return false;
+    return valueConfig.some(function(v) {
+        return scores[domain][v.key] != null;
+    });
+}
+
 // EBS formula – matches _layouts/intervention.html. Linear EV is in units of
 // (max_anchor / 1024); EBS = sign(EV) × log₂(1 + |EV|). Always positive for
 // positive expected value, always negative for negative; smooths near zero.
@@ -999,14 +1083,19 @@ function computeEbs(pbs, isr, uar, confFactor, drFactor) {
 // which is the population-average value. For tier > 0 returns the captured
 // EBS at that tier: PBS × ISR × confidence × tier multiplier, no UAR, because
 // the user has reported they are already at this dose.
-function computeEbsForTier(v, templateName, tier) {
+//
+// userDrFactor composes with the dose-response tier multiplier: it shrinks
+// PBS for users already above baseline (less room to improve) and is 1.0
+// when the user has no signed-in assessment data for this value.
+function computeEbsForTier(v, templateName, tier, userDrFactor) {
     if (!v) return 0;
+    userDrFactor = userDrFactor != null ? userDrFactor : 1.0;
     var multipliers = DR_TEMPLATES[templateName] || [0, 1, 1, 1];
     if (tier <= 0) {
-        return computeEbs(v.pbs, v.isr, v.uar, v.conf, multipliers[3]);
+        return computeEbs(v.pbs, v.isr, v.uar, v.conf, multipliers[3] * userDrFactor);
     }
     var mult = multipliers[Math.min(tier, 3)] != null ? multipliers[Math.min(tier, 3)] : 1.0;
-    return computeEbs(v.pbs, v.isr, 100, v.conf, mult);
+    return computeEbs(v.pbs, v.isr, 100, v.conf, mult * userDrFactor);
 }
 
 // Compute WBS as the user-weighted sum of per-value EBSes, and identify the
@@ -1028,7 +1117,8 @@ function computeWbsAndDriver(intervention, userValues, tier) {
         var v = intervention.values[k];
         if (!v) return;
         var weight = userValues[k] / 100;
-        var ebs = computeEbsForTier(v, templates[k] || 'mild_diminishing', t);
+        var userDrFactor = getDrFactorForValue(k);
+        var ebs = computeEbsForTier(v, templates[k] || 'mild_diminishing', t, userDrFactor);
         var contribution = ebs * weight;
         wbs += contribution;
         if (Math.abs(contribution) > topAbs) {
@@ -1143,6 +1233,36 @@ function valueLabelFor(key) {
     return v ? v.label : key;
 }
 
+// Show a status line above the table describing whether rankings have been
+// adjusted for the user's assessment data, or prompting the user to take the
+// assessment (or sign in) for personalised rankings.
+function renderPersonalisationNote() {
+    var el = document.getElementById('personalisationNote');
+    if (!el) return;
+    var assessUrl = '{{ site.baseurl }}/' + domain + '/level-1';
+    var domainLabel = {{ page.domain_label | default: page.domain | capitalize | jsonify }};
+    if (hasAnyPersonalisation()) {
+        var scores = loadUserPercentiles()[domain] || {};
+        var n = valueConfig.filter(function(v) { return scores[v.key] != null; }).length;
+        var noun = n === 1 ? 'value' : 'values';
+        el.className = 'personalisation-note visible';
+        el.innerHTML = 'Rankings adjusted for your assessment data across ' + n + ' ' + noun +
+            '. Interventions targeting values where you&rsquo;re already well above the ' +
+            'population baseline score lower – ' +
+            '<a href="' + assessUrl + '">retake the assessment</a> if your situation has changed.';
+        return;
+    }
+    if (isUserSignedIn()) {
+        el.className = 'personalisation-note cta visible';
+        el.innerHTML = 'Complete the <a href="' + assessUrl + '">' + domainLabel +
+            ' Awareness assessment</a> to personalise rankings against your current percentile.';
+    } else {
+        el.className = 'personalisation-note cta visible';
+        el.innerHTML = 'Sign in and complete the <a href="' + assessUrl + '">' + domainLabel +
+            ' Awareness assessment</a> to personalise rankings against your current percentile.';
+    }
+}
+
 function updateRecommendations() {
     const scored = Object.keys(interventions).map(key => {
         const i = interventions[key];
@@ -1207,6 +1327,7 @@ function updateRecommendations() {
     }).join('');
 
     updateHabitsSummary(scored);
+    renderPersonalisationNote();
 }
 
 function magnitudeLabel(score) {
