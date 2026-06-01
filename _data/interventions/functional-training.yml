@@ -96,7 +96,7 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 6
     isr: 60
     uar: 45
@@ -206,7 +206,7 @@ dose_response:
     fitness.performance: steep_diminishing
     fitness.enjoyment: mild_diminishing
     physical-safety.risk: steep_diminishing
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
     behaviours.resilience: mild_diminishing
     mental-health.stability: steep_diminishing
     mental-health.resilience: mild_diminishing
@@ -215,7 +215,7 @@ dose_response:
   rationale: |
     - Tier criteria reflect the dose-response in [muscle-strengthening meta-analyses](https://doi.org/10.1136/bjsports-2021-105099): mortality benefit appears at 30–60 min/week (tier 2 territory) and plateaus around 60 min/week, with diminishing returns thereafter. Tier 3 captures the full 2–4 session week the PBS values were scored against.
     - `steep_diminishing` for fitness.health, fitness.performance, physical-safety.risk, and mental-health.stability because each follows a biological-saturation curve – mortality and depression effect sizes plateau at modest weekly volumes, and the [Cochrane fall-prevention evidence](https://doi.org/10.1002/14651858.CD012424.pub2) shows the balance/fall-prevention effect requires only 2 sessions/week to capture most of the available benefit.
-    - `near_linear` for body-image.fat_loss because per-session caloric expenditure scales roughly linearly with session count, with compensatory eating moderating but not eliminating the relationship.
+    - `near_linear` for body-image.weight because per-session caloric expenditure scales roughly linearly with session count, with compensatory eating moderating but not eliminating the relationship.
     - `mild_diminishing` for fitness.enjoyment, behaviours.resilience, mental-health.resilience, and mental-health.flourishing – subjective and self-efficacy outcomes that build with practice volume but have noisy evidence and no sharp plateau.
 
 resources:

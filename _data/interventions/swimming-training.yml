@@ -89,7 +89,7 @@ values:
       - The bimodal distribution means UAR is concentrated: roughly 55–65% of regular swimmers continue 5+ years, while early dropouts leave within months, dragging the population-average UAR down ([Barker et al. 2014, Int J Aquatic Research and Education](https://doi.org/10.25035/ijare.08.01.06))
       - Pool-access friction reduces session frequency relative to other modalities, but the meditative quality keeps motivated swimmers anchored to the practice ([Sperandei et al. 2016, PLoS ONE](https://doi.org/10.1371/journal.pone.0153199))
 
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 5
     isr: 45
     uar: 45
@@ -167,7 +167,7 @@ dose_response:
     fitness.health: steep_diminishing
     fitness.performance: mild_diminishing
     fitness.enjoyment: mild_diminishing
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
     mental-health.stability: steep_diminishing
     mental-health.flourishing: mild_diminishing
 
@@ -175,7 +175,7 @@ dose_response:
     - Tier cuts reflect the 2–4 sessions/week dose against which PBS values are scored. The technique threshold ([Wanivenhaus et al. 2012](https://doi.org/10.1177/1941738112439554)) means non-swimmers sit at tier 0; the 6-month mark is when cardiovascular adaptations consolidate and technique-driven efficiency gains compound.
     - `steep_diminishing` for fitness.health and mental-health.stability: biological-saturation outcomes (cardiovascular adaptation per [Tanaka 2009](https://doi.org/10.2165/00007256-200939050-00004), mood per the [aquatic exercise meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC9714032/)) front-load benefit at first regular sessions.
     - `mild_diminishing` for fitness.performance, fitness.enjoyment, and mental-health.flourishing: skill consolidation, flow access, and meditative-quality enjoyment all accrue gradually with practice volume without a sharp plateau.
-    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with session count, with the cold-water appetite-compensation effect ([Berneis et al. 2022](https://doi.org/10.1016/j.appet.2022.106371)) attenuating but not breaking the dose-response.
+    - `near_linear` for body-image.weight: caloric expenditure scales roughly proportionally with session count, with the cold-water appetite-compensation effect ([Berneis et al. 2022](https://doi.org/10.1016/j.appet.2022.106371)) attenuating but not breaking the dose-response.
 
 resources:
   upfront_cost: 100

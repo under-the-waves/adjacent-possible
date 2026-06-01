@@ -76,7 +76,7 @@ values:
     uar_reasoning: |
       - See fitness.health UAR. Enjoyment-driven practitioners cluster on the higher end of that adherence distribution: high subjective enjoyment is the strongest single predictor of exercise persistence ([Rhodes & Kates 2015](https://doi.org/10.1007/s12160-015-9704-5)).
 
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 5
     isr: 30
     uar: 55
@@ -214,7 +214,7 @@ dose_response:
     fitness.health: steep_diminishing
     fitness.performance: mild_diminishing
     fitness.enjoyment: mild_diminishing
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
     mental-health.stability: steep_diminishing
     mental-health.resilience: mild_diminishing
     mental-health.flourishing: mild_diminishing
@@ -226,7 +226,7 @@ dose_response:
     - Tier cuts reflect the 2–4 sessions/week dose against which PBS values are scored. The [Cramer 2016 review of 168 RCTs](https://doi.org/10.1371/journal.pone.0159665) shows that adherence past 12 weeks is when style-fit and habit consolidation occur; the 6-month threshold at tier 3 corresponds to sustained practice where breath and attention have become integrated.
     - `steep_diminishing` for fitness.health and mental-health.stability: cardiometabolic adaptations ([Cramer 2014](https://doi.org/10.1177/2047487314523132)) and anxiolytic effects ([Cramer 2018](https://onlinelibrary.wiley.com/doi/10.1002/da.22762)) front-load benefit at first regular sessions.
     - `mild_diminishing` for fitness.performance, fitness.enjoyment, mental-health.resilience, mental-health.flourishing, mindfulness.clarity, mindfulness.emotional, and sleep.comfort_experience: flexibility, balance, mindful attention skill, and subjective wellbeing all accrue gradually with practice volume without a sharp plateau.
-    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with session count and style intensity, though [Thind 2017](https://doi.org/10.1016/j.ypmed.2016.03.013) shows the absolute effect is modest.
+    - `near_linear` for body-image.weight: caloric expenditure scales roughly proportionally with session count and style intensity, though [Thind 2017](https://doi.org/10.1016/j.ypmed.2016.03.013) shows the absolute effect is modest.
 
 resources:
   upfront_cost: 30

@@ -24,7 +24,7 @@ description: |
 applicable_domains: ["body-image"]
 
 values:
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 7
     pbs_reasoning: |
       - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th percentile. Delta: 30 percentile points of improvement. [A 12-month RCT](https://doi.org/10.7326/M23-0052) of 8-hour TRE without calorie counting found a mean weight loss of 4.61 kg (~5% body weight), and [a trial in adults with type 2 diabetes](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2811116) showed 3.56% loss at 6 months – placing the sustained effect at 3 – 5%
@@ -66,11 +66,11 @@ dose_response:
       criterion: "8-hour window honoured 6+ days per week sustained for 12+ weeks, without compensatory over-eating during the window"
 
   value_templates:
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
 
   rationale: |
     - Tier cuts reflect that adherence is the dominant failure mode for TRE per the [6-month follow-up study](https://www.nature.com/articles/s41366-025-01968-2) (only 11.8% met the 5+ days/week criterion during unsupervised follow-up despite 86% supervised adherence). PBS values are scored against the 8-hour window with sustained 6+ days/week adherence (tier 3), the dose the [12-month RCT](https://doi.org/10.7326/M23-0052) measured.
-    - `near_linear` for body-image.fat_loss: fat-loss outcomes scale roughly proportionally with caloric deficit, which scales with the number of restricted-eating days per week. The [meta-analytic ~400 kcal/day spontaneous reduction](https://doi.org/10.1038/s41430-023-01311-w) translates into a linear weekly deficit across adherent days. Compensatory eating ([review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10111287/)) attenuates but does not break the proportionality. Not `steep_diminishing` because going from no window to a 10–12 hour window produces minimal benefit – the deficit only meaningfully accrues when the window narrows enough to displace eating opportunities.
+    - `near_linear` for body-image.weight: fat-loss outcomes scale roughly proportionally with caloric deficit, which scales with the number of restricted-eating days per week. The [meta-analytic ~400 kcal/day spontaneous reduction](https://doi.org/10.1038/s41430-023-01311-w) translates into a linear weekly deficit across adherent days. Compensatory eating ([review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10111287/)) attenuates but does not break the proportionality. Not `steep_diminishing` because going from no window to a 10–12 hour window produces minimal benefit – the deficit only meaningfully accrues when the window narrows enough to displace eating opportunities.
 
 resources:
   upfront_cost: 0

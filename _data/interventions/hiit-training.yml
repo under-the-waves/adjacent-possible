@@ -74,7 +74,7 @@ values:
       - Individual variation is large: [those with higher baseline fitness](https://doi.org/10.2165/11590680-000000000-00000) report more positive affect at prescribed high intensities, while less fit individuals experience disproportionately negative responses
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile; enjoyment-driven adherence faces the same intensity barrier as health-driven adherence
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 7
     isr: 65
     uar: 40
@@ -147,14 +147,14 @@ dose_response:
     fitness.health: steep_diminishing
     fitness.performance: steep_diminishing
     fitness.enjoyment: mild_diminishing
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
     mental-health.stability: mild_diminishing
     mental-health.resilience: mild_diminishing
 
   rationale: |
     - Tier criteria anchor on the intervention's stated practical ceiling of 2–3 sessions/week for non-athletes, with additional sessions producing diminishing returns and overtraining risk. Tier 1 captures the common sub-threshold intensity failure mode noted in the pitfalls section.
     - `steep_diminishing` for fitness.health and fitness.performance because VO2max gains and the mortality dose-response curve plateau quickly: the [Milanović 2015 meta-analysis](https://doi.org/10.1007/s40279-015-0365-0) shows most of the available VO2max benefit appears with 2 sessions per week, and the CRF-mortality relationship per [Kodama et al.](https://doi.org/10.1001/jama.2009.681) flattens at moderate fitness gains.
-    - `near_linear` for body-image.fat_loss because per-session caloric expenditure and EPOC contribution scale roughly linearly with session count.
+    - `near_linear` for body-image.weight because per-session caloric expenditure and EPOC contribution scale roughly linearly with session count.
     - `mild_diminishing` for fitness.enjoyment, mental-health.stability, and mental-health.resilience because these are subjective outcomes accruing with practice volume; the discomfort-tolerance and mood mechanisms have noisy evidence.
 
 resources:

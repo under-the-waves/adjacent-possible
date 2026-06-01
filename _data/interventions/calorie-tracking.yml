@@ -24,7 +24,7 @@ description: |
 applicable_domains: ["body-image"]
 
 values:
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 8
     pbs_reasoning: |
       - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 75th–80th percentile (6.5% sustained body weight loss). Delta: ~40–45 percentile points of improvement. [Meta-analytic evidence](https://pubmed.ncbi.nlm.nih.gov/17904936/) from behavioural diet interventions with 1+ year follow-up shows successful participants sustain 5–7% body weight loss at 12 months, with peak losses of 5–9% at 6 months before partial regain
@@ -66,11 +66,11 @@ dose_response:
       criterion: "6–7 logged days per week with portion calibration via kitchen scale during initial weeks"
 
   value_templates:
-    body-image.fat_loss: threshold
+    body-image.weight: threshold
 
   rationale: |
     - Tier criteria reflect [the systematic review of self-monitoring](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/) finding adherence is the strongest behavioural correlate of weight loss; [app-based trial data](https://link.springer.com/article/10.1007/s10865-019-00091-8) defines "consistent" as 6+ days logged per week. PBS values assume tier 3 (6–7 days/week).
-    - Template choice: `threshold` for body-image.fat_loss – the [Pontzer compensation literature](https://doi.org/10.1016/j.cub.2015.12.046) and [dietary self-monitoring research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6543803/) consistently find that sporadic tracking fails to produce a real deficit because the unlogged meals are typically the most caloric. The mechanism only fires when tracking is comprehensive enough to expose true intake; below ~5 days/week the awareness illusion produces little behaviour change.
+    - Template choice: `threshold` for body-image.weight – the [Pontzer compensation literature](https://doi.org/10.1016/j.cub.2015.12.046) and [dietary self-monitoring research](https://pmc.ncbi.nlm.nih.gov/articles/PMC6543803/) consistently find that sporadic tracking fails to produce a real deficit because the unlogged meals are typically the most caloric. The mechanism only fires when tracking is comprehensive enough to expose true intake; below ~5 days/week the awareness illusion produces little behaviour change.
 
 resources:
   upfront_cost: 0

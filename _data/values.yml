@@ -568,49 +568,82 @@ goals:
       -10: "Severe damage to goal adaptability (entrenches rigid or chaotic goal-setting)"
 
 body-image:
-  fat_loss:
-    name: "Fat Loss"
-    user_description: "sustained fat loss"
-    anchor_type: "linear"
-    anchor_max: 25
-    anchor_unit: "percent body fat lost"
-    anchor_description: "Percentage of body weight lost as fat, sustained for 12+ months"
+  vitality:
+    name: "Vitality"
+    user_description: "youthful, energetic appearance and the energy to sustain it"
+    anchor_type: "subjective"
+    anchor_description: "Change in youthful, energetic appearance through grooming, skin, posture, and sustained energy"
     baseline_percentile: 35
-    scale_factor_money: 0.1832
-    scale_factor_time: 0.1372
+    scale_factor_money: 0.2
+    scale_factor_time: 0.15
     scale_levels:
-      10: "25%+ body weight lost and sustained"
-      8: "6% body weight lost and sustained"
-      6: "1.5% body weight lost and sustained"
-      4: "0.4% body weight lost and sustained"
-      2: "0.1% body weight lost and sustained"
-      -2: "0.1% body weight gained as fat"
-      -4: "0.4% body weight gained as fat"
-      -6: "1.5% body weight gained as fat"
-      -8: "6% body weight gained as fat"
-      -10: "25%+ body weight gained as fat"
-  muscle_gain:
-    name: "Muscle Gain"
-    user_description: "lean muscle gained"
-    anchor_type: "linear"
-    anchor_max: 15
-    anchor_unit: "kg lean mass gained"
-    anchor_description: "Kilograms of lean muscle mass gained and sustained for 12+ months"
+      10: "Transformative gain in youthful, energetic appearance and daily energy"
+      8: "Major gain in youthful appearance and sustained energy"
+      6: "Meaningful gain in vitality and appearance"
+      4: "Modest gain in appearance and energy"
+      2: "Slight, barely noticeable gain in vitality"
+      -2: "Slight, barely noticeable decline in vitality"
+      -4: "Modest decline in vitality"
+      -6: "Meaningful decline in vitality and appearance"
+      -8: "Major decline in vitality"
+      -10: "Severe decline in vitality (chronic fatigue and premature appearance)"
+  romantic:
+    name: "Romantic Appeal"
+    user_description: "physical attractiveness and confidence in romantic contexts"
+    anchor_type: "subjective"
+    anchor_description: "Change in physical attractiveness, confident body language, and presence in romantic contexts"
     baseline_percentile: 35
-    scale_factor_money: 0.6334
-    scale_factor_time: 0.5452
+    scale_factor_money: 0.15
+    scale_factor_time: 0.1
     scale_levels:
-      10: "15+ kg lean mass gained"
-      8: "3.75 kg lean mass gained"
-      6: "0.9 kg lean mass gained"
-      4: "0.25 kg lean mass gained"
-      2: "0.06 kg lean mass gained"
-
-      -2: "~0.06 kg lean mass lost"
-      -4: "~0.23 kg lean mass lost"
-      -6: "~0.94 kg lean mass lost"
-      -8: "~3.75 kg lean mass lost"
-      -10: "15+ kg lean mass lost"
+      10: "Transformative gain in romantic appeal and physical confidence"
+      8: "Major gain in romantic appeal"
+      6: "Meaningful gain in attractiveness and romantic presence"
+      4: "Modest gain in romantic appeal"
+      2: "Slight, barely noticeable gain in romantic appeal"
+      -2: "Slight, barely noticeable reduction in romantic appeal"
+      -4: "Modest reduction in attractiveness"
+      -6: "Meaningful decline in romantic appeal"
+      -8: "Major decline in attractiveness and presence"
+      -10: "Severe damage to romantic appeal"
+  weight:
+    name: "Weight Management"
+    user_description: "achieving and sustaining your desired body composition"
+    anchor_type: "subjective"
+    anchor_description: "Change in body composition (fat loss, muscle gain, or maintenance) sustained for 12+ months"
+    baseline_percentile: 35
+    scale_factor_money: 0.4
+    scale_factor_time: 0.3
+    scale_levels:
+      10: "Transformative gain in desired body composition (e.g. 25%+ body weight lost or 15+ kg muscle gained, sustained)"
+      8: "Major gain in desired body composition (e.g. 6% body weight lost or 3.75 kg muscle gained, sustained)"
+      6: "Meaningful gain in desired body composition (e.g. 1.5% body weight lost or 0.9 kg muscle gained, sustained)"
+      4: "Modest gain in desired body composition (e.g. 0.4% body weight lost or 0.25 kg muscle gained)"
+      2: "Slight, barely noticeable shift in body composition"
+      -2: "Slight, undesirable shift in body composition"
+      -4: "Modest, undesirable shift in body composition"
+      -6: "Meaningful, undesirable shift in body composition"
+      -8: "Major, undesirable shift in body composition (e.g. 6% body weight gained as fat)"
+      -10: "Severe, undesirable shift in body composition (e.g. 25%+ body weight gained as fat)"
+  confidence:
+    name: "Body Confidence"
+    user_description: "comfort and confidence in your own body, regardless of changes"
+    anchor_type: "subjective"
+    anchor_description: "Change in comfort with one's body, internal body dialogue, and confidence in body-exposing or intimate contexts"
+    baseline_percentile: 35
+    scale_factor_money: 0.2
+    scale_factor_time: 0.15
+    scale_levels:
+      10: "Transformative gain in body acceptance and confidence"
+      8: "Major gain in body confidence"
+      6: "Meaningful gain in body comfort and acceptance"
+      4: "Modest gain in body confidence"
+      2: "Slight, barely noticeable gain in body confidence"
+      -2: "Slight, barely noticeable reduction in body comfort"
+      -4: "Modest reduction in body acceptance"
+      -6: "Meaningful decline in body confidence"
+      -8: "Major decline in body confidence"
+      -10: "Severe damage to body confidence (chronic body dysphoria)"
 housework:
   health:
     name: "Health & Hygiene"

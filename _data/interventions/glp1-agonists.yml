@@ -24,7 +24,7 @@ description: |
 applicable_domains: ["body-image"]
 
 values:
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 9
     pbs_reasoning: |
       - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 85th – 90th percentile on sustained fat loss outcomes. Delta: ~50 – 55 percentile points of improvement. [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) showed mean weight loss of 14.9% at 68 weeks with semaglutide 2.4 mg; [STEP 5](https://www.nature.com/articles/s41591-022-02026-4) confirmed 15.2% sustained at 104 weeks of continuous use
@@ -66,11 +66,11 @@ dose_response:
       criterion: "Sustained therapeutic dose, weekly injections without gaps, plus resistance training and adequate protein intake to preserve lean mass"
 
   value_templates:
-    body-image.fat_loss: threshold
+    body-image.weight: threshold
 
   rationale: |
     - Tier criteria reflect the dose-titration arc and the description's emphasis that "without resistance training and protein, a chunk of the weight you lose will be muscle rather than fat, leaving you weaker and softer-looking than the scale suggests" – tier 2 captures pharmacological compliance without lean-mass protection (still delivers most scale weight loss but lower body-composition quality); tier 3 captures the full regimen the PBS was scored against.
-    - `threshold` for body-image.fat_loss because the appetite-suppression mechanism only activates at therapeutic dose – the [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) and [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) both show the bulk of weight loss occurring after full dose escalation. Tier 1 (titrating) produces minimal weight change; meaningful fat loss requires tier 2+, and the body-composition quality that PBS 9 reflects requires tier 3.
+    - `threshold` for body-image.weight because the appetite-suppression mechanism only activates at therapeutic dose – the [STEP 1 trial](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183) and [SURMOUNT-1](https://www.nejm.org/doi/full/10.1056/NEJMoa2206038) both show the bulk of weight loss occurring after full dose escalation. Tier 1 (titrating) produces minimal weight change; meaningful fat loss requires tier 2+, and the body-composition quality that PBS 9 reflects requires tier 3.
 
 resources:
   upfront_cost: 250

@@ -76,33 +76,16 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile
 
-  body-image.muscle_gain:
+  body-image.weight:
     pbs: 7
     pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile on lean mass gained. Delta: ~30–40 percentile points. Hypertrophy from progressive bodyweight training is comparable to weight training when volume and proximity to failure are matched: [load-equating meta-analyses](https://pubmed.ncbi.nlm.nih.gov/35015560/) show similar muscle growth across loading schemes, and successful adherents typically gain 2–4 kg of lean mass over a year of consistent training
-      - Calisthenics-specific RCTs show measurable triceps and pectoral hypertrophy after 4 weeks of progressive push-up training, comparable to bench press at matched intensity ([Kotarsky et al. 2018, J Strength Cond Res](https://pubmed.ncbi.nlm.nih.gov/29466268/))
-      - Slightly below progressive strength training on the ceiling: at advanced stages, adding external load is the most efficient way to drive continued hypertrophy, and the leverage-based progression of calisthenics has a practical upper limit; on the logarithmic anchor, 3 kg of sustained lean mass gain maps to 10 + log₂(3/15) = 7.68, rounding to PBS 7 (vs. PBS 7-8 for weighted training in this domain)
-    isr: 70
+      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 65th–75th percentile on desired body composition. Delta: ~30–40 percentile points. The primary mechanism is hypertrophy: progressive bodyweight training produces muscle growth comparable to weight training when volume and proximity to failure are matched ([load-equating meta-analyses](https://pubmed.ncbi.nlm.nih.gov/35015560/)), with successful adherents typically gaining 2–4 kg of lean mass over a year.
+      - Calisthenics-specific RCTs show measurable triceps and pectoral hypertrophy after 4 weeks of progressive push-up training, comparable to bench press at matched intensity ([Kotarsky et al. 2018, J Strength Cond Res](https://pubmed.ncbi.nlm.nih.gov/29466268/)).
+      - Fat-mass loss is an additional, smaller contribution: [Lopez et al. 2022](https://doi.org/10.1111/obr.13428) shows resistance training alone reduces body fat percentage by ~1.5% and produces ~1 kg fat mass loss without dietary modification, with higher-rep bodyweight circuits providing modest extra caloric expenditure. On the subjective composition scale, the composite of meaningful muscle gain plus modest fat loss rounds to PBS 7 – slightly below progressive strength training because external load supports continued hypertrophy past calisthenics' leverage limits at advanced stages.
+    isr: 80
     isr_reasoning: |
-      - Hypertrophy response to bodyweight training is reliable for novice and intermediate trainees but more variable at advanced stages where the leverage progression hits practical ceilings without added external load
-      - Volume and proximity to failure are the primary mediators: [reviews confirm](https://pmc.ncbi.nlm.nih.gov/articles/PMC8884877/) that hypertrophy outcomes equate when these variables are matched, but bodyweight trainees often under-volume by stopping at sub-failure rep counts
-      - An estimated 65–75% of consistent calisthenics practitioners achieve meaningful muscle gain; the lower bound reflects undertraining intensity rather than physiological non-response
-    uar: 45
-    confidence: medium
-    uar_reasoning: |
-      - See fitness.health UAR – same intervention, same adherence profile
-
-  body-image.fat_loss:
-    pbs: 6
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 55th–60th percentile on sustained fat loss. Delta: ~20–25 percentile points. Resistance training (including calisthenics) reduces body fat percentage by ~1.5% and produces 1.0 kg fat mass loss without dietary modification, alongside lean mass gains that mask scale weight change ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
-      - Calisthenics-specific [body composition trials](https://www.researchgate.net/publication/317321468_The_effects_of_a_calisthenics_training_intervention_on_posture_strength_and_body_composition) show measurable fat-mass reductions over 8-week protocols, with the metabolic conditioning element of higher-rep bodyweight circuits providing modest caloric expenditure beyond pure resistance work
-      - On the logarithmic anchor, 2% sustained loss maps to 10 + log₂(2/25) = 6.36, rounding to PBS 6 – matching progressive strength training rather than HIIT, since the metabolic component is moderate rather than maximal
-    isr: 60
-    isr_reasoning: |
-      - Without dietary modification, fat loss from resistance training of any modality is small and partially masked by simultaneous muscle gain; many practitioners experience recomposition without scale weight change ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2))
-      - Caloric expenditure per session is moderate (typically 200–400 kcal for a 45-minute session), lower than HIIT or running-based training, limiting the fat-loss effect when isolated from dietary changes
-      - An estimated 55–65% of consistent practitioners see meaningful body composition shifts; weight-focused users without dietary co-intervention often perceive no progress and disengage
+      - Hypertrophy is the primary mechanism and reliable for novice and intermediate trainees: an estimated 65–75% see meaningful muscle gain ([reviews confirm](https://pmc.ncbi.nlm.nih.gov/articles/PMC8884877/) that hypertrophy outcomes equate when volume and proximity to failure are matched).
+      - Fat-loss component is less reliable without dietary co-intervention: 55–65% of consistent practitioners see meaningful body composition shifts ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2)). The two pathways are partially redundant – many practitioners get one even when the other underperforms – giving ~80% combined probability of meaningful body-composition change.
     uar: 45
     confidence: medium
     uar_reasoning: |
@@ -212,8 +195,7 @@ dose_response:
     fitness.health: steep_diminishing
     fitness.performance: steep_diminishing
     fitness.enjoyment: mild_diminishing
-    body-image.muscle_gain: near_linear
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
     mental-health.stability: steep_diminishing
     mental-health.resilience: mild_diminishing
     mental-health.flourishing: mild_diminishing
@@ -224,7 +206,7 @@ dose_response:
     - Tier criteria reflect [muscle-strengthening meta-analyses](https://doi.org/10.1136/bjsports-2021-105099) showing maximum mortality benefit at 30–60 minutes/week (roughly 1–2 sessions for the median trainee), with strength and hypertrophy adaptations requiring 2–4 sessions per [Kotarsky et al. (2018)](https://pubmed.ncbi.nlm.nih.gov/29466268/). PBS values assume tier 3 (3–4 sessions/week).
     - Template choices:
       - `steep_diminishing` for fitness.health, fitness.performance, and mental-health.stability – mortality reduction and antidepressant effects largely saturate with 1–2 sessions/week per [BMJ 2024 meta-analysis](https://doi.org/10.1136/bmj-2023-075847); additional sessions refine.
-      - `near_linear` for body-image.muscle_gain and body-image.fat_loss – hypertrophy and caloric expenditure scale roughly with training volume.
+      - `near_linear` for body-image.weight – the underlying mechanisms (hypertrophy and caloric expenditure) both scale roughly with training volume.
       - `mild_diminishing` for enjoyment, resilience, flourishing, and experiential self-awareness – subjective and skill-acquisition gains accrue gradually with practice volume.
 
 resources:

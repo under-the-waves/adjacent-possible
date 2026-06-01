@@ -81,7 +81,7 @@ values:
       - Race calendars, trail-running clubs, and exploration goals provide sustained motivation beyond physical fitness, anchoring the habit socially and seasonally
       - Weather dependency and trail access reduce year-round consistency in some climates; many trail runners adapt by transitioning to road or treadmill running in poor conditions, preserving the underlying habit
 
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 7
     isr: 70
     uar: 45
@@ -220,7 +220,7 @@ dose_response:
     fitness.health: steep_diminishing
     fitness.performance: mild_diminishing
     fitness.enjoyment: mild_diminishing
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
     mental-health.stability: steep_diminishing
     mental-health.resilience: mild_diminishing
     mental-health.flourishing: mild_diminishing
@@ -232,7 +232,7 @@ dose_response:
     - Tier cuts reflect the [running cohort meta-analyses](https://doi.org/10.1016/j.jacc.2014.04.058) finding that even modest doses (50 min/week) capture most of the mortality benefit, with the curve flattening at higher volumes – mapped onto session counts where 2 sessions/week (tier 2) crosses into meaningful CRF-mortality territory and 3–4 sessions (tier 3) is where PBS values are scored.
     - `steep_diminishing` for fitness.health and mental-health.stability: biological-saturation outcomes (mortality per [Lee et al. 2014](https://doi.org/10.1016/j.jacc.2014.04.058), depression per the [BMJ 2024 network meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC10870815/)) front-load benefit at the first regular sessions.
     - `mild_diminishing` for fitness.performance, fitness.enjoyment, mental-health.resilience, mental-health.flourishing, and the participatory-leisure values: skill consolidation, flow access, mastery experience, and community embedding accrue gradually with practice volume.
-    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with running volume, with [dietary compensation](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) attenuating but not breaking the proportionality.
+    - `near_linear` for body-image.weight: caloric expenditure scales roughly proportionally with running volume, with [dietary compensation](https://pmc.ncbi.nlm.nih.gov/articles/PMC10016725/) attenuating but not breaking the proportionality.
 
 resources:
   upfront_cost: 150

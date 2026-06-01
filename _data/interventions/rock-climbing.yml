@@ -81,7 +81,7 @@ values:
       - Initial dropout from fear of falling, gym self-consciousness, and frustration during early plateaus reduces aggregate adherence; among those who continue past 6 months, the practice tends to become highly sticky
       - UAR set 5 points above fitness.health/performance because enjoyment-driven adherence in this domain is reinforced by climbing's flow profile, even though the same access and injury barriers apply
 
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 5
     isr: 50
     uar: 45
@@ -224,7 +224,7 @@ dose_response:
     fitness.health: steep_diminishing
     fitness.performance: mild_diminishing
     fitness.enjoyment: mild_diminishing
-    body-image.fat_loss: near_linear
+    body-image.weight: near_linear
     mental-health.stability: steep_diminishing
     mental-health.resilience: mild_diminishing
     mental-health.flourishing: mild_diminishing
@@ -236,7 +236,7 @@ dose_response:
     - Tier cuts reflect the 2–3 sessions/week dose against which PBS values are scored, with the learning-phase cutoff at 6 months that the intervention identifies as the threshold past which retention and benefits consolidate ([Schoffl et al. 2011](https://doi.org/10.1016/j.wem.2011.06.001), [Llewellyn & Sanchez 2008](https://doi.org/10.1348/000712607X183614)).
     - `steep_diminishing` for fitness.health and mental-health.stability: biological-saturation outcomes (cardiovascular, depressive-symptom reduction per [Buechter & Fechtelpeter 2015](https://pmc.ncbi.nlm.nih.gov/articles/PMC4548691/)) front-load benefit at first regular sessions.
     - `mild_diminishing` for fitness.performance, fitness.enjoyment, mental-health.resilience, mental-health.flourishing, and the participatory-leisure values: skill consolidation, flow access, mastery experience, and community embedding accrue with practice volume without a sharp plateau ([Orth et al. 2016](https://doi.org/10.1080/02640414.2016.1151924), [Stelzer et al. 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11883046/)).
-    - `near_linear` for body-image.fat_loss: caloric expenditure scales roughly proportionally with session count, tempered but not eliminated by compensation.
+    - `near_linear` for body-image.weight: caloric expenditure scales roughly proportionally with session count, tempered but not eliminated by compensation.
 
 resources:
   upfront_cost: 150

@@ -44,19 +44,19 @@ values:
       - Barriers include perceived programming complexity, gym intimidation, commute time, and post-exercise soreness during the first few weeks before adaptation ([Schutzer & Graves 2004, Prev Med](https://doi.org/10.1016/j.ypmed.2004.04.003))
       - Lower than calisthenics (UAR 45) because gym dependency adds commute, cost, and travel-disruption barriers; performance-motivated lifters with measurable progress show somewhat better retention than the average gym-goer but still face long-term attrition ([Rhodes et al. 2017, Br J Sports Med](https://doi.org/10.1136/bjsports-2015-095948))
 
-  body-image.muscle_gain:
+  body-image.weight:
     pbs: 8
-    isr: 80
+    isr: 85
     uar: 35
     confidence: high
     pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. Endpoint: 80th–85th percentile on lean mass gained. Delta: ~45–50 percentile points. On the logarithmic anchor (anchor_max = 15 kg lean mass gained), 4 kg of sustained lean mass gain maps to 10 + log₂(4/15) = 8.07, rounding to PBS 8
-      - Successful adherents typically gain 4–7 kg of lean mass over the first one to two years before progress slows; this is the highest-ceiling hypertrophy intervention because adding plates lets the trainee keep increasing volume and load past the leverage ceilings of bodyweight progressions ([Schoenfeld et al. 2017, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000002200))
-      - One point above calisthenics (PBS 7) because external load supports continued hypertrophy at intermediate and advanced stages: at matched volume hypertrophy is similar, but bodyweight trainees stall at the leverage ceiling while weighted trainees can keep adding kilograms ([Schoenfeld et al. 2017 dose-response, Med Sci Sports Exerc](https://doi.org/10.1136/bjsports-2017-097608))
+      - Baseline (per values.yml): 35th percentile. Endpoint: 80th–85th percentile on desired body composition. Delta: ~45–50 percentile points. The primary mechanism is hypertrophy: successful adherents typically gain 4–7 kg of lean mass over one to two years before progress slows. This is the highest-ceiling hypertrophy intervention because adding plates lets the trainee keep increasing volume and load past the leverage ceilings of bodyweight progressions ([Schoenfeld et al. 2017, J Strength Cond Res](https://doi.org/10.1519/JSC.0000000000002200)).
+      - Fat-mass loss is an additional, smaller contribution: [Wewege et al. 2022](https://doi.org/10.1007/s40279-021-01562-2) found resistance training alone reduces body fat percentage by 1.46% and fat mass by 0.55 kg in healthy adults; in overweight populations [Lopez et al. 2022](https://doi.org/10.1111/obr.13428) shows 1.6% body fat reduction and 1.0 kg fat mass loss, with up to 5.3 kg fat lost when combined with caloric restriction.
+      - On the subjective body-composition scale, the combined effect of major muscle gain plus modest fat loss rounds to PBS 8 – one point above calisthenics (PBS 7) because external load supports continued hypertrophy at intermediate and advanced stages: at matched volume hypertrophy is similar, but bodyweight trainees stall at the leverage ceiling while weighted trainees can keep adding kilograms ([Schoenfeld et al. 2017 dose-response, Med Sci Sports Exerc](https://doi.org/10.1136/bjsports-2017-097608)).
     isr_reasoning: |
-      - Hypertrophy response to progressive overload with external load is reliable: at matched volume and proximity to failure, [load-equating meta-analyses](https://pubmed.ncbi.nlm.nih.gov/35015560/) find similar muscle growth across schemes, but external load makes it easier to apply the volume and intensity needed for near-maximal hypertrophy
-      - Dose-response evidence indicates roughly 10 sets per muscle group per week is needed for near-maximal hypertrophy, which is much easier to programme and progress with weighted training than with bodyweight progressions ([Schoenfeld et al. 2017, J Sports Sci](https://doi.org/10.1080/02640414.2016.1210197))
-      - Estimated 75–85% of consistent trainees achieve meaningful muscle gain; the remainder typically under-train intensity, eat in a chronic deficit, or sleep poorly enough to suppress recovery ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608))
+      - Hypertrophy response to progressive overload with external load is reliable: at matched volume and proximity to failure, [load-equating meta-analyses](https://pubmed.ncbi.nlm.nih.gov/35015560/) find similar muscle growth across schemes, but external load makes it easier to apply the volume and intensity needed for near-maximal hypertrophy.
+      - Estimated 75–85% of consistent trainees achieve meaningful muscle gain; the remainder typically under-train intensity, eat in a chronic deficit, or sleep poorly enough to suppress recovery ([Morton et al. 2018, Br J Sports Med](https://doi.org/10.1136/bjsports-2017-097608)).
+      - Fat-loss component is less reliable without dietary co-intervention (60–70% of consistent lifters see meaningful composition shifts per [Wing & Phelan 2005](https://doi.org/10.1093/ajcn/82.1.222S)) but the two pathways are partially redundant, giving ~85% combined probability of meaningful body-composition change.
     uar_reasoning: |
       - See fitness.performance UAR – same intervention, same adherence profile
 
@@ -73,22 +73,6 @@ values:
       - Robust evidence from multiple large RCTs and pooled cohort analyses (n > 80,000) consistently shows health benefits when training is performed with adequate intensity and progressive overload ([Shailendra et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2022-105669))
       - Physiological mechanisms (muscle protein synthesis, bone remodelling, glucose uptake, mitochondrial adaptation) are well-understood and reliably reproduced across diverse populations including elderly, diabetic, and cardiac patients ([Liu & Latham 2009, Cochrane Database](https://doi.org/10.1002/14651858.CD002759.pub2))
       - The dose-response curve plateaus at ~60 minutes per week; even sub-optimal execution produces meaningful adaptations as long as the threshold dose is reached ([Momma et al. 2022, Br J Sports Med](https://doi.org/10.1136/bjsports-2021-105099))
-    uar_reasoning: |
-      - See fitness.performance UAR – same intervention, same adherence profile
-
-  body-image.fat_loss:
-    pbs: 6
-    isr: 65
-    uar: 35
-    confidence: medium
-    pbs_reasoning: |
-      - Baseline (per values.yml): 35th percentile. Endpoint: 55th–60th percentile on sustained fat loss. Delta: ~20–25 percentile points. On the logarithmic anchor (anchor_max = 25% body weight lost), 1.5–2% sustained loss maps to 10 + log₂(2/25) = 6.36, rounding to PBS 6
-      - [Meta-analysis of 58 trials](https://doi.org/10.1007/s40279-021-01562-2) (Wewege et al. 2022, Sports Med) found resistance training alone reduces body fat percentage by 1.46% and fat mass by 0.55 kg in healthy adults while simultaneously increasing lean mass; net scale weight change is small (~0–1%) despite genuine recomposition
-      - In overweight populations, [pooled analysis](https://doi.org/10.1111/obr.13428) (Lopez et al. 2022) shows resistance training alone produces 1.6% body fat reduction and 1.0 kg fat mass loss; combined with caloric restriction, successful lifters lose up to 5.3 kg fat mass while preserving muscle – matching calisthenics on this domain since fat-loss outcomes from resistance work are modality-insensitive
-    isr_reasoning: |
-      - Without dietary modification, fat loss from any resistance training modality is small and partially masked by simultaneous muscle gain; many practitioners experience recomposition without scale weight change ([Wewege et al. 2022, Sports Med](https://doi.org/10.1007/s40279-021-01562-2))
-      - Caloric expenditure per session is moderate (200–400 kcal for a 45-minute session), lower than HIIT or running, so dietary co-intervention is the primary moderator of larger fat-loss effects ([Lopez et al. 2022, Obes Rev](https://doi.org/10.1111/obr.13428))
-      - Estimated 60–70% of consistent lifters see meaningful body composition shifts; the remainder typically lift without adjusting nutrition and see little scale movement ([Wing & Phelan 2005, Am J Clin Nutr](https://doi.org/10.1093/ajcn/82.1.222S))
     uar_reasoning: |
       - See fitness.performance UAR – same intervention, same adherence profile
 
@@ -197,9 +181,8 @@ dose_response:
 
   value_templates:
     fitness.performance: near_linear
-    body-image.muscle_gain: near_linear
+    body-image.weight: near_linear
     fitness.health: steep_diminishing
-    body-image.fat_loss: near_linear
     fitness.enjoyment: mild_diminishing
     mental-health.stability: steep_diminishing
     mental-health.resilience: mild_diminishing
@@ -209,7 +192,7 @@ dose_response:
   rationale: |
     - Tier criteria use session count rather than weekly volume in sets because sessions are easier for users to self-report accurately. Three sessions per week corresponds to roughly 10+ sets per muscle group, the volume-dose plateau identified in [Schoenfeld 2017](https://doi.org/10.1136/bjsports-2017-097608). One session per week sits just above the Momma 2022 health-benefit threshold of 30–60 min/week.
     - Template choices reflect the different dose-response shapes across values:
-      - `near_linear` for `fitness.performance`, `body-image.muscle_gain`, and `body-image.fat_loss`. Strength gains and hypertrophy scale roughly proportionally with weekly volume up to the 10-set plateau ([Schoenfeld 2017](https://doi.org/10.1080/02640414.2016.1210197)); caloric expenditure scales linearly with sessions.
+      - `near_linear` for `fitness.performance` and `body-image.weight`. Strength gains and hypertrophy scale roughly proportionally with weekly volume up to the 10-set plateau ([Schoenfeld 2017](https://doi.org/10.1080/02640414.2016.1210197)); caloric expenditure scales linearly with sessions.
       - `steep_diminishing` for `fitness.health` and `mental-health.stability`. The [Momma 2022 meta-analysis](https://doi.org/10.1136/bjsports-2021-105099) shows mortality and cardiovascular-event benefits plateau at 30–60 min/week (roughly tier 1), and [Gordon 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC6137526/) found mood-stabilising effects regardless of training volume.
       - `mild_diminishing` for the subjective values with noisier evidence (`fitness.enjoyment`, `mental-health.resilience`, `mental-health.flourishing`, `behaviours.resilience`). These accrue with sustained practice volume but lack a sharp plateau.
 

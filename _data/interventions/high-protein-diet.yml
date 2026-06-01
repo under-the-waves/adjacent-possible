@@ -24,7 +24,7 @@ description: |
 applicable_domains: ["body-image"]
 
 values:
-  body-image.fat_loss:
+  body-image.weight:
     pbs: 8
     pbs_reasoning: |
       - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 70th – 80th percentile on sustained fat loss outcomes. Delta: ~40 percentile points of improvement. [A 12-month RCT](https://pmc.ncbi.nlm.nih.gov/articles/PMC7539343/) comparing 1.6 g/kg/day protein versus 0.8 g/kg/day found the high-protein group lost 8.2 kg (~8 – 9% body weight) at 4 months; with some regain by 12 months, sustained loss sits at approximately 5 – 7%
@@ -66,11 +66,11 @@ dose_response:
       criterion: "1.6+ g/kg/day sustained (roughly 100g+ for a 70kg adult), spread across three to four meals of 25–30g each"
 
   value_templates:
-    body-image.fat_loss: threshold
+    body-image.weight: threshold
 
   rationale: |
     - Tier criteria anchor on the [meta-analysis dose-response evidence](https://doi.org/10.3945/ajcn.112.044321): the body-composition advantage (more fat lost, more lean mass retained) appears reliably at ~1.6 g/kg/day with at least 25–30g per meal for maximal muscle protein synthesis stimulation. The 1.0 g/kg threshold is roughly the minimum at which any protein-related satiety effect appears.
-    - `threshold` for body-image.fat_loss because the muscle-protein-synthesis mechanism has a known biological minimum (~20–25g per meal to maximally stimulate MPS) and the body-composition advantage over standard-protein diets only emerges at ~1.6 g/kg/day per the [Wycherley meta-analysis](https://doi.org/10.3945/ajcn.112.044321). Below tier 2, the intervention provides little benefit beyond a generic calorie deficit; the distinctive fat-loss-with-lean-mass-retention pattern that justifies PBS 8 is a tier-3 outcome.
+    - `threshold` for body-image.weight because the muscle-protein-synthesis mechanism has a known biological minimum (~20–25g per meal to maximally stimulate MPS) and the body-composition advantage over standard-protein diets only emerges at ~1.6 g/kg/day per the [Wycherley meta-analysis](https://doi.org/10.3945/ajcn.112.044321). Below tier 2, the intervention provides little benefit beyond a generic calorie deficit; the distinctive fat-loss-with-lean-mass-retention pattern that justifies PBS 8 is a tier-3 outcome.
 
 resources:
   upfront_cost: 0
