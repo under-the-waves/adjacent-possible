@@ -124,7 +124,7 @@ life_area_slug: body-image
 # Body Image
 
 **What it is**
-- Your physical appearance, including body composition, grooming, and vitality.
+- Your relationship with your body &ndash; how you look, how you feel about it, and how others see it. Spans body composition, grooming, vitality, romantic appeal, and the comfort and confidence you have in your own skin.
 
 **Why it matters**
 - Research shows that roughly a quarter of our self-esteem is determined by how positively we view our bodies. Body image satisfaction affects daily functioning, romantic relationships, and overall life satisfaction, whilst body dissatisfaction is strongly linked to depression, anxiety, and eating disorders.
