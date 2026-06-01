@@ -28,7 +28,7 @@ description: |
 applicable_domains: ["nutrition", "global-impact", "fitness"]
 
 values:
-  nutrition.ethical_environmental:
+  nutrition.ethical:
     pbs: 8
     isr: 80
     uar: 35
@@ -60,9 +60,9 @@ values:
       - ISR is held below 80% because the magnitude of the reduction depends heavily on what the user substitutes toward – swapping beef for chicken delivers only ~20% of the available emissions reduction, whereas swapping beef for lentils delivers ~95%. Many adherent users land in the partial-reduction range.
       - [Lifecycle analyses synthesised by Our World in Data](https://ourworldindata.org/food-choice-vs-eating-local) confirm that plant-forward eating reliably reduces food-related emissions for the median adherent user, supporting an ISR around 70%.
     uar_reasoning: |
-      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile. UAR of 35% reflects the high attrition observed in long-term meat-reduction efforts.
+      - See nutrition.ethical UAR – same intervention, same adherence profile. UAR of 35% reflects the high attrition observed in long-term meat-reduction efforts.
 
-  nutrition.physical_wellbeing:
+  nutrition.health:
     pbs: 6
     isr: 60
     uar: 35
@@ -76,7 +76,7 @@ values:
       - [Reviews of plant-based diet quality](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865) find that healthful plant-based diet indices reduce coronary heart disease incidence by ~25%, while unhealthful plant-based patterns slightly increase risk – meaning ISR is conditional on diet quality, not just animal-product reduction.
       - ISR of 60% reflects that a majority of adherent users achieve meaningful health gains, with a substantial minority capturing little because they substitute toward refined carbohydrates rather than whole plant foods.
     uar_reasoning: |
-      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+      - See nutrition.ethical UAR – same intervention, same adherence profile.
 
   fitness.health:
     pbs: 5
@@ -86,13 +86,13 @@ values:
     pbs_reasoning: |
       - Baseline (per values.yml): 35th percentile. After successful adherence, a user could plausibly reach the 60th–65th percentile on healthy lifespan from fitness-related health, primarily via reduced cardiovascular and metabolic disease risk. Delta: ~25–30 percentile points, mapping to roughly 6–9 months of added healthy lifespan – PBS 5 on the 15-year anchor.
       - [Meta-analyses of Mediterranean and plant-forward dietary patterns](https://pubmed.ncbi.nlm.nih.gov/30575854/) find ~20–25% reductions in cardiovascular disease incidence – the same disease class targeted by aerobic fitness interventions, justifying scoring against fitness.health.
-      - The mechanism overlaps meaningfully with nutrition.physical_wellbeing but is scored separately because the fitness anchor is broader-spectrum (cardiovascular plus metabolic plus inflammatory pathways), and the diet-driven contribution to those pathways is a real but partial slice of the full anchor.
+      - The mechanism overlaps meaningfully with nutrition.health but is scored separately because the fitness anchor is broader-spectrum (cardiovascular plus metabolic plus inflammatory pathways), and the diet-driven contribution to those pathways is a real but partial slice of the full anchor.
     isr_reasoning: |
-      - As with nutrition.physical_wellbeing, health gains depend on diet quality – healthful plant-forward patterns deliver consistent cardiovascular benefits ([review evidence](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865)), while unhealthful plant-forward patterns deliver little.
+      - As with nutrition.health, health gains depend on diet quality – healthful plant-forward patterns deliver consistent cardiovascular benefits ([review evidence](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865)), while unhealthful plant-forward patterns deliver little.
       - The cardiovascular benefit operates through multiple pathways (lower LDL, lower blood pressure, reduced inflammation) and is robust across populations, but the magnitude depends on baseline diet quality – someone shifting from a heavy red-meat diet sees larger gains than someone already eating moderately.
-      - ISR of 55% reflects that a slight majority of adherent users achieve meaningful cardiovascular gains, slightly below nutrition.physical_wellbeing because the fitness anchor includes performance and metabolic dimensions where plant-forward eating contributes less directly.
+      - ISR of 55% reflects that a slight majority of adherent users achieve meaningful cardiovascular gains, slightly below nutrition.health because the fitness anchor includes performance and metabolic dimensions where plant-forward eating contributes less directly.
     uar_reasoning: |
-      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+      - See nutrition.ethical UAR – same intervention, same adherence profile.
 
   global-impact.impartiality:
     pbs: 4
@@ -108,7 +108,7 @@ values:
       - The impartial-giving framing applies cleanly only if the user subscribes to a moral framework that gives meaningful weight to animal welfare; for users who do not, the impartiality gain is near zero.
       - ISR of 55% reflects genuine but uncertain impact – the mechanism is real for those who endorse it morally, but unreliable across the broader population of adherent users.
     uar_reasoning: |
-      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+      - See nutrition.ethical UAR – same intervention, same adherence profile.
 
   global-impact.fulfilment:
     pbs: 4
@@ -124,7 +124,7 @@ values:
       - Sustained value alignment with daily behaviour reliably contributes to meaning, but the magnitude of that contribution depends on how central environmental and ethical values are to the user's broader self-concept.
       - ISR of 55% reflects modest but variable fulfilment gains, conditional on the user's framing of and attachment to the underlying values.
     uar_reasoning: |
-      - See nutrition.ethical_environmental UAR – same intervention, same adherence profile.
+      - See nutrition.ethical UAR – same intervention, same adherence profile.
 
 dose_response:
   metric: plant_share_of_diet
@@ -147,17 +147,17 @@ dose_response:
       criterion: "Plants 80%+ of diet (EAT-Lancet pattern); red meat once a week or less, totalling 100–300 g/week; small dairy portion"
 
   value_templates:
-    nutrition.ethical_environmental: near_linear
+    nutrition.ethical: near_linear
     global-impact.sustainability: near_linear
-    nutrition.physical_wellbeing: mild_diminishing
+    nutrition.health: mild_diminishing
     fitness.health: mild_diminishing
     global-impact.impartiality: near_linear
     global-impact.fulfilment: mild_diminishing
 
   rationale: |
     - Tier cuts reflect the EAT-Lancet planetary-health diet target (80% plant) and [Poore and Nemecek (2018)](https://www.science.org/doi/10.1126/science.aaq0216) data showing emissions reduction scales smoothly with red-meat reduction. Tier 3 is the full plant-forward pattern the PBS values were scored against; tier 1 is light reduction that still captures partial benefit.
-    - `near_linear` for nutrition.ethical_environmental, global-impact.sustainability, and global-impact.impartiality: per [Poore and Nemecek](https://www.science.org/doi/10.1126/science.aaq0216), each replaced beef meal reduces personal emissions by a roughly equal increment, and the avoided-animal-suffering pathway scales proportionally with consumption reduction.
-    - `mild_diminishing` for nutrition.physical_wellbeing, fitness.health, and global-impact.fulfilment: the cardiovascular and longevity benefits per [the AHA review](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865) and [the Mediterranean diet meta-analysis](https://pubmed.ncbi.nlm.nih.gov/30575854/) front-load: the first reductions in red and processed meat capture most of the available health gain, with diminishing returns at higher plant shares. Fulfilment also accrues gradually with values-aligned practice.
+    - `near_linear` for nutrition.ethical, global-impact.sustainability, and global-impact.impartiality: per [Poore and Nemecek](https://www.science.org/doi/10.1126/science.aaq0216), each replaced beef meal reduces personal emissions by a roughly equal increment, and the avoided-animal-suffering pathway scales proportionally with consumption reduction.
+    - `mild_diminishing` for nutrition.health, fitness.health, and global-impact.fulfilment: the cardiovascular and longevity benefits per [the AHA review](https://www.ahajournals.org/doi/10.1161/JAHA.119.012865) and [the Mediterranean diet meta-analysis](https://pubmed.ncbi.nlm.nih.gov/30575854/) front-load: the first reductions in red and processed meat capture most of the available health gain, with diminishing returns at higher plant shares. Fulfilment also accrues gradually with values-aligned practice.
 
 resources:
   upfront_cost: 0

@@ -1,0 +1,154 @@
+evaluated_at: 2026-06-01
+evaluated_by: claude-opus-4-7
+name: "Mediterranean Diet"
+what_it_is: |
+  A traditional eating pattern centred on olive oil, vegetables, legumes, whole grains, fish, nuts, and moderate wine, with low intake of red meat, processed food, and added sugar. Operationalised in the [PREDIMED trial](https://www.nejm.org/doi/full/10.1056/NEJMoa1800389) as: extra-virgin olive oil daily, 3+ servings of vegetables, 3+ pieces of fruit, 3+ servings of legumes per week, 3+ servings of fish per week, 7+ servings of nuts per week, and limited red meat and sweets. Among named eating patterns it has the strongest mortality and cardiovascular evidence – the gold-standard target for nutrition interventions.
+how_to_do_it: |
+  - Anchor every main meal around vegetables and a whole grain or legume base. A reliable default lunch: a bowl with whole grains, roasted vegetables, beans, olive oil, and lemon.
+  - Shift cooking fat to extra-virgin olive oil – use it for dressings, sautéing, and finishing. The PREDIMED arm that hit the largest benefit consumed about 50 ml/day.
+  - Eat fish or seafood at least twice a week; oily fish (salmon, sardines, mackerel) provides omega-3 with the biggest mortality signal.
+  - Have a small handful of unsalted nuts most days (almonds, walnuts, hazelnuts). Use them as a snack or salad topper.
+  - Cut red and processed meat to a couple of times a month, not multiple times a week. Substitute legumes, fish, or poultry.
+  - Treat refined grains, pastries, and sugary drinks as occasional, not daily.
+  - If you drink alcohol, keep it to 1 glass of wine per day with food. The benefit is not in starting alcohol if you don't already drink.
+success_looks_like: |
+  - Sustained 12+ months on a recognisable Mediterranean pattern, scoring 9+ on the [14-item PREDIMED adherence screener](https://www.predimed.es/uploads/8/0/5/1/8051451/p14_mediterranean_diet_adherence_screener.pdf).
+  - Routine fasting lipids and blood pressure improve modestly within 3–6 months; long-term cardiovascular event risk drops by roughly a quarter to a third in adherent users.
+  - You build a small rotation of meals you genuinely enjoy and can default to under stress – the pattern stops feeling like a "diet" and becomes how you cook.
+common_pitfalls: |
+  - Treating it as a list of forbidden foods rather than a positive cuisine. Adherence depends on enjoying the food; restriction-framing predicts relapse.
+  - Buying low-quality olive oil. Light, refined, or pomace oils contain little of the polyphenol fraction PREDIMED attributed benefit to. Pay for extra-virgin and use it.
+  - Skipping the fish step. Land-based Mediterranean (lots of bread, cheese, and pasta with limited fish) loses much of the cardiovascular signal.
+  - Over-relying on Mediterranean-themed convenience food. Frozen pizza with olive oil is still a refined-grain meal; PREDIMED measured home-cooked patterns.
+description: |
+  - Whole-food eating pattern modelled on traditional southern European diets, operationalised by the PREDIMED study with quantitative weekly targets for vegetables, legumes, fish, nuts, and olive oil. Highest-evidence named eating pattern for mortality and cardiovascular outcomes.
+  - [PREDIMED 2018 republication](https://www.nejm.org/doi/full/10.1056/NEJMoa1800389) (n=7,447 high-risk adults) found the Mediterranean-with-olive-oil arm reduced major cardiovascular events (MI, stroke, CV death) by ~30% vs control over ~5 years.
+  - [Lyon Diet Heart Study](https://www.ahajournals.org/doi/10.1161/01.CIR.99.6.779) found ~50–70% reduction in cardiovascular events at 4 years in post-MI secondary prevention.
+  - [SMILES trial](https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-017-0791-y) (Jacka et al. 2017) showed clinically significant improvement in major depression after 12 weeks on a Mediterranean-style diet (n=67) – the first RCT evidence that diet pattern affects mood.
+  - [Meta-analysis of 38 cohorts](https://www.bmj.com/content/378/bmj-2021-068882) (BMJ 2022) found higher Mediterranean adherence associated with 10–25% lower all-cause mortality.
+  - Real-world adherence is the rate-limiting factor: long-term sustained adherence outside trial conditions is 25–40% per most cohort follow-ups.
+applicable_domains: ["nutrition", "health-management", "fitness", "mental-health"]
+
+values:
+  nutrition.health:
+    pbs: 8
+    isr: 80
+    uar: 30
+    confidence: high
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (typical Western diet). Endpoint: ~85th–90th percentile of nutritional quality. Delta: ~50–55 percentile points – the largest single dietary-pattern shift available.
+      - On the linear healthy-lifespan anchor (anchor_max = 12 years), sustained Mediterranean adherence supports ~3 years of additional healthy lifespan: [BMJ 2022 meta-analysis](https://www.bmj.com/content/378/bmj-2021-068882) found 10–25% lower all-cause mortality (call it 20% midpoint for adherent users), which over ~30 remaining years translates to ~3 years gained. PBS = 10 + log₂(3/12) = 8.0.
+      - Independently supported by PREDIMED's 30% cardiovascular event reduction and Lyon Diet Heart's similar secondary-prevention signal. The mechanism is multi-pathway: polyphenols, omega-3, fibre, monounsaturated fat profile, and displacement of refined grains and processed meat.
+    isr_reasoning: |
+      - Cardiovascular benefit replicates across multiple high-quality RCTs and large cohorts; the dose-response is consistent. Among users who actually hit the PREDIMED adherence threshold (14-item screener ≥9), ~80% see measurable improvements in lipids, blood pressure, and cardiovascular event risk over 5+ years.
+      - 20% who don't benefit either have an underlying condition that dominates (genetic hyperlipidaemia, advanced atherosclerosis already, etc.) or aren't actually adherent despite self-report.
+    uar_reasoning: |
+      - Long-term Mediterranean adherence outside trial support is the rate-limiting factor. Cohort follow-ups in non-Mediterranean countries report 25–40% sustained adherence at 5 years; population-level uptake from public-health campaigns is lower.
+      - UAR 30 reflects a typical motivated user in a non-Mediterranean country: the food culture isn't built in, eating out is harder, and most attempts drift back toward baseline within 12 months.
+
+  nutrition.enjoyment:
+    pbs: 5
+    isr: 75
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~65th percentile on enjoyment and cultural connection. Delta: ~30 percentile points.
+      - Unlike most "healthy diets", Mediterranean is built around an existing culinary tradition. Adherent users typically report higher satisfaction with food than baseline because they're eating fresher, more flavourful, and more varied meals.
+      - Score 5 corresponds to a "meaningful gain" on the subjective anchor: real and noticeable, but bounded by the home-cooking effort and the fact that the gain depends on whether the user actually likes the cuisine.
+    isr_reasoning: |
+      - Most users who genuinely adopt the pattern (rather than treat it as restriction) report increased food enjoyment within months. Affective response to Mediterranean cuisine is positive on average per [hedonic ratings literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC7794319/).
+      - A minority – particularly those who dislike olive oil, fish, or vegetable-forward eating – never warm to it. Cultural and palate fit moderate this; estimated ~75% net enjoyment gain.
+    uar_reasoning: |
+      - Adherence on enjoyment-motivated users matches general Mediterranean adherence: shifts back toward convenience and ultra-processed defaults under time pressure.
+
+  nutrition.ethical:
+    pbs: 3
+    isr: 70
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~55th percentile on ethical/environmental alignment. Delta: ~20 percentile points.
+      - Mediterranean is not vegetarian, but its substantially lower red meat consumption and emphasis on legumes and seafood gives a modest environmental footprint reduction compared with typical Western patterns.
+      - Score 3 corresponds to a "modest" gain – real but smaller than dedicated plant-forward or vegetarian patterns. Fish consumption introduces its own sustainability concerns depending on sourcing.
+    isr_reasoning: |
+      - Footprint reduction is mechanical for users who actually displace red and processed meat with legumes and fish. Estimated 70% see real reductions in dietary GHG equivalent.
+    uar_reasoning: |
+      - Same intervention, same adherence profile.
+
+  fitness.health:
+    pbs: 5
+    isr: 75
+    uar: 30
+    confidence: high
+    pbs_reasoning: |
+      - Mediterranean diet improves cardiovascular and metabolic risk markers (lipid profile, blood pressure, insulin sensitivity) and modestly reduces all-cause mortality independent of physical activity – cross-domain benefit on fitness.health.
+      - Score 5 on the linear anchor reflects ~1–2 years of additional healthy lifespan attributable to the diet alone, on top of fitness behaviours.
+    isr_reasoning: |
+      - Cardiometabolic risk improvements are well-replicated; ~75% of adherent users see measurable benefit.
+    uar_reasoning: |
+      - Same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 4
+    isr: 60
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - [SMILES trial](https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-017-0791-y) showed a clinically significant improvement in major depression after 12 weeks of Mediterranean-style eating. Mechanism is plausibly via gut-brain inflammation pathways.
+      - Score 4 on the subjective anchor: modest-to-meaningful gain in flourishing for the general population (larger effect in those with low-mood baseline).
+    isr_reasoning: |
+      - SMILES showed ~32% remission rate vs 8% in the social-support control. Effect varies with baseline mood symptoms; users with high baseline flourishing see smaller gains.
+    uar_reasoning: |
+      - Same intervention, same adherence profile.
+
+dose_response:
+  metric: predimed_adherence_score
+  metric_label: "14-item PREDIMED adherence screener score (0–14)"
+  scored_at_tier: 3
+  tiers:
+    - level: 0
+      label: "Western default"
+      criterion: "PREDIMED score 0–4: typical Western diet, red meat several times/week, low vegetable and legume intake"
+    - level: 1
+      label: "Mediterranean-leaning"
+      criterion: "PREDIMED score 5–7: olive oil as primary cooking fat, increased fruit and vegetable intake, but still frequent red meat and refined grain"
+    - level: 2
+      label: "Mostly Mediterranean"
+      criterion: "PREDIMED score 8–10: meeting most weekly targets for vegetables, legumes, fish, and nuts; red meat reduced to ~weekly"
+    - level: 3
+      label: "Fully Mediterranean"
+      criterion: "PREDIMED score 11–14: hitting all PREDIMED weekly targets, red meat ~monthly, refined grain and sweets occasional"
+
+  value_templates:
+    nutrition.health: steep_diminishing
+    nutrition.enjoyment: mild_diminishing
+    nutrition.ethical: near_linear
+    fitness.health: steep_diminishing
+    mental-health.flourishing: mild_diminishing
+
+  rationale: |
+    - Tier criteria use the [14-item PREDIMED adherence screener](https://www.predimed.es/uploads/8/0/5/1/8051451/p14_mediterranean_diet_adherence_screener.pdf) as the dose metric because it's the operationalisation that PREDIMED's PBS-equivalent evidence is built on. The screener scores yes/no on 14 components; the trial saw maximum benefit at score ≥10.
+    - `steep_diminishing` for nutrition.health and fitness.health: most cardiovascular benefit accrues in moving from the Western default to mostly-Mediterranean. The last few PREDIMED screener points add less.
+    - `near_linear` for nutrition.ethical: red-meat displacement scales roughly linearly with the number of weekly Mediterranean substitutions.
+    - `mild_diminishing` for nutrition.enjoyment and mental-health.flourishing: subjective gains accrue gradually with practice; no sharp threshold.
+
+resources:
+  upfront_cost: 60
+  upfront_cost_reasoning: "A couple of decent cookbooks ($30–60) and a starter pantry build-out: extra-virgin olive oil (~$15/litre), basic spice kit, dried legumes, canned fish. Optional: a copy of a PREDIMED-style adherence screener (free). Minimum viable start is $0 if you already cook."
+  ongoing_cost: 80
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "Roughly $50–100/month above a typical processed-food-heavy grocery budget for a single adult – extra-virgin olive oil, fresh produce, fish, and nuts are more expensive per kilogram than refined-grain staples. Cost drops sharply when home cooking displaces takeaway."
+  upfront_time: 6
+  upfront_time_reasoning: "About 4 hours to learn the pattern (read PREDIMED summary, build a meal rotation, learn 6–8 default recipes), plus 2 hours for the first big grocery and pantry stock-up."
+  ongoing_time: 3
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "About 30 minutes per main meal, ~3 hours/week of additional cooking time vs heavy reliance on convenience food. Drops with practice as the meal rotation becomes automatic."
+
+prerequisites:
+  - "Access to fresh vegetables, fish, and decent olive oil – more constrained in some regions or food deserts"
+  - "Basic home-cooking comfort – Mediterranean adherence depends on cooking, not on Mediterranean-themed packaged foods"
+  - "Budget flexibility for the ~$50–100/month grocery uplift, or willingness to displace takeaway spend"
+
+flagged_domains:
+  - domain: "behaviours"
+    rationale: "Adopting and sustaining a recognisable eating pattern builds general behavioural self-regulation capacity, particularly around food environment design and meal planning routines."

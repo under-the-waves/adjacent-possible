@@ -188,7 +188,7 @@ British spelling is a project convention and unaffected by this section. Keep "o
 **CRITICAL:** Use the exact format `[life_area].[value_name]` for all value domain keys. Examples:
 - For fitness interventions: `fitness.health`, `fitness.performance`, `fitness.appearance`, `fitness.enjoyment`
 - For sleep interventions: `sleep.daily_functioning`, `sleep.long_term_health`, `sleep.comfort_experience`
-- For nutrition interventions: `nutrition.physical_wellbeing`, `nutrition.pleasure_connection`, `nutrition.ethical_environmental`
+- For nutrition interventions: `nutrition.health`, `nutrition.enjoyment`, `nutrition.ethical`
 
 Do NOT create new top-level categories like `health.longevity` or `performance.athletic`. Always use the life area as the top-level key.
 

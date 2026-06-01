@@ -77,7 +77,7 @@ values:
     uar_reasoning: |
       - See food-management.craft UAR – same intervention, same adherence profile.
 
-  nutrition.physical_wellbeing:
+  nutrition.health:
     pbs: 6
     isr: 55
     uar: 35
@@ -93,7 +93,7 @@ values:
     uar_reasoning: |
       - See food-management.craft UAR – same intervention, same adherence profile.
 
-  nutrition.pleasure_connection:
+  nutrition.enjoyment:
     pbs: 7
     isr: 70
     uar: 35
@@ -165,8 +165,8 @@ dose_response:
     food-management.craft: mild_diminishing
     food-management.competence: mild_diminishing
     food-management.waste_reduction: mild_diminishing
-    nutrition.physical_wellbeing: mild_diminishing
-    nutrition.pleasure_connection: mild_diminishing
+    nutrition.health: mild_diminishing
+    nutrition.enjoyment: mild_diminishing
     life-skills.high: mild_diminishing
     saving.lifestyle: mild_diminishing
 

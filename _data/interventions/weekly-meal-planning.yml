@@ -62,7 +62,7 @@ values:
     uar_reasoning: |
       - See food-management.competence UAR – same intervention, same adherence profile.
 
-  nutrition.physical_wellbeing:
+  nutrition.health:
     pbs: 5
     isr: 55
     uar: 45
@@ -133,7 +133,7 @@ dose_response:
   value_templates:
     food-management.competence: mild_diminishing
     food-management.waste_reduction: mild_diminishing
-    nutrition.physical_wellbeing: mild_diminishing
+    nutrition.health: mild_diminishing
     saving.security: mild_diminishing
     time-management.productivity: mild_diminishing
 

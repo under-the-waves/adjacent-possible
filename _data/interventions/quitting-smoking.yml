@@ -140,7 +140,7 @@ values:
     uar_reasoning: |
       - See fitness.health UAR – same intervention, same adherence profile.
 
-  nutrition.pleasure_connection:
+  nutrition.enjoyment:
     pbs: 6
     isr: 85
     uar: 10
@@ -184,7 +184,7 @@ dose_response:
     health-management.control: threshold
     saving.security: near_linear
     saving.growth: near_linear
-    nutrition.pleasure_connection: threshold
+    nutrition.enjoyment: threshold
 
   rationale: |
     - Tier cuts capture the cessation dose-response independent of UAR. Per [NEJM Evidence (2023)](https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272) and [the Doll British Doctors Study](https://pmc.ncbi.nlm.nih.gov/articles/PMC1447499/), the mortality benefit grows substantially with sustained abstinence – the 12-month mark is the standard cessation benchmark and corresponds to roughly half the cardiovascular excess risk being recovered. Tier 1 (cut down) captures the well-documented partial benefit of reduction without cessation: meaningful but far smaller than full quitting.
@@ -192,7 +192,7 @@ dose_response:
     - `near_linear` for saving.security and saving.growth: the financial benefit scales roughly proportionally with cigarettes not smoked – every avoided pack is dollars retained.
     - `mild_diminishing` for fitness.performance and health-management.vitality: VO2max and energy recovery accrue gradually as abstinence sustains, with the largest gains in the first months.
     - `threshold` for health-management.control: the self-efficacy benefit of having quit only fires once a sustained run is achieved – ongoing cut-down or oscillation arguably damages rather than builds health agency. Per [the cessation self-efficacy literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC1764891/), the control benefit is concentrated in those who have demonstrated sustained abstinence.
-    - `threshold` for nutrition.pleasure_connection: olfactory epithelium regeneration requires sustained nicotine clearance over weeks-to-months; cutting down doesn't reach the threshold for taste/smell recovery.
+    - `threshold` for nutrition.enjoyment: olfactory epithelium regeneration requires sustained nicotine clearance over weeks-to-months; cutting down doesn't reach the threshold for taste/smell recovery.
 
 resources:
   upfront_cost: 0

@@ -25,7 +25,7 @@ description: |
 applicable_domains: ["nutrition", "food-management", "health-management"]
 
 values:
-  nutrition.physical_wellbeing:
+  nutrition.health:
     pbs: 6
     isr: 45
     uar: 65
@@ -57,7 +57,7 @@ values:
       - ISR is limited by the indirect pathway: improving purchasing decisions does not automatically convert to more nutritionally adequate meals.
       - The knowledge-behaviour gap is well-documented in nutrition research.
     uar_reasoning: |
-      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+      - See nutrition.health UAR – same intervention, same adherence profile.
 
   food-management.waste_reduction:
     pbs: 4
@@ -73,7 +73,7 @@ values:
       - A minority of label readers will actively use serving-size information to calibrate purchase quantities.
       - ISR of 40% reflects the weak and indirect causal chain.
     uar_reasoning: |
-      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+      - See nutrition.health UAR – same intervention, same adherence profile.
 
   health-management.control:
     pbs: 5
@@ -89,7 +89,7 @@ values:
       - Users do not need to change dietary behaviour to experience greater control; understanding what they are eating is itself the benefit. ISR of 60%.
       - ISR is not 80%+ because some learners find the label system confusing or incomplete when eating out or using unpackaged food.
     uar_reasoning: |
-      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+      - See nutrition.health UAR – same intervention, same adherence profile.
 
   health-management.longterm:
     pbs: 4
@@ -105,7 +105,7 @@ values:
       - ISR of 40% reflects the indirect pathway: fewer than half of learners frame food choices explicitly as part of a preventive health strategy.
       - Evidence is observational and indirect; no RCT directly measures this pathway.
     uar_reasoning: |
-      - See nutrition.physical_wellbeing UAR – same intervention, same adherence profile.
+      - See nutrition.health UAR – same intervention, same adherence profile.
 
 dose_response:
   metric: label_use_consistency
@@ -128,7 +128,7 @@ dose_response:
       criterion: "Routinely reads panels and ingredient lists at the point of purchase across all packaged categories; corrects for serving size as a matter of course"
 
   value_templates:
-    nutrition.physical_wellbeing: mild_diminishing
+    nutrition.health: mild_diminishing
     food-management.competence: mild_diminishing
     food-management.waste_reduction: near_linear
     health-management.control: mild_diminishing

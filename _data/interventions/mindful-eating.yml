@@ -1,0 +1,153 @@
+evaluated_at: 2026-06-01
+evaluated_by: claude-opus-4-7
+name: "Mindful Eating"
+what_it_is: |
+  An attention-based approach to eating that uses awareness of hunger, fullness, taste, and emotional triggers to govern food intake instead of rules about what or how much to eat. Draws on the [Mindfulness-Based Eating Awareness Training (MB-EAT) programme](https://www.springerpub.com/the-joy-of-half-a-cookie-9780399184789.html) and the [Intuitive Eating framework](https://www.intuitiveeating.org/) developed by Tribole and Resch. The lever is paying attention – distinguishing physical hunger from emotional or habitual eating, eating without distraction, and stopping when comfortably full rather than when the plate is empty.
+how_to_do_it: |
+  - Eat without screens for at least one meal per day. The single highest-leverage step: phone away, TV off, attend to what's on the fork.
+  - Before eating, pause and rate your hunger on a 0–10 scale. Eat only when you're at 3 or below, stop near 7. Use the scale at mid-meal too – physical fullness arrives before "stuffed".
+  - Slow down. Aim for ~20 minutes per main meal: it takes the gut about that long to signal satiety to the brain. Put the fork down between bites; chew thoroughly.
+  - When you feel an urge to eat, ask: am I hungry, or is this stress, boredom, tiredness, or thirst? Address the underlying state directly if it isn't hunger.
+  - Reintroduce previously "forbidden" foods deliberately and slowly. Restriction predicts binges; permission paradoxically reduces compulsion ([Intuitive Eating evidence base](https://pubmed.ncbi.nlm.nih.gov/24388560/)).
+  - Notice flavour, texture, and temperature. Eat foods you actually enjoy, attentively – satisfaction is the most underrated determinant of satiety.
+success_looks_like: |
+  - You can eat a meal without a screen and find it more satisfying, not less.
+  - Snacking decreases because the underlying triggers (stress, boredom) are getting addressed directly rather than via food.
+  - Weight stabilises – often with modest 1–3 kg loss over 6–12 months without explicit dieting – because intake matches actual energy needs more closely.
+  - Episodes of overeating drop in frequency; if you do overeat occasionally, it doesn't trigger a restriction-binge cycle.
+common_pitfalls: |
+  - Treating "mindful eating" as code for restrictive eating. The point is attention, not control – using mindful eating to police every bite re-creates the restriction loop it's meant to dissolve.
+  - Skipping the no-distraction step. Eating while reading, scrolling, or watching TV bypasses the attentional mechanism almost entirely – the rest of the practice doesn't compensate.
+  - Expecting fast weight change. The mechanism is gradual recalibration of intake. Most evidence shows ~1–3 kg loss at 6–12 months, less than dedicated weight-loss approaches.
+  - Practising in isolation. Family or shared meals often run counter to mindful eating (eating to social pace, distracted by conversation). Pick which meals are "mindful" rather than fighting your eating context.
+description: |
+  - An attention-based eating practice combining the MB-EAT programme (Kristeller) and Intuitive Eating (Tribole & Resch). Uses mindfulness of hunger/satiety cues, emotional eating triggers, and the eating experience itself instead of rules about what or how much.
+  - [Intuitive Eating systematic review](https://pubmed.ncbi.nlm.nih.gov/24388560/) (Bruce & Ricciardelli 2014) found higher Intuitive Eating Scale scores robustly associated with lower BMI variability, better body image, and lower disordered eating across 24 studies (n>10,000).
+  - [RCT of MB-EAT](https://pmc.ncbi.nlm.nih.gov/articles/PMC4438369/) (Kristeller et al. 2014) showed significant reductions in binge frequency and depression symptoms vs psychoeducation control over 4 months.
+  - [Mindful eating meta-analysis](https://doi.org/10.1016/j.eatbeh.2017.06.005) (Warren et al. 2017) found small-to-moderate effects on emotional eating, external eating, and binge eating, with weaker effects on weight (~1–2 kg over 6–12 months).
+  - [Long-term follow-up of intuitive eating](https://doi.org/10.1093/abm/kaaa106) (Hazzard et al. 2020) tracked 1,491 adults over 8 years and found intuitive eating predicted lower odds of depression, low self-esteem, body dissatisfaction, and unhealthy weight-control behaviours.
+  - The effect on absolute weight is modest – the larger documented gains are in eating experience, mental health around food, and disordered-eating prevention.
+applicable_domains: ["nutrition", "body-image", "mental-health", "mindfulness"]
+
+values:
+  nutrition.enjoyment:
+    pbs: 6
+    isr: 70
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline (per values.yml): 35th percentile (typical distracted, fast eating). Endpoint: ~70th–75th percentile on enjoyment and cultural connection from food. Delta: ~35–40 percentile points – one of the largest gains available on this value because most baseline eating is barely attended to.
+      - The mechanism is direct: paying attention to taste, texture, and the eating experience increases hedonic reward per bite. Adherent users report substantially higher meal satisfaction even when eating the same food.
+      - Score 6 corresponds to a "meaningful" gain on the subjective anchor. Capped below "major" because mindful eating doesn't add culinary variety – it deepens enjoyment of whatever you're already eating.
+    isr_reasoning: |
+      - The attentional mechanism works for most people who actually practise it: ~70% of users sustaining the practice report meaningful improvements in eating satisfaction within weeks ([mindful eating meta-analysis](https://doi.org/10.1016/j.eatbeh.2017.06.005)).
+      - 30% who don't benefit either find slow attentive eating frustrating, or have established eating contexts (family meals, work lunches) that prevent the practice from being applied consistently.
+    uar_reasoning: |
+      - Sustained mindful eating is hard outside dedicated contexts: most people drift back to distracted eating within months because the practice runs counter to ambient norms.
+      - UAR 30 reflects realistic free-living adherence: meaningful proportion of meals practised mindfully, but rarely all meals all the time.
+
+  nutrition.health:
+    pbs: 3
+    isr: 55
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~50th percentile via reduced overeating and better satiety regulation. Delta: ~15 percentile points.
+      - The nutrition.health benefit is indirect: mindful eating doesn't change WHAT you eat (it isn't a nutrient-focused intervention), only HOW MUCH. So the healthy-lifespan contribution is via energy balance rather than dietary quality.
+      - On the linear healthy-lifespan anchor, ~1–2 months of additional healthy lifespan from reduced overeating and improved satiety regulation maps to PBS 3.
+    isr_reasoning: |
+      - About 55% of adherent users see meaningful reductions in overeating and improved satiety; the rest were already in approximate energy balance or compensate via other eating contexts.
+    uar_reasoning: |
+      - Same intervention, same adherence profile.
+
+  body-image.weight:
+    pbs: 4
+    isr: 55
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~55th percentile on desired body composition. Delta: ~20 percentile points.
+      - Most evidence shows modest weight loss (~1–3 kg over 6–12 months) for adherent users – meaningful but smaller than dedicated weight-loss approaches. On the subjective body-composition scale, this rounds to PBS 4 ("modest gain in desired body composition").
+      - The mechanism is recalibration of intake to actual energy needs rather than caloric restriction. The advantage is sustainability; the disadvantage is bounded magnitude.
+    isr_reasoning: |
+      - ~55% of adherent users see meaningful weight change. The rest were near energy balance already or have other eating contexts that dominate.
+    uar_reasoning: |
+      - Same intervention, same adherence profile.
+
+  mental-health.flourishing:
+    pbs: 4
+    isr: 60
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Baseline: 35th percentile. Endpoint: ~55th–60th percentile on flourishing. Delta: ~20–25 percentile points.
+      - [Long-term follow-up](https://doi.org/10.1093/abm/kaaa106) shows intuitive eating predicts lower odds of depression, low self-esteem, and body dissatisfaction over 8 years. Mechanism is plausibly via reducing the restriction-binge cycle and the chronic low-grade distress of dieting.
+      - Score 4 corresponds to a modest-to-meaningful gain. Larger effect for users with disordered eating baseline; smaller for users who already eat without food-related distress.
+    isr_reasoning: |
+      - About 60% of adherent users see real improvement in food-related psychological wellbeing. The remainder either had low baseline distress (less room to improve) or have non-food drivers of mental-health symptoms.
+    uar_reasoning: |
+      - Same intervention, same adherence profile.
+
+  mindfulness.clarity:
+    pbs: 4
+    isr: 70
+    uar: 30
+    confidence: medium
+    pbs_reasoning: |
+      - Mindful eating is a concrete, repeated opportunity to practise present-moment attention three times a day. For users without a meditation practice, it's often the most accessible doorway into mindfulness.
+      - Score 4 corresponds to a "modest" gain in present-moment attention capacity, transferring partly to non-eating contexts.
+    isr_reasoning: |
+      - ~70% of users sustaining mindful eating report broader benefits in attention and presence; the rest treat it as a narrow eating technique without generalising.
+    uar_reasoning: |
+      - Same intervention, same adherence profile.
+
+dose_response:
+  metric: mindful_meals_per_week
+  metric_label: "Number of distraction-free, attended meals per week"
+  scored_at_tier: 3
+  tiers:
+    - level: 0
+      label: "Distracted default"
+      criterion: "Eats most meals with a screen, while working, or on the move; rarely notices hunger or fullness cues"
+    - level: 1
+      label: "Occasional"
+      criterion: "1–3 distraction-free, attended meals per week"
+    - level: 2
+      label: "Regular"
+      criterion: "5–10 attended meals per week, including most main meals, with conscious use of hunger/fullness cues at least daily"
+    - level: 3
+      label: "Embedded"
+      criterion: "Most main meals attended and screen-free, sustained for 3+ months; hunger/fullness scale used reflexively"
+
+  value_templates:
+    nutrition.enjoyment: mild_diminishing
+    nutrition.health: near_linear
+    body-image.weight: near_linear
+    mental-health.flourishing: mild_diminishing
+    mindfulness.clarity: mild_diminishing
+
+  rationale: |
+    - Tier criteria use distraction-free meal count as the dose because that's the operationalisable element – the underlying mechanism (attention) doesn't have a clean metric.
+    - `mild_diminishing` for nutrition.enjoyment, mental-health.flourishing, and mindfulness.clarity: the attentional capacity builds gradually with practice volume, no sharp threshold.
+    - `near_linear` for nutrition.health and body-image.weight: caloric impact scales roughly proportionally with the number of attended meals per week, since each attended meal is one fewer episode of overriding satiety cues.
+
+resources:
+  upfront_cost: 0
+  upfront_cost_reasoning: "No equipment, programmes, or fees required. Optional: a book like Intuitive Eating ($15–20) or Joy of Half a Cookie ($15) for structured guidance. Minimum viable start is $0."
+  ongoing_cost: 0
+  ongoing_cost_period: "month"
+  ongoing_cost_reasoning: "No recurring costs. The practice involves how you eat, not what you eat or buy."
+  upfront_time: 2
+  upfront_time_reasoning: "About 2 hours to read the core idea (Intuitive Eating principles or MB-EAT overview), understand the hunger/fullness scale, and decide which meals to start with."
+  ongoing_time: 0
+  ongoing_time_period: "week"
+  ongoing_time_reasoning: "No added time once embedded – attended meals take roughly the same wall-clock time as distracted meals, just with attention redirected. Some initial slowing of meal pace, but no net time cost over the long run."
+
+prerequisites:
+  - "No active eating disorder (anorexia, bulimia, or active binge eating disorder) – mindful eating is supportive but not curative for these, and clinical interventions are the appropriate first step"
+  - "Willingness to eat without screens at least some meals – the no-distraction component is the practice's load-bearing element"
+  - "An eating context where the practice is feasible: families and workplaces where most meals are eaten on-the-go or socially can erode adherence"
+
+flagged_domains:
+  - domain: "behaviours"
+    rationale: "Mindful eating builds general attentional self-regulation – the practice of pausing before an automatic behaviour (eating) and checking the underlying state generalises to other impulse-driven contexts."

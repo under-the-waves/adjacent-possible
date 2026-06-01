@@ -66,8 +66,8 @@ fitness:
       -8: "Major reduction in enjoyment of physical activity"
       -10: "Severe damage to enjoyment of physical activity"
 nutrition:
-  physical_wellbeing:
-    name: "Physical Wellbeing"
+  health:
+    name: "Health & Longevity"
     user_description: "healthy years added through better nutrition"
     anchor_type: "linear"
     anchor_max: 12
@@ -82,32 +82,31 @@ nutrition:
       6: "9 months additional healthy lifespan"
       4: "2-3 months additional healthy lifespan"
       2: "Few weeks additional healthy lifespan"
-
       -2: "Few weeks of healthy lifespan lost"
       -4: "2-3 months of healthy lifespan lost"
       -6: "9 months of healthy lifespan lost"
       -8: "3 years of healthy lifespan lost"
       -10: "12+ years of healthy lifespan lost"
-  pleasure_connection:
-    name: "Pleasure & Connection"
-    user_description: "pleasure and social connection from food"
+  enjoyment:
+    name: "Enjoyment & Culture"
+    user_description: "pleasure, variety, and social connection from food"
     anchor_type: "subjective"
-    anchor_description: "Change in how much food contributes to cultural expression and social bonding"
+    anchor_description: "Change in how much food contributes to pleasure, cultural expression, and social bonding"
     baseline_percentile: 35
     scale_factor_money: 0.0443
     scale_factor_time: 0.1651
     scale_levels:
-      10: "Transformative gain in pleasure and connection from food"
-      8: "Major gain in pleasure and connection from food"
-      6: "Meaningful gain in pleasure and connection from food"
-      4: "Modest gain in pleasure and connection from food"
-      2: "Slight, barely noticeable gain in pleasure and connection from food"
-      -2: "Slight, barely noticeable reduction in pleasure and connection from food"
-      -4: "Modest reduction in pleasure and connection from food"
-      -6: "Meaningful reduction in pleasure and connection from food"
-      -8: "Major reduction in pleasure and connection from food"
-      -10: "Severe damage to pleasure and connection from food"
-  ethical_environmental:
+      10: "Transformative gain in enjoyment and cultural connection from food"
+      8: "Major gain in enjoyment and cultural connection from food"
+      6: "Meaningful gain in enjoyment and cultural connection from food"
+      4: "Modest gain in enjoyment and cultural connection from food"
+      2: "Slight, barely noticeable gain in enjoyment and cultural connection from food"
+      -2: "Slight, barely noticeable reduction in enjoyment and cultural connection from food"
+      -4: "Modest reduction in enjoyment and cultural connection from food"
+      -6: "Meaningful reduction in enjoyment and cultural connection from food"
+      -8: "Major reduction in enjoyment and cultural connection from food"
+      -10: "Severe damage to enjoyment and cultural connection from food"
+  ethical:
     name: "Ethical & Environmental Impact"
     user_description: "ethical and environmental alignment of what you eat"
     anchor_type: "subjective"
