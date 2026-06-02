@@ -38,10 +38,4 @@ Value sliders on each life area page change which interventions get surfaced. Th
 
 Signing in lets these inputs sync across devices and persist over time, so the dashboard can track which interventions you've put in place and which areas you're actively working on.
 
-## Where it's heading
-
-Eventually you'll interact with an intelligent system that understands your values, constraints, and goals, providing customised guidance that evolves with you. Rather than browsing static advice, you'll have conversations with AI that can synthesise the entire evidence base, understand your specific context, and suggest optimal next steps for your unique situation.
-
-The current site is the first version of that – a structured database with manual personalisation through value sliders, percentile-anchored benchmarks, and a prioritisation screen. The recommendations and tracking will become more dynamic over time.
-
 For practical guidance on navigating the site, see [How to Use This Site]({{ site.baseurl }}/start-here/how-to-use/). For the vocabulary, see [Key Terms]({{ site.baseurl }}/start-here/key-terms/).
