@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Worthwhile
-human_written: true
 ---
 
 <div class="hero-section">
