@@ -212,6 +212,20 @@ Layout reads `ap-user-country` from localStorage (set once at first visit or via
 
 ---
 
+## 16. Human-written authorship display – DEFERRED
+
+**Status:** Mechanism shipped 2026-06-01, all `human_written: true` tags removed 2026-06-02. The infrastructure is dormant but ready to switch back on.
+
+**What exists:**
+- `_layouts/default.html` renders a discrete chip near the top of the page when frontmatter sets `human_written: true`. Hidden otherwise – site default is no badge.
+- `assets/css/style.scss` has the `.page-author-badge` CSS rule.
+
+**Why deferred:** Marking individual pages as hand-written turned out to overpromise on what's actually a spectrum (fully hand-written, AI-drafted then edited, AI-drafted unedited). Rather than ship a binary indicator that lies about the middle case, leave the mechanism dormant until a richer authorship taxonomy is worked out.
+
+**When to revisit:** When there's a clear answer to what categories to mark (e.g. `authorship: human | ai-edited | ai`) and which pages are unambiguously in each. Could pair naturally with the broader trust/transparency story before launch.
+
+---
+
 ## 15. Per-question percentile threshold audit – ONGOING
 
 **Status:** Methodology committed and `dont-know`-pattern sweep shipped 2026-06-01. Per-question audit against published survey data is a tracked ongoing task.

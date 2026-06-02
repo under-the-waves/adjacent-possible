@@ -2,7 +2,6 @@
 layout: default
 title: How percentile estimates are calibrated
 permalink: /methodology/percentile-calibration/
-human_written: true
 ---
 
 # How percentile estimates are calibrated

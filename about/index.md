@@ -2,7 +2,6 @@
 layout: default
 title: About
 permalink: /about/
-human_written: true
 ---
 # About
 
